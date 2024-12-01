@@ -2,6 +2,7 @@
 project: transition.css
 stars: 1900
 description: :octocat: Drop-in CSS transitions
+url: https://github.com/argyleink/transition.css
 ---
 
 **46 pre-built transitions!**

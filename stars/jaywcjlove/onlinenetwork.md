@@ -2,6 +2,7 @@
 project: onlinenetwork
 stars: 98
 description: js判断是否断网了
+url: https://github.com/jaywcjlove/onlinenetwork
 ---
 
 js判断是否断网了

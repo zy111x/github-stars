@@ -2,6 +2,7 @@
 project: sibi
 stars: 1311
 description: V2EX 撕逼大战
+url: https://github.com/greatghoul/sibi
 ---
 
 V2EX 撕逼大战

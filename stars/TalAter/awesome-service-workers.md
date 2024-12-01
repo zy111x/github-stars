@@ -2,6 +2,7 @@
 project: awesome-service-workers
 stars: 1654
 description: :nut_and_bolt: A collection of awesome resources for learning Service Workers
+url: https://github.com/TalAter/awesome-service-workers
 ---
 
 Awesome Service Workers

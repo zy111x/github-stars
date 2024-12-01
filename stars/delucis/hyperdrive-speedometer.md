@@ -2,6 +2,7 @@
 project: hyperdrive-speedometer
 stars: 31
 description: Speedlify for Astro sites
+url: https://github.com/delucis/hyperdrive-speedometer
 ---
 
 Hyperdrive Speedometer

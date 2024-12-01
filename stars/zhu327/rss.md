@@ -2,6 +2,7 @@
 project: rss
 stars: 531
 description: weibo weixin zhihu rss RSS工厂，生成微博，微信公众号，知乎日报RSS
+url: https://github.com/zhu327/rss
 ---
 
 ### RSS Factory

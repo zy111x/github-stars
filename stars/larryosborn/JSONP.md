@@ -2,6 +2,7 @@
 project: JSONP
 stars: 82
 description: A slim JSONP request library for Javascript
+url: https://github.com/larryosborn/JSONP
 ---
 
 JSONP

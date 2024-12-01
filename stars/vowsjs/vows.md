@@ -2,6 +2,7 @@
 project: vows
 stars: 1561
 description: Asynchronous BDD & continuous testing for node.js
+url: https://github.com/vowsjs/vows
 ---
 
 vows

@@ -2,6 +2,7 @@
 project: opentuna
 stars: 143
 description: TUNA on AWS
+url: https://github.com/tuna/opentuna
 ---
 
 NOTICE

@@ -2,6 +2,7 @@
 project: outdated-browser
 stars: 3527
 description: A simple tool to identify and upgrade old browsers.
+url: https://github.com/outdatedbrowser/outdated-browser
 ---
 
 Outdated Browser v1.1.5

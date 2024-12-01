@@ -2,6 +2,7 @@
 project: thresh
 stars: 579
 description: Flutter-based mobile cross-platform dynamic UI framework
+url: https://github.com/ymm-tech/thresh
 ---
 
 Thresh — 基于JS的Flutter动态化方案

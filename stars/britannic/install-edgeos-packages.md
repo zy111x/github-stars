@@ -2,6 +2,7 @@
 project: install-edgeos-packages
 stars: 34
 description: Installs debian packages if they aren't already installed following an upgrade or reboot
+url: https://github.com/britannic/install-edgeos-packages
 ---
 
 UBNT Install EdgeOS Packages Script with Upgrade Persistence

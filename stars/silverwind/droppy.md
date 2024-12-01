@@ -2,6 +2,7 @@
 project: droppy
 stars: 1623
 description: **ARCHIVED** Self-hosted file storage
+url: https://github.com/silverwind/droppy
 ---
 
 **Development on droppy has ceased because I don't have enough time or motivation to properly support it and because of its outdated technology stack, it became exceedingly boring to work.**

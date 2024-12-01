@@ -2,6 +2,7 @@
 project: caniuse-embed
 stars: 331
 description: 📊 Embed realtime data from caniuse.com
+url: https://github.com/ireade/caniuse-embed
 ---
 
 The CanIUse Embed

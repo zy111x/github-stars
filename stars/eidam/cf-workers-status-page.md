@@ -2,6 +2,7 @@
 project: cf-workers-status-page
 stars: 2362
 description: Monitor your websites, showcase status including daily history, and get Slack/Telegram/Discord notification whenever your website status changes. Using Cloudflare Workers, CRON Triggers, and KV storage.
+url: https://github.com/eidam/cf-workers-status-page
 ---
 
 Cloudflare Worker - Status Page

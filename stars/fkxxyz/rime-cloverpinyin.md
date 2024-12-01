@@ -2,6 +2,7 @@
 project: rime-cloverpinyin
 stars: 1832
 description: 🍀️四叶草拼音输入方案，做最好用的基于rime开源的简体拼音输入方案！
+url: https://github.com/fkxxyz/rime-cloverpinyin
 ---
 
 你是否经历过搜狗输入法总是闪退bug的绝望？

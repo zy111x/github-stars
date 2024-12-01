@@ -2,6 +2,7 @@
 project: mama2
 stars: 2054
 description: 妈妈计划-众人拾柴火焰高
+url: https://github.com/zythum/mama2
 ---
 
 #妈妈再也不用担心我的 MacBook 发热了计划2

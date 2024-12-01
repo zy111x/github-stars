@@ -2,6 +2,7 @@
 project: wtfjs
 stars: 35368
 description: 🤪 A list of funny and tricky JavaScript examples
+url: https://github.com/denysdovhan/wtfjs
 ---
 
 What the f\*ck JavaScript?

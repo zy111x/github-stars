@@ -1,7 +1,8 @@
 ---
 project: parcel
-stars: 43521
+stars: 43522
 description: The zero configuration build tool for the web. 📦🚀
+url: https://github.com/parcel-bundler/parcel
 ---
 
 Parcel is a zero configuration build tool for the web. It combines a great out-of-the-box development experience with a scalable architecture that can take your project from just getting started to massive production application.

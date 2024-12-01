@@ -2,6 +2,7 @@
 project: sidefolio
 stars: 176
 description: 🧑‍💻 Source code for Sidefolio
+url: https://github.com/manuarora700/sidefolio
 ---
 
 Sidefolio - Portfolio website template

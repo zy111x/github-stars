@@ -2,6 +2,7 @@
 project: khoshnus
 stars: 113
 description: A library to bring life to your web writings!
+url: https://github.com/Amer-Jabar/khoshnus
 ---
 
 ✨ Khoshnus - Craft Beautiful Handwritten SVG Text Animations

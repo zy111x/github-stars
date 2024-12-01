@@ -2,6 +2,7 @@
 project: morse-encrypt
 stars: 513
 description: 基于零宽字符和摩斯电码的隐藏文本加密 || Text hiding encryption、Morse code encryption、zero-width character encryption
+url: https://github.com/rover95/morse-encrypt
 ---
 
 隐藏字符加密

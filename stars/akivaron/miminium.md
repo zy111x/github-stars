@@ -2,6 +2,7 @@
 project: miminium
 stars: 498
 description: DISCONTINUED - Miminium Admin Template
+url: https://github.com/akivaron/miminium
 ---
 
 Now you can use this project for your studies or participate in the hacktoberfest contest, you can make a Pull Request here. I will review and merge your code.

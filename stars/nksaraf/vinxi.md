@@ -2,6 +2,7 @@
 project: vinxi
 stars: 2230
 description: The Full Stack JavaScript SDK
+url: https://github.com/nksaraf/vinxi
 ---
 
 _The JavaScript toolkit to build full stack apps and frameworks with your own opinions.  

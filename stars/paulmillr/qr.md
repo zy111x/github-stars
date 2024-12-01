@@ -2,6 +2,7 @@
 project: qr
 stars: 149
 description: Minimal browser & node.js QR Code Pattern reader and generator
+url: https://github.com/paulmillr/qr
 ---
 
 paulmillr-qr

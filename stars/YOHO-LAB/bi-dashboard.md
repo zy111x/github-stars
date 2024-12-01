@@ -2,6 +2,7 @@
 project: bi-dashboard
 stars: 6
 description: 有货数据可视化工具
+url: https://github.com/YOHO-LAB/bi-dashboard
 ---
 
 有货BI报表工具

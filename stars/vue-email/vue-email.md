@@ -2,6 +2,7 @@
 project: vue-email
 stars: 944
 description: 💌 Write email templates with vue
+url: https://github.com/vue-email/vue-email
 ---
 
 💌 vue-email

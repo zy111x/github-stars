@@ -2,6 +2,7 @@
 project: Entware
 stars: 2288
 description: Ultimate repo for embedded devices
+url: https://github.com/Entware/Entware
 ---
 
 Entware-ng-3x and Entware-ng merged to become Entware

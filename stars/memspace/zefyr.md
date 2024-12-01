@@ -2,6 +2,7 @@
 project: zefyr
 stars: 2224
 description: Soft and gentle rich text editing for Flutter applications.
+url: https://github.com/memspace/zefyr
 ---
 
 About Zefyr

@@ -2,6 +2,7 @@
 project: pulltorefresh.js
 stars: 3982
 description: A quick and powerful plugin for your pull-to-refresh needs in your webapp.
+url: https://github.com/BoxFactura/pulltorefresh.js
 ---
 
 **PulltoRefresh.js** • Demos

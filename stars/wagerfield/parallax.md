@@ -2,6 +2,7 @@
 project: parallax
 stars: 16503
 description: Parallax Engine that reacts to the orientation of a smart device
+url: https://github.com/wagerfield/parallax
 ---
 
 Parallax Engine that reacts to the orientation of a smart device. Where no gyroscope or motion detection hardware is available, the position of the cursor is used instead.

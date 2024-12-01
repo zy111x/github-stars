@@ -2,6 +2,7 @@
 project: sinopia
 stars: 5507
 description: Private npm repository server
+url: https://github.com/rlidwka/sinopia
 ---
 
 `sinopia` - a private/caching npm repository server

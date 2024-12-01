@@ -2,6 +2,7 @@
 project: rrweb
 stars: 16867
 description: record and replay the web
+url: https://github.com/rrweb-io/rrweb
 ---
 
 Try rrweb

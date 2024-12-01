@@ -2,6 +2,7 @@
 project: jquery-plugin
 stars: 33
 description: Official TapirGo JQuery plugin
+url: https://github.com/TapirGo/jquery-plugin
 ---
 
 Tapir jQuery plugin

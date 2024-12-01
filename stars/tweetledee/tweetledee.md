@@ -2,6 +2,7 @@
 project: tweetledee
 stars: 207
 description: A PHP library that provides an incredibly easy way to access Twitter data as JSON or RSS feed by URL or standard CLI syntax.  
+url: https://github.com/tweetledee/tweetledee
 ---
 
 Tweetledee

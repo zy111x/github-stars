@@ -1,7 +1,8 @@
 ---
 project: svelte
-stars: 80261
+stars: 80263
 description: web development for the rest of us
+url: https://github.com/sveltejs/svelte
 ---
 
 What is Svelte?

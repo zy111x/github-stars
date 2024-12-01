@@ -2,6 +2,7 @@
 project: awesome-github
 stars: 2134
 description: A curated list of awesome GitHub guides, articles, sites, tools, projects and resources.  收集这个列表，只是为了更好地使用GitHub,欢迎提交pr和issue。
+url: https://github.com/AntBranch/awesome-github
 ---
 
 awesome-github

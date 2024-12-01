@@ -2,6 +2,7 @@
 project: denoflare
 stars: 711
 description: Develop, test, and deploy Cloudflare Workers with Deno.
+url: https://github.com/skymethod/denoflare
 ---
 
 denoflare

@@ -2,6 +2,7 @@
 project: jquery-clientsidecaptcha
 stars: 13
 description: A jQuery plugin implementing client-side CAPTCHA validation.
+url: https://github.com/brantb/jquery-clientsidecaptcha
 ---
 
 _Is your signup form or comment section a spam magnet?_

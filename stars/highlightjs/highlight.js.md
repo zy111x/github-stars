@@ -2,6 +2,7 @@
 project: highlight.js
 stars: 23777
 description: JavaScript syntax highlighter with language auto-detection and zero dependencies.
+url: https://github.com/highlightjs/highlight.js
 ---
 
 Highlight.js

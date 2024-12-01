@@ -2,6 +2,7 @@
 project: registry
 stars: 38
 description: Open-source domain registry platform. Revolutionizing ccTLD and gTLD management with Namingo.
+url: https://github.com/getnamingo/registry
 ---
 
 Namingo Registry

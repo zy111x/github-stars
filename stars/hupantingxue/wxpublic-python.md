@@ -2,6 +2,7 @@
 project: wxpublic-python
 stars: 35
 description: Wechat public platform send/response message with python
+url: https://github.com/hupantingxue/wxpublic-python
 ---
 
 wxpublic-python

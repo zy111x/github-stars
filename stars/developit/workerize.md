@@ -2,6 +2,7 @@
 project: workerize
 stars: 4352
 description: 🏗️ Run a module in a Web Worker.
+url: https://github.com/developit/workerize
 ---
 
 💖 Using Webpack? You want workerize-loader ➡️

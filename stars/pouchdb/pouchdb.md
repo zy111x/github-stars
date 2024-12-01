@@ -2,6 +2,7 @@
 project: pouchdb
 stars: 16929
 description: :kangaroo: - PouchDB is a pocket-sized database.
+url: https://github.com/pouchdb/pouchdb
 ---
 
 PouchDB – The Database that Syncs!

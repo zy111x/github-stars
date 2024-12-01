@@ -2,6 +2,7 @@
 project: Smoji
 stars: 75
 description: Social emoji for mastodon, pleroma, misskey...
+url: https://github.com/DejavuMoe/Smoji
 ---
 
 Smoji 🫣

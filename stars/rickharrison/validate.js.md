@@ -2,6 +2,7 @@
 project: validate.js
 stars: 2565
 description: Lightweight JavaScript form validation library inspired by CodeIgniter.
+url: https://github.com/rickharrison/validate.js
 ---
 
 validate.js

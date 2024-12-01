@@ -2,6 +2,7 @@
 project: hunt
 stars: 342
 description: 👻 Minimal library to observe nodes entering and leaving the viewport
+url: https://github.com/jeremenichelli/hunt
 ---
 
 hunt

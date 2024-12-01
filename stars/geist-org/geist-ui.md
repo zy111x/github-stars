@@ -2,6 +2,7 @@
 project: geist-ui
 stars: 4346
 description: A design system for building modern websites and applications.
+url: https://github.com/geist-org/geist-ui
 ---
 
 > Modern and minimalist React UI library, originating from Vercel's design.

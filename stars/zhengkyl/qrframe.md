@@ -2,6 +2,7 @@
 project: qrframe
 stars: 2502
 description: code-based qr code designer
+url: https://github.com/zhengkyl/qrframe
 ---
 
 qrframe

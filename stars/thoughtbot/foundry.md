@@ -2,6 +2,7 @@
 project: foundry
 stars: 231
 description: Providing a new generation of vector assets and infinite possibility for the interactive web and mobile applications
+url: https://github.com/thoughtbot/foundry
 ---
 
 Foundry ∞

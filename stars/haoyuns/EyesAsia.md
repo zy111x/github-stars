@@ -2,6 +2,7 @@
 project: EyesAsia
 stars: 237
 description: A font if you need tiny shapes for China's provinces or east Asian countries as a design element.
+url: https://github.com/haoyuns/EyesAsia
 ---
 
 EyesAsia

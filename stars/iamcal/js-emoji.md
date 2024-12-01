@@ -2,6 +2,7 @@
 project: js-emoji
 stars: 1423
 description: A JS Emoji conversion library
+url: https://github.com/iamcal/js-emoji
 ---
 
 js-emoji - Display emoji in the browser, everywhere

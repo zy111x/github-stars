@@ -2,6 +2,7 @@
 project: swf-docs-generator
 stars: 399
 description: 类百度文库 swf 生成和在线浏览完整解决方案：支持 office/pdf/txt/html 等多格式文档上传
+url: https://github.com/yoozi/swf-docs-generator
 ---
 
 Swf 文档生成和展示解决方案（类百度文库）

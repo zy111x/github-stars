@@ -2,6 +2,7 @@
 project: python-kuaipan
 stars: 9
 description: A library for Kingsoft Kuaipan implementation (金山快盘 Open API)
+url: https://github.com/deren/python-kuaipan
 ---
 
 ##支援金山快盘 Open API 操作

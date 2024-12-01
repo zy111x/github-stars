@@ -2,6 +2,7 @@
 project: xinu
 stars: 433
 description: Repository for Xinu source code
+url: https://github.com/xinu-os/xinu
 ---
 
 Embedded Xinu

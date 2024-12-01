@@ -2,6 +2,7 @@
 project: lede
 stars: 29950
 description: Lean's LEDE source
+url: https://github.com/coolsnowwolf/lede
 ---
 
 欢迎来到 Lean 的 LEDE 源码仓库

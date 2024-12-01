@@ -2,6 +2,7 @@
 project: wx-mini-qrcode
 stars: 46
 description: 微信小程序二维码组件
+url: https://github.com/flyingsouthwind/wx-mini-qrcode
 ---
 
 微信小程序专用的二维码组件，支持base64输出和canvas绘制两种方式。

@@ -2,6 +2,7 @@
 project: mdb-ui-kit
 stars: 24200
 description: Bootstrap 5 & Material Design UI KIT
+url: https://github.com/mdbootstrap/mdb-ui-kit
 ---
 
 Bootstrap 5 UI KIT - 700+ components, plain JavaScript, MIT license, simple installation.

@@ -2,6 +2,7 @@
 project: qr-code
 stars: 1290
 description: A no-framework, no-dependencies, customizable, animate-able, SVG-based <qr-code> HTML element.
+url: https://github.com/bitjson/qr-code
 ---
 
 `<qr-code>`

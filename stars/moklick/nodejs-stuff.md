@@ -2,6 +2,7 @@
 project: nodejs-stuff
 stars: 479
 description: Node.js libs I want to keep in mind.
+url: https://github.com/moklick/nodejs-stuff
 ---
 
 Node.js Stuff

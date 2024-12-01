@@ -2,6 +2,7 @@
 project: stacks-cli
 stars: 1992
 description: 📊 Analyze website stack from the terminal  💻 
+url: https://github.com/WeiChiaChang/stacks-cli
 ---
 
 stacks-cli

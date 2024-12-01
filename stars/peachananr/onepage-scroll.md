@@ -2,6 +2,7 @@
 project: onepage-scroll
 stars: 9541
 description: Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin
+url: https://github.com/peachananr/onepage-scroll
 ---
 
 #One Page Scroll 1.3.1 by Pete R. Create an Apple-like one page scroll website (iPhone 5S website) with One Page Scroll plugin Created by Pete R., Founder of BucketListly

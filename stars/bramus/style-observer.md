@@ -2,6 +2,7 @@
 project: style-observer
 stars: 370
 description: MutationObserver for CSS. Get notified when the computed value of a CSS property changes.
+url: https://github.com/bramus/style-observer
 ---
 
 `@bramus/style-observer` – MutationObserver for CSS

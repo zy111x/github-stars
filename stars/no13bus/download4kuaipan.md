@@ -2,6 +2,7 @@
 project: download4kuaipan
 stars: 32
 description: vps下载国外视频 并将其即时上传至金山快盘
+url: https://github.com/no13bus/download4kuaipan
 ---
 
 download4kuaipan

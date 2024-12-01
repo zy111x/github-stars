@@ -2,6 +2,7 @@
 project: remark
 stars: 7737
 description: markdown processor powered by plugins part of the @unifiedjs collective
+url: https://github.com/remarkjs/remark
 ---
 
 **remark** is a tool that transforms markdown with plugins. These plugins can inspect and change your markup. You can use remark on the server, the client, CLIs, deno, etc.

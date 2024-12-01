@@ -2,6 +2,7 @@
 project: PaymentFont
 stars: 1593
 description: A sleek webfont featuring your favourite payment methods
+url: https://github.com/AlexanderPoellmann/PaymentFont
 ---
 
 PaymentFont 1.2.5

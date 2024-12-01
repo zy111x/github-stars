@@ -2,6 +2,7 @@
 project: takahe
 stars: 1129
 description: An ActivityPub/Fediverse server
+url: https://github.com/jointakahe/takahe
 ---
 
 A _beta_ Fediverse server for microblogging. Not fully polished yet - we're still working towards a 1.0!

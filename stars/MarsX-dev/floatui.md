@@ -2,6 +2,7 @@
 project: floatui
 stars: 3389
 description: Beautiful and responsive UI components and templates for React and Vue (soon) with Tailwind CSS.
+url: https://github.com/MarsX-dev/floatui
 ---
 
 Float UI is a collection of modern UI components and website templates built on top of React, and soon, Vue. With Tailwind CSS, the components are beautifully designed and expertly crafted, allowing you to build beautiful websites.

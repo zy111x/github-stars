@@ -2,6 +2,7 @@
 project: stateface
 stars: 360
 description: A typeface of U.S. state shapes to use in web apps.
+url: https://github.com/propublica/stateface
 ---
 
 StateFace

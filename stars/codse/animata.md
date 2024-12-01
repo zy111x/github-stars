@@ -1,7 +1,8 @@
 ---
 project: animata
-stars: 1458
+stars: 1459
 description: Bring your site to life with easy to use animation & interaction code. Copy. Paste. Animate. 
+url: https://github.com/codse/animata
 ---
 
 Handcrafted ✍️ interaction animations and visual effects sourced from across the internet 🛜, ready for you to copy and paste into your project seamlessly.

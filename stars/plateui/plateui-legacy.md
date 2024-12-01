@@ -2,6 +2,7 @@
 project: plateui-legacy
 stars: 23
 description: Admin site powered by JSON APIs.
+url: https://github.com/plateui/plateui-legacy
 ---
 
 Plate UI

@@ -1,7 +1,8 @@
 ---
 project: awesome-flutter
-stars: 53882
+stars: 53883
 description: An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more.
+url: https://github.com/Solido/awesome-flutter
 ---
 
 Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. If you appreciate the content 📖, support projects visibility, give 👍| ⭐| 👏

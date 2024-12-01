@@ -2,6 +2,7 @@
 project: css-doodle
 stars: 5658
 description: 🎨  A web component for drawing patterns with CSS.
+url: https://github.com/css-doodle/css-doodle
 ---
 
 <css-doodle />

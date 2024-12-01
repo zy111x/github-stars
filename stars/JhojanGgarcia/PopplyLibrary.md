@@ -2,6 +2,7 @@
 project: PopplyLibrary
 stars: 48
 description: Components about animations and Effects for your website. ✨
+url: https://github.com/JhojanGgarcia/PopplyLibrary
 ---
 
 Popply Library

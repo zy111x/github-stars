@@ -2,6 +2,7 @@
 project: unirest-nodejs
 stars: 953
 description: Unirest in Node.js: Simplified, lightweight HTTP client library.
+url: https://github.com/Kong/unirest-nodejs
 ---
 
 Unirest for Node.js

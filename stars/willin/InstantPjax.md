@@ -2,6 +2,7 @@
 project: InstantPjax
 stars: 11
 description: A jQuery Plugin for PJAX with instantclick.
+url: https://github.com/willin/InstantPjax
 ---
 
 InstantPjax

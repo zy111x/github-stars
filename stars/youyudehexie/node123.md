@@ -2,6 +2,7 @@
 project: node123
 stars: 3554
 description: node.js中文资料导航
+url: https://github.com/youyudehexie/node123
 ---
 
 #node.js中文资料导航

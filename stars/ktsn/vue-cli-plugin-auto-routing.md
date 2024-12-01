@@ -2,6 +2,7 @@
 project: vue-cli-plugin-auto-routing
 stars: 296
 description: Automatically resolve pages and layouts routing
+url: https://github.com/ktsn/vue-cli-plugin-auto-routing
 ---
 
 vue-cli-plugin-auto-routing

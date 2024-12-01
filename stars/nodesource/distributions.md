@@ -2,6 +2,7 @@
 project: distributions
 stars: 13527
 description: NodeSource Node.js Binary Distributions
+url: https://github.com/nodesource/distributions
 ---
 
 NodeSource N|Solid & Node.js Binary Distributions

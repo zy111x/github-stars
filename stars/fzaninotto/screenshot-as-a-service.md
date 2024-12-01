@@ -2,6 +2,7 @@
 project: screenshot-as-a-service
 stars: 1101
 description: Website screenshot service powered by node.js and phantomjs
+url: https://github.com/fzaninotto/screenshot-as-a-service
 ---
 
 Screenshot as a Service

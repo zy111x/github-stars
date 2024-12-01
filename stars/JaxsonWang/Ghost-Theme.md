@@ -2,6 +2,7 @@
 project: Ghost-Theme
 stars: 24
 description: null
+url: https://github.com/JaxsonWang/Ghost-Theme
 ---
 
 Ghost theme

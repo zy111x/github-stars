@@ -2,6 +2,7 @@
 project: urllib-sync
 stars: 44
 description: sync http request
+url: https://github.com/node-modules/urllib-sync
 ---
 
 urllib-sync

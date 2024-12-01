@@ -2,6 +2,7 @@
 project: boris
 stars: 2153
 description: A tiny REPL for PHP
+url: https://github.com/borisrepl/boris
 ---
 
 Boris

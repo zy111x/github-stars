@@ -2,6 +2,7 @@
 project: iconpark
 stars: 361
 description: Collection of iconfonts
+url: https://github.com/lvwzhen/iconpark
 ---
 
 iconpark

@@ -2,6 +2,7 @@
 project: node-daily
 stars: 317
 description: daily article for node
+url: https://github.com/dailyNode/node-daily
 ---
 
 收集一些Node方面的可读性文章

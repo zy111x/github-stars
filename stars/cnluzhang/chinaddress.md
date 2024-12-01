@@ -2,6 +2,7 @@
 project: chinaddress
 stars: 244
 description: china_address_json
+url: https://github.com/cnluzhang/chinaddress
 ---
 
 中国三级地址库

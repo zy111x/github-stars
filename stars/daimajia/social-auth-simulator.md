@@ -2,6 +2,7 @@
 project: social-auth-simulator
 stars: 109
 description: 模拟登陆->授权->获取access_token，目前支持人人、新浪微博、腾讯微博
+url: https://github.com/daimajia/social-auth-simulator
 ---
 
 Social-Auth-Simulator

@@ -2,6 +2,7 @@
 project: chsrc
 stars: 4113
 description: chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
+url: https://github.com/RubyMetric/chsrc
 ---
 
 全平台通用换源工具与框架 `chsrc`，**目标支持 Linux, Windows (MSYS2, Cygwin), macOS, BSD 等尽可能多的操作系统环境，龙芯、飞腾、RISC-V 等尽可能多的 CPU**。

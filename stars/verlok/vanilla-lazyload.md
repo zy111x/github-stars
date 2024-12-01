@@ -2,6 +2,7 @@
 project: vanilla-lazyload
 stars: 7720
 description: LazyLoad is a lightweight, flexible script that speeds up your website by deferring the loading of your below-the-fold images, backgrounds, videos, iframes and scripts to when they will enter the viewport. Written in plain "vanilla" JavaScript, it leverages IntersectionObserver, supports responsive images and enables native lazy loading.
+url: https://github.com/verlok/vanilla-lazyload
 ---
 
 LazyLoad is a lightweight (2.4 kB) and flexible script that **speeds up your web application** by deferring the loading of your below-the-fold images, animated SVGs, videos and iframes to **when they will enter the viewport**. It's written in plain "vanilla" JavaScript, it leverages the IntersectionObserver API, it supports responsive images, it optimizes your website for slower connections, and can enable native lazy loading. See all features for more.

@@ -2,6 +2,7 @@
 project: vue-iframes
 stars: 48
 description: A Vue js component for creating super fast loading, non-blocking iframes.
+url: https://github.com/chantouchsek/vue-iframes
 ---
 
 vue-iframes

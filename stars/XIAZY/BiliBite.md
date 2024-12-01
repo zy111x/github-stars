@@ -2,6 +2,7 @@
 project: BiliBite
 stars: 77
 description: The most elegant Bilibili client in the west hemisphere
+url: https://github.com/XIAZY/BiliBite
 ---
 
 BiliBite

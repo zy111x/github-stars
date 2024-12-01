@@ -2,6 +2,7 @@
 project: OpenCC
 stars: 8543
 description: Conversion between Traditional and Simplified Chinese
+url: https://github.com/BYVoid/OpenCC
 ---
 
 Open Chinese Convert 開放中文轉換

@@ -2,6 +2,7 @@
 project: ev0-astro-theme
 stars: 167
 description: EV0 Astro Theme is a free and open-source serverless blog template, built with Astro, Tailwind CSS, and TypeScript.
+url: https://github.com/gndx/ev0-astro-theme
 ---
 
 🚀 EV0 Astro Theme - Blog Template

@@ -2,6 +2,7 @@
 project: free-programming-books-zh_CN
 stars: 111881
 description: :books: 免费的计算机编程类中文书籍，欢迎投稿
+url: https://github.com/justjavac/free-programming-books-zh_CN
 ---
 
 免费的编程中文书籍索引

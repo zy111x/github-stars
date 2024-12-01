@@ -2,6 +2,7 @@
 project: cloudflare-exporter
 stars: 318
 description: Prometheus CloudFlare Exporter
+url: https://github.com/lablabs/cloudflare-exporter
 ---
 
 CloudFlare Prometheus exporter

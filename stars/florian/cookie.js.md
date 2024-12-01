@@ -2,6 +2,7 @@
 project: cookie.js
 stars: 1129
 description: A tiny JavaScript library that simplifies cookies.
+url: https://github.com/florian/cookie.js
 ---
 
 cookie.js – simplifying cookies in JavaScript

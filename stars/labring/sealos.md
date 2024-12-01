@@ -2,6 +2,7 @@
 project: sealos
 stars: 14255
 description: Sealos is a production-ready Kubernetes distribution. You can create any programming language and any framework development Env, create high availability databases like mysql/pgsql/redis/mongo, and run any docker image.
+url: https://github.com/labring/sealos
 ---
 
 A Cloud Operating System designed for managing cloud-native applications

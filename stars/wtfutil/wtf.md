@@ -2,6 +2,7 @@
 project: wtf
 stars: 15895
 description: The personal information dashboard for your terminal
+url: https://github.com/wtfutil/wtf
 ---
 
 WTF (aka 'wtfutil') is the personal information dashboard for your terminal, providing at-a-glance access to your very important but infrequently-needed stats and data.

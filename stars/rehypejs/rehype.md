@@ -2,6 +2,7 @@
 project: rehype
 stars: 1835
 description: HTML processor powered by plugins part of the @unifiedjs collective
+url: https://github.com/rehypejs/rehype
 ---
 
 **rehype** is a tool that transforms HTML with plugins. These plugins can inspect and change the HTML. You can use rehype on the server, the client, CLIs, deno, etc.

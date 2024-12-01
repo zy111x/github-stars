@@ -2,6 +2,7 @@
 project: gemoji
 stars: 4418
 description: Emoji images and names.
+url: https://github.com/github/gemoji
 ---
 
 gemoji

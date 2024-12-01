@@ -2,6 +2,7 @@
 project: waypoints
 stars: 10381
 description: Waypoints is a library that makes it easy to execute a function whenever you scroll to an element.
+url: https://github.com/imakewebthings/waypoints
 ---
 
 Waypoints

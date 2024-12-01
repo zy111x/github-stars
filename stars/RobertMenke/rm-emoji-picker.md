@@ -2,6 +2,7 @@
 project: rm-emoji-picker
 stars: 78
 description: A modern, ES2015 emoji picker and editor.
+url: https://github.com/RobertMenke/rm-emoji-picker
 ---
 
 Why This Emoji Picker?

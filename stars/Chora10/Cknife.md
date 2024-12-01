@@ -2,6 +2,7 @@
 project: Cknife
 stars: 2430
 description: Cknife
+url: https://github.com/Chora10/Cknife
 ---
 
 软件名称：Cknife

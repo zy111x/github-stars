@@ -2,6 +2,7 @@
 project: is-identifier
 stars: 24
 description: Check if a string is a valid JavaScript identifier
+url: https://github.com/sindresorhus/is-identifier
 ---
 
 is-identifier

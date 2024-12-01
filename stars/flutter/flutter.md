@@ -1,7 +1,8 @@
 ---
 project: flutter
-stars: 166770
+stars: 166771
 description: Flutter makes it easy and fast to build beautiful apps for mobile and beyond
+url: https://github.com/flutter/flutter
 ---
 
 Flutter is Google's SDK for crafting beautiful, fast user experiences for mobile, web, and desktop from a single codebase. Flutter works with existing code, is used by developers and organizations around the world, and is free and open source.

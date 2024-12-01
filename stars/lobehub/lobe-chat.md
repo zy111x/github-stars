@@ -1,7 +1,8 @@
 ---
 project: lobe-chat
-stars: 45484
+stars: 45491
 description: 🤯 Lobe Chat - an open-source, modern-design AI chat framework. Supports Multi AI Providers( OpenAI / Claude 3 / Gemini / Ollama / Azure /  DeepSeek), Knowledge Base (file upload / knowledge management / RAG ), Multi-Modals (Vision/TTS/Plugins/Artifacts). One-click FREE deployment of your private ChatGPT/ Claude application.
+url: https://github.com/lobehub/lobe-chat
 ---
 
 Lobe Chat

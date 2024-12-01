@@ -1,7 +1,8 @@
 ---
 project: number-flow
-stars: 4677
+stars: 4678
 description: A component to transition, format, and localize numbers.
+url: https://github.com/barvian/number-flow
 ---
 
 number-flow.mp4

@@ -2,6 +2,7 @@
 project: emoji-mart-vue
 stars: 603
 description: One component to pick them all 👊🏼
+url: https://github.com/jm-david/emoji-mart-vue
 ---
 
 > This project has been forked from emoji-mart which was written for React

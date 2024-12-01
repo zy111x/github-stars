@@ -2,6 +2,7 @@
 project: FSVS
 stars: 724
 description: Full Screen Vertical Scroll
+url: https://github.com/lukesnowden/FSVS
 ---
 
 #Showcase Send a pull request to add your projects to the showcase list

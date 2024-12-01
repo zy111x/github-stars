@@ -2,6 +2,7 @@
 project: cut-it
 stars: 152
 description: Link shortener built using Next.js App Router, Server Actions, Drizzle ORM, Turso and styled with shadcn ui
+url: https://github.com/mehrabmp/cut-it
 ---
 
 Cut It

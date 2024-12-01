@@ -2,6 +2,7 @@
 project: Musish
 stars: 3071
 description: Apple Music...ish 
+url: https://github.com/Musish/Musish
 ---
 
 Musish (musi.sh)

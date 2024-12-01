@@ -2,6 +2,7 @@
 project: plyr
 stars: 26660
 description: A simple HTML5, YouTube and Vimeo player
+url: https://github.com/sampotts/plyr
 ---
 
 🎉

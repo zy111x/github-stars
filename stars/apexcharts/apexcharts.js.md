@@ -2,6 +2,7 @@
 project: apexcharts.js
 stars: 14462
 description: 📊 Interactive JavaScript Charts built on SVG
+url: https://github.com/apexcharts/apexcharts.js
 ---
 
 A modern JavaScript charting library that allows you to build interactive data visualizations with simple API and 100+ ready-to-use samples. Packed with the features that you expect, ApexCharts includes over a dozen chart types that deliver beautiful, responsive visualizations in your apps and dashboards. ApexCharts is an MIT-licensed open-source project that can be used in commercial and non-commercial projects.

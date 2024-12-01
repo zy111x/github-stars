@@ -2,6 +2,7 @@
 project: discourse
 stars: 42464
 description: A platform for community discussion. Free, open, simple.
+url: https://github.com/discourse/discourse
 ---
 
 Discourse is the online home for your community. We offer a 100% open source community platform to those who want complete control over how and where their site is run.

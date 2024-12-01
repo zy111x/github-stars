@@ -2,6 +2,7 @@
 project: tremor
 stars: 16226
 description: React components to build charts and dashboards
+url: https://github.com/tremorlabs/tremor
 ---
 
   

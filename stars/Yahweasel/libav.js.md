@@ -2,6 +2,7 @@
 project: libav.js
 stars: 361
 description: This is a compilation of the libraries associated with handling audio and video in ffmpeg—libavformat, libavcodec, libavfilter, libavutil, libswresample, and libswscale—for emscripten, and thus the web.
+url: https://github.com/Yahweasel/libav.js
 ---
 
 libav.js

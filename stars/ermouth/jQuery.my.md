@@ -2,6 +2,7 @@
 project: jQuery.my
 stars: 1509
 description: jQuery.my is a plugin that reactively binds form controls with js data structures.
+url: https://github.com/ermouth/jQuery.my
 ---
 
 jQuery.my

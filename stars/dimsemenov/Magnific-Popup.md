@@ -2,6 +2,7 @@
 project: Magnific-Popup
 stars: 11390
 description: Light and responsive lightbox script with focus on performance.
+url: https://github.com/dimsemenov/Magnific-Popup
 ---
 
 **Important note** This jQuery plugin is deprecated, only critical or security bug fixes will be released in future. Use native `<dialog>` element if you need a basic dialog/modal/popup, or my PhotoSwipe library if you need an advanced image gallery. Feel free to email me if you need assistance.

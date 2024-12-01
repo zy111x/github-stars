@@ -2,6 +2,7 @@
 project: rapid-core
 stars: 61
 description: core of rapid cloud framework
+url: https://github.com/Clouda-team/rapid-core
 ---
 
 Rapid-core

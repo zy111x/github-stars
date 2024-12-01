@@ -2,6 +2,7 @@
 project: carlo
 stars: 9312
 description: Web rendering surface for Node applications
+url: https://github.com/GoogleChromeLabs/carlo
 ---
 
 Carlo - headful Node app framework

@@ -2,6 +2,7 @@
 project: poster-design
 stars: 3779
 description: 一款漂亮且功能强大的在线海报设计器，图片编辑器，仿稿定设计，适用于多种场景：海报生成、电商产品图、文章长图、视频/公众号封面等。A beautiful online image designer, suitable for various scenarios like generate posters, making design easier!
+url: https://github.com/palxiao/poster-design
 ---
 
 迅排官方网站 | 在线文档 | 常见问题 | 性能压测

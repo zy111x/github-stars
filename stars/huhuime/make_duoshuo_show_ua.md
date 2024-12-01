@@ -2,6 +2,7 @@
 project: make_duoshuo_show_ua
 stars: 7
 description: 使多说显示ua
+url: https://github.com/huhuime/make_duoshuo_show_ua
 ---
 
 #Make DUOSHUO Show UA

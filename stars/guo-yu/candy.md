@@ -2,6 +2,7 @@
 project: candy
 stars: 568
 description: a tiny and cute social forum based on duoshuo.com
+url: https://github.com/guo-yu/candy
 ---
 
 Candy 是基于多说社交评论的社会化论坛系统，采用 Node.js/Mongodb 构建。营造简洁、实用、具有人情味的下一代论坛系统，是 Candy 的设计目标。

@@ -2,6 +2,7 @@
 project: weapp-demo-websocket
 stars: 359
 description: The websocket demo of wechat micro program
+url: https://github.com/CFETeam/weapp-demo-websocket
 ---
 
 微信小程序示例 - 剪刀石头布

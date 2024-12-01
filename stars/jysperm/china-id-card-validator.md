@@ -2,6 +2,7 @@
 project: china-id-card-validator
 stars: 14
 description: Validator for China's ID Card.
+url: https://github.com/jysperm/china-id-card-validator
 ---
 
 china-id-card-validator

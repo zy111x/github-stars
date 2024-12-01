@@ -2,6 +2,7 @@
 project: Xiaomi-Dafang-Hacks
 stars: 4198
 description: null
+url: https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks
 ---
 
 Xiaomi DaFang Hacks / XiaoFang 1S / Wyzecam V2 / Wyzecam Pan / Other T20 Devices

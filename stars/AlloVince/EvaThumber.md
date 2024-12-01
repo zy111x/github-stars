@@ -2,6 +2,7 @@
 project: EvaThumber
 stars: 553
 description: A light-weight url based image transformation php library
+url: https://github.com/AlloVince/EvaThumber
 ---
 
 EvaThumber : 基于URL的图片处理库 (可实现缩略图 | 二维码 | 水印 | 面部识别等,基于PHP

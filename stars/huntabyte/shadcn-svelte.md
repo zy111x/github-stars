@@ -1,7 +1,8 @@
 ---
 project: shadcn-svelte
-stars: 5541
+stars: 5542
 description: shadcn/ui, but for Svelte. ✨
+url: https://github.com/huntabyte/shadcn-svelte
 ---
 
 shadcn-svelte

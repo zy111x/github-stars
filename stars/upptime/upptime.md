@@ -2,6 +2,7 @@
 project: upptime
 stars: 15639
 description: ⬆️ GitHub Actions uptime monitor & status page by @AnandChowdhary
+url: https://github.com/upptime/upptime
 ---
 
 **Upptime** (https://upptime.js.org) is the open-source uptime monitor and status page, powered entirely by GitHub Actions, Issues, and Pages. It's made with 💚 by Anand Chowdhary, supported by Pabio.

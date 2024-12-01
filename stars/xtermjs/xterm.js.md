@@ -2,6 +2,7 @@
 project: xterm.js
 stars: 17789
 description: A terminal for the web
+url: https://github.com/xtermjs/xterm.js
 ---
 
 Xterm.js is a front-end component written in TypeScript that lets applications bring fully-featured terminals to their users in the browser. It's used by popular projects such as VS Code, Hyper and Theia.

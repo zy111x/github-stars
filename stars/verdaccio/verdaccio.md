@@ -2,6 +2,7 @@
 project: verdaccio
 stars: 16502
 description: A lightweight Node.js private proxy registry
+url: https://github.com/verdaccio/verdaccio
 ---
 
 > Verdaccio stands for **peace**, stop the war, we will be yellow / blue 🇺🇦 until that happens.

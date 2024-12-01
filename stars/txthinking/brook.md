@@ -2,6 +2,7 @@
 project: brook
 stars: 14637
 description: A cross-platform programmable network tool
+url: https://github.com/txthinking/brook
 ---
 
 Brook

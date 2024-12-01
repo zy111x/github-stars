@@ -2,6 +2,7 @@
 project: Haraka
 stars: 5108
 description: A fast, highly extensible, and event driven SMTP server
+url: https://github.com/haraka/Haraka
 ---
 
 Haraka - a Node.js Mail Server

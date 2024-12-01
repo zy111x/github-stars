@@ -2,6 +2,7 @@
 project: upndown
 stars: 276
 description: HTML to Markdown javascript converter
+url: https://github.com/netgusto/upndown
 ---
 
 upndown

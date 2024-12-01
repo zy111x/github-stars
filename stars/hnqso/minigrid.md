@@ -2,6 +2,7 @@
 project: minigrid
 stars: 1780
 description: 📏 Minimal 2kb zero dependency cascading grid layout
+url: https://github.com/hnqso/minigrid
 ---
 
 Minigrid

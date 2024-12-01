@@ -2,6 +2,7 @@
 project: PubSubJS
 stars: 4789
 description: Dependency free publish/subscribe for JavaScript
+url: https://github.com/mroderick/PubSubJS
 ---
 
 PubSubJS is a topic-based publish/subscribe library written in JavaScript.

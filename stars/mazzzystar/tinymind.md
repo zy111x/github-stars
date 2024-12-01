@@ -2,6 +2,7 @@
 project: tinymind
 stars: 663
 description: Tinymind - Write and sync your blog & thoughts with GitHub
+url: https://github.com/mazzzystar/tinymind
 ---
 
 Turn your GitHub into a blog & memo data storage place with one-click Sign in. No server needed - every input automatically syncs to your GitHub repository. https://tinymind.me

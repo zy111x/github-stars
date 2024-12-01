@@ -2,6 +2,7 @@
 project: cursor.directory
 stars: 1775
 description: Find the best cursor rules for your framework and language
+url: https://github.com/pontusab/cursor.directory
 ---
 
 Recognition

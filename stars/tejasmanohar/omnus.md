@@ -2,6 +2,7 @@
 project: omnus
 stars: 182
 description: Offline mobile music streaming server
+url: https://github.com/tejasmanohar/omnus
 ---
 
 Omnus

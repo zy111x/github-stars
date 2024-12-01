@@ -2,6 +2,7 @@
 project: autocomplete-search-example
 stars: 4
 description: Example showing how to use Swiftype's jQuery autocomplete and search plugins together
+url: https://github.com/swiftype/autocomplete-search-example
 ---
 
 Swiftype Autocomplete and Search Example
