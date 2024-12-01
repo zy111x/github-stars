@@ -1,0 +1,21 @@
+{
+  "name": "github-stars",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --env-file .env index.js",
+    "build": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "ofetch": "^1.3.4",
+    "sanitize-html": "^2.13.0",
+    "turndown": "^7.2.0"
+  },
+  "packageManager": "pnpm@9.9.0"
+}
