@@ -68,6 +68,7 @@ function saveReadMe(repo, readme) {
 project: ${repo.name}
 stars: ${repo.stargazers_count}
 description: ${repo.description}
+url: ${repo.html_url}
 ---
 
 ${readme}
