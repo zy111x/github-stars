@@ -1,6 +1,6 @@
 ---
 project: react-markplus
-stars: 2121
+stars: 2123
 description: A React markdown editor and previewer.
 url: https://github.com/markpluslabs/react-markplus
 ---
@@ -29,14 +29,14 @@ Usage
 
 import MarkPlus from 'react-markplus';
 
-<MarkPlus markdown\="# Hello world!" /\>;
+<MarkPlus markdown\="# Hello world!" />;
 
 markdown
 --------
 
 Initial markdown text to load into the editor.
 
-<MarkPlus markdown\="# Hello world!" /\>
+<MarkPlus markdown\="# Hello world!" />
 
 Default value is `''`.
 
@@ -49,7 +49,7 @@ A callback function to be invoked automatically when markdown text changes.
   onChange\={(markdown) \=> {
     console.log('markdown text changed to:', markdown);
   }}
-/\>
+/>
 
 Default value is `() => {}`.
 
@@ -62,7 +62,7 @@ A callback function to be invoked automatidally when preview html changes.
   onPreviewChange\={(html) \=> {
     console.log('preview html changed to:', html);
   }}
-/\>
+/>
 
 Default value is `() => {}`.
 
@@ -71,7 +71,7 @@ toolbar
 
 Show, hide or remove toolbar.
 
-<MarkPlus toolbar\="show" /\>
+<MarkPlus toolbar\="show" />
 
 3 possible values:
 
@@ -86,7 +86,7 @@ mode
 
 Display editor, preview or both.
 
-<MarkPlus mode\="both" /\>
+<MarkPlus mode\="both" />
 
 3 possible values:
 
@@ -104,7 +104,7 @@ theme
 
 Overall theme: light, dark or auto:
 
-<MarkPlus theme\="auto" /\>
+<MarkPlus theme\="auto" />
 
 3 possible values:
 
@@ -119,7 +119,7 @@ toolbarItems
 
 You may configure the toolbar freely.
 
-<MarkPlus toolbarItems\={\['about', '|', 'bold', 'italic'\]} /\>
+<MarkPlus toolbarItems\={\['about', '|', 'bold', 'italic'\]} />
 
 A toolbar item could be either a string or a `ReactElement`. For toolbar items included with library, you may just specify a string. For your own custom toolbar items, please specify a `ReactElement`.
 
@@ -224,4 +224,4 @@ Here is a sample to create and insert a custom toolbar item:
       }}
     \></i\>,
   \]}
-/\>
+/>

@@ -1,6 +1,6 @@
 ---
 project: FastGPT
-stars: 18675
+stars: 18859
 description: FastGPT is a knowledge-based platform built on the LLMs, offers a comprehensive suite of out-of-the-box capabilities such as data processing, RAG retrieval, and visual AI workflow orchestration, letting you easily develop and deploy complex question-answering systems without the need for extensive setup or configuration.
 url: https://github.com/labring/FastGPT
 ---
@@ -97,7 +97,7 @@ fastgpt.mp4
 🏘️ 加入我们
 --------
 
-我们正在寻找志同道合的小伙伴，加速 FastGPT 的发展。你可以通过 FastGPT 2025 招聘 了解 FastGPT 的招聘信息。
+我们正在寻找志同道合的小伙伴，加速 FastGPT 的发展。你可以通过 FastGPT 2025 招聘了解 FastGPT 的招聘信息。
 
 💪 相关项目
 -------

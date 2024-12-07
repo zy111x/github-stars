@@ -1,6 +1,6 @@
 ---
 project: fedify
-stars: 603
+stars: 607
 description: ActivityPub server framework in TypeScript
 url: https://github.com/dahlia/fedify
 ---

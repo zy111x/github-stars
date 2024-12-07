@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 27264
+stars: 27321
 description: 🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
 ---
@@ -52,7 +52,7 @@ const Counter \= () \=> {
 	return <Text color\="green"\>{counter} tests passed</Text\>;
 };
 
-render(<Counter /\>);
+render(<Counter />);
 
 You can also check it out live on repl.it sandbox. Feel free to play around with the code and fork this repl at https://repl.it/@vadimdemedes/ink-counter-demo.
 
@@ -158,7 +158,7 @@ import {render, Text} from 'ink';
 
 const Demo \= () \=> <Text\>Hello World</Text\>;
 
-render(<Demo /\>);
+render(<Demo />);
 
 Then, transpile this file with Babel:
 
@@ -196,7 +196,7 @@ const Example \= () \=> (
 	</\>
 );
 
-render(<Example /\>);
+render(<Example />);
 
 **Note:** `<Text>` allows only text nodes and nested `<Text>` components inside of it. For example, `<Box>` component can't be used inside `<Text>`.
 
@@ -291,7 +291,7 @@ This property tells Ink to wrap or truncate text if its width is larger than con
 
 <Box width\={7}\>
 	<Text wrap\="truncate-middle"\>Hello World</Text\>
-</Box>
+</Box\>
 //=> 'He…ld'
 
 <Box width\={7}\>
@@ -311,7 +311,7 @@ const Example \= () \=> (
 	</Box\>
 );
 
-render(<Example /\>);
+render(<Example />);
 
 #### Dimensions
 
@@ -603,20 +603,20 @@ See flex-direction.
 	<Box marginRight\={1}\>
 		<Text\>Y</Text\>
 	</Box>
-</Box>
+</Box\>
 // Y X
 
 <Box flexDirection\="column"\>
 	<Text\>X</Text\>
-	<Text\>Y</Text>
-</Box>
+	<Text\>Y</Text\>
+</Box\>
 // X
 // Y
 
 <Box flexDirection\="column-reverse"\>
 	<Text\>X</Text\>
 	<Text\>Y</Text>
-</Box>
+</Box\>
 // Y
 // X
 
@@ -655,9 +655,9 @@ See align-items.
 	</Box\>
 	<Text\>
 		A
-		<Newline/\>
+		<Newline/>
 		B
-		<Newline/\>
+		<Newline/>
 		C
 	</Text\>
 </Box\>
@@ -676,7 +676,7 @@ See align-items.
 		<Newline/\>
 		C
 	</Text>
-</Box>
+</Box\>
 //   A
 // X B
 //   C
@@ -687,12 +687,12 @@ See align-items.
 	</Box\>
 	<Text\>
 		A
-		<Newline/\>
+		<Newline/>
 		B
-		<Newline/\>
+		<Newline/>
 		C
-	</Text>
-</Box>
+	</Text\>
+</Box\>
 //   A
 //   B
 // X C
@@ -727,7 +727,7 @@ See align-self.
 	<Box alignSelf\="flex-end"\>
 		<Text\>X</Text\>
 	</Box\>
-</Box>
+</Box\>
 //
 //
 // X
@@ -751,25 +751,25 @@ See justify-content.
 
 <Box justifyContent\="flex-end"\>
 	<Text\>X</Text\>
-</Box>
+</Box\>
 // \[      X\]
 
 <Box justifyContent\="space-between"\>
 	<Text\>X</Text\>
 	<Text\>Y</Text>
-</Box>
+</Box\>
 // \[X      Y\]
 
 <Box justifyContent\="space-around"\>
 	<Text\>X</Text\>
-	<Text\>Y</Text>
-</Box>
+	<Text\>Y</Text\>
+</Box\>
 // \[  X   Y  \]
 
 <Box justifyContent\="space-evenly"\>
 	<Text\>X</Text\>
 	<Text\>Y</Text>
-</Box>
+</Box\>
 // \[   X   Y   \]
 
 #### Visibility
@@ -1027,12 +1027,12 @@ import {render, Text, Newline} from 'ink';
 const Example \= () \=> (
 	<Text\>
 		<Text color\="green"\>Hello</Text\>
-		<Newline /\>
+		<Newline />
 		<Text color\="red"\>World</Text\>
 	</Text\>
 );
 
-render(<Example /\>);
+render(<Example />);
 
 Output:
 
@@ -1052,12 +1052,12 @@ import {render, Box, Text, Spacer} from 'ink';
 const Example \= () \=> (
 	<Box\>
 		<Text\>Left</Text\>
-		<Spacer /\>
+		<Spacer />
 		<Text\>Right</Text\>
 	</Box\>
 );
 
-render(<Example /\>);
+render(<Example />);
 
 In a vertical flex direction (`column`), it will position "Top" to the top of the container and push "Bottom" to the bottom of it. Note, that container needs to be tall to enough to see this in effect.
 
@@ -1066,12 +1066,12 @@ import {render, Box, Text, Spacer} from 'ink';
 const Example \= () \=> (
 	<Box flexDirection\="column" height\={10}\>
 		<Text\>Top</Text\>
-		<Spacer /\>
+		<Spacer />
 		<Text\>Bottom</Text\>
 	</Box\>
 );
 
-render(<Example /\>);
+render(<Example />);
 
 ### `<Static>`
 
@@ -1132,7 +1132,7 @@ const Example \= () \=> {
 	);
 };
 
-render(<Example /\>);
+render(<Example />);
 
 **Note:** `<Static>` only renders new items in `items` prop and ignores items that were previously rendered. This means that when you add new items to `items` array, changes you make to previous items will not trigger a rerender.
 
@@ -1189,7 +1189,7 @@ const Example \= () \=> (
 	</Transform\>
 );
 
-render(<Example /\>);
+render(<Example />);
 
 Since `transform` function converts all characters to upper case, final output that's rendered to the terminal will be "HELLO WORLD", not "Hello World".
 
@@ -1435,9 +1435,9 @@ const Example \= () \=> {
 	const {isRawModeSupported} \= useStdin();
 
 	return isRawModeSupported ? (
-		<MyInputComponent /\>
+		<MyInputComponent />
 	) : (
-		<MyComponentThatDoesntUseInput /\>
+		<MyComponentThatDoesntUseInput />
 	);
 };
 
@@ -1590,7 +1590,7 @@ const Example \= () \=> {
 	return <Text\>{isFocused ? 'I am focused' : 'I am not focused'}</Text\>;
 };
 
-render(<Example /\>);
+render(<Example />);
 
 See example in examples/use-focus and examples/use-focus-with-id.
 
@@ -1758,25 +1758,25 @@ Replace previous root node with a new one or update props of the current root no
 Type: `ReactElement`
 
 // Update props of the root node
-const {rerender} \= render(<Counter count\={1} /\>);
-rerender(<Counter count\={2} /\>);
+const {rerender} \= render(<Counter count\={1} />);
+rerender(<Counter count\={2} />);
 
 // Replace root node
-const {rerender} \= render(<OldCounter /\>);
-rerender(<NewCounter /\>);
+const {rerender} \= render(<OldCounter />);
+rerender(<NewCounter />);
 
 ##### unmount()
 
 Manually unmount the whole Ink app.
 
-const {unmount} \= render(<MyApp /\>);
+const {unmount} \= render(<MyApp />);
 unmount();
 
 ##### waitUntilExit()
 
 Returns a promise, which resolves when app is unmounted.
 
-const {unmount, waitUntilExit} \= render(<MyApp /\>);
+const {unmount, waitUntilExit} \= render(<MyApp />);
 
 setTimeout(unmount, 1000);
 
@@ -1786,7 +1786,7 @@ await waitUntilExit(); // resolves after \`unmount()\` is called
 
 Clear output.
 
-const {clear} \= render(<MyApp /\>);
+const {clear} \= render(<MyApp />);
 clear();
 
 #### measureElement(ref)
@@ -1820,7 +1820,7 @@ const Example \= () \=> {
 	);
 };
 
-render(<Example /\>);
+render(<Example />);
 
 Testing
 -------
@@ -1832,7 +1832,7 @@ import {Text} from 'ink';
 import {render} from 'ink-testing-library';
 
 const Test \= () \=> <Text\>Hello World</Text\>;
-const {lastFrame} \= render(<Test /\>);
+const {lastFrame} \= render(<Test />);
 
 lastFrame() \=== 'Hello World'; //=> true
 

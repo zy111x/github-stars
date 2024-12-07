@@ -23,8 +23,8 @@ import { GeistProvider, CssBaseline } from '@geist-ui/core'
 
 const Application \= () \=> (
   <GeistProvider\>
-    <CssBaseline /\> // ---> Normalize styles
-    <AppComponent /\> // ---> Your App Component
+    <CssBaseline /> // ---\> Normalize styles
+    <AppComponent /> // ---\> Your App Component
   </GeistProvider\>
 )
 

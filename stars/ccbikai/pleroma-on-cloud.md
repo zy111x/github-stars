@@ -1,6 +1,6 @@
 ---
 project: pleroma-on-cloud
-stars: 11
+stars: 12
 description: 在云平台(Koyeb/Render/Northflank/Zeabur/Fly.io)使用 Docker 部署运行 Pleroma。
 url: https://github.com/ccbikai/pleroma-on-cloud
 ---

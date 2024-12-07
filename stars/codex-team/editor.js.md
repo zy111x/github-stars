@@ -1,6 +1,6 @@
 ---
 project: editor.js
-stars: 28913
+stars: 28974
 description: A block-style editor with clean JSON output
 url: https://github.com/codex-team/editor.js
 ---

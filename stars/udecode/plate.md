@@ -1,6 +1,6 @@
 ---
 project: plate
-stars: 12143
+stars: 12218
 description: A rich-text editor powered by AI
 url: https://github.com/udecode/plate
 ---

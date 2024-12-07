@@ -1,6 +1,6 @@
 ---
 project: coolify
-stars: 34902
+stars: 35161
 description: An open-source & self-hostable Heroku / Netlify / Vercel alternative.
 url: https://github.com/coollabsio/coolify
 ---
@@ -55,6 +55,7 @@ Special thanks to our biggest sponsors!
 -   QuantCDN - A content delivery network (CDN) optimizing website performance through global content distribution.
 -   Arcjet - A cloud-based platform providing real-time protection against API abuse and bot attacks.
 -   SupaGuide - A comprehensive resource hub offering guides and tutorials for web development using Supabase.
+-   GoldenVM - A cloud hosting provider offering scalable infrastructure solutions for businesses of all sizes.
 -   Tigris - A fully managed serverless object storage service compatible with Amazon S3 API. Offers high performance, scalability, and built-in search capabilities for efficient data management.
 -   Advin - A digital advertising agency specializing in programmatic advertising and data-driven marketing strategies.
 -   Treive - An AI-powered search and discovery platform for enhancing information retrieval in large datasets.
@@ -105,7 +106,7 @@ Core Maintainers
 
 Andras Bacsai
 
-Peak
+🏔️ Peak
 
 Repo Activity
 =============

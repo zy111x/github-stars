@@ -1,6 +1,6 @@
 ---
 project: memlab
-stars: 4430
+stars: 4433
 description: A framework for finding JavaScript memory leaks and analyzing heap snapshots
 url: https://github.com/facebook/memlab
 ---

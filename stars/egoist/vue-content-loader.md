@@ -1,6 +1,6 @@
 ---
 project: vue-content-loader
-stars: 3050
+stars: 3049
 description: SVG component to create placeholder loading, like Facebook cards loading.
 url: https://github.com/egoist/vue-content-loader
 ---
@@ -69,13 +69,13 @@ import {
 
 `ContentLoader` is a meta loader while other loaders are just higher-order components of it. By default `ContentLoader` only displays a simple rectangle, here's how you can use it to create custom loaders:
 
-<ContentLoader viewBox\="0 0 250 110"\>
-  <rect x\="0" y\="0" rx\="3" ry\="3" width\="250" height\="10" />
-  <rect x\="20" y\="20" rx\="3" ry\="3" width\="220" height\="10" />
-  <rect x\="20" y\="40" rx\="3" ry\="3" width\="170" height\="10" />
-  <rect x\="0" y\="60" rx\="3" ry\="3" width\="250" height\="10" />
-  <rect x\="20" y\="80" rx\="3" ry\="3" width\="200" height\="10" />
-  <rect x\="20" y\="100" rx\="3" ry\="3" width\="80" height\="10" />
+<ContentLoader viewBox="0 0 250 110">
+  <rect x="0" y="0" rx="3" ry="3" width="250" height="10" />
+  <rect x="20" y="20" rx="3" ry="3" width="220" height="10" />
+  <rect x="20" y="40" rx="3" ry="3" width="170" height="10" />
+  <rect x="0" y="60" rx="3" ry="3" width="250" height="10" />
+  <rect x="20" y="80" rx="3" ry="3" width="200" height="10" />
+  <rect x="20" y="100" rx="3" ry="3" width="80" height="10" />
 </ContentLoader\>
 
 This is also how ListLoader is created.
@@ -192,14 +192,14 @@ Examples
 
 To create a responsive loader that will follow its parent container width, use only the `viewBox` attribute to set the ratio:
 
-<ContentLoader viewBox\="0 0 300 200"\>
-  <!-- ... \-->
+<ContentLoader viewBox="0 0 300 200">
+  <!-- ... -->
 </ContentLoader\>
 
 To create a loader with fixed dimensions, use `width` and `height` attributes:
 
-<ContentLoader width\="300" height\="200"\>
-  <!-- ... \-->
+<ContentLoader width="300" height="200">
+  <!-- ... -->
 </ContentLoader\>
 
 Note: the exact behavior might be different depending on the CSS you apply to SVG elements.

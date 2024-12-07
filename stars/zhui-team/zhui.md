@@ -1,6 +1,6 @@
 ---
 project: zhui
-stars: 1461
+stars: 1462
 description: 🚀 A Chinese style component library powered by React 
 url: https://github.com/zhui-team/zhui
 ---
@@ -28,7 +28,7 @@ npm install zhui
 -----
 
 import { Button } from 'zhui';
-ReactDOM.render(<Button /\>, mountNode);
+ReactDOM.render(<Button />, mountNode);
 
 ⌨️ 开发
 -----

@@ -1,6 +1,6 @@
 ---
 project: awesome-flutter
-stars: 53883
+stars: 53955
 description: An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more.
 url: https://github.com/Solido/awesome-flutter
 ---

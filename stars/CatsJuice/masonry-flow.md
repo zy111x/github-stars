@@ -40,7 +40,7 @@ import MasonryFlow from "masonry-flow/react";
 Vue
 ---
 
-<script setup\>
+<script setup>
 import { MasonryFlowRoot, MasonryFlowItem } from "masonry-flow/vue";
 </script\>
 

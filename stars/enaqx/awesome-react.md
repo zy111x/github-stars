@@ -1,16 +1,12 @@
 ---
 project: awesome-react
-stars: 65744
+stars: 65856
 description: A collection of awesome things regarding React ecosystem
 url: https://github.com/enaqx/awesome-react
 ---
 
 Awesome React
 =============
-
-Offer API docs that look as good as Stripe's using our sponsor Fern. Request a preview of your docs on Fern.
-
-* * *
 
 A collection of awesome things regarding the React ecosystem.
 

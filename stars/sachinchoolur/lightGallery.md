@@ -1,6 +1,6 @@
 ---
 project: lightGallery
-stars: 6560
+stars: 6571
 description: A customizable, modular, responsive, lightbox gallery plugin. 
 url: https://github.com/sachinchoolur/lightGallery
 ---
@@ -86,7 +86,6 @@ If you like you can also import scss files instead of css files from the `scss` 
     <!-- lightgallery plugins -->
     <link type\="text/css" rel\="stylesheet" href\="css/lg-zoom.css" />
     <link type\="text/css" rel\="stylesheet" href\="css/lg-thumbnail.css" />
-
 
     <!-- OR -->
 

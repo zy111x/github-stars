@@ -43,7 +43,7 @@ The Provider component provides state to all the consumers. All Consumer instanc
 
 const App \= () \=> (
   <Provider\>
-    <AppBody /\>
+    <AppBody />
   </Provider\>
 )
 
@@ -51,7 +51,7 @@ If you need to initialize state from props you can use the `initialState` prop t
 
 const App \= ({user}) \=> (
   <Provider initialState\={{name: user.name }}\>
-    <AppBody /\>
+    <AppBody />
   </Provider\>
 )
 
@@ -63,7 +63,7 @@ A Consumer lets you _consume_ some set of state. It uses a render prop as a chil
 const Avatar \= () \=> (
   <Consumer\>
    {state \=> (
-     <img src\={state.user.avatar.src} /\>
+     <img src\={state.user.avatar.src} />
    )}
   </Consumer\>
 )
@@ -76,7 +76,7 @@ If a Consumer observes the entire state tree then it will update anytime _any_ v
 
 const Avatar \= () \=> (
   <Consumer select\={\[state \=> state.user.avatar.src\]}\>
-    {src \=> <img src\={src} /\>}
+    {src \=> <img src\={src} />}
   </Consumer\>
 )
 
@@ -87,7 +87,7 @@ const Avatar \= () \=> (
     state \=> state.user.avatar.src,
     state \=> state.theme.avatar,
   \]}\>
-    {(src, avatarTheme) \=> <img src\={src} style\={avatarTheme} /\>}
+    {(src, avatarTheme) \=> <img src\={src} style\={avatarTheme} />}
   </Consumer\>
 )
 

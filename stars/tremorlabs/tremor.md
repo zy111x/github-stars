@@ -1,6 +1,6 @@
 ---
 project: tremor
-stars: 16226
+stars: 16236
 description: React components to build charts and dashboards
 url: https://github.com/tremorlabs/tremor
 ---
@@ -67,7 +67,7 @@ export default function Example() {
         categories\={\["Route Requests", "Station Requests"\]}
         colors\={\["indigo", "rose"\]}
         yAxisWidth\={33}
-      /\>
+      />
     </Card\>
   );
 }

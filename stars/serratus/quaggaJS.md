@@ -1,6 +1,6 @@
 ---
 project: quaggaJS
-stars: 5078
+stars: 5081
 description: An advanced barcode-scanner written in JavaScript
 url: https://github.com/serratus/quaggaJS
 ---

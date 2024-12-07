@@ -1,6 +1,6 @@
 ---
 project: chsrc
-stars: 4113
+stars: 4218
 description: chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
 ---
@@ -20,7 +20,9 @@ url: https://github.com/RubyMetric/chsrc
 
 Note
 
-**`chsrc` 可换源 60+ 目标。每个人仅仅贡献和维护自己熟悉的部分，回报是得到其他所有领域专家的帮助**。欢迎对 GitHub、Gitee 协作不熟悉的人以此为契机学习参与贡献, 欢迎任何编程初学者参与贡献，作者可提供一定的 贡献指导
+**`chsrc` 可换源 60+ 目标。每个人仅仅贡献和维护自己熟悉的部分，回报是得到其他所有领域专家的帮助**。欢迎对 GitHub、Gitee 协作不熟悉的人以此为契机学习参与贡献, 欢迎任何编程初学者参与贡献，作者可提供一定的 贡献指导。
+
+积极招募 Recipe Maintainers 维护者!
 
 Tip
 
@@ -32,9 +34,9 @@ Tip
 
 可参与的任务与挑战：
 
-1.  \[HELP\] 提供默认源地址，如Debian,Maven,PHP composer等的默认源URL，帮助我们进行 `chsrc reset`
+1.  提供默认源地址，如Maven等的默认源URL，帮助我们进行 `chsrc reset`
     
-2.  \[Challenge\] CentOS (Stream) Recipe
+2.  CentOS (Stream) Recipe
     
 
   
@@ -42,7 +44,7 @@ Tip
 
 1.  \[Challenge\] 编写统一安装的 shell 和 PowerShell 脚本
     
-    已由 @Efterklang 与 @xuan 完成
+    已由 @Efterklang 与 @wickdynex 完成
     
 
 镜像站可用性
@@ -83,12 +85,12 @@ $ scoop install chsrc
 
   
 
--   可通过 `PowerShell` 脚本一键下载最新版二进制文件，感谢 @xuan
+-   可通过 `PowerShell` 脚本一键下载最新版二进制文件，感谢 @wickdynex
     
     若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.ps1` 替代
     
 
-$ iwr \-useb "https://chsrc.run/windows" | iex
+"& { $(iwr \-useb https://chsrc.run/windows) } -Version pre" | iex
 
   
 
@@ -111,7 +113,7 @@ $ yay -S chsrc     # Build  from GitHub Release
 
   
 
--   可通过 `shell` 脚本一键安装最新版，感谢 @Efterklang 与 @xuan
+-   可通过 `shell` 脚本一键安装最新版，感谢 @Efterklang 与 @wickdynex
     
     若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.sh` 替代
     
@@ -152,7 +154,7 @@ $ brew install chsrc
 
   
 
--   可通过 `shell` 脚本安装最新版，感谢 @Efterklang 与 @xuan
+-   可通过 `shell` 脚本安装最新版，感谢 @Efterklang 与 @wickdynex
     
     若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.sh` 替代
     
@@ -256,6 +258,8 @@ chsrc set python | py | pypi # 同时换 pip, poetry 和 pdm 这3个包管理器
   chsrc set pip
   chsrc set poetry
   chsrc set pdm
+
+chsrc set rye
 
 chsrc set node | nodejs # 同时换 npm, yarn 和 pnpm 这3个包管理器，也可以3个独立换源
   chsrc set npm

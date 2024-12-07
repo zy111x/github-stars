@@ -1,6 +1,6 @@
 ---
 project: SuperTinyIcons
-stars: 14776
+stars: 14785
 description: Under 1KB each! Super Tiny Icons are miniscule SVG versions of your favourite website and app logos
 url: https://github.com/edent/SuperTinyIcons
 ---
@@ -1658,7 +1658,7 @@ The modern way, the React (JSX) example:
 
 import logo from "super-tiny-icons/images/svg/github.svg";
 
-<img src\={logo} /\>;
+<img src\={logo} />;
 
 CSS can be used to customize an icon's appearance. The following example shows styles for small/medium/large icons with square/rounded/circular frames:
 

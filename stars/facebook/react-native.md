@@ -1,6 +1,6 @@
 ---
 project: react-native
-stars: 119530
+stars: 119633
 description: A framework for building native applications using React
 url: https://github.com/facebook/react-native
 ---
@@ -36,7 +36,7 @@ Contents
 📋 Requirements
 ---------------
 
-React Native apps may target iOS 13.4 and Android 6.0 (API 23) or newer. You may use Windows, macOS, or Linux as your development operating system, though building and running iOS apps is limited to macOS. Tools like Expo can be used to work around this.
+React Native apps may target iOS 15.1 and Android 7.0 (API 24) or newer. You may use Windows, macOS, or Linux as your development operating system, though building and running iOS apps is limited to macOS. Tools like Expo can be used to work around this.
 
 🎉 Building your first React Native app
 ---------------------------------------

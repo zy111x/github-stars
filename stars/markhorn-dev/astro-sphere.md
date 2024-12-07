@@ -1,6 +1,6 @@
 ---
 project: astro-sphere
-stars: 335
+stars: 340
 description: Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog.
 url: https://github.com/markhorn-dev/astro-sphere
 ---
@@ -29,6 +29,7 @@ It is primarily Astro, Tailwind and Typescript, with a very small amount of Soli
 -   ✅ Markdown support
 -   ✅ MDX Support (components in your markdown)
 -   ✅ Searchable content (posts and projects)
+-   ✅ Code Blocks - copy to clipboard
 
 💯 Lighthouse score
 -------------------
@@ -108,7 +109,6 @@ Auto-fix ESLint issues
 
 A few features I plan to implement
 
--   ⬜ Code Blocks - copy to clipboard
 -   ⬜ Article Pages - Table of Contents
 -   ⬜ Article Pages - Share on social media
 

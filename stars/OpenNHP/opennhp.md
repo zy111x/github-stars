@@ -1,6 +1,6 @@
 ---
 project: opennhp
-stars: 13519
+stars: 13517
 description: NHP: A lightweight cryptography-driven Zero Trust networking protocol at the OSI 5th layer to hide your server and data from attackers.
 url: https://github.com/OpenNHP/opennhp
 ---

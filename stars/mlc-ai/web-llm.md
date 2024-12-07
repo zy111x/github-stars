@@ -1,6 +1,6 @@
 ---
 project: web-llm
-stars: 13861
+stars: 13940
 description: High-performance In-browser LLM Inference Engine 
 url: https://github.com/mlc-ai/web-llm
 ---
@@ -269,7 +269,7 @@ You can find a complete example on how to run WebLLM in service worker in exampl
 
 ### Chrome Extension
 
-You can also find examples of building Chrome extension with WebLLM in examples/chrome-extension and examples/chrome-extension-webgpu-service-worker. The latter one leverages service worker, so the extension is persistent in the background.
+You can also find examples of building Chrome extension with WebLLM in examples/chrome-extension and examples/chrome-extension-webgpu-service-worker. The latter one leverages service worker, so the extension is persistent in the background. Additionally, you can explore another full project of a Chrome extension, WebLLM Assistant, which leverages WebLLM here.
 
 Full OpenAI Compatibility
 -------------------------

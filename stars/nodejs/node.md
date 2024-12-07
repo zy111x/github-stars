@@ -1,6 +1,6 @@
 ---
 project: node
-stars: 108041
+stars: 108238
 description: Node.js JavaScript runtime ✨🐢🚀✨
 url: https://github.com/nodejs/node
 ---
@@ -233,6 +233,7 @@ TSC emeriti members
 -   lemire - **Daniel Lemire** <daniel@lemire.me\>
 -   Linkgoron - **Nitzan Uziely** <linkgoron@gmail.com\>
 -   LiviaMedeiros - **LiviaMedeiros** <livia@cirno.name\>
+-   ljharb - **Jordan Harband** <ljharb@gmail.com\>
 -   lpinca - **Luigi Pinca** <luigipinca@gmail.com\> (he/him)
 -   lukekarrys - **Luke Karrys** <luke@lukekarrys.com\> (he/him)
 -   Lxxyx - **Zijian Liu** <lxxyxzj@gmail.com\> (he/him)

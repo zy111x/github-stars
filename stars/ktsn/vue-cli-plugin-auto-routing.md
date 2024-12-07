@@ -109,25 +109,25 @@ Components under the `layouts/` directory will be used as shared layout componen
 
 For example, when you have `layouts/foo.vue` and `pages/index.vue`:
 
-<!-- layouts/foo.vue \-->
-<template\>
-  <div\>
-    <h1\>Foo Layout</h1\>
+<!\-- layouts/foo.vue -->
+<template>
+  <div>
+    <h1>Foo Layout</h1>
     <router-view />
-  </div\>
-</template\>
+  </div>
+</template>
 
-<!-- pages/index.vue \-->
-<template\>
-  <p\>index.vue</p\>
-</template\>
+<!\-- pages/index.vue -->
+<template>
+  <p>index.vue</p>
+</template>
 
-<script\>
+<script>
 export default {
   // You can specify layout component name here (default value is 'default')
   layout: 'foo'
 }
-</script\>
+</script>
 
 The following html will be rendered:
 

@@ -1,6 +1,6 @@
 ---
 project: wtfjs
-stars: 35368
+stars: 35392
 description: 🤪 A list of funny and tricky JavaScript examples
 url: https://github.com/denysdovhan/wtfjs
 ---
@@ -692,7 +692,7 @@ HTML comments are valid in JavaScript
 You will be impressed, but `<!--` (which is known as HTML comment) is a valid comment in JavaScript.
 
 // valid comment
-<!\-- valid comment too
+<!-- valid comment too
 
 ### 💡 Explanation:
 

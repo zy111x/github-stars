@@ -1,6 +1,6 @@
 ---
 project: vee-validate
-stars: 10844
+stars: 10848
 description: ✅  Painless Vue forms
 url: https://github.com/logaretm/vee-validate
 ---
@@ -66,7 +66,7 @@ The fastest way to create a form and manage its validation, behavior, and values
 
 Create your form with `useForm` and then use `defineField` to create your field model and props/attributes and `handleSubmit` to use the values and send them to an API.
 
-<script setup\>
+<script setup>
 import { useForm } from 'vee-validate';
 // Validation, or use \`yup\` or \`zod\`
 function required(value) {
@@ -102,7 +102,7 @@ You can do so much more than this, for more info check the composition API docum
 
 Higher-order components can also be used to build forms. Register the `Field` and `Form` components and create a simple `required` validator:
 
-<script setup\>
+<script setup>
 import { Field, Form } from 'vee-validate';
 // Validation, or use \`yup\` or \`zod\`
 function required(value) {

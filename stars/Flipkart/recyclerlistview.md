@@ -1,6 +1,6 @@
 ---
 project: recyclerlistview
-stars: 5261
+stars: 5260
 description: High performance listview for React Native and web!
 url: https://github.com/Flipkart/recyclerlistview
 ---
@@ -363,10 +363,10 @@ Typescript works out of the box. The only execption is with the inherited Scroll
           await refetchQueue();
           this.setState({ loading: false });
         }}
-      /\>
+      />
     )
   }}
-/\>
+/>
 
 Guides
 ------

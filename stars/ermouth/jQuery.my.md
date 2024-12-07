@@ -1,6 +1,6 @@
 ---
 project: jQuery.my
-stars: 1509
+stars: 1510
 description: jQuery.my is a plugin that reactively binds form controls with js data structures.
 url: https://github.com/ermouth/jQuery.my
 ---
@@ -48,7 +48,7 @@ var manifest \= {
   'init': function ($node, formRuntimeObj) {
     $node.html(
       '<div><input id='name' type\='text' /\></div\>' +
-      '<div\><input id\='age' type\='number' /\></div\>'
+      '<div\><input id\='age' type\='number' /></div>'
     );
   },
   'ui':{

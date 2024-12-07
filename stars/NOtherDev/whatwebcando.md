@@ -1,6 +1,6 @@
 ---
 project: whatwebcando
-stars: 836
+stars: 838
 description: An overview of the device integration HTML5 APIs
 url: https://github.com/NOtherDev/whatwebcando
 ---

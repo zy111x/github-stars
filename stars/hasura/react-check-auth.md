@@ -48,13 +48,13 @@ const App \= () \=> (
   <AuthProvider authUrl\={'https://website.com/get/userInfo'}\>
     <div\>
       // The rest of your react app goes here
-      <Header /\>
-      <Main /\>
+      <Header />
+      <Main />
     </div\>
   </AuthProvider\>
 );
 
-ReactDOM.render(<App /\>, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 ### 2) Show a "welcome user" or a Login button
 
@@ -84,8 +84,8 @@ You can mix and match `react-check-auth` with other declarative components like 
 
   const Main \= () \=> (
     <Router\>
-      <Route path\='/home' component\={Home} /\>
-      <Route path \='/login' component\={Login} /\>
+      <Route path\='/home' component\={Home} />
+      <Route path \='/login' component\={Login} />
     </Router\>
    );
    
@@ -96,7 +96,7 @@ You can mix and match `react-check-auth` with other declarative components like 
 
            // Redirect the user to login if they are not logged in
            if (!userInfo) {
-              return (<Redirect to\='/login' /\>);
+              return (<Redirect to\='/login' />);
            } 
            
            // Otherwise render the normal component
@@ -156,7 +156,7 @@ The `AuthProvider` component should be at the top of the component tree so that 
 
 The `AuthProvider` takes a required prop called `authUrl` and an optional prop called `reqOptions`.
 
-<AuthProvider authUrl\="https://my-backend.com/api/user" reqOptions\={requestOptionsObject} /\>
+<AuthProvider authUrl\="https://my-backend.com/api/user" reqOptions\={requestOptionsObject} />
 
 ##### `authUrl` :: String
 
@@ -305,15 +305,15 @@ export default class App extends Component<Props\> {
           <AuthConsumer\>
             {({isLoading, userInfo, error}) \=> {
               if (isLoading) {
-                return (<ActivityIndicator /\>);
+                return (<ActivityIndicator />);
               }
               if (error) {
                 return (<Text\> Unexpected </Text\>);
               }
               if (!userInfo) {
-                return (<LoginComponent /\>);
+                return (<LoginComponent />);
               }
-              return (<HomeComponent /\>);
+              return (<HomeComponent />);
             }}
           </AuthConsumer\>
         </View\>

@@ -1,6 +1,6 @@
 ---
 project: gotosocial
-stars: 3858
+stars: 3876
 description: Fast, fun, small ActivityPub server.
 url: https://github.com/superseriousbusiness/gotosocial
 ---
@@ -111,7 +111,7 @@ The Mastodon API has become the de facto standard for client communication with 
 Though most apps that implement the Mastodon API should work, GoToSocial is tested and works reliably with beautiful apps like:
 
 -   Tusky for Android
--   Semaphore in the browser
+-   Pinafore in the browser
 -   Feditext (beta) on iOS, iPadOS and macOS
 
 If you've used Mastodon with a third-party app before, you'll find using GoToSocial a breeze.

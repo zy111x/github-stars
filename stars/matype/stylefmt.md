@@ -1,6 +1,6 @@
 ---
 project: stylefmt
-stars: 2098
+stars: 2099
 description: stylefmt is a tool that automatically formats stylesheets.
 url: https://github.com/matype/stylefmt
 ---
@@ -64,7 +64,7 @@ body {font-size: calc(var(\--fontSize) \* 1.2); }
 }
 
 /\* custom selectors \*/
-@custom-selector :\--heading h1,h2,h3,    h4,h5,h6;
+@custom-selector :\-\-heading h1,h2,h3,    h4,h5,h6;
 :\--heading { margin-top:0 }
 
 /\* colors stuff \*/
@@ -113,7 +113,7 @@ body {
 }
 
 /\* custom selectors \*/
-@custom-selector :\--heading h1, h2, h3, h4, h5, h6;
+@custom-selector :\-\-heading h1, h2, h3, h4, h5, h6;
 
 :\--heading {
   margin-top: 0;

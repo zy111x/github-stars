@@ -281,7 +281,7 @@ const MyComponent \= () \=> (
   </BBCode\>
 )
 
-render(<MyComponent /\>) // <div><blockquote><p>Text</p></blockquote></div>
+render(<MyComponent />) // <div><blockquote><p>Text</p></blockquote></div>
 
 #### Render prop
 
@@ -301,7 +301,7 @@ const App \= ({ renderProp }) \=> (
   <span\>{text}</span\>
 )
 
-render(<App /\>) // <span><span style="font-weight: bold;">Super <span style="font-style: italic;">easy</span></span> <span style="text-decoration: underline;">to</span> render</span>
+render(<App />) // <span><span style="font-weight: bold;">Super <span style="font-style: italic;">easy</span></span> <span style="text-decoration: underline;">to</span> render</span>
 
 ### PostHTML usage
 

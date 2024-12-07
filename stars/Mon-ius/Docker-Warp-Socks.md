@@ -1,6 +1,6 @@
 ---
 project: Docker-Warp-Socks
-stars: 374
+stars: 375
 description: Connet to CloudFlare WARP, exposing `socks5` proxy all together.
 url: https://github.com/Mon-ius/Docker-Warp-Socks
 ---
@@ -197,7 +197,9 @@ docker run --privileged --restart=always -itd \\
     -e SOCK\_USER=monius \\
     -e SOCK\_PWD=cool \\
     --cap-add NET\_ADMIN \\
+    --cap-add NET\_RAW \\
     --cap-add SYS\_MODULE \\
+    --device=/dev/net/tun \\
     --sysctl net.ipv6.conf.all.disable\_ipv6=0 \\
     --sysctl net.ipv4.conf.all.src\_valid\_mark=1 \\
     -p 127.0.0.1:9091:9091 \\

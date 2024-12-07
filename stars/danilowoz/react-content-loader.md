@@ -1,6 +1,6 @@
 ---
 project: react-content-loader
-stars: 13780
+stars: 13787
 description: ⚪ SVG-Powered component to easily create skeleton loadings.
 url: https://github.com/danilowoz/react-content-loader
 ---
@@ -52,17 +52,17 @@ There are two ways to use it:
 
 import ContentLoader, { Facebook } from 'react-content-loader'
 
-const MyLoader \= () \=> <ContentLoader /\>
-const MyFacebookLoader \= () \=> <Facebook /\>
+const MyLoader \= () \=> <ContentLoader />
+const MyFacebookLoader \= () \=> <Facebook />
 
 **2. Custom mode, see the online tool**
 
 const MyLoader \= () \=> (
   <ContentLoader viewBox\="0 0 380 70"\>
     {/\* Only SVG shapes \*/}    
-    <rect x\="0" y\="0" rx\="5" ry\="5" width\="70" height\="70" /\>
-    <rect x\="80" y\="17" rx\="4" ry\="4" width\="300" height\="13" /\>
-    <rect x\="80" y\="40" rx\="3" ry\="3" width\="250" height\="10" /\>
+    <rect x\="0" y\="0" rx\="5" ry\="5" width\="70" height\="70" />
+    <rect x\="80" y\="17" rx\="4" ry\="4" width\="300" height\="13" />
+    <rect x\="80" y\="40" rx\="3" ry\="3" width\="250" height\="10" />
   </ContentLoader\>
 )
 
@@ -77,8 +77,8 @@ Native
 
 import ContentLoader, { Facebook } from 'react-content-loader/native'
 
-const MyLoader \= () \=> <ContentLoader /\>
-const MyFacebookLoader \= () \=> <Facebook /\>
+const MyLoader \= () \=> <ContentLoader />
+const MyFacebookLoader \= () \=> <Facebook />
 
 **2. Custom mode**
 
@@ -88,9 +88,9 @@ import ContentLoader, { Rect, Circle } from 'react-content-loader/native'
 
 const MyLoader \= () \=> (
   <ContentLoader viewBox\="0 0 380 70"\>
-    <Circle cx\="30" cy\="30" r\="30" /\>
-    <Rect x\="80" y\="17" rx\="4" ry\="4" width\="300" height\="13" /\>
-    <Rect x\="80" y\="40" rx\="3" ry\="3" width\="250" height\="10" /\>
+    <Circle cx\="30" cy\="30" r\="30" />
+    <Rect x\="80" y\="17" rx\="4" ry\="4" width\="300" height\="13" />
+    <Rect x\="80" y\="40" rx\="3" ry\="3" width\="250" height\="10" />
   </ContentLoader\>
 )
 
@@ -226,31 +226,31 @@ Examples
 
 import { Facebook } from 'react-content-loader'
 
-const MyFacebookLoader \= () \=> <Facebook /\>
+const MyFacebookLoader \= () \=> <Facebook />
 
 ##### Instagram Style
 
 import { Instagram } from 'react-content-loader'
 
-const MyInstagramLoader \= () \=> <Instagram /\>
+const MyInstagramLoader \= () \=> <Instagram />
 
 ##### Code Style
 
 import { Code } from 'react-content-loader'
 
-const MyCodeLoader \= () \=> <Code /\>
+const MyCodeLoader \= () \=> <Code />
 
 ##### List Style
 
 import { List } from 'react-content-loader'
 
-const MyListLoader \= () \=> <List /\>
+const MyListLoader \= () \=> <List />
 
 ##### Bullet list Style
 
 import { BulletList } from 'react-content-loader'
 
-const MyBulletListLoader \= () \=> <BulletList /\>
+const MyBulletListLoader \= () \=> <BulletList />
 
 ### Custom Style
 
@@ -265,9 +265,9 @@ const MyLoader \= () \=> (
     viewBox\="0 0 380 70"
   \>
     {/\* Only SVG shapes \*/}
-    <rect x\="0" y\="0" rx\="5" ry\="5" width\="70" height\="70" /\>
-    <rect x\="80" y\="17" rx\="4" ry\="4" width\="300" height\="13" /\>
-    <rect x\="80" y\="40" rx\="3" ry\="3" width\="250" height\="10" /\>
+    <rect x\="0" y\="0" rx\="5" ry\="5" width\="70" height\="70" />
+    <rect x\="80" y\="17" rx\="4" ry\="4" width\="300" height\="13" />
+    <rect x\="80" y\="40" rx\="3" ry\="3" width\="250" height\="10" />
   </ContentLoader\>
 )
 
@@ -286,7 +286,7 @@ const MyCodeLoader \= () \=> (
     height\={100}
     viewBox\="0 0 100 100"
     style\={{ width: '100%' }}
-  /\>
+  />
 )
 
 #### Server-side rendering (SSR) - Match snapshot
@@ -297,7 +297,7 @@ To fix it, set the prop `uniqueKey`, then the id will not be random anymore:
 
 import { Facebook } from 'react-content-loader'
 
-const MyFacebookLoader \= () \=> <Facebook uniqueKey\="my-random-value" /\>
+const MyFacebookLoader \= () \=> <Facebook uniqueKey\="my-random-value" />
 
 #### **Alpha is not working: Safari / iOS**
 

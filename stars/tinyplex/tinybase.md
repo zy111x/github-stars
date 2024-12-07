@@ -1,6 +1,6 @@
 ---
 project: tinybase
-stars: 3906
+stars: 3922
 description: The reactive data store for local‑first apps.
 url: https://github.com/tinyplex/tinybase
 ---
@@ -149,7 +149,7 @@ const App1 \= () \=> {
 
 const app \= document.createElement('div');
 const root \= createRoot(app);
-root.render(<App1 /\>);
+root.render(<App1 />);
 console.log(app.innerHTML);
 // -> 'Color: brown'
 
@@ -479,19 +479,19 @@ tinybase/store (minimal)
 
 5.3kB
 
-52.4kB
+52.5kB
 
 tinybase (complete)
 
 11.4kB
 
-119.3kB
+119.4kB
 
 ui-react
 
 4.9kB
 
-53.5kB
+53.6kB
 
 ui-react-dom
 
@@ -516,43 +516,43 @@ Coverage
 
 Lines
 
-2,286
+2,290
 
-2,286
+2,290
 
 100.0%
 
 Statements
 
-2,468
+2,474
 
-2,468
+2,474
 
 100.0%
 
 Functions
 
-986
+988
 
-986
+988
 
 100.0%
 
 Branches
 
-854
+856
 
-854
+856
 
 100.0%
 
 Tests
 
-7,461
+7,464
 
 Assertions
 
-33,209
+33,201
 
 * * *
 

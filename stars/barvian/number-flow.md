@@ -1,7 +1,7 @@
 ---
 project: number-flow
-stars: 4678
-description: A component to transition, format, and localize numbers.
+stars: 4853
+description: An animated number component for React, Vue, and Svelte.
 url: https://github.com/barvian/number-flow
 ---
 

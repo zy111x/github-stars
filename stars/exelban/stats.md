@@ -1,6 +1,6 @@
 ---
 project: stats
-stars: 26286
+stars: 26497
 description: macOS system monitor in your menu bar
 url: https://github.com/exelban/stats
 ---

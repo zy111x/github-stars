@@ -1,6 +1,6 @@
 ---
 project: dante-astro-theme
-stars: 289
+stars: 296
 description: Dante, a single-author blog and portfolio theme for Astro.js. 
 url: https://github.com/JustGoodUI/dante-astro-theme
 ---

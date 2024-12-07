@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 9895
+stars: 10065
 description: A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
 ---
@@ -21,6 +21,7 @@ _Created by: birobirobiro.dev_
 Libs and Components
 -------------------
 
+-   21st.dev – open source npm for shadcn/ui components. Also: Dribble for design engineers. Install UI components via shadcn CLI, or publish your own.
 -   aceternity-ui - Copy paste the most trending react components without having to worry about styling and animations.
 -   assistant-ui - React Components for AI Chat.
 -   autocomplete-select-shadcn-ui - Autocomplete component built with shadcn/ui and Fancy Multi Select by Maximilian Kaske.
@@ -37,6 +38,7 @@ Libs and Components
 -   date-range-picker-for-shadcn - Includes multi-month views, text entry, preset ranges, responsive design, and date range comparisons.
 -   date-time-picker-shadcn - Beautifully Crafted Datetime Picker for your shadNext Project.
 -   datetime-picker - A powerful datetime picker with support for timezones, minimum and maximum dates, and month/year selection.
+-   dialog-stack - Composable stacked dialogs for shadcn/ui
 -   dnd-dashboard - A beautiful, performant dashboard with drop-to-swap layouts built using Next.js, shadcn/ui, and swapy.
 -   downshift-shadcn-combobox - Combobox/autocomplete component built with shadcn/ui and Downshift.
 -   drag-to-resize-sidebar - A extended shadcn/ui drag-to-resize component for Next.js applications with persisted state drag-to-resize functionality.
@@ -270,6 +272,7 @@ Design System
 Boilerplates / Templates
 ------------------------
 
+-   autoflow - An open source GraphRAG (Knowledge Graph) built on top of TiDB Vector and LlamaIndex and DSPy. Demo site
 -   browser-extension-starter-plasmo-shadcn-trpc - Browser extension starter kit featuring Plasmo, React, Shadcn, and tRPC.
 -   chadnext - Quick Starter Template includes Next.js 14 App router, shadcn/ui, LuciaAuth, Prisma, Server Actions, Stripe, Internationalization and more.
 -   cloudflare-saas-stack - An opinionated, batteries-included starter kit for quickly building and deploying SaaS products on Cloudflare.
@@ -288,6 +291,7 @@ Boilerplates / Templates
 -   next-wp - Headless Wordpress Starter built with the NextJS App Router and React Server Components
 -   onyx - Full stack, batteries included MVP Template with NextJS 14, Supabase SSR Auth & Postgres DB with CRUD operations, RBAC, Tanstack React Query, Zod Validation, MDX components, Resend, and more.
 -   opendocs - Beautifully designed template that you can use for your projects for free. Accessible. Customizable. Open Source with i18n support.
+-   react-vite-starter - React starter powered with vite + redux toolkit + rtkquery + react router + shadcn ui and many more.
 -   shadcn-landing-page - Landing page template using shadcn/ui, React, Typescript and Tailwind CSS
 -   shadcn-landing-page - Project conversion shadcn-vue-landing-page to nextjs - Landing page template using Nestjs, shadcn/ui, TypeScript, Tailwind CSS
 -   shadcn-nextjs-free-boilerplate - Free & Open-source NextJS Boilerplate + ChatGPT API Dashboard Template

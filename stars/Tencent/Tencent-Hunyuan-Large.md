@@ -1,6 +1,6 @@
 ---
 project: Tencent-Hunyuan-Large
-stars: 1154
+stars: 1220
 description: null
 url: https://github.com/Tencent/Tencent-Hunyuan-Large
 ---
@@ -717,7 +717,7 @@ python3 login\_ssh.py --ips ${ip1},${ip2} --port 36000 --password=Tmp123,./
 
 ### BF16 Deployment
 
-BF16 requires 16 H800 or H20 GPUs for deployment. After verifying that multi-machine communication is correct, execute the following steps:
+BF16 requires 16 H20 GPUs for deployment. After verifying that multi-machine communication is correct, execute the following steps:
 
 Before running the commands, set the following environment variables:
 

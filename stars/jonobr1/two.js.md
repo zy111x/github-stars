@@ -1,6 +1,6 @@
 ---
 project: two.js
-stars: 8329
+stars: 8336
 description: A renderer agnostic two-dimensional drawing api for the web.
 url: https://github.com/jonobr1/two.js
 ---
@@ -101,7 +101,7 @@ export default function App() {
     }
   }
 
-  return <div ref\={domElement} /\>;
+  return <div ref\={domElement} />;
 }
 
 In addition to importing, the published packages of Two.js include the specific modules. So, if necessary you can import specific modules from the source code and bundle / minify for yourself like so:

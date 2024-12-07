@@ -1,6 +1,6 @@
 ---
 project: disposable-email-domains
-stars: 3191
+stars: 3216
 description: a list of disposable and temporary email address domains
 url: https://github.com/disposable-email-domains/disposable-email-domains
 ---
@@ -64,8 +64,8 @@ else:
 
 Available as PyPI module thanks to @di
 
-\>>\> from disposable\_email\_domains import blocklist
-\>>\> 'bearsarefuzzy.com' in blocklist
+\>\>> from disposable\_email\_domains import blocklist
+\>\>> 'bearsarefuzzy.com' in blocklist
 True
 
 ### PHP

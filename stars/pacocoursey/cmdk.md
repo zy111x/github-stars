@@ -1,6 +1,6 @@
 ---
 project: cmdk
-stars: 10013
+stars: 10044
 description: Fast, unstyled command menu React component.
 url: https://github.com/pacocoursey/cmdk
 ---
@@ -25,14 +25,14 @@ import { Command } from 'cmdk'
 const CommandMenu \= () \=> {
   return (
     <Command label\="Command Menu"\>
-      <Command.Input /\>
+      <Command.Input />
       <Command.List\>
         <Command.Empty\>No results found.</Command.Empty\>
 
         <Command.Group heading\="Letters"\>
           <Command.Item\>a</Command.Item\>
           <Command.Item\>b</Command.Item\>
-          <Command.Separator /\>
+          <Command.Separator />
           <Command.Item\>c</Command.Item\>
         </Command.Group\>
 
@@ -64,14 +64,14 @@ const CommandMenu \= () \=> {
 
   return (
     <Command.Dialog open\={open} onOpenChange\={setOpen} label\="Global Command Menu"\>
-      <Command.Input /\>
+      <Command.Input />
       <Command.List\>
         <Command.Empty\>No results found.</Command.Empty\>
 
         <Command.Group heading\="Letters"\>
           <Command.Item\>a</Command.Item\>
           <Command.Item\>b</Command.Item\>
-          <Command.Separator /\>
+          <Command.Separator />
           <Command.Item\>c</Command.Item\>
         </Command.Group\>
 
@@ -98,7 +98,7 @@ const \[value, setValue\] \= React.useState('apple')
 
 return (
   <Command value\={value} onValueChange\={setValue}\>
-    <Command.Input /\>
+    <Command.Input />
     <Command.List\>
       <Command.Item\>Orange</Command.Item\>
       <Command.Item\>Apple</Command.Item\>
@@ -113,7 +113,7 @@ You can provide a custom `filter` function that is called to rank each item. Not
     if (value.includes(search)) return 1
     return 0
   }}
-/\>
+/>
 
 A third argument, `keywords`, can also be provided to the filter function. Keywords act as aliases for the item value, and can also affect the rank of the item. Keywords are trimmed.
 
@@ -123,7 +123,7 @@ A third argument, `keywords`, can also be provided to the filter function. Keywo
     if (extendValue.includes(search)) return 1
     return 0
   }}
-/\>
+/>
 
 Or disable filtering and sorting entirely:
 
@@ -141,7 +141,7 @@ Or disable filtering and sorting entirely:
 
 You can make the arrow keys wrap around the list (when you reach the end, it goes back to the first item) by setting the `loop` prop:
 
-<Command loop /\>
+<Command loop />
 
 ### Dialog `[cmdk-dialog]` `[cmdk-overlay]`
 
@@ -161,8 +161,8 @@ const containerElement \= React.useRef(null)
 
 return (
   <\>
-    <Command.Dialog container\={containerElement.current} /\>
-    <div ref\={containerElement} /\>
+    <Command.Dialog container\={containerElement.current} />
+    <div ref\={containerElement} />
   </\>
 )
 
@@ -172,7 +172,7 @@ All props are forwarded to the underlying `input` element. Can be controlled wit
 
 const \[search, setSearch\] \= React.useState('')
 
-return <Command.Input value\={search} onValueChange\={setSearch} /\>
+return <Command.Input value\={search} onValueChange\={setSearch} />
 
 ### List `[cmdk-list]`
 
@@ -279,7 +279,7 @@ return (
       }
     }}
   \>
-    <Command.Input value\={search} onValueChange\={setSearch} /\>
+    <Command.Input value\={search} onValueChange\={setSearch} />
     <Command.List\>
       {!page && (
         <\>
@@ -312,12 +312,12 @@ If your items have nested sub-items that you only want to reveal when searching,
 const SubItem \= (props) \=> {
   const search \= useCommandState((state) \=> state.search)
   if (!search) return null
-  return <Command.Item {...props} /\>
+  return <Command.Item {...props} />
 }
 
 return (
   <Command\>
-    <Command.Input /\>
+    <Command.Input />
     <Command.List\>
       <Command.Item\>Change theme…</Command.Item\>
       <SubItem\>Change theme to dark</SubItem\>
@@ -346,7 +346,7 @@ React.useEffect(() \=> {
 
 return (
   <Command\>
-    <Command.Input /\>
+    <Command.Input />
     <Command.List\>
       {loading && <Command.Loading\>Fetching words…</Command.Loading\>}
       {items.map((item) \=> {
@@ -376,7 +376,7 @@ return (
 
     <Popover.Content\>
       <Command\>
-        <Command.Input /\>
+        <Command.Input />
         <Command.List\>
           <Command.Item\>Apple</Command.Item\>
         </Command.List\>

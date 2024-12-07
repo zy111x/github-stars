@@ -94,7 +94,7 @@ function CounterDisplay() {
 function App() {
   return (
     <StatedBeanProvider\>
-      <CounterDisplay /\>
+      <CounterDisplay />
     </StatedBeanProvider\>
   );
 }
@@ -154,7 +154,7 @@ class UserModel {
 function App() {
   return (
     <StatedBeanProvider providers\={\[UserModel\]}\>
-      <UserDisplay /\>
+      <UserDisplay />
     </StatedBeanProvider\>
   );
 }
@@ -207,7 +207,7 @@ const UserTable() {
   const { loading, error } \= useObserveEffect(model, "search");
 
   if (loading) {
-    return <Loading /\>;
+    return <Loading />;
   }
   return (
     // ...user table

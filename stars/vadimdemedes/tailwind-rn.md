@@ -1,6 +1,6 @@
 ---
 project: tailwind-rn
-stars: 4243
+stars: 4242
 description: 🦎 Use Tailwind CSS in React Native projects
 url: https://github.com/vadimdemedes/tailwind-rn
 ---
@@ -102,7 +102,7 @@ import utilities from './tailwind.json';
 
 const App \= () \=> (
 	<TailwindProvider utilities\={utilities}\>
-		<MyComponent /\>
+		<MyComponent />
 	</TailwindProvider\>
 );
 
@@ -189,7 +189,7 @@ import utilities from './tailwind.json';
 
 const App \= () \=> (
 	<TailwindProvider utilities\={utilities}\>
-		<MyComponent /\>
+		<MyComponent />
 	</TailwindProvider\>
 );
 
@@ -204,7 +204,7 @@ import utilities from './tailwind.json';
 
 const App \= () \=> (
 	<TailwindProvider utilities\={utilities} colorScheme\="dark"\>
-		<MyComponent /\>
+		<MyComponent />
 	</TailwindProvider\>
 );
 

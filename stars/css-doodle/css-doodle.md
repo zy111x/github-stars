@@ -1,6 +1,6 @@
 ---
 project: css-doodle
-stars: 5658
+stars: 5660
 description: 🎨  A web component for drawing patterns with CSS.
 url: https://github.com/css-doodle/css-doodle
 ---
@@ -13,11 +13,11 @@ A web component for drawing patterns with CSS.
 Example
 -------
 
-<css-doodle\>
+<css\-doodle\>
   @grid: 5 / 200px;
   background: @p(#000, #fff);
   margin: 1px;
-</css-doodle\>
+</css\-doodle\>
 
 Docs
 ----

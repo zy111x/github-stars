@@ -1,6 +1,6 @@
 ---
 project: scalar
-stars: 7638
+stars: 7771
 description: Scalar is an open-source API platform:　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　🌐 Modern Rest API Client　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　📖 Beautiful API References　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　✨ 1st-Class OpenAPI/Swagger Support
 url: https://github.com/scalar/scalar
 ---
@@ -78,6 +78,7 @@ And there’s an ever-growing list of plugins and integrations:
 -   Next.js
 -   Nuxt
 -   React
+-   Ruby on Rails
 -   Rust
 -   Scalar for Laravel
 -   Vue.js
@@ -223,6 +224,9 @@ Contributions are welcome! Read the `CONTRIBUTING` guide.
 **Amorim33**
 
   
+**Mason-Little**
+
+  
 **adjsky**
 
   
@@ -230,9 +234,6 @@ Contributions are welcome! Read the `CONTRIBUTING` guide.
 
   
 **Edgaraszs**
-
-  
-**Mason-Little**
 
   
 **Mohib834**
@@ -316,6 +317,9 @@ Contributions are welcome! Read the `CONTRIBUTING` guide.
 **sanscontext**
 
   
+**elliotnash**
+
+  
 **soGit**
 
   
@@ -359,9 +363,6 @@ Contributions are welcome! Read the `CONTRIBUTING` guide.
 
   
 **tsiwek-piwik**
-
-  
-**kyllian**
 
   
 **diegolopes**
@@ -412,6 +413,9 @@ Contributions are welcome! Read the `CONTRIBUTING` guide.
 **abdulamite**
 
   
+**kyllian**
+
+  
 **KiARC**
 
   
@@ -419,6 +423,9 @@ Contributions are welcome! Read the `CONTRIBUTING` guide.
 
   
 **jonataw**
+
+  
+**Jefwillems**
 
   
 **TheVaan**
@@ -455,6 +462,3 @@ Contributions are welcome! Read the `CONTRIBUTING` guide.
 
   
 **emmanuel-ferdman**
-
-  
-**elliotnash**

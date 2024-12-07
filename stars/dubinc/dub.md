@@ -1,6 +1,6 @@
 ---
 project: dub
-stars: 18995
+stars: 19083
 description: Open-source link management infrastructure. Loved by modern marketing teams like Vercel, Raycast, and Perplexity.
 url: https://github.com/dubinc/dub
 ---

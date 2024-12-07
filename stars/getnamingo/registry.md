@@ -95,7 +95,7 @@ Namingo is equipped with a comprehensive suite of features to meet the diverse n
     
 -   **DAS Server**: Efficient Domain Availability Service to quickly check domain availability.
     
--   **DNS Interface**: Advanced zone generator supporting BIND, NSD, and KnotDNS for flexible DNS software options. Includes DNSSEC signing support with native BIND9 and OpenDNSSEC. For NSD and KnotDNS, native DNSSEC signing must be enabled manually—contact us for assistance.
+-   **DNS Interface**: Advanced zone generator supporting BIND, NSD, and KnotDNS for flexible DNS software options. Includes DNSSEC signing support with native BIND9, KnotDNS and OpenDNSSEC. For NSD, native DNSSEC signing must be enabled manually—contact us for assistance.
     
 -   **Database Compatibility**: Fully supports MySQL/MariaDB and offers beta support for PostgreSQL, providing flexibility to match users' technical needs and infrastructure for seamless integration and peak performance.
     
@@ -118,9 +118,9 @@ Our documentation provides comprehensive guidance on installation, configuration
 
 ### Installation
 
-**Minimum requirement:** a VPS running Ubuntu 22.04/24.04 or Debian 12, with at least 1 CPU core, 2 GB RAM, and 10 GB hard drive space.
+**Minimum requirement:** a fresh VPS running Ubuntu 22.04/24.04 or Debian 12, with at least 1 CPU core, 2 GB RAM, and 10 GB hard drive space. **Recommended:** 4 CPU cores, 8 GB RAM, and 50 GB hard drive space.
 
-To get started, copy the command below and paste it into your server terminal:
+To get started, copy the command below and paste it into your server terminal (root access required):
 
 wget https://namingo.org/install.sh -O install.sh && chmod +x install.sh && ./install.sh
 

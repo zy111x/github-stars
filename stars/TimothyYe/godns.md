@@ -56,7 +56,7 @@ GoDNS is a dynamic DNS (DDNS) client tool. It is a rewrite in Go of my early Dyn
         -   Discord
         -   Pushover
     -   Webhook
-        -   Webhook with HTTP GET reqeust
+        -   Webhook with HTTP GET request
         -   Webhook with HTTP POST request
     -   Miscellaneous topics
         -   IPv6 support
@@ -806,7 +806,7 @@ Example
 
 #### Hetzner
 
-For Hetzner, you have to create an access token. This can be done in the DNS-Console. (Person Icon in the top left corner --> API Tokens) Notice: If a domain has multiple Records **only the first** Record will be updated. Make shure there is just one record.
+For Hetzner, you have to create an access token. This can be done in the DNS-Console. (Person Icon in the top left corner --> API Tokens) Notice: If a domain has multiple Records **only the first** Record will be updated. Make sure there is just one record.
 
 Example
 
@@ -830,7 +830,7 @@ Example
 
 #### OVH
 
-For OVH, you need to provide a Consumerkey, an Appsecret, an Appkey and configure all the domains & subdomains. The neeeded values can be obtaines by visting this site Rights should be '\*' on GET, POST and PUT More info: help.ovhcloud.com
+For OVH, you need to provide a Consumerkey, an Appsecret, an Appkey and configure all the domains & subdomains. The needed values can be obtained by visiting this site Rights should be '\*' on GET, POST and PUT More info: help.ovhcloud.com
 
 Example
 
@@ -1001,7 +1001,7 @@ Available variables:
 > -   `IP`: The new IP address.
 > -   `IPType`: The type of the IP: `IPV4` or `IPV6`.
 
-#### Webhook with HTTP GET reqeust
+#### Webhook with HTTP GET request
 
 "webhook": {
   "enabled": true,

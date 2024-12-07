@@ -1,6 +1,6 @@
 ---
 project: kbar
-stars: 4869
+stars: 4878
 description: fast, portable, and extensible cmd+k interface for your site
 url: https://github.com/timc1/kbar
 ---
@@ -95,11 +95,11 @@ import {
       <KBarPortal\> // Renders the content outside the root node
         <KBarPositioner\> // Centers the content
           <KBarAnimator\> // Handles the show/hide and height animations
-            <KBarSearch /\> // Search input
+            <KBarSearch /> // Search input
           </KBarAnimator\>
         </KBarPositioner\>
       </KBarPortal\>
-      <MyApp /\>
+      <MyApp />
     </KBarProvider\>;
   );
 }
@@ -123,7 +123,7 @@ import {
 // ...
 // <KBarAnimator>
 //   <KBarSearch />
-<RenderResults /\>;
+<RenderResults />;
 // ...
 
 function RenderResults() {
@@ -145,7 +145,7 @@ function RenderResults() {
           </div\>
         )
       }
-    /\>
+    />
   );
 }
 

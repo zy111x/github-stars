@@ -114,10 +114,10 @@ class App extends Component
                 window.location.reload();
             },
             iconArrow: ReactDOMServer.renderToString(
-                <FontAwesomeIcon icon\={faSyncAlt} /\>
+                <FontAwesomeIcon icon\={faSyncAlt} />
             ),
             iconRefreshing: ReactDOMServer.renderToString(
-                <FontAwesomeIcon icon\={faSyncAlt} spin\={true} /\>
+                <FontAwesomeIcon icon\={faSyncAlt} spin\={true} />
             ),
         });
     }

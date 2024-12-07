@@ -1,6 +1,6 @@
 ---
 project: react-hot-toast
-stars: 9860
+stars: 9880
 description: Smoking Hot React Notifications 🔥 
 url: https://github.com/timolins/react-hot-toast
 ---
@@ -55,7 +55,7 @@ const App \= () \=> {
   return (
     <div\>
       <button onClick\={notify}\>Make me a toast</button\>
-      <Toaster /\>
+      <Toaster />
     </div\>
   );
 };

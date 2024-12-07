@@ -1,6 +1,6 @@
 ---
 project: ldrs
-stars: 1773
+stars: 1779
 description: Modern, tree-shakeable loader & spinner web components. Made with CSS, HTML and SVG. https://uiball.com/ldrs
 url: https://github.com/GriffinJohnston/ldrs
 ---
@@ -90,37 +90,37 @@ _Each loader has different defaults. You can see them on the website. Click on a
 
 The size of the loader. Specifically, this defines the largest dimension (height or width) in pixels.
 
-<l-trefoil size\="35" /\>
+<l-trefoil size\="35" />
 
 ### `color: string`
 
 Any valid CSS color value is accepted, so `#000000`, `red`, `hsla(13, 68%, 63%, .7)`, and `var(--my-custom-color)` are all a-okay.
 
-<l-trefoil color\="papayawhip" /\>
+<l-trefoil color\="papayawhip" />
 
 ### `speed: number | string`
 
 The speed of the animation. Each loader uses this number a little differently (individual parts of a given loader might have different timings), but in general this number represents the duration of a single full animation loop in seconds, so smaller = faster. If you set speed to `0` or `Infinity` it will pause the animation.
 
-<l-trefoil speed\="1.75" /\>
+<l-trefoil speed\="1.75" />
 
 ### `stroke: number | string`
 
 The width / stroke in pixels of line-based loaders like `<l-waveform />` or `<l-zoomies />`.
 
-<l-trefoil stroke\="3.5" /\>
+<l-trefoil stroke\="3.5" />
 
 ### `stroke-length: number | string`
 
 The length of the animated element of track-based loaders like `<l-ring-2 />` or `<l-infinity />`. Expressed as a fraction of total. Accepts a value from 0 to 1 (for example `.1` or `0.14159`).
 
-<l-trefoil stroke-length\=".15" /\>
+<l-trefoil stroke-length\=".15" />
 
 ### `bg-opacity: number | string`
 
 The opacity of background elements in loaders like `<l-reuleaux />` or `<l-hourglass />`. Accepts a value from 0 to 1 (for example `.1` or `0.618`).
 
-<l-trefoil bg-opacity\=".1" /\>
+<l-trefoil bg-opacity\=".1" />
 
 License
 -------

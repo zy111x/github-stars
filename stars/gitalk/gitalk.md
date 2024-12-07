@@ -1,6 +1,6 @@
 ---
 project: gitalk
-stars: 7031
+stars: 7036
 description: Gitalk is a modern comment component based on Github Issue and Preact.
 url: https://github.com/gitalk/gitalk
 ---
@@ -85,7 +85,7 @@ And use the component like
   clientID: "...",
   // ...
   // options below
-}} /\>
+}} />
 
 Options
 -------

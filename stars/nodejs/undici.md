@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 6298
+stars: 6366
 description: An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici
 ---
@@ -403,6 +403,10 @@ Collaborators
 -   **Matthew Aitken**, https://www.npmjs.com/~khaf
 -   **Robert Nagy**, https://www.npmjs.com/~ronag
 -   **Szymon Marczak**, https://www.npmjs.com/~szmarczak
+
+Past Collaborators
+------------------
+
 -   **Tomas Della Vedova**, https://www.npmjs.com/~delvedor
 
 ### Releasers
@@ -411,6 +415,35 @@ Collaborators
 -   **Matteo Collina**, https://www.npmjs.com/~matteo.collina
 -   **Robert Nagy**, https://www.npmjs.com/~ronag
 -   **Matthew Aitken**, https://www.npmjs.com/~khaf
+
+Long Term Support
+-----------------
+
+Undici aligns with the Node.js LTS schedule. The following table shows the supported versions:
+
+Version
+
+Node.js
+
+End of Life
+
+5.x
+
+v18.x
+
+2024-04-30
+
+6.x
+
+v20.x v22.x
+
+2026-04-30
+
+7.x
+
+v24.x
+
+2027-04-30
 
 License
 -------

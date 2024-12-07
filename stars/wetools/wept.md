@@ -1,6 +1,6 @@
 ---
 project: wept
-stars: 2958
+stars: 2960
 description: 微信小程序多端实时运行工具
 url: https://github.com/wetools/wept
 ---
