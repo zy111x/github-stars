@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 15525
+stars: 15725
 description: 在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -161,7 +161,7 @@ UUID
 
 ✅
 
-Powershell -NoExit -Command "\[guid\]::NewGuid()"
+可输入任意值(非UUIDv4标准的值会自动切换成动态UUID)
 
 Video
 
@@ -179,7 +179,7 @@ TIME
 
 ❌
 
-动态UUID有效时间(单位:天)
+动态UUID有效时间(默认值:`7`天)
 
 UPTIME
 
@@ -187,7 +187,7 @@ UPTIME
 
 ❌
 
-动态UUID更新时间(默认:北京时间`3`点更新)
+动态UUID更新时间(默认值:北京时间`3`点更新)
 
 PROXYIP
 
@@ -264,6 +264,14 @@ DLS
 ❌
 
 `ADDCSV`测速结果满足速度下限
+
+CSVREMARK
+
+`1`
+
+❌
+
+CSV备注所在列偏移量
 
 TGTOKEN
 
@@ -370,7 +378,8 @@ CF账户标准端口列表
 
 1.  填写`KEY`后，您的**永久订阅**地址为：`https://[YOUR-URL]/[YOUR-KEY]`；
 2.  使用动态`UUID`订阅时：
-    -   临时订阅地址为：`https://[YOUR-URL]/[YOUR-UUID]`；
+    -   动态`UUID`需手动在永久订阅配置页内获得；
+    -   临时订阅地址为：`https://[YOUR-URL]/[动态UUID]`；
     -   订阅有效时间为：**1个`TIME`周期**；
     -   节点可使用时间：**2个`TIME`周期**，即动态`UUID`失效后，节点仍可使用1个额外周期，但无法继续更新订阅。
 

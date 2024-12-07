@@ -1,6 +1,6 @@
 ---
 project: FreeDomain
-stars: 16455
+stars: 20708
 description: US.KG Free Domain For Everyone
 url: https://github.com/DigitalPlatDev/FreeDomain
 ---

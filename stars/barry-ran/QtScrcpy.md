@@ -1,6 +1,6 @@
 ---
 project: QtScrcpy
-stars: 20953
+stars: 21029
 description: Android real-time display control software
 url: https://github.com/barry-ran/QtScrcpy
 ---
@@ -46,6 +46,9 @@ Group control
 -------------
 
 You can control all your phones at the same time.
+
+Star History
+------------
 
 Thanks
 ------
