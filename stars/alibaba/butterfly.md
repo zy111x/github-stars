@@ -1,6 +1,6 @@
 ---
 project: butterfly
-stars: 4489
+stars: 4488
 description: 🦋Butterfly，A JavaScript/React/Vue2 Diagramming library which concentrate on flow layout field.    (基于JavaScript/React/Vue2的流程图组件)
 url: https://github.com/alibaba/butterfly
 ---

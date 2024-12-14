@@ -1,6 +1,6 @@
 ---
 project: docker-postgres-backup-local
-stars: 853
+stars: 855
 description: Backup PostgresSQL to local filesystem with periodic backups and rotate backups.
 url: https://github.com/prodrigestivill/docker-postgres-backup-local
 ---
@@ -107,6 +107,10 @@ Number of minutes for `last` folder backups to keep before removal. Defaults to 
 BACKUP\_LATEST\_TYPE
 
 Type of `latest` pointer (`symlink`,`hardlink`,`none`). Defaults to `symlink`.
+
+VALIDATE\_ON\_START
+
+If set to `FALSE` does not validate the configuration on start. Disabling this is not recommended. Defaults to `TRUE`.
 
 HEALTHCHECK\_PORT
 

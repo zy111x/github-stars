@@ -1,6 +1,6 @@
 ---
 project: gateway
-stars: 6419
+stars: 6532
 description: A Blazing Fast AI Gateway with integrated Guardrails. Route to 200+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.
 url: https://github.com/Portkey-AI/gateway
 ---
@@ -136,14 +136,14 @@ Core Features
 ### Security & Accuracy
 
 -   **Guardrails**: Verify your LLM inputs and outputs to adhere to your specified checks. Choose from the 40+ pre-built guardrails to ensure compliance with security and accuracy standards. You can bring your own guardrails or choose from our many partners.
--   **Secure Key Management**\*: Use your own keys or generate virtual keys on the fly.
--   **Role-based access control**\*: Granular access control for your users, workspaces and API keys.
+-   **Secure Key Management**: Use your own keys or generate virtual keys on the fly.
+-   **Role-based access control**: Granular access control for your users, workspaces and API keys.
 -   **Compliance & Data Privacy**: The AI gateway is SOC2, HIPAA, GDPR, and CCPA compliant.
 
 ### Cost Management
 
 -   **Smart caching**: Cache responses from LLMs to reduce costs and improve latency. Supports simple and semantic\* caching.
--   **Usage analytics**\*: Monitor and analyze your AI and LLM usage, including request volume, latency, costs and error rates.
+-   **Usage analytics**: Monitor and analyze your AI and LLM usage, including request volume, latency, costs and error rates.
 -   **Provider optimization**\*: Automatically switch to the most cost-effective provider based on usage patterns and pricing models.
 
 ### Collaboration & Workflows
@@ -202,7 +202,7 @@ Anyscale
 
 ✅
 
-Google Gemini & Palm
+Google Gemini
 
 ✅
 
@@ -446,3 +446,5 @@ Join our growing community around the world, for help, ideas, and discussions on
 -   Follow us on Twitter
 -   Connect with us on LinkedIn
 -   Read the documentation in Japanese
+-   Visit us on YouTube
+-   Join our Dev community

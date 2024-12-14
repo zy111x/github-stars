@@ -1,6 +1,6 @@
 ---
 project: react
-stars: 230174
+stars: 230408
 description: The library for web and native user interfaces.
 url: https://github.com/facebook/react
 ---
@@ -60,7 +60,7 @@ function HelloMessage({ name }) {
 }
 
 const root \= createRoot(document.getElementById('container'));
-root.render(<HelloMessage name\="Taylor" /\>);
+root.render(<HelloMessage name\="Taylor" />);
 
 This example will render "Hello Taylor" into a container on the page.
 

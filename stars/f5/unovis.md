@@ -1,6 +1,6 @@
 ---
 project: unovis
-stars: 2297
+stars: 2311
 description: Modular data visualization framework for React, Angular, Svelte, Vue, and vanilla TypeScript or JavaScript
 url: https://github.com/f5/unovis
 ---
@@ -18,7 +18,7 @@ Learn more about _Unovis_ on unovis.dev
 Quick Start
 -----------
 
-You can install the core of the library `@unovis/ts` and framework-specific packages (if you use React, Angular, or Svelte) from NPM:
+You can install the core of the library `@unovis/ts` and framework-specific packages (if you use React, Angular, Svelte, Vue or Solid) from NPM:
 
 npm install -P @unovis/ts @unovis/<react|angular|svelte|vue|solid\>
 
@@ -47,7 +47,7 @@ export function BasicLineChart (): JSX.Element {
   )
 }
 
-Looking for Angular, Svelte, Vue, or TypeScript examples? Check out the Quick Start page on our website.
+Looking for Angular, Svelte, Vue, Solid or TypeScript examples? Check out the Quick Start page on our website.
 
 Examples and Documentation
 --------------------------

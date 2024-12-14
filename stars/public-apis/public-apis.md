@@ -1,6 +1,6 @@
 ---
 project: public-apis
-stars: 319446
+stars: 319867
 description: A collective list of free APIs
 url: https://github.com/public-apis/public-apis
 ---

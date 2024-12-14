@@ -1,6 +1,6 @@
 ---
 project: warp-docker
-stars: 334
+stars: 343
 description: Run Cloudflare WARP in Docker.
 url: https://github.com/cmj2002/warp-docker
 ---
@@ -28,6 +28,8 @@ services:
     image: caomingjun/warp
     container\_name: warp
     restart: always
+    devices:
+      - /dev/net/tun:/dev/net/tun
     ports:
       - "1080:1080"
     environment:
@@ -106,6 +108,10 @@ The default `GOST_ARGS` is `-L :1080`, which provides HTTP and SOCKS5 proxy. If 
 ### How to connect from another container
 
 You may want to use the proxy from another container and find that you cannot connect to `127.0.0.1:1080` in that container. This is because the `docker-compose.yml` only maps the port to the host, not to other containers. To solve this problem, you can use the service name as the hostname, for example, `warp:1080`. You also need to put the two containers in the same docker network.
+
+### "Operation not permitted" when open tun
+
+Error like `{ err: Os { code: 1, kind: PermissionDenied, message: "Operation not permitted" }, context: "open tun" }` is caused by a updated of containerd. You need to pass the tun device to the container following the instruction.
 
 ### NFT error on Synology or QNAP NAS
 

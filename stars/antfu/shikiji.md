@@ -1,6 +1,6 @@
 ---
 project: shikiji
-stars: 1463
+stars: 1461
 description: A syntax highlighter based on TextMate grammars. ESM rewrite of shiki, with more features and capabilities.
 url: https://github.com/antfu/shikiji
 ---

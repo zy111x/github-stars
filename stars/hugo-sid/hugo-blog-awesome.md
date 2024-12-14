@@ -1,6 +1,6 @@
 ---
 project: hugo-blog-awesome
-stars: 464
+stars: 475
 description: Fast, minimal blog with dark mode support.
 url: https://github.com/hugo-sid/hugo-blog-awesome
 ---
@@ -521,6 +521,7 @@ If you are using this theme for any website, feel free to list the website here.
 -   https://mrizkimaulidan.vercel.app/
 -   https://www.yukizr.com/
 -   http://liamdalg.co.uk/
+-   https://codewithzichen.bine.me/
 -   https://chriscodes.net/
 -   https://journeytolunar.com/
 -   https://ruiper.es/

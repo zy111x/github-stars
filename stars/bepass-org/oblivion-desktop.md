@@ -1,6 +1,6 @@
 ---
 project: oblivion-desktop
-stars: 5069
+stars: 5108
 description: Oblivion Desktop - Unofficial Warp Client for Windows/Mac/Linux
 url: https://github.com/bepass-org/oblivion-desktop
 ---
@@ -40,12 +40,12 @@ Network Configuration
 
 ✅ Proxy (No Change)  
 ✅ System Proxy (with PAC)  
-⬜ TUN
+✅ TUN (with SingBox)
 
 Routing Rules
 
 ✅ System Proxy  
-⬜ GeoIP
+✅ GeoDB
 
 System Tray
 
@@ -63,8 +63,9 @@ Languages
 ✅ Turkish  
 ✅ Indonesian  
 ✅ Arabic  
-✅ Portuguese (Brazil)  
-✅ Vietnamese
+✅ Portuguese  
+✅ Vietnamese  
+✅ Urdu
 
 Theme
 
@@ -79,8 +80,9 @@ Other
 ✅ Scanner  
 ✅ Ping  
 ✅ Accessibility  
+✅ SpeedTest  
 ⬜ Inline Update  
-⬜ SpeedTest
+⬜ Kill Switch
 
 Download
 --------
@@ -100,14 +102,15 @@ Windows
   
   
 
-v10  
-v11
+10+
 
 macOS
 
   
   
   
+
+10.15+
 
 Linux
 
@@ -125,7 +128,7 @@ Android
 
   
 
-v6+
+6+
 
 iOS
 
@@ -157,6 +160,7 @@ This project stands on the shoulders of giants, and we are deeply grateful for t
 -   Cloudflare Warp
 -   warp-plus (Yousef Ghobadi & Mark Pashmfouroush)
 -   Oblivion
+-   Oblivion Helper
 -   Electron
 -   React
 -   electron-react-boilerplate
@@ -165,6 +169,7 @@ This project stands on the shoulders of giants, and we are deeply grateful for t
 -   sing-box
 -   Iran Sing-box rules
 -   Shabnam Font (Saber Rastikerdar)
+-   Zag-NetStats
 -   and others 🧡
 
 Contributors

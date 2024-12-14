@@ -1,6 +1,6 @@
 ---
 project: node-rss
-stars: 1008
+stars: 1010
 description: RSS feed generator for Node.
 url: https://github.com/dylang/node-rss
 ---

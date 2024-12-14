@@ -1,6 +1,6 @@
 ---
 project: minio
-stars: 48701
+stars: 48843
 description: MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.
 url: https://github.com/minio/minio
 ---
@@ -8,7 +8,7 @@ url: https://github.com/minio/minio
 MinIO Quickstart Guide
 ======================
 
-MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service. Use MinIO to build high performance infrastructure for machine learning, analytics and application data workloads.
+MinIO is a High Performance Object Storage released under GNU Affero General Public License v3.0. It is API compatible with Amazon S3 cloud storage service. Use MinIO to build high performance infrastructure for machine learning, analytics and application data workloads. To learn more about what MinIO is doing for AI storage, go to AI storage documentation.
 
 This README provides quickstart instructions on running MinIO on bare metal hardware, including container-based installations. For Kubernetes environments, use the MinIO Kubernetes Operator.
 

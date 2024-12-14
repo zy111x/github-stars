@@ -1,6 +1,6 @@
 ---
 project: shoutrrr
-stars: 1044
+stars: 1052
 description: Notification library for gophers and their furry friends.
 url: https://github.com/containrrr/shoutrrr
 ---

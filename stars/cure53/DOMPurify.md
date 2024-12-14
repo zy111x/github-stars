@@ -1,6 +1,6 @@
 ---
 project: DOMPurify
-stars: 14196
+stars: 14236
 description: DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:
 url: https://github.com/cure53/DOMPurify
 ---
@@ -10,11 +10,11 @@ DOMPurify
 
 DOMPurify is a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG.
 
-It's also very simple to use and get started with. DOMPurify was started in February 2014 and, meanwhile, has reached version **v3.2.2**.
+It's also very simple to use and get started with. DOMPurify was started in February 2014 and, meanwhile, has reached version **v3.2.3**.
 
 DOMPurify is written in JavaScript and works in all modern browsers (Safari (10+), Opera (15+), Edge, Firefox and Chrome - as well as almost anything else using Blink, Gecko or WebKit). It doesn't break on MSIE or other legacy browsers. It simply does nothing.
 
-**Note that DOMPurify v2.5.7 is the latest version supporting MSIE. For important security updates compatible with MSIE, please use the 2.x branch.**
+**Note that DOMPurify v2.5.8 is the latest version supporting MSIE. For important security updates compatible with MSIE, please use the 2.x branch.**
 
 Our automated tests cover 24 different browsers right now, more to come. We also cover Node.js v16.x, v17.x, v18.x and v19.x, running DOMPurify on jsdom. Older Node versions are known to work as well, but hey... no guarantees.
 

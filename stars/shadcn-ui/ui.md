@@ -1,6 +1,6 @@
 ---
 project: ui
-stars: 76153
+stars: 76606
 description: Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
 url: https://github.com/shadcn-ui/ui
 ---

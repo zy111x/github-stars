@@ -1,6 +1,6 @@
 ---
 project: medium-zoom
-stars: 3694
+stars: 3697
 description: 🔎🖼 A JavaScript library for zooming images like Medium
 url: https://github.com/francoischalifour/medium-zoom
 ---

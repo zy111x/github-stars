@@ -1,6 +1,6 @@
 ---
 project: nocodb
-stars: 50133
+stars: 50240
 description: 🔥 🔥 🔥 Open Source Airtable Alternative
 url: https://github.com/nocodb/nocodb
 ---
@@ -51,7 +51,7 @@ Auto-upstall is a single command that sets up NocoDB on a server for production 
 
 bash <(curl -sSL http://install.nocodb.com/noco.sh) <(mktemp)
 
-Auto-upstall does the following : 🕊
+Auto-upstall does the following: 🕊
 
 -   🐳 Automatically installs all pre-requisites like docker, docker-compose
 -   🚀 Automatically installs NocoDB with PostgreSQL, Redis, Minio, Traefik gateway using Docker Compose. 🐘 🗄️ 🌐

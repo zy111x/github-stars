@@ -1,6 +1,6 @@
 ---
 project: semi-design
-stars: 8568
+stars: 8583
 description: 🚀A modern, comprehensive, flexible design system and React UI library. 🎨 Provide more than 3000+ Design Tokens, easy to build your design system. Make Semi Design to Any Design.  🧑🏻‍💻 Design to Code in one click 
 url: https://github.com/DouyinFE/semi-design
 ---
@@ -49,7 +49,7 @@ const App \= () \=> (
 
 const root \= createRoot(document.querySelector('#app'));
 
-root.render(<App /\>);
+root.render(<App />);
 
 Semi UI Doc Site has hundreds of editable examples and live preview, welcome to play with those examples.
 

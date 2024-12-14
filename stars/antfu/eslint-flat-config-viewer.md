@@ -1,6 +1,6 @@
 ---
 project: eslint-flat-config-viewer
-stars: 551
+stars: 549
 description: A visual tool to help you view and understand your ESLint Flat config.
 url: https://github.com/antfu/eslint-flat-config-viewer
 ---

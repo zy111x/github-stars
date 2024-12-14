@@ -1,6 +1,6 @@
 ---
 project: vite
-stars: 69173
+stars: 69327
 description: Next generation frontend tooling. It's fast!
 url: https://github.com/vitejs/vite
 ---

@@ -1,6 +1,6 @@
 ---
 project: selfhosted-music-overview
-stars: 728
+stars: 735
 description: A table listing software network services which can be hosted on your own servers
 url: https://github.com/basings/selfhosted-music-overview
 ---
@@ -533,7 +533,7 @@ Plex
 
 Polaris
 
-last.fm
+❌
 
 ❔
 

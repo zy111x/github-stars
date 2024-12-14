@@ -1,6 +1,6 @@
 ---
 project: react-pdf
-stars: 15061
+stars: 15081
 description: 📄  Create PDF files using React
 url: https://github.com/diegomura/react-pdf
 ---
@@ -58,18 +58,18 @@ import { PDFViewer } from '@react-pdf/renderer';
 
 const App \= () \=> (
   <PDFViewer\>
-    <MyDocument /\>
+    <MyDocument />
   </PDFViewer\>
 );
 
-ReactDOM.render(<App /\>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 ### `Node.` Save in a file
 
 import React from 'react';
 import ReactPDF from '@react-pdf/renderer';
 
-ReactPDF.render(<MyDocument /\>, \`${\_\_dirname}/example.pdf\`);
+ReactPDF.render(<MyDocument />, \`${\_\_dirname}/example.pdf\`);
 
 Contributors
 ------------

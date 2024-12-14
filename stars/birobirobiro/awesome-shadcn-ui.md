@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 10065
+stars: 10269
 description: A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
 ---
@@ -118,8 +118,10 @@ Libs and Components
 -   shadcn-multi-select-component - A multi-select component designed with shadcn/ui.
 -   shadcn-phone-input-2 - Simple and formatted phone input component built with shadcn/ui y libphonenumber-js.
 -   shadcn-phone-input - Customizable phone input component with proper validation for any country.
+-   shadcn-pricing-page - Responsive and customizable pricing component built with shadcn/ui. Features payment frequency toggles, tier highlights, and smooth price transitions.
 -   shadcn-spinner - Spinner component for shadcn/ui.
 -   shadcn-stepper - A complete stepper component built with shadcn/ui.
+-   shadcn-table-maker - ShadCN Table Maker is a tool designed to simplify the process of creating dynamic, feature-rich tables in Next.js using the ShadCN design library. It provides a robust scaffold for table-related components and integrates seamlessly with the ShadCN Form Builder for effortless form creation.
 -   shadcn-table-v2 - shadcn/ui table component with server-side sorting, filtering, and pagination.
 -   shadcn-timeline - Customizable and re-usable timeline component for you to use in your projects. Built on top of shadcn.
 -   shadcn-timeline-2 - Shadcn timeline component built with shadcn/ui.

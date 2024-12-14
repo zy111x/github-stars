@@ -1,6 +1,6 @@
 ---
 project: stats
-stars: 26497
+stars: 26657
 description: macOS system monitor in your menu bar
 url: https://github.com/exelban/stats
 ---
@@ -92,7 +92,7 @@ Supported languages
 -   German (thanks to natterstefan and aneitel)
 -   中文 (繁體) (thanks to iamch15542 and jrthsr700tmax)
 -   Spanish (thanks to jcconca)
--   Vietnamese (thanks to xuandung38)
+-   Vietnamese (thanks to HXD.VN)
 -   French (thanks to RomainLt)
 -   Italian (thanks to gmcinalli)
 -   Portuguese (Brazil) (thanks to marcelochaves95 and pedroserigatto)

@@ -1,6 +1,6 @@
 ---
 project: htmx
-stars: 38774
+stars: 38892
 description: </> htmx - high power tools for HTML
 url: https://github.com/bigskysoftware/htmx
 ---
@@ -27,7 +27,7 @@ By removing these arbitrary constraints htmx completes HTML as a hypertext
 quick start
 -----------
 
-  <script src\="https://unpkg.com/htmx.org@2.0.3"\></script\>
+  <script src\="https://unpkg.com/htmx.org@2.0.4"\></script\>
   <!-- have a button POST a click via AJAX -->
   <button hx-post\="/clicked" hx-swap\="outerHTML"\>
     Click Me

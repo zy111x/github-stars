@@ -1,6 +1,6 @@
 ---
 project: element-plus
-stars: 24722
+stars: 24784
 description: 🎉 A Vue.js 3 UI Library made by Element team
 url: https://github.com/element-plus/element-plus
 ---

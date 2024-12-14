@@ -1,6 +1,6 @@
 ---
 project: ui-thing
-stars: 342
+stars: 351
 description: A set of components created with Radix-Vue. Inspired by shadcn/ui & shadcn-vue.
 url: https://github.com/BayBreezy/ui-thing
 ---
@@ -25,6 +25,11 @@ Credits
 -   Nuxt UI
 
 Thanks to the maintainers of the other third party libraries used in this project.
+
+💸 Support Me
+-------------
+
+If you can 😊
 
 Getting Started
 ---------------

@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare
-stars: 8928
+stars: 8997
 description: ⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.
 url: https://github.com/zhuima/awesome-cloudflare
 ---
@@ -241,6 +241,14 @@ serverless-cloud-notepad
 基于 Cloudflare Worker 实现的Serverless Cloud Notepad 云笔记。
 
 https://note.src.moe/y6y
+
+维护中
+
+Rin
+
+Rin 是一个基于 Cloudflare Pages + Workers + D1 + R2 全家桶的博客，无需服务器无需备案，只需要一个解析到 Cloudflare 的域名即可部署。
+
+https://docs.openrin.org/
 
 维护中
 
@@ -495,6 +503,14 @@ dingding
 cf-files-sharing
 
 在该项目中，利用 Cloudflare Workers 的全球加速优势，实现了一个支持密码保护的文件分享工具，并集成了 Cloudflare 的 D1 数据库和 R2 存储，以满足不同大小文件的存储需求
+
+维护中
+
+CloudPaste
+
+基于 Cloudflare Workers 的在线剪贴板和文件分享服务，支持 Markdown、密码保护、文件上传等功能
+
+https://copy.vw50.ggff.net/share/paste/example
 
 维护中
 

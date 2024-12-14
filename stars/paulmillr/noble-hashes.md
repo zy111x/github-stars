@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 601
+stars: 606
 description: Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
 ---
@@ -65,7 +65,6 @@ console.log(sha256('abc')); // == sha256(new TextEncoder().encode('abc'))
     -   Randomness
 -   Speed
 -   Contributing & testing
--   Resources
 -   License
 
 ### Implementations
@@ -499,20 +498,17 @@ The current performance is good enough when compared to other projects; SHA256 t
 Contributing & testing
 ----------------------
 
-1.  Clone the repository
-2.  `npm install` to install build dependencies like TypeScript
-3.  `npm run build` to compile TypeScript code
-4.  `npm run test` will execute all main tests. See our approach to testing
-5.  `npm run test:dos` will test against DoS; by measuring function complexity. **Takes ~20 minutes**
-6.  `npm run test:big` will execute hashing on 4GB inputs, scrypt with 1024 different `N, r, p` combinations, etc. **Takes several hours**. Using 8-32+ core CPU helps.
-7.  `npm run format` will fix lint issues
-
 `test/misc` directory contains implementations of loop unrolling and md5.
 
-Resources
----------
+-   `npm install && npm run build && npm test` will build the code and run tests.
+-   `npm run lint` / `npm run format` will run linter / fix linter issues.
+-   `npm run bench` will run benchmarks, which may need their deps first (`npm run bench:install`)
+-   `cd build && npm install && npm run build:release` will build single file
+-   There is **additional** 20-min DoS test `npm run test:dos` and 2-hour "big" multicore test `npm run test:big`. See our approach to testing
 
-Check out paulmillr.com/noble for useful resources, articles, documentation and demos related to the library.
+Check out github.com/paulmillr/guidelines for general coding practices and rules.
+
+See paulmillr.com/noble for useful resources, articles, documentation and demos related to the library.
 
 License
 -------

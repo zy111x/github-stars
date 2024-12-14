@@ -1,6 +1,6 @@
 ---
 project: editor
-stars: 2101
+stars: 2126
 description: A rich text editor React component for markdown
 url: https://github.com/mdx-editor/editor
 ---
@@ -16,7 +16,7 @@ import {MDXEditor, headingsPlugin} from '@mdxeditor/editor';
 import '@mdxeditor/editor/style.css';
 
 export default function App() {
-  return <MDXEditor markdown\={'# Hello World'} plugins\={\[headingsPlugin()\]} /\>;
+  return <MDXEditor markdown\={'# Hello World'} plugins\={\[headingsPlugin()\]} />;
 }
 
 Get Started

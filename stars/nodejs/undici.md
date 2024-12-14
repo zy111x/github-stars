@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 6366
+stars: 6398
 description: An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici
 ---
@@ -270,17 +270,22 @@ The Fetch Standard allows users to skip consuming the response body by relying o
 Garbage collection in Node is less aggressive and deterministic (due to the lack of clear idle periods that browsers have through the rendering refresh rate) which means that leaving the release of connection resources to the garbage collector can lead to excessive connection usage, reduced performance (due to less connection re-use), and even stalls or deadlocks when running out of connections.
 
 // Do
-const headers \= await fetch(url)
-  .then(async res \=> {
-    for await (const chunk of res.body) {
-      // force consumption of body
-    }
-    return res.headers
-  })
+const { body, headers } \= await fetch(url);
+for await (const chunk of body) {
+  // force consumption of body
+}
 
 // Do not
-const headers \= await fetch(url)
-  .then(res \=> res.headers)
+const { headers } \= await fetch(url);
+
+The same applies for `request` too:
+
+// Do
+const { body, headers } \= await request(url);
+await res.body.dump(); // force consumption of body
+
+// Do not
+const { headers } \= await request(url);
 
 However, if you want to get only headers, it might be better to use `HEAD` request method. Usage of this method will obviate the need for consumption or cancelling of the response body. See MDN - HTTP - HTTP request methods - HEAD for more details.
 

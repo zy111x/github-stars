@@ -1,6 +1,6 @@
 ---
 project: termshot
-stars: 456
+stars: 460
 description: Creates screenshots based on terminal command output
 url: https://github.com/homeport/termshot
 ---
@@ -8,34 +8,72 @@ url: https://github.com/homeport/termshot
 termshot
 ========
 
-Terminal screenshot tool, which takes the console output and renders an output image that resembles a user interface window. The idea is similar to what carbon.now.sh, instaco.de, or codekeep.io/screenshot do. Instead of applying syntax highlight based on a programming language, `termshot` is using the ANSI escape codes of the program output. The result is clean screenshot (or recreation) of your terminal output. If you want, it has an option to edit the program output before creating the screenshot. This way you can remove unwanted sensitive content. Like `time`, `watch`, or `perf`, just place `termshot` before the command and you are set.
+Generate beautiful screenshots of your terminal, from your terminal.
 
-For example, `termshot --show-cmd -- lolcat -f <(figlet -f big foobar)` will create a screenshot which looks like this:
+termshot --show-cmd -- lolcat -f <(figlet -f big foobar)
+
+This command generates this screenshot:
 
 Installation
 ------------
 
-### macOS / Linux
+To install with Homebrew on macOS or Linux:
 
-Use `homebrew` to install `termshot`: `brew install homeport/tap/termshot`
+brew install homeport/tap/termshot
 
-### Binaries
+See Releases for pre-compiled binaries for Darwin and Linux.
 
-The releases section has pre-compiled binaries for Darwin, and Linux.
-
-Notes
+Usage
 -----
 
--   Since both `termshot` and your command can have command line flags, it is recommended to use `--` to separate them.
-    
-    termshot --edit -- tool --apply --force
-    
--   If you want to run a command and pipe the output into another, you have to use quotes to make this clear on the command line.
-    
-    termshot --show-cmd -- "figlet foobar | lolcat"
-    
--   In order to work, `termshot` uses a pseudo terminal for the command to be executed. This means you can invoke a fully interactive shell and capture the entire output. The screenshot is created once you terminate the shell.
-    
-    termshot /bin/zsh
-    
--   _Please note:_ This project is work in progress. Although a lot of the ANSI sequences can be parsed, there are definitely commands in existence that create output that cannot be parsed correctly, yet. Also, commands that reset the cursor position are known to create issues.
+This tool reads the console output and renders an output image that resembles a user interface window. It's inspired by some other web-based tools like carbon.now.sh, and codekeep.io/screenshot. Unlike those tools, `termshot` does not blindly apply syntax highlighting to some provided text; instead it reads the ANSI escape codes ("rich text") logged by most command-line tools and uses it to generate a high-fidelity "screenshot" of your terminal output.
+
+Like `time`, `watch`, or `perf`, just prefix the command you want to screenshot with `termshot --` .
+
+termshot -- ls -a
+
+This will generate an image file called `out.png` in the current directory.
+
+In some cases, if your target command contains _pipes_—there may still be ambiguity, even with `--`. In these cases, wrap your command in double quotes.
+
+termshot -- "ls -l | grep go"
+
+#### `--show-cmd`/`-c`
+
+Include the target command in the screenshot.
+
+termshot --show-cmd -- "ls -a"
+termshot --c -- "ls -a"
+
+#### `--edit`/`-e`
+
+Edit the output before generating the screenshot. This will open the rich text output in the editor configured in `$EDITOR`, using `vi` as a fallback. Use this flag to remove unwanted or sensitive output.
+
+termshot --edit -- "ls -a"
+termshot -e -- "ls -a"
+
+#### `--filename`/`-f`
+
+Specify a path where the screenshot should be generated. This can be an absolute path or a relative path; relative paths will be resolved relative to the current working directory.
+
+termshot -- "ls -a" # defaults to <cwd>/out.png
+termshot --filename my-image.png -- "ls -a"
+termshot --filename screenshots/my-image.png -- "ls -a"
+termshot --filename /Desktop/my-image.png -- "ls -a"
+
+Defaults to `out.png`.
+
+#### `--version`/`-v`
+
+Print the version of `termshot` installed.
+
+$ termshot --version
+termshot version 0.2.5
+
+### Multiple commands
+
+In order to work, `termshot` uses a pseudo terminal for the command to be executed. For advanced use cases, you can invoke a fully interactive shell, run several commands, and capture the entire output. The screenshot will be created once you terminate the shell.
+
+termshot /bin/zsh
+
+> _Please note:_ This project is work in progress. Although a lot of the ANSI sequences can be parsed, there are definitely commands in existence that create output that cannot be parsed correctly, yet. Also, commands that reset the cursor position are known to create issues.

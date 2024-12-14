@@ -1,6 +1,6 @@
 ---
 project: aos
-stars: 26956
+stars: 26982
 description: Animate on scroll library
 url: https://github.com/michalsnik/aos
 ---
@@ -213,7 +213,7 @@ Similar to animations you can add custom easings:
 
 Default distance for built-in animations is 100px. As long as you're using SCSS though, you can override it:
 
-$aos-distance: 200px; // It has to be above import
+$aos\-distance: 200px; // It has to be above import
 @import 'node\_modules/aos/src/sass/aos.scss';
 
 You have to however configure your build process to allow it to import styles from `node_modules` beforehand.

@@ -1,6 +1,6 @@
 ---
 project: newTrackon
-stars: 616
+stars: 617
 description: newTrackon, a public open BitTorrent trackers monitoring tool
 url: https://github.com/CorralPeltzer/newTrackon
 ---

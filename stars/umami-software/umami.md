@@ -1,6 +1,6 @@
 ---
 project: umami
-stars: 23208
+stars: 23300
 description: Umami is a simple, fast, privacy-focused alternative to Google Analytics.
 url: https://github.com/umami-software/umami
 ---
@@ -24,7 +24,7 @@ A detailed getting started guide can be found at umami.is/docs.
 
 ### Requirements
 
--   A server with Node.js version 16.13 or newer
+-   A server with Node.js version 18.18 or newer
 -   A database. Umami supports MariaDB (minimum v10.5), MySQL (minimum v8.0) and PostgreSQL (minimum v12.14) databases.
 
 ### Install Yarn

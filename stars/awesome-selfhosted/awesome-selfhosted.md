@@ -1,6 +1,6 @@
 ---
 project: awesome-selfhosted
-stars: 206034
+stars: 206984
 description: A list of Free Software network services and web applications which can be hosted on your own servers
 url: https://github.com/awesome-selfhosted/awesome-selfhosted
 ---
@@ -133,10 +133,9 @@ _Related: Database Management, Personal Dashboards_
 -   AWStats - Generate statistics from web, streaming, ftp or mail server logfiles. (Demo, Source Code) `GPL-3.0` `Perl`
 -   Countly Community Edition - Real time mobile and web analytics, crash reporting and push notifications platform. (Source Code) `AGPL-3.0` `Nodejs/Docker`
 -   Druid - Distributed, column-oriented, real-time analytics data store. (Source Code) `Apache-2.0` `Java/Docker`
--   EDA - Web application for data analysis and visualization. (Source Code) `AGPL-3.0` `Nodejs/Docker`
+-   EDA - Web application for data analysis and visualization. `AGPL-3.0` `Nodejs/Docker`
 -   GoAccess - Real-time web log analyzer and interactive viewer that runs in a terminal. (Source Code) `GPL-2.0` `C`
 -   GoatCounter - Easy web statistics without tracking of personal data. (Source Code) `EUPL-1.2` `Go`
--   Litlyx - All-in-one Analytics Solution. Setup in 30 seconds. Display all your data on an AI-powered dashboard. Fully self-hostable and GDPR compliant. (Source Code) `Apache-2.0` `Docker`
 -   Litlyx - All-in-one Analytics Solution. Setup in 30 seconds. Display all your data on an AI-powered dashboard. Fully self-hostable and GDPR compliant. (Source Code) `Apache-2.0` `Docker`
 -   Matomo - Google Analytics alternative that protects your data and your customers' privacy. (Source Code) `GPL-3.0` `PHP`
 -   Metabase - Easy, open-source way for everyone in your company to ask questions and learn from data. (Source Code) `AGPL-3.0` `Java/Docker`
@@ -216,6 +215,8 @@ _Related: Internet of Things (IoT), Software Development - Continuous Integratio
 -   Mylar3 - Automated Comic Book (cbr/cbz) downloader program for use with NZB and torrents. (Source Code) `GPL-3.0` `Python/Docker`
 -   nefarious - Web application that automates downloading Movies and TV Shows. `GPL-3.0` `Python`
 -   OliveTin - OliveTin is a web interface for running Linux shell commands. `AGPL-3.0` `Go`
+-   PlexRipper `⚠` - A cross-platform Plex media downloader that seamlessly adds media from other Plex servers to your own. (Source Code) `GPL-3.0` `Docker`
+-   PlexRipper `⚠` - A cross-platform Plex media downloader that seamlessly adds media from other Plex servers to your own. (Source Code) `GPL-3.0` `Docker`
 -   pyLoad - Lightweight, customizable and remotely manageable downloader for 1-click-hosting sites like rapidshare.com or uploaded.to. (Source Code) `GPL-3.0` `Python`
 -   Radarr - Radarr is an independent fork of Sonarr reworked for automatically downloading movies via Usenet and BitTorrent, à la Couchpotato. (Source Code) `GPL-3.0` `C#/Docker`
 -   SickChill - SickChill is an automatic video library manager for TV shows. It watches for new episodes of your favorite shows, and when they are posted it does its magic. (Source Code) `GPL-3.0` `Python/Docker`
@@ -722,6 +723,8 @@ A document management system (DMS) is a system used to receive, track, manage an
 -   OpenSign `⚠` - Free, open source & self-hosted document signing software (alternative to DocuSign). (Source Code) `AGPL-3.0` `Nodejs/Docker`
 -   Paperless-ngx - Scan, index, and archive all of your paper documents with an improved interface (fork of Paperless). (Demo, Source Code) `GPL-3.0` `Python/Docker`
 -   Papermerge - Open Source Document Management System focused on scanned documents (electronic archives). Features file browsing in similar way to dropbox/google drive. OCR, full text search, text overlay/selection. (Source Code) `Apache-2.0` `Python/Docker/K8S`
+-   PdfDing - PDF manager and viewer offering a seamless user experience on multiple devices. It's designed to be minimal, fast, and easy to set up using Docker. `GPL-3.0` `Docker`
+-   SeedDMS - Document Management System with workflows, access rights, fulltext search, and more. (Demo, Source Code) `GPL-2.0` `PHP`
 -   Stirling-PDF - Local hosted web application that allows you to perform various operations on PDF files, such as merging, splitting, file conversions and OCR. `Apache-2.0` `Docker/Java`
 -   Teedy - Lightweight document management system packed with all the features you can expect from big expensive solutions (Ex SismicsDocs). (Demo, Source Code) `GPL-2.0` `Docker/Java`
 
@@ -995,6 +998,7 @@ _Related: Games_
 -   Pterodactyl - Management panel for game servers, with an intuitive UI for end users. (Source Code) `MIT` `PHP`
 -   PufferPanel - PufferPanel is an open source game server management panel, designed for both small networks and game server providers. (Source Code) `Apache-2.0` `Go`
 -   RconCli - CLI for executing queries on a remote Valve Source dedicated server using the RCON Protocol. `MIT` `Go`
+-   Retrom - Private cloud game library distribution server + frontend/launcher. `GPL-3.0` `Docker/Rust`
 -   Romm `⚠` - RomM (Rom Manager) is a web based retro roms manager integrated with IGDB. `GPL-3.0` `Docker`
 -   SourceBans++ - Admin, ban, and communication management system for games running on the Source engine. (Source Code) `CC-BY-SA-4.0` `PHP`
 -   Sunshine - Remote game stream host for Moonlight with support up to 120 frames per second and 4K resolution. (Source Code) `GPL-3.0` `C++/deb/Docker`
@@ -1076,6 +1080,7 @@ _Related: Money, Budgeting & Management, Resource Planning_
 _See also: awesome-sysadmin/IT Asset Management_
 
 -   Cannery - Firearm and ammunition tracker app. (Source Code) `AGPL-3.0` `Docker`
+-   HomeBox (SysAdminsMedia) - Inventory and organization system built for the Home User. (Demo, Source Code) `AGPL-3.0` `Docker/Go`
 -   Inventaire - Collaborative resources mapper project, while yet only focused on exploring books mapping with wikidata and ISBNs. (Source Code) `AGPL-3.0` `Nodejs`
 -   Inventree - InvenTree is an open-source inventory management system which provides intuitive parts management and stock control. (Demo, Source Code) `MIT` `Python`
 -   Open QuarterMaster - Powerful inventory management system, designed to be flexible and scalable. (Source Code) `GPL-3.0` `deb/Docker`
@@ -1574,7 +1579,7 @@ _Related: Web Servers_
 
 Software and tools for managing recipes.
 
--   Bar Assistant - Bar assistant is a self hosted application for managing your home bar. It allows you to add your ingredients, search for cocktails and create custom cocktail recipes. (Demo) `MIT` `PHP/Docker`
+-   Bar Assistant - Bar assistant is a self hosted application for managing your home bar. It allows you to add your ingredients, search for cocktails and create custom cocktail recipes. (Demo, Source Code) `MIT` `PHP/Docker`
 -   KitchenOwl - A cross-platform shopping list, recipe storage, expense tracker, and meal planner following the material design language. (Source Code) `AGPL-3.0` `Docker/deb`
 -   Mealie - Material design inspired recipe manager with category and tag management, shopping-lists, meal-planner, and site customizations. Mealie is focused on simple user interactions to keep the whole family using the app. (Source Code) `MIT` `Python`
 -   RecipeSage - A recipe keeper, meal plan organizer, and shopping list manager that can import recipes directly from any URL. (Demo) `AGPL-3.0` `Nodejs`
@@ -1969,6 +1974,7 @@ _See also: Wikimatrix, List of wiki software - Wikipedia, Comparison of wiki sof
 -   AmuseWiki - Amusewiki is based on the Emacs Muse markup, remaining mostly compatible with the original implementation. It can work as a read-only site, as a moderated wiki, or as a fully open wiki or even as a private site. (Demo, Source Code) `GPL-1.0` `Perl/Docker`
 -   BookStack - BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing information. It allows for documentation to be stored in a book like fashion. (Demo, Source Code) `MIT` `PHP/Docker`
 -   django-wiki - Wiki system with complex functionality for simple integration and a superb interface. Store your knowledge with style: Use django models. (Demo) `GPL-3.0` `Python`
+-   docmost - Collaborative wiki and documentation software (alternative to Confluence, Notion). (Source Code) `AGPL-3.0` `Docker/Nodejs`
 -   Documize - Modern Docs + Wiki software with built-in workflow, single binary executable, just bring MySQL/Percona. (Source Code) `AGPL-3.0` `Go`
 -   Dokuwiki - Easy to use, lightweight, standards-compliant wiki engine with a simple syntax allowing reading the data outside the wiki. All data is stored in plain text files, therefore no database is required. (Source Code) `GPL-2.0` `PHP`
 -   Feather Wiki - A lightning fast and infinitely extensible tool for creating personal non-linear notebooks, databases, and wikis that is entirely self-contained, runs in your browser, and is only 58 kilobytes in size. (Demo, Source Code, Clients) `AGPL-3.0` `Javascript`

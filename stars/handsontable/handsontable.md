@@ -1,6 +1,6 @@
 ---
 project: handsontable
-stars: 20106
+stars: 20192
 description: JavaScript data grid with a spreadsheet look & feel. Works with React, Angular, and Vue. Supported by the Handsontable team ⚡
 url: https://github.com/handsontable/handsontable
 ---

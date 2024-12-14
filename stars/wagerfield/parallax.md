@@ -1,6 +1,6 @@
 ---
 project: parallax
-stars: 16506
+stars: 16509
 description: Parallax Engine that reacts to the orientation of a smart device
 url: https://github.com/wagerfield/parallax
 ---

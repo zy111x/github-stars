@@ -1,6 +1,6 @@
 ---
 project: godns
-stars: 1516
+stars: 1520
 description: A dynamic DNS client tool that supports AliDNS, Cloudflare, Google Domains, DNSPod, HE.net & DuckDNS & DreamHost, etc, written in Go.
 url: https://github.com/TimothyYe/godns
 ---
