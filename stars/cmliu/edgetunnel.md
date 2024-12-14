@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 15725
+stars: 16734
 description: 在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -371,6 +371,10 @@ CF账户标准端口列表
 
 注意事项
 ====
+
+### 开启在线编辑优选列表
+
+-   绑定名为`KV`的KV空间，即可在无`SUB`的前提下，在配置页实现在线编辑`ADD`与`ADDAPI`优选列表；
 
 ### **关于`KEY`与`UUID`：**
 

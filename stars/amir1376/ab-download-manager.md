@@ -1,6 +1,6 @@
 ---
 project: ab-download-manager
-stars: 4567
+stars: 4907
 description: A Download Manager that speeds up your downloads
 url: https://github.com/amir1376/ab-download-manager
 ---
@@ -36,7 +36,7 @@ in order to download and install the app
 
 ### installation script (Linux)
 
-curl -fsSL https://raw.githubusercontent.com/amir1376/ab-download-manager/master/scripts/install.sh | bash
+bash <(curl -fsSL https://raw.githubusercontent.com/amir1376/ab-download-manager/master/scripts/install.sh)
 
 ### winget or scoop (for Windows)
 
@@ -53,7 +53,7 @@ Uninstall
 
 perform below command to uninstall
 
-curl -fsSL https://raw.githubusercontent.com/amir1376/ab-download-manager/master/scripts/uninstall.sh | bash
+bash <(curl -fsSL https://raw.githubusercontent.com/amir1376/ab-download-manager/master/scripts/uninstall.sh)
 
 Screenshots
 -----------

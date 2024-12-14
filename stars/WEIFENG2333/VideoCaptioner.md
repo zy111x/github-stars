@@ -1,6 +1,6 @@
 ---
 project: VideoCaptioner
-stars: 1767
+stars: 2036
 description: 🎬 卡卡字幕助手 | VideoCaptioner - 基于 LLM 的智能字幕助手，无需GPU一键高质量字幕视频合成！支持生成、断句、优化、翻译全流程。让视频字幕制作简单高效！
 url: https://github.com/WEIFENG2333/VideoCaptioner
 ---

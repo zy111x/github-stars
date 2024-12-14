@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 8186
+stars: 8237
 description: TikTok 主页/合辑/直播/视频/图集/原声；抖音主页/视频/图集/实况/收藏/直播/原声/合集/评论/账号/搜索/热榜数据采集工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---

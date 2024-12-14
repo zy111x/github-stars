@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 47150
+stars: 47334
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -183,7 +183,7 @@ Certain functionality like `Sign` supports pre-saved files stored at `/customFil
 Supported Languages
 -------------------
 
-Stirling-PDF currently supports 37 languages!
+Stirling-PDF currently supports 38 languages!
 
 Language
 
@@ -232,6 +232,8 @@ Japanese (日本語) (ja\_JP)
 Korean (한국어) (ko\_KR)
 
 Norwegian (Norsk) (no\_NB)
+
+Persian (فارسی) (fa\_IR)
 
 Polish (Polski) (pl\_PL)
 
@@ -435,7 +437,7 @@ To access your account settings, go to Account Settings in the settings cog menu
 
 To add new users, go to the bottom of Account Settings and hit 'Admin Settings'. Here you can add new users. The different roles mentioned within this are for rate limiting. This is a work in progress and will be expanded on more in the future.
 
-For API usage, you must provide a header with `X-API-Key` and the associated API key for that user.
+For API usage, you must provide a header with `X-API-KEY` and the associated API key for that user.
 
 FAQ
 ---

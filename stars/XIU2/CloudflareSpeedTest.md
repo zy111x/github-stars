@@ -1,6 +1,6 @@
 ---
 project: CloudflareSpeedTest
-stars: 20131
+stars: 20270
 description: 🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~
 url: https://github.com/XIU2/CloudflareSpeedTest
 ---
@@ -194,7 +194,7 @@ https://github.com/XIU2/CloudflareSpeedTest
 
 * * *
 
-> 该示例把常用参数都给加上了，即为：`-ttl 40 -tl 150 -sl 1 -dn 5`，最后输出结果如下：
+> 该示例把常用参数都给加上了，即为：`-tll 40 -tl 150 -sl 1 -dn 5`，最后输出结果如下：
 
 \# XIU2/CloudflareSpeedTest vX.X.X
 

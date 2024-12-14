@@ -1,6 +1,6 @@
 ---
 project: enhanced-FaaS-in-China
-stars: 1843
+stars: 1862
 description: 提升部署在cloudflare、vercel或netlify的网页在中国的访问速度和稳定性 Improve the access speed and stability in China of web pages hosted on cloudflare, vercel or netlify by merely changing your CNAME record. cf优选域名 | cf优选ip | cloudflare | vercel | netlify | 加速 | 国内 | 中国 | 境内 | 大陆
 url: https://github.com/xingpingcn/enhanced-FaaS-in-China
 ---
@@ -127,7 +127,7 @@ A：
 1.  如果你使用 cf 的 dns 服务，本身在大陆里 dns 的解析速度就慢，而且还要增加多一次因为 cname 导致的 dns 递归解析，那就更慢了。如果可以那把域名托管在国内的权威 dns 服务器吧。
 2.  如果你域名托管在 cf 或者 NS1.COM 这种不支持给顶级域名添加 cname 记录的 dns 服务器，请看 这里#9
 3.  或者你可以打开本 repo 根目录里面的三个 json 文件，里面是实时更新的 ip，如果你愿意，可以自己尝试着同步到你的 a 记录。repo 里的 ip 一般来说每 40 分钟更新一次。
-4.  最后可能出现问题的是我使用的华为云 dns，本来是国内的用户访问网站，却被华为云 dns 识别为国外用户，然后解析了默认的路线——例如 japan.com。
+4.  **最后可能出现大问题的是我使用的华为云 dns，本来是国内的用户访问网站，却被华为云 dns 识别为国外用户，然后解析了默认的路线——例如 japan.com。**
 
 **Q：为什么设置了你的 CNAME 解析后网站不能访问？**  
 A：

@@ -1,7 +1,7 @@
 ---
 project: FreeDomain
-stars: 20708
-description: US.KG Free Domain For Everyone
+stars: 30035
+description: DigitalPlat FreeDomain: Free Domain For Everyone
 url: https://github.com/DigitalPlatDev/FreeDomain
 ---
 
@@ -41,7 +41,19 @@ Jump in and register your domain by visiting our site:
 
 ### 🌟 Trusted by Thousands
 
-With over 90,000 domains already registered, DigitalPlat FreeDomain is a trusted choice for individuals and organizations alike. Join our growing community and claim your own free domain today!
+With over 100,000 domains already registered, DigitalPlat FreeDomain is a trusted choice for individuals and organizations alike. Join our growing community and claim your own free domain today!
+
+* * *
+
+### ❔ FAQ
+
+Check FAQ Page
+
+* * *
+
+### 🤝 Join Our Community!
+
+🆕 Join the official DigitalPlat FreeDomain Telegram group or Discord server today! Be the first to know about the latest updates and happenings! Got questions? Facing challenges? Or simply want to show off your awesome builds? Don’t wait—become part of our community now! 🚀
 
 * * *
 
