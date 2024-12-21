@@ -1,6 +1,6 @@
 ---
 project: v2rayN
-stars: 71570
+stars: 71993
 description: A GUI client for Windows and Linux, support Xray core and sing-box-core and others
 url: https://github.com/2dust/v2rayN
 ---
@@ -21,7 +21,7 @@ Check Release files introduction and select the version you need to download
 
 ### Linux
 
--   `chmod +x v2rayN` Run `./v2rayN`
+-   `chmod +x v2rayN` Run `./v2rayN` under user permissions
 
 ```
 Debian 9+

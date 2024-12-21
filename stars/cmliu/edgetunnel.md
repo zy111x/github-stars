@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 16734
+stars: 17536
 description: 在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -10,10 +10,8 @@ edgetunnel
 
 这是一个基于 CF Worker 平台的脚本，在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 
--   基础部署视频教程：https://www.youtube.com/watch?v=LeT4jQUh8ok
--   快速部署视频教程：https://www.youtube.com/watch?v=59THrmJhmAw _**最佳推荐!!!**_
--   进阶使用视频教程：https://www.youtube.com/watch?v=s91zjpw3-P8
--   **从入门到精通**教程：https://www.youtube.com/watch?v=oRYnrp5rQSc _**必看内容!必看内容!必看内容!!!**_
+-   **edgetunnel 最新教程**：https://www.youtube.com/watch?v=tKe9xUuFODA _**必看内容!必看内容!必看内容!!!**_
+-   **报错 Error 1101 详解**：https://www.youtube.com/watch?v=r4uVTEJptdE
 
 Telegram交流群：@CMLiussss，**感谢Alice Networks提供的云服务器维持CM订阅转换服务！**
 
@@ -372,9 +370,9 @@ CF账户标准端口列表
 注意事项
 ====
 
-### 开启在线编辑优选列表
+### 开启在线编辑优选列表 视频教程
 
--   绑定名为`KV`的KV空间，即可在无`SUB`的前提下，在配置页实现在线编辑`ADD`与`ADDAPI`优选列表；
+-   绑定**变量名称**为`KV`的**KV命名空间**，即可在无`SUB`的前提下，在配置页实现在线编辑`ADD`与`ADDAPI`优选列表；
 
 ### **关于`KEY`与`UUID`：**
 
@@ -406,13 +404,13 @@ CF账户标准端口列表
 
 -   示例订阅地址： `https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10`
 
-1.  更换**订阅生成器**的订阅地址
+1.  更换**订阅生成器**的订阅地址 视频教程
     
     快速切换订阅生成器至 `VLESS.fxxk.dedyn.io`：
     
     https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub\=VLESS.fxxk.dedyn.io
     
-2.  更换**PROXYIP**的订阅地址
+2.  更换**PROXYIP**的订阅地址 视频教程
     
     快速更换PROXYIP为 `proxyip.fxxk.dedyn.io`：
     
@@ -483,4 +481,4 @@ Star 星星走起
 感谢
 ==
 
-zizifn、3Kmfi6HP、Stanley-baby、ACL4SSR、SHIJS1999、、
+zizifn、3Kmfi6HP、Stanley-baby、ACL4SSR、SHIJS1999、Alice Networks LTD、

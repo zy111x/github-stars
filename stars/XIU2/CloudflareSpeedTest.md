@@ -1,6 +1,6 @@
 ---
 project: CloudflareSpeedTest
-stars: 20270
+stars: 20396
 description: 🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~
 url: https://github.com/XIU2/CloudflareSpeedTest
 ---
@@ -21,7 +21,7 @@ XIU2/CloudflareSpeedTest
 
 Important
 
-对于**代理套 Cloudflare CDN** 的忠告，须知这应为**备用方案**，而不应该是**唯一方案**，请勿过度依赖 #382 #383
+Cloudflare CDN 已**禁止代理**方式使用，对于**代理套 CDN** 的自行承担风险，请勿过度依赖 #382 #383
 
 * * *
 

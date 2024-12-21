@@ -1,6 +1,6 @@
 ---
 project: poster-design
-stars: 3817
+stars: 3851
 description: 一款漂亮且功能强大的在线海报设计器，图片编辑器，仿稿定设计，适用于多种场景：海报生成、电商产品图、文章长图、视频/公众号封面等。A beautiful online image designer, suitable for various scenarios like generate posters, making design easier!
 url: https://github.com/palxiao/poster-design
 ---
@@ -37,6 +37,32 @@ npm run serve
 本仓库中所提供的后端代码仅为示例作用，目的在于帮助开发者更好地理解项目，实际生产则根据自身需求进行开发。（原项目中请求的远程 API 接口已不再适用，但 接口 API 文档 仍具有一定参考性）
 
 关于部署等说明请前往项目中查看，后端项目代码位于根目录 /service 下。
+
+### 快速启动
+
+使用docker-compose.yml 文件快速启动。在运行安装命令之前，请确保您的机器上安装了 Docker 和 Docker Compose：
+
+> 特别注意⚠️：由于`ghcr.io/puppeteer/puppeteer`镜像，暂不支持Arm64架构。请在Amd64架构下运行。
+
+```
+docker compose up -d
+```
+
+运行后，可以在浏览器上访问http://localhost 直接访问
+
+#### 自定义镜像构建
+
+-   前端构建
+
+```
+docker build -t heimanba/poster-web -f ./docker/web/Dockerfile .
+```
+
+-   服务端构建
+
+```
+docker build -t heimanba/poster-api -f ./docker/api/Dockerfile ./service
+```
 
 ### 付费技术支持
 
