@@ -1,6 +1,6 @@
 ---
 project: wxt
-stars: 4868
+stars: 4929
 description: ⚡ Next-gen Web Extension Framework
 url: https://github.com/wxt-dev/wxt
 ---
@@ -50,6 +50,11 @@ Features
 -   🖍️ Quickly bootstrap a new project
 -   📏 Bundle analysis
 -   ⬇️ Download and bundle remote URL imports
+
+Sponsors
+--------
+
+WXT is a MIT-licensed open source project with its ongoing development made possible entirely by the support of these awesome backers. If you'd like to join them, please consider sponsoring WXT's development.
 
 Contributors
 ------------

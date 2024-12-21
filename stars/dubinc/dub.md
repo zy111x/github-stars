@@ -1,7 +1,7 @@
 ---
 project: dub
-stars: 19173
-description: Open-source link management infrastructure. Loved by modern marketing teams like Vercel, Raycast, and Perplexity.
+stars: 19244
+description: Open-source link management infrastructure. Loved by modern marketing teams like Twilio, Perplexity, Vercel, and Huberman Labs.
 url: https://github.com/dubinc/dub
 ---
 

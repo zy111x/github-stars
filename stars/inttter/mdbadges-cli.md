@@ -8,12 +8,12 @@ url: https://github.com/inttter/mdbadges-cli
 mdbadges-cli
 ============
 
-**mdbadges-cli** is an extensive CLI tool to find over 400+ Shields.io badges for your projects without needing to leave the terminal, featuring multiple commands with different purposes.
+**mdbadges-cli** is an extensive command-line tool that lets you search for over **400+** Shields.io badges for your projects without needing to leave the terminal, also including multiple commands with different purposes.
 
 Installation
 ============
 
-To globally install mdbadges-cli onto your machine, you can run the following:
+To globally install mdbadges-cli, run the following:
 
 npm install -g mdbadges-cli
 
@@ -34,16 +34,12 @@ mdb social discord --style plastic
 # Badge found:
 # \[!\[Discord\](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white&style=plastic)\](#)
 
-Tip
-
-If you are using Visual Studio Code, you should install the Image Preview extension. Hovering over the badge link will allow you to see a preview of it. See an example here.
-
-For help information, such as what commands do or what arguments they accept, run `mdb help`.
+For information on things like command syntax or accepted arguments, run `mdb help`.
 
 Commands
 ========
 
-This section contains the commands that are currently available, with their corrosponding syntax, arguements, and aliases.
+This section contains the commands that are currently available, with their corresponding syntax, arguments, and aliases.
 
 Command
 
@@ -59,11 +55,11 @@ Displays badge from a specific category.
 
 None
 
-View all available options on the documentation.
+View all available options in detail on the documentation.
 
 `mdb search`
 
-Search for badges across any category.
+Searches for badges across every category.
 
 `s`, `find`, `lookup`
 
@@ -178,6 +174,10 @@ Database
 
 `database`
 
+Data Science
+
+`data-science`
+
 Design
 
 `design`
@@ -217,6 +217,10 @@ Jobs
 Operating System
 
 `os`
+
+ORM
+
+`orm`
 
 Package Manager
 
@@ -273,12 +277,12 @@ Virtual Reality
 Documentation
 =============
 
-To learn more about mdbadges-cli and how to use certain commands/options, visit the documentation.
+To learn more about mdbadges-cli and how to use certain commands/options, visit the documentation, which hosts more detailed information and various examples.
 
 Contributing
 ============
 
-If you would like to contribute, please ensure to read the contributing guidelines before you submit a pull request.
+If you would like to contribute, please ensure to read the contributing guidelines first before you submit a pull request.
 
 License
 =======

@@ -1,6 +1,6 @@
 ---
 project: supermemory
-stars: 7411
+stars: 7448
 description: Build your own second brain with supermemory. It's a ChatGPT for your bookmarks. Import tweets or save websites and content using the chrome extension.
 url: https://github.com/supermemoryai/supermemory
 ---

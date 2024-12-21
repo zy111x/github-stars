@@ -1,6 +1,6 @@
 ---
 project: semi-design
-stars: 8583
+stars: 8598
 description: 🚀A modern, comprehensive, flexible design system and React UI library. 🎨 Provide more than 3000+ Design Tokens, easy to build your design system. Make Semi Design to Any Design.  🧑🏻‍💻 Design to Code in one click 
 url: https://github.com/DouyinFE/semi-design
 ---
@@ -141,6 +141,8 @@ Join User Group on Feishu / Lark
 Thanks to Chromatic for providing the visual testing platform that helps us review UI changes and catch visual regressions.
 
 Thanks to Cypress for providing E2E testing.
+
+Thanks to VisActor for providing the data visualization solution.
 
 👐 Contributing
 ---------------

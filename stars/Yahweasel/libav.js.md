@@ -1,6 +1,6 @@
 ---
 project: libav.js
-stars: 366
+stars: 368
 description: This is a compilation of the libraries associated with handling audio and video in ffmpeg—libavformat, libavcodec, libavfilter, libavutil, libswresample, and libswscale—for emscripten, and thus the web.
 url: https://github.com/Yahweasel/libav.js
 ---
@@ -37,7 +37,7 @@ The simplest way to use libav.js is to include it from a CDN. libav.js uses Web 
 <!doctype html\>
 <html\>
     <body\>
-        <script type\="text/javascript" src\="https://cdn.jsdelivr.net/npm/@libav.js/variant-default@6.4.7/dist/libav-6.4.7.1-default.js"\></script\>
+        <script type\="text/javascript" src\="https://cdn.jsdelivr.net/npm/@libav.js/variant-default@6.5.7/dist/libav-6.5.7.1-default.js"\></script\>
         <script type\="text/javascript"\>(async function() {
             const libav \= await LibAV.LibAV({noworker: true});
             await libav.writeFile("tmp.opus", new Uint8Array(
@@ -58,7 +58,7 @@ Here's a better example, using libav.js locally:
 <!doctype html\>
 <html\>
     <body\>
-        <script type\="text/javascript" src\="libav-6.4.7.1-default.js"\></script\>
+        <script type\="text/javascript" src\="libav-6.5.7.1-default.js"\></script\>
         <script type\="text/javascript"\>(async function() {
             const libav \= await LibAV.LibAV();
             await libav.writeFile("tmp.opus", new Uint8Array(
@@ -108,7 +108,7 @@ The file `libav.types.d.ts` is a TypeScript types definition file, and is only n
 
 Note that, independently of what files are available to end users, _you are contractually obligated to release the source code of libav.js and all of its dependencies_ if you provide the compiled version. If you are using a compiled, released version, it is sufficient to provide the `sources` directory.
 
-libav.js is published to NPM as `libav.js`, and each released variant is published in a much smaller NPM package as `@libav.js/variant-<variant>`. The CDN example above uses the `@libav.js/variant-default` package, for example.
+libav.js is published to NPM as `libav.js`, and each released variant is published in a much smaller NPM package as `@libav.js/variant-<variant>`. The CDN example above uses the `@libav.js/variant-default` package, for example. The `@libav.js/types` package is also provided with only the types (`.d.ts` file), and if using TypeScript, you are highly recommended to use it, to avoid bringing entire variants in as dependencies of your own packages.
 
 ### Why the version number in the filenames?
 

@@ -1,6 +1,6 @@
 ---
 project: skel
-stars: 2215
+stars: 2213
 description: A lightweight responsive framework for the www
 url: https://github.com/ajlkn/skel
 ---

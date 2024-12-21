@@ -1,6 +1,6 @@
 ---
 project: solid
-stars: 32606
+stars: 32640
 description: A declarative, efficient, and flexible JavaScript library for building user interfaces.
 url: https://github.com/solidjs/solid
 ---

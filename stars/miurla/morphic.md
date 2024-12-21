@@ -1,6 +1,6 @@
 ---
 project: morphic
-stars: 6451
+stars: 6485
 description: An AI-powered search engine with a generative UI
 url: https://github.com/miurla/morphic
 ---
@@ -236,7 +236,7 @@ engines:
 ✅ Verified models
 -----------------
 
-### List of models applicable to all:
+### List of models applicable to all
 
 -   OpenAI
     -   gpt-4o
@@ -244,7 +244,8 @@ engines:
     -   gpt-4-turbo
     -   gpt-3.5-turbo
 -   Google
-    -   Gemini 1.5 pro (Unstable)
+    -   Gemini 1.5 Pro (Unstable)
+    -   Gemini 2.0 Flash (Experimental)
 -   Anthropic
     -   Claude 3.5 Sonnet
 -   Ollama

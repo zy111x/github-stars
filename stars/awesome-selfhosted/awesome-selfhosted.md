@@ -1,6 +1,6 @@
 ---
 project: awesome-selfhosted
-stars: 206984
+stars: 208292
 description: A list of Free Software network services and web applications which can be hosted on your own servers
 url: https://github.com/awesome-selfhosted/awesome-selfhosted
 ---
@@ -270,7 +270,7 @@ Event scheduling, reservation, and appointment management software.
 _Related: Polls and Events_
 
 -   Alf.io - The open source ticket reservation system. (Demo, Source Code) `GPL-3.0` `Java`
--   Cal.com - The open-source online appointment scheduling system. (Demo, Source Code) `MIT` `Nodejs`
+-   Cal.com - The open-source online appointment scheduling system. (Demo, Source Code) `AGPL-3.0` `Nodejs`
 -   Easy!Appointments - A highly customizable web application that allows your customers to book appointments with you via the web. (Demo, Source Code) `GPL-3.0` `PHP`
 -   Hi.Events - Event management and ticketing platform for conferences, concerts, and more. Offering customizable event pages and embeddable ticket widgets. (Demo, Source Code) `AGPL-3.0` `Docker`
 -   QloApps - An open-source, customizable and intuitive web-based hotel reservation system and a booking engine. (Demo, Source Code) `OSL-3.0` `PHP/Nodejs`
@@ -902,7 +902,6 @@ Peer-to-peer file sharing is the distribution and sharing of digital media using
 
 Simplified file servers for sharing of one-time/short-lived/temporary files, providing single-click or drag-and-drop upload functionality.
 
--   ass - The superior self-hosted ShareX server. For use with clients such as ShareX (Windows), Flameshot (Linux), & MagicCap (Linux, macOS). `ISC` `Nodejs/Docker`
 -   Chibisafe - File uploader service that aims to to be easy to use and set up. It accepts files, photos, documents, anything you imagine and gives you back a shareable link for you to send to others. (Source Code) `MIT` `Docker/Nodejs`
 -   elixire - Simple yet advanced screenshot uploading and link shortening service. (Source Code, Clients) `AGPL-3.0` `Python`
 -   Files Sharing - Open Source and self-hosted files sharing application based on unique and temporary links. `GPL-3.0` `PHP/Docker`
@@ -964,8 +963,8 @@ _Related: Games - Administrative Utilities & Control Panels_
 -   A Dark Room - Minimalist text adventure game for your browser. (Demo) `MPL-2.0` `Javascript`
 -   Digibuzzer - Create a virtual game room around a connected buzzer (documentation in French). (Demo, Source Code) `AGPL-3.0` `Nodejs`
 -   Lila - The forever free, adless and open source chess server powering lichess.org, with official iOS and Android client apps. (Source Code) `AGPL-3.0` `Scala`
+-   Luanti - An open source voxel game engine (formerly Minetest). Play one of our many games, mod a game to your liking, make your own game, or play on a multiplayer server. (Source Code) `LGPL-2.1/MIT/Zlib` `C++/Lua/deb`
 -   Mindustry - Factorio-like tower defense game. Build production chains to gather more resources, and build complex facilities. (Source Code) `GPL-3.0` `Java`
--   Minetest - An open source voxel game engine. Play one of our many games, mod a game to your liking, make your own game, or play on a multiplayer server. (Source Code) `LGPL-2.1/MIT/Zlib` `C++/deb`
 -   MTA:SA `⚠` - Multi Theft Auto (MTA) is a software project that adds network play functionality to Rockstar North's Grand Theft Auto game series, in which this functionality is not originally found. (Source Code) `GPL-3.0` `C++`
 -   OpenTTD - Open source transport tycoon simulation game. (Source Code, Clients) `GPL-2.0` `C++/Docker`
 -   piqueserver - Server for openspades, the first-person shooter in a destructible voxel world. (Clients) `GPL-3.0` `Python/C++`
@@ -1293,6 +1292,7 @@ Software that does not fit in another section.
 -   Habitica - Habit tracker app which treats your goals like a Role Playing Game. Previously called HabitRPG. (Source Code) `GPL-3.0/CC-BY-SA-3.0` `Nodejs/Docker`
 -   HortusFox - A collaborative plant management system. (Source Code) `MIT` `PHP/Docker`
 -   IconCaptcha - IconCaptcha is a self-hosted, fast, simple and user-friendly captcha for PHP. (Source Code) `MIT` `PHP`
+-   iSponsorBlockTV `⚠` - SponsorBlock for YouTube TV, allows skipping sponsors, muting and skipping ads. `GPL-3.0` `Docker/Python`
 -   Jellyseerr - Manage requests for your media library, supports Plex, Jellyfin and Emby media servers (fork of Overseerr). `MIT` `Docker/Nodejs`
 -   Jelu - Self hosted read and to-read list book tracker. (Source Code) `MIT` `Java/Docker`
 -   Kasm Workspaces - Streaming containerized apps and desktops to end-users. Examples include Ubuntu in your browser, or simply single apps such as Chrome, OpenOffice, Gimp, Filezilla etc. (Demo, Source Code) `GPL-3.0` `Docker`
@@ -1362,7 +1362,7 @@ _Related: Inventory Management, Resource Planning_
 -   InvoicePlane - Manage quotes, invoices, payments and customers for your small business. `MIT` `PHP`
 -   InvoiceShelf - A software that helps you track expenses, payments & create professional invoices & estimates (fork of Crater). (Source Code) `AGPL-3.0` `PHP/Docker`
 -   Kill Bill - Open-Source Subscription Billing & Payments Platform. Have access to real-time analytics and financial reports. (Source Code) `Apache-2.0` `Java/Docker`
--   Kresus - Open source personal finance manager. (Demo, Source Code) `MIT` `Nodejs/Docker`
+-   Kresus - Open source personal finance manager. (Demo, Source Code) `AGPL-3.0` `Nodejs/Docker`
 -   Lago - Open-source metering and usage-based billing. (Source Code) `AGPL-3.0` `Docker`
 -   Maybe - An OS for your personal finances built by a small team alongside an incredible community. (Source Code) `AGPL-3.0` `Docker`
 -   OctoBot - Open-source cryptocurrency trading bot. (Source Code) `GPL-3.0` `Python/Docker`
@@ -1431,7 +1431,6 @@ An office suite is a collection of productivity software usually containing at l
 A password manager allows users to store, generate, and manage their passwords for local applications and online services.
 
 -   Bitwarden `⚠` - Password manager with webapp, browser extension, and mobile app. (Source Code) `AGPL-3.0` `Docker/C#`
--   Padloc - A modern, open source password manager for individuals and teams. (Source Code) `GPL-3.0` `Nodejs`
 -   Passbolt - Password manager dedicated for managing passwords in a collaborative way on any Web server, using a MySQL database backend. (Source Code) `AGPL-3.0` `PHP/deb/K8S/Docker`
 -   PassIt - Simple password manage with sharing features by group and user, but no administration interface. (Demo, Source Code) `AGPL-3.0` `Docker/Django`
 -   Passky - Simple, modern and open source password manager with website, browser extension, android and desktop application. (Demo, Source Code) `GPL-3.0` `PHP`
@@ -1593,6 +1592,8 @@ Software and tools for managing recipes.
 
 Remote desktop and SSH servers and web interfaces for remote management of computer systems.
 
+-   Engity's Bifröst - Highly customizable SSH server with several ways to authorize a user and options where and how to execute a user's session. (Source Code) `Apache-2.0` `Go/Docker`
+-   Engity's Bifröst - Highly customizable SSH server with several ways to authorize a user and options where and how to execute a user's session. (Source Code) `Apache-2.0` `Go/Docker`
 -   Firezone - Self-hosted secure remote access gateway that supports the WireGuard protocol. It offers a Web GUI, 1-line install script, multi-factor auth (MFA), and SSO. (Source Code) `Apache-2.0` `Elixir/Docker`
 -   Guacamole - Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP. (Source Code) `Apache-2.0` `Java/C`
 -   MeshCentral - A full computer management website. With MeshCentral, you can run your own web server to remotely manage and control computers on a local network or anywhere on the internet. (Source Code) `Apache-2.0` `Nodejs`
@@ -1816,7 +1817,6 @@ _Related: Ticketing, Task Management & To-do Lists_
 Tools and software for software testing.
 
 -   Bencher - Bencher is a suite of continuous benchmarking tools designed to catch performance regressions in CI. (Source Code) `MIT/Apache-2.0` `Rust`
--   Selenoid - Lightweight Selenium hub implementation launching browsers within Docker containers. (Source Code) `Apache-2.0` `Go`
 -   Sorry Cypress - Alternative open-source dashboard for the Cypress browser automation framework, featuring unlimited parallelization, recording and debugging of tests. (Source Code) `MIT` `Docker/K8S`
 -   Touca - Continuous regression testing for engineering teams. Get feedback when you write code that could break your software. (Source Code) `Apache-2.0` `Docker/Nodejs`
 

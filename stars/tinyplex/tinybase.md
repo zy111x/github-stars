@@ -1,6 +1,6 @@
 ---
 project: tinybase
-stars: 3939
+stars: 3957
 description: The reactive data store for local‑first apps.
 url: https://github.com/tinyplex/tinybase
 ---
@@ -552,7 +552,7 @@ Tests
 
 Assertions
 
-33,197
+33,229
 
 * * *
 

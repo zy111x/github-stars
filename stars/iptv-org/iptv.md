@@ -1,6 +1,6 @@
 ---
 project: iptv
-stars: 87761
+stars: 88091
 description: Collection of publicly available IPTV channels from all over the world
 url: https://github.com/iptv-org/iptv
 ---
@@ -69,7 +69,7 @@ Animation
 
 Auto
 
-13
+14
 
 `https://iptv-org.github.io/iptv/categories/auto.m3u`
 
@@ -93,7 +93,7 @@ Comedy
 
 Cooking
 
-28
+29
 
 `https://iptv-org.github.io/iptv/categories/cooking.m3u`
 
@@ -105,7 +105,7 @@ Culture
 
 Documentary
 
-96
+97
 
 `https://iptv-org.github.io/iptv/categories/documentary.m3u`
 
@@ -117,7 +117,7 @@ Education
 
 Entertainment
 
-555
+560
 
 `https://iptv-org.github.io/iptv/categories/entertainment.m3u`
 
@@ -129,13 +129,13 @@ Family
 
 General
 
-2342
+2366
 
 `https://iptv-org.github.io/iptv/categories/general.m3u`
 
 Kids
 
-224
+223
 
 `https://iptv-org.github.io/iptv/categories/kids.m3u`
 
@@ -147,25 +147,25 @@ Legislative
 
 Lifestyle
 
-95
+96
 
 `https://iptv-org.github.io/iptv/categories/lifestyle.m3u`
 
 Movies
 
-288
+289
 
 `https://iptv-org.github.io/iptv/categories/movies.m3u`
 
 Music
 
-642
+644
 
 `https://iptv-org.github.io/iptv/categories/music.m3u`
 
 News
 
-967
+974
 
 `https://iptv-org.github.io/iptv/categories/news.m3u`
 
@@ -183,7 +183,7 @@ Relax
 
 Religious
 
-778
+782
 
 `https://iptv-org.github.io/iptv/categories/religious.m3u`
 
@@ -207,7 +207,7 @@ Shop
 
 Sports
 
-246
+247
 
 `https://iptv-org.github.io/iptv/categories/sports.m3u`
 
@@ -219,7 +219,7 @@ Travel
 
 Weather
 
-13
+14
 
 `https://iptv-org.github.io/iptv/categories/weather.m3u`
 
@@ -231,7 +231,7 @@ XXX
 
 Undefined
 
-4549
+4501
 
 `https://iptv-org.github.io/iptv/categories/undefined.m3u`
 
@@ -279,7 +279,7 @@ Amharic
 
 Arabic
 
-392
+390
 
 `https://iptv-org.github.io/iptv/languages/ara.m3u`
 
@@ -291,7 +291,7 @@ Armenian
 
 Assamese
 
-7
+8
 
 `https://iptv-org.github.io/iptv/languages/asm.m3u`
 
@@ -435,7 +435,7 @@ Dutch
 
 English
 
-2262
+2270
 
 `https://iptv-org.github.io/iptv/languages/eng.m3u`
 
@@ -561,7 +561,7 @@ Hebrew
 
 Hindi
 
-160
+163
 
 `https://iptv-org.github.io/iptv/languages/hin.m3u`
 
@@ -591,7 +591,7 @@ Inuktitut
 
 Iranian Persian
 
-1
+2
 
 `https://iptv-org.github.io/iptv/languages/pes.m3u`
 
@@ -615,7 +615,7 @@ Italian
 
 Japanese
 
-41
+42
 
 `https://iptv-org.github.io/iptv/languages/jpn.m3u`
 
@@ -645,7 +645,7 @@ Kazakh
 
 Khmer
 
-19
+20
 
 `https://iptv-org.github.io/iptv/languages/khm.m3u`
 
@@ -669,7 +669,7 @@ Konkani (macrolanguage)
 
 Korean
 
-110
+109
 
 `https://iptv-org.github.io/iptv/languages/kor.m3u`
 
@@ -813,7 +813,7 @@ Norwegian Bokmål
 
 Oriya (macrolanguage)
 
-8
+9
 
 `https://iptv-org.github.io/iptv/languages/ori.m3u`
 
@@ -855,7 +855,7 @@ Polish
 
 Portuguese
 
-368
+367
 
 `https://iptv-org.github.io/iptv/languages/por.m3u`
 
@@ -879,7 +879,7 @@ Romany
 
 Russian
 
-288
+290
 
 `https://iptv-org.github.io/iptv/languages/rus.m3u`
 
@@ -1053,7 +1053,7 @@ Ukrainian
 
 Urdu
 
-65
+66
 
 `https://iptv-org.github.io/iptv/languages/urd.m3u`
 
@@ -1101,7 +1101,7 @@ Yue Chinese
 
 Undefined
 
-2360
+2346
 
 `https://iptv-org.github.io/iptv/languages/undefined.m3u`
 
@@ -1623,7 +1623,7 @@ Playlist
 
 🇰🇭 Cambodia
 
-42
+43
 
 `https://iptv-org.github.io/iptv/countries/kh.m3u`
 
@@ -2397,7 +2397,7 @@ Playlist
 
 🇮🇳 India
 
-432
+437
 
 `https://iptv-org.github.io/iptv/countries/in.m3u`
 
@@ -3843,7 +3843,7 @@ Playlist
 
 🇬🇧 United Kingdom
 
-204
+206
 
 `https://iptv-org.github.io/iptv/countries/uk.m3u`
 
@@ -3855,7 +3855,7 @@ Playlist
 
 🇺🇸 United States
 
-1962
+1955
 
 `https://iptv-org.github.io/iptv/countries/us.m3u`
 
@@ -4257,7 +4257,7 @@ Africa
 
 Americas
 
-4624
+4617
 
 `https://iptv-org.github.io/iptv/regions/amer.m3u`
 
@@ -4269,19 +4269,19 @@ Arab world
 
 Asia
 
-2831
+2837
 
 `https://iptv-org.github.io/iptv/regions/asia.m3u`
 
 Asia-Pacific
 
-1933
+1939
 
 `https://iptv-org.github.io/iptv/regions/apac.m3u`
 
 Association of Southeast Asian Nations
 
-388
+389
 
 `https://iptv-org.github.io/iptv/regions/asean.m3u`
 
@@ -4329,13 +4329,13 @@ Commonwealth of Independent States
 
 Europe
 
-4066
+4068
 
 `https://iptv-org.github.io/iptv/regions/eur.m3u`
 
 Europe, the Middle East and Africa
 
-5021
+5023
 
 `https://iptv-org.github.io/iptv/regions/emea.m3u`
 
@@ -4389,13 +4389,13 @@ Nordics
 
 North America
 
-3255
+3248
 
 `https://iptv-org.github.io/iptv/regions/noram.m3u`
 
 Northern America
 
-2349
+2342
 
 `https://iptv-org.github.io/iptv/regions/nam.m3u`
 
@@ -4419,13 +4419,13 @@ South America
 
 South Asia
 
-590
+595
 
 `https://iptv-org.github.io/iptv/regions/sas.m3u`
 
 Southeast Asia
 
-398
+399
 
 `https://iptv-org.github.io/iptv/regions/sea.m3u`
 
@@ -4449,7 +4449,7 @@ West Africa
 
 Western Europe
 
-1776
+1778
 
 `https://iptv-org.github.io/iptv/regions/wer.m3u`
 

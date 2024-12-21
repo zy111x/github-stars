@@ -1,6 +1,6 @@
 ---
 project: magick.css
-stars: 965
+stars: 967
 description: magically playful, yet simple styling. all in one file.
 url: https://github.com/wintermute-cell/magick.css
 ---

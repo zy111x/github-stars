@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2256
+stars: 2317
 description: ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
 ---
@@ -13,6 +13,7 @@ Available as a command-line utility, a library and a GitHub Action.
 Table of Contents
 -----------------
 
+-   Development
 -   Installation
 -   Features
 -   Commandline usage
@@ -24,6 +25,11 @@ Table of Contents
 -   Users
 -   Credits
 -   License
+
+Development
+-----------
+
+After installing Rust use Cargo for building and testing. On Linux the OpenSSL package is required to compile `reqwest`, a dependency of lychee. For Nix we provide a flake so you can use `nix develop` and `nix build`.
 
 Installation
 ------------

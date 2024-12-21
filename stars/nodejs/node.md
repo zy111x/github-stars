@@ -1,6 +1,6 @@
 ---
 project: node
-stars: 108336
+stars: 108438
 description: Node.js JavaScript runtime ✨🐢🚀✨
 url: https://github.com/nodejs/node
 ---
@@ -132,7 +132,6 @@ For information about the governance of the Node.js project, see GOVERNANCE.md.
 -   marco-ippolito - **Marco Ippolito** <marcoippolito54@gmail.com\> (he/him)
 -   mcollina - **Matteo Collina** <matteo.collina@gmail.com\> (he/him)
 -   mhdawson - **Michael Dawson** <midawson@redhat.com\> (he/him)
--   MoLow - **Moshe Atlow** <moshe@atlow.co.il\> (he/him)
 -   RafaelGSS - **Rafael Gonzaga** <rafael.nunu@hotmail.com\> (he/him)
 -   richardlau - **Richard Lau** <rlau@redhat.com\>
 -   ronag - **Robert Nagy** <ronagy@icloud.com\>
@@ -149,6 +148,7 @@ For information about the governance of the Node.js project, see GOVERNANCE.md.
 -   cjihrig - **Colin Ihrig** <cjihrig@gmail.com\> (he/him)
 -   codebytere - **Shelley Vohr** <shelley.vohr@gmail.com\> (she/her)
 -   GeoffreyBooth - **Geoffrey Booth** <webadmin@geoffreybooth.com\> (he/him)
+-   MoLow - **Moshe Atlow** <moshe@atlow.co.il\> (he/him)
 -   Trott - **Rich Trott** <rtrott@gmail.com\> (he/him)
 
 TSC emeriti members

@@ -1,6 +1,6 @@
 ---
 project: one-api
-stars: 20046
+stars: 20218
 description: OpenAI 接口管理 & 分发系统，支持 Azure、Anthropic Claude、Google PaLM 2 & Gemini、智谱 ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360 智脑以及腾讯混元，可用于二次分发管理 key，仅单可执行文件，已打包好 Docker 镜像，一键部署，开箱即用. OpenAI key management & redistribution system, using a single API for all LLMs, and features an English UI.
 url: https://github.com/songquanpeng/one-api
 ---
@@ -83,8 +83,8 @@ Warning
 21.  支持 Cloudflare Turnstile 用户校验。
 22.  支持用户管理，支持**多种用户登录注册方式**：
     -   邮箱登录注册（支持注册邮箱白名单）以及通过邮箱进行密码重置。
-    -   支持使用飞书进行授权登录。
-    -   GitHub 开放授权。
+    -   支持飞书授权登录（这里有 One API 的实现细节阐述供参考）。
+    -   支持 GitHub 授权登录。
     -   微信公众号授权（需要额外部署 WeChat Server）。
 23.  支持主题切换，设置环境变量 `THEME` 即可，默认为 `default`，欢迎 PR 更多主题，具体参考此处。
 24.  配合 Message Pusher 可将报警信息推送到多种 App 上。

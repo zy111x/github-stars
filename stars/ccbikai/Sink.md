@@ -1,6 +1,6 @@
 ---
 project: Sink
-stars: 3152
+stars: 3200
 description: ⚡ A Simple / Speedy / Secure Link Shortener with Analytics, 100% run on Cloudflare.
 url: https://github.com/ccbikai/Sink
 ---
@@ -18,7 +18,7 @@ url: https://github.com/ccbikai/Sink
 -   **URL Shortening:** Compress your URLs to their minimal length.
 -   **Analytics:** Monitor link analytics and gather insightful statistics.
 -   **Serverless:** Deploy without the need for traditional servers.
--   **Customizable Slug:** Support for personalized slugs.
+-   **Customizable Slug:** Support for personalized slugs and case sensitivity.
 -   **🪄 AI Slug:** Leverage AI to generate slugs.
 -   **Link Expiration:** Set expiration dates for your links.
 
@@ -82,6 +82,8 @@ We welcome your contributions and PRs.
         -   Return to **Settings** -> **Bindings** -> **Add** and select **Analytics engine**.
         -   Bind the variable name `ANALYTICS` to the `sink` dataset.
 7.  Redeploy the project.
+    
+8.  Update code, refer to the official GitHub documentation Syncing a fork branch from the web UI.
     
 
 ⚒️ Configuration

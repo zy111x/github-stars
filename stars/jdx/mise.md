@@ -1,6 +1,6 @@
 ---
 project: mise
-stars: 11839
+stars: 12067
 description: dev tools, env vars, task runner
 url: https://github.com/jdx/mise
 ---
@@ -30,7 +30,7 @@ Install mise (other methods here):
 
 $ curl https://mise.run | sh
 $ ~/.local/bin/mise --version
-2024.12.10 macos-arm64 (a1b2d3e 2024-12-14)
+2024.12.17 macos-arm64 (a1b2d3e 2024-12-21)
 
 or install a specific a version:
 
@@ -45,6 +45,7 @@ Hook mise into your shell (pick the right one for your shell):
 echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
 echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
 echo '~/.local/bin/mise activate fish | source' >> ~/.config/fish/config.fish
+echo '~/.local/bin/mise activate mise activate pwsh | Out-String | Invoke-Expression' >> ~/.config/powershell/Microsoft.PowerShell\_profile.ps1
 
 Install a runtime and set it as the global default:
 

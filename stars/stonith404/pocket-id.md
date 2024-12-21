@@ -1,6 +1,6 @@
 ---
 project: pocket-id
-stars: 397
+stars: 411
 description: A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services.
 url: https://github.com/stonith404/pocket-id
 ---
@@ -28,7 +28,7 @@ Pocket ID is in its early stages and may contain bugs. There might be OIDC featu
 
 ### Before you start
 
-Pocket ID requires a secure context, meaning it must be served over HTTPS. This is necessary because Pocket ID uses the WebAuthn API which requires a secure context.
+Pocket ID requires a secure context, meaning it must be served over HTTPS. This is necessary because Pocket ID uses the WebAuthn API.
 
 ### Installation with Docker (recommended)
 
@@ -86,14 +86,14 @@ Required tools:
     
     # Optional: Start Caddy (You can use any other reverse proxy)
     cd ..
-    pm2 start --name pocket-id-caddy caddy -- run --config Caddyfile
+    pm2 start --name pocket-id-caddy caddy -- run --config reverse-proxy/Caddyfile
     
 
 You can now sign in with the admin account on `http://localhost/login/setup`.
 
 ### Nginx Reverse Proxy
 
-To use Nginx in front of Pocket ID, add the following configuration to increase the header buffer size because, as SvelteKit generates larger headers.
+To use Nginx as a reverse proxy for Pocket ID, update the configuration to increase the header buffer size. This adjustment is necessary because SvelteKit generates larger headers, which may exceed the default buffer limits.
 
 proxy\_busy\_buffers\_size   512k;
 proxy\_buffers   4 512k;
@@ -102,7 +102,7 @@ proxy\_buffer\_size   256k;
 Proxy Services with Pocket ID
 -----------------------------
 
-As the goal of Pocket ID is to stay simple, we don't have a built-in proxy provider. However, you can use OAuth2 Proxy to add authentication to your services that don't support OIDC.
+As the goal of Pocket ID is to stay simple, it doesn't have a built-in proxy provider. However, you can use OAuth2 Proxy to add authentication to your services that don't support OIDC.
 
 See the guide for more information.
 
@@ -141,7 +141,7 @@ docker compose up -d
     
     # Optional: Start Caddy (You can use any other reverse proxy)
     cd ..
-    pm2 start caddy --name pocket-id-caddy -- run --config Caddyfile
+    pm2 start caddy --name pocket-id-caddy -- run --config reverse-proxy/Caddyfile
     
 
 Environment variables

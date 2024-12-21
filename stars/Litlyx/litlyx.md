@@ -1,6 +1,6 @@
 ---
 project: litlyx
-stars: 791
+stars: 795
 description: Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant.
 url: https://github.com/Litlyx/litlyx
 ---

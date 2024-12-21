@@ -1,6 +1,6 @@
 ---
 project: runtipi
-stars: 7581
+stars: 7602
 description: Runtipi is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps. ✨
 url: https://github.com/runtipi/runtipi
 ---
@@ -10,7 +10,7 @@ Runtipi — A personal homeserver for everyone
 
 Note
 
-Runtipi is built with TypeScript, NestJS and React! If you want to collaborate on a cool project, join the discussion on Discord!
+Runtipi is built with TypeScript, NestJS and React! If you want to collaborate on a cool project, join the discussion in the forums or on Discord!
 
 #### Join the community
 

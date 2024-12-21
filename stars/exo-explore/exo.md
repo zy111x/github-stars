@@ -1,6 +1,6 @@
 ---
 project: exo
-stars: 17289
+stars: 17616
 description: Run your own AI cluster at home with everyday devices 📱💻 🖥️⌚
 url: https://github.com/exo-explore/exo
 ---

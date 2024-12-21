@@ -1,6 +1,6 @@
 ---
 project: ssl
-stars: 518
+stars: 519
 description: Self-signed Wildcard SSL Certificate Generator
 url: https://github.com/Fishdrowned/ssl
 ---

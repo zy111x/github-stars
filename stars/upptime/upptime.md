@@ -1,6 +1,6 @@
 ---
 project: upptime
-stars: 15682
+stars: 15705
 description: ⬆️ GitHub Actions uptime monitor & status page by @AnandChowdhary
 url: https://github.com/upptime/upptime
 ---
@@ -30,7 +30,7 @@ Google
 
 google.yml
 
-107ms  
+93ms  
   
   
   
@@ -47,7 +47,7 @@ Wikipedia
 
 wikipedia.yml
 
-225ms  
+248ms  
   
   
   
@@ -64,7 +64,7 @@ Hacker News
 
 hacker-news.yml
 
-292ms  
+333ms  
   
   
   

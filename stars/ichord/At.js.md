@@ -1,6 +1,6 @@
 ---
 project: At.js
-stars: 5290
+stars: 5288
 description: Add Github like mentions autocomplete to your application.
 url: https://github.com/ichord/At.js
 ---

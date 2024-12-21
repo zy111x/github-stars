@@ -1,6 +1,6 @@
 ---
 project: EvaThumber
-stars: 553
+stars: 552
 description: A light-weight url based image transformation php library
 url: https://github.com/AlloVince/EvaThumber
 ---

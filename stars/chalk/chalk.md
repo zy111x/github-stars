@@ -1,6 +1,6 @@
 ---
 project: chalk
-stars: 22037
+stars: 22057
 description: 🖍 Terminal string styling done right
 url: https://github.com/chalk/chalk
 ---
@@ -298,6 +298,8 @@ Related
 -   gradient-string - Apply color gradients to strings
 -   chalk-pipe - Create chalk style schemes with simpler style strings
 -   terminal-link - Create clickable links in the terminal
+
+_(Not accepting additional entries)_
 
 Maintainers
 -----------

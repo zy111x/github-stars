@@ -1,6 +1,6 @@
 ---
 project: images
-stars: 2084
+stars: 2089
 description: Source code of wsrv.nl (formerly images.weserv.nl), to be used on your own server(s).
 url: https://github.com/weserv/images
 ---

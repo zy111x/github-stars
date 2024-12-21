@@ -1,6 +1,6 @@
 ---
 project: tailwindcss-motion
-stars: 1592
+stars: 1630
 description: tailwindcss-motion is a Tailwind CSS Plugin made at RomboHQ. It’s a simple, yet powerful, animation library with a simple syntax.
 url: https://github.com/romboHQ/tailwindcss-motion
 ---
@@ -56,6 +56,18 @@ Documentation
 
 For full documentation, visit docs.rombo.co/tailwind
 
+🧩 Introducing the Chrome Extension
+-----------------------------------
+
+Take your animations to the next level with the Rombo Chrome Extension!
+
+Create animations visually:
+
+-   Use our intuitive animator directly in your browser.
+-   Loop animations
+-   Save presets: Keep your animations organized and reusable.
+-   Export options: Output animations as Tailwind classes, pure CSS, or Framer Motion code.
+
 Examples
 --------
 
@@ -74,7 +86,7 @@ Emoji Animations - https://play.tailwindcss.com/86s55I4wmC
 What's Rombo?
 -------------
 
-Rombo is an early-stage company, building tools to help companies build beautiful interactive interfaces. We're starting out with a toolkit for engineers, designers and creative marketers to animate natively inside common Workflows — like Tailwind, Figma, Webflow, Shopify & more to come! Sign up for our waitlist at https://rombo.co/tailwind/#waitlist
+Rombo is an early-stage company, building tools to help companies build beautiful interactive interfaces. We're starting out with a toolkit for engineers, designers and creative marketers to animate natively inside common Workflows — like Tailwind, Figma, Webflow, Shopify & more to come!
 
 More Resources
 --------------

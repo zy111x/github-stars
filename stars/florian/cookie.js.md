@@ -1,6 +1,6 @@
 ---
 project: cookie.js
-stars: 1130
+stars: 1131
 description: A tiny JavaScript library that simplifies cookies.
 url: https://github.com/florian/cookie.js
 ---

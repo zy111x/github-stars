@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare
-stars: 8997
+stars: 9269
 description: ⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.
 url: https://github.com/zhuima/awesome-cloudflare
 ---
@@ -338,7 +338,7 @@ Url-Shorten-Worker
 
 在原分支和 crazypeace 分支部分功能基础上优化了页面，增加了管理员用户、访客身份，增加正则表达式匹配功能，支持了环境变量配置，以及其他细节性改进。
 
-https://url-shortner-demo.iou.icu/
+https://url-shortener-demo.jhw.li/
 
 维护中
 

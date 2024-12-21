@@ -1,6 +1,6 @@
 ---
 project: sql-formatter
-stars: 2400
+stars: 2407
 description: A whitespace formatter for different query languages
 url: https://github.com/sql-formatter-org/sql-formatter
 ---
@@ -175,6 +175,10 @@ If you don't use a module bundler, clone the repository, run `npm install` and g
     -   Repo
 -   Vim extension
 -   Prettier plugin
+
+### Usage as ESLint plugin
+
+-   Inside `eslint-plugin-sql` by using the rule eslint-plugin-sql#format.
 
 Frequently Asked Questions
 --------------------------

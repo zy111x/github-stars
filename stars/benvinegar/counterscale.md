@@ -1,6 +1,6 @@
 ---
 project: counterscale
-stars: 1528
+stars: 1535
 description: Scalable web analytics you run yourself on Cloudflare
 url: https://github.com/benvinegar/counterscale
 ---
@@ -14,39 +14,39 @@ It's designed to be easy to deploy and maintain, and should cost you near-zero t
 
 **_NOTE: Counterscale is currently in very early development and shouldn't be used in any actual production setting. We welcome people trying it and giving feedback/contributing, but heads up this project is still super early._**
 
-Deployment
-----------
+Installation
+------------
 
-If you don't have one already, create a Cloudflare account here.
+### Cloudflare Preparation
+
+If you don't have one already, create a Cloudflare account here and verify your email address.
 
 1.  Go to your Cloudflare dashboard and, if you do not already have one, set up a Cloudflare Workers subdomain
 2.  Enable Cloudflare Analytics Engine beta for your account (screenshot)
     1.  If this is your first time using Workers, you have to create a Worker before you can enable the Analytics Engine. Navigate to Workers & Pages > Overview, click the "Create Worker" button (screenshot) to create a "Hello World" worker (it doesn't matter what you name this Worker as you can delete it later).
 3.  Create a Cloudflare API token. This token needs `Account.Account Analytics` permissions at a minimum (screenshot).
-4.  Run `npm install`
-5.  Run `npx wrangler pages project create counterscale` and create a new Pages project.
-    1.  If this is your first time invoking `wrangler` on the terminal, you will be prompted to sign into your Cloudflare account.
-6.  Run `npx wrangler pages secret put CF_BEARER_TOKEN` → when prompted, paste the API token you created
-7.  Run `npx wrangler pages secret put CF_ACCOUNT_ID` → when prompted, paste your Cloudflare Account ID
-    1.  Find your account ID by visiting Workers and Pages > Overview. It is displayed on the right hand side of the screen.
-8.  Run `npm run deploy` – this will do several things:
-    1.  Prompt you to create a new Cloudflare Pages project (`counterscale`)
-    2.  Prompt you for the production branch name (default is your current branch, i.e. `main`)
-    3.  Create a new Analytics Engine dataset, called `metricsDataset`
-    4.  Deploy the site and give you the deployment URL.
-9.  The site should now be deployed. Visit `https://{subdomain-emitted-from-npm-run-deploy}.pages.dev`.
-    1.  NOTE: _It may take take a few minutes before the subdomain becomes live._
+    -   _WARNING: Keep this window open or copy your API token somewhere safe (e.g. a password manager), because if you close this window you will not be able to access this API token again and have to start over._
 
-### Troubleshooting
+### Deploy Counterscale
 
-If the website is not immediately available (e.g. "Secure Connection Failed"), it could be because Cloudflare has not yet activated your subdomain (yoursubdomain.workers.dev). This process can take a minute; you can check in on the progress by visiting the newly created worker in your Cloudflare dashboard (Workers & Pages → counterscale).
+1.  Download the latest Counterscale release (or clone the repository) and extract the source files to a folder.
+2.  With your terminal, navigate to the folder containing the source files.
+3.  Run `npm install`
+4.  Run `npx wrangler pages project create counterscale` and create a new Pages project.
+    
+    1.  You will be prompted to enter the "production branch name". Just use the default provided (e.g. "main" or "production").
+    
+    -   _NOTE: If this is your first time invoking `wrangler` on the terminal, you will be prompted to sign into your Cloudflare account._
+5.  Run `npx wrangler pages secret put CF_BEARER_TOKEN` → when prompted, paste the API token you created
+6.  Run `npx wrangler pages secret put CF_ACCOUNT_ID` → when prompted, paste your Cloudflare Account ID
+    -   Find your account ID by visiting Workers and Pages > Overview. It is displayed on the right hand side of the screen.
+7.  Run `npm run deploy` – this will do several things:
+    1.  Create a new Analytics Engine dataset, called `metricsDataset`
+    2.  Deploy the site and give you the deployment URL.
+8.  The site should now be deployed. Visit `https://{subdomain-emitted-from-npm-run-deploy}.pages.dev`.
+    -   NOTE: _It may take take a few minutes before the subdomain becomes live._
 
-### Custom Domains
-
-The deployment URL can always be changed to go behind a custom domain you own. More here.
-
-Installing the Tracker
-----------------------
+### Install the Tracker Script on Your Website(s)
 
 When Counterscale is deployed, it makes `tracker.js` available at the URL you deployed to:
 
@@ -70,6 +70,16 @@ To start tracking website traffic on your web property, copy/paste the following
 \></script\>
 
 Be sure to replace `your-unique-site-id` with a unique string/slug representing your web property. Use a unique site ID for each property you place the tracking script on.
+
+Troubleshooting
+---------------
+
+If the website is not immediately available (e.g. "Secure Connection Failed"), it could be because Cloudflare has not yet activated your subdomain (yoursubdomain.workers.dev). This process can take a minute; you can check in on the progress by visiting the newly created worker in your Cloudflare dashboard (Workers & Pages → counterscale).
+
+Custom Domains
+--------------
+
+The deployment URL can always be changed to go behind a custom domain you own. More here.
 
 Development
 -----------

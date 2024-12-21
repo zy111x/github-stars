@@ -1,6 +1,6 @@
 ---
 project: icons
-stars: 215
+stars: 222
 description: Collection of icons and logos maintained by the selfh.st team
 url: https://github.com/selfhst/icons
 ---
@@ -33,6 +33,18 @@ Requests and Contributions
 The collection of icons and logos found in this repository are maintained solely by the _selfh.st_ team. Pull requests will not be considered or accepted, although forks are encouraged for those who wish to use these icons as a starting point for their own collections.
 
 New icon requests, updates, and issues with existing icons can be raised via the repository's Discussions page. The _selfh.st_ team is committed to acknowledging all requests in a timely manner.
+
+Integrations
+------------
+
+The following applications have built-in support for the selfh.st/icons collection:
+
+-   Homepage
+    -   Prefix names with 'sh-' to specify loading them from this collection
+-   What's Up Docker?
+    -   Prefix names with 'sh-' or 'sh:' to specify loading them from this collection
+-   XPipe
+    -   As of v12, custom icons in the application are populated by the icons in this collection
 
 Icon Details
 ------------

@@ -1,6 +1,6 @@
 ---
 project: node-daily
-stars: 317
+stars: 316
 description: daily article for node
 url: https://github.com/dailyNode/node-daily
 ---

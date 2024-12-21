@@ -1,6 +1,6 @@
 ---
 project: stats
-stars: 26657
+stars: 26812
 description: macOS system monitor in your menu bar
 url: https://github.com/exelban/stats
 ---
@@ -116,6 +116,7 @@ Supported languages
 -   Thai (thanks to apiphoomchu)
 -   Estonian (thanks to postylem)
 -   Hindi (thanks to patiljignesh)
+-   Finnish (thanks to eightscrow)
 
 You can help by adding a new language or improving the existing translation.
 

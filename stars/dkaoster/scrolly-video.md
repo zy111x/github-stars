@@ -1,6 +1,6 @@
 ---
 project: scrolly-video
-stars: 973
+stars: 974
 description: Components for scroll-based (or other externally controlled) playback.
 url: https://github.com/dkaoster/scrolly-video
 ---

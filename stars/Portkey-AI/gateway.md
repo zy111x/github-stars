@@ -1,7 +1,7 @@
 ---
 project: gateway
-stars: 6532
-description: A Blazing Fast AI Gateway with integrated Guardrails. Route to 200+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.
+stars: 6600
+description: A blazing fast AI Gateway with integrated guardrails. Route to 200+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.
 url: https://github.com/Portkey-AI/gateway
 ---
 
@@ -50,6 +50,10 @@ Quickstart (2 mins)
 # Run the gateway locally (needs Node.js and npm)
 npx @portkey-ai/gateway
 
+> The Gateway is running on `http://localhost:8787/v1`
+> 
+> The Gateway Console is running on `http://localhost:8787/public/`
+
 Deployment guides:   Portkey Cloud (Recommended)   Docker   Node.js   Cloudflare   Replit   Others...
 
 ### 2\. Make your first request
@@ -71,6 +75,8 @@ client.chat.completions.create(
 )
 
 Supported Libraries:   JS   Python   REST   OpenAI SDKs   Langchain   LlamaIndex   Autogen   CrewAI   More..
+
+On the Gateway Console (`http://localhost:8787/public/`) you can see all of your local logs in one place.
 
 ### 3\. Routing & Guardrails
 
@@ -115,9 +121,9 @@ The enterprise deployment architecture for supported platforms is available here
 
 ### AI Engineering Hours
 
-Join weekly community calls every Friday (8 AM PT) to kickstart your AI Gateway implementation! Calendar Link
+Join weekly community calls every Friday (8 AM PT) to kickstart your AI Gateway implementation! Happening every Friday
 
-Meetings of Minutes published here.
+Minutes of Meetings published here.
 
 * * *
 

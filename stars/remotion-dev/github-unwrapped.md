@@ -1,8 +1,8 @@
 ---
-project: github-unwrapped-2023
-stars: 904
+project: github-unwrapped
+stars: 939
 description: Your coding year in review
-url: https://github.com/remotion-dev/github-unwrapped-2023
+url: https://github.com/remotion-dev/github-unwrapped
 ---
 
 **Try it out live:** GitHubUnwrapped.com
@@ -14,8 +14,15 @@ Make your own
 
 Want to make your own year-in-review for your users?
 
--   **Developers**: Feel free to fork and use this repository as a template! Note the legal disclaimers at the bottom of this README.
--   **Non-developers**: Write to hi@remotion.dev for a free consultation in Fall 2024!
+Feel free to fork and use this repository as a template! Note the legal disclaimers at the bottom of this README.
+
+Versions
+--------
+
+-   2024: `main` branch
+-   2023: `2023` branch
+-   2022: `github-unwrapped-2022` Repo
+-   2021: `github-unwrapped-2021` Repo
 
 Setup
 -----

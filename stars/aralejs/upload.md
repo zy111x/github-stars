@@ -1,6 +1,6 @@
 ---
 project: upload
-stars: 85
+stars: 84
 description: iframe and html5 file uploader
 url: https://github.com/aralejs/upload
 ---

@@ -1,6 +1,6 @@
 ---
 project: tails-components
-stars: 797
+stars: 796
 description: The Tails Open Source Components are a (no-config) copy'n paste free collection of hand-crafted templates and components built in TailwindCSS.
 url: https://github.com/thedevdojo/tails-components
 ---

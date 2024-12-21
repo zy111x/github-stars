@@ -1,6 +1,6 @@
 ---
 project: warp-docker
-stars: 343
+stars: 347
 description: Run Cloudflare WARP in Docker.
 url: https://github.com/cmj2002/warp-docker
 ---
@@ -28,8 +28,9 @@ services:
     image: caomingjun/warp
     container\_name: warp
     restart: always
-    devices:
-      - /dev/net/tun:/dev/net/tun
+    # add removed rule back (https://github.com/opencontainers/runc/pull/3468)
+    device\_cgroup\_rules:
+      - 'c 10:200 rwm'
     ports:
       - "1080:1080"
     environment:

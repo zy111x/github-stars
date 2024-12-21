@@ -1,6 +1,6 @@
 ---
 project: sanity
-stars: 5353
+stars: 5366
 description: Sanity Studio – Rapidly configure content workspaces powered by structured content
 url: https://github.com/sanity-io/sanity
 ---
@@ -65,7 +65,9 @@ Sanity Studio is an open-source real-time CMS, that you can customize with JavaS
 Stay up to date
 ---------------
 
--   Follow **@sanity\_io** on Twitter
+-   Follow us on X
+-   Follow us on Bluesky
+-   Subscribe to our YouTube channel
 -   Subscribe to our blog by RSS
 -   Subscribe to our newsletter
 -   Join the developer community on Slack

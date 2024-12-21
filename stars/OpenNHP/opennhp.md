@@ -1,6 +1,6 @@
 ---
 project: opennhp
-stars: 13520
+stars: 13519
 description: A lightweight cryptography-driven Zero Trust protocol to safeguard servers and data from attackers by leveraging resource-hiding and encryption algorithms.
 url: https://github.com/OpenNHP/opennhp
 ---
@@ -50,14 +50,14 @@ Vision: Making the Internet Trustworthy
 
 The openness of TCP/IP protocols has driven the explosive growth of internet applications but also exposed vulnerabilities, allowing malicious actors to gain unauthorized access and exploit any exposed IP address. Although the OSI network model defines the _5th layer (Session Layer)_ for managing connections, few effective solutions have been implemented to address this.
 
-**NHP**, or the **"Network-resource Hiding Protocol"**, is a lightweight cryptography-driven Zero Trust networking protocol designed to function at the _OSI Session Layer_, which is optimal for managing network visibility and connections. NHP's key objective is to conceal protected resources from unauthorized entities, granting access only to verified, authorized users through continuous verification, contributing to a more trustworthy Internet.
+**NHP**, or the **"Network-resource Hiding Protocol"**, is a lightweight cryptography-driven Zero Trust protocol designed to function at the _OSI 5th and 6th Layer_, which is optimal for managing network visibility and connections. NHP's key objective is to conceal protected resources from unauthorized entities, granting access only to verified, authorized users through continuous verification, contributing to a more trustworthy Internet.
 
 * * *
 
-Solution: OpenNHP Fixes the Network Visibility Control
-------------------------------------------------------
+Solution: OpenNHP Fixes the Network/Data Visibility Control
+-----------------------------------------------------------
 
-**OpenNHP** is the open-source implementation of the NHP protocol. It is cryptography-driven and designed with security-first principles, implementing a true zero-trust architecture at the _OSI Session Layer_.
+**OpenNHP** is the open-source implementation of the NHP protocol. It is cryptography-driven and designed with security-first principles, implementing a true zero-trust architecture at the _OSI Session and Presentation Layer_.
 
 OpenNHP builds upon earlier research in network hiding technology, utilizing modern cryptographic framework and architecture to ensure security and high performance, thereby overcoming the limitations of previous technologies.
 

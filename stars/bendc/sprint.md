@@ -1,6 +1,6 @@
 ---
 project: sprint
-stars: 4221
+stars: 4219
 description: A tiny, lightning fast jQuery-like library for modern browsers.
 url: https://github.com/bendc/sprint
 ---

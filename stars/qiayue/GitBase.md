@@ -1,6 +1,6 @@
 ---
 project: GitBase
-stars: 596
+stars: 602
 description: Github Based Simple Website Framework
 url: https://github.com/qiayue/GitBase
 ---

@@ -1,6 +1,6 @@
 ---
 project: unwasm
-stars: 183
+stars: 186
 description: 🇼 WebAssembly tools for JavaScript
 url: https://github.com/unjs/unwasm
 ---

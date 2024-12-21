@@ -1,6 +1,6 @@
 ---
 project: tremor-raw
-stars: 985
+stars: 1003
 description: Copy & Paste React components to build modern web applications. 
 url: https://github.com/tremorlabs/tremor-raw
 ---
