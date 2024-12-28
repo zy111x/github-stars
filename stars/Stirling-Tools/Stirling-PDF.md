@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 47526
+stars: 47792
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -29,7 +29,7 @@ PDF Features
 
 ### Page Operations
 
--   View and modify PDFs - View multi-page PDFs with custom viewing, sorting, and searching. Plus on-page edit features like annotate, draw, and adding text and images. (Using PDF.js with Joxit and Liberation fonts)
+-   View and modify PDFs - View multi-page PDFs with custom viewing, sorting, and searching. Plus, on-page edit features like annotating, drawing, and adding text and images. (Using PDF.js with Joxit and Liberation fonts)
 -   Full interactive GUI for merging/splitting/rotating/moving PDFs and their pages
 -   Merge multiple PDFs into a single resultant file
 -   Split PDFs into multiple files at specified page numbers or extract all pages as individual files
@@ -40,11 +40,11 @@ PDF Features
 -   Scale page contents size by set percentage
 -   Adjust contrast
 -   Crop PDF
--   Auto split PDF (with physically scanned page dividers)
+-   Auto-split PDF (with physically scanned page dividers)
 -   Extract page(s)
 -   Convert PDF to a single page
 -   Overlay PDFs on top of each other
--   PDF to single page
+-   PDF to a single page
 -   Split PDF by sections
 
 ### Conversion Operations
@@ -53,7 +53,7 @@ PDF Features
 -   Convert any common file to PDF (using LibreOffice)
 -   Convert PDF to Word/PowerPoint/others (using LibreOffice)
 -   Convert HTML to PDF
--   Convert PDF to xml
+-   Convert PDF to XML
 -   Convert PDF to CSV
 -   URL to PDF
 -   Markdown to PDF
@@ -81,9 +81,9 @@ PDF Features
 -   Extract images from scans
 -   Remove annotations
 -   Add page numbers
--   Auto rename file by detecting PDF header text
--   OCR on PDF (using tesseract)
--   PDF/A conversion (using libreoffice)
+-   Auto-rename files by detecting PDF header text
+-   OCR on PDF (using Tesseract OCR)
+-   PDF/A conversion (using LibreOffice)
 -   Edit metadata
 -   Flatten PDFs
 -   Get all information on a PDF to view or export as JSON
@@ -122,7 +122,7 @@ Note
 
 https://hub.docker.com/r/stirlingtools/stirling-pdf
 
-Stirling-PDF has three different versions: a full version, an ultra-lite version, and a 'fat' version. Depending on the types of features you use, you may want a smaller image to save on space. To see what the different versions offer, please look at our version mapping. For people that don't mind space optimization, just use the latest tag.
+Stirling-PDF has three different versions: a full version, an ultra-lite version, and a 'fat' version. Depending on the types of features you use, you may want a smaller image to save on space. To see what the different versions offer, please look at our version mapping. For people who don't mind space optimization, just use the latest tag.
 
 Please note in the examples below, you may need to change the volume paths as needed, e.g., `./extraConfigs:/configs` to `/opt/stirlingpdf/extraConfigs:/configs`.
 
@@ -173,7 +173,7 @@ Please view the HowToUseOCR.md.
 Reuse Stored Files
 ------------------
 
-Certain functionality like `Sign` supports pre-saved files stored at `/customFiles/signatures/`. Image files placed within here will be accessible to be used via the web UI. Currently, this supports two folder types:
+Certain functionality like `Sign` supports pre-saved files stored at `/customFiles/signatures/`. Image files placed here will be accessible via the web UI. Currently, this supports two folder types:
 
 -   `/customFiles/signatures/ALL_USERS`: Accessible to all users, useful for organizations where many users use the same files or for users not using authentication
 -   `/customFiles/signatures/{username}`: Such as `/customFiles/signatures/froodle`, accessible only to the `froodle` username, private for all others
@@ -271,11 +271,11 @@ Please see our Contributing Guide.
 Stirling PDF Enterprise
 -----------------------
 
-Stirling PDF offers a Enterprise edition of its software, This is the same great software but with added features and comforts
+Stirling PDF offers an Enterprise edition of its software. This is the same great software but with added features and comforts.
 
-### Whats included
+### What's included
 
--   Prioritised Support tickets via support@stirlingpdf.com to reach directly to Stirling-PDF team for support and 1:1 meetings where applicable (Provided they come from same email domain registered with us)
+-   Prioritized Support tickets via support@stirlingpdf.com to reach directly to Stirling-PDF team for support and 1:1 meetings where applicable (Provided they come from the same email domain registered with us)
 -   Prioritised Enhancements to Stirling-PDF where applicable
 -   Base SSO support
 -   Advanced SSO such as automated login handling (Coming very soon)
@@ -284,7 +284,7 @@ Stirling PDF offers a Enterprise edition of its software, This is the same great
 -   Advanced user configurations (Coming soon)
 -   Plus other exciting features to come
 
-Check out of docs on it or our official website
+Check out our docs on it or our official website
 
 Customization
 -------------
@@ -433,7 +433,7 @@ When you log in to Stirling-PDF, you will be redirected to the `/login` page to 
 
 To access your account settings, go to Account Settings in the settings cog menu (top right in the navbar). This Account Settings menu is also where you find your API key.
 
-To add new users, go to the bottom of Account Settings and hit 'Admin Settings'. Here you can add new users. The different roles mentioned within this are for rate limiting. This is a work in progress and will be expanded on more in the future.
+To add new users, go to the bottom of Account Settings and hit 'Admin Settings'. Here, you can add new users. The different roles mentioned within this are for rate limiting. This is a work in progress and will be expanded on more in the future.
 
 For API usage, you must provide a header with `X-API-KEY` and the associated API key for that user.
 
@@ -450,9 +450,9 @@ FAQ
 -   Multi-page layout (stitch PDF pages together) support x rows y columns and custom page sizing
 -   Fill forms manually or automatically
 
-### Q2: Why is my application downloading .htm files? Why am i getting HTTP error 413?
+### Q2: Why is my application downloading .htm files? Why am I getting HTTP error 413?
 
-This is an issue commonly caused by your NGINX configuration. The default file upload size for NGINX is 1MB. You need to add the following in your Nginx sites-available file: `client_max_body_size SIZE;` (where "SIZE" is 50M for example for 50MB files).
+This is an issue commonly caused by your NGINX configuration. The default file upload size for NGINX is 1MB. You need to add the following in your Nginx sites-available file: `client_max_body_size SIZE;` (where "SIZE" is 50M, for example, for 50MB files).
 
 ### Q3: Why is my download timing out?
 

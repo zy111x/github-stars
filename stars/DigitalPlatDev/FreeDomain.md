@@ -1,12 +1,21 @@
 ---
 project: FreeDomain
-stars: 36055
+stars: 38446
 description: DigitalPlat FreeDomain: Free Domain For Everyone
 url: https://github.com/DigitalPlatDev/FreeDomain
 ---
 
 DigitalPlat FreeDomain – **Your Free Domain Awaits!**
 =====================================================
+
+December 26, 2024
+-----------------
+
+The US.KG domain has been fully restored, and all domains are functioning normally. If you are unable to resolve the domain properly, please clear your DNS cache or wait up to 24 hours for full DNS propagation.
+
+We are actively communicating with Kyrgyzstan (.KG domain registry) to ensure that similar incidents are minimized as much as possible. We emphasize proactive collaboration and encourage any issues to be discussed with us in advance to guarantee stable service.
+
+**We have not recommended users to migrate to any other domain. Such messages are purely rumors.**
 
 🌐 Say Goodbye to Domain Fees
 -----------------------------

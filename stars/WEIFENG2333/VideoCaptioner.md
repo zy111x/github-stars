@@ -1,6 +1,6 @@
 ---
 project: VideoCaptioner
-stars: 2241
+stars: 2439
 description: 🎬 卡卡字幕助手 | VideoCaptioner - 基于 LLM 的智能字幕助手，无需GPU一键高质量字幕视频合成！视频字幕生成、断句、校正、字幕翻译全流程。让字幕制作简单高效！
 url: https://github.com/WEIFENG2333/VideoCaptioner
 ---
@@ -18,6 +18,8 @@ VideoCaptioner
 -------
 
 卡卡字幕助手（VideoCaptioner）操作简单且无需高配置，支持网络调用和本地离线（支持调用GPU）两种方式进行语音识别，利用可用通过大语言模型进行字幕智能断句、校正、翻译，字幕视频全流程一键处理！为视频配上效果惊艳的字幕。
+
+最新版本已经支持 VAD 、 人声分离、 字级时间戳 等实用功能
 
 -   🎯 无需GPU即可使用强大的语音识别引擎，生成精准字幕
 -   ✂️ 基于 LLM 的智能分割与断句，字幕阅读更自然流畅

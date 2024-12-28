@@ -1,14 +1,14 @@
 ---
 project: v2rayN
-stars: 71993
-description: A GUI client for Windows and Linux, support Xray core and sing-box-core and others
+stars: 72490
+description: A GUI client for Windows, Linux and macOS, support Xray core and sing-box-core and others
 url: https://github.com/2dust/v2rayN
 ---
 
 v2rayN
 ======
 
-A GUI client for Windows and Linux, support Xray core and sing-box-core and others
+A GUI client for Windows, Linux and macOS, support Xray core and sing-box-core and others
 
 How to use
 ----------
@@ -27,6 +27,14 @@ Check Release files introduction and select the version you need to download
 Debian 9+
 Ubuntu 16.04+
 Fedora 30+
+```
+
+### macOS
+
+-   `chmod +x v2rayN` Run `./v2rayN` under user permissions
+
+```
+macOS 10.14+
 ```
 
 Requirements

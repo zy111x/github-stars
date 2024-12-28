@@ -1,6 +1,6 @@
 ---
 project: hexo-theme-anzhiyu
-stars: 1632
+stars: 1660
 description: 安知鱼主题，这是一个简洁美丽的hexo主题。
 url: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
 ---

@@ -1,6 +1,6 @@
 ---
 project: CloudPaste
-stars: 318
+stars: 351
 description: 基于 Cloudflare Workers 的在线剪贴板和文件分享服务，支持 Markdown、密码保护、文件上传等功能
 url: https://github.com/ling-drag0n/CloudPaste
 ---
@@ -30,6 +30,7 @@ CloudPaste - 在线剪贴板 📋
 -   同步滚动预览
 -   支持自定义链接后缀（仅单文件上传时可用）
 -   支持设置访问次数限制
+-   文本分享支持pdf、png导出
 -   支持自动保存草稿
     -   浏览器关闭前自动保存
     -   下次访问时可恢复
@@ -142,7 +143,7 @@ CloudPaste - 在线剪贴板 📋
     -   等待仓库克隆完成
 2.  **设置 GitHub Secrets**
     
-    在你的 GitHub 仓库中，转到 Settings -> Secrets and variables -> Actions ，添加以下 secrets：
+    在你的 GitHub 仓库中，转到 Settings -> Secrets and variables -> Actions -> New Repository secrets ，添加以下 secrets：
     
     -   `CF_API_TOKEN`: Cloudflare API 令牌
         
