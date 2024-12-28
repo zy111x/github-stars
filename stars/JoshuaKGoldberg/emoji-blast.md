@@ -1,6 +1,6 @@
 ---
 project: emoji-blast
-stars: 274
+stars: 278
 description: Blasts emoji like fireworks all up in your HTML page. 🎆
 url: https://github.com/JoshuaKGoldberg/emoji-blast
 ---

@@ -1,6 +1,6 @@
 ---
 project: jquery.adaptive-backgrounds.js
-stars: 6528
+stars: 6527
 description: 🦎 A jQuery plugin for extracting the dominant color from images and applying the color to their parent.
 url: https://github.com/briangonzalez/jquery.adaptive-backgrounds.js
 ---

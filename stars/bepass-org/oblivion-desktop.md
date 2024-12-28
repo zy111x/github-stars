@@ -1,6 +1,6 @@
 ---
 project: oblivion-desktop
-stars: 5142
+stars: 5173
 description: Oblivion Desktop - Unofficial Warp Client for Windows/Mac/Linux
 url: https://github.com/bepass-org/oblivion-desktop
 ---
@@ -59,7 +59,6 @@ Languages
 ✅ English  
 ✅ Chinese  
 ✅ Russian  
-✅ Deutsch  
 ✅ Turkish  
 ✅ Indonesian  
 ✅ Arabic  
@@ -137,7 +136,7 @@ Coming Soon ...
 Faced Bug 🐞?
 -------------
 
-checkout wiki and search in issues (open and closed ones!) and if you did'nt get your answer, then create a new issue.
+checkout wiki and search in issues (open and closed ones!) and if you didn't get your answer, then create a new issue.
 
 Get Involved
 ------------

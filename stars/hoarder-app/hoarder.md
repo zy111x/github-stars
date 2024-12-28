@@ -1,6 +1,6 @@
 ---
 project: hoarder
-stars: 7305
+stars: 9348
 description: A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search
 url: https://github.com/hoarder-app/hoarder
 ---
@@ -19,13 +19,15 @@ Features
 -   🔖 Chrome plugin and Firefox addon for quick bookmarking.
 -   📱 An iOS app, and an Android app.
 -   📰 Auto hoarding from RSS feeds.
--   🌐 REST API.
+-   🔌 REST API.
+-   🌐 Mutli-language support.
+-   🖍️ Mark and store highlights from your hoarded content.
 -   🗄️ Full page archival (using monolith) to protect against link rot. Auto video archiving using youtube-dl.
 -   ☑️ Bulk actions support.
 -   🔐 SSO support.
 -   🌙 Dark mode support.
 -   💾 Self-hosting first.
--   \[Planned\] Downloading the content for offline reading.
+-   \[Planned\] Downloading the content for offline reading in the mobile app.
 
 **⚠️ This app is under heavy development and it's far from stable.**
 

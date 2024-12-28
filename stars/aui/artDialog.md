@@ -1,6 +1,6 @@
 ---
 project: artDialog
-stars: 3137
+stars: 3136
 description: 经典的网页对话框组件
 url: https://github.com/aui/artDialog
 ---

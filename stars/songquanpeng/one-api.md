@@ -1,6 +1,6 @@
 ---
 project: one-api
-stars: 20218
+stars: 20403
 description: OpenAI 接口管理 & 分发系统，支持 Azure、Anthropic Claude、Google PaLM 2 & Gemini、智谱 ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360 智脑以及腾讯混元，可用于二次分发管理 key，仅单可执行文件，已打包好 Docker 镜像，一键部署，开箱即用. OpenAI key management & redistribution system, using a single API for all LLMs, and features an English UI.
 url: https://github.com/songquanpeng/one-api
 ---
@@ -144,6 +144,12 @@ sudo service nginx restart
 
 初始账号用户名为 `root`，密码为 `123456`。
 
+### 通过宝塔面板进行一键部署
+
+1.  安装宝塔面板9.2.0及以上版本，前往 宝塔面板 官网，选择正式版的脚本下载安装；
+2.  安装后登录宝塔面板，在左侧菜单栏中点击 `Docker`，首次进入会提示安装 `Docker` 服务，点击立即安装，按提示完成安装；
+3.  安装完成后在应用商店中搜索 `One-API`，点击安装，配置域名等基本信息即可完成安装；
+
 ### 基于 Docker Compose 进行部署
 
 > 仅启动方式不同，参数设置不变，请参考基于 Docker 部署部分
@@ -186,7 +192,7 @@ docker-compose ps
 3.  所有从服务器必须设置 `NODE_TYPE` 为 `slave`，不设置则默认为主服务器。
 4.  设置 `SYNC_FREQUENCY` 后服务器将定期从数据库同步配置，在使用远程数据库的情况下，推荐设置该项并启用 Redis，无论主从。
 5.  从服务器可以选择设置 `FRONTEND_BASE_URL`，以重定向页面请求到主服务器。
-6.  从服务器上**分别**装好 Redis，设置好 `REDIS_CONN_STRING`，这样可以做到在缓存未过期的情况下数据库零访问，可以减少延迟。
+6.  从服务器上**分别**装好 Redis，设置好 `REDIS_CONN_STRING`，这样可以做到在缓存未过期的情况下数据库零访问，可以减少延迟（Redis 集群或者哨兵模式的支持请参考环境变量说明）。
 7.  如果主服务器访问数据库延迟也比较高，则也需要启用 Redis，并设置 `SYNC_FREQUENCY`，以定期从数据库同步配置。
 
 环境变量的具体使用方法详见此处。
@@ -301,6 +307,11 @@ Loading
 1.  `REDIS_CONN_STRING`：设置之后将使用 Redis 作为缓存使用。
     -   例子：`REDIS_CONN_STRING=redis://default:redispw@localhost:49153`
     -   如果数据库访问延迟很低，没有必要启用 Redis，启用后反而会出现数据滞后的问题。
+    -   如果需要使用哨兵或者集群模式：
+        -   则需要把该环境变量设置为节点列表，例如：`localhost:49153,localhost:49154,localhost:49155`。
+        -   除此之外还需要设置以下环境变量：
+            -   `REDIS_PASSWORD`：Redis 集群或者哨兵模式下的密码设置。
+            -   `REDIS_MASTER_NAME`：Redis 哨兵模式下主节点的名称。
 2.  `SESSION_SECRET`：设置之后将使用固定的会话密钥，这样系统重新启动后已登录用户的 cookie 将依旧有效。
     -   例子：`SESSION_SECRET=random_string`
 3.  `SQL_DSN`：设置之后将使用指定数据库而非 SQLite，请使用 MySQL 或 PostgreSQL。

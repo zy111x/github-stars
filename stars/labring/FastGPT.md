@@ -1,6 +1,6 @@
 ---
 project: FastGPT
-stars: 19185
+stars: 19350
 description: FastGPT is a knowledge-based platform built on the LLMs, offers a comprehensive suite of out-of-the-box capabilities such as data processing, RAG retrieval, and visual AI workflow orchestration, letting you easily develop and deploy complex question-answering systems without the need for extensive setup or configuration.
 url: https://github.com/labring/FastGPT
 ---
@@ -36,9 +36,9 @@ fastgpt.mp4
 -   多库复用，混用
 -   chunk 记录修改和删除
 -   支持手动输入，直接分段，QA 拆分导入
--   支持 txt，md，html，pdf，docx，pptx，csv，xlsx (有需要更多可 PR file loader)
--   支持 url 读取、CSV 批量导入
+-   支持 txt，md，html，pdf，docx，pptx，csv，xlsx (有需要更多可 PR file loader)，支持 url 读取、CSV 批量导入
 -   混合检索 & 重排
+-   API 知识库
 -   自定义文件读取服务
 -   自定义分块服务
 
@@ -84,7 +84,7 @@ fastgpt.mp4
 -   快速开始本地开发
 -   部署 FastGPT
 -   系统配置文件说明
--   多模型配置
+-   多模型配置方案
 -   版本更新/升级介绍
 -   OpenAPI API 文档
 -   知识库结构详解
@@ -107,17 +107,18 @@ fastgpt.mp4
 -   One API：多模型管理，支持 Azure、文心一言等
 -   TuShan：5 分钟搭建后台管理系统
 
+🌿 第三方生态
+--------
+
+-   COW 个人微信/企微机器人
+-   SiliconCloud (硅基流动) —— 开源模型在线体验平台
+
 👀 其他
 -----
 
 -   保姆级 FastGPT 教程
 -   接入飞书
 -   接入企微
-
-🌿 第三方生态
---------
-
--   COW 个人微信/企微机器人
 
 🤝 参与贡献
 -------

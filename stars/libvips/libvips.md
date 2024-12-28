@@ -1,6 +1,6 @@
 ---
 project: libvips
-stars: 9856
+stars: 9886
 description: A fast image processing library with low memory needs.
 url: https://github.com/libvips/libvips
 ---
@@ -69,7 +69,7 @@ sharp for Go
 
 Ruby on Rails
 
-carrierwave-vips
+CarrierWave
 
 mediawiki
 

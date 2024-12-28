@@ -1,6 +1,6 @@
 ---
 project: chsrc
-stars: 4326
+stars: 4384
 description: chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
 ---
@@ -22,18 +22,13 @@ Tip
 
 **`chsrc` 不仅是一个命令行工具，同时也是一个换源框架，它甚至使你能够在不了解C语言的情况下编写出新的换源方法(recipe)。** 给新软件添加换源方法总共分几步？Write A Recipe Even If You Don't Know C
 
-1.  复制 recipe 模版 并替换占位符
-2.  在 Wiki 中找可用源
-3.  添加具体的换源步骤
-4.  编译运行！`chsrc set my-favorite-software`
-
 Note
 
-**`chsrc` 可换源 60+ 目标。每个人仅仅贡献和维护自己熟悉的部分，回报是得到其他所有领域专家的帮助**。欢迎对 GitHub、Gitee 协作不熟悉的人以此为契机学习参与贡献, 欢迎任何编程初学者参与贡献，作者可提供一定的 贡献指导。
+**`chsrc` 可换源 60+ 目标。每个人仅仅贡献和维护自己熟悉的部分，回报是得到其他所有领域专家的帮助**。欢迎对 GitHub、Gitee 协作不熟悉的人以此为契机学习参与贡献, 欢迎任何编程初学者参与贡献。从开发到提交贡献，我们覆盖全流程文档 ，另外作者可提供一定的 贡献指导
 
 Important
 
-招募 Recipe 负责人与维护者!
+招募 recipe 维护者
 
   
 
@@ -63,6 +58,7 @@ Important
 
 -   `Homebrew`
 -   `Scoop`
+-   `WinGet`
 -   `AUR`
 -   `Flatpak`
 -   `snap`
@@ -87,6 +83,12 @@ Windows
 -   可通过 `scoop` 安装，感谢 @Gn3po4g 与 @niheaven
 
 $ scoop install chsrc
+
+  
+
+-   可通过 `WinGet` 安装，感谢 @YU-7
+
+$ winget install RubyMetric.chsrc
 
   
 
@@ -189,7 +191,7 @@ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-macos
 BSD
 
 $ git clone https://gitee.com/RubyMetric/chsrc.git; cd chsrc
-$ clang -Iinclude src/chsrc-main.c -o chsrc
+$ clang -Iinclude -Ilib src/chsrc-main.c -o chsrc
 
 其他平台
 
@@ -348,24 +350,6 @@ chsrc set guix
 chsrc set emacs  | elpa
 chsrc set tex    | ctan | latex | texlive | miktex
 chsrc set conda  | anaconda
-
-  
-
-🛠️ 开发
-------
-
-请安装好 `gcc`或`clang` 和 `make` 以及 `curl`
-
-# 使用 dev 分支开发
-git clone https://gitee.com/RubyMetric/chsrc.git -b dev
-
-make          # 默认使用 cc 编译
-make CC=clang # 使用 clang 编译
-make CC=gcc   # 使用 gcc   编译
-
-make test    # 测试命令
-make test-xy # 测试 xy.h
-make clean
 
   
 

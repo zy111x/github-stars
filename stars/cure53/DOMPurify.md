@@ -1,6 +1,6 @@
 ---
 project: DOMPurify
-stars: 14279
+stars: 14309
 description: DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:
 url: https://github.com/cure53/DOMPurify
 ---
@@ -422,7 +422,7 @@ Who contributed?
 
 Many people helped and help DOMPurify become what it is and need to be acknowledged here!
 
-hash\_kitten ❤️, kevin\_mizu ❤️, icesfont ❤️, reduckted ❤️, dcramer 💸, JGraph 💸, baekilda 💸, Healthchecks 💸, Sentry 💸, jarrodldavis 💸, CynegeticIO, ssi02014 ❤️, GrantGryczan, Lowdefy, granlem, oreoshake, tdeekens ❤️, peernohell ❤️, is2ei, SoheilKhodayari, franktopel, NateScarlet, neilj, fhemberger, Joris-van-der-Wel, ydaniv, terjanq, filedescriptor, ConradIrwin, gibson042, choumx, 0xSobky, styfle, koto, tlau88, strugee, oparoz, mathiasbynens, edg2s, dnkolegov, dhardtke, wirehead, thorn0, styu, mozfreddyb, mikesamuel, jorangreef, jimmyhchan, jameydeorio, jameskraus, hyderali, hansottowirtz, hackvertor, freddyb, flavorjones, djfarrelly, devd, camerondunford, buu700, buildog, alabiaga, Vector919, Robbert, GreLI, FuzzySockets, ArtemBernatskyy, @garethheyes, @shafigullin, @mmrupp, @irsdl,ShikariSenpai, ansjdnakjdnajkd, @asutherland, @mathias, @cgvwzq, @robbertatwork, @giutro, @CmdEngineer\_, @avr4mit and especially @securitymb ❤️ & @masatokinugawa ❤️
+hash\_kitten ❤️, kevin\_mizu ❤️, icesfont ❤️, reduckted ❤️, dcramer 💸, JGraph 💸, baekilda 💸, Healthchecks 💸, Sentry 💸, jarrodldavis 💸, CynegeticIO, ssi02014 ❤️, GrantGryczan, Lowdefy, granlem, oreoshake, tdeekens ❤️, peernohell ❤️, is2ei, SoheilKhodayari, franktopel, NateScarlet, neilj, fhemberger, Joris-van-der-Wel, ydaniv, terjanq, filedescriptor, ConradIrwin, gibson042, choumx, 0xSobky, styfle, koto, tlau88, strugee, oparoz, mathiasbynens, edg2s, dnkolegov, dhardtke, wirehead, thorn0, styu, mozfreddyb, mikesamuel, jorangreef, jimmyhchan, jameydeorio, jameskraus, hyderali, hansottowirtz, hackvertor, freddyb, flavorjones, djfarrelly, devd, camerondunford, buu700, buildog, alabiaga, Vector919, Robbert, GreLI, FuzzySockets, ArtemBernatskyy, @garethheyes, @shafigullin, @mmrupp, @irsdl,ShikariSenpai, ansjdnakjdnajkd, @asutherland, @mathias, @cgvwzq, @robbertatwork, @giutro, @CmdEngineer\_, @avr4mit, davecardwell and especially @securitymb ❤️ & @masatokinugawa ❤️
 
 Testing powered by
 ------------------

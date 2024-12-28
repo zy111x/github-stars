@@ -1,6 +1,6 @@
 ---
 project: cacheable
-stars: 1666
+stars: 1671
 description: a robust, scalable, and maintained set of caching packages
 url: https://github.com/jaredwray/cacheable
 ---
@@ -51,21 +51,7 @@ How to Use the Cacheable Mono Repo
 Open a Pull Request
 -------------------
 
-You can contribute changes to this repo by opening a pull request:
-
-1.  After forking this repository to your Git account, make the proposed changes on your forked branch.
-2.  You will need `docker` installed and running on your machine. Once it is installed run `pnpm test:services:start` to start the services needed for testing.
-3.  Run tests and linting locally.
-    -   Run `pnpm i && pnpm test`.
-4.  Commit your changes and push them to your forked repository.
-5.  Navigate to the main `cacheable` repository and select the _Pull Requests_ tab.
-6.  Click the _New pull request_ button, then select the option "Compare across forks"
-7.  Leave the base branch set to main. Set the compare branch to your forked branch, and open the pull request.
-8.  Once your pull request is created, ensure that all checks have passed and that your branch has no conflicts with the base branch. If there are any issues, resolve these changes in your local repository, and then commit and push them to git.
-9.  Similarly, respond to any reviewer comments or requests for changes by making edits to your local repository and pushing them to Git.
-10.  Once the pull request has been reviewed, those with write access to the branch will be able to merge your changes into the `cacheable` repository.
-
-If you need more information on the steps to create a pull request, you can find a detailed walkthrough in the GitHub documentation
+Please follow the CONTRIBUTING guidelines provided and remember you will need to do setup on this project such as having redis running (via docker), building the project `pnpm build`, and testing `pnpm test` which will also perform linting.
 
 Post an Issue
 -------------

@@ -1,6 +1,6 @@
 ---
 project: react-email
-stars: 14804
+stars: 14840
 description: 💌 Build and send emails using React
 url: https://github.com/resend/react-email
 ---
@@ -89,6 +89,8 @@ Emails built with React Email can be converted into HTML and sent using any emai
 -   SendGrid
 -   Postmark
 -   AWS SES
+-   Plunk
+-   Scaleway
 
 Support
 -------

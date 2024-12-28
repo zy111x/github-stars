@@ -1,6 +1,6 @@
 ---
 project: egg
-stars: 18913
+stars: 18916
 description: 🥚 Born to build better enterprise frameworks and apps with Node.js & Koa
 url: https://github.com/eggjs/egg
 ---

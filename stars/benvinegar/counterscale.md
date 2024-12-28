@@ -1,6 +1,6 @@
 ---
 project: counterscale
-stars: 1535
+stars: 1544
 description: Scalable web analytics you run yourself on Cloudflare
 url: https://github.com/benvinegar/counterscale
 ---
@@ -34,19 +34,19 @@ If you don't have one already, create a Cloudflare account here and verify your 
 3.  Run `npm install`
 4.  Run `npx wrangler pages project create counterscale` and create a new Pages project.
     
-    1.  You will be prompted to enter the "production branch name". Just use the default provided (e.g. "main" or "production").
+    1.  You will be prompted to enter the "production branch name". Just use the default provided.
     
     -   _NOTE: If this is your first time invoking `wrangler` on the terminal, you will be prompted to sign into your Cloudflare account._
 5.  Run `npx wrangler pages secret put CF_BEARER_TOKEN` → when prompted, paste the API token you created
 6.  Run `npx wrangler pages secret put CF_ACCOUNT_ID` → when prompted, paste your Cloudflare Account ID
     -   Find your account ID by visiting Workers and Pages > Overview. It is displayed on the right hand side of the screen.
-7.  Run `npm run deploy` – this will do several things:
+7.  Run `npx turbo deploy` – this will do several things:
     1.  Create a new Analytics Engine dataset, called `metricsDataset`
     2.  Deploy the site and give you the deployment URL.
 8.  The site should now be deployed. Visit `https://{subdomain-emitted-from-npm-run-deploy}.pages.dev`.
     -   NOTE: _It may take take a few minutes before the subdomain becomes live._
 
-### Install the Tracker Script on Your Website(s)
+### Install the Tracking Script on Your Website(s)
 
 When Counterscale is deployed, it makes `tracker.js` available at the URL you deployed to:
 
@@ -54,22 +54,14 @@ When Counterscale is deployed, it makes `tracker.js` available at the URL you de
 https://{subdomain-emitted-from-npm-run-deploy}.pages.dev/tracker.js
 ```
 
-To start tracking website traffic on your web property, copy/paste the following snippet into your website HTML:
+To start reporting website traffic from your web property, copy/paste the following snippet into your website HTML:
 
-<script\>
-    (function () {
-        window.counterscale \= {
-            q: \[\["set", "siteId", "your-unique-site-id"\], \["trackPageview"\]\],
-        };
-    })();
-</script\>
 <script
     id\="counterscale-script"
+    data-site-id\="your-unique-site-id"
     src\="https://{subdomain-emitted-from-npm-run-deploy}.pages.dev/tracker.js"
     defer
 \></script\>
-
-Be sure to replace `your-unique-site-id` with a unique string/slug representing your web property. Use a unique site ID for each property you place the tracking script on.
 
 Troubleshooting
 ---------------
@@ -86,7 +78,7 @@ Development
 
 ### Config
 
-To get started, in the project root, copy `.dev.vars.example` to `.dev.vars`.
+To get started, in the `packages/server` folder, copy `.dev.vars.example` to `.dev.vars`.
 
 Open `.dev.vars` and enter the same values for `CF_BEARER_TOKEN` and `CF_ACCOUNT_ID` you used earlier.
 
@@ -94,8 +86,8 @@ Open `.dev.vars` and enter the same values for `CF_BEARER_TOKEN` and `CF_ACCOUNT
 
 Counterscale is built on Remix and Cloudflare Workers. In development, you have two options:
 
-1.  `npm run dev` → This runs the Vite development server in Node.js. This server will automatically rebuild files when you change them, but it does not best reflect Cloudflare's serverless platform.
-2.  `npm run preview` → This runs Cloudflare's Miniflare server with a build of the Remix files. This closer matches the deployment environment, but does not (yet) automatically rebuild your app.
+1.  `npx turbo dev` → This runs the Vite development server in Node.js. This server will automatically rebuild files when you change them, but it does not best reflect Cloudflare's serverless platform.
+2.  `npx turbo preview` → This runs Cloudflare's Miniflare server with a build of the Remix files. This closer matches the deployment environment, but does not (yet) automatically rebuild your app.
 
 Notes
 -----

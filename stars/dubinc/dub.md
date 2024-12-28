@@ -1,6 +1,6 @@
 ---
 project: dub
-stars: 19244
+stars: 19390
 description: Open-source link management infrastructure. Loved by modern marketing teams like Twilio, Perplexity, Vercel, and Huberman Labs.
 url: https://github.com/dubinc/dub
 ---
@@ -22,11 +22,11 @@ Dub.co is the open-source link management infrastructure for modern marketing te
 Features
 --------
 
--   Advanced Analytics
--   Branded Links
--   QR Codes
--   Personalization
--   Team Collaboration
+-   **Free custom domains**: Create branded short links with your own domain and improve click-through rates by 30%. Paid plans also include a complimentary custom domain.
+-   **Advanced link features**: Supercharge your links with custom link previews, device targeting, geo targeting, link cloaking, password protection, and more.
+-   **Advanced Analytics**: Dub provides powerful analytics for your links, including geolocation, device, browser, and referrer information.
+-   **QR Codes**: QR codes and short links are like peas in a pod. Dub offers free QR codes for every short link you create. Feeling artsy? Customize them with your own logo.
+-   **Team collaboration**: Invite your teammates to collaborate on your links. For enterprises, Dub offers SAML SSO with Okta, Google, and Azure AD for higher security.
 
 Tech Stack
 ----------

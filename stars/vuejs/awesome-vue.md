@@ -1,6 +1,6 @@
 ---
 project: awesome-vue
-stars: 72362
+stars: 72391
 description: 🎉 A curated list of awesome things related to Vue.js
 url: https://github.com/vuejs/awesome-vue
 ---
@@ -1114,6 +1114,7 @@ _Overlay / modal / alert / dialog / lightbox / popup_
 -   @egjs/vue-flicking - It's reliable, flexible and extendable carousel for Vue.js 2 & 3.
 -   swiper - Official Swiper component for Vue 3. Tree shakable, SSR support, typing, a11y and a lot more
 -   vue-concise-carousel - Vue Concise Carousel with True SSR. Works for Vue 2 & 3.
+-   vue3-carousel - A highly customizable, lightweight Vue 3 carousel component for your next awesome project.
 
 #### Charts
 

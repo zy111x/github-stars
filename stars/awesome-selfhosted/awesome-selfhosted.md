@@ -1,6 +1,6 @@
 ---
 project: awesome-selfhosted
-stars: 208292
+stars: 209442
 description: A list of Free Software network services and web applications which can be hosted on your own servers
 url: https://github.com/awesome-selfhosted/awesome-selfhosted
 ---
@@ -215,7 +215,6 @@ _Related: Internet of Things (IoT), Software Development - Continuous Integratio
 -   Mylar3 - Automated Comic Book (cbr/cbz) downloader program for use with NZB and torrents. (Source Code) `GPL-3.0` `Python/Docker`
 -   nefarious - Web application that automates downloading Movies and TV Shows. `GPL-3.0` `Python`
 -   OliveTin - OliveTin is a web interface for running Linux shell commands. `AGPL-3.0` `Go`
--   PlexRipper `⚠` - A cross-platform Plex media downloader that seamlessly adds media from other Plex servers to your own. (Source Code) `GPL-3.0` `Docker`
 -   PlexRipper `⚠` - A cross-platform Plex media downloader that seamlessly adds media from other Plex servers to your own. (Source Code) `GPL-3.0` `Docker`
 -   pyLoad - Lightweight, customizable and remotely manageable downloader for 1-click-hosting sites like rapidshare.com or uploaded.to. (Source Code) `GPL-3.0` `Python`
 -   Radarr - Radarr is an independent fork of Sonarr reworked for automatically downloading movies via Usenet and BitTorrent, à la Couchpotato. (Source Code) `GPL-3.0` `C#/Docker`
@@ -735,6 +734,7 @@ A document management system (DMS) is a system used to receive, track, manage an
 Ebook library management software.
 
 -   Atsumeru - Free and open source self-hosted manga/comic/light novel media server with clients for Windows, Linux, macOS and Android. (Source Code, Clients) `MIT` `Java/Docker`
+-   BookLogr - Web app designed to help you manage your personal book library with ease. (Demo) `Apache-2.0` `Docker`
 -   Calibre Web - Web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database. `GPL-3.0` `Python`
 -   Calibre - E-book library manager that can view, convert, and catalog e-books in most of the major e-book formats and provides a built-in Web server for remote clients. (Demo, Source Code) `GPL-3.0` `Python/deb`
 -   Kavita - Cross-platform e-book/manga/comic/pdf server and web reader with user management, ratings and reviews, and metadata support. (Demo, Source Code) `GPL-3.0` `.NET/Docker`
@@ -894,6 +894,7 @@ Peer-to-peer file sharing is the distribution and sharing of digital media using
 -   instant.io - Streaming file transfer over WebTorrent. (Demo) `MIT` `Nodejs`
 -   qBittorrent - Free cross-platform bittorrent client with a feature rich Web UI for remote access. (Source Code) `GPL-2.0` `C++`
 -   Send - Simple, private, end to end encrypted temporary file sharing, originally built by Mozilla. (Clients) `MPL-2.0` `Nodejs/Docker`
+-   slskd `⚠` - A modern client-server application for the Soulseek file sharing network. `AGPL-3.0` `Docker/C#`
 -   Transmission - Fast, easy, free Bittorrent client. (Source Code) `GPL-3.0` `C++/deb`
 
 ### File Transfer - Single-click & Drag-n-drop Upload
@@ -904,6 +905,7 @@ Simplified file servers for sharing of one-time/short-lived/temporary files, pro
 
 -   Chibisafe - File uploader service that aims to to be easy to use and set up. It accepts files, photos, documents, anything you imagine and gives you back a shareable link for you to send to others. (Source Code) `MIT` `Docker/Nodejs`
 -   elixire - Simple yet advanced screenshot uploading and link shortening service. (Source Code, Clients) `AGPL-3.0` `Python`
+-   Enclosed - A minimalistic web application designed for sending private and secure notes. (Demo, Source Code) `Apache-2.0` `Docker/Nodejs`
 -   Files Sharing - Open Source and self-hosted files sharing application based on unique and temporary links. `GPL-3.0` `PHP/Docker`
 -   FileShelter - FileShelter is a self-hosted software that allows you to easily share files over the Internet. `GPL-3.0` `C++/deb`
 -   Gokapi - Lightweight server to share files, which expire after a set amount of downloads or days. Similar to the discontinued Firefox Send, with the difference that only the admin is allowed to upload files. `GPL-3.0` `Go/Docker`
@@ -971,6 +973,7 @@ _Related: Games - Administrative Utilities & Control Panels_
 -   Posio - Geography multiplayer game. `MIT` `Python`
 -   Quizmaster - A web-app for conducting a quiz, including a page for players to enter their answers. `Apache-2.0` `Scala`
 -   Red Eclipse 2 - A FOSS Arena First-Person Shooter Similar to Unreal Tournament. (Source Code) `Zlib/MIT/CC-BY-SA-4.0` `C/C++/deb`
+-   Scribble.rs - A web-based pictionary game. (Demo) `BSD-3-Clause` `Go/Docker`
 -   Suroi - An open-source 2D battle royale game inspired by surviv.io. (Demo, Source Code) `GPL-3.0` `Nodejs`
 -   The Battle for Wesnoth - The Battle for Wesnoth is an Open Source, turn-based tactical strategy game with a high fantasy theme, featuring both singleplayer and online/hotseat multiplayer combat. `GPL-2.0` `C++/deb`
 -   Veloren - Multiplayer RPG. Open-source game inspired by Cube World, Legend of Zelda, Dwarf Fortress and Minecraft. (Source Code) `GPL-3.0` `Rust`
@@ -1371,6 +1374,7 @@ _Related: Inventory Management, Resource Planning_
 -   Receipt Wrangler `⚠` - Easy-to-use receipt manager, powered by AI. Allows users to create receipts effortlessly and quickly, categorize and more. (Demo, Source Code) `AGPL-3.0` `Docker`
 -   REI3 - Open source, expandable Business Management Software. Manage tasks, time, assets and much more. (Demo, Source Code) `MIT` `Go`
 -   SolidInvoice - Open source invoicing and quote application. (Source Code) `MIT` `PHP`
+-   YAFFA - Personal finance web application, that can be used to keep track of your money, expenses, budgets, and investments. It also helps with long-term financial planning. (Demo, Source Code) `MIT` `PHP`
 
 ### Monitoring
 
@@ -1585,6 +1589,7 @@ Software and tools for managing recipes.
 -   Recipya - A clean, simple and powerful recipe manager your whole family will enjoy. (Demo, Source Code) `GPL-3.0` `Docker/Go`
 -   Specifically Clementines - Grocery shopping app (previously Groceries), providing reliable sync with multiple users/devices (web/Android/iOS), recipes and integration with Tandoor. (Demo, Source Code) `MIT` `Docker`
 -   Tamari - Recipe manager web app with a built-in collection of recipes. Organize by favorites and categories, create shopping lists, and plan meals. (Demo, Source Code) `GPL-3.0` `Docker/Python`
+-   What To Cook? - Get a recipe to cook today, based on the ingredients you have at home. `AGPL-3.0` `Docker`
 
 ### Remote Access
 
@@ -1592,7 +1597,6 @@ Software and tools for managing recipes.
 
 Remote desktop and SSH servers and web interfaces for remote management of computer systems.
 
--   Engity's Bifröst - Highly customizable SSH server with several ways to authorize a user and options where and how to execute a user's session. (Source Code) `Apache-2.0` `Go/Docker`
 -   Engity's Bifröst - Highly customizable SSH server with several ways to authorize a user and options where and how to execute a user's session. (Source Code) `Apache-2.0` `Go/Docker`
 -   Firezone - Self-hosted secure remote access gateway that supports the WireGuard protocol. It offers a Web GUI, 1-line install script, multi-factor auth (MFA), and SSO. (Source Code) `Apache-2.0` `Elixir/Docker`
 -   Guacamole - Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP. (Source Code) `Apache-2.0` `Java/C`
@@ -1852,6 +1856,7 @@ Task management software.
 _Related: Software Development - Project Management, Ticketing_
 
 -   AppFlowy - With AppFlowy, you can build detailed lists of to-do’s for different projects while tracking the status of each one. Open Source Notion Alternative. (Source Code) `AGPL-3.0` `Rust/Dart/Docker`
+-   Donetick - Task and chore management tool for personal and family use, with advanced scheduling, flexible assignment, and group sharing capabilities, detailed history, automation via API, simple and modern design. (Demo, Source Code) `AGPL-3.0` `Go/Docker`
 -   Focalboard - Define, organize, track and manage work across individuals and teams (alternative to Trello, Notion, and Asana). (Source Code, Clients) `MIT/AGPL-3.0/Apache-2.0` `Nodejs/Go/Docker`
 -   Kanboard - Simple and open source visual task board. (Source Code) `MIT` `PHP`
 -   myTinyTodo - Simple way to manage your todo list in AJAX style. Uses PHP, jQuery, SQLite/MySQL. GTD compliant. (Demo, Source Code) `GPL-2.0` `PHP`
@@ -1879,7 +1884,6 @@ _Related: Task Management & To-do Lists, Software Development - Project Manageme
 -   Iguana - Iguana is an open source issue management system with a kanban board. `CC-BY-SA-4.0` `Python/Docker`
 -   ITFlow - Client IT Documentation, Ticketing, Invoicing and Accounting Web Application for MSPs (Managed Service Providers). (Demo, Source Code) `GPL-3.0` `PHP`
 -   MantisBT - Self hosted bug tracker, fits best for software development. (Demo, Source Code) `GPL-2.0` `PHP`
--   osTicket - Manage, organize and archive all your support requests and responses in one place. (Source Code) `GPL-2.0` `PHP`
 -   OTOBO - Flexible web-based ticketing system used for Customer Service, Help Desk, IT Service Management. (Demo, Source Code) `GPL-3.0` `Perl/Docker`
 -   Request Tracker - An enterprise-grade issue tracking system. (Source Code) `GPL-2.0` `Perl`
 -   Roundup Issue Tracker - A simple-to-use and -install issue-tracking system with command-line, web, REST, XML-RPC, and e-mail interfaces. Designed with flexibility in mind - not just another bug tracker. (Source Code) `MIT/ZPL-2.0` `Python/Docker`
@@ -1989,6 +1993,7 @@ _See also: Wikimatrix, List of wiki software - Wikipedia, Comparison of wiki sof
 -   Raneto - Raneto is an open source Knowledgebase platform that uses static Markdown files to power your Knowledgebase. (Source Code) `MIT` `Nodejs`
 -   TiddlyWiki - Reusable non-linear personal web notebook. (Source Code) `BSD-3-Clause` `Nodejs`
 -   Tiki - Wiki CMS Groupware with the most built-in features. (Demo, Source Code) `LGPL-2.1` `PHP`
+-   W - Lightweight, mutli-user, flat-file-database Wiki engine. Create pages quickly and edit them in your Web browser using Mardown/HTML/CSS/JS. The main difference with other wiki is that you are encouraged to customize each page style individually. (Source Code) `AGPL-3.0` `PHP`
 -   WackoWiki - WackoWiki is a light and easy to install multilingual Wiki-engine. (Source Code) `BSD-3-Clause` `PHP`
 -   Wiki.js - Modern, lightweight and powerful wiki app using Git and Markdown. (Demo, Source Code) `AGPL-3.0` `Nodejs/Docker/K8S`
 -   WikiDocs - A databaseless markdown flat-file wiki engine. (Demo, Source Code) `MIT` `PHP/Docker`

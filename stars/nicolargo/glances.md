@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 27194
+stars: 27242
 description: Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
 ---
@@ -59,7 +59,7 @@ Optional dependencies:
 -   `influxdb-client` (for the InfluxDB version 2 export module)
 -   `jinja2` (for templating, used under the hood by FastAPI)
 -   `kafka-python` (for the Kafka export module)
--   `netifaces` (for the IP plugin)
+-   `netifaces-plus` (for the IP plugin)
 -   `nvidia-ml-py` (for the GPU plugin)
 -   `pycouchdb` (for the CouchDB export module)
 -   `pika` (for the RabbitMQ/ActiveMQ export module)

@@ -1,6 +1,6 @@
 ---
 project: selfhosted-music-overview
-stars: 744
+stars: 747
 description: A table listing software network services which can be hosted on your own servers
 url: https://github.com/basings/selfhosted-music-overview
 ---
@@ -327,17 +327,17 @@ Subsonic, OpenSubsonic
 
 ✔️
 
-❌
-
 ✔️
 
 ✔️
 
-❌
+✔️
 
 ❌
 
 ❌
+
+✔️
 
 ✔️
 
@@ -347,7 +347,7 @@ GitHub
 
 GPLv3
 
-3.48.0
+3.62.1
 
 Lightweight Music Server
 
@@ -1570,7 +1570,7 @@ Web
 
 ❌
 
-❌
+✔️
 
 ❌
 
@@ -1582,7 +1582,7 @@ GitHub
 
 GPLv3
 
-3.48.0
+3.62.1
 
 Lightweight Music Server
 
