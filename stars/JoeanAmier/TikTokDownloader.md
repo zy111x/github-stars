@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 8360
+stars: 8413
 description: TikTok 主页/合辑/直播/视频/图集/原声；抖音主页/视频/图集/实况/收藏/直播/原声/合集/评论/账号/搜索/热榜数据采集工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -315,7 +315,7 @@ TikHub 是一家领先的数据接口服务供应商，专注于提供高质量�
 
 TikHub 还提供定制化的服务，如直播间监控、作品监控和达人监控，以满足不同业务场景的需求。
 
-通过每日签到，用户可以免费获取一定额度的使用量；可以使用我的 **推荐链接**：https://beta-web.tikhub.io/users/signup?referral\_code=X084IATy 或 **推荐码**：`X084IATy`，注册并充值即可获得 `$2` 额度！
+通过每日签到，用户可以免费获取一定额度的使用量；可以使用我的 **推荐链接**：https://user.tikhub.io/users/signup?referral\_code=ZrdH8McC 或 **推荐码**：`ZrdH8McC`，注册并充值即可获得 `$2` 额度！
 
 TikHub 提供以下服务：
 
@@ -323,8 +323,7 @@ TikHub 提供以下服务：
 -   每日签到免费获取额度
 -   高质量的 API 服务
 -   官网：https://tikhub.io/
--   项目地址：https://github.com/TikHubIO/
--   用户登陆地址：https://beta-web.tikhub.io/
+-   用户登陆地址：https://user.tikhub.io/
 
 💡 项目参考(Refer)
 ==============

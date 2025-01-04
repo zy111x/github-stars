@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 36696
+stars: 36844
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -22,9 +22,9 @@ Refer to the Releases Page to download the latest version of EasySpider.
 赞助者/Sponsors | First Sponsor: CapSolver
 ---------------------------------------
 
-Proxy302是一个全球代理IP自助超市。按需付费，无需套餐捆绑购买；无阶梯式定价，充值即可使用所有类型的代理IP；免费测试，注册获取$1测试额度。覆盖全球240＋国家和地区，6500万个住宅IP可供选择。Proxy302可配合EasySpider进行数据采集。
-
 亮数据BrightData是代理市场领导者，覆盖全球的7200万IP，提供真人住宅IP，即时批量采集网络公开数据，成功率亲测有保证。需要性价比高代理IP的可**点击上方图片注册**后联系中文客服，开通后免费试用，**现在有首充多少就送多少的活动**。BrightData可配合EasySpider进行数据采集。
+
+Proxy302是一个全球代理IP自助超市。按需付费，无需套餐捆绑购买；无阶梯式定价，充值即可使用所有类型的代理IP；免费测试，注册获取$1测试额度。覆盖全球240＋国家和地区，6500万个住宅IP可供选择。Proxy302可配合EasySpider进行数据采集。
 
 Capsolver.com is an AI-powered service that specializes in solving various types of captchas automatically. It supports captchas such as reCAPTCHA V2, reCAPTCHA V3, DataDome, AWS Captcha, Geetest, and Cloudflare Captcha / Challenge 5s, Imperva / Incapsula, among others. For developers, Capsolver offers API integration options detailed in their documentation, facilitating the integration of captcha solving into applications. They also provide browser extensions for Chrome and Firefox, making it easy to use their service directly within a browser. Different pricing packages are available to accommodate varying needs, ensuring flexibility for users.
 
