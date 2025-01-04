@@ -1,6 +1,6 @@
 ---
 project: md-badges
-stars: 383
+stars: 405
 description: An extensive list of Shields.io badges.
 url: https://github.com/inttter/md-badges
 ---
@@ -34,6 +34,7 @@ Table Of Contents
 -   Frameworks
 -   Game Engines
 -   Gaming Storefronts
+-   Jobs
 -   Operating Systems
 -   ORM
 -   Package Managers
@@ -48,7 +49,6 @@ Table Of Contents
 -   Terminals
 -   Version Control
 -   Virtual Reality
--   Work/Jobs
 -   Website Status
 
 > **Tip:** Use Ctrl + F to quickly search for and find a badge.
@@ -225,7 +225,7 @@ Markdown Code
 
 `[![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)`
 
-`[![Oracle](https://img.shields.io/badge/Oracle%20Cloud-F80000?logo=oracle&logoColor=white)](#)`
+`[![Oracle Cloud](https://custom-icon-badges.demolab.com/badge/Oracle%20Cloud-F80000?logo=oracle&logoColor=white)](#)`
 
 `[![SAP](https://img.shields.io/badge/SAP-0FAAFF?logo=sap&logoColor=fff)](#)`
 
@@ -399,11 +399,9 @@ Markdown Code
 
 `[![Neo4J](https://img.shields.io/badge/Neo4j-008CC1?logo=neo4j&logoColor=white)](#)`
 
-`[![Oracle](https://img.shields.io/badge/Oracle-F80000?logo=oracle&logoColor=fff)](#)`
+`[![Oracle](https://custom-icon-badges.demolab.com/badge/Oracle-F80000?logo=oracle&logoColor=fff)](#)`
 
 `[![Postgres](https://img.shields.io/badge/Postgres-%23316192.svg?logo=postgresql&logoColor=white)](#)`
-
-`[![Realm](https://img.shields.io/badge/Realm-39477F?logo=realm&logoColor=fff)](#)`
 
 `[![Redis](https://img.shields.io/badge/Redis-%23DD0031.svg?logo=redis&logoColor=white)](#)`
 
@@ -456,22 +454,6 @@ Back To Top ⬆️
 Preview
 
 Markdown Code
-
-`[![Adobe After Effects](https://img.shields.io/badge/Adobe%20After%20Effects-CF96FD?logo=Adobe%20After%20Effects&logoColor=393665)](#)`
-
-`[![Adobe Creative Cloud](https://img.shields.io/badge/Adobe%20Creative%20Cloud-DA1F26?logo=Adobe%20Creative%20Cloud&logoColor=white)](#)`
-
-`[![Adobe Illustrator](https://img.shields.io/badge/Adobe%20Illustrator-FF9A00?logo=adobe%20illustrator&logoColor=white)](#)`
-
-`[![Adobe InDesign](https://img.shields.io/badge/Adobe%20InDesign-49021F?logo=adobeindesign&logoColor=white)](#)`
-
-`[![Adobe Lightroom](https://img.shields.io/badge/Adobe%20Lightroom-31A8FF?logo=Adobe%20Lightroom&logoColor=white)](#)`
-
-`[![Adobe Photoshop](https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?logo=Adobe%20Photoshop&logoColor=black)](#)`
-
-`[![Adobe Premiere Pro](https://img.shields.io/badge/Adobe%20Premiere%20Pro-9999FF?logo=Adobe%20Premiere%20Pro&logoColor=white)](#)`
-
-`[![Adobe XD](https://img.shields.io/badge/Adobe%20XD-470137?logo=Adobe%20XD&logoColor=#FF61F6)](#)`
 
 `[![Behance](https://img.shields.io/badge/Behance-0054F7?logo=behance&logoColor=white)](#)`
 
@@ -543,7 +525,7 @@ Markdown Code
 
 `[![Khan Academy](https://img.shields.io/badge/Khan%20Academy-14BF96?logo=khanacademy&logoColor=fff)](#)`
 
-`[![LinkedIn Learning](https://img.shields.io/badge/LinkedIn%20Learning-0A66C2?logo=linkedin&logoColor=fff)](#)`
+`[![LinkedIn Learning](https://custom-icon-badges.demolab.com/badge/LinkedIn%20Learning-0A66C2?logo=linkedin-white&logoColor=fff)](#)`
 
 `[![MDN Web Docs](https://img.shields.io/badge/MDN%20Web%20Docs-000?logo=mdnwebdocs&logoColor=fff)](#)`
 
@@ -669,7 +651,7 @@ Markdown Code
 
 `[![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)`
 
-`[![Nuxt.js](https://img.shields.io/badge/Nuxt.js-002E3B?logo=nuxtdotjs&logoColor=#00DC82)](#)`
+`[![Nuxt](https://img.shields.io/badge/Nuxt-002E3B?logo=nuxt&logoColor=#00DC82)](#)`
 
 `[![Preact](https://img.shields.io/badge/Preact-673AB8?logo=preact&logoColor=fff)](#)`
 
@@ -773,7 +755,7 @@ Markdown Code
 
 `[![Itch.io](https://img.shields.io/badge/itch.io-%23FF0B34.svg?logo=Itch.io&logoColor=white)](#)`
 
-`[![Nintendo eShop](https://img.shields.io/badge/Nintendo%20eShop-FF7D00?logo=nintendoswitch&logoColor=fff)](#)`
+`[![Nintendo eShop](https://custom-icon-badges.demolab.com/badge/Nintendo%20eShop-FF7D00?logo=nintendo&logoColor=fff)](#)`
 
 `[![Origin](https://img.shields.io/badge/Origin-F56C2D?logo=origin&logoColor=fff)](#)`
 
@@ -782,6 +764,26 @@ Markdown Code
 `[![Steam](https://img.shields.io/badge/Steam-%23000000.svg?logo=steam&logoColor=white)](#)`
 
 `[![Uplay](https://img.shields.io/badge/Uplay-black?logo=ubisoft)](#)`
+
+Back To Top ⬆️
+
+### 💼 Jobs
+
+Preview
+
+Markdown Code
+
+`[![Fiverr](https://img.shields.io/badge/Fiverr-1DBF73?logo=fiverr&logoColor=fff)](#)`
+
+`[![Glassdoor](https://img.shields.io/badge/Glassdoor-0CAA41?logo=glassdoor&logoColor=fff)](#)`
+
+`[![Indeed](https://img.shields.io/badge/Indeed-003A9B?logo=indeed&logoColor=fff)](#)`
+
+`[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](#)`
+
+`[![Monster](https://img.shields.io/badge/Monster-6D4C9F?logo=monster&logoColor=fff)](#)`
+
+`[![Upwork](https://img.shields.io/badge/Upwork-6FDA44?logo=upwork&logoColor=fff)](#)`
 
 Back To Top ⬆️
 
@@ -1105,7 +1107,7 @@ Markdown Code
 
 `[![Linktree](https://img.shields.io/badge/LinkTree-1de9b6?logo=linktree&logoColor=white)](#)`
 
-`[![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?logo=linkedin&logoColor=white)](#)`
+`[![LinkedIn](https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff)](#)`
 
 `[![Matrix](https://img.shields.io/badge/Matrix-000?logo=matrix&logoColor=fff)](#)`
 
@@ -1217,8 +1219,6 @@ Markdown Code
 
 `[![MkDocs](https://img.shields.io/badge/MkDocs-526CFE?logo=materialformkdocs&logoColor=fff)](#)`
 
-`[![Nuxt.js](https://img.shields.io/badge/Nuxt.js-00DC82?logo=nuxtdotjs&logoColor=fff)](#)`
-
 `[![Pelican](https://img.shields.io/badge/Pelican-14A0C4?logo=pelican&logoColor=fff)](#)`
 
 Back To Top ⬆️
@@ -1298,26 +1298,6 @@ Markdown Code
 `[![PlayStation VR](https://img.shields.io/badge/PlayStation%20VR-%23007ACC.svg?logo=playstation&logoColor=white)](#)`
 
 `[![SteamVR](https://img.shields.io/badge/SteamVR-%23232F3E.svg?logo=steam&logoColor=white)](#)`
-
-Back To Top ⬆️
-
-### 💼 Work and Jobs
-
-Preview
-
-Markdown Code
-
-`[![Fiverr](https://img.shields.io/badge/Fiverr-1DBF73?logo=fiverr&logoColor=fff)](#)`
-
-`[![Glassdoor](https://img.shields.io/badge/Glassdoor-0CAA41?logo=glassdoor&logoColor=fff)](#)`
-
-`[![Indeed](https://img.shields.io/badge/Indeed-003A9B?logo=indeed&logoColor=fff)](#)`
-
-`[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=fff)](#)`
-
-`[![Monster](https://img.shields.io/badge/Monster-6D4C9F?logo=monster&logoColor=fff)](#)`
-
-`[![Upwork](https://img.shields.io/badge/Upwork-6FDA44?logo=upwork&logoColor=fff)](#)`
 
 Back To Top ⬆️
 

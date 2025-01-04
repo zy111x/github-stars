@@ -1,6 +1,6 @@
 ---
 project: BroadcastChannel
-stars: 1490
+stars: 1508
 description: Turn your Telegram Channel into a MicroBlog.
 url: https://github.com/ccbikai/BroadcastChannel
 ---
@@ -144,6 +144,9 @@ LINKS\=Title1,URL1;Title2,URL3;Title3,URL3;
 
 #\# Sidebar Navigation Item, Separate using commas and semicolons
 NAVS\=Title1,URL1;Title2,URL3;Title3,URL3;
+
+#\# Enable RSS beautify
+RSS\_BEAUTIFY\=true
 
 🙋🏻 FAQs
 ---------

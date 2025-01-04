@@ -1,6 +1,6 @@
 ---
 project: awesome-frontend
-stars: 1637
+stars: 1636
 description: A curated list of amazingly awesome frontend libraries, resources and shiny things.
 url: https://github.com/JingwenTian/awesome-frontend
 ---

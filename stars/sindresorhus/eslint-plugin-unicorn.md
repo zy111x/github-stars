@@ -1,6 +1,6 @@
 ---
 project: eslint-plugin-unicorn
-stars: 4338
+stars: 4341
 description: More than 100 powerful ESLint rules
 url: https://github.com/sindresorhus/eslint-plugin-unicorn
 ---

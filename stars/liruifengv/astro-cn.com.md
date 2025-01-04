@@ -1,6 +1,6 @@
 ---
 project: astro-cn.com
-stars: 59
+stars: 60
 description: Astro 中文网站 Showcase。展示一些使用 Astro 构建的中文网站！
 url: https://github.com/liruifengv/astro-cn.com
 ---

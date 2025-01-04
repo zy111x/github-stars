@@ -1,6 +1,6 @@
 ---
 project: astro-landing-page
-stars: 566
+stars: 571
 description: An Astro + Tailwind CSS Example/Template for Landing Pages
 url: https://github.com/mhyfritz/astro-landing-page
 ---

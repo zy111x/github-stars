@@ -1,6 +1,6 @@
 ---
 project: CloudflareSpeedTest
-stars: 20513
+stars: 20614
 description: 🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~
 url: https://github.com/XIU2/CloudflareSpeedTest
 ---
@@ -377,6 +377,10 @@ CloudflareST.exe -httping -tp 80 -url http://cdn.cloudflare.steamstatic.com/stea
 Cloudflare CDN 的节点 IP 是 Anycast IP，即每个 IP 对应的服务器节点及地区不是固定的，而是动态变化的，**不同地区、不同运营商、不同时间段**访问**同一个 IP** 分配到的服务器节点地区和路线也都是不一样的（比如同一个 IP，美国人访问就是分配到就近的美国节点服务器，日本人访问则就又变成了就近的日本节点服务器了，国内内地就比较特殊了，只能给你分配到其他国家，当然不同的 IP 段路由变化/分配逻辑也是不同的，有的 IP 段会较为固定）。
 
 > **注意**！虽然 Cloudflare CDN 有很多亚洲节点，但**不代表你就能用上**，新加坡人测速可能随便一抓一大把的新加坡节点，但你全部扫一遍可能都遇不到一个，因为这是由 CDN 控制的。Anycast IP 的路由是经常变的，同一个 IP 今天可能是美国，明天你再访问可能就又分配到欧洲节点了（当然这只是个例子，一般没有那么频繁，这也和很多因素有关，比如线路拥塞程度，成本变动等），因此**不要对该功能有过高期待**~
+
+或者你随便找个 Cloudflare CDN 的 IP（比如官网域名的解析 IP `104.16.123.96`），然后去那些有全球节点的在线 Ping 测试网站，你就会发现这个 IP 在全球大部分地区的延迟都是个位数（而且很多都是 0.X ms），就算一些地方延迟高一些但也基本都控制在 几十ms，只有在国内才会发现突然变成了 上百ms 了。
+
+这就是 Anycast 技术，也就只有国内大陆这种特殊的网络情况，才需要对 Anycast 的 CDN IP 进行优选。
 
 因此，对于这种 Anycast IP 的实际服务器位置，就不能靠那些在线 IP 地址位置查询网站来判断了。
 

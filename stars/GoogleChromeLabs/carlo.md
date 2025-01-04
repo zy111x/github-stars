@@ -1,6 +1,6 @@
 ---
 project: carlo
-stars: 9310
+stars: 9308
 description: Web rendering surface for Node applications
 url: https://github.com/GoogleChromeLabs/carlo
 ---

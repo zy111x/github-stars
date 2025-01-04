@@ -1,6 +1,6 @@
 ---
 project: Spirit
-stars: 1168
+stars: 1167
 description: Spirit is a modern Python based forum built on top of Django framework
 url: https://github.com/nitely/Spirit
 ---

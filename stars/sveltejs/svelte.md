@@ -1,6 +1,6 @@
 ---
 project: svelte
-stars: 80663
+stars: 80753
 description: web development for the rest of us
 url: https://github.com/sveltejs/svelte
 ---
@@ -30,10 +30,6 @@ Contributing
 ------------
 
 Please see the Contributing Guide and the `svelte` package for information on contributing to Svelte.
-
-### svelte.dev
-
-The source code for https://svelte.dev lives in the sites folder, with all the documentation right here. The site is built with SvelteKit.
 
 Is svelte.dev down?
 -------------------

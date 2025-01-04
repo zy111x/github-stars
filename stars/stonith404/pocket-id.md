@@ -1,6 +1,6 @@
 ---
 project: pocket-id
-stars: 422
+stars: 637
 description: A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services.
 url: https://github.com/stonith404/pocket-id
 ---

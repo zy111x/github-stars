@@ -1,6 +1,6 @@
 ---
 project: open-webui
-stars: 53443
+stars: 54541
 description: User-friendly AI Interface (Supports Ollama, OpenAI API, ...)
 url: https://github.com/open-webui/open-webui
 ---
@@ -165,6 +165,12 @@ The `:dev` branch contains the latest unstable features and changes. Use it at y
 If you want to try out the latest bleeding-edge features and are okay with occasional instability, you can use the `:dev` tag like this:
 
 docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui --add-host=host.docker.internal:host-gateway --restart always ghcr.io/open-webui/open-webui:dev
+
+### Offline Mode
+
+If you are running Open WebUI in an offline environment, you can set the `HF_HUB_OFFLINE` environment variable to `1` to prevent attempts to download models from the internet.
+
+export HF\_HUB\_OFFLINE=1
 
 What's Next? 🌟
 ---------------

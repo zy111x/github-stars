@@ -1,6 +1,6 @@
 ---
 project: gost
-stars: 16197
+stars: 16250
 description: GO Simple Tunnel - a simple tunnel written in golang
 url: https://github.com/ginuerzh/gost
 ---
@@ -11,8 +11,6 @@ GO Simple Tunnel
 ### GO语言实现的安全隧道
 
 English README
-
-### ！！！V3版本已经可用，欢迎抢先体验！！！
 
 特性
 --
@@ -39,6 +37,8 @@ Wiki站点: v2.gost.run
 Telegram讨论群: https://t.me/gogost
 
 Google讨论组: https://groups.google.com/d/forum/go-gost
+
+GOST v3 https://gost.run
 
 安装
 --

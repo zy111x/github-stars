@@ -1,6 +1,6 @@
 ---
 project: weex
-stars: 18279
+stars: 18277
 description: A framework for building Mobile cross-platform UI
 url: https://github.com/alibaba/weex
 ---

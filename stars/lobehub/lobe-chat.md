@@ -1,6 +1,6 @@
 ---
 project: lobe-chat
-stars: 50239
+stars: 50937
 description: 🤯 Lobe Chat - an open-source, modern-design AI chat framework. Supports Multi AI Providers( OpenAI / Claude 3 / Gemini / Ollama / Qwen /  DeepSeek), Knowledge Base (file upload / knowledge management / RAG ), Multi-Modals (Vision/TTS/Plugins/Artifacts). One-click FREE deployment of your private ChatGPT/ Claude application.
 url: https://github.com/lobehub/lobe-chat
 ---
@@ -184,6 +184,12 @@ Recent Submits
 
 Description
 
+MintbaseSearch  
+By **mintbase** on **2024-12-31**
+
+Find any NFT data on the NEAR Protocol.  
+`crypto` `nft`
+
 PortfolioMeta  
 By **portfoliometa** on **2024-12-22**
 
@@ -201,12 +207,6 @@ By **speak** on **2024-12-02**
 
 Learn how to say anything in another language with Speak, your AI-powered language tutor.  
 `education` `language`
-
-Tongyi wanxiang Image Generator  
-By **YoungTx** on **2024-08-09**
-
-This plugin uses Alibaba's Tongyi Wanxiang model to generate images based on text prompts.  
-`image` `tongyi` `wanxiang`
 
 > 📊 Total plugins: **48**
 

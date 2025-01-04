@@ -1,6 +1,6 @@
 ---
 project: ai.robots.txt
-stars: 1341
+stars: 1425
 description: A list of AI agents and robots to block.
 url: https://github.com/ai-robots-txt/ai.robots.txt
 ---

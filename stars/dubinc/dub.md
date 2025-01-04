@@ -1,6 +1,6 @@
 ---
 project: dub
-stars: 19390
+stars: 19462
 description: Open-source link management infrastructure. Loved by modern marketing teams like Twilio, Perplexity, Vercel, and Huberman Labs.
 url: https://github.com/dubinc/dub
 ---

@@ -1,6 +1,6 @@
 ---
 project: logto
-stars: 9153
+stars: 9185
 description: 🧑‍🚀 The better identity infrastructure for developers and the open-source alternative to Auth0.
 url: https://github.com/logto-io/logto
 ---

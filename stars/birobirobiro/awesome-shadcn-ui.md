@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 10670
+stars: 10809
 description: A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
 ---
@@ -753,6 +753,12 @@ Interactive Tailwind components for Vue.
 
 https://stunningui.design
 
+supabase-shadcn-database-example
+
+supabase + shadcn/ui datatable
+
+https://github.com/thisisfel1x/supabase-shadcn-database-example
+
 supercharged-shadcn-components
 
 Type-safe form components collection.
@@ -987,6 +993,12 @@ A website to get fake Brazilian data for testing purposes.
 
 https://www.5devs.com.br/
 
+ai-generator-shadcn-theme
+
+AI Shadcn Theme Generator, The AI Shadcn Theme Generator crafts stunning, consistent themes for your shadcn/ui projects in seconds.
+
+https://ipalettes.com/theme/shadcn
+
 bento-hub
 
 BentoHub is an application where you can create a bento grid for your GitHub profile readme.
@@ -1064,12 +1076,6 @@ memfree
 Open-source hybrid AI search engine, instantly get accurate answers from the internet, bookmarks, notes, and docs. Built using Next.js and shadcn/ui.
 
 https://github.com/memfreeme/memfree
-
-metro-sp
-
-Receive automatic real-time updates on incidents and changes on the SP Metro, ViaMobilidade, and CPTM lines every 5 minutes.
-
-https://github.com/birobirobiro/metro-sp-front
 
 myinstants
 
@@ -1190,6 +1196,12 @@ v0
 Vercel's generative UI system, built on shadcn/ui and TailwindCSS, allows effortless UI generation from text prompts and/or images.
 
 https://v0.dev/
+
+vercel-status-tracker
+
+Track the status of all of your projects deployed via Vercel. Built with shadcn/ui and TailwindCSS.
+
+https://vercel-status-tracker.vercel.app
 
 wallhaven-desktop
 

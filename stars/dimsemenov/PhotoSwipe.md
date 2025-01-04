@@ -1,6 +1,6 @@
 ---
 project: PhotoSwipe
-stars: 24335
+stars: 24345
 description: JavaScript image gallery for mobile and desktop, modular, framework independent
 url: https://github.com/dimsemenov/PhotoSwipe
 ---
