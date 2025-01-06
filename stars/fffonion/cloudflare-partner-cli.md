@@ -1,7 +1,8 @@
 ---
 project: cloudflare-partner-cli
 stars: 73
-description: Set CNAME to use Cloudflare using the partner program
+description: |-
+    Set CNAME to use Cloudflare using the partner program
 url: https://github.com/fffonion/cloudflare-partner-cli
 ---
 

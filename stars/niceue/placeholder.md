@@ -1,7 +1,8 @@
 ---
 project: placeholder
 stars: 8
-description: Makes the html5 input placeholder attribute fully compatible.
+description: |-
+    Makes the html5 input placeholder attribute fully compatible.
 url: https://github.com/niceue/placeholder
 ---
 

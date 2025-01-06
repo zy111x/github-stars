@@ -1,7 +1,8 @@
 ---
 project: H5Skills
 stars: 830
-description: 移动端开发技巧集合
+description: |-
+    移动端开发技巧集合
 url: https://github.com/o2team/H5Skills
 ---
 

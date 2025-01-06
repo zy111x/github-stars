@@ -1,7 +1,8 @@
 ---
 project: trianglify
 stars: 10085
-description: Algorithmically generated triangle art
+description: |-
+    Algorithmically generated triangle art
 url: https://github.com/qrohlf/trianglify
 ---
 

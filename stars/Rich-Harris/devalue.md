@@ -1,7 +1,8 @@
 ---
 project: devalue
 stars: 2221
-description: Gets the job done when JSON.stringify can't
+description: |-
+    Gets the job done when JSON.stringify can't
 url: https://github.com/Rich-Harris/devalue
 ---
 

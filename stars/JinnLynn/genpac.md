@@ -1,7 +1,8 @@
 ---
 project: genpac
 stars: 2166
-description: PAC/Dnsmasq/Wingy file Generator,  working with gfwlist, support custom rules.
+description: |-
+    PAC/Dnsmasq/Wingy file Generator,  working with gfwlist, support custom rules.
 url: https://github.com/JinnLynn/genpac
 ---
 

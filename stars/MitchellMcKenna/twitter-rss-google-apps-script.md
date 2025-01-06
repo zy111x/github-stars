@@ -1,7 +1,8 @@
 ---
 project: twitter-rss-google-apps-script
 stars: 62
-description: Google Apps Script to use Twitter API v1.1 to create RSS feeds of  user's timeline, search results, user's favorites, or Twitter Lists.
+description: |-
+    Google Apps Script to use Twitter API v1.1 to create RSS feeds of  user's timeline, search results, user's favorites, or Twitter Lists.
 url: https://github.com/MitchellMcKenna/twitter-rss-google-apps-script
 ---
 

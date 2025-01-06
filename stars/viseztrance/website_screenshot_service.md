@@ -1,7 +1,8 @@
 ---
 project: website_screenshot_service
 stars: 5
-description: null
+description: |-
+    null
 url: https://github.com/viseztrance/website_screenshot_service
 ---
 

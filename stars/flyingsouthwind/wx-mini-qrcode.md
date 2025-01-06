@@ -1,7 +1,8 @@
 ---
 project: wx-mini-qrcode
 stars: 47
-description: 微信小程序二维码组件
+description: |-
+    微信小程序二维码组件
 url: https://github.com/flyingsouthwind/wx-mini-qrcode
 ---
 

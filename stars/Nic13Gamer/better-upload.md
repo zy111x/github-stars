@@ -1,7 +1,8 @@
 ---
 project: better-upload
 stars: 63
-description: Simple file uploads for React.
+description: |-
+    Simple file uploads for React.
 url: https://github.com/Nic13Gamer/better-upload
 ---
 

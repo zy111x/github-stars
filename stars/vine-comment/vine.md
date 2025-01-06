@@ -1,7 +1,8 @@
 ---
 project: vine
 stars: 31
-description: a 3rd party comment system [python] [javascript]
+description: |-
+    a 3rd party comment system [python] [javascript]
 url: https://github.com/vine-comment/vine
 ---
 

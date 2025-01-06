@@ -1,7 +1,8 @@
 ---
 project: node-express-mongoose-demo
 stars: 5115
-description: A simple demo app using node and mongodb for beginners (with docker)
+description: |-
+    A simple demo app using node and mongodb for beginners (with docker)
 url: https://github.com/madhums/node-express-mongoose-demo
 ---
 

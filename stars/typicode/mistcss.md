@@ -1,7 +1,8 @@
 ---
 project: mistcss
 stars: 1254
-description: Create visual components for React without JavaScript or TypeScript.  Leverage native HTML and CSS. It's an alternative to CSS-in-JS and CSS modules.
+description: |-
+    Create visual components for React without JavaScript or TypeScript.  Leverage native HTML and CSS. It's an alternative to CSS-in-JS and CSS modules.
 url: https://github.com/typicode/mistcss
 ---
 

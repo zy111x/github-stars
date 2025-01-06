@@ -1,7 +1,8 @@
 ---
 project: Email-Framework
 stars: 1659
-description: Responsive HTML Email Framework
+description: |-
+    Responsive HTML Email Framework
 url: https://github.com/g13nn/Email-Framework
 ---
 

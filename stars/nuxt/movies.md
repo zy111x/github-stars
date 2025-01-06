@@ -1,7 +1,8 @@
 ---
 project: movies
 stars: 2034
-description: 🍿 A TMDB client built with Nuxt 3
+description: |-
+    🍿 A TMDB client built with Nuxt 3
 url: https://github.com/nuxt/movies
 ---
 

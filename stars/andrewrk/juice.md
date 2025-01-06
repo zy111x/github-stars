@@ -1,7 +1,8 @@
 ---
 project: juice
 stars: 60
-description: Juice inlines CSS stylesheets into your HTML source.
+description: |-
+    Juice inlines CSS stylesheets into your HTML source.
 url: https://github.com/andrewrk/juice
 ---
 

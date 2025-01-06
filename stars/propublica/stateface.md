@@ -1,7 +1,8 @@
 ---
 project: stateface
 stars: 361
-description: A typeface of U.S. state shapes to use in web apps.
+description: |-
+    A typeface of U.S. state shapes to use in web apps.
 url: https://github.com/propublica/stateface
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: PraisonAI
-stars: 2869
-description: PraisonAI is an AI Agents Framework with Self Reflection. PraisonAI application combines PraisonAI Agents, AutoGen, and CrewAI into a low-code solution for building and managing multi-agent LLM systems, focusing on simplicity, customisation, and efficient human–agent collaboration. 
+stars: 2871
+description: |-
+    PraisonAI is an AI Agents Framework with Self Reflection. PraisonAI application combines PraisonAI Agents, AutoGen, and CrewAI into a low-code solution for building and managing multi-agent LLM systems, focusing on simplicity, customisation, and efficient human–agent collaboration. 
 url: https://github.com/MervinPraison/PraisonAI
 ---
 

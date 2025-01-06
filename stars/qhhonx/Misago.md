@@ -1,7 +1,8 @@
 ---
 project: Misago
 stars: 2
-description: Misago is fully featured forum application standing on shoulders of Django.
+description: |-
+    Misago is fully featured forum application standing on shoulders of Django.
 url: https://github.com/qhhonx/Misago
 ---
 

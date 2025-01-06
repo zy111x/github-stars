@@ -1,7 +1,8 @@
 ---
 project: yo
 stars: 18
-description: yo是一个基于express的前端表现层的框架。
+description: |-
+    yo是一个基于express的前端表现层的框架。
 url: https://github.com/h1bomb/yo
 ---
 

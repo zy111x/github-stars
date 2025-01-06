@@ -1,7 +1,8 @@
 ---
 project: Learn-WordPress
 stars: 31
-description: WordPress的进阶之路
+description: |-
+    WordPress的进阶之路
 url: https://github.com/rccoder/Learn-WordPress
 ---
 

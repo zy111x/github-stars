@@ -1,7 +1,8 @@
 ---
 project: mdbadges-cli
 stars: 5
-description: An extensive CLI tool to find over 400+ Shields.io badges for your projects.
+description: |-
+    An extensive CLI tool to find over 400+ Shields.io badges for your projects.
 url: https://github.com/inttter/mdbadges-cli
 ---
 

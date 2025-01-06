@@ -1,7 +1,8 @@
 ---
 project: fontisto
 stars: 485
-description: The iconic font and CSS toolkit. Fontisto gives you scalable vector icons that can instantly be customized: size, color, drop shadow and anything that can be done with the power of CSS.
+description: |-
+    The iconic font and CSS toolkit. Fontisto gives you scalable vector icons that can instantly be customized: size, color, drop shadow and anything that can be done with the power of CSS.
 url: https://github.com/kenangundogan/fontisto
 ---
 

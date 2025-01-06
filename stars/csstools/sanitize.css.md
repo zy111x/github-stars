@@ -1,7 +1,8 @@
 ---
 project: sanitize.css
 stars: 5233
-description: A best-practices CSS foundation
+description: |-
+    A best-practices CSS foundation
 url: https://github.com/csstools/sanitize.css
 ---
 

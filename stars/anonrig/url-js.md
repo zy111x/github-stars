@@ -1,7 +1,8 @@
 ---
 project: url-js
 stars: 165
-description: Super fast spec-compliant URL state machine for Node.js
+description: |-
+    Super fast spec-compliant URL state machine for Node.js
 url: https://github.com/anonrig/url-js
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: react-components-from-scratch
 stars: 103
-description: Accessible and animated components
+description: |-
+    Accessible and animated components
 url: https://github.com/joshuawootonn/react-components-from-scratch
 ---
 

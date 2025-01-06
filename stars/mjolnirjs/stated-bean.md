@@ -1,7 +1,8 @@
 ---
 project: stated-bean
 stars: 34
-description: A light but scalable view-model library with react hooks
+description: |-
+    A light but scalable view-model library with react hooks
 url: https://github.com/mjolnirjs/stated-bean
 ---
 

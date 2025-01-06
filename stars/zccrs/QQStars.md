@@ -1,7 +1,8 @@
 ---
 project: QQStars
 stars: 492
-description: 基于webqq协议的qq客户端，qt开发，可跨平台
+description: |-
+    基于webqq协议的qq客户端，qt开发，可跨平台
 url: https://github.com/zccrs/QQStars
 ---
 

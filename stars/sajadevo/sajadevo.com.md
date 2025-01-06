@@ -1,7 +1,8 @@
 ---
 project: sajadevo.com
 stars: 3
-description: my personal portfolio
+description: |-
+    my personal portfolio
 url: https://github.com/sajadevo/sajadevo.com
 ---
 

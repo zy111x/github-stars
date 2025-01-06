@@ -1,7 +1,8 @@
 ---
 project: es6-cheatsheet
 stars: 13380
-description: ES2015 [ES6] cheatsheet containing tips, tricks, best practices and code snippets
+description: |-
+    ES2015 [ES6] cheatsheet containing tips, tricks, best practices and code snippets
 url: https://github.com/DrkSephy/es6-cheatsheet
 ---
 

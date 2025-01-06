@@ -1,7 +1,8 @@
 ---
 project: bolt.diy
-stars: 8630
-description: Prompt, run, edit, and deploy full-stack web applications using any LLM you want!
+stars: 8635
+description: |-
+    Prompt, run, edit, and deploy full-stack web applications using any LLM you want!
 url: https://github.com/stackblitz-labs/bolt.diy
 ---
 
@@ -81,6 +82,7 @@ bolt.diy was originally started by [Cole Medin](https://www.youtube.com/@ColeMed
 - ⬜ Voice prompting
 - ⬜ Azure Open AI API Integration
 - ✅ Perplexity Integration (@meetpateltech)
+- ✅ AWS Bedrock Integration (@kunjabijukchhe)
 - ⬜ Vertex AI Integration
 
 ## Features

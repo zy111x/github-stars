@@ -1,7 +1,8 @@
 ---
 project: opennhp
 stars: 13524
-description: A lightweight cryptography-driven Zero Trust protocol to safeguard servers and data from attackers by leveraging resource-hiding and encryption algorithms.
+description: |-
+    A lightweight cryptography-driven Zero Trust protocol to safeguard servers and data from attackers by leveraging resource-hiding and encryption algorithms.
 url: https://github.com/OpenNHP/opennhp
 ---
 

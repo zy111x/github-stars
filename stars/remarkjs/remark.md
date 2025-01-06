@@ -1,7 +1,8 @@
 ---
 project: remark
 stars: 7819
-description: markdown processor powered by plugins part of the @unifiedjs collective
+description: |-
+    markdown processor powered by plugins part of the @unifiedjs collective
 url: https://github.com/remarkjs/remark
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: github-unwrapped-2022
 stars: 1321
-description: Your coding year in review #GitHubUnwrapped
+description: |-
+    Your coding year in review #GitHubUnwrapped
 url: https://github.com/remotion-dev/github-unwrapped-2022
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: rime
 stars: 3223
-description: Rime Squirrel 鼠须管配置文件（朙月拼音、小鹤双拼、自然码双拼）
+description: |-
+    Rime Squirrel 鼠须管配置文件（朙月拼音、小鹤双拼、自然码双拼）
 url: https://github.com/ssnhd/rime
 ---
 

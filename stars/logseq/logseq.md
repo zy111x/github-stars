@@ -1,7 +1,8 @@
 ---
 project: logseq
 stars: 34108
-description: A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: http://trello.com/b/8txSM12G/roadmap
+description: |-
+    A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: http://trello.com/b/8txSM12G/roadmap
 url: https://github.com/logseq/logseq
 ---
 

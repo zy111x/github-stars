@@ -1,7 +1,8 @@
 ---
 project: aigotools
 stars: 509
-description: AigoTools can help users quickly create and manage website directory, with built-in site auto-crawling features, and also provides internationalization, SEO, image storage, and other functions. It allows users to quickly deploy their own directory site online.
+description: |-
+    AigoTools can help users quickly create and manage website directory, with built-in site auto-crawling features, and also provides internationalization, SEO, image storage, and other functions. It allows users to quickly deploy their own directory site online.
 url: https://github.com/someu/aigotools
 ---
 

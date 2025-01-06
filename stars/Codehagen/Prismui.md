@@ -1,7 +1,8 @@
 ---
 project: Prismui
-stars: 313
-description: A fully customizable component library built on top of shadcn/ui. Beautiful, accessible, and ready for production.
+stars: 321
+description: |-
+    A fully customizable component library built on top of shadcn/ui. Beautiful, accessible, and ready for production.
 url: https://github.com/Codehagen/Prismui
 ---
 

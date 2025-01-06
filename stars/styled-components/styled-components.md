@@ -1,7 +1,8 @@
 ---
 project: styled-components
 stars: 40584
-description: Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅
+description: |-
+    Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅
 url: https://github.com/styled-components/styled-components
 ---
 

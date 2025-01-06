@@ -1,7 +1,8 @@
 ---
 project: shake.js
 stars: 1516
-description: A custom 'shake' event plugin for mobile web browsers using device accelerometer.
+description: |-
+    A custom 'shake' event plugin for mobile web browsers using device accelerometer.
 url: https://github.com/alexgibson/shake.js
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: kbrdn.dev-old
 stars: 8
-description: My website/portfolio where I talk about myself and development !
+description: |-
+    My website/portfolio where I talk about myself and development !
 url: https://github.com/kbrdn1/kbrdn.dev-old
 ---
 

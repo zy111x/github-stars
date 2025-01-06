@@ -1,7 +1,8 @@
 ---
 project: rescripts
 stars: 1068
-description: 💥 Use the latest react-scripts with custom configurations for Babel, ESLint, TSLint, Webpack,... ∞
+description: |-
+    💥 Use the latest react-scripts with custom configurations for Babel, ESLint, TSLint, Webpack,... ∞
 url: https://github.com/harrysolovay/rescripts
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: indie-hacker-tools
 stars: 6738
-description: 收录独立开发者出海技术栈和工具
+description: |-
+    收录独立开发者出海技术栈和工具
 url: https://github.com/weijunext/indie-hacker-tools
 ---
 

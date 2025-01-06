@@ -1,7 +1,8 @@
 ---
 project: lmbtfy
 stars: 78
-description: let me baidu that for you
+description: |-
+    let me baidu that for you
 url: https://github.com/retaker/lmbtfy
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: twei
 stars: 78
-description: 微博命令行工具
+description: |-
+    微博命令行工具
 url: https://github.com/justan/twei
 ---
 

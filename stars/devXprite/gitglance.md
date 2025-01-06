@@ -1,7 +1,8 @@
 ---
 project: gitglance
 stars: 54
-description: GitGlance is your go-to tool for visualizing GitHub profiles. Gain insights into your contributions, expertise, and community engagement with intuitive visualizations.
+description: |-
+    GitGlance is your go-to tool for visualizing GitHub profiles. Gain insights into your contributions, expertise, and community engagement with intuitive visualizations.
 url: https://github.com/devXprite/gitglance
 ---
 

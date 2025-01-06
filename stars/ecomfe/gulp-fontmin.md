@@ -1,7 +1,8 @@
 ---
 project: gulp-fontmin
 stars: 79
-description: Minify font seamlessly
+description: |-
+    Minify font seamlessly
 url: https://github.com/ecomfe/gulp-fontmin
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: gotosocial
 stars: 3927
-description: Fast, fun, small ActivityPub server. WE'RE ON HOLIDAY! <3 Repo is read-only until Jan 2, 2025. See you in the new year!
+description: |-
+    Fast, fun, small ActivityPub server. WE'RE ON HOLIDAY! <3 Repo is read-only until Jan 2, 2025. See you in the new year!
 url: https://github.com/superseriousbusiness/gotosocial
 ---
 

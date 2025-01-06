@@ -1,7 +1,8 @@
 ---
 project: devresume
 stars: 7
-description: Generate a beautiful resume based on your GitHub profile data.
+description: |-
+    Generate a beautiful resume based on your GitHub profile data.
 url: https://github.com/sajadevo/devresume
 ---
 

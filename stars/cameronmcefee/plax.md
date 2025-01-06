@@ -1,7 +1,8 @@
 ---
 project: plax
 stars: 2279
-description: JQuery powered parallaxing
+description: |-
+    JQuery powered parallaxing
 url: https://github.com/cameronmcefee/plax
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: kneesocks
 stars: 67
-description: Put some nice SOCKS on your HTTP only program
+description: |-
+    Put some nice SOCKS on your HTTP only program
 url: https://github.com/bitinn/kneesocks
 ---
 

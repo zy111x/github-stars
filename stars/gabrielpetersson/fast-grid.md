@@ -1,7 +1,8 @@
 ---
 project: fast-grid
 stars: 1845
-description: World's most performant DOM-based web table. Try it! fast-grid.vercel.app/
+description: |-
+    World's most performant DOM-based web table. Try it! fast-grid.vercel.app/
 url: https://github.com/gabrielpetersson/fast-grid
 ---
 

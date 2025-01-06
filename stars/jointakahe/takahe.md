@@ -1,7 +1,8 @@
 ---
 project: takahe
 stars: 1134
-description: An ActivityPub/Fediverse server
+description: |-
+    An ActivityPub/Fediverse server
 url: https://github.com/jointakahe/takahe
 ---
 

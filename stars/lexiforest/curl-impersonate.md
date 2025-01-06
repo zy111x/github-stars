@@ -1,7 +1,8 @@
 ---
 project: curl-impersonate
-stars: 1246
-description: An active fork of curl-impersonate with more versions and build targets.
+stars: 1251
+description: |-
+    An active fork of curl-impersonate with more versions and build targets.
 url: https://github.com/lexiforest/curl-impersonate
 ---
 

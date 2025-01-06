@@ -1,7 +1,8 @@
 ---
 project: big.js
 stars: 4931
-description: A small, fast JavaScript library for arbitrary-precision decimal arithmetic.
+description: |-
+    A small, fast JavaScript library for arbitrary-precision decimal arithmetic.
 url: https://github.com/MikeMcl/big.js
 ---
 

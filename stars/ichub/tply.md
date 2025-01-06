@@ -1,7 +1,8 @@
 ---
 project: tply
 stars: 122
-description: typewriter effect for your websites
+description: |-
+    typewriter effect for your websites
 url: https://github.com/ichub/tply
 ---
 

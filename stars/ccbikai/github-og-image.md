@@ -1,7 +1,8 @@
 ---
 project: github-og-image
 stars: 18
-description: 提取 Github OpenGraph 图片用于卡片预览
+description: |-
+    提取 Github OpenGraph 图片用于卡片预览
 url: https://github.com/ccbikai/github-og-image
 ---
 

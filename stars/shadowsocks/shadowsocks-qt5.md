@@ -1,7 +1,8 @@
 ---
 project: shadowsocks-qt5
 stars: 7979
-description: A cross-platform shadowsocks GUI client
+description: |-
+    A cross-platform shadowsocks GUI client
 url: https://github.com/shadowsocks/shadowsocks-qt5
 ---
 

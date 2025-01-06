@@ -1,7 +1,8 @@
 ---
 project: candy
 stars: 568
-description: a tiny and cute social forum based on duoshuo.com
+description: |-
+    a tiny and cute social forum based on duoshuo.com
 url: https://github.com/guo-yu/candy
 ---
 

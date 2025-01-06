@@ -1,7 +1,8 @@
 ---
 project: ipv6
 stars: 526
-description: IPv6 文档
+description: |-
+    IPv6 文档
 url: https://github.com/tmplink/ipv6
 ---
 

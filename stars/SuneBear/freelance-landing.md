@@ -1,7 +1,8 @@
 ---
 project: freelance-landing
 stars: 35
-description: null
+description: |-
+    null
 url: https://github.com/SuneBear/freelance-landing
 ---
 

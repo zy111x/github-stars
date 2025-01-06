@@ -1,7 +1,8 @@
 ---
 project: website
 stars: 12
-description: bgp.cheap
+description: |-
+    bgp.cheap
 url: https://github.com/bgpcheap/website
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: VTuber-Logos-Collection
 stars: 311
-description: An elegant website for collecting kawaii logos from great artists
+description: |-
+    An elegant website for collecting kawaii logos from great artists
 url: https://github.com/Ender-Wiggin2019/VTuber-Logos-Collection
 ---
 

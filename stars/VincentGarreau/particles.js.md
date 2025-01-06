@@ -1,7 +1,8 @@
 ---
 project: particles.js
-stars: 29230
-description: A lightweight JavaScript library for creating particles
+stars: 29231
+description: |-
+    A lightweight JavaScript library for creating particles
 url: https://github.com/VincentGarreau/particles.js
 ---
 

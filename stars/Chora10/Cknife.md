@@ -1,7 +1,8 @@
 ---
 project: Cknife
 stars: 2431
-description: Cknife
+description: |-
+    Cknife
 url: https://github.com/Chora10/Cknife
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: neatdns
 stars: 287
-description: anti-pollution DNS server
+description: |-
+    anti-pollution DNS server
 url: https://github.com/ustclug/neatdns
 ---
 

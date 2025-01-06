@@ -1,7 +1,8 @@
 ---
 project: across-tabs
 stars: 1657
-description: Easy communication between cross-origin browser tabs. Simplified "CORS"ing!
+description: |-
+    Easy communication between cross-origin browser tabs. Simplified "CORS"ing!
 url: https://github.com/wingify/across-tabs
 ---
 

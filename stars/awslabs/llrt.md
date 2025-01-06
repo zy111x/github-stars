@@ -1,7 +1,8 @@
 ---
 project: llrt
 stars: 8204
-description: LLRT (Low Latency Runtime) is an experimental, lightweight JavaScript runtime designed to address the growing demand for fast and efficient Serverless applications.
+description: |-
+    LLRT (Low Latency Runtime) is an experimental, lightweight JavaScript runtime designed to address the growing demand for fast and efficient Serverless applications.
 url: https://github.com/awslabs/llrt
 ---
 

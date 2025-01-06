@@ -1,7 +1,8 @@
 ---
 project: floatui
 stars: 3410
-description: Beautiful and responsive UI components and templates for React and Vue (soon) with Tailwind CSS.
+description: |-
+    Beautiful and responsive UI components and templates for React and Vue (soon) with Tailwind CSS.
 url: https://github.com/MarsX-dev/floatui
 ---
 

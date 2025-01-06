@@ -1,7 +1,8 @@
 ---
 project: AirConnect
 stars: 3647
-description: Use AirPlay to stream to UPnP/Sonos & Chromecast devices
+description: |-
+    Use AirPlay to stream to UPnP/Sonos & Chromecast devices
 url: https://github.com/philippe44/AirConnect
 ---
 

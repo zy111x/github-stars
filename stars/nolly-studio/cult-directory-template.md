@@ -1,7 +1,8 @@
 ---
 project: cult-directory-template
 stars: 487
-description: A full stack Next.js, Shadcn, and Supabase directory template. Build your startup directory effortlessly with features like user authentication, product filters, and customizable themes. Advanced admin perks and AI magic.
+description: |-
+    A full stack Next.js, Shadcn, and Supabase directory template. Build your startup directory effortlessly with features like user authentication, product filters, and customizable themes. Advanced admin perks and AI magic.
 url: https://github.com/nolly-studio/cult-directory-template
 ---
 

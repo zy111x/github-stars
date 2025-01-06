@@ -1,7 +1,8 @@
 ---
 project: signale
 stars: 8937
-description: Highly configurable logging utility
+description: |-
+    Highly configurable logging utility
 url: https://github.com/klaudiosinani/signale
 ---
 

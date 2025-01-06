@@ -1,7 +1,8 @@
 ---
 project: go-proxy-bingai
 stars: 8825
-description: 用 Vue3 和 Go 搭建的微软 New Bing 演示站点，拥有一致的 UI 体验，支持 ChatGPT 提示词，国内可用。
+description: |-
+    用 Vue3 和 Go 搭建的微软 New Bing 演示站点，拥有一致的 UI 体验，支持 ChatGPT 提示词，国内可用。
 url: https://github.com/adams549659584/go-proxy-bingai
 ---
 

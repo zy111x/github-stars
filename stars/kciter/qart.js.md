@@ -1,7 +1,8 @@
 ---
 project: qart.js
 stars: 3177
-description: Generate artistic QR code. 🎨
+description: |-
+    Generate artistic QR code. 🎨
 url: https://github.com/kciter/qart.js
 ---
 

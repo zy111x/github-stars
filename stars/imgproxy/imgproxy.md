@@ -1,7 +1,8 @@
 ---
 project: imgproxy
 stars: 9141
-description: Fast and secure standalone server for resizing and converting remote images
+description: |-
+    Fast and secure standalone server for resizing and converting remote images
 url: https://github.com/imgproxy/imgproxy
 ---
 

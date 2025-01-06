@@ -1,7 +1,8 @@
 ---
 project: Rocket-Form
 stars: 56
-description: A universal form module.
+description: |-
+    A universal form module.
 url: https://github.com/chrishumboldt/Rocket-Form
 ---
 

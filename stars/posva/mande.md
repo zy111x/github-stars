@@ -1,7 +1,8 @@
 ---
 project: mande
 stars: 1224
-description: <700 bytes convenient and modern wrapper around fetch with smart extensible defaults
+description: |-
+    <700 bytes convenient and modern wrapper around fetch with smart extensible defaults
 url: https://github.com/posva/mande
 ---
 

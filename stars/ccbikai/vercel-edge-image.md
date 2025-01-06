@@ -1,7 +1,8 @@
 ---
 project: vercel-edge-image
 stars: 31
-description: 使用 Vercel Edge 处理图片, 依赖 Photon，支持缩放、剪裁、水印、滤镜等功能。
+description: |-
+    使用 Vercel Edge 处理图片, 依赖 Photon，支持缩放、剪裁、水印、滤镜等功能。
 url: https://github.com/ccbikai/vercel-edge-image
 ---
 

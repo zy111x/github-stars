@@ -1,7 +1,8 @@
 ---
 project: forcify
 stars: 88
-description: Polyfill 3D/Force Touch in any device
+description: |-
+    Polyfill 3D/Force Touch in any device
 url: https://github.com/Huxpro/forcify
 ---
 

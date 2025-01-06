@@ -1,7 +1,8 @@
 ---
 project: jquery-clientsidecaptcha
 stars: 13
-description: A jQuery plugin implementing client-side CAPTCHA validation.
+description: |-
+    A jQuery plugin implementing client-side CAPTCHA validation.
 url: https://github.com/brantb/jquery-clientsidecaptcha
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: NViconsLib_Silhouette
 stars: 955
-description: vector PSD and SVG  popular website Icon (Especially China ) 
+description: |-
+    vector PSD and SVG  popular website Icon (Especially China ) 
 url: https://github.com/nullice/NViconsLib_Silhouette
 ---
 

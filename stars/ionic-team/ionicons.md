@@ -1,7 +1,8 @@
 ---
 project: ionicons
-stars: 17639
-description: Premium hand-crafted icons built by Ionic, for Ionic apps and web apps everywhere 🌎
+stars: 17640
+description: |-
+    Premium hand-crafted icons built by Ionic, for Ionic apps and web apps everywhere 🌎
 url: https://github.com/ionic-team/ionicons
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: apple-color-emoji
 stars: 59
-description: Replace emoji in strings with images from the Apple Color Emoji font
+description: |-
+    Replace emoji in strings with images from the Apple Color Emoji font
 url: https://github.com/devongovett/apple-color-emoji
 ---
 

@@ -1,7 +1,8 @@
 ---
 project: unlockrepo
 stars: 18
-description: Automate your Github repository access
+description: |-
+    Automate your Github repository access
 url: https://github.com/ErfanEbrahimnia/unlockrepo
 ---
 

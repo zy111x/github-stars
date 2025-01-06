@@ -1,7 +1,8 @@
 ---
 project: lazy-line-painter
 stars: 1976
-description: Lazy Line Painter - A Modern JS library for SVG path animation
+description: |-
+    Lazy Line Painter - A Modern JS library for SVG path animation
 url: https://github.com/merri-ment/lazy-line-painter
 ---
 

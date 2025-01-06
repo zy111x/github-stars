@@ -1,7 +1,8 @@
 ---
 project: awesome-vue
 stars: 72415
-description: 🎉 A curated list of awesome things related to Vue.js
+description: |-
+    🎉 A curated list of awesome things related to Vue.js
 url: https://github.com/vuejs/awesome-vue
 ---
 
