@@ -51,7 +51,8 @@ function saveReadMe(repo, readme) {
     const fileContent = `---
 project: ${repo.name}
 stars: ${repo.stargazers_count}
-description: ${repo.description}
+description: |-
+    ${repo.description}
 url: ${repo.html_url}
 ---
 
