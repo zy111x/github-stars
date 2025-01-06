@@ -1,47 +1,49 @@
 ---
 project: ipatool
-stars: 6063
+stars: 6066
 description: Command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store
 url: https://github.com/majd/ipatool
 ---
 
-IPATool
-=======
+# IPATool
 
-`ipatool` is a command line tool that allows you to search for iOS apps on the App Store and download a copy of the app package, known as an _ipa_ file.
+[![Release](https://img.shields.io/github/release/majd/ipatool.svg?label=Release)](https://GitHub.com/majd/ipatool/releases/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/majd/ipatool/blob/main/LICENSE)
 
--   Requirements
--   Installation
-    -   Manual
-    -   Package Manager (macOS)
--   Usage
--   Compiling
--   License
--   Changelog
--   FAQ
+`ipatool` is a command line tool that allows you to search for iOS apps on the [App Store](https://apps.apple.com) and download a copy of the app package, known as an _ipa_ file.
 
-Requirements
-------------
+![Demo](./demo.gif)
 
--   Supported operating system (Windows, Linux or macOS).
--   Apple ID set up to use the App Store.
+- [Requirements](#requirements)
+- [Installation](#installation)
+  - [Manual](#manual)
+  - [Package Manager (macOS)](#package-manager-macos)
+- [Usage](#usage)
+- [Compiling](#compiling)
+- [License](#license)
+- [Changelog](https://github.com/majd/ipatool/blob/main/CHANGELOG.md)
+- [FAQ](https://github.com/majd/ipatool/wiki/FAQ)
 
-Installation
-------------
+## Requirements
+- Supported operating system (Windows, Linux or macOS).
+- Apple ID set up to use the App Store.
+
+## Installation
 
 ### Manual
 
-You can grab the latest version of `ipatool` from GitHub releases.
+You can grab the latest version of `ipatool` from [GitHub releases](https://github.com/majd/ipatool/releases).
 
 ### Package Manager (macOS)
 
-You can install `ipatool` using Homebrew.
+You can install `ipatool` using [Homebrew](https://brew.sh).
 
+```shell
 $ brew tap majd/repo
 $ brew install ipatool
+```
 
-Usage
------
+## Usage
 
 To authenticate with the App Store, use the `auth` command.
 
@@ -125,21 +127,25 @@ Global Flags:
       --verbose                      enables verbose logs
 ```
 
-**Note:** the tool runs in interactive mode by default. Use the `--non-interactive` flag if running in an automated environment.
+**Note:** the tool runs in interactive mode by default. Use the `--non-interactive` flag
+if running in an automated environment.
 
-Compiling
----------
+## Compiling
 
 The tool can be compiled using the Go toolchain.
 
+```shell
 $ go build -o ipatool
+```
 
 Unit tests can be executed with the following commands.
 
+```shell
 $ go generate github.com/majd/ipatool/...
 $ go test -v github.com/majd/ipatool/...
+```
 
-License
--------
+## License
 
-IPATool is released under the MIT license.
+IPATool is released under the [MIT license](https://github.com/majd/ipatool/blob/main/LICENSE).
+

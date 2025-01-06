@@ -1,57 +1,69 @@
 ---
 project: markdoc
-stars: 7345
+stars: 7347
 description: A powerful, flexible, Markdown-based authoring framework.
 url: https://github.com/markdoc/markdoc
 ---
 
-  
-  
-  
+<h1 align="center">
+  <br>
+    <img src="https://user-images.githubusercontent.com/62121649/167893184-a2b69260-ca9e-4a77-a5bc-63b8135ae5db.png" alt="Markdoc" width="260">
+  <br>
+  <br>
+</h1>
 
-=========
+<h4 align="center">A powerful, flexible, Markdown-based authoring framework.</h4>
 
-#### A powerful, flexible, Markdown-based authoring framework.
+Markdoc is a [Markdown](https://commonmark.org)-based syntax and toolchain for creating custom documentation sites and experiences.  
+We designed Markdoc to power [Stripe's public docs](http://stripe.com/docs), our largest and most complex content site.
 
-Markdoc is a Markdown\-based syntax and toolchain for creating custom documentation sites and experiences.  
-We designed Markdoc to power Stripe's public docs, our largest and most complex content site.
-
-Installation
-------------
+## Installation
 
 To get started with Markdoc, first install the library:
 
+```shell
 npm install @markdoc/markdoc
+```
 
 or
 
+```shell
 yarn add @markdoc/markdoc
+```
 
 and import it in your app:
 
-const Markdoc \= require('@markdoc/markdoc');
+```js
+const Markdoc = require('@markdoc/markdoc');
+```
 
 or if you are using ESM
 
+```js
 import Markdoc from '@markdoc/markdoc';
+```
 
 then use `Markdoc` in your app or tool:
 
-const doc \= \`
-\# Markdoc README
+```js
+const doc = `
+# Markdoc README
+
 {% image src="/logo.svg" /%}
-\`;
+`;
 
-const ast \= Markdoc.parse(doc);
-const content \= Markdoc.transform(ast);
+const ast = Markdoc.parse(doc);
+const content = Markdoc.transform(ast);
 return Markdoc.renderers.react(content, React);
+```
 
-Check out our docs for more guidance on how to use Markdoc.
+Check out [our docs](https://markdoc.dev/docs) for more guidance on how to use Markdoc.
 
 ### TypeScript
 
 This is the minimal `tsconfig.json` required to use Markdoc in your TypeScript project:
 
+```json
 {
   "compilerOptions": {
     "moduleResolution": "node",
@@ -59,38 +71,38 @@ This is the minimal `tsconfig.json` required to use Markdoc in your TypeScript p
     "esModuleInterop": true
   }
 }
+```
 
 ### React
 
 If you are using React, install Markdoc with:
 
+```sh
 npm install @markdoc/markdoc react @types/react
+```
 
-Contributing
-------------
+## Contributing
 
-Contributions and feedback are welcome and encouraged. Check out our contributing guidelines on how to do so.
+Contributions and feedback are welcome and encouraged. Check out our [contributing guidelines](.github/CONTRIBUTING.md) on how to do so.
 
 ### Development
 
-1.  Run `npm install`
-2.  Run `npm run build`
-3.  Run the tests using `npm test`
+1. Run `npm install`
+1. Run `npm run build`
+1. Run the tests using `npm test`
 
-Code of conduct
----------------
+## Code of conduct
 
-This project has adopted the Stripe Code of conduct.
+This project has adopted the Stripe [Code of conduct](.github/CODE_OF_CONDUCT.md).
 
-License
--------
+## License
 
-This project uses the MIT license.
+This project uses the [MIT license](LICENSE).
 
-Credits
--------
+## Credits
 
 Special shout out to:
 
--   @marcioAlmada for providing us with the @markdoc GitHub org.
--   @koomen for gifting us https://markdoc.dev.
+- [@marcioAlmada](https://github.com/marcioAlmada) for providing us with the [@markdoc](https://github.com/markdoc) GitHub org.
+- [@koomen](https://github.com/koomen) for gifting us https://markdoc.dev.
+

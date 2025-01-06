@@ -5,217 +5,142 @@ description: A Vue js component for creating super fast loading, non-blocking if
 url: https://github.com/chantouchsek/vue-iframes
 ---
 
-vue-iframes
-===========
-
+# vue-iframes
 > Vue.js component for creating dynamic async iframes based on Aaron Peter's article: http://www.aaronpeters.nl/blog/iframe-loading-techniques-performance?%3E#dynamic
 
-Requirements
-------------
+[![Latest Version on NPM](https://img.shields.io/npm/v/vue-iframes.svg?style=flat-square)](https://npmjs.com/package/vue-iframes)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![npm](https://img.shields.io/npm/dt/vue-iframes.svg?style=flat-square)](https://npmjs.com/package/vue-iframes)
+[![npm](https://img.shields.io/npm/dm/vue-iframes.svg?style=flat-square)](https://npmjs.com/package/vue-iframes)
 
--   Vue.js (^v2.1.4)
+## Requirements
+* [Vue.js](http://vuejs.org/) (^v2.1.4)
 
-Vue Support
------------
+## Vue Support
 
 Supports on Vue >= 2 & <3
 
-Installation and Usage
-----------------------
+## Installation and Usage
 
-```
+```npm
 npm install vue-iframes
 ```
 
-```
+```yarn
 yarn add vue-iframes
 ```
 
+```javascript
 import Vue from 'vue'
 import VueIframe from 'vue-iframes'
 
 Vue.use(VueIframe)
+```
 
-Nuxt Support
-------------
+## Nuxt Support
+---
+- Create `~/plugins/vue-iframes.js`
 
-* * *
-
--   Create `~/plugins/vue-iframes.js`
-
+```js
 import Vue from 'vue'
 import VueIframe from 'vue-iframes'
 
 Vue.use(VueIframe)
+```
 
-Nuxt SSR
---------
-
+## Nuxt SSR
+```js
 import Vue from 'vue'
 import VueIframe from 'vue-iframes/dist/vue-iframes.ssr'
 
 Vue.use(VueIframe)
+```
 
-nuxt.config.js
-==============
+# nuxt.config.js
 
-plugins: \[
+```js
+plugins: [
     // ...
     { src: '~/plugins/vue-iframes' },
     // ...
-\]
+]
+```
 
-plugins: \[
+```js
+plugins: [
     // ...
     { src: '~/plugins/vue-iframes', mode: 'client' },
     // ...
-\]
+]
+```
 
 Or another short way
 
+```js
 export default {
     // ...
-    modules: \['vue-iframes/nuxt'\]
+    modules: ['vue-iframes/nuxt']
     // ...
 }
+```
 
-Components
-----------
+## Components
 
-<template\>
+```vue
+
+<template>
   <vue-iframe
-      :src\="src"
-      allow\="camera \*; geolocation \*; microphone \*; autoplay \*"
-      frame-id\="my-ifram"
-      @load\="onLoad"
-      name\="my-frame"
-      width\="150px"
-      height\="200px"\></vue-iframe\>
-</template\>
+      :src="src"
+      allow="camera *; geolocation *; microphone *; autoplay *"
+      frame-id="my-ifram"
+      @load="onLoad"
+      name="my-frame"
+      width="150px"
+      height="200px"></vue-iframe>
+</template>
 
-<script\>
+<script>
   export default {
     name: 'MyIframe',
-    data: () \=> ({
+    data: () => ({
       myIframe: null
     }),
     methods: {
       onLoad(frame) {
-        this.myIframe \= frame.contentWindow
+        this.myIframe = frame.contentWindow
       }
     }
   }
-</script\>
+</script>
+```
 
-Props
------
+## Props
 
-Prop
+| Prop            | Description             | Required | Default                                             |
+|-----------------|-------------------------|----------|-----------------------------------------------------|
+| **src**         | The iframe resource     | true     |                                                     |
+| **crossorigin** | Cross origin            | false    | anonymous                                           |
+| **target**      | Target of iframe        | false    | _parent                                             |
+| **className**   | Iframe's class          | false    | null                                                |
+| **allow**       | Iframe's allow          | false    | 'camera *; geolocation *; microphone *; autoplay *' |
+| **name**        | Iframe's name           | false    | 'vue-iframes'                                       |
+| **frame-id**    | Iframe's id             | false    | 'vue-iframes'                                       |
+| **scrolling**   | Set scrolling to iframe | false    | null                                                |
+| **width**       | Set width to iframe     | false    | null                                                |
+| **height**      | Set height to iframe    | false    | null                                                |
 
-Description
+## Events
 
-Required
-
-Default
-
-**src**
-
-The iframe resource
-
-true
-
-**crossorigin**
-
-Cross origin
-
-false
-
-anonymous
-
-**target**
-
-Target of iframe
-
-false
-
-\_parent
-
-**className**
-
-Iframe's class
-
-false
-
-null
-
-**allow**
-
-Iframe's allow
-
-false
-
-'camera \*; geolocation \*; microphone \*; autoplay \*'
-
-**name**
-
-Iframe's name
-
-false
-
-'vue-iframes'
-
-**frame-id**
-
-Iframe's id
-
-false
-
-'vue-iframes'
-
-**scrolling**
-
-Set scrolling to iframe
-
-false
-
-null
-
-**width**
-
-Set width to iframe
-
-false
-
-null
-
-**height**
-
-Set height to iframe
-
-false
-
-null
-
-Events
-------
-
-Name
-
-Description
-
-**iframe-load**
-
-When the iframe is loaded
-
-**load**
-
-When the iframe is ready
+| Name            | Description               |
+|-----------------|---------------------------|
+| **iframe-load** | When the iframe is loaded |
+| **load**        | When the iframe is ready  |
 
 ### Contributing
 
 Pull requests are welcome, or open up an issue if you have ideas for additional functionality, new features or bugs.
 
-Contact
-=======
+# Contact
 
-Twitter @DevidCs83
+Twitter [@DevidCs83](https://twitter.com/DevidCs83)
+

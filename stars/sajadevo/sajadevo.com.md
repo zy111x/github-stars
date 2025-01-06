@@ -5,42 +5,45 @@ description: my personal portfolio
 url: https://github.com/sajadevo/sajadevo.com
 ---
 
-sajadevo.com
-============
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsajadevo%2Fsajadevo.com)
 
--   **Framework**: Next.js
--   **Deployment**: Vercel
--   **Styling**: Tailwind CSS
--   **Email**: Resend
--   **Analytics**: OpenPanel
+# sajadevo.com
 
-Running Locally
----------------
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Deployment**: [Vercel](https://vercel.com)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Email**: [Resend](https://resend.com/)
+- **Analytics**: [OpenPanel](https://openpanel.dev/)
+
+## Running Locally
 
 This application requires Node.js v18.17+.
 
+```bash
 git clone git@github.com:sajadevo/sajadevo.com.git my-portfolio
 cd my-portfolio
 bun install
 bun dev
+```
 
 Rename the `.env.example` file to `.env.local` and fill in the necessary environment variables.
 
-Environment Variables
----------------------
+## Environment Variables
 
-NEXT\_PUBLIC\_PROD\_URL=
-NEXT\_PUBLIC\_DEV\_URL=https://localhost:3000
+```bash
+NEXT_PUBLIC_PROD_URL=
+NEXT_PUBLIC_DEV_URL=https://localhost:3000
 
-RESEND\_API\_KEY=
-RESEND\_FROM\_EMAIL=
-RESEND\_TO\_EMAIL=
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=
+RESEND_TO_EMAIL=
 
-OPENPANEL\_CLIENT\_ID=
+OPENPANEL_CLIENT_ID=
+```
 
-Notes
------
+## Notes
 
-1.  You are free to use this code as inspiration.
-2.  Please do not copy it directly.
-3.  Crediting the author is appreciated.
+1. You are free to use this code as inspiration.
+2. Please do not copy it directly.
+3. Crediting the author is appreciated.
+

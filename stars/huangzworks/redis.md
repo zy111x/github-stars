@@ -1,13 +1,15 @@
 ---
 project: redis
-stars: 1760
+stars: 1761
 description: 《Redis Command Reference》全文的中文翻译版。
 url: https://github.com/huangzworks/redis
 ---
 
+
+
 <!DOCTYPE html>
-<!--\[if IE 8\]><html class="no-js lt-ie9" lang="en" > <!\[endif\]-->
-<!--\[if gt IE 8\]><!--> <html class="no-js" lang="en" > <!--<!\[endif\]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   
@@ -22,22 +24,22 @@ url: https://github.com/huangzworks/redis
   
 
   
-  <script type="text/javascript" src="\_static/js/modernizr.min.js"></script>
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
-      <script type="text/javascript" id="documentation\_options" data-url\_root="./" src="\_static/documentation\_options.js"></script>
-        <script type="text/javascript" src="\_static/jquery.js"></script>
-        <script type="text/javascript" src="\_static/underscore.js"></script>
-        <script type="text/javascript" src="\_static/doctools.js"></script>
-        <script type="text/javascript" src="\_static/language\_data.js"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
-    <script type="text/javascript" src="\_static/js/theme.js"></script>
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
 
   
-  <link rel="stylesheet" href="\_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="\_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -73,7 +75,7 @@ url: https://github.com/huangzworks/redis
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check\_keywords" value="yes" />
+    <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
@@ -93,7 +95,7 @@ url: https://github.com/huangzworks/redis
 <li class="toctree-l1"><a class="reference internal" href="hash/index.html">哈希表</a></li>
 <li class="toctree-l1"><a class="reference internal" href="list/index.html">列表</a></li>
 <li class="toctree-l1"><a class="reference internal" href="set/index.html">集合</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sorted\_set/index.html">有序集合</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sorted_set/index.html">有序集合</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hyperloglog/index.html">HyperLogLog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geo/index.html">地理位置</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bitmap/index.html">位图</a></li>
@@ -104,7 +106,7 @@ url: https://github.com/huangzworks/redis
 <li class="toctree-l1"><a class="reference internal" href="persistence/index.html">持久化</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pubsub/index.html">发布与订阅</a></li>
 <li class="toctree-l1"><a class="reference internal" href="replication/index.html">复制</a></li>
-<li class="toctree-l1"><a class="reference internal" href="client\_and\_server/index.html">客户端与服务器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_and_server/index.html">客户端与服务器</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configure/index.html">配置选项</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debug/index.html">调试</a></li>
 <li class="toctree-l1"><a class="reference internal" href="internal/index.html">内部命令</a></li>
@@ -160,7 +162,7 @@ url: https://github.com/huangzworks/redis
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="\_sources/readme.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/readme.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -176,14 +178,14 @@ url: https://github.com/huangzworks/redis
   <div class="section" id="id1">
 <h1>关于<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>本文档是 Redis 命令参考手册的中文翻译版，
-可以在 <a class="reference external" href="http://www.redisdoc.com">RedisDoc.com</a\> 在线阅读本文档。</p>
+可以在 <a class="reference external" href="http://www.redisdoc.com">RedisDoc.com</a> 在线阅读本文档。</p>
 <div class="section" id="id2">
 <h2>版权声明<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>本文档由 <a class="reference external" href="http://huangz.me">黄健宏（huangz）</a\> 翻译，版权归 Redis 官方所有。</p>
+<p>本文档由 <a class="reference external" href="http://huangz.me">黄健宏（huangz）</a> 翻译，版权归 Redis 官方所有。</p>
 </div>
 <div class="section" id="id3">
 <h2>赞助商<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>本文档由 <a class="reference external" href="http://yunba.io/">云巴（yunba.io）</a\> 提供赞助支持。</p>
+<p>本文档由 <a class="reference external" href="http://yunba.io/">云巴（yunba.io）</a> 提供赞助支持。</p>
 </div>
 </div>
 
@@ -195,19 +197,19 @@ url: https://github.com/huangzworks/redis
         <a class="headerlink" href="#discuss" title="永久链接至标题">¶</a>
     </h2>
 
-    <div id="disqus\_thread"></div>
+    <div id="disqus_thread"></div>
     <script type="text/javascript">
-        /\* \* \* CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE \* \* \*/
-        var disqus\_shortname = 'redis-command-cn'; // required: replace example with your forum shortname
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'redis-command-cn'; // required: replace example with your forum shortname
 
-        /\* \* \* DON'T EDIT BELOW THIS LINE \* \* \*/
+        /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus\_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')\[0\] || document.getElementsByTagName('body')\[0\]).appendChild(dsq);
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref\_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
 
@@ -231,7 +233,7 @@ url: https://github.com/huangzworks/redis
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a\> using a <a href="https://github.com/rtfd/sphinx\_rtd\_theme">theme</a\> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -256,9 +258,9 @@ url: https://github.com/huangzworks/redis
    
 
     <script>
-    (function(i,s,o,g,r,a,m){i\['GoogleAnalyticsObject'\]=r;i\[r\]=i\[r\]||function(){
-    (i\[r\].q=i\[r\].q||\[\]).push(arguments)},i\[r\].l=1\*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)\[0\];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', 'UA-53959484-7', 'auto');

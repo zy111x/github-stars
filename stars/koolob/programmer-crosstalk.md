@@ -5,8 +5,7 @@ description: 程序员相声
 url: https://github.com/koolob/programmer-crosstalk
 ---
 
-开源程序员主题相声
----------
+## 开源程序员主题相声
 
 ### 声明
 
@@ -14,8 +13,8 @@ url: https://github.com/koolob/programmer-crosstalk
 
 ### 年会相声小段
 
--   得加钱
+* [得加钱](得加钱.md)
 
 ### 完整相声
 
--   我要去培训
+* [我要去培训](我要去培训.md)

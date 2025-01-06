@@ -5,17 +5,18 @@ description: 🔭 My cozy corner in the wide expanse of the internet
 url: https://github.com/boehs/site
 ---
 
-My main website!
-================
+# My main website!
+
+![](https://wakapi.dev/api/badge/evan/interval:any/project:site) ![](https://img.shields.io/w3c-validation/html?targetUrl=https%3A%2F%2Fboehs.org) ![](https://img.shields.io/website?url=https%3A%2F%2Fboehs.org)
 
 This is the site wherein I push 11ty to it's absolute limits and then some. It works on some 11ty versions but not all of them.
 
-This website is my `indieweb`\-enabled `digital garden` with `dynamic taxonomies`, `aliases`, `gemini`, `scss`, `ts`, and lots of love.
+This website is my `indieweb`-enabled `digital garden` with `dynamic taxonomies`, `aliases`, ~~`gemini`~~, `scss`, `ts`, and lots of love.
 
-Some notes for developers
--------------------------
+## Some notes for developers
 
-I like to think this website is pretty cool, I've taken great care to design it in such a way that it is _very_ flexible (although mind that the stylesheets are heavily customized)
+I like to think this website is pretty cool, I've taken great care to design
+it in such a way that it is _very_ flexible (although mind that the stylesheets are heavily customized)
 
 No taxonomies, be that tags, dates, or "in" properties, are hardcoded. Tbh I think I got lazy and started hard coding my social media in places but thats easy to change.
 
@@ -50,7 +51,7 @@ No taxonomies, be that tags, dates, or "in" properties, are hardcoded. Tbh I thi
 
 ### Building
 
-When you clone this repository, you should run `git clone --recurse-submodules https://github.com/boehs/site`, as my content lives on sourcehut. Please note this content is not licensed under AGPL. It is not licensed, unless otherwise noted. If you already cloned it, run the following commands:
+When you clone this repository, you should run `git clone --recurse-submodules https://github.com/boehs/site`, as my content [lives](https://git.sr.ht/~boehs/oasis) on sourcehut. Please note this content is not licensed under AGPL. It is not licensed, unless otherwise noted. If you already cloned it, run the following commands:
 
 ```
 git submodule update --init --recursive
@@ -61,7 +62,9 @@ Next, you can run `pnpm install` and `pnpm run start` to get a dev server up and
 
 ### Contributing
 
-Feel free to do whatever the heck you want, provided you abide by the included LICENSE.md file. This includes adding pages, squashing bugs, and tiny improvements. Anything really.
+Feel free to do whatever the heck you want, provided you abide by the
+included LICENSE.md file. This includes adding pages, squashing bugs, and
+tiny improvements. Anything really.
 
 If you want, submit a PR adding a line to
 
@@ -74,14 +77,8 @@ Be creative, everything is welcome (probably).
 
 Some sites have made use of this code in various capacities, as is permitted by the AGPL. A list is included here, please note that it is not extensive.
 
-site
+| site                                   | git                                               |
+| -------------------------------------- | ------------------------------------------------- |
+| [ariscript.org](https://ariscript.org) | [ariscript/www](https://github.com/ariscript/www) |
+| [amey.dev](https://amey.dev/)          | [whyamey/www](https://github.com/whyamey/www)     |
 
-git
-
-ariscript.org
-
-ariscript/www
-
-amey.dev
-
-whyamey/www

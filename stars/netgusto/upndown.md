@@ -5,20 +5,19 @@ description: HTML to Markdown javascript converter
 url: https://github.com/netgusto/upndown
 ---
 
-upndown
-=======
+# upndown
 
 Javascript HTML to Markdown converter, for Node.js and the browser.
 
-About
------
+[![](https://travis-ci.org/netgusto/upndown.svg?branch=master)](https://travis-ci.org/netgusto/upndown)
+
+## About
 
 **upndown** converts HTML documents to Markdown documents.
 
 **upndown** is designed to offer a fast, reliable and whitespace perfect conversion for HTML documents.
 
-Install / Usage
----------------
+## Install / Usage
 
 ### Browser
 
@@ -26,23 +25,26 @@ Install / Usage
 
 Download the zip archive on github, unzip, copy in your web folder, and in your HTML:
 
-<script type\="text/javascript" src\="/assets/upndown/lib/upndown.bundle.min.js"\></script\>
-<script type\="text/javascript"\>
+```html
+<script type="text/javascript" src="/assets/upndown/lib/upndown.bundle.min.js"></script>
+<script type="text/javascript">
 
-    var und \= new upndown();
+    var und = new upndown();
     und.convert('<h1>Hello, World !</h1>', function(err, markdown) {
         if(err) { console.err(err); }
         else { console.log(markdown); } // Outputs: # Hello, World !
     });
 
-</script\>
+</script>
+```
 
 **Using RequireJS**
 
 Download the zip archive on github, unzip, copy in your web folder, and in your HTML:
 
-<script type\="text/javascript" src\="http://requirejs.org/docs/release/2.1.11/minified/require.js"\></script\>
-<script type\="text/javascript"\>
+```html
+<script type="text/javascript" src="http://requirejs.org/docs/release/2.1.11/minified/require.js"></script>
+<script type="text/javascript">
 
 require.config({
     paths: {
@@ -50,41 +52,47 @@ require.config({
     }
 });
 
-require(\['upndown'\], function(upndown) {
-    var und \= new upndown();
+require(['upndown'], function(upndown) {
+    var und = new upndown();
     und.convert('<h1>Hello, World !</h1>', function(err, markdown) {
         if(err) { console.err(err);
         else { console.log(markdown); } // Outputs: # Hello, World !
     });
 });
-</script\>
+</script>
+```
+
 
 ### Nodejs
 
 **Install**
 
+```bash
 npm install upndown
+```
 
 **Use**
 
-var upndown \= require('upndown');
+```js
+var upndown = require('upndown');
 
-var und \= new upndown();
+var und = new upndown();
 und.convert('<h1>Hello, World !</h1>', function(err, markdown) {
     if(err) { console.err(err);
     else { console.log(markdown); } // Outputs: # Hello, World !
 });
-
+```
 **Warning: With Node < 0.12.8, you'll have to require a polyfill for the `Promise` functionnality (like https://www.npmjs.com/package/bluebird); see #10 on how to do that.**
 
-Options
--------
+## Options
 
 ### `decodeEntities`
 
 By default Updown will decode all html entities, so source HTML like this:
 
-<p\>I'm an escaped &lt;em&gt;code sample&lt;/em&gt;.</p\>
+```html
+<p>I'm an escaped &lt;em&gt;code sample&lt;/em&gt;.</p>
+```
 
 Will become:
 
@@ -92,14 +100,16 @@ Will become:
 I'm an escaped *code sample*.
 ```
 
-If your use case does not call for that behavior and you wish HTML entities to stay encoded, you can pass an option to the constructor:
+If your use case does not call for that behavior and you wish HTML entities to
+stay encoded, you can pass an option to the constructor:
 
-var und \= new upndown({decodeEntities: false})
+```js
+var und = new upndown({decodeEntities: false})
+```
 
 Then just use as normal.
 
-Test
-----
+## Test
 
 ### In the browser
 
@@ -109,11 +119,13 @@ Navigate to `test/browser/` inside the **upndown** folder. Browser tests are exe
 
 To run the tests, simply execute:
 
+```sh
 npm test
+```
 
 Nodejs tests are executed using mocha.
 
-Maintainer
-----------
+## Maintainer
 
-**upndown** is produced by Net Gusto. Drop us a line at contact@netgusto.com
+**upndown** is produced by [Net Gusto](http://netgusto.com). Drop us a line at <contact@netgusto.com>
+

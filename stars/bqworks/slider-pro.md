@@ -5,41 +5,44 @@ description: A modular, responsive and touch-enabled jQuery slider plugin that e
 url: https://github.com/bqworks/slider-pro
 ---
 
-Slider Pro - jQuery slider plugin
-=================================
+[![npm version](https://img.shields.io/npm/v/slider-pro)](https://www.npmjs.com/package/slider-pro)
+[![License](https://img.shields.io/github/license/bqworks/slider-pro)](https://github.com/bqworks/slider-pro/blob/master/LICENSE)
+[![Build](https://github.com/bqworks/slider-pro/actions/workflows/build.yml/badge.svg)](https://github.com/bqworks/slider-pro/actions/workflows/build.yml)
+[![Downloads](https://img.shields.io/npm/dt/slider-pro)](https://github.com/bqworks/slider-pro)
+
+# [Slider Pro - jQuery slider plugin](https://bqworks.net/slider-pro/) #
 
 A modular, responsive and touch-enabled jQuery slider plugin that enables you to create elegant and professionally looking sliders.
 
-> The slider is also available in Vanilla JavaScript and as a WordPress plugin.
+>The slider is also available in [Vanilla JavaScript](https://github.com/bqworks/slider-pro-js) and as a [WordPress plugin](https://wordpress.org/plugins/sliderpro/).
 
-Main features:
+Main features: 
 
--   modular architecture
--   responsive
--   touch-swipe
--   CSS3 transitions
--   animated layers (and static)
--   infinite scrolling
--   carousel layout
--   different sized images
--   full width and full window support
--   thumbnails
--   deep linking
--   lazy loading
--   retina-enabled
--   fade effect
--   full-screen support
--   CSS-only navigation controls (no graphics) for easy customization
--   video support
--   conditional images (different images for different screen sizes)
--   JavaScript breakpoints
+* modular architecture
+* responsive
+* touch-swipe
+* CSS3 transitions
+* animated layers (and static)
+* infinite scrolling
+* carousel layout
+* different sized images
+* full width and full window support
+* thumbnails
+* deep linking
+* lazy loading
+* retina-enabled
+* fade effect
+* full-screen support
+* CSS-only navigation controls (no graphics) for easy customization
+* video support
+* conditional images (different images for different screen sizes)
+* JavaScript breakpoints 
 
-Check the plugin's presentation page for examples and more details of the available features.
+Check the plugin's [presentation page](https://bqworks.net/slider-pro/) for examples and more details of the available features.
 
-Getting started
----------------
+## Getting started ##
 
-### 1\. Get a copy of the plugin
+### 1. Get a copy of the plugin ###
 
 You can fork or download the plugin from GitHub, or you can install it through `npm` or `bower`.
 
@@ -51,94 +54,101 @@ $ npm install slider-pro
 $ bower install slider-pro
 ```
 
-### 2\. Load the required files
+### 2. Load the required files ###
 
 Inside the page's head tag include the slider's CSS file.
 
-<link rel\="stylesheet" href\="dist/css/slider-pro.min.css"/>
+```html
+<link rel="stylesheet" href="dist/css/slider-pro.min.css"/>
+```
 
-In the page's footer, just before `</body>`, include the required JavaScript files.
+In the page's footer, just before <code>&lt;/body&gt;</code>, include the required JavaScript files.
 
-<script src\="https://code.jquery.com/jquery-3.6.2.min.js"\></script\>
-<script src\="dist/js/jquery.sliderPro.min.js"\></script\>
+```html
+<script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+<script src="dist/js/jquery.sliderPro.min.js"></script>
+```
 
 From unpkg.com:
 
-<link rel\="stylesheet" href\="https://unpkg.com/slider-pro/dist/css/slider-pro.min.css"/>
-<script type\="text/javascript" src\="https://unpkg.com/slider-pro/dist/js/jquery.sliderPro.min.js"\></script\>
+```html
+<link rel="stylesheet" href="https://unpkg.com/slider-pro/dist/css/slider-pro.min.css"/>
+<script type="text/javascript" src="https://unpkg.com/slider-pro/dist/js/jquery.sliderPro.min.js"></script>
+```
 
-### 3\. Create the HTML markup
+### 3. Create the HTML markup ###
 
-<div class\="slider-pro" id\="my-slider"\>
-	<div class\="sp-slides"\>
+```html
+<div class="slider-pro" id="my-slider">
+	<div class="sp-slides">
 		<!-- Slide 1 -->
-		<div class\="sp-slide"\>
-			<img class\="sp-image" src\="path/to/image1.jpg"/>
-		</div\>
+		<div class="sp-slide">
+			<img class="sp-image" src="path/to/image1.jpg"/>
+		</div>
 		
 		<!-- Slide 2 -->
-		<div class\="sp-slide"\>
-			<p\>Lorem ipsum dolor sit amet</p\>
-		</div\>
+		<div class="sp-slide">
+			<p>Lorem ipsum dolor sit amet</p>
+		</div>
 		
 		<!-- Slide 3 -->
-		<div class\="sp-slide"\>
-			<h3 class\="sp-layer"\>Lorem ipsum dolor sit amet</h3\>
-			<p class\="sp-layer"\>consectetur adipisicing elit</p\>
-		</div\>
-	</div\>
-</div\>
+		<div class="sp-slide">
+			<h3 class="sp-layer">Lorem ipsum dolor sit amet</h3>
+			<p class="sp-layer">consectetur adipisicing elit</p>
+		</div>
+	</div>
+</div>
+```
 
 The structure you see in the code above (slider-pro > sp-slides > sp-slide) as well as the class names used are required.
 
 If you add an image to the slide and you want it to behave like a background image you need to add the `sp-image` class to it.
 
-More about the supported content (i.e., layers, html, video) in the Modules doc.
+More about the supported content (i.e., layers, html, video) in the [Modules](docs/modules.md#modules) doc.
 
-### 4\. Instantiate the slider
+### 4. Instantiate the slider ###
 
-<script type\="text/javascript"\>
+```html
+<script type="text/javascript">
 	jQuery( document ).ready(function( $ ) {
 		$( '#my-slider' ).sliderPro();
 	});
-</script\>
+</script>
+```
 
-Slider Pro has 50+ options which you can pass to the slider when you instantiate it. More about this in the JavaScript API doc.
+Slider Pro has 50+ options which you can pass to the slider when you instantiate it. More about this in the [JavaScript API](docs/api.md#javascript-api) doc.
 
-Detailed usage instructions
----------------------------
+## Detailed usage instructions ##
 
--   JavaScript API
-    -   1\. Properties
-    -   2\. Public Methods
-    -   3\. Callbacks
--   Modules
-    -   1\. Fade
-    -   2\. Caption
-    -   3\. Full Screen
-    -   4\. Lazy Loading
-    -   5\. Retina
-    -   6\. Conditional Images
-    -   7\. Layers
-    -   8\. Deep Linking
-    -   9\. Autoplay
-    -   10\. Touch Swipe
-    -   11\. Buttons
-    -   12\. Arrows
-    -   13\. Keyboard
-    -   14\. Thumbnails
-    -   15\. Thumbnail Touch Swipe
-    -   16\. Thumbnail Arrows
-    -   17\. Video
+* [JavaScript API](docs/api.md#javascript-api)
+	* [1. Properties](docs/api.md#1-properties)
+	* [2. Public Methods](docs/api.md#2-public-methods)
+	* [3. Callbacks](docs/api.md#3-callbacks)
+* [Modules](docs/modules.md#modules)
+	* [1. Fade](docs/modules.md#1-fade)
+	* [2. Caption](docs/modules.md#2-caption)
+	* [3. Full Screen](docs/modules.md#3-full-screen)
+	* [4. Lazy Loading](docs/modules.md#4-lazy-loading)
+	* [5. Retina](docs/modules.md#5-retina)
+	* [6. Conditional Images](docs/modules.md#6-conditional-images)
+	* [7. Layers](docs/modules.md#7-layers)
+	* [8. Deep Linking](docs/modules.md#8-deep-linking)
+	* [9. Autoplay](docs/modules.md#9-autoplay)
+	* [10. Touch Swipe](docs/modules.md#10-touch-swipe)
+	* [11. Buttons](docs/modules.md#11-buttons)
+	* [12. Arrows](docs/modules.md#12-arrows)
+	* [13. Keyboard](docs/modules.md#13-keyboard)
+	* [14. Thumbnails](docs/modules.md#14-thumbnails)
+	* [15. Thumbnail Touch Swipe](docs/modules.md#15-thumbnail-touch-swipe)
+	* [16. Thumbnail Arrows](docs/modules.md#16-thumbnail-arrows)
+	* [17. Video](docs/modules.md#17-video)
 
-Support
--------
+## Support ##
 
-If you found a bug or have a feature suggestion, please submit it in the Issues tracker.
+If you found a bug or have a feature suggestion, please submit it in the [Issues tracker](https://github.com/bqworks/slider-pro/issues).
 
-If you need help with implementing the slider in your project, I recommend using Stack Overflow instead of the Issues tracker.
+If you need help with implementing the slider in your project, I recommend using [Stack Overflow](https://stackoverflow.com/questions/tagged/slider-pro) instead of the Issues tracker.
 
-License
--------
+## License ##
 
-The plugin is available under the MIT license.
+The plugin is available under the <a href="https://opensource.org/licenses/MIT">MIT license</a>.

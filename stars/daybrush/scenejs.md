@@ -1,102 +1,94 @@
 ---
 project: scenejs
-stars: 2737
+stars: 2738
 description: 🎬 Scene.js is JavaScript & CSS timeline-based animation library
 url: https://github.com/daybrush/scenejs
 ---
 
-Scene.js
---------
 
-🎬 Scene.js is an JavaScript & CSS timeline-based animation library.
+<p align="middle"><img src="https://daybrush.com/scenejs/images/clapperboard.png" width="250"/></p>
+<h2 align="middle">Scene.js</h2>
+<p align="middle">
+<a href="https://www.npmjs.com/package/scenejs" target="_blank"><img src="https://img.shields.io/npm/v/scenejs.svg?style=flat-square&color=007acc&label=version" alt="npm version" /></a>
+<img src="https://img.shields.io/badge/language-typescript-blue.svg?style=flat-square"/>
+<a href="https://github.com/daybrush/scenejs/actions" target="_blank"><img alt="Github actions" src="https://img.shields.io/github/actions/workflow/status/daybrush/scenejs/test.yml?branch=master&style=flat-square" /></a>
+<a href="https://coveralls.io/github/daybrush/scenejs?branch=master&style=flat-square" target="_blank"><img alt="Coveralls github" src="https://img.shields.io/coveralls/github/daybrush/scenejs.svg?style=flat-square&label=%E2%9C%85%20coverage" /></a>
+<a href="https://github.com/daybrush/scenejs/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/daybrush/scenejs.svg?style=flat-square&label=license&color=08CE5D"/></a>
+<a href="https://github.com/daybrush/scenejs/tree/master/packages/react-scenejs" target="_blank"><img alt="React" src="https://img.shields.io/static/v1.svg?label=&message=React&style=flat-square&color=61daeb"></a> 
+<a href="https://github.com/daybrush/scenejs/tree/master/packages/vue2-scenejs" target="_blank"><img
+    alt="Vue 2"
+    src="https://img.shields.io/static/v1.svg?label=&message=Vue2&style=flat-square&color=3fb984"></a>
+<a href="https://github.com/daybrush/scenejs/tree/master/packages/vue-scenejs" target="_blank"><img
+    alt="Vue 3"
+    src="https://img.shields.io/static/v1.svg?label=&message=Vue%203&style=flat-square&color=3fb984"></a>
+ <a href="https://github.com/daybrush/scenejs/tree/master/packages/svelte-scenejs" target="_blank"><img alt="Svelte" src="https://img.shields.io/static/v1.svg?label=&message=Svelte&style=flat-square&color=C82B38"></a>
+</p>
 
-**Official Site**  /  **API**  /  **Features**  /  **Examples**  /  **Main Project**
 
-  
+<p align="middle">🎬 Scene.js is an JavaScript & CSS timeline-based animation library.</p>
 
-                 
+<p align="middle"><a href="https://daybrush.com/scenejs"><strong>Official Site</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/release/latest/doc"><strong>API</strong></a> &nbsp;/&nbsp; <a href="https://daybrush.com/scenejs/features.html"><strong>Features</strong></a> &nbsp;/&nbsp; <a href="https://codepen.io/collection/DLWxrd/"><strong>Examples</strong></a> &nbsp;/&nbsp; <a href="https://github.com/daybrush/scena"><strong>Main Project</strong></a></p>
+<br/>
+<p align="middle" style="max-width: 1000px; margin: 0px auto;" >
+  <a href="https://codepen.io/daybrush/pen/arQpYb" target="_blank"><img src="https://daybrush.com/scenejs/images/daybrush.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
+  <a href="https://codepen.io/daybrush/pen/EQPPBg" target="_blank"><img src="https://daybrush.com/scenejs/images/tree.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
+  <a href="https://codepen.io/daybrush/pen/QYRyMd" target="_blank"><img src="https://daybrush.com/scenejs/images/card.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
+  <a href="https://codepen.io/daybrush/pen/zWMeJW" target="_blank"><img src="https://daybrush.com/scenejs/images/circleburst.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
+  <a href="https://codepen.io/daybrush/pen/aYPjjM" target="_blank"><img src="https://daybrush.com/scenejs/example/scenejs.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
+  <a href="https://codepen.io/daybrush/pen/ydMJKR" target="_blank"><img src="https://daybrush.com/scenejs/images/panda.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
+  <a href="https://codepen.io/daybrush/pen/vRrbXG" target="_blank"><img src="https://daybrush.com/scenejs/example/raindrop.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
+  <a href="https://codepen.io/daybrush/pen/RMBXBm" target="_blank"><img src="https://daybrush.com/scenejs/example/search.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
+  <a href="https://codepen.io/daybrush/pen/pLxQGY" target="_blank"><img src="https://daybrush.com/scenejs/example/motion.gif" width="280" style="min-width:200px;max-width:320px;width: 32%;"/></a>&nbsp;
+</p>
 
-🚀 Examples
------------
 
--   ClapperBoard Animation
--   Panda eating Bamboo Animation
--   Circle Burst
--   Motion Effect
--   Tree Animation
--   Snow Animation
--   Card Rotation
--   Raindrop Effect
--   Cube
--   Shape
--   Timer
+## 🚀 Examples
+* [ClapperBoard Animation](https://codepen.io/daybrush/pen/VRomqr)
+* [Panda eating Bamboo Animation](https://codepen.io/daybrush/pen/ydMJKR)
+* [Circle Burst](https://codepen.io/daybrush/pen/zWMeJW)
+* [Motion Effect](https://codepen.io/daybrush/pen/pLxQGY)
+* [Tree Animation](https://codepen.io/daybrush/pen/EQPPBg)
+* [Snow Animation](https://codepen.io/daybrush/pen/eoYGrx)
+* [Card Rotation](https://codepen.io/daybrush/pen/QYRyMd)
+* [Raindrop Effect](https://codepen.io/daybrush/pen/vRrbXG)
+* [Cube](https://codepen.io/daybrush/pen/ybxwpV)
+* [Shape](https://codepen.io/daybrush/pen/VXVgpE) 
+* [Timer](https://codepen.io/daybrush/pen/OdMMXd)
 
-**More Examples**
+[**More Examples**](https://codepen.io/collection/DLWxrd/)
 
-⚙️ Installation
----------------
 
+## ⚙️ Installation
+```bash
 $ npm install scenejs
+```
+```html
+<script src="//daybrush.com/scenejs/release/latest/dist/scene.min.js"></script>
+```
 
-<script src\="//daybrush.com/scenejs/release/latest/dist/scene.min.js"\></script\>
+## 📄 Documents
+* [API Documentation](https://daybrush.com/scenejs/release/latest/doc/)
+* [Features Documentation](https://daybrush.com/scenejs/features.html)
 
-📄 Documents
-------------
+## 📦 Packages
+|Package|Version|Description|
+|---|---|---|
+|[**react-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/react-scenejs)|[![](https://img.shields.io/npm/v/react-scenejs.svg?style=flat-square)](https://npmjs.com/package/react-scenejs)|A React Component that create JavaScript & CSS timeline-based animation with Scene.js.|
+|[**svelte-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/svelte-scenejs)|[![](https://img.shields.io/npm/v/svelte-scenejs.svg?style=flat-square)](https://npmjs.com/package/svelte-scenejs)|A Svelte Component that create JavaScript & CSS timeline-based animation with Scene.js.|
+|[**vue-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/vue3-scenejs)|[![](https://img.shields.io/npm/v/vue-scenejs.svg?style=flat-square)](https://npmjs.com/package/vue-scenejs)|A Vue 3 Component that create JavaScript & CSS timeline-based animation with Scene.js.|
+|[**vue2-scenejs**](https://github.com/daybrush/scenejs/tree/master/packages/vue-scenejs)|[![](https://img.shields.io/npm/v/vue2-scenejs.svg?style=flat-square)](https://npmjs.com/package/vue2-scenejs)|A Vue 2 Component that create JavaScript & CSS timeline-based animation with Scene.js.|
+|[**@scenejs/render**](https://github.com/daybrush/scenejs-render)|[![](https://img.shields.io/npm/v/@scenejs/render.svg?style=flat-square)](https://npmjs.com/package/@scenejs/render)|Make a movie of CSS animation through Scene.js.|
+|[**@scenejs/effects**](https://github.com/daybrush/scenejs-effects)|[![](https://img.shields.io/npm/v/@scenejs/effects.svg?style=flat-square)](https://npmjs.com/package/@scenejs/effects)|Effect collection library where you can add scene effects to Scene.js.|
+|[**@scenejs/timeline**](https://github.com/daybrush/scenejs-timeline)|[![](https://img.shields.io/npm/v/@scenejs/timeline.svg?style=flat-square)](https://npmjs.com/package/@scenejs/timeline)|A library that represents the timeline of Scene.js. You can control time, properties, and items.|
+|[**@scenejs/media**](https://github.com/daybrush/scenejs-media)|[![](https://img.shields.io/npm/v/@scenejs/media.svg?style=flat-square)](https://npmjs.com/package/@scenejs/media)|A library for playing or controlling media with Scene.js.|
+|[**@scenejs/iframe**](https://github.com/daybrush/scenejs-iframe)|[![](https://img.shields.io/npm/v/@scenejs/iframe.svg?style=flat-square)](https://npmjs.com/package/@scenejs/iframe)|A library that control the animation of iframe with Scene.js.|
 
--   API Documentation
--   Features Documentation
 
-📦 Packages
------------
-
-Package
-
-Version
-
-Description
-
-**react-scenejs**
-
-A React Component that create JavaScript & CSS timeline-based animation with Scene.js.
-
-**svelte-scenejs**
-
-A Svelte Component that create JavaScript & CSS timeline-based animation with Scene.js.
-
-**vue-scenejs**
-
-A Vue 3 Component that create JavaScript & CSS timeline-based animation with Scene.js.
-
-**vue2-scenejs**
-
-A Vue 2 Component that create JavaScript & CSS timeline-based animation with Scene.js.
-
-**@scenejs/render**
-
-Make a movie of CSS animation through Scene.js.
-
-**@scenejs/effects**
-
-Effect collection library where you can add scene effects to Scene.js.
-
-**@scenejs/timeline**
-
-A library that represents the timeline of Scene.js. You can control time, properties, and items.
-
-**@scenejs/media**
-
-A library for playing or controlling media with Scene.js.
-
-**@scenejs/iframe**
-
-A library that control the animation of iframe with Scene.js.
-
-🎬 Make Scene
--------------
-
+## 🎬 Make Scene
+```javascript
 import Scene from "scenejs";
 
-const scene \= new Scene({
+const scene = new Scene({
   ".class": {
     0: "left: 0px; top: 0px; transform: translate(0px);",
     1: {
@@ -116,21 +108,19 @@ const scene \= new Scene({
   selector: true,
   easing: "ease-in-out",
 }).play();
-
-🎬 Add Media (Audio/Video)
---------------------------
-
+```
+## 🎬 Add Media (Audio/Video)
 This library supports adding video and audio components to your scene. To add a video or an audio, you need to install @scenejs/media library.
-
 ### Add necessary npm package
-
+```sh
 $ npm i @scenejs/media
-
+```
 ### How to use
+```javascript
 
 import MediaScene from '@scenejs/media';
 
-const mediaScene \= new MediaScene();
+const mediaScene = new MediaScene();
     mediaScene
         .addMedia("background", "./background.mp3")
         .seek(0, 40.79);
@@ -143,77 +133,69 @@ const mediaScene \= new MediaScene();
         .setDelay(startTime);
 
     scene.setItem("video",mediaScene);
-
+```
 Please note that this library uses the built-in capability of your browser to play audio and video files. Make sure necessary codecs are installed, and the browser supports the video/audio file being added to the project
 
-✨ Effects
----------
+## ✨ Effects
 
--   typing
--   flip
--   flipX
--   flipY
--   shake
--   shakeX
--   shakeY
--   wipeIn
--   wipeOut
--   zoomIn
--   zoomOut
--   blink
--   fadeIn
--   fadeOut
--   transition
+* [typing](https://daybrush.com/scenejs/features.html#typing)
+* [flip](https://daybrush.com/scenejs/features.html#flip)
+* [flipX](https://daybrush.com/scenejs/features.html#flipx)
+* [flipY](https://daybrush.com/scenejs/features.html#flipy)
+* [shake](https://daybrush.com/scenejs/features.html#shake)
+* [shakeX](https://daybrush.com/scenejs/features.html#shakex)
+* [shakeY](https://daybrush.com/scenejs/features.html#shakey)
+* [wipeIn](https://daybrush.com/scenejs/features.html#wipein)
+* [wipeOut](https://daybrush.com/scenejs/features.html#wipeout)
+* [zoomIn](https://daybrush.com/scenejs/features.html#zoomin)
+* [zoomOut](https://daybrush.com/scenejs/features.html#zoomout)
+* [blink](https://daybrush.com/scenejs/features.html#bllink)
+* [fadeIn](https://daybrush.com/scenejs/features.html#fadein)
+* [fadeOut](https://daybrush.com/scenejs/features.html#fadeout)
+* [transition](https://daybrush.com/scenejs/features.html#transition)
 
-🌐 Supported Browsers
----------------------
 
-Internet Explorer
+## 🌐 Supported Browsers
 
-Chrome
+|Internet Explorer|Chrome|FireFox|Safari|Opera|
+|---|---|---|---|---|
+|9+(10+ playCSS)|latest|latest|latest|latest|
 
-FireFox
-
-Safari
-
-Opera
-
-9+(10+ playCSS)
-
-latest
-
-latest
-
-latest
-
-latest
-
-⭐️ Show Your Support
---------------------
-
+## ⭐️ Show Your Support
 Please give a ⭐️ if this project helped you!
 
-👏 Contributing
----------------
 
-If you have any questions or requests or want to contribute to `scenejs` or other packages, please write the issue or give me a Pull Request freely.
+## 👏 Contributing
+
+If you have any questions or requests or want to contribute to `scenejs` or other packages, please write the [issue](https://github.com/daybrush/scenejs/issues) or give me a Pull Request freely.
+
 
 ### Code Contributors
 
-This project exists thanks to all the people who contribute. \[Contribute\].
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
 
-Sponsors
---------
+<a href="https://github.com/daybrush/scenejs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=daybrush/scenejs" />
+</a>
 
-🐞 Bug Report
--------------
 
-If you find a bug, please report to us opening a new Issue on GitHub.
+## Sponsors
+<p align="center">
+	<a href="https://daybrush.com/sponsors/sponsors.svg">
+		<img src="https://daybrush.com/sponsors/sponsors.svg"/>
+	</a>
+</p>
 
-📝 License
-----------
 
-This project is MIT licensed.
+## 🐞 Bug Report
+
+If you find a bug, please report to us opening a new [Issue](https://github.com/daybrush/scenejs/issues) on GitHub.
+
+
+
+## 📝 License
+
+This project is [MIT](https://github.com/daybrush/scenejs/blob/master/LICENSE) licensed.
 
 ```
 MIT License
@@ -238,3 +220,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+

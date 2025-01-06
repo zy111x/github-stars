@@ -5,17 +5,19 @@ description: Next.js template for programmatic video apps
 url: https://github.com/remotion-dev/template-next-app-dir
 ---
 
-  
-  
+<img src="https://github.com/remotion-dev/template-next/assets/1629785/9092db5f-7c0c-4d38-97c4-5f5a61f5cc098" />
+<br/>
+<br/>
 
-This is a Next.js template for building programmatic video apps, with `@remotion/player` and `@remotion/lambda` built in.
+This is a Next.js template for building programmatic video apps, with [`@remotion/player`](https://remotion.dev/player) and [`@remotion/lambda`](https://remotion.dev/lambda) built in.
 
-This template uses the Next.js App directory. There is a Tailwind CSS version and a Pages directory version of this template available.
+This template uses the Next.js App directory. There is a [Tailwind CSS version](https://github.com/remotion-dev/template-next-app-dir-tailwind) and a [Pages directory version](https://github.com/remotion-dev/template-next-pages-dir) of this template available.
 
-Getting Started
----------------
+<img src="https://github.com/remotion-dev/template-next/assets/1629785/c9c2e5ca-2637-4ec8-8e40-a8feb5740d88" />
 
-Use this template to clone it into your GitHub account. Run
+## Getting Started
+
+[Use this template](https://github.com/new?template_name=template-next-app-dir&template_owner=remotion-dev) to clone it into your GitHub account. Run
 
 ```
 npm i
@@ -27,8 +29,7 @@ afterwards. Alternatively, use this command to scaffold a project:
 npx create-video@latest --next
 ```
 
-Commands
---------
+## Commands
 
 Start the Next.js dev server:
 
@@ -62,38 +63,34 @@ node deploy.mjs
 
 You should run this script after:
 
--   changing the video template
--   changing `config.mjs`
--   upgrading Remotion to a newer version
+- changing the video template
+- changing `config.mjs`
+- upgrading Remotion to a newer version
 
-Set up rendering on AWS Lambda
-------------------------------
+## Set up rendering on AWS Lambda
 
-This template supports rendering the videos via Remotion Lambda.
+This template supports rendering the videos via [Remotion Lambda](https://remotion.dev/lambda).
 
-1.  Copy the `.env.example` file to `.env` and fill in the values. Complete the Lambda setup guide to get your AWS credentials.
-    
-2.  Edit the `config.mjs` file to your desired Lambda settings.
-    
-3.  Run `node deploy.mjs` to deploy your Lambda function and Remotion Bundle.
-    
+1. Copy the `.env.example` file to `.env` and fill in the values.
+   Complete the [Lambda setup guide](https://www.remotion.dev/docs/lambda/setup) to get your AWS credentials.
 
-Docs
-----
+1. Edit the `config.mjs` file to your desired Lambda settings.
 
-Get started with Remotion by reading the fundamentals page.
+1. Run `node deploy.mjs` to deploy your Lambda function and Remotion Bundle.
 
-Help
-----
+## Docs
 
-We provide help on our Discord server.
+Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
 
-Issues
-------
+## Help
 
-Found an issue with Remotion? File an issue here.
+We provide help on our [Discord server](https://remotion.dev/discord).
 
-License
--------
+## Issues
 
-Note that for some entities a company license is needed. Read the terms here.
+Found an issue with Remotion? [File an issue here](https://remotion.dev/issue).
+
+## License
+
+Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+

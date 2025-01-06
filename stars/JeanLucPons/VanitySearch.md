@@ -5,33 +5,31 @@ description: Bitcoin Address Prefix Finder
 url: https://github.com/JeanLucPons/VanitySearch
 ---
 
-VanitySearch
-============
+# VanitySearch
 
-VanitySearch is a bitcoin address prefix finder. If you want to generate safe private keys, use the -s option to enter your passphrase which will be used for generating a base key as for BIP38 standard (_VanitySearch.exe -s "My PassPhrase" 1MyPrefix_). You can also use _VanitySearch.exe -ps "My PassPhrase"_ which will add a crypto secure seed to your passphrase.  
+VanitySearch is a bitcoin address prefix finder. If you want to generate safe private keys, use the -s option to enter your passphrase which will be used for generating a base key as for BIP38 standard (*VanitySearch.exe -s "My PassPhrase" 1MyPrefix*). You can also use *VanitySearch.exe -ps "My PassPhrase"* which will add a crypto secure seed to your passphrase.\
 VanitySearch may not compute a good grid size for your GPU, so try different values using -g option in order to get the best performances. If you want to use GPUs and CPUs together, you may have best performances by keeping one CPU core for handling GPU(s)/CPU exchanges (use -t option to set the number of CPU threads).
 
-Feature
-=======
+# Feature
 
--   Fixed size arithmetic
--   Fast Modular Inversion (Delayed Right Shift 62 bits)
--   SecpK1 Fast modular multiplication (2 steps folding 512bits to 256bits using 64 bits digits)
--   Use some properties of elliptic curve to generate more keys
--   SSE Secure Hash Algorithm SHA256 and RIPEMD160 (CPU)
--   Multi-GPU support
--   CUDA optimisation via inline PTX assembly
--   Seed protected by pbkdf2\_hmac\_sha512 (BIP38)
--   Support P2PKH, P2SH and BECH32 addresses
--   Support split-key vanity address
+<ul>
+  <li>Fixed size arithmetic</li>
+  <li>Fast Modular Inversion (Delayed Right Shift 62 bits)</li>
+  <li>SecpK1 Fast modular multiplication (2 steps folding 512bits to 256bits using 64 bits digits)</li>
+  <li>Use some properties of elliptic curve to generate more keys</li>
+  <li>SSE Secure Hash Algorithm SHA256 and RIPEMD160 (CPU)</li>
+  <li>Multi-GPU support</li>
+  <li>CUDA optimisation via inline PTX assembly</li>
+  <li>Seed protected by pbkdf2_hmac_sha512 (BIP38)</li>
+  <li>Support P2PKH, P2SH and BECH32 addresses</li>
+  <li>Support split-key vanity address</li>
+</ul>
 
-Discussion Thread
-=================
+# Discussion Thread
 
-Disucussion about VanitySearch@bitcointalk
+[Disucussion about VanitySearch@bitcointalk](https://bitcointalk.org/index.php?topic=5112311.0)
 
-Usage
-=====
+# Usage
 
 You can downlad latest release from https://github.com/JeanLucPons/VanitySearch/releases
 
@@ -114,45 +112,35 @@ Priv (WIF): p2wpkh:L37xBVcFGeAZ9Tii7igqXBWmfiBhiwwiKQmchNXPV2LNREXQDLCp
 Priv (HEX): 0xB00FD8CDA85B11D4744C09E65C527D35E2B1D19095CFCA0BF2E48186F31979C2
 ```
 
-Generate a vanity address for a third party using split-key
-===========================================================
+# Generate a vanity address for a third party using split-key
 
-It is possible to generate a vanity address for a third party in a safe manner using split-key.  
+It is possible to generate a vanity address for a third party in a safe manner using split-key.\
 For instance, Alice wants a nice prefix but does not have CPU power. Bob has the requested CPU power but cannot know the private key of Alice, Alice has to use a split-key.
 
-Step 1
-------
+## Step 1
 
-Alice generates a key pair on her computer then send the generated public key and the wanted prefix to Bob. It can be done by email, nothing is secret. Nevertheless, Alice has to keep safely the private key and not expose it.
-
+Alice generates a key pair on her computer then send the generated public key and the wanted prefix to Bob. It can be done by email, nothing is secret.  Nevertheless, Alice has to keep safely the private key and not expose it.
 ```
 VanitySearch.exe -s "AliceSeed" -kp
 Priv : L4U2Ca2wyo721n7j9nXM9oUWLzCj19nKtLeJuTXZP3AohW9wVgrH
 Pub  : 03FC71AE1E88F143E8B05326FC9A83F4DAB93EA88FFEACD37465ED843FCC75AA81
 ```
-
 Note: The key pair is a standard SecpK1 key pair and can be generated with a third party software.
 
-Step 2
-------
+## Step 2
 
 Bob runs VanitySearch using the Alice's public key and the wanted prefix.
-
 ```
 VanitySearch.exe -sp 03FC71AE1E88F143E8B05326FC9A83F4DAB93EA88FFEACD37465ED843FCC75AA81 -gpu -stop -o keyinfo.txt 1ALice
 ```
-
 It generates a keyinfo.txt file containing the partial private key.
-
 ```
 PubAddress: 1ALicegohz9YgrLLa4ADCmam7X2Zr6xJZx
 PartialPriv: L2hbovuDd8nG4nxjDq1yd5qDsSQiG8xFsAFbHMcThqfjSP6WLg89
 ```
-
 Bob sends back this file to Alice. It can also be done by email. The partial private key does not allow anyone to guess the final Alice's private key.
 
-Step 3
-------
+## Step 3
 
 Alice can then reconstructs the final private key using her private key (the one generated in step 1) and the keyinfo.txt from Bob.
 
@@ -164,160 +152,131 @@ Priv (WIF): p2pkh:L1NHFgT826hYNpNN2qd85S7F7cyZTEJ4QQeEinsCFzknt3nj9gqg
 Priv (HEX): 0x7BC226A19A1E9770D3B0584FF2CF89E5D43F0DC19076A7DE1943F284DA3FB2D0
 ```
 
-How it works
-------------
+## How it works
 
-Basically the -sp (start public key) adds the specified starting public key (let's call it Q) to the starting keys of each threads. That means that when you search (using -sp), you do not search for addr(k.G) but for addr(kpart.G+Q) where k is the private key in the first case and kpart the "partial private key" in the second case. G is the SecpK1 generator point.  
-Then the requester can reconstruct the final private key by doing kpart+ksecret (mod n) where kpart is the partial private key found by the searcher and ksecret is the private key of Q (Q=ksecret.G). This is the purpose of the -rp option.  
-The searcher has found a match for addr(kpart.G+ksecret.G) without knowing ksecret so the requester has the wanted address addr(kpart.G+Q) and the corresponding private key kpart+ksecret (mod n). The searcher is not able to guess this final private key because he doesn't know ksecret (he knows only Q).
+Basically the -sp (start public key) adds the specified starting public key (let's call it Q) to the starting keys of each threads. That means that when you search (using -sp), you do not search for addr(k.G) but for addr(k<sub>part</sub>.G+Q) where k is the private key in the first case and k<sub>part</sub> the "partial private key" in the second case. G is the SecpK1 generator point.\
+Then the requester can reconstruct the final private key by doing k<sub>part</sub>+k<sub>secret</sub> (mod n) where k<sub>part</sub> is the partial private key found by the searcher and k<sub>secret</sub> is the private key of Q (Q=k<sub>secret</sub>.G). This is the purpose of the -rp option.\
+The searcher has found a match for addr(k<sub>part</sub>.G+k<sub>secret</sub>.G) without knowing k<sub>secret</sub> so the requester has the wanted address addr(k<sub>part</sub>.G+Q) and the corresponding private key k<sub>part</sub>+k<sub>secret</sub> (mod n). The searcher is not able to guess this final private key because he doesn't know k<sub>secret</sub> (he knows only Q).
 
 Note: This explanation is simplified, it does not take care of symmetry and endomorphism optimizations but the idea is the same.
 
-Trying to attack a list of addresses
-====================================
+# Trying to attack a list of addresses
 
-The bitcoin address (P2PKH) consists of a hash160 (displayed in Base58 format) which means that there are 2160 possible addresses. A secure hash function can be seen as a pseudo number generator, it transforms a given message in a random number. In this case, a number (uniformaly distributed) in the range \[0,2160\]. So, the probability to hit a particular number after n tries is 1-(1-1/2160)n. We perform n Bernoulli trials statistically independent.  
-If we have a list of m distinct addresses (m<=2160), the search space is then reduced to 2160/m, the probability to find a collision after 1 try becomes m/2160 and the probability to find a collision after n tries becomes 1-(1-m/2160)n.  
-An example:  
-We have a hardware capable of generating **1GKey/s** and we have an input list of **106** addresses, the following table shows the probability of finding a collision after a certain amount of time:
+The bitcoin address (P2PKH) consists of a hash160 (displayed in Base58 format) which means that there are 2<sup>160</sup> possible addresses. A secure hash function can be seen as a pseudo number generator, it transforms a given message in a random number. In this case, a number (uniformaly distributed) in the range [0,2<sup>160</sup>]. So, the probability to hit a particular number after n tries is 1-(1-1/2<sup>160</sup>)<sup>n</sup>. We perform n Bernoulli trials statistically independent.\
+If we have a list of m distinct addresses (m<=2<sup>160</sup>), the search space is then reduced to 2<sup>160</sup>/m, the probability to find a collision after 1 try becomes m/2<sup>160</sup> and the probability to find a collision after n tries becomes 1-(1-m/2<sup>160</sup>)<sup>n</sup>.\
+An example:\
+We have a hardware capable of generating **1GKey/s** and we have an input list of **10<sup>6</sup>** addresses, the following table shows the probability of finding a collision after a certain amount of time:
 
-Time
+| Time     |  Probability  |
+|----------|:-------------:|
+| 1 second |6.8e-34|
+| 1 minute |4e-32|
+| 1 hour |2.4e-30|
+| 1 day |5.9e-29|
+| 1 year |2.1e-26|
+| 10 years | 2.1e-25 |
+| 1000 years | 2.1e-23 |
+| Age of earth | 8.64e-17 |
+| Age of universe | 2.8e-16 (much less than winning at the lottery) |
 
-Probability
+Calculation has been done using this [online high precision calculator](https://keisan.casio.com/calculator)
 
-1 second
+As you can see, even with a competitive hardware, it is very unlikely that you find a collision. Birthday paradox doesn't apply in this context, it works only if we know already the public key (not the address, the hash of the public key) we want to find.  This program doesn't look for collisions between public keys. It searchs only for collisions with addresses with a certain prefix.
 
-6.8e-34
+# Compilation
 
-1 minute
+## Windows
 
-4e-32
-
-1 hour
-
-2.4e-30
-
-1 day
-
-5.9e-29
-
-1 year
-
-2.1e-26
-
-10 years
-
-2.1e-25
-
-1000 years
-
-2.1e-23
-
-Age of earth
-
-8.64e-17
-
-Age of universe
-
-2.8e-16 (much less than winning at the lottery)
-
-Calculation has been done using this online high precision calculator
-
-As you can see, even with a competitive hardware, it is very unlikely that you find a collision. Birthday paradox doesn't apply in this context, it works only if we know already the public key (not the address, the hash of the public key) we want to find. This program doesn't look for collisions between public keys. It searchs only for collisions with addresses with a certain prefix.
-
-Compilation
-===========
-
-Windows
--------
-
-Intall CUDA SDK and open VanitySearch.sln in Visual C++ 2017.  
-You may need to reset your _Windows SDK version_ in project properties.  
-In Build->Configuration Manager, select the _Release_ configuration.  
-Build and enjoy.  
-  
+Intall CUDA SDK and open VanitySearch.sln in Visual C++ 2017.\
+You may need to reset your *Windows SDK version* in project properties.\
+In Build->Configuration Manager, select the *Release* configuration.\
+Build and enjoy.\
+\
 Note: The current relase has been compiled with CUDA SDK 10.0, if you have a different release of the CUDA SDK, you may need to update CUDA SDK paths in VanitySearch.vcxproj using a text editor. The current nvcc option are set up to architecture starting at 3.0 capability, for older hardware, add the desired compute capabilities to the list in GPUEngine.cu properties, CUDA C/C++, Device, Code Generation.
 
-Linux
------
+## Linux
 
--   Intall CUDA SDK.
-    
--   Install older g++ (just for the CUDA SDK). Depenging on the CUDA SDK version and on your Linux distribution you may need to install an older g++.
-    
--   Install recent gcc. VanitySearch needs to be compiled and linked with a recent gcc (>=7). The current release has been compiled with gcc 7.3.0.
-    
--   Edit the makefile and set up the appropriate CUDA SDK and compiler paths for nvcc. Or pass them as variables to `make` invocation.
-    
+ - Intall CUDA SDK.
+ - Install older g++ (just for the CUDA SDK). Depenging on the CUDA SDK version and on your Linux distribution you may need to install an older g++.
+ - Install recent gcc. VanitySearch needs to be compiled and linked with a recent gcc (>=7). The current release has been compiled with gcc 7.3.0.
+ - Edit the makefile and set up the appropriate CUDA SDK and compiler paths for nvcc. Or pass them as variables to `make` invocation.
+
+    ```make
     CUDA       = /usr/local/cuda-8.0
     CXXCUDA    = /usr/bin/g++-4.8
-    
--   You can enter a list of architectrures (refer to nvcc documentation) if you have several GPU with different architecture.
-    
--   Set CCAP to the desired compute capability according to your hardware. See docker section for more. Compute capability 2.0 (Fermi) is deprecated for recent CUDA SDK.
-    
--   Go to the VanitySearch directory.
-    
--   To build CPU-only version (without CUDA support):
-    
+    ```
+
+ - You can enter a list of architectrures (refer to nvcc documentation) if you have several GPU with different architecture.
+
+ - Set CCAP to the desired compute capability according to your hardware. See docker section for more. Compute capability 2.0 (Fermi) is deprecated for recent CUDA SDK.
+
+ - Go to the VanitySearch directory.
+ - To build CPU-only version (without CUDA support):
+    ```sh
     $ make all
-    
--   To build with CUDA:
-    
+    ```
+ - To build with CUDA:
+    ```sh
     $ make gpu=1 CCAP=2.0 all
-    
+    ```
 
-Runnig VanitySearch (Intel(R) Xeon(R) CPU, 8 cores, @ 2.93GHz, Quadro 600 (x2))
-
-$ export LD\_LIBRARY\_PATH=/usr/local/cuda-8.0/lib64
+Runnig VanitySearch (Intel(R) Xeon(R) CPU, 8 cores,  @ 2.93GHz, Quadro 600 (x2))
+```sh
+$ export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64
 $ ./VanitySearch -t 7 -gpu -gpuId 0,1 1TryMe
 # VanitySearch v1.10
 # Difficulty: 15318045009
-# Search: 1TryMe \[Compressed\]
+# Search: 1TryMe [Compressed]
 # Start Wed Mar 27 10:26:43 2019
 # Base Key:C6718D8E50C1A5877DE3E52021C116F7598826873C61496BDB7CAD668CE3DCE5
 # Number of CPU thread: 7
 # GPU: GPU #1 Quadro 600 (2x48 cores) Grid(16x128)
 # GPU: GPU #0 Quadro 600 (2x48 cores) Grid(16x128)
-# 40.284 MK/s (GPU 27.520 MK/s) (2^31.84) \[P 22.24%\]\[50.00% in 00:02:47\]\[0\]
+# 40.284 MK/s (GPU 27.520 MK/s) (2^31.84) [P 22.24%][50.00% in 00:02:47][0]
 #
 # Pub Addr: 1TryMeERTZK7RCTemSJB5SNb2WcKSx45p
 # Priv (WIF): Ky9bMLDpb9o5rBwHtLaidREyA6NzLFkWJ19QjPDe2XDYJdmdUsRk
 # Priv (HEX): 0x398E7271AF3E5A78821C1ADFDE3EE90760A6B65F72D856CFE455B1264350BCE8
+```
 
-Docker
-------
+## Docker
+
+[![Docker Stars](https://img.shields.io/docker/stars/ratijas/vanitysearch.svg)](https://hub.docker.com/r/ratijas/vanitysearch)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ratijas/vanitysearch.svg)](https://hub.docker.com/r/ratijas/vanitysearch)
 
 ### Supported tags
 
--   `latest`, `cuda-ccap-6`, `cuda-ccap-6.0` _(cuda/Dockerfile)_
--   `cuda-ccap-5`, `cuda-ccap-5.2` _(cuda/Dockerfile)_
--   `cuda-ccap-2`, `cuda-ccap-2.0` _(cuda/ccap-2.0.Dockerfile)_
--   `cpu` _(cpu/Dockerfile)_
+ * [`latest`, `cuda-ccap-6`, `cuda-ccap-6.0` *(cuda/Dockerfile)*](./docker/cuda/Dockerfile)
+ * [`cuda-ccap-5`, `cuda-ccap-5.2` *(cuda/Dockerfile)*](./docker/cuda/Dockerfile)
+ * [`cuda-ccap-2`, `cuda-ccap-2.0` *(cuda/ccap-2.0.Dockerfile)*](./docker/cuda/ccap-2.0.Dockerfile)
+ * [`cpu` *(cpu/Dockerfile)*](./docker/cpu/Dockerfile)
 
 ### Docker build
 
-Docker images are build for CPU-only version and for each supported CUDA Compute capability version (`CCAP`). Generally, users should choose latest `CCAP` supported by their hardware and driver. Compatibility table can be found on Wikipedia or at the official NVIDIA web page of your product.
+Docker images are build for CPU-only version and for each supported CUDA Compute capability version (`CCAP`). Generally, users should choose latest `CCAP` supported by their hardware and driver. Compatibility table can be found on [Wikipedia](https://en.wikipedia.org/wiki/CUDA#GPUs_supported) or at the official NVIDIA web page of your product.
 
 Docker uses multi-stage builds to improve final image size. Scripts are provided to facilitate the build process.
 
-When building on your own, full image name (including owner/repo parts) can be customized via `IMAGE_NAME` environment variable. It defaults to just `vanitysearch` withour owner part. Pre-built images are available on Docker hub from @ratijas.
+When building on your own, full image name (including owner/repo parts) can be customized via `IMAGE_NAME` environment variable. It defaults to just `vanitysearch` withour owner part. Pre-built images are available on Docker hub from [@ratijas](https://hub.docker.com/r/ratijas/vanitysearch).
 
 #### Docker build / CPU-only
 
 Build and tag `vanitysearch:cpu` image:
-
+```sh
 $ ./docker/cpu/build.sh
+```
 
 #### Docker build / GPU
 
 Build with "default" GPU support, which might not be suitable for your system:
-
+```sh
 $ ./docker/cuda/build.sh
+```
 
 Build with customized GPU support:
-
+```sh
 $ env CCAP=5.2 CUDA=10.2 ./docker/cuda/build.sh
+```
 
 As for docker-compose folks, sorry, docker-composed GPUs are not (yet) supported on a 3.x branch. But it (hopefully) will change soon.
 
@@ -325,10 +284,11 @@ As for docker-compose folks, sorry, docker-composed GPUs are not (yet) supported
 
 Note: VanitySearch image does not (neither should) require network access. To further ensure no data ever leaks from the running container, always pass `--network none` to the docker run command.
 
+```sh
 $ docker run -it --rm --gpus all --network none ratijas/vanitysearch:cuda-ccap-5.2 -gpu -c -stop 1docker
 # VanitySearch v1.18
 # Difficulty: 957377813
-# Search: 1docker \[Compressed, Case unsensitive\] (Lookup size 3)
+# Search: 1docker [Compressed, Case unsensitive] (Lookup size 3)
 # Start Sat Jul 11 17:41:32 2020
 # Base Key: B506F2C7CA8AA2E826F2947012CFF15D2E6CD3DA5C562E8252C9F755F2A4C5D3
 # Number of CPU thread: 1
@@ -337,8 +297,9 @@ $ docker run -it --rm --gpus all --network none ratijas/vanitysearch:cuda-ccap-5
 # PubAddress: 1DoCKeRXYyydeQy6xxpneqtDovXFarAwrE
 # Priv (WIF): p2pkh:KzESATCZFmnH1RfwT5XbCF9dZSnDGTS8z61YjnQbgFiM7tXtcH73
 # Priv (HEX): 0x59E27084C6252377A8B7AABB20AFD975060914B3747BD6392930BC5BE7A06565
+```
 
-License
-=======
+# License
 
 VanitySearch is licensed under GPLv3.
+

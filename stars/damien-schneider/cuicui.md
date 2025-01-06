@@ -1,50 +1,66 @@
 ---
 project: cuicui
-stars: 581
-description: CuiCui is a collection of high-quality, reusable components designed to streamline the development of your web applications. With a focus on providing essential UI elements, pre-built blocks, and templates, CuiCui enables you to quickly and effortlessly create professional-grade websites and SaaS platforms featuring top-notch user interfaces.
+stars: 588
+description: Simplify your UI with clean, copy-paste components that minimize JavaScript, maximize CSS, spark creativity, and empower you with code you fully own and understand.
 url: https://github.com/damien-schneider/cuicui
 ---
 
-Visit site · Report Bug · Request Feature
+<div align="center">
+  <a href="https://github.com/damien-schneider/cuicui">
+     <img src="/apps/website/public/metadata/banner-image.png" alt="Banner" />
+  </a>
+  <!-- <h1 align="left">CuiCui - A high quality react copy paste components library</h1> -->
+  <p>
+    <a href="https://cuicui.day/">Visit site</a>
+    ·
+    <a href="https://github.com/damien-schneider/cuicui/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/damien-schneider/cuicui/issues">Request Feature</a>
+  </p>
+  <hr></hr>
+  <p align="left">
+   An open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
+100% open-source, and customizable that can be copy pasted directly into your code base.
+  </p>
 
-* * *
+![Alt](https://repobeats.axiom.co/api/embed/c72a9b3db3d7872f458beaa4db837cc58136ba99.svg "Repobeats analytics image")
 
-An open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion. 100% open-source, and customizable that can be copy pasted directly into your code base.
+</div>
 
-Table of Contents
------------------
+## Table of Contents
 
--   About The Project
--   License
--   Contributing
-    -   Commit Message Convention
--   Activity
+- [About The Project](#about-the-project)
+- [License](#license)
+- [Contributing](#contributing)
+  - [Commit Message Convention](#commit-message-convention)
+- [Activity](#activity)
 
-About The Project
------------------
+<!-- ABOUT THE PROJECT -->
 
-open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion. 100% open-source, and customizable.
+## About The Project
 
-Developper guide
-----------------
+open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
+100% open-source, and customizable.
+
+## Developper guide
 
 To Write ... (a contribution is welcome here)
-
 > follow this section to contribute and write the Developper guide 🙃
 
-License
--------
 
-Licensed under the MIT license.
+## License
 
-Contributing
-------------
+Licensed under the [MIT license.](https://github.com/damien-schneider/cuicui/blob/main/license.md)
 
-visit this Documentation
+## Contributing
+
+visit this [Documentation](https://github.com/damien-schneider/cuicui/blob/main/contributing.md)
 
 ### Commit Message Convention
 
-We are using Gitmoji for our commit messages. You can find the rules at gitmoji.dev
+We are using Gitmoji for our commit messages. You can find the rules at [gitmoji.dev](https://gitmoji.dev/)
 
-Star History
-============
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=damien-schneider/cuicui&type=Date)](https://star-history.com/#damien-schneider/cuicui&Date)
+

@@ -5,6 +5,9 @@ description: A canvas experiment in which a set of particles is used to render d
 url: https://github.com/kennethcachia/shape-shifter
 ---
 
+
 #Shape Shifter
 
-A canvas experiment. Check out the Demo.
+A canvas experiment. Check out the [Demo](http://www.kennethcachia.com/shape-shifter/ "Shape Shifter - Demo").
+
+![Shape Shifter - Screenshot](http://www.kennethcachia.com/assets/thumbnails/shape-shifter.jpg)

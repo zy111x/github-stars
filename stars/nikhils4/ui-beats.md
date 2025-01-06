@@ -5,25 +5,26 @@ description: Level up your UI development with reusable components from UI Beats
 url: https://github.com/nikhils4/ui-beats
 ---
 
-UI Beats
-========
+<h1 align="center">UI Beats</h1>
+<p align="center">
+    Supercharge your UI
+</p>
 
-Supercharge your UI
-
-Documentation
--------------
+## Documentation
 
 Visit https://uibeats.com/docs to view the documentation.
 
-Contributing
-------------
+## Contributing
 
-Visit our contributing guide to learn how to contribute.
+Visit our [contributing guide](https://www.uibeats.com/docs/getting-started/contribute) to learn how to
+contribute.
 
-Authors
--------
+## Authors
 
-License
--------
+<a href="https://github.com/nikhils4/ui-beats/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=nikhils4/ui-beats" />
+</a>
 
-Licensed under the MIT license.
+## License
+
+Licensed under the [MIT license](https://github.com/nikhils4/ui-beats/blob/main/LICENSE.md).

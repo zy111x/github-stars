@@ -5,18 +5,21 @@ description: An HTTP API bridge for Sonos easing automation. Hostable on any nod
 url: https://github.com/jishi/node-sonos-http-api
 ---
 
+[![PayPal donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.me/jishi "Donate once-off to this project using Paypal") [![Join the chat at gitter](https://img.shields.io/gitter/room/badges/shields.svg)](https://gitter.im/node-sonos-http-api/Lobby "Need assistance? Join the chat at Gitter.im") 
+
 ⚠WARNING!⚠
 
-The Sonos S2 update, released June 2020, still works with this API. However, it might break in the future if and when Sonos decide to drop UPnP as the control protocol.
+The Sonos S2 update, released June 2020, still works with this API. However, it might break in the future if and when Sonos decide to drop UPnP as the control protocol. 
+
 
 Feel free to use it as you please. Consider donating if you want to support further development. Reach out on the gitter chat if you have issues getting it to run, instead of creating new issues, thank you!
 
-If you are also looking for cloud control (ifttt, public webhooks etc), see the bronos-client project! That pi image also contains an installation of this http-api.
+If you are also looking for cloud control (ifttt, public webhooks etc), see the [bronos-client](http://www.bronos.net) project! That pi image also contains an installation of this http-api.  
 
 SONOS HTTP API
 ==============
 
-\*\* Beta is no more, master is up to date with the beta now! \*\*
+** Beta is no more, master is up to date with the beta now! **
 
 **This application requires node 4.0.0 or higher!**
 
@@ -41,139 +44,135 @@ start the server by running
 
 Now you can control your system by invoking the following commands:
 
-```
-http://localhost:5005/zones
-http://localhost:5005/lockvolumes
-http://localhost:5005/unlockvolumes
-http://localhost:5005/pauseall[/{timeout in minutes}]
-http://localhost:5005/resumeall[/{timeout in minutes}]
-http://localhost:5005/preset/{JSON preset}
-http://localhost:5005/preset/{predefined preset name}
-http://localhost:5005/reindex
-http://localhost:5005/{room name}/sleep/{timeout in seconds or "off"}
-http://localhost:5005/{room name}/sleep/{timeout in seconds or "off"}
-http://localhost:5005/{room name}/{action}[/{parameter}]
-```
+	http://localhost:5005/zones
+	http://localhost:5005/lockvolumes
+	http://localhost:5005/unlockvolumes
+	http://localhost:5005/pauseall[/{timeout in minutes}]
+	http://localhost:5005/resumeall[/{timeout in minutes}]
+	http://localhost:5005/preset/{JSON preset}
+	http://localhost:5005/preset/{predefined preset name}
+	http://localhost:5005/reindex
+	http://localhost:5005/{room name}/sleep/{timeout in seconds or "off"}
+	http://localhost:5005/{room name}/sleep/{timeout in seconds or "off"}
+	http://localhost:5005/{room name}/{action}[/{parameter}]
 
 Example:
 
-`http://localhost:5005/living room/volume/15` (will set volume for room Living Room to 15%)
+`http://localhost:5005/living room/volume/15`
+(will set volume for room Living Room to 15%)
 
-`http://localhost:5005/living room/volume/+1` (will increase volume by 1%)
+`http://localhost:5005/living room/volume/+1`
+(will increase volume by 1%)
 
-`http://localhost:5005/living room/next` (will skip to the next track on living room, unless it's not a coordinator)
+`http://localhost:5005/living room/next`
+(will skip to the next track on living room, unless it's not a coordinator)
 
-`http://localhost:5005/living room/pause` (will pause the living room)
+`http://localhost:5005/living room/pause`
+(will pause the living room)
 
-`http://localhost:5005/living room/favorite/mysuperplaylist` (will replace queue with the favorite called "mysuperplaylist")
+`http://localhost:5005/living room/favorite/mysuperplaylist`
+(will replace queue with the favorite called "mysuperplaylist")
 
-`http://localhost:5005/living room/repeat/on` (will turn on repeat mode for group)
+`http://localhost:5005/living room/repeat/on`
+(will turn on repeat mode for group)
+
 
 The actions supported as of today:
 
--   play
--   pause
--   playpause (toggles playing state)
--   volume (parameter is absolute or relative volume. Prefix +/- indicates relative volume)
--   groupVolume (parameter is absolute or relative volume. Prefix +/- indicates relative volume)
--   mute / unmute
--   groupMute / groupUnmute
--   togglemute (toggles mute state)
--   trackseek (parameter is queue index)
--   timeseek (parameter is in seconds, 60 for 1:00, 120 for 2:00 etc)
--   next
--   previous
--   state (will return a json-representation of the current state of player)
--   favorite
--   favorites (with optional "detailed" parameter)
--   playlist
--   lockvolumes / unlockvolumes (experimental, will enforce the volume that was selected when locking!)
--   repeat (on(=all)/one/off(=none)/toggle)
--   shuffle (on/off/toggle)
--   crossfade (on/off/toggle)
--   pauseall (with optional timeout in minutes)
--   resumeall (will resume the ones that was pause on the pauseall call. Useful for doorbell, phone calls, etc. Optional timeout)
--   say
--   sayall
--   saypreset
--   queue
--   clearqueue
--   sleep (values in seconds)
--   linein (only analog linein, not PLAYBAR yet)
--   clip (announce custom mp3 clip)
--   clipall
--   clippreset
--   join / leave (Grouping actions)
--   sub (on/off/gain/crossover/polarity) See SUB section for more info
--   nightmode (on/off/toggle, PLAYBAR only)
--   speechenhancement (on/off/toggle, PLAYBAR only)
--   bass/treble (use -10 through to 10 as the value. 0 is neutral)
+* play
+* pause
+* playpause (toggles playing state)
+* volume (parameter is absolute or relative volume. Prefix +/- indicates relative volume)
+* groupVolume (parameter is absolute or relative volume. Prefix +/- indicates relative volume)
+* mute / unmute
+* groupMute / groupUnmute
+* togglemute (toggles mute state)
+* trackseek (parameter is queue index)
+* timeseek (parameter is in seconds, 60 for 1:00, 120 for 2:00 etc)
+* next
+* previous
+* state (will return a json-representation of the current state of player)
+* favorite
+* favorites (with optional "detailed" parameter)
+* playlist
+* lockvolumes / unlockvolumes (experimental, will enforce the volume that was selected when locking!)
+* repeat (on(=all)/one/off(=none)/toggle)
+* shuffle (on/off/toggle)
+* crossfade (on/off/toggle)
+* pauseall (with optional timeout in minutes)
+* resumeall (will resume the ones that was pause on the pauseall call. Useful for doorbell, phone calls, etc. Optional timeout)
+* say
+* sayall
+* saypreset
+* queue
+* clearqueue
+* sleep (values in seconds)
+* linein (only analog linein, not PLAYBAR yet)
+* clip (announce custom mp3 clip)
+* clipall
+* clippreset
+* join / leave  (Grouping actions)
+* sub (on/off/gain/crossover/polarity) See SUB section for more info
+* nightmode (on/off/toggle, PLAYBAR only)
+* speechenhancement (on/off/toggle, PLAYBAR only)
+* bass/treble (use -10 through to 10 as the value. 0 is neutral)
+
 
 State
 -----
 
 Example of a state json:
 
-```
-{
-  "currentTrack":{
-    "artist":"College",
-    "title":"Teenage Color - Anoraak Remix",
-    "album":"Nightdrive With You",
-    "albumArtURI":"/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a3DjBDQs8ebkxMBo2V8V3SH%3fsid%3d9%26flags%3d32",
-    "duration":347,
-    "uri":"x-sonos-spotify:spotify%3atrack%3a3DjBDQs8ebkxMBo2V8V3SH?sid=9&flags=32"
-  },
-  "nextTrack":{
-    "artist":"Blacknuss",
-    "title":"Thinking of You",
-    "album":"3",
-    "albumArtURI":"/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4U93TIa0X6jGQrTBGTkChH%3fsid%3d9%26flags%3d32",
-    "duration":235,
-    "uri":"x-sonos-spotify:spotify%3atrack%3a4U93TIa0X6jGQrTBGTkChH?sid=9&flags=32"
-  },
-  "volume":18,
-  "mute":false,
-  "trackNo":161,
-  "elapsedTime":200,
-  "elapsedTimeFormatted":"03:20",
-  "zoneState":"PAUSED_PLAYBACK",
-  "playerState":"PLAYING",
-  "zonePlayMode":{
-    "shuffle":true,
-    "repeat":false,
-    "crossfade":false
-  },
-  "equalizer": {
-    "bass": 0,
-    "treble": 0,
-    "loudness": true
-  }
-}
-```
+	{
+	  "currentTrack":{
+	    "artist":"College",
+	    "title":"Teenage Color - Anoraak Remix",
+	    "album":"Nightdrive With You",
+	    "albumArtURI":"/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a3DjBDQs8ebkxMBo2V8V3SH%3fsid%3d9%26flags%3d32",
+	    "duration":347,
+	    "uri":"x-sonos-spotify:spotify%3atrack%3a3DjBDQs8ebkxMBo2V8V3SH?sid=9&flags=32"
+	  },
+	  "nextTrack":{
+	    "artist":"Blacknuss",
+	    "title":"Thinking of You",
+	    "album":"3",
+	    "albumArtURI":"/getaa?s=1&u=x-sonos-spotify%3aspotify%253atrack%253a4U93TIa0X6jGQrTBGTkChH%3fsid%3d9%26flags%3d32",
+	    "duration":235,
+	    "uri":"x-sonos-spotify:spotify%3atrack%3a4U93TIa0X6jGQrTBGTkChH?sid=9&flags=32"
+	  },
+	  "volume":18,
+	  "mute":false,
+	  "trackNo":161,
+	  "elapsedTime":200,
+	  "elapsedTimeFormatted":"03:20",
+	  "zoneState":"PAUSED_PLAYBACK",
+	  "playerState":"PLAYING",
+	  "zonePlayMode":{
+	    "shuffle":true,
+	    "repeat":false,
+	    "crossfade":false
+	  },
+	  "equalizer": {
+        "bass": 0,
+        "treble": 0,
+        "loudness": true
+      }
+	}
 
 Queue
 -----
-
 Obtain the current queue list from a specified player. The request will accept:
+ - limit (optional)
+ - offset (optional, requires limit)
+ - detailed flag (optional, include uri in response)
 
--   limit (optional)
-    
--   offset (optional, requires limit)
-    
--   detailed flag (optional, include uri in response)
-    
-    ```
-     http://localhost:5005/living room/queue
-     http://localhost:5005/living room/queue/10 (only return top 10)
-     http://localhost:5005/living room/queue/10/10 (return result 11-20)
-     http://localhost:5005/living room/queue/detailed
-     http://localhost:5005/living room/queue/10/detailed
-    ```
-    
+	    http://localhost:5005/living room/queue
+	    http://localhost:5005/living room/queue/10 (only return top 10)
+	    http://localhost:5005/living room/queue/10/10 (return result 11-20)
+	    http://localhost:5005/living room/queue/detailed
+	    http://localhost:5005/living room/queue/10/detailed
 
 Example queue response:
-
 ```
 [
     {
@@ -192,6 +191,7 @@ Example queue response:
 
 ```
 
+
 Preset
 ------
 
@@ -199,38 +199,39 @@ A preset is a predefined grouping of players with predefined volumes, that will 
 
 Example preset (state and uri are optional):
 
-```
-{
-  "players": [
-    { "roomName": "room1", "volume": 15},
-    {"roomName": "room2", "volume": 25}
-  ],
-  "state": "stopped",
-  "favorite": "my favorite name",
-  "uri": "x-rincon-stream:RINCON_0000000000001400",
-  "playMode": {
-    "shuffle": true
-  },
-  "pauseOthers": true
-  "sleep": 600
-}
-```
+	{
+	  "players": [
+	    { "roomName": "room1", "volume": 15},
+	    {"roomName": "room2", "volume": 25}
+	  ],
+	  "state": "stopped",
+	  "favorite": "my favorite name",
+	  "uri": "x-rincon-stream:RINCON_0000000000001400",
+	  "playMode": {
+	    "shuffle": true
+	  },
+	  "pauseOthers": true
+	  "sleep": 600
+	}
 
-The first player listed in the example, "room1", will become the coordinator. It will loose it's queue when ungrouped but eventually that will be fixed in the future. Playmode defines the three options "shuffle", "repeat", "crossfade" similar to the state Favorite will have precedence over a uri. pauseOthers will pause all zones before applying the preset, effectively muting your system. sleep is an optional value that enables the sleep timer and is defined in total seconds (600 = 10 minutes).
+The first player listed in the example, "room1", will become the coordinator. It will loose it's queue when ungrouped but eventually that will be fixed in the future. Playmode defines the three options "shuffle", "repeat", "crossfade" similar to the state
+Favorite will have precedence over a uri.
+pauseOthers will pause all zones before applying the preset, effectively muting your system.  sleep is an optional value that enables the sleep timer and is defined in total seconds (600 = 10 minutes).
 
 presets.json (deprecated, use preset files instead)
----------------------------------------------------
+-----------
 
 You can create a file with pre made presets, called presets.json. It will be loaded upon start, any changes requires a restart of the server.
 
 Example content:
 
+```json
 {
   "all": {
     "playMode": {
       "shuffle": true
     },
-    "players": \[
+    "players": [
       {
         "roomName": "Bathroom",
         "volume": 10
@@ -251,24 +252,27 @@ Example content:
         "roomName": "TV Room",
         "volume": 15
       }
-    \],
+    ],
     "pauseOthers": true
   },
   "tv": {
-    "players": \[
+    "players": [
       {
         "roomName": "TV Room",
         "volume": 20
       }
-    \],
+    ],
     "pauseOthers": true,
-    "uri": "x-rincon-stream:RINCON\_000XXXXXXXXXX01400"
+    "uri": "x-rincon-stream:RINCON_000XXXXXXXXXX01400"
   }
 }
+```
+
 
 In the example, there is one preset called `all`, which you can apply by invoking:
 
 `http://localhost:5005/preset/all`
+
 
 presets folder
 --------------
@@ -277,8 +281,9 @@ You can create a preset files in the presets folder with pre made presets. It wi
 
 Example content:
 
+```json
 {
-  "players": \[
+  "players": [
     {
       "roomName": "Bathroom",
       "volume": 10
@@ -299,7 +304,7 @@ Example content:
       "roomName": "TV Room",
       "volume": 15
     }
-  \],
+  ],
   "trackNo": 3,
   "elapsedTime": 42,
   "playMode": {
@@ -310,6 +315,7 @@ Example content:
   "pauseOthers": false,
   "favorite": "My example favorite"
 }
+```
 
 There is an example.json bundled with this repo. The name of the file will become the name of the preset.
 
@@ -320,16 +326,17 @@ If you want to change default settings, you can create a settings.json file and 
 
 Available options are:
 
--   port: change the listening port
--   ip: change the listening IP
--   https: use https which requires a key and certificate or pfx file
--   auth: require basic auth credentials which requires a username and password
--   announceVolume: the percentual volume use when invoking say/sayall without any volume parameter
--   presetDir: absolute path to look for presets (folder must exist!)
--   household: when theres multiple sonos accounts on one network (example: Sonos\_ab7d67898dcc5a6d, find it in \[Your sonos IP\]:1400/status/zp). Note that the value after the '.' should not be removed. See more info here: #783
+* port: change the listening port
+* ip: change the listening IP
+* https: use https which requires a key and certificate or pfx file
+* auth: require basic auth credentials which requires a username and password
+* announceVolume: the percentual volume use when invoking say/sayall without any volume parameter
+* presetDir: absolute path to look for presets (folder must exist!)
+* household: when theres multiple sonos accounts on one network (example: Sonos_ab7d67898dcc5a6d, find it in [Your sonos IP]:1400/status/zp). Note that the value after the '.' should not be removed. See more info here: https://github.com/jishi/node-sonos-http-api/issues/783
+
 
 Example:
-
+```json
 	{
 	  "voicerss": "Your api key for TTS with voicerss",
 	  "microsoft": {
@@ -364,6 +371,7 @@ Example:
 	    "randomQueueLimit": 50
 	  }
 	}
+```
 
 Override as it suits you.
 
@@ -371,6 +379,7 @@ Note for Spotify users!
 -----------------------
 
 To use Spotify, go to https://developer.spotify.com/my-applications/#!/applications/create and create a Spotify application to get your client keys. You can name it Sonos or anything else and you don't have to change any values. Use the Client ID and the Client Secret values in the settings.json file as indicated above.
+
 
 Favorites
 ---------
@@ -382,7 +391,7 @@ It now has support for starting favorites. Simply invoke:
 and it will replace the queue with that favorite. Bear in mind that favorites may share name, which might give unpredictable behavior at the moment.
 
 Playlist
---------
+---------
 
 Playing a Sonos playlist is now supported. Invoke the following:
 
@@ -390,17 +399,18 @@ Playing a Sonos playlist is now supported. Invoke the following:
 
 and it will replace the queue with the playlist and starts playing.
 
+
 Say (TTS support)
 -----------------
 
 Experimental support for TTS. Today the following providers are available:
 
--   voicerss
--   Microsoft Cognitive Services (Bing Text to Speech API)
--   AWS Polly
--   Google (default)
--   macOS say command
--   Elevenlabs
+* voicerss
+* Microsoft Cognitive Services (Bing Text to Speech API)
+* AWS Polly
+* Google (default)
+* macOS say command
+* Elevenlabs
 
 It will use the one you configure in settings.json. If you define settings for multiple TTS services, it will not be guaranteed which one it will choose!
 
@@ -420,20 +430,16 @@ Replace the code above (it is just made up) with the api-key you've got after re
 
 Action is:
 
-```
-/[Room name]/say/[phrase][/[language_code]][/[announce volume]]
-/sayall/[phrase][/[language_code]][/[announce volume]]
-```
+	/[Room name]/say/[phrase][/[language_code]][/[announce volume]]
+	/sayall/[phrase][/[language_code]][/[announce volume]]
 
 Example:
 
-```
-/Office/say/Hello, dinner is ready
-/Office/say/Hej, maten är klar/sv-se
-/sayall/Hello, dinner is ready
-/Office/say/Hello, dinner is ready/90
-/Office/say/Hej, maten är klar/sv-se/90
-```
+	/Office/say/Hello, dinner is ready
+	/Office/say/Hej, maten är klar/sv-se
+	/sayall/Hello, dinner is ready
+	/Office/say/Hello, dinner is ready/90
+	/Office/say/Hej, maten är klar/sv-se/90
 
 language code needs to be before volume if specified.
 
@@ -441,128 +447,52 @@ Sayall will group all players, set 40% volume (by default) and then try and rest
 
 The supported language codes are:
 
-Language code
-
-Language
-
-ca-es
-
-Catalan
-
-zh-cn
-
-Chinese (China)
-
-zh-hk
-
-Chinese (Hong Kong)
-
-zh-tw
-
-Chinese (Taiwan)
-
-da-dk
-
-Danish
-
-nl-nl
-
-Dutch
-
-en-au
-
-English (Australia)
-
-en-ca
-
-English (Canada)
-
-en-gb
-
-English (Great Britain)
-
-en-in
-
-English (India)
-
-en-us
-
-English (United States)
-
-fi-fi
-
-Finnish
-
-fr-ca
-
-French (Canada)
-
-fr-fr
-
-French (France)
-
-de-de
-
-German
-
-it-it
-
-Italian
-
-ja-jp
-
-Japanese
-
-ko-kr
-
-Korean
-
-nb-no
-
-Norwegian
-
-pl-pl
-
-Polish
-
-pt-br
-
-Portuguese (Brazil)
-
-pt-pt
-
-Portuguese (Portugal)
-
-ru-ru
-
-Russian
-
-es-mx
-
-Spanish (Mexico)
-
-es-es
-
-Spanish (Spain)
-
-sv-se
-
-Swedish (Sweden)
+| Language code | Language |
+| ------------- | -------- |
+| ca-es | Catalan  |
+| zh-cn | Chinese (China) |
+| zh-hk |Chinese (Hong Kong) |
+| zh-tw | Chinese (Taiwan) |
+| da-dk | Danish |
+| nl-nl | Dutch |
+| en-au | English (Australia) |
+| en-ca | English (Canada) |
+| en-gb | English (Great Britain) |
+| en-in | English (India) |
+| en-us | English (United States) |
+| fi-fi | Finnish |
+| fr-ca | French (Canada) |
+| fr-fr | French (France) |
+| de-de | German |
+| it-it | Italian |
+| ja-jp | Japanese |
+| ko-kr | Korean |
+| nb-no | Norwegian |
+| pl-pl | Polish |
+| pt-br | Portuguese (Brazil) |
+| pt-pt | Portuguese (Portugal) |
+| ru-ru | Russian |
+| es-mx | Spanish (Mexico) |
+| es-es | Spanish (Spain) |
+| sv-se | Swedish (Sweden) |
 
 #### Microsoft
-
 This one also requires a registered api key. You can sign up for free here: https://www.microsoft.com/cognitive-services/en-US/subscriptions?mode=NewTrials and select "Bing Speech - Preview".
 
 The following configuration is available (the entered values except key are default, and may be omitted):
 
+```json
 	{
 	  "microsoft": {
 	    "key": "Your api for Bing speech API",
 	    "name": "ZiraRUS"
 	  }
 	}
+```
 
-You change language by specifying a voice name correlating to the desired language. Name should be specified according to this list: https://www.microsoft.com/cognitive-services/en-us/speech-api/documentation/API-Reference-REST/BingVoiceOutput#SupLocales where name is the right most part of the voice font name (without optional Apollo suffix). Example:
+You change language by specifying a voice name correlating to the desired language.
+Name should be specified according to this list: https://www.microsoft.com/cognitive-services/en-us/speech-api/documentation/API-Reference-REST/BingVoiceOutput#SupLocales
+where name is the right most part of the voice font name (without optional Apollo suffix). Example:
 
 `Microsoft Server Speech Text to Speech Voice (ar-EG, Hoda)` name should be specified as `Hoda`
 
@@ -572,34 +502,31 @@ You change language by specifying a voice name correlating to the desired langua
 
 Action is:
 
-```
-/[Room name]/say/[phrase][/[name]][/[announce volume]]
-/sayall/[phrase][/[name]][/[announce volume]]
-```
+	/[Room name]/say/[phrase][/[name]][/[announce volume]]
+	/sayall/[phrase][/[name]][/[announce volume]]
 
 Example:
 
-```
-/Office/say/Hello, dinner is ready
-/Office/say/Hello, dinner is ready/BenjaminRUS
-/Office/say/Guten morgen/Stefan
-/sayall/Hello, dinner is ready
-/Office/say/Hello, dinner is ready/90
-/Office/say/Guten morgen/Stefan/90
-```
+	/Office/say/Hello, dinner is ready
+	/Office/say/Hello, dinner is ready/BenjaminRUS
+	/Office/say/Guten morgen/Stefan
+	/sayall/Hello, dinner is ready
+	/Office/say/Hello, dinner is ready/90
+	/Office/say/Guten morgen/Stefan/90
 
 Supported voices are:
 
-Hoda, Naayf, Ivan, HerenaRUS, Jakub, Vit, HelleRUS, Michael, Karsten, Hedda, Stefan, Catherine, Linda, Susan, George, Ravi, ZiraRUS, BenjaminRUS, Laura, Pablo, Raul, Caroline, Julie, Paul, Cosimo, Ayumi, Ichiro, Daniel, Irina, Pavel, HuihuiRUS, Yaoyao, Kangkang, Tracy, Danny, Yating, Zhiwei
+ Hoda, Naayf, Ivan, HerenaRUS, Jakub, Vit, HelleRUS, Michael, Karsten, Hedda, Stefan, Catherine, Linda, Susan, George, Ravi, ZiraRUS, BenjaminRUS, Laura, Pablo, Raul, Caroline, Julie, Paul, Cosimo, Ayumi, Ichiro, Daniel, Irina, Pavel, HuihuiRUS, Yaoyao, Kangkang, Tracy, Danny, Yating, Zhiwei
 
-See https://www.microsoft.com/cognitive-services/en-us/speech-api/documentation/API-Reference-REST/BingVoiceOutput#SupLocales to identify which language and gender it maps against. If your desired voice is not in the list of supported one, raise an issue about adding it or send me a PR.
+See https://www.microsoft.com/cognitive-services/en-us/speech-api/documentation/API-Reference-REST/BingVoiceOutput#SupLocales to identify
+which language and gender it maps against. If your desired voice is not in the list of supported one, raise an issue about adding it or send me a PR.
 
 #### AWS Polly
 
 Requires AWS access tokens, which you generate for your user. Since this uses the AWS SDK, it will look for settings in either Environment variables, the ~/.aws/credentials or ~/.aws/config.
 
 You can also specify it for this application only, using:
-
+```json
 	{
 	  "aws": {
 	    "credentials": {
@@ -610,6 +537,7 @@ You can also specify it for this application only, using:
 	    "name": "Joanna"
 	  }
 	}
+```
 
 To select the neural engine, append `Neural` to the name, e.g. `DanielNeural`.
 
@@ -617,413 +545,78 @@ Choose the region where you registered your account, or the one closest to you.
 
 If you have your credentials elsewhere and want to stick with the default voice, you still need to make sure that the aws config option is set to trigger AWS TTS:
 
+```json
 	{
 	  "aws": {}
 	}
+```
 
 Action is:
 
-```
-/[Room name]/say/[phrase][/[name]][/[announce volume]]
-/sayall/[phrase][/[name]][/[announce volume]]
-```
+	/[Room name]/say/[phrase][/[name]][/[announce volume]]
+	/sayall/[phrase][/[name]][/[announce volume]]
 
 Example:
 
-```
-/Office/say/Hello, dinner is ready
-/Office/say/Hello, dinner is ready/Nicole
-/Office/say/Hej, maten är klar/Astrid
-/sayall/Hello, dinner is ready
-/Office/say/Hello, dinner is ready/90
-/Office/say/Hej, maten är klar/Astrid/90
-```
-
-This is the current list of voice names and their corresponding language and accent (as of Dec 2016). To get a current list of voices, you would need to use the AWS CLI and invoke the describe-voices command.
-
-Language
-
-Code
-
-Gender
-
-Name
-
-Australian English
-
-en-AU
-
-Female
-
-Nicole
-
-Australian English
-
-en-AU
-
-Male
-
-Russell
-
-Brazilian Portuguese
-
-pt-BR
-
-Female
-
-Vitoria
-
-Brazilian Portuguese
-
-pt-BR
-
-Male
-
-Ricardo
-
-British English
-
-en-GB
-
-Male
-
-Brian
-
-British English
-
-en-GB
-
-Female
-
-Emma
-
-British English
-
-en-GB
-
-Female
-
-Amy
-
-Canadian French
-
-fr-CA
-
-Female
-
-Chantal
-
-Castilian Spanish
-
-es-ES
-
-Female
-
-Conchita
-
-Castilian Spanish
-
-es-ES
-
-Male
-
-Enrique
-
-Danish
-
-da-DK
-
-Female
-
-Naja
-
-Danish
-
-da-DK
-
-Male
-
-Mads
-
-Dutch
-
-nl-NL
-
-Male
-
-Ruben
-
-Dutch
-
-nl-NL
-
-Female
-
-Lotte
-
-French
-
-fr-FR
-
-Male
-
-Mathieu
-
-French
-
-fr-FR
-
-Female
-
-Celine
-
-German
-
-de-DE
-
-Female
-
-Marlene
-
-German
-
-de-DE
-
-Male
-
-Hans
-
-Icelandic
-
-is-IS
-
-Male
-
-Karl
-
-Icelandic
-
-is-IS
-
-Female
-
-Dora
-
-Indian English
-
-en-IN
-
-Female
-
-Raveena
-
-Italian
-
-it-IT
-
-Female
-
-Carla
-
-Italian
-
-it-IT
-
-Male
-
-Giorgio
-
-Japanese
-
-ja-JP
-
-Female
-
-Mizuki
-
-Norwegian
-
-nb-NO
-
-Female
-
-Liv
-
-Polish
-
-pl-PL
-
-Female
-
-Maja
-
-Polish
-
-pl-PL
-
-Male
-
-Jacek
-
-Polish
-
-pl-PL
-
-Male
-
-Jan
-
-Polish
-
-pl-PL
-
-Female
-
-Ewa
-
-Portuguese
-
-pt-PT
-
-Female
-
-Ines
-
-Portuguese
-
-pt-PT
-
-Male
-
-Cristiano
-
-Romanian
-
-ro-RO
-
-Female
-
-Carmen
-
-Russian
-
-ru-RU
-
-Female
-
-Tatyana
-
-Russian
-
-ru-RU
-
-Male
-
-Maxim
-
-Swedish
-
-sv-SE
-
-Female
-
-Astrid
-
-Turkish
-
-tr-TR
-
-Female
-
-Filiz
-
-US English
-
-en-US
-
-Male
-
-Justin
-
-US English
-
-en-US
-
-Female
-
-Joanna
-
-US English
-
-en-US
-
-Male
-
-Joey
-
-US English
-
-en-US
-
-Female
-
-Ivy
-
-US English
-
-en-US
-
-Female
-
-Salli
-
-US English
-
-en-US
-
-Female
-
-Kendra
-
-US English
-
-en-US
-
-Female
-
-Kimberly
-
-US Spanish
-
-es-US
-
-Female
-
-Penelope
-
-US Spanish
-
-es-US
-
-Male
-
-Miguel
-
-Welsh
-
-cy-GB
-
-Female
-
-Gwyneth
-
-Welsh English
-
-en-GB-WLS
-
-Male
-
-Geraint
+	/Office/say/Hello, dinner is ready
+	/Office/say/Hello, dinner is ready/Nicole
+	/Office/say/Hej, maten är klar/Astrid
+	/sayall/Hello, dinner is ready
+	/Office/say/Hello, dinner is ready/90
+	/Office/say/Hej, maten är klar/Astrid/90
+
+This is the current list of voice names and their corresponding language and accent (as of Dec 2016).
+To get a current list of voices, you would need to use the AWS CLI and invoke the describe-voices command.
+
+| Language | Code | Gender | Name |
+| --------- | ---- | ------ | ---- |
+| Australian English | en-AU | Female | Nicole |
+| Australian English | en-AU | Male | Russell |
+| Brazilian Portuguese | pt-BR | Female | Vitoria |
+| Brazilian Portuguese | pt-BR | Male | Ricardo |
+| British English | en-GB | Male | Brian |
+| British English | en-GB | Female | Emma |
+| British English | en-GB | Female | Amy |
+| Canadian French | fr-CA | Female | Chantal |
+| Castilian Spanish | es-ES | Female | Conchita |
+| Castilian Spanish | es-ES | Male | Enrique |
+| Danish | da-DK | Female | Naja |
+| Danish | da-DK | Male | Mads |
+| Dutch | nl-NL | Male | Ruben |
+| Dutch | nl-NL | Female | Lotte |
+| French | fr-FR | Male | Mathieu |
+| French | fr-FR | Female | Celine |
+| German | de-DE | Female | Marlene |
+| German | de-DE | Male | Hans |
+| Icelandic | is-IS | Male | Karl |
+| Icelandic | is-IS | Female | Dora |
+| Indian English | en-IN | Female | Raveena |
+| Italian | it-IT | Female | Carla |
+| Italian | it-IT | Male | Giorgio |
+| Japanese | ja-JP | Female | Mizuki |
+| Norwegian | nb-NO | Female | Liv |
+| Polish | pl-PL | Female | Maja |
+| Polish | pl-PL | Male | Jacek |
+| Polish | pl-PL | Male | Jan |
+| Polish | pl-PL | Female | Ewa |
+| Portuguese | pt-PT | Female | Ines |
+| Portuguese | pt-PT | Male | Cristiano |
+| Romanian | ro-RO | Female | Carmen |
+| Russian | ru-RU | Female | Tatyana |
+| Russian | ru-RU | Male | Maxim |
+| Swedish | sv-SE | Female | Astrid |
+| Turkish | tr-TR | Female | Filiz |
+| US English | en-US | Male | Justin |
+| US English | en-US | Female | Joanna |
+| US English | en-US | Male | Joey |
+| US English | en-US | Female | Ivy |
+| US English | en-US | Female | Salli |
+| US English | en-US | Female | Kendra |
+| US English | en-US | Female | Kimberly |
+| US Spanish | es-US | Female | Penelope |
+| US Spanish | es-US | Male | Miguel |
+| Welsh | cy-GB | Female | Gwyneth |
+| Welsh English | en-GB-WLS | Male | Geraint |
 
 #### Elevenlabs
 
@@ -1031,12 +624,14 @@ Elevenlabs is a TTS service enabling generatiung TTS audio files using AI genera
 
 Requires API Key and optionally default voiceId.
 
-Since Elevenlabs AI models are multilingual by default, there is no need (nor place) for `language` parameter in Elevenlabs API. Because of this, `language` parameter in URL is used to inject custom `voiceId` on per-request basis. You will need to either configure default voiceId in `settings.json` or provide `voiceId` with every HTTP request.
+Since Elevenlabs AI models are multilingual by default, there is no need (nor place) for `language` parameter in 
+Elevenlabs API. Because of this, `language` parameter in URL is used to inject custom `voiceId` on per-request basis. You will
+need to either configure default voiceId in `settings.json` or provide `voiceId` with every HTTP request.
 
 ##### Config
 
 Minimal:
-
+```json
 	{
 	  "elevenlabs": {
 		"auth": {
@@ -1044,9 +639,10 @@ Minimal:
 		}
 	  }
 	}
+```
 
 Full:
-
+```json
 	{
 	  "elevenlabs": {
 		"auth": {
@@ -1058,10 +654,11 @@ Full:
 		  "similarityBoost": 0.5,
 		  "speakerBoost": true,
 		  "style": 1,
-		  "modelId": "eleven\_multilingual\_v2"
+		  "modelId": "eleven_multilingual_v2"
 		}
 	  }
 	}
+```
 
 #### Google (default if no other has been configured)
 
@@ -1069,262 +666,104 @@ Does not require any API keys. Please note that Google has been known in the pas
 
 The following language codes are supported
 
-Language code
-
-Language
-
-af
-
-Afrikaans
-
-sq
-
-Albanian
-
-ar
-
-Arabic
-
-hy
-
-Armenian
-
-bn
-
-Bengali
-
-ca
-
-Catalan
-
-zh
-
-Chinese
-
-zh-cn
-
-Chinese (Mandarin/China)
-
-zh-tw
-
-Chinese (Mandarin/Taiwan)
-
-zh-yue
-
-Chinese (Cantonese)
-
-hr
-
-Croatian
-
-cs
-
-Czech
-
-da
-
-Danish
-
-nl
-
-Dutch
-
-en
-
-English
-
-en-au
-
-English (Australia)
-
-en-gb
-
-English (Great Britain)
-
-en-us
-
-English (United States)
-
-eo
-
-Esperanto
-
-fi
-
-Finnish
-
-fr
-
-Franch
-
-de
-
-German
-
-el
-
-Greek
-
-hi
-
-Hindi
-
-hu
-
-Hungarian
-
-is
-
-Icelandic
-
-id
-
-Indonesian
-
-it
-
-Italian
-
-ja
-
-Japanese
-
-ko
-
-Korean
-
-la
-
-Latin
-
-lv
-
-Latvian
-
-mk
-
-Macedonian
-
-no
-
-Norwegian
-
-pl
-
-Polish
-
-pt
-
-Portuguese
-
-pt-br
-
-Portuguese (Brazil)
-
-ro
-
-Romanian
-
-ru
-
-Russian
-
-sr
-
-Serbian
-
-sk
-
-Slovak
-
-es
-
-Spanish
-
-es-es
-
-Spanish (Spain)
-
-es-us
-
-Spanish (United States)
-
-sw
-
-Swahili
-
-sv
-
-Swedish
-
-ta
-
-Tamil
-
-th
-
-Thai
-
-tr
-
-Turkish
-
-vi
-
-Vietnamese
-
-cy
-
-Welsh
+| Language code | Language |
+| ------------- | -------- |
+| af | Afrikaans |
+| sq | Albanian |
+| ar | Arabic |
+| hy | Armenian |
+| bn | Bengali |
+| ca | Catalan |
+| zh | Chinese |
+| zh-cn | Chinese (Mandarin/China) |
+| zh-tw | Chinese (Mandarin/Taiwan) |
+| zh-yue | Chinese (Cantonese) |
+| hr | Croatian |
+| cs | Czech |
+| da | Danish |
+| nl | Dutch |
+| en | English |
+| en-au | English (Australia) |
+| en-gb | English (Great Britain) |
+| en-us | English (United States) |
+| eo | Esperanto |
+| fi | Finnish |
+| fr | Franch |
+| de | German |
+| el | Greek |
+| hi | Hindi |
+| hu | Hungarian |
+| is | Icelandic |
+| id | Indonesian |
+| it | Italian |
+| ja | Japanese |
+| ko | Korean |
+| la | Latin |
+| lv | Latvian |
+| mk | Macedonian |
+| no | Norwegian |
+| pl | Polish |
+| pt | Portuguese |
+| pt-br | Portuguese (Brazil) |
+| ro | Romanian |
+| ru | Russian |
+| sr | Serbian |
+| sk | Slovak |
+| es | Spanish |
+| es-es | Spanish (Spain) |
+| es-us | Spanish (United States) |
+| sw | Swahili |
+| sv | Swedish |
+| ta | Tamil |
+| th | Thai |
+| tr | Turkish |
+| vi | Vietnamese |
+| cy | Welsh |
 
 Action is:
 
-```
-/[Room name]/say/[phrase][/[language_code]][/[announce volume]]
-/sayall/[phrase][/[language_code]][/[announce volume]]
-```
+	/[Room name]/say/[phrase][/[language_code]][/[announce volume]]
+	/sayall/[phrase][/[language_code]][/[announce volume]]
 
 #### macOS say command
-
 On macOS the "say" command can be used for text to speech. If your installation runs on macOS you can activate the system TTS by giving an empty configuration:
 
+```json
 {
   "macSay": {}
 }
+```
 
 Or you can provide a default voice and a speech rate:
 
+```json
 {
   "macSay": {
   	"voice" : "Alex",
   	"rate": 90
   }
 }
+```
 
 Action is:
 
-```
-/[Room name]/say/[phrase][/[voice]][/[announce volume]]
-/sayall/[phrase][/[voice]][/[announce volume]]
-```
+	/[Room name]/say/[phrase][/[voice]][/[announce volume]]
+	/sayall/[phrase][/[voice]][/[announce volume]]
 
 Example:
 
-```
-/Office/say/Hello, dinner is ready
-/Office/say/Hello, dinner is ready/Agnes
-/Office/say/Guten morgen/Anna
-/sayall/Hello, dinner is ready
-/Office/say/Hello, dinner is ready/90
-/Office/say/Guten morgen/Anna/90
-```
+	/Office/say/Hello, dinner is ready
+	/Office/say/Hello, dinner is ready/Agnes
+	/Office/say/Guten morgen/Anna
+	/sayall/Hello, dinner is ready
+	/Office/say/Hello, dinner is ready/90
+	/Office/say/Guten morgen/Anna/90
 
 Supported voices are:
 
 Alex, Alice, Alva, Amelie, Anna, Carmit, Damayanti, Daniel, Diego, Ellen, Fiona, Fred, Ioana, Joana, Jorge, Juan, Kanya, Karen, Kyoko, Laura, Lekha, Luca, Luciana, Maged, Mariska, Mei-Jia, Melina, Milena, Moira, Monica, Nora, Paulina, Samantha, Sara, Satu, Sin-ji, Tessa, Thomas, Ting-Ting, Veena, Victoria, Xander, Yelda, Yuna, Yuri, Zosia, Zuzana
 
 A list of available voices can be printed by this command:
-
 ```
    say -v '?'
 ```
@@ -1336,11 +775,14 @@ To download more voices go to: System Preferences -> Accessibility -> Speech -> 
 Line-in
 -------
 
-Convenience method for selecting line in. Will select linein for zone-group, not detach it for line-in. Optional parameter is line-in from another player. Examples:
+Convenience method for selecting line in. Will select linein for zone-group, not detach it for line-in.
+Optional parameter is line-in from another player. Examples:
 
-`/Office/linein` Selects line-in on zone Office belongs to, with source Office.
+`/Office/linein`
+Selects line-in on zone Office belongs to, with source Office.
 
-`/Office/linein/TV%20Room` Selects line-in for zone Office belongs to, with source TV Room.
+`/Office/linein/TV%20Room`
+Selects line-in for zone Office belongs to, with source TV Room.
 
 If you want to to isolate a player and then select line-in, use the `/Office/leave` first.
 
@@ -1349,52 +791,56 @@ Clip
 
 Like "Say" but instead of a phrase, reference a custom track from the `static/clips` folder. There is a sample file available (courtesy of https://www.sound-ideas.com/).
 
-```
-/{Room name}/clip/{filename}[/{announce volume}]
-/clipall/{filename}[/{announce volume}]
-```
+    /{Room name}/clip/{filename}[/{announce volume}]
+    /clipall/{filename}[/{announce volume}]
 
 Examples:
 
-```
-/clipall/sample_clip.mp3
-/clipall/sample_clip.mp3/80
-/Office/clip/sample_clip.mp3
-/Office/clip/sample_clip.mp3/30
-```
+    /clipall/sample_clip.mp3
+    /clipall/sample_clip.mp3/80
+    /Office/clip/sample_clip.mp3
+    /Office/clip/sample_clip.mp3/30
 
-_Pro-tip: announce your arrival with an epic theme song!_
+*Pro-tip: announce your arrival with an epic theme song!*
 
 Grouping
 --------
 
 You have basic grouping capabilities. `join` will join the selected player to the specified group (specify group by addressing any of the players in that group):
 
-`/Kitchen/join/Office` This will join the Kitchen player to the group that Office currently belong to.
+`/Kitchen/join/Office`
+This will join the Kitchen player to the group that Office currently belong to.
 
-`/Kitchen/leave` Kitchen will leave any group it was part of and become a standalone player.
+`/Kitchen/leave`
+Kitchen will leave any group it was part of and become a standalone player.
 
 You don't have to ungroup a player in order to join it to another group, just join it to the new group and it will jump accordingly.
 
 SUB
 ---
 
-SUB actions include the following: `/TV%20Room/sub/off` Turn off sub
+SUB actions include the following:
+`/TV%20Room/sub/off`
+Turn off sub
 
-`/TV%20Room/sub/on` Turn on sub
+`/TV%20Room/sub/on`
+Turn on sub
 
-`/TV%20Room/sub/gain/3` Adjust gain, -15 to 15. You can make bigger adjustments, but I'm limiting it for now because it might damage the SUB.
+`/TV%20Room/sub/gain/3`
+Adjust gain, -15 to 15. You can make bigger adjustments, but I'm limiting it for now because it might damage the SUB.
 
-`/TV%20Room/sub/crossover/90` adjust crossover frequency in hz. Official values are 50 through 110 in increments of 10. Use other values at your own risk! My SUB gave a loud bang and shut down when setting this to high, and I thought I broke it. However, a restart woke it up again.
+`/TV%20Room/sub/crossover/90`
+adjust crossover frequency in hz. Official values are 50 through 110 in increments of 10. Use other values at your own risk! My SUB gave a loud bang and shut down when setting this to high, and I thought I broke it. However, a restart woke it up again.
 
-`/TV%20Room/sub/polarity/1` Switch "placement adjustment" or more commonly known as phase. 0 = 0°, 1 = 180°
+`/TV%20Room/sub/polarity/1`
+Switch "placement adjustment" or more commonly known as phase. 0 = 0°, 1 = 180°
 
 Spotify, Apple Music and Amazon Music (Experimental)
-----------------------------------------------------
+----------------------
 
 Allows you to perform your own external searches for Spotify, Apple Music or Amazon Music songs or albums and play a specified song or track ID. The Music Search funtionality outlined further below performs a search of its own and plays the specified music.
 
-Ensure you have added and registered the respective service with your Sonos account, before trying to control your speakers with node-sonos-http-api. Instructions on how to do this can be found here: https://support.sonos.com/s/article/2757?language=en\_US
+Ensure you have added and registered the respective service with your Sonos account, before trying to control your speakers with node-sonos-http-api. Instructions on how to do this can be found here: https://support.sonos.com/s/article/2757?language=en_US
 
 The following endpoints are available:
 
@@ -1415,13 +861,12 @@ The following endpoints are available:
 
 **Spotify**
 
-You can find the **Spotify** track and album IDs as the last part of the URL.
+You can find the **Spotify** track and album IDs as the last part of the URL. 
 
 How to find the URL?
-
--   Web player: the address bar URL for albums and playlist; select _Copy Song Link_ from the dot menu.
--   Desktop client: via _Share > Copy {Album,Playlist,Song} Link_
--   Mobile client: via _Share > Copy Link_
+- Web player: the address bar URL for albums and playlist; select _Copy Song Link_ from the dot menu. 
+- Desktop client: via _Share > Copy {Album,Playlist,Song} Link_
+- Mobile client: via _Share > Copy Link_
 
 For Spotify playlists, you'll need this format: `spotify:user:spotify:playlist:{playlistid}`. Even if it's a public playlist, you always need to prefix with `spotify:user:`. An example of a great playlist: `/kitchen/spotify/now/spotify:user:spotify:playlist:32O0SSXDNWDrMievPkV0Im`.
 
@@ -1431,327 +876,130 @@ It only handles a single **spotify** account currently. It will probably use the
 
 **Apple Music**
 
-You can find **Apple Music** song and album IDs via the iTunes Search API.
+You can find **Apple Music** song and album IDs via the [iTunes Search
+API](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/).
 
 You can also use iTunes to figure out song and album IDs. Right click on a song or album and select "Share" -> "Copy Link". You can do this when you searched within Apple Music or from your media library as long as the song is available in Apple Music.
 
-Have a look at the link you just copied.
+Have a look at the link you just copied. 
 
-_If you shared the link to a song:_ The format is: https://itunes.apple.com/de/album/{songName}/{albumID}?i={songID}
-
+*If you shared the link to a song:*
+The format is: https://itunes.apple.com/de/album/{songName}/{albumID}?i={songID}
 > eg: https://itunes.apple.com/de/album/blood-of-my-enemies/355363490?i=355364259
 
-_If you shared the link to an album:_ The format is: https://itunes.apple.com/de/album/{albumName}/{albumID}
-
+*If you shared the link to an album:*
+The format is: https://itunes.apple.com/de/album/{albumName}/{albumID}
 > eg: https://itunes.apple.com/de/album/f-g-restless/355363490
 
 **Amazon Music**
 
 To find **Amazon Music** song and album IDs you can use the Amazon Music App, search for a song or an album and share a link.
 
-Look at the link you just shared. This works with Amazon Music Prime as well as with Amazon Music Prime which is included in your Amazon Prime membership.
+Look at the link you just shared. This works with Amazon Music Prime as well as with Amazon Music Prime which is included in your Amazon Prime membership. 
 
-_If you shared the link to a song:_ The format is: https://music.amazon.de/albums/{albumID}?trackAsin={songID}&ref=dm\_sh\_d74d-4daa-dmcp-63cb-e8747&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
+*If you shared the link to a song:*
+The format is: https://music.amazon.de/albums/{albumID}?trackAsin={songID}&ref=dm_sh_d74d-4daa-dmcp-63cb-e8747&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
+> eg: https://music.amazon.de/albums/B0727SH7LW?trackAsin=B071918VCR&ref=dm_sh_d74d-4daa-dmcp-63cb-e8747&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
 
-> eg: https://music.amazon.de/albums/B0727SH7LW?trackAsin=B071918VCR&ref=dm\_sh\_d74d-4daa-dmcp-63cb-e8747&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
-
-_If you shared the link to an album:_ The format is: https://music.amazon.de/albums/{albumID}?ref=dm\_sh\_97aa-255b-dmcp-c6ba-4ff00&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
-
-> eg: https://music.amazon.de/albums/B0727SH7LW?ref=dm\_sh\_97aa-255b-dmcp-c6ba-4ff00&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
+*If you shared the link to an album:*
+The format is: https://music.amazon.de/albums/{albumID}?ref=dm_sh_97aa-255b-dmcp-c6ba-4ff00&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
+> eg: https://music.amazon.de/albums/B0727SH7LW?ref=dm_sh_97aa-255b-dmcp-c6ba-4ff00&musicTerritory=DE&marketplaceId=A1PA6795UKMFR9
 
 BBC Sounds (as of 2022 only available in the UK)
-------------------------------------------------
-
-Ensure you have added and registered the BBC Sounds service with your Sonos account, before trying to control your speakers with node-sonos-http-api. Instructions on how to do this can be found here: https://www.bbc.co.uk/sounds/help/questions/listening-on-a-smart-speaker/sonos or here: https://support.sonos.com/s/article/2757?language=en\_US
+----------------------
+Ensure you have added and registered the BBC Sounds service with your Sonos account, before trying to control your speakers with node-sonos-http-api. Instructions on how to do this can be found here: https://www.bbc.co.uk/sounds/help/questions/listening-on-a-smart-speaker/sonos or here: https://support.sonos.com/s/article/2757?language=en_US
 
 You can specify a BBC station and the station will be played or set depending on the command used.
 
 To play immediately:
-
 ```
 /RoomName/bbcsounds/play/{stream code}
 ```
-
 To set the station without playing:
-
 ```
 /RoomName/bbcsounds/set/{stream code}
 ```
 
 Refer to the table below for available codes for BBC Radio Stations
 
-BBC Radio Station Name
-
-Stream Code
-
-BBC Radio 1
-
-bbc\_radio\_one
-
-BBC 1Xtra
-
-bbc\_1xtra
-
-BBC 1Dance
-
-bbc\_radio\_one\_dance
-
-BBC 1Relax
-
-bbc\_radio\_one\_relax
-
-BBC Radio 2
-
-bbc\_radio\_two
-
-BBC Radio 3
-
-bbc\_radio\_three
-
-BBC Radio 4 FM
-
-bbc\_radio\_fourfm
-
-BBC Radio 4 LW
-
-bbc\_radio\_fourlw
-
-BBC Radio 4 Extra
-
-bbc\_radio\_four\_extra
-
-BBC Radio 5 Live
-
-bbc\_radio\_five\_live
-
-BBC Radio 5 Live Sports Extra
-
-bbc\_five\_live\_sports\_extra
-
-BBC Radio 6 Music
-
-bbc\_6music
-
-BBC Asian Network
-
-bbc\_asian\_network
-
-BBC Radio Berkshire
-
-bbc\_radio\_berkshire
-
-BBC Radio Bristol
-
-bbc\_radio\_bristol
-
-BBC Radio Cambridge
-
-bbc\_radio\_cambridge
-
-BBC Radio Cornwall
-
-bbc\_radio\_cornwall
-
-BBC Radio Cumbria
-
-bbc\_radio\_cumbria
-
-BBC Radio Cymru
-
-bbc\_radio\_cymru
-
-BBC Radio Cymru 2
-
-bbc\_radio\_cymru\_2
-
-BBC Radio CWR
-
-bbc\_radio\_coventry\_warwickshire
-
-BBC Radio Derby
-
-bbc\_radio\_derby
-
-BBC Radio Devon
-
-bbc\_radio\_devon
-
-BBC Radio Essex
-
-bbc\_radio\_essex
-
-BBC Radio Foyle
-
-bbc\_radio\_foyle
-
-BBC Radio Gloucestershire
-
-bbc\_radio\_gloucestershire
-
-BBC Radio Guernsey
-
-bbc\_radio\_guernsey
-
-BBC Radio Hereford Worcester
-
-bbc\_radio\_hereford\_worcester
-
-BBC Radio Humberside
-
-bbc\_radio\_humberside
-
-BBC Radio Jersey
-
-bbc\_radio\_jersey
-
-BBC Radio Kent
-
-bbc\_radio\_kent
-
-BBC Radio Lancashire
-
-bbc\_radio\_lancashire
-
-BBC Radio Leeds
-
-bbc\_radio\_leeds
-
-BBC Radio Leicester
-
-bbc\_radio\_leicester
-
-BBC Radio Lincolnshire
-
-bbc\_radio\_lincolnshire
-
-BBC Radio London
-
-bbc\_london
-
-BBC Radio Manchester
-
-bbc\_radio\_manchester
-
-BBC Radio Merseyside
-
-bbc\_radio\_merseyside
-
-BBC Radio nan Gaidheal
-
-bbc\_radio\_nan\_gaidheal
-
-BBC Radio Newcastle
-
-bbc\_radio\_newcastle
-
-BBC Radio Norfolk
-
-bc\_radio\_norfolk
-
-BBC Radio Northampton
-
-bbc\_radio\_northampton
-
-BBC Radio Nottingham
-
-bbc\_radio\_nottingham
-
-BBC Radio Oxford
-
-bbc\_radio\_oxford
-
-BBC Radio Scotland FM
-
-bbc\_radio\_scotland\_fm
-
-BBC Radio Scotland Extra
-
-bbc\_radio\_scotland\_mw
-
-BBC Radio Sheffield
-
-bbc\_radio\_sheffield
-
-BBC Radio Shropshire
-
-bbc\_radio\_shropshire
-
-BBC Radio Solent
-
-bbc\_radio\_solent
-
-BBC Radio Somerset
-
-bbc\_radio\_somerset\_sound
-
-BBC Radio Stoke
-
-bbc\_radio\_stoke
-
-BBC Radio Suffolk
-
-bbc\_radio\_suffolk
-
-BBC Radio Surrey
-
-bbc\_radio\_surrey
-
-BBC Radio Sussex
-
-bbc\_radio\_sussex
-
-BBC Radio Tees
-
-bbc\_tees
-
-BBC Radio Three Counties Radio
-
-bbc\_three\_counties\_radio
-
-BBC Radio Ulster
-
-bbc\_radio\_ulster
-
-BBC Radio Wales
-
-bbc\_radio\_wales\_fm
-
-BBC Radio Wales Extra
-
-bbc\_radio\_wales\_am
-
-BBC Radio Wiltshire
-
-bbc\_radio\_wiltshire
-
-BBC Radio WM
-
-bbc\_wm
-
-BBC Radio York
-
-bbc\_radio\_york
-
-BBC World\_Service
-
-bbc\_world\_service
-
-Cbeebies Radio
-
-cbeebies\_radio
+|  BBC Radio Station Name          | Stream Code                      |
+|----------------------------------|----------------------------------|
+|  BBC Radio 1                     | bbc_radio_one                    |
+|  BBC 1Xtra                       | bbc_1xtra                        |
+|  BBC 1Dance                      | bbc_radio_one_dance              |
+|  BBC 1Relax                      | bbc_radio_one_relax              |
+|  BBC Radio 2                     | bbc_radio_two                    |
+|  BBC Radio 3                     | bbc_radio_three                  |
+|  BBC Radio 4 FM                  | bbc_radio_fourfm                 |
+|  BBC Radio 4 LW                  | bbc_radio_fourlw                 |
+|  BBC Radio 4 Extra               | bbc_radio_four_extra             |
+|  BBC Radio 5 Live                | bbc_radio_five_live              |
+|  BBC Radio 5 Live Sports Extra   | bbc_five_live_sports_extra       |
+|  BBC Radio 6 Music               | bbc_6music                       |
+|  BBC Asian Network               | bbc_asian_network                |
+|  BBC Radio Berkshire             | bbc_radio_berkshire              |
+|  BBC Radio Bristol               | bbc_radio_bristol                |
+|  BBC Radio Cambridge             | bbc_radio_cambridge              |
+|  BBC Radio Cornwall              | bbc_radio_cornwall               |
+|  BBC Radio Cumbria               | bbc_radio_cumbria                |
+|  BBC Radio Cymru                 | bbc_radio_cymru                  |
+|  BBC Radio Cymru 2               | bbc_radio_cymru_2                |
+|  BBC Radio CWR                   | bbc_radio_coventry_warwickshire  |
+|  BBC Radio Derby                 | bbc_radio_derby                  |
+|  BBC Radio Devon                 | bbc_radio_devon                  |
+|  BBC Radio Essex                 | bbc_radio_essex                  |
+|  BBC Radio Foyle                 | bbc_radio_foyle                  |
+|  BBC Radio Gloucestershire       | bbc_radio_gloucestershire        |
+|  BBC Radio Guernsey              | bbc_radio_guernsey               |
+|  BBC Radio Hereford Worcester    | bbc_radio_hereford_worcester     |
+|  BBC Radio Humberside            | bbc_radio_humberside             |
+|  BBC Radio Jersey                | bbc_radio_jersey                 |
+|  BBC Radio Kent                  | bbc_radio_kent                   |
+|  BBC Radio Lancashire            | bbc_radio_lancashire             |
+|  BBC Radio Leeds                 | bbc_radio_leeds                  |
+|  BBC Radio Leicester             | bbc_radio_leicester              |
+|  BBC Radio Lincolnshire          | bbc_radio_lincolnshire           |
+|  BBC Radio London                | bbc_london                       |
+|  BBC Radio Manchester            | bbc_radio_manchester             |
+|  BBC Radio Merseyside            | bbc_radio_merseyside             |
+|  BBC Radio nan Gaidheal          | bbc_radio_nan_gaidheal           |
+|  BBC Radio Newcastle             | bbc_radio_newcastle              |
+|  BBC Radio Norfolk               | bc_radio_norfolk                 |
+|  BBC Radio Northampton           | bbc_radio_northampton            |
+|  BBC Radio Nottingham            | bbc_radio_nottingham             |
+|  BBC Radio Oxford                | bbc_radio_oxford                 |
+|  BBC Radio Scotland FM           | bbc_radio_scotland_fm            |
+|  BBC Radio Scotland Extra        | bbc_radio_scotland_mw            | 
+|  BBC Radio Sheffield             | bbc_radio_sheffield              |
+|  BBC Radio Shropshire            | bbc_radio_shropshire             |
+|  BBC Radio Solent                | bbc_radio_solent                 |
+|  BBC Radio Somerset              | bbc_radio_somerset_sound         |
+|  BBC Radio Stoke                 | bbc_radio_stoke                  |
+|  BBC Radio Suffolk               | bbc_radio_suffolk                |
+|  BBC Radio Surrey                | bbc_radio_surrey                 |
+|  BBC Radio Sussex                | bbc_radio_sussex                 |
+|  BBC Radio Tees                  | bbc_tees                         |
+|  BBC Radio Three Counties Radio  | bbc_three_counties_radio         |
+|  BBC Radio Ulster                | bbc_radio_ulster                 |
+|  BBC Radio Wales                 | bbc_radio_wales_fm               |
+|  BBC Radio Wales Extra           | bbc_radio_wales_am               |
+|  BBC Radio Wiltshire             | bbc_radio_wiltshire              |
+|  BBC Radio WM                    | bbc_wm                           |
+|  BBC Radio York                  | bbc_radio_york                   |
+|  BBC World_Service               | bbc_world_service                |
+|  Cbeebies Radio                  | cbeebies_radio                   |
 
 SiriusXM
---------
-
+----------------------
 You can specify a SiriusXM channel number or station name and the station will be played.
 
 ```
 /RoomName/siriusXM/{channel number,station name}
 ```
 
-Pandora
--------
 
+Pandora
+----------------------
 Perform a search for one of your Pandora stations and begin playing. Give the currently playing song a thumbs up or thumbs down. Requires a valid Pandora account and credentials.
 
 The following endpoints are available:
@@ -1763,19 +1011,18 @@ The following endpoints are available:
 ```
 
 Your Pandora credentials need to be added to the settings.json file
+   ```
+          ,
+          "pandora": {
+            "username": "your-pandora-account-email-address",
+            "password": "your-pandora-password"
+          }
+  ```
 
-```
-       ,
-       "pandora": {
-         "username": "your-pandora-account-email-address",
-         "password": "your-pandora-password"
-       }
-```
 
 Tunein
-------
-
-Given a station id this will play or set the streaming broadcast via the tunein service. You can find tunein station ids via services like radiotime
+----------------------
+Given a station id this will play or set the streaming broadcast via the tunein service. You can find tunein station ids via services like [radiotime](http://opml.radiotime.com/)
 
 The following endpoint is available:
 
@@ -1787,7 +1034,7 @@ Will set and start playing given Station id
 Will set without start playing given Station id
 ```
 
-For example to play Radio 6 Music - tunein.com/radio/s44491
+For example to play Radio 6 Music - [tunein.com/radio/s44491](https://tunein.com/radio/s44491)
 
 ```
 /RoomName/tunein/play/44491
@@ -1795,8 +1042,7 @@ note the droping of the 's' in 's44491'
 ```
 
 Music Search and Play
----------------------
-
+----------------------
 Perform a search for a song, artist, album or station and begin playing. Supports Apple Music, Spotify, Deezer, Deezer Elite, and your local Music Library.
 
 The following endpoint is available:
@@ -1845,6 +1091,7 @@ Examples:
 
 /Kitchen/musicsearch/library/load  (Loads or reloads the music library from Sonos)
 ```
+
 
 Experiment with these and leave feedback!
 
@@ -1903,49 +1150,51 @@ or
 }
 ```
 
-"data" property will be equal to the same data as you would get from /RoomName/state or /zones. There is an example endpoint in the root if this project called test\_endpoint.js which you may fire up to get an understanding of what is posted, just invoke it with "node test\_endpoint.js" in a terminal, and then start the http-api in another terminal.
+"data" property will be equal to the same data as you would get from /RoomName/state or /zones. There is an example endpoint in the root if this project called test_endpoint.js which you may fire up to get an understanding of what is posted, just invoke it with "node test_endpoint.js" in a terminal, and then start the http-api in another terminal.
+
 
 Server Sent Events
-------------------
+-----
 
-As an alternative to the web hook you can also call the `/events` endpoint to receive every state change and topology change as Server Sent Event. Compared to the web hook there is no configuration required on the server, and you can listen for events from multiple clients.
+As an alternative to the web hook you can also call the `/events` endpoint to receive every state change and topology change as [Server Sent Event](https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events).
+Compared to the web hook there is no configuration required on the server, and you can listen for events from multiple clients.
 
 Because it is a long-polling connection, you must take care of errors in your client code and re-connect if necessary.
 
-The server sends events formatted as single-line JSON in the format of Server Sent Events: every event starts with the string `data:` , followed by the single-line JSON formatted event, and is terminated by two new line characters.
+The server sends events formatted as single-line JSON in the format of Server Sent Events: every event starts with the string `data: `, followed by the single-line JSON formatted event, and is terminated by two new line characters.
 
-There are several client libraries available to listen for Server Sent Events. Using `curl` yields the following output for some volume changes:
+There are [several client libraries available](https://en.wikipedia.org/wiki/Server-sent_events#Libraries) to listen for Server Sent Events.
+Using `curl` yields the following output for some volume changes:
 
+```shell
 host:~ user$ curl localhost:5005/events
-data: {"type":"volume-change","data":{"uuid":"RINCON\_E2832F58D9074C45B","previousVolume":13,"newVolume":19,"roomName":"Office"}}
+data: {"type":"volume-change","data":{"uuid":"RINCON_E2832F58D9074C45B","previousVolume":13,"newVolume":19,"roomName":"Office"}}
 
-data: {"type":"volume-change","data":{"uuid":"RINCON\_E2832F58D9074C45B","previousVolume":19,"newVolume":25,"roomName":"Office"}}
+data: {"type":"volume-change","data":{"uuid":"RINCON_E2832F58D9074C45B","previousVolume":19,"newVolume":25,"roomName":"Office"}}
 
-data: {"type":"volume-change","data":{"uuid":"RINCON\_E2832F58D9074C45B","previousVolume":25,"newVolume":24,"roomName":"Office"}}
+data: {"type":"volume-change","data":{"uuid":"RINCON_E2832F58D9074C45B","previousVolume":25,"newVolume":24,"roomName":"Office"}}
 
-data: {"type":"volume-change","data":{"uuid":"RINCON\_E2832F58D9074C45B","previousVolume":23,"newVolume":23,"roomName":"Office"}}
+data: {"type":"volume-change","data":{"uuid":"RINCON_E2832F58D9074C45B","previousVolume":23,"newVolume":23,"roomName":"Office"}}
+
+```
 
 DOCKER
-------
+-----
 
-Docker usage is maintained by Chris Nesbitt-Smith at chrisns/docker-node-sonos-http-api
+Docker usage is maintained by [Chris Nesbitt-Smith](https://github.com/chrisns) at [chrisns/docker-node-sonos-http-api](https://github.com/chrisns/docker-node-sonos-http-api)
 
-FIREWALL
---------
+## FIREWALL
 
 If you are running this in an environment where you manually have to unblock traffic to and from the machine, the following traffic needs to be allowed:
 
 ### Incoming
-
 ```
 TCP, port 3500 (Sonos events)
 UDP, port 1905 (Sonos initial discovery)
 TCP, port 5005 (if using the default api port)
 TCP, port 5006 (if using https support, optional)
 ```
-
 ### Outgoing
-
 ```
 TCP, port 1400 (Sonos control commands)
 UDP, port 1900 (Sonos initial discovery)
@@ -1955,34 +1204,43 @@ TCP, port 80/443 (for looking up hig res cover arts on various music services)
 
 The UDP traffic is a mixture of multicast (outgoing), broadcast (outgoing) and unicast (incoming). The multicast address is 239.255.255.250, the broadcast is 255.255.255.255 and the unicast is from the Sonos players.
 
-If port 3500 is occupied while trying to bind it, it will try using 3501, 3502, 3503 etc. You would need to adjust your firewall rules accordingly, if running multiple instances of this software, or any other software utilizing these ports.
+If port 3500 is occupied while trying to bind it, it will try using 3501, 3502, 3503 etc. You would need to adjust your firewall rules accordingly, if running multiple instances of this software, or any other software utilizing these ports. 
 
 ### Projects built with this API
 
 **Alexa For Sonos (Alexa Skills)**
 
-Amazon Alexa voice layer on top of the amazing NodeJS component https://github.com/hypermoose/AlexaForSonos
+Amazon Alexa voice layer on top of the amazing NodeJS component
+https://github.com/hypermoose/AlexaForSonos
 
 **Echo Sonos (Alexa Skills)**
 
-Amazon Echo integration with Sonos https://github.com/rgraciano/echo-sonos
+Amazon Echo integration with Sonos
+https://github.com/rgraciano/echo-sonos
 
 **JukeBot (Ruby)**
 
-A Slack bot that can control a Sonos instance. Custom spotify integration to find music. https://github.com/estiens/jukebot
+A Slack bot that can control a Sonos instance. Custom spotify integration to find music.
+https://github.com/estiens/jukebot
 
 **Sonos Controller (JS / Electron)**
 
-A Sonos controller, built with the Electron framework. https://github.com/anton-christensen/sonos-controller
+A Sonos controller, built with the Electron framework.
+https://github.com/anton-christensen/sonos-controller
 
 **Sonos Cron (PHP)**
 
-Service for retrieving commands from an AWS SQS queue and passing them to an instance of the Sonos HTTP API https://github.com/cjrpaterson/sonos-cron
+Service for retrieving commands from an AWS SQS queue and passing them to an instance of the Sonos HTTP API 
+https://github.com/cjrpaterson/sonos-cron
 
 **Sonos Push Server (JS)**
 
-A Node server to receive notifications from node-sonos-http-api and push them via socket.io to the clients. https://github.com/TimoKorinth/sonos-push-server
+A Node server to receive notifications from node-sonos-http-api and push them via socket.io to the clients. 
+https://github.com/TimoKorinth/sonos-push-server
 
 **SonoBoss (Siri Shortcut)**
 
-A ChatGPT-assisted Siri Shortcut that acts as a virtual assistant to let you find music and control Sonos through voice and chat. https://github.com/Barloew/SonoBoss
+A ChatGPT-assisted Siri Shortcut that acts as a virtual assistant to let you find music and control Sonos through voice and chat.
+https://github.com/Barloew/SonoBoss
+
+

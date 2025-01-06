@@ -5,51 +5,44 @@ description: :clapper: Source code of IMAX.im
 url: https://github.com/huacnlee/imax.im
 ---
 
-IMAX.im
-=======
+# IMAX.im
 
-功能
---
+## 功能
 
--   依附于 Douban API 创建电影信息库；
--   上传资源的时候自动解析 Ed2k, Torrent 的信息；
--   国内在线视频网站播放地址解析；
--   Retina Display 支持;
--   Apple TV API for @盒子大师
+* 依附于 Douban API 创建电影信息库；
+* 上传资源的时候自动解析 Ed2k, Torrent 的信息；
+* 国内在线视频网站播放地址解析；
+* Retina Display 支持;
+* Apple TV API for @盒子大师
 
-系统需求
-----
+## 系统需求
 
--   Linux
--   Ruby 1.9.3 (2.0.0 CSS 有个 Bug 一直没查出来)
--   Solr
--   MongoDb
--   Redis
--   Memcached
--   Douban API
+* Linux
+* Ruby 1.9.3 (2.0.0 CSS 有个 Bug 一直没查出来)
+* Solr
+* MongoDb
+* Redis
+* Memcached
+* Douban API
 
-搜索引擎
-----
+## 搜索引擎
 
 使用 Solr 实现搜索功能。
 
-Scanffold 命令创建后台
-----------------
+## Scanffold 命令创建后台
 
-```
-rails g scaffold_controller admin/movies title:string year:integer alias_list:string director_list:string actor_list:string category_list:string country_list:string language_list:string tag_list:string pub_date:date time_length:integer imdb:string rank:integer raters_count:integer cover:string website:string desc:string summary:string
-```
-
-安装简单说明
-------
+    rails g scaffold_controller admin/movies title:string year:integer alias_list:string director_list:string actor_list:string category_list:string country_list:string language_list:string tag_list:string pub_date:date time_length:integer imdb:string rank:integer raters_count:integer cover:string website:string desc:string summary:string
+    
+    
+## 安装简单说明
 
 ### 环境
 
--   Ubuntu Server 12.04
--   Ruby 1.9.3
--   MongoDB 2.4.0+
--   Memcached 新版本
--   Solr (用特定脚本安装，以便有中文分词)
+* Ubuntu Server 12.04
+* Ruby 1.9.3
+* MongoDB 2.4.0+
+* Memcached 新版本
+* Solr (用[特定脚本](https://raw.github.com/huacnlee/sunspot_chinese_example/master/install.sh)安装，以便有中文分词)
 
 ### Ruby 安装
 
@@ -60,7 +53,7 @@ rails g scaffold_controller admin/movies title:string year:integer alias_list:st
 ```
 sudo apt-get update
 sudo apt-get install -y wget vim build-essential openssl libreadline6 libreadline6-dev libsqlite3-dev libmysqlclient-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt-dev autoconf automake libtool imagemagick libmagickwand-dev libpcre3-dev language-pack-zh-hans nodejs
-```
+``` 
 
 #### 安装 Ruby
 
@@ -145,3 +138,4 @@ MongoDB, Memcached, Solr 什么的配置已经是在本地上面的，都是默�
 cd www/movieso
 rake sunspot:solr:reindex
 ```
+

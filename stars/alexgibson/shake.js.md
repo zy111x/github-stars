@@ -6,27 +6,27 @@ url: https://github.com/alexgibson/shake.js
 ---
 
 shake.js
-========
+=======================================
 
 A custom 'shake' event JavaScript plugin for mobile web browsers using device accelerometer.
 
 Installation
-------------
+---------------------------------------
 
--   Download: zip
--   NPM: `npm install shake.js`
--   Bower: `bower install shake.js`
--   Git: `git clone https://github.com/alexgibson/shake.js`
+* Download: [zip](https://github.com/alexgibson/shake.js/zipball/master)
+* [NPM](https://www.npmjs.org/): `npm install shake.js`
+* [Bower](https://github.com/twitter/bower/): `bower install shake.js`
+* Git: `git clone https://github.com/alexgibson/shake.js`
 
 Dependencies
-------------
+---------------------------------------
 
 Your web browser must support the `devicemotion` event for this plugin to work. Shake.js uses built-in feature detection to determine if it can run in your web browser. It will terminate silently on non-supporting browsers.
 
 http://w3c.github.io/deviceorientation/spec-source-orientation.html
 
 Setup
------
+---------------------------------------
 
 For CommonJS using NPM:
 
@@ -89,12 +89,13 @@ myShakeEvent.stop();
 ```
 
 Supported web browsers/devices
-------------------------------
+---------------------------------------
 
--   iOS Safari 4.2.1 (and above)
--   Android 4.0.3 (default browser)
--   Chrome 41+ for Android
--   Opera Mobile (Android)
--   BlackBerry PlayBook 2.0
--   Firefox for Android
--   FirefoxOS Devices
+- iOS Safari 4.2.1 (and above)
+- Android 4.0.3 (default browser)
+- Chrome 41+ for Android
+- Opera Mobile (Android)
+- BlackBerry PlayBook 2.0
+- Firefox for Android
+- FirefoxOS Devices
+

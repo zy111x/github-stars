@@ -5,37 +5,36 @@ description: Get unified user avatar from social networks, including Instagram, 
 url: https://github.com/microlinkhq/unavatar
 ---
 
+![logo](https://unavatar.io/banner.png ':id=banner')
+
 Welcome to **unavatar.io**, the ultimate avatar service that offers everything you need to easily retrieve user avatars:
 
--   **Versatile**: A wide range of platforms and services including Facebook, Instagram, YouTube, Twitter, Gravatar, etc., meaning you can rule all of them just querying against unavatar.
-    
--   **Speed**: Designed to be fast and efficient, all requests are being cached and delivered +200 global datacenters, allowing you to consume avatars instantly, counting more than 20 millions requests per month.
-    
--   **Optimize**: All the images are not only compressed on-the-fly to reduce their size and save bandwith, but also optimized to maintain a high-quality ratio. They are ready for immediate use, enhancing the overall optimization of your website or application.
-    
--   **Integration**: The service seamlessly incorporates into your current applications or websites with ease. We offer straightforward documentation and comprehensive support to ensure a quick and effortless onboarding experience.
-    
+- **Versatile**: A wide range of platforms and services including Facebook, Instagram, YouTube, Twitter, Gravatar, etc., meaning you can rule all of them just querying against unavatar.
+
+- **Speed**: Designed to be fast and efficient, all requests are being cached and delivered +200 global datacenters, allowing you to consume avatars instantly, counting more than 20 millions requests per month.
+
+- **Optimize**: All the images are not only compressed on-the-fly to reduce their size and save bandwith, but also optimized to maintain a high-quality ratio. They are ready for immediate use, enhancing the overall optimization of your website or application.
+
+- **Integration**: The service seamlessly incorporates into your current applications or websites with ease. We offer straightforward documentation and comprehensive support to ensure a quick and effortless onboarding experience.
 
 In summary, **unavatar.io** provides versatility, speed, optimization, and effortless integration, making it the ultimate avatar retrieval service.
 
-Quick start
------------
+## Quick start
 
 The service is a single endpoint exposed in **unavatar.io** that can resolve:
 
--   an **email**: https://unavatar.io/sindresorhus@gmail.com
--   an **username**: https://unavatar.io/kikobeats
--   a **domain**: https://unavatar.io/reddit.com
+- an **email**: https://unavatar.io/sindresorhus@gmail.com
+- an **username**: https://unavatar.io/kikobeats
+- a **domain**: https://unavatar.io/reddit.com
 
-So, no matter what type of query you use, **unavatar.io** has you covered. You can read more about that in providers.
+So, no matter what type of query you use, **unavatar.io** has you covered. You can read more about that in [providers](#providers).
 
-Query parameters
-----------------
+## Query parameters
 
 ### TTL
 
-Type: `number`|`string`  
-Default: `'24h'`  
+Type: `number`|`string`<br/>
+Default: `'24h'`<br/>
 Range: from `'1h'` to `'28d'`
 
 It determines the maximum quantity of time an avatar is considered fresh.
@@ -54,7 +53,7 @@ When it can't be possible to get a user avatar, a fallback image is returned ins
 
 You can get one from **boringavatars.com**:
 
-e.g., https://unavatar.io/github/37t?fallback=https://source.boringavatars.com/marble/120/1337\_user?colors=264653r,2a9d8f,e9c46a,f4a261,e76f51
+e.g., https://unavatar.io/github/37t?fallback=https://source.boringavatars.com/marble/120/1337_user?colors=264653r,2a9d8f,e9c46a,f4a261,e76f51
 
 or **avatar.vercel.sh**:
 
@@ -68,7 +67,7 @@ or even a base64 encoded image. This allows you to return a transparent, base64 
 
 e.g., https://unavatar.io/github/37t?fallback=data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
 
-You can pass `fallback=false` to explicitly disable this behavior. In this case, a _404 Not Found_ HTTP status code will returned when is not possible to get the user avatar.
+You can pass `fallback=false` to explicitly disable this behavior. In this case, a *404 Not Found* HTTP status code will returned when is not possible to get the user avatar.
 
 ### JSON
 
@@ -80,21 +79,19 @@ In case you want to get a JSON payload as response, just pass `json=true`:
 
 e.g., https://unavatar.io/kikobeats?json
 
-Limitations
------------
+## Limitations
 
 For preventing abusive usage, the service has associated a daily rate limit based on requests IP address.
 
 You can verify for your rate limit state checking the following headers in the response:
 
--   `x-rate-limit-limit`: The maximum number of requests that the consumer is permitted to make per minute.
--   `x-rate-limit-remaining`: The number of requests remaining in the current rate limit window.
--   `x-rate-limit-reset`: The time at which the current rate limit window resets in UTC epoch seconds.
+- `x-rate-limit-limit`: The maximum number of requests that the consumer is permitted to make per minute.
+- `x-rate-limit-remaining`: The number of requests remaining in the current rate limit window.
+- `x-rate-limit-reset`: The time at which the current rate limit window resets in UTC epoch seconds.
 
-When you reach the API quota limit, you will experience HTTP 429 errors, meaning you need to wait until the API quota reset. If you need more quota, contact us.
+When you reach the API quota limit, you will experience HTTP 429 errors, meaning you need to wait until the API quota reset. If you need more quota, <a target="_blank" rel="noopener noreferrer" href="mailto:hello@microlink.io?subject=unavatar.io%20API%20key&amp;body=Hello%2C%0D%0A%0D%0AWe%20wanted%20unlimited%20usage%20for%20unavatar.io.%0D%0A%0D%0APlease%2C%20tell%20us%20how%20to%20proceed.">contact us</a>.
 
-Providers
----------
+## Providers
 
 With **unavatar.io**, you can retrieve user avatars based on an **email**, **domain**, or **username**.
 
@@ -152,6 +149,14 @@ It resolves user avatar against **gravatar.com**.
 
 e.g., https://unavatar.io/gravatar/sindresorhus@gmail.com
 
+<!-- ### Instagram
+
+Type: `username`
+
+It resolves user avatar against **instagram.com**.
+
+e.g., https://unavatar.io/instagram/willsmith -->
+
 ### Microlink
 
 Type: `domain`
@@ -173,6 +178,14 @@ Type: `username`
 It resolves user avatar against **read.cv**.
 
 e.g., https://unavatar.io/readcv/elenatorro
+
+<!-- ### Reddit
+
+Type: `username`
+
+It resolves user avatar against **reddit.com**.
+
+e.g., https://unavatar.io/reddit/kikobeats -->
 
 ### SoundCloud
 
@@ -198,6 +211,14 @@ It resolves user avatar against **telegram.com**.
 
 e.g., https://unavatar.io/telegram/drsdavidsoft
 
+<!-- ### TikTok
+
+Type: `username`
+
+It resolves user avatar against **tiktok.com**.
+
+e.g., https://unavatar.io/tiktok/carlosazaustre -->
+
 ### Twitch
 
 Type: `username`
@@ -221,3 +242,4 @@ Type: `username`
 It resolves user avatar against **youtube.com**.
 
 e.g., https://unavatar.io/youtube/casey
+

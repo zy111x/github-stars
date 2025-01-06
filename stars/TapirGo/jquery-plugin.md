@@ -5,24 +5,21 @@ description: Official TapirGo JQuery plugin
 url: https://github.com/TapirGo/jquery-plugin
 ---
 
-Tapir jQuery plugin
-===================
+h1. Tapir jQuery plugin
 
 A plugin that makes searching with Tapir a breeze!
 
-Check out the live example
+Check out the "live example":http://tapirgo.com/examples/jquery-plugin/index.html
 
-Using the plugin
-----------------
+h2. Using the plugin
 
-1\. Make sure you have jQuery in your site (any version above 1.2 should work).  
-2\. Add the `jquery-tapir.min.js` file to your site.  
-3\. Call `tapir()` on the element you want the results to appear in (don’t forget to pass your token!).
+1. Make sure you have jQuery in your site (any version above 1.2 should work).
+2. Add the @jquery-tapir.min.js@ file to your site.
+3. Call @tapir()@ on the element you want the results to appear in (don't forget to pass your token!).
 
 example:
 
-```
-
+<pre><code>
   <!DOCTYPE html>
 
   <html>
@@ -43,18 +40,16 @@ example:
 
     </body>
   </html>
-```
+</code></pre>
 
-Options
--------
+h2. Options
 
-### Complete
+h3. Complete
 
-If you pass a function as a `complete`\-option, your function will be executed when the search is complete and the results have been returned, right before they’re appended to the page:
+If you pass a function as a @complete@-option, your function will be executed when the search is complete and the results have been returned, right before they're appended to the page:
 
-```
-$('#search_results').tapir({
+bc. $('#search_results').tapir({
   'token': '4dbfc79e3f61b05b53000021',
   'complete' : function() { alert("I'm done searching!"); }
 });
-```
+

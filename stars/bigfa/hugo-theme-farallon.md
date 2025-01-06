@@ -1,17 +1,17 @@
 ---
 project: hugo-theme-farallon
-stars: 50
+stars: 51
 description: ✒️ single column hugo theme
 url: https://github.com/bigfa/hugo-theme-farallon
 ---
 
-Hugo Theme Farallon
-===================
+# Hugo Theme Farallon
+
+![Hugo Theme Farallon](https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png)
 
 Farallon is a simple single column hugo theme with perfect performace and elegance design.
 
-Usage
------
+## Usage
 
 ```
 git submodule add https://github.com/bigfa/hugo-theme-farallon.git themes/farallon
@@ -19,10 +19,9 @@ git submodule add https://github.com/bigfa/hugo-theme-farallon.git themes/farall
 echo "theme = 'farallon'" >> hugo.toml
 ```
 
-Full demo site
+[Full demo site](https://github.com/bigfa/bigfa.github.io)
 
-Release Notes
--------------
+## Release Notes
 
 ### 0.4.8
 
@@ -205,3 +204,4 @@ wpdToken = 'token generated above'
 ### 0.0.1
 
 -   Initial setup.
+

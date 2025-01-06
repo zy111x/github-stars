@@ -1,186 +1,106 @@
 ---
 project: scrolly-video
-stars: 978
+stars: 981
 description: Components for scroll-based (or other externally controlled) playback.
 url: https://github.com/dkaoster/scrolly-video
 ---
 
-ScrollyVideo.js
-===============
+# ScrollyVideo.js
 
-A component for scroll-based (or other externally controlled) playback. See `/demos` for full example usages.
+A component for scroll-based (or other externally controlled) playback. See [`/demos`](https://github.com/dkaoster/scrolly-video/tree/main/demos) for full example usages.
 
-🚀 Web
-------
+## 🚀 Web
 
 Add html container to your page:
 
-<div id\="scrolly-video"\></div\>
+```html
+<div id="scrolly-video"></div>
+```
 
 Require javascript in your page and create the object (before `</body>`):
 
-<script src\="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"\></script\>
-<script type\="text/javascript"\>
+```html
+<script src="https://cdn.jsdelivr.net/npm/scrolly-video@latest/dist/scrolly-video.js"></script>
+<script type="text/javascript">
   new ScrollyVideo({
     scrollyVideoContainer: "scrolly-video",
     src: "https://scrollyvideo.js.org/goldengate.mp4"
   });
-</script\>
+</script>
+```
 
 You can replace `@latest` with specific version, example `@0.0.2`.
 
-🔵 React
---------
+## 🔵 React
 
-Install npm module with `npm install scrolly-video --save`: Import component in your application:
+Install npm module with `npm install scrolly-video --save`:
+Import component in your application:
 
+```javascript
 import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.cjs.jsx';
 or
 import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.esm.jsx';
+```
 
 Add the component where you need it:
 
-<ScrollyVideo src\="https://scrollyvideo.js.org/goldengate.mp4" />
+```html
+<ScrollyVideo src="https://scrollyvideo.js.org/goldengate.mp4" />
+```
 
-🟠 Svelte
----------
+## 🟠 Svelte
 
-Install npm module with `npm install scrolly-video --save`: Import component in your application:
+Install npm module with `npm install scrolly-video --save`:
+Import component in your application:
 
+```javascript
 import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.svelte';
+```
 
 Add the ScrollyVideo component to your application:
 
-<ScrollyVideo src\="https://scrollyvideo.js.org/goldengate.mp4" />
+```html
+<ScrollyVideo src="https://scrollyvideo.js.org/goldengate.mp4" />
+```
 
-🟢 Vue
-------
+## 🟢 Vue
 
-Install npm module with `npm install scrolly-video --save`: Import module in your `src/App.vue` and config:
+Install npm module with `npm install scrolly-video --save`:
+Import module in your `src/App.vue` and config:
 
+```javascript
 import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.vue';
+```
 
 Add html code to your html component:
 
-<ScrollyVideo src\="https://scrollyvideo.js.org/goldengate.mp4" />
+```html
+<ScrollyVideo src="https://scrollyvideo.js.org/goldengate.mp4" />
+```
 
-🧰 Options / Attributes
------------------------
+## 🧰 Options / Attributes
 
-Parameter
+| Parameter             | Description                                                                                              | Values           | Default |
+|:----------------------|:---------------------------------------------------------------------------------------------------------|:-----------------|:--------|
+| src                   | The URL of the video (required)                                                                          | URL              |         |
+| scrollyVideoContainer | The DOM element of the container, only used for plain js                                                 | String / Element |         |
+| transitionSpeed       | Sets the maximum playbackRate for this video                                                             | Number           | 8       |
+| frameThreshold        | When to stop the video animation, in seconds                                                             | Number           | 0.1     |
+| cover                 | Forces the video to cover in it's container                                                              | Boolean          | true    |
+| sticky                | Whether the video should have `position: sticky`                                                         | Boolean          | true    |
+| full                  | Whether the video should take up the entire viewport                                                     | Boolean          | true    |
+| trackScroll           | Whether this object should automatically respond to scroll                                               | Boolean          | true    |
+| lockScroll            | Whether it ignores human scroll while it runs `setVideoPercentage` with enabled `trackScroll`            | Boolean          | true    |
+| useWebCodecs          | Whether the library should use the webcodecs method, see below                                           | Boolean          | true    |
+| videoPercentage       | Manually specify the position of the video between 0..1, only used for react, vue, and svelte components | Number           |         |
+| onReady               | The callback when it's ready to scroll                                                                   | VoidFunction     |         |
+| onChange              | The callback for video percentage change                                                                 | VoidFunction     |         |
+| debug                 | Whether to log debug information                                                                         | Boolean          | false   |
 
-Description
 
-Values
+## Additional callbacks
 
-Default
-
-src
-
-The URL of the video (required)
-
-URL
-
-scrollyVideoContainer
-
-The DOM element of the container, only used for plain js
-
-String / Element
-
-transitionSpeed
-
-Sets the maximum playbackRate for this video
-
-Number
-
-8
-
-frameThreshold
-
-When to stop the video animation, in seconds
-
-Number
-
-0.1
-
-cover
-
-Forces the video to cover in it's container
-
-Boolean
-
-true
-
-sticky
-
-Whether the video should have `position: sticky`
-
-Boolean
-
-true
-
-full
-
-Whether the video should take up the entire viewport
-
-Boolean
-
-true
-
-trackScroll
-
-Whether this object should automatically respond to scroll
-
-Boolean
-
-true
-
-lockScroll
-
-Whether it ignores human scroll while it runs `setVideoPercentage` with enabled `trackScroll`
-
-Boolean
-
-true
-
-useWebCodecs
-
-Whether the library should use the webcodecs method, see below
-
-Boolean
-
-true
-
-videoPercentage
-
-Manually specify the position of the video between 0..1, only used for react, vue, and svelte components
-
-Number
-
-onReady
-
-The callback when it's ready to scroll
-
-VoidFunction
-
-onChange
-
-The callback for video percentage change
-
-VoidFunction
-
-debug
-
-Whether to log debug information
-
-Boolean
-
-false
-
-Additional callbacks
---------------------
-
-_**setVideoPercentage**_
+***setVideoPercentage***
 
 Description: A way to set currentTime manually. Pass a progress in between of 0 and 1 that specifies the percentage position of the video. If `trackScroll` enabled - it performs scroll automatically.
 
@@ -188,9 +108,8 @@ Signature: `(percentage: number, options: { transitionSpeed: number, (progress: 
 
 Example: `scrollyVideo.setVideoPercentage(0.5, { transitionSpeed: 12, easing: d3.easeLinear })`
 
-Technical Details and Cross Browser Differences
------------------------------------------------
 
+## Technical Details and Cross Browser Differences
 To make this library perform optimally in all browsers, three different approaches are taken to animating the video.
 
 ### Method 1: WebCodecs and Canvas
@@ -209,11 +128,10 @@ Thus, if the video needs to be animated backwards, this library falls back to me
 
 This method is the way that scrollytelling videos have traditionally been done, using an HTML `<video>` tag and skipping directly to frames using currentTime. However, this method requires the video to be encoded at keyframe = 1, which causes the video to be a lot larger or the quality to drop. Unfortunately, this is the only option for scenarios where methods 1 and 2 are not supported, or on mobile safari browsers where somehow this method performs better than method 2. Thus, to achieve maximum performance under all circumstances, it is still recommended to encode videos with keyframe = 1, if possible.
 
-Known Issues
-------------
+## Known Issues
+- On iOS, ScrollyVideo will not work if battery saver mode is on. Unfortunately, there is no workaround for this due to the way that iOS handles videos and battery saving functions.
 
--   On iOS, ScrollyVideo will not work if battery saver mode is on. Unfortunately, there is no workaround for this due to the way that iOS handles videos and battery saving functions.
+---
 
-* * *
+Created by: [Daniel Kao](https://www.diplateevo.com/)
 
-Created by: Daniel Kao

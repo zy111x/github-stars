@@ -8,7 +8,12 @@ url: https://github.com/alexgibson/notify.js
 Notify.js
 =========
 
-A handy wrapper for using the Web Notifications API. Notify.js aims to simplify requesting user permission and associated Web Notification API events, as well as providing a few extra callbacks and convenience methods.
+[![Build Status](https://travis-ci.org/alexgibson/notify.js.png?branch=master)](https://travis-ci.org/alexgibson/notify.js)
+
+A handy wrapper for using the [Web Notifications API](http://www.w3.org/TR/notifications/).
+Notify.js aims to simplify requesting user permission and associated Web
+Notification API events, as well as providing a few extra callbacks and
+convenience methods.
 
 Online demo: https://alexgibson.github.io/notify.js/
 
@@ -24,7 +29,7 @@ Note: when installed via npm the Notify.js source file is located at `./dist/not
 Build
 -----
 
-Notify.js is written in ES6 and transpiled to ES5 & UMD format using Babel and Rollup.
+Notify.js is written in ES6 and transpiled to ES5 & UMD format using [Babel](http://babeljs.io) and [Rollup](http://rollupjs.org).
 
 Install dependencies:
 
@@ -41,9 +46,12 @@ npm run build
 Usage
 -----
 
-To initialize a web notification create a new `Notify` instance, passing the message `title` as well as any other options you wish to use.
+To initialize a web notification create a new `Notify` instance, passing the
+message `title` as well as any other options you wish to use.
 
-var myNotification \= new Notify('Yo dawg!', {
+
+```javascript
+var myNotification = new Notify('Yo dawg!', {
 	body: 'This is an awesome notification',
 	notifyShow: onNotifyShow
 });
@@ -51,13 +59,18 @@ var myNotification \= new Notify('Yo dawg!', {
 function onNotifyShow() {
 	console.log('notification was shown!');
 }
+```
 
 Then show the notification.
 
+```javascript
 myNotification.show();
+```
 
-It's a good idea to make sure that you have permissions to send notifications first.
+It's a good idea to make sure that you have permissions to send notifications
+first.
 
+```javascript
 if (!Notify.needsPermission) {
     doNotification();
 } else if (Notify.isSupported()) {
@@ -72,36 +85,41 @@ function onPermissionGranted() {
 function onPermissionDenied() {
 	console.warn('Permission has been denied by the user');
 }
+```
 
 Required parameters
 -------------------
 
--   title (string) - notification title
+* title (string) - notification title
 
 Optional parameters
 -------------------
 
-All options supported in the Notifications API specification, in addition to:
+All options supported in the [Notifications API specification](https://notifications.spec.whatwg.org/#dictdef-notificationoptions),
+in addition to:
 
--   `timeout`: (integer) - number of seconds to close the notification automatically
--   `closeOnClick`: (boolean) - close the notification when clicked. Useful in chrome where the notification remains open until the timeout or the x is clicked.
--   `notifyShow`: (function) - callback when notification is shown
--   `notifyClose`: (function) - callback when notification is closed
--   `notifyClick`: (function) - callback when notification is clicked
--   `notifyError`: (function) - callback when notification throws an error
+* `timeout`: (integer) - number of seconds to close the notification automatically
+* `closeOnClick`: (boolean) - close the notification when clicked. Useful in
+chrome where the notification remains open until the timeout or the x is clicked.
+* `notifyShow`: (function) - callback when notification is shown
+* `notifyClose`: (function) - callback when notification is closed
+* `notifyClick`: (function) - callback when notification is clicked
+* `notifyError`: (function) - callback when notification throws an error
 
 Static methods and properties
 -----------------------------
 
--   `Notify.requestPermission(onPermissionGrantedCallback, onPermissionDeniedCallback)` - requests permission from the user if needed and handles permission callbacks.
--   `Notify.isSupported` - Function to test for Web Notifications API browser support
--   `Notify.needsPermission` - Boolean property to check if permission is needed for the user to receive notifications.
+* `Notify.requestPermission(onPermissionGrantedCallback, onPermissionDeniedCallback)` -
+requests permission from the user if needed and handles permission callbacks.
+* `Notify.isSupported` - Function to test for Web Notifications API browser
+support
+* `Notify.needsPermission` - Boolean property to check if permission is needed
+for the user to receive notifications.
 
 Instance methods
 ----------------
-
--   `Notify.show` - Function to display the Notify instance
--   `Notify.close` - Function to close the Notify instance
+* `Notify.show` - Function to display the Notify instance
+* `Notify.close` - Function to close the Notify instance
 
 Test
 ----
@@ -117,7 +135,8 @@ This will also automatically build from source before running the tests.
 Demo example
 ------------
 
-An easy way to run the provided demo file is to use python `SimpleHTTPServer` and then navigate to the `/example` directory:
+An easy way to run the provided demo file is to use python `SimpleHTTPServer`
+and then navigate to the `/example` directory:
 
 ```
 python -m SimpleHTTPServer
@@ -127,3 +146,4 @@ Browser support
 ---------------
 
 http://caniuse.com/#search=notifications
+

@@ -1,47 +1,49 @@
 ---
 project: screenfull
-stars: 7098
+stars: 7099
 description: Simple wrapper for cross-browser usage of the JavaScript Fullscreen API
 url: https://github.com/sindresorhus/screenfull
 ---
 
-screenfull
-==========
+# screenfull
 
-> Simple wrapper for cross-browser usage of the JavaScript Fullscreen API, which lets you bring the page or any element into fullscreen. Smoothens out the browser implementation differences, so you don't have to.
+> Simple wrapper for cross-browser usage of the JavaScript [Fullscreen API](https://developer.mozilla.org/en/DOM/Using_full-screen_mode), which lets you bring the page or any element into fullscreen. Smoothens out the browser implementation differences, so you don't have to.
 
-**This package is ESM. Please familiarize yourself with what that implies.**  
+**This package is ESM. Please [familiarize](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c) yourself with what that implies.**\
 If you cannot use ESM or need to support older browsers without using transpilation, use version 5.2.0.
 
-**Not supported on iPhone**
+**[Not supported on iPhone](#support)**
 
 **This package is feature complete. No new features will be accepted.**
 
-#### Demo
+#### [Demo](https://sindresorhus.com/screenfull)
 
-Install
--------
+## Install
 
 Only 0.7 kB gzipped.
 
+```sh
 npm install screenfull
+```
 
-Also available on cdnjs _(older version)_.
+Also available on [cdnjs](https://cdnjs.com/libraries/screenfull.js/5.1.0) *(older version)*.
 
-Why?
-----
+## Why?
 
 ### Screenfull
 
+```js
 import screenfull from 'screenfull';
 
 if (screenfull.isEnabled) {
 	screenfull.request();
 }
+```
 
 ### Vanilla JavaScript
 
-document.fullscreenEnabled \=
+```js
+document.fullscreenEnabled =
 	document.fullscreenEnabled ||
 	document.mozFullScreenEnabled ||
 	document.documentElement.webkitRequestFullScreen;
@@ -52,7 +54,7 @@ function requestFullscreen(element) {
 	} else if (element.mozRequestFullScreen) {
 		element.mozRequestFullScreen();
 	} else if (element.webkitRequestFullScreen) {
-		element.webkitRequestFullScreen(Element.ALLOW\_KEYBOARD\_INPUT);
+		element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
 	}
 }
 
@@ -61,121 +63,139 @@ if (document.fullscreenEnabled) {
 }
 
 // This is not even entirely comprehensive. There's more.
+```
 
-Support
--------
+## Support
 
-Supported browsers
+[Supported browsers](https://caniuse.com/#feat=fullscreen)
 
 **Note:** Safari is supported on desktop and iPad, but not on iPhone. This is a limitation in the browser, not in Screenfull.
 
-Documentation
--------------
+## Documentation
 
 ### Examples
 
 #### Fullscreen the page
 
+```js
 import screenfull from 'screenfull';
 
-document.getElementById('button').addEventListener('click', () \=> {
+document.getElementById('button').addEventListener('click', () => {
 	if (screenfull.isEnabled) {
 		screenfull.request();
 	} else {
 		// Ignore or do something else
 	}
 });
+```
 
 #### Fullscreen an element
 
+```js
 import screenfull from 'screenfull';
 
-const element \= document.getElementById('target');
+const element = document.getElementById('target');
 
-document.getElementById('button').addEventListener('click', () \=> {
+document.getElementById('button').addEventListener('click', () => {
 	if (screenfull.isEnabled) {
 		screenfull.request(element);
 	}
 });
+```
 
 #### Hide navigation user-interface on mobile devices
 
+```js
 import screenfull from 'screenfull';
 
-const element \= document.getElementById('target');
+const element = document.getElementById('target');
 
-document.getElementById('button').addEventListener('click', () \=> {
+document.getElementById('button').addEventListener('click', () => {
 	if (screenfull.isEnabled) {
 		screenfull.request(element, {navigationUI: 'hide'});
 	}
 });
+```
 
 #### Fullscreen an element with jQuery
 
+```js
 import screenfull from 'screenfull';
 
-const element \= $('#target')\[0\]; // Get DOM element from jQuery collection
+const element = $('#target')[0]; // Get DOM element from jQuery collection
 
-$('#button').on('click', () \=> {
+$('#button').on('click', () => {
 	if (screenfull.isEnabled) {
 		screenfull.request(element);
 	}
 });
+```
 
 #### Toggle fullscreen on a image with jQuery
 
+```js
 import screenfull from 'screenfull';
 
-$('img').on('click', event \=> {
+$('img').on('click', event => {
 	if (screenfull.isEnabled) {
 		screenfull.toggle(event.target);
 	}
 });
+```
 
 #### Detect fullscreen change
 
+```js
 import screenfull from 'screenfull';
 
 if (screenfull.isEnabled) {
-	screenfull.on('change', () \=> {
+	screenfull.on('change', () => {
 		console.log('Am I fullscreen?', screenfull.isFullscreen ? 'Yes' : 'No');
 	});
 }
+```
 
 Remove listeners with:
 
+```js
 import screenfull from 'screenfull';
 
 screenfull.off('change', callback);
+```
 
 #### Detect fullscreen error
 
+```js
 import screenfull from 'screenfull';
 
 if (screenfull.isEnabled) {
-	screenfull.on('error', event \=> {
+	screenfull.on('error', event => {
 		console.error('Failed to enable fullscreen', event);
 	});
 }
+```
 
-See the demo for more examples, and view the source.
+See the [demo](https://sindresorhus.com/screenfull) for more examples, and view the source.
 
 #### Fullscreen an element with Angular.js
 
-You can use the Angular.js binding to do something like:
+You can use the [Angular.js binding](https://github.com/hrajchert/angular-screenfull) to do something like:
 
-<div ngsf-fullscreen\>
-	<p\>This is a fullscreen element</p\>
-	<button ngsf-toggle-fullscreen\>Toggle fullscreen</button\>
-</div\>
+```html
+<div ngsf-fullscreen>
+	<p>This is a fullscreen element</p>
+	<button ngsf-toggle-fullscreen>Toggle fullscreen</button>
+</div>
+```
 
 #### Fullscreen the page with Angular 2
 
+```ts
 import {Directive, HostListener} from '@angular/core';
 import screenfull from 'screenfull';
 
 @Directive({
-	selector: '\[toggleFullscreen\]'
+	selector: '[toggleFullscreen]'
 })
 export class ToggleFullscreenDirective {
 	@HostListener('click') onClick() {
@@ -184,8 +204,11 @@ export class ToggleFullscreenDirective {
 		}
 	}
 }
+```
 
-<button toggleFullscreen\>Toggle fullscreen<button\>
+```html
+<button toggleFullscreen>Toggle fullscreen<button>
+```
 
 ### API
 
@@ -193,7 +216,7 @@ export class ToggleFullscreenDirective {
 
 Make an element fullscreen.
 
-Accepts a DOM element and `FullscreenOptions`.
+Accepts a DOM element and [`FullscreenOptions`](https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions).
 
 The default element is `<html>`. If called with another element than the currently active, it will switch to that if it's a descendant.
 
@@ -213,7 +236,7 @@ Returns a promise that resolves after the element exits fullscreen.
 
 Requests fullscreen if not active, otherwise exits.
 
-Accepts a DOM element and `FullscreenOptions`.
+Accepts a DOM element and [`FullscreenOptions`](https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions).
 
 Returns a promise that resolves after the element enters/exits fullscreen.
 
@@ -251,37 +274,38 @@ Returns a boolean whether you are allowed to enter fullscreen. If your page is i
 
 Exposes the raw properties (prefixed if needed) used internally: `requestFullscreen`, `exitFullscreen`, `fullscreenElement`, `fullscreenEnabled`, `fullscreenchange`, `fullscreenerror`
 
-FAQ
----
+## FAQ
 
 ### How can I navigate to a new page when fullscreen?
 
 That's not supported by browsers for security reasons. There is, however, a dirty workaround. Create a seamless iframe that fills the screen and navigate to the page in that instead.
 
+```js
 import screenfull from 'screenfull';
 
-document.querySelector('#new-page-button').addEventListener(() \=> {
-	const iframe \= document.createElement('iframe')
+document.querySelector('#new-page-button').addEventListener(() => {
+	const iframe = document.createElement('iframe')
 
 	iframe.setAttribute('id', 'external-iframe');
 	iframe.setAttribute('src', 'https://new-page-website.com');
 	iframe.setAttribute('frameborder', 'no');
-	iframe.style.position \= 'absolute';
-	iframe.style.top \= '0';
-	iframe.style.right \= '0';
-	iframe.style.bottom \= '0';
-	iframe.style.left \= '0';
-	iframe.style.width \= '100%';
-	iframe.style.height \= '100%';
+	iframe.style.position = 'absolute';
+	iframe.style.top = '0';
+	iframe.style.right = '0';
+	iframe.style.bottom = '0';
+	iframe.style.left = '0';
+	iframe.style.width = '100%';
+	iframe.style.height = '100%';
 
 	document.body.prepend(iframe);
-	document.body.style.overflow \= 'hidden';
+	document.body.style.overflow = 'hidden';
 });
+```
 
-Resources
----------
+## Resources
 
--   Using the Fullscreen API in web browsers
--   MDN - Fullscreen API
--   W3C Fullscreen spec
--   Building an amazing fullscreen mobile experience
+- [Using the Fullscreen API in web browsers](https://hacks.mozilla.org/2012/01/using-the-fullscreen-api-in-web-browsers/)
+- [MDN - Fullscreen API](https://developer.mozilla.org/en/DOM/Using_full-screen_mode)
+- [W3C Fullscreen spec](https://fullscreen.spec.whatwg.org/)
+- [Building an amazing fullscreen mobile experience](https://developers.google.com/web/fundamentals/native-hardware/fullscreen/)
+

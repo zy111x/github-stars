@@ -5,13 +5,11 @@ description: A JavaScript library for web-based content editing.
 url: https://github.com/substance/substance
 ---
 
-Substance.js
-============
+# Substance.js [![Build Status](https://travis-ci.org/substance/substance.svg?branch=devel)](https://travis-ci.org/substance/substance)
 
-Substance is a JavaScript library for web-based content editing. It provides building blocks for realizing custom text editors and web-based publishing system. It is developed to power our online editing platform Substance.
+Substance is a JavaScript library for web-based content editing. It provides building blocks for realizing custom text editors and web-based publishing system. It is developed to power our online editing platform [Substance](http://substance.io).
 
-Development
------------
+## Development
 
 Install the dev dependencies.
 
@@ -32,3 +30,4 @@ To run the test-suite headless.
 ```
 $ npm test
 ```
+

@@ -1,80 +1,99 @@
 ---
 project: lazy-line-painter
-stars: 1975
+stars: 1976
 description: Lazy Line Painter - A Modern JS library for SVG path animation
 url: https://github.com/merri-ment/lazy-line-painter
 ---
 
+![Lazy Line Painter](https://lazylinepainter.com/banner.png)
+
+<p align="center">
+	<img alt="Bundle Size" src="https://img.shields.io/bundlephobia/min/lazy-line-painter.svg?colorB=6f6f6f&style=flat-square">
+	<img alt="GitHub Release" src="https://img.shields.io/github/release/merri-ment/lazy-line-painter.svg?colorB=6f6f6f&style=flat-square">
+	<img alt="License" src="https://img.shields.io/github/license/merri-ment/lazy-line-painter.svg?colorB=6f6f6f&style=flat-square">
+	<img alt="npm Version" src="https://data.jsdelivr.com/v1/package/npm/lazy-line-painter/badge">
+</p>
+
+<h1 align="center">
 Lazy Line Painter
-=================
-
-### lazylinepainter.com
-
+</h1>
+<h3 align="center">
+	<a href="https://lazylinepainter.com" target="_blank">lazylinepainter.com</a>
+</h3>
+<p align="center">
 A Modern JS library for SVG path animation
+</p>
 
-Getting Started | Documentation | Examples | Lazy Line Composer
+<p align="center">
+  <a href="#getting-started">Getting Started</a>&nbsp;|&nbsp;<a href="#documentation">Documentation</a>&nbsp;|&nbsp;<a href="#examples">Examples</a>&nbsp;|&nbsp;<a href="https://lazylinepainter.com/#composer">Lazy Line Composer</a>
+</p>
+ 
+<br><br>
 
-  
-  
+# Getting Started
 
-Getting Started
-===============
-
-_Lazy Line Painter can be setup with minimal effort as per the Quick Start instructions.  
-  
-However if a GUI is more your thing, be sure to use the Lazy Line Composer.  
+![Lazy Line Painter](https://lazylinepainter.com/drag_drop.jpg)
+_Lazy Line Painter can be setup with minimal effort as per the Quick Start instructions. <br><br>
+However if a GUI is more your thing, be sure to use the [Lazy Line Composer](https://lazylinepainter.com/#composer). <br>
 A free Online Editor developed specifically for SVG path animation._
 
-  
+<br>
 
-##### NPM  
+##### [NPM](https://www.npmjs.com/package/lazy-line-painter) <br>
 
-pnpm i lazy\-line\-painter
+```js
+pnpm i lazy-line-painter
+```
 
-##### CDN  
+##### [CDN](https://www.jsdelivr.com/package/npm/lazy-line-painter) <br>
 
-<script src\="https://cdn.jsdelivr.net/npm/lazy-line-painter@2.0.3/lib/lazy-line-painter-2.0.3.min.js"\></script\>
+```html
+<script src="https://cdn.jsdelivr.net/npm/lazy-line-painter@2.0.3/lib/lazy-line-painter-2.0.3.min.js"></script>
+```
 
-##### DOWNLOAD  
+##### [DOWNLOAD](https://github.com/merri-ment/lazy-line-painter/releases) <br>
 
-<script src\="./libs/lazylinepainter-2.0.3.js"\></script\>
+```html
+<script src="./libs/lazylinepainter-2.0.3.js"></script>
+```
 
-  
-  
+<br><br>
 
 ### Quick Start
 
 The most basic, no-frills implementation;
 
+```js
 // import LazyLinePainter
 import LazyLinePainter from "lazy-line-painter";
 
 // select your svg
-const el \= document.querySelector("#my-svg");
+const el = document.querySelector("#my-svg");
 
 // initialise & configure LazyLinePainter
-const myAnimation \= new LazyLinePainter(el, { strokeWidth: 10 });
+const myAnimation = new LazyLinePainter(el, { strokeWidth: 10 });
 
 // paint! :)
 myAnimation.paint();
+```
 
-  
-  
+<br><br>
 
-Documentation
-=============
+# Documentation
 
-  
+<br>
 
 ### Configuration
 
 ##### Configure on initialisation
 
-On initialise you can pass lazylinepainter a config object as an argument containing the attritubes you wish to alter across the entire svg.  
-All config properties are optional.  
+On initialise you can pass lazylinepainter a config object as an argument containing the attritubes you wish to alter across the entire svg. <br>
+All config properties are optional. <br>
 Style attributes set in the config will override css styles.
 
-const config \= {
+```js
+
+const config = {
 
 	// style properties
 	'strokeWidth'     // Adjust width of stroke
@@ -91,16 +110,20 @@ const config \= {
 	'repeat'          // number of additional plays, -1 for loop
 }
 
-const svg \= document.querySelector('#my-svg')
-const myAnimation \= new LazyLinePainter(svg, config)
+const svg = document.querySelector('#my-svg')
+const myAnimation = new LazyLinePainter(svg, config)
 
-  
+```
+
+<br>
 
 ##### Configure individual paths
 
-Data attributes can be used to configure style & animation properties on individual paths in the SVG.  
-Data attributes will override both css styles & initialisation config style attributes.  
+Data attributes can be used to configure style & animation properties on individual paths in the SVG. <br>
+Data attributes will override both css styles & initialisation config style attributes. <br>
 
+<!-- prettier-ignore-start -->
+```html
 <path 
 
   // style 
@@ -111,16 +134,17 @@ Data attributes will override both css styles & initialisation config style attr
   data-llp-stroke-join="mitre" 
 
   // animation
-  data-llp-stroke-dash="\[2,2\]" 
+  data-llp-stroke-dash="[2,2]" 
   data-llp-duration="200" // (ms)
   data-llp-delay="200" // delay offset from start of timeline (ms)
   data-llp-reverse="true" (default = "false") 
   data-llp-ease="easeInOutQuad" (default = 'easeLinear') 
 
   />
+```
+<!-- prettier-ignore-end -->
 
-  
-  
+<br><br>
 
 ### API Reference
 
@@ -128,94 +152,108 @@ Data attributes will override both css styles & initialisation config style attr
 
 **Paint** - accepts optional playback arguments - reverse, ease, delay
 
-const reverse \= true;
-const ease \= "easeExpoOut";
-const delay \= 200;
+```js
+const reverse = true;
+const ease = "easeExpoOut";
+const delay = 200;
 myAnimation.paint({ reverse, ease, delay });
+```
 
 **Erase** - paint can still be called on the element after it has been erased;
 
+```js
 myAnimation.erase();
+```
 
 **Pause**
 
+```js
 myAnimation.pause();
+```
 
 **Resume**
 
+```js
 myAnimation.resume();
+```
 
 **Progress**
 
-// set - \[0 - 1\]
+```js
+// set - [0 - 1]
 myAnimation.progress(value);
 
 // get
-const progress \= myAnimation.progress();
+const progress = myAnimation.progress();
 console.log(progress);
+```
 
 **Destroy** - destroys svg & lazyline instance
 
+```js
 myAnimation.destroy();
+```
 
-  
-  
+<br><br>
 
 #### Events
 
 ##### Handle events across entire animation
 
-myAnimation.on("start", () \=> {});
-myAnimation.on("update", () \=> {});
-myAnimation.on("complete", () \=> {});
+```js
+myAnimation.on("start", () => {});
+myAnimation.on("update", () => {});
+myAnimation.on("complete", () => {});
+```
 
 ##### Handle all events
 
-Called for each shape animated within the svg.  
+Called for each shape animated within the svg.<br>
 event argument contains shape properties.
 
-myAnimation.on('start:all', (event) \=> {});
-myAnimation.on('update:all', (event) \=> { console.log(event.progress); // \[0-1\] });
-myAnimation.on('complete:all', (event) \=> {});
+```js
+myAnimation.on('start:all', (event) => {});
+myAnimation.on('update:all', (event) => { console.log(event.progress); // [0-1] });
+myAnimation.on('complete:all', (event) => {});
+```
 
 ##### Handle targeted events.
 
-Listen to events on specific shapes by adding the shape-id after the colon.  
+Listen to events on specific shapes by adding the shape-id after the colon.<br>
 event argument contains shape properties.
 
-myAnimation.on("start:id", (event) \=> {});
-myAnimation.on("update:id", (event) \=> {});
-myAnimation.on("complete:id", (event) \=> {});
+```js
+myAnimation.on("start:id", (event) => {});
+myAnimation.on("update:id", (event) => {});
+myAnimation.on("complete:id", (event) => {});
+```
 
 ##### Timeline playback events
 
-myAnimation.on("pause", () \=> {});
-myAnimation.on("resume", () \=> {});
-myAnimation.on("erase", () \=> {});
+```js
+myAnimation.on("pause", () => {});
+myAnimation.on("resume", () => {});
+myAnimation.on("erase", () => {});
+```
 
-  
-  
+<br><br>
 
-Examples
-========
+# [Examples](https://codepen.io/collection/DLLeRb/)
 
--   Hello World Example
--   Event Example
--   Set Example
--   Playback Options
+- [Hello World Example](https://codepen.io/camoconnell/pen/zeqgWB)
+- [Event Example](https://codepen.io/camoconnell/pen/vvKWzP)
+- [Set Example](https://codepen.io/camoconnell/pen/GPYGvd)
+- [Playback Options](https://codepen.io/camoconnell/pen/wRYELj)
 
-  
-  
+<br><br>
 
-Changelog
----------
+## Changelog
 
-_Refer to Release notes for entire Changelog_
+_Refer to [Release notes](https://github.com/merri-ment/lazy-line-painter/releases) for entire Changelog_
 
-  
-  
+<br><br>
 
-Author
-------
+## Author
 
-https://merriment.info/
+[https://merriment.info/](https://merriment.info/)
+

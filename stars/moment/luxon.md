@@ -1,46 +1,63 @@
 ---
 project: luxon
-stars: 15560
+stars: 15563
 description: ⏱ A library for working with dates and times in JS
 url: https://github.com/moment/luxon
 ---
 
-Luxon
-=====
+# Luxon
+
+[![MIT License][license-image]][license] [![Build Status][github-action-image]][github-action-url] [![NPM version][npm-version-image]][npm-url] [![Coverage Status][test-coverage-image]][test-coverage-url] [![PRs welcome][contributing-image]][contributing-url]
 
 Luxon is a library for working with dates and times in JavaScript.
 
-DateTime.now().setZone("America/New\_York").minus({ weeks: 1 }).endOf("day").toISO();
+```js
+DateTime.now().setZone("America/New_York").minus({ weeks: 1 }).endOf("day").toISO();
+```
 
-Upgrading to 3.0
-----------------
+## Upgrading to 3.0
 
-Guide
+[Guide](https://moment.github.io/luxon/#upgrading)
 
-Features
---------
+## Features
+ * DateTime, Duration, and Interval types.
+ * Immutable, chainable, unambiguous API.
+ * Parsing and formatting for common and custom formats.
+ * Native time zone and Intl support (no locale or tz files).
 
--   DateTime, Duration, and Interval types.
--   Immutable, chainable, unambiguous API.
--   Parsing and formatting for common and custom formats.
--   Native time zone and Intl support (no locale or tz files).
+## Download/install
 
-Download/install
-----------------
+[Download/install instructions](https://moment.github.io/luxon/#/install)
 
-Download/install instructions
+## Documentation
 
-Documentation
--------------
+* [General documentation](https://moment.github.io/luxon/#/?id=luxon)
+* [API docs](https://moment.github.io/luxon/api-docs/index.html)
+* [Quick tour](https://moment.github.io/luxon/#/tour)
+* [For Moment users](https://moment.github.io/luxon/#/moment)
+* [Why does Luxon exist?](https://moment.github.io/luxon/#/why)
+* [A quick demo](https://moment.github.io/luxon/demo/global.html)
 
--   General documentation
--   API docs
--   Quick tour
--   For Moment users
--   Why does Luxon exist?
--   A quick demo
+## Development
 
-Development
------------
+See [contributing](CONTRIBUTING.md).
 
-See contributing.
+![Phasers to stun][phasers-image]
+
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg
+[license]: LICENSE.md
+
+[github-action-image]: https://github.com/moment/luxon/actions/workflows/test.yml/badge.svg
+[github-action-url]: https://github.com/moment/luxon/actions/workflows/test.yml
+
+[npm-url]: https://npmjs.org/package/luxon
+[npm-version-image]: https://badge.fury.io/js/luxon.svg
+
+[test-coverage-url]: https://codecov.io/gh/moment/luxon
+[test-coverage-image]: https://codecov.io/gh/moment/luxon/branch/master/graph/badge.svg
+
+[contributing-url]: https://github.com/moment/luxon/blob/master/CONTRIBUTING.md
+[contributing-image]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
+
+[phasers-image]: https://img.shields.io/badge/phasers-stun-brightgreen.svg
+
