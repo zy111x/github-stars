@@ -8,7 +8,6 @@
 - 将 README 文件转换并保存为 Markdown 格式
 - 保留仓库的基本信息（项目名、星标数、描述等）
 - 每周自动运行备份（通过 GitHub Actions）
-- 支持 HTML 到 Markdown 的智能转换
 - 包含错误处理和重试机制
 
 ## 使用方法
