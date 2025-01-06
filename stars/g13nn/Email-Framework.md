@@ -5,23 +5,22 @@ description: Responsive HTML Email Framework
 url: https://github.com/g13nn/Email-Framework
 ---
 
-Email Framework
-===============
+# Email Framework
 
-The HTML Email Framework developed to help you build responsive HTML email templates.
+The HTML [Email Framework](https://emailframe.work "Email Framework") developed to help you build responsive HTML email templates.
 
 ### Getting Started
 
--   Documentation
--   Download
+* [Documentation](http://emailframe.work "Documentation")
+* [Download](https://github.com/g13nn/Email-Framework/archive/master.zip "Download")
 
 ### Support
 
-Need some help, or have a question. Get in touch:
+Need some help, or have a question.  Get in touch:
 
--   Get in touch
--   Submit an Issue
--   Sponsor
+* [Get in touch](https://glennsmith.me/#contact "Get in touch")
+* [Submit an Issue](https://github.com/g13nn/Email-Framework/issues/new "Submit an Issue")
+* [Sponsor](https://github.com/sponsors/g13nn "Sponsor")
 
 ### License
 
@@ -47,3 +46,4 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
+

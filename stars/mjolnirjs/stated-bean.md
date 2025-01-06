@@ -5,74 +5,86 @@ description: A light but scalable view-model library with react hooks
 url: https://github.com/mjolnirjs/stated-bean
 ---
 
-stated-bean
-===========
+# stated-bean
+
+[![Travis](https://img.shields.io/travis/com/mjolnirjs/stated-bean.svg)](https://travis-ci.com/mjolnirjs/stated-bean)
+[![Codecov](https://img.shields.io/codecov/c/gh/mjolnirjs/stated-bean)](https://codecov.io/gh/mjolnirjs/stated-bean)
+[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fmjolnirjs%2Fstated-bean%2Fmaster%2Fpackage.json)](https://github.com/plantain-00/type-coverage)
+[![npm](https://img.shields.io/npm/v/stated-bean.svg)](https://www.npmjs.com/package/stated-bean)
+[![GitHub release](https://img.shields.io/github/release/mjolnirjs/stated-bean)](https://github.com/mjolnirjs/stated-bean/releases)
+
+[![David Peer](https://img.shields.io/david/peer/mjolnirjs/stated-bean.svg)](https://david-dm.org/mjolnirjs/stated-bean?type=peer)
+[![David](https://img.shields.io/david/mjolnirjs/stated-bean.svg)](https://david-dm.org/mjolnirjs/stated-bean)
+[![David Dev](https://img.shields.io/david/dev/mjolnirjs/stated-bean.svg)](https://david-dm.org/mjolnirjs/stated-bean?type=dev)
+
+[![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![codechecks.io](https://raw.githubusercontent.com/codechecks/docs/master/images/badges/badge-default.svg?sanitize=true)](https://codechecks.io)
 
 > A light but scalable `view-model` library with react hooks.
 
-TOC
----
+## TOC <!-- omit in TOC -->
 
--   Features
--   Online Demo
--   Usage
-    -   Define a StatedBean
-        -   Plain object StatedBean
-        -   Class StatedBean
-    -   Singleton and Named StatedBean
-        -   Define a named bean
-        -   Declare as a named bean when `useBean`
-    -   Provider container and inject the singleton bean
-    -   Auto inject and watch the props
-    -   Effect action state and observer
--   API
-    -   Decorators
-        -   `StatedBean`
-        -   `Stated`
-        -   `AfterProvided`
-        -   `Effect`
-        -   `Props` and `ObservableProps`
-    -   use Hooks
-        -   `useBean`
-        -   `useInject`
-            -   `UseStatedBeanOption`
-        -   `useObserveEffect`
-    -   Provider
-        -   `<StatedBeanProvider {...props: StatedBeanProviderProps} />`
--   License
+- [Features](#features)
+- [Online Demo](#online-demo)
+- [Usage](#usage)
+  - [Define a StatedBean](#define-a-statedbean)
+    - [Plain object StatedBean](#plain-object-statedbean)
+    - [Class StatedBean](#class-statedbean)
+  - [Singleton and Named StatedBean](#singleton-and-named-statedbean)
+    - [Define a named bean](#define-a-named-bean)
+    - [Declare as a named bean when `useBean`](#declare-as-a-named-bean-when-usebean)
+  - [Provider container and inject the singleton bean](#provider-container-and-inject-the-singleton-bean)
+  - [Auto inject and watch the props](#auto-inject-and-watch-the-props)
+  - [Effect action state and observer](#effect-action-state-and-observer)
+- [API](#api)
+  - [Decorators](#decorators)
+    - [`StatedBean`](#statedbean)
+    - [`Stated`](#stated)
+    - [`AfterProvided`](#afterprovided)
+    - [`Effect`](#effect)
+    - [`Props` and `ObservableProps`](#props-and-observableprops)
+  - [use Hooks](#use-hooks)
+    - [`useBean`](#usebean)
+    - [`useInject`](#useinject)
+      - [`UseStatedBeanOption`](#usestatedbeanoption)
+    - [`useObserveEffect`](#useobserveeffect)
+  - [Provider](#provider)
+    - [`<StatedBeanProvider {...props: StatedBeanProviderProps} />`](#statedbeanprovider-props-statedbeanproviderprops-)
+- [License](#license)
 
+```sh
 # yarn
 yarn add stated-bean
 
 # npm
 npm i stated-bean
+```
 
-Features
---------
+## Features
 
--   OOP: easy to integrate with DI(dependency inject) framework together
--   Familiar API: just provider and hooks
--   Small size:
--   Written in TypeScript
+- OOP: easy to integrate with DI(dependency inject) framework together
+- Familiar API: just provider and hooks
+- Small size: ![npm bundle size](https://img.shields.io/bundlephobia/min/stated-bean) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/stated-bean)
+- Written in TypeScript
 
-Online Demo
------------
+## Online Demo
 
-GitHub Pages: Integration with injection-js
+[GitHub Pages](https://mjolnirjs.github.io/stated-bean): Integration with [injection-js](https://github.com/mgechev/injection-js)
 
-Usage
------
+## Usage
 
 ### Define a StatedBean
 
 #### Plain object StatedBean
 
+```tsx
 import { useBean } from 'stated-bean';
 
-const CounterModel \= {
+const CounterModel = {
   count: 0,
   decrement() {
-    this.count\--;
+    this.count--;
   },
   increment() {
     this.count++;
@@ -80,50 +92,53 @@ const CounterModel \= {
 };
 
 function CounterDisplay() {
-  const counter \= useBean(() \=> CounterModel);
+  const counter = useBean(() => CounterModel);
 
   return (
-    <div\>
-      <button onClick\={counter.decrement}\>\-</button\>
-      <span\>{counter.count}</span\>
-      <button onClick\={counter.increment}\>+</button\>
-    </div\>
+    <div>
+      <button onClick={counter.decrement}>-</button>
+      <span>{counter.count}</span>
+      <button onClick={counter.increment}>+</button>
+    </div>
   );
 }
 
 function App() {
   return (
-    <StatedBeanProvider\>
+    <StatedBeanProvider>
       <CounterDisplay />
-    </StatedBeanProvider\>
+    </StatedBeanProvider>
   );
 }
+```
 
 #### Class StatedBean
 
+```ts
 import { StatedBean, Stated useBean } from 'stated-bean';
 
 @StatedBean()
 class CounterModel {
   @Stated()
-  count \= 0;
+  count = 0;
 
   increment() {
     this.count++;
   }
 
   decrement() {
-    this.count\--;
+    this.count--;
   }
 }
 
 function CounterDisplay() {
-  const counter \= useBean(CounterModel);
+  const counter = useBean(CounterModel);
 
   return (
     // ...
   );
 }
+```
 
 ### Singleton and Named StatedBean
 
@@ -131,42 +146,50 @@ The named bean singleton bean can be resolved via `useInject` with the special n
 
 #### Define a named bean
 
+```ts
 @StatedBean('SpecialName')
 class NamedBean {}
 
 @StatedBean({ singleton: true })
 class SingletonBean {}
+```
 
 #### Declare as a named bean by `useBean`
 
-const model \= useBean(CounterModel, { name: 'SpecialName' });
+```ts
+const model = useBean(CounterModel, { name: 'SpecialName' });
+```
 
 ### Provider container and inject the singleton bean
 
-The beans was stored in the `StatedBeanContainer` witch be created by the `StatedBeanProvider` and bind to the React context. `useInject` will find the named bean from the container or it's parent container.
+The beans was stored in the `StatedBeanContainer` witch be created by the `StatedBeanProvider` and bind to the React context.
+`useInject` will find the named bean from the container or it's parent container.
 
+```tsx
 @StatedBean({ singleton: true })
 class UserModel {
   @Stated()
-  user \= { name: 'jack' };
+  user = { name: 'jack' };
 }
 
 function App() {
   return (
-    <StatedBeanProvider providers\={\[UserModel\]}\>
+    <StatedBeanProvider providers={[UserModel]}>
       <UserDisplay />
-    </StatedBeanProvider\>
+    </StatedBeanProvider>
   );
 }
 
 function UserDisplay() {
-  const model \= useInject(UserModel);
+  const model = useInject(UserModel);
 
   return model.user.name;
 }
+```
 
 ### Auto inject and watch the props
 
+```tsx
 @StatedBean()
 class InputModel implements InitializingBean {
   @Props('initialValue')
@@ -174,25 +197,27 @@ class InputModel implements InitializingBean {
   value: number;
 
   @ObservableProps()
-  value$: BehaviorSubject<number\>;
+  value$: BehaviorSubject<number>;
 
   afterProvided() {
-    this.value$.subscribe(v \=> {
-      this.value \= v;
+    this.value$.subscribe(v => {
+      this.value = v;
     });
   }
 }
 
 function Input(props: InputProps) {
-  const model \= useBean(InputModel, { props });
+  const model = useBean(InputModel, { props });
 
   return (
     // input component
   );
 }
+```
 
 ### Effect action state and observer
 
+```tsx
 @StatedBean()
 class SearchModel {
 
@@ -203,8 +228,8 @@ class SearchModel {
 }
 
 const UserTable() {
-  const model \= useBean(SearchModel);
-  const { loading, error } \= useObserveEffect(model, "search");
+  const model = useBean(SearchModel);
+  const { loading, error } = useObserveEffect(model, "search");
 
   if (loading) {
     return <Loading />;
@@ -213,9 +238,9 @@ const UserTable() {
     // ...user table
   );
 }
+```
 
-API
----
+## API
 
 ### Decorators
 
@@ -247,7 +272,8 @@ The `Effect` decorator is used on a method that can get the execution state by `
 
 _Signature_: `@Props(name?: string): PropertyDecorator` `@ObservableProps(name?: string): PropertyDecorator`
 
-The `Props` decorator is used on a property that can sync the value from props. The `ObservableProps` decorator is used on a `BehaviorSubject` property. You can subscribe the next new props value.
+The `Props` decorator is used on a property that can sync the value from props.
+The `ObservableProps` decorator is used on a `BehaviorSubject` property. You can subscribe the next new props value.
 
 ### use Hooks
 
@@ -265,10 +291,12 @@ The `useInject` will get the instance of the stated bean from the `StatedBeanCon
 
 ##### `UseStatedBeanOption`
 
-option \= {
+```ts
+option = {
   name: string | symbol;   // get/create the instance with special name
-  dependentFields: Array<string | symbol\>;   // do re-render when the special property changed
+  dependentFields: Array<string | symbol>;   // do re-render when the special property changed
 };
+```
 
 #### `useObserveEffect`
 
@@ -284,14 +312,16 @@ The `StatedBeanProvider` is responsible for creating an instance of the stated b
 
 **StatedBeanProviderProps**
 
+```ts
 interface StatedBeanProviderProps {
-  types?: ClassType\[\];
-  beans?: Array<StatedBeanType<unknown\>\>;
+  types?: ClassType[];
+  beans?: Array<StatedBeanType<unknown>>;
   beanProvider?: BeanProvider;
   application?: StatedBeanApplication;
 }
+```
 
-License
--------
+## License
 
-MIT
+[MIT](http://opensource.org/licenses/MIT)
+

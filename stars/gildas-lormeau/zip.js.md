@@ -1,31 +1,31 @@
 ---
 project: zip.js
-stars: 3466
+stars: 3467
 description: JavaScript library to zip and unzip files supporting multi-core compression, compression streams, zip64, split files and encryption.
 url: https://github.com/gildas-lormeau/zip.js
 ---
 
-Introduction
-============
+# Introduction
 
-zip.js is a JavaScript open-source library (BSD-3-Clause license) for compressing and decompressing zip files. It has been designed to handle large amounts of data. It supports notably multi-core compression, native compression with compression streams, archives larger than 4GB with Zip64, split zip files and data encryption.
+zip.js is a JavaScript open-source library (BSD-3-Clause license) for
+compressing and decompressing zip files. It has been designed to handle large amounts
+of data. It supports notably multi-core compression, native compression with
+compression streams, archives larger than 4GB with Zip64, split zip files and data
+encryption.
 
-Demo
-====
+# Demo
 
 See https://gildas-lormeau.github.io/zip-manager
 
-Documentation
-=============
+# Documentation
 
 See here for more info: https://gildas-lormeau.github.io/zip.js/
 
-Examples
-========
+# Examples
 
-Hello world
------------
+## Hello world
 
+```js
 import {
   BlobReader,
   BlobWriter,
@@ -40,48 +40,49 @@ import {
 // ----
 
 // Creates a BlobWriter object where the zip content will be written.
-const zipFileWriter \= new BlobWriter();
+const zipFileWriter = new BlobWriter();
 // Creates a TextReader object storing the text of the entry to add in the zip
 // (i.e. "Hello world!").
-const helloWorldReader \= new TextReader("Hello world!");
+const helloWorldReader = new TextReader("Hello world!");
 
-// Creates a ZipWriter object writing data via \`zipFileWriter\`, adds the entry
-// "hello.txt" containing the text "Hello world!" via \`helloWorldReader\`, and
+// Creates a ZipWriter object writing data via `zipFileWriter`, adds the entry
+// "hello.txt" containing the text "Hello world!" via `helloWorldReader`, and
 // closes the writer.
-const zipWriter \= new ZipWriter(zipFileWriter);
+const zipWriter = new ZipWriter(zipFileWriter);
 await zipWriter.add("hello.txt", helloWorldReader);
 await zipWriter.close();
 
-// Retrieves the Blob object containing the zip content into \`zipFileBlob\`. It
+// Retrieves the Blob object containing the zip content into `zipFileBlob`. It
 // is also returned by zipWriter.close() for more convenience.
-const zipFileBlob \= await zipFileWriter.getData();
+const zipFileBlob = await zipFileWriter.getData();
 
 // ----
 // Read the zip file
 // ----
 
-// Creates a BlobReader object used to read \`zipFileBlob\`.
-const zipFileReader \= new BlobReader(zipFileBlob);
+// Creates a BlobReader object used to read `zipFileBlob`.
+const zipFileReader = new BlobReader(zipFileBlob);
 // Creates a TextWriter object where the content of the first entry in the zip
 // will be written.
-const helloWorldWriter \= new TextWriter();
+const helloWorldWriter = new TextWriter();
 
-// Creates a ZipReader object reading the zip content via \`zipFileReader\`,
+// Creates a ZipReader object reading the zip content via `zipFileReader`,
 // retrieves metadata (name, dates, etc.) of the first entry, retrieves its
-// content via \`helloWorldWriter\`, and closes the reader.
-const zipReader \= new ZipReader(zipFileReader);
-const firstEntry \= (await zipReader.getEntries()).shift();
-const helloWorldText \= await firstEntry.getData(helloWorldWriter);
+// content via `helloWorldWriter`, and closes the reader.
+const zipReader = new ZipReader(zipFileReader);
+const firstEntry = (await zipReader.getEntries()).shift();
+const helloWorldText = await firstEntry.getData(helloWorldWriter);
 await zipReader.close();
 
 // Displays "Hello world!".
 console.log(helloWorldText);
+```
 
 Run the code on JSFiddle: https://jsfiddle.net/dns7pkxt/
 
-Hello world with Streams
-------------------------
+## Hello world with Streams
 
+```js
 import {
   BlobReader,
   ZipReader,
@@ -93,55 +94,56 @@ import {
 // ----
 
 // Creates a TransformStream object, the zip content will be written in the
-// \`writable\` property.
-const zipFileStream \= new TransformStream();
+// `writable` property.
+const zipFileStream = new TransformStream();
 // Creates a Promise object resolved to the zip content returned as a Blob
-// object retrieved from \`zipFileStream.readable\`.
-const zipFileBlobPromise \= new Response(zipFileStream.readable).blob();
+// object retrieved from `zipFileStream.readable`.
+const zipFileBlobPromise = new Response(zipFileStream.readable).blob();
 // Creates a ReadableStream object storing the text of the entry to add in the
 // zip (i.e. "Hello world!").
-const helloWorldReadable \= new Blob(\["Hello world!"\]).stream();
+const helloWorldReadable = new Blob(["Hello world!"]).stream();
 
-// Creates a ZipWriter object writing data into \`zipFileStream.writable\`, adds
+// Creates a ZipWriter object writing data into `zipFileStream.writable`, adds
 // the entry "hello.txt" containing the text "Hello world!" retrieved from
-// \`helloWorldReadable\`, and closes the writer.
-const zipWriter \= new ZipWriter(zipFileStream.writable);
+// `helloWorldReadable`, and closes the writer.
+const zipWriter = new ZipWriter(zipFileStream.writable);
 await zipWriter.add("hello.txt", helloWorldReadable);
 await zipWriter.close();
 
-// Retrieves the Blob object containing the zip content into \`zipFileBlob\`.
-const zipFileBlob \= await zipFileBlobPromise;
+// Retrieves the Blob object containing the zip content into `zipFileBlob`.
+const zipFileBlob = await zipFileBlobPromise;
 
 // ----
 // Read the zip file
 // ----
 
-// Creates a BlobReader object used to read \`zipFileBlob\`.
-const zipFileReader \= new BlobReader(zipFileBlob);
+// Creates a BlobReader object used to read `zipFileBlob`.
+const zipFileReader = new BlobReader(zipFileBlob);
 // Creates a TransformStream object, the content of the first entry in the zip
-// will be written in the \`writable\` property.
-const helloWorldStream \= new TransformStream();
+// will be written in the `writable` property.
+const helloWorldStream = new TransformStream();
 // Creates a Promise object resolved to the content of the first entry returned
-// as text from \`helloWorldStream.readable\`.
-const helloWorldTextPromise \= new Response(helloWorldStream.readable).text();
+// as text from `helloWorldStream.readable`.
+const helloWorldTextPromise = new Response(helloWorldStream.readable).text();
 
-// Creates a ZipReader object reading the zip content via \`zipFileReader\`,
+// Creates a ZipReader object reading the zip content via `zipFileReader`,
 // retrieves metadata (name, dates, etc.) of the first entry, retrieves its
-// content into \`helloWorldStream.writable\`, and closes the reader.
-const zipReader \= new ZipReader(zipFileReader);
-const firstEntry \= (await zipReader.getEntries()).shift();
+// content into `helloWorldStream.writable`, and closes the reader.
+const zipReader = new ZipReader(zipFileReader);
+const firstEntry = (await zipReader.getEntries()).shift();
 await firstEntry.getData(helloWorldStream.writable);
 await zipReader.close();
 
 // Displays "Hello world!".
-const helloWorldText \= await helloWorldTextPromise;
+const helloWorldText = await helloWorldTextPromise;
 console.log(helloWorldText);
+```
 
 Run the code on JSFiddle: https://jsfiddle.net/exnyq1ft/
 
-Adding concurrently multiple entries in a zip file
---------------------------------------------------
+## Adding concurrently multiple entries in a zip file
 
+```js
 import {
   BlobWriter,
   HttpReader,
@@ -149,16 +151,16 @@ import {
   ZipWriter,
 } from "https://unpkg.com/@zip.js/zip.js/index.js";
 
-const README\_URL \= "https://unpkg.com/@zip.js/zip.js/README.md";
+const README_URL = "https://unpkg.com/@zip.js/zip.js/README.md";
 getZipFileBlob()
   .then(downloadFile);
 
 async function getZipFileBlob() {
-  const zipWriter \= new ZipWriter(new BlobWriter("application/zip"));
-  await Promise.all(\[
+  const zipWriter = new ZipWriter(new BlobWriter("application/zip"));
+  await Promise.all([
     zipWriter.add("hello.txt", new TextReader("Hello world!")),
-    zipWriter.add("README.md", new HttpReader(README\_URL)),
-  \]);
+    zipWriter.add("README.md", new HttpReader(README_URL)),
+  ]);
   return zipWriter.close();
 }
 
@@ -169,10 +171,11 @@ function downloadFile(blob) {
     textContent: "Download zip file",
   }));
 }
+```
 
 Run the code on Plunker: https://plnkr.co/edit/4sVljNIpqSUE9HCA?preview
 
-Tests
------
+## Tests
 
 See https://github.com/gildas-lormeau/zip.js/tree/master/tests/all
+

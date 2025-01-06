@@ -5,79 +5,99 @@ description: Call python code from node.js
 url: https://github.com/monkeycz/python.js
 ---
 
-python.js
-=========
+# python.js
 
 Call python code from node.js.
 
-Usage
------
 
-var python \= require('python.js');
-var os \= python.import('os');
+## Usage
 
-var path \= require('path');
+```javascript
+var python = require('python.js');
+var os = python.import('os');
 
-assert(os.path.basename(os.getcwd()) \== path.basename(process.cwd()));
+var path = require('path');
 
-Feature
--------
+assert(os.path.basename(os.getcwd()) == path.basename(process.cwd()));
+```
 
+
+## Feature
+
+```python
 def test():
 	try:
-		\## do samething
+		## do samething
 	except Exception as e:
 		raise e
 	return 'done'
+```
 
-PYMODULE.test.async \= true;
+```javascript
+PYMODULE.test.async = true;
 PYMODULE.test(function (result, error) {
 	if (!error)
 		console.log(result);
 });
+```
 
-Build
------
+
+## Build
 
 ### Mac
 
+```bash
 # for Node.js
-node-gyp rebuild --arch=\[ia32/x64\] --target=x.y.z 
+node-gyp rebuild --arch=[ia32/x64] --target=x.y.z 
 # target nodejs version, eg: 0.10.28
+```
 
+```bash
 # for node-webkit
-nw-gyp rebuild --arch=\[ia32/x64\] --target=x.y.z 
+nw-gyp rebuild --arch=[ia32/x64] --target=x.y.z 
 # target node-webkit version, eg: 0.8.6
+```
 
 ### Windows
 
+```bash
 # for Node.js
-cd python.js\\src
-cl /O2 /MT /LD -Febinding.node binding.cc py\_object\_wrapper.cc utils.cc <NODE\_GYP\_ROOT\>\\.node-gyp\\<NODEJS\_VERSION\>\\<NODEJS\_ARCH\>\\node.lib <PYTHON\_ROOT\>\\Python27\\libs\\python27.lib /I<NODE\_GYP\_ROOT\>\\.node-gyp\\<NODEJS\_VERSION\>\\src /I<NODE\_GYP\_ROOT\>\\.node-gyp\\<NODEJS\_VERSION\>\\deps\\uv\\include /I<NODE\_GYP\_ROOT\>\\.node-gyp\\<NODEJS\_VERSION\>\\deps\\v8\\include /I<PYTHON\_ROOT\>\\Python27\\include
-copy binding.node <NODE\_MODULES\_ROOT\>\\python.js\\compiled\\<NODEJS\_VERSION\>\\win32\\<NODEJS\_ARCH\>
+cd python.js\src
+cl /O2 /MT /LD -Febinding.node binding.cc py_object_wrapper.cc utils.cc <NODE_GYP_ROOT>\.node-gyp\<NODEJS_VERSION>\<NODEJS_ARCH>\node.lib <PYTHON_ROOT>\Python27\libs\python27.lib /I<NODE_GYP_ROOT>\.node-gyp\<NODEJS_VERSION>\src /I<NODE_GYP_ROOT>\.node-gyp\<NODEJS_VERSION>\deps\uv\include /I<NODE_GYP_ROOT>\.node-gyp\<NODEJS_VERSION>\deps\v8\include /I<PYTHON_ROOT>\Python27\include
+copy binding.node <NODE_MODULES_ROOT>\python.js\compiled\<NODEJS_VERSION>\win32\<NODEJS_ARCH>
+```
 
+```bash
 # for node-webkit
-cd python.js\\src
-cl /O2 /MT /LD -Febinding.node binding.cc py\_object\_wrapper.cc utils.cc <NW\_GYP\_ROOT\>\\.nw-gyp\\<NODE\_WEBKIT\_VERSION\>\\<NODE\_WEBKIT\_ARCH\>\\nw.lib <PYTHON\_ROOT\>\\Python27\\libs\\python27.lib /I<NW\_GYP\_ROOT\>\\.nw-gyp\\<NODE\_WEBKIT\_VERSION\>\\src /I<NW\_GYP\_ROOT\>\\.nw-gyp\\<NODE\_WEBKIT\_VERSION\>\\deps\\uv\\include /I<NW\_GYP\_ROOT\>\\.nw-gyp\\<NODE\_WEBKIT\_VERSION\>\\deps\\v8\\include /I<PYTHON\_ROOT\>\\Python27\\include
-copy binding.node <NODE\_MODULES\_ROOT\>\\python.js\\compiled\\<NODEJS\_VERSION\>\\win32\\<NODE\_WEBKIT\_ARCH\>
+cd python.js\src
+cl /O2 /MT /LD -Febinding.node binding.cc py_object_wrapper.cc utils.cc <NW_GYP_ROOT>\.nw-gyp\<NODE_WEBKIT_VERSION>\<NODE_WEBKIT_ARCH>\nw.lib <PYTHON_ROOT>\Python27\libs\python27.lib /I<NW_GYP_ROOT>\.nw-gyp\<NODE_WEBKIT_VERSION>\src /I<NW_GYP_ROOT>\.nw-gyp\<NODE_WEBKIT_VERSION>\deps\uv\include /I<NW_GYP_ROOT>\.nw-gyp\<NODE_WEBKIT_VERSION>\deps\v8\include /I<PYTHON_ROOT>\Python27\include
+copy binding.node <NODE_MODULES_ROOT>\python.js\compiled\<NODEJS_VERSION>\win32\<NODE_WEBKIT_ARCH>
+```
 
-Install
--------
 
+## Install
+
+```bash
 npm install python.js
+```
 
 or
 
-npm install <protocol\>://<user\>@<domain\>/<projects\>/python.js.git
+```bash
+npm install <protocol>://<user>@<domain>/<projects>/python.js.git
 # eg: npm install git+ssh://git@example.com/projects/python.js.git
+```
 
-Test
-----
 
+## Test
+
+```bash
 node test/jstest.js
+```
 
-Thanks
-------
 
--   Jean-Sébastien Tremblay
--   Chris Dickinson
+## Thanks
+
+* [Jean-Sébastien Tremblay](https://github.com/JeanSebTr/node-python)
+* [Chris Dickinson](https://github.com/chrisdickinson/node-python)
+

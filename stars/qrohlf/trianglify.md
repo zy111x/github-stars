@@ -5,22 +5,21 @@ description: Algorithmically generated triangle art
 url: https://github.com/qrohlf/trianglify
 ---
 
-Trianglify
-==========
+# Trianglify ![Build Status](https://github.com/qrohlf/trianglify/workflows/build/badge.svg)
+
 
 Trianglify is a library that I wrote to generate nice SVG background images like this one:
 
-Contents
-========
+![](https://cloud.githubusercontent.com/assets/347189/6771063/f8b0af46-d090-11e4-8d4c-6c7ef5bd9d37.png)
 
-📦 Getting Trianglify  
-🏎 Quickstart  
-⚖️ Licensing  
-📖 API  
-🎨 Configuration
+# Contents
+[📦 Getting Trianglify](#-getting-trianglify)  
+[🏎 Quickstart](#-quickstart)  
+[⚖️ Licensing](#%EF%B8%8F-licensing)  
+[📖 API](#-api)  
+[🎨 Configuration](#-configuration)
 
-📦 Getting Trianglify
-=====================
+# 📦 Getting Trianglify
 
 You can grab Trianglify with npm/yarn (recommended):
 
@@ -34,92 +33,102 @@ Include it in your application via the unpkg CDN:
 <script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
 ```
 
-Or download a .zip from the **releases page**.
+Or download a .zip from the [**releases page**](https://github.com/qrohlf/trianglify/releases).
 
-🏎 Quickstart
-=============
+
+# 🏎 Quickstart
 
 **Browsers**
-
-<script src\='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'\></script\>
-<script\>
-  const pattern \= trianglify({
+```html
+<script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
+<script>
+  const pattern = trianglify({
     width: window.innerWidth,
     height: window.innerHeight
   })
   document.body.appendChild(pattern.toCanvas())
-</script\>
+</script>
+```
 
 **Node**
+```js
+const trianglify = require('trianglify')
+const fs = require('fs')
 
-const trianglify \= require('trianglify')
-const fs \= require('fs')
-
-const canvas \= trianglify({
+const canvas = trianglify({
   width: 1920,
   height: 1080
 }).toCanvas()
 
-const file \= fs.createWriteStream('trianglify.png')
+const file = fs.createWriteStream('trianglify.png')
 canvas.createPNGStream().pipe(file)
+```
 
-You can see the `examples/` folder for more usage examples.
+You can see the [`examples/`](./examples) folder for more usage examples.
 
 The https://trianglify.io/ GUI is a good place to play around with the various configuration parameters and see their effect on the generated output, live.
 
-⚖️ Licensing
-============
+# ⚖️ Licensing
 
-The source code of Trianglify is licensed under version 3 of the GNU General Public License (GPLv3). This means that any websites, apps, or other projects that include the Trianglify javascript library need to be released under a compatible open-source license. If you are interested in using Trianglify in a closed-source project, please email qr@qrohlf.com to purchase a commercial license.
+The source code of Trianglify is licensed under version 3 of the GNU General Public License ([GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)). This means that any websites, apps, or other projects that include the Trianglify javascript library need to be released under a compatible open-source license. If you are interested in using Trianglify in a closed-source project, please email qr@qrohlf.com to purchase a commercial license.
 
-**However**, it's worth noting that you own the copyright to the output image files which you create using Trianglify, just like you own the copyright to an image created using something like GIMP. If you just want to use an image file that was generated using Trianglify in your project, and do not plan to distribute the Trianglify source code or compiled versions of it, you do not need to worry about the license restrictions described above.
+**However**, it's worth noting that you own the copyright to the output image files which you create using Trianglify, just like you own the copyright to an image created using something like [GIMP](https://www.gimp.org/). If you just want to use an image file that was generated using Trianglify in your project, and do not plan to distribute the Trianglify source code or compiled versions of it, you do not need to worry about the license restrictions described above.
 
-📖 API
-======
+
+# 📖 API
 
 Trianglify is primarily used by calling the `trianglify` function, which returns a `trianglify.Pattern` object.
 
+```js
 // load the library, either via a window global (browsers) or require call (node)
-// in es-module environments, you can \`import trianglify from 'trianglify'\` as well
-const trianglify \= window.trianglify || require('trianglify')
+// in es-module environments, you can `import trianglify from 'trianglify'` as well
+const trianglify = window.trianglify || require('trianglify')
 
-const options \= { height: 400, width: 600 }
-const pattern \= trianglify(options)
+const options = { height: 400, width: 600 }
+const pattern = trianglify(options)
 console.log(pattern instanceof trianglify.Pattern) // true
+```
 
-pattern
--------
+## pattern
 
 This object holds the generated geometry and colors, and exposes a number of methods for rendering this geometry to the DOM or a Canvas.
+
 
 **`pattern.opts`**
 
 Object containing the options used to generate the pattern.
 
+
 **`pattern.points`**
 
 The pseudo-random point grid used for the pattern geometry, in the following format:
 
-\[
-  \[x, y\],
-  \[x, y\],
-  \[x, y\],
+```js
+[
+  [x, y],
+  [x, y],
+  [x, y],
   // and so on...
-\]
+]
+```
+
 
 **`pattern.polys`**
 
 The array of colored polygons that make up the pattern, in the following format:
 
+```js
 // {x, y} center of the first polygon in the pattern
-pattern.polys\[0\].centroid
+pattern.polys[0].centroid
 
-// \[i, i, i\] three indexes into the pattern.points array, 
+// [i, i, i] three indexes into the pattern.points array, 
 // defining the shape corners
-pattern.polys\[0\].vertexIndices
+pattern.polys[0].vertexIndices
 
 // Chroma.js color object defining the color of the polygon
-pattern.polys\[0\].color
+pattern.polys[0].color
+```
+
 
 **`pattern.toSVG(destSVG?, svgOpts?)`**
 
@@ -129,7 +138,8 @@ If an existing svg element is passed as the `destSVG`, this function will render
 
 The `svgOpts` option allows for some svg-specific customizations to the output:
 
-const svgOpts \= {
+```js
+const svgOpts = {
   // Include or exclude the xmlns='http://www.w3.org/2000/svg' attribute on
   // the root <svg> tag. See https://github.com/qrohlf/trianglify/issues/41
   // for additional details on why this is sometimes important
@@ -138,22 +148,27 @@ const svgOpts \= {
   // You can set this to -1 to disable rounding. Default is 1.
   coordinateDecimals: 1
 }
+```
+
 
 **`pattern.toSVGTree(svgOpts?)`**
 
-Alternate rendering function for SVG. Returns a lightweight node tree structure that can be seralized to a valid SVG string using the `toString()` function. In node environments, this is an alias for `pattern.toSVG()`.
+Alternate rendering function for SVG. Returns a lightweight node tree structure that can be seralized to a valid SVG string using the `toString()` function. In node environments, this is an alias for
+`pattern.toSVG()`.
+
 
 **`pattern.toCanvas(destCanvas?, canvasOpts?)`**
 
-Rendering function for canvas. In browser and browser-like environments, returns a Canvas HTMLElement node. In node environments, this will return a node-canvas object which follows a superset of the Web Canvas API.
+Rendering function for canvas. In browser and browser-like environments, returns a Canvas HTMLElement node. In node environments, this will return a node-canvas object which follows [a superset of the Web Canvas API](https://github.com/Automattic/node-canvas#documentation).
 
 If an existing canvas element is passed as the `destCanvas`, this function will render the pattern to the pre-existing element instead of creating a new one.
 
-To use this in a node.js environment, the optional dependency node-canvas needs to be installed as a dependency of your project `npm install -save canvas`.
+To use this in a node.js environment, the optional dependency [node-canvas](https://github.com/Automattic/node-canvas) needs to be installed as a dependency of your project `npm install -save canvas`.
 
 The `canvasOpts` option allows for some canvas-specific customizations to the output:
 
-const canvasOpts \= {
+```js
+const canvasOpts = {
   // determines how the canvas is rendered on high-DPI (aka "retina") devices.
   // - 'auto' will automatically render the canvas at the appropriate scale ratio
   //   for pixel-perfect display.
@@ -161,7 +176,7 @@ const canvasOpts \= {
   //   for example, 2.0 will render it at 2x resolution, wheras 0.5 will render
   //   at half resolution
   // - 'false' will disable scaling, and the canvas will be rendered at the 
-  //   exact resolution specified by \`width, height\`
+  //   exact resolution specified by `width, height`
   scaling: 'auto',
   // if the canvas is rendered at a different resolution than the {width, height}
   // trianglify will apply some inline style attributes to scale it back to
@@ -169,13 +184,14 @@ const canvasOpts \= {
   // disable this behavior.
   applyCssScaling: true
 }
+```
 
-🎨 Configuration
-================
+# 🎨 Configuration
 
 Trianglify is configured by an options object passed in as the only argument. The following option keys are supported, see below for a complete description of what each option does.
 
-const defaultOptions \= {
+```js
+const defaultOptions = {
   width: 600,
   height: 400,
   cellSize: 75,
@@ -190,6 +206,7 @@ const defaultOptions \= {
   strokeWidth: 0,
   points: null
 }
+```
 
 **`width`**
 
@@ -215,7 +232,7 @@ String, defaults to `null`. Seeds the random number generator to create repeatab
 
 False, string, or array of CSS-formatted colors, default is `'random'`. Specify the color gradient used on the x axis.
 
-Valid string values are 'random', or the name of a colorbrewer palette (i.e. 'YlGnBu' or 'RdBu'). When set to 'random', a gradient will be randomly selected from the colorbrewer library.
+Valid string values are 'random', or the name of a [colorbrewer palette](http://bl.ocks.org/mbostock/5577023) (i.e. 'YlGnBu' or 'RdBu'). When set to 'random', a gradient will be randomly selected from the colorbrewer library.
 
 Valid array values should specify the color stops in any CSS format (i.e. `['#000000', '#4CAFE8', '#FFFFFF']`).
 
@@ -225,17 +242,17 @@ False, string or array of CSS-formatted colors, default is `'match'`. When set t
 
 **`palette`**
 
-The array of color combinations to pick from when using `random` for the xColors or yColors. See `src/utils/colorbrewer.js` for the format of this data.
+The array of color combinations to pick from when using `random` for the xColors or yColors. See [`src/utils/colorbrewer.js`](./src/utils/colorbrewer.js) for the format of this data.
 
 **`colorSpace`**
 
-String, defaults to `'lab'`. Set the color space used for generating gradients. Supported values are rgb, hsv, hsl, hsi, lab and hcl. See this blog post for some background on why this matters.
+String, defaults to `'lab'`. Set the color space used for generating gradients. Supported values are rgb, hsv, hsl, hsi, lab and hcl. See this [blog post](https://vis4.net/blog/posts/avoid-equidistant-hsv-colors/) for some background on why this matters.
 
 **`colorFunction`**
 
 Specify a custom function for coloring triangles, defaults to `null`. Accepts a function to override the standard gradient coloring, which is passed a variety of data about the pattern and each polygon and must return a Chroma.js color object.
 
-See `examples/color-function-example.html` and `src/utils/colorFunctions.js` for more information about the built-in color functions, and how to write custom color functions.
+See [`examples/color-function-example.html`](./examples/color-function-example.html) and [`src/utils/colorFunctions.js`](./src/utils/colorFunctions.js) for more information about the built-in color functions, and how to write custom color functions.
 
 **`fill`**
 
@@ -247,4 +264,5 @@ Number, defaults to 0. Specify the width of the strokes used to outline the poly
 
 **`points`**
 
-Array of points (\[x, y\]) to triangulate, defaults to null. When not specified an array randomised points is generated filling the space. Points must be within the coordinate space defined by `width` and `height`. See `examples/custom-points-example.html` for a demonstration of how this option can be used to generate circular trianglify patterns.
+Array of points ([x, y]) to triangulate, defaults to null. When not specified an array randomised points is generated filling the space. Points must be within the coordinate space defined by `width` and `height`. See [`examples/custom-points-example.html`](./examples/custom-points-example.html) for a demonstration of how this option can be used to generate circular trianglify patterns.
+

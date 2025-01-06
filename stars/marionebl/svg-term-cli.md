@@ -1,41 +1,41 @@
 ---
 project: svg-term-cli
-stars: 3584
+stars: 3583
 description: Share terminal sessions via SVG and CSS
 url: https://github.com/marionebl/svg-term-cli
 ---
 
 > Share terminal sessions as razor-sharp animated SVG everywhere
 
+<p align="center">
+  <img width="600" src="https://cdn.rawgit.com/marionebl/svg-term-cli/1250f9c1/examples/parrot.svg">
+</p>
+
 > Example generated with `svg-term --cast 113643 --out examples/parrot.svg --window --no-cursor --from=4500`
 
-svg-term-cli
-============
+# svg-term-cli
 
--   💄 Render asciicast to animated SVG
--   🌐 Share asciicasts everywhere (sans JS)
--   🤖 Style with common color profiles
+* 💄 Render asciicast to animated SVG
+* 🌐 Share asciicasts everywhere (sans JS)
+* 🤖 Style with common [color profiles](https://github.com/marionebl/term-schemes#supported-formats)
 
-Install
--------
+## Install
 
-1.  Install asciinema via: https://asciinema.org/docs/installation
-2.  Install svg-term-cli:
-    
-    npm install -g svg-term-cli
-    
+1. Install asciinema via: https://asciinema.org/docs/installation
+2. Install svg-term-cli:
+      ```sh
+      npm install -g svg-term-cli
+      ```
 
-Usage
------
+## Usage
 
-Generate the `parrot.svg` example from asciicast at https://asciinema.org/a/113643
+Generate the `parrot.svg` example from asciicast at <https://asciinema.org/a/113643>
 
 ```
 svg-term --cast=113643 --out examples/parrot.svg --window
 ```
 
-Interface
----------
+## Interface
 
 ```
 λ svg-term --help
@@ -71,29 +71,26 @@ Interface
     $ svg-term --cast 113643 --out examples/parrot.svg
 ```
 
-Rationale
----------
+## Rationale
 
-Replace GIF asciicast recordings where you can not use the asciinema player, e.g. `README.md` files on GitHub and the npm registry.
+Replace GIF asciicast recordings where you can not use the [asciinema player](https://asciinema.org/), e.g. `README.md` files on GitHub and the npm registry.
 
 The image at the top of this README is an example. See how sharp the text looks, even when you zoom in? That’s because it’s an SVG!
 
-Related
--------
+## Related
 
--   asciinema/asciinema - Terminal session recorder
--   derhuerst/asciicast-to-svg - Render frames of Asciicasts as SVGs
--   marionebl/svg-term - Render asciicast to animated SVG
--   marionebl/term-schemes - Parse and normalize common terminal emulator color schemes
+* [asciinema/asciinema](https://github.com/asciinema/asciinema) - Terminal session recorder
+* [derhuerst/asciicast-to-svg](https://github.com/derhuerst/asciicast-to-svg) - Render frames of Asciicasts as SVGs
+* [marionebl/svg-term](https://github.com/marionebl/svg-term) - Render asciicast to animated SVG
+* [marionebl/term-schemes](https://github.com/marionebl/term-schemes) - Parse and normalize common terminal emulator color schemes
 
-Gallery
--------
+## Gallery
 
--   marionebl/commitlint
--   marionebl/share-cli
--   marionebl/remote-share-cli
+* [marionebl/commitlint](https://github.com/marionebl/commitlint)
+* [marionebl/share-cli](https://github.com/marionebl/share-cli)
+* [marionebl/remote-share-cli](https://github.com/marionebl/remote-share-cli)
 
-License
--------
+## License
 
 Copyright 2017. Released under the MIT license.
+

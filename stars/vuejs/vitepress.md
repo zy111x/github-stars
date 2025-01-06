@@ -1,35 +1,35 @@
 ---
 project: vitepress
-stars: 13541
+stars: 13556
 description: Vite & Vue powered static site generator.
 url: https://github.com/vuejs/vitepress
 ---
 
-VitePress 📝💨
-==============
+# VitePress 📝💨
 
-* * *
+[![test](https://github.com/vuejs/vitepress/workflows/Test/badge.svg)](https://github.com/vuejs/vitepress/actions)
+[![npm](https://img.shields.io/npm/v/vitepress)](https://www.npmjs.com/package/vitepress)
+[![chat](https://img.shields.io/badge/chat-discord-blue?logo=discord)](https://chat.vuejs.org)
 
-VitePress is a Vue-powered static site generator and a spiritual successor to VuePress, built on top of Vite.
+---
 
-Documentation
--------------
+VitePress is a Vue-powered static site generator and a spiritual successor to [VuePress](https://vuepress.vuejs.org), built on top of [Vite](https://github.com/vitejs/vite).
 
-To check out docs, visit vitepress.dev.
+## Documentation
 
-Changelog
----------
+To check out docs, visit [vitepress.dev](https://vitepress.dev).
 
-Detailed changes for each release are documented in the CHANGELOG.
+## Changelog
 
-Contribution
-------------
+Detailed changes for each release are documented in the [CHANGELOG](https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md).
 
-Please make sure to read the Contributing Guide before making a pull request.
+## Contribution
 
-License
--------
+Please make sure to read the [Contributing Guide](https://github.com/vuejs/vitepress/blob/main/.github/contributing.md) before making a pull request.
 
-MIT
+## License
+
+[MIT](https://github.com/vuejs/vitepress/blob/main/LICENSE)
 
 Copyright (c) 2019-present, Yuxi (Evan) You
+

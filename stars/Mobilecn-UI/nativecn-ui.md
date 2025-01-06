@@ -1,36 +1,39 @@
 ---
 project: nativecn-ui
-stars: 1040
+stars: 1041
 description: Beautiful and customizable React Native components
 url: https://github.com/Mobilecn-UI/nativecn-ui
 ---
 
-nativecn-ui
-===========
+# nativecn-ui
 
-Beautiful and customizable React Native components, inspired by shadcn-ui. Built-in dark mode, CSS variables, and NativeWind support.
+Beautiful and customizable React Native components, inspired by [shadcn-ui](https://github.com/shadcn-ui/ui). Built-in dark mode, CSS variables, and NativeWind support.
 
-Dark mode
+|               Dark mode               |               Light mode               |
+| :-----------------------------------: | :------------------------------------: |
+| ![](assets/examples/example-dark.png) | ![](assets/examples/example-light.png) |
 
-Light mode
-
-Usage
------
+## Usage
 
 ### I have an Expo project, how do I get started?
 
 First, initialize nativecn from your project's root directory.
 
+```bash
 npx nativecn-ui init
+```
 
 Then, you can start adding components.
 
+```bash
 npx nativecn-ui add Avatar
+```
 
 > **Tip**: run `npx nativecn-ui add -a` to add all components.
 
 ### How do I run this locally?
 
+```bash
 # Clone the repo
 git clone git@github.com:Mobilecn-UI/nativecn-ui.git
 cd nativecn-ui
@@ -40,34 +43,33 @@ yarn
 
 # Run it with Expo
 yarn start
+```
 
-Components
-----------
+## Components
 
--   Avatar
--   Badge
--   Button
--   Card
--   Checkbox
--   Dialog
--   Input
--   Progress
--   Radio Group
--   Skeleton
--   Switch
--   Tabs
--   Toast
--   Dropdown
--   Select
--   Alert (WIP)
--   Form (WIP)
+- [x] [Avatar](components/Avatar.tsx)
+- [x] [Badge](components/Badge.tsx)
+- [x] [Button](components/Button.tsx)
+- [x] [Card](components/Card.tsx)
+- [x] [Checkbox](components/Checkbox.tsx)
+- [x] [Dialog](components/Dialog.tsx)
+- [x] [Input](components/Input.tsx)
+- [x] [Progress](components/Progress.tsx)
+- [x] [Radio Group](components/RadioGroup.tsx)
+- [x] [Skeleton](components/Skeleton.tsx)
+- [x] [Switch](components/Switch.tsx)
+- [x] [Tabs](components/Tabs.tsx)
+- [x] [Toast](components/Toast.tsx)
+- [x] [Dropdown](components/DropDown.tsx)
+- [x] [Select](components/Select.tsx)
+- [ ] Alert (WIP)
+- [ ] Form (WIP)
 
-Contributing
-------------
+## Contributing
 
-Check out the contributing guide
+Check out the [contributing guide](https://github.com/Mobilecn-UI/nativecn-ui/blob/main/CONTRIBUTING.md)
 
-License
--------
+## License
 
-Distributed under the MIT license.
+Distributed under the [MIT license](https://github.com/Mobilecn-UI/nativecn-ui/blob/main/LICENSE).
+

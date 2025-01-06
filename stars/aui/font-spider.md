@@ -5,10 +5,14 @@ description: Smart webfont compression and format conversion tool
 url: https://github.com/aui/font-spider
 ---
 
-font-spider
-===========
+# font-spider
 
-\[简体中文\] | \[English\] | \[日本語\]
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Node.js Version][node-version-image]][node-version-url]
+[![Build Status][travis-ci-image]][travis-ci-url]
+
+[[简体中文]](./README-ZH-CN.md) | [[English]](./README.md) | [[日本語]](./README-JA.md)
 
 Font-spider is a compress tool for WebFont which can analyze your web-page intelligently to find the fonts out which have been used and then compress them.
 
@@ -16,24 +20,26 @@ Font-spider is a compress tool for WebFont which can analyze your web-page intel
 
 フォント・スパイダー（font-spider）は、Webフォントを圧縮するためのスマートなツールです，Webページに使用されるWebフォントを分析し、必要に応じて圧縮することができます。
 
-* * *
+------------------
 
-Feature
--------
+<img alt="font-spider" width="670" src="https://cloud.githubusercontent.com/assets/1791748/15415184/8bc574ac-1e73-11e6-92b9-515281620e9d.png">
 
-1.  Font subsetter: Our tool is based on HTML and CSS analysis and completely running in local so that.
-2.  Font converter: Support woff2, woff, eot, svg font format generation.
+## Feature
 
-Install
--------
+1. Font subsetter: Our tool is based on HTML and CSS analysis and completely running in local so that.
+2. Font converter: Support woff2, woff, eot, svg font format generation.
 
+## Install
+
+``` shell
 npm install font-spider -g
+```
 
-Use
----
+## Use
 
 ### step one: code CSS
 
+``` css
 @font-face {
   font-family: 'source';
   src: url('../font/source.eot');
@@ -47,15 +53,18 @@ Use
   font-style: normal;
 }
 
-.home h1, .demo \> .test {
+.home h1, .demo > .test {
     font-family: 'source';
 }
+```
 
 > Attention: the ".ttf" file must be existed which is referred in `src` property of `@font-face`, and our font-spider will automatically generate other formats of font.
 
 ### step two: compress WebFont by using font-spider
 
-font-spider \[options\] <htmlFile1 htmlFile2 ...\>
+``` shell
+font-spider [options] <htmlFile1 htmlFile2 ...>
+```
 
 #### htmlFiles
 
@@ -63,7 +72,9 @@ One or more web-page addresses which support the http form.
 
 Example:
 
+``` shell
 font-spider dest/news.html dest/index.html dest/about.html
+```
 
 #### options
 
@@ -85,40 +96,55 @@ Options:
 
 Use the wildcard character to compress the WebFont of several HTML file:
 
-font-spider dest/\*.html
+``` shell
+font-spider dest/*.html
+```
 
 `--info` Show the WebFont that has been used on the website:
 
+``` shell
 font-spider --info http://fontawesome.io
+```
 
 `--ignore` Ignore the file:
 
-font-spider --ignore "icon\\\\.css$" dest/\*.html
+``` shell
+font-spider --ignore "icon\\.css$" dest/*.html
+```
 
 `--map` This parameter will map the WebFont of online page to local and then compress it (the local path must be an absolute path):
 
+``` shell
 font-spider --map "http://font-spider.org/font,/Website/font" http://font-spider.org/index.html
+```
 
-Build plugins
--------------
+## Build plugins
 
--   grunt-font-spider
--   gulp-font-spider
+- [grunt-font-spider](https://github.com/aui/grunt-font-spider)
+- [gulp-font-spider](https://github.com/aui/gulp-font-spider)
 
-API
----
+## API
 
-See:API.md
+See:[API.md](./API.md)
 
-Limitations
------------
+## Limitations
 
--   Only the constant texts and styles are supported, but not the dynamic elements and styles which is inserted by javascript.
--   The ".otf" format fonts should be transfered to ".ttf" format firstly, so that we can start our compressing work.
--   Only the HTML and CSS files which is encoded by `utf-8` are supported.
+- Only the constant texts and styles are supported, but not the dynamic elements and styles which is inserted by javascript.
+- The ".otf" format fonts should be transfered to ".ttf" format firstly, so that we can start our compressing work.
+- Only the HTML and CSS files which is encoded by `utf-8` are supported.
 
-* * *
+[npm-image]: https://img.shields.io/npm/v/font-spider.svg
+[npm-url]: https://npmjs.org/package/font-spider
+[node-version-image]: https://img.shields.io/node/v/font-spider.svg
+[node-version-url]: http://nodejs.org/download/
+[downloads-image]: https://img.shields.io/npm/dm/font-spider.svg
+[downloads-url]: https://npmjs.org/package/font-spider
+[travis-ci-image]: https://travis-ci.org/aui/font-spider.svg?branch=master
+[travis-ci-url]: https://travis-ci.org/aui/font-spider
 
-\[Link\] 让 font-spider 支持 js 动态内容
+-----------------
 
-\[AD\] 前端招聘：在海边写代码
+[\[Link\] 让 font-spider 支持 js 动态内容](https://github.com/allanguys/font-spider-plus)
+
+[\[AD\] 前端招聘：在海边写代码](https://juejin.im/post/5a2651d06fb9a0451c3a40ad)
+

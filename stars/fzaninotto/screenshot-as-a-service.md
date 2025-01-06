@@ -5,15 +5,13 @@ description: Website screenshot service powered by node.js and phantomjs
 url: https://github.com/fzaninotto/screenshot-as-a-service
 ---
 
-Screenshot as a Service
-=======================
+# Screenshot as a Service
 
-A simple screenshot web service powered by Express and PhantomJS. Forked from screenshot-app.
+A simple screenshot web service powered by [Express](http://expressjs.com) and [PhantomJS](http://www.phantomjs.org/). Forked from [screenshot-app](http://github.com/visionmedia/screenshot-app).
 
-Setup
------
+## Setup
 
-First install phantomjs, then clone this repo and install the deps:
+First [install](http://code.google.com/p/phantomjs/wiki/Installation) phantomjs, then clone this repo and install the deps:
 
 ```
 $ npm install
@@ -26,12 +24,13 @@ $ node app
 Express server listening on port 3000
 ```
 
-Usage
------
+## Usage
 
 For a quick test with the command line, type:
 
-$ curl http://localhost:3000/?url=www.google.com \> google.png
+```sh
+$ curl http://localhost:3000/?url=www.google.com > google.png
+```
 
 Here is the complete usage documentation, also accessible on `/usage.html`:
 
@@ -78,11 +77,11 @@ GET /form.html
 
 Screenshots are cached for one minute, so that frequent requests for the same screenshot don't slow the service down. You can adjust or disable caching in the project configuration (see below).
 
-Configuration
--------------
+## Configuration
 
 Create a `config/development.yaml` or a `config/production.yaml` to override any of the settings found in the `config/default.yaml`:
 
+```yml
 rasterizer:
   command: phantomjs   # phantomjs executable
   port: 3001           # internal service port. No need to allow inbound or outbound access to this port
@@ -92,65 +91,81 @@ cache:
   lifetime: 60000      # one minute, set to 0 for no cache
 server:
   port: 3000           # main service port
+```
 
 For instance, if you want to setup a proxy for phantomjs, create a `config/development.yaml` as follows:
 
+```yml
 rasterizer:
   command: 'phantomjs --proxy=myproxy:1234'
+```
 
-Asynchronous Usage Example
---------------------------
+## Asynchronous Usage Example
 
 Here is an example application that takes asynchronous screenshots of a list of websites at regular intervals and saves them to disk:
 
-var http \= require('http');
-var url  \= require('url');
-var fs   \= require('fs');
+```js
+var http = require('http');
+var url  = require('url');
+var fs   = require('fs');
 
 // create a server to receive callbacks from the screenshot service
 // and save the body to a PNG file
 http.createServer(function(req, res) {
-  var name \= url.parse(req.url).pathname.slice(1);
+  var name = url.parse(req.url).pathname.slice(1);
   req.on('end', function () {
     res.writeHead(200);
     res.end();
   });
-  req.pipe(fs.createWriteStream(\_\_dirname + '/' + name + '.png'));
+  req.pipe(fs.createWriteStream(__dirname + '/' + name + '.png'));
 }).listen(8124);
 console.log("Server running on port 8124");
 
-var sites \= {
+var sites = {
   'google': 'http://www.google.com',
   'yahoo':  'http://www.yahoo.com'
 };
-var screenshotServiceUrl \= 'http://my.screenshot.app:3000/'; // must be running screenshot-app
+var screenshotServiceUrl = 'http://my.screenshot.app:3000/'; // must be running screenshot-app
 
 // call the screenshot service using the current server as a callback
-var poller \= function() {
+var poller = function() {
   for (name in sites) {
-    var options \= url.parse(screenshotServiceUrl + sites\[name\] + '?callback=http://localhost:8124/' + name);
+    var options = url.parse(screenshotServiceUrl + sites[name] + '?callback=http://localhost:8124/' + name);
     http.get(options, function(res) {});
   };
 }
 setInterval(poller, 60000);
+```
 
 Every minute, this script will refresh the two screenshots `google.png` and `yahoo.png`.
 
-TODO
-----
+## TODO
 
--   Allow to configure phantomjs options through YAML config
--   Implement a simple queuing system forcing the use of asynchronous screenshots when the number of browser processes reaches the limit
+* Allow to configure phantomjs options through YAML config
+* Implement a simple queuing system forcing the use of asynchronous screenshots when the number of browser processes reaches the limit
 
-License
--------
+## License
 
 (The MIT License)
 
-Copyright (c) 2012 François Zaninotto, TJ Holowaychuk <tj@vision-media.ca\>
+Copyright (c) 2012 François Zaninotto, TJ Holowaychuk &lt;tj@vision-media.ca&gt;
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+

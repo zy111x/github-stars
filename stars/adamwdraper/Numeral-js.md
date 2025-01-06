@@ -5,61 +5,63 @@ description: A javascript library for formatting and manipulating numbers.
 url: https://github.com/adamwdraper/Numeral-js
 ---
 
-Numeral.js
-==========
+# [Numeral.js](http://numeraljs.com/)
 
 A javascript library for formatting and manipulating numbers.
 
-Website and documentation
+[Website and documentation](http://numeraljs.com/)
 
-Travis Build Status
-===================
 
-Master
+# Travis Build Status
 
-Develop
+Master [![Build Status](https://api.travis-ci.org/adamwdraper/Numeral-js.svg)](https://travis-ci.org/adamwdraper/Numeral-js)
 
-NPM
-===
+Develop [![Build Status](https://travis-ci.org/adamwdraper/Numeral-js.svg?branch=develop)](https://travis-ci.org/adamwdraper/Numeral-js)
+
+# NPM
+
+[![NPM](https://nodei.co/npm/numeral.svg?downloads=true)](https://nodei.co/npm/numeral/)
 
 #CDNJS
 
-Contributing
-============
+[![CDNJS](https://img.shields.io/cdnjs/v/numeral.js.svg)](https://cdnjs.com/libraries/numeral.js)
 
-#### Important: Please create your branch from and submit pull requests to the `develop` branch. All pull requests must include the appropriate tests.
+# Contributing
 
-1.  Fork the library
-    
-2.  Install grunt
-    
-3.  Run `npm install` to install dependencies
-    
-4.  Create a new branch from `develop`
-    
-5.  Add your tests to the files in `/tests`
-    
-6.  To test your tests, run `grunt`
-    
-7.  When all your tests are passing, run `grunt dist` to compile and minify all files
-    
-8.  Submit a pull request to the `develop` branch.
-    
+#### Important: Please create your branch from and submit pull requests to the `develop` branch.  All pull requests must include the appropriate tests.
+
+1. Fork the library
+
+2. [Install grunt](http://gruntjs.com/getting-started#installing-the-cli)
+
+3. Run `npm install` to install dependencies
+
+4. Create a new branch from `develop`
+
+5. Add your tests to the files in `/tests`
+
+6. To test your tests, run `grunt`
+
+7. When all your tests are passing, run `grunt dist` to compile and minify all files
+
+8. Submit a pull request to the `develop` branch.
+
 
 ### Formats
 
-Formats now exist in their own files and act more or less as plugins. Check out the bytes format for an example of how to create one.
+Formats now exist in their own files and act more or less as plugins. Check out the [bytes format](https://github.com/adamwdraper/Numeral-js/blob/master/src/formats/bytes.js) for an example of how to create one.
+
 
 ### Locales
 
-When naming locale files use the ISO 639-1 language codes supplemented by ISO 3166-1 country codes when necessary.
+When naming locale files use the [ISO 639-1 language codes](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) supplemented by [ISO 3166-1](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) country codes when necessary.
 
 ### Locale translations will not be merged without unit tests.
 
-See the english unit tests for an example.
+See [the english unit tests](https://github.com/adamwdraper/Numeral-js/blob/master/tests/locales/en-gb.js) for an example.
 
-Changelog
-=========
+
+# Changelog
 
 ### 2.0.6
 
@@ -73,9 +75,9 @@ Option: Added `scalePercentBy100` (default: true) option to turn on/off scaling 
 
 ### 2.0.4
 
-Bug fix: Incorrect abbreviations for values rounded up #187
+Bug fix: Incorrect abbreviations for values rounded up [#187](https://github.com/adamwdraper/Numeral-js/issues/187)
 
-Bug fix: Signed currency is inconsistent #89
+Bug fix: Signed currency is inconsistent [#89](https://github.com/adamwdraper/Numeral-js/issues/89)
 
 ### 2.0.2
 
@@ -89,7 +91,7 @@ Bug fix: Fixed regression for webpack/browserify/rollup
 
 2.0.0 brings a lot of breaking changes and a reorganization of the repo, but also simplifies the api as well as the creating of custom formats.
 
-Breaking change / Feature: All formats are now separate files. This makes it easy to create custom formats, and will also allow for custom builds with only certain formats. (Note: The built numeral.js still contains all formats in the repo).
+Breaking change / Feature: All formats are now separate files.  This makes it easy to create custom formats, and will also allow for custom builds with only certain formats.  (Note: The built numeral.js still contains all formats in the repo).
 
 Breaking change / Feature: All formats and locales are now loaded using `numeral.register(type, name, {})`
 
@@ -99,7 +101,7 @@ Breaking change: The `locale` function no longer loads locales, it only sets the
 
 Breaking change: The `unformat` function has been removed `numeral().unformat(string)` and now happens on numeral init `numeral(string)`
 
-Breaking change / Feature: Bytes are now formatted as: `b` (base 1000) and `ib` (base 1024)
+Breaking change / Feature: Bytes are now formatted as: `b` (base 1000)  and `ib` (base 1024)
 
 Breaking change: `numeral(NaN)` is now treated the same as `numeral(null)` and no longer throws an error
 
@@ -287,20 +289,23 @@ Added abbreviations for thousands and millions using 'a' in the format
 
 Initial release
 
-Acknowlegements
-===============
 
-Numeral.js, while less complex, was inspired by and heavily borrowed from Moment.js
+# Acknowlegements
 
-License
-=======
+Numeral.js, while less complex, was inspired by and heavily borrowed from [Moment.js](http://momentjs.com)
+
+
+# License
 
 Numeral.js is freely distributable under the terms of the MIT license.
 
 Copyright (c) 2012 Adam Draper
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+

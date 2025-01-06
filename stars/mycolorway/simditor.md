@@ -7,15 +7,15 @@ url: https://github.com/mycolorway/simditor
 
 ### Simditor
 
-* * *
+---
 
 Simditor is a browser-based WYSIWYG text editor.
 
-It is used by Tower -- a popular project management web application.
+It is used by [Tower](http://tower.im) -- a popular project management web application.
 
 Supported Browsers: IE10+、Chrome、Firefox、Safari.
+* [Download Zip](https://github.com/mycolorway/simditor/releases)
+* Install with npm: $ npm install simditor</li>
 
--   Download Zip
--   Install with npm: $ npm install simditor
+Demo and docs can be found [here](http://simditor.tower.im/).
 
-Demo and docs can be found here.

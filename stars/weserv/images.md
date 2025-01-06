@@ -1,56 +1,71 @@
 ---
 project: images
-stars: 2100
+stars: 2102
 description: Source code of wsrv.nl (formerly images.weserv.nl), to be used on your own server(s).
 url: https://github.com/weserv/images
 ---
 
-weserv/images
-=============
+# weserv/images
 
-Source code of wsrv.nl (formerly images.weserv.nl), to be used on your own server(s). weserv/images leverages powerful libraries like libvips (for image handling and manipulation) and nginx (used as web server, forward proxy and HTTP cache).
+[<img src="https://raw.githubusercontent.com/weserv/docs/deploy/logo.svg?sanitize=true" width="160" align="right" alt="wsrv.nl logo">][website]
 
-Technologies used
------------------
+[![Author](https://img.shields.io/badge/author-andrieslouw-blue.svg)][author1]
+[![Author](https://img.shields.io/badge/author-kleisauke-blue.svg)][author2]
+[![Source code](https://img.shields.io/badge/source-weserv/images-blue.svg)](https://github.com/weserv/images)
+[![Software license](https://img.shields.io/github/license/weserv/images.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![CI status](https://github.com/weserv/images/workflows/CI/badge.svg?branch=5.x)](https://github.com/weserv/images/actions)
+[![Coverage status](https://codecov.io/gh/weserv/images/branch/5.x/graph/badge.svg)](https://codecov.io/gh/weserv/images)
 
--   Linux, nginx and libvips (without these technologies, this project would never have been possible)
--   Cloudflare (for CDN caching and IP-blocking)
--   Redis (for rate limiting)
--   OpenDNS (for DNS-filtering)
+Source code of wsrv.nl (formerly images.weserv.nl), to be used on your own server(s). weserv/images leverages
+powerful libraries like [libvips](https://github.com/libvips/libvips) (for image handling and manipulation)
+and [nginx](https://github.com/nginx/nginx) (used as web server, forward proxy and HTTP cache).
 
-Documentation
--------------
+## Technologies used
 
-See our wiki documentation or API reference for information on using wsrv.nl.
+- Linux, [nginx](https://github.com/nginx/nginx) and [libvips](https://github.com/libvips/libvips)
+ (without these technologies, this project would never have been possible)
+- [Cloudflare](https://www.cloudflare.com/) (for CDN caching and IP-blocking)
+- [Redis](https://github.com/antirez/redis) (for rate limiting)
+- [OpenDNS](https://www.opendns.com/) (for DNS-filtering)
 
-Docker deployment
------------------
+## Documentation
 
-For information on Docker deployment, please read the Docker installation instructions.
+See our [wiki documentation](https://github.com/weserv/images/wiki) or
+[API reference][website] for information on using wsrv.nl.
 
-Submitting Bugs and Suggestions
--------------------------------
+## Docker deployment
 
-We track support tickets, issues and feature requests using the GitHub issue tracker.
+For information on Docker deployment, please read the
+[Docker installation instructions](docker/README.md).
 
-Credits
--------
+## Submitting Bugs and Suggestions
 
-Andries Louw Wolthuizen
+We track support tickets, issues and feature requests using
+the [GitHub issue tracker](https://github.com/weserv/images/issues).
 
-Kleis Auke Wolthuizen
+## Credits
 
-License
--------
+| [![Andries Louw Wolthuizen][avatar-author1]][author1] | [![Kleis Auke Wolthuizen][avatar-author2]][author2] |
+| --- | --- |
+| [Andries Louw Wolthuizen][author1] | [Kleis Auke Wolthuizen][author2] |
 
-The source code is licensed under the BSD 3-Clause License, see the LICENSE file for details.
+## License
 
-Privacy Policy
---------------
+The source code is licensed under the BSD 3-Clause License, see the [LICENSE](LICENSE) file for details.
 
-Please see Privacy-Policy.md for more information.
+## Privacy Policy
 
-Last but not least
-------------------
+Please see [Privacy-Policy.md](Privacy-Policy.md) for more information.
+
+## Last but not least
 
 This is made in Sneek with love and passion.
+
+[<img src="https://raw.githubusercontent.com/weserv/docs/deploy/made-in-sneek.svg?sanitize=true" height="200" alt="Made in Sneek logo">](https://en.wikipedia.org/wiki/Sneek)
+
+[website]: https://wsrv.nl/
+[author1]: https://github.com/andrieslouw
+[author2]: https://github.com/kleisauke
+[avatar-author1]: https://avatars.githubusercontent.com/u/11487455?v=4&s=120
+[avatar-author2]: https://avatars.githubusercontent.com/u/12746591?v=4&s=120
+

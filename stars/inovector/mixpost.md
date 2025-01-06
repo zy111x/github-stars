@@ -1,16 +1,22 @@
 ---
 project: mixpost
-stars: 1270
+stars: 1273
 description: Mixpost - Self-hosted social media management software (Buffer alternative)
 url: https://github.com/inovector/mixpost
 ---
 
+[<img src="./art/standwithua.png" />](https://supportukrainenow.org)
+
 * * *
 
-Introduction
-------------
+[<img src="./art/logo.svg" alt="Logo Mixpost" />](https://mixpost.app)
 
-**Mixpost** it's the coolest **Self hosted social media management software**.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/inovector/mixpost.svg?style=flat-square)](https://packagist.org/packages/inovector/mixpost)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/inovector/mixpost/run-tests?label=tests)](https://github.com/inovector/mixpost/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/inovector/mixpost.svg?style=flat-square)](https://packagist.org/packages/inovector/mixpost)
+
+## Introduction
+**Mixpost** it's the coolest **Self hosted social media management software**. 
 
 This package is the **Lite version** of Mixpost Pro.
 
@@ -24,66 +30,78 @@ Trusted by a wide range of users, Mixpost stands out as a proficient and influen
 
 **Mixpost** offers a multitude of features, making **social media management** more effective and simpler:
 
-**Streamlined Social Account Management:** Bring all your social media accounts together in one place for smarter and more efficient management.
+**Streamlined Social Account Management:**
+Bring all your social media accounts together in one place for smarter and more efficient management.
 
-**Advanced Analytics:** Gain insights into your audience's behavior and preferences. Mixpost provides detailed analytics, for each platform according to the data shared. We do our best to make sure our API integrations are up to date, to provide seamless analytics experience accross all social media platforms.
+**Advanced Analytics:**
+Gain insights into your audience's behavior and preferences. Mixpost provides detailed analytics, for each platform according to the data shared. We do our best to make sure our API integrations are up to date, to provide seamless analytics experience accross all social media platforms.
 
-**Post Versions and Conditions:** Tailor your content for each social network and automate follow-up comments on high-performing posts, enhancing engagement and reach.
+**Post Versions and Conditions:**
+Tailor your content for each social network and automate follow-up comments on high-performing posts, enhancing engagement and reach.
 
-**Efficient Media Library:** Quickly access and reuse media files like images, GIFs, and videos, and integrate with stock image sources for a diverse range of content.
+**Efficient Media Library:**
+Quickly access and reuse media files like images, GIFs, and videos, and integrate with stock image sources for a diverse range of content.
 
-**Team Collaboration and Workspaces:** Foster team collaboration with dedicated workspaces. Discuss ideas, manage tasks, and monitor performance, all from a centralized platform.
+**Team Collaboration and Workspaces:**
+Foster team collaboration with dedicated workspaces. Discuss ideas, manage tasks, and monitor performance, all from a centralized platform.
 
-**Queue and Calendar Management:** Build a natural content posting schedule and visualize your strategy with an easy-to-use calendar.
+**Queue and Calendar Management:**
+Build a natural content posting schedule and visualize your strategy with an easy-to-use calendar.
 
-**Customizable Post Templates:** Boost efficiency with reusable post templates, perfect for maintaining consistency across your social media channels.
+**Customizable Post Templates:**
+Boost efficiency with reusable post templates, perfect for maintaining consistency across your social media channels.
 
-**Dynamic Variables and Hashtag Groups:** Insert dynamic text and organize your hashtags strategically for increased post effectiveness. And many more features that make Mixpost a standout choice for managing social media and content marketing. Discover all the features in detail at Mixpost Features.
+**Dynamic Variables and Hashtag Groups:**
+Insert dynamic text and organize your hashtags strategically for increased post effectiveness.
+And many more features that make Mixpost a standout choice for managing social media and content marketing. Discover all the features in detail at Mixpost Features.
 
 It is the ideal social media management software for bloggers, artisans, entrepreneurs, and marketing teams looking to optimize internal costs.
 
-**Unlock the full potential of Mixpost with Mixpost Pro/Enterprise**
+**[Unlock the full potential of Mixpost with Mixpost Pro/Enterprise](https://mixpost.app/pricing)**
 
 Join our community:
 
--   Discord
--   Facebook Private Group
+- [Discord](https://mixpost.app/discord)
+- [Facebook Private Group](https://www.facebook.com/groups/getmixpost)
 
-Installation
-------------
+[<img src="./art/cover.png?v=3" />](https://mixpost.app)
 
-Read our documentation on how to get started.
+## Installation
 
-Changelog
----------
+Read our [documentation](https://docs.mixpost.app/lite/) on how to get started.
 
-Please see Releases for more information what has changed recently.
+## Changelog
 
-Contributing
-------------
+Please see [Releases](../../releases) for more information what has changed recently.
+
+## Contributing
 
 By participating in this project you agree to these conditions 👇
 
-Please note that this project is a commercial product, and this repository is the lite version of Mixpost Pro. We work hard to offer the community the best free social media manager solution and please read this section carefully.
+Please note that this project is a [commercial product](https://mixpost.app/), and this repository is the lite version
+of Mixpost Pro. We work hard to offer the community the best free social media manager solution and please read this
+section carefully.
 
-If you want to add a feature, it's better to open an issue before you start coding. It is important for us that features from the Lite version do not correlate with features from the Mixpost Pro. PRs with optimizations, bug fixes are welcome.
+If you want to add a feature, it's better to open an issue before you start coding. It is important for us that features
+from the Lite version do not correlate with features from the Mixpost Pro. PRs with optimizations, bug fixes are
+welcome.
 
 Please, be very clear on your commit messages and pull requests, empty pull request messages may be rejected.
 
-When contributing code to Mixpost, you must follow the PSR-12 Coding Standard. The golden rule is: Imitate the existing Mixpost code.
+When contributing code to Mixpost, you must follow
+the [PSR-12 Coding Standard](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-12-extended-coding-style-guide.md).
+The golden rule is: Imitate the existing Mixpost code.
 
-Security Vulnerabilities
-------------------------
+## Security Vulnerabilities
 
-Please review our security policy on how to report security vulnerabilities.
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
-Credits
--------
+## Credits
 
--   Dima Botezatu
--   All Contributors
+- [Dima Botezatu](https://github.com/lao9s)
+- [All Contributors](../../contributors)
 
-License
--------
+## License
 
-Mixpost is licensed under the MIT License, sponsored and supported by Inovector.
+Mixpost is licensed under the [MIT License](LICENSE.md), sponsored and supported by [Inovector](https://inovector.com).
+

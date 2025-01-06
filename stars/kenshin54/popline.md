@@ -1,107 +1,124 @@
 ---
 project: popline
-stars: 1058
+stars: 1057
 description: Popline is an HTML5 Rich-Text-Editor Toolbar
 url: https://github.com/kenshin54/popline
 ---
 
 popline
-=======
+============
 
 Popline is a non-intrusive WYSIWYG editor that shows up only after selecting a piece of text on the page, inspired by popclip.
 
-Usage
------
+## Usage
 
 Load jQuery and popline:
 
-<script type\="text/javascript" src\="../scripts/jquery.min.js"\></script\>
-<script type\="text/javascript" src\="../scripts/jquery.popline.min.js"\></script\>
+```html
+<script type="text/javascript" src="../scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../scripts/jquery.popline.min.js"></script>
+```
 
 Or Load the popline plugins which you want:
 
-<script type\="text/javascript" src\="../scripts/jquery.popline.js"\></script\>
-<script type\="text/javascript" src\="../scripts/plugins/jquery.popline.link.js"\></script\>
-<script type\="text/javascript" src\="../scripts/plugins/jquery.popline.decoration.js"\></script\>
+```html
+<script type="text/javascript" src="../scripts/jquery.popline.js"></script>
+<script type="text/javascript" src="../scripts/plugins/jquery.popline.link.js"></script>
+<script type="text/javascript" src="../scripts/plugins/jquery.popline.decoration.js"></script>
 ...
+```
 
 Load font-awesome and popline theme:
-
-<link rel\="stylesheet" type\="text/css" href\="../font-awesome/css/font-awesome.min.css" />
-<link rel\="stylesheet" type\="text/css" href\="../themes/default.css" />
+```html
+<link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="../themes/default.css" />
+```
 
 Add a editable div to page:
 
-<div class\='editor' contenteditable\='true'\></div\>
+```html
+<div class='editor' contenteditable='true'></div>
+```
 
 Initialize you popline for you editor:
 
+```js
 $(".editor").popline();
+```
 
-View Mode
----------
+## View Mode
 
-Popline also support `View Mode`, you can send a twitter, a facebook message, pin an image to pinterest, search with google in `View Mode`
+Popline also support `View Mode`, you can send a twitter, a facebook message, pin an image to pinterest, search with google in `View Mode` 
 
+
+```js
 $(".editor").popline({mode: 'view'});
+```
 
-Popup Position
---------------
+## Popup Position
 
 Popline can popup at top of the paragraph which you selected (like Medium) or popup on the mouse pointer position.
 
+```js
 $(".editor").popline({position: 'fixed'});
 $(".editor").popline({position: 'relative'});
+```
 
 The default option is 'fixed'.
 
-Enable / Disable / Reorder plugins
-----------------------------------
+## Enable / Disable / Reorder plugins
 
 You can enable/disable/reorder plugins when popline initialize.
 
-$(".editor").popline({enable: \["link", \["justify", \["justifyCenter", "indent"\]\] , "orderedList", "unOrderedList"\]});
-$(".editor").popline({disable: \["link", "blockquote"\]});
 
-Extension
----------
+```js
+$(".editor").popline({enable: ["link", ["justify", ["justifyCenter", "indent"]] , "orderedList", "unOrderedList"]});
+$(".editor").popline({disable: ["link", "blockquote"]});
+```
+
+## Extension
 
 Todo
 
-Theme customize
----------------
+## Theme customize
 
 #### default
 
+![default](https://raw.github.com/kenshin54/popline/master/img/default.png "default")
+
 #### popclip
+
+![popclip](https://raw.github.com/kenshin54/popline/master/img/popclip.png "popclip")
+
 
 Hack the theme css and create yours.
 
-Example
--------
+## Example
 
-http://kenshin54.github.io/popline/
+<http://kenshin54.github.io/popline/>
 
-Compatibility
--------------
+## Compatibility
 
 Tested on Chrome 27.0+, Safari 6.0.4+, Firefox 21.0+, Opera 15.0+, IE 8+
 
-Sponsorer
----------
+## Sponsorer
 
-A Sepcial thanks to Artlogic's sponsor for IE8+ browsers compatibility support.
+A Sepcial thanks to [Artlogic](http://www.artlogic.net/)'s sponsor for IE8+ browsers compatibility support.
 
-Contributing
-------------
+## Contributing
 
-1.  Fork it
-2.  Create your feature branch (`git checkout -b my-new-feature`)
-3.  Commit your changes (`git commit -am 'Add some feature'`)
-4.  Push to the branch (`git push origin my-new-feature`)
-5.  Create new Pull Request
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
 License
 -------
 
 Copyright (c) 2014 kenshin54. Distributed under the MIT License. See LICENSE.txt for further details.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kenshin54/popline/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+

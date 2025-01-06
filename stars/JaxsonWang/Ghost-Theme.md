@@ -5,8 +5,7 @@ description: null
 url: https://github.com/JaxsonWang/Ghost-Theme
 ---
 
-Ghost theme
-===========
+# Ghost theme
 
 Ghost 主题仓库
 
@@ -19,3 +18,4 @@ Ghost 主题仓库
 2021年 - SoldOut Ghost Theme
 
 2023年 - Pomelo Ghost Theme
+

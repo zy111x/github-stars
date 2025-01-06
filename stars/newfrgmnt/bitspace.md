@@ -1,13 +1,15 @@
 ---
 project: bitspace
-stars: 736
+stars: 742
 description: A creative environment for the 21st century
 url: https://github.com/newfrgmnt/bitspace
 ---
 
-Bitspace
-========
+# Bitspace
+
+![Bitspace](./assets/bitspace.png)
 
 A new kind of playground for creative ideas.
 
-View the demo
+[View the demo](https://bitspace.sh)
+

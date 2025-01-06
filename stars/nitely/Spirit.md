@@ -5,27 +5,28 @@ description: Spirit is a modern Python based forum built on top of Django framew
 url: https://github.com/nitely/Spirit
 ---
 
-Spirit
-======
+# Spirit
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/nitely/Spirit/ci.yml?branch=master&style=flat-square)](https://github.com/nitely/Spirit/actions?query=workflow%3ACI)
+[![Coverage Status](https://img.shields.io/coveralls/nitely/Spirit/master.svg?style=flat-square)](https://coveralls.io/r/nitely/Spirit)
+[![pypi](https://img.shields.io/pypi/v/django-spirit.svg?style=flat-square)](https://pypi.python.org/pypi/django-spirit)
+[![licence](https://img.shields.io/pypi/l/django-spirit.svg?style=flat-square)](https://raw.githubusercontent.com/nitely/Spirit/master/LICENSE)
 
 Spirit is a Python based forum built using the Django framework.
 
-Documentation
--------------
+## Documentation
 
-Docs can be found at spirit.readthedocs.io
+Docs can be found at [spirit.readthedocs.io](http://spirit.readthedocs.io/en/latest/)
 
-Compatibility
--------------
+## Compatibility
 
--   Python 3.8, 3.9, 3.10, and 3.11 (recommended)
--   Django 3.2 LTS, and 4.2 LTS
--   PostgreSQL (recommended), MySQL, Oracle Database and SQLite
+* Python 3.8, 3.9, 3.10, and 3.11 (recommended)
+* Django 3.2 LTS, and 4.2 LTS
+* PostgreSQL (recommended), MySQL, Oracle Database and SQLite
 
-Constrained by "What Python version can I use with Django?"
+Constrained by "[What Python version can I use with Django?](https://docs.djangoproject.com/en/dev/faq/install/#what-python-version-can-i-use-with-django)"
 
-Usage
------
+## Usage
 
 > New in Spirit 0.5
 
@@ -38,18 +39,17 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-Visit http://127.0.0.1:8000
+Visit [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-For detailed setup docs, see spirit.readthedocs.io
+For detailed setup docs, see [spirit.readthedocs.io](http://spirit.readthedocs.io/en/latest/)
 
-Testing
--------
+## Testing
 
 ```
 python runtests.py
 ```
 
-License
--------
+## License
 
 MIT
+

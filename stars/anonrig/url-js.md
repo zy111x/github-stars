@@ -5,19 +5,21 @@ description: Super fast spec-compliant URL state machine for Node.js
 url: https://github.com/anonrig/url-js
 ---
 
-URL State Machine
------------------
+## URL State Machine
 
-Super fast specification compliant URL state machine for Node.js. For more information about the URL parsing state machine visit here.
+Super fast specification compliant URL state machine for Node.js. For more information about the URL parsing state machine visit [here](https://url.spec.whatwg.org/#url-parsing).
 
 ### Installation
 
+```bash
 npm i --save url-state-machine
+```
 
 ### Usage
 
-const URLStateMachine \= require('url-state-machine')
-const state \= new URLStateMachine('https://www.yagiz.co/implementing-node-js-url-parser-in-webassembly-with-rust')
+```javascript
+const URLStateMachine = require('url-state-machine')
+const state = new URLStateMachine('https://www.yagiz.co/implementing-node-js-url-parser-in-webassembly-with-rust')
 
 console.log(state.url)
 // {
@@ -26,16 +28,18 @@ console.log(state.url)
 //   password: '',
 //   host: 'www.yagiz.co',
 //   port: null,
-//   path: \[ 'implementing-node-js-url-parser-in-webassembly-with-rust' \],
+//   path: [ 'implementing-node-js-url-parser-in-webassembly-with-rust' ],
 //   query: null,
 //   fragment: null
 // }
+```
 
 ### Benchmarks
 
-Full domain with input and base
+<details>
+  <summary>Full domain with input and base</summary>
 
--   `new URL("/path/to/something?hello=world", "https://www.google.com")`
+- `new URL("/path/to/something?hello=world", "https://www.google.com")`
 
 ```
 ╔═══════════════════╤═════════╤══════════════════╤═══════════╤══════════════════════════╗
@@ -49,9 +53,12 @@ Full domain with input and base
 ║ URL               │   10000 │ 477303.34 op/sec │  ± 1.27 % │ + 85.58 %                ║
 ╚═══════════════════╧═════════╧══════════════════╧═══════════╧══════════════════════════╝
 ```
-ipv4 address
+</details>
 
--   `new URL("http://127.0.0.1")`
+<details>
+  <summary>ipv4 address</summary>
+
+- `new URL("http://127.0.0.1")`
 
 ```
 ╔═══════════════════╤═════════╤═══════════════════╤═══════════╤══════════════════════════╗
@@ -65,9 +72,13 @@ ipv4 address
 ║ URL               │    2500 │ 1037903.40 op/sec │  ± 0.87 % │ + 65.74 %                ║
 ╚═══════════════════╧═════════╧═══════════════════╧═══════════╧══════════════════════════╝
 ```
-ipv6 address
 
--   `new URL("http://[1:0::]")`
+</details>
+
+<details>
+  <summary>ipv6 address</summary>
+
+- `new URL("http://[1:0::]")`
 
 ```
 ╔═══════════════════╤═════════╤═══════════════════╤═══════════╤══════════════════════════╗
@@ -81,14 +92,17 @@ ipv6 address
 ║ URL               │    8000 │ 1356561.74 op/sec │  ± 0.97 % │ + 2.65 %                 ║
 ╚═══════════════════╧═════════╧═══════════════════╧═══════════╧══════════════════════════╝
 ```
+</details>
 
 ### Testing
 
 #### Running
 
-All tests are referenced and borrowed from web-platform-tests.
+All tests are referenced and borrowed from [web-platform-tests](https://github.com/web-platform-tests/wpt/blob/master/url/resources/urltestdata.json).
 
+```bash
 npm test
+```
 
 #### Code Coverage
 
@@ -98,119 +112,33 @@ Test Files  1 failed (1)
       Time  633ms (in thread 64ms, 989.58%)
 ```
 
-File
-
-% Stmts
-
-% Branch
-
-% Funcs
-
-% Lines
-
-Uncovered Line #s
-
-All files
-
-95.88
-
-95.18
-
-98
-
-95.88
-
-constants.js
-
-100
-
-100
-
-100
-
-100
-
-encoding.js
-
-100
-
-100
-
-100
-
-100
-
-index.js
-
-93.99
-
-93.02
-
-100
-
-93.99
-
-...4-775,800-801,921-922,926-927,1070-1071
-
-parser.js
-
-99.53
-
-99.05
-
-100
-
-99.53
-
-283-284
-
-platform.js
-
-100
-
-100
-
-100
-
-100
-
-string.js
-
-100
-
-100
-
-100
-
-100
-
-utf8.js
-
-84.33
-
-88.23
-
-50
-
-84.33
-
-39-44,63-64,77-81
+File          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+--------------|---------|----------|---------|---------|--------------------------------------------
+All files     |   95.88 |    95.18 |      98 |   95.88 |
+ constants.js |     100 |      100 |     100 |     100 |
+ encoding.js  |     100 |      100 |     100 |     100 |
+ index.js     |   93.99 |    93.02 |     100 |   93.99 | ...4-775,800-801,921-922,926-927,1070-1071
+ parser.js    |   99.53 |    99.05 |     100 |   99.53 | 283-284
+ platform.js  |     100 |      100 |     100 |     100 |
+ string.js    |     100 |      100 |     100 |     100 |
+ utf8.js      |   84.33 |    88.23 |      50 |   84.33 | 39-44,63-64,77-81
 
 #### Conformance to specification
 
--   pathname
-    -   1 failed | 732 passed (733)
--   search
-    -   1 failed | 732 passed (733)
--   host
-    -   733 passed (733)
--   password
-    -   733 passed (733)
--   protocol
-    -   733 passed (733)
--   username
-    -   733 passed (733)
--   port
-    -   733 passed (733)
--   fragment
-    -   733 passed (733)
+- pathname
+  - 1 failed | 732 passed (733)
+- search
+  - 1 failed | 732 passed (733)
+- host
+  - 733 passed (733)
+- password
+  - 733 passed (733)
+- protocol
+  - 733 passed (733)
+- username
+  - 733 passed (733)
+- port
+  - 733 passed (733)
+- fragment
+  - 733 passed (733)
+

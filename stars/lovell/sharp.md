@@ -1,56 +1,77 @@
 ---
 project: sharp
-stars: 29562
+stars: 29571
 description: High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library.
 url: https://github.com/lovell/sharp
 ---
 
-sharp
-=====
+# sharp
 
-The typical use case for this high speed Node-API module is to convert large images in common formats to smaller, web-friendly JPEG, PNG, WebP, GIF and AVIF images of varying dimensions.
+<img src="https://cdn.jsdelivr.net/gh/lovell/sharp@main/docs/image/sharp-logo.svg" width="160" height="160" alt="sharp logo" align="right">
 
-It can be used with all JavaScript runtimes that provide support for Node-API v9, including Node.js (^18.17.0 or >= 20.3.0), Deno and Bun.
+The typical use case for this high speed Node-API module
+is to convert large images in common formats to
+smaller, web-friendly JPEG, PNG, WebP, GIF and AVIF images of varying dimensions.
 
-Resizing an image is typically 4x-5x faster than using the quickest ImageMagick and GraphicsMagick settings due to its use of libvips.
+It can be used with all JavaScript runtimes
+that provide support for Node-API v9, including
+Node.js (^18.17.0 or >= 20.3.0), Deno and Bun.
 
-Colour spaces, embedded ICC profiles and alpha transparency channels are all handled correctly. Lanczos resampling ensures quality is not sacrificed for speed.
+Resizing an image is typically 4x-5x faster than using the
+quickest ImageMagick and GraphicsMagick settings
+due to its use of [libvips](https://github.com/libvips/libvips).
 
-As well as image resizing, operations such as rotation, extraction, compositing and gamma correction are available.
+Colour spaces, embedded ICC profiles and alpha transparency channels are all handled correctly.
+Lanczos resampling ensures quality is not sacrificed for speed.
 
-Most modern macOS, Windows and Linux systems do not require any additional install or runtime dependencies.
+As well as image resizing, operations such as
+rotation, extraction, compositing and gamma correction are available.
 
-Documentation
--------------
+Most modern macOS, Windows and Linux systems
+do not require any additional install or runtime dependencies.
 
-Visit sharp.pixelplumbing.com for complete installation instructions, API documentation, benchmark tests and changelog.
+## Documentation
 
-Examples
---------
+Visit [sharp.pixelplumbing.com](https://sharp.pixelplumbing.com/) for complete
+[installation instructions](https://sharp.pixelplumbing.com/install),
+[API documentation](https://sharp.pixelplumbing.com/api-constructor),
+[benchmark tests](https://sharp.pixelplumbing.com/performance) and
+[changelog](https://sharp.pixelplumbing.com/changelog).
 
+## Examples
+
+```sh
 npm install sharp
+```
 
-const sharp \= require('sharp');
+```javascript
+const sharp = require('sharp');
+```
 
 ### Callback
 
+```javascript
 sharp(inputBuffer)
   .resize(320, 240)
-  .toFile('output.webp', (err, info) \=> { ... });
+  .toFile('output.webp', (err, info) => { ... });
+```
 
 ### Promise
 
+```javascript
 sharp('input.jpg')
   .rotate()
   .resize(200)
   .jpeg({ mozjpeg: true })
   .toBuffer()
-  .then( data \=> { ... })
-  .catch( err \=> { ... });
+  .then( data => { ... })
+  .catch( err => { ... });
+```
 
 ### Async/await
 
-const semiTransparentRedPng \= await sharp({
+```javascript
+const semiTransparentRedPng = await sharp({
   create: {
     width: 48,
     height: 48,
@@ -60,36 +81,46 @@ const semiTransparentRedPng \= await sharp({
 })
   .png()
   .toBuffer();
+```
 
 ### Stream
 
-const roundedCorners \= Buffer.from(
+```javascript
+const roundedCorners = Buffer.from(
   '<svg><rect x="0" y="0" width="200" height="200" rx="50" ry="50"/></svg>'
 );
 
-const roundedCornerResizer \=
+const roundedCornerResizer =
   sharp()
     .resize(200, 200)
-    .composite(\[{
+    .composite([{
       input: roundedCorners,
       blend: 'dest-in'
-    }\])
+    }])
     .png();
 
 readableStream
   .pipe(roundedCornerResizer)
   .pipe(writableStream);
+```
 
-Contributing
-------------
+## Contributing
 
-A guide for contributors covers reporting bugs, requesting features and submitting code changes.
+A [guide for contributors](https://github.com/lovell/sharp/blob/main/.github/CONTRIBUTING.md)
+covers reporting bugs, requesting features and submitting code changes.
 
-Licensing
----------
+## Licensing
 
 Copyright 2013 Lovell Fuller and others.
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at https://www.apache.org/licenses/LICENSE-2.0
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+[https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+

@@ -1,60 +1,66 @@
 ---
 project: metascraper
-stars: 2375
+stars: 2376
 description: Get unified metadata from websites using Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more.
 url: https://github.com/microlinkhq/metascraper
 ---
 
-  
-  
-  
+<h1 align="center">
+  <br>
+  <img style="width: 500px; margin:3rem 0 1.5rem;" src="https://metascraper.js.org/static/logo-banner.png" alt="metascraper">
+  <br>
+  <br>
+</h1>
 
-=========
+![Last version](https://img.shields.io/github/tag/microlinkhq/metascraper.svg?style=flat-square)
+[![Coverage Status](https://img.shields.io/coveralls/microlinkhq/metascraper.svg?style=flat-square)](https://coveralls.io/github/microlinkhq/metascraper)
+[![NPM Status](https://img.shields.io/npm/dm/metascraper.svg?style=flat-square)](https://www.npmjs.org/package/metascraper)
 
 > A library to easily get unified metadata from websites using Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more.
 
-What is it
-----------
+## What is it
 
 The **metascraper** library allows you to easily scrape metadata from an article on the web using Open Graph metadata, regular HTML metadata, and series of fallbacks.
 
 It follows a few principles:
 
--   Have a high accuracy for online articles by default.
--   Make it simple to add new rules or override existing ones.
--   Don't restrict rules to CSS selectors or text accessors.
+- Have a high accuracy for online articles by default.
+- Make it simple to add new rules or override existing ones.
+- Don't restrict rules to CSS selectors or text accessors.
 
-Getting started
----------------
+## Getting started
 
 Let's extract accurate information from the following website:
+
+![](https://i.imgur.com/jZl0Uej.png)
 
 First, **metascraper** expects you provide the HTML markup behind the target URL.
 
 There are multiple ways to get the HTML markup. In our case, we are going to run a programmatic headless browser to simulate real user navigation, so the data obtained will be close to a real-world example.
 
-const getHTML \= require('html-get')
+```js
+const getHTML = require('html-get')
 
-/\*\*
- \* \`browserless\` will be passed to \`html-get\`
- \* as driver for getting the rendered HTML.
- \*/
-const browserless \= require('browserless')()
+/**
+ * `browserless` will be passed to `html-get`
+ * as driver for getting the rendered HTML.
+ */
+const browserless = require('browserless')()
 
-const getContent \= async url \=> {
+const getContent = async url => {
   // create a browser context inside the main Chromium process
-  const browserContext \= browserless.createContext()
-  const promise \= getHTML(url, { getBrowserless: () \=> browserContext })
+  const browserContext = browserless.createContext()
+  const promise = getHTML(url, { getBrowserless: () => browserContext })
   // close browser resources before return the result
-  promise.then(() \=> browserContext).then(browser \=> browser.destroyContext())
+  promise.then(() => browserContext).then(browser => browser.destroyContext())
   return promise
 }
 
-/\*\*
- \* \`metascraper\` is a collection of tiny packages,
- \* so you can just use what you actually need.
- \*/
-const metascraper \= require('metascraper')(\[
+/**
+ * `metascraper` is a collection of tiny packages,
+ * so you can just use what you actually need.
+ */
+const metascraper = require('metascraper')([
   require('metascraper-author')(),
   require('metascraper-date')(),
   require('metascraper-description')(),
@@ -64,19 +70,21 @@ const metascraper \= require('metascraper')(\[
   require('metascraper-publisher')(),
   require('metascraper-title')(),
   require('metascraper-url')()
-\])
+])
 
-/\*\*
- \* The main logic
- \*/
+/**
+ * The main logic
+ */
 getContent('https://microlink.io')
   .then(metascraper)
-  .then(metadata \=> console.log(metadata))
+  .then(metadata => console.log(metadata))
   .then(browserless.close)
   .then(process.exit)
+```
 
 The output will be something like:
 
+```json
 {
   "author": "Microlink HQ",
   "date": "2022-07-10T22:53:04.856Z",
@@ -87,56 +95,54 @@ The output will be something like:
   "title": "Turns websites into data — Microlink",
   "url": "https://microlink.io/"
 }
+```
 
-What data it detects
---------------------
+## What data it detects
 
-> **Note**: Custom metadata detection can be defined using a rule bundle.
+> **Note**: Custom metadata detection can be defined using a [rule bundle](#rules-bundles).
 
 Here is an example of the metadata that **metascraper** can detect:
 
--   `audio` — e.g. _https://cf-media.sndcdn.com/U78RIfDPV6ok.128.mp3_  
-    A audio URL that best represents the article.
-    
--   `author` — e.g. _Noah Kulwin_  
-    A human-readable representation of the author's name.
-    
--   `date` — e.g. _2016-05-27T00:00:00.000Z_  
-    An ISO 8601 representation of the date the article was published.
-    
--   `description` — e.g. _Venture capitalists are raising money at the fastest rate..._  
-    The publisher's chosen description of the article.
-    
--   `video` — e.g. _https://assets.entrepreneur.com/content/preview.mp4_  
-    A video URL that best represents the article.
-    
--   `image` — e.g. _https://assets.entrepreneur.com/content/3x2/1300/20160504155601-GettyImages-174457162.jpeg_  
-    An image URL that best represents the article.
-    
--   `lang` — e.g. _en_  
-    An ISO 639-1 representation of the url content language.
-    
--   `logo` — e.g. _https://entrepreneur.com/favicon180x180.png_  
-    An image URL that best represents the publisher brand.
-    
--   `publisher` — e.g. _Fast Company_  
-    A human-readable representation of the publisher's name.
-    
--   `title` — e.g. _Meet Wall Street's New A.I. Sheriffs_  
-    The publisher's chosen title of the article.
-    
--   `url` — e.g. _http://motherboard.vice.com/read/google-wins-trial-against-oracle-saves-9-billion_  
-    The URL of the article.
-    
+- `audio` — e.g. <small>*ht<span>tps://cf-media.sndcdn.com/U78RIfDPV6ok.128.mp3*</small><br/>
+A audio URL that best represents the article.
 
-How it works
-------------
+- `author` — e.g. <small>*Noah Kulwin*</small><br/>
+  A human-readable representation of the author's name.
+
+- `date` — e.g. <small>*2016-05-27T00:00:00.000Z*</small><br/>
+  An [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) representation of the date the article was published.
+
+- `description` — e.g. <small>*Venture capitalists are raising money at the fastest rate...*</small><br/>
+  The publisher's chosen description of the article.
+
+- `video` — e.g. <small>*ht<span>tps://assets.entrepreneur.com/content/preview.mp4*</small><br/>
+  A video URL that best represents the article.
+
+- `image` — e.g. <small>*ht<span>tps://assets.entrepreneur.com/content/3x2/1300/20160504155601-GettyImages-174457162.jpeg*</small><br/>
+  An image URL that best represents the article.
+
+- `lang` — e.g. <small>*en*</small><br/>
+  An [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) representation of the url content language.
+
+- `logo` — e.g. <small>*ht<span>tps://entrepreneur.com/favicon180x180.png*</small><br/>
+  An image URL that best represents the publisher brand.
+
+- `publisher` — e.g. <small>*Fast Company*</small><br/>
+  A human-readable representation of the publisher's name.
+
+- `title` — e.g. <small>*Meet Wall Street's New A.I. Sheriffs*</small><br/>
+  The publisher's chosen title of the article.
+
+- `url` — e.g. <small>*ht<span>tp://motherboard.vice.com/read/google-wins-trial-against-oracle-saves-9-billion*</small><br/>
+  The URL of the article.
+
+## How it works
 
 **metascraper** is built out of rules bundles.
 
 It was designed to be easy to adapt. You can compose your own transformation pipeline using existing rules or write your own.
 
-Rules bundles are a collection of HTML selectors around a determinate property. When you load the library, implicitly it is loading core rules.
+Rules bundles are a collection of HTML selectors around a determinate property. When you load the library, implicitly it is loading [core rules](#core-rules).
 
 Each set of rules load a set of selectors in order to get a determinate value.
 
@@ -144,18 +150,18 @@ These rules are sorted with priority: The first rule that resolve the value succ
 
 Rules work as fallback between them:
 
--   If the first rule fails, then it fallback in the second rule.
--   If the second rule fails, time to third rule.
--   etc
+- If the first rule fails, then it fallback in the second rule.
+- If the second rule fails, time to third rule.
+- etc
 
 **metascraper** do that until finish all the rule or find the first rule that resolves the value.
 
-Importing rules
----------------
+## Importing rules
 
 **metascraper** exports a constructor that need to be initialized providing a collection of rules to load:
 
-const metascraper \= require('metascraper')(\[
+```js
+const metascraper = require('metascraper')([
   require('metascraper-author')(),
   require('metascraper-date')(),
   require('metascraper-description')(),
@@ -165,23 +171,25 @@ const metascraper \= require('metascraper')(\[
   require('metascraper-publisher')(),
   require('metascraper-title')(),
   require('metascraper-url')()
-\])
+])
+```
 
 Again, the order of rules are loaded are important: Just the first rule that resolve the value will be applied.
 
 Use the first parameter to pass custom options specific per each rules bundle:
 
-const metascraper \= require('metascraper')(\[
+```js
+const metascraper = require('metascraper')([
   require('metascraper-clearbit')({
     size: 256,
     format: 'jpg'
   })
-\])
+])
+```
 
-Rules bundles
--------------
+## Rules bundles
 
-?> Can't find the rules bundle that you want? Let's open an issue to create it.
+?> Can't find the rules bundle that you want? Let's [open an issue](https://github.com/microlinkhq/metascraper/issues/new) to create it.
 
 ### Official
 
@@ -189,47 +197,46 @@ Rules bundles
 
 **Core essential**
 
--   metascraper-audio – Get audio property from HTML markup.
--   metascraper-author – Get author property from HTML markup.
--   metascraper-date – Get date property from HTML markup.
--   metascraper-description – Get description property from HTML markup.
--   metascraper-feed – Get RSS/Atom feed URL from HTML markup.
--   metascraper-image – Get image property from HTML markup.
--   metascraper-iframe – Get iframe for embedding content for the supported providers.
--   metascraper-lang – Get lang property from HTML markup.
--   metascraper-logo – Get logo property from HTML markup.
--   metascraper-logo-favicon – Metascraper logo favicon fallback.
--   metascraper-media-provider – Get specific video provider url (Facebook/Twitter/Vimeo/etc).
--   metascraper-publisher – Get publisher property from HTML markup.
--   metascraper-readability – A Mozilla readability connector for metascraper.
--   metascraper-title – Get title property from HTML markup.
--   metascraper-url – Get url property from HTML markup.
--   metascraper-video – Get video property from HTML markup.
+- [metascraper-audio](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-audio) – Get audio property from HTML markup.
+- [metascraper-author](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-author) – Get author property from HTML markup.
+- [metascraper-date](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-date) – Get date property from HTML markup.
+- [metascraper-description](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-description) – Get description property from HTML markup.
+- [metascraper-feed](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-feed) – Get RSS/Atom feed URL from HTML markup.
+- [metascraper-image](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-image) – Get image property from HTML markup.
+- [metascraper-iframe](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-iframe) – Get iframe for embedding content for the supported providers.
+- [metascraper-lang](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-lang) – Get lang property from HTML markup.
+- [metascraper-logo](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-logo) – Get logo property from HTML markup.
+- [metascraper-logo-favicon](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-logo-favicon) – Metascraper logo favicon fallback.
+- [metascraper-media-provider](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-media-provider) – Get specific video provider url (Facebook/Twitter/Vimeo/etc).
+- [metascraper-publisher](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-publisher) – Get publisher property from HTML markup.
+- [metascraper-readability](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-readability) – A Mozilla readability connector for metascraper.
+- [metascraper-title](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-title) – Get title property from HTML markup.
+- [metascraper-url](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-url) – Get url property from HTML markup.
+- [metascraper-video](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-video) – Get video property from HTML markup.
 
 **Vendor specific**
 
--   metascraper-amazon – Metascraper integration with Amazon.
--   metascraper-clearbit – Metascraper integration with Clearbit Logo API.
--   metascraper-instagram – Metascraper integration for Instagram.
--   metascraper-manifest – Metascraper integration for detecting PWA Web app manifests.
--   metascraper-soundcloud – Metascraper integration with SoundCloud.
--   metascraper-telegram – Metascraper integration with Telegram.
--   metascraper-uol – Metascraper integration for uol.com URLs.
--   metascraper-spotify – Metascraper integration with Spotify.
--   metascraper-x – Metascraper integration with x.com.
--   metascraper-youtube – Metascraper integration with YouTube.
+- [metascraper-amazon](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-amazon) – Metascraper integration with Amazon.
+- [metascraper-clearbit](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-clearbit) – Metascraper integration with Clearbit Logo API.
+- [metascraper-instagram](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-instagram) –  Metascraper integration for Instagram.
+- [metascraper-manifest](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-manifest) –  Metascraper integration for detecting PWA Web app [manifests](https://developer.mozilla.org/en-US/docs/Web/Manifest).
+- [metascraper-soundcloud](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-soundcloud) – Metascraper integration with SoundCloud.
+- [metascraper-telegram](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-telegram) – Metascraper integration with Telegram.
+- [metascraper-uol](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-uol) – Metascraper integration for uol.com URLs.
+- [metascraper-spotify](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-spotify) – Metascraper integration with Spotify.
+- [metascraper-x](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-x) – Metascraper integration with x.com.
+- [metascraper-youtube](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-youtube) – Metascraper integration with YouTube.
 
 ### Community
 
 > Rules bundles maintained by individual users.
 
--   metascraper-address – Get schema.org formatted address.
--   metascraper-shopping – Get product information from HTML markup on merchant websites.
+- [metascraper-address](https://github.com/goodhood-eu/metascraper-address) – Get schema.org formatted address.
+- [metascraper-shopping](https://github.com/samirrayani/metascraper-shopping) – Get product information from HTML markup on merchant websites.
 
-See CONTRIBUTING for adding your own module!
+See [CONTRIBUTING](/CONTRIBUTING.md) for adding your own module!
 
-API
----
+## API
 
 ### constructor(rules)
 
@@ -249,7 +256,7 @@ Call the instance for extracting content based on rules bundle provided at the c
 
 #### url
 
-_Required_  
+*Required*<br>
 Type: `String`
 
 The URL associated with the HTML markup.
@@ -274,90 +281,46 @@ The DOM representation of the HTML markup. When it's not provided, it's get from
 
 Type: `Array`
 
-You can pass additional rules to add on execution time.
+You can pass additional rules to add on execution time. 
 
-These rules will be merged with your loaded rules at the beginning.
+These rules will be merged with your loaded [rules](#rules) at the beginning.
 
 #### validateUrl
 
-Type: `boolean`  
+Type: `boolean`<br>
 Default: `true`
 
-Ensure the URL provided is validated as a WHATWG URL API compliant.
+Ensure the URL provided is validated as a [WHATWG URL](https://nodejs.org/api/url.html#url_the_whatwg_url_api) API compliant.
 
-Environment Variables
----------------------
+## Environment Variables
 
-#### METASCRAPER\_RE2
+#### METASCRAPER_RE2
 
-Type: `boolean`  
+Type: `boolean`<br>
 Default: `true`
 
 It attemptt to load re2 to use instead of RegExp.
 
-Benchmark
----------
+## Benchmark
 
 To give you an idea of how accurate **metascraper** is, here is a comparison of similar libraries:
 
-Library
-
-metascraper
-
-html-metadata
-
-node-metainspector
-
-open-graph-scraper
-
-unfluff
-
-Correct
-
-**95.54%**
-
-**74.56%**
-
-**61.16%**
-
-**66.52%**
-
-**70.90%**
-
-Incorrect
-
-1.79%
-
-1.79%
-
-0.89%
-
-6.70%
-
-10.27%
-
-Missed
-
-2.68%
-
-23.67%
-
-37.95%
-
-26.34%
-
-8.95%
+| Library   | [metascraper](https://www.npmjs.com/package/metascraper) | [html-metadata](https://www.npmjs.com/package/html-metadata) | [node-metainspector](https://www.npmjs.com/package/node-metainspector) | [open-graph-scraper](https://www.npmjs.com/package/open-graph-scraper) | [unfluff](https://www.npmjs.com/package/unfluff) |
+|:----------|:-----------------------------------------------------------|:---------------------------------------------------------------|:-------------------------------------------------------------------------|:-------------------------------------------------------------------------|:---------------------------------------------------|
+| Correct   | **95.54%**                                                 | **74.56%**                                                     | **61.16%**                                                               | **66.52%**                                                               | **70.90%**                                         |
+| Incorrect | 1.79%                                                      | 1.79%                                                          | 0.89%                                                                    | 6.70%                                                                    | 10.27%                                             |
+| Missed    | 2.68%                                                      | 23.67%                                                         | 37.95%                                                                   | 26.34%                                                                   | 8.95%                                              |
 
 A big part of the reason for **metascraper**'s higher accuracy is that it relies on a series of fallbacks for each piece of metadata, instead of just looking for the most commonly-used, spec-compliant pieces of metadata, like Open Graph.
 
 **metascraper**'s default settings are targetted specifically at parsing online articles, which is why it's able to be more highly-tuned than the other libraries for that purpose.
 
-If you're interested in the breakdown by individual pieces of metadata, check out the full comparison summary, or dive into the raw result data for each library.
+If you're interested in the breakdown by individual pieces of metadata, check out the [full comparison summary](/bench), or dive into the [raw result data for each library](/bench/results).
 
-License
--------
+## License
 
-**metascraper** © Microlink, released under the MIT License.  
-Authored and maintained by Microlink with help from contributors.
+**metascraper** © [Microlink](https://microlink.io), released under the [MIT](https://github.com/microlinkhq/metascraper/blob/master/LICENSE.md) License.<br>
+Authored and maintained by [Microlink](https://microlink.io) with help from [contributors](https://github.com/microlinkhq/metascraper/contributors).
 
-> microlink.io · GitHub microlinkhq · X @microlinkhq
+> [microlink.io](https://microlink.io) · GitHub [microlinkhq](https://github.com/microlinkhq) · X [@microlinkhq](https://x.com/microlinkhq)
+

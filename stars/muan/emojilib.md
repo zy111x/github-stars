@@ -5,130 +5,144 @@ description: Emoji keyword library.
 url: https://github.com/muan/emojilib
 ---
 
-emojilib
-========
+# emojilib ![CI status](https://github.com/muan/emojilib/workflows/Test%20dataset/badge.svg?branch=main) [![npm](https://img.shields.io/npm/dt/emojilib.svg?style=flat-square&colorB=fd7463)](https://www.npmjs.com/package/emojilib) [![JavaScript Standard Style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square&colorB=f1d04a)](https://github.com/feross/standard)
 
 Make emoji searchable with this keyword library.
 
-Install
--------
+## Install
 
 ```
 npm install emojilib --save
 ```
 
-Usage
------
+## Usage
 
-\> require("emojilib")
+```javascript
+> require("emojilib")
 {
-  '😀': \[
-    'grinning\_face',
+  '😀': [
+    'grinning_face',
     'face',
     'smile',
     'happy',
     'joy',
     ':D',
     'grin'
-  \],
-  '😃': \[
-    'grinning\_face\_with\_big\_eyes',
+  ],
+  '😃': [
+    'grinning_face_with_big_eyes',
     'face',
     'happy',
     'joy',
     'haha',
   ...
 }
+```
 
-If you are looking for the unicode emoji dataset, including version, grouping, ordering, and skin tone support flag, check out `unicode-emoji-json`.
+If you are looking for the unicode emoji dataset, including version, grouping, ordering, and skin tone support flag, check out [`unicode-emoji-json`](https://github.com/muan/unicode-emoji-json).
 
-Migrating from 2.x
-------------------
+## Migrating from 2.x
 
 Previously:
 
-\> var emoji \= require("emojilib")
-\> emoji.lib
+```js
+> var emoji = require("emojilib")
+> emoji.lib
 {
   "grinning": {
-    "keywords": \["face", "smile", "happy", "joy"\],
+    "keywords": ["face", "smile", "happy", "joy"],
     "char": "😀",
-    "fitzpatrick\_scale": false,
+    "fitzpatrick_scale": false,
     "category": "people"
   },
   ...
 }
+```
 
 Now, merge keywords with other metadata from `unicode-emoji-json`:
 
-\> var data \= require('unicode-emoji-json')
-\> var keywordSet \= require('emojilib')
-\> for (const emoji in data) {
-data\[emoji\]\['keywords'\] \= keywordSet\[emoji\]
+```js
+> var data = require('unicode-emoji-json')
+> var keywordSet = require('emojilib')
+> for (const emoji in data) {
+data[emoji]['keywords'] = keywordSet[emoji]
 }
-\> data\['😀'\]
+> data['😀']
 {
   name: 'grinning face',
-  slug: 'grinning\_face',
+  slug: 'grinning_face',
   group: 'Smileys & Emotion',
-  emoji\_version: '1.0',
-  unicode\_version: '1.0',
-  skin\_tone\_support: false,
-  keywords: \[ 'grinning\_face', 'face', 'smile', 'happy', 'joy', ':D', 'grin' \]
+  emoji_version: '1.0',
+  unicode_version: '1.0',
+  skin_tone_support: false,
+  keywords: [ 'grinning_face', 'face', 'smile', 'happy', 'joy', ':D', 'grin' ]
 }
+```
 
-* * *
-
-Previously:
-
-\> var emoji \= require("emojilib")
-\> emoji.ordered
-\[ 'grinning', 'grimacing', 'grin', 'joy', 'smiley', 'smile', 'sweat\_smile', ...\]
-
-Now this data can be found in `unicode-emoji-json`:
-
-\> var orderedEmoji \= require('unicode-emoji-json/data-ordered-emoji')
-\['😀', '😃', '😄', '😁', '😆', '😅',...\]
-
-* * *
+---
 
 Previously:
 
-\> var emoji \= require("emojilib")
-\> emoji.fitzpatrick\_scale\_modifiers
-\[ '🏻', '🏼', '🏽', '🏾', '🏿' \]
+```js
+> var emoji = require("emojilib")
+> emoji.ordered
+[ 'grinning', 'grimacing', 'grin', 'joy', 'smiley', 'smile', 'sweat_smile', ...]
+```
 
 Now this data can be found in `unicode-emoji-json`:
 
-\> require('unicode-emoji-json/data-emoji-components')
+```js
+> var orderedEmoji = require('unicode-emoji-json/data-ordered-emoji')
+['😀', '😃', '😄', '😁', '😆', '😅',...]
+```
+
+---
+
+Previously:
+
+```js
+> var emoji = require("emojilib")
+> emoji.fitzpatrick_scale_modifiers
+[ '🏻', '🏼', '🏽', '🏾', '🏿' ]
+```
+
+Now this data can be found in `unicode-emoji-json`:
+
+```js
+> require('unicode-emoji-json/data-emoji-components')
 {
-  light\_skin\_tone: '🏻',
-  medium\_light\_skin\_tone: '🏼',
-  medium\_skin\_tone: '🏽',
-  medium\_dark\_skin\_tone: '🏾',
-  dark\_skin\_tone: '🏿',
-  red\_hair: '🦰',
-  curly\_hair: '🦱',
-  white\_hair: '🦳',
+  light_skin_tone: '🏻',
+  medium_light_skin_tone: '🏼',
+  medium_skin_tone: '🏽',
+  medium_dark_skin_tone: '🏾',
+  dark_skin_tone: '🏿',
+  red_hair: '🦰',
+  curly_hair: '🦱',
+  white_hair: '🦳',
   bald: '🦲'
 }
+```
 
 Previously:
 
-\> require("emojilib").lib\['v'\].fitzpatrick\_scale
+```js
+> require("emojilib").lib['v'].fitzpatrick_scale
 true
 
-\> require("emojilib").lib\['turtle'\].fitzpatrick\_scale
+> require("emojilib").lib['turtle'].fitzpatrick_scale
 false
+```
 
 Now this data can be found in `unicode-emoji-json`:
 
-\> require('unicode-emoji-json')\['✌️'\].skin\_tone\_support
+```js
+> require('unicode-emoji-json')['✌️'].skin_tone_support
 true
-\> require('unicode-emoji-json')\['🐢'\].skin\_tone\_support
+> require('unicode-emoji-json')['🐢'].skin_tone_support
 false
+```
 
-Development
------------
+## Development
 
 See `CONTRIBUTING.md`.
+

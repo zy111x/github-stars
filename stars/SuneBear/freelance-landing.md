@@ -5,16 +5,15 @@ description: null
 url: https://github.com/SuneBear/freelance-landing
 ---
 
-Freelance Landing
-=================
+# Freelance Landing
 
-Look at the Nuxt 3 documentation to learn more.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-Setup
------
+## Setup
 
 Make sure to install the dependencies:
 
+```bash
 # npm
 npm install
 
@@ -23,12 +22,13 @@ pnpm install
 
 # yarn
 yarn install
+```
 
-Development Server
-------------------
+## Development Server
 
 Start the development server on `http://localhost:3004`:
 
+```bash
 # npm
 npm run dev
 
@@ -37,12 +37,13 @@ pnpm run dev
 
 # yarn
 yarn dev
+```
 
-Production
-----------
+## Production
 
 Build the application for production:
 
+```bash
 # npm
 npm run build
 
@@ -51,9 +52,11 @@ pnpm run build
 
 # yarn
 yarn build
+```
 
 Locally preview production build:
 
+```bash
 # npm
 npm run preview
 
@@ -62,5 +65,7 @@ pnpm run preview
 
 # yarn
 yarn preview
+```
 
-Check out the deployment documentation for more information.
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+

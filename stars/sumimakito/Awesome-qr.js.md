@@ -5,113 +5,127 @@ description: An awesome QR code generator written in JavaScript.
 url: https://github.com/sumimakito/Awesome-qr.js
 ---
 
-Awesome-qr.js
-=============
+# Awesome-qr.js <!-- omit in toc -->
+
+![](https://img.shields.io/npm/v/awesome-qr/latest) ![](https://img.shields.io/npm/v/awesome-qr/next) ![](https://img.shields.io/npm/v/awesome-qr/beta) [![license](https://img.shields.io/github/license/sumimakito/awesome-qr.js)](https://www.apache.org/licenses/LICENSE-2.0)
 
 An awesome but simple QR code generator written in JavaScript.
 
-Gallery
--------
+## Gallery <!-- omit in toc -->
 
 > These QR codes were made with Awesome-qr.js 🤗
 
-Contents
---------
+<table>
+	<tr>
+		<td valign="top"><img src="art/gallery-1.png" width="350"></td>
+    <td valign="top"><img src="art/gallery-2.png" width="350"></td>
+    <td valign="top"><img src="art/gallery-3.gif" width="350"></td>
+  </tr>
+</table>
 
--   Getting Started
-    -   Node.js
-    -   Browsers
--   Options
-    -   text
-    -   size
-    -   margin
-    -   correctLevel
-    -   maskPattern
-    -   version
-    -   components
-    -   colorDark
-    -   colorLight
-    -   autoColor
-    -   backgroundImage
-    -   backgroundDimming
-    -   gifBackground
-    -   whiteMargin
-    -   logoImage
-    -   logoScale
-    -   logoMargin
-    -   logoCornerRadius
-    -   dotScale (DEPRECATED)
--   ComponentOptions
-    -   scale
-    -   protectors
--   Sponsors
--   Changelog
--   Special thanks
--   AwesomeQRCode: Designed for Android
--   Other versions
--   Copyright & License
+## Contents <!-- omit in toc -->
 
-Getting Started
----------------
+- [Getting Started](#getting-started)
+  - [Node.js](#nodejs)
+  - [Browsers](#browsers)
+- [Options](#options)
+  - [text](#text)
+  - [size](#size)
+  - [margin](#margin)
+  - [correctLevel](#correctlevel)
+  - [maskPattern](#maskpattern)
+  - [version](#version)
+  - [components](#components)
+  - [colorDark](#colordark)
+  - [colorLight](#colorlight)
+  - [autoColor](#autocolor)
+  - [backgroundImage](#backgroundimage)
+  - [backgroundDimming](#backgrounddimming)
+  - [gifBackground](#gifbackground)
+  - [whiteMargin](#whitemargin)
+  - [logoImage](#logoimage)
+  - [logoScale](#logoscale)
+  - [logoMargin](#logomargin)
+  - [logoCornerRadius](#logocornerradius)
+  - [<del>dotScale</del> (DEPRECATED)](#deldotscaledel-deprecated)
+- [ComponentOptions](#componentoptions)
+  - [scale](#scale)
+  - [protectors](#protectors)
+- [Sponsors](#sponsors)
+- [Changelog](#changelog)
+- [Special thanks](#special-thanks)
+- [AwesomeQRCode: Designed for Android](#awesomeqrcode-designed-for-android)
+- [Other versions](#other-versions)
+- [Copyright &amp; License](#copyright--license)
+
+## Getting Started
 
 ### Node.js
 
 _Type definitions are included in the npm package._
 
 > **Please read ⚠️**
-> 
-> Awesome-qr.js uses node-canvas as its drawing backend. You might need to take a look at its documentation to ensure that node-canvas works on your environment.
+>
+> Awesome-qr.js uses node-canvas as its drawing backend. You might need to take a look at [its documentation](https://github.com/Automattic/node-canvas#installation) to ensure that node-canvas works on your environment.
 
+```shell
 yarn add awesome-qr // using Yarn
 npm install --save awesome-qr // using NPM
+```
 
 > Awesome-qr.js prior to v2.0.0 **does not work well** in Node.js environment and Awesome-qr.js prior to v1.2.0 **does not work** in Node.js environment.
 
-const { AwesomeQR } \= require("awesome-qr");
-const fs \= require("fs");
+```js
+const { AwesomeQR } = require("awesome-qr");
+const fs = require("fs");
 
 // ...
 
-const background \= fs.readFileSync("background.png");
+const background = fs.readFileSync("background.png");
 
-const buffer \= await new AwesomeQR({
+const buffer = await new AwesomeQR({
   text: "AwesomeQR by Makito - Awesome, right now.",
   size: 500,
   backgroundImage: background,
 }).draw();
 
 fs.writeFileSync("qrcode.png", buffer);
+```
 
 ### Browsers
 
-> ⚛️   If you're using React, please use react-awesome-qr.
+> ⚛️ &nbsp; If you're using React, please use [react-awesome-qr](https://github.com/AwesomeQR/react-awesome-qr).
 
+```html
 <!-- import to the global scope -->
-<script src\="dist/awesome-qr.js"\></script\>
+<script src="dist/awesome-qr.js"></script>
 
 <!-- or use require.js -->
-<script\>
-  require(\["dist/awesome-qr.js"\], (AwesomeQR) \=> ...);
-</script\>
+<script>
+  require(["dist/awesome-qr.js"], (AwesomeQR) => ...);
+</script>
+```
 
+```js
 var background;
-var reader \= new FileReader();
-reader.onload \= function () {
-  background \= this.result;
+var reader = new FileReader();
+reader.onload = function () {
+  background = this.result;
   new AwesomeQR({
     text: "AwesomeQR by Makito - Awesome, right now.",
     size: 500,
     backgroundImage: background,
-  }).draw().then((dataURL) \=> );
+  }).draw().then((dataURL) => );
 };
 reader.readAsDataURL(file);
+```
 
-Options
--------
+## Options
 
 > _Options_ is an object that you can pass to the generator to customize your QR code.
 
-type Options \= {
+```ts
+type Options = {
   text: string;
   size?: number;
   margin?: number;
@@ -132,6 +146,7 @@ type Options \= {
   logoCornerRadius?: number;
   dotScale?: number; // DEPRECATED!!
 };
+```
 
 ### text
 
@@ -139,7 +154,7 @@ type Options \= {
 
 Text to be encoded in the QR code.
 
-* * *
+<hr/>
 
 ### size
 
@@ -149,7 +164,7 @@ Text to be encoded in the QR code.
 
 Size of the QR code in pixel.
 
-* * *
+<hr/>
 
 ### margin
 
@@ -159,7 +174,7 @@ Size of the QR code in pixel.
 
 Size of margins around the QR code body in pixel.
 
-* * *
+<hr/>
 
 ### correctLevel
 
@@ -167,11 +182,11 @@ Size of margins around the QR code body in pixel.
 
 **Default** `QRErrorCorrectLevel.M` ~> `0`
 
-> For more information, please refer to Error correction feature | QRcode.com | DENSO WAVE.
+> For more information, please refer to [Error correction feature | QRcode.com | DENSO WAVE](https://www.qrcode.com/en/about/error_correction.html).
 
 Error correction level of the QR code.
 
-* * *
+<hr/>
 
 ### maskPattern
 
@@ -185,11 +200,11 @@ Specify the mask pattern to be used in QR code encoding.
 
 Accepts a value provided by _QRMaskPattern_.
 
-> To find out all eight mask patterns, please refer to Wikipedia File:QR\_Code\_Mask\_Patterns.svg
+> To find out all eight mask patterns, please refer to [Wikipedia File:QR_Code_Mask_Patterns.svg](https://en.wikipedia.org/wiki/File:QR_Code_Mask_Patterns.svg)
 
-> For more information, please refer to Reed–Solomon codes for coders: Masking.
+> For more information, please refer to [Reed–Solomon codes for coders: Masking](https://en.wikiversity.org/wiki/Reed%E2%80%93Solomon_codes_for_coders#Masking).
 
-* * *
+<hr/>
 
 ### version
 
@@ -201,23 +216,23 @@ Leave untouched to let the code decide which version to use.
 
 Specify the version to be used in QR code encoding.
 
-Accepts an integer in range \[1, 40\].
+Accepts an integer in range [1, 40].
 
-**⚠️   An error might occurs if the specified version does not have enough space for the input data.**
+**⚠️ &nbsp; An error might occurs if the specified version does not have enough space for the input data.**
 
-> For more information, please refer to Information capacity and versions of QR Code | QRcode.com | DENSO WAVE.
+> For more information, please refer to [Information capacity and versions of QR Code | QRcode.com | DENSO WAVE](https://www.qrcode.com/en/about/version.html).
 
-* * *
+<hr/>
 
 ### components
 
-**Type** ComponentOptions
+**Type** [ComponentOptions](#componentoptions)
 
 Controls the appearances of parts in the QR code.
 
-Read section ComponentOptions to learn more.
+Read section [ComponentOptions](#componentoptions) to learn more.
 
-* * *
+<hr/>
 
 ### colorDark
 
@@ -225,11 +240,11 @@ Read section ComponentOptions to learn more.
 
 **Default** `"#000000"`
 
-> For more information about CSS <color>, please refer to <color> - CSS: Cascading Style Sheets | MDN
+> For more information about CSS &lt;color&gt;, please refer to [&lt;color&gt; - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
 
 Color of the blocks on the QR code.
 
-* * *
+<hr/>
 
 ### colorLight
 
@@ -239,7 +254,7 @@ Color of the blocks on the QR code.
 
 Color of the empty areas on the QR code.
 
-* * *
+<hr/>
 
 ### autoColor
 
@@ -249,7 +264,7 @@ Color of the empty areas on the QR code.
 
 Automatically calculate the _colorDark_ value from the QR code's background.
 
-* * *
+<hr/>
 
 ### backgroundImage
 
@@ -261,7 +276,7 @@ Background image to be used in the QR code.
 
 Accepts a `data:` string in web browsers or a Buffer in Node.js.
 
-* * *
+<hr/>
 
 ### backgroundDimming
 
@@ -271,7 +286,7 @@ Accepts a `data:` string in web browsers or a Buffer in Node.js.
 
 Color of the dimming mask above the background image.
 
-* * *
+<hr/>
 
 ### gifBackground
 
@@ -281,7 +296,7 @@ Color of the dimming mask above the background image.
 
 GIF background image to be used in the QR code.
 
-* * *
+<hr/>
 
 ### whiteMargin
 
@@ -291,7 +306,7 @@ GIF background image to be used in the QR code.
 
 Use a white margin instead of a transparent one which reveals the background of the QR code on margins.
 
-* * *
+<hr/>
 
 ### logoImage
 
@@ -305,7 +320,7 @@ Accepts a `data:` string in web browsers or a Buffer in Node.js.
 
 When set to `undefined` or `null`, the logo is disabled.
 
-* * *
+<hr/>
 
 ### logoScale
 
@@ -315,7 +330,7 @@ When set to `undefined` or `null`, the logo is disabled.
 
 Ratio of the logo size to the QR code size.
 
-* * *
+<hr/>
 
 ### logoMargin
 
@@ -325,7 +340,7 @@ Ratio of the logo size to the QR code size.
 
 Size of margins around the logo image in pixels.
 
-* * *
+<hr/>
 
 ### logoCornerRadius
 
@@ -335,15 +350,15 @@ Size of margins around the logo image in pixels.
 
 Corner radius of the logo image in pixels.
 
-* * *
+<hr/>
 
-### dotScale (DEPRECATED)
+### <del>dotScale</del> (DEPRECATED)
 
 **Type** `number?`
 
 **Default** `0.4`
 
-Use components to control the scaling in a more advanced way.
+Use [components](#components) to control the scaling in a more advanced way.
 
 > This option is yet to be removed. You can still use this option to control the scaling of the QR code parts in the lagacy way.
 
@@ -351,12 +366,12 @@ Ratio of the real size to the full size of the blocks.
 
 This can be helpful when you want to make more parts of the background visible.
 
-ComponentOptions
-----------------
+## ComponentOptions
 
 > _ComponentOptions_ controls the appearances of parts in the QR code.
 
-type ComponentOptions \= {
+```ts
+type ComponentOptions = {
   data?: {
     scale?: number;
   };
@@ -373,7 +388,9 @@ type ComponentOptions \= {
     protectors?: boolean;
   };
 };
+```
 
+```ts
 // default ComponentOptions
 
 {
@@ -393,6 +410,7 @@ type ComponentOptions \= {
     protectors: true,
   },
 }
+```
 
 ### scale
 
@@ -400,7 +418,7 @@ type ComponentOptions \= {
 
 Scale factor for blocks in the specified area of the QR code.
 
-* * *
+<hr/>
 
 ### protectors
 
@@ -408,44 +426,38 @@ Scale factor for blocks in the specified area of the QR code.
 
 Controls whether or not to draw the translucent protectors under the specified area in the QR code.
 
-Sponsors
---------
+## Sponsors
 
 It is those generous sponsors who supports this project makes the Awesome-qr.js more awesome!
 
 I'd like to express my sincere appreciation to all the generous sponsors.
 
--   Coxxs
+- [Coxxs](https://coxxs.me/)
 
 Since sponsors' names will not show up here without their permissions, the list above only shows a part of all the sponsors. If you wish to have your name shown up here, please feel free to contact me.
 
-Changelog
----------
+## Changelog
 
-Check the full changelog
+[Check the full changelog](CHANGELOG.md)
 
-Special thanks
---------------
+## Special thanks
 
-Awesome-qr.js is inspired by EFQRCode by EyreFree.
+Awesome-qr.js is inspired by [EFQRCode by EyreFree](https://github.com/EyreFree/EFQRCode).
 
 EFQRCode is a tool to generate QRCode image or recognize QRCode from image, in Swift.
 
 If your application is in need of generating pretty QR codes in Swift, take a look at EFQRCode. It should help.
 
-AwesomeQRCode: Designed for Android
------------------------------------
+## AwesomeQRCode: Designed for Android
 
-Also, if you are developing Android apps, you can take a look at AwesomeQRCode, which is designed for Android projects.
+Also, if you are developing Android apps, you can take a look at [AwesomeQRCode](https://github.com/SumiMakito/AwesomeQRCode), which is designed for Android projects.
 
-Other versions
---------------
+## Other versions
 
--   React component: react-awesome-qr
--   Vue 2.x component: Vue-qr
+- React component: [react-awesome-qr](https://github.com/AwesomeQR/react-awesome-qr)
+- Vue 2.x component: [Vue-qr](https://github.com/Binaryify/vue-qr)
 
-Copyright & License
--------------------
+## Copyright &amp; License
 
 Awesome-qr.js is licensed under Apache License 2.0 License.
 
@@ -499,3 +511,4 @@ The word "QR Code" is registered trademark of
 DENSO WAVE INCORPORATED
     http://www.denso-wave.com/qrcode/faqpatent-e.html
 ```
+

@@ -5,47 +5,57 @@ description: A web UI for Docker, focused on swarm cluster.
 url: https://github.com/cuigh/swirl
 ---
 
-SWIRL
-=====
+# SWIRL
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/cuigh/swirl.svg)](https://hub.docker.com/r/cuigh/swirl/)
+[![Swirl](https://goreportcard.com/badge/cuigh/swirl)](https://goreportcard.com/report/cuigh/swirl)
 
 **Swirl** is a web management tool for Docker, focused on swarm cluster.
 
 > Warning: v1.0+ is not fully compatible with previous versions, it is recommended to redeploy instead of upgrading directly.
 
-Features
---------
+## Features
 
--   Swarm components management
--   Image and container management
--   Compose management with deployment support
--   Service monitoring based on Prometheus and cadvisor
--   Service auto scaling
--   LDAP authentication support
--   Full permission control based on RBAC model
--   Scale out as you want
--   Multiple language support
--   And more...
+* Swarm components management
+* Image and container management
+* Compose management with deployment support
+* Service monitoring based on [Prometheus](https://hub.docker.com/r/cuigh/prometheus/) and [cadvisor](https://github.com/google/cadvisor)
+* Service auto scaling
+* LDAP authentication support
+* Full permission control based on RBAC model
+* Scale out as you want
+* Multiple language support
+* And more...
 
-Snapshots
----------
+## Snapshots
 
 ### Home
 
+![Home](docs/images/home.png)
+
 ### Service list
+
+![Service list](docs/images/services.png)
 
 ### Service stats
 
+![Service stats](docs/images/service-stats.png)
+
 ### Stack list
+
+![Stack list](docs/images/stacks.png)
 
 ### Settings
 
-Configuration
--------------
+![Setting](docs/images/settings.png)
+
+## Configuration
 
 ### With config file
 
 All options can be set with `config/app.yml`.
 
+```yaml
 name: swirl
 banner: false
 
@@ -55,11 +65,11 @@ web:
   authorize: '?'
 
 swirl:
-  db\_type: mongo
-  db\_address: mongodb://localhost:27017/swirl
-#  token\_expiry: 30m
-#  docker\_api\_version: '1.41'
-#  docker\_endpoint: tcp://docker-proxy:2375
+  db_type: mongo
+  db_address: mongodb://localhost:27017/swirl
+#  token_expiry: 30m
+#  docker_api_version: '1.41'
+#  docker_endpoint: tcp://docker-proxy:2375
 
 log:
   loggers:
@@ -68,42 +78,26 @@ log:
   writers:
   - name: console
     type: console
-    layout: '\[{L}\]{T}: {M}{N}'
+    layout: '[{L}]{T}: {M}{N}'
+```
 
 ### With environment variables
 
 Only these options can be set by environment variables for now.
 
-Name
-
-Value
-
-DB\_TYPE
-
-mongo(default),bolt
-
-DB\_ADDRESS
-
-mongodb://localhost:27017/swirl
-
-TOKEN\_EXPIRY
-
-30m
-
-DOCKER\_ENDPOINT
-
-tcp://docker-proxy:2375
-
-DOCKER\_API\_VERSION
-
-1.41
+| Name               | Value                            |
+|--------------------|----------------------------------|
+| DB_TYPE            | mongo(default),bolt              |
+| DB_ADDRESS         | mongodb://localhost:27017/swirl  |
+| TOKEN_EXPIRY       | 30m                              |
+| DOCKER_ENDPOINT    | tcp://docker-proxy:2375          |
+| DOCKER_API_VERSION | 1.41                             |
 
 ### With swarm config
 
 Docker support mounting configuration file through swarm from v17.06, so you can store your config in swarm and mount it to your program.
 
-Deployment
-----------
+## Deployment
 
 Swirl support two storage engines now: mongo and bolt. **bolt** is suitable for development environment, **Swirl** can only deploy one replica if you use **bolt** storage engine.
 
@@ -111,86 +105,89 @@ Swirl support two storage engines now: mongo and bolt. **bolt** is suitable for 
 
 Just copy the swirl binary and config directory to the host, and run it.
 
+```bash
 ./swirl
+```
 
 ### Docker
 
--   Use **bolt** storage engine
+* Use **bolt** storage engine
 
-docker run -d -p 8001:8001 \\
-    -v /var/run/docker.sock:/var/run/docker.sock \\
-    -v /data/swirl:/data/swirl \\
-    -e DB\_TYPE=bolt \\
-    -e DB\_ADDRESS=/data/swirl \\
-    --name=swirl \\
+```bash
+docker run -d -p 8001:8001 \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /data/swirl:/data/swirl \
+    -e DB_TYPE=bolt \
+    -e DB_ADDRESS=/data/swirl \
+    --name=swirl \
     cuigh/swirl
+```
 
--   Use **MongoDB** storage engine
+* Use **MongoDB** storage engine
 
-docker run -d -p 8001:8001 \\
-    --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \\
-    -e DB\_TYPE=mongo \\
-    -e DB\_ADDRESS=mongodb://localhost:27017/swirl \\
-    --name=swirl \\
+```bash
+docker run -d -p 8001:8001 \
+    --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+    -e DB_TYPE=mongo \
+    -e DB_ADDRESS=mongodb://localhost:27017/swirl \
+    --name=swirl \
     cuigh/swirl
+```
 
 ### Docker swarm
 
--   Use **bolt** storage engine
+* Use **bolt** storage engine
 
-docker service create \\
-  --name=swirl \\
-  --publish=8001:8001/tcp \\
-  --env DB\_TYPE=bolt \\
-  --env DB\_ADDRESS=/data/swirl \\
-  --constraint=node.hostname==manager1 \\
-  --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \\
-  --mount=type=bind,src=/data/swirl,dst=/data/swirl \\
+```bash
+docker service create \
+  --name=swirl \
+  --publish=8001:8001/tcp \
+  --env DB_TYPE=bolt \
+  --env DB_ADDRESS=/data/swirl \
+  --constraint=node.hostname==manager1 \
+  --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
+  --mount=type=bind,src=/data/swirl,dst=/data/swirl \
   cuigh/swirl
+```
 
--   Use **MongoDB** storage engine
+* Use **MongoDB** storage engine
 
-docker service create \\
-  --name=swirl \\
-  --publish=8001:8001/tcp \\
-  --env DB\_ADDRESS=mongodb://localhost:27017/swirl \\
-  --constraint=node.role==manager \\
-  --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \\
+```bash
+docker service create \
+  --name=swirl \
+  --publish=8001:8001/tcp \
+  --env DB_ADDRESS=mongodb://localhost:27017/swirl \
+  --constraint=node.role==manager \
+  --mount=type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock \
   cuigh/swirl
+```
 
 ### Docker compose
 
+```bash
 docker stack deploy -c compose.yml swirl
+```
 
-Advanced features
------------------
+## Advanced features
 
 **Swirl** use service labels to support some features, the labels in the table below are currently supported.
 
-Name
+| Name        | Description          | Examples                |
+|-------------|----------------------|-------------------------|
+| swirl.scale | Service auto scaling | `min=1,max=5,cpu=30:50` |
 
-Description
-
-Examples
-
-swirl.scale
-
-Service auto scaling
-
-`min=1,max=5,cpu=30:50`
-
-Build
------
+## Build
 
 To build **Swirl** from source, you need `yarn` and `go(v1.16+)` installed.
 
+```sh
 $ cd ui 
 $ yarn
 $ yarn build
 $ cd ..
 $ go build
+```
 
-License
--------
+## License
 
 This product is licensed to you under the MIT License. You may not use this product except in compliance with the License. See LICENSE and NOTICE for more information.

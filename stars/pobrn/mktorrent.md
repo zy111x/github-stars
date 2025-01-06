@@ -1,6 +1,6 @@
 ---
 project: mktorrent
-stars: 487
+stars: 488
 description: A simple command line utility to create BitTorrent metainfo files
 url: https://github.com/pobrn/mktorrent
 ---
@@ -13,3 +13,4 @@ If you use an old version of BSD's make, you might need
 make -f BSDmakefile
 
 See https://github.com/pobrn/mktorrent/wiki for more info.
+

@@ -5,16 +5,13 @@ description: Combustion is a sleek, modern web interface for Transmission
 url: https://github.com/Secretmapper/combustion
 ---
 
-Combustion
-==========
+# Combustion
 
-Introduction
-------------
+## Introduction
 
-Combustion is a sleek, modern web interface for Transmission
+Combustion is a sleek, modern web interface for [Transmission](https://transmissionbt.com)
 
-Installation
-------------
+## Installation
 
 Latest Releases are available at: `https://github.com/Secretmapper/combustion/archive/release.zip`
 
@@ -28,8 +25,10 @@ OSX: `/Applications/Transmission.app/Contents/Resources/web/`
 
 ### Install through Docker
 
+```bash
 sudo docker build -t combustion .
 sudo docker run -d --restart=always -p 80:80 --link some-transmission container combustion
+```
 
 ### Install by pointing transmission to a custom directory
 
@@ -56,30 +55,27 @@ Stop then restart the daemon:
 export TRANSMISSION_WEB_HOME="$HOME/.combustion/combustion-release" && transmission-stop && transmission-daemon;
 ```
 
-Technology
-----------
+## Technology
 
--   Webpack
--   React
--   Mobx
--   CSS modules
+- [Webpack](https://webpack.github.io/)
+- [React](https://facebook.github.io/react/)
+- [Mobx](https://mobxjs.github.io/mobx/)
+- [CSS modules](https://github.com/css-modules/css-modules)
 
-Roadmap
--------
+## Roadmap
 
--   Remote setup (Addable server)
--   Installable Desktop app (Combustion-Remote)
--   Update Notice/OTA Updates
--   Service Worker Support
--   Standalone server?
--   Native Mobile apps?
+- Remote setup (Addable server)
+- Installable Desktop app (Combustion-Remote)
+- Update Notice/OTA Updates
+- Service Worker Support
+- Standalone server?
+- Native Mobile apps?
 
-Special Thanks
---------------
+## Special Thanks
 
-This project is built from the excellent transmission web interface reimplementation react-transmission
+This project is built from the excellent transmission web interface reimplementation [react-transmission](https://github.com/fcsonline/react-transmission)
 
-License
--------
+## License
 
 MIT
+

@@ -5,21 +5,24 @@ description: Expose your TCP/UDP port behind full-cone NAT to the Internet.
 url: https://github.com/MikeWang000000/Natter
 ---
 
-Natter (v2)
-===========
+# Natter (v2)
 
 Expose your port behind full-cone NAT to the Internet.
+  
+[中文文档](docs/README.md)
 
-中文文档
 
-Quick start
------------
+## Quick start
 
+```bash
 python3 natter.py
+```
 
 Or, using Docker:
 
+```bash
 docker run --net=host nattertool/natter
+```
 
 ```
 2023-11-01 01:00:08 [I] Natter
@@ -48,8 +51,8 @@ It works!
 Natter
 ```
 
-Usage
------
+
+## Usage
 
 ```
 usage: natter.py [--version] [--help] [-v] [-q] [-u] [-U] [-k <interval>]
@@ -82,29 +85,34 @@ forward options:
   -r              keep retrying until the port of forward target is open
 ```
 
-Usage for Docker
-----------------
 
-Read natter-docker for details.
+## Usage for Docker
 
-Use cases
----------
+Read [natter-docker](natter-docker) for details.
+
+
+## Use cases
 
 Expose local port 80 to the Internet, using built-in forward method:
 
+```bash
 python3 natter.py -p 80
+```
 
 Expose local port 80 to the Internet, using iptables kernel forward method (requires root permission):
 
+```bash
 sudo python3 natter.py -m iptables -p 80
+```
 
-Dependencies
-------------
 
--   Python 2.7 (minimum), >= 3.6 (recommended)
--   No third-party modules are required.
+## Dependencies
 
-License
--------
+- Python 2.7 (minimum), >= 3.6 (recommended)
+- No third-party modules are required.
+
+
+## License
 
 GNU General Public License v3.0
+

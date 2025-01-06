@@ -5,7 +5,20 @@ description: Dependency free publish/subscribe for JavaScript
 url: https://github.com/mroderick/PubSubJS
 ---
 
-PubSubJS is a topic-based publish/subscribe library written in JavaScript.
+<div align="center">
+  <p>
+    <img src="https://raw.githubusercontent.com/mroderick/PubSubJS/master/branding/logo.png"/ alt="PubSubJS" title="PubSubJS" width="200" height="200">
+  </p>
+
+  <p>
+    <a href="https://www.npmjs.com/package/pubsub-js"><img src="https://img.shields.io/npm/v/pubsub-js.svg?style=flat-square" alt="NPM version" title="Click to go to NPM" /></a><!--
+    --><a href="https://github.com/mroderick/PubSubJS/blob/master/LICENSE.md"><img src="https://img.shields.io/npm/l/pubsub-js.svg?style=flat-square" alt="MIT License" title="License" /></a><!--
+    --><a href="https://www.npmjs.com/package/pubsub-js"><img src="https://img.shields.io/npm/dm/pubsub-js.svg?style=flat-square" alt="NPM downloads/month" title="Click to go to NPM" /></a><!--
+    --><a href="https://coveralls.io/github/mroderick/PubSubJS"><img src="https://img.shields.io/coveralls/github/mroderick/PubSubJS.svg?style=flat-square" alt="Coverage Status" title="View Coverage"/></a>
+  </p>
+</div>
+
+PubSubJS is a [topic-based](http://en.wikipedia.org/wiki/Publish–subscribe_pattern#Message_filtering) [publish/subscribe](http://en.wikipedia.org/wiki/Publish/subscribe) library written in JavaScript.
 
 PubSubJS has synchronisation decoupling, so topics are published asynchronously. This helps keep your program predictable as the originator of topics will not be blocked while consumers process them.
 
@@ -13,54 +26,54 @@ For the adventurous, PubSubJS also supports synchronous topic publication. This 
 
 #### Single process
 
-PubSubJS is designed to be used within a **single process**, and is not a good candidate for multi-process applications (like Node.js – Cluster with many sub-processes). If your Node.js app is a single process app, you're good. If it is (or is going to be) a multi-process app, you're probably better off using redis Pub/Sub or similar
+PubSubJS is designed to be used within a **single process**, and is not a good candidate for multi-process applications (like [Node.js – Cluster](http://nodejs.org/api/cluster.html) with many sub-processes). If your Node.js app is a single process app, you're good. If it is (or is going to be) a multi-process app, you're probably better off using [redis Pub/Sub](http://redis.io/topics/pubsub) or similar
 
-Key features
-------------
+## Key features
 
--   Dependency free
--   synchronisation decoupling
--   ES3 compatible. PubSubJS should be able to run everywhere that can execute JavaScript. Browsers, servers, ebook readers, old phones, game consoles.
--   AMD / CommonJS module support
--   No modification of subscribers (jQuery custom events modify subscribers)
--   Easy to understand and use (thanks to synchronisation decoupling)
--   Small(ish), less than 1kb minified and gzipped
+* Dependency free
+* synchronisation decoupling
+* ES3 compatible. PubSubJS should be able to run everywhere that can execute JavaScript. Browsers, servers, ebook readers, old phones, game consoles.
+* AMD / CommonJS module support
+* No modification of subscribers (jQuery custom events modify subscribers)
+* Easy to understand and use (thanks to synchronisation decoupling)
+* Small(ish), less than 1kb minified and gzipped
 
-Getting PubSubJS
-----------------
+## Getting PubSubJS
 
 There are several ways of getting PubSubJS
 
--   Install via npm (`npm install pubsub-js`)
--   Use it directly from a CDN
-    -   https://www.jsdelivr.com/package/npm/pubsub-js
-    -   https://cdnjs.com/libraries/pubsub-js
-    -   https://unpkg.com/pubsub-js
--   Download a tagged version from GitHub
+* Install via npm (`npm install pubsub-js`)
+* Use it directly from a CDN
+    - https://www.jsdelivr.com/package/npm/pubsub-js
+    - https://cdnjs.com/libraries/pubsub-js
+    - https://unpkg.com/pubsub-js
+* [Download a tagged version](https://github.com/mroderick/PubSubJS/tags) from GitHub
 
 **Note: the last version of this library available via bower is v1.5.4**
 
-Examples
---------
+## Examples
 
 First you have to import the module:
 
+```javascript
 import PubSub from 'pubsub-js'
 
 // or when using CommonJS
-const PubSub \= require('pubsub-js');
+const PubSub = require('pubsub-js');
+```
 
 ### Basic example
 
+```javascript
 // create a function to subscribe to topics
-var mySubscriber \= function (msg, data) {
+var mySubscriber = function (msg, data) {
     console.log( msg, data );
 };
 
 // add the function to the list of subscribers for a particular topic
 // we're keeping the returned token, in order to be able to unsubscribe
 // from the topic later on
-var token \= PubSub.subscribe('MY TOPIC', mySubscriber);
+var token = PubSub.subscribe('MY TOPIC', mySubscriber);
 
 // publish a topic asynchronously
 PubSub.publish('MY TOPIC', 'hello world!');
@@ -70,34 +83,40 @@ PubSub.publish('MY TOPIC', 'hello world!');
 // same execution chain
 // USE WITH CAUTION, HERE BE DRAGONS!!!
 PubSub.publishSync('MY TOPIC', 'hello world!');
+```
 
 ### Cancel specific subscription
 
+```javascript
 // create a function to receive the topic
-var mySubscriber \= function (msg, data) {
+var mySubscriber = function (msg, data) {
     console.log(msg, data);
 };
 
 // add the function to the list of subscribers to a particular topic
 // we're keeping the returned token, in order to be able to unsubscribe
 // from the topic later on
-var token \= PubSub.subscribe('MY TOPIC', mySubscriber);
+var token = PubSub.subscribe('MY TOPIC', mySubscriber);
 
 // unsubscribe this subscriber from this topic
 PubSub.unsubscribe(token);
+```
 
 ### Cancel all subscriptions for a function
 
+```javascript
 // create a function to receive the topic
-var mySubscriber \= function(msg, data) {
+var mySubscriber = function(msg, data) {
     console.log(msg, data);
 };
 
 // unsubscribe mySubscriber from ALL topics
 PubSub.unsubscribe(mySubscriber);
+```
 
 ### Clear all subscriptions for a topic
 
+```javascript
 PubSub.subscribe('a', myFunc1);
 PubSub.subscribe('a.b', myFunc2);
 PubSub.subscribe('a.b.c', myFunc3);
@@ -105,34 +124,44 @@ PubSub.subscribe('a.b.c', myFunc3);
 PubSub.unsubscribe('a.b');
 // no further notifications for 'a.b' and 'a.b.c' topics
 // notifications for 'a' will still get published
+```
 
 ### Clear all subscriptions
 
+```javascript
 PubSub.clearAllSubscriptions();
 // all subscriptions are removed
+```
 
 ### Get Subscriptions
 
+```javascript
 PubSub.getSubscriptions('token');
 // subscriptions by token from all topics
+```
 
 ### Count Subscriptions
 
+```javascript
 PubSub.countSubscriptions('token');
 // count by token from all topics
+```
+
 
 ### Error Handling
-
+```javascript
 // isPublished is a boolean that represents if any subscribers was registered for this topic
-var isPublished \= PubSub.publish('a');
+var isPublished = PubSub.publish('a');
 
 // token will be false if something went wrong and subscriber was not registered
-var token \= PubSub.subscribe('MY TOPIC', mySubscriber); 
+var token = PubSub.subscribe('MY TOPIC', mySubscriber); 
+```
 
 ### Hierarchical addressing
 
+```javascript
 // create a subscriber to receive all topics from a hierarchy of topics
-var myToplevelSubscriber \= function (msg, data) {
+var myToplevelSubscriber = function (msg, data) {
     console.log('top level: ', msg, data);
 }
 
@@ -140,7 +169,7 @@ var myToplevelSubscriber \= function (msg, data) {
 PubSub.subscribe('car', myToplevelSubscriber);
 
 // create a subscriber to receive only leaf topic from hierarchy op topics
-var mySpecificSubscriber \= function (msg, data) {
+var mySpecificSubscriber = function (msg, data) {
     console.log('specific: ', msg, data);
 }
 
@@ -156,14 +185,19 @@ PubSub.publish('car.sell', {newOwner: 'someone else'});
 // topics, three times in total
 // But, mySpecificSubscriber will only be called once, as it only
 // subscribes to the 'car.drive' topic
+```
 
-Tips
-----
 
-Use "constants" for topics and not string literals. PubSubJS uses strings as topics, and will happily try to deliver your topics with ANY topic. So, save yourself from frustrating debugging by letting the JavaScript engine complain when you make typos.
+
+
+## Tips
+
+Use "constants" for topics and not string literals. PubSubJS uses strings as topics, and will happily try to deliver your topics with ANY topic. So, save yourself from frustrating debugging by letting the JavaScript engine complain
+when you make typos.
 
 ### Example of use of "constants"
 
+```javascript
 // 👎 Bad usage
 PubSub.subscribe('hello', function (msg, data) {
 	console.log(data)
@@ -172,25 +206,28 @@ PubSub.subscribe('hello', function (msg, data) {
 PubSub.publish('hello', 'world');
 
 // 👍 Better usage
-var MY\_TOPIC \= 'hello';
-PubSub.subscribe(MY\_TOPIC, function (msg, data) {
+var MY_TOPIC = 'hello';
+PubSub.subscribe(MY_TOPIC, function (msg, data) {
 	console.log(data)
 });
 
-PubSub.publish(MY\_TOPIC, 'world');
+PubSub.publish(MY_TOPIC, 'world');
+```
 
 ### Example of use of "symbol constants" with ES6/7 syntax
 
+```javascript
 // event-types.js
-export const MY\_TOPIC \= Symbol('MY\_TOPIC')
+export const MY_TOPIC = Symbol('MY_TOPIC')
 
 // somefile.js
-import { MY\_TOPIC } from './event-types.js'
-PubSub.subscribe(MY\_TOPIC, function (msg, data) {
+import { MY_TOPIC } from './event-types.js'
+PubSub.subscribe(MY_TOPIC, function (msg, data) {
 	console.log(data)
 });
 
-PubSub.publish(MY\_TOPIC, 'world');
+PubSub.publish(MY_TOPIC, 'world');
+```
 
 ### Immediate Exceptions for stack traces in developer tools
 
@@ -200,41 +237,39 @@ This should be considered a development only option, as PubSubJS was designed to
 
 Setting immediate exceptions in development is easy, just tell PubSubJS about it after it has been loaded.
 
-PubSub.immediateExceptions \= true;
+```javascript
+PubSub.immediateExceptions = true;
+```
 
-Contributing to PubSubJS
-------------------------
+## Contributing to PubSubJS
 
-Please see CONTRIBUTING.md
+Please see [CONTRIBUTING.md](CONTRIBUTING.md)
 
-More about Publish/Subscribe
-----------------------------
 
--   The Many Faces of Publish/Subscribe (PDF)
--   Addy Osmani's mini book on Patterns
--   Publish / Subscribe Systems, A summary of 'The Many Faces of Publish / Subscribe'
+## More about Publish/Subscribe
 
-Versioning
-----------
+* [The Many Faces of Publish/Subscribe](http://www.cs.ru.nl/~pieter/oss/manyfaces.pdf) (PDF)
+* [Addy Osmani's mini book on Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/#observerpatternjavascript)
+* [Publish / Subscribe Systems, A summary of 'The Many Faces of Publish / Subscribe'](http://downloads.ohohlfeld.com/talks/hohlfeld_schroeder-publish_subscribe_systems-dsmware_eurecom2007.pdf)
 
-PubSubJS uses Semantic Versioning for predictable versioning.
+## Versioning
 
-Changelog
----------
+PubSubJS uses [Semantic Versioning](http://semver.org/) for predictable versioning.
 
-Please see https://github.com/mroderick/PubSubJS/releases
+## Changelog
 
-License
--------
+Please see [https://github.com/mroderick/PubSubJS/releases](https://github.com/mroderick/PubSubJS/releases)
+
+## License
 
 MIT: http://mrgnrdrck.mit-license.org
 
-Alternatives
-------------
+## Alternatives
 
 These are a few alternative projects that also implement topic based publish subscribe in JavaScript.
 
--   http://www.joezimjs.com/projects/publish-subscribe-jquery-plugin/
--   http://amplifyjs.com/api/pubsub/
--   http://radio.uxder.com/ — oriented towards 'channels', free of dependencies
--   https://github.com/pmelander/Subtopic - supports vanilla, underscore, jQuery and is even available in NuGet
+* http://www.joezimjs.com/projects/publish-subscribe-jquery-plugin/
+* http://amplifyjs.com/api/pubsub/
+* http://radio.uxder.com/ — oriented towards 'channels', free of dependencies
+* https://github.com/pmelander/Subtopic - supports vanilla, underscore, jQuery and is even available in NuGet
+

@@ -5,20 +5,17 @@ description: 📏 Minimal 2kb zero dependency cascading grid layout
 url: https://github.com/hnqso/minigrid
 ---
 
-Minigrid
-========
+# Minigrid
 
 Minigrid is a minimal 2kb zero dependency cascading grid layout.
 
-Website & Documentation: http://alves.im/minigrid.
+Website & Documentation: [http://alves.im/minigrid](http://minigrid.js.org/).
 
-Demo
-----
+## Demo
 
-There's a simple example on jsbin.
+There's a simple example on [jsbin](http://jsbin.com/wamele/2).
 
-Installation
-------------
+## Installation
 
 Using **NPM**
 
@@ -32,11 +29,9 @@ Or 1998 script tag from unpkg:
 <script src="https://unpkg.com/minigrid@3.1.1/dist/minigrid.min.js"></script>
 ```
 
-Usage
------
+## Usage
 
 It works on a grid container with a group of grid items.
-
 ```
 <div class="cards">
   <div class="card"></div>
@@ -46,7 +41,6 @@ It works on a grid container with a group of grid items.
 ```
 
 Then:
-
 ```
 var grid = new Minigrid({
   container: '.cards',
@@ -57,15 +51,13 @@ grid.mount();
 ```
 
 ### Limitation
-
 Minigrid was built having in mind "cards" with same width and different heights. If your cards have different width sizes or you need more power Minigrid might not be right for you.
 
-Contributing
-------------
+## Contributing
 
-Plese see CONTRIBUTING.
+Plese see [CONTRIBUTING](CONTRIBUTING.md).
 
-License
--------
+## License
 
-MIT © 2016 Henrique Alves
+MIT &copy; 2016 [Henrique Alves](http://twitter.com/healves82)
+

@@ -1,12 +1,11 @@
 ---
 project: mkcert
-stars: 51531
+stars: 51550
 description: A simple zero-config tool to make locally trusted development certificates with any names you'd like.
 url: https://github.com/FiloSottile/mkcert
 ---
 
-mkcert
-======
+# mkcert
 
 mkcert is a simple tool for making locally-trusted development certificates. It requires no configuration.
 
@@ -29,25 +28,26 @@ Created a new certificate valid for the following names 📜
 The certificate is at "./example.com+5.pem" and the key at "./example.com+5-key.pem" ✅
 ```
 
+<p align="center"><img width="498" alt="Chrome and Firefox screenshot" src="https://user-images.githubusercontent.com/1225294/51066373-96d4aa80-15be-11e9-91e2-f4e44a3a4458.png"></p>
+
 Using certificates from real certificate authorities (CAs) for development can be dangerous or impossible (for hosts like `example.test`, `localhost` or `127.0.0.1`), but self-signed certificates cause trust errors. Managing your own CA is the best solution, but usually involves arcane commands, specialized knowledge and manual steps.
 
 mkcert automatically creates and installs a local CA in the system root store, and generates locally-trusted certificates. mkcert does not automatically configure servers to use the certificates, though, that's up to you.
 
-Installation
-------------
+## Installation
 
 > **Warning**: the `rootCA-key.pem` file that mkcert automatically generates gives complete power to intercept secure requests from your machine. Do not share it.
 
 ### macOS
 
-On macOS, use Homebrew
+On macOS, use [Homebrew](https://brew.sh/)
 
 ```
 brew install mkcert
 brew install nss # if you use Firefox
 ```
 
-or MacPorts.
+or [MacPorts](https://www.macports.org/).
 
 ```
 sudo port selfupdate
@@ -69,7 +69,7 @@ sudo pacman -S nss
 sudo zypper install mozilla-nss-tools
 ```
 
-Then you can install using Homebrew on Linux
+Then you can install using [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux)
 
 ```
 brew install mkcert
@@ -82,7 +82,7 @@ git clone https://github.com/FiloSottile/mkcert && cd mkcert
 go build -ldflags "-X main.Version=$(git describe --tags)"
 ```
 
-or use the pre-built binaries.
+or use [the pre-built binaries](https://github.com/FiloSottile/mkcert/releases).
 
 ```
 curl -JLO "https://dl.filippo.io/mkcert/latest?for=linux/amd64"
@@ -90,7 +90,7 @@ chmod +x mkcert-v*-linux-amd64
 sudo cp mkcert-v*-linux-amd64 /usr/local/bin/mkcert
 ```
 
-For Arch Linux users, `mkcert` is available on the official Arch Linux repository.
+For Arch Linux users, [`mkcert`](https://archlinux.org/packages/extra/x86_64/mkcert/) is available on the official Arch Linux repository.
 
 ```
 sudo pacman -Syu mkcert
@@ -98,7 +98,7 @@ sudo pacman -Syu mkcert
 
 ### Windows
 
-On Windows, use Chocolatey
+On Windows, use [Chocolatey](https://chocolatey.org)
 
 ```
 choco install mkcert
@@ -111,29 +111,27 @@ scoop bucket add extras
 scoop install mkcert
 ```
 
-or build from source (requires Go 1.10+), or use the pre-built binaries.
+or build from source (requires Go 1.10+), or use [the pre-built binaries](https://github.com/FiloSottile/mkcert/releases).
 
 If you're running into permission problems try running `mkcert` as an Administrator.
 
-Supported root stores
----------------------
+## Supported root stores
 
 mkcert supports the following root stores:
 
--   macOS system store
--   Windows system store
--   Linux variants that provide either
-    -   `update-ca-trust` (Fedora, RHEL, CentOS) or
-    -   `update-ca-certificates` (Ubuntu, Debian, OpenSUSE, SLES) or
-    -   `trust` (Arch)
--   Firefox (macOS and Linux only)
--   Chrome and Chromium
--   Java (when `JAVA_HOME` is set)
+* macOS system store
+* Windows system store
+* Linux variants that provide either
+    * `update-ca-trust` (Fedora, RHEL, CentOS) or
+    * `update-ca-certificates` (Ubuntu, Debian, OpenSUSE, SLES) or
+    * `trust` (Arch)
+* Firefox (macOS and Linux only)
+* Chrome and Chromium
+* Java (when `JAVA_HOME` is set)
 
 To only install the local root CA into a subset of them, you can set the `TRUST_STORES` environment variable to a comma-separated list. Options are: "system", "java" and "nss" (includes Firefox).
 
-Advanced topics
----------------
+## Advanced topics
 
 ### Advanced options
 
@@ -176,13 +174,13 @@ mkcert filippo@example.com
 
 For the certificates to be trusted on mobile devices, you will have to install the root CA. It's the `rootCA.pem` file in the folder printed by `mkcert -CAROOT`.
 
-On iOS, you can either use AirDrop, email the CA to yourself, or serve it from an HTTP server. After opening it, you need to install the profile in Settings > Profile Downloaded and then enable full trust in it.
+On iOS, you can either use AirDrop, email the CA to yourself, or serve it from an HTTP server. After opening it, you need to [install the profile in Settings > Profile Downloaded](https://github.com/FiloSottile/mkcert/issues/233#issuecomment-690110809) and then [enable full trust in it](https://support.apple.com/en-nz/HT204477).
 
-For Android, you will have to install the CA and then enable user roots in the development build of your app. See this StackOverflow answer.
+For Android, you will have to install the CA and then enable user roots in the development build of your app. See [this StackOverflow answer](https://stackoverflow.com/a/22040887/749014).
 
 ### Using the root with Node.js
 
-Node does not use the system root store, so it won't accept mkcert certificates automatically. Instead, you will have to set the `NODE_EXTRA_CA_CERTS` environment variable.
+Node does not use the system root store, so it won't accept mkcert certificates automatically. Instead, you will have to set the [`NODE_EXTRA_CA_CERTS`](https://nodejs.org/api/cli.html#cli_node_extra_ca_certs_file) environment variable.
 
 ```
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
@@ -198,9 +196,10 @@ If you want to manage separate CAs, you can use the environment variable `$CAROO
 
 Installing in the trust store does not require the CA key, so you can export the CA certificate and use mkcert to install it in other machines.
 
--   Look for the `rootCA.pem` file in `mkcert -CAROOT`
--   copy it to a different machine
--   set `$CAROOT` to its directory
--   run `mkcert -install`
+* Look for the `rootCA.pem` file in `mkcert -CAROOT`
+* copy it to a different machine
+* set `$CAROOT` to its directory
+* run `mkcert -install`
 
-Remember that mkcert is meant for development purposes, not production, so it should not be used on end users' machines, and that you should _not_ export or share `rootCA-key.pem`.
+Remember that mkcert is meant for development purposes, not production, so it should not be used on end users' machines, and that you should *not* export or share `rootCA-key.pem`.
+

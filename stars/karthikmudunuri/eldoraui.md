@@ -1,36 +1,52 @@
 ---
 project: eldoraui
-stars: 1445
+stars: 1451
 description: Eldora UI is a collection of re-usable components that you can copy and paste into your web apps. It primarily features components, blocks, and templates.
 url: https://github.com/karthikmudunuri/eldoraui
 ---
 
-Eldora UI
-=========
+<div align="center">
+  <a href="https://github.com/karthikmudunuri/eldoraui">
 
-open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion 100% open-source, and customizable.
+ <img src="https://github.com/user-attachments/assets/39ad7b92-4696-44be-9079-f38ed06d80c5" alt="Logo" width="60" height="60">
 
-Visit site · Report Bug · Request Feature
+  </a>
+  <h1 align="center">Eldora UI</h1>
+  <p align="center">
+   open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion
+100% open-source, and customizable.
+  </p>
+  <p>
+    
+   <a href="https://www.eldoraui.site/">Visit site</a>
+    ·
+    <a href="https://github.com/karthikmudunuri/eldoraui/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/karthikmudunuri/eldoraui/issues">Request Feature</a>
+  </p>
 
-Explore components
-------------------
+</div>
 
-Visit https://www.eldoraui.site/components to view the documentation.
+<!-- ABOUT THE PROJECT -->
 
-About The Project
------------------
+## Explore components
 
-open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion. 100% open-source, and customizable.
+Visit [https://www.eldoraui.site/components](https://www.eldoraui.site/components) to view the documentation.
 
-Activity
---------
+## About The Project
 
-License
--------
+open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
+100% open-source, and customizable.
 
-Licensed under the MIT license.
+## Activity
 
-Contributing
-------------
+![Alt](https://repobeats.axiom.co/api/embed/35271c3244e24efbae34731d1ee21d0988f8fc0e.svg "Repobeats analytics image")
 
-visit this Documentation
+## License
+
+Licensed under the [MIT license.](https://github.com/karthikmudunuri/eldoraui/blob/main/LICENSE)
+
+## Contributing
+
+visit this [Documentation](https://github.com/karthikmudunuri/eldoraui/blob/main/CONTRIBUTING.md)
+

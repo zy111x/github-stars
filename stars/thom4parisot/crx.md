@@ -5,55 +5,55 @@ description: A node.js command line app for packing Google Chrome extensions.
 url: https://github.com/thom4parisot/crx
 ---
 
-crx
-===
+# crx [![Build Status](https://secure.travis-ci.org/oncletom/crx.svg)](http://travis-ci.org/oncletom/crx) [![Build status](https://ci.appveyor.com/api/projects/status/i8v95qmgwwxic5wn?svg=true)](https://ci.appveyor.com/project/oncletom/crx)
 
-> crx is a utility to **package Google Chrome extensions** via a _Node API_ and the _command line_. It is written **purely in JavaScript** and **does not require OpenSSL**!
+> crx is a utility to **package Google Chrome extensions** via a *Node API* and the *command line*. It is written **purely in JavaScript** and **does not require OpenSSL**!
 
 Packages are available to use `crx` with:
 
--   _grunt_: grunt-crx
--   _gulp_: gulp-crx-pack
--   _webpack_: crx-webpack-plugin
+- *grunt*: [grunt-crx](https://npmjs.com/grunt-crx)
+- *gulp*: [gulp-crx-pack](https://npmjs.com/gulp-crx-pack)
+- *webpack*: [crx-webpack-plugin](https://npmjs.com/crx-webpack-plugin)
 
-Massive hat tip to the node-rsa project for the pure JavaScript encryption!
+Massive hat tip to the [node-rsa project](https://npmjs.com/node-rsa) for the pure JavaScript encryption!
 
 **Compatibility**: this extension is compatible with `node>=10`.
 
-Install
--------
+## Install
 
+```bash
 $ npm install crx
+```
 
-Module API
-----------
+## Module API
 
 Asynchronous functions returns a native ECMAScript Promise.
 
-const fs \= require('fs');
-const path \= require('path');
+```js
+const fs = require('fs');
+const path = require('path');
 
-const ChromeExtension \= require('crx');
+const ChromeExtension = require('crx');
 
-const crx \= new ChromeExtension({
+const crx = new ChromeExtension({
   codebase: 'http://localhost:8000/myExtension.crx',
   privateKey: fs.readFileSync('./key.pem')
 });
 
-crx.load( path.resolve(\_\_dirname, './myExtension') )
-  .then(crx \=> crx.pack())
-  .then(crxBuffer \=> {
-    const updateXML \= crx.generateUpdateXML()
+crx.load( path.resolve(__dirname, './myExtension') )
+  .then(crx => crx.pack())
+  .then(crxBuffer => {
+    const updateXML = crx.generateUpdateXML()
 
     fs.writeFileSync('../update.xml', updateXML);
     fs.writeFileSync('../myExtension.crx', crxBuffer);
   })
-  .catch(err\=>{
+  .catch(err=>{
     console.error( err );
   });
+```
 
 ### ChromeExtension = require("crx")
-
 ### crx = new ChromeExtension(attrs)
 
 This module exports the `ChromeExtension` constructor directly, which can take an optional attribute object, which is used to extend the instance.
@@ -62,50 +62,59 @@ This module exports the `ChromeExtension` constructor directly, which can take a
 
 Prepares the temporary workspace for the Chrome Extension located at `path` — which is expected to directly contain `manifest.json`.
 
-crx.load('/path/to/extension').then(crx \=> {
+```js
+crx.load('/path/to/extension').then(crx => {
   // ...
 });
+```
 
 Alternatively, you can pass a list of files — the first `manifest.json` file to be found will be considered as the root of the application.
 
-crx.load(\['/my/extension/manifest.json', '/my/extension/background.json'\]).then(crx \=> {
+```js
+crx.load(['/my/extension/manifest.json', '/my/extension/background.json']).then(crx => {
   // ...
 });
+```
 
 ### crx.pack()
 
 Packs the Chrome Extension and resolves the promise with a Buffer containing the `.crx` file.
 
+```js
 crx.load('/path/to/extension')
-  .then(crx \=> crx.pack())
-  .then(crxBuffer \=> {
+  .then(crx => crx.pack())
+  .then(crxBuffer => {
     fs.writeFileSync('/tmp/foobar.crx', crxBuffer);
   });
+```
 
 ### crx.generateUpdateXML()
 
 Returns a Buffer containing the update.xml file used for `autoupdate`, as specified for `update_url` in the manifest. In this case, the instance must have a property called `codebase`.
 
-const crx \= new ChromeExtension({ ..., codebase: 'https://autoupdateserver.com/myFirstExtension.crx' });
+```js
+const crx = new ChromeExtension({ ..., codebase: 'https://autoupdateserver.com/myFirstExtension.crx' });
 
 crx.load('/path/to/extension')
-  .then(crx \=> crx.pack())
-  .then(crxBuffer \=> {
+  .then(crx => crx.pack())
+  .then(crxBuffer => {
     // ...
-    const xmlBuffer \= crx.generateUpdateXML();
+    const xmlBuffer = crx.generateUpdateXML();
     fs.writeFileSync('/foo/bar/update.xml', xmlBuffer);
   });
+```
 
 ### crx.generateAppId
 
 Generates application id (extension id) from given path.
 
+```js
 new crx().generateAppId('/path/to/ext') // epgkjnfaepceeghkjflpimappmlalchn
+```
 
-CLI API
--------
+## CLI API
 
-### crx pack \[directory\] \[--crx-version number\] \[-o file\] \[--zip-output file\] \[-p private-key\]
+### crx pack [directory] [--crx-version number] [-o file] [--zip-output file] [-p private-key]
 
 Pack the specified directory into a .crx package, and output it to stdout. If no directory is specified, the current working directory is used.
 
@@ -119,7 +128,7 @@ Use the `-p` option to specify an external private key. If this is not used, `ke
 
 Use the `-b` option to specify the maximum buffer allowed to generate extension. By default, will rely on `node` internal setting (~200KB).
 
-### crx keygen \[directory\]
+### crx keygen [directory]
 
 Generate a 2048-bit RSA private key within the directory. This is called automatically if a key is not specified, and `key.pem` does not exist.
 
@@ -127,10 +136,9 @@ Use the `--force` option to overwrite an existing private key located in the sam
 
 ### crx --help
 
-Show information about using this utility, generated by commander.
+Show information about using this utility, generated by [commander](https://github.com/visionmedia/commander.js).
 
-CLI example
------------
+## CLI example
 
 Given the following directory structure:
 
@@ -142,26 +150,34 @@ Given the following directory structure:
 
 run this:
 
+```bash
 $ cd myFirstExtension
 $ crx pack -o
+```
 
 to generate this:
 
+```bash
 ├─┬ myFirstExtension
 │ ├── manifest.json
 │ ├── icon.png
 │ └── key.pem
 └── myFirstExtension.crx
+```
 
 You can also name the output file like this:
 
+```bash
 $ cd myFirstExtension
 $ crx pack -o myFirstExtension.crx
+```
 
 to get the same results, or also pipe to the file manually like this.
 
+```bash
 $ cd myFirstExtension
-$ crx pack \> ../myFirstExtension.crx
+$ crx pack > ../myFirstExtension.crx
+```
 
 As you can see a key is generated for you at `key.pem` if none exists. You can also specify an external key. So if you have this:
 
@@ -174,11 +190,13 @@ As you can see a key is generated for you at `key.pem` if none exists. You can a
 
 you can run this:
 
+```bash
 $ crx pack myFirstExtension -p myPrivateKey.pem -o
+```
 
 to sign your package without keeping the key in the directory.
 
-License
-=======
+# License
 
-MIT License.
+[MIT License](LICENSE).
+

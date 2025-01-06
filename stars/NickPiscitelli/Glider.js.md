@@ -1,14 +1,14 @@
 ---
 project: Glider.js
-stars: 3289
+stars: 3290
 description: A fast, lightweight, dependency free, native scrolling carousel alternative!
 url: https://github.com/NickPiscitelli/Glider.js
 ---
 
-Glider.js
-=========
+# Glider.js
 
-Latest Version: 1.7.8 A fast, light-weight, dependency free, responsive, accessible, extendable, native scrolling list with paging controls, methods and events. (< 2.8kb gzipped!)
+Latest Version: 1.7.8
+A fast, light-weight, dependency free, responsive, accessible, extendable, native scrolling list with paging controls, methods and events. (< 2.8kb gzipped!)
 
 Demos and full documentation available on Github Pages: https://nickpiscitelli.github.io/Glider.js/
 
@@ -16,48 +16,57 @@ Demos and full documentation available on Github Pages: https://nickpiscitelli.g
 
 Include glider.min.css:
 
-<link rel\="stylesheet" href\="glider.min.css"\>
+```html
+<link rel="stylesheet" href="glider.min.css">
 or
-<link rel\="stylesheet" href\="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"\>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
+```
 
 Include Glider.js:
 
-<script src\="glider.min.js"\></script\>
+```html
+<script src="glider.min.js"></script>
 or
-<script src\="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"\></script\>
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+```
 
 Example HTML:
 
-<div class\="glider"\>
-  <div\> 1 </div\>
-  <div\> 2 </div\>
-  <div\> 3 </div\>
-  <div\> 4 </div\>
-  <div\> 5 </div\>
-  <div\> 6 </div\>
-</div\>
+```html
+<div class="glider">
+  <div> 1 </div>
+  <div> 2 </div>
+  <div> 3 </div>
+  <div> 4 </div>
+  <div> 5 </div>
+  <div> 6 </div>
+</div>
+```
 
 Glider.js Initialization
 
+```javascript
 new Glider(document.querySelector('.glider'));
+```
 
 Glider.js Initialization w/ full options:
 
+```javascript
 new Glider(document.querySelector('.glider'), {
 
-  // \`auto\` allows automatic responsive
+  // `auto` allows automatic responsive
   // width calculations
   slidesToShow: 'auto',
   slidesToScroll: 'auto',
 
-  // should have been named \`itemMinWidth\`
+  // should have been named `itemMinWidth`
   // slides grow to fit the container viewport
-  // ignored unless \`slidesToShow\` is set to \`auto\`
+  // ignored unless `slidesToShow` is set to `auto`
   itemWidth: undefined,
 
   // if true, slides wont be resized to fit viewport
-  // requires \`itemWidth\` to be set
-  // \* this may cause fractional slides
+  // requires `itemWidth` to be set
+  // * this may cause fractional slides
   exactWidth: false,
 
   // speed aggravator - higher is slower
@@ -81,7 +90,7 @@ new Glider(document.querySelector('.glider'), {
   // use any custom easing function
   // compatible with most easing plugins
   easing: function (x, t, b, c, d) {
-    return c\*(t/=d)\*t + b;
+    return c*(t/=d)*t + b;
   },
 
   // event control
@@ -98,7 +107,7 @@ new Glider(document.querySelector('.glider'), {
   resizeLock: true,
 
   // Glider.js breakpoints are mobile-first
-  responsive: \[
+  responsive: [
     {
       breakpoint: 900,
       settings: {
@@ -113,31 +122,38 @@ new Glider(document.querySelector('.glider'), {
         slidesToScroll: 3
       }
     }
-  \]
+  ]
 });
+ ```
 
 Change options:
 
-Glider(document.querySelector(element\_path)).setOption({
+```javascript
+Glider(document.querySelector(element_path)).setOption({
   name: value,
   ...
 });
 
 // optionally call refresh
-Glider(document.querySelector(element\_path)).refresh();
+Glider(document.querySelector(element_path)).refresh();
+```
 
 Bind event:
 
-document.querySelector(element\_path).addEventListener('glider-slide-visible', function(event){
-  // \`this\` is bound to the glider element
-  // custom data located at \`event.detail\`
-  // access to Glider object via \`Glider(this)\`
+```javascript
+document.querySelector(element_path).addEventListener('glider-slide-visible', function(event){
+  // `this` is bound to the glider element
+  // custom data located at `event.detail`
+  // access to Glider object via `Glider(this)`
   ...
 });
+```
 
 Destroy with:
 
-Glider(document.querySelector(element\_path)).destroy();
+```javascript
+Glider(document.querySelector(element_path)).destroy();
+```
 
 #### Install using package managers NPM / YARN
 
@@ -167,10 +183,12 @@ Most browsers now support the `scrollbar-width` property allowing us to avoid th
 }
 ```
 
+
 Since Glider.js uses native scrolling, the browser wants to apply the standard scrollbar to the glider. In most cases, this is fine since the scrollbar can be hidden with CSS and Glider.js does so when appropriate. In browsers such as Firefox though, the scrollbars cannot be hidden with CSS and require additional markup to hide.
 
 To hide the scrollbars in Firefox, you'll want to wrap your glider with `<div class="glider-wrap">` and apply the following CSS/JS:
 
+```css
 @-moz-document url-prefix() {
   .glider-track {
     margin-bottom: 17px;
@@ -179,23 +197,26 @@ To hide the scrollbars in Firefox, you'll want to wrap your glider with `<div cl
     overflow: hidden;
   }
 }
+```
 
+```javascript
 document.addEventListener('glider-loaded', hideFFScrollBars);
 document.addEventListener('glider-refresh', hideFFScrollBars);
 function hideFFScrollBars(e){
-  var scrollbarHeight \= 17; // Currently 17, may change with updates
+  var scrollbarHeight = 17; // Currently 17, may change with updates
   if(/firefox/i.test(navigator.userAgent)){
     // We only need to appy to desktop. Firefox for mobile uses
     // a different rendering engine (WebKit)
-    if (window.innerWidth \> 575){
-      e.target.parentNode.style.height \= (e.target.offsetHeight \- scrollbarHeight) + 'px'
+    if (window.innerWidth > 575){
+      e.target.parentNode.style.height = (e.target.offsetHeight - scrollbarHeight) + 'px'
     }
   }
 }
+```
 
-#### Packages using Glider.js 🚀
+#### Packages using Glider.js :rocket:
 
--   react-glider - A react wrapper for Glider.js written in typescript.
+- [react-glider](https://www.npmjs.com/package/react-glider) - A react wrapper for Glider.js written in typescript. 
 
 #### Dependencies
 
@@ -208,3 +229,4 @@ Copyright (c) 2018 Nick Piscitelli
 Licensed under the MIT license.
 
 It's all yours.
+

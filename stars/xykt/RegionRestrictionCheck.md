@@ -1,43 +1,55 @@
 ---
 project: RegionRestrictionCheck
-stars: 356
+stars: 357
 description: A bash script to check the status of your IP on various geo-restricted services. 
 url: https://github.com/xykt/RegionRestrictionCheck
 ---
 
-流媒体解锁检测脚本 - Streaming Unlock Test Script (EN)
----------------------------------------------
+<p align="center">
+<img src="https://hits.seeyoufarm.com/api/count/keep/badge.svg?url=https%3A%2F%2Fmedia.ispvps.com&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=runs&edge_flat=false"/> 
+<img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fxykt%2FRegionRestrictionCheck&count_bg=%233DC8C0&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visits&edge_flat=false"/> 
+<a href="/LICENSE"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="license" /></a>  
+</p>
 
-**支持OS/Platform：CentOS 6+, Ubuntu 14.04+, Debian 8+, Alpine, MacOS, Android with Termux, iOS**
+## 流媒体解锁检测脚本 -  [Streaming Unlock Test Script (EN)](https://github.com/xykt/RegionRestrictionCheck/blob/main/README_EN.md)
+
+**支持OS/Platform：CentOS 6+, Ubuntu 14.04+, Debian 8+, Alpine, MacOS, Android with Termux, [iOS](https://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95)**
+
+![截图](https://raw.githubusercontent.com/xykt/RegionRestrictionCheck/main/reference/IMG/ScreenShot.png)
 
 **使用脚本前请确认curl已安装**
 
+````bash
 bash <(curl -sL Media.Check.Place)
+````
 
 ##### 只检测IPv4结果：
-
+````bash
 bash <(curl -sL Media.Check.Place) -M 4
+````
 
 ##### 只检测IPv6结果：
-
+````bash
 bash <(curl -sL Media.Check.Place) -M 6
+````
 
 ##### 指定检测的网卡名称：
-
+````bash
 bash <(curl -sL Media.Check.Place) -I eth0
+````
 
 ##### 选择脚本语言为英文：
-
+````bash
 bash <(curl -sL Media.Check.Place) -E
+````
 
-脚本更新
-----
+## 脚本更新
 
 2024/07/22 02:40 增加Google Gemini检测，修复Disney+解锁类型错误；因展示原版广告，改版运行次数同时计入原版
 
 2024/05/09 00:40 修正Netflix澳洲检测错误问题，增加Wikipedia及Reddit检测
 
-2024/03/22 09:45 修复MyTVSuper，感谢RikkaNaa
+2024/03/22 09:45 修复MyTVSuper，感谢[RikkaNaa](https://github.com/RikkaNaa)
 
 2024/03/22 09:30 增加ChatGPT地区检测，更新英文原生/DNS解锁显示内容
 
@@ -45,7 +57,7 @@ bash <(curl -sL Media.Check.Place) -E
 
 2024/02/18 22:00 修复LineTV.tw
 
-2024/02/17 16:00 修复Now E，感谢RikkaNaa
+2024/02/17 16:00 修复Now E，感谢[RikkaNaa](https://github.com/RikkaNaa)
 
 2024/02/12 00:45 增加Alpine系统支持
 
@@ -67,18 +79,21 @@ bash <(curl -sL Media.Check.Place) -E
 
 2024/01/01 21:00 增加DNS/原生解锁检测机制
 
-脚本贡献
-----
+## 脚本贡献
 
 **Acknowledgments:**
 
--   感谢lmc999原作，本改版脚本由此进化而来
-    
--   本脚本基于CoiaPrant/MediaUnlock\_Test代码进行修改
-    
--   onoc1yn 提供多架构docker解决方案及Hulu Cookies加密方案
-    
--   目前市面的流媒体解锁检测脚本都是从Lemonbench演化而来
-    
+- 感谢[lmc999原作](https://github.com/lmc999/RegionRestrictionCheck)，本改版脚本由此进化而来
+
+- 本脚本基于[CoiaPrant/MediaUnlock_Test](https://github.com/CoiaPrant/MediaUnlock_Test)代码进行修改
+
+- [onoc1yn](https://github.com/onoc1yn) 提供多架构docker解决方案及Hulu Cookies加密方案
+
+- 目前市面的流媒体解锁检测脚本都是从[Lemonbench](https://github.com/LemonBench/LemonBench)演化而来
 
 **Stars History:**
+![Stargazers over time](https://starchart.cc/xykt/RegionRestrictionCheck.svg?background=%23FFFFFF&axis=%23333333&line=%2377dd77)
+
+
+
+

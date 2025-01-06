@@ -30,25 +30,25 @@ With an initial seed of ~200 spot illustrations that exist as a cohesive set, na
 
 Foundry's library architecture will be similar to that of a type foundry. As one foundry might have half a dozen font families, with weights and alternates within them, each foundry family can have a particular style, a set of goals, and potential applications. We could have a few established families or groups that are built out over time. Then, as the need and availability arises, more families will be added that blaze new territory in visual direction or theme.
 
-* * *
+---
 
 Foundry Progress
-================
+===============
 
-A family of animated spinners, loaders and progress bars for Foundry ∞.
+A family of animated spinners, loaders and progress bars for [Foundry ∞](https://github.com/thoughtbot/foundry).
 
--   The icons are pure SVG, no javascript and CSS required
--   They are all 50x50 pixels, ensuring that you can swap one spinner out for another
--   The markup is easy to edit and follows thoughtbot's guides
--   The `<svg>` includes an `id` and `class` matching the filename, for targetting with CSS
--   The paths inside (`<circle>`, `<rect>`, `<path>`, etc) include a class `shape` to make styling even easier
+- The icons are pure SVG, no javascript and CSS required
+- They are all 50x50 pixels, ensuring that you can swap one spinner out for another
+- The markup is easy to edit and follows [thoughtbot's guides](http://github.com/thoughtbot/guides)
+- The `<svg>` includes an `id` and `class` matching the filename, for targetting with CSS
+- The paths inside (`<circle>`, `<rect>`, `<path>`, etc) include a class `shape` to make styling even easier
 
-* * *
+---
 
 ### How do I style the icons?
 
 By adding something like this to your CSS:
-
+```css
 .progress-006 {
   height: 25px;
   width: 25px;
@@ -57,3 +57,5 @@ By adding something like this to your CSS:
 .progress-006 .shape {
   fill: #C32F34;
 }
+```
+
