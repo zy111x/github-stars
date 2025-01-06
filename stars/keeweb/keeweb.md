@@ -1,6 +1,6 @@
 ---
 project: keeweb
-stars: 12381
+stars: 12397
 description: Free cross-platform password manager compatible with KeePass
 url: https://github.com/keeweb/keeweb
 ---
@@ -27,6 +27,7 @@ KeeWeb is a browser and desktop password manager which is capable of opening up 
     -   Quick Links
 -   Self-hosting
     -   Docker
+        -   Images
         -   Docker Run
         -   Docker Compose
         -   Traefik Integration
@@ -168,6 +169,40 @@ If you wish to host Keeweb within a Docker container, we provide pre-built image
 Note
 
 For a full set of Docker instructions, visit our **docker/keeweb readme**
+
+  
+
+#### Images
+
+Use any of the following images in your `📄 docker-compose.yml` or `run` command:
+
+  
+
+Service
+
+Version
+
+Image Link
+
+`Docker Hub`
+
+`🔖 keeweb/keeweb:latest`  
+`🔖 keeweb/keeweb:1.19.0`  
+`🔖 keeweb/keeweb:1.19.0-amd64`  
+`🔖 keeweb/keeweb:1.19.0-arm64`  
+`🔖 keeweb/keeweb:development`  
+`🔖 keeweb/keeweb:development-amd64`  
+`🔖 keeweb/keeweb:development-arm64`
+
+`Github`
+
+`🔖 ghcr.io/keeweb/keeweb:latest`  
+`🔖 ghcr.io/keeweb/keeweb:1.19.0`  
+`🔖 ghcr.io/keeweb/keeweb:1.19.0-amd64`  
+`🔖 ghcr.io/keeweb/keeweb:1.19.0-arm64`  
+`🔖 ghcr.io/keeweb/keeweb:development`  
+`🔖 ghcr.io/keeweb/keeweb:development-amd64`  
+`🔖 ghcr.io/keeweb/keeweb:development-arm64`
 
   
 
@@ -779,6 +814,21 @@ To configure Dropbox support on your self-hosted setup view our Wiki page.
 Build From Source
 -----------------
 
+Note
+
+Keeweb v1.19.0+ requires a minimum of Node v20.9.0 LTS in order to build. If you require multiple versions of node, you can install `nvm`
+
+# install nvm
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+# install node 20
+nvm install 20
+
+# switch to node 20
+nvm use 20
+
+  
+
 The easiest way to clone all KeeWeb repos is:
 
 curl https://raw.githubusercontent.com/keeweb/keeweb/develop/dev-env.sh | bash -
@@ -891,7 +941,7 @@ Please note: donation does not imply any type of service contract.
 Contributors ✨
 --------------
 
-We are always looking for contributors. If you feel that you can provide something useful to Gistr, then we'd love to review your suggestion. Before submitting your contribution, please review the following resources:
+We are always looking for contributors. If you feel that you can provide something useful to Keeweb or our other projects, then we'd love to review your suggestion. Before submitting your contribution, please review the following resources:
 
 -   Pull Request Procedure
 -   Contributor Policy

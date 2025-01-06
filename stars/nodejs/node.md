@@ -1,6 +1,6 @@
 ---
 project: node
-stars: 108438
+stars: 108713
 description: Node.js JavaScript runtime ✨🐢🚀✨
 url: https://github.com/nodejs/node
 ---
@@ -269,7 +269,6 @@ TSC emeriti members
 -   UlisesGascon - **Ulises Gascón** <ulisesgascongonzalez@gmail.com\> (he/him)
 -   vmoroz - **Vladimir Morozov** <vmorozov@microsoft.com\> (he/him)
 -   VoltrexKeyva - **Mohammed Keyvanzadeh** <mohammadkeyvanzade94@gmail.com\> (he/him)
--   watilde - **Daijiro Wachi** <daijiro.wachi@gmail.com\> (he/him)
 -   zcbenz - **Cheng Zhao** <zcbenz@gmail.com\> (he/him)
 -   ZYSzys - **Yongsheng Zhang** <zyszys98@gmail.com\> (he/him)
 
@@ -397,6 +396,7 @@ Emeriti
 -   vdeturckheim - **Vladimir de Turckheim** <vlad2t@hotmail.com\> (he/him)
 -   vkurchatkin - **Vladimir Kurchatkin** <vladimir.kurchatkin@gmail.com\>
 -   vsemozhetbyt - **Vse Mozhet Byt** <vsemozhetbyt@gmail.com\> (he/him)
+-   watilde - **Daijiro Wachi** <daijiro.wachi@gmail.com\> (he/him)
 -   watson - **Thomas Watson** <w@tson.dk\>
 -   whitlockjc - **Jeremy Whitlock** <jwhitlock@apache.org\>
 -   XadillaX - **Khaidi Chu** <i@2333.moe\> (he/him)

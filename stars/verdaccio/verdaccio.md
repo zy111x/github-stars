@@ -1,6 +1,6 @@
 ---
 project: verdaccio
-stars: 16561
+stars: 16586
 description: A lightweight Node.js private proxy registry
 url: https://github.com/verdaccio/verdaccio
 ---
@@ -582,8 +582,6 @@ Ayush Sharma
 
 Sergio Hg
 
-@jotadeveloper
-
 @ayusharma\_
 
 @sergiohgz
@@ -596,7 +594,7 @@ Daniel Ruf
 
 @DanielRufde
 
-You can find and chat with them over Discord, click here or follow them at _Twitter_.
+You can find and chat with them over Discord, click here.
 
 Who is using Verdaccio?
 -----------------------

@@ -1,6 +1,6 @@
 ---
 project: setup-simple-pptp-vpn
-stars: 705
+stars: 703
 description: This is a very old repo, and a script that used to work years ago. Please find a newer vpn setup.
 url: https://github.com/viljoviitanen/setup-simple-pptp-vpn
 ---

@@ -1,6 +1,6 @@
 ---
 project: mise
-stars: 12067
+stars: 12494
 description: dev tools, env vars, task runner
 url: https://github.com/jdx/mise
 ---
@@ -30,7 +30,7 @@ Install mise (other methods here):
 
 $ curl https://mise.run | sh
 $ ~/.local/bin/mise --version
-2024.12.17 macos-arm64 (a1b2d3e 2024-12-21)
+2025.1.0 macos-arm64 (a1b2d3e 2025-01-01)
 
 or install a specific a version:
 

@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 9298
+stars: 9387
 description: How smooth scroll should be
 url: https://github.com/darkroomengineering/lenis
 ---
@@ -513,7 +513,22 @@ prevent touch events only
 
 ### Anchor links
 
-<a href\="#anchor" onclick\="lenis.scrollTo('#anchor')"\>scroll to anchor</a\>
+By default Lenis will prevent anchor links click while scrolling, to fix that you must set `anchors: true`.
+
+new Lenis({
+  anchors: true
+})
+
+You can also use `scrollTo` options.
+
+new Lenis({
+  anchors: {
+    offset: 100,
+    onComplete: ()\=>{
+      console.log('scrolled to anchor')
+    }
+  }
+})
 
   
 

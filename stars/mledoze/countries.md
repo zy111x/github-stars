@@ -1,6 +1,6 @@
 ---
 project: countries
-stars: 5998
+stars: 6003
 description: World countries in JSON, CSV, XML and Yaml. Any help is welcome!
 url: https://github.com/mledoze/countries
 ---

@@ -1,6 +1,6 @@
 ---
 project: partyserver
-stars: 409
+stars: 422
 description: PartyKit, for Workers
 url: https://github.com/threepointone/partyserver
 ---
@@ -19,6 +19,8 @@ PartyServer - The core library for building real-time applications with Durable 
 Y-PartyServer - A library that adds Yjs support to PartyServer. Yjs is a CRDT library that allows for real-time collaborative editing. This library exposes a base class extending PartyServer that adds Yjs support, with utility hooks for loading/saving Yjs documents from any external storage.
 
 🥖 partysub - A library for doing pubsub at scale with PartyServer. It lets you configure a "room" to be backed by N separate Durable Object instances, and a strategy for spreading the load across the world concentrated in configurable locations.
+
+partysync - An experimental library to synchronise state from a Durable Object to a client.
 
 ### Fixtures
 

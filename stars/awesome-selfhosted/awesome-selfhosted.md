@@ -1,6 +1,6 @@
 ---
 project: awesome-selfhosted
-stars: 208292
+stars: 210314
 description: A list of Free Software network services and web applications which can be hosted on your own servers
 url: https://github.com/awesome-selfhosted/awesome-selfhosted
 ---
@@ -188,7 +188,6 @@ _Related: Internet of Things (IoT), Software Development - Continuous Integratio
 -   Activepieces - No-code business automation tool like Zapier or Tray. For example, you can send a Slack notification for each new Trello card. (Source Code) `MIT` `Docker`
 -   Apache Airflow - Airflow is a platform to programmatically author, schedule, and monitor workflows. (Source Code) `Apache-2.0` `Python/Docker`
 -   Automatisch - Business automation tool that lets you connect different services like Twitter, Slack, and more to automate your business processes (alternative to Zapier). (Source Code) `AGPL-3.0` `Docker`
--   betanin - Music organization man-in-the-middle of your torrent client and music player. Based on beets.io, similar to Sonarr and Radarr. `GPL-3.0` `Python/Docker`
 -   changedetection.io - Self-hosted tool for staying up-to-date with web-site content changes. `Apache-2.0` `Python/Docker`
 -   ChiefOnboarding - Employee onboarding platform that allows you to provision user accounts and create sequences with todo items, resources, text/email/Slack messages, and more! Available as a web portal and Slack bot. (Source Code) `AGPL-3.0` `Docker`
 -   Dagu - Powerful Cron alternative with a Web UI. It allows you to define dependencies between commands as a Directed Acyclic Graph (DAG) in a declarative YAML format. (Source Code) `GPL-3.0` `Go/Docker`
@@ -215,7 +214,6 @@ _Related: Internet of Things (IoT), Software Development - Continuous Integratio
 -   Mylar3 - Automated Comic Book (cbr/cbz) downloader program for use with NZB and torrents. (Source Code) `GPL-3.0` `Python/Docker`
 -   nefarious - Web application that automates downloading Movies and TV Shows. `GPL-3.0` `Python`
 -   OliveTin - OliveTin is a web interface for running Linux shell commands. `AGPL-3.0` `Go`
--   PlexRipper `⚠` - A cross-platform Plex media downloader that seamlessly adds media from other Plex servers to your own. (Source Code) `GPL-3.0` `Docker`
 -   PlexRipper `⚠` - A cross-platform Plex media downloader that seamlessly adds media from other Plex servers to your own. (Source Code) `GPL-3.0` `Docker`
 -   pyLoad - Lightweight, customizable and remotely manageable downloader for 1-click-hosting sites like rapidshare.com or uploaded.to. (Source Code) `GPL-3.0` `Python`
 -   Radarr - Radarr is an independent fork of Sonarr reworked for automatically downloading movies via Usenet and BitTorrent, à la Couchpotato. (Source Code) `GPL-3.0` `C#/Docker`
@@ -481,7 +479,6 @@ IRC communication software.
 SIP/IPBX telephony software.
 
 -   Asterisk - Easy to use but advanced IP PBX system, VoIP gateway and conference server. (Source Code) `GPL-2.0` `C/deb`
--   ASTPP - VoIP Billing Solution for Freeswitch. It supports prepaid and postpaid billing with call rating and credit control. It also provides many other features. (Source Code) `AGPL-3.0` `PHP`
 -   Eqivo - Eqivo implements an API layer on top of FreeSWITCH facilitating integration between web applications and voice/video-enabled endpoints such as traditional phone lines (PSTN), VoIP phones, webRTC clients etc. (Source Code) `MIT` `Docker/PHP`
 -   Flexisip - A complete, modular and scalable SIP server, includes a push gateway, to deliver SIP incoming calls or text messages on mobile device platforms where push notifications are required to receive information when the app is not active in the foreground. (Source Code) `AGPL-3.0` `C/Docker`
 -   Freepbx - Web-based open source GUI that controls and manages Asterisk. (Source Code) `GPL-2.0` `PHP`
@@ -519,7 +516,6 @@ Social Networking and Forum software.
 -   Hubzilla - Decentralized identity, privacy, publishing, sharing, cloud storage, and communications/social platform. (Source Code) `MIT` `PHP`
 -   HumHub - Flexible kit for private social networks. (Source Code) `AGPL-3.0` `PHP`
 -   Isso - Lightweight commenting server written in Python and Javascript. It aims to be a drop-in replacement for Disqus. (Source Code) `MIT` `Python/Docker`
--   kbin - Federated content aggregator and microblogging platform. (Source Code) `AGPL-3.0` `PHP/Nodejs/Docker`
 -   Lemmy - A link aggregator / reddit clone for the fediverse (alternative to Reddit). (Source Code) `AGPL-3.0` `Docker/Rust`
 -   Libreddit `⚠` - Private front-end for Reddit written in Rust. `AGPL-3.0` `Rust`
 -   Loomio - Loomio is a collaborative decision-making tool that makes it easy for anyone to participate in decisions which affect them. (Source Code) `AGPL-3.0` `Docker`
@@ -735,6 +731,7 @@ A document management system (DMS) is a system used to receive, track, manage an
 Ebook library management software.
 
 -   Atsumeru - Free and open source self-hosted manga/comic/light novel media server with clients for Windows, Linux, macOS and Android. (Source Code, Clients) `MIT` `Java/Docker`
+-   BookLogr - Web app designed to help you manage your personal book library with ease. (Demo) `Apache-2.0` `Docker`
 -   Calibre Web - Web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database. `GPL-3.0` `Python`
 -   Calibre - E-book library manager that can view, convert, and catalog e-books in most of the major e-book formats and provides a built-in Web server for remote clients. (Demo, Source Code) `GPL-3.0` `Python/deb`
 -   Kavita - Cross-platform e-book/manga/comic/pdf server and web reader with user management, ratings and reviews, and metadata support. (Demo, Source Code) `GPL-3.0` `.NET/Docker`
@@ -894,6 +891,7 @@ Peer-to-peer file sharing is the distribution and sharing of digital media using
 -   instant.io - Streaming file transfer over WebTorrent. (Demo) `MIT` `Nodejs`
 -   qBittorrent - Free cross-platform bittorrent client with a feature rich Web UI for remote access. (Source Code) `GPL-2.0` `C++`
 -   Send - Simple, private, end to end encrypted temporary file sharing, originally built by Mozilla. (Clients) `MPL-2.0` `Nodejs/Docker`
+-   slskd `⚠` - A modern client-server application for the Soulseek file sharing network. `AGPL-3.0` `Docker/C#`
 -   Transmission - Fast, easy, free Bittorrent client. (Source Code) `GPL-3.0` `C++/deb`
 
 ### File Transfer - Single-click & Drag-n-drop Upload
@@ -904,6 +902,7 @@ Simplified file servers for sharing of one-time/short-lived/temporary files, pro
 
 -   Chibisafe - File uploader service that aims to to be easy to use and set up. It accepts files, photos, documents, anything you imagine and gives you back a shareable link for you to send to others. (Source Code) `MIT` `Docker/Nodejs`
 -   elixire - Simple yet advanced screenshot uploading and link shortening service. (Source Code, Clients) `AGPL-3.0` `Python`
+-   Enclosed - A minimalistic web application designed for sending private and secure notes. (Demo, Source Code) `Apache-2.0` `Docker/Nodejs`
 -   Files Sharing - Open Source and self-hosted files sharing application based on unique and temporary links. `GPL-3.0` `PHP/Docker`
 -   FileShelter - FileShelter is a self-hosted software that allows you to easily share files over the Internet. `GPL-3.0` `C++/deb`
 -   Gokapi - Lightweight server to share files, which expire after a set amount of downloads or days. Similar to the discontinued Firefox Send, with the difference that only the admin is allowed to upload files. `GPL-3.0` `Go/Docker`
@@ -971,6 +970,7 @@ _Related: Games - Administrative Utilities & Control Panels_
 -   Posio - Geography multiplayer game. `MIT` `Python`
 -   Quizmaster - A web-app for conducting a quiz, including a page for players to enter their answers. `Apache-2.0` `Scala`
 -   Red Eclipse 2 - A FOSS Arena First-Person Shooter Similar to Unreal Tournament. (Source Code) `Zlib/MIT/CC-BY-SA-4.0` `C/C++/deb`
+-   Scribble.rs - A web-based pictionary game. (Demo) `BSD-3-Clause` `Go/Docker`
 -   Suroi - An open-source 2D battle royale game inspired by surviv.io. (Demo, Source Code) `GPL-3.0` `Nodejs`
 -   The Battle for Wesnoth - The Battle for Wesnoth is an Open Source, turn-based tactical strategy game with a high fantasy theme, featuring both singleplayer and online/hotseat multiplayer combat. `GPL-2.0` `C++/deb`
 -   Veloren - Multiplayer RPG. Open-source game inspired by Cube World, Legend of Zelda, Dwarf Fortress and Minecraft. (Source Code) `GPL-3.0` `Rust`
@@ -993,6 +993,7 @@ _Related: Games_
 -   Lancache `⚠` - LAN Party game caching made easy. (Source Code) `MIT` `Docker/Shell`
 -   LinuxGSM - CLI tool for deployment and management of dedicated game servers on Linux: more than 120 games are supported. (Source Code) `MIT` `Shell`
 -   Lodestone - A free, open source server hosting tool for Minecraft and other multiplayers. `AGPL-3.0` `Docker/Rust`
+-   Minus Games - Sync games and save files across multiple devices. (Source Code) `MIT` `Rust`
 -   Pelican Panel - Web application for easy management of game servers, offering a user-friendly interface for deploying, configuring, and managing servers, server monitoring tools, and extensive customization options (fork of Pterodactyl). (Source Code) `AGPL-3.0` `PHP/Docker`
 -   Pterodactyl - Management panel for game servers, with an intuitive UI for end users. (Source Code) `MIT` `PHP`
 -   PufferPanel - PufferPanel is an open source game server management panel, designed for both small networks and game server providers. (Source Code) `Apache-2.0` `Go`
@@ -1060,6 +1061,7 @@ Internet of Things describes physical objects with sensors, processing ability, 
 -   Gladys - Gladys is a privacy-first, open-source home assistant. (Source Code) `Apache-2.0` `Nodejs/Docker`
 -   Home Assistant - Open-source home automation platform. (Demo, Source Code) `Apache-2.0` `Python/Docker`
 -   ioBroker - Integration platform for the Internet of Things, focused on building automation, smart metering, ambient assisted living, process automation, visualization and data logging. (Source Code) `MIT` `Nodejs`
+-   LHA - Light Home Automation application. LHA is fully extensible using Blockly, HTML or Lua. It includes extensions such as ConBee, Philips Hue or Z-Wave JS. `MIT` `Lua`
 -   Node RED - Browser-based flow editor that helps you wiring hardware devices, APIs and online services to create IoT solutions. (Source Code) `Apache-2.0` `Nodejs/Docker`
 -   openHAB - Vendor and technology agnostic open source software for home automation. (Source Code) `EPL-2.0` `Java`
 -   OpenRemote - Open-Source IoT Platform - IoT Asset management, Flow Rules and WHEN-THEN rules, Data visualization, Edge Gateway. (Demo, Source Code) `AGPL-3.0` `Java`
@@ -1180,7 +1182,6 @@ Audio streaming tools and software.
 -   AzuraCast - A modern and accessible self-hosted web radio management suite. (Source Code) `Apache-2.0` `Docker`
 -   Beets - Music library manager and MusicBrainz tagger (command-line and Web interface). (Source Code) `MIT` `Python/deb`
 -   Black Candy - Music streaming server built with Rails and Stimulus. `MIT` `Docker/Ruby`
--   Bsimp - Minimalistic S3-backed audio library. `Apache-2.0` `Go`
 -   Funkwhale - Modern, web-based, convivial, multi-user and free music server. `BSD-3-Clause` `Python/Django`
 -   gonic - Lightweight music streaming server. Subsonic compatible. `GPL-3.0` `Go/Docker`
 -   HoloPlay `⚠` - Web app using Invidious API for listening to Youtube audio sources. (Source Code) `MIT` `Nodejs/Docker`
@@ -1212,7 +1213,6 @@ Multimedia streaming tools and software.
 
 _Related: Media Streaming - Video Streaming, Media Streaming - Audio Streaming_
 
--   Dim - Dim is a self-hosted media manager fueled by dark forces. With minimal setup, Dim will organize and beautify your media collections, letting you access and play them anytime from anywhere. `GPL-2.0` `Rust`
 -   Gerbera - Gerbera is an UPnP Media Server. It allows you to stream your digital media throughout your home network and listen to/watch it on a variety of UPnP compatible devices. (Source Code) `GPL-2.0` `Docker/deb/C++`
 -   Icecast 2 - Streaming audio/video server which can be used to create an Internet radio station or a privately running jukebox and many things in between. (Source Code, Clients) `GPL-2.0` `C`
 -   Jellyfin - Media server for audio, video, books, comics, and photos with a sleek interface and robust transcoding capabilities. Almost all modern platforms have clients, including Roku, Android TV, iOS, and Kodi. (Demo, Source Code, Clients) `GPL-2.0` `C#/deb/Docker`
@@ -1291,7 +1291,6 @@ Software that does not fit in another section.
 -   graph-vl - Identity document verification using Machine Learning and GraphQL. `MIT` `Python/Docker/K8S`
 -   Habitica - Habit tracker app which treats your goals like a Role Playing Game. Previously called HabitRPG. (Source Code) `GPL-3.0/CC-BY-SA-3.0` `Nodejs/Docker`
 -   HortusFox - A collaborative plant management system. (Source Code) `MIT` `PHP/Docker`
--   IconCaptcha - IconCaptcha is a self-hosted, fast, simple and user-friendly captcha for PHP. (Source Code) `MIT` `PHP`
 -   iSponsorBlockTV `⚠` - SponsorBlock for YouTube TV, allows skipping sponsors, muting and skipping ads. `GPL-3.0` `Docker/Python`
 -   Jellyseerr - Manage requests for your media library, supports Plex, Jellyfin and Emby media servers (fork of Overseerr). `MIT` `Docker/Nodejs`
 -   Jelu - Self hosted read and to-read list book tracker. (Source Code) `MIT` `Java/Docker`
@@ -1302,14 +1301,11 @@ Software that does not fit in another section.
 -   Libre Translate - Free and Open Source Machine Translation API, entirely self-hosted. (Source Code) `AGPL-3.0` `Docker/Python`
 -   Loggit - End-to-end encrypted and simple life tracking & logging. (Demo, Source Code) `AGPL-3.0` `Deno`
 -   LubeLogger - A web-based vehicle maintenance and fuel mileage tracker. (Demo, Source Code) `MIT` `Docker/K8S/C#`
--   MailyGo - MailyGo is a small tool written in Go that allows to send HTML forms, for example from static websites without a dynamic backend, via email. `MIT` `Go`
 -   Mere Medical `⚠` - With Mere Medical, you can finally manage all of your medical records from Epic MyChart, Cerner, and OnPatient patient portals in one place. Privacy-focused, self-hosted, and offline-first. (Demo, Source Code) `GPL-3.0` `Docker/Nodejs`
 -   Monica - Personal relationship manager, and a new kind of CRM to organize interactions with your friends and family. (Source Code) `AGPL-3.0` `PHP/Docker`
 -   mosparo - The modern spam protection tool. It replaces other captcha methods with a simple and easy to use spam protection solution. (Source Code) `MIT` `PHP`
 -   MyIP `⚠` - All in one IP Toolbox. Easy to check what's your IPs, IP geolocation, check for DNS leaks, examine WebRTC connections, speed test, ping test, MTR test, check website availability and more. (Demo, Source Code) `MIT` `Nodejs/Docker`
 -   Neko - A self hosted virtual browser (rabb.it clone) that runs in Docker. (Source Code) `Apache-2.0` `Docker/Go`
--   Noisedash - Self-hostable web tool for generating ambient noises/sounds using audio tools and user-uploadable samples. `AGPL-3.0` `Nodejs/Docker`
--   Octave Online - Infrastructure behind a web UI for GNU Octave (alternative to MATLAB). (Source Code) `AGPL-3.0` `Docker/Nodejs`
 -   Ombi - A content request system for Plex/Emby, connects to SickRage, CouchPotato, Sonarr, with a growing feature set. (Demo, Source Code) `GPL-2.0` `C#/deb`
 -   Open-Meteo - Open-source weather API with open-data forecasts, historical and climate data from all major national weather services. (Demo, Source Code) `AGPL-3.0` `Docker`
 -   OpenZiti - Fully-featured, self-hostable, zero trust, full mesh overlay network. Includes a 2FA support out of the box, clients for all major desktop/mobile OS'es. (Source Code) `Apache-2.0` `Go`
@@ -1348,6 +1344,7 @@ _Related: Inventory Management, Resource Planning_
 -   BTCPay Server - A self-hosted Bitcoin and other cryptocurrencies payment processor. (Demo, Source Code) `MIT` `C#`
 -   Budget Zen - End-to-end encrypted and simple expense manager. (Demo, Source Code) `AGPL-3.0` `Deno`
 -   DePay - Accept Web3 Payments directly into your wallet. Peer-to-peer, free, self-hosted & open-source. (Demo, Source Code) `MIT` `Nodejs`
+-   ezbookkeeping - A lightweight personal bookkeeping app hosted by yourself. (Demo, Source Code) `MIT` `Go/Docker`
 -   Family Accounting Tool - Web-based finance management tool for partners with partially shared expenses. `Apache-2.0` `Scala`
 -   Fava - Fava is the web frontend of Beancount, a text based double-entry accounting system. (Demo, Source Code) `MIT` `Python`
 -   Firefly III - Firefly III is a modern financial manager. It helps you to keep track of your money and make budget forecasts. It supports credit cards, has an advanced rule engine and can import data from many banks. (Demo, Source Code) `AGPL-3.0` `PHP/Docker`
@@ -1355,7 +1352,6 @@ _Related: Inventory Management, Resource Planning_
 -   Galette - Galette is a membership management web application towards non profit organizations. (Source Code) `GPL-3.0` `PHP`
 -   Ghostfolio - Wealth management software to keep track of stocks, ETFs and cryptocurrencies. (Source Code) `AGPL-3.0` `Docker/Nodejs`
 -   GRR - Assets management and booking for small/medium companies. (Source Code) `GPL-2.0` `PHP`
--   Hub20 - A self-hosted payment processor for Ethereum and ERC20 Tokens. (Source Code) `AGPL-3.0` `Docker/Python`
 -   HyperSwitch `⚠` - HyperSwitch is an Open Source Financial Switch to make payments Fast, Reliable and Affordable. It lets you connect with multiple payment processors and route traffic effortlessly, all with a single API integration. (Source Code) `Apache-2.0` `Docker/Rust`
 -   IHateMoney - Manage your shared expenses, easily. (Demo, Source Code) `BSD-3-Clause` `Docker/Python`
 -   Invoice Ninja - Powerful tool to invoice clients online. (Demo, Source Code) `AAL` `PHP/Docker/K8S`
@@ -1371,6 +1367,7 @@ _Related: Inventory Management, Resource Planning_
 -   Receipt Wrangler `⚠` - Easy-to-use receipt manager, powered by AI. Allows users to create receipts effortlessly and quickly, categorize and more. (Demo, Source Code) `AGPL-3.0` `Docker`
 -   REI3 - Open source, expandable Business Management Software. Manage tasks, time, assets and much more. (Demo, Source Code) `MIT` `Go`
 -   SolidInvoice - Open source invoicing and quote application. (Source Code) `MIT` `PHP`
+-   YAFFA - Personal finance web application, that can be used to keep track of your money, expenses, budgets, and investments. It also helps with long-term financial planning. (Demo, Source Code) `MIT` `PHP`
 
 ### Monitoring
 
@@ -1446,6 +1443,7 @@ A pastebin is a type of online content-hosting service used for sharing and stor
 
 -   bepasty - A pastebin for all kinds of files. (Source Code) `BSD-2-Clause` `Python/deb`
 -   bin - A paste bin that's actually minimalist. `WTFPL/0BSD` `Rust`
+-   BinPastes - Minimal pastebin supporting client-side encryption, fulltext search, one-time messages. Intended for one to few users looking for a simple pastebin deployment. (Demo) `Apache-2.0` `Java`
 -   dpaste - Simple pastebin with multiple text and code option, with short url result easy to remember. (Source Code) `MIT` `Docker/Django`
 -   ExBin - A pastebin with public/private snippets and netcat server. `MIT` `Docker`
 -   FlashPaper - A one-time encrypted zero-knowledge password/secret sharing application focused on simplicity and security. No database or complicated set-up required. (Demo) `MIT` `Docker/PHP`
@@ -1585,6 +1583,7 @@ Software and tools for managing recipes.
 -   Recipya - A clean, simple and powerful recipe manager your whole family will enjoy. (Demo, Source Code) `GPL-3.0` `Docker/Go`
 -   Specifically Clementines - Grocery shopping app (previously Groceries), providing reliable sync with multiple users/devices (web/Android/iOS), recipes and integration with Tandoor. (Demo, Source Code) `MIT` `Docker`
 -   Tamari - Recipe manager web app with a built-in collection of recipes. Organize by favorites and categories, create shopping lists, and plan meals. (Demo, Source Code) `GPL-3.0` `Docker/Python`
+-   What To Cook? - Get a recipe to cook today, based on the ingredients you have at home. `AGPL-3.0` `Docker`
 
 ### Remote Access
 
@@ -1592,7 +1591,6 @@ Software and tools for managing recipes.
 
 Remote desktop and SSH servers and web interfaces for remote management of computer systems.
 
--   Engity's Bifröst - Highly customizable SSH server with several ways to authorize a user and options where and how to execute a user's session. (Source Code) `Apache-2.0` `Go/Docker`
 -   Engity's Bifröst - Highly customizable SSH server with several ways to authorize a user and options where and how to execute a user's session. (Source Code) `Apache-2.0` `Go/Docker`
 -   Firezone - Self-hosted secure remote access gateway that supports the WireGuard protocol. It offers a Web GUI, 1-line install script, multi-factor auth (MFA), and SSO. (Source Code) `Apache-2.0` `Elixir/Docker`
 -   Guacamole - Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP. (Source Code) `Apache-2.0` `Java/C`
@@ -1852,6 +1850,7 @@ Task management software.
 _Related: Software Development - Project Management, Ticketing_
 
 -   AppFlowy - With AppFlowy, you can build detailed lists of to-do’s for different projects while tracking the status of each one. Open Source Notion Alternative. (Source Code) `AGPL-3.0` `Rust/Dart/Docker`
+-   Donetick - Task and chore management tool for personal and family use, with advanced scheduling, flexible assignment, and group sharing capabilities, detailed history, automation via API, simple and modern design. (Demo, Source Code) `AGPL-3.0` `Go/Docker`
 -   Focalboard - Define, organize, track and manage work across individuals and teams (alternative to Trello, Notion, and Asana). (Source Code, Clients) `MIT/AGPL-3.0/Apache-2.0` `Nodejs/Go/Docker`
 -   Kanboard - Simple and open source visual task board. (Source Code) `MIT` `PHP`
 -   myTinyTodo - Simple way to manage your todo list in AJAX style. Uses PHP, jQuery, SQLite/MySQL. GTD compliant. (Demo, Source Code) `GPL-2.0` `PHP`
@@ -1879,7 +1878,6 @@ _Related: Task Management & To-do Lists, Software Development - Project Manageme
 -   Iguana - Iguana is an open source issue management system with a kanban board. `CC-BY-SA-4.0` `Python/Docker`
 -   ITFlow - Client IT Documentation, Ticketing, Invoicing and Accounting Web Application for MSPs (Managed Service Providers). (Demo, Source Code) `GPL-3.0` `PHP`
 -   MantisBT - Self hosted bug tracker, fits best for software development. (Demo, Source Code) `GPL-2.0` `PHP`
--   osTicket - Manage, organize and archive all your support requests and responses in one place. (Source Code) `GPL-2.0` `PHP`
 -   OTOBO - Flexible web-based ticketing system used for Customer Service, Help Desk, IT Service Management. (Demo, Source Code) `GPL-3.0` `Perl/Docker`
 -   Request Tracker - An enterprise-grade issue tracking system. (Source Code) `GPL-2.0` `Perl`
 -   Roundup Issue Tracker - A simple-to-use and -install issue-tracking system with command-line, web, REST, XML-RPC, and e-mail interfaces. Designed with flexibility in mind - not just another bug tracker. (Source Code) `MIT/ZPL-2.0` `Python/Docker`
@@ -1913,7 +1911,6 @@ URL shortening is the action of shortening a URL to make it substantially shorte
 -   rs-short - A lightweight link shortener written in Rust, with features such as caching, spambot protection and phishing detection. (Demo) `MPL-2.0` `Rust`
 -   Shlink - URL shortener with REST API and command line interface. Includes official progressive web application and docker images. (Source Code, Clients) `MIT` `PHP/Docker`
 -   Simple-URL-Shortener - KISS URL shortener, public or private (with account). Minimalist and lightweight. No dependencies. (Demo) `MIT` `PHP`
--   Simply Shorten - A simple URL shortener that just shortens links. `MIT` `Java/Docker`
 -   YOURLS - YOURLS is a set of PHP scripts that will allow you to run Your Own URL Shortener. Features include password protection, URL customization, bookmarklets, statistics, API, plugins, jsonp. (Source Code) `MIT` `PHP`
 
 ### Video Surveillance
@@ -1989,6 +1986,7 @@ _See also: Wikimatrix, List of wiki software - Wikipedia, Comparison of wiki sof
 -   Raneto - Raneto is an open source Knowledgebase platform that uses static Markdown files to power your Knowledgebase. (Source Code) `MIT` `Nodejs`
 -   TiddlyWiki - Reusable non-linear personal web notebook. (Source Code) `BSD-3-Clause` `Nodejs`
 -   Tiki - Wiki CMS Groupware with the most built-in features. (Demo, Source Code) `LGPL-2.1` `PHP`
+-   W - Lightweight, mutli-user, flat-file-database Wiki engine. Create pages quickly and edit them in your Web browser using Mardown/HTML/CSS/JS. The main difference with other wiki is that you are encouraged to customize each page style individually. (Source Code) `AGPL-3.0` `PHP`
 -   WackoWiki - WackoWiki is a light and easy to install multilingual Wiki-engine. (Source Code) `BSD-3-Clause` `PHP`
 -   Wiki.js - Modern, lightweight and powerful wiki app using Git and Markdown. (Demo, Source Code) `AGPL-3.0` `Nodejs/Docker/K8S`
 -   WikiDocs - A databaseless markdown flat-file wiki engine. (Demo, Source Code) `MIT` `PHP/Docker`
@@ -2062,7 +2060,7 @@ External Links
 -   Lists of software aimed at privacy and decentralization in some form: PRISM Break, privacytools.io, Alternative Internet, Libre Projects, Easy Indie App
 -   Other Awesome lists: Awesome Big Data, Awesome Public Datasets
 -   Dynamic Domain Name services: Afraid.org, Pagekite
--   Communities/forums: /c/selfhosted on lemmy.world, /c/selfhost on lemmy.ml, /m/selfhosted on kbin.social, /r/selfhosted on reddit, r-selfhosted forum, /r/selfhosted Matrix Channel, Homelab forum, /r/homelab on reddit, IndieWeb
+-   Communities/forums: /c/selfhosted on lemmy.world, /c/selfhost on lemmy.ml, /r/selfhosted on reddit, r-selfhosted forum, /r/selfhosted Matrix Channel, Homelab forum, /r/homelab on reddit, IndieWeb
 -   theme.park - A collection of themes/skins for 50 selfhosted apps! (Source Code) `MIT` `CSS`
 -   Track Awesome Selfhosted - Get the latest updates of awesome-selfhosted.
 

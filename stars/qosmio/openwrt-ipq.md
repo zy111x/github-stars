@@ -1,6 +1,6 @@
 ---
 project: openwrt-ipq
-stars: 168
+stars: 180
 description: NSS Fork of OpenWrt targeting Qualcomm IPQ807x/6018
 url: https://github.com/qosmio/openwrt-ipq
 ---
@@ -14,33 +14,25 @@ mac80211 Version
 
 Notes
 
-qualcommax-6.x-nss-wifi
+main-nss
 
-6.11
+6.12.6
 
-Current with upstream
+Current with upstream `main` (unstable)
 
-qualcommax-6.x-nss-mx4300
+24.10-nss
 
-6.11
+6.11.2
 
-Current with upstream. Supports Linksys MX4300
+Current with upstream `openwrt-24.10` (next stable release)
 
-qualcommax-6.x-nss-wifi-6.9
+24.10-nss-mx4300
 
-6.9.9
+6.11.2
 
-Current with upstream, except older mac80211
+Current with upstream `openwrt-24.10` supports Linksys MX4300
 
-qualcommax-6.x-nss-mx4300-6.9
-
-6.9.9
-
-Current with upstream, except older mac80211. Supports Linksys MX4300
-
-NOTE: The 6.9 branches are meant for folks having issues with the current 6.11.2 version of backports/mac80211. These are mostly just meant as a workaround for the time being. I don't plan on supporting these branches longterm.
-
-The MX4300 branches will soon be merged in once the PR for MX4300 is approved upstream.
+UPDATE: As of 2024-12-31 support for MX4300 has been merged upstream in `main` branch and `main-nss-mx4300` is no longer needed.
 
 Table of Contents
 -----------------
@@ -138,7 +130,7 @@ Quickstart
 
 1.  Clone this repository:
     
-    git clone https://github.com/qosmio/openwrt-ipq -b qualcommax-6.x-nss-wifi
+    git clone https://github.com/qosmio/openwrt-ipq -b 24.10-nss
     cd openwrt-ipq
     
 2.  Update feeds:

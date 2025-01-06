@@ -1,6 +1,6 @@
 ---
 project: mktorrent
-stars: 486
+stars: 487
 description: A simple command line utility to create BitTorrent metainfo files
 url: https://github.com/pobrn/mktorrent
 ---

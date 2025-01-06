@@ -1,6 +1,6 @@
 ---
 project: github-unwrapped
-stars: 939
+stars: 1006
 description: Your coding year in review
 url: https://github.com/remotion-dev/github-unwrapped
 ---

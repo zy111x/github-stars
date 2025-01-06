@@ -1,6 +1,6 @@
 ---
 project: certimate
-stars: 5042
+stars: 5146
 description: 开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期。An open-source SSL certificate management tool that helps you automatically apply for and deploy SSL certificates, as well as automatically renew them when they are about to expire.
 url: https://github.com/usual2970/certimate
 ---
@@ -11,7 +11,7 @@ Warning
 
 当前分支为 `next`，是 v0.3.x 的开发分支，目前还没有稳定，请勿在生产环境中使用。
 
-如需访问 v0.2.x 源码，请切换至 `main` 分支。
+如需访问之前的版本，请切换至 `main` 分支。
 
 🔒Certimate
 ===========
@@ -151,11 +151,17 @@ GoDaddy
 
 可签发在 GoDaddy 注册的域名
 
-Namesilo
+Name.com
 
 √
 
-可签发在 Namesilo 注册的域名
+可签发在 Name.com 注册的域名
+
+NameSilo
+
+√
+
+可签发在 NameSilo 注册的域名
 
 PowerDNS
 

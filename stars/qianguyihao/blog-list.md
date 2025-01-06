@@ -1,6 +1,6 @@
 ---
 project: blog-list
-stars: 1707
+stars: 1727
 description: 中文博客琅琊榜，只收录精品独立博客
 url: https://github.com/qianguyihao/blog-list
 ---
@@ -940,6 +940,16 @@ Android系统工程师。目前主要在做 Android 系统开发、和应用快�
 -   楚权的世界：http://chuquan.me/
 
 在猿辅导担任前端Teach Lead。业余博客写手，主要记录自身对于某些技术的理解；技术书籍收藏家，偏爱计算机科学、底层原理、编程语言，喜欢研究技术的底层实现原理。
+
+### 张晓辉-乱世浮生
+
+-   乱世浮生：https://atbug.com/
+
+英文名 Addo。
+
+资深程序员，LF APAC 开源布道师，CNCF Ambassador，云原生社区管委会成员，公众号“云原生指北”作者，微软 Azure MVP。
+
+曾任职于汇丰软件、唯品会、数人云、小鹏汽车，有多年的微服务和基础架构实践经验，主要工作涉及微服务、容器、Kubernetes、DevOps 等。
 
 ### 卤蛋实验室
 

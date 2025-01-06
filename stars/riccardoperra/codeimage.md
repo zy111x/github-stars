@@ -1,6 +1,6 @@
 ---
 project: codeimage
-stars: 1501
+stars: 1526
 description: A tool to beautify your code screenshots. Built with SolidJS and Fastify.
 url: https://github.com/riccardoperra/codeimage
 ---
@@ -11,6 +11,10 @@ Introduction
 ------------
 
 CodeImage is the newest tool to help developers to create beautiful screenshots of their code, providing several features to speed up the process to post in social media.
+
+#### Supported by
+
+* * *
 
 🤖 Tech stack
 -------------

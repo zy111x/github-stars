@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 608
+stars: 613
 description: Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
 ---
@@ -35,66 +35,50 @@ Usage
 
 > npm install @noble/hashes
 
-We support all major platforms and runtimes. For Deno, ensure to use npm specifier. For React Native, you may need a polyfill for getRandomValues. A standalone file noble-hashes.js is also available.
+> deno add jsr:@noble/hashes
+
+> deno doc jsr:@noble/hashes # command-line documentation
+
+We support all major platforms and runtimes. For React Native, you may need a polyfill for getRandomValues. A standalone file noble-hashes.js is also available.
 
 // import \* from '@noble/hashes'; // Error: use sub-imports, to ensure small app size
 import { sha256 } from '@noble/hashes/sha2'; // ECMAScript modules (ESM) and Common.js
-// import { sha256 } from 'npm:@noble/hashes@1.3.0/sha2'; // Deno
+// u8a is accepted
 console.log(sha256(new Uint8Array(\[1, 2, 3\]))); // Uint8Array(32) \[3, 144, 88, 198, 242...\]
-// you could also pass strings that will be UTF8-encoded to Uint8Array
+// strings are also accepted and auto-encoded into u8a
 console.log(sha256('abc')); // == sha256(new TextEncoder().encode('abc'))
 
 -   Implementations
-    -   sha2: sha256, sha384, sha512 and others
+    -   sha2: sha256, sha384, sha512
     -   sha3: FIPS, SHAKE, Keccak
     -   sha3-addons: cSHAKE, KMAC, K12, M14, TurboSHAKE
-    -   ripemd160
-    -   blake2b, blake2s, blake3
-    -   sha1: legacy hash
-    -   hmac
-    -   hkdf
-    -   pbkdf2
-    -   scrypt
-    -   argon2
+    -   ripemd160 | blake2b, blake2s, blake3 | sha1: legacy hash
+    -   MACs: hmac (also sha3-addons kmac, blake3 key mode)
+    -   KDFs: hkdf | pbkdf2 | scrypt | argon2
     -   utils
     -   All available imports
--   Security
-    -   Constant-timeness
-    -   Memory dumping
-    -   Supply chain security
-    -   Randomness
-    -   Quantum computers
--   Speed
--   Contributing & testing
--   License
+-   Security | Speed | Contributing & testing | License
 
 ### Implementations
 
-All hash functions:
-
--   receive `Uint8Array` and return `Uint8Array`
--   may receive `string`, which is automatically converted to `Uint8Array` via utf8 encoding **(not hex)**
--   support little-endian and big-endian architectures
--   can hash up to 4GB per chunk, with any amount of chunks
-
-function hash(message: Uint8Array | string): Uint8Array;
+// function hash(message: Uint8Array | string): Uint8Array;
 hash(new Uint8Array(\[1, 3\]));
-hash('string') \== hash(new TextEncoder().encode('string'));
+hash('string'); // == hash(new TextEncoder().encode('string'));
+// prettier-ignore
+hash.create().update(new Uint8Array(\[1, 3\])).digest();
 
-All hash functions can be constructed via `hash.create()` method:
+Hash functions:
 
--   the result is `Hash` subclass instance, which has `update()` and `digest()` methods
--   `digest()` finalizes the hash and makes it no longer usable
-
-hash
-  .create()
-  .update(new Uint8Array(\[1, 3\]))
-  .digest();
-
-_Some_ hash functions can also receive `options` object, which can be either passed as a:
-
--   second argument to hash function: `blake3('abc', { key: 'd', dkLen: 32 })`
--   first argument to class initializer: `blake3.create({ context: 'e', dkLen: 32 })`
+-   receive & return `Uint8Array`
+-   may receive `string` **(not hex)**, which is automatically utf8-encoded to `Uint8Array`
+-   support little-endian architecture; also experimentally big-endian
+-   can hash up to 4GB per chunk, with any amount of chunks
+-   can be constructed via `hash.create()` method
+    -   the result is `Hash` subclass instance, which has `update()` and `digest()` methods
+    -   `digest()` finalizes the hash and makes it no longer usable
+-   some of them can receive `options`:
+    -   second argument to hash function: `blake3('abc', { key: 'd', dkLen: 32 })`
+    -   first argument to class initializer: `blake3.create({ context: 'e', dkLen: 32 })`
 
 #### sha2: sha256, sha384, sha512 and others
 
@@ -125,17 +109,11 @@ See RFC 4634 and the paper on truncated SHA512/256.
 
 #### sha3: FIPS, SHAKE, Keccak
 
+// prettier-ignore
 import {
-  sha3\_224,
-  sha3\_256,
-  sha3\_384,
-  sha3\_512,
-  keccak\_224,
-  keccak\_256,
-  keccak\_384,
-  keccak\_512,
-  shake128,
-  shake256,
+  sha3\_224, sha3\_256, sha3\_384, sha3\_512,
+  keccak\_224, keccak\_256, keccak\_384, keccak\_512,
+  shake128, shake256,
 } from '@noble/hashes/sha3';
 const h5a \= sha3\_256('abc');
 const h5b \= sha3\_256
@@ -146,26 +124,19 @@ const h6a \= keccak\_256('abc');
 const h7a \= shake128('abc', { dkLen: 512 });
 const h7b \= shake256('abc', { dkLen: 512 });
 
-See FIPS PUB 202, Website.
+See FIPS-202, Website.
 
 Check out the differences between SHA-3 and Keccak
 
 #### sha3-addons: cSHAKE, KMAC, K12, M14, TurboSHAKE
 
+// prettier-ignore
 import {
-  cshake128,
-  cshake256,
-  kmac128,
-  kmac256,
-  k12,
-  m14,
-  turboshake128,
-  turboshake256,
-  tuplehash128,
-  tuplehash256,
-  parallelhash128,
-  parallelhash256,
-  keccakprg,
+  cshake128, cshake256,
+  turboshake128, turboshake256,
+  kmac128, kmac256,
+  tuplehash256, parallelhash256,
+  k12, m14, keccakprg
 } from '@noble/hashes/sha3-addons';
 const h7c \= cshake128('abc', { personalization: 'def' });
 const h7d \= cshake256('abc', { personalization: 'def' });
@@ -175,10 +146,10 @@ const h7h \= k12('abc');
 const h7g \= m14('abc');
 const h7t1 \= turboshake128('abc');
 const h7t2 \= turboshake256('def', { D: 0x05 });
-const h7i \= tuplehash128(\['ab', 'c'\]); // tuplehash(\['ab', 'c'\]) !== tuplehash(\['a', 'bc'\]) !== tuplehash(\['abc'\])
+const h7i \= tuplehash256(\['ab', 'c'\]); // tuplehash(\['ab', 'c'\]) !== tuplehash(\['a', 'bc'\]) !== tuplehash(\['abc'\])
 // Same as k12/blake3, but without reduced number of rounds. Doesn't speedup anything due lack of SIMD and threading,
 // added for compatibility.
-const h7j \= parallelhash128('abc', { blockLen: 8 });
+const h7j \= parallelhash256('abc', { blockLen: 8 });
 // pseudo-random generator, first argument is capacity. XKCP recommends 254 bits capacity for 128-bit security strength.
 // \* with a capacity of 254 bits.
 const p \= keccakprg(254);
@@ -219,7 +190,9 @@ const h10c \= blake2s
   .digest();
 
 // All params are optional
-const h11 \= blake3('abc', { dkLen: 256, key: 'def', context: 'fji' });
+const h11 \= blake3('abc', { dkLen: 256 });
+const h11\_mac \= blake3('abc', { key: new Uint8Array(32) });
+const h11\_kdf \= blake3('abc', { context: 'application name' });
 
 See RFC 7693, Website.
 
@@ -253,9 +226,8 @@ import { sha256 } from '@noble/hashes/sha2';
 import { randomBytes } from '@noble/hashes/utils';
 const inputKey \= randomBytes(32);
 const salt \= randomBytes(32);
-const info \= 'abc';
-const dkLen \= 32;
-const hk1 \= hkdf(sha256, inputKey, salt, info, dkLen);
+const info \= 'application-key';
+const hk1 \= hkdf(sha256, inputKey, salt, info, 32);
 
 // == same as
 import \* as hkdf from '@noble/hashes/hkdf';

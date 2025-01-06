@@ -1,6 +1,6 @@
 ---
 project: SuperTinyIcons
-stars: 14798
+stars: 14805
 description: Under 1KB each! Super Tiny Icons are miniscule SVG versions of your favourite website and app logos
 url: https://github.com/edent/SuperTinyIcons
 ---
@@ -1054,7 +1054,7 @@ Pixelfed
 
 PlayStation  
   
-703 bytes
+515 bytes
 
 Plex  
   

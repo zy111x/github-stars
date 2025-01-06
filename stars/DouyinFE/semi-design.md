@@ -1,6 +1,6 @@
 ---
 project: semi-design
-stars: 8598
+stars: 8658
 description: 🚀A modern, comprehensive, flexible design system and React UI library. 🎨 Provide more than 3000+ Design Tokens, easy to build your design system. Make Semi Design to Any Design.  🧑🏻‍💻 Design to Code in one click 
 url: https://github.com/DouyinFE/semi-design
 ---
@@ -15,7 +15,7 @@ English | 简体中文
 🎉 Features
 ===========
 
--   💪 Up to 60+ high-quality Components. Stable update since 2019
+-   💪 Up to 70+ high-quality Components. Stable update since 2019
 -   🚀 Official Design to Code (D2C) support, convert figma draft to real code in a few seconds
 -   💅 Code to Design (C2D), automatically generate Figma UI Kit according to different themes, keep same between design and code
 -   💕 Complete A11y support, follows W3C standards to provide keyboard interaction, focus management and ARIA for all components

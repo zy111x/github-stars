@@ -1,7 +1,7 @@
 ---
 project: handsontable
-stars: 20218
-description: JavaScript data grid with a spreadsheet look & feel. Works with React, Angular, and Vue. Supported by the Handsontable team ⚡
+stars: 20263
+description: JavaScript Data Grid with a Spreadsheet Look & Feel. Works with React, Angular, and Vue. Supported by the Handsontable team ⚡
 url: https://github.com/handsontable/handsontable
 ---
 
@@ -121,7 +121,7 @@ If your environment does not support imports, you can use the code below to quic
   </head\>
   <body\>
     <div id\="handsontable-grid" class\="ht-theme-main"\></div\>
-    <script src\="https://cdn.jsdelivr.net/gh/handsontable/handsontable/dist/handsontable.full.min.js"\></script\>
+    <script src\="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"\></script\>
     <script\>
       const element \= document.getElementById("handsontable-grid");
 

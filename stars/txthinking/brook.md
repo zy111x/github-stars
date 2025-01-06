@@ -1,6 +1,6 @@
 ---
 project: brook
-stars: 14664
+stars: 14670
 description: A cross-platform programmable network tool
 url: https://github.com/txthinking/brook
 ---
@@ -46,14 +46,517 @@ Client
 > You may want to use `brook link` to customize some parameters
 
 -   About App Mode on macOS
--   How to install Brook on Windows?
+-   How to install Brook on Windows
 -   How to install Brook on Linux
 -   How to install Brook on OpenWrt
 
-Client
+Server
 ======
 
-Brook GUI will pass different _global variables_ to the script at different times, and the script only needs to assign the processing result to the global variable `out`
+brook dnsserver, dohserver, dnsserveroverbrook, server, wsserver, wssserver, quicserver can use script to do more complex thing. brook will pass different _global variables_ to the script at different times, and the script only needs to assign the processing result to the global variable `out`
+
+Brook DNS Server
+----------------
+
+Script can do more:
+
+-   There are examples for dns server
+-   In the `script: in_dnsquery` step, script can do more, read more below
+
+Brook Server
+------------
+
+Script can do more:
+
+-   There are examples for server
+-   In the `script: in_address` step, script can do more, read more below
+
+Variables
+---------
+
+variable
+
+type
+
+command
+
+timing
+
+description
+
+out type
+
+in\_dnsservers
+
+map
+
+dnsserver/dnsserveroverbrook/dohserver/server/wsserver/wssserver/quicserver
+
+When just running
+
+Predefine multiple dns servers, and then programmatically specify which one to use
+
+map
+
+in\_dohservers
+
+map
+
+dnsserver/dnsserveroverbrook/dohserver/server/wsserver/wssserver/quicserver
+
+When just running
+
+Predefine multiple doh servers, and then programmatically specify which one to use
+
+map
+
+in\_brooklinks
+
+map
+
+server/wsserver/wssserver/quicserver
+
+When just running
+
+Predefine multiple brook links, and then programmatically specify which one to use
+
+map
+
+in\_dnsquery
+
+map
+
+dnsserver/dnsserveroverbrook/dohserver
+
+When a DNS query occurs
+
+Script can decide how to handle this request
+
+map
+
+in\_address
+
+map
+
+server/wsserver/wssserver/quicserver
+
+When the Server connects the proxied address
+
+Script can decide how to handle this request
+
+map
+
+in\_dnsservers
+--------------
+
+Key
+
+Type
+
+Description
+
+Example
+
+\_
+
+bool
+
+meaningless
+
+true
+
+`out`, ignored if not of type `map`
+
+Key
+
+Type
+
+Description
+
+Example
+
+...
+
+...
+
+...
+
+...
+
+custom name
+
+string
+
+dns server
+
+8.8.8.8:53
+
+...
+
+...
+
+...
+
+...
+
+in\_dohservers
+--------------
+
+Key
+
+Type
+
+Description
+
+Example
+
+\_
+
+bool
+
+meaningless
+
+true
+
+`out`, ignored if not of type `map`
+
+Key
+
+Type
+
+Description
+
+Example
+
+...
+
+...
+
+...
+
+...
+
+custom name
+
+string
+
+dohserver
+
+https://dns.quad9.net/dns-query?address=9.9.9.9%3A443
+
+...
+
+...
+
+...
+
+...
+
+in\_brooklinks
+--------------
+
+Key
+
+Type
+
+Description
+
+Example
+
+\_
+
+bool
+
+meaningless
+
+true
+
+`out`, ignored if not of type `map`
+
+Key
+
+Type
+
+Description
+
+Example
+
+...
+
+...
+
+...
+
+...
+
+custom name
+
+string
+
+brook link
+
+brook://...
+
+...
+
+...
+
+...
+
+...
+
+in\_dnsquery
+------------
+
+Key
+
+Type
+
+Description
+
+Example
+
+fromipaddress
+
+string
+
+client address which send this request
+
+1.2.3.4:5
+
+domain
+
+string
+
+domain name
+
+google.com
+
+type
+
+string
+
+query type
+
+A
+
+...
+
+...
+
+...
+
+...
+
+tag\_key
+
+string
+
+\--tag specifies the key value
+
+tag\_value
+
+...
+
+...
+
+...
+
+...
+
+`out`, if it is `error` type will be recorded in the log. Ignored if not of type `map`
+
+Key
+
+Type
+
+Description
+
+Example
+
+block
+
+bool
+
+Whether Block, default `false`
+
+false
+
+ip
+
+string
+
+Specify IP directly, only valid when `type` is `A`/`AAAA`
+
+1.2.3.4
+
+dnsserverkey
+
+string
+
+Use the dnsserver specified by key to resolve
+
+custom name
+
+dohserverkey
+
+string
+
+Use the dohserver specified by key to resolve
+
+custom name
+
+in\_address
+-----------
+
+Key
+
+Type
+
+Description
+
+Example
+
+network
+
+string
+
+`tcp` or `udp`
+
+tcp
+
+fromipaddress
+
+string
+
+client address which send this request
+
+1.2.3.4:5
+
+ipaddress
+
+string
+
+ip address to be proxied
+
+1.2.3.4:443
+
+domainaddress
+
+string
+
+domain address to be proxied
+
+google.com:443
+
+user
+
+string
+
+user ID, only available when used with --userAPI
+
+9
+
+...
+
+...
+
+...
+
+...
+
+tag\_key
+
+string
+
+\--tag specifies the key value
+
+tag\_value
+
+...
+
+...
+
+...
+
+...
+
+`out`, if it is `error` type will be recorded in the log. Ignored if not of type `map`
+
+Key
+
+Type
+
+Description
+
+Example
+
+block
+
+bool
+
+Whether Block, default `false`
+
+false
+
+address
+
+string
+
+Rewrite destination to an address
+
+1.2.3.4
+
+ipaddressfromdnsserverkey
+
+string
+
+If the destination is domain address, use the dnsserver specified by key to resolve
+
+custom name
+
+ipaddressfromdnsserverkey
+
+string
+
+If the destination is domain address, use the dohserver specified by key to resolve
+
+custom name
+
+aoraaaa
+
+string
+
+Must be used with ipaddressfromdnsserverkey or ipaddressfromdnsserverkey. Valid value is `A`/`AAAA`
+
+A
+
+speedlimit
+
+int
+
+Set a rate limit for this request, for example `1000000` means 1000 kb/s
+
+1000000
+
+brooklinkkey
+
+string
+
+Use the brook link specified by key to proxy
+
+custom name
+
+dialwith
+
+string
+
+If your server has multiple IPs or network interfaces, you can specify the IP or network interface name to initiate this request
+
+192.168.1.2 or 2606:4700:3030::ac43:a86a or en1
+
+Client
+======
 
 CLI
 ---
@@ -68,111 +571,50 @@ For the specifics of socks5 and http proxy, you can read this article.
 GUI
 ---
 
-The GUI client does not use socks5 and http proxy mode, so there is no issue with some software not using the system proxy. Instead, it uses a virtual network card to take over the entire system's network, including UDP-based http3. Moreover, Brook allows us to control network requests programmatically, so it is necessary to have basic knowledge of network requests.
+The GUI client does not use socks5 and http proxy mode, so there is no issue with some software not using the system proxy. Instead, it uses a virtual network card to take over the entire system's network, including UDP-based http3. Moreover, Brook allows us to control network requests programmatically, so it is necessary to have basic knowledge of network requests. Brook GUI will pass different _global variables_ to the script at different times, and the script only needs to assign the processing result to the global variable `out`
 
-Without Brook: Basic Knowledge of Network Requests
---------------------------------------------------
+Without Brook
+-------------
 
 > Note: When we talk about addresses, we mean addresses that include the port number, such as a domain address: `google.com:443`, or an IP address: `8.8.8.8:53`
 
 1.  When an app requests a domain address, such as `google.com:443`
 2.  It will first perform a DNS resolution, which means that the app will send a network request to the system-configured DNS, such as `8.8.8.8:53`, to inquire about the IP of `google.com`
-    1.  The system DNS will return the IP of `google.com`, such as `1.2.3.4`, to the app
-3.  The app will combine the IP and port into an IP address, such as: `1.2.3.4:443`
-4.  The app makes a network request to this IP address `1.2.3.4:443`
-5.  The app receives the response data
+3.  The system DNS will return the IP of `google.com`, such as `1.2.3.4`, to the app
+4.  The app will combine the IP and port into an IP address, such as: `1.2.3.4:443`
+5.  The app makes a network request to this IP address `1.2.3.4:443`
+6.  The app receives the response data
 
 In the above process, the app actually makes two network requests: one to the IP address `8.8.8.8:53` and another to the IP address `1.2.3.4:443`. In other words, the domain name is essentially an alias for the IP, and must obtain the domain's IP to establish a connection.
 
-With Brook: Fake DNS On
------------------------
+With Brook
+----------
 
-Brook has a Fake DNS feature, which can parse the domain name out of the query requests that an app sends to the system DNS and decide how to respond to the app.
+Brook has a Fake DNS feature default, which can parse the domain name out of the query requests that an app sends to the system DNS UDP 53 and decide how to respond to the app.
 
 1.  When an app requests a domain name address, such as `google.com:443`
 2.  A DNS resolution will be performed first. That is, the app will send a network request to the system-configured DNS, such as `8.8.8.8:53`, to inquire about the IP of `google.com`
 3.  The Brook client detects that an app is sending a network request to `8.8.8.8:53`. This will trigger the `in_dnsquery` variable, carrying information such as `domain`
-    1.  The Brook client returns a fake IP to the app, such as `240.0.0.1`
-4.  The app combines the IP and port into an IP address, such as: `240.0.0.1:443`
-5.  The app makes a network request to the IP address `240.0.0.1:443`
-6.  The Brook client detects that an app is sending a network request to `240.0.0.1:443`, discovers that this is a fake IP, and will convert the fake IP address back to the domain address `google.com:443`. This will trigger the `in_address` variable, carrying information such as `domainaddress`
-    1.  The Brook client sends `google.com:443` to the Brook Server
-    2.  The Brook Server first requests its own DNS to resolve the domain name to find out the IP of `google.com`, such as receiving `1.2.3.4`
-    3.  The Brook Server combines the IP and port into an IP address, such as: `1.2.3.4:443`
-    4.  The Brook Server sends a network request to `1.2.3.4:443` and returns the data to the Brook client
-    5.  The Brook client then returns the data to the app
-7.  The app receives the response data
+4.  The Brook client returns a fake IP to the app, such as `240.0.0.1`
+5.  The app combines the IP and port into an IP address, such as: `240.0.0.1:443`
+6.  The app makes a network request to the IP address `240.0.0.1:443`
+7.  The Brook client detects that an app is sending a network request to `240.0.0.1:443`, discovers that this is a fake IP, and will convert the fake IP address back to the domain address `google.com:443`. This will trigger the `in_address` variable, carrying information such as `domainaddress`
+8.  The Brook client sends `google.com:443` to the Brook Server
+9.  The Brook Server first requests its own DNS to resolve the domain name to find out the IP of `google.com`, such as receiving `1.2.3.4`
+10.  The Brook Server combines the IP and port into an IP address, such as: `1.2.3.4:443`
+11.  The Brook Server sends a network request to `1.2.3.4:443` and returns the data to the Brook client
+12.  The Brook client then returns the data to the app
+13.  The app receives the response data
 
-However, if the following situations occur, the domain name will not/cannot be parsed, meaning that the Brook client will not/cannot know what the domain name is and will treat it as a normal request sent to an IP address:
+However, if the following situations occur, the domain name will not/cannot be parsed, meaning that the Brook client will not/cannot know what the domain name is and will treat it as a normal request sent to an IP address. To avoid the ineffectiveness of Fake DNS, please refer to this article:
 
 -   Fake DNS not enabled: in this case, the Brook client will not attempt to parse the domain name from the request sent to the system DNS and will treat it as a normal request sent to an IP address.
 -   Even with Fake DNS enabled, but the app uses the system's secure DNS or the app's own secure DNS: in this case, the Brook client cannot parse the domain name from the request sent to the secure DNS and will treat it as a normal request sent to an IP address.
 
-To avoid the ineffectiveness of Fake DNS, please refer to this article.
+Script can do more:
 
-With Brook: Fake DNS Off
-------------------------
-
-1.  When an app requests a domain address, such as `google.com:443`
-2.  A DNS resolution will be performed first. That is, the app will send a network request to the system-configured DNS, such as `8.8.8.8:53`, to inquire about the IP of `google.com`
-3.  The Brook client detects that an app is sending a network request to `8.8.8.8:53`. This will trigger the `in_address` variable, carrying information such as `ipaddress`
-    1.  The Brook client sends `8.8.8.8:53` to the Brook Server
-    2.  The Brook Server sends a network request to `8.8.8.8:53` and returns the result, such as `1.2.3.4`, to the Brook client
-    3.  The Brook client then returns the result to the app
-4.  The app combines the IP and port into an IP address, such as: `1.2.3.4:443`
-5.  The app makes a network request to the IP address `1.2.3.4:443`
-6.  The Brook client detects that an app is sending a network request to `1.2.3.4:443`. This will trigger the `in_address` variable, carrying information such as `ipaddress`
-    1.  The Brook client sends `1.2.3.4:443` to the Brook Server
-    2.  The Brook Server sends a network request to `1.2.3.4:443` and returns the data to the Brook client
-    3.  The Brook client then returns the data to the app
-7.  The app receives the response data
-
-With Brook: Fake DNS On, But the App Uses the System's Secure DNS or Its Own Secure DNS
----------------------------------------------------------------------------------------
-
-1.  When an app requests a domain name address, such as `google.com:443`
-2.  A DNS resolution will be performed first. That is, the app will send a network request to the secure DNS, such as `8.8.8.8:443`, to inquire about the IP of `google.com`
-3.  The Brook client detects that an app is sending a network request to `8.8.8.8:443`. This will trigger the `in_address` variable, carrying information such as `ipaddress`
-    1.  The Brook client sends `8.8.8.8:443` to the Brook Server
-    2.  The Brook Server sends a network request to `8.8.8.8:443`, and returns the result, such as `1.2.3.4`, to the Brook client
-    3.  The Brook client then returns the result to the app
-4.  The app combines the IP and port into an IP address, such as: `1.2.3.4:443`
-5.  The app makes a network request to the IP address `1.2.3.4:443`
-6.  The Brook client detects that an app is sending a network request to `1.2.3.4:443`. This will trigger the `in_address` variable, carrying information such as `ipaddress`
-    1.  The Brook client sends `1.2.3.4:443` to the Brook Server
-    2.  The Brook Server sends a network request to `1.2.3.4:443` and returns the data to the Brook client
-    3.  The Brook client then returns the data to the app
-7.  The app receives the response data
-
-To avoid the ineffectiveness of Fake DNS, please refer to this article.
-
-Handle Variable Trigger
------------------------
-
--   When the `in_brooklinks` variable is triggered:
-    -   This is currently the only variable that gets triggered before the Brook client starts.
-    -   We know that Brook starts with your choice of a Brook Server, and this variable lets you specify multiple Brook Servers.
-    -   Then during runtime, you can use one of these Brook Servers as needed.
--   When the `in_dnsquery` variable is triggered, you can process as needed, such as:
-    -   Blocking, such as to prevent ad domain names.
-    -   Directly specifying the response IP.
-    -   Letting the system DNS resolve this domain.
-    -   Letting Bypass DNS resolve this domain.
-    -   And so on.
--   When the `in_address` variable is triggered, you can process as needed, such as:
-    -   Block this connection.
-    -   Rewrite the destination.
-    -   If it's a domain address, you can specify that Bypass DNS is responsible for resolving the IP of this domain.
-    -   Allow it to connect directly without going through a proxy.
-    -   If it's HTTP/HTTPS, you can start MITM (Man-In-The-Middle), which will subsequently trigger `in_httprequest` and `in_httpresponse`.
-    -   And so on.
--   When the `in_httprequest` variable is triggered, you can process as needed, such as:
-    -   Modifying the HTTP request.
-    -   Returning a custom HTTP response directly.
--   When the `in_httpresponse` variable is triggered, you can process as needed, such as:
-    -   Modifying the HTTP response.
-
-For detailed information on the properties and responses of variables, please refer to the following content.
+-   In the `script: in_dnsquery` step, script can do more, read more below
+-   In the `script: in_address` step, script can do more, read more below
 
 Variables
 ---------
@@ -221,7 +663,7 @@ map
 
 When connecting to an address
 
-script can decide how to connect
+Script can decide how to handle this request
 
 map
 
@@ -233,7 +675,7 @@ map
 
 When an HTTP(S) request comes in
 
-the script can decide how to handle this request
+Script can decide how to handle this request
 
 map
 
@@ -245,7 +687,7 @@ map
 
 when an HTTP(S) response comes in
 
-the script can decide how to handle this response
+Script can decide how to handle this response
 
 map
 
@@ -333,17 +775,9 @@ appid
 
 string
 
-App ID or path
+macOS App Mode: this is app id; Linux and Windows: this is app path; OpenWrt: this is IP address of client device. Note: In some operating systems, the app may initiate DNS queries through the system app.
 
 com.google.Chrome.helper
-
-interface
-
-string
-
-network interface. Mac only
-
-en0
 
 `out`, if it is `error` type will be recorded in the log. Ignored if not of type `map`
 
@@ -367,7 +801,7 @@ ip
 
 string
 
-Specify IP directly, only valid when `type` is `A`/`AAAA`
+Ignore fake DNS, specify IP directly, only valid when `type` is `A`/`AAAA`
 
 1.2.3.4
 
@@ -375,7 +809,7 @@ system
 
 bool
 
-Resolve by System DNS, default `false`
+Ignore fake DNS, resolve by System DNS over brook, default `false`
 
 false
 
@@ -383,7 +817,7 @@ bypass
 
 bool
 
-Resolve by Bypass DNS, default `false`
+Ignore fake DNS, resolve by Bypass DNS, default `false`
 
 false
 
@@ -391,7 +825,7 @@ brooklinkkey
 
 string
 
-When need to connect the Server，instead, connect to the Server specified by the key in\_brooklinks
+When need to connect the Server, instead, perfer connect to the Server specified by the key in\_brooklinks
 
 custom name
 
@@ -418,7 +852,7 @@ ipaddress
 
 string
 
-IP type address. There is only of ipaddress and domainaddress. Note that there is no relationship between these two
+IP type address. There is only one of ipaddress and domainaddress. Note that there is no relationship between these two
 
 1.2.3.4:443
 
@@ -434,17 +868,9 @@ appid
 
 string
 
-App ID or path
+macOS App Mode: this is app id; Linux and Windows: this is app path; OpenWrt: this is IP address of client device
 
 com.google.Chrome.helper
-
-interface
-
-string
-
-network interface. Mac only
-
-en0
 
 `out`, if it is `error` type will be recorded in the log. Ignored if not of type `map`
 
@@ -468,7 +894,7 @@ ipaddress
 
 string
 
-IP type address, rewrite destination
+Rewrite destination to an ip address
 
 1.2.3.4:443
 
@@ -484,7 +910,7 @@ bypass
 
 bool
 
-Bypass, default `false`. If `true` and `domainaddress`, then `ipaddress` or `ipaddressfrombypassdns` must be specified
+Bypass, default `false`. If `true` and `domainaddress` exists, then `ipaddress` or `ipaddressfrombypassdns` must be specified
 
 false
 
@@ -508,7 +934,7 @@ mitmcertdomain
 
 string
 
-The MITM certificate domain name, which is taken from `domainaddress` by default. If `ipaddress` and `mitm` is `true` and `mitmprotocol` is `https` then must be must be specified explicitly
+The MITM certificate domain name, which is taken from `domainaddress` by default. If `ipaddress` exists and `mitm` is `true` and `mitmprotocol` is `https` then must be must be specified explicitly
 
 example.com
 
@@ -524,7 +950,7 @@ mitmautohandlecompress
 
 bool
 
-Whether to automatically decompress the http body when interacting with the script, default `false`
+Whether to automatically decompress the http body when interacting with the script, default `false`. Usually need set this to true
 
 false
 
@@ -603,7 +1029,7 @@ other fields are HTTP headers
 
 /
 
-`out`, must be set to a request or response
+`out`, must be set to an unmodified or modified request or a response
 
 in\_httpresponse
 ----------------
@@ -640,12 +1066,12 @@ other fields are HTTP headers
 
 /
 
-`out`, must be set to a response
+`out`, must be set to an unmodified or modified response
 
 Modules
 -------
 
-In Brook GUI, scripts are abstracted into **Modules**. There are already some modules, and thre is no magic, it just automatically combine \_header.tengo and \_footer.tengo, so you only need to write the module itself.
+In Brook GUI, scripts are abstracted into **Modules**. There are already some modules, and there is no magic, it just automatically combine \_header.tengo and \_footer.tengo, so you only need to write the module itself.
 
 ```
 modules = append(modules, {
@@ -672,12 +1098,12 @@ modules = append(modules, {
 })
 ```
 
-tun2brook
----------
+ipio
+----
 
-https://github.com/txthinking/tun2brook
+https://github.com/txthinking/ipio
 
-If you are using tun2brook, you can manually combine multiple modules into a complete script in the following way. For example:
+ipio uses the same script as the GUI. If you are using ipio, you can manually combine multiple modules into a complete script in the following way. For example:
 
 ```
 cat _header.tengo > my.tengo
@@ -688,10 +1114,110 @@ cat block_aaaa.tengo >> my.tengo
 cat _footer.tengo >> my.tengo
 ```
 
-Syntax
-------
+openwrt
+-------
 
-Tengo Language Syntax
+https://www.txthinking.com/talks/articles/brook-openwrt-en.article
+
+openwrt uses the same script as the GUI. If you are using openwrt, you can manually combine multiple modules into a complete script in the following way. For example:
+
+```
+cat _header.tengo > my.tengo
+
+cat block_google_secure_dns.tengo >> my.tengo
+cat block_aaaa.tengo >> my.tengo
+
+cat _footer.tengo >> my.tengo
+```
+
+Debug
+-----
+
+If you are writing complex scripts, the GUI may not be convenient for debugging. It is recommended to use ipio on desktop to debug with `fmt.println`
+
+CA
+--
+
+https://txthinking.github.io/ca/ca.pem
+
+OS
+
+How
+
+iOS
+
+https://www.youtube.com/watch?v=HSGPC2vpDGk
+
+Android
+
+Android has user CA and system CA, must be installed in the system CA after ROOT
+
+macOS
+
+`nami install mad ca.txthinking`, `sudo mad install --ca ~/.nami/bin/ca.pem`
+
+Windows
+
+`nami install mad ca.txthinking`, Admin: `mad install --ca ~/.nami/bin/ca.pem`
+
+> Some software may not read the system CA，you can use `curl --cacert ~/.nami/bin/ca.pem` to debug
+
+IPv6
+----
+
+Brook's stance on IPv6 is positive, if your server or local environment doesn't have an IPv6 stack, read this article.
+
+Troubleshooting Steps
+---------------------
+
+1.  After adding your Server to the Brook client
+2.  If your Server uses a domain and has not specified an IP address via `brook link --address`, then Brook client will attempt to resolve the domain's IP using local DNS, preferring AAAA record. For example:
+    -   domain.com:9999
+    -   ws://domain.com:9999
+    -   wss://domain.com:9999
+    -   quic://domain.com:9999
+3.  Connectivity check: Go to the Server details page and click `Connectivity Check`. If it works sometimes but not others, this indicates instability.
+4.  After connected
+5.  Brook will change your system DNS to the System DNS configured in Brook (by default Google's DNS). In very rare cases, this change may be ignored on Windows, you can confirm this in the system settings.
+6.  Test IPv4 TCP: Use `Test IPv4 TCP` for testing; this test has hardcoded the IP address, so does not trigger DNS resolution.
+7.  Test IPv4 UDP: Use `Test IPv4 UDP` for testing; this test has hardcoded the IP address, so does not trigger DNS resolution.
+8.  Test IPv6 TCP: Use `Test IPv6 TCP` for testing; this test has hardcoded the IP address, so does not trigger DNS resolution.
+9.  Test IPv6 UDP: Use `Test IPv6 UDP` for testing; this test has hardcoded the IP address, so does not trigger DNS resolution.
+10.  Test TCP and UDP: Use the `Echo Client` for testing. If the echo server entered is a domain address, it will trigger DNS resolution.
+11.  Ensure the effectiveness of Fake DNS: Fake DNS is essential to do something with a domain or domain address. Generally, enable the `Block Google Secure DNS` module is sufficient. For other cases, refer to this article.
+12.  If your local or Server does not support IPv6: Refer to this article.
+13.  macOS App Mode: Refer to this article.
+14.  Windows:
+    -   The client can pass the tests without any special configuration on a brand-new, genuine Windows 11.
+    -   Be aware that the Windows system time is often incorrect.
+    -   Do not have other similar network software installed; they can cause conflicting network settings in the system.
+    -   Try restarting the computer.
+    -   Windows Defender may ask for permission to connect to the network or present other issues.
+    -   System DNS may need to be set to 8.8.8.8 and/or 2001:4860:4860::8888
+15.  Android:
+    -   The client can pass the tests without any special configuration on the official Google ROM.
+    -   Different ROMs may have made different modifications to the system.
+    -   Permission for background running might require separate settings.
+    -   System DNS may need to be set to 8.8.8.8 and/or 2001:4860:4860::8888
+16.  Bypass traffic such as China, usually requires the following modules to be activated:
+    -   `Block Google Secure DNS`
+    -   `Bypass Geo`
+    -   `Bypass Apple`: To prevent issues receiving Apple message notifications.
+    -   `Bypass China domain` or `Bypass China domain A`: The former uses `Bypass DNS` to obtain the IP, then `Bypass Geo` or other modules decide whether to bypass; the latter bypasses directly after obtaining the IP with `Bypass DNS` using A records. The latter is needed if your local does not support IPv6.
+    -   If you are a Shiliew user, some modules are enabled by default, which is usually sufficient.
+17.  Search GitHub issues
+18.  Read the blog
+19.  Read the documentation
+20.  Submit new issue
+21.  Seek help in the group
+
+Other
+=====
+
+Script Syntax
+-------------
+
+I think just reading this one page is enough: Tengo Language Syntax
 
 Library
 
@@ -746,96 +1272,112 @@ Library
     ```
     
 
-Debug
------
-
-If you are writing complex scripts, the GUI may not be convenient for debugging. It is recommended to use tun2brook on desktop to debug with `fmt.println`
-
-CA
---
-
-https://txthinking.github.io/ca/ca.pem
-
-OS
-
-How
-
-iOS
-
-https://www.youtube.com/watch?v=HSGPC2vpDGk
-
-Android
-
-Android has user CA and system CA, must be installed in the system CA after ROOT
-
-macOS
-
-`nami install mad ca.txthinking`, `sudo mad install --ca ~/.nami/bin/ca.pem`
-
-Windows
-
-`nami install mad ca.txthinking`, Admin: `mad install --ca ~/.nami/bin/ca.pem`
-
-> Some software may not read the system CA，you can use `curl --cacert ~/.nami/bin/ca.pem` to debug
-
-OpenWrt
+Example
 -------
 
-Brook OpenWRT: Perfectly supports IPv4/IPv6/TCP/UDP
+Each `subcommand` has a `--example`, such as:
 
-IPv6
-----
+```
+brook server --example
+```
 
-Brook's stance on IPv6 is positive, if your server or local environment doesn't have an IPv6 stack, read this article.
+Resources
+---------
 
-Troubleshooting Steps
----------------------
+CLI
 
-1.  After adding your Server to the Brook client
-2.  If your Server uses a domain and has not specified an IP address via `brook link --address`, then Brook client will attempt to resolve the domain's IP using local DNS, preferring AAAA record. For example:
-    -   domain.com:9999
-    -   ws://domain.com:9999
-    -   wss://domain.com:9999
-    -   quic://domain.com:9999
-3.  Connectivity check: Go to the Server details page and click `Connectivity Check`. If it works sometimes but not others, this indicates instability.
-4.  After connected
-5.  Brook will change your system DNS to the System DNS configured in Brook (by default Google's DNS). In very rare cases, this change may be ignored on Windows, you can confirm this in the system settings.
-6.  Test IPv4 TCP: Use `Test IPv4 TCP` for testing; this test has hardcoded the IP address, so does not trigger DNS resolution.
-7.  Test IPv4 UDP: Use `Test IPv4 UDP` for testing; this test has hardcoded the IP address, so does not trigger DNS resolution.
-8.  Test IPv6 TCP: Use `Test IPv6 TCP` for testing; this test has hardcoded the IP address, so does not trigger DNS resolution.
-9.  Test IPv6 UDP: Use `Test IPv6 UDP` for testing; this test has hardcoded the IP address, so does not trigger DNS resolution.
-10.  Test TCP and UDP: Use the `Echo Client` for testing. If the echo server entered is a domain address, it will trigger DNS resolution.
-11.  Ensure the effectiveness of Fake DNS: Fake DNS is essential to do something with a domain or domain address. Generally, enable the `Block Google Secure DNS` module is sufficient. For other cases, refer to this article.
-12.  If your local or Server does not support IPv6: Refer to this article.
-13.  macOS App Mode: Refer to this article.
-14.  Windows:
-    -   The client can pass the tests without any special configuration on a brand-new, genuine Windows 11.
-    -   Be aware that the Windows system time is often incorrect.
-    -   Do not have other similar network software installed; they can cause conflicting network settings in the system.
-    -   Try restarting the computer.
-    -   Windows Defender may ask for permission to connect to the network or present other issues.
-    -   System DNS may need to be set to 8.8.8.8 and/or 2001:4860:4860::8888
-15.  Android:
-    -   The client can pass the tests without any special configuration on the official Google ROM.
-    -   Different ROMs may have made different modifications to the system.
-    -   Permission for background running might require separate settings.
-    -   System DNS may need to be set to 8.8.8.8 and/or 2001:4860:4860::8888
-16.  Bypass traffic such as China, usually requires the following modules to be activated:
-    -   `Block Google Secure DNS`
-    -   `Bypass Geo`
-    -   `Bypass Apple`: To prevent issues receiving Apple message notifications.
-    -   `Bypass China domain` or `Bypass China domain A`: The former uses `Bypass DNS` to obtain the IP, then `Bypass Geo` or other modules decide whether to bypass; the latter bypasses directly after obtaining the IP with `Bypass DNS` using A records. The latter is needed if your local does not support IPv6.
-    -   If you are a Shiliew user, some modules are enabled by default, which is usually sufficient.
-17.  Search GitHub issues
-18.  Read the blog
-19.  Read the documentation
-20.  Submit new issue
-21.  Seek help in the group
+Description
+
+nami
+
+A clean and tidy decentralized package manager
+
+joker
+
+Joker can turn process into daemon. Zero-Configuration
+
+nico
+
+Nico can work with brook wsserver together
+
+z
+
+z - process manager
+
+ipio
+
+Proxy all traffic just one line command
+
+mad
+
+Generate root CA and derivative certificate for any domains and any IPs
+
+hancock
+
+Manage multiple remote servers and execute commands remotely
+
+sshexec
+
+A command-line tool to execute remote command through ssh
+
+bash
+
+Many one-click scripts
+
+docker
+
+`docker run txthinking/brook`
+
+Resources
+
+Description
+
+Protocol
+
+Brook Protocol
+
+Blog
+
+Some articles you should read
+
+YouTube
+
+Some videos you should watch
+
+Telegram
+
+Ask questions here
+
+Announce
+
+All news you should care
+
+GitHub
+
+Other useful repos
+
+Socks5 Configurator
+
+If you prefer CLI brook client
+
+IPvBar
+
+See domain, IP and country in browser
+
+TxThinking SSH
+
+A SSH Terminal
+
+brook-store
+
+A Brook User System
+
+TxThinking
+
+Everything
 
 CLI Documentation
 =================
-
-Each subcommand has a `--example` parameter that can print the minimal example of usage
 
 NAME
 ====
@@ -860,67 +1402,29 @@ Brook [GLOBAL OPTIONS] command [COMMAND OPTIONS] [ARGUMENTS...]
 GLOBAL OPTIONS
 ==============
 
--   **\--blockCIDR4List**\="": One CIDR per line, https://, http:// or local file absolute path, like: https://raw.githubusercontent.com/txthinking/brook/master/programmable/list/example\_cidr4.txt. Works with server/wsserver/wssserver/quicserver
+-   **\--cliToken**\="": The CLI Token of your Brook Plus or Brook Business account, get it from https://www.txthinking.com/brook.html
     
--   **\--blockCIDR6List**\="": One CIDR per line, https://, http:// or local file absolute path, like: https://raw.githubusercontent.com/txthinking/brook/master/programmable/list/example\_cidr6.txt. Works with server/wsserver/wssserver/quicserver
+-   **\--clientHKDFInfo**\="": client HKDF info, most time you don't need to change this, if changed, all and each brook links in client side must be same (default: "brook")
     
--   **\--blockDomainList**\="": One domain per line, suffix match mode. https://, http:// or local file absolute path. Like: https://raw.githubusercontent.com/txthinking/brook/master/programmable/list/example\_domain.txt. Works with server/wsserver/wssserver/quicserver
+-   **\--log**\="": Works with server, wsserver, wssserver, quicserver, dnsserver, dohserver, dnsserveroverbrook. A valid value is file path. If you want to debug SOCKS5 lib, set env SOCKS5\_DEBUG=true
     
--   **\--blockGeoIP**\="": Block IP by Geo country code, such as US. Works with server/wsserver/wssserver/quicserver
+-   **\--pid**\="": A file path used to store pid. Send SIGUSR1 to me to reset the --log or --userLog file on unix system
     
--   **\--blockListUpdateInterval**\="": Update list --blockDomainList,--blockCIDR4List,--blockCIDR6List interval, second. default 0, only read one time on start (default: 0)
+-   **\--script**\="": \[Brook Plus or Brook Business\]. Works with server, wsserver, wssserver, quicserver, dnsserver, dohserver, dnsserveroverbrook. https://, http:// or /path/to/file.tengo. Get details at https://brook.app
     
--   **\--clientHKDFInfo**\="": client HKDF info, most time you don't need to change this, if changed, all and each brook links in client side must be same, I mean each (default: "brook")
+-   **\--scriptUpdateInterval**\="": Works with --script. The interval (s) to re-fetch script. The default is 0, which means only fetch once on startup (default: 0)
     
--   **\--dialWithDNS**\="": When a domain name needs to be resolved, use the specified DNS. Such as 8.8.8.8:53 or https://dns.google/dns-query?address=8.8.8.8%3A443, the address is required. Note that for client-side commands, this does not affect the client passing the domain address to the server
+-   **\--serverHKDFInfo**\="": server HKDF info, most time you don't need to change this, if changed, all and each brook links in client side must be same (default: "brook")
     
--   **\--dialWithDNSPrefer**\="": This is used with the dialWithDNS parameter. Prefer A record or AAAA record. Value is A or AAAA
+-   **\--tag**\="": Works with --log, --userAPI, --userLog, --script. Tag can be used to the process, will be append into log or userLog, such as: 'key1:value1'. And all tags will also be appended as query parameters one by one to the userAPI
     
--   **\--dialWithIP4**\="": When the current machine establishes a network connection to the outside IPv4, both TCP and UDP, it is used to specify the IPv4 used
+-   **\--userAPI**\="": \[Brook Business\]. Works with server, wsserver, wssserver, quicserver. When you build your own user system, Brook Server will send GET request to your userAPI to check if token is valid, for example: https://your-api-server.com/a\_unpredictable\_path. Yes, it is recommended to add an unpredictable path to your https API, of course, you can also use the http api for internal network communication. The request format is https://your-api-server.com/a\_unpredictable\_path?token=xxx. When the response is 200, the body should be the user's unique identifier, such as user ID; all other status codes are considered to represent an illegitimate user, and in these cases, the body should be a string describing the error. For more information, please read https://github.com/txthinking/brook/blob/master/protocol/user.md
     
--   **\--dialWithIP6**\="": When the current machine establishes a network connection to the outside IPv6, both TCP and UDP, it is used to specify the IPv6 used
+-   **\--userAPIRateLimit**\="": Works with --userAPI. Limit the request rate per token to the user API by Brook Server, this will reduce the load on the user API. This is especially important when users have expired, and the userAPIValidCacheTime will not cache the requests, resulting in continuous requests to the user API. The default is 0, which means no limitation. For example, setting it to 1 means the rate is limited to 1 request per token per second. The phrase 'per token' means that each token has its own rate limiter, and they do not interfere with each other (default: 1)
     
--   **\--dialWithNIC**\="": When the current machine establishes a network connection to the outside, both TCP and UDP, it is used to specify the NIC used
+-   **\--userAPIValidCacheTime**\="": Works with --userAPI. Once a token is checked and valid, the userAPI will not be requested to validate again for a certain period (s). A reasonable value must be set, otherwise it will affect the performance of each incoming connection (default: 3600)
     
--   **\--dialWithSocks5**\="": When the current machine establishes a network connection to the outside, both TCP and UDP, with your socks5 proxy, such as 127.0.0.1:1081
-    
--   **\--dialWithSocks5Password**\="": If there is
-    
--   **\--dialWithSocks5TCPTimeout**\="": time (s) (default: 0)
-    
--   **\--dialWithSocks5UDPTimeout**\="": time (s) (default: 60)
-    
--   **\--dialWithSocks5Username**\="": If there is
-    
--   **\--ipLimitInterval**\="": Interval (s) for ipLimitMax (default: 0)
-    
--   **\--ipLimitMax**\="": Limit the number of client IP addresses, be careful when using this parameter, as the client may have dynamic IP. Works with server/wsserver/wssserver/quicserver (default: 0)
-    
--   **\--ipLimitWait**\="": How long (s) to wait for recovery after exceeding ipLimitMax (default: 0)
-    
--   **\--log**\="": Enable log. A valid value is file path or 'console'. Send SIGUSR1 to me to reset the log file on unix system. If you want to debug SOCKS5 lib, set env SOCKS5\_DEBUG=true
-    
--   **\--pid**\="": A file path used to store pid. Send SIGUSR1 to me to reset the --serverLog file on unix system
-    
--   **\--pprof**\="": go http pprof listen addr, such as :6060
-    
--   **\--prometheus**\="": prometheus http listen addr, such as :7070. If it is transmitted on the public network, it is recommended to use it with nico
-    
--   **\--prometheusPath**\="": prometheus http path, such as /xxx. If it is transmitted on the public network, a hard-to-guess value is recommended
-    
--   **\--serverHKDFInfo**\="": server HKDF info, most time you don't need to change this, if changed, all and each brook links in client side must be same, I mean each (default: "brook")
-    
--   **\--serverLog**\="": Enable server log, traffic and more. A valid value is file path or 'console'. Send SIGUSR1 to me to reset the log file on unix system. Mutually exclusive with the --log parameter. Works with server/wsserver/wssserver/quicserver with brook protocol
-    
--   **\--speedLimit**\="": Limit speed (b), 500kb/s such as: 500000, works with server/wsserver/wssserver/quicserver (default: 0)
-    
--   **\--tag**\="": Tag can be used to the process, will be append into log or serverLog, such as: 'key1:value1'. All tags will also be appended as query parameters one by one to the userAPI
-    
--   **\--userAPI**\="": When you build your own user system, Brook Server will send GET request to your userAPI to check if token is valid, for example: https://your-api-server.com/a\_unpredictable\_path. Yes, it is recommended to add an unpredictable path to your https API, of course, you can also use the http api for internal network communication. The request format is https://your-api-server.com/a\_unpredictable\_path?token=xxx. When the response is 200, the body should be the user's unique identifier, such as user ID; all other status codes are considered to represent an illegitimate user, and in these cases, the body should be a string describing the error. It should be used with --serverLog and server/wsserver/wssserver/quicserver with brook protocol. For more information, please read https://github.com/txthinking/brook/blob/master/protocol/user.md
-    
--   **\--userAPIInvalidCacheTime**\="": Once a token is checked and invalid, the userAPI will not be requested to validate again for a certain period (s). A reasonable value must be set, otherwise it will affect the performance of each incoming connection. Note that this may affect the user experience, when you change the user status from invalid to valid in your user system (default: 1800)
-    
--   **\--userAPIValidCacheTime**\="": Once a token is checked and valid, the userAPI will not be requested to validate again for a certain period (s). A reasonable value must be set, otherwise it will affect the performance of each incoming connection (default: 3600)
+-   **\--userLog**\="": Works with --userAPI. Log, traffic and more. A valid value is file path. Send SIGUSR1 to me to reset the log file on unix system. Mutually exclusive with the --log parameter.
     
 -   **\--version, -v**: print the version
     
@@ -933,14 +1437,6 @@ server
 
 Start a brook server that supports tcp and udp
 
--   **\--blockCIDR4List**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockCIDR6List**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockDomainList**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockGeoIP**\="": This option will be removed in a future version, please use the global option instead
-    
 -   **\--example**: Show a minimal example of usage
     
 -   **\--listen, -l**\="": Listen address, like: ':9999'
@@ -950,8 +1446,6 @@ Start a brook server that supports tcp and udp
 -   **\--tcpTimeout**\="": time (s) (default: 0)
     
 -   **\--udpTimeout**\="": time (s) (default: 0)
-    
--   **\--updateListInterval**\="": This option will be removed in a future version, please use the global option instead (default: 0)
     
 
 client
@@ -983,14 +1477,6 @@ wsserver
 
 Start a brook wsserver that supports tcp and udp. It opens a standard http server and a websocket server
 
--   **\--blockCIDR4List**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockCIDR6List**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockDomainList**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockGeoIP**\="": This option will be removed in a future version, please use the global option instead
-    
 -   **\--example**: Show a minimal example of usage
     
 -   **\--listen, -l**\="": Listen address, like: ':80'
@@ -1002,10 +1488,6 @@ Start a brook wsserver that supports tcp and udp. It opens a standard http serve
 -   **\--tcpTimeout**\="": time (s) (default: 0)
     
 -   **\--udpTimeout**\="": time (s) (default: 0)
-    
--   **\--updateListInterval**\="": This option will be removed in a future version, please use the global option instead (default: 0)
-    
--   **\--withoutBrookProtocol**: The data will not be encrypted with brook protocol
     
 -   **\--xForwardedFor**: Replace the from field in --log, note that this may be forged
     
@@ -1039,14 +1521,6 @@ wssserver
 
 Start a brook wssserver that supports tcp and udp. It opens a standard https server and a websocket server
 
--   **\--blockCIDR4List**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockCIDR6List**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockDomainList**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockGeoIP**\="": This option will be removed in a future version, please use the global option instead
-    
 -   **\--cert**\="": The cert file absolute path for the domain, such as /path/to/cert.pem. If cert or certkey is empty, a certificate will be issued automatically
     
 -   **\--certkey**\="": The cert key file absolute path for the domain, such as /path/to/certkey.pem. If cert or certkey is empty, a certificate will be issued automatically
@@ -1062,10 +1536,6 @@ Start a brook wssserver that supports tcp and udp. It opens a standard https ser
 -   **\--tcpTimeout**\="": time (s) (default: 0)
     
 -   **\--udpTimeout**\="": time (s) (default: 0)
-    
--   **\--updateListInterval**\="": This option will be removed in a future version, please use the global option instead (default: 0)
-    
--   **\--withoutBrookProtocol**: The data will not be encrypted with brook protocol
     
 
 wssclient
@@ -1097,14 +1567,6 @@ quicserver
 
 Start a brook quicserver that supports tcp and udp.
 
--   **\--blockCIDR4List**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockCIDR6List**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockDomainList**\="": This option will be removed in a future version, please use the global option instead
-    
--   **\--blockGeoIP**\="": This option will be removed in a future version, please use the global option instead
-    
 -   **\--cert**\="": The cert file absolute path for the domain, such as /path/to/cert.pem. If cert or certkey is empty, a certificate will be issued automatically
     
 -   **\--certkey**\="": The cert key file absolute path for the domain, such as /path/to/certkey.pem. If cert or certkey is empty, a certificate will be issued automatically
@@ -1119,15 +1581,11 @@ Start a brook quicserver that supports tcp and udp.
     
 -   **\--udpTimeout**\="": time (s) (default: 0)
     
--   **\--updateListInterval**\="": This option will be removed in a future version, please use the global option instead (default: 0)
-    
--   **\--withoutBrookProtocol**: The data will not be encrypted with brook protocol
-    
 
 quicclient
 ----------
 
-Start a brook quicclient that supports tcp and udp. It can open a socks5 proxy, \[src <-> socks5 <-> $ brook quicclient <-> $ brook quicserver <-> dst\]. (The global-dial-parameter is ignored)
+Start a brook quicclient that supports tcp and udp. It can open a socks5 proxy, \[src <-> socks5 <-> $ brook quicclient <-> $ brook quicserver <-> dst\]
 
 -   **\--example**: Show a minimal example of usage
     
@@ -1169,19 +1627,9 @@ Relay network traffic over brook, which supports TCP and UDP. Accessing \[from a
 dnsserveroverbrook
 ------------------
 
-Run a dns server over brook, which supports TCP and UDP, \[src <-> $ brook dnserversoverbrook <-> $ brook server/wsserver/wssserver/quicserver <-> dns\] or \[src <-> $ brook dnsserveroverbrook <-> dnsForBypass\]
+Run a dns server over brook, which supports TCP and UDP, \[src <-> $ brook dnserversoverbrook <-> $ brook server/wsserver/wssserver/quicserver <-> dns\]
 
--   **\--blockDomainList**\="": One domain per line, suffix match mode. https://, http:// or local absolute file path. Like: https://raw.githubusercontent.com/txthinking/brook/master/programmable/list/example\_domain.txt
-    
--   **\--bypassDomainList**\="": One domain per line, suffix match mode. https://, http:// or local absolute file path. Like: https://raw.githubusercontent.com/txthinking/brook/master/programmable/list/example\_domain.txt
-    
--   **\--disableA**: Disable A query
-    
--   **\--disableAAAA**: Disable AAAA query
-    
--   **\--dns**\="": DNS server for resolving domains NOT in list (default: 8.8.8.8:53)
-    
--   **\--dnsForBypass**\="": DNS server for resolving domains in bypass list. Such as 223.5.5.5:53 or https://dns.alidns.com/dns-query?address=223.5.5.5:443, the address is required (default: 223.5.5.5:53)
+-   **\--dns**\="": Forward to DNS server (default: 8.8.8.8:53)
     
 -   **\--example**: Show a minimal example of usage
     
@@ -1192,6 +1640,26 @@ Run a dns server over brook, which supports TCP and UDP, \[src <-> $ brook dnser
 -   **\--password, -p**\="": Password
     
 -   **\--server, -s**\="": brook server or brook wsserver or brook wssserver or brook quicserver, like: 1.2.3.4:9999, ws://1.2.3.4:9999, wss://domain.com:443/ws, quic://domain.com:443
+    
+-   **\--tcpTimeout**\="": time (s) (default: 0)
+    
+-   **\--udpTimeout**\="": time (s) (default: 0)
+    
+
+connect
+-------
+
+Run a client and connect with a brook link, which supports TCP and UDP. It can start a socks5 proxy, \[src <-> socks5 <-> $ brook connect <-> $ brook server/wsserver/wssserver/quicserver <-> dst\]
+
+-   **\--example**: Show a minimal example of usage
+    
+-   **\--http**\="": Where to listen for HTTP proxy connections
+    
+-   **\--link, -l**\="": brook link, you can get it via $ brook link
+    
+-   **\--socks5**\="": Where to listen for SOCKS5 connections (default: 127.0.0.1:1080)
+    
+-   **\--socks5ServerIP**\="": Only if your socks5 server IP is different from listen IP
     
 -   **\--tcpTimeout**\="": time (s) (default: 0)
     
@@ -1225,35 +1693,13 @@ Generate a brook link
     
 -   **\--tlsfingerprint**\="": When server is brook wssserver, select tls fingerprint, value can be: chrome
     
--   **\--token**\="": A token represents a user's identity. A string encoded in hexadecimal. Server needs to have --userAPI enabled. Note that: Only supported by the brook GUI(except for OpenWrt) and tun2brook
+-   **\--token**\="": A token represents a user's identity. A string encoded in hexadecimal. Server needs to have --userAPI enabled
     
--   **\--udpoverstream**: When server is brook quicserver, UDP over Stream. Under normal circumstances, you need this parameter because the max datagram size for QUIC is very small. Note: only brook CLI and tun2brook suppport for now
+-   **\--udpoverstream**: When server is brook quicserver, UDP over Stream. Under normal circumstances, you need this parameter because the max datagram size for QUIC is very small
     
 -   **\--udpovertcp**: When server is brook server, UDP over TCP
     
 -   **\--username, -u**\="": Username, when server is socks5 server
-    
--   **\--withoutBrookProtocol**: When server is brook wsserver or brook wssserver or brook quicserver, the data will not be encrypted with brook protocol
-    
-
-connect
--------
-
-Run a client and connect with a brook link, which supports TCP and UDP. It can start a socks5 proxy, \[src <-> socks5 <-> $ brook connect <-> $ brook server/wsserver/wssserver/quicserver <-> dst\]
-
--   **\--example**: Show a minimal example of usage
-    
--   **\--http**\="": Where to listen for HTTP proxy connections
-    
--   **\--link, -l**\="": brook link, you can get it via $ brook link
-    
--   **\--socks5**\="": Where to listen for SOCKS5 connections (default: 127.0.0.1:1080)
-    
--   **\--socks5ServerIP**\="": Only if your socks5 server IP is different from listen IP
-    
--   **\--tcpTimeout**\="": time (s) (default: 0)
-    
--   **\--udpTimeout**\="": time (s) (default: 0)
     
 
 relay
@@ -1277,12 +1723,6 @@ dnsserver
 
 Run a standalone dns server
 
--   **\--blockDomainList**\="": One domain per line, suffix match mode. https://, http:// or local absolute file path. Like: https://raw.githubusercontent.com/txthinking/brook/master/programmable/list/example\_domain.txt
-    
--   **\--disableA**: Disable A query
-    
--   **\--disableAAAA**: Disable AAAA query
-    
 -   **\--dns**\="": DNS server which forward to. Such as 8.8.8.8:53 or https://dns.google/dns-query?address=8.8.8.8%3A443, the address is required (default: 8.8.8.8:53)
     
 -   **\--example**: Show a minimal example of usage
@@ -1315,15 +1755,9 @@ dohserver
 
 Run a standalone doh server
 
--   **\--blockDomainList**\="": One domain per line, suffix match mode. https://, http:// or local absolute file path. Like: https://raw.githubusercontent.com/txthinking/brook/master/programmable/list/example\_domain.txt
-    
 -   **\--cert**\="": The cert file absolute path for the domain, such as /path/to/cert.pem. If cert or certkey is empty, a certificate will be issued automatically
     
 -   **\--certkey**\="": The cert key file absolute path for the domain, such as /path/to/certkey.pem. If cert or certkey is empty, a certificate will be issued automatically
-    
--   **\--disableA**: Disable A query
-    
--   **\--disableAAAA**: Disable AAAA query
     
 -   **\--dns**\="": DNS server which forward to. Such as 8.8.8.8:53 or https://dns.google/dns-query?address=8.8.8.8%3A443, the address is required (default: 8.8.8.8:53)
     
@@ -1359,7 +1793,7 @@ Send a dns query
 dhcpserver
 ----------
 
-Run a standalone dhcp server. Other running dhcp servers need to be stopped.
+Run a standalone dhcp server. IPv4 only. Other running dhcp servers need to be stopped.
 
 -   **\--cache**\="": Cache file, local absolute file path, default is $HOME/.brook.dhcpserver
     
@@ -1420,30 +1854,12 @@ Convert a socks5 proxy to a http proxy, \[src <-> listen address(http proxy) <->
 -   **\--tcpTimeout**\="": Connection tcp timeout (s) (default: 0)
     
 
-pac
----
-
-Run a PAC server or save PAC to a file
-
--   **\--bypassDomainList, -b**\="": One domain per line, suffix match mode. http(s):// or local absolute file path. Like: https://raw.githubusercontent.com/txthinking/brook/master/programmable/list/example\_domain.txt
-    
--   **\--example**: Show a minimal example of usage
-    
--   **\--file, -f**\="": Save PAC to file, this will ignore listen address
-    
--   **\--listen, -l**\="": Listen address, like: 127.0.0.1:1980
-    
--   **\--proxy, -p**\="": Proxy, like: 'SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT' (default: SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080; DIRECT)
-    
-
 testsocks5
 ----------
 
 Test a socks5 server to see if it works properly
 
--   **\--dns**\="": DNS server for connecting (default: 8.8.8.8:53)
-    
--   **\--domain**\="": Domain for query (default: http3.ooo)
+-   **\--dns**\="": A DNS Server to connect to and send TCP DNS query to test TCP, and UDP DNS query to test UDP. (default: 8.8.8.8:53)
     
 -   **\--example**: Show a minimal example of usage
     
@@ -1453,25 +1869,17 @@ Test a socks5 server to see if it works properly
     
 -   **\--username, -u**\="": Socks5 username
     
--   **\-a**\="": The A record of domain (default: 137.184.237.95)
-    
 
 testbrook
 ---------
 
-Test UDP and TCP of a brook server/wsserver/wssserver/quicserver connection. (The global-dial-parameter is ignored)
+Test UDP and TCP of a brook server/wsserver/wssserver/quicserver connection.
 
--   **\--dns**\="": DNS server for connecting (default: 8.8.8.8:53)
-    
--   **\--domain**\="": Domain for query (default: http3.ooo)
+-   **\--dns**\="": A DNS Server to connect to and send TCP DNS query to test TCP, and UDP DNS query to test UDP. (default: 8.8.8.8:53)
     
 -   **\--example**: Show a minimal example of usage
     
 -   **\--link, -l**\="": brook link. Get it via $ brook link
-    
--   **\--socks5**\="": Temporarily listening socks5 (default: 127.0.0.1:11080)
-    
--   **\-a**\="": The A record of domain (default: 137.184.237.95)
     
 
 echoserver
@@ -1540,389 +1948,3 @@ help, h
 -------
 
 Shows a list of commands or help for one command
-
-Examples
-========
-
-List some examples of common scene commands, pay attention to replace the parameters such as IP, port, password, domain name, certificate path, etc. in the example by yourself
-
-Run brook server
-----------------
-
-```
-brook server --listen :9999 --password hello
-```
-
-then
-
--   server: `1.2.3.4:9999`
--   password: `hello`
-
-or get brook link
-
-```
-brook link --server 1.2.3.4:9999 --password hello --name 'my brook server'
-```
-
-or get brook link with `--udpovertcp`
-
-```
-brook link --server 1.2.3.4:9999 --password hello --udpovertcp --name 'my brook server'
-```
-
-Run brook wsserver
-------------------
-
-```
-brook wsserver --listen :9999 --password hello
-```
-
-then
-
--   server: `ws://1.2.3.4:9999`
--   password: `hello`
-
-or get brook link
-
-```
-brook link --server ws://1.2.3.4:9999 --password hello --name 'my brook wsserver'
-```
-
-or get brook link with domain, even if that's not your domain
-
-```
-brook link --server ws://hello.com:9999 --password hello --address 1.2.3.4:9999 --name 'my brook wsserver'
-```
-
-Run brook wssserver: automatically certificate
-----------------------------------------------
-
-> Make sure your domain has been resolved to your server IP successfully. Automatic certificate issuance requires the use of port 80
-
-```
-brook wssserver --domainaddress domain.com:443 --password hello
-```
-
-then
-
--   server: `wss://domain.com:443`
--   password: `hello`
-
-or get brook link
-
-```
-brook link --server wss://domain.com:443 --password hello --name 'my brook wssserver'
-```
-
-Run brook wssserver Use a certificate issued by an existing trust authority
----------------------------------------------------------------------------
-
-> Make sure your domain has been resolved to your server IP successfully
-
-```
-brook wssserver --domainaddress domain.com:443 --password hello --cert /root/cert.pem --certkey /root/certkey.pem
-```
-
-then
-
--   server: `wss://domain.com:443`
--   password: `hello`
-
-or get brook link
-
-```
-brook link --server wss://domain.com:443 --password hello --name 'my brook wssserver'
-```
-
-Run brook wssserver issue untrusted certificates yourself, any domain
----------------------------------------------------------------------
-
-Install mad
-
-```
-nami install mad
-```
-
-Generate root ca
-
-```
-mad ca --ca /root/ca.pem --key /root/cakey.pem
-```
-
-Generate domain cert by root ca
-
-```
-mad cert --ca /root/ca.pem --ca_key /root/cakey.pem --cert /root/cert.pem --key /root/certkey.pem --domain domain.com
-```
-
-Run brook
-
-```
-brook wssserver --domainaddress domain.com:443 --password hello --cert /root/cert.pem --certkey /root/certkey.pem
-```
-
-get brook link with `--insecure`
-
-```
-brook link --server wss://domain.com:443 --password hello --name 'my brook wssserver' --address 1.2.3.4:443 --insecure
-```
-
-or get brook link with `--ca`
-
-```
-brook link --server wss://domain.com:443 --password hello --name 'my brook wssserver' --address 1.2.3.4:443 --ca /root/ca.pem
-```
-
-withoutBrookProtocol
---------------------
-
-Better performance, but data is not strongly encrypted using Brook protocol. So please use certificate encryption, and it is not recommended to use --withoutBrookProtocol and --insecure together
-
-withoutBrookProtocol automatically certificate
-----------------------------------------------
-
-> Make sure your domain has been resolved to your server IP successfully. Automatic certificate issuance requires the use of port 80
-
-```
-brook wssserver --domainaddress domain.com:443 --password hello --withoutBrookProtocol
-```
-
-get brook link
-
-```
-brook link --server wss://domain.com:443 --password hello --withoutBrookProtocol
-```
-
-withoutBrookProtocol Use a certificate issued by an existing trust authority
-----------------------------------------------------------------------------
-
-> Make sure your domain has been resolved to your server IP successfully
-
-```
-brook wssserver --domainaddress domain.com:443 --password hello --cert /root/cert.pem --certkey /root/certkey.pem --withoutBrookProtocol
-```
-
-get brook link
-
-```
-brook link --server wss://domain.com:443 --password hello --name 'my brook wssserver' --withoutBrookProtocol
-```
-
-withoutBrookProtocol issue untrusted certificates yourself, any domain
-----------------------------------------------------------------------
-
-Install mad
-
-```
-nami install mad
-```
-
-Generate root ca
-
-```
-mad ca --ca /root/ca.pem --key /root/cakey.pem
-```
-
-Generate domain cert by root ca
-
-```
-mad cert --ca /root/ca.pem --ca_key /root/cakey.pem --cert /root/cert.pem --key /root/certkey.pem --domain domain.com
-```
-
-Run brook wssserver
-
-```
-brook wssserver --domainaddress domain.com:443 --password hello --cert /root/cert.pem --certkey /root/certkey.pem --withoutBrookProtocol
-```
-
-Get brook link
-
-```
-brook link --server wss://domain.com:443 --password hello --withoutBrookProtocol --address 1.2.3.4:443 --ca /root/ca.pem
-```
-
-Run brook socks5, A stand-alone standard socks5 server
-------------------------------------------------------
-
-```
-brook socks5 --listen :1080 --socks5ServerIP 1.2.3.4
-```
-
-then
-
--   server: `1.2.3.4:1080`
-
-or get brook link
-
-```
-brook link --server socks5://1.2.3.4:1080
-```
-
-Run brook socks5 with username and password. A stand-alone standard socks5 server
----------------------------------------------------------------------------------
-
-```
-brook socks5 --listen :1080 --socks5ServerIP 1.2.3.4 --username hello --password world
-```
-
-then
-
--   server: `1.2.3.4:1080`
--   username: `hello`
--   password: `world`
-
-or get brook link
-
-```
-brook link --server socks5://1.2.3.4:1080 --username hello --password world
-```
-
-brook relayoverbrook can relay a local address to a remote address over brook, both TCP and UDP, it works with brook server wsserver wssserver.
------------------------------------------------------------------------------------------------------------------------------------------------
-
-```
-brook relayoverbrook ... --from 127.0.0.1:5353 --to 8.8.8.8:53
-```
-
-brook dnsserveroverbrook can create a encrypted DNS server, both TCP and UDP, it works with brook server wsserver wssserver.
-----------------------------------------------------------------------------------------------------------------------------
-
-```
-brook dnsserveroverbrook ... --listen 127.0.0.1:53
-```
-
-Brook OpenWRT Router: Perfectly supports IPv4/IPv6/TCP/UDP. Native IPv6
------------------------------------------------------------------------
-
-https://www.txthinking.com/talks/articles/brook-openwrt-en.article
-
-Turn macOS into a Gateway with Brook
-------------------------------------
-
-https://www.txthinking.com/talks/articles/brook-macos-gateway-en.article
-
-Turn Windows into a Gateway with Brook
---------------------------------------
-
-https://www.txthinking.com/talks/articles/brook-windows-gateway-en.article
-
-Turn Linux into a Gateway with Brook
-------------------------------------
-
-https://www.txthinking.com/talks/articles/brook-linux-gateway-en.article
-
-brook relay can relay a address to a remote address. It can relay any tcp and udp server
-----------------------------------------------------------------------------------------
-
-```
-brook relay --from :9999 --to 1.2.3.4:9999
-```
-
-brook socks5tohttp can convert a socks5 to a http proxy
--------------------------------------------------------
-
-```
-brook socks5tohttp --socks5 127.0.0.1:1080 --listen 127.0.0.1:8010
-```
-
-There are countless examples; for more feature suggestions, it's best to look at the commands and parameters in the CLI documentation one by one, and blog, YouTube...
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-Resources
-=========
-
-CLI
-
-Description
-
-nami
-
-A clean and tidy decentralized package manager
-
-joker
-
-Joker can turn process into daemon. Zero-Configuration
-
-nico
-
-Nico can work with brook wsserver together
-
-z
-
-z - process manager
-
-tun2brook
-
-Proxy all traffic just one line command
-
-mad
-
-Generate root CA and derivative certificate for any domains and any IPs
-
-hancock
-
-Manage multiple remote servers and execute commands remotely
-
-sshexec
-
-A command-line tool to execute remote command through ssh
-
-jb
-
-write script in an easier way than bash
-
-bash
-
-Many one-click scripts
-
-docker
-
-`docker run txthinking/brook`
-
-Resources
-
-Description
-
-Protocol
-
-Brook Protocol
-
-Blog
-
-Some articles you should read
-
-YouTube
-
-Some videos you should watch
-
-Telegram
-
-Ask questions here
-
-Announce
-
-All news you should care
-
-GitHub
-
-Other useful repos
-
-Socks5 Configurator
-
-If you prefer CLI brook client
-
-IPvBar
-
-See domain, IP and country in browser
-
-TxThinking SSH
-
-A SSH Terminal
-
-brook-user-system
-
-A Brook User System
-
-TxThinking
-
-Everything

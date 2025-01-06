@@ -1,6 +1,6 @@
 ---
 project: wasm-pack
-stars: 6372
+stars: 6402
 description: 📦✨ your favorite rust -> wasm workflow tool!
 url: https://github.com/rustwasm/wasm-pack
 ---

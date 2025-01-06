@@ -1,6 +1,6 @@
 ---
 project: cuicui
-stars: 537
+stars: 581
 description: CuiCui is a collection of high-quality, reusable components designed to streamline the development of your web applications. With a focus on providing essential UI elements, pre-built blocks, and templates, CuiCui enables you to quickly and effortlessly create professional-grade websites and SaaS platforms featuring top-notch user interfaces.
 url: https://github.com/damien-schneider/cuicui
 ---
