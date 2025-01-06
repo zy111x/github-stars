@@ -1,5 +1,3 @@
-import sanitizeHtml from 'sanitize-html'
-import TurndownService from 'turndown'
 import { $fetch } from 'ofetch'
 import fs from 'fs-extra'
 
@@ -7,31 +5,17 @@ if (!process.env.GITHUB_TOKEN) {
     throw new Error('GITHUB_TOKEN is not set')
 }
 
-const turndownService = new TurndownService({
-    bulletListMarker: '-',
-    codeBlockStyle: 'fenced'
-})
-
 async function getReadMe(repo) {
     console.log(`Getting readme for ${repo.full_name}`)
-    const reame = await $fetch(`https://api.github.com/repos/${repo.full_name}/readme`, {
+    return $fetch(`https://api.github.com/repos/${repo.full_name}/readme`, {
         headers: {
             'authorization': 'Bearer ' + process.env.GITHUB_TOKEN,
-            'accept': 'application/vnd.github.html+json',
+            'accept': 'application/vnd.github.raw+json',
             'user-agent': 'github-stars',
         },
         retry: 3,
         retryDelay: 100,
     })
-    console.log(`Got readme for ${repo.full_name}`)
-
-    return turndownService.turndown(sanitizeHtml(reame, {
-        allowedTags: [...sanitizeHtml.defaults.allowedTags, 'details', 'summary'],
-        allowedAttributes: {
-            ...sanitizeHtml.defaults.allowedAttributes,
-            a: ['title'],
-        }
-    }))
 }
 
 async function getStaredRepos() {
