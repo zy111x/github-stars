@@ -1,6 +1,6 @@
 ---
 project: iconv-lite
-stars: 3095
+stars: 3097
 description: |-
     Convert character encodings in pure javascript.
 url: https://github.com/ashtuchkin/iconv-lite

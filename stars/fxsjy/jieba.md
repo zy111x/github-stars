@@ -1,6 +1,6 @@
 ---
 project: jieba
-stars: 33563
+stars: 33581
 description: |-
     结巴中文分词
 url: https://github.com/fxsjy/jieba

@@ -1,6 +1,6 @@
 ---
 project: pagePiling.js
-stars: 4105
+stars: 4104
 description: |-
     pagePiling plugin by Alvaro Trigo. Create a scrolling pile of sections. http://alvarotrigo.com/pagePiling/
 url: https://github.com/alvarotrigo/pagePiling.js

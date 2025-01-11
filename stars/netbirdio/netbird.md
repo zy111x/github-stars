@@ -1,18 +1,11 @@
 ---
 project: netbird
-stars: 11706
+stars: 11749
 description: |-
     Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.
 url: https://github.com/netbirdio/netbird
 ---
 
-<p align="center">
- <strong>:hatching_chick: New Release! Device Posture Checks.</strong>
-  <a href="https://docs.netbird.io/how-to/manage-posture-checks">
-       Learn more
-     </a>   
-</p>
-<br/>
 <div align="center">
 <p align="center">
   <img width="234" src="docs/media/logo-full.png"/>

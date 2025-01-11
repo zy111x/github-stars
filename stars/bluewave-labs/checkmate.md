@@ -1,15 +1,17 @@
 ---
 project: checkmate
-stars: 3192
+stars: 3262
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
 url: https://github.com/bluewave-labs/checkmate
 ---
 
 
-# **We're opening our $5000 grant funding announcement soon, in partnership with [UpRock](https://uprock.com) - check [our web page](https://checkmate.so) for preliminary details.** 
+# **Announcing $5000 grant funding in partnership with [UpRock](https://uprock.com) - check [our web page](https://checkmate.so) for funding ideas** 
 
-**If you would like to support us, please consider giving it a ⭐, and think about contributing or providing feedback. Need support or have a suggestion? Check our [Discord channel](https://discord.gg/NAb6H3UTjK) or [Discussions](https://github.com/bluewave-labs/checkmate/discussions) forum.**
+- If you would like to support us, please consider giving it a ⭐ and click on "watch". 
+- Need support or have a suggestion? Check our [Discord channel](https://discord.gg/NAb6H3UTjK) or [Discussions](https://github.com/bluewave-labs/checkmate/discussions) forum.
+- Need a ping when there's a new release? Use [Newreleases](https://newreleases.io/), a free service to track releases.
 
 ![Frame 34](https://github.com/user-attachments/assets/00db1520-24b6-42f2-aca2-a1c9794677da)
 
@@ -20,6 +22,7 @@ url: https://github.com/bluewave-labs/checkmate
 ![](https://img.shields.io/github/languages/top/bluewave-labs/checkmate)
 ![](https://img.shields.io/github/issues/bluewave-labs/checkmate)
 ![](https://img.shields.io/github/issues-pr/bluewave-labs/checkmate)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9901/badge)](https://www.bestpractices.dev/projects/9901)
 
 <h1 align="center"><a href="https://bluewavelabs.ca" target="_blank">Checkmate</a></h1>
 
@@ -89,11 +92,12 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 - [MUI (React framework)](https://mui.com/)
 - [Node.js](https://nodejs.org/en)
 - [MongoDB](https://mongodb.com)
+- [Recharts](https://recharts.org)
 - Lots of other open source components!
 
 ## 🤝 Contributing
 
-We pride ourselves on building strong connections with contributors at every level. Despite being a young project, Checkmate has already earned 2700 stars and attracted almost 40 contributors from around the globe. So, don’t hold back — jump in, contribute and learn with us!
+We pride ourselves on building strong connections with contributors at every level. Despite being a young project, Checkmate has already earned 3300 stars and attracted 40+ contributors from around the globe. So, don’t hold back — jump in, contribute and learn with us!
 
 Here's how you can contribute:
 

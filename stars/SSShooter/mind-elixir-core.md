@@ -1,13 +1,13 @@
 ---
 project: mind-elixir-core
-stars: 2005
+stars: 2010
 description: |-
     ⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.
 url: https://github.com/SSShooter/mind-elixir-core
 ---
 
 <p align="center">
-  <a href="mind-elixir.com" target="_blank" rel="noopener noreferrer">
+  <a href="https://docs.mind-elixir.com" target="_blank" rel="noopener noreferrer">
     <img width="150" src="https://raw.githubusercontent.com/ssshooter/mind-elixir-core/master/images/logo2.png" alt="mindelixir logo2">
   </a>
   <h1 align="center">Mind Elixir</h1>

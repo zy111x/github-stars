@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 27413
+stars: 27441
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink

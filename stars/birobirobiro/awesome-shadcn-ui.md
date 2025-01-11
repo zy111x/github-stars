@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 10842
+stars: 10988
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -131,6 +131,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-image-cropper | Image cropper with react-image-crop. | https://github.com/sujjeee/shadcn-image-cropper |
 | shadcn-linear-combobox | Linear-style task priority combobox. | https://github.com/damianricobelli/shadcn-linear-combobox |
 | shadcn-multi-select-component | Multi-select component. | https://github.com/sersavan/shadcn-multi-select-component |
+| shadcn-number-scrubber | Draggable numeric input component. | https://github.com/camwebby/shadcn-react-number-scrubber |
 | shadcn-phone-input-2 | Phone input with libphonenumber-js. | https://github.com/damianricobelli/shadcn-phone-input |
 | shadcn-phone-input | Phone input with country validation. | https://github.com/omeralpi/shadcn-phone-input |
 | shadcn-pricing-page | Responsive pricing component with toggles. | https://github.com/aymanch-03/shadcn-pricing-page |
@@ -211,6 +212,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | bento-hub                           | BentoHub is an application where you can create a bento grid for your GitHub profile readme.                                                          | https://github.com/amittam104/BentoHub               |
 | cut-it                              | Link shortener built using Next.js App Router, Server Actions, Drizzle ORM, Turso, and styled with shadcn/ui.                                         | https://github.com/mehrabmp/cut-it                   |
 | country-data-in-charts              | Globe Graph is a web app that visualizes countries' data like GDP, GDP per capita, and population in different years using many charts.               | https://globe-graph.vercel.app/                      |
+| dev-quotes                          | A website that displays quotes from professional programmers.                                            | https://dev-quotes-six.vercel.app/                                                                |
 | down-dev-detector                   | This app lists all the services currently down and uses Atlassian Status Page and others (soon).                                                      | https://github.com/birobirobiro/downdevdetector      |
 | cv-forge                            | Resume builder built with @shadcn/ui, react-hook-form, and react-pdf.                                                                                 | https://cvforge.app                                  |
 | excelkits                           | Create free downloadable Shadcn-themed chart images. Supports PNG, JPEG, WEBP, and even WEBM videos. Upload your own data for more realistic designs. | https://excelkits.com/charts                         |
@@ -241,7 +243,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | ui-builder                          | A React component editor that provides a no-code, visual way to create UIs, fully compatible with shadcn/ui and custom components.                  | https://github.com/olliethedev/ui-builder            |
 | ui-fonts                            | Test and preview fonts in real-time for all your design needs. Choose the perfect typeface with ease.                                               | https://www.uifonts.app/                             |
 | v0                                  | Vercel's generative UI system, built on shadcn/ui and TailwindCSS, allows effortless UI generation from text prompts and/or images.                  | https://v0.dev/                                      |
-| vercel-status-tracker               | Track the status of all of your projects deployed via Vercel. Built with shadcn/ui and TailwindCSS.                  | https://vercel-status-tracker.vercel.app                                      |
+| vercel-status-tracker               | Track the status of all of your projects deployed via Vercel. Built with shadcn/ui and TailwindCSS.                                                 | https://vercel-status-tracker.vercel.app             |
 | wallhaven-desktop                   | Wallhaven Wallpaper software desktop. Create a Wallhaven API-based client, a true wallpaper software.                                               | https://github.com/ErKeLost/wallhaven-desktop        |
 | xuneix                              | A link rotation tool for enhanced admin panel security. Includes dynamic URLs, expiring tokens, customizable rotation.                              | https://xuneix.theteleporter.me/                     |
 

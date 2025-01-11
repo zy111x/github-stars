@@ -1,6 +1,6 @@
 ---
 project: glide
-stars: 7457
+stars: 7459
 description: |-
     A dependency-free JavaScript ES6 slider and carousel. It’s lightweight, flexible and fast. Designed to slide. No less, no more
 url: https://github.com/glidejs/glide

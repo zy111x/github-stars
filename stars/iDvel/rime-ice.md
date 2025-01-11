@@ -1,6 +1,6 @@
 ---
 project: rime-ice
-stars: 10384
+stars: 10431
 description: |-
     Rime 配置：雾凇拼音 | 长期维护的简体词库
 url: https://github.com/iDvel/rime-ice

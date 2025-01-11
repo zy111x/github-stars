@@ -1,6 +1,6 @@
 ---
 project: pressure
-stars: 2923
+stars: 2925
 description: |-
     :point_down::boom:  JavaScript library for handling Force Touch, 3D Touch, and Pointer Pressure.
 url: https://github.com/stuyam/pressure

@@ -1,6 +1,6 @@
 ---
 project: vitepress
-stars: 13556
+stars: 13607
 description: |-
     Vite & Vue powered static site generator.
 url: https://github.com/vuejs/vitepress
@@ -10,6 +10,7 @@ url: https://github.com/vuejs/vitepress
 
 [![test](https://github.com/vuejs/vitepress/workflows/Test/badge.svg)](https://github.com/vuejs/vitepress/actions)
 [![npm](https://img.shields.io/npm/v/vitepress)](https://www.npmjs.com/package/vitepress)
+[![nightly releases](https://img.shields.io/badge/nightly-releases-orange)](https://nightly.akryum.dev/vuejs/vitepress)
 [![chat](https://img.shields.io/badge/chat-discord-blue?logo=discord)](https://chat.vuejs.org)
 
 ---

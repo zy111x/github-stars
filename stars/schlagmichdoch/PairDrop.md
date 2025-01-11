@@ -1,6 +1,6 @@
 ---
 project: PairDrop
-stars: 5141
+stars: 5219
 description: |-
     PairDrop: Transfer Files Cross-Platform. No Setup, No Signup.
 url: https://github.com/schlagmichdoch/PairDrop

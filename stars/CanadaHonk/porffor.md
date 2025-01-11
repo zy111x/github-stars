@@ -1,6 +1,6 @@
 ---
 project: porffor
-stars: 3153
+stars: 3172
 description: |-
     A from-scratch experimental AOT JS engine, written in JS
 url: https://github.com/CanadaHonk/porffor
@@ -116,7 +116,6 @@ Porffor can run Test262 via some hacks/transforms which remove unsupported featu
   - `codegen.js`: code (wasm) generation, ast -> wasm. The bulk of the effort
   - `cyclone.js`: wasm partial constant evaluator (it is fast and dangerous hence "cyclone")
   - `disassemble.js`: wasm disassembler using internal debug info
-  - `embedding.js`: utils for embedding consts
   - `encoding.js`: utils for encoding things as bytes as wasm expects
   - `expression.js`: mapping most operators to an opcode (advanced are as built-ins eg `f64_%`)
   - `havoc.js`: wasm rewrite library (it wreaks havoc upon wasm bytecode hence "havoc")

@@ -1,6 +1,6 @@
 ---
 project: Sink
-stars: 3342
+stars: 3492
 description: |-
     ⚡ A Simple / Speedy / Secure Link Shortener with Analytics, 100% run on Cloudflare.
 url: https://github.com/ccbikai/Sink
@@ -28,7 +28,7 @@ url: https://github.com/ccbikai/Sink
 </a>
 <a href="https://www.uneed.best/tool/sink" target="_blank">
   <img
-    src="https://www.uneed.best/POTD2.png"
+    src="https://www.uneed.best/POTW1.png"
     alt="Uneed Badge"
     height="55"
   />

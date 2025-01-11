@@ -1,6 +1,6 @@
 ---
 project: strip
-stars: 630
+stars: 629
 description: |-
     Strip - An Unobtrusive Responsive Lightbox
 url: https://github.com/staaky/strip
