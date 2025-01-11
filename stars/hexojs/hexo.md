@@ -1,6 +1,6 @@
 ---
 project: hexo
-stars: 39791
+stars: 39820
 description: A fast, simple & powerful blog framework, powered by Node.js.
 url: https://github.com/hexojs/hexo
 ---

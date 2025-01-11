@@ -1,6 +1,6 @@
 ---
 project: CF-Workers-docker.io
-stars: 6657
+stars: 6782
 description: 这个项目是一个基于 Cloudflare Workers 的 Docker 镜像代理工具。它能够中转对 Docker 官方镜像仓库的请求，解决一些访问限制和加速访问的问题。
 url: https://github.com/cmliu/CF-Workers-docker.io
 ---
@@ -11,6 +11,8 @@ CF-Workers-docker.io：Docker仓库镜像代理工具
 ===================================
 
 这个项目是一个基于 Cloudflare Workers 的 Docker 镜像代理工具。它能够中转对 Docker 官方镜像仓库的请求，解决一些访问限制和加速访问的问题。
+
+> docker.fxxk.dedyn.io 已被GFW污染，请自行部署使用
 
 部署方式
 ----

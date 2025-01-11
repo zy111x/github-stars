@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 48515
+stars: 48776
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -12,7 +12,9 @@ Stirling-PDF is a robust, locally hosted web-based PDF manipulation tool using D
 
 All files and PDFs exist either exclusively on the client side, reside in server memory only during task execution, or temporarily reside in a file solely for the execution of the task. Any file downloaded by the user will have been deleted from the server by that point.
 
-All information available at https://docs.stirlingpdf.com/
+Homepage: https://stirlingpdf.com
+
+All documentation available at https://docs.stirlingpdf.com/
 
 Features
 --------
@@ -180,6 +182,8 @@ Spanish (Español) (es\_ES)
 Swedish (Svenska) (sv\_SE)
 
 Thai (ไทย) (th\_TH)
+
+Tibetan (བོད་ཡིག་) (zh\_BO)
 
 Traditional Chinese (繁體中文) (zh\_TW)
 

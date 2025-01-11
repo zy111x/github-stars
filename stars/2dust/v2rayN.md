@@ -1,6 +1,6 @@
 ---
 project: v2rayN
-stars: 72884
+stars: 73333
 description: A GUI client for Windows, Linux and macOS, support Xray core and sing-box-core and others
 url: https://github.com/2dust/v2rayN
 ---
@@ -34,7 +34,7 @@ Fedora 30+
 -   `chmod +x v2rayN` Run `./v2rayN` under user permissions
 
 ```
-macOS 10.14+
+macOS 11+
 ```
 
 Requirements

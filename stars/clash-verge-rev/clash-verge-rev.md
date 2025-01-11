@@ -1,6 +1,6 @@
 ---
 project: clash-verge-rev
-stars: 43919
+stars: 44550
 description: Continuation of Clash Verge - A Clash Meta GUI based on Tauri (Windows, MacOS, Linux)
 url: https://github.com/clash-verge-rev/clash-verge-rev
 ---
