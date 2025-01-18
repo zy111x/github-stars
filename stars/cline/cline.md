@@ -1,12 +1,12 @@
 ---
 project: cline
-stars: 21442
+stars: 22967
 description: |-
     Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
 url: https://github.com/cline/cline
 ---
 
-# Cline (prev. Claude Dev) – \#1 on OpenRouter
+# Cline – \#1 on OpenRouter
 
 <p align="center">
   <img src="https://media.githubusercontent.com/media/cline/cline/main/assets/docs/demo.gif" width="100%" />
@@ -19,7 +19,10 @@ url: https://github.com/cline/cline
 <a href="https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev" target="_blank"><strong>Download on VS Marketplace</strong></a>
 </td>
 <td align="center">
-<a href="https://discord.gg/cline" target="_blank"><strong>Join the Discord</strong></a>
+<a href="https://discord.gg/cline" target="_blank"><strong>Discord</strong></a>
+</td>
+<td align="center">
+<a href="https://www.reddit.com/r/cline/" target="_blank"><strong>r/cline</strong></a>
 </td>
 <td align="center">
 <a href="https://github.com/cline/cline/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop" target="_blank"><strong>Feature Requests</strong></a>

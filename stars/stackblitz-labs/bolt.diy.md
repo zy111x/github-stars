@@ -1,6 +1,6 @@
 ---
 project: bolt.diy
-stars: 9218
+stars: 9777
 description: |-
     Prompt, run, edit, and deploy full-stack web applications using any LLM you want!
 url: https://github.com/stackblitz-labs/bolt.diy
@@ -35,6 +35,13 @@ bolt.diy was originally started by [Cole Medin](https://www.youtube.com/@ColeMed
 
 [Join the bolt.diy community here, in the oTTomator Think Tank!](https://thinktank.ottomator.ai)
 
+## Project management
+
+Bolt.diy is a community effort! Still, the core team of contributors aims at organizing the project in way that allows
+you to understand where the current areas of focus are.
+
+If you want to know what we are working on, what we are planning to work on, or if you want to contribute to the
+project, please check the [project management guide](./PROJECT.md) to get started easily.
 
 ## Requested Additions
 

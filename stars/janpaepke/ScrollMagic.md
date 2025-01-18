@@ -1,6 +1,6 @@
 ---
 project: ScrollMagic
-stars: 14931
+stars: 14935
 description: |-
     The javascript library for magical scroll interactions.
 url: https://github.com/janpaepke/ScrollMagic

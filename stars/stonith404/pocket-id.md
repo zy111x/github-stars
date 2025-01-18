@@ -1,6 +1,6 @@
 ---
 project: pocket-id
-stars: 787
+stars: 950
 description: |-
     A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services.
 url: https://github.com/stonith404/pocket-id
@@ -17,6 +17,24 @@ Pocket ID is a simple OIDC provider that allows users to authenticate with their
 The goal of Pocket ID is to be a simple and easy-to-use. There are other self-hosted OIDC providers like [Keycloak](https://www.keycloak.org/) or [ORY Hydra](https://www.ory.sh/hydra/) but they are often too complex for simple use cases.
 
 Additionally, what makes Pocket ID special is that it only supports [passkey](https://www.passkeys.io/) authentication, which means you don’t need a password. Some people might not like this idea at first, but I believe passkeys are the future, and once you try them, you’ll love them. For example, you can now use a physical Yubikey to sign in to all your self-hosted services easily and securely.
+
+## Table of Contents
+
+- [ Pocket ID](#-pocket-id)
+  - [Table of Contents](#table-of-contents)
+  - [Setup](#setup)
+    - [Before you start](#before-you-start)
+    - [Installation with Docker (recommended)](#installation-with-docker-recommended)
+    - [Unraid](#unraid)
+    - [Stand-alone Installation](#stand-alone-installation)
+    - [Nginx Reverse Proxy](#nginx-reverse-proxy)
+  - [Proxy Services with Pocket ID](#proxy-services-with-pocket-id)
+  - [Update](#update)
+      - [Docker](#docker)
+      - [Stand-alone](#stand-alone)
+  - [Environment variables](#environment-variables)
+  - [Account recovery](#account-recovery)
+  - [Contribute](#contribute)
 
 ## Setup
 
@@ -103,7 +121,7 @@ proxy_buffer_size   256k;
 
 ## Proxy Services with Pocket ID
 
-As the goal of Pocket ID is to stay simple, it doesn't have a built-in proxy provider. However, you can use [OAuth2 Proxy](https://oauth2-proxy.github.io/oauth2-proxy) to add authentication to your services that don't support OIDC.
+The goal of Pocket ID is to function exclusively as an OIDC provider. As such, we don't have a built-in proxy provider. However, you can use other tools that act as a middleware to protect your services and support OIDC as an authentication provider.
 
 See the [guide](docs/proxy-services.md) for more information.
 
@@ -164,6 +182,16 @@ docker compose up -d
 | `CADDY_PORT`                 | `80`                      | no                    | The port on which Caddy should listen. Caddy is only active inside the Docker container. If you want to change the exposed port of the container then you sould change this variable.                                                                                                                                                                                     |
 | `PORT`                       | `3000`                    | no                    | The port on which the frontend should listen.                                                                                                                                                                                                                                                                                                                             |
 | `BACKEND_PORT`               | `8080`                    | no                    | The port on which the backend should listen.                                                                                                                                                                                                                                                                                                                              |
+
+## Account recovery
+
+There are two ways to create a one-time access link for a user:
+
+1. **UI**: An admin can create a one-time access link for the user in the admin panel under the "Users" tab by clicking on the three dots next to the user's name and selecting "One-time link".
+2. **Terminal**: You can create a one-time access link for a user by running the `scripts/create-one-time-access-token.sh` script. To execute this script with Docker you have to run the following command:
+   ```bash
+   docker compose exec pocket-id sh "sh scripts/create-one-time-access-token.sh <username or email>"
+   ```
 
 ## Contribute
 

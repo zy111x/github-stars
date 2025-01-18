@@ -1,6 +1,6 @@
 ---
 project: github-cards
-stars: 2132
+stars: 2133
 description: |-
     The unofficial GitHub Cards. Card for your GitHub profile, card for your GitHub repositories.
 url: https://github.com/lepture/github-cards

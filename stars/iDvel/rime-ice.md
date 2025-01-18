@@ -1,6 +1,6 @@
 ---
 project: rime-ice
-stars: 10431
+stars: 10498
 description: |-
     Rime 配置：雾凇拼音 | 长期维护的简体词库
 url: https://github.com/iDvel/rime-ice
@@ -117,7 +117,7 @@ Linux 依赖问题的具体解释请参考 [#840](https://github.com/iDvel/rime-
 
 以下安装方式，选择其一：
 
-- [手动安装](#使用说明)
+- [手动安装](#手动安装)
 - [Git 安装](#git-安装)
 - [东风破 plum](#东风破-plum)
 - [自动部署脚本](#自动部署脚本)

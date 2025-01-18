@@ -1,6 +1,6 @@
 ---
 project: qr
-stars: 157
+stars: 158
 description: |-
     Minimal browser & node.js QR Code Pattern reader and generator
 url: https://github.com/paulmillr/qr
@@ -102,7 +102,7 @@ Decoding raw bitmap is still possible.
 
 ```js
 import encodeQR from '@paulmillr/qr';
-import decodeQR from '@paulmillr/qr/decode.js';
+import decodeQR from '@paulmillr/qr/decode';
 import { Bitmap } from '@paulmillr/qr';
 
 // Scale so it would be 100x100 instead of 25x25
@@ -138,7 +138,7 @@ function decodeWithExternal() {
 }
 
 // c) draw gif/svg to browser DOM canvas
-import { svgToPng } from '@paulmillr/qr/dom.js';
+import { svgToPng } from '@paulmillr/qr/dom';
 const png = svgToPng(encodeQR('Hello world', 'svg'), 512, 512);
 ```
 

@@ -1,6 +1,6 @@
 ---
 project: 3proxy
-stars: 93
+stars: 94
 description: |-
     An attempt to install 3proxy as an elite high anonymous HTTP proxy with SSL support with a few command lines
 url: https://github.com/benjamin74/3proxy

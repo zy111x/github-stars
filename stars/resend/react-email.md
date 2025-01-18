@@ -1,6 +1,6 @@
 ---
 project: react-email
-stars: 14928
+stars: 14966
 description: |-
     💌 Build and send emails using React
 url: https://github.com/resend/react-email

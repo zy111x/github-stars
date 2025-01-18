@@ -1,6 +1,6 @@
 ---
 project: template-next-app-dir
-stars: 87
+stars: 90
 description: |-
     Next.js template for programmatic video apps
 url: https://github.com/remotion-dev/template-next-app-dir

@@ -1,6 +1,6 @@
 ---
 project: aos
-stars: 27085
+stars: 27118
 description: |-
     Animate on scroll library
 url: https://github.com/michalsnik/aos

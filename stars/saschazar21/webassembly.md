@@ -1,6 +1,6 @@
 ---
 project: webassembly
-stars: 152
+stars: 153
 description: |-
     A WebAssembly Monorepo
 url: https://github.com/saschazar21/webassembly

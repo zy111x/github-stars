@@ -1,6 +1,6 @@
 ---
 project: caddy
-stars: 60397
+stars: 60516
 description: |-
     Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS
 url: https://github.com/caddyserver/caddy

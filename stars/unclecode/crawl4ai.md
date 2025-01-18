@@ -1,6 +1,6 @@
 ---
 project: crawl4ai
-stars: 23885
+stars: 25788
 description: |-
     🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper
 url: https://github.com/unclecode/crawl4ai
@@ -440,7 +440,7 @@ if __name__ == "__main__":
 </details>
 
 <details>
-<summary>🤖 <strong>Using You own Browswer with Custome User Profile</strong></summary>
+<summary>🤖 <strong>Using You own Browser with Custom User Profile</strong></summary>
 
 ```python
 import os, sys
@@ -519,7 +519,7 @@ To check our development plans and upcoming features, visit our [Roadmap](https:
 
 ## 🤝 Contributing 
 
-We welcome contributions from the open-source community. Check out our [contribution guidelines](https://github.com/unclecode/crawl4ai/blob/main/CONTRIBUTING.md) for more information.
+We welcome contributions from the open-source community. Check out our [contribution guidelines](https://github.com/unclecode/crawl4ai/blob/main/CONTRIBUTORS.md) for more information.
 
 ## 📄 License 
 

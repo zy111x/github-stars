@@ -1,6 +1,6 @@
 ---
 project: disposable-email-domains
-stars: 3294
+stars: 3312
 description: |-
     a list of disposable and temporary email address domains
 url: https://github.com/disposable-email-domains/disposable-email-domains

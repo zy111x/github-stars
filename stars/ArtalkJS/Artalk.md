@@ -1,6 +1,6 @@
 ---
 project: Artalk
-stars: 1743
+stars: 1753
 description: |-
     🌌  Your Self-hosted Comment System. | 自托管评论系统
 url: https://github.com/ArtalkJS/Artalk

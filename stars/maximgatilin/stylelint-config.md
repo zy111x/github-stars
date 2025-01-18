@@ -1,6 +1,6 @@
 ---
 project: stylelint-config
-stars: 97
+stars: 96
 description: |-
     App for generating stylelint config online
 url: https://github.com/maximgatilin/stylelint-config

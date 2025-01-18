@@ -1,6 +1,6 @@
 ---
 project: Xiaomi-Dafang-Hacks
-stars: 4217
+stars: 4220
 description: |-
     null
 url: https://github.com/EliasKotlyar/Xiaomi-Dafang-Hacks

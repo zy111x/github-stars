@@ -1,10 +1,12 @@
 ---
 project: domain-digger
-stars: 539
+stars: 552
 description: |-
     Full Toolkit for Next-Level Domain Analysis
 url: https://github.com/wotschofsky/domain-digger
 ---
+
+> **Do you enjoy using Domain Digger? Leave a star! 🌟**
 
 ![Domain Digger](docs/logo.svg)
 

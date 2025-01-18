@@ -1,6 +1,6 @@
 ---
 project: 5ire
-stars: 552
+stars: 630
 description: |-
     5ire is a cross-platform desktop AI assistant, MCP client. It compatible with major service providers,  supports local knowledge base and  tools via model context protocol servers .
 url: https://github.com/nanbingxyz/5ire
@@ -40,6 +40,7 @@ url: https://github.com/nanbingxyz/5ire
     ·
     <a href="https://github.com/nanbingxyz/5ire/releases/latest">Releases</a>
   </p>
+  <div><a href="https://buymeacoffee.com/ironben"><img src="https://github.com/user-attachments/assets/2265e2d6-2a17-4a48-b779-52a925261135" style="width:200px"/></a></div>
    <br />
 <video src="https://github.com/user-attachments/assets/741b23d3-31df-4749-bde4-103e2d415953.mp4"></video>
 </div>
@@ -82,8 +83,6 @@ You can perform keyword searches across all conversations, quickly pinpointing t
 > [!TIP]
 > Since 5ire uses native dependencies, it needs to be packaged on the corresponding platform. If it is on Mac OS, you may also need to configure APPLE_TEAM_ID, APPLE_ID, and APPLE_ID_PASS for notarization to avoid security alerts.
 
-<br />
-<br />
 
 # License
 

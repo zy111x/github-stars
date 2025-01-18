@@ -1,6 +1,6 @@
 ---
 project: logocreator
-stars: 1823
+stars: 1868
 description: |-
     A free + OSS logo generator powered by Flux on Together AI
 url: https://github.com/Nutlope/logocreator
@@ -17,7 +17,7 @@ url: https://github.com/Nutlope/logocreator
 
 ## Tech stack
 
-- [Flux Pro 1.1](https://dub.sh/flux-playground) on [Together AI](https://dub.sh/together-ai) for logo generation
+- [Flux Pro 1.1](https://togetherai.link/flux-playground) on [Together AI](https://togetherai.link/) for logo generation
 - [Next.js](https://nextjs.org/) with TypeScript for the app framework
 - [Shadcn](https://ui.shadcn.com/) for UI components & [Tailwind](https://tailwindcss.com/) for styling
 - [Upstash Redis](https://upstash.com/) for rate limiting

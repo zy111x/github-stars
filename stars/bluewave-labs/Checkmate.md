@@ -1,17 +1,13 @@
 ---
-project: checkmate
-stars: 3262
+project: Checkmate
+stars: 3356
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
-url: https://github.com/bluewave-labs/checkmate
+url: https://github.com/bluewave-labs/Checkmate
 ---
 
 
-# **Announcing $5000 grant funding in partnership with [UpRock](https://uprock.com) - check [our web page](https://checkmate.so) for funding ideas** 
-
-- If you would like to support us, please consider giving it a ⭐ and click on "watch". 
-- Need support or have a suggestion? Check our [Discord channel](https://discord.gg/NAb6H3UTjK) or [Discussions](https://github.com/bluewave-labs/checkmate/discussions) forum.
-- Need a ping when there's a new release? Use [Newreleases](https://newreleases.io/), a free service to track releases.
+## **Announcing $5000 grant funding in partnership with [UpRock](https://uprock.com) to build distributed uptime monitoring - check [our web page](https://checkmate.so) for funding ideas** 
 
 ![Frame 34](https://github.com/user-attachments/assets/00db1520-24b6-42f2-aca2-a1c9794677da)
 
@@ -72,19 +68,20 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 - Port monitoring (**complete**, waiting to be deployed to stable version)
 - Global (distributed) uptime checking on Solana network (**in progress**)
 - Status pages (**in progress**)
+- Translations (i18n) (**in progress**)
 - Better notification options (Webhooks, Discord, Telegram, Slack)
+- Server security monitoring 
 - More configuration options
-- Translations
 - Tagging/grouping monitors
 - DNS monitoring
 
 ## 🏗️ Screenshots
 
-![Group 3765](https://github.com/user-attachments/assets/8e8144f2-a769-4707-8ea1-99cf758284a8)
-
-![Group 3768](https://github.com/user-attachments/assets/05aed2f2-2cf7-487f-879b-cf8bfb0e9241)
-
-![Group 3768-1](https://github.com/user-attachments/assets/d4ee4bcf-4d69-4e4a-9bce-fd3541129c24)
+<img width="2714" alt="server" src="https://github.com/user-attachments/assets/f7cb272a-69a6-48c5-93b0-249ecf20ecc6" />
+<p>
+<img width="2714" alt="uptime" src="https://github.com/user-attachments/assets/98ddc6c0-3384-47fd-96ce-7e53e6b688ac" />
+<p>
+<img width="2714" alt="page speed" src="https://github.com/user-attachments/assets/b5589f79-da30-4239-9846-1f8bb2637ff9" />
 
 ## 🏗️ Tech stack
 
@@ -94,6 +91,13 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 - [MongoDB](https://mongodb.com)
 - [Recharts](https://recharts.org)
 - Lots of other open source components!
+
+## A few links 
+
+- If you would like to support us, please consider giving it a ⭐ and click on "watch". 
+- Have a question or suggestion for the roadmap/featureset? Check our [Discord channel](https://discord.gg/NAb6H3UTjK) or [Discussions](https://github.com/bluewave-labs/checkmate/discussions) forum.
+- Need a ping when there's a new release? Use [Newreleases](https://newreleases.io/), a free service to track releases.
+- Watch a Checkmate [installation and usage video](https://www.youtube.com/watch?v=GfFOc0xHIwY)
 
 ## 🤝 Contributing
 
@@ -128,4 +132,5 @@ Also check other developer and contributor-friendly projects of BlueWave:
 - [Guidefox](https://github.com/bluewave-labs/guidefox), an application that helps new users learn how to use your product via hints, tours, popups and banners.
 - [VerifyWise](https://github.com/bluewave-labs/verifywise), the first open source AI governance platform.
 
+![image](https://badges.pufler.dev/visits/bluewave-labs/checkmate) since 14 Jan, 2025
 

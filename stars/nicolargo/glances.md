@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 27351
+stars: 27418
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
@@ -11,7 +11,7 @@ Glances - An eye on your system
 ===============================
 
 |  |pypi| |test| |contributors| |quality|
-|  |starts| |docker| |pypistat|
+|  |starts| |docker| |pypistat| |ossrank|
 |  |sponsors| |twitter|
 
 .. |pypi| image:: https://img.shields.io/pypi/v/glances.svg
@@ -28,6 +28,10 @@ Glances - An eye on your system
 .. |pypistat| image:: https://pepy.tech/badge/glances/month
     :target: https://pepy.tech/project/glances
     :alt: Pypi downloads
+
+.. |ossrank| image:: https://shields.io/endpoint?url=https://ossrank.com/shield/3689
+    :target: https://ossrank.com/p/3689
+    :alt: OSSRank
 
 .. |test| image:: https://github.com/nicolargo/glances/actions/workflows/ci.yml/badge.svg?branch=develop
     :target: https://github.com/nicolargo/glances/actions

@@ -1,6 +1,6 @@
 ---
 project: devalue
-stars: 2224
+stars: 2230
 description: |-
     Gets the job done when JSON.stringify can't
 url: https://github.com/Rich-Harris/devalue
