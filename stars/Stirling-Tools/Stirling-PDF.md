@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 48776
+stars: 48945
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -109,7 +109,7 @@ Visit our comprehensive documentation at docs.stirlingpdf.com for:
 Supported Languages
 -------------------
 
-Stirling-PDF currently supports 38 languages!
+Stirling-PDF currently supports 39 languages!
 
 Language
 
@@ -176,6 +176,8 @@ Serbian Latin alphabet (Srpski) (sr\_LATN\_RS)
 Simplified Chinese (简体中文) (zh\_CN)
 
 Slovakian (Slovensky) (sk\_SK)
+
+Slovenian (Slovenščina) (sl\_SI)
 
 Spanish (Español) (es\_ES)
 

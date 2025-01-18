@@ -1,6 +1,6 @@
 ---
 project: Reactive-Resume
-stars: 27001
+stars: 27503
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/AmruthPillai/Reactive-Resume
 ---
@@ -57,7 +57,7 @@ Features
 -   **Bring your own OpenAI API key** and unlock features such as improving your writing, fixing spelling and grammar or changing the tone of your text in one-click
 -   Translate your resume into any language using ChatGPT and import it back for easier editing
 -   Create single page resumes or a resume that spans multiple pages easily
--   Customize the colours and layouts to add a personal touch to your resume.
+-   Customize the colours and layouts to add a personal touch to your resume
 -   Customise your page layout as you like just by dragging-and-dropping sections
 -   Create custom sections that are specific to your industry if the existing ones don't fit
 -   Jot down personal notes specific to your resume that's only visible to you

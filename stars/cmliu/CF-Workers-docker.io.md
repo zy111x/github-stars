@@ -1,27 +1,35 @@
 ---
 project: CF-Workers-docker.io
-stars: 6782
+stars: 6878
 description: 这个项目是一个基于 Cloudflare Workers 的 Docker 镜像代理工具。它能够中转对 Docker 官方镜像仓库的请求，解决一些访问限制和加速访问的问题。
 url: https://github.com/cmliu/CF-Workers-docker.io
 ---
 
 **第三方 DockerHub 镜像服务列表**
 
-CF-Workers-docker.io：Docker仓库镜像代理工具
-===================================
+🐳 CF-Workers-docker.io：Docker仓库镜像代理工具
+======================================
 
 这个项目是一个基于 Cloudflare Workers 的 Docker 镜像代理工具。它能够中转对 Docker 官方镜像仓库的请求，解决一些访问限制和加速访问的问题。
 
-> docker.fxxk.dedyn.io 已被GFW污染，请自行部署使用
+Caution
 
-部署方式
-----
+**docker.fxxk.dedyn.io 已被GFW污染，需自行部署使用。**
+
+Warning
+
+根据 Cloudflare 协议 中，2.2.1 第 (j) use the Services to provide a virtual private network or other similar proxy services.
+
+使用本服务可能存在被 Cloudflare 封号的潜在风险，请自行斟酌使用风险。
+
+🚀 部署方式
+-------
 
 -   **Workers** 部署：复制 \_worker.js 代码，`保存并部署`即可
 -   **Pages** 部署：`Fork` 后 `连接GitHub` 一键部署即可
 
-如何使用？ 视频教程
-----------
+⚙️ 如何使用？ 视频教程
+-------------
 
 例如您的Workers项目域名为：`docker.fxxk.dedyn.io`；
 
@@ -112,8 +120,8 @@ location = "xxxx.xx.com"
 对于以上配置，k8s在使用的时候，就可以直接`pull`外部无法pull的镜像了 手动可以直接`pull` 配置了`mirror`的仓库  
 `crictl pull registry.k8s.io/kube-proxy:v1.28.4` `docker pull nginx:1.21`
 
-变量说明
-----
+🔧 变量说明
+-------
 
 变量名
 
@@ -125,7 +133,7 @@ location = "xxxx.xx.com"
 
 URL302
 
-https://t.me/CMLiussss
+`https://t.me/CMLiussss`
 
 ❌
 
@@ -133,7 +141,7 @@ https://t.me/CMLiussss
 
 URL
 
-https://www.baidu.com/
+`https://www.baidu.com/`
 
 ❌
 
@@ -141,14 +149,14 @@ https://www.baidu.com/
 
 UA
 
-netcraft
+`netcraft`
 
 ❌
 
 支持多元素, 元素之间使用空格或换行作间隔
 
-第三方 DockerHub 镜像服务
-==================
+🛠️ 第三方 DockerHub 镜像服务
+======================
 
 **注意:**
 
@@ -222,7 +230,7 @@ AtomHub 可信镜像仓库平台 (只包含基础镜像，共336个)
 
 `https://atomhub.openatom.cn`
 
-鸣谢
-==
+🙏 鸣谢
+=====
 
 muzihuaner、V2ex网友、ciiiii、ChatGPT、白嫖哥、zero\_free频道、dongyubin、kiko923

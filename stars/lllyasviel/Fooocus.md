@@ -1,6 +1,6 @@
 ---
 project: Fooocus
-stars: 42514
+stars: 42665
 description: Focus on prompting and generating
 url: https://github.com/lllyasviel/Fooocus
 ---
@@ -689,7 +689,6 @@ Fooocus' forks
 fenneishi/Fooocus-Control  
 runew0lf/RuinedFooocus  
 MoonRide303/Fooocus-MRE  
-metercai/SimpleSDXL  
 mashb1t/Fooocus  
 and so on ...
 
