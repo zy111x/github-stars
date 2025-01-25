@@ -1,6 +1,6 @@
 ---
 project: hackingtool
-stars: 51326
+stars: 51382
 description: ALL IN ONE Hacking Tool For Hackers
 url: https://github.com/Z4nzu/hackingtool
 ---

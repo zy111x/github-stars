@@ -1,385 +1,334 @@
 ---
 project: CloudPaste
-stars: 411
-description: 基于 Cloudflare Workers 的在线剪贴板和文件分享服务，支持 Markdown、密码保护、文件上传等功能
+stars: 425
+description: 基于 Cloudflare Workers 的在线剪贴板和文件分享服务，支持 Markdown、阅后即焚、文本/文件分享、密码保护等功能
 url: https://github.com/ling-drag0n/CloudPaste
 ---
 
-CloudPaste - 在线剪贴板 📋
-=====================
+CloudPaste - Online Clipboard 📋
+================================
 
-一个基于 Cloudflare Workers 的在线剪贴板和文件分享服务。支持 Markdown、密码保护、文件上传等功能。
+English | 中文
 
-✨ 功能特点
-------
+An online clipboard and file sharing service based on Cloudflare Workers. Supports Markdown, password protection, file uploads, and more.
 
-### 📝 文本分享
+✨ Features
+----------
 
--   支持普通文本和 Markdown 格式
--   Markdown 实时预览和同步滚动
--   完整的 Markdown 样式支持
-    -   优化的列表嵌套显示
-    -   美化的表格样式
-    -   代码块实时语法高亮
-    -   标准的任务列表样式
-    -   优化的引用块样式
-    -   支持数学公式渲染 (KaTeX)
--   编辑器支持双向拉伸调整大小
--   支持密码保护
--   可选过期时间
--   同步滚动预览
--   支持自定义链接后缀（仅单文件上传时可用）
--   支持设置访问次数限制
--   文本分享支持pdf、word文档、png图片导出
--   支持自动保存草稿
-    -   浏览器关闭前自动保存
-    -   下次访问时可恢复
-    -   提交成功后自动清除
+### 📝 Text Sharing
 
-### 📁 文件分享
+-   Supports plain text and Markdown styles
+-   Real-time Markdown preview with synchronized scrolling
+-   Resizable editor with bidirectional stretching
+-   Password protection
+-   Optional expiration time
+-   Custom link suffix (available for single file uploads only)
+-   Access count limit settings
+-   Text sharing supports export to PDF, Word documents, and PNG images
+-   Auto-save draft feature
+    -   Automatically saves before browser closes
+    -   Recoverable on next visit
+    -   Automatically clears after successful submission
 
--   支持拖拽上传
--   多文件上传
--   文件大小限制（98MB，注意 worker 限制和 R2 限制）
--   密码保护
--   自定义过期时间
--   实时上传进度显示
--   文件预览功能
-    -   图片预览
-    -   音频预览
-    -   视频预览
--   上传速度显示
--   支持取消上传
--   文件类型图标显示
--   支持自定义链接后缀（仅单文件上传时可用）
--   支持二维码分享和直链分享
--   支持设置下载次数限制
+### 📁 File Sharing
 
-### 👨‍💻 管理功能
+-   Drag and drop upload support
+-   Multiple file uploads
+-   Configurable file size limits and total storage limits
+-   Password protection
+-   Optional expiration time
+-   Real-time upload progress display
+-   File preview functionality
+-   Upload speed display
+-   Upload cancellation support
+-   Custom link suffix (available for single file uploads only)
+-   QR code sharing and direct link sharing
+-   Download count limit settings
 
--   管理员登录
--   管理员状态持久化
--   查看所有分享链接
--   可管理文本/文件上传（防止被盗刷额度）
-    -   开启/关闭文本上传功能
-    -   开启/关闭文件上传功能
--   分类过滤（文本/文件）
--   删除分享（带确认提示）
--   复制分享链接
--   查看分享统计
-    -   总分享数
-    -   有效分享数
-    -   剩余访问/下载次数统计
--   监控存储空间使用情况
-    -   已用空间
-    -   总容量
-    -   使用率百分比
-    -   存储空间预警提示（70%警告，90%危险）
--   修改分享密码（支持文本和文件分享）
-    -   可随时添加/移除密码保护
-    -   支持清空密码移除保护
--   编辑文本分享内容
-    -   支持实时 Markdown 预览
-    -   可切换 Markdown 开关
-    -   与主页编辑器相同的编辑体验
-    -   分屏预览模式
--   编辑文件分享设置
-    -   修改过期时间
-    -   修改下载次数限制
-    -   实时生效
+### 🔐 Access Control
 
-### 🔐 访问控制
+-   Storage space usage monitoring
+-   Password Protection
+    -   Password settings for text and file sharing
+    -   Administrators can modify or remove passwords at any time
+    -   Encrypted password storage
+-   Text Content Control
+    -   Only administrators can edit shared text content
+    -   Regular users can only view
+    -   Support for modifying expiration time
+    -   Support for modifying access count limits
+-   Upload Control
+    -   Administrators can enable/disable text upload functionality
+    -   Administrators can enable/disable file upload functionality
+    -   Prevention of malicious resource consumption
 
--   密码保护
-    -   支持文本和文件分享设置密码
-    -   管理员可随时修改或移除密码
-    -   密码加密存储
--   文本内容控制
-    -   仅管理员可编辑已分享的文本内容
-    -   普通用户只能查看
-    -   支持修改过期时间
-    -   支持修改访问次数限制
--   上传控制
-    -   管理员可开启/关闭文本上传功能
-    -   管理员可开启/关闭文件上传功能
-    -   防止恶意上传占用资源
+### 🛡️ Security Features
 
-### 🛡️ 安全特性
+-   Encrypted password storage
+-   Access permission control
+-   CORS security configuration
+-   Upload limit protection
+-   Automatic expiration cleanup
+    -   Regular checks for expired content
+    -   Automatic deletion of expired shares
+    -   Storage space release
+    -   Cleanup check triggered by access
 
--   密码加密存储
--   访问权限控制
--   CORS 安全配置
--   上传限制保护
--   自动过期清理
-    -   定时检查过期内容
-    -   自动删除过期分享
-    -   释放存储空间
-    -   访问触发清理检查
+### 🎨 Interface Optimization
 
-### 🎨 界面优化
+-   Full resolution responsive layout
+-   Optimized mobile adaptation
+-   Beautiful scrollbar styles
+-   Smooth animation transitions
+-   File upload progress animation
+-   Copy success notification animation
+-   Error notification animation effects
+-   Drag and drop upload visual feedback
+-   Dark theme support (with minor imperfections)
 
--   全分辨率自适应布局
--   响应式编辑器布局
--   优化的移动端适配
--   美化的滚动条样式
--   平滑的动画过渡效果
--   优化的代码块显示
--   完整的中文标点符号对齐
--   列表项完美对齐
--   文件上传进度动画
--   复制成功提示动画
--   错误提示动画效果
--   拖放上传视觉反馈
--   暗色主题支持（有点瑕疵）
+🚀 Deployment (Automatic)
+-------------------------
 
-🚀 部署（自动）
----------
+### 1\. GitHub Actions Deployment (Optional)
 
-### 1\. GitHub Actions 部署(可选)
-
-1.  **Fork 本仓库**
+1.  **Fork this Repository**
     
-    -   点击右上角的 Fork 按钮
-    -   等待仓库克隆完成
-2.  **设置 GitHub Secrets**
+    -   Click the Fork button in the top right
+    -   Wait for repository cloning to complete
+2.  **Set GitHub Secrets** In your GitHub repository, go to Settings -> Secrets and variables -> Actions -> New Repository secrets, and add the following secrets:
     
-    在你的 GitHub 仓库中，转到 Settings -> Secrets and variables -> Actions -> New Repository secrets ，添加以下 secrets：
-    
-    -   `CF_API_TOKEN`: Cloudflare API 令牌
+    -   `CF_API_TOKEN`: Cloudflare API token
         
-        -   访问 Cloudflare Dashboard
-        -   创建新的 API 令牌 -选择"编辑 Cloudflare Workers"
-    -   `CF_ACCOUNT_ID`: Cloudflare 账户 ID
+        -   Visit Cloudflare Dashboard
+        -   Create new API token - select "Edit Cloudflare Workers"
+    -   `CF_ACCOUNT_ID`: Cloudflare account ID
         
-        -   在 Cloudflare 仪表板右侧可以找到
-    -   `ADMIN_USERNAME`: 管理员用户名
+        -   Found on the right side of your Cloudflare dashboard
+    -   `ADMIN_USERNAME`: Administrator username
         
-        -   设置你的管理员账号
-    -   `ADMIN_PASSWORD`: 管理员密码
+        -   Set your admin account
+    -   `ADMIN_PASSWORD`: Administrator password
         
-        -   设置你的管理员密码
-3.  **运行工作流**
+        -   Set your admin password
+3.  **Run Workflow**
     
 
-### 2\. 一键部署
+### 2\. One-Click Deployment
 
-部署后默认无密码,需在 cloudflare 的对应 worker 下的变量和机密中设置：
+After deployment, there's no password by default. You need to set up variables and secrets in the corresponding worker under Cloudflare:
 
-🚀 部署（手动）
----------
+🚀 Deployment (Manual)
+----------------------
 
-### 1\. 准备工作
+### 1\. Prerequisites
 
-1.  注册 Cloudflare 账号
-2.  进入 Cloudflare 控制台
+1.  Register for a Cloudflare account
+2.  Access the Cloudflare console
 
-### 2\. 创建存储资源
+### 2\. Create Storage Resources
 
-1.  创建 KV 命名空间
+1.  Create KV Namespace
     
-    -   名称：`PASTE_STORE`
-    -   用于存储文本内容
-2.  创建 KV 命名空间
+    -   Name: `PASTE_STORE`
+    -   Used for storing text content
+2.  Create KV Namespace
     
-    -   名称：`UPLOAD_STATUS`
-    -   用于存储上传功能的开关状态
-3.  创建 R2 存储桶
+    -   Name: `UPLOAD_STATUS`
+    -   Used for storing upload functionality switch status
+3.  Create R2 Bucket
     
-    -   名称：`cloudpaste-files`
-    -   用于存储上传的文件
+    -   Name: `cloudpaste-files`
+    -   Used for storing uploaded files
 
-### 3\. 创建 Worker
+### 3\. Create Worker
 
-1.  创建新的 Worker 脚本
+1.  Create a new Worker script
     
-2.  配置环境变量：
+2.  Configure environment variables:
     
-    ADMIN\_USERNAME\=你的管理员用户名
-    ADMIN\_PASSWORD\=你的管理员密码
+    ADMIN\_USERNAME\=your-admin-username
+    ADMIN\_PASSWORD\=your-admin-password
     
-3.  绑定存储：
+3.  Bind storage:
     
-    -   KV 绑定：
+    -   KV bindings:
         
-        # 文本存储
-        变量名：PASTE\_STORE
-        选择创建的 KV 命名空间
+        # Text storage
+        Variable name: PASTE\_STORE
+        Select created KV namespace
         
-        # 上传状态控制
-        变量名：UPLOAD\_STATUS
-        选择创建的 KV 命名空间
+        # Upload status control
+        Variable name: UPLOAD\_STATUS
+        Select created KV namespace
         
-    -   R2 绑定：
+    -   R2 binding:
         
-        变量名：FILE\_STORE
-        选择创建的 R2 存储桶
+        Variable name: FILE\_STORE
+        Select created R2 bucket
         
-4.  KV 命名空间说明：
+4.  KV Namespace Description:
     
-    -   `PASTE_STORE`: 用于存储文本分享内容和元数据
-    -   `UPLOAD_STATUS`: 用于存储和控制上传功能的开关状态
-        -   `textUpload`: 控制文本上传功能
-        -   `fileUpload`: 控制文件上传功能
-    -   `FILE_STORE`: 用于存储上传的文件
-5.  配置示例代码 (wrangler.toml):
+    -   `PASTE_STORE`: For storing text share content and metadata
+    -   `UPLOAD_STATUS`: For storing and controlling upload functionality switches
+        -   `textUpload`: Controls text upload functionality
+        -   `fileUpload`: Controls file upload functionality
+    -   `FILE_STORE`: For storing uploaded files
+5.  Example Configuration (wrangler.toml):
     
     \[\[kv\_namespaces\]\]
     binding = "PASTE\_STORE"
-    id = "你的KV命名空间ID"
+    id = "your-KV-namespace-ID"
     
     \[\[kv\_namespaces\]\]
     binding = "UPLOAD\_STATUS"
-    id = "你的KV命名空间ID"
+    id = "your-KV-namespace-ID"
     
     \[\[r2\_buckets\]\]
     bucket\_name = "cloudpaste-files"
     binding = "FILE\_STORE"
     
 
-### 4\. 部署代码
+### 4\. Deploy Code
 
-1.  复制 `worker.js` 的完整代码
-2.  粘贴到 Worker 的编辑器中
-3.  保存并部署
+1.  Copy the complete code from `worker.js`
+2.  Paste it into the Worker editor
+3.  Save and deploy
 
-🔧 代码结构说明
----------
+🔧 Code Structure
+-----------------
 
-### 主要组件
+### Main Components
 
 1.  `worker.js`
     
-    -   主要的 Worker 代码
-    -   包含路由处理和 API 实现
-2.  工具函数
+    -   Main Worker code
+    -   Contains route handling and API implementation
+2.  Utility Functions
     
-    -   `generateId`: 生成随机 ID
-    -   `hashPassword`: 密码加密
-    -   `verifyPassword`: 密码验证
-    -   `calculateExpiryTime`: 计算过期时间
-    -   `isExpired`: 检查是否过期
-3.  前端组件
+    -   `generateId`: Generate random ID
+    -   `hashPassword`: Password encryption
+    -   `verifyPassword`: Password verification
+    -   `calculateExpiryTime`: Calculate expiration time
+    -   `isExpired`: Check if expired
+3.  Frontend Components
     
-    -   Vue 3 应用
-    -   Markdown 渲染
-    -   代码高亮
-    -   文件上传界面
+    -   Vue 3 application
+    -   Markdown rendering
+    -   Code highlighting
+    -   File upload interface
 
-### 📡 API 端点
+### 📡 API Endpoints
 
-1.  文本相关
+1.  Text Related
     
-    POST /api/paste     # 创建文本分享
-    GET  /api/paste/:id # 获取文本内容
+    POST /api/paste     # Create text share
+    GET  /api/paste/:id # Get text content
     
-2.  文件相关
+2.  File Related
     
-    POST /api/file      # 上传文件
-    GET  /api/file/:id  # 获取文件信息
-    GET  /api/file/:id?download=true # 下载文件
-    GET  /download/:id  # 直接下载文件
+    POST /api/file      # Upload file
+    GET  /api/file/:id  # Get file information
+    GET  /api/file/:id?download=true # Download file
+    GET  /download/:id  # Direct file download
     
-3.  管理相关
+3.  Admin Related
     
-    POST   /api/admin/login                    # 管理员登录
-    GET    /api/admin/shares                   # 获取分享列表
-    GET    /api/admin/storage                  # 获取存储空间使用情况
-    DELETE /api/admin/paste/:id                # 删除文本分享
-    DELETE /api/admin/file/:id                 # 删除文件分享
-    PUT    /api/admin/paste/:id/content        # 更新文本内容
-    PUT    /api/admin/paste/:id/password       # 修改文本分享密码
-    PUT    /api/admin/file/:id/password        # 修改文件分享密码
-    GET    /api/admin/upload-status            # 获取上传状态
-    PUT    /api/admin/upload-status            # 更新上传状态
-    PUT    /api/admin/file/:id/settings        # 修改文件分享设置
+    POST   /api/admin/login                    # Admin login
+    GET    /api/admin/shares                   # Get share list
+    GET    /api/admin/storage                  # Get storage space usage
+    DELETE /api/admin/paste/:id                # Delete text share
+    DELETE /api/admin/file/:id                 # Delete file share
+    PUT    /api/admin/paste/:id/content        # Update text content
+    PUT    /api/admin/paste/:id/password       # Modify text share password
+    PUT    /api/admin/file/:id/password        # Modify file share password
+    GET    /api/admin/upload-status            # Get upload status
+    PUT    /api/admin/upload-status            # Update upload status
+    PUT    /api/admin/file/:id/settings        # Modify file share settings
     
 
-🔄 自动化功能
+🔄 Automation Features
+----------------------
+
+### Expired Content Cleanup
+
+-   Automatic detection of expired content
+-   Scheduled cleanup of expired files and text
+-   Storage space release
+-   Automatic cleanup triggered every hour
+
+⚠️ Usage Limitations
+--------------------
+
+-   Maximum file size: 98MB (modifiable)
+-   Supported expiration times: 1 hour, 1 day, 7 days, 30 days, never expires
+-   Concurrent requests limited by Worker
+-   Free R2 total storage space: 10GB (modifiable)
+-   Share access count limits:
+    -   Text shares can set maximum view count
+    -   File shares can set maximum download count
+    -   Custom count settings, 0 means unlimited
+    -   Automatic deletion when limit is reached
+-   Custom link limitations:
+    -   Only supports letters, numbers, hyphens, and underscores
+    -   Only available for single file uploads
+-   Storage space warnings:
+    -   Warning at 70% usage
+    -   Danger alert at 90% usage
+    -   Upload disabled when storage is full
+
+📝 Notes
 --------
 
-### 过期内容清理
-
--   自动检测过期内容
--   定时清理过期文件和文本
--   释放存储空间
--   每整点自动触发清理
-
-⚠️ 使用限制
--------
-
--   文件大小上限：98MB
--   支持的过期时间：1 小时、1 天、7 天、30 天，永不过期
--   并发请求受 Worker 限制
--   总存储空间：5GB
--   分享次数访问限制：
-    -   文本分享可设置最大访问次数
-    -   文件分享可设置最大下载次数
-    -   自定义设置次数，0 表示无限制
-    -   达到限制次数后自动删除
--   自定义链接限制：
-    -   仅支持字母、数字、横线和下划线
-    -   仅单文件上传时可用
--   上传功能限制：
-    -   管理员可随时开启/关闭文本上传
-    -   管理员可随时开启/关闭文件上传
--   存储空间预警：
-    -   70%使用率时显示警告
-    -   90%使用率时显示危险提示
-    -   存储空间满时无法继续上传
-
-📝 注意事项
--------
-
-1.  确保正确配置环境变量
+1.  Ensure correct environment variable configuration
     
-2.  定期检查存储使用量
+2.  Regular storage usage checks
     
-    -   通过管理面板监控存储空间
-    -   注意存储空间使用率预警
-    -   及时清理不需要的内容
-3.  监控错误日志
+    -   Monitor storage space through admin panel
+    -   Pay attention to storage space usage warnings
+    -   Timely cleanup of unnecessary content
+3.  Monitor error logs
     
-4.  注意 Worker 使用配额
+4.  Mind Worker usage quotas
     
-5.  直链下载若要在服务器传输文件
+5.  For direct link downloads on server file transfer
     
-    # 直接下载
+    # Direct download
     curl -O https://your-domain/download/fileId
     
-    # 带密码下载
+    # Download with password
     curl -H "X-Password: your-password" -O https://your-domain/download/fileId
     
 
-🛠️ 使用
-------
+🛠️ Built With
+--------------
 
 -   Cloudflare Workers
 -   Cloudflare KV
 -   Cloudflare R2
 -   Vue 3
--   Marked (Markdown 渲染)
--   Highlight.js (代码高亮)
+-   Marked (Markdown rendering)
+-   Highlight.js (code highlighting)
 
-📱 浏览器支持
---------
+📱 Browser Support
+------------------
 
--   Chrome (推荐)
+-   Chrome (recommended)
 -   Firefox
 -   Safari
 -   Edge
--   移动端浏览器
+-   Mobile browsers
 
-📄 许可证
-------
+📄 License
+----------
 
 MIT License
 
-🔗 相关链接
--------
+🔗 Related Links
+----------------
 
--   Cloudflare Workers 文档
--   Vue 3 文档
--   Marked 文档
+-   Cloudflare Workers Documentation
+-   Vue 3 Documentation
+-   Marked Documentation
 
 Star History
 ------------

@@ -1,6 +1,6 @@
 ---
 project: free-api
-stars: 15110
+stars: 15123
 description: 收集免费的接口服务,做一个api的搬运工
 url: https://github.com/fangzesheng/free-api
 ---
@@ -12,6 +12,14 @@ url: https://github.com/fangzesheng/free-api
 ****
 
 ##程序员的浪漫 ##你适合干程序吗？
+
+2025-01-20
+==========
+
+### 本月更新的接口有：相克食物，知乎热搜榜。
+
+-   **相克食物(可在线调用):** 会相克的食物查询，避免误食产生不良后果 接口地址
+-   **知乎热搜榜(可在线调用):** 知乎热搜榜 接口地址
 
 2024-12-08
 ==========

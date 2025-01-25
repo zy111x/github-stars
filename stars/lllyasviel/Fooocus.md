@@ -1,6 +1,6 @@
 ---
 project: Fooocus
-stars: 42665
+stars: 42785
 description: Focus on prompting and generating
 url: https://github.com/lllyasviel/Fooocus
 ---
@@ -303,7 +303,7 @@ Then run the `run.bat`.
 
 AMD is not intensively tested, however. The AMD support is in beta.
 
-For AMD, use `.\python_embeded\python.exe entry_with_update.py --directml --preset anime` or `.\python_embeded\python.exe entry_with_update.py --directml --preset realistic` for Fooocus Anime/Realistic Edition.
+For AMD, use `.\python_embeded\python.exe Fooocus\entry_with_update.py --directml --preset anime` or `.\python_embeded\python.exe Fooocus\entry_with_update.py --directml --preset realistic` for Fooocus Anime/Realistic Edition.
 
 ### Mac
 
