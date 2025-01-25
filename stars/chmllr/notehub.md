@@ -1,6 +1,6 @@
 ---
 project: notehub
-stars: 274
+stars: 273
 description: |-
     A pastebin for markdown pages.
 url: https://github.com/chmllr/notehub

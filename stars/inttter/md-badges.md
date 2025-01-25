@@ -1,6 +1,6 @@
 ---
 project: md-badges
-stars: 440
+stars: 457
 description: |-
     An extensive list of Shields.io badges.
 url: https://github.com/inttter/md-badges
@@ -77,6 +77,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Google Assistant](https://img.shields.io/badge/Google%20Assistant-4285F4?logo=googleassistant&logoColor=fff)](#) | `[![Google Assistant](https://img.shields.io/badge/Google%20Assistant-4285F4?logo=googleassistant&logoColor=fff)](#)` |
 | [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](#) | `[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](#)` |
 | [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#) | `[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#)` |
+| [![v0](https://img.shields.io/badge/v0-000?logo=v0&logoColor=fff)](#) | `[![v0](https://img.shields.io/badge/v0-000?logo=v0&logoColor=fff)](#)` |
 
 <div align="right">
 
@@ -176,6 +177,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Hostinger](https://img.shields.io/badge/Hostinger-673DE6?logo=hostinger&logoColor=fff)](#) | `[![Hostinger](https://img.shields.io/badge/Hostinger-673DE6?logo=hostinger&logoColor=fff)](#)` |
 | [![Netlify](https://img.shields.io/badge/Netlify-%23000000.svg?logo=netlify&logoColor=#00C7B7)](#) | `[![Netlify](https://img.shields.io/badge/Netlify-%23000000.svg?logo=netlify&logoColor=#00C7B7)](#)` |
 | [![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#) | `[![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)` |
+| [![Odoo](https://img.shields.io/badge/Odoo-714B67?logo=Odoo&logoColor=fff)](#) | `[![Odoo](https://img.shields.io/badge/Odoo-714B67?logo=Odoo&logoColor=fff)](#)` |
 | [![Oracle Cloud](https://custom-icon-badges.demolab.com/badge/Oracle%20Cloud-F80000?logo=oracle&logoColor=white)](#) | `[![Oracle Cloud](https://custom-icon-badges.demolab.com/badge/Oracle%20Cloud-F80000?logo=oracle&logoColor=white)](#)` |
 | [![SAP](https://img.shields.io/badge/SAP-0FAAFF?logo=sap&logoColor=fff)](#) | `[![SAP](https://img.shields.io/badge/SAP-0FAAFF?logo=sap&logoColor=fff)](#)` |
 | [![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](#) | `[![Vercel](https://img.shields.io/badge/Vercel-%23000000.svg?logo=vercel&logoColor=white)](#)` |

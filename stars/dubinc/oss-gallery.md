@@ -1,6 +1,6 @@
 ---
 project: oss-gallery
-stars: 1144
+stars: 1150
 description: |-
     A crowdsourced list of the best open-source projects on the internet. Built with the Dub TypeScript SDK.
 url: https://github.com/dubinc/oss-gallery

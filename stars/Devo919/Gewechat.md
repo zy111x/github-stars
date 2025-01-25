@@ -1,6 +1,6 @@
 ---
 project: Gewechat
-stars: 729
+stars: 790
 description: |-
     微信机器人框架，个人微信二次开发，最简单易用的免费二开框架,微信ipad登录（非HOOK破解桌面端）
 url: https://github.com/Devo919/Gewechat
@@ -198,9 +198,10 @@ docker update --restart=always gewe
 
 ## 友情链接
 - [gewechaty](https://github.com/mikoshu/gewechaty) 基于nodejs二次封装gewechat的易用框架
-- [rgewe-api](https://github.com/momo402/rgewe-api) 基于rust语言封装gewechat的api接口，同步API web页面文档
-- [gewechat-python](https://github.com/hanfangyuan4396/gewechat-python) python实现的gewechat api接口
 - [dify-on-wechat](https://github.com/hanfangyuan4396/dify-on-wechat) 对chatgpt-on-wechat项目扩展，实现了gewechat channel
+- [rgewe-api](https://github.com/momo402/rgewe-api) 【demo】基于rust语言封装gewechat的api接口，同步API web页面文档
+- [gewechat-python](https://github.com/hanfangyuan4396/gewechat-python) 【demo】python实现的gewechat api接口
+  
 
 ## 版本更新
 

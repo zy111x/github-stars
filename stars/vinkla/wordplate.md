@@ -1,6 +1,6 @@
 ---
 project: wordplate
-stars: 2120
+stars: 2121
 description: |-
     A boilerplate for WordPress, built with Composer and designed with sensible defaults.
 url: https://github.com/vinkla/wordplate

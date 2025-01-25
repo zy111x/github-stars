@@ -1,6 +1,6 @@
 ---
 project: diem
-stars: 16695
+stars: 16697
 description: |-
     Diem’s mission is to build a trusted and innovative financial network that empowers people and businesses around the world.
 url: https://github.com/diem/diem

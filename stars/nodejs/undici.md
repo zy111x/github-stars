@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 6503
+stars: 6528
 description: |-
     An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici
@@ -345,7 +345,8 @@ See [Dispatcher.upgrade](./docs/docs/api/Dispatcher.md#dispatcherupgradeoptions-
 
 * dispatcher `Dispatcher`
 
-Sets the global dispatcher used by Common API Methods.
+Sets the global dispatcher used by Common API Methods. Global dispatcher is shared among compatible undici modules,
+including undici that is bundled internally with node.js.
 
 ### `undici.getGlobalDispatcher()`
 

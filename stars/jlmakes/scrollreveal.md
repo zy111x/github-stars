@@ -1,6 +1,6 @@
 ---
 project: scrollreveal
-stars: 22457
+stars: 22462
 description: |-
     Animate elements as they scroll into view.
 url: https://github.com/jlmakes/scrollreveal

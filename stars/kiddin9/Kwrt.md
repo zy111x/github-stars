@@ -1,6 +1,6 @@
 ---
 project: Kwrt
-stars: 8019
+stars: 8031
 description: |-
     一分钟在线定制编译 X86/64, NanoPi R2S R4S R5S R6S, 斐讯 Phicomm N1 K2P,  树莓派 Raspberry Pi, 香橙派 Orange Pi, 红米AX6, 小米AX3600, 小米AX9000, 红米AX6S 小米AX3200, 红米AC2100, 华硕ASUS, 网件NETGEAR 等主流软硬路由
 url: https://github.com/kiddin9/Kwrt

@@ -1,6 +1,6 @@
 ---
 project: exo
-stars: 18714
+stars: 19922
 description: |-
     Run your own AI cluster at home with everyday devices 📱💻 🖥️⌚
 url: https://github.com/exo-explore/exo
@@ -68,7 +68,7 @@ Unlike other distributed inference frameworks, exo does not use a master-worker 
 
 Exo supports different [partitioning strategies](exo/topology/partitioning_strategy.py) to split up a model across devices. The default partitioning strategy is [ring memory weighted partitioning](exo/topology/ring_memory_weighted_partitioning_strategy.py). This runs an inference in a ring where each device runs a number of model layers proportional to the memory of the device.
 
-!["A screenshot of exo running 5 nodes](docs/exo-screenshot.png)
+!["A screenshot of exo running 5 nodes](docs/exo-screenshot.jpg)
 
 ## Installation
 

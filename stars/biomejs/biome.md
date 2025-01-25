@@ -1,10 +1,14 @@
 ---
 project: biome
-stars: 16519
+stars: 16636
 description: |-
     A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP.
 url: https://github.com/biomejs/biome
 ---
+
+> [!IMPORTANT]
+> All new developments, fixes and features should be directed towards the `next` branch.
+> The `main` is only used for maintenance and CI while the team prepares everything for v2.
 
 <div align="center">
   <picture>
@@ -144,6 +148,9 @@ We use [Polar.sh](https://polar.sh/biomejs) to up-vote and promote specific feat
       </td>
       <td align="center" valign="middle">
         <a href="https://www.phoenixlabs.dev/?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://images.opencollective.com/phoenix-labs/2824ed4/logo/100.png?height=100" height="100"></a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://lokalise.com/?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://avatars.githubusercontent.com/u/14294501?s=200&v=4" height="100"></a>
       </td>
     </tr>
   </tbody>

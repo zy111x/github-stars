@@ -1,6 +1,6 @@
 ---
 project: gewechaty
-stars: 121
+stars: 129
 description: |-
     GeweBot是基于Gewechat项目的二次封装，提供了更方便的使用方式。它参考wechaty的api实现，以满足更快速开发的需求。
 url: https://github.com/mikoshu/gewechaty
@@ -297,7 +297,7 @@ const onMessage = async (msg) => {
   });
   msg.say(video);
 
-  // 发送语音 （由于确实silk文件暂时未发送成功 待测试）
+  // 发送语音
   const voice = new Voice({
     voiceUrl: `${bot.proxy}/test/test2.silk`,
     voiceDuration: 3000, // 语音时长(注意 语音时长以毫秒为单位)
@@ -332,6 +332,14 @@ const onMessage = async (msg) => {
   msg.say(emoji);
 
   msg.quote('引用了这条消息') // 引用这条消息传入一个引用时的内容只能是文字
+
+  // 静态引用方法
+  await bot.Message.quote({
+    title: '引用了这条消息',
+    msgid: this._newMsgId,
+    wxid: this.fromId
+  })
+
 
   // 下载图片 如果为图片消息可以使用toFileBox方法下载
   const filebox = await msg.toFileBox();

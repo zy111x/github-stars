@@ -1,16 +1,15 @@
 ---
 project: Checkmate
-stars: 3356
+stars: 3534
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
 url: https://github.com/bluewave-labs/Checkmate
 ---
 
 
-## **Announcing $5000 grant funding in partnership with [UpRock](https://uprock.com) to build distributed uptime monitoring - check [our web page](https://checkmate.so) for funding ideas** 
 
-![Frame 34](https://github.com/user-attachments/assets/00db1520-24b6-42f2-aca2-a1c9794677da)
-
+<p align=center> <a href="https://trendshift.io/repositories/12443" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12443" alt="bluewave-labs%2Fcheckmate | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a></p>
+  
 ![](https://img.shields.io/github/license/bluewave-labs/checkmate)
 ![](https://img.shields.io/github/repo-size/bluewave-labs/checkmate)
 ![](https://img.shields.io/github/commit-activity/m/bluewave-labs/checkmate)
@@ -19,6 +18,7 @@ url: https://github.com/bluewave-labs/Checkmate
 ![](https://img.shields.io/github/issues/bluewave-labs/checkmate)
 ![](https://img.shields.io/github/issues-pr/bluewave-labs/checkmate)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9901/badge)](https://www.bestpractices.dev/projects/9901)
+
 
 <h1 align="center"><a href="https://bluewavelabs.ca" target="_blank">Checkmate</a></h1>
 
@@ -65,23 +65,27 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 
 **Short term roadmap:**
 
-- Port monitoring (**complete**, waiting to be deployed to stable version)
-- Global (distributed) uptime checking on Solana network (**in progress**)
-- Status pages (**in progress**)
+- Port monitoring (**complete**, waiting to be deployed to stable version) https://github.com/bluewave-labs/Checkmate/issues/1476
+- Global (distributed) uptime checking on Solana network (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1593
+- Status pages (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1131 
 - Translations (i18n) (**in progress**)
-- Better notification options (Webhooks, Discord, Telegram, Slack)
-- Server security monitoring 
+- Better notification options (Webhooks, Discord, Telegram, Slack) (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1545
+- Command line interface (CLI) (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1558
+- JSON query monitoring https://github.com/bluewave-labs/Checkmate/issues/1573
+- Tagging/grouping monitors https://github.com/bluewave-labs/Checkmate/issues/1546
 - More configuration options
-- Tagging/grouping monitors
 - DNS monitoring
 
 ## 🏗️ Screenshots
-
+<p>
 <img width="2714" alt="server" src="https://github.com/user-attachments/assets/f7cb272a-69a6-48c5-93b0-249ecf20ecc6" />
+</p>
 <p>
 <img width="2714" alt="uptime" src="https://github.com/user-attachments/assets/98ddc6c0-3384-47fd-96ce-7e53e6b688ac" />
+</p>
 <p>
 <img width="2714" alt="page speed" src="https://github.com/user-attachments/assets/b5589f79-da30-4239-9846-1f8bb2637ff9" />
+</p>
 
 ## 🏗️ Tech stack
 

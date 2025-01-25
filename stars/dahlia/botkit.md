@@ -1,6 +1,6 @@
 ---
 project: botkit
-stars: 35
+stars: 40
 description: |-
     A framework for creating ActivityPub bots
 url: https://github.com/dahlia/botkit

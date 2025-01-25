@@ -1,6 +1,6 @@
 ---
 project: plyr
-stars: 27984
+stars: 28081
 description: |-
     A simple HTML5, YouTube and Vimeo player
 url: https://github.com/sampotts/plyr

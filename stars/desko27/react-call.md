@@ -1,6 +1,6 @@
 ---
 project: react-call
-stars: 572
+stars: 737
 description: |-
     ⚛️ 📡 Call your React components
 url: https://github.com/desko27/react-call
@@ -103,6 +103,42 @@ const accepted = await Confirm.call({ message: 'Continue?' })
 
 Check out [the demo site](https://react-call.desko.dev/) to see some live examples of other React components being called.
 
+# Advanced usage
+
+The returned promise can also be used to end the call from the caller scope:
+
+```tsx
+const promise = Confirm.call({ message: 'Continue?' })
+
+// For example, on some event subscription
+onImportantEvent(() => {
+  Confirm.end(promise, false)
+})
+
+// And still await the response where needed
+const accepted = await promise
+```
+
+Or even update the call props on the fly:
+
+```tsx
+const promise = Alert.call({ message: 'Starting operation...' })
+await asyncOperation()
+Alert.update(promise, { message: 'Completed!' })
+```
+
+While the promise argument is used to target that specific call, all ongoing calls can be affected by omitting it:
+
+```tsx
+// All confirm calls are ended with `false`
+Confirm.end(false)
+
+// All alert calls are updated with the new message prop
+Alert.update({ message: 'Completed!' })
+```
+
+This may also be cleaner for you if you're sure that only one call is run at once in your code.
+
 # Exit animations
 
 To animate the exit of your component when `call.end()` is run, just pass the duration of your animation in milliseconds to createCallable as a second argument:
@@ -184,8 +220,8 @@ ReactCall.Callable<Props?, Response?, RootProps?> | What createCallable returns
 
 Error | Solution
 --- | ---
-No \<Root> found! | You forgot to place the Root, check [Place the Root](#2--place-the-root) section. If it's already in place but not present by the time you call(), you may want to place it higher in your React tree. If you're getting this error on the server see [SSR section](#does-the-setup-work-with-ssr).
-Multiple instances of \<Root> found! | You placed more than one Root, check [Place the Root](#2--place-the-root) section as there is a warning about this.
+No \<Root> found! | You forgot to place the Root, check [Rooting section](#2--rooting). If it's already in place but not present by the time you call(), you may want to place it higher in your React tree. If you're getting this error on the server see [SSR section](#ssr).
+Multiple instances of \<Root> found! | You placed more than one Root, check [Rooting section](#2--rooting) as there is a warning about this.
 
 # SSR
 

@@ -1,6 +1,6 @@
 ---
 project: asuswrt-merlin
-stars: 6742
+stars: 6746
 description: |-
     Enhanced version of Asus's router firmware (Asuswrt) (legacy code base)
 url: https://github.com/RMerl/asuswrt-merlin

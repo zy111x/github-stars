@@ -1,6 +1,6 @@
 ---
 project: node
-stars: 108995
+stars: 109139
 description: |-
     Node.js JavaScript runtime ✨🐢🚀✨
 url: https://github.com/nodejs/node

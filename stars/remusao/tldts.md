@@ -1,6 +1,6 @@
 ---
 project: tldts
-stars: 540
+stars: 541
 description: |-
     JavaScript Library to extract domains, subdomains and public suffixes from complex URIs.
 url: https://github.com/remusao/tldts

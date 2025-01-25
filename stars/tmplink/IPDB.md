@@ -1,6 +1,6 @@
 ---
 project: IPDB
-stars: 478
+stars: 477
 description: |-
     National IP database, providing data based on CIDR and NETMASK format, supporting IPv4 and IPv6.
 url: https://github.com/tmplink/IPDB

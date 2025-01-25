@@ -1,6 +1,6 @@
 ---
 project: sql-formatter
-stars: 2443
+stars: 2446
 description: |-
     A whitespace formatter for different query languages
 url: https://github.com/sql-formatter-org/sql-formatter

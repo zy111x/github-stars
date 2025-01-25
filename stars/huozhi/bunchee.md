@@ -1,6 +1,6 @@
 ---
 project: bunchee
-stars: 991
+stars: 996
 description: |-
     Zero config bundler for npm packages
 url: https://github.com/huozhi/bunchee
@@ -49,12 +49,12 @@ Add the exports in `package.json`.
 
 ```json5
 {
-  name: 'coffee',
-  type: 'module',
-  main: './dist/index.js',
-  scripts: {
-    build: 'bunchee',
-  },
+  "name": "coffee",
+  "type": "module",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "bunchee"
+  }
 }
 ```
 
@@ -81,23 +81,23 @@ Here's a example of entry files and exports configuration:
 
 ```json5
 {
-  name: 'coffee',
-  scripts: {
-    build: 'bunchee',
+  "name": "coffee",
+  "scripts": {
+    "build: "bunchee",
   },
-  type: 'module',
-  exports: {
+  "type": "module",
+  "exports": {
     // entry: ./src/index.ts
-    '.': {
-      import: './dist/index.js',
-      require: './dist/index.cjs',
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
     },
 
     // entry: ./src/lite.ts
-    './lite': './dist/lite.js',
+    "./lite": "./dist/lite.js",
 
     // entry: ./src/react/index.ts
-    './react': './dist/react.js',
+    "./react": "./dist/react.js",
   },
 }
 ```
@@ -132,15 +132,15 @@ The `dependencies` and `peerDependencies` will be marked as externalized and won
 ```json5
 {
   // Externalized
-  dependencies: {
+  "dependencies": {
     /* ... */
   },
-  peerDependencies: {
+  "peerDependencies": {
     /* ... */
   },
 
   // Bundled
-  devDependencies: {
+  "devDependencies": {
     /* ... */
   },
 }
@@ -154,10 +154,10 @@ For instance:
 
 ```json5
 {
-  exports: {
-    'react-server': './dist/react-server.mjs',
-    'edge-light': './dist/edge-light.mjs',
-    import: './dist/index.mjs',
+  "exports": {
+    "react-server": "./dist/react-server.mjs",
+    "edge-light": "./dist/edge-light.mjs",
+    "import": "./dist/index.mjs",
   },
 }
 ```
@@ -169,8 +169,8 @@ For instance:
 ```json5
 // package.json
 {
-  imports: {
-    '#util': './src/utils.ts',
+  "imports": {
+    "#util": "./src/utils.ts",
   },
 }
 ```
@@ -191,7 +191,7 @@ This will match the `bin` field in package.json as:
 
 ```json5
 {
-  bin: './dist/bin.js',
+  "bin": "./dist/bin.js",
 }
 ```
 
@@ -212,9 +212,9 @@ This will match the `bin` field in package.json as:
 
 ```json5
 {
-  bin: {
-    foo: './dist/bin/a.js',
-    bar: './dist/bin/b.js',
+  "bin": {
+    "foo": "./dist/bin/a.js",
+    "bar": "./dist/bin/b.js",
   },
 }
 ```
@@ -346,14 +346,14 @@ Then use use the [exports field in package.json](https://nodejs.org/api/packages
 
 ```json5
 {
-  files: ['dist'],
-  type: 'module',
-  exports: {
-    '.': './dist/es/index.js',
-    './react': './dist/es/react.js',
+  "files": ["dist"],
+  "type": "module",
+  "exports": {
+    ".": "./dist/es/index.js",
+    "./react": "./dist/es/react.js",
   },
-  scripts: {
-    build: 'bunchee',
+  "scripts": {
+    "build": "bunchee",
   },
 }
 ```
@@ -367,21 +367,21 @@ If you're building a TypeScript library, separate the types from the main entry 
 
 ```json5
 {
-  files: ['dist'],
-  type: 'module',
-  main: './dist/index.js',
-  exports: {
-    '.': {
-      types: './dist/index.d.ts',
-      default: './dist/index.js',
+  "files": ["dist"],
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js",
     },
-    './react': {
-      types: './dist/react/index.d.ts',
-      default: './dist/react/index.js',
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "default": "./dist/react/index.js",
     },
   },
-  scripts: {
-    build: 'bunchee',
+  "scripts": {
+    "build": "bunchee",
   },
 }
 ```
@@ -396,23 +396,23 @@ _NOTE_: When you're using `.mjs` or `.cjs` extensions with TypeScript and modern
 
 ```json5
 {
-  files: ['dist'],
-  type: 'module',
-  main: './dist/index.js',
-  module: './dist/index.js',
-  types: './dist/index.d.ts',
-  exports: {
-    import: {
-      types: './dist/index.d.ts',
-      default: './dist/index.js',
+  "files": ["dist"],
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js",
     },
-    require: {
-      types: './dist/index.d.cts',
-      default: './dist/index.cjs',
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs",
     },
   },
-  scripts: {
-    build: 'bunchee',
+  "scripts": {
+    "build": "bunchee",
   },
 }
 ```
@@ -458,9 +458,9 @@ This will match the export name `"react-server"` and `"edge-light"` then use the
 
 ```json5
 {
-  exports: {
-    development: './dist/index.development.js',
-    production: './dist/index.production.js',
+  "exports": {
+    "development": './dist/index.development.js',
+    "production": './dist/index.production.js',
   },
 }
 ```
@@ -507,8 +507,8 @@ hello world
 
 output
 
-```
-export default "hello world"
+```js
+export default 'hello world'
 ```
 
 ### Node.js API
@@ -546,11 +546,11 @@ For example:
 
 ```json5
 {
-  browserslist: [
-    'last 1 version',
-    '> 1%',
-    'maintained node versions',
-    'not dead',
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead",
   ],
 }
 ```
