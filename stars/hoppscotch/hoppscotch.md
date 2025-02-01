@@ -1,6 +1,6 @@
 ---
 project: hoppscotch
-stars: 66637
+stars: 66941
 description: |-
     Open source API development ecosystem - https://hoppscotch.io (open-source alternative to Postman, Insomnia)
 url: https://github.com/hoppscotch/hoppscotch

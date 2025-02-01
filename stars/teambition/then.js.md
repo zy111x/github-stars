@@ -1,6 +1,6 @@
 ---
 project: then.js
-stars: 570
+stars: 569
 description: |-
     [快照]史上最快，与 node callback 完美结合的异步流程控制库!
 url: https://github.com/teambition/then.js

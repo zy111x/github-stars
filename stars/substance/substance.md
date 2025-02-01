@@ -1,6 +1,6 @@
 ---
 project: substance
-stars: 2750
+stars: 2749
 description: |-
     A JavaScript library for web-based content editing.
 url: https://github.com/substance/substance

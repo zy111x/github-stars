@@ -1,6 +1,6 @@
 ---
 project: DNS.Surf
-stars: 336
+stars: 338
 description: |-
     Querying DNS Resolution Results in Different Regions Worldwide.
 url: https://github.com/ccbikai/DNS.Surf

@@ -1,6 +1,6 @@
 ---
 project: kbar
-stars: 4915
+stars: 4931
 description: |-
     fast, portable, and extensible cmd+k interface for your site
 url: https://github.com/timc1/kbar

@@ -1,6 +1,6 @@
 ---
 project: llamafile
-stars: 21374
+stars: 21494
 description: |-
     Distribute and run LLMs with a single file.
 url: https://github.com/Mozilla-Ocho/llamafile
@@ -372,6 +372,13 @@ disable the WIN32 interop feature:
 
 ```sh
 sudo sh -c "echo -1 > /proc/sys/fs/binfmt_misc/WSLInterop"
+```
+
+In Windows 11 with WSL 2 the location of the interop flag has changed, as such
+the following command be required instead/additionally:
+
+```sh
+sudo sh -c "echo -1 > /proc/sys/fs/binfmt_misc/WSLInterop-late"
 ```
 
 In the instance of getting a `Permission Denied` on disabling interop

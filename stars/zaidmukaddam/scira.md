@@ -1,6 +1,6 @@
 ---
 project: scira
-stars: 4282
+stars: 4433
 description: |-
     Scira (Formerly MiniPerplx) is a minimalistic AI-powered search engine that helps you find information on the internet. Powered by Vercel AI SDK! Search with models like Grok 2.0.
 url: https://github.com/zaidmukaddam/scira

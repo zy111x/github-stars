@@ -1,6 +1,6 @@
 ---
 project: lowstorage
-stars: 224
+stars: 225
 description: |-
     💾 Simple, lightning fast, object pseudo-database for S3-compatible storages using Avro schema
 url: https://github.com/good-lly/lowstorage

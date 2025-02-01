@@ -1,9 +1,9 @@
 ---
 project: botkit
-stars: 40
+stars: 47
 description: |-
     A framework for creating ActivityPub bots
-url: https://github.com/dahlia/botkit
+url: https://github.com/fedify-dev/botkit
 ---
 
 <img src="./logo.svg" alt="BotKit by Fedify" width="203" height="165">
@@ -68,10 +68,10 @@ export default bot;
 For more information, see the [BotKit docs][BotKit].
 
 [BotKit]: https://botkit.fedify.dev/
-[GitHub Actions]: https://github.com/dahlia/botkit/actions/workflows/main.yaml
-[GitHub Actions badge]: https://github.com/dahlia/botkit/actions/workflows/main.yaml/badge.svg
-[Codecov]: https://codecov.io/gh/dahlia/botkit
-[Codecov badge]: https://codecov.io/gh/dahlia/botkit/graph/badge.svg?token=dMbBbQvk4v
+[GitHub Actions]: https://github.com/fedify-dev/botkit/actions/workflows/main.yaml
+[GitHub Actions badge]: https://github.com/fedify-dev/botkit/actions/workflows/main.yaml/badge.svg
+[Codecov]: https://codecov.io/gh/fedify-dev/botkit
+[Codecov badge]: https://codecov.io/gh/fedify-dev/botkit/graph/badge.svg?token=1KVVER1626
 [Fediverse]: https://hollo.social/@botkit
 [Fediverse badge]: https://fedi-badge.deno.dev/@botkit@hollo.social/followers.svg
 [ActivityPub]: https://activitypub.rocks/

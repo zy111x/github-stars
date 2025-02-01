@@ -1,6 +1,6 @@
 ---
 project: piku
-stars: 5937
+stars: 5935
 description: |-
     The tiniest PaaS you've ever seen. Piku allows you to do git push deployments to your own servers.
 url: https://github.com/piku/piku
@@ -32,7 +32,7 @@ There are also [other installation methods](https://piku.github.io/install) avai
 
 **`piku` is considered STABLE**. It is actively maintained, but "actively" here means the feature set is pretty much done, so it is only updated when new language runtimes are added or reproducible bugs crop up.
 
-It currently requires Python 3.7 or above, since even though 3.8+ is now the baseline Python 3 version in Ubuntu LTS 20.04 and Debian 11 has already moved on to 3.9, there are no substantial differences between those versions.
+It currently requires Python 3.8 or above (which is what we test against), although it can be cajoled to run on older versions. We currently aim to support the latest two Debian and Ubuntu LTS major versions.
 
 ## Motivation
 

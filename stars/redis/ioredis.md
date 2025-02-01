@@ -1,6 +1,6 @@
 ---
 project: ioredis
-stars: 14557
+stars: 14570
 description: |-
     🚀 A robust, performance-focused, and full-featured Redis client for Node.js.
 url: https://github.com/redis/ioredis
@@ -733,11 +733,17 @@ There are also `hscanStream`, `zscanStream` and `sscanStream` to iterate through
 similar to `scanStream` except the first argument is the key name:
 
 ```javascript
-const stream = redis.hscanStream("myhash", {
+const stream = redis.zscanStream("myhash", {
   match: "age:??",
 });
 ```
-
+The `hscanStream` also accepts the `noValues` option to specify whether Redis should return only the keys in the hash table without their corresponding values.
+```javascript
+const stream = redis.hscanStream("myhash", {
+  match: "age:??",
+  noValues: true,
+});
+```
 You can learn more from the [Redis documentation](http://redis.io/commands/scan).
 
 **Useful Tips**
@@ -1140,7 +1146,31 @@ const cluster = new Redis.Cluster(
 );
 ```
 
+Or you can specify this parameter through function:
+```javascript
+const cluster = new Redis.Cluster(
+  [
+    {
+      host: "203.0.113.73",
+      port: 30001,
+    },
+  ],
+  {
+    natMap: (key) => {
+      if(key.indexOf('30001')) {
+        return { host: "203.0.113.73", port: 30001 };
+      }
+
+      return null;
+    },
+  }
+);
+```
+
 This option is also useful when the cluster is running inside a Docker container.
+Also it works for Clusters in cloud infrastructure where cluster nodes connected through dedicated subnet.
+
+Specifying through may be useful if you don't know concrete internal host and know only node port.
 
 ### Transaction and Pipeline in Cluster Mode
 

@@ -1,6 +1,6 @@
 ---
 project: pocket-id
-stars: 1117
+stars: 1277
 description: |-
     A simple and easy-to-use OIDC provider that allows users to authenticate with their passkeys to your services.
 url: https://github.com/stonith404/pocket-id
@@ -10,7 +10,7 @@ url: https://github.com/stonith404/pocket-id
 
 Pocket ID is a simple OIDC provider that allows users to authenticate with their passkeys to your services.
 
-→ Try out the [Demo](https://pocket-id.eliasschneider.com)
+→ Try out the [Demo](https://demo.pocket-id.org)
 
 <img src="https://github.com/user-attachments/assets/96ac549d-b897-404a-8811-f42b16ea58e2" width="1200"/>
 
@@ -22,7 +22,7 @@ Additionally, what makes Pocket ID special is that it only supports [passkey](ht
 
 Pocket ID can be set up in multiple ways. The easiest and recommended way is to use Docker.
 
-Visit the [documentation](https://stonith404.github.io/pocket-id) for the setup guide and more information.
+Visit the [documentation](https://docs.pocket-id.org) for the setup guide and more information.
 
 ## Contribute
 

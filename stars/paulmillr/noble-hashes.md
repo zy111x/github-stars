@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 627
+stars: 631
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
@@ -52,32 +52,36 @@ A standalone file [noble-hashes.js](https://github.com/paulmillr/noble-hashes/re
 
 ```js
 // import * from '@noble/hashes'; // Error: use sub-imports, to ensure small app size
-import { sha256 } from '@noble/hashes/sha2'; // ECMAScript modules (ESM) and Common.js
-console.log(sha256(new Uint8Array([1, 2, 3]))); // Uint8Array(32) [3, 144, 88, 198, 242...]
-// strings are also accepted and auto-encoded into u8a
-console.log(sha256('abc')); // == sha256(new TextEncoder().encode('abc'))
+import { sha256 } from '@noble/hashes/sha2'; // ESM & Common.js
+sha256(new Uint8Array([1, 2, 3]); // returns Uint8Array
+sha256('abc'); // == sha256(new TextEncoder().encode('abc'))
+
+// Available modules
+import { sha256, sha384, sha512, sha224, sha512_256, sha512_384 } from '@noble/hashes/sha2';
+import { sha3_256, sha3_512, keccak_256, keccak_512, shake128, shake256 } from '@noble/hashes/sha3';
+import { cshake256, turboshake256, kmac256, tuplehash256, k12, m14, keccakprg } from '@noble/hashes/sha3-addons';
+import { ripemd160 } from '@noble/hashes/ripemd160';
+import { blake3 } from '@noble/hashes/blake3';
+import { blake2b } from '@noble/hashes/blake2b';
+import { blake2s } from '@noble/hashes/blake2s';
+import { blake256, blake512 } from '@noble/hashes/blake1';
+import { hmac } from '@noble/hashes/hmac';
+import { hkdf } from '@noble/hashes/hkdf';
+import { pbkdf2, pbkdf2Async } from '@noble/hashes/pbkdf2';
+import { scrypt, scryptAsync } from '@noble/hashes/scrypt';
+import * as utils from '@noble/hashes/utils'; // bytesToHex, hexToBytes, etc
 ```
 
-- [Implementations](#implementations)
-  - [sha2: sha256, sha384, sha512](#sha2-sha256-sha384-sha512-and-others)
-  - [sha3: FIPS, SHAKE, Keccak](#sha3-fips-shake-keccak)
-  - [sha3-addons: cSHAKE, KMAC, K12, M14, TurboSHAKE](#sha3-addons-cshake-kmac-k12-m14-turboshake)
-  - [ripemd160](#ripemd160) | [blake, blake2b, blake2s, blake3](#blake-blake2b-blake2s-blake3) | [sha1: legacy hash](#sha1-legacy-hash)
-  - MACs: [hmac](#hmac) (also sha3-addons [kmac](#sha3-addons-cshake-kmac-k12-m14-turboshake), blake3 [key mode](#blake2b-blake2s-blake3))
-  - KDFs: [hkdf](#hkdf) | [pbkdf2](#pbkdf2) | [scrypt](#scrypt) | [argon2](#argon2)
-  - [utils](#utils)
-  - [All available imports](#all-available-imports)
+- [sha2: sha256, sha384, sha512](#sha2-sha256-sha384-sha512-and-others)
+- [sha3: FIPS, SHAKE, Keccak](#sha3-fips-shake-keccak)
+- [sha3-addons: cSHAKE, KMAC, K12, M14, TurboSHAKE](#sha3-addons-cshake-kmac-k12-m14-turboshake)
+- [ripemd160](#ripemd160) | [blake, blake2b, blake2s, blake3](#blake-blake2b-blake2s-blake3) | [sha1](#sha1)
+- MACs: [hmac](#hmac) | [sha3-addons kmac](#sha3-addons-cshake-kmac-k12-m14-turboshake) | [blake3 key mode](#blake2b-blake2s-blake3)
+- KDFs: [hkdf](#hkdf) | [pbkdf2](#pbkdf2) | [scrypt](#scrypt) | [argon2](#argon2)
+- [utils](#utils)
 - [Security](#security) | [Speed](#speed) | [Contributing & testing](#contributing--testing) | [License](#license)
 
 ### Implementations
-
-```ts
-// function hash(message: Uint8Array | string): Uint8Array;
-hash(new Uint8Array([1, 3]));
-hash('string'); // == hash(new TextEncoder().encode('string'));
-// prettier-ignore
-hash.create().update(new Uint8Array([1, 3])).digest();
-```
 
 Hash functions:
 
@@ -230,9 +234,9 @@ const h11_kdf = blake3('abc', { context: 'application name' });
 - Blake2 is popular fast hash. blake2b focuses on 64-bit platforms while blake2s is for 8-bit to 32-bit ones. See [RFC 7693](https://datatracker.ietf.org/doc/html/rfc7693), [Website](https://www.blake2.net)
 - Blake3 is faster, reduced-round blake2. See [Website & specs](https://blake3.io)
 
-#### sha1: legacy hash
+#### sha1
 
-SHA1 was cryptographically broken, however, it was not broken for cases like HMAC.
+SHA1 is legacy hash, which was cryptographically broken, however, it was not broken for cases like HMAC.
 
 See [RFC4226 B.2](https://datatracker.ietf.org/doc/html/rfc4226#appendix-B.2).
 
@@ -363,40 +367,6 @@ console.log(toHex(randomBytes(32)));
 - `bytesToHex` will convert `Uint8Array` to a hex string
 - `randomBytes(bytes)` will produce cryptographically secure random `Uint8Array` of length `bytes`
 
-#### All available imports
-
-```js
-import { sha256, sha384, sha512, sha224, sha512_256, sha512_384 } from '@noble/hashes/sha2';
-// prettier-ignore
-import {
-  sha3_224, sha3_256, sha3_384, sha3_512,
-  keccak_224, keccak_256, keccak_384, keccak_512,
-  shake128, shake256
-} from '@noble/hashes/sha3';
-// prettier-ignore
-import {
-  cshake128, cshake256,
-  turboshake128, turboshake256,
-  kmac128, kmac256,
-  tuplehash256, parallelhash256,
-  k12, m14, keccakprg
-} from '@noble/hashes/sha3-addons';
-import { ripemd160 } from '@noble/hashes/ripemd160';
-import { blake3 } from '@noble/hashes/blake3';
-import { blake2b } from '@noble/hashes/blake2b';
-import { blake2s } from '@noble/hashes/blake2s';
-import { hmac } from '@noble/hashes/hmac';
-import { hkdf } from '@noble/hashes/hkdf';
-import { pbkdf2, pbkdf2Async } from '@noble/hashes/pbkdf2';
-import { scrypt, scryptAsync } from '@noble/hashes/scrypt';
-
-import { sha1 } from '@noble/hashes/sha1'; // legacy
-
-// small utility method that converts bytes to hex
-import { bytesToHex as toHex } from '@noble/hashes/utils';
-console.log(toHex(sha256('abc'))); // ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
-```
-
 ## Security
 
 The library has been independently audited:
@@ -408,19 +378,19 @@ The library has been independently audited:
   - The audit has been funded by [Ethereum Foundation](https://ethereum.org/en/) with help of [Nomic Labs](https://nomiclabs.io)
 
 It is tested against property-based, cross-library and Wycheproof vectors,
-and has fuzzing by [Guido Vranken's cryptofuzz](https://github.com/guidovranken/cryptofuzz).
+and is being fuzzed in [the separate repo](https://github.com/paulmillr/fuzzing).
 
 If you see anything unusual: investigate and report.
 
 ### Constant-timeness
 
-_JIT-compiler_ and _Garbage Collector_ make "constant time" extremely hard to
-achieve [timing attack](https://en.wikipedia.org/wiki/Timing_attack) resistance
+We're targetting algorithmic constant time. _JIT-compiler_ and _Garbage Collector_ make "constant time"
+extremely hard to achieve [timing attack](https://en.wikipedia.org/wiki/Timing_attack) resistance
 in a scripting language. Which means _any other JS library can't have
 constant-timeness_. Even statically typed Rust, a language without GC,
 [makes it harder to achieve constant-time](https://www.chosenplaintext.ca/open-source/rust-timing-shield/security)
 for some cases. If your goal is absolute security, don't use any JS lib — including bindings to native ones.
-Use low-level libraries & languages. Nonetheless we're targetting algorithmic constant time.
+Use low-level libraries & languages.
 
 ### Memory dumping
 
@@ -444,16 +414,18 @@ can read application memory, you are doomed in any case:
 
 ### Supply chain security
 
-- **Commits** are signed with PGP keys, to prevent forgery. Make sure to verify commit signatures.
+- **Commits** are signed with PGP keys, to prevent forgery. Make sure to verify commit signatures
 - **Releases** are transparent and built on GitHub CI. Make sure to verify [provenance](https://docs.npmjs.com/generating-provenance-statements) logs
 - **Rare releasing** is followed to ensure less re-audit need for end-users
-- **Dependencies** are minimized and locked-down:
-  - If your app has 500 dependencies, any dep could get hacked and you'll be downloading
-    malware with every install. We make sure to use as few dependencies as possible
-  - We prevent automatic dependency updates by locking-down version ranges. Every update is checked with `npm-diff`
-- **Dev Dependencies** are only used if you want to contribute to the repo. They are disabled for end-users:
-  - scure-base, scure-bip32, scure-bip39, micro-bmark and micro-should are developed by the same author and follow identical security practices
-  - prettier (linter), fast-check (property-based testing) and typescript are used for code quality, vector generation and ts compilation. The packages are big, which makes it hard to audit their source code thoroughly and fully
+- **Dependencies** are minimized and locked-down: any dependency could get hacked and users will be downloading malware with every install.
+  - We make sure to use as few dependencies as possible
+  - Automatic dep updates are prevented by locking-down version ranges; diffs are checked with `npm-diff`
+- **Dev Dependencies** are disabled for end-users; they are only used to develop / build the source code
+
+For this package, there are 0 dependencies; and a few dev dependencies:
+
+- micro-bmark, micro-should and jsbt are used for benchmarking / testing / build tooling and developed by the same author
+- prettier, fast-check and typescript are used for code quality / test generation / ts compilation. It's hard to audit their source code thoroughly and fully because of their size
 
 ### Randomness
 
@@ -557,7 +529,7 @@ The current performance is good enough when compared to other projects; SHA256 t
 - `npm install && npm run build && npm test` will build the code and run tests.
 - `npm run lint` / `npm run format` will run linter / fix linter issues.
 - `npm run bench` will run benchmarks, which may need their deps first (`npm run bench:install`)
-- `cd build && npm install && npm run build:release` will build single file
+- `npm run build:release` will build single file
 - There is **additional** 20-min DoS test `npm run test:dos` and 2-hour "big" multicore test `npm run test:big`.
   See [our approach to testing](./test/README.md)
 

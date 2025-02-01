@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 3094
+stars: 3842
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building stunning, memorable user interfaces.
 url: https://github.com/DavidHDev/react-bits
@@ -34,25 +34,47 @@ The project embraces simplicity as its core philosophy—it maintains minimal de
 
 ## Installing Components Via CLI - <a href="https://jsrepo.dev"><img src="https://jsrepo.dev/badges/jsrepo.svg" width="50" alt="jsrepo"></a>
 
-#### One-Time Installation
+### JavaScript (One-Time Installation)
+
+#### Vanilla CSS
 ```bash
 npx jsrepo add https://reactbits.dev/default/<CategoryName>/<ComponentName>
 
 # Example: npx jsrepo add https://reactbits.dev/default/TextAnimations/SplitText
 ```
 
-#### One-Time Installation (Tailwind)
+#### Tailwind
 ```bash
 npx jsrepo add https://reactbits.dev/tailwind/<CategoryName>/<ComponentName>
 
-# Example: npx jsrepo add https://reactbits.dev/tailwind/TailwindTextAnimations/SplitText
+# Example: npx jsrepo add https://reactbits.dev/tailwind/TextAnimations/SplitText
 ```
 
-#### Full CLI Setup
+### TypeScript (One-Time Installation)
+
+#### Vanilla CSS
+```bash
+npx jsrepo add https://reactbits.dev/ts/default/<CategoryName>/<ComponentName>
+
+# Example: npx jsrepo add https://reactbits.dev/ts/default/TextAnimations/SplitText
+```
+
+#### Tailwind
+```bash
+npx jsrepo add https://reactbits.dev/ts/tailwind/<CategoryName>/<ComponentName>
+
+# Example: npx jsrepo add https://reactbits.dev/ts/tailwind/TextAnimations/SplitText
+```
+
+## Full CLI Setup
 ```bash
 # 1. Initialize a config file for your project
-npx jsrepo init https://reactbits.dev/default/ # default
+npx jsrepo init https://reactbits.dev/default/ # css
 npx jsrepo init https://reactbits.dev/tailwind/ # tailwind
+
+# TS Support is still WIP
+npx jsrepo init https://reactbits.dev/ts/default/ # ts + css
+npx jsrepo init https://reactbits.dev/ts/tailwind/ # ts + tailwind
 
 # 2. Browse & add components from the list
 npx jsrepo add
@@ -86,7 +108,7 @@ npm run dev
 
 ## Contributing
 
-This project is always open to improvements and contributions, you can check the [Open Issues](https://github.com/DavidHDev/react-bits/issues) if you want to contribute, and it's also possible to request to add your own improvements/ideas using the [Feature Request](https://github.com/DavidHDev/react-bits/issues/new/choose) template. Before contributing, please read the [Contribution Guide](https://github.com/DavidHDev/react-bits/blob/main/CONTRIBUTING.MD) and make sure to respect the standards! Thank you for your time!
+This project is always open to improvements and contributions, you can check the [Open Issues](https://github.com/DavidHDev/react-bits/issues) if you want to contribute, and it's also possible to request to add your own improvements/ideas using the [Feature Request](https://github.com/DavidHDev/react-bits/issues/new/choose) template. Before contributing, please read the [Contribution Guide](https://github.com/DavidHDev/react-bits/blob/main/CONTRIBUTING.md) and make sure to respect the standards! Thank you for your time!
 
 ## CONTENTS
 

@@ -1,6 +1,6 @@
 ---
 project: partyserver
-stars: 438
+stars: 442
 description: |-
     PartyKit, for Workers
 url: https://github.com/threepointone/partyserver

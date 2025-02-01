@@ -1,6 +1,6 @@
 ---
 project: vitepress
-stars: 13757
+stars: 13797
 description: |-
     Vite & Vue powered static site generator.
 url: https://github.com/vuejs/vitepress

@@ -1,6 +1,6 @@
 ---
 project: nerd-fonts
-stars: 56049
+stars: 56142
 description: |-
     Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more
 url: https://github.com/ryanoasis/nerd-fonts
@@ -236,6 +236,8 @@ All fonts are available via [Homebrew Cask](https://github.com/Homebrew/homebrew
 ```sh
 brew install font-hack-nerd-font
 ```
+
+_On Linux you have to add `--cask` after `install`._
 
 ### `Option 3: Unofficial Chocolatey or Scoop Repositories`
 

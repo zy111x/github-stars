@@ -1,6 +1,6 @@
 ---
 project: maily.to
-stars: 2211
+stars: 2293
 description: |-
     Craft beautiful emails effortlessly with Maily, the powerful email editor that ensures impeccable communication across all major clients.
 url: https://github.com/arikchakma/maily.to
@@ -55,7 +55,7 @@ Designing emails that work across all email platforms, browsers, etc is hard. **
 - Link Cards
 - Section
 - Columns
-- For Loop
+- Repeat
 - Show If Condition
 
 ## Contributions

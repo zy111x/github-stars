@@ -1,6 +1,6 @@
 ---
 project: react-content-loader
-stars: 13821
+stars: 13820
 description: |-
     ⚪ SVG-Powered component to easily create skeleton loadings.
 url: https://github.com/danilowoz/react-content-loader

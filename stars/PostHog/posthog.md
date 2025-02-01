@@ -1,6 +1,6 @@
 ---
 project: posthog
-stars: 23426
+stars: 23894
 description: |-
     🦔 PostHog provides open-source web & product analytics, session recording, feature flagging and A/B testing that you can self-host. Get started - free.
 url: https://github.com/PostHog/posthog

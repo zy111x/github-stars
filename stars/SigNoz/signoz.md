@@ -1,6 +1,6 @@
 ---
 project: signoz
-stars: 20307
+stars: 20380
 description: |-
     SigNoz is an open-source observability platform native to OpenTelemetry with logs, traces and metrics in a single application. An open-source alternative to DataDog, NewRelic, etc. 🔥 🖥.   👉  Open source Application Performance Monitoring (APM) & Observability tool
 url: https://github.com/SigNoz/signoz
@@ -25,9 +25,9 @@ url: https://github.com/SigNoz/signoz
   
 <h3 align="center">
   <a href="https://signoz.io/docs"><b>Documentation</b></a> &bull;
-  <a href="https://github.com/SigNoz/signoz/blob/develop/README.zh-cn.md"><b>ReadMe in Chinese</b></a> &bull;
-  <a href="https://github.com/SigNoz/signoz/blob/develop/README.de-de.md"><b>ReadMe in German</b></a> &bull;
-  <a href="https://github.com/SigNoz/signoz/blob/develop/README.pt-br.md"><b>ReadMe in Portuguese</b></a> &bull;
+  <a href="https://github.com/SigNoz/signoz/blob/main/README.zh-cn.md"><b>ReadMe in Chinese</b></a> &bull;
+  <a href="https://github.com/SigNoz/signoz/blob/main/README.de-de.md"><b>ReadMe in German</b></a> &bull;
+  <a href="https://github.com/SigNoz/signoz/blob/main/README.pt-br.md"><b>ReadMe in Portuguese</b></a> &bull;
   <a href="https://signoz.io/slack"><b>Slack Community</b></a> &bull;
   <a href="https://twitter.com/SigNozHq"><b>Twitter</b></a>
 </h3>

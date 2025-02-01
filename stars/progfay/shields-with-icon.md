@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 434
+stars: 436
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -758,6 +758,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Deutsche Telekom](https://img.shields.io/badge/Deutsche%20Telekom-E20074?style=for-the-badge&logo=Deutsche+Telekom&logoColor=FFFFFF)
 ![Deutsche Welle](https://img.shields.io/badge/Deutsche%20Welle-222222?style=for-the-badge&logo=Deutsche+Welle&logoColor=05B2FC)
 ![dev.to](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=FFFFFF)
+![Devbox](https://img.shields.io/badge/Devbox-280459?style=for-the-badge&logo=Devbox&logoColor=FFFFFF)
 ![DevExpress](https://img.shields.io/badge/DevExpress-FF7200?style=for-the-badge&logo=DevExpress&logoColor=FFFFFF)
 ![DeviantArt](https://img.shields.io/badge/DeviantArt-222222?style=for-the-badge&logo=DeviantArt&logoColor=05CC47)
 ![Devpost](https://img.shields.io/badge/Devpost-003E54?style=for-the-badge&logo=Devpost&logoColor=FFFFFF)
@@ -917,7 +918,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Expedia](https://img.shields.io/badge/Expedia-191E3B?style=for-the-badge&logo=Expedia&logoColor=FFFFFF)
 ![Expensify](https://img.shields.io/badge/Expensify-0185FF?style=for-the-badge&logo=Expensify&logoColor=FFFFFF)
 ![Experts Exchange](https://img.shields.io/badge/Experts%20Exchange-00AAE7?style=for-the-badge&logo=Experts+Exchange&logoColor=FFFFFF)
-![Expo](https://img.shields.io/badge/Expo-000020?style=for-the-badge&logo=Expo&logoColor=FFFFFF)
+![Expo](https://img.shields.io/badge/Expo-1C2024?style=for-the-badge&logo=Expo&logoColor=FFFFFF)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=Express&logoColor=FFFFFF)
 ![Express.com](https://img.shields.io/badge/Express.com-000000?style=for-the-badge&logo=Express.com&logoColor=FFFFFF)
 ![ExpressVPN](https://img.shields.io/badge/ExpressVPN-DA3940?style=for-the-badge&logo=ExpressVPN&logoColor=FFFFFF)
@@ -968,6 +969,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Fila](https://img.shields.io/badge/Fila-002D62?style=for-the-badge&logo=Fila&logoColor=FFFFFF)
 ![Filament](https://img.shields.io/badge/Filament-222222?style=for-the-badge&logo=Filament&logoColor=FDAE4B)
 ![File.io](https://img.shields.io/badge/File.io-3D3C9D?style=for-the-badge&logo=File.io&logoColor=FFFFFF)
+![Filen](https://img.shields.io/badge/Filen-000000?style=for-the-badge&logo=Filen&logoColor=FFFFFF)
 ![Files](https://img.shields.io/badge/Files-4285F4?style=for-the-badge&logo=Files&logoColor=FFFFFF)
 ![FileZilla](https://img.shields.io/badge/FileZilla-BF0000?style=for-the-badge&logo=FileZilla&logoColor=FFFFFF)
 ![Fineco](https://img.shields.io/badge/Fineco-00549F?style=for-the-badge&logo=Fineco&logoColor=FFFFFF)
@@ -1102,6 +1104,7 @@ url: https://github.com/progfay/shields-with-icon
 ![GitLab](https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=GitLab&logoColor=FFFFFF)
 ![Gitpod](https://img.shields.io/badge/Gitpod-222222?style=for-the-badge&logo=Gitpod&logoColor=FFAE33)
 ![Gitter](https://img.shields.io/badge/Gitter-ED1965?style=for-the-badge&logo=Gitter&logoColor=FFFFFF)
+![GL.iNet](https://img.shields.io/badge/GL.iNet-636363?style=for-the-badge&logo=GL.iNet&logoColor=FFFFFF)
 ![Glassdoor](https://img.shields.io/badge/Glassdoor-00A162?style=for-the-badge&logo=Glassdoor&logoColor=FFFFFF)
 ![Glide](https://img.shields.io/badge/Glide-222222?style=for-the-badge&logo=Glide&logoColor=18BED4)
 ![Glitch](https://img.shields.io/badge/Glitch-3333FF?style=for-the-badge&logo=Glitch&logoColor=FFFFFF)
@@ -2894,6 +2897,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Toptal](https://img.shields.io/badge/Toptal-3863A0?style=for-the-badge&logo=Toptal&logoColor=FFFFFF)
 ![Tor Browser](https://img.shields.io/badge/Tor%20Browser-7D4698?style=for-the-badge&logo=Tor+Browser&logoColor=FFFFFF)
 ![Tor Project](https://img.shields.io/badge/Tor%20Project-7D4698?style=for-the-badge&logo=Tor+Project&logoColor=FFFFFF)
+![Torizon](https://img.shields.io/badge/Torizon-222222?style=for-the-badge&logo=Torizon&logoColor=FAAF00)
 ![Toshiba](https://img.shields.io/badge/Toshiba-FF0000?style=for-the-badge&logo=Toshiba&logoColor=FFFFFF)
 ![TOTVS](https://img.shields.io/badge/TOTVS-363636?style=for-the-badge&logo=TOTVS&logoColor=FFFFFF)
 ![TourBox](https://img.shields.io/badge/TourBox-231F20?style=for-the-badge&logo=TourBox&logoColor=FFFFFF)

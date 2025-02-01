@@ -1,6 +1,6 @@
 ---
 project: lebab
-stars: 5632
+stars: 5631
 description: |-
     Turn your ES5 code into readable ES6. Lebab does the opposite of what Babel does.
 url: https://github.com/lebab/lebab
@@ -127,6 +127,7 @@ or they have significant bugs which can result in breaking your code.
     - [x] recognizes `Foo.prototype = { ...methods... };`
     - [x] recognizes static methods like `Foo.method = function(){ ... };`
     - [x] recognizes getters/setters defined with `Object.defineProperty()`
+    - [x] recognizes getters/setters defined with `Object.defineProperties()`
     - [x] recognizes inheritance with `Child.prototype = new Parent()`
     - [x] recognizes inheritance with `util.inherits(Child, Parent);`
     - [x] converts superclass constructor calls to `super()`

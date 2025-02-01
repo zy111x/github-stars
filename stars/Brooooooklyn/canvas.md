@@ -1,6 +1,6 @@
 ---
 project: canvas
-stars: 1845
+stars: 1850
 description: |-
     High performance skia binding to Node.js. Zero system dependencies and pure npm packages without any postinstall scripts nor node-gyp.
 url: https://github.com/Brooooooklyn/canvas
@@ -8,8 +8,8 @@ url: https://github.com/Brooooooklyn/canvas
 
 # `skr canvas`
 
-![CI](https://github.com/Brooooooklyn/canvas/workflows/CI/badge.svg)
-![Skia Version](https://img.shields.io/badge/Skia-chrome%2Fm131-hotpink)
+[![CI](https://github.com/Brooooooklyn/canvas/actions/workflows/CI.yaml/badge.svg)](https://github.com/Brooooooklyn/canvas/actions/workflows/CI.yaml)
+![Skia Version](https://img.shields.io/badge/Skia-chrome%2Fm133-hotpink)
 [![install size](https://packagephobia.com/badge?p=@napi-rs/canvas)](https://packagephobia.com/result?p=@napi-rs/canvas)
 [![Downloads](https://img.shields.io/npm/dm/@napi-rs/canvas.svg?sanitize=true)](https://npmcharts.com/compare/@napi-rs/canvas?minimal=true)
 

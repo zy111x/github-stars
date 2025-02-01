@@ -1,9 +1,9 @@
 ---
 project: languine
-stars: 1313
+stars: 1358
 description: |-
     Translate your application with Languine CLI powered by AI.
-url: https://github.com/midday-ai/languine
+url: https://github.com/languine-ai/languine
 ---
 
 <p align="center">

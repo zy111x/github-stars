@@ -1,6 +1,6 @@
 ---
 project: docker-pleroma
-stars: 360
+stars: 361
 description: |-
     Docker image for the Pleroma federated social network
 url: https://github.com/angristan/docker-pleroma
