@@ -1,6 +1,6 @@
 ---
 project: Fooocus
-stars: 42934
+stars: 43069
 description: Focus on prompting and generating
 url: https://github.com/lllyasviel/Fooocus
 ---

@@ -1,6 +1,6 @@
 ---
 project: AnyText
-stars: 4496
+stars: 4505
 description: Official implementation code of the paper <AnyText: Multilingual Visual Text Generation And Editing>
 url: https://github.com/tyxsspa/AnyText
 ---

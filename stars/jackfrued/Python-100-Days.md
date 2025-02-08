@@ -1,6 +1,6 @@
 ---
 project: Python-100-Days
-stars: 160302
+stars: 160553
 description: Python - 100天从新手到大师
 url: https://github.com/jackfrued/Python-100-Days
 ---
@@ -782,6 +782,12 @@ Python在以下领域都有用武之地。
 5.  Transformer
 
 #### Day90 - 机器学习实战
+
+1.  数据探索
+2.  特征工程
+3.  模型训练
+4.  模型评估
+5.  模型部署
 
 ### Day91~100 - 团队项目开发
 

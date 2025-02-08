@@ -1,6 +1,6 @@
 ---
 project: VideoCaptioner
-stars: 3602
+stars: 3896
 description: 🎬 卡卡字幕助手 | VideoCaptioner - 基于 LLM 的智能字幕助手，无需GPU一键高质量字幕视频合成！视频字幕生成、断句、校正、字幕翻译全流程。让字幕制作简单高效！
 url: https://github.com/WEIFENG2333/VideoCaptioner
 ---
@@ -12,14 +12,14 @@ VideoCaptioner
 
 一款基于大语言模型(LLM)的视频字幕处理助手，支持语音识别、字幕断句、优化、翻译全流程处理
 
-简体中文 / 正體中文 / English
+简体中文 / 正體中文 / English / 日本語
 
 📖 项目介绍
 -------
 
 卡卡字幕助手（VideoCaptioner）操作简单且无需高配置，支持网络调用和本地离线（支持调用GPU）两种方式进行语音识别，利用可用通过大语言模型进行字幕智能断句、校正、翻译，字幕视频全流程一键处理！为视频配上效果惊艳的字幕。
 
-最新版本已经支持 VAD 、 人声分离、 字级时间戳 等实用功能
+最新版本已经支持 VAD 、 人声分离、 字级时间戳 批量字幕等实用功能
 
 -   🎯 无需GPU即可使用强大的语音识别引擎，生成精准字幕
 -   ✂️ 基于 LLM 的智能分割与断句，字幕阅读更自然流畅
@@ -34,7 +34,7 @@ VideoCaptioner
 🧪 测试
 -----
 
-全流程处理一个14分钟1080P的 B站英文 TED 视频，调用本地 Whisper 模型进行语音识别，使用 `gpt-4o-mini` 模型优化和翻译为中文，总共消耗时间约 **4 分钟**。
+全流程处理一个14分钟1080P的 B站英文 TED 视频，调用本地 Whisper 模型进行语音识别，使用 `gpt-4o-mini` 模型优化和翻译为中文，总共消耗时间约 **3 分钟**。
 
 近后台计算，模型优化和翻译消耗费用不足 ￥0.01（以OpenAI官方价格为计算）
 
@@ -68,18 +68,56 @@ Mac 用户请自行使用下载源码和安装 python 依赖运行。（本地 W
 
 brew install ffmpeg
 brew install aria2
+brew install python@3.\*\*
 
 1.  克隆项目
 
 git clone https://github.com/WEIFENG2333/VideoCaptioner.git
+cd VideoCaptioner
 
 1.  安装依赖
 
+python3.\*\* -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 
 1.  运行程序
 
 python main.py
+
+Docker 部署（beta）
+
+目前应用较为简略，欢迎各位PR贡献。
+
+### 1\. 克隆项目
+
+git clone https://github.com/WEIFENG2333/VideoCaptioner.git
+cd VideoCaptioner
+
+### 2\. 构建镜像
+
+docker build -t video-captioner .
+
+### 3\. 运行容器
+
+使用自定义API配置运行：
+
+docker run -d \\
+  -p 8501:8501 \\
+  -v $(pwd)/temp:/app/temp \\
+  -e OPENAI\_BASE\_URL="你的API地址" \\
+  -e OPENAI\_API\_KEY="你的API密钥" \\
+  --name video-captioner \\
+  video-captioner
+
+### 4\. 访问应用
+
+打开浏览器访问：`http://localhost:8501`
+
+### 注意事项
+
+-   容器内已预装ffmpeg等必要依赖
+-   如需使用其他模型，请通过环境变量配置
 
 ✨ 主要功能
 ------
@@ -124,7 +162,7 @@ python main.py
 
 内置模型
 
-软件内置基础大语言模型（`gpt-4o-mini`），无需配置即可使用
+软件内置基础大语言模型（`gpt-4o-mini`），无需配置即可使用(公益服务不稳定)
 
 API支持
 
@@ -135,7 +173,7 @@ API支持
 
 ### 2\. 本地 Whisper 语音识别配置（需软件内下载）
 
-Whisper 版本有 WhisperCpp 和 fasterWhisper 两种，后者效果更好，都需要自行在软件内下载模型。
+Whisper 版本有 WhisperCpp 和 fasterWhisper（推荐） 两种，后者效果更好，都需要自行在软件内下载模型。
 
 模型
 
@@ -169,7 +207,7 @@ Medium
 
 中文识别建议至少使用此版本
 
-Large-v1/v2
+Large-v1/v2 👍
 
 2.9 GiB
 
@@ -184,6 +222,8 @@ Large-v3
 ~3.9 GB
 
 社区反馈可能会出现幻觉/字幕重复问题
+
+推荐模型: Large-v1稳定且质量较好。
 
 注：以上模型国内网络可直接在软件内下载；支持GPU也支持核显调用。
 
@@ -255,29 +295,30 @@ WhisperCpp
 
 本地
 
-需要下载转录模型  
+（实际使用不稳定）需要下载转录模型  
 中文建议medium以上模型  
 英文等使用较小模型即可达到不错效果。
 
-fasterWhisper
+fasterWhisper 👍
 
 中文、英文等多99种语言，外语效果优秀，时间轴更准确
 
 本地
 
-需要下载程序和转录模型  
+（🌟极力推荐🌟）需要下载程序和转录模型  
 支持CUDA,速度更快，转录准确。  
+超级准确的时间戳字幕。  
 建议优先使用
 
 ### 5\. Cookie 配置说明
 
-但你需要URL下载功能时，如果遇到以下情况:
+如果使用URL下载功能时，如果遇到以下情况:
 
-1.  下载的视频需要登录信息
-2.  只能下载较低分辨率的视频
-3.  网络条件较差时需要验证
+1.  下载视频网站需要登录信息才可以下载；
+2.  只能下载较低分辨率的视频；
+3.  网络条件较差时需要验证；
 
--   请参考 Cookie 配置说明 获取Cookie信息，并将cookies.txt文件放置到软件的 `AppData` 目录下，即可正常下载高质量视频。
+-   请参考 Cookie 配置说明 获取Cookie信息，并将cookies.txt文件放置到软件安装目录的 `AppData` 目录下，即可正常下载高质量视频。
 
 💡 软件流程介绍
 ---------
@@ -285,7 +326,7 @@ fasterWhisper
 程序简单的处理流程如下:
 
 ```
-语音识别 -> 字幕断句 -> 字幕优化翻译(可选) -> 字幕视频合成
+语音识别 -> 字幕断句(可选) -> 字幕优化翻译(可选) -> 字幕视频合成
 ```
 
 安装软件的主要目录结构说明如下：
@@ -293,14 +334,14 @@ fasterWhisper
 ```
 VideoCaptioner/
 ├── runtime/                    # 运行环境目录（不用更改）
-├── resources/               # 软件资源文件目录（界面、图标等,不用更改）
+├── resources/               # 软件资源文件目录（二进制程序、图标等,以及下载的faster-whisper程序）
 ├── work-dir/               # 工作目录，处理完成的视频和字幕文件保存在这里
 ├── AppData/                    # 应用数据目录
-    ├── cache/              # 缓存目录，临时数据
+    ├── cache/              # 缓存目录，缓存转录、大模型请求的数据。
     ├── models/              # 存放 Whisper 模型文件
     ├── logs/               # 日志目录，记录软件运行状态
     ├── settings.json          # 存储用户设置
-    └──  cookies.txt           # 视频平台的 cookie 信息
+    └──  cookies.txt           # 视频平台的 cookie 信息（下载高清视频时需要）
 └── VideoCaptioner.exe      # 主程序执行文件
 ```
 
@@ -309,7 +350,7 @@ VideoCaptioner/
 
 1.  字幕断句的质量对观看体验至关重要。为此我开发了 SubtitleSpliter，它能将逐字字幕智能重组为符合自然语言习惯的段落，并与视频画面完美同步。
     
-2.  在处理过程中，仅向大语言模型发送纯文本内容，不包含时间轴信息，这大大降低了处理开销。
+2.  在处理过程中，仅向大语言模型发送文本内容，不包含时间轴信息，这大大降低了处理开销。
     
 3.  在翻译环节，我们采用吴恩达提出的"翻译-反思-翻译"方法论。这种迭代优化的方式不仅确保了翻译的准确性。
     
@@ -321,6 +362,39 @@ VideoCaptioner/
 
 更新日志
 ----
+
+2025.02.07 ### Bug 修复与其他改进 - 修复谷歌翻译语言不正确的问题。 - 修部微软翻译不准确的问题。 - 修复运行设备不选择cuda时显示报 winError的错误 - 修复合成失败的问题 - 修复ass单语字幕没有内容的问题 2024.2.06
+
+### 核心功能增强
+
+-   完整重构代码架构，优化整体性能
+-   字幕优化与翻译功能模块分离，提供更灵活的处理选项
+-   新增批量处理功能：支持批量字幕、批量转录、批量字幕视频合成
+-   全面优化 UI 界面与交互细节
+
+### AI 模型与翻译升级
+
+-   扩展 LLM 支持：新增 SiliconCloud、DeepSeek、Ollama、Gemini、ChatGLM 等模型
+-   集成多种翻译服务：DeepLx、Bing、Google、LLM
+-   新增 faster-whisper-large-v3-turbo 模型支持
+-   新增多种 VAD（语音活动检测）方法
+-   支持自定义反思翻译开关
+-   字幕断句支持语义/句子两种模式
+-   字幕断句、优化、翻译提示词的优化
+-   字幕、转录缓存机制的优化
+-   优化中文字幕自动换行功能
+-   新增竖屏字幕样式
+-   改进字幕时间轴切换机制，消除闪烁问题
+
+### Bug 修复与其他改进
+
+-   修复 Whisper API 无法使用问题
+-   新增多种字幕视频格式支持
+-   修复部分情况转录错误的问题
+-   优化视频工作目录结构
+-   新增日志查看功能
+-   新增泰语、德语等语言的字幕优化
+-   修复诸多Bug...
 
 2024.12.07
 
