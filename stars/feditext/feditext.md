@@ -1,6 +1,6 @@
 ---
 project: feditext
-stars: 187
+stars: 188
 description: |-
     A free, open-source iOS client for Mastodon, Glitch, GotoSocial, Iceshrimp, Akkoma, and other Mastodon-API-compatible Fediverse instance servers.
 url: https://github.com/feditext/feditext

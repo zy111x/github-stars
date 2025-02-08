@@ -1,6 +1,6 @@
 ---
 project: 5ire
-stars: 715
+stars: 767
 description: |-
     5ire is a cross-platform desktop AI assistant, MCP client. It compatible with major service providers,  supports local knowledge base and  tools via model context protocol servers .
 url: https://github.com/nanbingxyz/5ire
@@ -25,10 +25,11 @@ url: https://github.com/nanbingxyz/5ire
     <br />
     <div style="display:flex;justify-content:space-around;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:15px;">
     <span style="font-size:12px;">OpenAI</span>
-    <span style="font-size:12px;">/ Azure OpenAI</span>
+    <span style="font-size:12px;">/ Azure</span>
     <span style="font-size:12px;">/ Anthropic</span>
     <span style="font-size:12px;">/ Google</span>
     <span style="font-size:12px;">/ Baidu</span>
+    <span style="font-size:12px;">/ Mistral</span>
     <span style="font-size:12px;">/ Moonshot</span>
     <span style="font-size:12px;">/ Doubao</span>
     <span style="font-size:12px;">/ Grok</span>

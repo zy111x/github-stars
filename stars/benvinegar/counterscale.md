@@ -1,6 +1,6 @@
 ---
 project: counterscale
-stars: 1571
+stars: 1580
 description: |-
     Scalable web analytics you run yourself on Cloudflare
 url: https://github.com/benvinegar/counterscale
@@ -80,14 +80,14 @@ The Counterscale tracker is published as an npm module:
 npm install @counterscale/tracker
 ```
 
-Initialize Counterscale with your site ID and deployment URL:
+Initialize Counterscale with your site ID and the URL of your deployed reporting endpoint:
 
 ```typescript
 import * as Counterscale from "@counterscale/tracker";
 
 Counterscale.init({
     siteId: "your-unique-site-id",
-    deploymentUrl: "https://{subdomain-emitted-during-deploy}.pages.dev/",
+    reporterUrl: "https://{subdomain-emitted-during-deploy}.pages.dev/collect",
 });
 ```
 
@@ -106,7 +106,7 @@ import * as Counterscale from "@counterscale/tracker";
 
 Counterscale.init({
     siteId: "your-unique-site-id",
-    deploymentUrl: "https://{subdomain-emitted-during-deploy}.pages.dev/",
+    reporterUrl: "https://{subdomain-emitted-during-deploy}.pages.dev/collect",
     autoTrackPageviews: false, // <- don't forget this
 });
 

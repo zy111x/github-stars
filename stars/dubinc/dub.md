@@ -1,8 +1,8 @@
 ---
 project: dub
-stars: 19811
+stars: 19872
 description: |-
-    Open-source link management infrastructure. Loved by modern marketing teams like Twilio, Perplexity, Vercel, and Huberman Labs.
+    Open-source link attribution platform. Loved by modern marketing teams like Twilio, Perplexity, Vercel, and Huberman Labs.
 url: https://github.com/dubinc/dub
 ---
 
@@ -13,7 +13,7 @@ url: https://github.com/dubinc/dub
 <h3 align="center">Dub.co</h3>
 
 <p align="center">
-    The open-source Bitly successor.
+    The open-source link attribution platform.
     <br />
     <a href="https://dub.co"><strong>Learn more »</strong></a>
     <br />
@@ -39,7 +39,7 @@ url: https://github.com/dubinc/dub
 
 ## Introduction
 
-Dub.co is the open-source link management infrastructure for modern marketing teams.
+Dub.co is the open-source link attribution platform for modern marketing teams.
 
 ## Features
 

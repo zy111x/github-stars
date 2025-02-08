@@ -1,6 +1,6 @@
 ---
 project: openwrt-ipq
-stars: 197
+stars: 201
 description: |-
     NSS Fork of OpenWrt targeting Qualcomm IPQ807x/6018
 url: https://github.com/qosmio/openwrt-ipq

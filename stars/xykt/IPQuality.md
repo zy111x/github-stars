@@ -1,6 +1,6 @@
 ---
 project: IPQuality
-stars: 2902
+stars: 2934
 description: |-
     A script for IP quality detection
 url: https://github.com/xykt/IPQuality

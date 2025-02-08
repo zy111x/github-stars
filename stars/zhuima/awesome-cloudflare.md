@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare
-stars: 10075
+stars: 10138
 description: |-
     ⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.
 url: https://github.com/zhuima/awesome-cloudflare
@@ -36,10 +36,17 @@ url: https://github.com/zhuima/awesome-cloudflare
 
 [Awesome Cloudflare 在线导航](https://cloudflare.chuhai.tools)
 
+
+## 群组
+
+[一个群](https://t.me/indiehackertools)
+
+
 ## Contents
 
 - [](#)
   - [在线版本](#在线版本)
+  - [群组](#群组)
   - [Contents](#contents)
   - [图床](#图床)
   - [邮箱](#邮箱)
@@ -55,8 +62,6 @@ url: https://github.com/zhuima/awesome-cloudflare
 - [文章](#文章)
   - [其他](#其他)
   - [教程](#教程)
-  - [群组](#群组)
-  - [捐赠](#捐赠)
   - [Contributors](#contributors)
   - [Star History](#star-history)
 
@@ -228,6 +233,7 @@ url: https://github.com/zhuima/awesome-cloudflare
 | [wr.do](https://github.com/oiov/wr.do) | 基于 Cloudflare 的多租户 DNS 分发系统。开源且免费提供 DNS 解析、短链接生成。| https://wr.do  | 维护中|
 | [cloudflare-proxy-sites](https://github.com/seadfeng/cloudflare-proxy-sites) | Cloudflare Workers web proxy 二级域名访问方式。 | [Demo 地址](https://www.proxysites.ai.serp.ing/) | 维护中 |
 | [sublink-worker](https://github.com/7Sageer/sublink-worker) | 一个部署在Cloudflare worker上的轻量级代理节点订阅转换工具，它可以将各种代理协议的分享 URL 转换为不同客户端可用的订阅链接。同时还提供灵活的自定义规则与API支持。 | | 维护中 |
+| [melody-auth](https://github.com/ValueMelody/melody-auth) | 一个基于Cloudflare workers, D1, KV的OAuth及身份认证系统。 | <https://auth.valuemelody.com/> | 有效中 |
 
 
 
@@ -242,16 +248,6 @@ url: https://github.com/zhuima/awesome-cloudflare
 | [cloudflare-worker-gmail-resend-enterprise-email](https://cleanclip.cc/zh/developer/cloudflare-worker-gmail-resend-enterprise-email) |  Cloudflare + Gmail + Resend 十分钟轻松拥有免费的企业邮箱。 |  | 更新中 |
 
 
-
-## 群组
-
-[一个群](https://t.me/indiehackertools)
-
-## 捐赠
-
-首先十分幸运能在Github上与你相识，其次十分感谢您对我的项目感兴趣，如果说我的项目能够对您有一些帮助，还希望您可以打赏支持一下，这将会对我有莫大的鼓励，谢谢！
-
-![](./docs/alipay_small.jpeg)
 
 ## Contributors
 

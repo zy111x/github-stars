@@ -1,6 +1,6 @@
 ---
 project: atvjs
-stars: 311
+stars: 312
 description: |-
     Blazing fast Apple TV application development using pure JavaScript
 url: https://github.com/emadalam/atvjs

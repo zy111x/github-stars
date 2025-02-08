@@ -1,6 +1,6 @@
 ---
 project: morphic
-stars: 6728
+stars: 6890
 description: |-
     An AI-powered search engine with a generative UI
 url: https://github.com/miurla/morphic
@@ -183,8 +183,9 @@ This will allow you to use Morphic as your default search engine in the browser.
   - gpt-4-turbo
   - gpt-3.5-turbo
 - Google
-  - Gemini 1.5 Pro (Unstable)
-  - Gemini 2.0 Flash (Experimental)
+  - Gemini 2.0 Pro (Experimental)
+  - Gemini 2.0 Flash Thinking (Experimental)
+  - Gemini 2.0 Flash
 - Anthropic
   - Claude 3.5 Sonnet
   - Claude 3.5 Hike

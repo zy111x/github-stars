@@ -1,6 +1,6 @@
 ---
 project: driver.js
-stars: 23710
+stars: 23752
 description: |-
     A light-weight, no-dependency, vanilla JavaScript engine to drive user's focus across the page
 url: https://github.com/kamranahmedse/driver.js
@@ -12,11 +12,11 @@ url: https://github.com/kamranahmedse/driver.js
   <a href="https://github.com/kamranahmedse/driver.js/blob/master/license">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
-  <a href="https://npmjs.org/package/driver.js">
-    <img src="https://img.shields.io/npm/v/driver.js.svg" alt="version" />
+  <a href="https://www.jsdelivr.com/package/npm/driver.js">
+    <img src="https://data.jsdelivr.com/v1/package/npm/driver.js/badge?style=rounded" alt="jsdelivr hits" />
   </a>
   <a href="https://npmjs.org/package/driver.js">
-    <img src="https://img.shields.io/npm/dt/driver.js.svg" alt="downloads" />
+    <img src="https://img.shields.io/npm/dm/driver.js" alt="downloads" />
   </a>
 </p>
 

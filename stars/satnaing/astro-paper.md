@@ -1,6 +1,6 @@
 ---
 project: astro-paper
-stars: 2855
+stars: 2871
 description: |-
     A minimal, accessible and SEO-friendly Astro blog theme
 url: https://github.com/satnaing/astro-paper
@@ -188,7 +188,7 @@ If you have any suggestions/feedback, you can contact me via [my email](mailto:c
 
 ## 📜 License
 
-Licensed under the MIT License, Copyright © 2023
+Licensed under the MIT License, Copyright © 2025
 
 ---
 

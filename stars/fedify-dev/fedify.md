@@ -1,6 +1,6 @@
 ---
 project: fedify
-stars: 645
+stars: 655
 description: |-
     ActivityPub server framework in TypeScript
 url: https://github.com/fedify-dev/fedify
@@ -103,14 +103,16 @@ financial contributors:[^2]
 ### Supporters
 
 - [Daniel Supernault](https://pixelfed.org/)
+- [tkgka](https://opencollective.com/tkgka)
+- [Blaine](https://opencollective.com/blaine)
 
 ### Backers
 
-yamanoku, okin, Andy Piper, box464, Evan Prodromou
+yamanoku, okin, Andy Piper, box464, Evan Prodromou, Rafael Goulart
 
 ### One-time donations
 
-Rameez
+Markus P, Nils Bergmann, Rameez
 
 <!-- /DO NOT EDIT -->
 <!-- cSpell: enable -->

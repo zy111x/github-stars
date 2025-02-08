@@ -1,6 +1,6 @@
 ---
 project: virtual
-stars: 5762
+stars: 5778
 description: |-
     🤖 Headless UI for Virtualizing Large Element Lists in JS/TS, React, Solid, Vue and Svelte
 url: https://github.com/TanStack/virtual
@@ -43,5 +43,5 @@ Enjoy this library? Try the entire [TanStack](https://tanstack.com)! [React Quer
 - Imperative scrollTo control for offset, indices and alignment
 - Custom scrolling function support (eg. smooth scroll)
 
-<!-- Use the Force, Luke!  -->
+<!-- Use the Force Luke!  -->
 

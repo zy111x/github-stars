@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2424
+stars: 2434
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -528,7 +528,7 @@ Options:
           Set the output display mode. Determines how results are presented in the terminal
 
           [default: color]
-          [possible values: plain, color, emoji]
+          [possible values: plain, color, emoji, task]
 
   -f, --format <FORMAT>
           Output format of final status report

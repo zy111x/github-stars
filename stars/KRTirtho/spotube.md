@@ -1,6 +1,6 @@
 ---
 project: spotube
-stars: 34135
+stars: 34907
 description: |-
     🎧 Open source Spotify client that doesn't require Premium nor uses Electron! Available for both desktop & mobile!
 url: https://github.com/KRTirtho/spotube

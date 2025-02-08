@@ -1,6 +1,6 @@
 ---
 project: webpack
-stars: 64994
+stars: 65009
 description: |-
     A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through "loaders", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.
 url: https://github.com/webpack/webpack
@@ -325,6 +325,11 @@ a question to [StackOverflow with the webpack tag](https://stackoverflow.com/tag
 If you are twitter savvy you can tweet #webpack with your question and someone should be able to reach out and help also.
 
 If you have discovered a 🐜 or have a feature suggestion, feel free to create an issue on GitHub.
+
+### Understanding webpack in a better way
+
+- [Understanding Webpack - Video 1](https://www.youtube.com/watch?v=xj93pvQIsRo)
+- [Understanding Webpack - Video 2](https://www.youtube.com/watch?v=4tQiJaFzuJ8)
 
 ### License
 

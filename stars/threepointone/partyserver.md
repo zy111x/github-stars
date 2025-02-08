@@ -1,6 +1,6 @@
 ---
 project: partyserver
-stars: 442
+stars: 464
 description: |-
     PartyKit, for Workers
 url: https://github.com/threepointone/partyserver
@@ -23,6 +23,8 @@ This is the main repository for PartyServer. It contains the following packages:
 [partysync](/packages/partysync/README.md) - An experimental library to synchronise state from a Durable Object to a client.
 
 [⏱️ partywhen](/packages/partywhen/README.md) - A library for scheduling tasks at scale.
+
+[hono-party](/packages/hono-party/README.md) - A middleware for Hono to handle PartyServer requests.
 
 ### Fixtures
 

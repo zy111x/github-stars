@@ -1,6 +1,6 @@
 ---
 project: rolldown
-stars: 9913
+stars: 9979
 description: |-
     Fast Rust bundler for JavaScript/TypeScript with Rollup-compatible API.
 url: https://github.com/rolldown/rolldown
@@ -49,6 +49,12 @@ url: https://github.com/rolldown/rolldown
 Rolldown is a JavaScript/TypeScript bundler written in Rust intended to serve as the future bundler used in [Vite](https://vitejs.dev/). It provides Rollup-compatible APIs and plugin interface, but will be more similar to esbuild in scope.
 
 For more information, please check out the documentation at [rolldown.rs](https://rolldown.rs/about).
+
+## VoidZero Inc.
+
+Rolldown is a project of [VoidZero](https://voidzero.dev/), see our announcement [Announcing VoidZero - Next Generation Toolchain for JavaScript](https://voidzero.dev/blog).
+
+If you have requirements for JavaScript tools at scale, please [get in touch](https://forms.gle/WQgjyzYJpwurpxWKA)!
 
 ## Contributing
 

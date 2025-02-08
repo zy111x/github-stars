@@ -1,6 +1,6 @@
 ---
 project: Sink
-stars: 3617
+stars: 3647
 description: |-
     ⚡ A Simple / Speedy / Secure Link Shortener with Analytics, 100% run on Cloudflare.
 url: https://github.com/ccbikai/Sink
@@ -106,7 +106,7 @@ We welcome your contributions and PRs.
 
 5. Save and deploy the project.
 6. Cancel the deployment, then navigate to **Settings** -> **Bindings** -> **Add**:
-   - **KV Namespace**: Bind the variable name `KV` to a KV namespace (create a new one under **Workers & Pages** -> **KV**).
+   - **KV Namespace**: Bind the variable name `KV` to a [KV namespace](https://developers.cloudflare.com/kv/) (create a new one under **Storage & Databases** -> **KV**). 
    - **Workers AI** (_Optional_): Bind the variable name `AI` to the Workers AI Catalog.
    - **Analytics Engine**:
      - In **Workers & Pages**, go to **Account details** on the right side, find `Analytics Engine`, and click `Set up` to enable the free version.

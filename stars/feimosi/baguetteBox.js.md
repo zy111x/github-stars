@@ -1,6 +1,6 @@
 ---
 project: baguetteBox.js
-stars: 2452
+stars: 2453
 description: |-
     :zap: Simple and easy to use lightbox script written in pure JavaScript
 url: https://github.com/feimosi/baguetteBox.js

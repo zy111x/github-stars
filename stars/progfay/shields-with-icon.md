@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 436
+stars: 438
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -568,6 +568,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Clyp](https://img.shields.io/badge/Clyp-222222?style=for-the-badge&logo=Clyp&logoColor=3CBDB1)
 ![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=CMake&logoColor=FFFFFF)
 ![CNCF](https://img.shields.io/badge/CNCF-231F20?style=for-the-badge&logo=CNCF&logoColor=FFFFFF)
+![CNES](https://img.shields.io/badge/CNES-204F8C?style=for-the-badge&logo=CNES&logoColor=FFFFFF)
 ![CNET](https://img.shields.io/badge/CNET-E71D1D?style=for-the-badge&logo=CNET&logoColor=FFFFFF)
 ![CNN](https://img.shields.io/badge/CNN-CC0000?style=for-the-badge&logo=CNN&logoColor=FFFFFF)
 ![Co-op](https://img.shields.io/badge/Co-op-222222?style=for-the-badge&logo=Co-op&logoColor=00B1E7)
@@ -1740,6 +1741,7 @@ url: https://github.com/progfay/shields-with-icon
 ![mdBook](https://img.shields.io/badge/mdBook-000000?style=for-the-badge&logo=mdBook&logoColor=FFFFFF)
 ![MDN Web Docs](https://img.shields.io/badge/MDN%20Web%20Docs-000000?style=for-the-badge&logo=MDN+Web+Docs&logoColor=FFFFFF)
 ![MDX](https://img.shields.io/badge/MDX-1B1F24?style=for-the-badge&logo=MDX&logoColor=FFFFFF)
+![Mealie](https://img.shields.io/badge/Mealie-E58325?style=for-the-badge&logo=Mealie&logoColor=FFFFFF)
 ![MediaFire](https://img.shields.io/badge/MediaFire-1299F3?style=for-the-badge&logo=MediaFire&logoColor=FFFFFF)
 ![MediaMarkt](https://img.shields.io/badge/MediaMarkt-DF0000?style=for-the-badge&logo=MediaMarkt&logoColor=FFFFFF)
 ![MediaPipe](https://img.shields.io/badge/MediaPipe-0097A7?style=for-the-badge&logo=MediaPipe&logoColor=FFFFFF)
@@ -1998,6 +2000,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Open Containers Initiative](https://img.shields.io/badge/Open%20Containers%20Initiative-262261?style=for-the-badge&logo=Open+Containers+Initiative&logoColor=FFFFFF)
 ![Open Source Hardware](https://img.shields.io/badge/Open%20Source%20Hardware-0099B0?style=for-the-badge&logo=Open+Source+Hardware&logoColor=FFFFFF)
 ![Open Source Initiative](https://img.shields.io/badge/Open%20Source%20Initiative-3DA639?style=for-the-badge&logo=Open+Source+Initiative&logoColor=FFFFFF)
+![Open3D](https://img.shields.io/badge/Open3D-000000?style=for-the-badge&logo=Open3D&logoColor=FFFFFF)
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=OpenAI&logoColor=FFFFFF)
 ![OpenAI Gym](https://img.shields.io/badge/OpenAI%20Gym-0081A5?style=for-the-badge&logo=OpenAI+Gym&logoColor=FFFFFF)
 ![OpenAPI Initiative](https://img.shields.io/badge/OpenAPI%20Initiative-6BA539?style=for-the-badge&logo=OpenAPI+Initiative&logoColor=FFFFFF)
@@ -3034,6 +3037,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Veepee](https://img.shields.io/badge/Veepee-EC008C?style=for-the-badge&logo=Veepee&logoColor=FFFFFF)
 ![Vega](https://img.shields.io/badge/Vega-2450B2?style=for-the-badge&logo=Vega&logoColor=FFFFFF)
 ![VEGAS](https://img.shields.io/badge/VEGAS-1A1A1A?style=for-the-badge&logo=VEGAS&logoColor=FFFFFF)
+![Velocity](https://img.shields.io/badge/Velocity-222222?style=for-the-badge&logo=Velocity&logoColor=1BBAE0)
 ![Velog](https://img.shields.io/badge/Velog-222222?style=for-the-badge&logo=Velog&logoColor=20C997)
 ![Vencord](https://img.shields.io/badge/Vencord-D3859B?style=for-the-badge&logo=Vencord&logoColor=FFFFFF)
 ![Venmo](https://img.shields.io/badge/Venmo-008CFF?style=for-the-badge&logo=Venmo&logoColor=FFFFFF)

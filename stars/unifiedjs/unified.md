@@ -1,6 +1,6 @@
 ---
 project: unified
-stars: 4573
+stars: 4583
 description: |-
     ☔️ interface for parsing, inspecting, transforming, and serializing content through syntax trees
 url: https://github.com/unifiedjs/unified
@@ -76,7 +76,6 @@ language).
 These ecosystems can be connected together.
 
 * for more about us, see [`unifiedjs.com`][site]
-* for updates, see [@unifiedjs][twitter] on Twitter
 * for questions, see [support][]
 * to help, see [contribute][] and [sponsor][] below
 
@@ -1720,8 +1719,6 @@ work on [`ware`][ware], as it was a huge initial inspiration.
 [npm]: https://docs.npmjs.com/cli/install
 
 [site]: https://unifiedjs.com
-
-[twitter]: https://twitter.com/unifiedjs
 
 [rehype]: https://github.com/rehypejs/rehype
 

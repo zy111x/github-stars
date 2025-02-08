@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 11582
+stars: 11795
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -75,9 +75,11 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | image-upload-shadcn | Image upload component. | [Link](https://github.com/kushagrasarathe/image-upload-shadcn) |
 | indie-ui | UI components with variants. | [Link](https://github.com/Ali-Hussein-dev/indie-ui) |
 | inspira-ui | UI components for animated interfaces in Vue/NuxtJS. | [Link](https://inspira-ui.com/) |
+| junwen-k/ui-x | Additional beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source. | [Link](https://ui-x.junwen-k.dev/) |
 | kokonut-ui | Free Modern and Customizable components for Next.js. | [Link](https://kokonut.dev/) |
 | launch-ui | Landing page components with React, Shadcn/ui and Tailwind. | [Link](https://www.launchuicomponents.com/) |
 | lingua-time | Smart datetime picker with natural language input. | [Link](https://github.com/nainglinnkhant/lingua-time) |
+| linked-chart | Chart component linked with data-table. | [Link](https://github.com/ardasisbot/linked-chart) |
 | lukacho-ui | Next Generation UI Components. | [Link](https://ui.lukacho.com/components) |
 | manfromexistence-ui | Components to build beautiful designs. | [Link](https://github.com/manfromexistence/ui) |
 | magicui | React components for landing pages with tailwindcss + framer motion. | [Link](https://magicui.design) |
@@ -121,10 +123,12 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-carousel-testimonials | Carousel Testimonials component. | [Link](https://github.com/johanguse/shadcn-carousel-testimonials) |
 | shadcn-chatbot-kit | Customizable chatbot components. | [Link](https://shadcn-chatbot-kit.vercel.app/) |
 | shadcn-color-picker | Color picker with react-color. | [Link](https://shadcn-color-picker.vercel.app/) |
+| shadcn-cookies | Sleek and flexible cookie consent component, designed with shadcn/ui | [Link](https://shadcn-cookies.vercel.app/) |
 | shadcn-cookie-consent | Customizable cookie consent component. | [Link](https://github.com/r2hu1/shadcn-cookie-consent) |
 | shadcn-country-dropdown | ISO 3166 country selector dropdown. | [Link](https://shadcn-country-dropdown.vercel.app/) |
 | shadcn-data-table-advanced-col-opions | DataTable with column resizing. | [Link](https://github.com/danielagg/shadcn-data-table-advanced-col-opions) |
 | shadcn-date-picker | Advanced date picker with various features. | [Link](https://date-picker.luca-felix.com) |
+| shadcn-drag-and-drop-sort | Drag-and-drop sortable list of pills of different widths using dnd-kit. | [Link](https://github.com/crystaltai/shadcn-drag-and-drop) |
 | shadcn-drag-table | Drag-and-drop table component. | [Link](https://github.com/zenoncao/shadcn-drag-table) |
 | shadcn-dropzone | File upload component using React-Dropzone, built with accessibility in mind. | [Link](https://github.com/janglad/shadcn-dropzone) |
 | shadcn-editor | Lexical editor with shadcn theme. | [Link](https://github.com/htmujahid/shadcn-editor) |
@@ -152,6 +156,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shaduxe-ui | Component variants for shadcn/ui. | [Link](https://ui.shaduxe.com) |
 | simple-ai | Components and blocks to easily build AI apps | [Link](https://simple-ai.dev) |
 | simplekit | Wallet and account component for Wagmi. | [Link](https://github.com/vaunblu/SimpleKit) |
+| skiper-ui | Stand out from others with this crazzy ui library built with shad-cn cli | [Link](https://skiper-ui.com/) |
 | solanauth | Solana wallet authentication modal. | [Link](https://solanauth.vercel.app/) |
 | sortable | Sortable component with dnd-kit. | [Link](https://github.com/sadmann7/sortable) |
 | spectrum-ui | Collection using Aceternity UI Magic UI. | [Link](https://github.com/arihantcodes/spectrum-ui) |
@@ -160,7 +165,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | supabase-shadcn-database-example | supabase + shadcn/ui datatable | [Link](https://github.com/thisisfel1x/supabase-shadcn-database-example) |
 | supercharged-shadcn-components | Type-safe form components collection. | [Link](https://github.com/slickwit/supercharged-shadcn-components) |
 | time-picker | Simple TimePicker component. | [Link](https://github.com/openstatusHQ/time-picker) |
-| tremor-raw | Components for charts and dashboards. | [Link](https://github.com/tremorlabs/tremor-raw) |
+| tremor | Components for charts and dashboards. | [Link](https://github.com/tremorlabs/tremor) |
 | twblocks | Website blocks based on shadcn & Radix. | [Link](https://github.com/tommyjepsen/twblocks) |
 | tweet-to-code | Twitter design recreations as code. | [Link](https://tweet-to-code.vercel.app/) |
 | ui-beats | Animated React Components collection. | [Link](https://uibeats.com) |
@@ -300,6 +305,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 
 | Name                     | Description                                                                                                     | Link                                                                                      |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| shadcn-storybook-registry| Registry of stories for the shadcn components. Quickly get the atomic level components documented in Storybook.| [Link](https://registry.lloydrichards.dev/)                                             |
 | shadcn-ui-components     | Every component recreated in Figma.                                                                            | [Link](https://www.figma.com/community/file/1342715840824755935/shadcn-ui-components)            |
 | shadcn-ui-storybook (JheanAntunes) | All shadcn/ui components registered in the storybook by JheanAntunes.                                     | [Link](https://65711ecf32bae758b457ae34-uryqbzvojc.chromatic.com/)                               |
 | shadcn-ui-storybook (fellipeutaka) | All shadcn/ui components registered in the storybook by fellipeutaka.                                     | [Link](https://fellipeutaka-ui.vercel.app/?path=/docs/components-accordion--docs)               |

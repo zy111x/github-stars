@@ -1,6 +1,6 @@
 ---
 project: node-sonos
-stars: 704
+stars: 706
 description: |-
     🔈 Sonos Media Player Interface/Client
 url: https://github.com/bencevans/node-sonos
@@ -195,6 +195,7 @@ node-sonos in use across the interwebs. Missing yours? [Add it](https://github.c
 * **[gladys-sonos](https://github.com/GladysProject/gladys-sonos)** - Control Sonos with [Gladys](https://github.com/GladysProject/Gladys) a Raspberry Pi Home Assistant
 * **[sonos-web](https://github.com/Villarrealized/sonos-web)** - Sonos controller for your web browser
 * **[BudgieStream](https://github.com/filahf/budgie-stream)** - Stream system output to Sonos
+* **[GrooveSensor](https://github.com/recursivefunk/groove-sensor)** - Motion-activated Sonos playback
 
 ### Writeups
 

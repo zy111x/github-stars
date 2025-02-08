@@ -1,6 +1,6 @@
 ---
 project: changesets
-stars: 9369
+stars: 9397
 description: |-
     🦋       A way to manage your versioning and changelogs with a focus on monorepos
 url: https://github.com/changesets/changesets
@@ -102,6 +102,7 @@ To make releasing easier, you can use [this changesets github action](https://gi
 - [Clerk](https://github.com/clerk/javascript)
 - [Hey API](https://github.com/hey-api/openapi-ts)
 - [neverthrow](https://github.com/supermacro/neverthrow)
+- [Apollo Client](https://github.com/apollographql/apollo-client)
 
 # Thanks/Inspiration
 

@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 3298
+stars: 3348
 description: |-
     PraisonAI is a production-ready Multi AI Agents framework, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. It provides a low-code solution to streamline the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
 url: https://github.com/MervinPraison/PraisonAI
@@ -125,6 +125,8 @@ const { Agent } = require('praisonai');
 const agent = new Agent({ instructions: 'You are a helpful AI assistant' });
 agent.start('Write a movie script about a robot in Mars');
 ```
+
+![PraisonAI CLI Demo](docs/demo/praisonai-cli-demo.gif)
 
 ## AI Agents Flow
 

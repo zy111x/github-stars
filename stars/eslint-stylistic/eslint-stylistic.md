@@ -1,6 +1,6 @@
 ---
 project: eslint-stylistic
-stars: 1567
+stars: 1578
 description: |-
     Monorepo for ESLint Stylistic plugins and configs
 url: https://github.com/eslint-stylistic/eslint-stylistic
