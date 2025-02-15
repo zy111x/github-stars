@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 35922
+stars: 36025
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---
@@ -315,11 +315,16 @@ Other Curricula
 
 Our team produces other curricula! Check out:
 
+-   Generative AI for Beginners
+-   Generative AI for Beginners .NET
+-   Generative AI with JavaScript
+-   AI for Beginners
 -   Data Science for Beginners
--   **Version 2.0** Generative AI for Beginners
--   **NEW** Cybersecurity for Beginners
+-   ML for Beginners
+-   Cybersecurity for Beginners
 -   Web Dev for Beginners
 -   IoT for Beginners
--   Machine Learning for Beginners
 -   XR Development for Beginners
--   Mastering GitHub Copilot for AI Paired Programming
+-   Mastering GitHub Copilot for Paired Programming
+-   Mastering GitHub Copilot for C#/.NET Developers
+-   Choose Your Own Copilot Adventure

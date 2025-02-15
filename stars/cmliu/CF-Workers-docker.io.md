@@ -1,6 +1,6 @@
 ---
 project: CF-Workers-docker.io
-stars: 7085
+stars: 7202
 description: 这个项目是一个基于 Cloudflare Workers 的 Docker 镜像代理工具。它能够中转对 Docker 官方镜像仓库的请求，解决一些访问限制和加速访问的问题。
 url: https://github.com/cmliu/CF-Workers-docker.io
 ---
@@ -14,7 +14,7 @@ url: https://github.com/cmliu/CF-Workers-docker.io
 
 Caution
 
-**docker.fxxk.dedyn.io 已被GFW污染，需自行部署使用。**
+**docker.cmliussss.net 已被GFW污染，需自行部署使用。**
 
 Warning
 
@@ -31,13 +31,13 @@ Warning
 ⚙️ 如何使用？ 视频教程
 -------------
 
-例如您的Workers项目域名为：`docker.fxxk.dedyn.io`；
+例如您的Workers项目域名为：`docker.cmliussss.net`；
 
 ### 1.官方镜像路径前面加域名
 
-docker pull docker.fxxk.dedyn.io/stilleshan/frpc:latest
+docker pull docker.cmliussss.net/stilleshan/frpc:latest
 
-docker pull docker.fxxk.dedyn.io/library/nginx:stable-alpine3.19-perl
+docker pull docker.cmliussss.net/library/nginx:stable-alpine3.19-perl
 
 ### 2.一键设置镜像加速
 
@@ -46,7 +46,7 @@ docker pull docker.fxxk.dedyn.io/library/nginx:stable-alpine3.19-perl
 sudo mkdir -p /etc/docker
 sudo tee /etc/docker/daemon.json <<\-'EOF'
 {
-  "registry-mirrors": \["https://docker.fxxk.dedyn.io"\]  # 请替换为您自己的Worker自定义域名
+  "registry-mirrors": \["https://docker.cmliussss.net"\]  # 请替换为您自己的Worker自定义域名
 }
 EOF
 sudo systemctl daemon-reload

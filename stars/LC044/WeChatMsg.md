@@ -1,6 +1,6 @@
 ---
 project: WeChatMsg
-stars: 37020
+stars: 37220
 description: 提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属于个人的AI聊天助手
 url: https://github.com/LC044/WeChatMsg
 ---
