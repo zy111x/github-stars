@@ -1,6 +1,6 @@
 ---
 project: fedify
-stars: 655
+stars: 658
 description: |-
     ActivityPub server framework in TypeScript
 url: https://github.com/fedify-dev/fedify
@@ -108,7 +108,7 @@ financial contributors:[^2]
 
 ### Backers
 
-yamanoku, okin, Andy Piper, box464, Evan Prodromou, Rafael Goulart
+yamanoku, Julian Fietkau, taye, okin, Andy Piper, box464, Evan Prodromou, Rafael Goulart, malte
 
 ### One-time donations
 

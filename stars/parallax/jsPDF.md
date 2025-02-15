@@ -1,6 +1,6 @@
 ---
 project: jsPDF
-stars: 29707
+stars: 29751
 description: |-
     Client-side JavaScript PDF generation for everyone.
 url: https://github.com/parallax/jsPDF

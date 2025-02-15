@@ -1,6 +1,6 @@
 ---
 project: stencil
-stars: 12687
+stars: 12692
 description: |-
     A toolchain for building scalable, enterprise-ready component systems on top of TypeScript and Web Component standards. Stencil components can be distributed natively to React, Angular, Vue, and traditional web developers from a single, framework-agnostic codebase.
 url: https://github.com/ionic-team/stencil

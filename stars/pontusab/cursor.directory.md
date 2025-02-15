@@ -1,6 +1,6 @@
 ---
 project: cursor.directory
-stars: 2398
+stars: 2463
 description: |-
     Find the best cursor rules for your framework and language
 url: https://github.com/pontusab/cursor.directory

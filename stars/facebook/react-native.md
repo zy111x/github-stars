@@ -1,6 +1,6 @@
 ---
 project: react-native
-stars: 120464
+stars: 120570
 description: |-
     A framework for building native applications using React
 url: https://github.com/facebook/react-native

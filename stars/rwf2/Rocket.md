@@ -1,6 +1,6 @@
 ---
 project: Rocket
-stars: 24881
+stars: 24902
 description: |-
     A web framework for Rust.
 url: https://github.com/rwf2/Rocket

@@ -1,6 +1,6 @@
 ---
 project: echo
-stars: 3718
+stars: 3715
 description: |-
     Lazy-loading images with data-* attributes
 url: https://github.com/toddmotto/echo

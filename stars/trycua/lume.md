@@ -1,6 +1,6 @@
 ---
 project: lume
-stars: 1730
+stars: 1928
 description: |-
     A lightweight CLI and local API server to create, run and manage macOS and Linux virtual machines (VMs) natively on Apple Silicon.
 url: https://github.com/trycua/lume
@@ -19,7 +19,7 @@ url: https://github.com/trycua/lume
   [![Swift 6](https://img.shields.io/badge/Swift_6-F54A2A?logo=swift&logoColor=white&labelColor=F54A2A)](#)
   [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=F0F0F0)](#)
   [![Homebrew](https://img.shields.io/badge/Homebrew-FBB040?logo=homebrew&logoColor=fff)](#install)
-  [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.gg/8p56E2KJ)
+  [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.com/invite/5ngXY2Wn)
 </h1>
 </div>
 
@@ -76,11 +76,15 @@ Command Options:
     --no-display         Do not start the VNC client app
     --shared-dir <dir>   Share directory with VM (format: path[:ro|rw])
     --mount <path>       For Linux VMs only, attach a read-only disk image
+    --registry <url>     Container registry URL (default: ghcr.io)
+    --organization <org> Organization to pull from (default: trycua)
+    --vnc-port <port>    Port to use for the VNC server (default: 0 for auto-assign)
 
   set:
-    --cpu <cores>        New number of CPU cores
-    --memory <size>      New memory size
-    --disk-size <size>   New disk size
+    --cpu <cores>        New number of CPU cores (e.g., 4)
+    --memory <size>      New memory size (e.g., 8192MB or 8GB)
+    --disk-size <size>   New disk size (e.g., 40960MB or 40GB)
+    --display <res>      New display resolution in format WIDTHxHEIGHT (e.g., 1024x768)
 
   delete:
     --force              Force deletion without confirmation

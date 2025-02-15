@@ -1,6 +1,6 @@
 ---
 project: esoTalk
-stars: 1467
+stars: 1468
 description: |-
     Fat-free forum software.
 url: https://github.com/esotalk/esoTalk

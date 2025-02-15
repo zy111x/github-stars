@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 14246
+stars: 14296
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -87,7 +87,7 @@ import ky from 'ky';
 const json = await ky.post('https://example.com', {json: {foo: true}}).json();
 
 console.log(json);
-//=> `{data: '🦄'}`
+//=> {data: '🦄'}
 ```
 
 With plain `fetch`, it would be:
@@ -110,7 +110,7 @@ if (!response.ok) {
 const json = await response.json();
 
 console.log(json);
-//=> `{data: '🦄'}`
+//=> {data: '🦄'}
 ```
 
 If you are using [Deno](https://github.com/denoland/deno), import Ky from a URL. For example, using a CDN:
@@ -125,7 +125,7 @@ import ky from 'https://esm.sh/ky';
 
 The `input` and `options` are the same as [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch), with additional `options` available (see below).
 
-Returns a [`Response` object](https://developer.mozilla.org/en-US/docs/Web/API/Response) with [`Body` methods](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#body) added for convenience. So you can, for example, call `ky.get(input).json()` directly without having to await the `Response` first. When called like that, an appropriate `Accept` header will be set depending on the body method used. Unlike the `Body` methods of `window.Fetch`; these will throw an `HTTPError` if the response status is not in the range of `200...299`. Also, `.json()` will return an empty string if body is empty or the response status is `204` instead of throwing a parse error due to an empty body.
+Returns a [`Response` object](https://developer.mozilla.org/en-US/docs/Web/API/Response) with [`Body` methods](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#body) added for convenience. So you can, for example, call `ky.get(input).json()` directly without having to await the `Response` first. When called like that, an appropriate `Accept` header will be set depending on the body method used. Unlike the `Body` methods of `window.Fetch`, these will throw an `HTTPError` if the response status is not in the range of `200...299`. Also, `.json()` will return an empty string if body is empty or the response status is `204` instead of throwing a parse error due to an empty body.
 
 ```js
 import ky from 'ky';
@@ -681,7 +681,7 @@ const json = await ky.post('https://example.com', {
 }).json();
 
 console.log(json);
-//=> `{data: '🦄'}`
+//=> {data: '🦄'}
 ```
 
 ### Cancellation
@@ -769,12 +769,11 @@ Node.js 18 and later.
 ## Related
 
 - [fetch-extras](https://github.com/sindresorhus/fetch-extras) - Useful utilities for working with Fetch
-- [got](https://github.com/sindresorhus/got) - Simplified HTTP requests for Node.js
 - [ky-hooks-change-case](https://github.com/alice-health/ky-hooks-change-case) - Ky hooks to modify cases on requests and responses of objects
 
 ## Maintainers
 
 - [Sindre Sorhus](https://github.com/sindresorhus)
-- [Szymon Marczak](https://github.com/szmarczak)
 - [Seth Holladay](https://github.com/sholladay)
+- [Szymon Marczak](https://github.com/szmarczak)
 

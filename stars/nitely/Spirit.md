@@ -1,8 +1,8 @@
 ---
 project: Spirit
-stars: 1169
+stars: 1168
 description: |-
-    Spirit is a modern Python based forum built on top of Django framework
+    Spirit is a modern Python/Django forum
 url: https://github.com/nitely/Spirit
 ---
 
@@ -21,8 +21,8 @@ Docs can be found at [spirit.readthedocs.io](http://spirit.readthedocs.io/en/lat
 
 ## Compatibility
 
-* Python 3.8, 3.9, 3.10, and 3.11 (recommended)
-* Django 3.2 LTS, and 4.2 LTS
+* Python 3.9, 3.10, 3.11, and 3.12
+* Django 4.2 LTS
 * PostgreSQL (recommended), MySQL, Oracle Database and SQLite
 
 Constrained by "[What Python version can I use with Django?](https://docs.djangoproject.com/en/dev/faq/install/#what-python-version-can-i-use-with-django)"
@@ -44,10 +44,23 @@ Visit [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 For detailed setup docs, see [spirit.readthedocs.io](http://spirit.readthedocs.io/en/latest/)
 
-## Testing
+## Dev
+
+Use [uv tooling](https://docs.astral.sh/uv/).
+
+### Testing
 
 ```
-python runtests.py
+uv sync --all-extras
+uv run spirit startproject test_project
+uv run runtests.py
+```
+
+### Lint & Format
+
+```
+uvx ruff check --select I --fix
+uvx ruff format
 ```
 
 ## License

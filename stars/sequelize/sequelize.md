@@ -1,6 +1,6 @@
 ---
 project: sequelize
-stars: 29753
+stars: 29775
 description: |-
     Feature-rich ORM for modern Node.js and TypeScript, it supports PostgreSQL (with JSON and JSONB support), MySQL, MariaDB, SQLite, MS SQL Server, Snowflake, Oracle DB (v6), DB2 and DB2 for IBM i.
 url: https://github.com/sequelize/sequelize
@@ -21,6 +21,27 @@ url: https://github.com/sequelize/sequelize
 Sequelize is an easy-to-use and promise-based [Node.js](https://nodejs.org/en/about/) [ORM tool](https://en.wikipedia.org/wiki/Object-relational_mapping) for [Postgres](https://en.wikipedia.org/wiki/PostgreSQL), [MySQL](https://en.wikipedia.org/wiki/MySQL), [MariaDB](https://en.wikipedia.org/wiki/MariaDB), [SQLite](https://en.wikipedia.org/wiki/SQLite), [DB2](https://en.wikipedia.org/wiki/IBM_Db2_Family), [Microsoft SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server), [Snowflake](https://www.snowflake.com/), [Oracle DB](https://www.oracle.com/database/) and [Db2 for IBM i](https://www.ibm.com/support/pages/db2-ibm-i). It features solid transaction support, relations, eager and lazy loading, read replication and more.
 
 Would you like to contribute? Read [our contribution guidelines](./CONTRIBUTING.md) to know more. There are many ways to help! 😃
+
+## 🚀 Seeking New Maintainers for Sequelize! 🚀
+
+We're looking for new maintainers to help finalize and release the next major version of Sequelize! If you're passionate about open-source and database ORMs, we'd love to have you onboard.
+
+### 💰 Funding Available
+
+We distribute **$2,500 per quarter** among maintainers and have additional funds for full-time contributions.
+
+### 🛠️ What You’ll Work On
+
+- Finalizing and releasing Sequelize’s next major version
+- Improving TypeScript support and database integrations
+- Fixing critical issues and shaping the ORM’s future
+
+### 🤝 How to Get Involved
+
+Interested? Join our Slack and reach out to **@WikiRik** or **@sdepold**:  
+➡️ **[sequelize.org/slack](https://sequelize.org/slack)**
+
+We’d love to have you on board! 🚀
 
 ## :computer: Getting Started
 

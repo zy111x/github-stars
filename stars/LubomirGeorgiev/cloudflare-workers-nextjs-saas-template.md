@@ -1,6 +1,6 @@
 ---
 project: cloudflare-workers-nextjs-saas-template
-stars: 126
+stars: 147
 description: |-
     Cloudflare Workers SaaS Template
 url: https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template
@@ -47,17 +47,21 @@ Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overv
   - 🔄 Automatic Migration Generation
   - 💻 SQLite for Local Development
   - ⚡ Efficient Data Fetching
+  - 🔍 Type-safe Queries
 - 📨 Email Service with React Email and Resend or Brevo
   - 🎨 Beautiful Email Templates
   - 👀 Email Preview Mode
   - 🔧 Local Email Development Server
   - 📬 Transactional Emails
   - ✉️ Email Verification Flow
+  - 📱 Responsive Email Templates
 - 🚀 Deployment with Github Actions
   - ⚙️ Automatic Deployments
   - 🔐 Environment Variables Management
   - 📦 Database Migrations
   - 🔄 Comprehensive CI/CD Pipeline
+  - 🧹 Cache Purging
+  - ✅ Type Checking
 - 🎨 Modern UI
   - 🎨 Tailwind CSS
   - 🧩 Shadcn UI Components
@@ -69,12 +73,16 @@ Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overv
   - 🏠 Landing Page
   - ✨ Beautiful Email Templates
   - 👤 Profile Settings Page
+  - 🎯 Form Validation States
 - ✨ Validations with Zod and React Hook Form
   - 🛡️ Type-safe Form Validations
   - 🔒 Server-side Validations
   - 🔍 Client-side Validations
   - 🧹 Input Sanitization
+  - ⚡ Real-time Validation
+  - 🔄 Form State Management
 - 👨‍💻 Developer Experience
+  - 🧪 Local Development Setup
   - 📘 TypeScript Support
   - 🔍 ESLint Configuration
   - ✨ Prettier Configuration
@@ -91,6 +99,7 @@ Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overv
   - 🖥️ Server-side Rendering
   - 💾 Edge Database with D1
   - 🗄️ Session Storage with KV
+  - ⚡ API Rate Limiting
 
 ## Planned features (TODO):
 
@@ -115,9 +124,9 @@ Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overv
 5. `pnpm dev`
 6.  Open http://localhost:3000
 
-## Changes to wrangler.json
+## Changes to wrangler.jsonc
 
-After making a change to wrangler.json, you need to run `pnpm cf-typegen` to generate the new types.
+After making a change to wrangler.jsonc, you need to run `pnpm cf-typegen` to generate the new types.
 
 ## Things to change and customize before deploying to production
 1. Go to `src/constants.ts` and update it with your project details
@@ -132,7 +141,7 @@ After making a change to wrangler.json, you need to run `pnpm cf-typegen` to gen
 2. Set either `RESEND_API_KEY` or `SENDGRID_API_KEY` as a secret in your Cloudflare Worker depending on which email service you want to use.
 3. Create a Turnstile catcha in your Cloudflare account, and set the `NEXT_PUBLIC_TURNSTILE_SITE_KEY` as a Github Actions variable.
 4. Set `TURNSTILE_SECRET_KEY` as a secret in your Cloudflare Worker.
-5. Update the `wrangler.json` file with the new database and KV namespaces and env variables. If you change the D1 database name, you also need to update the `db:migrate:dev` script in the `package.json` file.
+5. Update the `wrangler.jsonc` file with the new database and KV namespaces and env variables.
 6. Go to https://dash.cloudflare.com/profile/api-tokens and click on "Use template" next to "Edit Cloudflare Workers". On the next, page add the following permissions in addition to the ones from the template:
     - Account:AI Gateway:Edit
     - Account:Workers AI:Edit
@@ -145,8 +154,7 @@ After making a change to wrangler.json, you need to run `pnpm cf-typegen` to gen
 7. Add the API token to the Github repository secrets as `CLOUDFLARE_API_TOKEN`
 8. Add the Cloudflare account id to the Github repository variables as `CLOUDFLARE_ACCOUNT_ID`
 9. Optional: If you want clear the CDN cache on deploy, add `CLOUDFLARE_ZONE_ID` to the Github repository variables for the zone id of your domain. This is the zone id of your domain, not the account id.
-10. Add the database name to the Github repository variables as `DATABASE_ID`. This should match the database name in the `wrangler.json` file.
-11. Push to the main branch
+10. Push to the main branch
 
 ## Email templates
 If you want to preview and edit the email templates you can:
@@ -159,5 +167,5 @@ If you want to preview and edit the email templates you can:
 ### How to upgrade this template
 Since this template is based on the [OpenNext](https://opennext.js.org/cloudflare) framework we need to make sure that we are following the changes they are making and update this template accordingly.
 
-To see the changes clone https://github.com/cloudflare/workers-sdk and then do `git diff f9fd9df...main -- packages/create-cloudflare/templates-experimental/next/` you will see the changes that we need to make to this template.
+To see the changes clone https://github.com/cloudflare/workers-sdk and then do `git diff dba3f2158...main -- packages/create-cloudflare/templates-experimental/next/` you will see the changes that we need to make to this template.
 

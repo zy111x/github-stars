@@ -1,6 +1,6 @@
 ---
 project: github-action-nixpacks
-stars: 23
+stars: 24
 description: |-
     Build and push images with nixpacks
 url: https://github.com/iloveitaly/github-action-nixpacks

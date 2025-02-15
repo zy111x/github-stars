@@ -1,6 +1,6 @@
 ---
 project: PairDrop
-stars: 5365
+stars: 5522
 description: |-
     PairDrop: Transfer Files Cross-Platform. No Setup, No Signup.
 url: https://github.com/schlagmichdoch/PairDrop
@@ -118,6 +118,7 @@ Connect to others in complex network situations, or over the Internet.
 * [NoSleep](https://github.com/richtr/NoSleep.js) display sleep, add wake lock ([MIT](licenses/MIT-NoSleep))
 * [heic2any](https://github.com/alexcorvi/heic2any) HEIC/HEIF to PNG/GIF/JPEG ([MIT](licenses/MIT-heic2any))
 * [Weblate](https://weblate.org/) web-based localization tool
+* [BrowserStack](https://www.browserstack.com/) This project is tested with BrowserStack
 
 [FAQ](docs/faq.md)
 

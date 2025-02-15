@@ -1,6 +1,6 @@
 ---
 project: divz
-stars: 203
+stars: 204
 description: |-
     A React component that lets you scroll, swipe and zoom through content on the 3D z-axis. Ideal to showcase your portfolio, media or products. Try out the demos here: https://lewhunt.github.io/divz/
 url: https://github.com/lewhunt/divz

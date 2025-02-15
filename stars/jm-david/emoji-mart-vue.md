@@ -1,6 +1,6 @@
 ---
 project: emoji-mart-vue
-stars: 606
+stars: 604
 description: |-
     One component to pick them all 👊🏼
 url: https://github.com/jm-david/emoji-mart-vue

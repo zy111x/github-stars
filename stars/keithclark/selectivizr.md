@@ -1,6 +1,6 @@
 ---
 project: selectivizr
-stars: 1705
+stars: 1704
 description: |-
     selectivizr is a JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8.
 url: https://github.com/keithclark/selectivizr

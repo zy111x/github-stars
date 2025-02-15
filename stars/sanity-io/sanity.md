@@ -1,12 +1,12 @@
 ---
 project: sanity
-stars: 5437
+stars: 5446
 description: |-
     Sanity Studio – Rapidly configure content workspaces powered by structured content
 url: https://github.com/sanity-io/sanity
 ---
 
-<p align="center">
+<div align="center">
   <a href="https://sanity.io">
     <img src="https://cdn.sanity.io/images/3do82whm/next/1dfce9dde7a62ccaa8e8377254a1e919f6c07ad3-128x128.svg" />
   </a>
@@ -16,19 +16,17 @@ url: https://github.com/sanity-io/sanity
     <a href="https://www.sanity.io/docs">Docs</a> |
     <a href="https://www.sanity.io">Website</a>
   </h4>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   <img alt="" src="https://img.shields.io/npm/v/sanity?style=flat">
   <img alt="" src="https://img.shields.io/npm/dm/@sanity/client?style=flat">
   <img alt="" src="https://img.shields.io/npm/l/sanity.svg?style=flat">
   <a aria-label="Join the community on Slack" href="https://slack.sanity.io">
-    <img alt="" src="https://img.shields.io/badge/Join%20Slack-f03e2f?logo=Slack&style=flat">
-  </a>
-  <a aria-label="Follow Sanity on Twitter" href="https://twitter.com/sanity_io">
-    <img alt="" src="https://img.shields.io/twitter/follow/sanity_io?style=flat&color=blue">
-  </a>
-</p>
+    <img alt="" src="https://img.shields.io/badge/Join%20Slack-f03e2f?logo=Slack&style=flat"></a>
+  <a aria-label="Follow Sanity on Bluesky" href="https://bsky.app/profile/sanity.io">
+    <img alt="" src="https://img.shields.io/badge/follow-@sanity.io-blue?logo=bluesky"></a>
+</div>
 
 ## Build powerful production-ready content workspaces
 

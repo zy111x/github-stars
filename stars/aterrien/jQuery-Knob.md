@@ -1,6 +1,6 @@
 ---
 project: jQuery-Knob
-stars: 5032
+stars: 5031
 description: |-
     Nice, downward compatible, touchable, jQuery dial
 url: https://github.com/aterrien/jQuery-Knob

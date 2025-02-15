@@ -1,6 +1,6 @@
 ---
 project: portfolio
-stars: 190
+stars: 196
 description: |-
     My portfolio website build with Nuxt, Scss and GSAP
 url: https://github.com/logotip4ik/portfolio

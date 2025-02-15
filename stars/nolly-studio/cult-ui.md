@@ -1,6 +1,6 @@
 ---
 project: cult-ui
-stars: 1846
+stars: 1895
 description: |-
     Components crafted for Design Engineers. Styled using Tailwind CSS, fully compatible with Shadcn, and easy to integrate—just copy and paste. MIT 🤌
 url: https://github.com/nolly-studio/cult-ui

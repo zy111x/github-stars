@@ -1,6 +1,6 @@
 ---
 project: counterscale
-stars: 1580
+stars: 1586
 description: |-
     Scalable web analytics you run yourself on Cloudflare
 url: https://github.com/benvinegar/counterscale
@@ -77,7 +77,7 @@ To start reporting website traffic from your web property, copy/paste the follow
 The Counterscale tracker is published as an npm module:
 
 ```bash
-npm install @counterscale/tracker
+npm install @counterscale/tracker@^2
 ```
 
 Initialize Counterscale with your site ID and the URL of your deployed reporting endpoint:

@@ -1,6 +1,6 @@
 ---
 project: two.js
-stars: 8393
+stars: 8399
 description: |-
     A renderer agnostic two-dimensional drawing api for the web.
 url: https://github.com/jonobr1/two.js
@@ -146,7 +146,7 @@ var width = 800;
 var height = 600;
 
 var canvas = createCanvas(width, height);
-Two.Utils.shim(canvas, Image);
+Two.Utils.polyfill(canvas, Image);
 
 var time = Date.now();
 

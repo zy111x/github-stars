@@ -1,18 +1,18 @@
 ---
 project: lenis
-stars: 9639
+stars: 9699
 description: |-
     How smooth scroll should be
 url: https://github.com/darkroomengineering/lenis
 ---
 
-[![LENIS](https://assets.darkroom.engineering/lenis/header.png)](https://github.com/darkroomengineering/lenis)
+[![LENIS](https://assets.darkroom.engineering/lenis/banner.gif)](https://github.com/darkroomengineering/lenis)
 
-[![npm](https://img.shields.io/npm/v/lenis?colorA=000000&colorB=ff98a2
+[![npm](https://img.shields.io/npm/v/lenis?colorA=E30613&colorB=000000
 )](https://www.npmjs.com/package/lenis)
-[![downloads](https://img.shields.io/npm/dm/lenis?colorA=000000&colorB=ff98a2
+[![downloads](https://img.shields.io/npm/dm/lenis?colorA=E30613&colorB=000000
 )](https://www.npmjs.com/package/lenis)
-[![size](https://img.shields.io/bundlephobia/minzip/lenis?label=size&colorA=000000&colorB=ff98a2)](https://bundlephobia.com/package/lenis)
+[![size](https://img.shields.io/bundlephobia/minzip/lenis?label=size&colorA=E30613&colorB=000000)](https://bundlephobia.com/package/lenis)
 
 ## Introduction
 

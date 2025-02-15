@@ -1,6 +1,6 @@
 ---
 project: ant-design-vue
-stars: 20509
+stars: 20528
 description: |-
     🌈  An enterprise-class UI components based on Ant Design and Vue. 🐜
 url: https://github.com/vueComponent/ant-design-vue
@@ -81,6 +81,7 @@ If you are in a bad network environment, you can try other registries and tools 
 | [vue-dash-event](https://github.com/vueComponent/vue-dash-event) | The library function, implemented in the DOM template, can use the custom event of the ant-design-vue component (camelCase) |
 | [@formily/antdv](https://github.com/formilyjs/antdv) | The Library with Formily and ant-design-vue |
 | [@ant-design-vue/nuxt](https://github.com/vueComponent/ant-design-vue-nuxt) | A nuxt module for ant-design-vue |
+| [ant-design-x-vue](https://github.com/wzc520pyfm/ant-design-x-vue) | A Vue AI interface solutions base on the Ant Design X design specification |
 
 ## Donation
 

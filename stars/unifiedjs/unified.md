@@ -1,6 +1,6 @@
 ---
 project: unified
-stars: 4583
+stars: 4586
 description: |-
     ☔️ interface for parsing, inspecting, transforming, and serializing content through syntax trees
 url: https://github.com/unifiedjs/unified

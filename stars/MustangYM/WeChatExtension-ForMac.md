@@ -1,6 +1,6 @@
 ---
 project: WeChatExtension-ForMac
-stars: 22441
+stars: 22457
 description: |-
     A plugin for Mac WeChat
 url: https://github.com/MustangYM/WeChatExtension-ForMac
@@ -27,7 +27,7 @@ url: https://github.com/MustangYM/WeChatExtension-ForMac
 ## ⚠️警告⚠️
 - [全国最大制售微信外挂软件案宣判！主犯获刑10年](https://tech.ifeng.com/c/85A5xn6wYpo)。
 - 有不少三方盗版网站在**售卖**甚至通过**改编**此项目开源代码进行**非法获利**，这已经超出我本人所能控制范围，这并非我的初衷，此项目是**免费开源**，严厉**谴责**及**警告**以下售卖此项目的网站或个人立即停止**非法盈利**。
-- 小助手将不再开源！以表抗议！！！直至你们停止盈利！
+- 小助手将不再开源！以表抗议！！！直至你们停止盈利。
 
 | 警告网站 | 非法获利形式 |
 | --- | --- |
