@@ -1,6 +1,6 @@
 ---
 project: skrollr
-stars: 18513
+stars: 18511
 description: |-
     Stand-alone parallax scrolling library for mobile (Android + iOS) and desktop. No jQuery. Just plain JavaScript (and some love).
 url: https://github.com/Prinzhorn/skrollr

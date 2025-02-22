@@ -1,6 +1,6 @@
 ---
 project: jsQR
-stars: 3791
+stars: 3796
 description: |-
     A pure javascript QR code reading library. This library takes in raw images and will locate, extract and parse any QR code found within.
 url: https://github.com/cozmo/jsQR

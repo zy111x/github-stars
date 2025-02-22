@@ -1,12 +1,10 @@
 ---
 project: Checkmate
-stars: 3701
+stars: 4061
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
 url: https://github.com/bluewave-labs/Checkmate
 ---
-
-
 
 <p align=center> <a href="https://trendshift.io/repositories/12443" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12443" alt="bluewave-labs%2Fcheckmate | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a></p>
   
@@ -19,20 +17,21 @@ url: https://github.com/bluewave-labs/Checkmate
 ![](https://img.shields.io/github/issues-pr/bluewave-labs/checkmate)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9901/badge)](https://www.bestpractices.dev/projects/9901)
 
-
 <h1 align="center"><a href="https://bluewavelabs.ca" target="_blank">Checkmate</a></h1>
 
 <p align="center"><strong>An open source uptime and infrastructure monitoring application</strong></p>
 
 ![dashboard](https://github.com/user-attachments/assets/252d6047-522b-4576-8f14-233510e464b8)
 
-Checkmate is an open source monitoring tool used to track the operational status and performance of servers and websites. It regularly checks whether a server/website is accessible and performs optimally, providing real-time alerts and reports on the monitored services' availability, downtime, and response time. 
+This repository contains the **frontend** of Checkmate, an open-source, self-hosted monitoring tool for tracking server hardware, uptime, response times, and incidents in real time with beautiful visualizations. Checkmate regularly checks whether a server/website is accessible and performs optimally, providing real-time alerts and reports on the monitored services' availability, downtime, and response time.
 
-Checkmate also has an agent, called [Capture](https://github.com/bluewave-labs/capture), to retrieve data from remote servers. While Capture is not required to run Checkmate, it provides additional insigths about your servers' CPU, RAM, disk and temperature status. 
+Checkmate also has an agent, called [Capture](https://github.com/bluewave-labs/capture), to retrieve data from remote servers. While Capture is not required to run Checkmate, it provides additional insigths about your servers' CPU, RAM, disk and temperature status.
 
 Checkmate has ben stress tested with 1000+ active monitors without any particular issues or performance bottlenecks.
 
-We **love** what we are building here, and we contibuously learn a few things about Reactjs, Nodejs, MongoDB and Docker while building Checkmate. 
+We **love** what we are building here, and we contibuously learn a few things about Reactjs, Nodejs, MongoDB and Docker while building Checkmate.
+
+For backend files, please check [Checkmate backend](https://github.com/bluewave-labs/checkmate-backend) repository.
 
 ## 📦 Demo
 
@@ -40,21 +39,21 @@ See [Checkmate](https://checkmate-demo.bluewavelabs.ca/) in action. The username
 
 ## 🔗 User's guide
 
-Usage instructions can be found [here](https://docs.checkmate.so/). It's still WIP and some of the information there might be outdated. Rest assured, we are doing our best! :)
+Usage instructions can be found [here](https://docs.checkmate.so/). It's still WIP and some of the information there might be outdated as we continuously add features weekly. Rest assured, we are doing our best! :)
 
 ## 🛠️ Installation
 
-See installation instructions in [Checkmate documentation portal](https://docs.checkmate.so/quickstart). Alternatively, you can also use [Coolify](https://coolify.io/) for a one click Docker deployment. If you would like to monitor your server infrastructure, you'll need [Capture agent](https://github.com/bluewave-labs/capture). Capture repository also contains the installation instructions. 
+See installation instructions in [Checkmate documentation portal](https://docs.checkmate.so/quickstart). Alternatively, you can also use [Coolify](https://coolify.io/) or [Elestio](https://elest.io/open-source/checkmate) for a one click Docker deployment. If you would like to monitor your server infrastructure, you'll need [Capture agent](https://github.com/bluewave-labs/capture). Capture repository also contains the installation instructions.
 
 ## 🚀 Performance
+
 Thanks to extensive optimizations, Checkmate operates with an exceptionally small memory footprint, requiring minimal memory and CPU resources. Here’s the memory usage of a Node.js instance running on a server that monitors 323 servers every minute:
 
 ![image](https://github.com/user-attachments/assets/37e04a75-d83a-488f-b25c-025511b492c9)
 
-You can see the memory footprint of MongoDB and Redis on the same server (398Mb and 15Mb) for the same amount of servers: 
+You can see the memory footprint of MongoDB and Redis on the same server (398Mb and 15Mb) for the same amount of servers:
 
 ![image](https://github.com/user-attachments/assets/3b469e85-e675-4040-a162-3f24c1afc751)
-
 
 ## 💚 Questions & ideas
 
@@ -77,7 +76,7 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 **Short term roadmap:**
 
 - Global (distributed) uptime checking on Solana network (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1593
-- Status pages (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1131 
+- Status pages (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1131
 - Translations (i18n) (**in progress**)
 - Better notification options (Webhooks, Discord, Telegram, Slack) (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1545
 - Command line interface (CLI) (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1558
@@ -87,6 +86,7 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 - DNS monitoring
 
 ## 🏗️ Screenshots
+
 <p>
 <img width="2714" alt="server" src="https://github.com/user-attachments/assets/f7cb272a-69a6-48c5-93b0-249ecf20ecc6" />
 </p>
@@ -106,16 +106,18 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 - [Recharts](https://recharts.org)
 - Lots of other open source components!
 
-## A few links 
+## A few links
 
-- If you would like to support us, please consider giving it a ⭐ and click on "watch". 
+- If you would like to support us, please consider giving it a ⭐ and click on "watch".
 - Have a question or suggestion for the roadmap/featureset? Check our [Discord channel](https://discord.gg/NAb6H3UTjK) or [Discussions](https://github.com/bluewave-labs/checkmate/discussions) forum.
 - Need a ping when there's a new release? Use [Newreleases](https://newreleases.io/), a free service to track releases.
 - Watch a Checkmate [installation and usage video](https://www.youtube.com/watch?v=GfFOc0xHIwY)
 
 ## 🤝 Contributing
 
-We pride ourselves on building strong connections with contributors at every level. Despite being a young project, Checkmate has already earned 3300 stars and attracted 40+ contributors from around the globe. So, don’t hold back — jump in, contribute and learn with us!
+We pride ourselves on building strong connections with contributors at every level. Despite being a young project, Checkmate has already earned 3700+ stars and attracted 45+ contributors from around the globe. 
+
+Our repo is starred by employees from **Google, Microsoft, Intel, Cisco, Tencent, Electronic Arts, ByteDance, JP Morgan Chase, Deloitte, Accenture, Foxconn, Broadcom, China Telecom, Barclays, Capgemini, Wipro, Cloudflare, Dassault Systèmes and NEC**, so don’t hold back — jump in, contribute and learn with us!
 
 Here's how you can contribute:
 
@@ -131,20 +133,18 @@ Here's how you can contribute:
   <img src="https://contrib.rocks/image?repo=bluewave-labs/checkmate" />
 </a>
 
-<!--
+## 💰 Our sponsors
 
-![Alt](https://repobeats.axiom.co/api/embed/c35d999c82dbb31e967427ea4166c14da4172e73.svg "Repobeats analytics image")
-
---> 
+Thanks to [Gitbook](https://gitbook.io/) for giving us a free tier for their documentation platform, and [Poeditor](https://poeditor.com/) providing us a free account to use their i18n services. If you would like to sponsor Checkmate, please send an email to hello@bluewavelabs.ca
 
 [![Star History Chart](https://api.star-history.com/svg?repos=bluewave-labs/checkmate&type=Date)](https://star-history.com/#bluewave-labs/bluewave-uptime&Date)
 
 Also check other developer and contributor-friendly projects of BlueWave:
 
+- [LangRoute](https://github.com/bluewave-labs/langroute), an LLM proxy and gateway
 - [DataRoom](https://github.com/bluewave-labs/bluewave-dataroom), an secure file sharing application, aka dataroom.
-- [BlueWave HRM](https://github.com/bluewave-labs/bluewave-hrm), a complete Human Resource Management platform.
+- [Headcount](https://github.com/bluewave-labs/bluewave-hrm), a complete Human Resource Management platform.
 - [Guidefox](https://github.com/bluewave-labs/guidefox), an application that helps new users learn how to use your product via hints, tours, popups and banners.
 - [VerifyWise](https://github.com/bluewave-labs/verifywise), the first open source AI governance platform.
 
-![image](https://badges.pufler.dev/visits/bluewave-labs/checkmate) since 14 Jan, 2025
 

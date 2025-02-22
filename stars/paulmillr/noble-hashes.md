@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 640
+stars: 645
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes

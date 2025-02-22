@@ -1,8 +1,8 @@
 ---
 project: CopilotKit
-stars: 16538
+stars: 16892
 description: |-
-    React UI + elegant infrastructure for AI Copilots, in-app AI agents, AI chatbots, and AI-powered Textareas 🪁
+    React UI + elegant infrastructure for AI Copilots, AI chatbots, and in-app AI agents. The Agentic last-mile 🪁
 url: https://github.com/CopilotKit/CopilotKit
 ---
 

@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2448
+stars: 2465
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -492,8 +492,11 @@ Options:
 
           [default: get]
 
-  -b, --base <BASE>
-          Base URL or website root directory to check relative URLs e.g. <https://example.com> or `/path/to/public`
+      --base <BASE>
+          Deprecated; use `--base-url` instead
+
+  -b, --base-url <BASE_URL>
+          Base URL used to resolve relative URLs during link checking Example: <https://example.com>
 
       --root-dir <ROOT_DIR>
           Root path to use when checking absolute local links, must be an absolute path

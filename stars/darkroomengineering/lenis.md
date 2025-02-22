@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 9699
+stars: 9765
 description: |-
     How smooth scroll should be
 url: https://github.com/darkroomengineering/lenis
@@ -22,12 +22,29 @@ Read our [Manifesto](https://github.com/darkroomengineering/lenis/blob/main/MANI
 
 <br/>
 
+- [Sponsors](#sponsors)
+- [Packages](#packages)
+- [Installation](#installation)
+- [Setup](#setup)
+- [Settings](#settings)
+- [Properties](#properties)
+- [Methods](#methods)
+- [Events](#events)
+- [Considerations](#considerations)
+- [Limitations](#limitations)
+- [Troubleshooting](#troubleshooting)
+- [Tutorials](#tutorials)
+- [Plugins](#plugins)
+- [Lenis is Use](#lenis-in-use)
+- [License](#license)
+
+<br/>
+
 ## Sponsors
 
 If you like Lenis, please consider [becoming a sponsor](https://github.com/sponsors/darkroomengineering). Your support helps us to smooth the web one library at a time.
 
-#### They make it possible:
-[![Scott Sunarto](https://avatars.githubusercontent.com/u/4402697?s=80&v=4)](https://smsunarto.com/) [![cachet.studio](https://avatars.githubusercontent.com/u/75880965?s=80&v=4)](https://www.cachet.studio/) [![Mario Sanchez Maselli](https://avatars.githubusercontent.com/u/1336977?s=80&v=4)](https://non-linear.studio/)
+[![Scott Sunarto](https://avatars.githubusercontent.com/u/4402697?s=80&v=4)](https://smsunarto.com/) [![Iron Velvet](https://avatars.githubusercontent.com/u/58460073?s=80&v=4)](https://www.ironvelvet.studio/) [![cachet.studio](https://avatars.githubusercontent.com/u/75880965?s=80&v=4)](https://www.cachet.studio/) [![Mario Sanchez Maselli](https://avatars.githubusercontent.com/u/1336977?s=80&v=4)](https://non-linear.studio/) [![Federico Valla](https://avatars.githubusercontent.com/u/38297526?s=80&v=4)](https://www.federic.ooo/)
 
 <br>
 
@@ -41,8 +58,6 @@ If you like Lenis, please consider [becoming a sponsor](https://github.com/spons
 <br>
 
 ## Installation
-
-### JavaScript
 
 using a package manager:
 
@@ -95,7 +110,7 @@ function raf(time) {
 requestAnimationFrame(raf);
 ```
 
-#### Recommended CSS:
+### Recommended CSS:
 
 import stylesheet
 ```js
@@ -140,7 +155,7 @@ gsap.ticker.lagSmoothing(0);
 <br/>
 
 
-## Instance settings
+## Settings
 
 | Option                   | Type                        | Default                                            | Description                                                                                                                                                                                                                                                                      |
 |--------------------------|-----------------------------|----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -183,7 +198,7 @@ gsap.ticker.lagSmoothing(0);
 - `lock`(`boolean`): whether or not to prevent user from scrolling until target reached
 - `onComplete`(`function`): called when target is reached -->
 
-## Instance Props
+## Properties
 
 | Property                | Type              | Description                                                                |
 |-------------------------|-------------------|----------------------------------------------------------------------------|
@@ -208,7 +223,7 @@ gsap.ticker.lagSmoothing(0);
 
 <br/>
 
-## Instance Methods
+## Methods
 
 | Method                      | Description                                                                     | Arguments                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |-----------------------------|---------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -222,7 +237,7 @@ gsap.ticker.lagSmoothing(0);
 
 
 
-## Instance Events
+## Events
 
 | Event            | Callback Arguments        |
 |------------------|---------------------------|
@@ -303,6 +318,15 @@ new Lenis({
 - position fixed seems to lag on MacOS Safari pre-M1 ([source](https://github.com/darkroomengineering/lenis/issues/103))
 - touch events may behave unexpectedly when `syncTouch` is enabled on iOS < 16
 - nested scroll containers require proper configuration to work correctly
+
+<br>
+
+## Troubleshooting
+- Make sure you use the latest version of [Lenis](https://www.npmjs.com/package/lenis?activeTab=versions)
+- Include recommended CSS.
+- Remove GSAP ScrollTrigger.
+- Remove Lenis and be sure that your element/page is scrollable anyway.
+- Be sure to use `autoRaf: true` or to manually call `lenis.raf(time)`.
 
 <br>
 

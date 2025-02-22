@@ -1,6 +1,6 @@
 ---
 project: style-observer
-stars: 385
+stars: 387
 description: |-
     MutationObserver for CSS. Get notified when the computed value of a CSS property changes.
 url: https://github.com/bramus/style-observer
@@ -42,7 +42,7 @@ const styleObserver = new StyleObserver(
     /* StyleObserver Configuration */
     {
       properties: ['--variable1', '--variable2', 'display', 'border-width'],
-      returnFormat: ReturnFormat.VALUE_ONLY,
+      returnFormat: ReturnFormat.OBJECT,
       notificationMode: NotificationMode.ALL,
     }
 );
@@ -57,15 +57,18 @@ styleObserver.unobserve(document.body); // Stop observing
 ### Configuration options
 
 * `notificationMode` (`NotificationMode`, default: `CHANGED_ONLY`): Determines whether to pass all properties (`ALL`) or only the changed ones (`CHANGED_ONLY`) into the callback
-* `ReturnFormat` (`ReturnFormat`, default: `OBJECT`): Determines the format of the data passed to the callback. Below are the options:
+* `returnFormat` (`ReturnFormat`, default: `OBJECT`): Determines the format of the data passed to the callback. Below are the options:
   * `VALUE_ONLY`: The callback receives an object with property names as keys and their current values:
+
     ```js
     {
         "--my-variable": "1.0",
         "display": "block"
     }
     ```
+
   * `OBJECT`: The callback receives an object with property names as keys and detailed information as values:
+
     ```js
     {
         "--my-variable":{
@@ -75,6 +78,8 @@ styleObserver.unobserve(document.body); // Stop observing
         }
     }
     ```
+
+    In the first callback invocation, which gets triggered after starting to observe an element, the value for `previousValue` will be `undefined`. You can use this to filter out the first trigger.
 
 Try out a demo on CodePen: [https://codepen.io/bramus/pen/WNqKqxj](https://codepen.io/bramus/pen/WNqKqxj?editors=1111)
 

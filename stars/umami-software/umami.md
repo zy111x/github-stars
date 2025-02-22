@@ -1,6 +1,6 @@
 ---
 project: umami
-stars: 24331
+stars: 24855
 description: |-
     Umami is a simple, fast, privacy-focused alternative to Google Analytics.
 url: https://github.com/umami-software/umami
@@ -129,7 +129,7 @@ To update the Docker image, simply pull the new images and rebuild:
 
 ```bash
 docker compose pull
-docker compose up --force-recreate
+docker compose up --force-recreate -d
 ```
 
 ---

@@ -1,6 +1,6 @@
 ---
 project: jscanify
-stars: 1460
+stars: 1500
 description: |-
     The Javascript document scanning library.
 url: https://github.com/puffinsoft/jscanify
@@ -36,7 +36,7 @@ Available on <a href="https://www.npmjs.com/package/jscanify">npm</a> or via <a 
 - paper scanning with distortion correction
 
 > [!IMPORTANT]  
-> 🎉 _jscanify v1.3.0_ has just been released! **Same API, better results.** See the [release](https://github.com/puffinsoft/jscanify/releases/tag/v1.3.0) to see the difference! 🎉
+> 🎉 _jscanify v1.3.0+_ has just been released! **Same API, better results.** See the [release](https://github.com/puffinsoft/jscanify/releases/tag/v1.3.0) to see the difference! 🎉
 
 
 - 🆕 glare suppression
@@ -136,4 +136,3 @@ To export the paper to a PDF, see [here](https://stackoverflow.com/questions/236
 - we recommend wrapping your code using `jscanify` in a window `load` event listener to ensure OpenCV is loaded
 
 <h3 align="center" margin="0"><a href="https://github.com/puffinsoft/jscanify/wiki">➡️ view documentation</a></h3>
-

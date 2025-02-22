@@ -1,6 +1,6 @@
 ---
 project: 5ire
-stars: 823
+stars: 943
 description: |-
     5ire is a cross-platform desktop AI assistant, MCP client. It compatible with major service providers,  supports local knowledge base and  tools via model context protocol servers .
 url: https://github.com/nanbingxyz/5ire
@@ -90,4 +90,11 @@ You can perform keyword searches across all conversations, quickly pinpointing t
 # License
 
 5ire is licensed under the GNU General Public License version 3.
+
+<hr/>
+
+##  Discover Exceptional MCP Servers
+
+> [!TIP]
+> [MCPSvr](https://github.com/nanbingxyz/mcpsvr), a community-driven directory of MCP servers, empowers developers to discover exceptional tools while offering a streamlined process for sharing their own MCP server creations.
 

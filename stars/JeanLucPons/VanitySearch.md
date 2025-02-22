@@ -1,6 +1,6 @@
 ---
 project: VanitySearch
-stars: 457
+stars: 458
 description: |-
     Bitcoin Address Prefix Finder
 url: https://github.com/JeanLucPons/VanitySearch

@@ -1,6 +1,6 @@
 ---
 project: autoprefixer
-stars: 21803
+stars: 21814
 description: |-
      Parse CSS and add vendor prefixes to rules by Can I Use
 url: https://github.com/postcss/autoprefixer

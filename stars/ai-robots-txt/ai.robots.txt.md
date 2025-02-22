@@ -1,6 +1,6 @@
 ---
 project: ai.robots.txt
-stars: 1826
+stars: 1839
 description: |-
     A list of AI agents and robots to block.
 url: https://github.com/ai-robots-txt/ai.robots.txt
@@ -32,6 +32,11 @@ Note that, as stated in the [httpd documentation](https://httpd.apache.org/docs/
 
 A note about contributing: updates should be added/made to `robots.json`. A GitHub action will then generate the updated `robots.txt`, `table-of-bot-metrics.md`, and `.htaccess`.
 
+You can run the tests by [installing](https://www.python.org/about/gettingstarted/) Python 3 and issuing:
+```console
+code/tests.py
+```
+
 ## Subscribe to updates
 
 You can subscribe to list updates via RSS/Atom with the releases feed:
@@ -47,7 +52,7 @@ Alternatively, you can also subscribe to new releases with your GitHub account b
 ## Report abusive crawlers
 
 If you use [Cloudflare's hard block](https://blog.cloudflare.com/declaring-your-aindependence-block-ai-bots-scrapers-and-crawlers-with-a-single-click) alongside this list, you can report abusive crawlers that don't respect `robots.txt` [here](https://docs.google.com/forms/d/e/1FAIpQLScbUZ2vlNSdcsb8LyTeSF7uLzQI96s0BKGoJ6wQ6ocUFNOKEg/viewform).
-
+But even if you don't use Cloudflare's hard block, their list of [verified bots](https://radar.cloudflare.com/traffic/verified-bots) may come in handy.
 ## Additional resources
 
 - [Blocking Bots with Nginx](https://rknight.me/blog/blocking-bots-with-nginx/) by Robb Knight

@@ -1,6 +1,6 @@
 ---
 project: svelte
-stars: 81340
+stars: 81506
 description: |-
     web development for the rest of us
 url: https://github.com/sveltejs/svelte
@@ -13,7 +13,7 @@ url: https://github.com/sveltejs/svelte
 	</picture>
 </a>
 
-[![license](https://img.shields.io/npm/l/svelte.svg)](LICENSE.md) [![Chat](https://img.shields.io/discord/457912077277855764?label=chat&logo=discord)](https://svelte.dev/chat)
+[![License](https://img.shields.io/npm/l/svelte.svg)](LICENSE.md) [![Chat](https://img.shields.io/discord/457912077277855764?label=chat&logo=discord)](https://svelte.dev/chat)
 
 ## What is Svelte?
 

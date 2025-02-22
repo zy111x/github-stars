@@ -1,6 +1,6 @@
 ---
 project: 33-js-concepts
-stars: 15165
+stars: 15169
 description: |-
     :scroll: 每个 JavaScript 工程师都应懂的33个概念 @leonardomso
 url: https://github.com/stephentian/33-js-concepts

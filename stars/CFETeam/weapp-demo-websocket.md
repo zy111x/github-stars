@@ -1,6 +1,6 @@
 ---
 project: weapp-demo-websocket
-stars: 359
+stars: 360
 description: |-
     The websocket demo of wechat micro program
 url: https://github.com/CFETeam/weapp-demo-websocket

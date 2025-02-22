@@ -1,6 +1,6 @@
 ---
 project: lume
-stars: 1928
+stars: 2037
 description: |-
     A lightweight CLI and local API server to create, run and manage macOS and Linux virtual machines (VMs) natively on Apple Silicon.
 url: https://github.com/trycua/lume
@@ -19,7 +19,7 @@ url: https://github.com/trycua/lume
   [![Swift 6](https://img.shields.io/badge/Swift_6-F54A2A?logo=swift&logoColor=white&labelColor=F54A2A)](#)
   [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=F0F0F0)](#)
   [![Homebrew](https://img.shields.io/badge/Homebrew-FBB040?logo=homebrew&logoColor=fff)](#install)
-  [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.com/invite/5ngXY2Wn)
+  [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.com/invite/mVnXXpdE85)
 </h1>
 </div>
 
@@ -141,7 +141,7 @@ For detailed API documentation, please refer to [API Reference](docs/API-Referen
 
 We welcome and greatly appreciate contributions to lume! Whether you're improving documentation, adding new features, fixing bugs, or adding new VM images, your efforts help make lume better for everyone. For detailed instructions on how to contribute, please refer to our [Contributing Guidelines](CONTRIBUTING.md).
 
-Join our [Discord community](https://discord.gg/8p56E2KJ) to discuss ideas or get assistance.
+Join our [Discord community](https://discord.com/invite/mVnXXpdE85) to discuss ideas or get assistance.
 
 ## License
 

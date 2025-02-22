@@ -1,6 +1,6 @@
 ---
 project: exo
-stars: 22799
+stars: 24797
 description: |-
     Run your own AI cluster at home with everyday devices 📱💻 🖥️⌚
 url: https://github.com/exo-explore/exo
@@ -36,6 +36,7 @@ Unify your existing devices into one powerful GPU: iPhone, iPad, Android, Mac, N
 
 <div align="center">
   <h2>Update: exo is hiring. See <a href="https://exolabs.net">here</a> for more details.</h2>
+  <h2>Interested in running exo in your business? <a href="mailto:hello@exolabs.net">Contact us</a> to discuss.</h2>
 </div>
 
 ## Get Involved

@@ -1,12 +1,17 @@
 ---
 project: netbird
-stars: 12168
+stars: 12233
 description: |-
     Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.
 url: https://github.com/netbirdio/netbird
 ---
 
 <div align="center">
+  <a href="https://netbird.io/webinars/achieve-zero-trust-access-to-k8s?utm_source=github&utm_campaign=2502%20-%20webinar%20-%20How%20to%20Achieve%20Zero%20Trust%20Access%20to%20Kubernetes%20-%20Effortlessly&utm_medium=github">
+    Webinar: How to Achieve Zero Trust Access to Kubernetes — Effortlessly
+  </a> 
+<br/>
+  <br/>
 <p align="center">
   <img width="234" src="docs/media/logo-full.png"/>
 </p>

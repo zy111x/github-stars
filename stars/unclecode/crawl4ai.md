@@ -1,6 +1,6 @@
 ---
 project: crawl4ai
-stars: 30402
+stars: 31300
 description: |-
     🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper
 url: https://github.com/unclecode/crawl4ai

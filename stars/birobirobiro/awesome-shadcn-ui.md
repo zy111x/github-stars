@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 12011
+stars: 12212
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -43,6 +43,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | capture-photo | Browser-based React component for camera functionalities in web applications. | [Link](https://github.com/UretzkyZvi/capture-photo) |
 | clerk-elements | Composable components for building custom UIs on top of Clerk's APIs. | [Link](https://clerk.com/docs/elements/examples/shadcn-ui) |
 | clerk-shadcn-theme | Synchronize Clerk SignIn/SignUp components with shadcn/ui styles. | [Link](https://github.com/stormynight9/clerk-shadcn-theme) |
+| commerce-ui | Components, blocks and examples to build e-commerce storefronts and apps. | [Link](https://github.com/stackzero-labs/ui) |
 | confirm-dialog | A confirm dialog component built with shadcn/ui. | [Link](https://github.com/Aslam97/react-confirm-dialog) |
 | country-state-dropdown | Component built with Nextjs, Tailwindcss, shadcn/ui & Zustand. | [Link](https://github.com/Jayprecode/country-state-dropdown) |
 | cult-ui | Curated set of animated shadcn-style React components. | [Link](https://www.cult-ui.com/) |
@@ -134,6 +135,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-editor | Lexical editor with shadcn theme. | [Link](https://github.com/htmujahid/shadcn-editor) |
 | shadcn-extends | Collection of shadcn/ui components. | [Link](https://github.com/lucioew28/extends) |
 | shadcn-extension | Open-source component collection. | [Link](https://github.com/BelkacemYerfa/shadcn-extension) |
+| shadcn-iconpicker | React/shadcn simple icon picker using lucide icons. | [Link](https://icon-picker.alan-courtois.fr/) |
 | shadcn-image-cropper | Image cropper with react-image-crop. | [Link](https://github.com/sujjeee/shadcn-image-cropper) |
 | shadcn-linear-combobox | Linear-style task priority combobox. | [Link](https://github.com/damianricobelli/shadcn-linear-combobox)|
 | shadcn-multi-select-component | Multi-select component. | [Link](https://github.com/sersavan/shadcn-multi-select-component) |
@@ -171,7 +173,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | ui-beats | Animated React Components collection. | [Link](https://uibeats.com) |
 | uixmat/onborda | Product tour for Next.js applications. | [Link](https://github.com/uixmat/onborda) |
 | vaul | Drawer component for React. | [Link](https://vaul.emilkowal.ski/) |
-| zoom-charts | Zoomable Charts with shadcn/ui. | [Link](<https://github.com/shelwinsunga/zoom-chart-demo>) |
+| zoom-charts | Zoomable Charts with shadcn/ui. | [Link](https://github.com/shelwinsunga/zoom-chart-demo) |
 
 ## Plugins and Extensions
 
@@ -266,6 +268,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | Nathan's AI              | An AI Chatbot acting as a portfolio, built with shadcn/ui components.                                    | [Link](https://chat.brodin.dev)               |
 | shubhporwal.me           | An eye-catching developer portfolio, built on NextJS, GSAP, Tailwind, and React.                        | [Link](https://www.shubhporwal.me/)           |
 | swajp.me                 | A visually appealing portfolio and resource hub.                                                        | [Link](https://swajp.me)                      |
+| Windows 11 (clone)       | A sleek Windows 11 clone built with React, Next.js, Tailwind CSS, ShadCN, and Framer-Motion, featuring smooth animations, draggable windows, and a modern design system. | [Link](https://win11.oimmi.com/)    |
 
 ## Platforms
 

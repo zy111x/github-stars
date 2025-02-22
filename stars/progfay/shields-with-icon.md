@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 438
+stars: 439
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -1036,7 +1036,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Frappe](https://img.shields.io/badge/Frappe-0089FF?style=for-the-badge&logo=Frappe&logoColor=FFFFFF)
 ![Fraunhofer-Gesellschaft](https://img.shields.io/badge/Fraunhofer-Gesellschaft-179C7D?style=for-the-badge&logo=Fraunhofer-Gesellschaft&logoColor=FFFFFF)
 ![FreeBSD](https://img.shields.io/badge/FreeBSD-AB2B28?style=for-the-badge&logo=FreeBSD&logoColor=FFFFFF)
-![FreeCAD](https://img.shields.io/badge/FreeCAD-729FCF?style=for-the-badge&logo=FreeCAD&logoColor=FFFFFF)
+![FreeCAD](https://img.shields.io/badge/FreeCAD-418FDE?style=for-the-badge&logo=FreeCAD&logoColor=FFFFFF)
 ![freeCodeCamp](https://img.shields.io/badge/freeCodeCamp-0A0A23?style=for-the-badge&logo=freeCodeCamp&logoColor=FFFFFF)
 ![freedesktop.org](https://img.shields.io/badge/freedesktop.org-3B80AE?style=for-the-badge&logo=freedesktop.org&logoColor=FFFFFF)
 ![Freelancer](https://img.shields.io/badge/Freelancer-222222?style=for-the-badge&logo=Freelancer&logoColor=29B2FE)
@@ -1521,6 +1521,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Kirby](https://img.shields.io/badge/Kirby-000000?style=for-the-badge&logo=Kirby&logoColor=FFFFFF)
 ![Kit](https://img.shields.io/badge/Kit-000000?style=for-the-badge&logo=Kit&logoColor=FFFFFF)
 ![Kitsu](https://img.shields.io/badge/Kitsu-FD755C?style=for-the-badge&logo=Kitsu&logoColor=FFFFFF)
+![Kiwix](https://img.shields.io/badge/Kiwix-000000?style=for-the-badge&logo=Kiwix&logoColor=FFFFFF)
 ![Klarna](https://img.shields.io/badge/Klarna-222222?style=for-the-badge&logo=Klarna&logoColor=FFB3C7)
 ![Kleinanzeigen](https://img.shields.io/badge/Kleinanzeigen-1D4B00?style=for-the-badge&logo=Kleinanzeigen&logoColor=FFFFFF)
 ![KLM](https://img.shields.io/badge/KLM-00A1DE?style=for-the-badge&logo=KLM&logoColor=FFFFFF)
@@ -2479,6 +2480,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Sabanci](https://img.shields.io/badge/Sabanci-004B93?style=for-the-badge&logo=Sabanci&logoColor=FFFFFF)
 ![Safari](https://img.shields.io/badge/Safari-006CFF?style=for-the-badge&logo=Safari&logoColor=FFFFFF)
 ![Sage](https://img.shields.io/badge/Sage-222222?style=for-the-badge&logo=Sage&logoColor=00D639)
+![SageMath](https://img.shields.io/badge/SageMath-3333FF?style=for-the-badge&logo=SageMath&logoColor=FFFFFF)
 ![Sahibinden](https://img.shields.io/badge/Sahibinden-222222?style=for-the-badge&logo=Sahibinden&logoColor=FFE800)
 ![Sailfish OS](https://img.shields.io/badge/Sailfish%20OS-053766?style=for-the-badge&logo=Sailfish+OS&logoColor=FFFFFF)
 ![Sails.js](https://img.shields.io/badge/Sails.js-14ACC2?style=for-the-badge&logo=Sails.js&logoColor=FFFFFF)

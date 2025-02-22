@@ -1,6 +1,6 @@
 ---
 project: morphic
-stars: 6953
+stars: 7000
 description: |-
     An AI-powered search engine with a generative UI
 url: https://github.com/miurla/morphic
@@ -153,25 +153,6 @@ Host your own live version of Morphic with Vercel, Cloudflare Pages, or Docker.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmiurla%2Fmorphic&env=OPENAI_API_KEY,TAVILY_API_KEY,UPSTASH_REDIS_REST_URL,UPSTASH_REDIS_REST_TOKEN)
 
-### Docker Prebuilt Image
-
-Prebuilt Docker images are available on GitHub Container Registry:
-
-```bash
-docker pull ghcr.io/miurla/morphic:latest
-```
-
-You can use it with docker-compose:
-
-```yaml
-services:
-  morphic:
-    image: ghcr.io/miurla/morphic:latest
-    env_file: .env.local
-    ports:
-      - '3000:3000'
-```
-
 ## 🔎 Search Engine
 
 ### Setting up the Search Engine in Your Browser
@@ -216,6 +197,9 @@ This will allow you to use Morphic as your default search engine in the browser.
 - DeepSeek
   - DeepSeek V3
   - DeepSeek R1
+- xAI
+  - grok-2
+  - grok-2-vision
 
 ## ⚡ AI SDK Implementation
 

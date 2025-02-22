@@ -1,8 +1,8 @@
 ---
 project: logto
-stars: 9471
+stars: 9518
 description: |-
-    🧑‍🚀 The better auth and identity infrastructure and the open-source alternative to Auth0.
+    🧑‍🚀 An identity and access management (IAM) system with authentication, authorization, MFA, SSO, user management, and multi-tenancy features. Supports OAuth 2.0, OIDC, and SAML. No framework restrictions.
 url: https://github.com/logto-io/logto
 ---
 

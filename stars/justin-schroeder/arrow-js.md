@@ -1,6 +1,6 @@
 ---
 project: arrow-js
-stars: 2443
+stars: 2448
 description: |-
     Reactivity without the framework
 url: https://github.com/justin-schroeder/arrow-js

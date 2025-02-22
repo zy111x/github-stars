@@ -1,6 +1,6 @@
 ---
 project: wasm-image-optimization
-stars: 71
+stars: 72
 description: |-
     Optimize images with wasm on edge runtime
 url: https://github.com/node-libraries/wasm-image-optimization
@@ -8,22 +8,58 @@ url: https://github.com/node-libraries/wasm-image-optimization
 
 # wasm-image-optimization
 
+## Supported Environments
+
 - Cloudflare workers  
   `import { optimizeImage } from 'wasm-image-optimization';`
-- Next.js(Webpack)  
+- Next.js (Webpack)  
   `import { optimizeImage } from 'wasm-image-optimization/next';`
-- ESM(import base) & Deno Deploy  
-  `import { optimizeImage } from 'wasm-image-optimization/esm';`
-- CJS(file base)  
-  `import { optimizeImage } from 'wasm-image-optimization/node';`
+- ESM (import base) & Deno Deploy  
+  `import { optimizeImage } from 'wasm-image-optimization';`
+- CJS (file base)  
+  `import { optimizeImage } from 'wasm-image-optimization';`
+- Vite (Browser)  
+  `import { optimizeImage } from 'wasm-image-optimization/vite';`
+- Web Worker (Browser) Multi process  
+  `import { optimizeImage } from 'wasm-image-optimization/webworker';`
 
-- function
+## WebWorker on Vite
+
+- vite.config.ts
 
 ```ts
-// quality: 1-100
-optimizeImage({image: ArrayBuffer, width?: number, height?:number,quality?: number,format?: "png" | "jpeg" | "avif" | "webp"}): Promise<ArrayBuffer>
+import wasmImageOptimizationPlugin from "wasm-image-optimization/vite-plugin";
 
-optimizeImageExt({image: ArrayBuffer, width?: number, height?:number,quality?: number,format?: "png" | "jpeg" | "avif" | "webp"}): Promise<{data: Uint8Array;originalWidth: number;originalHeight: number; width: number;height: number;}>
+export default defineConfig(() => ({
+  plugins: [wasmImageOptimizationPlugin()],
+}));
+```
+
+## function
+
+```ts
+
+optimizeImage({
+  image: ArrayBuffer,
+  width?: number,
+  height?:number,
+  quality?: number, // quality: 1-100
+  format?: "png" | "jpeg" | "avif" | "webp"})
+    :Promise<
+      ArrayBuffer>
+
+optimizeImageExt({
+  image: ArrayBuffer,
+  width?: number,
+  height?:number,
+  quality?: number,
+  format?: "png" | "jpeg" | "avif" | "webp"})
+    :Promise<{
+      data: Uint8Array;
+      originalWidth: number;
+      originalHeight: number;
+      width: number;
+      height: number;}>
 
 ```
 
@@ -39,9 +75,9 @@ optimizeImageExt({image: ArrayBuffer, width?: number, height?:number,quality?: n
   - webp
   - avif(default)
 
-# usage
+## usage
 
-## Next.js image optimization with Cloudflare
+### Next.js image optimization with Cloudflare
 
 ```ts
 import { optimizeImage } from "wasm-image-optimization";
@@ -161,9 +197,9 @@ const config = {
 export default config;
 ```
 
-## Deno Deploy
+### Deno Deploy
 
-### Parameters
+#### Parameters
 
 | Name | Type   | Description |
 | ---- | ------ | ----------- |

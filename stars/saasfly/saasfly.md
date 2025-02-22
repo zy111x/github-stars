@@ -1,6 +1,6 @@
 ---
 project: saasfly
-stars: 2244
+stars: 2267
 description: |-
     Your Next SaaS Template or Boilerplate ! A magic trip start with `bun create saasfly` . The more stars, the more surprises
 url: https://github.com/saasfly/saasfly
@@ -51,6 +51,13 @@ See more documentation at <https://document.saasfly.io>
       <a href="https://www.twillot.com/">
         <picture>
           <img alt="Take Control of All Your Twitter Assets" src="/twillot.png">
+        </picture>
+      </a>
+    </td>
+    <td>
+      <a href="https://www.setupyourpay.com/" title="如何注册美国公司进行收款">
+        <picture>
+          <img alt="全球收款手册" src="/setupyourpay.png">
         </picture>
       </a>
     </td>

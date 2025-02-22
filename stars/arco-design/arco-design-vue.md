@@ -1,6 +1,6 @@
 ---
 project: arco-design-vue
-stars: 2821
+stars: 2827
 description: |-
     A Vue.js 3 UI Library based on Arco Design
 url: https://github.com/arco-design/arco-design-vue
@@ -56,6 +56,9 @@ npm install @arco-design/web-vue
 
 // with yarn
 yarn add @arco-design/web-vue
+
+// with pnpm
+pnpm add @arco-design/web-vue
 ```
 
 # Examples
@@ -70,14 +73,6 @@ const app = createApp(App);
 app.use(ArcoVue);
 app.mount('#app');
 ```
-
-## Development
-
-1. Use `npm install -g` to install basic packages such as `lerna` and `yarn`.
-
-2. Use `yarn install` to install the dependencies of each package in `workspaces` (If you encounter a `YN0018` error, you can use `YARN_CHECKSUM_BEHAVIOR=update yarn` to install).
-
-3. Use `npm run init` to initialize the project.
 
 # Useful Links
 

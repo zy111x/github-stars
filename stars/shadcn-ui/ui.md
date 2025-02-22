@@ -1,8 +1,8 @@
 ---
 project: ui
-stars: 80850
+stars: 81424
 description: |-
-    A set of beautifully-designed, accessible, and customizable components to help you build your component library. Open Source.
+    A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.
 url: https://github.com/shadcn-ui/ui
 ---
 

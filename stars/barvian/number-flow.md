@@ -1,6 +1,6 @@
 ---
 project: number-flow
-stars: 5560
+stars: 5615
 description: |-
     An animated number component for React, Vue, and Svelte.
 url: https://github.com/barvian/number-flow

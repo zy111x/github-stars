@@ -1,6 +1,6 @@
 ---
 project: pglite
-stars: 10605
+stars: 10676
 description: |-
     Lightweight WASM Postgres with real-time, reactive bindings.
 url: https://github.com/electric-sql/pglite
