@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 37415
+stars: 37589
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -149,10 +149,6 @@ This software is for learning and communication only. **It is strictly forbidden
 对于政府和军事机关等网站的爬虫操作，**作者将不会进行任何答疑**，以免违反国家相关法律法规和政策。
 
 For the crawler operations of government and military websites, **the author will not answer any questions** in order to avoid violating relevant national laws, regulations and policies.
-
-同时，软件受到专利权保护，如要用于商业用途，如使用软件进行盈利接单，出售采集到的数据，或将软件集成到自己的系统中等，请邮件联系作者：naibowang@foxmail.com
-
-Meanwhile, the software is protected by patent rights. If it is used for commercial purposes, such as using the software to make profits, selling the collected data, or integrating the software into your own system, please contact the author by email: naibowang@foxmail.com
 
 答疑QQ群
 -----

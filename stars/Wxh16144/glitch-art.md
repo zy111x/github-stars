@@ -13,7 +13,13 @@ Status: WIP
 Usage
 -----
 
-!\[Glitch Art\](https://glitch-art.vercel.app/api/simple?word={YOUR%20TEXT})
+_\*.md_
+
+!\[Glitch Art\](//glitch-art.vercel.app/api/simple?word={YOUR%20TEXT})
+
+_\*.html_
+
+<img src\="//glitch-art.vercel.app/api/simple?word={YOUR%20TEXT}" alt\="Glitch Art" />
 
 Parameters
 ----------
