@@ -1,6 +1,6 @@
 ---
 project: roosterjs
-stars: 1222
+stars: 1223
 description: |-
     roosterjs is a framework-independent javascript rich text editor.
 url: https://github.com/microsoft/roosterjs
@@ -95,6 +95,8 @@ API overrides in Editor options when creating the editor.
 
 `roosterjs-content-model-api` provides APIs for scenario-based operations triggered by
 user interaction.
+
+`roosterjs-content-model-markdown` provides API to transform Markdown language in Content Model objects.
 
 ## Plugins
 

@@ -1,6 +1,6 @@
 ---
 project: runlike
-stars: 2636
+stars: 2648
 description: |-
     Given an existing docker container, prints the command line necessary to run a copy of it.
 url: https://github.com/lavie/runlike
@@ -115,6 +115,7 @@ Probably **shouldn't use this in production** yet. If you do, double check that 
       --rm                             Automatically remove the container
                                        when it exits
       --runtime string                 Runtime to use for this container
+      --shm-size bytes                 Size of /dev/shm
   -t, --tty                            Allocate a pseudo-TTY
   -u, --user string                    Username or UID (format:
                                        <name|uid>[:<group|gid>])
@@ -222,7 +223,6 @@ Probably **shouldn't use this in production** yet. If you do, double check that 
                                        filesystem as read only
 
       --security-opt list              Security Options
-      --shm-size bytes                 Size of /dev/shm
       --sig-proxy                      Proxy received signals to the
                                        process (default true)
       --stop-signal string             Signal to stop a container

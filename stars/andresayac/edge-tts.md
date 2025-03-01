@@ -1,6 +1,6 @@
 ---
 project: edge-tts
-stars: 33
+stars: 35
 description: |-
     Edge TTS is a Node or Bun package that allows access to the online text-to-speech service used by Microsoft Edge without the need for Microsoft Edge, Windows, or an API key.
 url: https://github.com/andresayac/edge-tts

@@ -1,6 +1,6 @@
 ---
 project: qr
-stars: 168
+stars: 169
 description: |-
     Minimal browser & node.js QR Code Pattern reader and generator
 url: https://github.com/paulmillr/qr
@@ -28,7 +28,9 @@ Other JS libraries are bad:
 
 A standalone file [paulmillr-qr.js](https://github.com/paulmillr/qr/releases) is also available.
 
-> npm install @paulmillr/qr
+> `npm install @paulmillr/qr`
+
+> `jsr add jsr:@paulmillr/qr`
 
 - [Encoding](#encoding)
 - [Decoding](#decoding)

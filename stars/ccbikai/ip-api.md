@@ -1,6 +1,6 @@
 ---
 project: ip-api
-stars: 208
+stars: 209
 description: |-
     利用 Cloudflare Workers / Vercel Edge / Netlify Edge 快速搭一个获取 IP 地址和地理位置信息的接口。
 url: https://github.com/ccbikai/ip-api

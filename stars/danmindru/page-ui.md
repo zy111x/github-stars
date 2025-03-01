@@ -1,6 +1,6 @@
 ---
 project: page-ui
-stars: 1321
+stars: 1328
 description: |-
     📃 Landing page UI components for React & Next.js, built on top of TailwindCSS
 url: https://github.com/danmindru/page-ui
@@ -23,6 +23,8 @@ Quick links:
 - [👩‍💻 A ton of demos](https://shipixen.com/demo/landing-page-component-examples)
 
 [Read more](https://pageui.dev/docs/introduction) about Page UI.
+
+> ⚠️ Page UI currently works with Tailwind v3. We are working on adding support for v4.
 
 ## 🎨 Templates
 

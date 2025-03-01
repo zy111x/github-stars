@@ -1,8 +1,8 @@
 ---
 project: sealos
-stars: 14976
+stars: 15029
 description: |-
-    Sealos is a production-ready Kubernetes distribution. You can create any programming language and any framework development Env, create high availability databases like mysql/pgsql/redis/mongo, and run any docker image.
+    Sealos is a production-ready Kubernetes distribution that makes deployment simple and efficient. Instantly set up development environments for any programming language or framework, deploy high-availability databases (like MySQL, PostgreSQL, Redis, and MongoDB) and run any Docker image with ease.
 url: https://github.com/labring/sealos
 ---
 
@@ -128,7 +128,7 @@ Sealos['siːləs] is a cloud operating system distribution based on the Kubernet
 
 + 🌐 Visit the [Sealos Website](https://sealos.io/) for full documentation and useful links.
 + 💬 Join our [Discord Server](https://discord.gg/qzBmGGZGk7) is to chat with Sealos developers and other Sealos users. This is a good place to learn about Sealos and Kubernetes, ask questions, and share your experiences.
-+ 🐦 Tweet at @Sealos_io on [X/Twitter](https://x.com/Sealos_io) and follow us.
++ 🐦 Tweet at @Sealos_io on [X/Twitter](https://twitter.com/Sealos_io) and follow us.
 + 🐞 Create [GitHub Issues](https://github.com/labring/sealos/issues/new/choose) for bug reports and feature requests.
 
 ## 🚧 Roadmap

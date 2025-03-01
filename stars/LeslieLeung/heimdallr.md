@@ -1,6 +1,6 @@
 ---
 project: heimdallr
-stars: 606
+stars: 608
 description: |-
     一个非常轻量的通知网关，可以聚合各种推送渠道，使用 Serverless 部署，几乎零成本运行。
 url: https://github.com/LeslieLeung/heimdallr

@@ -1,6 +1,6 @@
 ---
 project: jsx-email
-stars: 1128
+stars: 1130
 description: |-
     Build emails with a delightful DX
 url: https://github.com/shellscape/jsx-email

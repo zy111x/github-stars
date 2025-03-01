@@ -1,8 +1,8 @@
 ---
 project: cloudflare-workers-nextjs-saas-template
-stars: 171
+stars: 198
 description: |-
-    Cloudflare Workers SaaS Template
+    Cloudflare Workers/Next.js SaaS Template
 url: https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template
 ---
 

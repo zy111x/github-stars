@@ -1,8 +1,8 @@
 ---
 project: disposable-email-domains
-stars: 3460
+stars: 3482
 description: |-
-    a list of disposable and temporary email address domains
+    a list of disposable email domains
 url: https://github.com/disposable-email-domains/disposable-email-domains
 ---
 
@@ -36,6 +36,8 @@ You can copy, modify, distribute and use the work, even for commercial purposes,
 
 Changelog
 ============
+
+* 1/9/25 Enabled [GitHub sponsorhip](https://github.com/sponsors/disposable-email-domains) for this work. Everybody can do it, but currently only one person does it. Send them $2 for a coffee if you care.
 
 * 2/11/21 We created a github [org account](https://github.com/disposable-email-domains) and transferred the repository to it.
 

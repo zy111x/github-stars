@@ -1,6 +1,6 @@
 ---
 project: AutoAgent
-stars: 819
+stars: 1581
 description: |-
     "AutoAgent: Fully-Automated and Zero-Code LLM Agent Framework"
 url: https://github.com/HKUDS/AutoAgent
@@ -17,11 +17,11 @@ url: https://github.com/HKUDS/AutoAgent
 
 
 <div align="center">
-  <a href="https://metachain-ai.github.io"><img src="https://img.shields.io/badge/Project-Page-blue?style=for-the-badge&color=FFE165&logo=homepage&logoColor=white" alt="Credits"></a>
+  <a href="https://autoagent-ai.github.io"><img src="https://img.shields.io/badge/Project-Page-blue?style=for-the-badge&color=FFE165&logo=homepage&logoColor=white" alt="Credits"></a>
   <a href="https://join.slack.com/t/metachain-workspace/shared_invite/zt-2zibtmutw-v7xOJObBf9jE2w3x7nctFQ"><img src="https://img.shields.io/badge/Slack-Join%20Us-red?logo=slack&logoColor=white&style=for-the-badge" alt="Join our Slack community"></a>
   <a href="https://discord.gg/jQJdXyDB"><img src="https://img.shields.io/badge/Discord-Join%20Us-purple?logo=discord&logoColor=white&style=for-the-badge" alt="Join our Discord community"></a>
   <br/>
-  <a href="https://metachain-ai.github.io/docs"><img src="https://img.shields.io/badge/Documentation-000?logo=googledocs&logoColor=FFE165&style=for-the-badge" alt="Check out the documentation"></a>
+  <a href="https://autoagent-ai.github.io/docs"><img src="https://img.shields.io/badge/Documentation-000?logo=googledocs&logoColor=FFE165&style=for-the-badge" alt="Check out the documentation"></a>
   <a href="https://arxiv.org/abs/2502.05957"><img src="https://img.shields.io/badge/Paper%20on%20Arxiv-000?logoColor=FFE165&logo=arxiv&style=for-the-badge" alt="Paper"></a>
   <a href="https://gaia-benchmark-leaderboard.hf.space/"><img src="https://img.shields.io/badge/GAIA%20Benchmark-000?logoColor=FFE165&logo=huggingface&style=for-the-badge" alt="Evaluation Benchmark Score"></a>
   <hr>
@@ -106,13 +106,13 @@ AutoAgent have an out-of-the-box multi-agent system, which you could choose `use
 - 🎯 **User-Friendly**: Easy-to-deploy CLI interface for seamless interaction
 - 📁 **File Support**: Handles file uploads for enhanced data interaction
 
-
 <div align="center">
   <video width="80%" controls>
-    <source src="./assets/video_v1.mp4" type="video/mp4">
+    <source src="./assets/video_v1_compressed.mp4" type="video/mp4">
   </video>
   <p><em>🎥 Deep Research (aka User Mode)</em></p>
 </div>
+
 
 
 <span id='agent-editor'/>
@@ -487,8 +487,21 @@ We want to build a community for AutoAgent, and we welcome everyone to join us. 
 - [Join our Discord server](https://discord.gg/z68KRvwB) - This is a community-run server for general discussion, questions, and feedback. 
 - [Read or post Github Issues](https://github.com/HKUDS/AutoAgent/issues) - Check out the issues we're working on, or add your own ideas.
 
-
 <span id='acknowledgements'/>
+
+
+
+## Misc
+
+<div align="center">
+
+[![Stargazers repo roster for @HKUDS/AutoAgent](https://reporoster.com/stars/HKUDS/AutoAgent)](https://github.com/HKUDS/AutoAgent/stargazers)
+
+[![Forkers repo roster for @HKUDS/AutoAgent](https://reporoster.com/forks/HKUDS/AutoAgent)](https://github.com/HKUDS/AutoAgent/network/members)
+
+[![Star History Chart](https://api.star-history.com/svg?repos=HKUDS/AutoAgent&type=Date)](https://star-history.com/#HKUDS/AutoAgent&Date)
+
+</div>
 
 ## 🙏 Acknowledgements
 

@@ -1,6 +1,6 @@
 ---
 project: puter
-stars: 28223
+stars: 28942
 description: |-
     🌐 The Internet OS! Free, Open-Source, and Self-Hostable.
 url: https://github.com/HeyPuter/puter
@@ -15,6 +15,8 @@ url: https://github.com/HeyPuter/puter
     <br />
     <br />
     <a href="https://puter.com/?ref=github.com">Puter.com</a>
+    ·
+    <a href="https://puter.com/app/app-center">App Store</a>
     ·
     <a href="https://docs.puter.com" target="_blank">SDK</a>
     ·
@@ -56,7 +58,7 @@ npm start
 
 This will launch Puter at http://puter.localhost:4100 (or the next available port).
 
-If this does not work, see [First Run Issues](./doc/first-run-issues.md) for
+If this does not work, see [First Run Issues](./doc/self-hosters/first-run-issues.md) for
 troubleshooting steps.
 
 <br/>

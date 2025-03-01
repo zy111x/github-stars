@@ -1,6 +1,6 @@
 ---
 project: lume
-stars: 2037
+stars: 2098
 description: |-
     A lightweight CLI and local API server to create, run and manage macOS and Linux virtual machines (VMs) natively on Apple Silicon.
 url: https://github.com/trycua/lume

@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 12212
+stars: 12442
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -93,6 +93,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | nextjs-components | Next.js components with TypeScript and shadcn/ui. | [Link](https://components.bridger.to/) |
 | nextjs-dnd | Sortable Drag and Drop with Next.js and dnd-kit. | [Link](https://github.com/sujjeee/nextjs-dnd) |
 | nextjs-link-pagination | Pagination using Nextjs Links and search params. | [Link](https://shadcn-next-link-pagination.vercel.app) |
+| nextjs-multi-image-upload | Compact, responsive file uploader with shadcn/ui, React Hook Form, and cloud support (S3/R2). | [Link](https://github.com/jacksonkasi0/nextjs-multi-image-upload) |
 | next-shadcn-dashboard-starter | Admin Dashboard Starter with Nextjs 14 and Shadcn UI. | [Link](https://github.com/Kiranism/next-shadcn-dashboard-starter) |
 | next-stepper | Dynamic multi-step form with Next.js and zustand. | [Link](https://github.com/ebulku/next-stepper) |
 | novel | Notion-style WYSIWYG editor with AI-powered autocompletion. | [Link](https://github.com/steven-tey/novel) |
@@ -117,6 +118,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-address-autocomplete | Address autocomplete with Google Places API. | [Link](https://github.com/NiazMorshed2007/shadcn-address-autocomplete) |
 | shadcn-admin | Admin Dashboard UI with shadcn/ui and Vite. | [Link](https://github.com/satnaing/shadcn-admin) |
 | shadcn-blocks | Official pre-made customizable components. | [Link](https://ui.shadcn.com/blocks) |
+| shadcn-blocks-com | Hundreds of extra blocks built with shadcn/ui. | [Link](https://www.shadcnblocks.com) |
 | shadcn-cal | Cal.com monthly calendar replica with shadcn/ui. | [Link](https://shadcn-cal-com.vercel.app/?date=2024-04-29) |
 | shadcn-calendar-heatmap | Modern calendar heatmap alternative. | [Link](https://shadcn-calendar-heatmap.vercel.app/) |
 | shadcn-calendar-component | Calendar date picker component. | [Link](https://github.com/sersavan/shadcn-calendar-component) |
@@ -140,6 +142,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-linear-combobox | Linear-style task priority combobox. | [Link](https://github.com/damianricobelli/shadcn-linear-combobox)|
 | shadcn-multi-select-component | Multi-select component. | [Link](https://github.com/sersavan/shadcn-multi-select-component) |
 | shadcn-number-scrubber | Draggable numeric input component. | [Link](https://github.com/camwebby/shadcn-react-number-scrubber) |
+| shadcn-packaged | This is an npm package that exports all shadcn/ui components without the need for a CLI, designed for ease of use. | [Link](https://github.com/anuoua/shadcn-packaged) |
 | shadcn-phone-input-2 | Phone input with libphonenumber-js. | [Link](https://github.com/damianricobelli/shadcn-phone-input) |
 | shadcn-phone-input | Phone input with country validation. | [Link](https://github.com/omeralpi/shadcn-phone-input) |
 | shadcn-pricing-page | Responsive pricing component with toggles. | [Link](https://github.com/aymanch-03/shadcn-pricing-page) |
@@ -166,6 +169,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | stunning-ui | Interactive Tailwind components for Vue. | [Link](https://stunningui.design) |
 | supabase-shadcn-database-example | supabase + shadcn/ui datatable | [Link](https://github.com/thisisfel1x/supabase-shadcn-database-example) |
 | supercharged-shadcn-components | Type-safe form components collection. | [Link](https://github.com/slickwit/supercharged-shadcn-components) |
+| tanstack-ui-table | Customizable table with @tanstack/table and shadcn/ui | [Link](https://github.com/drefahl/tanstack-ui-table)
 | time-picker | Simple TimePicker component. | [Link](https://github.com/openstatusHQ/time-picker) |
 | tremor | Components for charts and dashboards. | [Link](https://github.com/tremorlabs/tremor) |
 | twblocks | Website blocks based on shadcn & Radix. | [Link](https://github.com/tommyjepsen/twblocks) |

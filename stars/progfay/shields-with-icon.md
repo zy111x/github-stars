@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 439
+stars: 440
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -1333,7 +1333,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Hyundai](https://img.shields.io/badge/Hyundai-002C5E?style=for-the-badge&logo=Hyundai&logoColor=FFFFFF)
 ![i18next](https://img.shields.io/badge/i18next-26A69A?style=for-the-badge&logo=i18next&logoColor=FFFFFF)
 ![i3](https://img.shields.io/badge/i3-222222?style=for-the-badge&logo=i3&logoColor=52C0FF)
-![Iata](https://img.shields.io/badge/Iata-004E81?style=for-the-badge&logo=Iata&logoColor=FFFFFF)
+![IATA](https://img.shields.io/badge/IATA-004E81?style=for-the-badge&logo=IATA&logoColor=FFFFFF)
 ![iBeacon](https://img.shields.io/badge/iBeacon-3D7EBB?style=for-the-badge&logo=iBeacon&logoColor=FFFFFF)
 ![Iberia](https://img.shields.io/badge/Iberia-D7192D?style=for-the-badge&logo=Iberia&logoColor=FFFFFF)
 ![Iced](https://img.shields.io/badge/Iced-3645FF?style=for-the-badge&logo=Iced&logoColor=FFFFFF)
@@ -3060,6 +3060,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Vim](https://img.shields.io/badge/Vim-019733?style=for-the-badge&logo=Vim&logoColor=FFFFFF)
 ![Vimeo](https://img.shields.io/badge/Vimeo-222222?style=for-the-badge&logo=Vimeo&logoColor=1AB7EA)
 ![Vimeo Livestream](https://img.shields.io/badge/Vimeo%20Livestream-0A0A20?style=for-the-badge&logo=Vimeo+Livestream&logoColor=FFFFFF)
+![Vinted](https://img.shields.io/badge/Vinted-007782?style=for-the-badge&logo=Vinted&logoColor=FFFFFF)
 ![Virgin](https://img.shields.io/badge/Virgin-E10A0A?style=for-the-badge&logo=Virgin&logoColor=FFFFFF)
 ![Virgin Atlantic](https://img.shields.io/badge/Virgin%20Atlantic-DA0530?style=for-the-badge&logo=Virgin+Atlantic&logoColor=FFFFFF)
 ![Virgin Media](https://img.shields.io/badge/Virgin%20Media-ED1A37?style=for-the-badge&logo=Virgin+Media&logoColor=FFFFFF)

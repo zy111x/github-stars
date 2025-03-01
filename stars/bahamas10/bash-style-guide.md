@@ -1,6 +1,6 @@
 ---
 project: bash-style-guide
-stars: 709
+stars: 711
 description: |-
     A style guide for writing safe, predictable, and portable bash scripts (not sh!)
 url: https://github.com/bahamas10/bash-style-guide

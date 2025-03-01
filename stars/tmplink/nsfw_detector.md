@@ -1,6 +1,6 @@
 ---
 project: nsfw_detector
-stars: 455
+stars: 458
 description: |-
     Solution for checking file if  contain NSFW content.
 url: https://github.com/tmplink/nsfw_detector
@@ -40,6 +40,7 @@ This detector supports checking the following file types:
 * ✅ PDF files (supported)
 * ✅ Videos (supported)
 * ✅ Files in compressed packages (supported)
+* ✅ Doc,Docx (supported)
 
 ## Quick Start
 

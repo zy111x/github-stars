@@ -1,6 +1,6 @@
 ---
 project: Docker-Warp-Socks
-stars: 401
+stars: 405
 description: |-
     Connet to CloudFlare WARP, exposing `socks5` proxy all together.
 url: https://github.com/Mon-ius/Docker-Warp-Socks
@@ -32,11 +32,12 @@ Multi-platform: `linux/amd64`, `linux/arm64`, `linux/arm`, `linux/ppc64le`, `lin
 - Used call `OpenAI-o3`, `OpenAI-o3-mini`, `OpenAI-o1-pro` and `OpenAI-Sora` API.
 - Used call `Anthropic Claude 3.5 Sonnet v2` API.
 - Used call `DeepSeek V3` and `DeepSeek R1` API.
+- Support `GHCR` for more Security and Flexibility.
 
 ## Migrate to v4
 - The `v2` version will be kept and available at `monius/docker-warp-socks:v2`.
 - The `v3` version will be kept and available at `monius/docker-warp-socks:v3`.
-- The `v4` version will soon be released and available at `monius/docker-warp-socks:v4` and default in `monius/docker-warp-socks`.
+- The `v4` version is now available at `monius/docker-warp-socks` and `ghcr.io/mon-ius/docker-warp-socks`.
 - The `Referral` programme has been closed, there is no `Plus` flag anymore.
 
 Quick start from:
@@ -44,7 +45,7 @@ Quick start from:
 docker run --restart=always -itd \
     --name warp_socks_v4 \
     -p 9091:9091 \
-    monius/docker-warp-socks:v4
+    ghcr.io/mon-ius/docker-warp-socks
 ```
 
 Then, verify on host with:
@@ -95,7 +96,8 @@ curl -fsSL "https://get.docker.com" | sudo bash
 
 # to avoid `sudo` calling
 sudo usermod -aG docker ${USER}
-sudo chmod 666 /var/run/docker.sock
+# sudo chmod 666 /var/run/docker.sock
+sudo chown root:docker /var/run/docker.sock
 # or check https://docs.docker.com/engine/security/rootless 
 # if required a rootless install with `dockerd-rootless-setuptool.sh install`
 

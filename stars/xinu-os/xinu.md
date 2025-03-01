@@ -1,6 +1,6 @@
 ---
 project: xinu
-stars: 437
+stars: 438
 description: |-
     Repository for Xinu source code
 url: https://github.com/xinu-os/xinu

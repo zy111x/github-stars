@@ -1,6 +1,6 @@
 ---
 project: omnivore
-stars: 14337
+stars: 14374
 description: |-
     Omnivore is a complete, open source read-it-later solution for people who like reading.
 url: https://github.com/omnivore-app/omnivore

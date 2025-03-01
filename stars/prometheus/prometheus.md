@@ -1,6 +1,6 @@
 ---
 project: prometheus
-stars: 57355
+stars: 57452
 description: |-
     The Prometheus monitoring system and time series database.
 url: https://github.com/prometheus/prometheus
@@ -76,8 +76,8 @@ Prometheus will now be reachable at <http://localhost:9090/>.
 To build Prometheus from source code, You need:
 
 * Go [version 1.22 or greater](https://golang.org/doc/install).
-* NodeJS [version 16 or greater](https://nodejs.org/).
-* npm [version 7 or greater](https://www.npmjs.com/).
+* NodeJS [version 22 or greater](https://nodejs.org/).
+* npm [version 8 or greater](https://www.npmjs.com/).
 
 Start by cloning the repository:
 

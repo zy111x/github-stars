@@ -1,6 +1,6 @@
 ---
 project: copilot-api
-stars: 17
+stars: 31
 description: |-
     GitHub Copilot API wrapper to make it OpenAI compatible
 url: https://github.com/ericc-ch/copilot-api
@@ -14,8 +14,6 @@ This project is a reverse-engineered implementation of the GitHub Copilot API cr
 ## Project Overview
 
 A wrapper around GitHub Copilot API to make it OpenAI compatible, making it usable for other tools.
-
-**Note:** Image/vision capabilities are now supported (experimental) but only work with the gpt-4o model, despite other models showing vision support in their metadata. See [Vision, agent mode, next edit suggestions, and more for GitHub Copilot in VS Code January release (v0.24)](https://github.blog/changelog/2025-02-06-next-edit-suggestions-agent-mode-and-prompts-files-for-github-copilot-in-vs-code-january-release-v0-24/)
 
 ## Demo
 
@@ -45,7 +43,7 @@ npx copilot-api@latest
 With options:
 
 ```sh
-npx copilot-api --port 8080 --emulate-streaming
+npx copilot-api --port 8080
 ```
 
 ## Running from Source
@@ -72,30 +70,30 @@ Runs the server in production mode with hot reloading disabled. Use this for dep
 
 The server accepts several command line options:
 
-| Option              | Description                                                    | Default |
-| ------------------- | -------------------------------------------------------------- | ------- |
-| --help, -h          | Show help message                                              | false   |
-| --emulate-streaming | Enable streaming response emulation                            | false   |
-| --port, -p          | Port to listen on                                              | 4141    |
-| --logs              | Write logs to the app directory (requires --emulate-streaming) | false   |
+| Option        | Description                           | Default |
+| ------------- | ------------------------------------- | ------- |
+| --port, -p    | Port to listen on                     | 4141    |
+| --verbose, -v | Enable verbose logging                | false   |
+| --log-file    | File to log request/response details  | -       |
+
+Note: The `--help, -h` option is automatically available through the underlying command-line framework.
 
 Example with options:
 
 ```sh
-bun run start --port 8080 --emulate-streaming
+bun run start --port 8080 --verbose
 ```
 
 In all cases, the server will start and listen for API requests on the specified port.
 
 ## Tested Tools Compatibility
 
-| Tool                                                             | Status  | Notes                                                                                                                                                            |
-| ---------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Cline](https://github.com/cline/cline)                          | Partial | Works with GPT-4o. Not compatible with Claude 3.5 Sonnet (prompts are too long - GitHub limits context length to 90K tokens, see `/models` endpoint for details) |
-| [Aider](https://github.com/Aider-AI/aider)                       | Full    | Fully compatible                                                                                                                                                 |
-| [bolt.diy](https://github.com/stackblitz-labs/bolt.diy)          | Full    | Sometimes models fail to load - you can set any random API key in the UI to refresh the models list                                                              |
-| [Page Assist](https://github.com/n4ze3m/page-assist)             | Full    | Fully compatible                                                                                                                                                 |
-| [Kobold AI Lite](https://github.com/LostRuins/lite.koboldai.net) | Partial | Won't work if the prompt is too long, because GitHub limits the context length (see `/models` endpoint for more details)                                         |
+| Tool                                                             | Status | Notes                                                                 |
+| ---------------------------------------------------------------- | ------ | --------------------------------------------------------------------- |
+| [Aider](https://github.com/Aider-AI/aider)                       | Full   | Fully compatible                                                      |
+| [bolt.diy](https://github.com/stackblitz-labs/bolt.diy)          | Full   | Fully compatible; use any random API key in UI if models fail to load |
+| [Page Assist](https://github.com/n4ze3m/page-assist)             | Full   | Fully compatible                                                      |
+| [Kobold AI Lite](https://github.com/LostRuins/lite.koboldai.net) | Full   | Fully compatible                                                      |
 
-**Note:** In general, any application that uses the `/chat/completions` and `/models` endpoints should work with this API. The main limitation is the context length imposed by GitHub - if prompts are too long, they may fail.
+**Note:** In general, any application that uses the standard OpenAI-compatible `/chat/completions` and `/models` endpoints should work with this API.
 

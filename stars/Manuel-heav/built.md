@@ -1,6 +1,6 @@
 ---
 project: built
-stars: 62
+stars: 63
 description: |-
     Built is a platform tailored for developers looking to showcase their amazing projects. Whether you're creating innovative tools, building cool libraries, or designing sleek UIs, Built gives you an easy-to-use interface to share your work with the community and get recognized! 
 url: https://github.com/Manuel-heav/built

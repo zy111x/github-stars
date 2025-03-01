@@ -1,6 +1,6 @@
 ---
 project: odyssey-theme
-stars: 617
+stars: 618
 description: |-
     A modern business marketing website theme/starter built with Astro 🚀
 url: https://github.com/treefarmstudio/odyssey-theme
