@@ -1,6 +1,6 @@
 ---
 project: free-api
-stars: 15165
+stars: 15179
 description: 收集免费的接口服务,做一个api的搬运工
 url: https://github.com/fangzesheng/free-api
 ---
@@ -11,7 +11,13 @@ url: https://github.com/fangzesheng/free-api
 
 ****
 
-##程序员的浪漫 ##你适合干程序吗？
+2025-02-28
+==========
+
+### 本月更新的接口有：DeepSeek-星火，DeepSeek-硅基流动。
+
+-   **DeepSeek-星火(可在线调用):** 通过讯飞星火白嫖DeepSeek-R1满... 接口地址
+-   **DeepSeek-硅基流动(可在线调用):** 通过硅基流动白嫖DeepSeek-R1满... 接口地址
 
 2025-01-20
 ==========
