@@ -1,6 +1,6 @@
 ---
 project: curl-impersonate
-stars: 1505
+stars: 1517
 description: |-
     An active fork of curl-impersonate with more versions and build targets. A series of patches that make curl requests look like Chrome and Firefox.
 url: https://github.com/lexiforest/curl-impersonate
@@ -24,6 +24,7 @@ url: https://github.com/lexiforest/curl-impersonate
 > 7. Single binary to support Chrome, Safari and Firefox.
 > 8. (In progress) Built with http/3 enabled.
 > 9. A user-friendly Python binding: [curl_cffi](https://github.com/lexiforest/curl_cffi).
+> 10. More prebuilt binaries, including Windows, Arm, and even RISC-V!
 
 A special build of [curl](https://github.com/curl/curl) that can impersonate the four
 major browsers: Chrome, Edge, Safari and Firefox. `curl-impersonate` is able to perform

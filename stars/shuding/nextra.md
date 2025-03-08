@@ -1,6 +1,6 @@
 ---
 project: nextra
-stars: 12402
+stars: 12433
 description: |-
     Simple, powerful and flexible site generation framework with everything you love from Next.js.
 url: https://github.com/shuding/nextra
@@ -20,8 +20,15 @@ https://nextra.site
 ### Installation
 
 The Nextra repository uses [PNPM Workspaces](https://pnpm.io/workspaces) and
-[Turborepo](https://github.com/vercel/turborepo). To install dependencies, run
-`pnpm install` in the project root directory.
+[Turborepo](https://github.com/vercel/turborepo).
+
+1. Run `corepack enable` to enable Corepack.
+
+   > If the command above fails, run `npm install -g corepack@latest` to install
+   > the latest version of
+   > [Corepack](https://github.com/nodejs/corepack?tab=readme-ov-file#manual-installs).
+
+2. Run `pnpm install` to install the project's dependencies.
 
 ### Build `nextra`
 

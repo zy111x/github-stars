@@ -1,9 +1,9 @@
 ---
 project: astro-theme-mia
-stars: 114
+stars: 115
 description: |-
     A minimalist, powerful astro theme with integrated rough-notation for engaging, informative content.
-url: https://github.com/infinity-ooo/astro-theme-mia
+url: https://github.com/thinkininfinity/astro-theme-mia
 ---
 
 # Mia - Astro & Tailwindcss & MDX Theme

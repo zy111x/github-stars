@@ -1,6 +1,6 @@
 ---
 project: mind-elixir-core
-stars: 2424
+stars: 2499
 description: |-
     ⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.
 url: https://github.com/SSShooter/mind-elixir-core
@@ -31,13 +31,14 @@ url: https://github.com/SSShooter/mind-elixir-core
   </a>
 </p>
 
-[English](/readme.md)
-[中文](/readme/zh.md)
-[Español](/readme/es.md)
-[Français](/readme/fr.md)
-[Português](/readme/pt.md)
-[Русский](/readme/ru.md)
-[日本語](/readme/ja.md)
+[English](/readme.md) |
+[中文](/readme/zh.md) |
+[Español](/readme/es.md) |
+[Français](/readme/fr.md) |
+[Português](/readme/pt.md) |
+[Русский](/readme/ru.md) |
+[日本語](/readme/ja.md) |
+[한국어](/readme/ko.md)
 
 Mind elixir is a open source JavaScript mind map core. You can use it with any frontend framework you like.
 

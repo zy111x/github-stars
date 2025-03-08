@@ -1,6 +1,6 @@
 ---
 project: registry
-stars: 47
+stars: 48
 description: |-
     Open-source domain registry platform. Revolutionizing ccTLD and gTLD management with Namingo.
 url: https://github.com/getnamingo/registry
@@ -100,6 +100,9 @@ After installation, be sure to review all the guides in the Documentation sectio
 To update, you **must run the update scripts sequentially** without skipping versions.  
 For example, if you're on **v1.0.13** and the latest is **v1.0.15**, first update to **v1.0.14**, then to **v1.0.15**.
 
+- **v1.0.16 → v1.0.17**  
+  Download and run the [`update1017.sh`](docs/update1017.sh) script.
+  
 - **v1.0.15 → v1.0.16**  
   Download and run the [`update1016.sh`](docs/update1016.sh) script.
 

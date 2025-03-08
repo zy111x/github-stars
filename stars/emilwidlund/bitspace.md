@@ -1,6 +1,6 @@
 ---
 project: bitspace
-stars: 800
+stars: 802
 description: |-
     A creative environment for the 21st century
 url: https://github.com/emilwidlund/bitspace

@@ -1,6 +1,6 @@
 ---
 project: Ice
-stars: 17028
+stars: 17189
 description: |-
     Powerful menu bar manager for macOS
 url: https://github.com/jordanbaird/Ice

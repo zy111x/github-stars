@@ -1,6 +1,6 @@
 ---
 project: blog-list
-stars: 1775
+stars: 1783
 description: |-
     中文博客琅琊榜，只收录精品独立博客
 url: https://github.com/qianguyihao/blog-list
@@ -249,13 +249,6 @@ Notion 中文社区负责人。95 后，男生，驻京六年。主职是一名�
 三流的人做干电池，二流的人做充电电池，一流的人做核电站。
 
 
-### Macin
-
-- 博客地址：https://www.macin.org/
-
-- [RSS订阅](https://www.macin.org/atom.xml)
-
-诸位少侠，在下是曾让江湖人闻风丧胆的筷子小手。退隐以后，我开始关注活色生香的生活。酝酿与众不同的视角，企图让更多人了解腥风血雨以外的江湖，从此沦为吃喝玩乐的顽徒。
 
 ### 学无止境
 
@@ -302,14 +295,14 @@ Notion 中文社区负责人。95 后，男生，驻京六年。主职是一名�
 
 ### Airing
 
-- Airing的小屋：https://me.ursb.me/
+- Airing的小屋：https://blog.ursb.me/
 - Airing Weekly：https://weekly.ursb.me/
 
-95 (后)老鲜肉，目前是腾讯音乐高级前端工程师（毕业2.5年T10）。本科广州大学，主修教育技术学，辅修软件工程，硕士中山大学哲学系♂。爱好动漫、电影、技术、捣鼓一些新奇玩意。
+95 (后)老鲜肉，曾任腾讯音乐高级前端工程师（毕业 4 年 T11），目前创业中。本科广州大学，主修教育技术学，辅修软件工程，硕士中山大学哲学系♂。爱好动漫、电影、技术、捣鼓一些新奇玩意。
 
-目前专注前端领域，包括但不限于 React、Flutter、iOS、Chromium 等。同时其他技术也基本都会一点儿，戳[这里](https://me.ursb.me/index.php/category/works/)可以浏览我学生时代的一些作品~
+目前专注前端领域，包括但不限于 React、Flutter、iOS、Chromium 等。同时其他技术也基本都会一点儿，戳[这里](https://blog.ursb.me/index.php/category/works/)可以浏览学生时代的一些作品~
 
-现在每周都有在写周刊，但本博客不会全量同步周刊内容。若你感兴趣的话，可以访问 [Airing Weekly](https://weekly.ursb.me/) 查看所有周刊。
+现在每周都有在写周刊，可以访问 [Airing Weekly](https://weekly.ursb.me/) 查看所有周刊。
 
 ### 千古壹号
 
@@ -332,6 +325,12 @@ Notion 中文社区负责人。95 后，男生，驻京六年。主职是一名�
 - 博客地址：https://github.com/yihong0618
 
 喜爱[游戏](https://www.gcores.com/users/60793)，跑步，[读书](https://github.com/yihong0618/my_kindle_stats)，编程。 项目大多和这些相关。用 GitHub 记录blog 和生活日常。
+
+### ManateeLazyCat
+
+- 博客地址：https://manateelazycat.github.io/
+
+擅长研究用户心理, 可以快速从 0 到 1 构建交互体验极佳的产品；全能选手， 上到客户需求沟通、 研发团队管理， 下到接网线写代码；自学能力极强、 精力旺盛， 平常没事就喜欢看书玩会儿电脑。
 
 ### Frost Ming（明希）
 
@@ -1559,6 +1558,12 @@ AchgDesign 远不止于此，它是一种记录的方式，是我们相识的地
 
 [城堡阅读周刊](https://www.yuque.com/gaohui-bdaa2/chengbao)的作者。
 
+### 酷口家数字花园
+
+- 博客地址：https://weqoocu.com/
+
+实践卡片盒笔记法，打造第二大脑。
+
 ### 掘墓人的小铲子
 
 - 博客地址：https://juemuren4449.com
@@ -1658,8 +1663,18 @@ wordpress博文内容主要分为以下几大类型：
 - 博客地址：https://hsingko.pages.dev/
 
 
+## 十、人文
 
-## 其他行业
+### Macin
+
+- 博客地址：https://www.macin.org/
+
+- [RSS订阅](https://www.macin.org/atom.xml)
+
+诸位少侠，在下是曾让江湖人闻风丧胆的筷子小手。退隐以后，我开始关注活色生香的生活。酝酿与众不同的视角，企图让更多人了解腥风血雨以外的江湖，从此沦为吃喝玩乐的顽徒。
+
+
+## 十一、其他行业
 
 ### 刘臣律师
 
@@ -1667,7 +1682,7 @@ wordpress博文内容主要分为以下几大类型：
 
 80后刑辩律师的办案手记。专注无罪辩护。反抗者的灵魂从未远去。
 
-## 十一、昔日重温
+## 十二、昔日重温
 
 > 很久未更新，但内容值得一看。
 
@@ -1869,7 +1884,7 @@ wordpress博文内容主要分为以下几大类型：
 
 - 博客地址：https://gaohanghang.cn/
 
-## 十二、小而美的博客
+## 十三、小而美的博客
 
 
 ### yonniye

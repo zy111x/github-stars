@@ -1,8 +1,8 @@
 ---
 project: AstrBot
-stars: 4419
+stars: 5682
 description: |-
-    ✨易上手的多平台 LLM 聊天机器人及开发框架✨。支持 QQ、QQ频道、Telegram、微信个人号(Gewechat)、企业微信、飞书、内置 Web Chat，OpenAI GPT、DeepSeek、Ollama、Llama、GLM、Gemini、硅基流动、月之暗面、OneAPI、LLMTuner，支持 LLM Agent 插件开发，可视化面板。一键部署。支持 Dify 工作流、代码执行器、Whisper 语音转文字。
+    ✨ 易上手的多平台 LLM 聊天机器人及开发框架 ✨ 平台支持 QQ、QQ频道、Telegram、微信、企微、飞书 | OpenAI、DeepSeek、Gemini、硅基流动、月之暗面、Ollama、OneAPI、Dify 等。附带 WebUI。
 url: https://github.com/Soulter/AstrBot
 ---
 
@@ -25,6 +25,7 @@ _✨ 易上手的多平台 LLM 聊天机器人及开发框架 ✨_
 [![wakatime](https://wakatime.com/badge/user/915e5316-99c6-4563-a483-ef186cf000c9/project/018e705a-a1a7-409a-a849-3013485e6c8e.svg)](https://wakatime.com/badge/user/915e5316-99c6-4563-a483-ef186cf000c9/project/018e705a-a1a7-409a-a849-3013485e6c8e)
 ![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.soulter.top%2Fastrbot%2Fstats&query=v&label=7%E6%97%A5%E6%B6%88%E6%81%AF%E4%B8%8A%E8%A1%8C%E9%87%8F&cacheSeconds=3600)
 [![codecov](https://codecov.io/gh/Soulter/AstrBot/graph/badge.svg?token=FF3P5967B8)](https://codecov.io/gh/Soulter/AstrBot)
+[![star](https://gitcode.com/Soulter/AstrBot/star/badge.svg)](https://gitcode.com/Soulter/AstrBot)
 
 <a href="https://github.com/Soulter/AstrBot/blob/master/README_en.md">English</a> ｜
 <a href="https://github.com/Soulter/AstrBot/blob/master/README_ja.md">日本語</a> ｜
@@ -72,6 +73,14 @@ AstrBot 是一个松耦合、异步、支持多消息平台部署、具有易用
 
 请参阅官方文档 [通过源码部署 AstrBot](https://astrbot.app/deploy/astrbot/cli.html) 。
 
+## 🚀 路线图
+
+### 垂类功能
+
+1. 更好的上下文管理：限制 token 总数、对话上下文总结
+3. AstrBot in Minecraft
+
+### 横功能
 
 ## ⚡ 消息平台支持情况
 
@@ -111,7 +120,19 @@ AstrBot 是一个松耦合、异步、支持多消息平台部署、具有易用
 
 欢迎任何 Issues/Pull Requests！只需要将你的更改提交到此项目 ：)
 
-对于新功能的添加，请先通过 Issue 讨论。
+### 如何贡献
+
+你可以通过查看问题或帮助审核 PR（拉取请求）来贡献。任何问题或 PR 都欢迎参与，以促进社区贡献。当然，这些只是建议，你可以以任何方式进行贡献。对于新功能的添加，请先通过 Issue 讨论。
+
+### 开发环境
+
+AstrBot 使用 `ruff` 进行代码格式化和检查。
+
+```bash
+git clone https://github.com/Soulter/AstrBot
+pip install pre-commit
+pre-commit install
+```
 
 ## 🌟 支持
 

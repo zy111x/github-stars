@@ -1,6 +1,6 @@
 ---
 project: scrolly-video
-stars: 989
+stars: 1026
 description: |-
     Components for scroll-based (or other externally controlled) playback.
 url: https://github.com/dkaoster/scrolly-video
@@ -74,6 +74,19 @@ import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.vue';
 ```
 
 Add html code to your html component:
+
+```html
+<ScrollyVideo src="https://scrollyvideo.js.org/goldengate.mp4" />
+```
+
+## 🔵 Astro
+
+Install npm module with `npm install scrolly-video --save`: 
+Import component in your frontmatter:
+
+```javascript
+import ScrollyVideo from 'scrolly-video/dist/ScrollyVideo.astro';
+```
 
 ```html
 <ScrollyVideo src="https://scrollyvideo.js.org/goldengate.mp4" />

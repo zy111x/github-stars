@@ -1,6 +1,6 @@
 ---
 project: ldrs
-stars: 1864
+stars: 1871
 description: |-
     Modern, tree-shakeable loader & spinner web components. Made with CSS, HTML and SVG. https://uiball.com/ldrs
 url: https://github.com/GriffinJohnston/ldrs
@@ -20,16 +20,16 @@ url: https://github.com/GriffinJohnston/ldrs
 
 # LDRS
 
-Lightweight loaders & spinners for your next web project. The successor to @uiball/loaders. Rebuilt from the ground up using Typescript and web components, with 20 new loaders added for good measure.
+Lightweight loaders & spinners for your next web project. Built with web components.
 
-- **44 types 🎨** : Unique enough to be interesting; simple enough to use in real-world projects
-- **Powered by web components 🛠️** : Use with React, Vue, Svelte, Solid, plain HTML...
-- **Customizable 🎚️** : Set the size, color, stroke width, and animation speed to match your design
-- **Tiny 🐭** : No frameworks. No bloat. Dues-paying member of the iddy biddy bundle committee
-- **Vanilla 🍦** : Only want the HTML & CSS? Just select a loader on [the website](https://uiball.com/ldrs) and go to `Source` -> `Raw`
-- **Typed 🇹** : No one likes a squiggly red underline
-- **No gifs 🎥** : Built with HTML, CSS and some lightweight SVG
-- **Zero dependencies 🔗** : Zero worries
+- **44 types** : Unique enough to be interesting; simple enough to use in real-world projects
+- **Universal** : Use with React, Vue, Svelte, Solid, plain HTML...
+- **Customizable** : Set the size, color, stroke width, and animation speed to match your design
+- **Tiny** : No frameworks. No bloat. Dues-paying member of the iddy biddy bundle committee
+- **Vanilla** : Only want the HTML & CSS? Just select a loader on [the website](https://uiball.com/ldrs) and go to `Source` -> `Raw`
+- **Typed** : No one likes a squiggly red underline
+- **No gifs** : Built with HTML, CSS and some lightweight SVG
+- **Zero dependencies** : Zero worries
 
 ➠ Visit the [🌐 Website](https://uiball.com/ldrs) to see them all in action.
 
@@ -47,11 +47,10 @@ npm install ldrs
 yarn add ldrs
 ```
 
-## Getting Started
+## Getting started
+Web components need to be registered or "defined" to work. Until registration they're just empty HTML elements that don't do anything. For convenience, LDRS come in two varieties: auto-defining and manually defined. Auto-defining elements are released as individual .js files that register themselves on import. Manually defined elements are named exports that come with a `register()` method. 
 
-Import individual loader components. Use them wherever you like. The full list can be found on [the website](https://uiball.com/ldrs).
-
-LDRS is built using web components ([here's why](/why-web-components.md)). Web components need to be registered or "defined" to work. Until registration they're just empty HTML elements that don't do anything. For convenience, LDRS come in two varieties: auto-defining and manually defined. Auto-defining elements are released as individual .js files that register themselves on import. Manually defined elements are named exports that come with a `register()` method.
+The full list of loaders can be found on [the website](https://uiball.com/ldrs).
 
 ```js
 // Auto-defining
@@ -89,17 +88,10 @@ export default function PageSection({ isLoading }) {
 
 ## Frameworks
 
-LDRS can only be run in a client-side environment, so they need to be excluded from SSR.
+Web components can only be run in a client-side environment, so they need to be excluded from SSR.
 
-[📖 Next.js guide →](/framework-guides.md#nextjs)  
 [📖 Nuxt.js guide →](/framework-guides.md#nuxtjs)  
 [📖 Astro guide →](/framework-guides.md#astro)  
-[📖 Remix guide →](/framework-guides.md#remix)  
-[📖 Gatsby guide →](/framework-guides.md#gatsby)
-
-## Where's the old library?
-
-It will continue to live on [npm](npmjs.com/package/@uiball/loaders) and [GitHub](https://github.com/GriffinJohnston/uiball-loaders-legacy), but is no longer maintained. That being said, upgrading to LDRS is pretty darn easy, and many of the loaders themselves have been improved. Give it a go why dontcha.
 
 ## Options
 

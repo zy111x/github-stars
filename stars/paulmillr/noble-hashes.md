@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 647
+stars: 649
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
@@ -417,6 +417,8 @@ can read application memory, you are doomed in any case:
 
 - **Commits** are signed with PGP keys, to prevent forgery. Make sure to verify commit signatures
 - **Releases** are transparent and built on GitHub CI. Make sure to verify [provenance](https://docs.npmjs.com/generating-provenance-statements) logs
+  - Use GitHub CLI to verify single-file builds:
+    `gh attestation verify --owner paulmillr noble-hashes.js`
 - **Rare releasing** is followed to ensure less re-audit need for end-users
 - **Dependencies** are minimized and locked-down: any dependency could get hacked and users will be downloading malware with every install.
   - We make sure to use as few dependencies as possible

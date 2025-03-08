@@ -1,6 +1,6 @@
 ---
 project: iconpark
-stars: 361
+stars: 362
 description: |-
     Collection of iconfonts
 url: https://github.com/lvwzhen/iconpark

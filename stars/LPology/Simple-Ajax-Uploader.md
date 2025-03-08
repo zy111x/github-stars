@@ -1,6 +1,6 @@
 ---
 project: Simple-Ajax-Uploader
-stars: 997
+stars: 995
 description: |-
     Javascript file upload plugin with progress bar support. Works in all major browsers, including IE7+, Chrome, Firefox, Safari, and  Opera. No dependencies - use it with or without jQuery.
 url: https://github.com/LPology/Simple-Ajax-Uploader

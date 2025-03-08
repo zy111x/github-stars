@@ -1,6 +1,6 @@
 ---
 project: openalternative
-stars: 4058
+stars: 4083
 description: |-
     A community driven list of open source alternatives to proprietary software and applications.
 url: https://github.com/piotrkulpinski/openalternative
@@ -98,18 +98,6 @@ OpenAlternative is built as a Turborepo monorepo with multiple packages. The pro
   - `/github` - GitHub integration utilities
 
 The project uses Turborepo for task orchestration and dependency management across the monorepo.
-
-## Development
-
-This project uses [Bun](https://bun.sh/) as the package manager and runtime. Make sure you have Bun installed before proceeding.
-
-To set up the project for development:
-
-1. Clone the repository
-2. Run `bun install` to install all dependencies
-3. Set up the required environment variables (see below)
-4. Run `bun run db:push` to push the Prisma schema to the database
-5. Run `bun run dev` to start the application in development mode
 
 ## Development
 

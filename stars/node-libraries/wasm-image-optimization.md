@@ -1,6 +1,6 @@
 ---
 project: wasm-image-optimization
-stars: 75
+stars: 76
 description: |-
     Optimize images with wasm on edge runtime
 url: https://github.com/node-libraries/wasm-image-optimization
@@ -37,9 +37,11 @@ WebAssembly is used to provide image transformation functionality.
 ## Example
 
 https://next-image-convert.vercel.app/  
-![](https://raw.githubusercontent.com/node-libraries/wasm-image-optimization/refs/heads/master/doc/image.avif)
+![](https://raw.githubusercontent.com/node-libraries/wasm-image-optimization/refs/heads/master/doc/image.webp)
 
 ## Functions
+
+- Convert image
 
 ```ts
 optimizeImage({
@@ -68,6 +70,15 @@ optimizeImageExt({
       width: number,
       height: number}>
 
+```
+
+- Multi Threading
+
+```ts
+waitAll(): Promise<void>
+waitReady(retryTime?: number) :Promise<void>
+close(): void;
+launchWorker(): Promise<void>
 ```
 
 ## WebWorker on Vite

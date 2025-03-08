@@ -1,6 +1,6 @@
 ---
 project: asuswrt-merlin.ng
-stars: 5498
+stars: 5504
 description: |-
     Third party firmware for Asus routers (newer codebase)
 url: https://github.com/RMerl/asuswrt-merlin.ng

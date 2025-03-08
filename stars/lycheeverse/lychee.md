@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2476
+stars: 2484
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -341,6 +341,15 @@ Options:
   -n, --no-progress
           Do not show progress bar.
           This is recommended for non-interactive shells (e.g. for continuous integration)
+
+      --extensions <EXTENSIONS>
+          Test the specified file extensions for URIs when checking files locally.
+
+          Multiple extensions can be separated by commas. Note that if you want to check filetypes,
+          which have multiple extensions, e.g. HTML files with both .html and .htm extensions, you need to
+          specify both extensions explicitly.
+
+          [default: md,mkd,mdx,mdown,mdwn,mkdn,mkdown,markdown,html,htm,txt]
 
       --cache
           Use request cache stored on disk at `.lycheecache`

@@ -1,6 +1,6 @@
 ---
 project: react-hot-toast
-stars: 10172
+stars: 10191
 description: |-
     Smoking Hot React Notifications 🔥 
 url: https://github.com/timolins/react-hot-toast

@@ -1,6 +1,6 @@
 ---
 project: polished
-stars: 7643
+stars: 7641
 description: |-
     A lightweight toolset for writing styles in JavaScript ✨
 url: https://github.com/styled-components/polished

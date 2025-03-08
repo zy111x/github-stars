@@ -1,6 +1,6 @@
 ---
 project: morphic
-stars: 7059
+stars: 7102
 description: |-
     An AI-powered search engine with a generative UI
 url: https://github.com/miurla/morphic
@@ -55,7 +55,7 @@ The following AI providers are supported:
 - xAI (Grok)
 - OpenAI Compatible
 
-Models are configured in `lib/config/models.json`. Each model requires its corresponding API key to be set in the environment variables. See [Configuration Guide](docs/CONFIGURATION.md) for details.
+Models are configured in `public/config/models.json`. Each model requires its corresponding API key to be set in the environment variables. See [Configuration Guide](docs/CONFIGURATION.md) for details.
 
 ### Search Capabilities
 
@@ -176,7 +176,7 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - ./models.json:/app/public/config/models.json  # Optional: Override default model configuration
+      - ./models.json:/app/public/config/models.json # Optional: Override default model configuration
 ```
 
 The default model configuration is located at `public/config/models.json`. For Docker deployment, you can create `models.json` alongside `.env.local` to override the default configuration.

@@ -1,6 +1,6 @@
 ---
 project: eslint-plugin-unicorn
-stars: 4411
+stars: 4422
 description: |-
     More than 100 powerful ESLint rules
 url: https://github.com/sindresorhus/eslint-plugin-unicorn
@@ -57,8 +57,8 @@ export default [
 <!-- Do not manually modify this list. Run: `npm run fix:eslint-docs` -->
 <!-- begin auto-generated rules list -->
 
-💼 [Configurations](https://github.com/sindresorhus/eslint-plugin-unicorn#preset-configs-eslintconfigjs) enabled in.\
-✅ Set in the `recommended` [configuration](https://github.com/sindresorhus/eslint-plugin-unicorn#preset-configs-eslintconfigjs).\
+💼 [Configurations](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config) enabled in.\
+✅ Set in the `recommended` [configuration](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config).\
 🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).\
 💡 Manually fixable by [editor suggestions](https://eslint.org/docs/latest/use/core-concepts#rule-suggestions).
 
@@ -75,7 +75,7 @@ export default [
 | [custom-error-definition](docs/rules/custom-error-definition.md)                                 | Enforce correct `Error` subclassing.                                                                                                                                                                              |    | 🔧 |    |
 | [empty-brace-spaces](docs/rules/empty-brace-spaces.md)                                           | Enforce no spaces between braces.                                                                                                                                                                                 | ✅  | 🔧 |    |
 | [error-message](docs/rules/error-message.md)                                                     | Enforce passing a `message` value when creating a built-in error.                                                                                                                                                 | ✅  |    |    |
-| [escape-case](docs/rules/escape-case.md)                                                         | Require escape sequences to use uppercase values.                                                                                                                                                                 | ✅  | 🔧 |    |
+| [escape-case](docs/rules/escape-case.md)                                                         | Require escape sequences to use uppercase or lowercase values.                                                                                                                                                    | ✅  | 🔧 |    |
 | [expiring-todo-comments](docs/rules/expiring-todo-comments.md)                                   | Add expiration conditions to TODO comments.                                                                                                                                                                       | ✅  |    |    |
 | [explicit-length-check](docs/rules/explicit-length-check.md)                                     | Enforce explicitly comparing the `length` or `size` property of a value.                                                                                                                                          | ✅  | 🔧 | 💡 |
 | [filename-case](docs/rules/filename-case.md)                                                     | Enforce a case style for filenames.                                                                                                                                                                               | ✅  |    |    |

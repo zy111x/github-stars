@@ -1,6 +1,6 @@
 ---
 project: unplugin-purge-polyfills
-stars: 209
+stars: 210
 description: |-
     A tiny plugin to replace package imports with better native code.
 url: https://github.com/danielroe/unplugin-purge-polyfills

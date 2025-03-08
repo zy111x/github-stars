@@ -1,6 +1,6 @@
 ---
 project: certimate
-stars: 5392
+stars: 5710
 description: |-
     开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期。An open-source SSL certificate management tool that helps you automatically apply for and deploy SSL certificates, as well as automatically renew them when they are about to expire.
 url: https://github.com/usual2970/certimate
@@ -23,11 +23,6 @@ url: https://github.com/usual2970/certimate
 中文 ｜ [English](README_EN.md)
 
 </div>
-
-> [!WARNING]
-> 当前分支为 `next`，是 v0.3.x 的开发分支，目前还没有稳定，请勿在生产环境中使用。
->
-> 如需访问之前的版本，请切换至 `main` 分支。
 
 ---
 
@@ -77,9 +72,9 @@ Certimate 旨在为用户提供一个安全、简便的 SSL 证书管理解决�
 
 如何使用 Docker 或其他部署方式请参考文档。
 
-## 📄 技术文档
+## 📄 使用手册
 
-请访问 [docs.certimate.me](https://docs.certimate.me/) 以阅读技术文档。
+请访问文档站 [docs.certimate.me](https://docs.certimate.me/) 以阅读使用手册。
 
 相关文章：
 

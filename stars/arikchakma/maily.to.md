@@ -1,6 +1,6 @@
 ---
 project: maily.to
-stars: 2711
+stars: 2739
 description: |-
     Craft beautiful emails effortlessly with Maily, the powerful email editor that ensures impeccable communication across all major clients.
 url: https://github.com/arikchakma/maily.to
@@ -10,7 +10,7 @@ url: https://github.com/arikchakma/maily.to
 
 <p align="center">
   <a href="https://github.com/arikchakma/maily.to/blob/main/license">
-    <img src="https://img.shields.io/badge/License-Non--Commercial-222222.svg" />
+    <img src="https://img.shields.io/badge/License-MIT-222222.svg" />
   </a>
   <a href="https://buymeacoffee.com/arikchakma">
     	<img src="https://img.shields.io/badge/-buy_me_a%C2%A0coffee-222222?logo=buy-me-a-coffee" alt="Buy me a coffee" />
@@ -24,14 +24,6 @@ url: https://github.com/arikchakma/maily.to
   <b>Powerful editor for creating beautiful, pre-designed, mobile-ready emails.</b></br>
   <sub>Just bring your text, use our pre-designed components, and be done.</sub><br>
 </p>
-<br />
-
-<p align="center">
-  <a href="https://novu.co">
-    <img src="https://github.com/user-attachments/assets/a4d3f4d1-9e76-4bc9-91f9-1156c9f14d5d" alt="Backed by Novu" style="height: 36px;" />
-  </a>
-</p>
-
 <br />
 
 ## Start Using
@@ -58,6 +50,35 @@ Designing emails that work across all email platforms, browsers, etc is hard. **
 - Repeat
 - Show If Condition
 
+<br/>
+
+## Sponsors
+
+Sponsorship at any level is appreciated and encouraged. If you built a paid product using Maily, consider one of the [sponsorship tiers](https://github.com/sponsors/arikchakma).
+
+<br/>
+
+<h3 align="center">Gold</h3>
+
+<table align="center" style="justify-content: center;align-items: center;display: flex;">
+  <tr>
+    <td align="center">
+      <p></p>
+      <p></p>
+      <a href="https://novu.co?ref=maily.to">
+        <picture height="60px">
+          <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/5e2b9ef1-5ded-4863-995d-62c7e40f946a">
+          <img alt="Novu Logo" height="60px" src="https://github.com/user-attachments/assets/d2fdaf14-2211-4946-ab67-a4ce547aabc0">
+        </picture>
+      </a>
+      <p></p>
+      <p></p>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
 ## Contributions
 
 Feel free to submit pull requests, create issues, or spread the word. For getting a development version of it up & running, go through the following steps.
@@ -71,5 +92,5 @@ Feel free to submit pull requests, create issues, or spread the word. For gettin
 
 ## License
 
-Non-Commercial Use Only. See `LICENSE` for more information.
+MIT &copy; [Arik Chakma](https://twitter.com/imarikchakma)
 

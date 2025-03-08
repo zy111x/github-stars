@@ -1,6 +1,6 @@
 ---
 project: hugo-blog-awesome
-stars: 547
+stars: 551
 description: |-
     Fast, minimal blog with dark mode support.
 url: https://github.com/hugo-sid/hugo-blog-awesome
@@ -128,7 +128,7 @@ url = "https://twitter.com"
 
 [[params.socialIcons]]
 name = "Rss"
-url = "index.xml"
+url = "/index.xml"
 ```
 
 <details>
@@ -288,6 +288,7 @@ If you are using this theme for any website, feel free to list the website here.
 - <https://www.boniface.me/>
 - <https://meanii.dev/>
 - <https://unixsec.io/>
+- <https://blog.crisweb.com/>
 
 ## Support
 
