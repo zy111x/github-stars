@@ -1,6 +1,6 @@
 ---
 project: AnyText
-stars: 4550
+stars: 4563
 description: Official implementation code of the paper <AnyText: Multilingual Visual Text Generation And Editing>
 url: https://github.com/tyxsspa/AnyText
 ---
@@ -11,6 +11,7 @@ AnyText: Multilingual Visual Text Generation And Editing
 📌News
 ------
 
+\[2025.03.03\] - 🔥🔥🔥We have open-sourced AnyText2, which is faster, performs better, and allows you to set properties such as font and color for the text! See \[demo\] \[code\] \[ckpt\]!  
 \[2024.04.18\] - 👏👏👏The training code and dataset(**AnyWord-3M**) are released!  
 \[2024.04.18\] - You can merge weights from self-trained or community models into AnyText now, including all base models and LoRA models based on SD1.5. Have fun!  
 \[2024.02.21\] - The evaluation code and dataset(**AnyText-benchmark**) are released.  

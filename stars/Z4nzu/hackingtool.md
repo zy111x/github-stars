@@ -1,6 +1,6 @@
 ---
 project: hackingtool
-stars: 51738
+stars: 51818
 description: ALL IN ONE Hacking Tool For Hackers
 url: https://github.com/Z4nzu/hackingtool
 ---
@@ -252,6 +252,7 @@ Hackingtool Menu 🧰
 #### Mix tools
 
 -   Terminal Multiplexer
+-   Crivo
 
 Installation For Linux
 

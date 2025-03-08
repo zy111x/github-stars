@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 37737
+stars: 37894
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -25,12 +25,6 @@ Refer to the Releases Page to download the latest version of EasySpider.
 亮数据BrightData是代理市场领导者，覆盖全球的7200万IP，提供真人住宅IP，即时批量采集网络公开数据，成功率亲测有保证。需要性价比高代理IP的可**点击上方图片注册**后联系中文客服，开通后免费试用，**现在有首充多少就送多少的活动**。BrightData可配合EasySpider进行数据采集。
 
 Capsolver.com is an AI-powered service that specializes in solving various types of captchas automatically. It supports captchas such as reCAPTCHA V2, reCAPTCHA V3, DataDome, AWS Captcha, Geetest, and Cloudflare Captcha / Challenge 5s, Imperva / Incapsula, among others. For developers, Capsolver offers API integration options detailed in their documentation, facilitating the integration of captcha solving into applications. They also provide browser extensions for Chrome and Firefox, making it easy to use their service directly within a browser. Different pricing packages are available to accommodate varying needs, ensuring flexibility for users.
-
-Proxy302是一个全球代理IP自助超市。按需付费，无需套餐捆绑购买；无阶梯式定价，充值即可使用所有类型的代理IP；免费测试，注册获取$1测试额度。覆盖全球240＋国家和地区，6500万个住宅IP可供选择。Proxy302可配合EasySpider进行数据采集。
-
-123Proxy是企业级海外代理IP提供商, 拥有独家的8000万+代理IP池，190+国家覆盖，真实家庭住宅IP，适合各种用途的数据采集类任务。它支持免费测试2-4小时，**点击上方图片注册**联系客服即可获取；它还支持15%返现活动，给公司购买代理可以返现到个人，直接微信/支付宝返现，打工人的小福利。123Proxy可配合EasySpider进行数据采集。
-
-Koala-IP提供海量低价高质量代理IP服务，致力于为客户提供最优价格和最稳定的代理IP解决方案。无论你是需要网络爬虫、数据抓取、隐私保护还是跨地域访问，Koala-IP（中文） 都能满足你的所有需求。立即注册Koala-IP，享受超高性价比的代理IP服务，提升你的业务效益！
 
 官方网站/Official Website
 ---------------------
@@ -63,18 +57,6 @@ At the same time, if you select the 'Loop-click every element' option after sele
 更多特性请翻到页面底部查看。
 
 More features please scroll to the bottom of this page to view.
-
-支持作者/Support Author
--------------------
-
-易采集EasySpider是一款完全免费无广告的开源软件，软件开发和维护全靠作者用爱发电，因此您可以选择支持作者让作者有更多的热情和精力维护此软件，或者您使用了此软件进行了盈利，欢迎您通过下面的方式支持作者：
-
-1.  Github Sponsor：直接点击右侧**Sponsor**按钮赞助。
-2.  支付宝账号：naibowang@foxmail.com，也可以扫描下方二维码。
-3.  微信收款：扫描下方二维码。
-4.  PayPal账号：naibowang，也可以扫描下方二维码。
-
-You can support the author by clicking the **Sponsor** button at right side or pay via paypal: naibowang.
 
 文档/Documentation
 ----------------
