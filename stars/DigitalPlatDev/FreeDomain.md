@@ -1,25 +1,9 @@
 ---
 project: FreeDomain
-stars: 41163
+stars: 41152
 description: DigitalPlat FreeDomain: Free Domain For Everyone
 url: https://github.com/DigitalPlatDev/FreeDomain
 ---
-
-DigitalPlat FreeDomain – **Your Free Domain Awaits!**
-=====================================================
-
-**⚠️⚠️ February 21, 2025 - Important Notice ⚠️⚠️**
-
-Due to the misuse of the **US.KG** domain by certain criminal organizations, it has been reported to the **.KG** registry. As a result, the **.KG** domain registry has **suspended DNS resolution** for all **\*.US.KG** domains, making them temporarily inaccessible.
-
-We have already responded to the **.KG** registry and are now waiting for them to restore DNS resolution. This process may take some time, so we kindly ask for your patience. In the meantime, we recommend checking our **official repository** or **joining our discussion group** for the latest updates:  
-🔗 https://github.com/DigitalPlatDev/FreeDomain?tab=readme-ov-file#-join-our-community
-
-This suspension was **a decision made by the .KG registry and not by us**. Typically, **US.KG** domains should be restored soon.
-
-We appreciate your understanding and support. Moving forward, we will **enhance our review mechanisms and implement KYC measures** to prevent further misuse, ensuring a safer and freer internet for everyone.
-
-Thank you for your patience! 🙏
 
 🌐 Say Goodbye to Domain Fees
 -----------------------------
@@ -38,7 +22,8 @@ DigitalPlat is fiscally sponsored by The Hack Foundation, a 501(c)(3) nonprofit 
 
 ### 🌍 Available Domain Extensions
 
--   **.US.KG** (Due to high levels of misuse, this domain now requires approval. You need a email suffix from approved list (like @gmail.com) for registration, and please use your GitHub account to submit an issue for approval. Each approved and verified account can enjoy up to three free domain names!)
+-   **.DPDNS.ORG**
+-   **.US.KG** (Registration is temporarily suspended and will resume in the near future.)
 
 _(More extensions coming soon!)_
 
@@ -85,3 +70,11 @@ Donate Us Today! (Tax exemption in the US)
 We might introduce more domain options and free hosting in the future to help as many people as possible!
 
 **We can’t wait to see what you build!**
+
+* * *
+
+### 🚨 Abuse Reporting
+
+We take domain name abuse seriously and are committed to maintaining a safer and more open internet. Every report is carefully reviewed, and response times may vary from a few hours to several days, depending on the complexity of the case.
+
+Email: abusereport@digitalplat.org Report Form: Abuse Report Form

@@ -1,6 +1,6 @@
 ---
 project: QtScrcpy
-stars: 23040
+stars: 23176
 description: Android real-time display control software
 url: https://github.com/barry-ran/QtScrcpy
 ---
@@ -50,8 +50,6 @@ You can write your script to map keyboard and mouse actions to touches and click
 
 Script for TikTok and some other games are provided by default. Once enabled, you can play the game with your keyboard and mouse. The default key mapping for PUBG Mobile is as follows:
 
-Here is a video demonstration playing PUBG Mobile.
-
 Instruction for adding new customized mapping files.
 
 -   Write a customized script and put it in the `keymap` directory
@@ -61,6 +59,22 @@ Instruction for adding new customized mapping files.
 -   Press `~` key (the SwitchKey in the key map script) to switch to custom mapping mode
 -   Press the ~ key again to switch back to normal mode
 -   (For games such as PUBG Mobile) If you want to move vehicles with the STEER\_WHEEL keys, you need to set the move mode to `single rocker mode`.
+
+If you don't know how to manually write mapping rules, you can also use the `QuickAssistant` developed by the author QuickAssistant Features&Functions:
+
+-   Play Android mobile games smoothly through keyboard and mouse
+-   Interface based editing of key mapping script
+-   Support pausing the computer screen and using only keyboard and mouse operations
+-   Screenshot&Recording of Mobile Screen
+-   Simple batch control
+-   Android 11+supports playing mobile audio on computers (under development...)
+-   Mobile app installation free
+-   Fast and instant connection
+-   Low latency: USB screen mirroring 1080p latency is within 30ms, which is lower than all screen mirroring software on the market in terms of latency at the same resolution and smoothness
+-   Low CPU usage: pure C++development, high-performance GPU video rendering
+-   High resolution: adjustable, maximum support for native resolution of Android terminals
+-   Telegram Group：https://t.me/+EnQNmb47C\_liYmRl
+-   QuickAssistant
 
 Group control
 -------------
