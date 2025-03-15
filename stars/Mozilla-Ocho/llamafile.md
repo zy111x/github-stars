@@ -1,6 +1,6 @@
 ---
 project: llamafile
-stars: 21900
+stars: 21963
 description: |-
     Distribute and run LLMs with a single file.
 url: https://github.com/Mozilla-Ocho/llamafile
@@ -365,7 +365,14 @@ WantedBy=multi-user.target
 
 Put that in `/etc/systemd/system/cosmo-binfmt.service`.
 
-Then run `sudo systemctl enable cosmo-binfmt`.
+Ensure that the APE loader is installed to `/usr/bin/ape`:
+
+```sh
+sudo wget -O /usr/bin/ape https://cosmo.zip/pub/cosmos/bin/ape-$(uname -m).elf
+sudo chmod +x /usr/bin/ape
+```
+
+Then run `sudo systemctl enable --now cosmo-binfmt`.
 
 Another thing that's helped WSL users who experience issues, is to
 disable the WIN32 interop feature:

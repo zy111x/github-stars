@@ -1,6 +1,6 @@
 ---
 project: blog-list
-stars: 1783
+stars: 1788
 description: |-
     中文博客琅琊榜，只收录精品独立博客
 url: https://github.com/qianguyihao/blog-list
@@ -1386,6 +1386,14 @@ AchgDesign 远不止于此，它是一种记录的方式，是我们相识的地
 一名UX设计师，在东京某 IT 公司工作。专注于用户体验、交互设计领域，但对字体、视觉艺术也感兴趣。
 
 「觉论」是博主发起的个人博客，具体可以诠释为「Sense of Design & Life」，旨在记录博主对世界的观察、审美、思考方式的沉淀和转变。
+
+
+### 大黑天
+
+- 小信号：https://xiaoxinhao.top/
+
+一个工作挺久的室内设计师，开始写一些东西，关注效率工具，也关注优质的信息源，做了2个公众号。
+
 
 ### suithink 苏志斌
 

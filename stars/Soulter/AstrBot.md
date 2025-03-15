@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 5682
+stars: 6093
 description: |-
     ✨ 易上手的多平台 LLM 聊天机器人及开发框架 ✨ 平台支持 QQ、QQ频道、Telegram、微信、企微、飞书 | OpenAI、DeepSeek、Gemini、硅基流动、月之暗面、Ollama、OneAPI、Dify 等。附带 WebUI。
 url: https://github.com/Soulter/AstrBot
@@ -23,7 +23,7 @@ _✨ 易上手的多平台 LLM 聊天机器人及开发框架 ✨_
 <a href="https://hub.docker.com/r/soulter/astrbot"><img alt="Docker pull" src="https://img.shields.io/docker/pulls/soulter/astrbot.svg"/></a>
 <a  href="https://qm.qq.com/cgi-bin/qm/qr?k=wtbaNx7EioxeaqS9z7RQWVXPIxg2zYr7&jump_from=webapi&authKey=vlqnv/AV2DbJEvGIcxdlNSpfxVy+8vVqijgreRdnVKOaydpc+YSw4MctmEbr0k5"><img alt="Static Badge" src="https://img.shields.io/badge/QQ群-630166526-purple"></a>
 [![wakatime](https://wakatime.com/badge/user/915e5316-99c6-4563-a483-ef186cf000c9/project/018e705a-a1a7-409a-a849-3013485e6c8e.svg)](https://wakatime.com/badge/user/915e5316-99c6-4563-a483-ef186cf000c9/project/018e705a-a1a7-409a-a849-3013485e6c8e)
-![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.soulter.top%2Fastrbot%2Fstats&query=v&label=7%E6%97%A5%E6%B6%88%E6%81%AF%E4%B8%8A%E8%A1%8C%E9%87%8F&cacheSeconds=3600)
+![Dynamic JSON Badge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.soulter.top%2Fastrbot%2Fstats&query=v&label=7%E6%97%A5%E6%B6%88%E6%81%AF%E4%B8%8A%E8%A1%8C%E9%87%8F&cacheSeconds=60)
 [![codecov](https://codecov.io/gh/Soulter/AstrBot/graph/badge.svg?token=FF3P5967B8)](https://codecov.io/gh/Soulter/AstrBot)
 [![star](https://gitcode.com/Soulter/AstrBot/star/badge.svg)](https://gitcode.com/Soulter/AstrBot)
 
@@ -91,7 +91,8 @@ AstrBot 是一个松耦合、异步、支持多消息平台部署、具有易用
 | 微信(个人号)    | ✔    | 微信个人号私聊、群聊 | 文字、图片、语音 |
 | [Telegram](https://github.com/Soulter/astrbot_plugin_telegram)   | ✔    | 私聊、群聊 | 文字、图片 |
 | [微信(企业微信)](https://github.com/Soulter/astrbot_plugin_wecom)    | ✔    | 私聊 | 文字、图片、语音 |
-| 飞书   | ✔    | 群聊 | 文字、图片 |
+| 飞书   | ✔    | 私聊、群聊 | 文字、图片 |
+| 钉钉   | ✔    | 私聊、群聊 | 文字、图片 |
 | 微信对话开放平台 | 🚧    | 计划内 | - |
 | Discord   | 🚧    | 计划内 | - |
 | WhatsApp   | 🚧    | 计划内 | - |

@@ -1,6 +1,6 @@
 ---
 project: openwrt-6.x
-stars: 271
+stars: 278
 description: |-
     This repository is a mirror of https://git.openwrt.org/openwrt/openwrt.git It is for reference only and is not active for check-ins.  We will continue to accept Pull Requests here. They will be merged via staging trees then into openwrt.git.
 url: https://github.com/LiBwrt/openwrt-6.x

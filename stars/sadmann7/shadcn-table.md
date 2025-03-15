@@ -1,6 +1,6 @@
 ---
 project: shadcn-table
-stars: 4194
+stars: 4323
 description: |-
     Shadcn table with server-side sorting, filtering, and pagination.
 url: https://github.com/sadmann7/shadcn-table
@@ -56,16 +56,28 @@ This is a shadcn table with server-side sorting, filtering, and pagination. It i
    cp .env.example .env
    ```
 
-4. Start the development server
+4. (Optional) Run database using docker-compose.yml file
 
    ```bash
-   pnpm run dev
+   docker compose up
    ```
 
 5. Push the database schema
 
    ```bash
    pnpm run db:push
+   ```
+
+6. Seed the database
+
+   ```bash
+   pnpm run db:seed
+   ```
+
+7. Start the development server
+
+   ```bash
+   pnpm run dev
    ```
 
 ## Build your own Table

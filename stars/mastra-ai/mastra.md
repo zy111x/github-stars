@@ -1,6 +1,6 @@
 ---
 project: mastra
-stars: 9627
+stars: 10422
 description: |-
     The TypeScript AI agent framework. ⚡ Assistants, RAG, observability. Supports any LLM: GPT-4, Claude, Gemini, Llama.
 url: https://github.com/mastra-ai/mastra
@@ -35,6 +35,8 @@ If you don't have an API key for an LLM provider, you can get one from the follo
 - [OpenAI](https://platform.openai.com/)
 - [Anthropic](https://console.anthropic.com/settings/keys)
 - [Google Gemini](https://ai.google.dev/gemini-api/docs)
+- [Groq](https://console.groq.com/docs/overview)
+- [Cerebras](https://inference-docs.cerebras.ai/introduction)
 
 If you don't have an account with these providers, you can sign up and get an API key. Anthropic require a credit card to get an API key. Some OpenAI models and Gemini do not and have a generous free tier for its API.
 

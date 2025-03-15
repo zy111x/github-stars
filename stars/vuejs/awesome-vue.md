@@ -1,6 +1,6 @@
 ---
 project: awesome-vue
-stars: 72624
+stars: 72656
 description: |-
     🎉 A curated list of awesome things related to Vue.js
 url: https://github.com/vuejs/awesome-vue
@@ -968,7 +968,6 @@ _Set of admin template_
 - [Geeker-Admin](https://github.com/HalseySpicy/Geeker-Admin) - A set of open source backend management framework based on Vue3 + TypeScript + Element Plus. [Live demo](https://admin.spicyboy.cn)
 - [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin) - 🚀Vite+Vue3+Gin development basic platform. [Live demo](https://demo.gin-vue-admin.com)
 - [adminforth](https://adminforth.dev) - Vue + Node + Tailwind admin framework. [Live Demo](https://demo.adminforth.dev)
-- [vue-start-admin](https://github.com/loicduong/vue-start-admin) - A modern adaptation of the Start Vue Free - Admin Dashboard Template by KeenThemes.
 - [soybean-admin](https://github.com/soybeanjs/soybean-admin/blob/main/README.en_US.md) - A clean, elegant, beautiful and powerful admin template, based on Vue3, Vite5, TypeScript, Pinia, NaiveUI and UnoCSS.
 
 #### Server-side rendering
@@ -1569,6 +1568,7 @@ _LocalStorage etc._
 - [pinia-orm](https://github.com/CodeDredd/pinia-orm) - The Pinia plugin to enable Object-Relational Mapping access to the Pinia Store. 🍍
 - [pinia-persistedstate-2](https://github.com/iendeavor/pinia-plugin-persistedstate-2) - Persist and rehydrate your Pinia state between page reloads.
 - [tauri-plugin-pinia](https://github.com/ferreira-tb/tauri-store/tree/main/packages/tauri-plugin-pinia) - Persistent Pinia stores for Tauri.
+- [pinia-plugin-unstorage](https://github.com/litingyes/pinia-plugin-unstorage) - The best persistence plugin with unjs/unstorage for pinia.
 
 ##### Authentication/Authorization
 

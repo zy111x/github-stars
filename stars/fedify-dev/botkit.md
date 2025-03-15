@@ -1,6 +1,6 @@
 ---
 project: botkit
-stars: 50
+stars: 51
 description: |-
     A framework for creating ActivityPub bots
 url: https://github.com/fedify-dev/botkit

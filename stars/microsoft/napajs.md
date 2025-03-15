@@ -1,6 +1,6 @@
 ---
 project: napajs
-stars: 9238
+stars: 9236
 description: |-
     Napa.js: a multi-threaded JavaScript runtime
 url: https://github.com/microsoft/napajs

@@ -1,6 +1,6 @@
 ---
 project: icono
-stars: 3990
+stars: 3989
 description: |-
     One tag One icon, no font or svg, Pure CSS
 url: https://github.com/saeedalipoor/icono

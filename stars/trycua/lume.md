@@ -1,6 +1,6 @@
 ---
 project: lume
-stars: 2135
+stars: 2167
 description: |-
     A lightweight CLI and local API server to create, run and manage macOS and Linux virtual machines (VMs) natively on Apple Silicon.
 url: https://github.com/trycua/lume
@@ -20,6 +20,7 @@ url: https://github.com/trycua/lume
   [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=F0F0F0)](#)
   [![Homebrew](https://img.shields.io/badge/Homebrew-FBB040?logo=homebrew&logoColor=fff)](#install)
   [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.com/invite/mVnXXpdE85)
+  [![All Contributors](https://img.shields.io/github/all-contributors/trycua/lume?color=ee8449&style=flat-square)](#contributors)
 </h1>
 </div>
 
@@ -73,12 +74,13 @@ Command Options:
     --ipsw <path>        Path to IPSW file or 'latest' for macOS VMs
 
   run:
-    --no-display         Do not start the VNC client app
-    --shared-dir <dir>   Share directory with VM (format: path[:ro|rw])
-    --mount <path>       For Linux VMs only, attach a read-only disk image
-    --registry <url>     Container registry URL (default: ghcr.io)
-    --organization <org> Organization to pull from (default: trycua)
-    --vnc-port <port>    Port to use for the VNC server (default: 0 for auto-assign)
+    --no-display                Do not start the VNC client app
+    --shared-dir <dir>          Share directory with VM (format: path[:ro|rw])
+    --mount <path>              For Linux VMs only, attach a read-only disk image
+    --registry <url>            Container registry URL (default: ghcr.io)
+    --organization <org>        Organization to pull from (default: trycua)
+    --vnc-port <port>           Port to use for the VNC server (default: 0 for auto-assign)
+    --recovery-mode <boolean>   For MacOS VMs only, start VM in recovery mode (default: false)
 
   set:
     --cpu <cores>        New number of CPU cores (e.g., 4)
@@ -154,4 +156,22 @@ Apple, macOS, and Apple Silicon are trademarks of Apple Inc. Ubuntu and Canonica
 ## Stargazers over time
 
 [![Stargazers over time](https://starchart.cc/trycua/lume.svg?variant=adaptive)](https://starchart.cc/trycua/lume)
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/f-trycua"><img src="https://avatars.githubusercontent.com/u/195596869?v=4?s=100" width="100px;" alt="f-trycua"/><br /><sub><b>f-trycua</b></sub></a><br /><a href="#code-f-trycua" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 

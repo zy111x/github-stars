@@ -1,6 +1,6 @@
 ---
 project: IPQuality
-stars: 3068
+stars: 3127
 description: |-
     A script for IP quality detection
 url: https://github.com/xykt/IPQuality
@@ -63,6 +63,16 @@ bash <(curl -Ls IP.Check.Place) -x socks5://username:password@socksproxy:port
 bash <(curl -Ls IP.Check.Place) -l en
 ````
 
+##### 跳过检测系统及安装依赖：
+````bash
+bash <(curl -Ls Net.Check.Place) -n
+````
+
+##### 自动安装依赖：
+````bash
+bash <(curl -Ls Net.Check.Place) -y
+````
+
 ##### 报告展示完整IP地址：
 ````bash
 bash <(curl -Ls IP.Check.Place) -f
@@ -74,6 +84,8 @@ bash <(curl -Ls IP.Check.Place) -l jp|es|de|fr|ru|pt
 ````
 
 ## 脚本更新
+
+2025/03/13 23:15 增加-y自动安装依赖，-n跳过操作系统及依赖检查
 
 2024/11/09 00:30 增加Cloudflare风险评分，修复IP2Location偶发IP类型判断BUG
 

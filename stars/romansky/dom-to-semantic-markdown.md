@@ -1,6 +1,6 @@
 ---
 project: dom-to-semantic-markdown
-stars: 773
+stars: 778
 description: |-
     DOM to Semantic-Markdown for use with LLMs
 url: https://github.com/romansky/dom-to-semantic-markdown

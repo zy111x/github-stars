@@ -1,6 +1,6 @@
 ---
 project: Heat.js
-stars: 691
+stars: 700
 description: |-
     🌞 A lightweight JavaScript library that generates customizable heat maps, charts, and statistics to visualize date-based activity and trends.
 url: https://github.com/williamtroup/Heat.js

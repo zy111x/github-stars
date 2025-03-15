@@ -1,6 +1,6 @@
 ---
 project: stylefmt
-stars: 2098
+stars: 2097
 description: |-
     stylefmt is a tool that automatically formats stylesheets.
 url: https://github.com/matype/stylefmt

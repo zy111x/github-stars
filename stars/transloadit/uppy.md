@@ -1,6 +1,6 @@
 ---
 project: uppy
-stars: 29563
+stars: 29601
 description: |-
     The next open source file uploader for web browsers :dog: 
 url: https://github.com/transloadit/uppy
@@ -95,7 +95,7 @@ npm install @uppy/core @uppy/dashboard @uppy/tus
 ```
 
 Add CSS
-[uppy.min.css](https://releases.transloadit.com/uppy/v4.13.3/uppy.min.css),
+[uppy.min.css](https://releases.transloadit.com/uppy/v4.13.4/uppy.min.css),
 either to your HTML page’s `<head>` or include in JS, if your bundler of choice
 supports it.
 
@@ -109,7 +109,7 @@ CDN. In that case `Uppy` will attach itself to the global `window.Uppy` object.
 ```html
 <!-- 1. Add CSS to `<head>` -->
 <link
-  href="https://releases.transloadit.com/uppy/v4.13.3/uppy.min.css"
+  href="https://releases.transloadit.com/uppy/v4.13.4/uppy.min.css"
   rel="stylesheet"
 />
 
@@ -120,7 +120,7 @@ CDN. In that case `Uppy` will attach itself to the global `window.Uppy` object.
     Uppy,
     Dashboard,
     Tus,
-  } from 'https://releases.transloadit.com/uppy/v4.13.3/uppy.min.mjs'
+  } from 'https://releases.transloadit.com/uppy/v4.13.4/uppy.min.mjs'
 
   const uppy = new Uppy()
   uppy.use(Dashboard, { target: '#files-drag-drop' })

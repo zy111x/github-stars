@@ -1,6 +1,6 @@
 ---
 project: fumadocs
-stars: 3165
+stars: 3232
 description: |-
     The beautiful docs framework with Next.js.
 url: https://github.com/fuma-nama/fumadocs

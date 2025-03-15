@@ -1,6 +1,6 @@
 ---
 project: mixpost
-stars: 1598
+stars: 1618
 description: |-
     Mixpost - Self-hosted social media management software (Buffer alternative)
 url: https://github.com/inovector/mixpost

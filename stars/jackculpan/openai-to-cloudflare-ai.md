@@ -1,6 +1,6 @@
 ---
 project: openai-to-cloudflare-ai
-stars: 28
+stars: 29
 description: |-
     This is example of using Workers AI. This Cloudflare Worker provides a Base URL which allows you to make AI calls to the @cf/meta/llama-3-8b-instruct model using an OpenAI client.
 url: https://github.com/jackculpan/openai-to-cloudflare-ai

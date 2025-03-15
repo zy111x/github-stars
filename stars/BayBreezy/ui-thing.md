@@ -1,6 +1,6 @@
 ---
 project: ui-thing
-stars: 439
+stars: 446
 description: |-
     A set of components created with Radix-Vue. Inspired by shadcn/ui & shadcn-vue.
 url: https://github.com/BayBreezy/ui-thing

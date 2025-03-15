@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 27745
+stars: 27815
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -84,6 +84,7 @@ Feel free to play around with the code and fork this repl at [https://repl.it/@v
 
 ## Who's Using Ink?
 
+- [Claude Code](https://github.com/anthropics/claude-code) - An agentic coding tool made by Anthropic.
 - [GitHub Copilot for CLI](https://githubnext.com/projects/copilot-cli) - Just say what you want the shell to do.
 - [Cloudflare's Wrangler](https://github.com/cloudflare/wrangler2) - The CLI for Cloudflare Workers.
 - [Linear](https://linear.app) - Linear built an internal CLI for managing deployments, configs and other housekeeping tasks.

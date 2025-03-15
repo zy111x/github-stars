@@ -1,6 +1,6 @@
 ---
 project: chsrc
-stars: 4933
+stars: 4959
 description: |-
     chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
@@ -393,6 +393,9 @@ sudo chsrc set openkylin
 sudo chsrc set deepin
 
 chsrc set msys2 | msys
+
+# Android
+chsrc set termux
 
 # BSD
 sudo chsrc set freebsd

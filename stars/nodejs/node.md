@@ -1,6 +1,6 @@
 ---
 project: node
-stars: 110034
+stars: 110138
 description: |-
     Node.js JavaScript runtime ✨🐢🚀✨
 url: https://github.com/nodejs/node
@@ -190,6 +190,8 @@ For information about the governance of the Node.js project, see
   **Michael Dawson** <<midawson@redhat.com>> (he/him)
 * [RafaelGSS](https://github.com/RafaelGSS) -
   **Rafael Gonzaga** <<rafael.nunu@hotmail.com>> (he/him)
+* [RaisinTen](https://github.com/RaisinTen) -
+  **Darshan Sen** <<raisinten@gmail.com>> (he/him)
 * [richardlau](https://github.com/richardlau) -
   **Richard Lau** <<rlau@redhat.com>>
 * [ronag](https://github.com/ronag) -
@@ -268,8 +270,6 @@ For information about the governance of the Node.js project, see
   **Alexis Campailla** <<orangemocha@nodejs.org>>
 * [piscisaureus](https://github.com/piscisaureus) -
   **Bert Belder** <<bertbelder@gmail.com>>
-* [RaisinTen](https://github.com/RaisinTen) -
-  **Darshan Sen** <<raisinten@gmail.com>> (he/him)
 * [rvagg](https://github.com/rvagg) -
   **Rod Vagg** <<r@va.gg>>
 * [sam-github](https://github.com/sam-github) -
@@ -411,8 +411,6 @@ For information about the governance of the Node.js project, see
   **Moshe Atlow** <<moshe@atlow.co.il>> (he/him)
 * [MrJithil](https://github.com/MrJithil) -
   **Jithil P Ponnan** <<jithil@outlook.com>> (he/him)
-* [ovflowd](https://github.com/ovflowd) -
-  **Claudio Wunder** <<cwunder@gnome.org>> (he/they)
 * [panva](https://github.com/panva) -
   **Filip Skokan** <<panva.ip@gmail.com>> (he/him)
 * [pimterry](https://github.com/pimterry) -
@@ -637,6 +635,8 @@ For information about the governance of the Node.js project, see
   **Alexis Campailla** <<orangemocha@nodejs.org>>
 * [othiym23](https://github.com/othiym23) -
   **Forrest L Norvell** <<ogd@aoaioxxysz.net>> (they/them/themself)
+* [ovflowd](https://github.com/ovflowd) -
+  **Claudio Wunder** <<cwunder@gnome.org>> (he/they)
 * [oyyd](https://github.com/oyyd) -
   **Ouyang Yadong** <<oyydoibh@gmail.com>> (he/him)
 * [petkaantonov](https://github.com/petkaantonov) -

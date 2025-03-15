@@ -1,6 +1,6 @@
 ---
 project: memlab
-stars: 4508
+stars: 4515
 description: |-
     A framework for finding JavaScript memory leaks and analyzing heap snapshots
 url: https://github.com/facebook/memlab
@@ -40,6 +40,8 @@ Features:
 - **Memory assertions in Node.js** - Enables unit tests or running node.js
   programs to take a heap snapshot of their own state, perform self memory
   checking, or write advanced memory assertions
+
+![](./website/static/img/heap-diff.gif)
 
 ## CLI Usage
 

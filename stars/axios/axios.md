@@ -1,6 +1,6 @@
 ---
 project: axios
-stars: 106452
+stars: 106521
 description: |-
     Promise based HTTP client for the browser and node.js
 url: https://github.com/axios/axios
@@ -144,6 +144,12 @@ Using pnpm:
 
 ```bash
 $ pnpm add axios
+```
+
+Using bun:
+
+```bash
+$ bun add axios
 ```
 
 Once the package is installed, you can import the library using `import` or `require` approach:

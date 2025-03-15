@@ -1,6 +1,6 @@
 ---
 project: pico
-stars: 14446
+stars: 14468
 description: |-
     Minimal CSS Framework for semantic HTML
 url: https://github.com/picocss/pico
@@ -19,7 +19,7 @@ url: https://github.com/picocss/pico
 [![Github release](https://img.shields.io/github/v/release/picocss/pico?color=0172ad&logo=github&logoColor=white)](https://github.com/picocss/pico/releases/latest)
 [![npm version](https://img.shields.io/npm/v/@picocss/pico?color=0172ad)](https://www.npmjs.com/package/@picocss/pico)
 [![License](https://img.shields.io/badge/license-MIT-%230172ad)](https://github.com/picocss/pico/blob/master/LICENSE.md)
-[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/picocss.svg?style=social&label=Follow%20%40picocss)](https://twitter.com/picocss)
+[![X (formerly Twitter)](https://img.shields.io/twitter/url/https/twitter.com/picocss.svg?style=social&label=Follow%20%40picocss)](https://x.com/picocss)
 
 ## Minimal CSS Framework for Semantic HTML
 
@@ -63,7 +63,7 @@ There are 4 ways to get started with pico.css:
 [Download Pico](https://github.com/picocss/pico/archive/refs/heads/main.zip) and link `/css/pico.min.css` in the `<head>` of your website.
 
 ```html
-<link rel="stylesheet" href="css/pico.min.css" />
+<link rel="stylesheet" href="css/pico.min.css">
 ```
 
 ### Usage from CDN
@@ -71,7 +71,7 @@ There are 4 ways to get started with pico.css:
 Alternatively, you can use [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@picocss/pico) to link pico.css.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 ```
 
 ### Install with NPM
@@ -106,7 +106,7 @@ composer require picocss/pico
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="css/pico.min.css">
     <title>Hello world!</title>
   </head>
@@ -139,7 +139,7 @@ Or use the `.fluid.classless` version if you need a fluid container:
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css"
-/>
+>
 ```
 
 Then just write pure HTML, and it should look great:
@@ -148,13 +148,13 @@ Then just write pure HTML, and it should look great:
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light dark" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
-    />
+    >
     <title>Hello, world!</title>
   </head>
   <body>

@@ -1,6 +1,6 @@
 ---
 project: browserslist
-stars: 13188
+stars: 13201
 description: |-
     🦔 Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env
 url: https://github.com/browserslist/browserslist
@@ -474,6 +474,22 @@ module.exports = {
   ]
 }
 ```
+
+
+### Popular Configs
+
+You can use a third-party Browserslist config instead of writing your own:
+
+* [`browserslist-config-baseline`] supports features that are
+  [“widely available” on MDN].
+* [`@wordpress/browserslist-config`] supports the same browsers WordPress does.
+  For instance, useful for WordPress plugins development.
+* All configs can be found by [`browserslist-config` on npm].
+
+[“widely available” on MDN]: https://developer.mozilla.org/en-US/docs/Glossary/Baseline/Compatibility
+[`browserslist-config-baseline`]: https://www.npmjs.com/package/browserslist-config-baseline
+[`@wordpress/browserslist-config`]: https://www.npmjs.com/package/@wordpress/browserslist-config
+[`browserslist-config` on npm]: https://www.npmjs.com/search?q=browserslist-config
 
 
 ## Configuring for Different Environments

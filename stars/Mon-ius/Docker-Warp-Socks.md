@@ -1,6 +1,6 @@
 ---
 project: Docker-Warp-Socks
-stars: 407
+stars: 414
 description: |-
     Connet to CloudFlare WARP, exposing `socks5` proxy all together.
 url: https://github.com/Mon-ius/Docker-Warp-Socks

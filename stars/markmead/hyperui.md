@@ -1,6 +1,6 @@
 ---
 project: hyperui
-stars: 10914
+stars: 10953
 description: |-
     Free Tailwind CSS components for application UI, ecommerce and marketing with support for dark mode, RTL and Alpine JS 🚀
 url: https://github.com/markmead/hyperui
@@ -24,18 +24,17 @@ HyperUI is a collection of free Tailwind CSS components that can be used in your
 
 ## Getting Started
 
-There is no HyperUI installation, if you have a Tailwind CSS project, you can copy the code and paste it into your project. Some components do use Alpine JS.
+There is no HyperUI installation, if you have a Tailwind CSS project, you can copy the code and paste it into your project.
 
 ## Usage
 
-Browse the website for the components you need, copy the code and paste it into your project. Some components will have support for dark mode and Alpine JS variants.
+Browse the website for the components you need, copy the code and paste it into your project. Some components will have support for dark mode.
 
 1. Browse the website for a component you like.
 2. Preview the component at different breakpoints and check its compatibility with:
 
 - LTR
 - Dark mode
-- Interactivity with Alpine JS
 
 3. Click on the 'Copy' button to copy the source code.
 4. Paste the copied code into your project.

@@ -1,6 +1,6 @@
 ---
 project: morphic
-stars: 7102
+stars: 7143
 description: |-
     An AI-powered search engine with a generative UI
 url: https://github.com/miurla/morphic

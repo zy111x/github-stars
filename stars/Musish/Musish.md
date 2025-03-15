@@ -1,6 +1,6 @@
 ---
 project: Musish
-stars: 3101
+stars: 3106
 description: |-
     Apple Music...ish 
 url: https://github.com/Musish/Musish

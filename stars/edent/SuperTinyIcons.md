@@ -1,6 +1,6 @@
 ---
 project: SuperTinyIcons
-stars: 14918
+stars: 14926
 description: |-
     Under 1KB each! Super Tiny Icons are miniscule SVG versions of your favourite website and app logos
 url: https://github.com/edent/SuperTinyIcons

@@ -1,6 +1,6 @@
 ---
 project: Checkmate
-stars: 4499
+stars: 4578
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
 url: https://github.com/bluewave-labs/Checkmate
@@ -79,7 +79,6 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 - Status pages (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1131
 - Translations (i18n) (**in progress**)
 - Better notification options (Webhooks, Discord, Telegram, Slack) (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1545
-- Command line interface (CLI) (**in progress**) https://github.com/bluewave-labs/Checkmate/issues/1558
 - JSON query monitoring https://github.com/bluewave-labs/Checkmate/issues/1573
 - Tagging/grouping monitors https://github.com/bluewave-labs/Checkmate/issues/1546
 - More configuration options
@@ -115,7 +114,9 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 
 ## 🤝 Contributing
 
-We pride ourselves on building strong connections with contributors at every level. Despite being a young project, Checkmate has already earned 4.4K+ stars and attracted 50+ contributors from around the globe.
+We are [@ajhollid](http://github.com/ajhollid) (team lead), [@vishnusn77](http://github.com/vishnusn77), [@mohicody](http://github.com/mohicody), [@gorkem-bwl](http://github.com/gorkem-bwl/) and [@Owaiseimdad](http://github.com/Owaiseimdad), helping individuals and businesses monitor their infra and servers.
+
+We pride ourselves on building strong connections with contributors at every level. Despite being a young project, Checkmate has already earned 4.6K+ stars and attracted 60 contributors from around the globe.
 
 Our repo is starred by employees from **Google, Microsoft, Intel, Cisco, Tencent, Electronic Arts, ByteDance, JP Morgan Chase, Deloitte, Accenture, Foxconn, Broadcom, China Telecom, Barclays, Capgemini, Wipro, Cloudflare, Dassault Systèmes and NEC**, so don’t hold back — jump in, contribute and learn with us!
 

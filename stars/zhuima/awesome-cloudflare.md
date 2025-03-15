@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare
-stars: 10341
+stars: 10394
 description: |-
     ⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.
 url: https://github.com/zhuima/awesome-cloudflare
@@ -233,6 +233,7 @@ url: https://github.com/zhuima/awesome-cloudflare
 | [cohere2openai](https://github.com/beanqi/cohere2openai) |Cloudflare Worker 将 Cohere API 转换为 OpenAI API。| | 维护中|
 | [locnode](https://github.com/minlearn/locnode) |selfhost light federated community app runs on cloudflare,第一款能在cf上运行的自建轻量联合社区🚀🎉。| <https://locnode.com/> | 维护中|
 | [Siri Ultra](https://github.com/fatwang2/siri-ultra) |The assistant is run on Cloudflare Workers and can work with any LLM model。|  | 维护中|
+| [GitPush](https://github.com/fatwang2/gitpush) |基于 Cloudflare Workflow、Workers AI 和 Email Routing 构建的 GitHub 项目更新订阅工具。可以订阅关注的 GitHub 项目，通过 AI 总结更新内容并通过邮件发送通知。| | 维护中|
 | [cobalt page function](https://github.com/jiacai2050/blog-snippets/blob/main/cloudflare/cobalt.js) | 利用页面函数调用 cobalt 接口，获取视频下载地址。| <https://liujiacai.net/api/cobalt> | 维护中|
 | [CloudFlare Radar](https://radar.cloudflare.com/scan) | 看某个网站的技术栈。|  | 维护中|
 | [wr.do](https://github.com/oiov/wr.do) | 基于 Cloudflare 的多租户 DNS 分发系统。开源且免费提供 DNS 解析、短链接生成。| https://wr.do  | 维护中|
