@@ -1,6 +1,6 @@
 ---
 project: hugo-blog-awesome
-stars: 561
+stars: 567
 description: |-
     Fast, minimal blog with dark mode support.
 url: https://github.com/hugo-sid/hugo-blog-awesome
@@ -144,6 +144,7 @@ url = "/index.xml"
 | `bitcoin`       | -                               |
 | `bluesky`       | bsky.app                        |
 | `buymeacoffee`  | buymeacoffee.com                |
+| `calendly`      | calendly.com                    |
 | `codepen`       | codepen.io                      |
 | `cryptohack`    | cryptohack.org                  |
 | `ctftime`       | ctftime.org                     |
@@ -176,6 +177,7 @@ url = "/index.xml"
 | `kofi`          | ko-fi.com                       |
 | `komoot`        | -                               |
 | `lastfm`        | last.fm                         |
+| `leetcode`      | leetcode.com                    |
 | `letterboxd`    | -                               |
 | `liberapay`     | liberapay.com                   |
 | `linkedin`      | linkedin.com                    |
@@ -287,6 +289,7 @@ If you are using this theme for any website, feel free to list the website here.
 - <https://unixsec.io/>
 - <https://blog.crisweb.com/>
 - <https://jonblack.gg/>
+- <https://viazure.cc/>
 
 ## Support
 

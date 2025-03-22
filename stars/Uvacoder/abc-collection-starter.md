@@ -1,6 +1,6 @@
 ---
 project: abc-collection-starter
-stars: 14
+stars: 15
 description: |-
     null
 url: https://github.com/Uvacoder/abc-collection-starter

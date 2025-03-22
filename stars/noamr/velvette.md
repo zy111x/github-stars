@@ -1,6 +1,6 @@
 ---
 project: velvette
-stars: 271
+stars: 272
 description: |-
     Common patterns for CSS view-transitions
 url: https://github.com/noamr/velvette

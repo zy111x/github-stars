@@ -1,6 +1,6 @@
 ---
 project: CuratedStack-nocode-template
-stars: 118
+stars: 119
 description: |-
     🧱 A template to create a CuratedStack without (or with) code
 url: https://github.com/sandoche/CuratedStack-nocode-template

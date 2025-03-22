@@ -1,6 +1,6 @@
 ---
 project: astro-theme-mia
-stars: 118
+stars: 119
 description: |-
     A minimalist, powerful astro theme with integrated rough-notation for engaging, informative content.
 url: https://github.com/thinkininfinity/astro-theme-mia

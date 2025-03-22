@@ -1,6 +1,6 @@
 ---
 project: directories
-stars: 2741
+stars: 2848
 description: |-
     The Cursor & Windsurf community, find rules and MCPs
 url: https://github.com/pontusab/directories

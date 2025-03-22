@@ -1,6 +1,6 @@
 ---
 project: logocreator
-stars: 4855
+stars: 4895
 description: |-
     A free + OSS logo generator powered by Flux on Together AI
 url: https://github.com/Nutlope/logocreator

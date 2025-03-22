@@ -1,6 +1,6 @@
 ---
 project: acme.sh
-stars: 41687
+stars: 41794
 description: |-
     A pure Unix shell script implementing ACME client protocol
 url: https://github.com/acmesh-official/acme.sh

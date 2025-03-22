@@ -1,6 +1,6 @@
 ---
 project: roosterjs
-stars: 1230
+stars: 1232
 description: |-
     roosterjs is a framework-independent javascript rich text editor.
 url: https://github.com/microsoft/roosterjs

@@ -1,6 +1,6 @@
 ---
 project: gotosocial
-stars: 4074
+stars: 4085
 description: |-
     Fast, fun, small ActivityPub server.
 url: https://github.com/superseriousbusiness/gotosocial

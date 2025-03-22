@@ -1,6 +1,6 @@
 ---
 project: heti
-stars: 6338
+stars: 6346
 description: |-
     赫蹏（hètí）是专为中文内容展示设计的排版样式增强。它基于通行的中文排版规范而来，可以为网站的读者带来更好的文章阅读体验。
 url: https://github.com/sivan/heti
@@ -64,6 +64,12 @@ url: https://github.com/sivan/heti
 - [x] 繁体中文支持
 - [x] 诗词版式
 - [x] 行间注版式
+
+## Star History
+
+谢谢每一位加星的朋友，让这个疫情期间憋在家里无聊做的小项目有了更大的价值。
+
+[![Star History Chart](https://api.star-history.com/svg?repos=sivan/heti&type=Date)](https://www.star-history.com/#sivan/heti&Date)
 
 -- EOF --
 

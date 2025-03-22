@@ -1,6 +1,6 @@
 ---
 project: simple-keyboard
-stars: 2270
+stars: 2271
 description: |-
     Javascript Virtual Keyboard - Customizable, responsive and lightweight
 url: https://github.com/hodgef/simple-keyboard
@@ -10,7 +10,7 @@ url: https://github.com/hodgef/simple-keyboard
   <a href="https://simple-keyboard.com/demo">
 	<img alt="simple-keyboard: Javascript Virtual Keyboard" src="https://user-images.githubusercontent.com/25509135/187999993-fb5422fd-a56f-4a9a-84a9-55c94478f61c.gif">
   </a>
-<a href="https://www.npmjs.com/package/simple-keyboard"><img src="https://badgen.net/npm/v/simple-keyboard?color=blue" alt="npm version"></a> <a href="https://github.com/hodgef/simple-keyboard/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a> <a href="https://github.com/hodgef/simple-keyboard/actions"><img alt="Build Status" src="https://github.com/hodgef/simple-keyboard/workflows/Build/badge.svg" /></a> <a href="https://github.com/hodgef/simple-keyboard/actions"><img alt="Publish Status" src="https://github.com/hodgef/simple-keyboard/workflows/Publish/badge.svg" /></a> <a href="https://gitlab.com/hodgef/simple-keyboard" target="_blank"><img alt="Mirroring" src="https://github.com/hodgef/simple-keyboard/actions/workflows/mirroring.yml/badge.svg" /></a>
+<a href="https://www.npmjs.com/package/simple-keyboard"><img src="https://badgen.net/npm/v/simple-keyboard?color=blue" alt="npm version"></a> <a href="https://github.com/hodgef/simple-keyboard/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT license"></a> <a href="https://gitlab.com/hodgef/simple-keyboard" target="_blank"><img alt="Mirroring" src="https://img.shields.io/badge/Mirror-GitLab-blue" /></a> <a href="https://github.com/hodgef/simple-keyboard/actions"><img alt="Build Status" src="https://github.com/hodgef/simple-keyboard/workflows/Build/badge.svg" /></a> <a href="https://github.com/hodgef/simple-keyboard/actions"><img alt="Publish Status" src="https://github.com/hodgef/simple-keyboard/workflows/Publish/badge.svg" /></a>
 </p>
 
 <blockquote>Virtual Keyboard for Javascript. Compatible with your JS, React, Angular or Vue projects.</blockquote>

@@ -1,6 +1,6 @@
 ---
 project: hono
-stars: 22946
+stars: 23094
 description: |-
     Web framework built on Web Standards
 url: https://github.com/honojs/hono

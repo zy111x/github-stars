@@ -1,6 +1,6 @@
 ---
 project: gemoji
-stars: 4437
+stars: 4435
 description: |-
     Emoji images and names.
 url: https://github.com/github/gemoji

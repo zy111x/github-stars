@@ -1,6 +1,6 @@
 ---
 project: afterglow-theme
-stars: 2111
+stars: 2109
 description: |-
     [DEPRECATED] A minimal dark Theme for Sublime Text 2 and 3
 url: https://github.com/YabataDesign/afterglow-theme

@@ -1,6 +1,6 @@
 ---
 project: ecapture
-stars: 13970
+stars: 13989
 description: |-
     Capturing SSL/TLS plaintext without a CA certificate using eBPF. Supported on Linux/Android kernels for amd64/arm64.
 url: https://github.com/gojue/ecapture

@@ -1,6 +1,6 @@
 ---
 project: agents
-stars: 1097
+stars: 1222
 description: |-
     Build and deploy AI Agents on Cloudflare 
 url: https://github.com/cloudflare/agents
@@ -56,7 +56,7 @@ This project is actively evolving. Current focus areas:
 npm create cloudflare@latest -- --template cloudflare/agents-starter
 
 # Or add to existing project
-npm install agents-sdk
+npm install agents
 ```
 
 ## Documentation

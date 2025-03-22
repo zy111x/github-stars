@@ -1,6 +1,6 @@
 ---
 project: chat-ui
-stars: 8404
+stars: 8459
 description: |-
     Open source codebase powering the HuggingChat app
 url: https://github.com/huggingface/chat-ui
@@ -1089,7 +1089,7 @@ npm run populate users settings assistants conversations
 
 to populate the database with fake data, including fake conversations and assistants for your user.
 
-### Building the docker images locally
+## Building the docker images locally
 
 You can build the docker images locally using the following commands:
 
@@ -1097,5 +1097,15 @@ You can build the docker images locally using the following commands:
 docker build -t chat-ui-db:latest --build-arg INCLUDE_DB=true .
 docker build -t chat-ui:latest --build-arg INCLUDE_DB=false .
 docker build -t huggingchat:latest --build-arg INCLUDE_DB=false --build-arg APP_BASE=/chat --build-arg PUBLIC_APP_COLOR=yellow .
+```
+
+If you want to run the images with your local .env.local you have two options
+
+```bash
+DOTENV_LOCAL=$(<.env.local)  docker run --rm --network=host -e DOTENV_LOCAL -p 3000:3000 chat-ui
+```
+
+```bash
+docker run --rm --network=host --mount type=bind,source="$(pwd)/.env.local",target=/app/.env.local -p 3000:3000 chat-ui
 ```
 

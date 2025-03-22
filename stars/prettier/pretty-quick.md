@@ -1,6 +1,6 @@
 ---
 project: pretty-quick
-stars: 2240
+stars: 2243
 description: |-
     ⚡ Get Pretty Quick
 url: https://github.com/prettier/pretty-quick

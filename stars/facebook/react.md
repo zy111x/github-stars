@@ -1,6 +1,6 @@
 ---
 project: react
-stars: 233297
+stars: 233534
 description: |-
     The library for web and native user interfaces.
 url: https://github.com/facebook/react

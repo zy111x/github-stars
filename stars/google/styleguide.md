@@ -1,6 +1,6 @@
 ---
 project: styleguide
-stars: 37956
+stars: 37979
 description: |-
     Style guides for Google-originated open-source projects
 url: https://github.com/google/styleguide

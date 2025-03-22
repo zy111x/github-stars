@@ -1,6 +1,6 @@
 ---
 project: css-protips
-stars: 28868
+stars: 28896
 description: |-
     ⚡️ A collection of tips to help take your CSS skills pro 🦾
 url: https://github.com/AllThingsSmitty/css-protips
@@ -17,7 +17,7 @@ A collection of tips to help take your CSS skills pro.
 > [!TIP]
 > For other great lists check out [@sindresorhus](https://github.com/sindresorhus/)'s curated list of [awesome lists](https://github.com/sindresorhus/awesome/).
 
-## Table of Contents
+## Contents
 
 - [Protips](#protips)
 - [Support](#support)
@@ -77,7 +77,7 @@ Now elements will be stripped of margins and padding, and `box-sizing` lets you 
 > [!TIP]
 > If you follow the [Inherit `box-sizing`](#inherit-box-sizing) tip below you might opt to not include the `box-sizing` property in your CSS reset.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Inherit `box-sizing`
 
@@ -99,7 +99,7 @@ This makes it easier to change `box-sizing` in plugins or other components that 
 
 #### [Demo](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use `unset` Instead of Resetting All Properties
 
@@ -124,7 +124,7 @@ button {
 }
 ```
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use `:not()` to Apply/Unapply Borders on Navigation
 
@@ -158,7 +158,7 @@ Here, the CSS selector is read as a human would describe it.
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/LkymvO)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Check if Font Is Installed Locally
 
@@ -179,7 +179,7 @@ code {
 
 H/T to Adam Argyle for sharing this protip and [demo](https://codepen.io/argyleink/pen/VwYJpgR).
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Add `line-height` to `body`
 
@@ -195,7 +195,7 @@ This way textual elements can inherit from `body` easily.
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/VjbdYd)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Set `:focus` for Form Elements
 
@@ -215,7 +215,7 @@ textarea:focus {
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/ePzoOP/)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Vertically-Center Anything
 
@@ -249,7 +249,7 @@ body {
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/GqmGqZ)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use `aspect-ratio` Instead of Height/Width
 
@@ -266,7 +266,7 @@ Learn more about the `aspect-ratio` property in this [web.dev post](https://web.
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/MWxwoNx/)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Comma-Separated Lists
 
@@ -283,7 +283,7 @@ Use the `:not()` pseudo-class and no comma will be added to the last item.
 > [!NOTE]
 > This tip may not be ideal for accessibility, specifically screen readers. And copy/paste from the browser doesn't work with CSS-generated content. Proceed with caution.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Select Items Using Negative `nth-child`
 
@@ -311,7 +311,7 @@ li:not(:nth-child(-n + 3)) {
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/WxjKZp)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use SVG for Icons
 
@@ -334,7 +334,7 @@ SVG scales well for all resolution types and is supported in all browsers [back 
 }
 ```
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use the "Lobotomized Owl" Selector
 
@@ -353,7 +353,7 @@ In this example, all elements in the flow of the document that follow other elem
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/grRvWq)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use `max-height` for Pure CSS Sliders
 
@@ -374,7 +374,7 @@ Implement CSS-only sliders using `max-height` with overflow hidden:
 
 The element expands to the `max-height` value on hover and the slider displays as a result of the overflow.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Equal-Width Table Cells
 
@@ -390,7 +390,7 @@ Pain-free table layouts.
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/jALALm)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Get Rid of Margin Hacks With Flexbox
 
@@ -409,7 +409,7 @@ When working with column gutters you can get rid of `nth-`, `first-`, and `last-
 
 Now column gutters always appear evenly-spaced.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use Attribute Selectors with Empty Links
 
@@ -428,7 +428,7 @@ That's really convenient.
 > [!NOTE]
 > This tip may not be ideal for accessibility, specifically screen readers. And copy/paste from the browser doesn't work with CSS-generated content. Proceed with caution.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Control Specificity Better with `:is()`
 
@@ -473,7 +473,7 @@ nav h6 {
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/rNRVxdx)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Style "Default" Links
 
@@ -488,7 +488,7 @@ a[href]:not([class]) {
 
 Now links that are inserted via a CMS, which don't usually have a `class` attribute, will have a distinction without generically affecting the cascade.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Intrinsic Ratio Boxes
 
@@ -515,7 +515,7 @@ Using 20% for padding makes the height of the box equal to 20% of its width. No 
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/jALZvE)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Style Broken Images
 
@@ -553,7 +553,7 @@ img::after {
 > [!TIP]
 > Learn more about styling for this pattern in [Ire Aderinokun's post](http://bitsofco.de/styling-broken-images/).
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use `rem` for Global Sizing; Use `em` for Local Sizing
 
@@ -583,7 +583,7 @@ aside .module {
 
 Now each module becomes compartmentalized and easier to style, more maintainable, and flexible.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Hide Autoplay Videos That Aren't Muted
 
@@ -597,7 +597,7 @@ video[autoplay]:not([muted]) {
 
 Once again, we're taking advantage of using the [`:not()`](#use-not-to-applyunapply-borders-on-navigation) pseudo-class.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use `:root` for Flexible Type
 
@@ -619,7 +619,7 @@ body {
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/XKgOkR)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Set `font-size` on Form Elements for a Better Mobile Experience
 
@@ -634,7 +634,7 @@ textarea {
 }
 ```
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use Pointer Events to Control Mouse Events
 
@@ -649,7 +649,7 @@ button:disabled {
 
 It's that simple.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Set `display: none` on Line Breaks Used as Spacing
 
@@ -661,7 +661,7 @@ br + br {
 }
 ```
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use `:empty` to Hide Empty HTML Elements
 
@@ -676,13 +676,13 @@ If you have HTML elements that are empty, i.e., the content has yet to be set ei
 > [!NOTE]
 > Keep in mind that elements with whitespace aren't considered empty, e.g., `<p class="error-message"> </p>`.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ## Support
 
 Current versions of Chrome, Firefox, Safari, and Edge.
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ### Use `margin-inline` instead of `margin`
 
@@ -704,7 +704,7 @@ The same can be done for `margin-block` with defines the block start and end mar
 
 #### [Demo](https://codepen.io/AllThingsSmitty/pen/PwoOQGB)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
 ## Translations
 
@@ -727,5 +727,5 @@ The same can be done for `margin-block` with defines the block start and end mar
 - [Русский](https://github.com/AllThingsSmitty/css-protips/tree/master/translations/ru-RU)
 - [Tiếng Việt](https://github.com/AllThingsSmitty/css-protips/tree/master/translations/vn-VN)
 
-<sup>[Back to top](#table-of-contents)</sup>
+<sup>[Back to top](#contents)</sup>
 
