@@ -1,6 +1,6 @@
 ---
 project: shot-easy-website
-stars: 942
+stars: 947
 description: Take a screenshot online and compresses images in browser with Webassembly
 url: https://github.com/CH563/shot-easy-website
 ---

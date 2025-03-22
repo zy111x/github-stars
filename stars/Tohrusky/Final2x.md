@@ -1,6 +1,6 @@
 ---
 project: Final2x
-stars: 6224
+stars: 6230
 description: 2^x Image Super-Resolution
 url: https://github.com/Tohrusky/Final2x
 ---
