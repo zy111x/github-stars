@@ -1,6 +1,6 @@
 ---
 project: ai-gateway-provider
-stars: 12
+stars: 24
 description: |-
     AI Gateway Provider for Vercel AI SDK
 url: https://github.com/G4brym/ai-gateway-provider
@@ -29,7 +29,7 @@ npm install ai-gateway-provider
 
 ## Usage
 
-### Basic Example
+### Basic Example with API Key
 
 ```typescript
 import {createOpenAI} from '@ai-sdk/openai';
@@ -40,14 +40,17 @@ import {createAnthropic} from "@ai-sdk/anthropic";
 const aigateway = createAiGateway({
   accountId: "my-cloudflare-account-id",
   gateway: 'my-gateway-name',
-  apiKey: 'optionally my cloudflare api key'
+  apiKey: 'optionally my cloudflare api key',
+  options: {  // Optional per-request override
+    skipCache: true
+  }
 });
 const openai = createOpenAI({apiKey: 'openai api key'});
 const anthropic = createAnthropic({apiKey: 'anthropic api key'});
 
 const model = aigateway([
-  anthropic('claude-3-5-haiku-20241022'),
-  openai("gpt-4o-mini"),
+  anthropic('claude-3-5-haiku-20241022'),  // Primary choice
+  openai("gpt-4o-mini"),                   // Fallback if first fails
 ]);
 
 const {text} = await generateText({
@@ -56,20 +59,85 @@ const {text} = await generateText({
 });
 ```
 
-### Explanation
+### Cloudflare AI Binding Example
 
-1. **Import necessary modules:**
-  * `createOpenAI` and `createAnthropic` from their respective provider libraries.
-  * `createAiGateway` from `ai-gateway-provider`.
-  * `generateText` from `ai` (Vercel AI SDK).
-2. **Create AI Provider instances:**
-  * `createAiGateway` is initialized with your Cloudflare account ID, gateway name, and optionally, your Cloudflare API key.
-  * `createOpenAI` and `createAnthropic` are initialized with their respective API keys.
-3. **Create the AI Gateway Model:**
-  * The `aigateway` function takes an array of models as input. In this example, it uses `claude-3-5-haiku-20241022` from Anthropic and `gpt-4o-mini` from OpenAI.
-  * **Key Feature:** The gateway will try the models in the order they are defined in the array, automatically falling back to the next model if the primary choice is unavailable.
-4. **Generate Text:**
-  * The `generateText` function from the Vercel AI SDK is used to generate text based on the specified model and prompt.
+Binding Benefits:
+- Faster Requests: Saves milliseconds by avoiding open internet routing.
+- Enhanced Security: Uses a special pre-authenticated pipeline.
+- No API Key Required: Authentication is handled by the binding.
+
+```typescript
+const aigateway = createAiGateway({
+  binding: env.AI.gateway('my-gateway'),
+  options: {  // Optional per-request override
+    skipCache: true
+  }
+});
+const openai = createOpenAI({apiKey: 'openai api key'});
+const anthropic = createAnthropic({apiKey: 'anthropic api key'});
+
+const model = aigateway([
+  anthropic('claude-3-5-haiku-20241022'),  // Primary choice
+  openai("gpt-4o-mini"),                   // Fallback if first fails
+]);
+
+const {text} = await generateText({
+  model: model,
+  prompt: 'Write a vegetarian lasagna recipe for 4 people.',
+});
+```
+
+### Request-Level Options
+
+You can now customize AI Gateway settings for each request:
+
+```typescript
+const aigateway = createAiGateway({
+  // ... other configs
+
+  options: {  // all fields are optional!
+    cacheKey: 'my-custom-cache-key',
+    cacheTtl: 3600,  // Cache for 1 hour
+    skipCache: false,
+    metadata: {
+      userId: 'user123',
+      requestType: 'recipe'
+    },
+    retries: {
+      maxAttempts: 3,
+      retryDelayMs: 1000,
+      backoff: 'exponential'
+    }
+  },
+});
+```
+
+## Configuration
+
+### `createAiGateway(options: AiGatewaySettings)`
+
+#### API Key Authentication
+* `accountId`: Your Cloudflare account ID
+* `gateway`: The name of your AI Gateway
+* `apiKey` (Optional): Your Cloudflare API key
+
+#### Cloudflare AI Binding
+* `binding`: Cloudflare AI Gateway binding
+* `options` (Optional): Request-level AI Gateway settings
+
+### Request Options
+
+* `cacheKey`: Custom cache key for the request
+* `cacheTtl`: Cache time-to-live in seconds
+* `skipCache`: Bypass caching for the request
+* `metadata`: Custom metadata for the request
+* `collectLog`: Enable/disable log collection
+* `eventId`: Custom event identifier
+* `requestTimeoutMs`: Request timeout in milliseconds
+* `retries`: Retry configuration
+  * `maxAttempts`: Number of retry attempts (1-5)
+  * `retryDelayMs`: Delay between retries
+  * `backoff`: Retry backoff strategy ('constant', 'linear', 'exponential')
 
 ## Automatic Fallback Example
 
@@ -88,18 +156,7 @@ const {text} = await generateText({
 });
 ```
 
-## Configuration
-
-### `createAiGateway(options: AiGatewaySettings)`
-
-* `options`: An object containing the following properties:
-  * `accountId`: Your Cloudflare account ID. This is required.
-  * `gateway`: The name of your AI Gateway. This is required.
-  * `apiKey` (Optional): Your Cloudflare API key. Required if your AI Gateway has authentication enabled.
-
 ## Supported Providers
-
-The following providers are currently supported:
 
 * OpenAI
 * Anthropic
@@ -121,6 +178,7 @@ More can be added, please open an issue in the GitHub repository!
 The library throws the following custom errors:
 
 * `AiGatewayUnauthorizedError`: Your AI Gateway has authentication enabled, but a valid API key was not provided.
+* `AiGatewayDoesNotExist`: Specified AI Gateway does not exist
 
 ## License
 

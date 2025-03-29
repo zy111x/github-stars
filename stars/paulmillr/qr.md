@@ -1,14 +1,14 @@
 ---
 project: qr
-stars: 179
+stars: 193
 description: |-
-    Minimal browser & node.js QR Code Pattern reader and generator
+    Minimal 0-dep QR code generator & reader
 url: https://github.com/paulmillr/qr
 ---
 
 # paulmillr-qr
 
-Minimal browser and node.js QR Code Pattern encoder & decoder.
+Minimal 0-dep QR code generator & reader.
 
 - 🔒 Auditable, 0-dependency
 - 🏞️ Encoding (generating) supports ASCII, term, gif and svg codes
@@ -16,19 +16,23 @@ Minimal browser and node.js QR Code Pattern encoder & decoder.
 - 🔍 Extensive tests ensure correctness: 100MB+ of vectors
 - 🪶 35KB for encoding + decoding, 18KB for encoding (1000 lines of code)
 
-Check out interactive demo [paulmillr.com/apps/qr/](https://paulmillr.com/apps/qr/) and
-[qrBTF.com](https://qrbtf.com/en), which uses the library to generate custom, styled codes.
+Check out:
 
-Other JS libraries are bad:
+- [paulmillr.com/apps/qr/](https://paulmillr.com/apps/qr/) - interactive demo
+- [qrBTF.com](https://qrbtf.com/en) - uses the library to generate custom, styled codes
+- [cuer](https://github.com/wevm/cuer) - React component based on the library
+- [metamask-sdk](https://github.com/MetaMask/metamask-sdk/blob/3d0ba19610853ec9259bb1aad459b1eaea799375/packages/sdk/package.json#L56) - is using the library
+
+Why other libraries are less optimal:
 
 - [jsQR](https://github.com/cozmo/jsQR) is dead, [zxing-js](https://github.com/zxing-js/) is [dead](https://github.com/zxing-js/library/commit/b797504c25454db32aa2db410e6502b6db12a401), [qr-scanner](https://github.com/nimiq/qr-scanner/) uses jsQR and doesn't work outside of browser, [qcode-decoder](https://github.com/cirocosta/qcode-decoder) is broken version of jsQR and doesn't work outside of browser, [qrcode](https://github.com/nuintun/qrcode) is fork of jsQR without adoption
 - [instascan](https://github.com/schmich/instascan) is too big: over 1MB+ (it's zxing compiled to js via emscripten)
 
 ## Usage
 
-A standalone file [paulmillr-qr.js](https://github.com/paulmillr/qr/releases) is also available.
+A standalone file [qr.js](https://github.com/paulmillr/qr/releases) is also available.
 
-> `npm install @paulmillr/qr`
+> `npm install qr`
 
 > `jsr add jsr:@paulmillr/qr`
 
@@ -45,9 +49,9 @@ A standalone file [paulmillr-qr.js](https://github.com/paulmillr/qr/releases) is
 ## Encoding
 
 ```ts
-import encodeQR from '@paulmillr/qr';
+import encodeQR from 'qr';
 
-// import decodeQR from '@paulmillr/qr/decode';
+// import decodeQR from 'qr/decode';
 // See separate README section for decoding.
 
 const txt = 'Hello world';
@@ -103,9 +107,9 @@ GIF reader is not included in the package (it would take a lot of space).
 Decoding raw bitmap is still possible.
 
 ```js
-import encodeQR from '@paulmillr/qr';
-import decodeQR from '@paulmillr/qr/decode';
-import { Bitmap } from '@paulmillr/qr';
+import encodeQR from 'qr';
+import decodeQR from 'qr/decode';
+import { Bitmap } from 'qr';
 
 // Scale so it would be 100x100 instead of 25x25
 const opts = { scale: 4 };
@@ -140,7 +144,7 @@ function decodeWithExternal() {
 }
 
 // c) draw gif/svg to browser DOM canvas
-import { svgToPng } from '@paulmillr/qr/dom';
+import { svgToPng } from 'qr/dom';
 const png = svgToPng(encodeQR('Hello world', 'svg'), 512, 512);
 ```
 
@@ -268,7 +272,7 @@ Copyright (c) 2023 Paul Miller (paulmillr.com)
 
 Copyright (c) 2019 ZXing authors
 
-The library @paulmillr/qr is dual-licensed under the Apache 2.0 OR MIT license.
+The library paulmillr-qr is dual-licensed under the Apache 2.0 OR MIT license.
 You can select a license of your choice.
 
 The library contains code inspired by [ZXing](https://github.com/zxing/zxing), which is licensed under Apache 2.0.

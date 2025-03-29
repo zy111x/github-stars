@@ -1,34 +1,45 @@
 ---
 project: PopplyLibrary
-stars: 49
+stars: 50
 description: |-
-    Components about animations and Effects for your website. ✨
+    Components about tooltip animations for your website.
 url: https://github.com/JhojanGgarcia/PopplyLibrary
 ---
 
-<h1 align=center>Popply Library</h1>
+
+
+Welcome to **Popply**, a refined animation library for tooltips—those subtle yet powerful UI elements that enhance user guidance and interaction.
+
+Tooltips are typically activated by a `mouseEnter` event. With **Popply**, bringing them to life is seamless and efficient.  
+Simply copy the desired animation, place it into your `./styles` folder, and apply it to any tooltip that could use a touch of motion.
+
+Explore a curated collection of **50+ animations**, including `fadeIn`, `slideIn`, `flyIn`, `punchIn`, `zoomIn`, and many others—each designed to complement your user experience with precision.
+
+Start exploring and find the animation that best aligns with your design vision.
 
 
 
-![Popply Library](/public/shot.png)
+# Preview 
 
-Welcome and thank you for using my **tooltips library**! I've created this library to help you add more interactivity to your web pages. I've included a collection of animations and effects for your tooltips components.
+By default, **Popply** animations are adaptive, this ensures smooth performance on all devices.  
+However, tooltips often behave differently on desktop (hovering) and mobile (tapping), so it is important to preview them in both contexts.
 
-<h1 align=center>Tech Stack</h1>
+<img src="./public/assets/desktop.png" />
 
-- **React**: For building the dynamic user interface.
-- **Next.js**: For server-side rendering and optimized performance.
-- **Sonner**: A library for toast notifications.
-- **CSS**: For defining and applying animations.
-- **Framer Motion**: For smooth and advanced UI animations.
-- **Tailwind CSS**: For utility-first styling and responsive design.
+On mobile, consider triggering tooltips via ```onClick```, or accessibility-focused interactions.  
 
-<h1 align=center>Preview</h1>
+<img src="./public/assets/mobile.png" />
 
-![Popply Library](/public/shotPhoneDark.png)
 
-**Popply** is a versatile library that offers a variety of effects and animations not only for tooltips but for any component in your project that needs an extra touch of animation. With over 50 unique animations to choose from, Popply helps you enhance the visual appeal and interactivity of your components. Enjoy exploring and using these animations, and thank you for reading, wonderful person!
 
-If you want to help me, please consider giving a star on GitHub.
+
+> [!IMPORTANT]
+> **Popply** is a free and open source project.
+> If you find it useful, please consider [donating](https://buymeacoffee.com/jhojanggar6).
+
+<video controls src="./public/assets/preview.mp4" title="Title" mute></video>
+
+
+
 
 

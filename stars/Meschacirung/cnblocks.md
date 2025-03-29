@@ -1,6 +1,6 @@
 ---
 project: cnblocks
-stars: 761
+stars: 819
 description: |-
     Shadcn marketing blocks
 url: https://github.com/Meschacirung/cnblocks

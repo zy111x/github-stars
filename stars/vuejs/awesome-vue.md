@@ -1,6 +1,6 @@
 ---
 project: awesome-vue
-stars: 72689
+stars: 72725
 description: |-
     🎉 A curated list of awesome things related to Vue.js
 url: https://github.com/vuejs/awesome-vue
@@ -1177,6 +1177,7 @@ _Display non-editable events in a Calendar_
 #### Markdown
 
 - [@f3ve/vue-markdown-it](https://github.com/f3ve/vue-markdown-it) - A markdown-it component for Vue3. Easy to use and fully typed.
+- [Vue Markdown](https://github.com/litingyes/vue-markdown) - The vue component for render Markdown string, supports custom rendering of specific node types and better adapts to AI Chat Stream.
 
 #### PDF
 

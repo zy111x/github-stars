@@ -1,6 +1,6 @@
 ---
 project: 5ire
-stars: 1725
+stars: 2152
 description: |-
     5ire is a cross-platform desktop AI assistant, MCP client. It compatible with major service providers,  supports local knowledge base and  tools via model context protocol servers .
 url: https://github.com/nanbingxyz/5ire
@@ -45,6 +45,20 @@ url: https://github.com/nanbingxyz/5ire
    <br />
 <video src="https://github.com/user-attachments/assets/741b23d3-31df-4749-bde4-103e2d415953.mp4"></video>
 </div>
+<br />
+
+
+ ### Before to activating tools feature, ensure the following components are installed:
+
+- Python
+- Node.js
+- uv (Python package manager)
+
+
+These components are required as they constitute the runtime environment for the MCP Server. If you don't anticipate using the tools feature immediately, you may choose to skip this installation step and complete it later when the need arises.
+
+For detailed installation instructions, please see our [Installation Guide](INSTALLATION.md).
+
 <br />
 
 # Features

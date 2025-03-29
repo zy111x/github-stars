@@ -1,6 +1,6 @@
 ---
 project: porffor
-stars: 3339
+stars: 3357
 description: |-
     A from-scratch experimental AOT JS engine, written in JS
 url: https://github.com/CanadaHonk/porffor
@@ -130,7 +130,7 @@ Porffor can run Test262 via some hacks/transforms which remove unsupported featu
   - `wasmSpec.js`: "enums"/info from wasm spec
   - `wrap.js`: wrapper for compiler which instantiates and produces nice exports
 
-- `runner`: contains utils for running JS with the compiler
+- `runtime`: contains utils for running JS with the compiler
   - `index.js`: the main file, you probably want to use this
   - `repl.js`: basic repl (uses `node:repl`)
 

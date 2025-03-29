@@ -1,6 +1,6 @@
 ---
 project: supermemory
-stars: 8865
+stars: 8919
 description: |-
     Build your own second brain with supermemory. It's a ChatGPT for your bookmarks. Import tweets or save websites and content using the chrome extension.
 url: https://github.com/supermemoryai/supermemory
@@ -142,10 +142,6 @@ Built with:
 Yes, everything is free & open source.
 Supermemory is built by [me](https://dhravya.dev), a college student. My life situations make it very difficult and almost impossible to monetise the product.
 
-Any kind of sponsorships / support would mean a lot to me, and help me keep supermemory alive.
-
-You can sponsor on my Github sponsors page - https://github.com/sponsors/dhravya
-
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Dhravya/supermemory&type=Date)](https://star-history.com/#Dhravya/supermemory&Date)
@@ -175,7 +171,7 @@ Thanks to all the awesome people who have contributed to supermemory.
 
 ## Sponsors
 
-We are grateful for the support of our sponsors:
+We are grateful for the support of our supporters:
 
 <table>
   <tr>

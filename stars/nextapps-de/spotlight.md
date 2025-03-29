@@ -1,6 +1,6 @@
 ---
 project: spotlight
-stars: 1652
+stars: 1657
 description: |-
     Web's most easy to integrate lightbox gallery library. Super-lightweight, outstanding performance, no dependencies.
 url: https://github.com/nextapps-de/spotlight

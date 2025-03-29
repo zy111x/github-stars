@@ -1,6 +1,6 @@
 ---
 project: domain-watchdog
-stars: 228
+stars: 230
 description: |-
     An app that uses RDAP to collect publicly available info about domains, track their history, and purchase them
 url: https://github.com/maelgangloff/domain-watchdog

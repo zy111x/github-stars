@@ -1,6 +1,6 @@
 ---
 project: tremor
-stars: 2155
+stars: 2193
 description: |-
     Copy & Paste React components to build modern web applications. 
 url: https://github.com/tremorlabs/tremor
@@ -58,7 +58,7 @@ We are always looking for new ideas or other ways to improve Tremor Raw. If you 
 
 ## License
 
-[Apache License 2.0](https://github.com/tremorlabs/tremor/blob/main/License)
+[Apache License 2.0](https://github.com/tremorlabs/tremor?tab=Apache-2.0-1-ov-file#readme)
 
-Copyright &copy; 2024 Tremor. All rights reserved.
+Copyright &copy; 2025 Tremor. All rights reserved.
 

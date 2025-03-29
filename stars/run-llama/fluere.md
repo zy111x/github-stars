@@ -1,6 +1,6 @@
 ---
 project: fluere
-stars: 70
+stars: 73
 description: |-
     🌊 is a simple, lightweight event-based workflow for JS
 url: https://github.com/run-llama/fluere

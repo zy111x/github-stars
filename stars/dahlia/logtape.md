@@ -1,6 +1,6 @@
 ---
 project: logtape
-stars: 658
+stars: 662
 description: |-
     Simple logging library with zero dependencies for Deno, Node.js, Bun, browsers, and edge functions
 url: https://github.com/dahlia/logtape
@@ -70,11 +70,11 @@ LogTape is available on [JSR] and [npm].  You can install LogTape for various
 JavaScript runtimes and package managers:
 
 ~~~~ sh
-deno add @logtape/logtape  # for Deno
-npm  add @logtape/logtape  # for npm
-pnpm add @logtape/logtape  # for pnpm
-yarn add @logtape/logtape  # for Yarn
-bun  add @logtape/logtape  # for Bun
+deno add jsr:@logtape/logtape  # for Deno
+npm  add     @logtape/logtape  # for npm
+pnpm add     @logtape/logtape  # for pnpm
+yarn add     @logtape/logtape  # for Yarn
+bun  add     @logtape/logtape  # for Bun
 ~~~~
 
 See also the [installation manual][Runtime diversity] for more details.

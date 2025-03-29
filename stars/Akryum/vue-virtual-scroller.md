@@ -1,6 +1,6 @@
 ---
 project: vue-virtual-scroller
-stars: 10008
+stars: 10025
 description: |-
     ⚡️ Blazing fast scrolling for any amount of data
 url: https://github.com/Akryum/vue-virtual-scroller

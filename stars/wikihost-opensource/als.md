@@ -1,6 +1,6 @@
 ---
 project: als
-stars: 1281
+stars: 1286
 description: |-
     Another Looking-glass Server
 url: https://github.com/wikihost-opensource/als

@@ -1,6 +1,6 @@
 ---
 project: node
-stars: 110237
+stars: 110351
 description: |-
     Node.js JavaScript runtime ✨🐢🚀✨
 url: https://github.com/nodejs/node
@@ -747,6 +747,8 @@ maintaining the Node.js project.
   **Chemi Atlow** <<chemi@atlow.co.il>> (he/him)
 * [Ayase-252](https://github.com/Ayase-252) -
   **Qingyu Deng** <<i@ayase-lab.com>>
+* [bjohansebas](https://github.com/bjohansebas) -
+  **Sebastian Beltran** <<bjohansebas@gmail.com>>
 * [bmuenzenmeyer](https://github.com/bmuenzenmeyer) -
   **Brian Muenzenmeyer** <<brian.muenzenmeyer@gmail.com>> (he/him)
 * [CanadaHonk](https://github.com/CanadaHonk) -
@@ -757,6 +759,8 @@ maintaining the Node.js project.
   **Feng Yu** <<F3n67u@outlook.com>> (he/him)
 * [gireeshpunathil](https://github.com/gireeshpunathil) -
   **Gireesh Punathil** <<gpunathi@in.ibm.com>> (he/him)
+* [gurgunday](https://github.com/gurgunday) -
+  **Gürgün Dayıoğlu** <<hey@gurgun.day>>
 * [iam-frankqiu](https://github.com/iam-frankqiu) -
   **Frank Qiu** <<iam.frankqiu@gmail.com>> (he/him)
 * [KevinEady](https://github.com/KevinEady) -

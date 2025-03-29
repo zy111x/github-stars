@@ -1,6 +1,6 @@
 ---
 project: partyserver
-stars: 523
+stars: 531
 description: |-
     PartyKit, for Workers
 url: https://github.com/threepointone/partyserver
@@ -15,6 +15,8 @@ Libraries / Examples / Documentation for building real-time apps (and more!) wit
 This is the main repository for PartyServer. It contains the following packages:
 
 [PartyServer](/packages/partyserver/README.md) - The core library for building real-time applications with Durable Objects. This library enhances a standard Durable Object to make it easier to work with WebSockets, as well as adding some additional features like lifecycle hooks and broadcasting.
+
+[PartySocket](/packages/partysocket/README.md) - A library for working with WebSockets. It features reconnections, buffering, resilience, and more.
 
 [Y-PartyServer](/packages/y-partyserver/README.md) - A library that adds Yjs support to PartyServer. Yjs is a CRDT library that allows for real-time collaborative editing. This library exposes a base class extending PartyServer that adds Yjs support, with utility hooks for loading/saving Yjs documents from any external storage.
 

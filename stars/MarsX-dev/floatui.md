@@ -1,6 +1,6 @@
 ---
 project: floatui
-stars: 3465
+stars: 3470
 description: |-
     Beautiful and responsive UI components and templates for React and Vue (soon) with Tailwind CSS.
 url: https://github.com/MarsX-dev/floatui
@@ -33,6 +33,7 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

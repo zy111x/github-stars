@@ -1,6 +1,6 @@
 ---
 project: swapy
-stars: 7651
+stars: 7702
 description: |-
     ✨ A framework-agnostic tool that converts any layout into a drag-to-swap one with just a few lines of code https://swapy.tahazsh.com/
 url: https://github.com/TahaSh/swapy

@@ -1,6 +1,6 @@
 ---
 project: biliATV
-stars: 174
+stars: 175
 description: |-
     bilibili apple tv app
 url: https://github.com/xioxin/biliATV

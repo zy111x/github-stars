@@ -1,6 +1,6 @@
 ---
 project: sheetjs
-stars: 35498
+stars: 35512
 description: |-
     📗 SheetJS Spreadsheet Data Toolkit -- New home https://git.sheetjs.com/SheetJS/sheetjs
 url: https://github.com/SheetJS/sheetjs

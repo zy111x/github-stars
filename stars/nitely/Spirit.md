@@ -1,6 +1,6 @@
 ---
 project: Spirit
-stars: 1173
+stars: 1175
 description: |-
     Spirit is a modern Python/Django forum
 url: https://github.com/nitely/Spirit
