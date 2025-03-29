@@ -1,6 +1,6 @@
 ---
 project: CF-Workers-docker.io
-stars: 7667
+stars: 7722
 description: 这个项目是一个基于 Cloudflare Workers 的 Docker 镜像代理工具。它能够中转对 Docker 官方镜像仓库的请求，解决一些访问限制和加速访问的问题。
 url: https://github.com/cmliu/CF-Workers-docker.io
 ---
@@ -56,11 +56,13 @@ sudo systemctl restart docker
 
 #### 3.1 配置
 
-Containerd 较简单，它支持任意 `registry` 的 `mirror`，只需要修改配置文件 `/etc/containerd/config.toml`，添加如下的配置：
+`Containerd` 较简单，它支持任意 `registry` 的 `mirror`，只需要修改配置文件 `/etc/containerd/config.toml`，添加如下的配置：
 
     \[plugins."io.containerd.grpc.v1.cri".registry\]
       \[plugins."io.containerd.grpc.v1.cri".registry.mirrors\]
         \[plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"\]
+          endpoint = \["https://xxxx.xx.com"\]
+        \[plugins."io.containerd.grpc.v1.cri".registry.mirrors."registry.k8s.io"\]
           endpoint = \["https://xxxx.xx.com"\]
         \[plugins."io.containerd.grpc.v1.cri".registry.mirrors."k8s.gcr.io"\]
           endpoint = \["https://xxxx.xx.com"\]
@@ -79,6 +81,14 @@ unqualified-search-registries = \['docker.io', 'k8s.gcr.io', 'gcr.io', 'ghcr.io'
 prefix = "docker.io"
 insecure = true
 location = "registry-1.docker.io"
+
+\[\[registry.mirror\]\]
+location = "xxxx.xx.com"
+
+\[\[registry\]\]
+prefix = "registry.k8s.io"
+insecure = true
+location = "registry.k8s.io"
 
 \[\[registry.mirror\]\]
 location = "xxxx.xx.com"
@@ -117,8 +127,11 @@ location = "xxxx.xx.com"
 
 #### 3.3 使用
 
-对于以上配置，k8s在使用的时候，就可以直接`pull`外部无法pull的镜像了 手动可以直接`pull` 配置了`mirror`的仓库  
-`crictl pull registry.k8s.io/kube-proxy:v1.28.4` `docker pull nginx:1.21`
+对于以上配置，k8s 在使用的时候，就可以直接 `pull` 外部无法 pull 的镜像了。
+
+# 手动可以直接pull配置了mirror的仓库
+crictl pull registry.k8s.io/kube-proxy:v1.28.4
+docker  pull nginx:1.21
 
 🔧 变量说明
 -------

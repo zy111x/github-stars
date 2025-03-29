@@ -1,12 +1,12 @@
 ---
 project: WeChatMsg
-stars: 38211
+stars: 38389
 description: 提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属于个人的AI聊天助手
 url: https://github.com/LC044/WeChatMsg
 ---
 
-留下你对2024年度聊天报告的期待
------------------
+现已支持微信4.0，点击查看详细设计文档
+--------------------
 
 我的数据我做主
 =======
@@ -22,11 +22,27 @@ url: https://github.com/LC044/WeChatMsg
 > 
 > **所以《留痕》**
 
+3.0 全面来袭
+--------
+
+### 全面适配微信4.0 点击查看详细设计文档
+
+-   全新框架、重构底层逻辑
+-   更低的内存占用
+-   更快的导出速度
+
+### 全新的Ui
+
+-   更简洁
+-   更流畅
+-   更友好
+-   前后端彻底分离
+
 🍉功能
 ----
 
 -   
--   🔒️🔑🔓️Windows本地微信数据库
+-   🔒️🔑🔓️Windows本地微信数据库（支持微信4.0）
 -   还原微信聊天界面
     -   🗨文本✅
     -   🏝图片✅
@@ -61,30 +77,6 @@ url: https://github.com/LC044/WeChatMsg
 
 https://github.com/LC044/AnnualReport
 
-2.2更新预告
--------
-
-### 全面适配微信4.0
-
--   全新框架、重构底层逻辑
--   更低的内存占用
--   更快的导出速度
-
-### 全新的Ui
-
--   更简洁
--   更流畅
--   更友好
--   前后端彻底分离
-
-### 更宽松的许可证
-
--   如果跟其他模块兼容的话，将采用MIT许可证
--   已有功能代码全开源
-
-🥤效果
-----
-
 ⌛使用
 ===
 
@@ -97,7 +89,7 @@ https://github.com/LC044/AnnualReport
 源码运行
 ----
 
-详见开发者手册
+使用示例 详见开发者手册
 
 AI聊天
 
@@ -183,6 +175,6 @@ AI交流
 License
 =======
 
-WeChatMsg is licensed under GPLv3.
+WeChatMsg is licensed under MIT.
 
 Copyright © 2022-2024 by SiYuan.
