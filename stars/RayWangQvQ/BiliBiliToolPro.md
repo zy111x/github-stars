@@ -1,6 +1,6 @@
 ---
 project: BiliBiliToolPro
-stars: 7031
+stars: 7095
 description: B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。敏感肌也能用。
 url: https://github.com/RayWangQvQ/BiliBiliToolPro
 ---
@@ -10,7 +10,8 @@ BiliBiliTool
 
 ================
 
-**BiliBiliTool 是一个自动执行任务的工具，当我们忘记做某项任务时，它会像一个贴心小助手，按照我们预先吩咐它的命令，在指定频率、时间范围内帮助我们完成计划的任务。**
+**BiliBiliTool 是一个自动执行任务的工具，当我们忘记做某项任务时，它会像一个贴心小助手，按照我们预先吩咐它的命令，在指定频率、时间范围内帮助我们完成计划的任务。**  
+**BiliBiliTool is an automated task execution tool that acts as a helpful assistant, following pre-configured commands to complete planned tasks within specified frequencies and timeframes when we forget to do them.**
 
 详细功能如下：
 
@@ -255,7 +256,7 @@ Discussions（讨论）板块可以用来**提问**和**讨论**。
 
 当前正处于稳定的迭代开发中，详细待更新和计划内容可参见 Projects 和 Issues 。
 
-想要有重要更新时收到通知的话，可以把仓库右上角的`Star`或`Watch`按钮点亮。
+想要有重要更新时收到通知的话，可以把仓库右上角的`Star`按钮点亮。
 
 7\. 成为开源贡献成员
 ------------
@@ -308,6 +309,6 @@ Discussions（讨论）板块可以用来**提问**和**讨论**。
 -   JunzhouLiu/BILIBILI-HELPER
     
 
-感谢`JetBrain`提供的免费证书支持：
+❤️Thanks to `JetBrain` for the free certificate support:
 
-Thanks to `JetBrain` for the free certificate support:
+❤️Thanks to YxVM & NodeSeekDev for sponsoring the server for testing support:

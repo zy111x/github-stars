@@ -1,6 +1,6 @@
 ---
 project: free-api
-stars: 15244
+stars: 15264
 description: 收集免费的接口服务,做一个api的搬运工
 url: https://github.com/fangzesheng/free-api
 ---
@@ -10,6 +10,14 @@ url: https://github.com/fangzesheng/free-api
 ### **现已发布【免费API】公众号，关注公众号可以获取相关密钥，也可以接收到每月更新接口消息（每月一次，不打扰大家），希望大家多关注，随时来个三连加点击广告**——您的关注是我一直更新的动力 : )****
 
 ****
+
+2025-03-31
+==========
+
+### 本月更新的接口有：DeepSeek-超算，DeepSeek-百炼。
+
+-   **DeepSeek-超算(可在线调用):** 通过超算互联网白嫖DeepSeek-R1... 接口地址
+-   **DeepSeek-百炼(可在线调用):** 通过百炼白嫖DeepSeek-R1满血版... 接口地址
 
 2025-02-28
 ==========

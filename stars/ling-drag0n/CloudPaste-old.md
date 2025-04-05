@@ -1,8 +1,8 @@
 ---
-project: CloudPaste
-stars: 528
-description: 基于 Cloudflare Workers 的在线剪贴板和文件分享服务，支持 Markdown、阅后即焚、文本/文件分享、密码保护等功能
-url: https://github.com/ling-drag0n/CloudPaste
+project: CloudPaste-old
+stars: 527
+description: 新版已重构！详细查看README。基于 Cloudflare Workers 的在线剪贴板和文件分享服务，支持 Markdown、阅后即焚、文本/文件分享、密码保护等功能
+url: https://github.com/ling-drag0n/CloudPaste-old
 ---
 
 CloudPaste - Online Clipboard 📋
@@ -11,6 +11,10 @@ CloudPaste - Online Clipboard 📋
 English | 中文
 
 An online clipboard and file sharing service based on Cloudflare Workers. Supports Markdown, password protection, file uploads, and more.
+
+👉Refactored version: https://github.com/ling-drag0n/CloudPaste
+
+Old version deployment tutorial, click to expand!
 
 ✨ Features
 ----------
