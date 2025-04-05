@@ -1,6 +1,6 @@
 ---
 project: cloudflare-workers-nextjs-saas-template
-stars: 254
+stars: 268
 description: |-
     Cloudflare Workers/Next.js SaaS Template
 url: https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template
@@ -83,6 +83,8 @@ Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overv
   - 📦 Credit Package Management
   - 💸 Pay-as-you-go Model
   - 📈 Usage Analytics
+- 👑 Admin Dashboard
+  - 👥 User Management
 - ✨ Validations with Zod and React Hook Form
   - 🛡️ Type-safe Form Validations
   - 🔒 Server-side Validations
@@ -117,10 +119,7 @@ Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overv
 - [ ] sitemap.xml 📄
 - [ ] robots.txt 📄
 - [ ] Multi-language support (i18n) 🌐
-- [ ] Billing 💰
-- [ ] Admin dashboard 👑
 - [ ] Notifications 🔔
-- [ ] Payments 💳
 - [ ] Webhooks 🔗
 - [ ] Track bundle size with https://www.npmjs.com/package/webpack-bundle-analyzer 📊
 

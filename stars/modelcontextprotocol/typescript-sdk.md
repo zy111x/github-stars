@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 3666
+stars: 4369
 description: |-
     The official Typescript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk
@@ -29,6 +29,7 @@ url: https://github.com/modelcontextprotocol/typescript-sdk
   - [Low-Level Server](#low-level-server)
   - [Writing MCP Clients](#writing-mcp-clients)
   - [Server Capabilities](#server-capabilities)
+  - [Proxy OAuth Server](#proxy-authorization-requests-upstream)
 
 ## Overview
 
@@ -496,6 +497,52 @@ const result = await client.callTool({
   }
 });
 ```
+
+### Proxy Authorization Requests Upstream
+
+You can proxy OAuth requests to an external authorization provider:
+
+```typescript
+import express from 'express';
+import { ProxyOAuthServerProvider, mcpAuthRouter } from '@modelcontextprotocol/sdk';
+
+const app = express();
+
+const proxyProvider = new ProxyOAuthServerProvider({
+    endpoints: {
+        authorizationUrl: "https://auth.external.com/oauth2/v1/authorize",
+        tokenUrl: "https://auth.external.com/oauth2/v1/token",
+        revocationUrl: "https://auth.external.com/oauth2/v1/revoke",
+    },
+    verifyAccessToken: async (token) => {
+        return {
+            token,
+            clientId: "123",
+            scopes: ["openid", "email", "profile"],
+        }
+    },
+    getClient: async (client_id) => {
+        return {
+            client_id,
+            redirect_uris: ["http://localhost:3000/callback"],
+        }
+    }
+})
+
+app.use(mcpAuthRouter({
+    provider: proxyProvider,
+    issuerUrl: new URL("http://auth.external.com"),
+    baseUrl: new URL("http://mcp.example.com"),
+    serviceDocumentationUrl: new URL("https://docs.example.com/"),
+}))
+```
+
+This setup allows you to:
+- Forward OAuth requests to an external provider
+- Add custom token validation logic
+- Manage client registrations
+- Provide custom documentation URLs
+- Maintain control over the OAuth flow while delegating to an external provider
 
 ## Documentation
 

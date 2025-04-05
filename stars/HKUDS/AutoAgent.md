@@ -1,6 +1,6 @@
 ---
 project: AutoAgent
-stars: 3316
+stars: 3610
 description: |-
     "AutoAgent: Fully-Automated and Zero-Code LLM Agent Framework"
 url: https://github.com/HKUDS/AutoAgent
@@ -32,8 +32,8 @@ Welcome to AutoAgent! AutoAgent is a **Fully-Automated** and highly **Self-Devel
 
 ## ✨Key Features
 
-* 🏆 Top Performer on the GAIA Benchmark
-</br>AutoAgent has ranked the **#1** spot among open-sourced methods, delivering comparable performance to **OpenAI's Deep Research**.
+* 🏆 Top Performers on the GAIA Benchmark
+</br>AutoAgent has secured top rankings among open-sourced methods, delivering comparable performance to **OpenAI's Deep Research**.
 
 * 📚 Agentic-RAG with Native Self-Managing Vector Database
 </br>AutoAgent equipped with a native self-managing vector database, outperforms industry-leading solutions like **LangChain**. 

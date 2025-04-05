@@ -1,6 +1,6 @@
 ---
 project: better-auth
-stars: 10607
+stars: 10934
 description: |-
     The most comprehensive authentication framework for TypeScript
 url: https://github.com/better-auth/better-auth
@@ -22,7 +22,7 @@ url: https://github.com/better-auth/better-auth
     <a href="https://better-auth.com"><strong>Learn more »</strong></a>
     <br />
     <br />
-    <a href="https://discord.com/invite/GYC3W7tZzb">Discord</a>
+    <a href="https://discord.gg/better-auth">Discord</a>
     ·
     <a href="https://better-auth.com">Website</a>
     ·

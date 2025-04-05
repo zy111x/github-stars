@@ -1,6 +1,6 @@
 ---
 project: chat-ui
-stars: 247
+stars: 258
 description: |-
     Chat UI components for LLM apps
 url: https://github.com/run-llama/chat-ui
@@ -112,7 +112,6 @@ const ChatExample = () => {
     <ChatSection handler={handler}>
       <ChatMessages />
       <ChatInput>
-        <ChatInput.Preview />
         <ChatInput.Form className="bg-lime-500">
           <ChatInput.Field type="textarea" />
           <ChatInput.Upload />
@@ -202,7 +201,7 @@ You can use any of them by copying [their CSS](https://github.com/highlightjs/hi
 
 ## Example
 
-See the [example app](./apps/web/README.md) for a complete example. The generate a full-featured project to
+See the [example app](https://github.com/run-llama/chat-ui/blob/main/apps/web/README.md) for a complete example. The generate a full-featured project to
 get started with, use [create-llama](https://github.com/run-llama/create-llama).
 
 ## License

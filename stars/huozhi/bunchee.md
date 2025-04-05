@@ -1,6 +1,6 @@
 ---
 project: bunchee
-stars: 1167
+stars: 1174
 description: |-
     Zero config bundler for npm packages
 url: https://github.com/huozhi/bunchee

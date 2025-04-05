@@ -1,6 +1,6 @@
 ---
 project: chinese-poetry
-stars: 48892
+stars: 48937
 description: |-
     The most comprehensive database of Chinese poetry 🧶最全中华古诗词数据库,  唐宋两朝近一万四千古诗人,  接近5.5万首唐诗加26万宋诗.  两宋时期1564位词人，21050首词。
 url: https://github.com/chinese-poetry/chinese-poetry
@@ -86,8 +86,9 @@ url: https://github.com/chinese-poetry/chinese-poetry
 - [诗经](./诗经)
 - [幽梦影](./幽梦影)
 - [四书五经](./四书五经)
-- [蒙學](./蒙学)
+- [蒙学](./蒙学)
 - [纳兰性德诗集](./纳兰性德)
+- [御定全唐詩](./御定全唐詩)
 
 
 ## 贡献

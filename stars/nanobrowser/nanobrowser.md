@@ -1,6 +1,6 @@
 ---
 project: nanobrowser
-stars: 4479
+stars: 4710
 description: |-
     Open-Source Chrome extension for AI-powered web automation. Run multi-agent workflows using your own LLM API key. Alternative to OpenAI Operator.
 url: https://github.com/nanobrowser/nanobrowser
@@ -155,6 +155,7 @@ Nanobrowser allows you to configure different LLM models for each agent to balan
   - Zero API costs and complete privacy with no data leaving your machine
 
 - **Recommended Models**:
+  - **Falcon3 10B**
   - **Qwen 2.5 Coder 14B**
   - **Mistral Small 24B**
   - We welcome community experience sharing with other local models in our [Discord](https://discord.gg/NN3ABHggMK)
@@ -186,12 +187,7 @@ Here are some powerful tasks you can accomplish with just a sentence:
 
 We're actively developing Nanobrowser with exciting features on the horizon, welcome to join us! 
 
-- [ ] **Expand LLM Support**: Add integration with more large language model providers for AI agents
-- [ ] **Security Firewall**: Implement protective measures to ensure safe browsing operations
-- [ ] **Memory Optimization**: Reduce token usage while maintaining context awareness
-- [ ] **Session Replay**: Efficiently replay historical tasks with minimal token consumption
-- [ ] **Specialized Agents**: Develop purpose-built agents for complex domain-specific tasks
-
+Check out our detailed roadmap and upcoming features in our [GitHub Discussions](https://github.com/nanobrowser/nanobrowser/discussions/85). 
 
 ## 🤝 Contributing
 
@@ -210,6 +206,14 @@ We're actively developing Nanobrowser with exciting features on the horizon, wel
 We believe in the power of open source and community collaboration.  Join us in building the future of web automation!
 
 
+## 🔒 Security
+
+If you discover a security vulnerability, please **DO NOT** disclose it publicly through issues, pull requests, or discussions.
+
+Instead, please create a [GitHub Security Advisory](https://github.com/nanobrowser/nanobrowser/security/advisories/new) to report the vulnerability responsibly. This allows us to address the issue before it's publicly disclosed.
+
+We appreciate your help in keeping Nanobrowser and its users safe!
+
 ## 💬 Community
 
 Join our growing community of developers and users:
@@ -225,6 +229,7 @@ Nanobrowser builds on top of other awesome open-source projects:
 - [Browser Use](https://github.com/browser-use/browser-use)
 - [Puppeteer](https://github.com/EmergenceAI/Agent-E)
 - [Chrome Extension Boilerplate](https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite)
+- [LangChain](https://github.com/langchain-ai/langchainjs)
 
 Huge thanks to their creators and contributors!
 

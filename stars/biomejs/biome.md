@@ -1,6 +1,6 @@
 ---
 project: biome
-stars: 17975
+stars: 18150
 description: |-
     A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP.
 url: https://github.com/biomejs/biome
@@ -116,7 +116,7 @@ We use [Polar.sh](https://polar.sh/biomejs) to up-vote and promote specific feat
 
 ## Sponsors
 
-### Gold Sponsors
+### Platinum Sponsor
 
 <table>
   <tbody>
@@ -126,7 +126,7 @@ We use [Polar.sh](https://polar.sh/biomejs) to up-vote and promote specific feat
           <picture>
             <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/biomejs/resources/refs/heads/main/sponsors/vercel-dark.png" />
             <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/biomejs/resources/refs/heads/main/sponsors/vercel-light.png" />
-            <img src="https://raw.githubusercontent.com/biomejs/resources/refs/heads/main/sponsors/vercel-light.png" width="400" alt="Vercel" />
+            <img src="https://raw.githubusercontent.com/biomejs/resources/refs/heads/main/sponsors/vercel-light.png" width="500" alt="Vercel" />
           </picture>
         </a>
       </td>

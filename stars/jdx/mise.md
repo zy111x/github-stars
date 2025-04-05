@@ -1,6 +1,6 @@
 ---
 project: mise
-stars: 14361
+stars: 14511
 description: |-
     dev tools, env vars, task runner
 url: https://github.com/jdx/mise
@@ -37,7 +37,7 @@ It also shows that you can use `mise` to install and many other tools such as `j
 
 [![demo](./docs/tapes/demo.gif)](https://mise.jdx.dev/demo.html)
 
-See [transcript](https://mise.jdx.dev/demo.html).
+See [demo transcript](https://mise.jdx.dev/demo.html).
 
 ## Quickstart
 
@@ -48,7 +48,7 @@ See [Getting started](https://mise.jdx.dev/getting-started.html) for more option
 ```sh-session
 $ curl https://mise.run | sh
 $ ~/.local/bin/mise --version
-2025.3.11 macos-arm64 (a1b2d3e 2025-03-28)
+2025.4.0 macos-arm64 (a1b2d3e 2025-04-01)
 ```
 
 Hook mise into your shell (pick the right one for your shell):

@@ -1,6 +1,6 @@
 ---
 project: portainer
-stars: 32465
+stars: 32551
 description: |-
     Making Docker and Kubernetes management easy.
 url: https://github.com/portainer/portainer

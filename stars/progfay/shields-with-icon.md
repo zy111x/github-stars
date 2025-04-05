@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 442
+stars: 441
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -692,7 +692,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Cultura](https://img.shields.io/badge/Cultura-1D2C54?style=for-the-badge&logo=Cultura&logoColor=FFFFFF)
 ![curl](https://img.shields.io/badge/curl-073551?style=for-the-badge&logo=curl&logoColor=FFFFFF)
 ![CurseForge](https://img.shields.io/badge/CurseForge-F16436?style=for-the-badge&logo=CurseForge&logoColor=FFFFFF)
-![Custom Ink](https://img.shields.io/badge/Custom%20Ink-4051B5?style=for-the-badge&logo=Custom+Ink&logoColor=FFFFFF)
+![Custom Ink](https://img.shields.io/badge/Custom%20Ink-FA3C00?style=for-the-badge&logo=Custom+Ink&logoColor=FFFFFF)
 ![CyberDefenders](https://img.shields.io/badge/CyberDefenders-335EEA?style=for-the-badge&logo=CyberDefenders&logoColor=FFFFFF)
 ![Cycling '74](https://img.shields.io/badge/Cycling%20%2774-111111?style=for-the-badge&logo=Cycling+%2774&logoColor=FFFFFF)
 ![Cypress](https://img.shields.io/badge/Cypress-222222?style=for-the-badge&logo=Cypress&logoColor=69D3A7)
@@ -1068,6 +1068,7 @@ url: https://github.com/progfay/shields-with-icon
 ![GameBanana](https://img.shields.io/badge/GameBanana-222222?style=for-the-badge&logo=GameBanana&logoColor=FCEF40)
 ![Gameloft](https://img.shields.io/badge/Gameloft-000000?style=for-the-badge&logo=Gameloft&logoColor=FFFFFF)
 ![Gamemaker](https://img.shields.io/badge/Gamemaker-000000?style=for-the-badge&logo=Gamemaker&logoColor=FFFFFF)
+![Gandi](https://img.shields.io/badge/Gandi-6640FE?style=for-the-badge&logo=Gandi&logoColor=FFFFFF)
 ![Garmin](https://img.shields.io/badge/Garmin-000000?style=for-the-badge&logo=Garmin&logoColor=FFFFFF)
 ![Gatling](https://img.shields.io/badge/Gatling-222222?style=for-the-badge&logo=Gatling&logoColor=FF9E2A)
 ![Gatsby](https://img.shields.io/badge/Gatsby-663399?style=for-the-badge&logo=Gatsby&logoColor=FFFFFF)
@@ -1231,6 +1232,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Gusto](https://img.shields.io/badge/Gusto-F45D48?style=for-the-badge&logo=Gusto&logoColor=FFFFFF)
 ![Gutenberg](https://img.shields.io/badge/Gutenberg-000000?style=for-the-badge&logo=Gutenberg&logoColor=FFFFFF)
 ![H&M](https://img.shields.io/badge/H&M-E50010?style=for-the-badge&logo=H%26M&logoColor=FFFFFF)
+![H2 Database](https://img.shields.io/badge/H2%20Database-09476B?style=for-the-badge&logo=H2+Database&logoColor=FFFFFF)
 ![H3](https://img.shields.io/badge/H3-1E54B7?style=for-the-badge&logo=H3&logoColor=FFFFFF)
 ![Habr](https://img.shields.io/badge/Habr-65A3BE?style=for-the-badge&logo=Habr&logoColor=FFFFFF)
 ![Hack Club](https://img.shields.io/badge/Hack%20Club-EC3750?style=for-the-badge&logo=Hack+Club&logoColor=FFFFFF)
@@ -1838,7 +1840,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Moscow Metro](https://img.shields.io/badge/Moscow%20Metro-D9232E?style=for-the-badge&logo=Moscow+Metro&logoColor=FFFFFF)
 ![Motorola](https://img.shields.io/badge/Motorola-E1140A?style=for-the-badge&logo=Motorola&logoColor=FFFFFF)
 ![Movistar](https://img.shields.io/badge/Movistar-019DF4?style=for-the-badge&logo=Movistar&logoColor=FFFFFF)
-![Mozilla](https://img.shields.io/badge/Mozilla-000000?style=for-the-badge&logo=Mozilla&logoColor=FFFFFF)
+![Mozilla](https://img.shields.io/badge/Mozilla-161616?style=for-the-badge&logo=Mozilla&logoColor=FFFFFF)
 ![mpv](https://img.shields.io/badge/mpv-691F69?style=for-the-badge&logo=mpv&logoColor=FFFFFF)
 ![MQTT](https://img.shields.io/badge/MQTT-660066?style=for-the-badge&logo=MQTT&logoColor=FFFFFF)
 ![MSI](https://img.shields.io/badge/MSI-FF0000?style=for-the-badge&logo=MSI&logoColor=FFFFFF)
@@ -2052,6 +2054,7 @@ url: https://github.com/progfay/shields-with-icon
 ![OSF](https://img.shields.io/badge/OSF-222222?style=for-the-badge&logo=OSF&logoColor=2CB9F1)
 ![OSGeo](https://img.shields.io/badge/OSGeo-4CB05B?style=for-the-badge&logo=OSGeo&logoColor=FFFFFF)
 ![Oshkosh](https://img.shields.io/badge/Oshkosh-E6830F?style=for-the-badge&logo=Oshkosh&logoColor=FFFFFF)
+![OsmAnd](https://img.shields.io/badge/OsmAnd-222222?style=for-the-badge&logo=OsmAnd&logoColor=FF8800)
 ![OSMC](https://img.shields.io/badge/OSMC-17394A?style=for-the-badge&logo=OSMC&logoColor=FFFFFF)
 ![osu!](https://img.shields.io/badge/osu%21-FF66AA?style=for-the-badge&logo=osu%21&logoColor=FFFFFF)
 ![Otto](https://img.shields.io/badge/Otto-D4021D?style=for-the-badge&logo=Otto&logoColor=FFFFFF)
@@ -2920,7 +2923,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Traefik Proxy](https://img.shields.io/badge/Traefik%20Proxy-24A1C1?style=for-the-badge&logo=Traefik+Proxy&logoColor=FFFFFF)
 ![Trailforks](https://img.shields.io/badge/Trailforks-222222?style=for-the-badge&logo=Trailforks&logoColor=FFCD00)
 ![TrainerRoad](https://img.shields.io/badge/TrainerRoad-DA291C?style=for-the-badge&logo=TrainerRoad&logoColor=FFFFFF)
-![Trakt](https://img.shields.io/badge/Trakt-ED1C24?style=for-the-badge&logo=Trakt&logoColor=FFFFFF)
+![Trakt](https://img.shields.io/badge/Trakt-9F42C6?style=for-the-badge&logo=Trakt&logoColor=FFFFFF)
 ![Transifex](https://img.shields.io/badge/Transifex-0064AB?style=for-the-badge&logo=Transifex&logoColor=FFFFFF)
 ![Transmission](https://img.shields.io/badge/Transmission-D70008?style=for-the-badge&logo=Transmission&logoColor=FFFFFF)
 ![Transport for Ireland](https://img.shields.io/badge/Transport%20for%20Ireland-00B274?style=for-the-badge&logo=Transport+for+Ireland&logoColor=FFFFFF)
@@ -3257,6 +3260,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Zebra Technologies](https://img.shields.io/badge/Zebra%20Technologies-000000?style=for-the-badge&logo=Zebra+Technologies&logoColor=FFFFFF)
 ![Zed Industries](https://img.shields.io/badge/Zed%20Industries-084CCF?style=for-the-badge&logo=Zed+Industries&logoColor=FFFFFF)
 ![Zelle](https://img.shields.io/badge/Zelle-6D1ED4?style=for-the-badge&logo=Zelle&logoColor=FFFFFF)
+![Zen Browser](https://img.shields.io/badge/Zen%20Browser-F76F53?style=for-the-badge&logo=Zen+Browser&logoColor=FFFFFF)
 ![Zend](https://img.shields.io/badge/Zend-0679EA?style=for-the-badge&logo=Zend&logoColor=FFFFFF)
 ![Zendesk](https://img.shields.io/badge/Zendesk-03363D?style=for-the-badge&logo=Zendesk&logoColor=FFFFFF)
 ![Zenn](https://img.shields.io/badge/Zenn-3EA8FF?style=for-the-badge&logo=Zenn&logoColor=FFFFFF)

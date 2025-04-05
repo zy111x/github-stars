@@ -1,6 +1,6 @@
 ---
 project: otel-worker
-stars: 28
+stars: 31
 description: |-
     OTEL ingestion running on Cloudflare Workers
 url: https://github.com/fiberplane/otel-worker

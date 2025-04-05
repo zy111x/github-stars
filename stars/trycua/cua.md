@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 2614
+stars: 3518
 description: |-
     Create and run high-performance macOS and Linux VMs on Apple Silicon, with built-in support for AI agents.
 url: https://github.com/trycua/cua
@@ -21,30 +21,125 @@ url: https://github.com/trycua/cua
   [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.com/invite/mVnXXpdE85)
 </div>
 
-# Cua
+Cua (pronounced "koo-ah", short for Computer-Use Agent) is an open-source framework that combines high-performance virtualization with AI agent capabilities to enable secure, isolated environments for AI systems to interact with desktop applications.
 
-Create and run high-performance macOS and Linux VMs on Apple Silicon, with built-in support for AI agents.
+## What is Cua?
 
-## Libraries
+Cua offers two primary capabilities in a single integrated framework:
 
-| Library | Description | Installation | Version |
-|---------|-------------|--------------|---------|
-| [**Lume**](./libs/lume/README.md) | CLI for running macOS/Linux VMs with near-native performance using Apple's `Virtualization.Framework`. | [![Download](https://img.shields.io/badge/Download-333333?style=for-the-badge&logo=github&logoColor=white)](https://github.com/trycua/cua/releases/latest/download/lume.pkg.tar.gz) | [![GitHub release](https://img.shields.io/github/v/release/trycua/cua?color=333333)](https://github.com/trycua/cua/releases) |
-| [**Computer**](./libs/computer/README.md) | Computer-Use Interface (CUI) framework for interacting with macOS/Linux sandboxes | `pip install cua-computer` | [![PyPI](https://img.shields.io/pypi/v/cua-computer?color=333333)](https://pypi.org/project/cua-computer/) |
-| [**Agent (Experimental)**](./libs/agent/README.md) | Computer-Use Agent (CUA) framework for running agentic workflows in macOS/Linux dedicated sandboxes | `pip install cua-agent` | [![PyPI](https://img.shields.io/pypi/v/cua-agent?color=333333)](https://pypi.org/project/cua-agent/) |
+1. **High-Performance Virtualization** - Create and run macOS/Linux virtual machines on Apple Silicon with near-native performance (up to 90% of native speed) using `Apple's Virtualization.Framework`.
 
-## Lume
+2. **Computer-Use Interface & Agent** - A framework that allows AI systems to observe and control these virtual environments - interacting with applications, browsing the web, writing code, and performing complex workflows.
 
-**Originally looking for Lume?** If you're here for the original Lume project, it's now part of this monorepo. Simply install with our one-line installer script and refer to its [documentation](./libs/lume/README.md):
+## Why Use Cua?
+
+- **Security & Isolation**: Run AI agents in fully isolated virtual environments instead of giving them access to your main system
+- **Performance**: [Near-native performance](https://browser.geekbench.com/v6/cpu/compare/11283746?baseline=11102709) on Apple Silicon
+- **Flexibility**: Run macOS or Linux environments with the same framework
+- **Reproducibility**: Create consistent, deterministic environments for AI agent workflows
+- **LLM Integration**: Built-in support for connecting to various LLM providers
+
+## System Requirements
+
+- Mac with Apple Silicon (M1/M2/M3/M4 series)
+- macOS 14 (Sonoma) or newer
+- Python 3.10+ (for Computer and Agent libraries)
+- Disk space for VM images (40GB+ recommended)
+
+## Quick Start
+
+### Option 1: Lume CLI Only (VM Management)
+If you only need the virtualization capabilities:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/lume/scripts/install.sh)"
 ```
 
+For Lume usage instructions, refer to the [Lume documentation](./libs/lume/README.md).
+
+### Option 2: Full Computer-Use Agent Capabilities
+If you want to use AI agents with virtualized environments:
+
+1. Install the Lume CLI:
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/lume/scripts/install.sh)"
+   ```
+
+2. Install the Python libraries:
+   ```bash
+   pip install cua-computer cua-agent[all]
+   ```
+
+3. Use the libraries in your Python code:
+   ```python
+   from cua.computer import Computer
+   from cua.agent import ComputerAgent, LLM, AgentLoop, LLMProvider
+
+   async with Computer(verbosity=logging.DEBUG) as macos_computer:
+     agent = ComputerAgent(
+         computer=macos_computer,
+         loop=AgentLoop.OPENAI, # or AgentLoop.ANTHROPIC, or AgentLoop.OMNI
+         model=LLM(provider=LLMProvider.OPENAI) # or LLM(provider=LLMProvider.ANTHROPIC)
+     )
+
+     tasks = [
+         "Look for a repository named trycua/cua on GitHub.",
+     ]
+
+     for task in tasks:
+       async for result in agent.run(task):
+         print(result)
+   ```
+   
+   Explore the [Agent Notebook](./notebooks/) for a ready-to-run example.
+
+4. Optionally, you can use the Agent with a Gradio UI:
+
+   ```bash
+   python -m pip install ai-gradio
+   ```
+
+   ```python
+   import gradio as gr
+   import ai_gradio
+
+   gr.load(
+      name='cua:gpt-4', # currently ignored
+      src=ai_gradio.registry,
+      title="Cua - AI Agent"
+   ).launch()
+   ```
+
+   Refer to the [Gradio Notebook](./notebooks/gradio_agent_nb.ipynb) for a complete example.
+
+5. For Developers only (contribute and use latest features):
+   ```bash
+   # Clone the repository
+   git clone https://github.com/trycua/cua.git
+   cd cua
+   
+   # Open the project in VSCode
+   code ./vscode/py.code-workspace
+
+   # Build the project
+   ./scripts/build.sh
+   ```
+   
+   See our [Developer-Guide](./docs/Developer-Guide.md) for more information.
+
+## Monorepo Libraries
+
+| Library | Description | Installation | Version |
+|---------|-------------|--------------|---------|
+| [**Lume**](./libs/lume/README.md) | CLI for running macOS/Linux VMs with near-native performance using Apple's `Virtualization.Framework`. | [![Download](https://img.shields.io/badge/Download-333333?style=for-the-badge&logo=github&logoColor=white)](https://github.com/trycua/cua/releases/latest/download/lume.pkg.tar.gz) | [![GitHub release](https://img.shields.io/github/v/release/trycua/cua?color=333333)](https://github.com/trycua/cua/releases) |
+| [**Computer**](./libs/computer/README.md) | Computer-Use Interface (CUI) framework for interacting with macOS/Linux sandboxes | `pip install cua-computer` | [![PyPI](https://img.shields.io/pypi/v/cua-computer?color=333333)](https://pypi.org/project/cua-computer/) |
+| [**Agent**](./libs/agent/README.md) | Computer-Use Agent (CUA) framework for running agentic workflows in macOS/Linux dedicated sandboxes | `pip install cua-agent` | [![PyPI](https://img.shields.io/pypi/v/cua-agent?color=333333)](https://pypi.org/project/cua-agent/) |
+
 ## Docs
 
-For optimal onboarding, we recommend starting with the [Computer](./libs/computer/README.md) documentation to cover the core functionality of the Computer sandbox, then exploring the [Agent](./libs/agent/README.md) documentation to understand Cua's AI agent capabilities, and finally working through the Notebook examples to try out the Computer-Use interface and agent.
+For the best onboarding experience with the packages in this monorepo, we recommend starting with the [Computer](./libs/computer/README.md) documentation to cover the core functionality of the Computer sandbox, then exploring the [Agent](./libs/agent/README.md) documentation to understand Cua's AI agent capabilities, and finally working through the Notebook examples.
 
+- [Lume](./libs/lume/README.md)
 - [Computer](./libs/computer/README.md)
 - [Agent](./libs/agent/README.md)
 - [Notebooks](./notebooks/)
@@ -62,7 +157,7 @@ Demos of the Computer-Use Agent in action. Share your most impressive demos in C
 
 </details>
 
-<details>
+<details open>
 <summary><b>Notebook: Fix GitHub issue in Cursor</b></summary>
 <br>
 <div align="center">
@@ -113,6 +208,10 @@ Apple, macOS, and Apple Silicon are trademarks of Apple Inc. Ubuntu and Canonica
       <td align="center" valign="top" width="14.28%"><a href="http://zaydkrunz.com"><img src="https://avatars.githubusercontent.com/u/70227235?v=4?s=100" width="100px;" alt="Zayd Krunz"/><br /><sub><b>Zayd Krunz</b></sub></a><br /><a href="#code-ShrootBuck" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/PrashantRaj18198"><img src="https://avatars.githubusercontent.com/u/23168997?v=4?s=100" width="100px;" alt="Prashant Raj"/><br /><sub><b>Prashant Raj</b></sub></a><br /><a href="#code-PrashantRaj18198" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.mobile.dev"><img src="https://avatars.githubusercontent.com/u/847683?v=4?s=100" width="100px;" alt="Leland Takamine"/><br /><sub><b>Leland Takamine</b></sub></a><br /><a href="#code-Leland-Takamine" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ddupont808"><img src="https://avatars.githubusercontent.com/u/3820588?v=4?s=100" width="100px;" alt="ddupont"/><br /><sub><b>ddupont</b></sub></a><br /><a href="#code-ddupont808" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Lizzard1123"><img src="https://avatars.githubusercontent.com/u/46036335?v=4?s=100" width="100px;" alt="Ethan Gutierrez"/><br /><sub><b>Ethan Gutierrez</b></sub></a><br /><a href="#code-Lizzard1123" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

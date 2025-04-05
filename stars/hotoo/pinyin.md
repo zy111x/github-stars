@@ -1,6 +1,6 @@
 ---
 project: pinyin
-stars: 7626
+stars: 7629
 description: |-
     :cn: 汉字拼音 ➜ hàn zì pīn yīn
 url: https://github.com/hotoo/pinyin

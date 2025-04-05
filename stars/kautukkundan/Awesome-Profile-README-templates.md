@@ -1,6 +1,6 @@
 ---
 project: Awesome-Profile-README-templates
-stars: 10938
+stars: 10947
 description: |-
     A collection of awesome readme templates to display on your profile
 url: https://github.com/kautukkundan/Awesome-Profile-README-templates

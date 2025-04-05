@@ -1,6 +1,6 @@
 ---
 project: clarity
-stars: 2322
+stars: 2332
 description: |-
     A behavioral analytics library that uses dom mutations and user interactions to generate aggregated insights.
 url: https://github.com/microsoft/clarity
@@ -23,6 +23,21 @@ We encourage the community to join us in building the best behavioral analytics 
 3. **[clarity-visualize](https://github.com/microsoft/clarity/tree/master/packages/clarity-visualize)**: It takes the decoded data from clarity-decode and turns it back into pixel-perfect session replay.
 
 4. **[clarity-devtools](https://github.com/microsoft/clarity/tree/master/packages/clarity-devtools)**: Devtools extension for chromium based browsers to generate live captures against any website.
+
+## Releasing new version
+1. **Bump Version**
+   ```bash
+   yarn bump-version
+   ```
+
+2. **Submit Changes**
+    * Commit updated files
+    * Push changes
+    * Create PR
+
+3. **Automated Release**
+    * After PR approval and merge
+    * GitHub Actions publishes to npmjs.org automatically
 
 ## Examples
 Here are some example sessions on popular websites visualized to demonstrate the telemetry captured:

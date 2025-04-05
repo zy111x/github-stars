@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 3677
+stars: 3930
 description: |-
     PraisonAI is a production-ready Multi AI Agents framework, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. It provides a low-code solution to streamline the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
 url: https://github.com/MervinPraison/PraisonAI
@@ -28,7 +28,7 @@ url: https://github.com/MervinPraison/PraisonAI
 
 </div>
 
-PraisonAI is a production-ready Multi-AI Agents framework with self-reflection, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. By integrating PraisonAI Agents, AutoGen, and CrewAI into a low-code solution, it streamlines the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
+PraisonAI is a production-ready Multi-AI Agents framework with self-reflection, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. By integrating PraisonAI Agents, AG2 (Formerly AutoGen), and CrewAI into a low-code solution, it streamlines the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
 
 <div align="center">
   <a href="https://docs.praison.ai">
@@ -556,7 +556,7 @@ uv pip install -r pyproject.toml --extra "crewai,autogen"
 
 ## Other Features
 
-- 🔄 Use CrewAI or AutoGen Framework
+- 🔄 Use CrewAI or AG2 (Formerly AutoGen) Framework
 - 💻 Chat with ENTIRE Codebase
 - 🎨 Interactive UIs
 - 📄 YAML-based Configuration

@@ -1,6 +1,6 @@
 ---
 project: AFFiNE
-stars: 49140
+stars: 49400
 description: |-
     There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use. 
 url: https://github.com/toeverything/AFFiNE
@@ -26,6 +26,23 @@ url: https://github.com/toeverything/AFFiNE
 
 <br/>
 <a href="https://www.producthunt.com/posts/affine-3?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-affine&#0045;3" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=440671&theme=light" alt="AFFiNE - One&#0032;app&#0032;for&#0032;all&#0032;&#0045;&#0032;Where&#0032;Notion&#0032;meets&#0032;Miro | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<br/>
+<br/>
+
+<div align="left" valign="middle">
+<a href="https://runblaze.dev">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://www.runblaze.dev/logo_dark.png">
+   <img align="right" src="https://www.runblaze.dev/logo_light.png" height="102px"/>
+ </picture>
+</a>
+
+<br style="display: none;"/>
+
+_Special thanks to [Blaze](https://runblaze.dev) for their support of this project. They provide high-performance Apple Silicon macOS and Linux (AMD64 & ARM64) runners for GitHub Actions, greatly reducing our automated build times._
+
+</div>
+
 <br/>
 <br/>
 

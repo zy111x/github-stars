@@ -1,6 +1,6 @@
 ---
 project: plate
-stars: 13334
+stars: 13396
 description: |-
     A rich-text editor powered by AI
 url: https://github.com/udecode/plate
@@ -18,8 +18,6 @@ Plate
   <a target="_blank" href="https://discord.gg/mAZRuBzGM3"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg?sanitize=true" /></a>
   <a target="_blank" href="https://github.com/udecode/plate/blob/main/LICENSE"><img src="https://badgen.now.sh/badge/license/MIT" /></a>
 </div>
-
-![hero](apps/www/public/og.png)
 
 [//]: # '  <a target="_blank" href="https://platejs.org/docs/playground" alt="Live Demo"><img src="https://img.shields.io/badge/Live%20Demo-blue" /></a>'
 [//]: # 'Welcome to Plate, a rich-text editor framework designed for simplicity and efficiency. Plate consists of four main parts:'

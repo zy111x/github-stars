@@ -1,6 +1,6 @@
 ---
 project: openpanel
-stars: 3978
+stars: 4011
 description: |-
     All the goodies from both Mixpanel and Plausible combined into one tool.
 url: https://github.com/Openpanel-dev/openpanel

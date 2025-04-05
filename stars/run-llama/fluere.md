@@ -1,8 +1,8 @@
 ---
 project: fluere
-stars: 73
+stars: 83
 description: |-
-    🌊 is a simple, lightweight event-based workflow for JS
+    🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/fluere
 ---
 
@@ -16,7 +16,7 @@ by [LlamaIndex Workflow](https://docs.llamaindex.ai/en/stable/module_guides/work
 
 - Minimal core API (<=2kb)
 - 100% Type safe
-- Event-driven execution engine
+- Event-driven, stream oriented programming
 - Support multiple JS runtime/framework
 
 ## Usage
@@ -41,101 +41,208 @@ import { createWorkflow } from "fluere";
 
 const convertEvent = workflowEvent();
 
-const workflow = createWorkflow({
-  startEvent,
-  stopEvent,
-});
+const workflow = createWorkflow();
 
 workflow.handle([startEvent], (start) => {
-  return convertEvent(Number.parseInt(start.data, 10));
+  return convertEvent.with(Number.parseInt(start.data, 10));
 });
 workflow.handle([convertEvent], (convert) => {
-  return stopEvent(convert.data > 0 ? 1 : -1);
+  return stopEvent.with(convert.data > 0 ? 1 : -1);
 });
 ```
 
-### Run workflow in multiple JS runtime/framework
-
-#### Node.js/Bun/Deno
+### Trigger workflow
 
 ```ts
-// One shot execution
-import { promiseHandler } from "fluere/interrupter/promise";
+import { pipeline } from "node:stream/promises";
 
-await promiseHandler(() => workflow.run("100"));
+const { stream, sendEvent } = workflow.createContext();
+sendEvent(startEvent.with());
+const result = await pipeline(stream, async function (source) {
+  for await (const event of source) {
+    if (stopEvent.include(event)) {
+      return "stop received!";
+    }
+  }
+});
+console.log(result); // stop received!
 ```
 
-### Hono.js
+### Fan-out (Parallelism)
+
+By default, we provide a simple fan-out utility to run multiple workflows in parallel
+
+- `getContext().sendEvent` will emit a new event to current workflow
+- `getContext().stream` will return a stream of events emitted by the sub-workflow
+
+```ts
+import { until } from "fluere/stream";
+
+let condition = false;
+workflow.handle([startEvent], (start) => {
+  const { sendEvent, stream } = getContext();
+  for (let i = 0; i < 10; i++) {
+    sendEvent(convertEvent.with(i));
+  }
+  // You define the condition to stop the workflow
+  const results = until(stream, () => condition).filter((ev) =>
+    convertStopEvent.includes(ev),
+  );
+  console.log(results.length); // 10
+  return stopEvent.with();
+});
+
+workflow.handle([convertEvent], (convert) => {
+  if (convert.data === 9) {
+    condition = true;
+  }
+  return convertStopEvent.with(/* ... */);
+});
+```
+
+### With RxJS, or any stream API
+
+Workflow is event-driven, you can use any stream API to handle the workflow like `rxjs`
+
+```ts
+import { from, pipe } from "rxjs";
+
+const { stream, sendEvent } = workflow.createContext();
+
+from(stream)
+  .pipe(filter((ev) => eventSource(ev) === messageEvent))
+  .subscribe((ev) => {
+    console.log(ev.data);
+  });
+
+sendEvent(fileParseWorkflow.startEvent(directory));
+```
+
+### Connect with Server endpoint
+
+Workflow can be used as middleware in any server framework, like `express`, `hono`, `fastify`, etc.
 
 ```ts
 import { Hono } from "hono";
+import { serve } from "@hono/node-server";
 import { createHonoHandler } from "fluere/interrupter/hono";
+import {
+  agentWorkflow,
+  startEvent,
+  stopEvent,
+} from "../workflows/tool-call-agent.js";
 
 const app = new Hono();
 
 app.post(
   "/workflow",
-  createHonoHandler(async (ctx) => workflow.run(await ctx.req.text())),
+  createHonoHandler(
+    agentWorkflow,
+    async (ctx) => startEvent(await ctx.req.text()),
+    stopEvent,
+  ),
 );
+
+serve(app, ({ port }) => {
+  console.log(`Server started at http://localhost:${port}`);
+});
 ```
 
-## Todo list
+### Error Handling
 
-- [x] minimal API
-  - basic logic: `if`, `else if`, `loop` case
-- [x] context API
-  - [x] `sendEvent`, `requireEvent`
-  - [ ] detect cycle dependency
-  - [ ] `@fluere/ui` for visualizing workflow
-  - ...
-- [x] concept API
-  - [x] `interrupter/*` for interrupting the workflow
-    - [ ] promise
-    - [ ] timeout
-    - [ ] `next.js`
-    - [ ] `hono.js`
-    - ...
-  - [ ] `middleware/*` for processing the workflow
-    - [x] log
-    - [x] `zod` schema validation
-    - ...
-- [x] third party integration
-  - [x] hono.js
-  - [x] cloudflare worker
-    - [ ] `createWorkerHandler` for handling the workflow
-    - [ ] bundler plugin for [remote-procedure call](https://developers.cloudflare.com/workers/runtime-apis/rpc/)
-    - ...
-  - ...
+You can use `signal` in `getContext` to handle error
 
-## Why not...
+```ts
+workflow.handle([convertEvent], () => {
+  const { signal } = getContext();
 
-### Event Emitter
+  signal.onabort = () => {
+    console.error("error in convert event:", abort.reason);
+  };
+});
+```
 
-Node.js Event Emitter is a great tool for handling events, however:
+### Pitfall in **browser**
 
-1. It's hard to maintain the event flow;
-   for the typesafety, it's hard to maintain the string name of the event.
-   Also, it's hard to control the event flow, like prohibit event `a` calling event `b`.
-   In `fluere`, event is checked by object reference, and the event flow is checked by the internal graph algorithm.
-2. It's hard to handle the async event, you have to handle the async event by yourself.
+You must call `getContext()` in the top level of the workflow, otherwise we will lose the async context of the workflow.
 
-   ```ts
-   import { EventEmitter } from "node:events";
+```ts
+workflow.handle([startEvent], async () => {
+  const { stream } = getContext(); // ✅ this is ok
+  await fetchData();
+});
 
-   const ee = new EventEmitter();
-   ee.on("start", (start) => {
-     ee.emit("convert:stop"); // <-- how to get the data from `convert:stop` event with correct one?
-   });
-   ee.once("convert", async (data) => {
-     const result = fetch("...").then((res) => res.json()); // <-- async fetch
-     ee.emit("convert:stop", result);
-   });
-   ee.on("stop", (stop) => {});
-   ```
+workflow.handle([startEvent], async () => {
+  await fetchData();
+  const { stream } = getContext(); // ❌ this is not ok
+  // we have no way to know this code was originally part of the workflow
+  // w/o AsyncContext
+});
+```
 
-### RxJS
+Due to missing API of `async_hooks` in browser, we are looking
+for [Async Context](https://github.com/tc39/proposal-async-context) to solve this problem in the future.
 
-It's too heavy, few people can understand the concept of RxJS, and maintaining the RxJS code is hard.
+## Middleware
+
+### `withStore`
+
+```ts
+import { withStore } from "fluere/middleware/store";
+const workflow = withStore(
+  () => ({
+    pendingTasks: new Set<Promise<unknown>>(),
+  }),
+  createWorkflow(),
+);
+
+workflow.handle([startEvent], () => {
+  workflow.getStore().pendingTasks.add(
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, 100);
+    }),
+  );
+});
+
+const { getStore } = workflow.createContext();
+```
+
+### `withValidation`
+
+make first parameter of `handler` to be `sendEvent` and its type safe and runtime safe
+when you create a workflow using `withValidation`.
+
+```ts
+// before:
+workflow.handle([startEvent], (start) => {});
+// after:
+workflow.handle([startEvent], (sendEvent, start) => {});
+```
+
+```ts
+import { withValidation } from "fluere/middleware/validation";
+
+const startEvent = workflowEvent<void, "start">();
+const disallowedEvent = workflowEvent<void, "disallowed">({
+  debugLabel: "disallowed",
+});
+const parseEvent = workflowEvent<string, "parse">();
+const stopEvent = workflowEvent<number, "stop">();
+const workflow = withValidation(createWorkflow(), [
+  [[startEvent], [stopEvent]],
+  [[startEvent], [parseEvent]],
+]);
+
+workflow.handle([startEvent], (sendEvent, start) => {
+  sendEvent(
+    disallowedEvent.with(), // <-- ❌ Type Check Failed, Runtime Error
+  );
+  sendEvent(parseEvent.with("")); // <-- ✅
+  sendEvent(stopEvent.with(1)); // <-- ✅
+});
+```
 
 # LICENSE
 

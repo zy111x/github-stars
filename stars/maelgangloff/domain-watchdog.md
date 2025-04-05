@@ -1,6 +1,6 @@
 ---
 project: domain-watchdog
-stars: 230
+stars: 231
 description: |-
     An app that uses RDAP to collect publicly available info about domains, track their history, and purchase them
 url: https://github.com/maelgangloff/domain-watchdog
@@ -57,13 +57,14 @@ gives his consent to define the legal framework in which the use of his account 
 
 The table below lists the supported API connector providers:
 
-| Provider  | Documentation                                                 | Supported |
-|:---------:|---------------------------------------------------------------|:---------:|
-|    OVH    | https://api.ovh.com                                           |  **Yes**  |
-|   GANDI   | https://api.gandi.net/docs/domains/                           |  **Yes**  |
-| NAMECHEAP | https://www.namecheap.com/support/api/methods/domains/create/ |  **Yes**  |
-|  AUTODNS  | https://cloud.autodns.com/                                    |  **Yes**  |
-| NAME.COM  | https://www.name.com/en-en/api-docs/                          |  **Yes**  |
+|                                  Provider                                  |    Supported     |
+|:--------------------------------------------------------------------------:|:----------------:|
+|                         [OVH](https://api.ovh.com)                         |     **Yes**      |
+|                [GANDI](https://api.gandi.net/docs/domains/)                |     **Yes**      |
+| [NAMECHEAP](https://www.namecheap.com/support/api/methods/domains/create/) |     **Yes**      |
+|                   [AUTODNS](https://cloud.autodns.com/)                    |     **Yes**      |
+|              [NAME.COM](https://www.name.com/en-en/api-docs/)              |     **Yes**      |
+|                             Custom EPP Server                              | **EXPERIMENTAL** |
 
 If a domain has expired and a connector is linked to the Watchlist, then Domain Watchdog will try to order it via the
 connector provider's API.

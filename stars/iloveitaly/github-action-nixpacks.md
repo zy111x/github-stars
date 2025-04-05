@@ -1,6 +1,6 @@
 ---
 project: github-action-nixpacks
-stars: 28
+stars: 29
 description: |-
     Build and push images with nixpacks
 url: https://github.com/iloveitaly/github-action-nixpacks
@@ -22,7 +22,7 @@ It's very opinionated out the box (as software should be!) but allows you to cus
 ## Inputs
 
 - `context`: The build's context, specifying the set of files located at the provided PATH or URL. It is required to point to your application source code.
-- `tags`: A comma-separated list of tags to apply to the built image. This field is required.
+- `tags`: A comma-separated list of tags to apply to the built image. Defaults to unix timestamp, git SHA, and `latest`.
 - `labels`: An optional, comma-separated list of metadata labels to add to the image.
 - `platforms`: An optional, comma-separated list of target platforms for the build.
 - `pkgs`: Optional additional Nix packages to install in the environment.
@@ -112,3 +112,4 @@ Some things to keep in mind:
 * `push` is required when building for multiple architectures.
 * For each platform, an auto-generated tag is generated and pushed.
 * There are some [TODOs](/TODO) that I won't get to until I need them.
+

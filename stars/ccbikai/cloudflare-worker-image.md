@@ -1,6 +1,6 @@
 ---
 project: cloudflare-worker-image
-stars: 217
+stars: 218
 description: |-
     使用 Cloudflare Worker 处理图片, 依赖 Photon，支持缩放、剪裁、水印、滤镜等功能。
 url: https://github.com/ccbikai/cloudflare-worker-image

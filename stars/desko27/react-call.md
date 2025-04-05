@@ -1,6 +1,6 @@
 ---
 project: react-call
-stars: 800
+stars: 802
 description: |-
     ⚛️ 📡 Call your React components
 url: https://github.com/desko27/react-call
@@ -8,8 +8,9 @@ url: https://github.com/desko27/react-call
 
 <div align="center">
   <h2>
-    ⚛️ 📡 react-call
-    <sup><a href="https://react-call.desko.dev">demo</a></sup>
+    ⚛️ 📡 <a href="https://react-call.desko.dev">react-call</a>
+    <!--<a href="https://www.npmjs.com/package/react-call"><img src="https://img.shields.io/npm/dw/react-call" alt="NPM Downloads"></a>-->
+    <a href="https://www.npmjs.com/package/react-call"><img src="https://img.shields.io/npm/dw/react-call?style=flat&label=npm&color=blue" alt="NPM Downloads"></a>
   </h2>
   ✓ Lightweight ✓ No deps ✓ SSR ✓ React Native
 </div>

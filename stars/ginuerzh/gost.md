@@ -1,6 +1,6 @@
 ---
 project: gost
-stars: 16572
+stars: 16601
 description: |-
     GO Simple Tunnel - a simple tunnel written in golang
 url: https://github.com/ginuerzh/gost
