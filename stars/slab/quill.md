@@ -1,6 +1,6 @@
 ---
 project: quill
-stars: 45074
+stars: 45075
 description: |-
     Quill is a modern WYSIWYG editor built for compatibility and extensibility
 url: https://github.com/slab/quill
