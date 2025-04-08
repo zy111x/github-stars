@@ -1,19 +1,45 @@
 {
-  "name": "github-stars",
-  "version": "1.0.0",
-  "description": "",
+  "name": "mcp-github-stars",
   "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "dev": "node --env-file .env index.js",
-    "build": "node index.js"
-  },
-  "keywords": [],
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.8.0",
+  "description": "",
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "fs-extra": "^11.2.0",
-    "ofetch": "^1.4.1"
+  "keywords": [],
+  "main": "index.js",
+  "files": [],
+  "scripts": {
+    "dev:stars": "node --env-file .env scripts/index.js",
+    "build:stars": "node scripts/index.js",
+    "dev:mcp": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "postinstall": "simple-git-hooks"
   },
-  "packageManager": "pnpm@9.15.3"
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "agents": "^0.0.54",
+    "fs-extra": "^11.3.0",
+    "ofetch": "^1.4.1",
+    "zod": "^3.24.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.11.0",
+    "eslint": "^9.23.0",
+    "eslint-plugin-format": "^1.0.1",
+    "lint-staged": "^15.5.0",
+    "simple-git-hooks": "^2.12.1",
+    "wrangler": "^4.8.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
 }
