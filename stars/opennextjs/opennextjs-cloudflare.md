@@ -1,6 +1,6 @@
 ---
 project: opennextjs-cloudflare
-stars: 785
+stars: 786
 description: |-
     Open Next.js adapter for Cloudflare
 url: https://github.com/opennextjs/opennextjs-cloudflare

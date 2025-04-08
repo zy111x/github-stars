@@ -1,6 +1,6 @@
 ---
 project: minio
-stars: 51383
+stars: 51386
 description: |-
     MinIO is a high-performance, S3 compatible object store, open sourced under GNU AGPLv3 license.
 url: https://github.com/minio/minio
