@@ -1,6 +1,6 @@
 ---
 project: fluere
-stars: 83
+stars: 86
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/fluere
@@ -66,6 +66,10 @@ const result = await pipeline(stream, async function (source) {
   }
 });
 console.log(result); // stop received!
+// or
+import { until } from "fluere/stream/until";
+import { collect } from "fluere/stream/consumer";
+const allEvents = await collect(until(stream, stopEvent));
 ```
 
 ### Fan-out (Parallelism)
@@ -76,7 +80,8 @@ By default, we provide a simple fan-out utility to run multiple workflows in par
 - `getContext().stream` will return a stream of events emitted by the sub-workflow
 
 ```ts
-import { until } from "fluere/stream";
+import { until } from "fluere/stream/until";
+import { collect } from "fluere/stream/consumer";
 
 let condition = false;
 workflow.handle([startEvent], (start) => {
@@ -85,8 +90,10 @@ workflow.handle([startEvent], (start) => {
     sendEvent(convertEvent.with(i));
   }
   // You define the condition to stop the workflow
-  const results = until(stream, () => condition).filter((ev) =>
-    convertStopEvent.includes(ev),
+  const results = collect(
+    until(stream, () => condition).filter((ev) =>
+      convertStopEvent.includes(ev),
+    ),
   );
   console.log(results.length); // 10
   return stopEvent.with();
@@ -187,8 +194,12 @@ for [Async Context](https://github.com/tc39/proposal-async-context) to solve thi
 
 ### `withStore`
 
+Adding a `getStore()` method to the workflow context, which returns a store object, each store is linked to the workflow
+context.
+
 ```ts
 import { withStore } from "fluere/middleware/store";
+
 const workflow = withStore(
   () => ({
     pendingTasks: new Set<Promise<unknown>>(),
@@ -211,7 +222,7 @@ const { getStore } = workflow.createContext();
 
 ### `withValidation`
 
-make first parameter of `handler` to be `sendEvent` and its type safe and runtime safe
+Make first parameter of `handler` to be `sendEvent` and its type safe and runtime safe
 when you create a workflow using `withValidation`.
 
 ```ts
@@ -243,6 +254,125 @@ workflow.handle([startEvent], (sendEvent, start) => {
   sendEvent(stopEvent.with(1)); // <-- ✅
 });
 ```
+
+### `withTraceEvents`
+
+Adds tracing capabilities to your workflow, allowing you to monitor/decorate handler and debug event flows easily.
+
+When enabled,
+it collects events based on the directed graph of the runtime and provide lifecycle hooks for each handler.
+
+```ts
+import { withTraceEvents, runOnce } from "fluere/middleware/trace-events";
+
+const workflow = withTraceEvents(createWorkflow());
+
+workflow.handle(
+  [messageEvent],
+  runOnce(() => {
+    console.log("This message handler will only run once");
+  }),
+);
+
+workflow.handle([startEvent], () => {
+  getContext().sendEvent(messageEvent.with());
+  getContext().sendEvent(messageEvent.with());
+});
+
+{
+  const { sendEvent } = workflow.createContext();
+  sendEvent(startEvent.with());
+  sendEvent(messageEvent.with());
+  // This message handler will only run once!
+}
+{
+  const { sendEvent } = workflow.createContext();
+  // For each new context, the decorator is isolated.
+  sendEvent(startEvent.with());
+  sendEvent(messageEvent.with());
+  // This message handler will only run once!
+}
+```
+
+#### `createHandlerDecorator`
+
+You can create your own handler decorator to modify the behavior of the handler.
+
+```ts
+import { createHandlerDecorator } from "fluere/middleware/trace-events";
+
+const noop: (...args: any[]) => void = function noop() {};
+export const runOnce = createHandlerDecorator({
+  debugLabel: "onceHook",
+  getInitialValue: () => false,
+  onBeforeHandler: (handler, handlerContext, tracked) =>
+    tracked ? noop : handler,
+  onAfterHandler: () => true,
+});
+```
+
+#### `HandlerContext`
+
+The `HandlerContext` includes the runtime information of the handler in the directed graph of the workflow.
+
+```ts
+type BaseHandlerContext = {
+  // ... some other properties are hidden
+  handler: Handler<WorkflowEvent<any>[], any>;
+  inputEvents: WorkflowEvent<any>[];
+  // events data that are accepted by the handler
+  inputs: WorkflowEventData<any>[];
+  // events data that are emitted by the handler
+  outputs: WorkflowEventData<any>[];
+
+  //#region linked list data structure
+  prev: HandlerContext;
+  next: Set<HandlerContext>;
+  root: HandlerContext;
+  //#endregion
+};
+
+type SyncHandlerContext = BaseHandlerContext & {
+  async: false;
+  pending: null;
+};
+
+type AsyncHandlerContext = BaseHandlerContext & {
+  async: true;
+  pending: Promise<WorkflowEventData<any> | void> | null;
+};
+
+type HandlerContext = AsyncHandlerContext | SyncHandlerContext;
+```
+
+For example, when you send two `startEvent` events, and send `messageEvent` twice (once in the handler and once in the global),
+the `HandlerContext` from root to leaf is:
+
+```ts
+let once = false;
+workflow.handle([startEvent], () => {
+  const { sendEvent } = getContext();
+  if (once) {
+    return;
+  }
+  once = true;
+  sendEvent(messageEvent.with());
+});
+const { sendEvent } = workflow.createContext();
+sendEvent(startEvent.with());
+sendEvent(startEvent.with());
+sendEvent(messageEvent.with());
+```
+
+```
+rootHandlerContext(0)
+  ├── startEventContext(0)
+  │   └── messageEventContext(0)
+  ├── startEventContext(1)
+  └── messageEventContext(1)
+```
+
+You can use any directed graph library to visualize the directed graph of the workflow.
 
 # LICENSE
 

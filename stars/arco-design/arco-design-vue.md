@@ -1,6 +1,6 @@
 ---
 project: arco-design-vue
-stars: 2880
+stars: 2882
 description: |-
     A Vue.js 3 UI Library based on Arco Design
 url: https://github.com/arco-design/arco-design-vue

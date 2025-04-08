@@ -1,6 +1,6 @@
 ---
 project: porffor
-stars: 3366
+stars: 3377
 description: |-
     A from-scratch experimental AOT JS engine, written in JS
 url: https://github.com/CanadaHonk/porffor
@@ -69,7 +69,7 @@ Expect nothing to work! Only very limited JS is currently supported. See files i
 - `--parser=acorn|@babel/parser|meriyah|hermes-parser` (default: `acorn`) to set which parser to use
 - `--parse-types` to enable parsing type annotations/typescript. if `-parser` is unset, changes default to `@babel/parser`. does not type check
 - `--opt-types` to perform optimizations using type annotations as compiler hints. does not type check
-- `--valtype=i32|i64|f64` (default: `f64`) to set valtype
+- `--valtype=i32|f64` (default: `f64`) to set valtype
 - `-O0` to disable opt
 - `-O1` (default) to enable basic opt (simplify insts, treeshake wasm imports)
 - `-O2` to enable advanced opt (partial evaluation). unstable!

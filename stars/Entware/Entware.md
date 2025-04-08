@@ -1,6 +1,6 @@
 ---
 project: Entware
-stars: 2391
+stars: 2393
 description: |-
     Ultimate repo for embedded devices
 url: https://github.com/Entware/Entware

@@ -1,6 +1,6 @@
 ---
 project: credenza
-stars: 744
+stars: 745
 description: |-
     Ready-made responsive modal component for shadcn/ui.
 url: https://github.com/redpangilinan/credenza

@@ -1,6 +1,6 @@
 ---
 project: astro
-stars: 50252
+stars: 50309
 description: |-
     The web framework for content-driven websites. ⭐️ Star to support our work!
 url: https://github.com/withastro/astro

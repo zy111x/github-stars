@@ -1,6 +1,6 @@
 ---
 project: extension.js
-stars: 4167
+stars: 4173
 description: |-
     🧩 The cross-browser extension framework.
 url: https://github.com/extension-js/extension.js

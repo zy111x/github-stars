@@ -1,6 +1,6 @@
 ---
 project: dub
-stars: 21059
+stars: 21090
 description: |-
     Open-source link attribution platform. Loved by modern marketing teams like Twilio, Perplexity, Vercel, and Huberman Labs.
 url: https://github.com/dubinc/dub

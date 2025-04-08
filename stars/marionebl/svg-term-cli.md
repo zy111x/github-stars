@@ -1,6 +1,6 @@
 ---
 project: svg-term-cli
-stars: 3609
+stars: 3611
 description: |-
     Share terminal sessions via SVG and CSS
 url: https://github.com/marionebl/svg-term-cli

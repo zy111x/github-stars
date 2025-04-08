@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 13489
+stars: 13590
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -34,11 +34,13 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 |------|-------------|------|------|
 | 21st.dev | Open source npm for shadcn/ui components. Also: Dribble for design engineers. Install UI components via shadcn CLI, or publish your own. | [Link](https://21st.dev/) | 2024-12-06 |
 | aceternity-ui | Copy paste the most trending react components without having to worry about styling and animations. | [Link](https://ui.aceternity.com/) | 2024-12-06 |
+| animated-tabs | Vercel-like animated tabs. | [Link](https://github.com/mehrdadrafiee/animated-tabs) | 2025-04-06 |
 | assistant-ui | React Components for AI Chat. | [Link](https://github.com/Yonom/assistant-ui) | 2024-09-23 |
 | autocomplete-select-shadcn-ui | Autocomplete component built with shadcn/ui and Fancy Multi Select by Maximilian Kaske. | [Link](https://www.armand-salle.fr/post/autocomplete-select-shadcn-ui) | 2024-04-07 |
 | auto-form | A React component that automatically creates a shadcn/ui form based on a zod schema. | [Link](https://github.com/vantezzen/auto-form) | 2024-04-29 | 2024-04-29 |
 | async-select | Async Select component built with shadcn/ui with debounce search. | [Link](https://async.rdsx.dev) | 2024-07-22 | 2024-07-22 |
 | big-calendar | A modern, feature-rich calendar application with multiple viewing options built using Next.js, TypeScript, and Tailwind CSS. | [Link](https://github.com/lramos33/big-calendar) | 2025-03-08 |
+| buouui | A UI component library and template suite based on shadcn/ui with stunning landing pages, templates, and rich animations. | [Link](https://buouui.com) | 2025-04-06 |
 | bundui | A collection of reusable animated components built with Tailwind CSS and Framer Motion. | [Link](https://bundui.io) | 2024-09-23 |
 | calendar | React/shadcn full calendar like Google Calendar | [Link](https://github.com/charlietlamb/calendar) | 2024-05-03 |
 | capture-photo | Browser-based React component for camera functionalities in web applications. | [Link](https://github.com/UretzkyZvi/capture-photo) | 2024-05-06 |
@@ -154,7 +156,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-phone-input | Phone input with country validation. | [Link](https://github.com/omeralpi/shadcn-phone-input) | 2024-03-27 |
 | shadcn-pricing-page | Responsive pricing component with toggles. | [Link](https://github.com/aymanch-03/shadcn-pricing-page) | 2024-03-08 |
 | shadcn-spinner | Spinner component. | [Link](https://github.com/allipiopereira/shadcn-spinner) | 2024-12-09 |
-| shadcn-stepper | Complete stepper component. | [Link](https://github.com/damianricobelli/shadcn-stepper) | 2024-04-25 |
+| shadcn-stepper | Complete stepper component. | [Link](https://github.com/damianricobelli/stepperize) | 2024-04-25 |
 | shadcn-table-maker | Tool for creating dynamic tables. | [Link](https://shadcn-table-maker.vercel.app/) | 2024-12-09 |
 | shadcn-table-v2 | Table with server-side features. | [Link](https://github.com/sadmann7/shadcn-table) | 2024-03-27 |
 | shadcn-timeline | Customizable timeline component. | [Link](https://github.com/timDeHof/shadcn-timeline) | 2024-06-22 |

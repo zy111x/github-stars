@@ -1,12 +1,14 @@
 ---
 project: SQLNoir
-stars: 1164
+stars: 1213
 description: |-
     Solve mysteries through SQL.
 url: https://github.com/hristo2612/SQLNoir
 ---
 
 # SQL Noir 🔍
+
+[➡️ Play the game online at sqlnoir.com](https://sqlnoir.com)
 
 Step into the shoes of a real detective and solve crimes using SQL! SQL Noir is an interactive mystery-solving game where you crack cases by writing SQL queries.
 

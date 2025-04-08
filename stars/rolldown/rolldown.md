@@ -1,6 +1,6 @@
 ---
 project: rolldown
-stars: 10644
+stars: 10665
 description: |-
     Fast Rust bundler for JavaScript/TypeScript with Rollup-compatible API.
 url: https://github.com/rolldown/rolldown
@@ -95,7 +95,6 @@ Licenses of these projects are listed in [THIRD-PARTY-LICENSE](/THIRD-PARTY-LICE
 [url-code-coverage]: https://codecov.io/gh/rolldown/rolldown
 [badge-npm-version]: https://img.shields.io/npm/v/rolldown/latest?color=brightgreen
 [url-npm]: https://www.npmjs.com/package/rolldown/v/latest
-
 [badge-binary-size-windows]: [https://img.shields.io/npm/unpacked-size/%40rolldown%2Fbinding-win32-x64-msvc/latest]
 [badge-binary-size-macos]: [https://img.shields.io/npm/unpacked-size/%40rolldown%2Fbinding-darwin-arm64/latest]
 

@@ -1,6 +1,6 @@
 ---
 project: virtual
-stars: 5956
+stars: 5968
 description: |-
     🤖 Headless UI for Virtualizing Large Element Lists in JS/TS, React, Solid, Vue and Svelte
 url: https://github.com/TanStack/virtual

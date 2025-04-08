@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 28239
+stars: 28256
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
@@ -304,7 +304,10 @@ To install the binary package:
 
 .. code-block:: console
 
-    # pkg install py39-glances
+    # pkg install pyXY-glances
+
+Where X and Y are the major and minor value of your Python system.
+Example for Python 3.11.3 use py311-glances.
 
 To install Glances from ports:
 

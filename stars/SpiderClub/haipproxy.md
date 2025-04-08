@@ -1,6 +1,6 @@
 ---
 project: haipproxy
-stars: 5472
+stars: 5471
 description: |-
     :sparkling_heart: High available distributed ip proxy pool, powerd by Scrapy and Redis
 url: https://github.com/SpiderClub/haipproxy

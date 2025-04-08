@@ -1,6 +1,6 @@
 ---
 project: bingo
-stars: 2921
+stars: 2920
 description: |-
     Bingo，一个让你呼吸顺畅 New Bing。
 url: https://github.com/weaigc/bingo

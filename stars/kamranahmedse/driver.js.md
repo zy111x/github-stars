@@ -1,6 +1,6 @@
 ---
 project: driver.js
-stars: 23959
+stars: 23962
 description: |-
     A light-weight, no-dependency, vanilla JavaScript engine to drive user's focus across the page
 url: https://github.com/kamranahmedse/driver.js

@@ -1,6 +1,6 @@
 ---
 project: text-behind-image
-stars: 1761
+stars: 1766
 description: |-
     https://textbehindimage.rexanwong.xyz - create text behind image designs easily
 url: https://github.com/RexanWONG/text-behind-image

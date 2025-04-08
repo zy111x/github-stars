@@ -1,6 +1,6 @@
 ---
 project: curl-impersonate
-stars: 1763
+stars: 1795
 description: |-
     An active fork of curl-impersonate with more versions and build targets. A series of patches that make curl requests look like Chrome and Firefox.
 url: https://github.com/lexiforest/curl-impersonate
@@ -159,7 +159,7 @@ Other files of interest:
 
 If you'd like to help, please check out the [open issues in the origional repo](https://github.com/lwthiker/curl-impersonate/issues) and [open issues here](https://github.com/lexiforest/curl-impersonate/issues). You can open a pull request with your changes. Note that some of the upstream issues have been fixed.
 
-This repository contains the build process for `curl-impersonate`. The actual patches to `curl` are maintained in a [separate repository](https://github.com/lexiforest/curl) forked from lwthiker's fork of the upstream curl. The changes are maintained in the [impersonate-firefox](https://github.com/lexiforest/curl/tree/impersonate-firefox) and [impersonate-chrome](https://github.com/lexiforest/curl/tree/impersonate-chrome) branches.
+This repository contains the build process for `curl-impersonate`. The actual patches to `curl` are maintained in a [separate repository](https://github.com/lexiforest/curl) forked from lwthiker's fork of the upstream curl. The changes are maintained in the [impersonate-chrome](https://github.com/lexiforest/curl/tree/impersonate-chrome) branch.
 
 You may also need the [forked and patched](https://github.com/lexiforest/boringssl) BoringSSL.
 

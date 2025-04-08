@@ -1,6 +1,6 @@
 ---
 project: Mars
-stars: 9667
+stars: 9669
 description: |-
     腾讯移动 Web 前端知识库
 url: https://github.com/AlloyTeam/Mars
