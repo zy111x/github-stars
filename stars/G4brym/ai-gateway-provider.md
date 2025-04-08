@@ -1,6 +1,6 @@
 ---
 project: ai-gateway-provider
-stars: 28
+stars: 29
 description: |-
     AI Gateway Provider for Vercel AI SDK
 url: https://github.com/G4brym/ai-gateway-provider

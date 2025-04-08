@@ -1,6 +1,6 @@
 ---
 project: core
-stars: 1111
+stars: 1112
 description: |-
     Build full-stack applications with Nuxt on CloudFlare, with zero configuration.
 url: https://github.com/nuxt-hub/core

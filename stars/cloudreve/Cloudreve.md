@@ -1,6 +1,6 @@
 ---
 project: Cloudreve
-stars: 22774
+stars: 22775
 description: |-
     🌩支持多家云存储的云盘系统 (Self-hosted file management and sharing system, supports multiple storage providers)
 url: https://github.com/cloudreve/Cloudreve

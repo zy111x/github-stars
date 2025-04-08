@@ -1,6 +1,6 @@
 ---
 project: You-Dont-Need-JavaScript
-stars: 20084
+stars: 20085
 description: |-
     CSS is powerful, you can do a lot of things without JS.
 url: https://github.com/you-dont-need/You-Dont-Need-JavaScript

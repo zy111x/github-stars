@@ -1,6 +1,6 @@
 ---
 project: hyperui
-stars: 11042
+stars: 11043
 description: |-
     Free Tailwind CSS components for application UI, ecommerce and marketing with support for dark mode, RTL and Alpine JS 🚀
 url: https://github.com/markmead/hyperui

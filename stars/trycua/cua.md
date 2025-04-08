@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 3746
+stars: 3777
 description: |-
     Create and run high-performance macOS and Linux VMs on Apple Silicon, with built-in support for AI agents.
 url: https://github.com/trycua/cua

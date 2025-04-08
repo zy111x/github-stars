@@ -1,6 +1,6 @@
 ---
 project: homeassistant
-stars: 1406
+stars: 1407
 description: |-
     Example Home Assistant Configs
 url: https://github.com/geekofweek/homeassistant

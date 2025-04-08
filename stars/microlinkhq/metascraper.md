@@ -1,6 +1,6 @@
 ---
 project: metascraper
-stars: 2428
+stars: 2427
 description: |-
     Get unified metadata from websites using Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more.
 url: https://github.com/microlinkhq/metascraper
