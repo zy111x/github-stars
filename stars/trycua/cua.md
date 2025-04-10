@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 3778
+stars: 3891
 description: |-
     Create and run high-performance macOS and Linux VMs on Apple Silicon, with built-in support for AI agents.
 url: https://github.com/trycua/cua
@@ -178,9 +178,11 @@ Join our [Discord community](https://discord.com/invite/mVnXXpdE85) to discuss i
 
 Cua is open-sourced under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+Microsoft's OmniParser, which is used in this project, is licensed under the Creative Commons Attribution 4.0 International License (CC-BY-4.0) - see the [OmniParser LICENSE](https://github.com/microsoft/OmniParser/blob/master/LICENSE) file for details.
+
 ## Trademarks
 
-Apple, macOS, and Apple Silicon are trademarks of Apple Inc. Ubuntu and Canonical are registered trademarks of Canonical Ltd. This project is not affiliated with, endorsed by, or sponsored by Apple Inc. or Canonical Ltd.
+Apple, macOS, and Apple Silicon are trademarks of Apple Inc. Ubuntu and Canonical are registered trademarks of Canonical Ltd. Microsoft is a registered trademark of Microsoft Corporation. This project is not affiliated with, endorsed by, or sponsored by Apple Inc., Canonical Ltd., or Microsoft Corporation.
 
 ## Stargazers over time
 

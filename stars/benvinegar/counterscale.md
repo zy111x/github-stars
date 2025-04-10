@@ -1,6 +1,6 @@
 ---
 project: counterscale
-stars: 1678
+stars: 1681
 description: |-
     Scalable web analytics you run yourself on Cloudflare
 url: https://github.com/benvinegar/counterscale
@@ -105,6 +105,22 @@ Counterscale.init({
     reporterUrl: "https://{subdomain-emitted-during-deploy}.workers.dev/collect",
 });
 ```
+
+## Upgrading
+
+For most releases, upgrading is as simple as re-running the CLI installer:
+
+```bash
+npx @counterscale/cli@latest install
+
+# OR
+# npx @counterscale/cli@VERSION install
+```
+
+You won't have to enter a new API key, and your data will carry forrward.
+
+
+Counterscale uses [semantic versioning](https://semver.org/). If upgrading to a major version (e.g. 2.x, 3.x, 4.x), there may be extra steps. Please consult the [release notes](/benvinegar/countersca/releases).
 
 ## Troubleshooting
 

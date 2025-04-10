@@ -1,6 +1,6 @@
 ---
 project: tuya-home-assistant
-stars: 904
+stars: 905
 description: |-
     Home Assistant integration for controlling Powered by Tuya  (PBT) devices using Tuya Open API, maintained by the Home Assistant Community and Tuya Developer Team.
 url: https://github.com/tuya/tuya-home-assistant

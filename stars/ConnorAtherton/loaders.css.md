@@ -1,6 +1,6 @@
 ---
 project: loaders.css
-stars: 10229
+stars: 10230
 description: |-
     Delightful, performance-focused pure css loading animations.
 url: https://github.com/ConnorAtherton/loaders.css

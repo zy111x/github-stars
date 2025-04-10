@@ -1,6 +1,6 @@
 ---
 project: unovis
-stars: 2430
+stars: 2431
 description: |-
     Modular data visualization framework for React, Angular, Svelte, Vue, and vanilla TypeScript or JavaScript
 url: https://github.com/f5/unovis

@@ -1,6 +1,6 @@
 ---
 project: progressbar.js
-stars: 7855
+stars: 7856
 description: |-
     Responsive and slick progress bars 
 url: https://github.com/kimmobrunfeldt/progressbar.js

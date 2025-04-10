@@ -1,6 +1,6 @@
 ---
 project: weui
-stars: 27292
+stars: 27291
 description: |-
     A UI library by WeChat official design team, includes the most useful widgets/modules in mobile web applications.
 url: https://github.com/Tencent/weui

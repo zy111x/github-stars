@@ -1,6 +1,6 @@
 ---
 project: es-toolkit
-stars: 7905
+stars: 7916
 description: |-
     A modern JavaScript utility library that's 2-3 times faster and up to 97% smaller—a major upgrade to lodash.
 url: https://github.com/toss/es-toolkit
