@@ -10,12 +10,12 @@ export class GitHubStarsMCP extends McpAgent {
       'search_github_stars',
       { query: z.string() },
       async ({ query }) => {
-        const answer = await this.env.AI.autorag(this.env.AUTO_RAG_NAME).aiSearch({
+        const answer = await this.env.AI.autorag(this.env.AUTO_RAG_NAME).search({
           query,
         })
 
         return {
-          content: [{ type: 'text', text: answer?.response }],
+          content: [{ type: 'text', text: JSON.stringify(answer.data) }],
         }
       },
     )
