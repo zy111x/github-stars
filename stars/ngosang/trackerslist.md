@@ -1,6 +1,6 @@
 ---
 project: trackerslist
-stars: 49375
+stars: 49376
 description: |-
     Updated list of public BitTorrent trackers
 url: https://github.com/ngosang/trackerslist
