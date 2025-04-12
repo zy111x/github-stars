@@ -1,6 +1,6 @@
 ---
 project: unlazy
-stars: 804
+stars: 805
 description: |-
     🪧 Universal lazy loading library for placeholder images leveraging native browser APIs
 url: https://github.com/johannschopplich/unlazy

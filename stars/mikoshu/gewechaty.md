@@ -1,6 +1,6 @@
 ---
 project: gewechaty
-stars: 274
+stars: 275
 description: |-
     GeweBot是基于Gewechat项目的二次封装，提供了更方便的使用方式。它参考wechaty的api实现，以满足更快速开发的需求。
 url: https://github.com/mikoshu/gewechaty

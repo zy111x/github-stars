@@ -1,6 +1,6 @@
 ---
 project: NoSleep.js
-stars: 2296
+stars: 2297
 description: |-
     Prevent display sleep and enable wake lock in any Android or iOS web browser.
 url: https://github.com/richtr/NoSleep.js

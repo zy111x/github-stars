@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 3959
+stars: 3988
 description: |-
     Create and run high-performance macOS and Linux VMs on Apple Silicon, with built-in support for AI agents.
 url: https://github.com/trycua/cua
@@ -21,17 +21,17 @@ url: https://github.com/trycua/cua
   [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.com/invite/mVnXXpdE85)
 </div>
 
-Cua (pronounced "koo-ah", short for Computer-Use Agent) is an open-source framework that combines high-performance virtualization with AI agent capabilities to enable secure, isolated environments for AI systems to interact with desktop applications.
+**TL;DR**: **c/ua** (pronounced "koo-ah", short for Computer-Use Agent) is a framework that enables AI agents to control full operating systems within high-performance, lightweight virtual containers. It delivers up to 97% native speed on Apple Silicon and works with any language models:
 
-## What is Cua?
+## What is c/ua?
 
 Cua offers two primary capabilities in a single integrated framework:
 
-1. **High-Performance Virtualization** - Create and run macOS/Linux virtual machines on Apple Silicon with near-native performance (up to 90% of native speed) using `Apple's Virtualization.Framework`.
+1. **High-Performance Virtualization** - Create and run macOS/Linux virtual machines on Apple Silicon with near-native performance (up to 97% of native speed) using the **Lume CLI** with `Apple's Virtualization.Framework`.
 
 2. **Computer-Use Interface & Agent** - A framework that allows AI systems to observe and control these virtual environments - interacting with applications, browsing the web, writing code, and performing complex workflows.
 
-## Why Use Cua?
+## Why Use c/ua?
 
 - **Security & Isolation**: Run AI agents in fully isolated virtual environments instead of giving them access to your main system
 - **Performance**: [Near-native performance](https://browser.geekbench.com/v6/cpu/compare/11283746?baseline=11102709) on Apple Silicon
@@ -42,7 +42,7 @@ Cua offers two primary capabilities in a single integrated framework:
 ## System Requirements
 
 - Mac with Apple Silicon (M1/M2/M3/M4 series)
-- macOS 14 (Sonoma) or newer
+- macOS 15 (Sequoia) or newer
 - Python 3.10+ (for Computer and Agent libraries)
 - Disk space for VM images (40GB+ recommended)
 
@@ -52,7 +52,7 @@ Cua offers two primary capabilities in a single integrated framework:
 If you only need the virtualization capabilities:
 
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/lume/scripts/install.sh)"
+sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/lume/scripts/install.sh)"
 ```
 
 For Lume usage instructions, refer to the [Lume documentation](./libs/lume/README.md).
@@ -62,15 +62,25 @@ If you want to use AI agents with virtualized environments:
 
 1. Install the Lume CLI:
    ```bash
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/lume/scripts/install.sh)"
+   sudo /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/lume/scripts/install.sh)"
    ```
 
-2. Install the Python libraries:
+2. Pull the latest macOS CUA image:
+   ```bash
+   lume pull macos-sequoia-cua:latest --no-cache
+   ```
+
+3. Start Lume daemon service:
+   ```bash
+   lume serve
+   ```
+
+4. Install the Python libraries:
    ```bash
    pip install cua-computer cua-agent[all]
    ```
 
-3. Use the libraries in your Python code:
+5. Use the libraries in your Python code:
    ```python
    from cua.computer import Computer
    from cua.agent import ComputerAgent, LLM, AgentLoop, LLMProvider
@@ -93,7 +103,7 @@ If you want to use AI agents with virtualized environments:
    
    Explore the [Agent Notebook](./notebooks/) for a ready-to-run example.
 
-4. Optionally, you can use the Agent with a Gradio UI:
+6. Optionally, you can use the Agent with a Gradio UI:
 
    ```python
    from utils import load_dotenv_files
@@ -105,7 +115,7 @@ If you want to use AI agents with virtualized environments:
    app.launch(share=False)
    ```
 
-5. For Developers only (contribute and use latest features):
+7. For Developers only (contribute and use latest features):
    ```bash
    # Clone the repository
    git clone https://github.com/trycua/cua.git

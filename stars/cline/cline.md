@@ -1,6 +1,6 @@
 ---
 project: cline
-stars: 39651
+stars: 39730
 description: |-
     Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
 url: https://github.com/cline/cline

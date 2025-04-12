@@ -1,6 +1,6 @@
 ---
 project: upptime
-stars: 16023
+stars: 16026
 description: |-
     ⬆️ GitHub Actions uptime monitor & status page by @AnandChowdhary
 url: https://github.com/upptime/upptime
