@@ -1,6 +1,6 @@
 ---
 project: lazysizes
-stars: 17644
+stars: 17647
 description: |-
     High performance and SEO friendly lazy loader for images (responsive and normal), iframes and more, that detects any visibility changes triggered through user interaction, CSS or JavaScript without configuration.
 url: https://github.com/aFarkas/lazysizes

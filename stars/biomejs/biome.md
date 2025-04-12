@@ -1,6 +1,6 @@
 ---
 project: biome
-stars: 18216
+stars: 18268
 description: |-
     A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP.
 url: https://github.com/biomejs/biome
@@ -158,9 +158,6 @@ We use [Polar.sh](https://polar.sh/biomejs) to up-vote and promote specific feat
   <tbody>
     <tr>
       <td align="center" valign="middle">
-        <a href="https://www.kanamekey.com?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://images.opencollective.com/kaname/d15fd98/logo/256.png?height=80" width="80"></a>
-      </td>
-      <td align="center" valign="middle">
         <a href="https://nanabit.dev/?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://images.opencollective.com/nanabit/d15fd98/logo/256.png?height=80" width="80"></a>
       </td>
       <td align="center" valign="middle">
@@ -174,6 +171,9 @@ We use [Polar.sh](https://polar.sh/biomejs) to up-vote and promote specific feat
       </td>
       <td align="center" valign="middle">
         <a href="http://rstudio.org/?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://avatars.githubusercontent.com/u/513560?s=200&v=4" width="80"></a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://pennylane.com/?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://avatars.githubusercontent.com/u/57875210?s=200&v=4" width="80"></a>
       </td>
     </tr>
   </tbody>

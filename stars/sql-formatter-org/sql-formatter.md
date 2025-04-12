@@ -1,12 +1,12 @@
 ---
 project: sql-formatter
-stars: 2510
+stars: 2514
 description: |-
     A whitespace formatter for different query languages
 url: https://github.com/sql-formatter-org/sql-formatter
 ---
 
-<a href='https://github.com/sql-formatter-org/sql-formatter'><img src="static/prettier-sql-clean.svg" width="128"/></a>
+<a href='https://github.com/sql-formatter-org/sql-formatter'><img src="static/sql-formatter-icon.png" width="64"/></a>
 
 # SQL Formatter [![NPM version](https://img.shields.io/npm/v/sql-formatter.svg)](https://npmjs.com/package/sql-formatter) ![Build status](https://img.shields.io/github/actions/workflow/status/sql-formatter-org/sql-formatter/coveralls.yaml) [![Coverage Status](https://coveralls.io/repos/github/sql-formatter-org/sql-formatter/badge.svg?branch=master)](https://coveralls.io/github/sql-formatter-org/sql-formatter?branch=master)
 

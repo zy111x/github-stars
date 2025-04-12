@@ -1,6 +1,6 @@
 ---
 project: roosterjs
-stars: 1234
+stars: 1236
 description: |-
     roosterjs is a framework-independent javascript rich text editor.
 url: https://github.com/microsoft/roosterjs
@@ -58,6 +58,9 @@ There are also some extension packages to provide additional functionalities.
 
 1. [roosterjs-color-utils](https://microsoft.github.io/roosterjs/docs/modules/roosterjs_color_utils.html):
    Provide color transformation utility to make editor work under dark mode.
+
+2. [roosterjs-content-model-markdown](https://microsoft.github.io/roosterjs/docs/modules/roosterjs_content_model_types.html):
+   Defines public APIs to enable conversions between Markdown and ContentModel
 
 To be compatible with old (8.\*) versions, you can use `EditorAdapter` class from the following package which can act as a 8.\* Editor:
 

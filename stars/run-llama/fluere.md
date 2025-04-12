@@ -1,6 +1,6 @@
 ---
 project: fluere
-stars: 87
+stars: 88
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/fluere

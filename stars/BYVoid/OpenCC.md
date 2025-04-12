@@ -1,6 +1,6 @@
 ---
 project: OpenCC
-stars: 8842
+stars: 8843
 description: |-
     Conversion between Traditional and Simplified Chinese
 url: https://github.com/BYVoid/OpenCC

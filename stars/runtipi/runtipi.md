@@ -1,6 +1,6 @@
 ---
 project: runtipi
-stars: 8359
+stars: 8368
 description: |-
     Runtipi is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps. ✨
 url: https://github.com/runtipi/runtipi

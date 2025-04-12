@@ -1,6 +1,6 @@
 ---
 project: php-wasm
-stars: 1045
+stars: 1052
 description: |-
     PHP in Browser, powered by WebAssembly.
 url: https://github.com/seanmorris/php-wasm
@@ -19,7 +19,8 @@ _PHP in WebAssembly, npm not required._
 
 ## 🌟 v0.0.9-alpha - Aiming for the (GitHub) Stars
 
-* Adding PHP-CGI support!
+* Adding PHP-CGI & PH-DBG support!
+* Faster build time!
 * Runtime extension loading!
 * libicu, freetype, zlib, gd, libpng, libjpeg, openssl, & phar support.
 * php-wasm, php-cgi-wasm, & php-wasm-builder are now separate packages.
@@ -32,7 +33,7 @@ _PHP in WebAssembly, npm not required._
 * Modules are now webpack-compatible out of the box.
 * Exposing FS methods w/queueing & locking to sync files between tabs & workers.
 * Fixed the bug with POST requests under Firefox.
-* Adding support for PHP 8.3.7 & 8.4.1.
+* Adding support for PHP 8.3.11 & 8.4.1.
 * Automatic CI testing for PHP 8.0, 8.1, 8.2, 8.3, & 8.4.
 
 [changelog](https://raw.githubusercontent.com/seanmorris/php-wasm/master/CHANGELOG.md)
@@ -1142,7 +1143,7 @@ The repository [pib-legacy](https://github.com/seanmorris/pib-legacy) was create
 
 https://github.com/oraoto/pib
 
-The repository `pib-legacy` was created to preserve the original state of the project: https://github.com/seanmorris/pib-legacy
+https://github.com/seanmorris/pib-legacy
 
 ## 🍻 Licensed under the Apache License, Version 2.0
 

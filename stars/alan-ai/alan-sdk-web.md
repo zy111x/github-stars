@@ -1,6 +1,6 @@
 ---
 project: alan-sdk-web
-stars: 2408
+stars: 2406
 description: |-
     Generative AI SDK for Web to create AI Agents for apps built with JavaScript, React, Angular, Vue, Ember, Electron
 url: https://github.com/alan-ai/alan-sdk-web

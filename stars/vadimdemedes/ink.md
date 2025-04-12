@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 27956
+stars: 27965
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -127,6 +127,7 @@ Feel free to play around with the code and fork this repl at [https://repl.it/@v
 - [Walle](https://github.com/Pobepto/walle) - Full-featured crypto wallet for EVM networks.
 - [Sudoku](https://github.com/mrozio13pl/sudoku-in-terminal) - Sudoku game.
 - [Sea Trader](https://github.com/zyishai/sea-trader) - Taipan! inspired trading simulator game.
+- [srtd](https://github.com/t1mmen/srtd) - Live-reloading SQL templates for Supabase projects.
 
 ## Contents
 
