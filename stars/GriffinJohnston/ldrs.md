@@ -1,6 +1,6 @@
 ---
 project: ldrs
-stars: 1993
+stars: 1994
 description: |-
     Modern, tree-shakeable loaders & spinners. Made with CSS, HTML and SVG. https://uiball.com/ldrs
 url: https://github.com/GriffinJohnston/ldrs

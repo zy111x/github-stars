@@ -1,6 +1,6 @@
 ---
 project: morphic
-stars: 7284
+stars: 7297
 description: |-
     An AI-powered search engine with a generative UI
 url: https://github.com/miurla/morphic
@@ -222,12 +222,17 @@ This will allow you to use Morphic as your default search engine in the browser.
   - deepseek-r1
 - Groq
   - deepseek-r1-distill-llama-70b
+  - Llama 4 Maverick 17B
+- Fireworks
+  - DeepSeek R1
+  - Llama 4 Maverick
 - DeepSeek
   - DeepSeek V3
   - DeepSeek R1
 - xAI
   - grok-2
   - grok-2-vision
+  - grok-3-beta
 
 ## ⚡ AI SDK Implementation
 

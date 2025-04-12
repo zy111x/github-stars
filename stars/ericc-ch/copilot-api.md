@@ -1,6 +1,6 @@
 ---
 project: copilot-api
-stars: 88
+stars: 89
 description: |-
     GitHub Copilot API wrapper to make it OpenAI compatible
 url: https://github.com/ericc-ch/copilot-api

@@ -1,6 +1,6 @@
 ---
 project: chat-ui
-stars: 8544
+stars: 8552
 description: |-
     Open source codebase powering the HuggingChat app
 url: https://github.com/huggingface/chat-ui
@@ -997,6 +997,14 @@ In some cases, the final answer can be extracted from the model output using a r
 		"regex": "\\\\boxed\\{(.+?)\\}"
 	}
 }
+```
+
+#### Enabling/Disabling Reasoning Summary
+
+You can toggle the summaries that are displayed alongside the CoT by changing the `REASONING_SUMMARY` env variable.
+
+```env
+REASONING_SUMMARY=false
 ```
 
 ## Common issues
