@@ -1,6 +1,6 @@
 ---
 project: RevokeMsgPatcher
-stars: 32133
+stars: 32245
 description: :trollface: A hex editor for WeChat/QQ/TIM - PC版微信/QQ/TIM防撤回补丁（我已经看到了，撤回也没用了）
 url: https://github.com/huiyadanli/RevokeMsgPatcher
 ---
@@ -48,6 +48,8 @@ QQNT 防撤回依赖于 LiteLoaderQQNT，修补依赖于 DLLHijackMethod 并集�
 
 -   插件列表查看 LL-plugin-list-viewer
 -   防撤回 LiteLoaderQQNT-Anti-Recall
+
+微信4.0版本后的防撤回特征来自于 BetterWX
 
 ❤️投喂
 ----
