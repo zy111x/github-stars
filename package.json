@@ -5,7 +5,7 @@
   "packageManager": "pnpm@10.8.0",
   "description": "",
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [],
   "main": "index.js",
   "files": [],
