@@ -1,6 +1,6 @@
 ---
 project: nocodb
-stars: 53699
+stars: 53712
 description: |-
     🔥 🔥 🔥 Open Source Airtable Alternative
 url: https://github.com/nocodb/nocodb

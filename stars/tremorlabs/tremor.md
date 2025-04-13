@@ -1,6 +1,6 @@
 ---
 project: tremor
-stars: 2234
+stars: 2235
 description: |-
     Copy & Paste React components to build modern web applications. 
 url: https://github.com/tremorlabs/tremor

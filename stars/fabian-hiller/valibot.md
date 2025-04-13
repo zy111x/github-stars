@@ -1,6 +1,6 @@
 ---
 project: valibot
-stars: 7436
+stars: 7441
 description: |-
     The modular and type safe schema library for validating structural data 🤖
 url: https://github.com/fabian-hiller/valibot
@@ -71,7 +71,7 @@ In addition, it allows you to easily extend my functionality with external code 
 
 ## Credits
 
-My friend [Fabian](https://x.com/FabianHiller) created me as part of his bachelor thesis at [Stuttgart Media University](https://www.hdm-stuttgart.de/en/), supervised by Walter Kriha, [Miško Hevery](https://x.com/mhevery) and [Ryan Carniato](https://x.com/RyanCarniato). My role models also include [Colin McDonnell](https://x.com/colinhacks), who had a big influence on my API design with [Zod](https://zod.dev/).
+My friend [Fabian](https://github.com/fabian-hiller) created me as part of his bachelor thesis at [Stuttgart Media University](https://www.hdm-stuttgart.de/en/), supervised by Walter Kriha, [Miško Hevery](https://github.com/mhevery) and [Ryan Carniato](https://github.com/ryansolid). My role models also include [Colin McDonnell](https://github.com/colinhacks), who had a big influence on my API design with [Zod](https://zod.dev/).
 
 ## Feedback
 
