@@ -1,6 +1,6 @@
 ---
 project: ant-design-vue
-stars: 20713
+stars: 20717
 description: |-
     🌈  An enterprise-class UI components based on Ant Design and Vue. 🐜
 url: https://github.com/vueComponent/ant-design-vue

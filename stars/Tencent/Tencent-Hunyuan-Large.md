@@ -1,6 +1,6 @@
 ---
 project: Tencent-Hunyuan-Large
-stars: 1494
+stars: 1496
 description: |-
     null
 url: https://github.com/Tencent/Tencent-Hunyuan-Large
