@@ -1,6 +1,6 @@
 ---
 project: pagefind
-stars: 4085
+stars: 4086
 description: |-
     Static low-bandwidth search at scale
 url: https://github.com/CloudCannon/pagefind

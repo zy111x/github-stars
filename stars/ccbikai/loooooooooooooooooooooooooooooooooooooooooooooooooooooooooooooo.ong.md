@@ -1,6 +1,6 @@
 ---
 project: loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo.ong
-stars: 239
+stars: 240
 description: |-
     Make your URL looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooonger
 url: https://github.com/ccbikai/loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo.ong

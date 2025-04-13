@@ -1,6 +1,6 @@
 ---
 project: Zero
-stars: 5060
+stars: 5081
 description: |-
     Experience email the way you want with 0 – the first open source email app that puts your privacy and safety first (coming soon). Join the discord: https://discord.gg/0email
 url: https://github.com/Mail-0/Zero
@@ -30,7 +30,7 @@ Most email services today are either **closed-source**, **data-hungry**, or **to
 
 - ✅ **Open-Source** – No hidden agendas, fully transparent.
 - 🦾 **AI Driven** - Enhance your emails with Agents & LLMs.
-- 🔒 **Data Privacy First** – Your emails, your data. No tracking, no selling, no middlemen.
+- 🔒 **Data Privacy First** – Your emails, your data. Zero does not track, collect, or sell your data in any way. Please note: while we integrate with external services, the data passed through them is not under our control and falls under their respective privacy policies and terms of service.
 - ⚙️ **Self-Hosting Freedom** – Run your own email app with ease.
 - 📬 **Unified Inbox** – Connect multiple email providers like Gmail, Outlook, and more.
 - 🎨 **Customizable UI & Features** – Tailor your email experience the way you want it.

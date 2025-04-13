@@ -1,6 +1,6 @@
 ---
 project: stable-diffusion-webui-colab
-stars: 15819
+stars: 15818
 description: |-
     stable diffusion webui colab
 url: https://github.com/camenduru/stable-diffusion-webui-colab
