@@ -1,6 +1,6 @@
 ---
 project: transformers.js
-stars: 13415
+stars: 13417
 description: |-
     State-of-the-art Machine Learning for the web. Run 🤗 Transformers directly in your browser, with no need for a server!
 url: https://github.com/huggingface/transformers.js

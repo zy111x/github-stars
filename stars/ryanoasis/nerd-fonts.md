@@ -1,6 +1,6 @@
 ---
 project: nerd-fonts
-stars: 57263
+stars: 57264
 description: |-
     Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more
 url: https://github.com/ryanoasis/nerd-fonts
@@ -48,7 +48,7 @@ The following flow diagram shows the current glyph sets included:
   * [**2 - Homebrew Fonts (macOS (OS X))**](#option-2-homebrew-fonts)
   * [**3 - Chocolatey or Scoop (Windows)**](#option-3-unofficial-chocolatey-or-scoop-repositories)
   * [**4 - Arch Linux Repository (Extra, AUR)**](#option-4-arch-extra-repository)
-  * [**5 - PowerShell Web Installer (Multi-Platform)**](#option-5-powershell-web-installer)
+  * [**5 - PowerShell Installer (Multi-Platform)**](#option-5-powershell-installer)
   * [**6 - Ad Hoc Curl Download**](#option-6-ad-hoc-curl-download)
   * [**7 - Install Script**](#option-7-install-script)
   * [**8 - Use Fontfallback**](#option-8-font-fallback)
@@ -89,7 +89,7 @@ _If you..._
   * `Option 2.` are on **macOS** and want to use **Homebrew** see [Homebrew Fonts](#option-2-homebrew-fonts)
   * `Option 3.` are on **Windows** and want to use **Chocolatey** or **Scoop** see [Unofficial Chocolatey or Scoop Repositories](#option-3-unofficial-chocolatey-or-scoop-repositories)
   * `Option 4.` are on **Arch Linux** and want to use **Extra packages** see [Arch Extra Repositories](#option-4-arch-extra-repository)
-  * `Option 5.` are using **PowerShell** and want an **interactive setup** or **use in scripts** see the [PowerShell Web Installer](#option-5-powershell-web-installer)
+  * `Option 5.` are using **PowerShell** and want an **interactive setup** or **use in scripts** see the [PowerShell Installer](#option-5-powershell-installer)
   * `Option 6.` want to use the **`curl` command** or use in **scripts** see [Ad Hoc Curl Download](#option-6-ad-hoc-curl-download)
   * `Option 7.` want to **automate** installing or use in **scripts** see the [Install Script](#option-7-install-script)
   * `Option 8.` want to install only one font for all fonts see [Font Fallback](#option-8-font-fallback)
@@ -263,16 +263,33 @@ scoop install Hack-NF
 Most fonts are available via [Arch Extra packages](https://archlinux.org/groups/any/nerd-fonts/).
 Some special packages are [in AUR](https://aur.archlinux.org/packages?K=nerd-fonts-&outdated=off).
 
-### `Option 5: PowerShell Web Installer`
+### `Option 5: PowerShell Installer`
 
 > Best option for **interactive setup guidance** or **automating** installations through **PowerShell scripts**.
 
-_Note_:
-  - **Requires PowerShell 7+** to be installed on Windows, macOS, or Linux.
-  - **Windows PowerShell 5.1** is also supported.
-  - This is a 3rd-party community tool. More information can be found on its GitHub repository [here](https://github.com/jpawlowski/nerd-fonts-installer-PS), including advanced installation options.
+#### PSModule NerdFonts
 
-#### Run the Interactive Installer
+This is a 3rd-party community tool. More information can be found on its GitHub repository [here](https://github.com/PSModule/NerdFonts).
+
+To install the module:
+
+```powershell
+Install-PSResource -Name NerdFonts
+Import-Module -Name NerdFonts
+```
+
+To install one font:
+
+```powershell
+Install-NerdFont -Name 'FiraCode' # Tab completion works on name
+```
+
+#### Powershell Web Installer
+
+This is a 3rd-party community tool. More information can be found on its GitHub repository [here](https://github.com/jpawlowski/nerd-fonts-installer-PS).
+
+- **Requires PowerShell 7+** to be installed on Windows, macOS, or Linux.
+- **Windows PowerShell 5.1** is also supported.
 
 To run the interactive installer, use the following command:
 
@@ -280,24 +297,10 @@ To run the interactive installer, use the following command:
 & ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1')))
 ```
 
-#### Install Fonts Directly
-
 To install specific fonts directly, use the following command:
 
 ```powershell
 & ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1'))) -Name hack, heavy-data
-```
-
-To install fonts without a confirmation prompt, use:
-
-```powershell
-& ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1'))) -Confirm:$false -Name hack, heavy-data
-```
-
-To get a list of possible font names, use:
-
-```powershell
-& ([scriptblock]::Create((iwr 'https://to.loredo.me/Install-NerdFont.ps1'))) -List All
 ```
 
 ### `Option 6: Ad Hoc Curl Download`

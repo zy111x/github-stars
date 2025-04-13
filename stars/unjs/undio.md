@@ -11,7 +11,7 @@ url: https://github.com/unjs/undio
 <!-- automd:badges color=yellow bundlejs codecov -->
 
 [![npm version](https://img.shields.io/npm/v/undio?color=yellow)](https://npmjs.com/package/undio)
-[![npm downloads](https://img.shields.io/npm/dm/undio?color=yellow)](https://npmjs.com/package/undio)
+[![npm downloads](https://img.shields.io/npm/dm/undio?color=yellow)](https://npm.chart.dev/undio)
 [![bundle size](https://img.shields.io/bundlejs/size/undio?color=yellow)](https://bundlejs.com/?q=undio)
 [![codecov](https://img.shields.io/codecov/c/gh/unjs/undio?color=yellow)](https://codecov.io/gh/unjs/undio)
 
@@ -61,6 +61,9 @@ pnpm install undio
 
 # bun
 bun install undio
+
+# deno
+deno install undio
 ```
 
 <!-- /automd -->
@@ -69,7 +72,7 @@ Import:
 
 <!-- automd:jsimport cjs cdn imports="" -->
 
-**ESM** (Node.js, Bun)
+**ESM** (Node.js, Bun, Deno)
 
 ```js
 import {} from "undio";
