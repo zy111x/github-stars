@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 36952
+stars: 37086
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---

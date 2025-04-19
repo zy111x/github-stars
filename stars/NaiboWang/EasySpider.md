@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 38429
+stars: 38524
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -8,9 +8,9 @@ url: https://github.com/NaiboWang/EasySpider
 易采集/EasySpider: Visual Code-Free Web Crawler
 ============================================
 
-一个可视化浏览器自动化测试/数据采集/爬虫软件，可以使用图形化界面，无代码可视化的设计和执行任务。只需要在网页上选择自己想要操作的内容并根据提示框操作即可完成任务的设计和执行。同时软件还可以单独以命令行的方式进行执行，从而可以很方便的嵌入到其他系统中。
+一个**完全免费**（**包括商业使用和二次开发**）的可视化浏览器自动化测试/数据采集/爬虫软件，可以使用图形化界面，无代码可视化的设计和执行任务。只需要在网页上选择自己想要操作的内容并根据提示框操作即可完成任务的设计和执行。同时软件还可以单独以命令行的方式进行执行，从而可以很方便的嵌入到其他系统中。
 
-A visual browser automation test/data collection/crawler software, which can be used to design and execute tasks in a code-free visual way. You only need to select the content you want to operate on the web page and follow the prompts to complete the design and execution of the task. At the same time, the software can also be executed separately in the command line, so that it can be easily embedded into other systems.
+A **completely free (including for commercial use and secondary development)** visual browser automation test/data collection/crawler software, which can be used to design and execute tasks in a code-free visual way. You only need to select the content you want to operate on the web page and follow the prompts to complete the design and execution of the task. At the same time, the software can also be executed separately in the command line, so that it can be easily embedded into other systems.
 
 下载易采集/Download EasySpider
 -------------------------
@@ -57,6 +57,18 @@ At the same time, if you select the 'Loop-click every element' option after sele
 更多特性请翻到页面底部查看。
 
 More features please scroll to the bottom of this page to view.
+
+支持作者/Support Author
+-------------------
+
+易采集EasySpider是一款完全免费且使用中无广告的开源软件，软件开发和维护全靠作者用爱发电，因此您可以选择支持作者让作者有更多的热情和精力维护此软件，或者您使用了此软件进行了盈利，欢迎您通过下面的方式支持作者：
+
+1.  Github Sponsor：直接点击右侧**Sponsor**按钮赞助。
+2.  支付宝账号：naibowang@foxmail.com，也可以扫描下方二维码。
+3.  微信收款：扫描下方二维码。
+4.  PayPal账号：naibowang，也可以扫描下方二维码。
+
+You can support the author by clicking the **Sponsor** button at right side or pay via paypal: naibowang.
 
 文档/Documentation
 ----------------
@@ -131,6 +143,47 @@ This software is for learning and communication only. **It is strictly forbidden
 对于政府和军事机关等网站的爬虫操作，**作者将不会进行任何答疑**，以免违反国家相关法律法规和政策。
 
 For the crawler operations of government and military websites, **the author will not answer any questions** in order to avoid violating relevant national laws, regulations and policies.
+
+EasySpider遵循AGPL-3.0协议，**任何个人和企业都可以免费使用软件本身或使用源代码进行二次开发，无需联系作者进行商业（专利）授权**，但需要注意AGPL-3.0协议的相关规则：
+
+EasySpider complies with the AGPL-3.0 agreement. **Any individual or enterprise can use the software for free and use the software source code for secondary development without contacting the author for commercial (patent) authorization.** However, it is necessary to pay attention to the related rules of the AGPL-3.0 agreement:
+
+### 1\. Copyleft（传染性） / Copyleft (Viral Clause)
+
+-   **衍生作品 / Derivative Works**
+    -   任何基于 AGPL 代码的修改或衍生作品，必须**以相同许可证（AGPL-3.0）发布**。
+    -   Any modifications or derivative works based on AGPL code must be **licensed under AGPL-3.0**.
+-   **联动范围 / Scope of Copyleft**
+    -   若 AGPL 代码与其他代码结合（如静态链接、紧密集成），整个作品需遵守 AGPL。
+    -   If AGPL code is combined with other code (e.g., static linking), the entire work must comply with AGPL.
+
+### 2\. 网络使用条款 / Network Use Clause
+
+-   **SaaS 触发开源义务 / SaaS Trigger**
+    -   若软件以服务形式提供（如网站、API），必须向所有用户公开**完整对应源代码**（包括修改后的代码）。
+    -   If the software is provided as a service (e.g., website, API), the **full corresponding source code** (including modifications) must be made available to all users.
+-   **用户权利 / User Rights**
+    -   服务的接收者可通过下载或书面请求获取源码。
+    -   Service recipients may obtain the source code via download or written request.
+
+### 3\. 源码提供要求 / Source Code Provision
+
+-   **二进制分发 / Binary Distribution**
+    -   必须附带源码或提供获取渠道（如下载链接）。
+    -   Source code must be included or a download link provided.
+-   **网络服务场景 / Network Service Scenario**
+    -   需通过服务界面**显式提供源码链接**，或向用户书面承诺提供源码。
+    -   The service interface must **explicitly provide a source code link** or offer a written offer for source code.
+
+### 4\. 专利授权 / Patent Grant
+
+-   贡献者自动授予用户与软件相关的专利许可，禁止专利诉讼。
+-   Contributors automatically grant users patent rights related to the software, and prohibit patent litigation.
+
+### 5\. 免责声明 / Disclaimer
+
+-   软件按“原样”提供，作者**不承担任何责任**（无担保条款）。
+-   The software is provided "as is" with **no warranties or liabilities**.
 
 答疑QQ群
 -----
