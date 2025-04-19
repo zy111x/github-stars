@@ -1,6 +1,6 @@
 ---
 project: cloudflare-workers-nextjs-saas-template
-stars: 297
+stars: 320
 description: |-
     Cloudflare Workers/Next.js SaaS Template
 url: https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template
@@ -153,6 +153,7 @@ After making a change to wrangler.jsonc, you need to run `pnpm cf-typegen` to ge
 6. Go to https://dash.cloudflare.com/profile/api-tokens and click on "Use template" next to "Edit Cloudflare Workers". On the next, page add the following permissions in addition to the ones from the template:
     - Account:AI Gateway:Edit
     - Account:Workers AI:Edit
+    - Account:Workers AI:Read
     - Account:Queues:Edit
     - Account:Vectorize:Edit
     - Account:D1:Edit

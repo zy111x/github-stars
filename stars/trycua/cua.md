@@ -1,8 +1,8 @@
 ---
 project: cua
-stars: 4003
+stars: 4201
 description: |-
-    Create and run high-performance macOS and Linux VMs on Apple Silicon, with built-in support for AI agents.
+    c/ua is the Docker Container for Computer-Use AI Agents.
 url: https://github.com/trycua/cua
 ---
 
@@ -21,11 +21,11 @@ url: https://github.com/trycua/cua
   [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.com/invite/mVnXXpdE85)
 </div>
 
-**TL;DR**: **c/ua** (pronounced "koo-ah", short for Computer-Use Agent) is a framework that enables AI agents to control full operating systems within high-performance, lightweight virtual containers. It delivers up to 97% native speed on Apple Silicon and works with any language models:
+**TL;DR**: **c/ua** (pronounced "koo-ah", short for Computer-Use Agent) is a framework that enables AI agents to control full operating systems within high-performance, lightweight virtual containers. It delivers up to 97% native speed on Apple Silicon and works with any vision language models.
 
 ## What is c/ua?
 
-Cua offers two primary capabilities in a single integrated framework:
+**c/ua** offers two primary capabilities in a single integrated framework:
 
 1. **High-Performance Virtualization** - Create and run macOS/Linux virtual machines on Apple Silicon with near-native performance (up to 97% of native speed) using the **Lume CLI** with `Apple's Virtualization.Framework`.
 
@@ -67,7 +67,7 @@ If you want to use AI agents with virtualized environments:
 
 2. Pull the latest macOS CUA image:
    ```bash
-   lume pull macos-sequoia-cua:latest --no-cache
+   lume pull macos-sequoia-cua:latest
    ```
 
 3. Start Lume daemon service:
@@ -82,8 +82,8 @@ If you want to use AI agents with virtualized environments:
 
 5. Use the libraries in your Python code:
    ```python
-   from cua.computer import Computer
-   from cua.agent import ComputerAgent, LLM, AgentLoop, LLMProvider
+   from computer import Computer
+   from agent import ComputerAgent, LLM, AgentLoop, LLMProvider
 
    async with Computer(verbosity=logging.DEBUG) as macos_computer:
      agent = ComputerAgent(
@@ -115,7 +115,9 @@ If you want to use AI agents with virtualized environments:
    app.launch(share=False)
    ```
 
-7. For Developers only (contribute and use latest features):
+### Option 3: Build from Source (Nightly)
+If you want to contribute to the project or need the latest nightly features:
+
    ```bash
    # Clone the repository
    git clone https://github.com/trycua/cua.git
@@ -226,6 +228,7 @@ Apple, macOS, and Apple Silicon are trademarks of Apple Inc. Ubuntu and Canonica
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ddupont808"><img src="https://avatars.githubusercontent.com/u/3820588?v=4?s=100" width="100px;" alt="ddupont"/><br /><sub><b>ddupont</b></sub></a><br /><a href="#code-ddupont808" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Lizzard1123"><img src="https://avatars.githubusercontent.com/u/46036335?v=4?s=100" width="100px;" alt="Ethan Gutierrez"/><br /><sub><b>Ethan Gutierrez</b></sub></a><br /><a href="#code-Lizzard1123" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://ricterz.me"><img src="https://avatars.githubusercontent.com/u/5282759?v=4?s=100" width="100px;" alt="Ricter Zheng"/><br /><sub><b>Ricter Zheng</b></sub></a><br /><a href="#code-RicterZ" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.trytruffle.ai/"><img src="https://avatars.githubusercontent.com/u/50844303?v=4?s=100" width="100px;" alt="Rahul Karajgikar"/><br /><sub><b>Rahul Karajgikar</b></sub></a><br /><a href="#code-rahulkarajgikar" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

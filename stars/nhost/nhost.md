@@ -1,6 +1,6 @@
 ---
 project: nhost
-stars: 8276
+stars: 8291
 description: |-
     The Open Source Firebase Alternative with GraphQL.
 url: https://github.com/nhost/nhost

@@ -1,8 +1,8 @@
 ---
 project: hyperui
-stars: 11070
+stars: 11092
 description: |-
-    Free Tailwind CSS components for application UI, ecommerce and marketing with support for dark mode, RTL and Alpine JS 🚀
+    Free Tailwind CSS v4 components for your next project, designed to enhance your web development with the latest features and styles 🚀
 url: https://github.com/markmead/hyperui
 ---
 
@@ -57,6 +57,7 @@ HyperUI has a wide range of freely available components. These components includ
 - [Grids](https://www.hyperui.dev/components/application/grids)
 - [Inputs](https://www.hyperui.dev/components/application/inputs)
 - [Media](https://www.hyperui.dev/components/application/media)
+- [Modals](https://www.hyperui.dev/components/application/modals)
 - [Pagination](https://www.hyperui.dev/components/application/pagination)
 - [Quantity Inputs](https://www.hyperui.dev/components/application/quantity-inputs)
 - [Radio Groups](https://www.hyperui.dev/components/application/radio-groups)

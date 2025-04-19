@@ -1,6 +1,6 @@
 ---
 project: hugo-theme-farallon
-stars: 52
+stars: 53
 description: |-
     ✒️ single column hugo theme
 url: https://github.com/bigfa/hugo-theme-farallon

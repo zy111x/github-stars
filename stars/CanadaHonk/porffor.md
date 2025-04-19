@@ -1,6 +1,6 @@
 ---
 project: porffor
-stars: 3391
+stars: 3402
 description: |-
     A from-scratch experimental AOT JS engine, written in JS
 url: https://github.com/CanadaHonk/porffor

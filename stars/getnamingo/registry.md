@@ -96,36 +96,38 @@ After installation, be sure to review all the guides in the Documentation sectio
 ### Updating
 
 To update, you **must run the update scripts sequentially** without skipping versions.  
-For example, if you're on **v1.0.16** and the latest is **v1.0.18**, first update to **v1.0.17**, then to **v1.0.18**.
+For example, if you're on **v1.0.18** and the latest is **v1.0.20**, first update to **v1.0.19**, then to **v1.0.20**.
 
+- **v1.0.19 → v1.0.20**  
+  Download and run the [`update1020.sh`](docs/update1020.sh) script.
+  
 - **v1.0.18 → v1.0.19**  
   Download and run the [`update1019.sh`](docs/update1019.sh) script.
   
 - **v1.0.17 → v1.0.18**  
   Download and run the [`update1018.sh`](docs/update1018.sh) script.
 
-- **v1.0.16 → v1.0.17**  
-  Download and run the [`update1017.sh`](docs/update1017.sh) script.
-
 For **older versions**, please refer to [`update.md`](docs/update.md).
 
-### [Configuration Guide](docs/configuration.md)
+### [Configuration Guide](docs/configuration.md) [Required]
 
-#### [Database Replication](docs/replication.md)
+#### [DNS Setup Guide](docs/dns.md) [Required]
 
-#### [Data Encryption](docs/encryption.md)
+#### [Registrar Payment Guide](docs/payment.md) [Required]
 
-#### [Custom Pricing per Registrar](docs/custom-registrar-pricing.md)
+#### [gTLD-Specific Setup](docs/gtld.md) [gTLD Only]
 
-#### [Minimum Data Set](docs/minimum-data-set.md)
+#### [Database Replication](docs/replication.md) [Recommended]
 
-### [Initial Operation Guide](docs/iog.md)
+#### [Data Encryption](docs/encryption.md) [Recommended]
 
-### [Namingo EPP Server](docs/epp.md)
+### [First Steps Guide](docs/iog.md) [Required]
 
-### [FAQ](docs/faq.md)
+### [EPP Operations Guide](docs/epp.md) [Required]
 
-### [Architecture of Namingo](docs/architecture.md)
+### [Registrar FAQ](docs/faq.md) [Required]
+
+### [System Architecture](docs/architecture.md) [Advanced]
 
 ## Support
 

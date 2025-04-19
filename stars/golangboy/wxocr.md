@@ -1,6 +1,6 @@
 ---
 project: wxocr
-stars: 903
+stars: 907
 description: |-
     nothing
 url: https://github.com/golangboy/wxocr

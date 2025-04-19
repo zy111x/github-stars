@@ -1,6 +1,6 @@
 ---
 project: edit
-stars: 3750
+stars: 3852
 description: |-
     Make changes to FMHY
 url: https://github.com/fmhy/edit

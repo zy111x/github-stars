@@ -1,6 +1,6 @@
 ---
 project: zerossl-ip-cert
-stars: 218
+stars: 219
 description: |-
     Automation tool for issuing ZeroSSL IP certificates
 url: https://github.com/tinkernels/zerossl-ip-cert

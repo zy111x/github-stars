@@ -1,6 +1,6 @@
 ---
 project: crossws
-stars: 487
+stars: 488
 description: |-
     🔌   Cross-platform WebSocket Servers for Node.js, Deno, Bun and Cloudflare Workers.
 url: https://github.com/unjs/crossws

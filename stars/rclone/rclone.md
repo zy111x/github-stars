@@ -1,28 +1,12 @@
 ---
 project: rclone
-stars: 49800
+stars: 49910
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
 ---
 
-<div align="center">
-<sup>Special thanks to our sponsor:</sup>
-<br>
-<br>
-<a href="https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=rclone_20231103">
-  <div>
-    <img src="https://rclone.org/img/logos/warp-github.svg" width="300" alt="Warp">
-  </div>
-  <b>Warp is a modern, Rust-based terminal with AI built in so you and your team can build great software, faster.</b>
-  <div>
-    <sup>Visit warp.dev to learn more.</sup>
-  </div>
-</a>
-<br>
-<hr>
-</div>
-<br>
+
 
 [<img src="https://rclone.org/img/logo_on_light__horizontal_color.svg" width="50%" alt="rclone logo">](https://rclone.org/#gh-light-mode-only)
 [<img src="https://rclone.org/img/logo_on_dark__horizontal_color.svg" width="50%" alt="rclone logo">](https://rclone.org/#gh-dark-mode-only)

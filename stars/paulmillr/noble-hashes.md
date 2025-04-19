@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 660
+stars: 662
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
@@ -16,7 +16,7 @@ Audited & minimal JS implementation of hash functions, MACs and KDFs.
 - 🔍 Reliable: chained / sliding window / DoS tests and fuzzing ensure correctness
 - 🔁 No unrolled loops: makes it easier to verify and reduces source code size up to 5x
 - 🦘 Includes SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF, Scrypt, Argon2 & KangarooTwelve
-- 🪶 47KB for everything, 5KB (2.5KB gzipped) for single-hash build
+- 🪶 48KB for everything, 5KB (2.5KB gzipped) for single-hash build
 
 Take a glance at [GitHub Discussions](https://github.com/paulmillr/noble-hashes/discussions) for questions and support.
 The library's initial development was funded by [Ethereum Foundation](https://ethereum.org/).
@@ -535,11 +535,13 @@ The current performance is good enough when compared to other projects; SHA256 t
 - There is **additional** 20-min DoS test `npm run test:dos` and 2-hour "big" multicore test `npm run test:big`.
   See [our approach to testing](./test/README.md)
 
-Check out [github.com/paulmillr/guidelines](https://github.com/paulmillr/guidelines)
-for general coding practices and rules.
+Additional resources:
 
-See [paulmillr.com/noble](https://paulmillr.com/noble/)
-for useful resources, articles, documentation and demos
+- NTT hashes are outside of scope of the library. You can view some of them in different repos:
+    - [Pedersen in micro-zk-proofs](https://github.com/paulmillr/micro-zk-proofs/blob/1ed5ce1253583b2e540eef7f3477fb52bf5344ff/src/pedersen.ts)
+    - [Poseidon in noble-curves](https://github.com/paulmillr/noble-curves/blob/3d124dd3ecec8b6634cc0b2ba1c183aded5304f9/src/abstract/poseidon.ts)
+- Check out [guidelines](https://github.com/paulmillr/guidelines) for coding practices
+- See [paulmillr.com/noble](https://paulmillr.com/noble/) for useful resources, articles, documentation and demos
 related to the library.
 
 ## License

@@ -1,6 +1,6 @@
 ---
 project: editor.md
-stars: 14082
+stars: 14088
 description: |-
     The open source embeddable online markdown editor (component).
 url: https://github.com/pandao/editor.md

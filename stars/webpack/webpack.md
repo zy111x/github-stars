@@ -1,6 +1,6 @@
 ---
 project: webpack
-stars: 65190
+stars: 65211
 description: |-
     A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through "loaders", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.
 url: https://github.com/webpack/webpack
@@ -684,6 +684,6 @@ Before we started using OpenCollective, donations were made anonymously. Now tha
 [builds2-url]: https://dev.azure.com/webpack/webpack/_build/latest?definitionId=3&branchName=main
 [dependency-review-url]: https://github.com/webpack/webpack/actions/workflows/dependency-review.yml
 [dependency-review]: https://github.com/webpack/webpack/actions/workflows/dependency-review.yml/badge.svg
-[cover]: https://codecov.io/gh/webpack/webpack/branch/master/graph/badge.svg?token=mDP3mQJNnn
+[cover]: https://codecov.io/gh/webpack/webpack/graph/badge.svg?token=mDP3mQJNnn
 [cover-url]: https://codecov.io/gh/webpack/webpack
 

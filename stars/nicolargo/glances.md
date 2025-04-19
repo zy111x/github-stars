@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 28320
+stars: 28371
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances

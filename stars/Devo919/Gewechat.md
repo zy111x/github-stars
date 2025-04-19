@@ -1,6 +1,6 @@
 ---
 project: Gewechat
-stars: 2978
+stars: 3104
 description: |-
     微信机器人框架，个人微信二次开发，最简单易用的免费二开框架,微信ipad登录（非HOOK破解桌面端）
 url: https://github.com/Devo919/Gewechat
@@ -91,7 +91,7 @@ yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-co
 
 ```
 systemctl start docker
-//将docker设置成开机自启动
+# 将docker设置成开机自启动
 systemctl enable docker.service
 ```
 
@@ -203,6 +203,7 @@ docker update --restart=always gewe
 - [Coze-on-Wechat](https://github.com/JC0v0/Coze-on-Wechat)对接 coze 的扩展
 - [rgewe-api](https://github.com/momo402/rgewe-api) 【demo】基于rust语言封装gewechat的api接口，同步API web页面文档
 - [gewechat-python](https://github.com/hanfangyuan4396/gewechat-python) 【demo】python实现的gewechat api接口
+- [LangBot](https://github.com/RockChinQ/langbot) 大模型原生即时通信机器人平台，支持对接 Dify、Coze、DeepSeek 等多种大模型接口
   
 
 ## 版本更新

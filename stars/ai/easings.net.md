@@ -1,6 +1,6 @@
 ---
 project: easings.net
-stars: 8251
+stars: 8262
 description: |-
     Easing Functions Cheat Sheet
 url: https://github.com/ai/easings.net
