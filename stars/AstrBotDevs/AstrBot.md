@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 7873
+stars: 8050
 description: |-
     ✨ 易上手的多平台 LLM 聊天机器人及开发框架 ✨ 平台支持 QQ、QQ频道、Telegram、微信、企微、飞书 | MCP 服务器、OpenAI、DeepSeek、Gemini、硅基流动、月之暗面、Ollama、OneAPI、Dify 等。附带 WebUI。
 url: https://github.com/AstrBotDevs/AstrBot
@@ -160,6 +160,8 @@ pre-commit install
 
 ## ✨ Demo
 
+<details><summary>👉 点击展开多张 Demo 截图 👈</summary>
+
 <div align='center'>
 
 <img src="https://github.com/user-attachments/assets/4ee688d9-467d-45c8-99d6-368f9a8a92d8" width="600">
@@ -180,6 +182,9 @@ _✨ 插件系统——部分插件展示 ✨_
 _✨ WebUI ✨_
 
 </div>
+
+</details>
+
 
 ## ❤️ Special Thanks
 

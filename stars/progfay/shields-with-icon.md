@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 441
+stars: 442
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon

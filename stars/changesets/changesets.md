@@ -1,6 +1,6 @@
 ---
 project: changesets
-stars: 9813
+stars: 9843
 description: |-
     🦋       A way to manage your versioning and changelogs with a focus on monorepos
 url: https://github.com/changesets/changesets

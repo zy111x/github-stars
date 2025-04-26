@@ -1,6 +1,6 @@
 ---
 project: mini-qr
-stars: 1087
+stars: 1099
 description: |-
     Scan & create pretty qr codes easily 👾
 url: https://github.com/lyqht/mini-qr
@@ -27,7 +27,7 @@ An app to create beautiful QR codes and scan various QR code types.
 
 - ✅ Accessible: minimally WCAG A compliant
 - 🎨 Customizable colors and styles
-- 🖼️ Export to PNG, JPG, SVG
+- 🖼️ Export to PNG, JPG & SVG
 - 📋 Copy to clipboard
 - 🌓 Light/dark/system-preference mode toggle
 - 🎲 Randomize style button
@@ -40,6 +40,7 @@ An app to create beautiful QR codes and scan various QR code types.
 - 📱 QR Code Scanner: Scan QR codes using your camera or by uploading images, with intelligent detection for URLs, emails, phone numbers, WiFi credentials, and more
 - 📦 Batch data export: Import a CSV file with multiple data strings and export QR codes for them all at once.
 - 📲 PWA Support: Install MiniQR as a desktop or mobile app
+- 📝 Data templates: Support for various data types including text, URLs, emails, phone numbers, SMS, WiFi credentials, vCards, locations, and calendar events
 
 ### Installation as PWA
 
@@ -72,12 +73,25 @@ Once installed, MiniQR will work offline and provide a native app-like experienc
 
 Try it out [here](https://mini-qr.vercel.app/) ✨
 
-https://github.com/lyqht/mini-qr/assets/35736525/991b2d7e-f168-4354-9091-1678d2c1bddb
+<details>
+
+<summary>Frame text included in batch export (added in v0.17.0)</summary>
+
+https://github.com/user-attachments/assets/c6db8fd5-ec36-43be-b6e3-a42e1b7dc3cb
+
+</details>
 
 <details>
-<summary>Batch data export (added in v0.9.0)</summary>
+<summary>Data templates (added in v0.16.0)</summary>
 
-https://github.com/user-attachments/assets/fef17e6a-c226-4136-9501-8d3e951671e0
+https://github.com/user-attachments/assets/863f9330-2645-4d23-88aa-04f5f5beaa67
+
+</details>
+
+<details>
+<summary>Basic frame settings (added in v0.15.0)</summary>
+
+https://github.com/user-attachments/assets/e160d60d-3c7f-4bbb-908c-efd11fec20e8
 
 </details>
 
@@ -89,9 +103,17 @@ https://github.com/user-attachments/assets/5ad58b35-0a16-43a4-839a-e2197bfc273a
 </details>
 
 <details>
-<summary>Basic frame settings (added in v0.15.0)</summary>
+<summary>Batch data export (added in v0.9.0)</summary>
 
-https://github.com/user-attachments/assets/e160d60d-3c7f-4bbb-908c-efd11fec20e8
+https://github.com/user-attachments/assets/fef17e6a-c226-4136-9501-8d3e951671e0
+
+</details>
+
+<details>
+
+<summary>MVP - presets, languages, dark/light mode (v0.3.0)</summary>
+
+https://github.com/lyqht/mini-qr/assets/35736525/991b2d7e-f168-4354-9091-1678d2c1bddb
 
 </details>
 
@@ -107,5 +129,6 @@ docker compose up -d
 
 ## Contributing
 
+Translations and bug fixes are welcome!
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 

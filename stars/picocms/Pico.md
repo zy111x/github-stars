@@ -1,6 +1,6 @@
 ---
 project: Pico
-stars: 3873
+stars: 3875
 description: |-
     Pico is a stupidly simple, blazing fast, flat file CMS.
 url: https://github.com/picocms/Pico

@@ -1,6 +1,6 @@
 ---
 project: mantrae
-stars: 205
+stars: 212
 description: |-
     Web UI for managing Traefik
 url: https://github.com/MizuchiLabs/mantrae
@@ -42,9 +42,8 @@ Check out the [docs](https://mizuchi.dev/mantrae/) for more information.
 ## Roadmap
 
 - Add support for more DNS providers
-- Backup scheduler (local or S3)
-- Support multiple database providers (currently only supports SQLite)
 - User management and permissions system
+- Stable API
 
 ## Contributing
 

@@ -1,6 +1,6 @@
 ---
 project: mama2
-stars: 2052
+stars: 2051
 description: |-
     妈妈计划-众人拾柴火焰高
 url: https://github.com/zythum/mama2

@@ -1,6 +1,6 @@
 ---
 project: QuanX
-stars: 1636
+stars: 1639
 description: |-
     Scripts for QX, Loon, Surge, and ShadowRocket!
 url: https://github.com/Peng-YM/QuanX

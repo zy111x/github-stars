@@ -1,6 +1,6 @@
 ---
 project: nerd-fonts
-stars: 57360
+stars: 57494
 description: |-
     Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more
 url: https://github.com/ryanoasis/nerd-fonts
@@ -126,10 +126,11 @@ A preview of all fonts can be found [here](https://www.nerdfonts.com/font-downlo
 |:--------------------------------------------------|:---------------------------------------|:-----------|:-----|
 | [0xProto Nerd Font][p-0xProto]                    | [0xProto][f-0xProto]                   | 2.300      | NO   |
 | [3270 Nerd Font][p-3270]                          | [3270][f-3270]                         | 3.0.1      | NO   |
+| [AdwaitaMono Nerd Font][p-adwaita-mono]           | [Adwaita Mono][f-adwaita-mono]         | 32.4       | NO   |
 | [Agave Nerd Font][p-agave]                        | [Agave][f-agave]                       | 37         | NO   |
 | [AnonymicePro Nerd Font][p-anonymous-pro]         | [Anonymous Pro][f-a-pro]               | 1.002      | YES  |
 | [Arimo Nerd Font][p-arimo]                        | [Arimo][f-arimo]                       | 1.33       | NO   |
-| [AtynsonMono Nerd Font][p-atkinson-mono]          | [Atkinson Hyperlegible Mono][f-atkinson]| 2.001     | YES  |
+| [AtkynsonMono Nerd Font][p-atkinson-mono]         | [Atkinson Hyperlegible Mono][f-atkinson]| 2.001     | YES  |
 | [AurulentSansMono Nerd Font][p-aurulent]          | Aurulent Sans Mono (Stephen G. Hartke) |            | NO   |
 | [BigBlueTerminal Nerd Font][p-bigblueterm]        | BigBlueTerminal (VileR)                |            | NO   |
 | [BitstromWera Nerd Font][p-bitstream]             | Vera Sans Mono (Bitstream Inc)         | 1.1        | YES  |
@@ -468,25 +469,27 @@ Patching the font of your own choosing:
 Full options follow, see also [**page explaining all options**](https://github.com/ryanoasis/nerd-fonts/wiki/ScriptOptions):
 
 ```
-Nerd Fonts Patcher v3.3.0-21 (4.16.1) (ff 20230101)
-usage: font-patcher [-h] [-v] [-s] [--variable-width-glyphs]
-                    [--debug [{0,1,2,3}]] [-q] [--careful] [-ext EXTENSION]
-                    [-out OUTPUTDIR] [--makegroups [{-1,0,1,2,3,4,5,6}]] [-c]
+Nerd Fonts Patcher v3.4.0-5 (4.20.3) (ff 20230101)
+usage: font-patcher [--careful] [--debug [{0,1,2,3}]] [--extension EXTENSION]
+                    [--help] [--makegroups [{-1,0,1,2,3,4,5,6}]] [--mono]
+                    [--outputdir OUTPUTDIR] [--quiet] [--single-width-glyphs]
+                    [--variable-width-glyphs] [--version] [--complete]
                     [--codicons] [--fontawesome] [--fontawesomeext]
-                    [--fontlogos] [--material] [--octicons] [--powersymbols]
-                    [--pomicons] [--powerline] [--powerlineextra] [--weather]
-                    [--boxdrawing] [--configfile CONFIGFILE] [--custom CUSTOM]
-                    [--dry] [--glyphdir GLYPHDIR] [--has-no-italic] [-l]
-                    [--metrics {HHEA,TYPO,WIN}] [--name FORCE_NAME]
-                    [--postprocess POSTPROCESS] [--removeligs]
-                    [--xavgcharwidth [XAVGWIDTH]]
+                    [--fontlogos] [--material] [--octicons] [--pomicons]
+                    [--powerline] [--powerlineextra] [--powersymbols]
+                    [--weather] [--adjust-line-height] [--boxdrawing]
+                    [--cell CELLOPT] [--configfile CONFIGFILE]
+                    [--custom CUSTOM] [--dry] [--glyphdir GLYPHDIR]
+                    [--has-no-italic] [--metrics {HHEA,TYPO,WIN}]
+                    [--name FORCE_NAME] [--postprocess POSTPROCESS]
+                    [--removeligs] [--xavgcharwidth [XAVGWIDTH]]
                     [--progressbars | --no-progressbars]
                     font
 
 Nerd Fonts Font Patcher: patches a given font with programming and development related glyphs
 
 * Website: https://www.nerdfonts.com
-* Version: 3.3.0-21
+* Version: 3.4.0-5
 * Development Website: https://github.com/ryanoasis/nerd-fonts
 * Changelog: https://github.com/ryanoasis/nerd-fonts/blob/-/changelog.md
 
@@ -494,52 +497,55 @@ positional arguments:
   font                  The path to the font to patch (e.g., Inconsolata.otf)
 
 options:
-  -h, --help            show this help message and exit
-  -v, --version         show program's version number and exit
-  -s, --mono            Whether to generate the glyphs as single-width not double-width (default is double-width) (Nerd Font Mono)
-  --variable-width-glyphs
-                        Do not adjust advance width (no "overhang") (Nerd Font Propo)
-  --debug [{0,1,2,3}]   Verbose mode (optional: 1=just to file; 2*=just to terminal; 3=display and file)
-  -q, --quiet           Do not generate verbose output
   --careful             Do not overwrite existing glyphs if detected
-  -ext EXTENSION, --extension EXTENSION
+  --debug [{0,1,2,3}]   Verbose mode (optional: 1=just to file; 2*=just to terminal; 3=display and file)
+  --extension EXTENSION, -ext EXTENSION
                         Change font file type to create (e.g., ttf, otf)
-  -out OUTPUTDIR, --outputdir OUTPUTDIR
-                        The directory to output the patched font file to
+  --help, -h            Show this help message and exit
   --makegroups [{-1,0,1,2,3,4,5,6}]
                         Use alternative method to name patched fonts (default=1)
+  --mono, -s            Create monospaced font, existing and added glyphs are single-width (implies --single-width-glyphs)
+  --outputdir OUTPUTDIR, -out OUTPUTDIR
+                        The directory to output the patched font file to
+  --quiet, -q           Do not generate verbose output
+  --single-width-glyphs
+                        Whether to generate the glyphs as single-width not double-width (default is double-width) (Nerd Font Mono)
+  --variable-width-glyphs
+                        Do not adjust advance width (no "overhang") (Nerd Font Propo)
+  --version, -v         Show program's version number and exit
 
 Symbol Fonts:
-  -c, --complete        Add all available Glyphs
+  --complete, -c        Add all available Glyphs
   --codicons            Add Codicons Glyphs (https://github.com/microsoft/vscode-codicons)
   --fontawesome         Add Font Awesome Glyphs (http://fontawesome.io/)
   --fontawesomeext      Add Font Awesome Extension Glyphs (https://andrelzgava.github.io/font-awesome-extension/)
   --fontlogos           Add Font Logos Glyphs (https://github.com/Lukas-W/font-logos)
   --material, --mdi     Add Material Design Icons (https://github.com/templarian/MaterialDesign)
   --octicons            Add Octicons Glyphs (https://octicons.github.com)
-  --powersymbols        Add IEC Power Symbols (https://unicodepowersymbol.com/)
   --pomicons            Add Pomicon Glyphs (https://github.com/gabrielelana/pomicons)
   --powerline           Add Powerline Glyphs
   --powerlineextra      Add Powerline Extra Glyphs (https://github.com/ryanoasis/powerline-extra-symbols)
+  --powersymbols        Add IEC Power Symbols (https://unicodepowersymbol.com/)
   --weather             Add Weather Icons (https://github.com/erikflowers/weather-icons)
 
 Expert Options:
+  --adjust-line-height, -l
+                        Whether to adjust line heights (attempt to center powerline separators more evenly)
   --boxdrawing          Force patching in (over existing) box drawing glyphs
+  --cell CELLOPT        Adjust or query the cell size, e.g. use "0:1000:-200:800" or "?"
   --configfile CONFIGFILE
-                        Specify a file path for JSON configuration file (see sample: src/config.sample.json)
+                        Specify a file path for configuration file (see sample: src/config.sample.cfg)
   --custom CUSTOM       Specify a custom symbol font, all glyphs will be copied; absolute path suggested
   --dry                 Do neither patch nor store the font, to check naming
   --glyphdir GLYPHDIR   Path to glyphs to be used for patching
   --has-no-italic       Font family does not have Italic (but Oblique), to help create correct RIBBI set
-  -l, --adjust-line-height
-                        Whether to adjust line heights (attempt to center powerline separators more evenly)
   --metrics {HHEA,TYPO,WIN}
                         Select vertical metrics source (for problematic cases)
   --name FORCE_NAME     Specify naming source ('full', 'postscript', 'filename', or concrete free name-string)
   --postprocess POSTPROCESS
                         Specify a Script for Post Processing
   --removeligs, --removeligatures
-                        Removes ligatures specificed in JSON configuration file (needs --configfile)
+                        Removes ligatures specified in configuration file (needs --configfile)
   --xavgcharwidth [XAVGWIDTH]
                         Adjust xAvgCharWidth (optional: concrete value)
   --progressbars        Show percentage completion progress bars per Glyph Set (default)
@@ -731,6 +737,7 @@ Font repos
 
 [f-0xProto]:https://github.com/0xType/0xProto
 [f-3270]:https://github.com/rbanffy/3270font
+[f-adwaita-mono]:https://gitlab.gnome.org/GNOME/adwaita-fonts
 [f-agave]:https://github.com/agarick/agave
 [f-a-pro]:https://www.marksimonson.com/fonts/view/anonymous-pro
 [f-arimo]:https://github.com/googlefonts/Arimo
@@ -793,6 +800,7 @@ Patched Font internal links
 
 [p-0xProto]:patched-fonts/0xProto
 [p-3270]:patched-fonts/3270
+[p-adwaita-mono]:patched-fonts/AdwaitaMono
 [p-agave]:patched-fonts/Agave
 [p-anonymous-pro]:patched-fonts/AnonymousPro
 [p-arimo]:patched-fonts/Arimo

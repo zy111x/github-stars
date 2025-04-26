@@ -1,6 +1,6 @@
 ---
 project: llama-flow
-stars: 100
+stars: 115
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/llama-flow
@@ -11,9 +11,8 @@ url: https://github.com/run-llama/llama-flow
 llama-flow 🌊 is a simple, lightweight workflow engine, in TypeScript.
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/run-llama/llama-flow/tree/main/demo/browser?file=src%2FApp.tsx)
-
-[![Bundle Size](https://img.shields.io/bundlephobia/min/@llama-flow/core)](https://bundlephobia.com/result?p=@llama-flow/core)
-[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@llama-flow/core)](https://bundlephobia.com/result?p=@llama-flow/core)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/run-llama/llama-flow/test.yml?branch=main&style=flat&colorA=000000&colorB=45dff8)](https://github.com/run-llama/llama-flow/actions/workflows/test.yml?query=branch%3Amain)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/@llama-flow/core?style=flat&colorA=000000&colorB=45dff8)](https://bundlephobia.com/result?p=@llama-flow/core)
 
 - Minimal core API (<=2kb)
 - 100% Type safe
@@ -29,7 +28,9 @@ yarn add @llama-flow/core
 
 pnpm add @llama-flow/core
 
-deno add jsr:@llama-flow/core
+bun add @llama-flow/core
+
+deno add npm:@llama-flow/core
 ```
 
 ### First, define events
@@ -77,6 +78,28 @@ console.log(result); // stop received!
 import { until } from "@llama-flow/core/stream/until";
 import { collect } from "@llama-flow/core/stream/consumer";
 const allEvents = await collect(until(stream, stopEvent));
+```
+
+### Helper Functions for Common Tasks
+
+There are helper functions to make working with workflows even simpler:
+
+```ts
+import {
+  runWorkflow,
+  runAndCollect,
+  runWorkflowWithFilter,
+} from "@llama-flow/core/stream/run";
+
+// Run workflow and get final result
+const result = await runWorkflow(workflow, startEvent.with("42"), stopEvent);
+
+// Run workflow and collect all events
+const allEvents = await runAndCollect(
+  workflow,
+  startEvent.with("42"),
+  stopEvent,
+);
 ```
 
 ### Fan-out (Parallelism)

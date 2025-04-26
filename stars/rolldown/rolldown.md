@@ -1,6 +1,6 @@
 ---
 project: rolldown
-stars: 10754
+stars: 10869
 description: |-
     Fast Rust bundler for JavaScript/TypeScript with Rollup-compatible API.
 url: https://github.com/rolldown/rolldown

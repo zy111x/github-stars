@@ -1,6 +1,6 @@
 ---
 project: DOMPurify
-stars: 15016
+stars: 15055
 description: |-
     DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:
 url: https://github.com/cure53/DOMPurify
@@ -18,7 +18,7 @@ DOMPurify is written in JavaScript and works in all modern browsers (Safari (10+
 
 **Note that [DOMPurify v2.5.8](https://github.com/cure53/DOMPurify/releases/tag/2.5.8) is the latest version supporting MSIE. For important security updates compatible with MSIE, please use the [2.x branch](https://github.com/cure53/DOMPurify/tree/2.x).**
 
-Our automated tests cover [28 different browsers](https://github.com/cure53/DOMPurify/blob/main/test/karma.custom-launchers.config.js#L5) right now, more to come. We also cover Node.js v18.x, v19.x, v20.x, v21.x, v12.x and v23.x, running DOMPurify on [jsdom](https://github.com/jsdom/jsdom). Older Node versions are known to work as well, but hey... no guarantees.
+Our automated tests cover [28 different browsers](https://github.com/cure53/DOMPurify/blob/main/test/karma.custom-launchers.config.js#L5) right now, more to come. We also cover Node.js v18.x, v19.x, v20.x, v21.x, v22.x and v23.x, running DOMPurify on [jsdom](https://github.com/jsdom/jsdom). Older Node versions are known to work as well, but hey... no guarantees.
 
 DOMPurify is written by security people who have vast background in web attacks and XSS. Fear not. For more details please also read about our [Security Goals & Threat Model](https://github.com/cure53/DOMPurify/wiki/Security-Goals-&-Threat-Model). Please, read it. Like, really.
 
@@ -30,10 +30,10 @@ DOMPurify sanitizes HTML and prevents XSS attacks. You can feed DOMPurify with s
 
 It's easy. Just include DOMPurify on your website.
 
-### Using the unminified development version
+### Using the unminified version (source-map available)
 
 ```html
-<script type="text/javascript" src="src/purify.js"></script>
+<script type="text/javascript" src="dist/purify.js"></script>
 ```
 
 ### Using the minified and tested production version (source-map available)
@@ -393,7 +393,7 @@ DOMPurify.addHook(
 
 We are currently using Github Actions in combination with BrowserStack. This gives us the possibility to confirm for each and every commit that all is going according to plan in all supported browsers. Check out the build logs here: https://github.com/cure53/DOMPurify/actions
 
-You can further run local tests by executing `npm test`. The tests work fine with Node.js v0.6.2 and jsdom@8.5.0.
+You can further run local tests by executing `npm run test`.
 
 All relevant commits will be signed with the key `0x24BB6BF4` for additional security (since 8th of April 2016).
 

@@ -1,6 +1,6 @@
 ---
 project: ipatool
-stars: 6767
+stars: 6797
 description: |-
     Command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store
 url: https://github.com/majd/ipatool

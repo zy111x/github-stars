@@ -1,6 +1,6 @@
 ---
 project: unstructured
-stars: 10920
+stars: 10985
 description: |-
     Open source libraries and APIs to build custom preprocessing pipelines for labeling, training, or production machine learning pipelines. 
 url: https://github.com/Unstructured-IO/unstructured

@@ -1,6 +1,6 @@
 ---
 project: Checkmate
-stars: 4991
+stars: 5276
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
 url: https://github.com/bluewave-labs/Checkmate
@@ -23,15 +23,13 @@ url: https://github.com/bluewave-labs/Checkmate
 
 ![dashboard](https://github.com/user-attachments/assets/252d6047-522b-4576-8f14-233510e464b8)
 
-This repository contains the **frontend** of Checkmate, an open-source, self-hosted monitoring tool for tracking server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Checkmate regularly checks whether a server/website is accessible and performs optimally, providing real-time alerts and reports on the monitored services' availability, downtime, and response time.
+This repository contains both the frontend and the backend of Checkmate, an open-source, self-hosted monitoring tool for tracking server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Checkmate regularly checks whether a server/website is accessible and performs optimally, providing real-time alerts and reports on the monitored services' availability, downtime, and response time.
 
 Checkmate also has an agent, called [Capture](https://github.com/bluewave-labs/capture), to retrieve data from remote servers. While Capture is not required to run Checkmate, it provides additional insights about your servers' CPU, RAM, disk, and temperature status.
 
 Checkmate has been stress-tested with 1000+ active monitors without any particular issues or performance bottlenecks.
 
 We **love** what we are building here, and we continuously learn a few things about Reactjs, Nodejs, MongoDB, and Docker while building Checkmate.
-
-For backend files, please check [Checkmate backend](https://github.com/bluewave-labs/checkmate-backend) repository.
 
 ## 📦 Demo
 
@@ -118,9 +116,9 @@ If you have any questions, suggestions or comments, please use our [Discord chan
 
 ## 🤝 Contributing
 
-We are [Alex](http://github.com/ajhollid) (team lead), [Vishnu](http://github.com/vishnusn77), [Mohadeseh](http://github.com/mohicody), [Gorkem](http://github.com/gorkem-bwl/), [Owaise](http://github.com/Owaiseimdad), and [Aryaman](https://github.com/Br0wnHammer) helping individuals and businesses monitor their infra and servers.
+We are [Alex](http://github.com/ajhollid) (team lead), [Vishnu](http://github.com/vishnusn77), [Mohadeseh](http://github.com/mohicody), [Gorkem](http://github.com/gorkem-bwl/), [Owaise](http://github.com/Owaiseimdad), [Aryaman](https://github.com/Br0wnHammer) and [Mert](https://github/com/mertssmnoglu) helping individuals and businesses monitor their infra and servers.
 
-We pride ourselves on building strong connections with contributors at every level. Despite being a young project, Checkmate has already earned 4.6K+ stars and attracted 60 contributors from around the globe.
+We pride ourselves on building strong connections with contributors at every level. Despite being a young project, Checkmate has already earned 5000+ stars and attracted 60 contributors from around the globe.
 
 Our repo is starred by employees from **Google, Microsoft, Intel, Cisco, Tencent, Electronic Arts, ByteDance, JP Morgan Chase, Deloitte, Accenture, Foxconn, Broadcom, China Telecom, Barclays, Capgemini, Wipro, Cloudflare, Dassault Systèmes and NEC**, so don’t hold back — jump in, contribute and learn with us!
 

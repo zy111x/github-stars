@@ -1,6 +1,6 @@
 ---
 project: site
-stars: 60
+stars: 59
 description: |-
     🔭 My cozy corner in the wide expanse of the internet
 url: https://github.com/boehs/site

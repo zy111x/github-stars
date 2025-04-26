@@ -1,6 +1,6 @@
 ---
 project: LibreChat
-stars: 24694
+stars: 24947
 description: |-
     Enhanced ChatGPT Clone: Features Agents, DeepSeek, Anthropic, AWS, OpenAI, Assistants API, Azure, Groq, o1, GPT-4o, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active project.
 url: https://github.com/danny-avila/LibreChat
@@ -81,6 +81,11 @@ url: https://github.com/danny-avila/LibreChat
 
 - 🪄 **Generative UI with Code Artifacts**:  
   - [Code Artifacts](https://youtu.be/GfTj7O4gmd0?si=WJbdnemZpJzBrJo3) allow creation of React, HTML, and Mermaid diagrams directly in chat
+
+- 🎨 **Image Generation & Editing**
+  - Text-to-image and image-to-image with [GPT-Image-1](https://www.librechat.ai/docs/features/image_gen#1--openai-image-tools-recommended)
+  - Text-to-image with [DALL-E (3/2)](https://www.librechat.ai/docs/features/image_gen#2--dalle-legacy), [Stable Diffusion](https://www.librechat.ai/docs/features/image_gen#3--stable-diffusion-local), [Flux](https://www.librechat.ai/docs/features/image_gen#4--flux), or any [MCP server](https://www.librechat.ai/docs/features/image_gen#5--model-context-protocol-mcp)
+  - Produce stunning visuals from prompts or refine existing images with a single instruction
 
 - 💾 **Presets & Context Management**:  
   - Create, Save, & Share Custom Presets  

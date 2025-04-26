@@ -1,6 +1,6 @@
 ---
 project: unavatar
-stars: 1286
+stars: 1287
 description: |-
     Get unified user avatar from social networks, including Instagram, SoundCloud, Telegram, Twitter, YouTube & more.
 url: https://github.com/microlinkhq/unavatar

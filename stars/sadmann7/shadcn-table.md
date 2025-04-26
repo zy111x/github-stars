@@ -1,16 +1,16 @@
 ---
 project: shadcn-table
-stars: 4770
+stars: 4803
 description: |-
     Shadcn table with server-side sorting, filtering, and pagination.
 url: https://github.com/sadmann7/shadcn-table
 ---
 
-# [Shadcn Table](https://table.sadmn.com)
+# [Shadcn Table](https://tablecn.com)
 
 This is a shadcn table component with server-side sorting, filtering, and pagination. It is bootstrapped with `create-t3-app`.
 
-[![Shadcn Table](./public/images/screenshot.png)](https://table.sadmn.com)
+[![Shadcn Table](./public/images/screenshot.png)](https://tablecn.com)
 
 ## Documentation
 

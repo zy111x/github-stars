@@ -1,6 +1,6 @@
 ---
 project: better-scroll
-stars: 16512
+stars: 16513
 description: |-
     :scroll: inspired by iscroll, and it supports more features and has a better scroll perfermance
 url: https://github.com/ustbhuangyi/better-scroll

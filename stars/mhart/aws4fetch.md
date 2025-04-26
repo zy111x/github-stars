@@ -1,6 +1,6 @@
 ---
 project: aws4fetch
-stars: 705
+stars: 710
 description: |-
     A compact AWS client and signing utility for modern JS environments
 url: https://github.com/mhart/aws4fetch

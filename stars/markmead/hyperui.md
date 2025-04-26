@@ -1,6 +1,6 @@
 ---
 project: hyperui
-stars: 11092
+stars: 11131
 description: |-
     Free Tailwind CSS v4 components for your next project, designed to enhance your web development with the latest features and styles 🚀
 url: https://github.com/markmead/hyperui
@@ -53,6 +53,7 @@ HyperUI has a wide range of freely available components. These components includ
 - [Details Lists](https://www.hyperui.dev/components/application/details-list)
 - [Dividers](https://www.hyperui.dev/components/application/dividers)
 - [Dropdowns](https://www.hyperui.dev/components/application/dropdown)
+- [File Uploaders](https://www.hyperui.dev/components/application/file-uploaders)
 - [Filters](https://www.hyperui.dev/components/application/filters)
 - [Grids](https://www.hyperui.dev/components/application/grids)
 - [Inputs](https://www.hyperui.dev/components/application/inputs)
@@ -68,6 +69,7 @@ HyperUI has a wide range of freely available components. These components includ
 - [Tables](https://www.hyperui.dev/components/application/tables)
 - [Textareas](https://www.hyperui.dev/components/application/textareas)
 - [Toggles](https://www.hyperui.dev/components/application/toggles)
+- [Timelines](https://www.hyperui.dev/components/application/timelines)
 - [Vertical Menu](https://www.hyperui.dev/components/application/vertical-menu)
 
 ### Marketing
