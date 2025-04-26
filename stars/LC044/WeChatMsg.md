@@ -1,6 +1,6 @@
 ---
 project: WeChatMsg
-stars: 39282
+stars: 39384
 description: null
 url: https://github.com/LC044/WeChatMsg
 ---
@@ -19,8 +19,20 @@ url: https://github.com/LC044/WeChatMsg
 > 
 > **所以《留痕》**
 
+其他项目
+----
+
+-   EasyBox-一个实用多功能工具箱
+    -   PDF转Word、PDF合并
+    -   网页转PDF
+    -   根据文件名修改图片的拍摄时间
+
 2024年度报告
 --------
+
+### 预览
+
+手机可以扫码观看
 
 ### 源码地址
 

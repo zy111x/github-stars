@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 20524
+stars: 20631
 description: 在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -11,9 +11,11 @@ url: https://github.com/cmliu/edgetunnel
 这是一个基于 CF Worker 平台的脚本，在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 
 -   **edgetunnel 最新教程**：https://www.youtube.com/watch?v=tKe9xUuFODA _**必看内容!必看内容!必看内容!!!**_
+    
 -   **报错 Error 1101 详解**：https://www.youtube.com/watch?v=r4uVTEJptdE
-
-Telegram交流群：@CMLiussss，**感谢Alice Networks提供的云服务器维持CM订阅转换服务！**
+    
+-   Telegram交流群：@CMLiussss
+    
 
 ⚠️ 免责声明
 -------
@@ -475,7 +477,18 @@ CF账户标准端口列表
 
 -   clash.meta（FlClash，mihomo-party）
 
-🙏 感谢
-=====
+🙏 特别鸣谢
+=======
 
-zizifn、3Kmfi6HP、Stanley-baby、ACL4SSR、SHIJS1999、Alice Networks LTD、
+### 💖 赞助支持 - 提供云服务器维持订阅转换服务
+
+-   Alice Networks LTD
+-   VTEXS Enterprise Cloud
+
+### 🛠 开源代码引用
+
+-   zizifn/edgetunnel
+-   3Kmfi6HP/EDtunnel
+-   SHIJS1999/cloudflare-worker-vless-ip
+-   Stanley-baby
+-   ACL4SSR

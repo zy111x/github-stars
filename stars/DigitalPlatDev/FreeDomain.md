@@ -1,6 +1,6 @@
 ---
 project: FreeDomain
-stars: 41730
+stars: 45091
 description: DigitalPlat FreeDomain: Free Domain For Everyone
 url: https://github.com/DigitalPlatDev/FreeDomain
 ---
@@ -23,7 +23,7 @@ DigitalPlat is fiscally sponsored by The Hack Foundation, a 501(c)(3) nonprofit 
 ### 🌍 Available Domain Extensions
 
 -   **.DPDNS.ORG**
--   **.US.KG** (Limited Open Registration due to Abuse and Phishing)
+-   **.US.KG**
 
 _(More extensions coming soon!)_
 
@@ -33,7 +33,7 @@ _(More extensions coming soon!)_
 
 Jump in and register your domain by visiting our site:
 
-➡️ US.KG Registry
+➡️ DigitalPlat FreeDomain Dashboard
 
 * * *
 

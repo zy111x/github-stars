@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 9832
+stars: 9908
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -29,6 +29,7 @@ TikTokDownloader
 -   ✅ 下载抖音无水印视频/图集
 -   ✅ 下载抖音无水印实况/动图
 -   ✅ 下载最高画质视频文件
+-   ✅ 下载 TikTok 视频原画
 -   ✅ 下载 TikTok 无水印视频/图集
 -   ✅ 下载抖音账号发布/喜欢/收藏/收藏夹作品
 -   ✅ 下载 TikTok 账号发布/喜欢作品
@@ -81,19 +82,15 @@ TikTokDownloader
 
 * * *
 
-  
-  
-**Web UI 交互模式：**  
-  
+**Web UI 交互模式：**
 
 * * *
 
 * * *
 
-  
-  
-**Web API 接口模式：**  
-  
+**Web API 接口模式：**
+
+**访问 `http://127.0.0.1:5555/docs` 或者 `http://127.0.0.1:5555/redoc` 可以查阅自动生成的文档！**
 
 📈 项目状态
 =======
@@ -109,9 +106,9 @@ TikTokDownloader
 快速入门
 ----
 
-⭐ Mac OS、Windows 10 及以上用户可前往 Releases 下载已编译的程序，开箱即用！
+⭐ Mac OS、Windows 10 及以上用户可前往 Releases 或者 Actions 下载已编译的程序，开箱即用！
 
-⭐ 本项目包含手动构建可执行文件的 GitHub Actions，使用者可以随时使用 GitHub Actions 将最新源码构建为可执行文件！
+⭐ 本项目包含自动构建可执行文件的 GitHub Actions，使用者可以随时使用 GitHub Actions 将最新源码构建为可执行文件！
 
 **注意：Mac OS 平台可执行文件 `main` 可能需要从终端命令行启动；受设备限制，Mac OS 平台可执行文件尚未经过测试，无法保证可用性！**
 
@@ -253,7 +250,6 @@ Docker 容器无法直接访问宿主机的文件系统，部分功能不可用�
 -   程序下载文件时会先将文件下载至临时文件夹，下载完成后再移动至储存文件夹；程序运行结束时会清空临时文件夹
 -   `批量下载收藏作品模式` 目前仅支持下载当前已登录 Cookie 对应账号的收藏作品，暂不支持多账号
 -   如果想要程序使用代理请求数据，必须在 `settings.json` 设置 `proxy` 参数，否则程序不会使用代理
--   退出程序时，请以正常方式结束运行或者按下 Ctrl + C 结束运行，不要直接点击终端窗口的关闭按钮结束运行，否则会导致数据丢失
 -   如果您的计算机没有合适的程序编辑 JSON 文件，建议使用 JSON 在线工具 编辑配置文件内容
 -   当程序请求用户输入内容或链接时，请注意避免输入的内容或链接包含换行符，这可能会导致预期之外的问题
 -   本项目不会支持付费作品下载，请勿反馈任何关于付费作品下载的问题
@@ -298,7 +294,7 @@ Docker 容器无法直接访问宿主机的文件系统，部分功能不可用�
 #### 3\. 手动触发打包流程
 
 1.  在您 Fork 的仓库中，点击顶部的 **Actions** 选项卡
-2.  找到名为 **手动构建可执行文件** 的工作流
+2.  找到名为 **构建可执行文件** 的工作流
 3.  点击右侧的 **Run workflow** 按钮：
     -   选择 **master** 或者 **develop** 分支
     -   点击 **Run workflow**
@@ -374,7 +370,7 @@ A: 由于权限限制，您无法直接触发主仓库的 Actions。请通过 Fo
 -   在开始开发前，请从 `develop` 分支拉取最新的代码，以此为基础进行修改；这有助于避免合并冲突并保证您的改动基于最新的项目状态。
 -   如果您的更改涉及多个不相关的功能或问题，请将它们分成多个独立的提交或拉取请求。
 -   每个拉取请求应尽可能专注于单一功能或修复，以便于代码审查和测试。
--   遵循现有的代码风格；请确保您的代码与项目中已有的代码风格保持一致。
+-   遵循现有的代码风格；请确保您的代码与项目中已有的代码风格保持一致；建议使用 Ruff 工具保持代码格式规范。
 -   编写可读性强的代码；添加适当的注释帮助他人理解您的意图。
 -   每个提交都应该包含一个清晰、简洁的提交信息，以描述所做的更改。提交信息应遵循以下格式：`<类型>: <简短描述>`
 -   当您准备提交拉取请求时，请优先将它们提交到 `develop` 分支；这是为了给维护者一个缓冲区，在最终合并到 `master` 分支之前进行额外的测试和审查。
@@ -395,8 +391,8 @@ A: 由于权限限制，您无法直接触发主仓库的 Actions。请通过 Fo
 
 ✨ **作者的其他开源项目：**
 
--   **XHS-Downloader（小红书）**：https://github.com/JoeanAmier/XHS-Downloader
--   **KS-Downloader（快手）**：https://github.com/JoeanAmier/KS-Downloader
+-   **XHS-Downloader（小红书、XiaoHongShu、RedNote）**：https://github.com/JoeanAmier/XHS-Downloader
+-   **KS-Downloader（快手、KuaiShou）**：https://github.com/JoeanAmier/KS-Downloader
 
 ♥️ 支持项目
 =======
@@ -455,3 +451,4 @@ TikHub 提供以下服务：
 -   https://github.com/lxml/lxml
 -   https://ffmpeg.org/ffmpeg-all.html
 -   https://html5up.net/hyperspace
+-   https://www.tikwm.com/

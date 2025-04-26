@@ -1,6 +1,6 @@
 ---
 project: sherlock
-stars: 63744
+stars: 63875
 description: Hunt down social media accounts by username across social networks
 url: https://github.com/sherlock-project/sherlock
 ---
@@ -94,6 +94,22 @@ optional arguments:
   --browse, -b          Browse to all results on default browser.
   --local, -l           Force the use of the local data.json file.
   --nsfw                Include checking of NSFW sites from default list.
+
+Apify Actor Usage
+-----------------
+
+You can run Sherlock in the cloud without installation using the Sherlock Actor on Apify free of charge.
+
+$ echo '{"usernames":\["user123"\]}' | apify call -so netmilk/sherlock
+\[{
+  "username": "user123",
+  "links": \[
+    "https://www.1337x.to/user/user123/",
+    ...
+  \]
+}\]s
+
+Read more about the Sherlock Actor, including how to use it programmaticaly via the Apify API, CLI and JS/TS and Python SDKs.
 
 Credits
 -------
