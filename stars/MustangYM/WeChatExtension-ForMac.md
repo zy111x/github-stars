@@ -1,6 +1,6 @@
 ---
 project: WeChatExtension-ForMac
-stars: 22544
+stars: 22547
 description: |-
     A plugin for Mac WeChat
 url: https://github.com/MustangYM/WeChatExtension-ForMac

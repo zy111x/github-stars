@@ -1,6 +1,6 @@
 ---
 project: OpenCC
-stars: 8877
+stars: 8899
 description: |-
     Conversion between Traditional and Simplified Chinese
 url: https://github.com/BYVoid/OpenCC
@@ -41,7 +41,7 @@ Discussion (Telegram): https://t.me/open_chinese_convert
 * [Ubuntu](https://launchpad.net/ubuntu/+source/opencc)
 * [Fedora](https://packages.fedoraproject.org/pkgs/opencc/opencc/)
 * [Arch Linux](https://archlinux.org/packages/extra/x86_64/opencc/)
-* [Mac](https://formulae.brew.sh/formula/opencc)
+* [macOS](https://formulae.brew.sh/formula/opencc)
 * [Bazel](https://registry.bazel.build/modules/opencc)
 * [Node.js](https://npmjs.org/package/opencc)
 * [Python](https://pypi.org/project/OpenCC/)
@@ -86,7 +86,7 @@ See [demo.js](https://github.com/BYVoid/OpenCC/blob/master/node/demo.js) and [ts
 
 ### Python
 
-`pip install opencc` (Windows, Linux, Mac)
+`pip install opencc` (Windows, Linux, macOS)
 
 ```python
 import opencc
@@ -168,7 +168,7 @@ Document 文檔: https://byvoid.github.io/OpenCC/
 
 ### Build with CMake
 
-#### Linux & Mac OS X
+#### Linux & macOS
 
 g++ 4.6+ or clang 3.2+ is required.
 
@@ -191,7 +191,7 @@ bazel test --test_output=all //src/... //data/... //test/...
 
 ### Test 測試
 
-#### Linux & Mac OS X
+#### Linux & macOS
 
 ```
 make test

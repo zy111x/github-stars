@@ -1,6 +1,6 @@
 ---
 project: zola
-stars: 562
+stars: 609
 description: |-
     Zola is a free, open-source AI chat app with multi-model support.
 url: https://github.com/ibelick/zola

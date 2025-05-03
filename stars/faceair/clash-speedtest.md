@@ -1,6 +1,6 @@
 ---
 project: clash-speedtest
-stars: 631
+stars: 642
 description: |-
     clash speedtest
 url: https://github.com/faceair/clash-speedtest
@@ -98,5 +98,5 @@ Cloudflare 是全球知名的 CDN 服务商，其提供的测速服务器到海�
 
 ## License
 
-[MIT](LICENSE)
+[GPL-3.0](LICENSE)
 

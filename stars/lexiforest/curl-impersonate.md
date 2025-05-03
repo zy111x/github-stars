@@ -1,6 +1,6 @@
 ---
 project: curl-impersonate
-stars: 1844
+stars: 1861
 description: |-
     An active fork of curl-impersonate with more versions and build targets. A series of patches that make curl requests look like Chrome and Firefox.
 url: https://github.com/lexiforest/curl-impersonate

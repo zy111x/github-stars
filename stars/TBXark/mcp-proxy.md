@@ -1,6 +1,6 @@
 ---
 project: mcp-proxy
-stars: 152
+stars: 196
 description: |-
     An MCP proxy server that aggregates and serves multiple MCP resource servers through a single HTTP server.
 url: https://github.com/TBXark/mcp-proxy
@@ -47,6 +47,8 @@ docker run -d -p 9090:9090 ghcr.io/tbxark/mcp-proxy:latest --config https://exam
 The server is configured using a JSON file. Below is an example configuration:
 > This is the format for the new version's configuration. The old version's configuration will be automatically converted to the new format's configuration when it is loaded.
 
+> You can use [`https://tbxark.github.io/mcp-proxy`](https://tbxark.github.io/mcp-proxy) to convert the configuration of `mcp-proxy` into the configuration that `Claude` can use.
+
 ```jsonc
 {
   "mcpProxy": {
@@ -71,6 +73,14 @@ The server is configured using a JSON file. Below is an example configuration:
       ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+      },
+      "options": {
+        "toolFilter": {
+          "mode": "block",
+          "list": [
+            "create_or_update_file"
+          ]
+        }
       }
     },
     "fetch": {
@@ -98,9 +108,14 @@ Common options for `mcpProxy` and `mcpServers`.
 
 - `panicIfInvalid`: If true, the server will panic if the client is invalid.
 - `logEnabled`: If true, the server will log the client's requests.
-- `authTokens`: A list of authentication tokens for the client. The `Authorization` header will be checked against this list. 
+- `authTokens`: A list of authentication tokens for the client. The `Authorization` header will be checked against this list.
+- `toolFilter`: Optional tool filtering configuration. **This configuration is only effective in `mcpServers`.**
+  - `mode`: Specifies the filtering mode. Must be explicitly set to `allow` or `block` if `list` is provided. If `list` is present but `mode` is missing or invalid, the filter will be ignored for this server.
+  - `list`: A list of tool names to filter (either allow or block based on the `mode`).
+  > **Tip:** If you don't know the exact tool names, run the proxy once without any `toolFilter` configured. The console will log messages like `<server_name> Adding tool <tool_name>` for each successfully registered tool. You can use these logged names in your `toolFilter` list.
 
 > In the new configuration, the `authTokens` of `mcpProxy` is not a global authentication token, but rather the default authentication token for `mcpProxy`. When `authTokens` is set in `mcpServers`, the value of `authTokens` in `mcpServers` will be used instead of the value in `mcpProxy`. In other words, the `authTokens` of `mcpProxy` serves as a default value and is only applied when `authTokens` is not set in `mcpServers`.
+
 > Other fields are the same.
 
 ### **`mcpProxy`**
@@ -131,7 +146,7 @@ For sse mcp servers, the `url` field is required. When the current `url` exists,
 For http streaming mcp servers, the `url` field is required. and `transportType` need to manually set to `streamable-http`.
 - `url`: The URL of the MCP client.
 - `headers`: The headers to send with the request to the MCP client.
-- `timeout`: The timeout for the request to the MCP client. 
+- `timeout`: The timeout for the request to the MCP client.
 
 
 ## Usage

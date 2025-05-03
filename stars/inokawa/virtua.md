@@ -1,6 +1,6 @@
 ---
 project: virtua
-stars: 2713
+stars: 2726
 description: |-
     A zero-config, fast and small (~3kB) virtual list (and grid) component for React, Vue, Solid and Svelte.
 url: https://github.com/inokawa/virtua
@@ -250,7 +250,7 @@ export const App = () => {
             background: "#fff",
           }}
         >
-          {i}
+          {i()}
         </div>
       )}
     </VList>
@@ -341,9 +341,11 @@ It may be dispatched by ResizeObserver in this lib [as described in spec](https:
 
 Especially for `webpack-dev-server`, [you can filter out the specific error with `devServer.client.overlay.runtimeErrors` option](https://webpack.js.org/configuration/dev-server/#overlay).
 
-#### Why my items are squashed on resize/add/remove?
+#### Why my items are squashed(or rendered inconsistently) on resize/add/remove?
 
 Maybe you forgot to pass `key` prop to each items, or the keys are not unique. Item sizes are stored per key.
+
+And do not use index of items as `key`, especially when you want to toggle `shift` prop to `true`. Prepending will increment every indexes of items and that will cause unexpected behavior.
 
 #### Why `VListHandle.viewportSize` is 0 on mount?
 

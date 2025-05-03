@@ -1,6 +1,6 @@
 ---
 project: godns
-stars: 1563
+stars: 1565
 description: |-
     A dynamic DNS client tool that supports AliDNS, Cloudflare, Google Domains, DNSPod, HE.net & DuckDNS & DreamHost, etc, written in Go.
 url: https://github.com/TimothyYe/godns
@@ -26,7 +26,9 @@ url: https://github.com/TimothyYe/godns
 [13]: https://godoc.org/github.com/TimothyYe/godns?status.svg
 [14]: https://godoc.org/github.com/TimothyYe/godns
 
-[GoDNS](https://github.com/TimothyYe/godns) is a dynamic DNS (DDNS) client tool. It is a rewrite in [Go](https://golang.org) of my early [DynDNS](https://github.com/TimothyYe/DynDNS) open-source project.
+[GoDNS](https://github.com/TimothyYe/godns) is a dynamic DNS (DDNS) client tool. It is a rewrite in [Go](https://golang.org) of my early [DynDNS](https://github.com/TimothyYe/DynDNS) open-source project. 
+
+[查看中文帮助文档](README_CN.md)
 
 <img src="https://github.com/TimothyYe/godns/blob/master/assets/snapshots/web-panel.jpg?raw=true" />
 
@@ -61,6 +63,7 @@ url: https://github.com/TimothyYe/godns
     - [OVH](#ovh)
     - [Dynu](#dynu)
     - [IONOS](#ionos)
+    - [TransIP](#transip)
   - [Notifications](#notifications)
     - [Email](#email)
     - [Telegram](#telegram)
@@ -118,6 +121,7 @@ url: https://github.com/TimothyYe/godns
 | [OVH][ovh]                            | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
 | [Dynu][dynu]                          | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
 | [IONOS][ionos]                          | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
+| [TransIP][transip]                    | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
 
 [cloudflare]: https://cloudflare.com
 [digitalocean]: https://digitalocean.com
@@ -138,6 +142,7 @@ url: https://github.com/TimothyYe/godns
 [ovh]: https://www.ovh.com
 [dynu]: https://www.dynu.com/
 [ionos]: https://www.ionos.com/
+[transip]: https://www.transip.net/
 
 Tip: You can follow this [issue](https://github.com/TimothyYe/godns/issues/76) to view the current status of DDNS for root domains.
 
@@ -870,6 +875,33 @@ socks5_proxy: ""
 ```
 
 </details>
+
+#### TransIP
+
+For TransIP, you need to provide your api private key as `login_token` and username as `email`, and configure all the domains & subdomains.
+
+<details>
+<summary>Example</summary>
+
+```yaml
+provider: TransIP
+email: account_name
+login_token: api_key
+domains:
+  - domain_name: example.com
+    sub_domains:
+      - "@"
+      - somesubdomain
+      - anothersubdomain
+resolver: 1.1.1.1
+ip_urls:
+  - https://api.ipify.org
+ip_type: IPv4
+interval: 300
+socks5_proxy: ""
+```
+
+<details>
 
 ### Notifications
 

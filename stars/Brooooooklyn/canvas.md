@@ -1,6 +1,6 @@
 ---
 project: canvas
-stars: 1916
+stars: 1923
 description: |-
     High performance skia binding to Node.js. Zero system dependencies and pure npm packages without any postinstall scripts nor node-gyp.
 url: https://github.com/Brooooooklyn/canvas
@@ -236,6 +236,7 @@ export class Path2D {
   getBounds(): [left: number, top: number, right: number, bottom: number]
   computeTightBounds(): [left: number, top: number, right: number, bottom: number]
   trim(start: number, end: number, isComplement?: boolean): Path2D
+  round(radius: number): Path2D
   equals(path: Path2D): boolean
 }
 ```

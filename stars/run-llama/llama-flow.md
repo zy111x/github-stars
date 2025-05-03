@@ -1,6 +1,6 @@
 ---
 project: llama-flow
-stars: 115
+stars: 130
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/llama-flow
@@ -75,9 +75,7 @@ const result = await pipeline(stream, async function (source) {
 });
 console.log(result); // stop received!
 // or
-import { until } from "@llama-flow/core/stream/until";
-import { collect } from "@llama-flow/core/stream/consumer";
-const allEvents = await collect(until(stream, stopEvent));
+const allEvents = await stream.until(stopEvent).toArray();
 ```
 
 ### Helper Functions for Common Tasks
@@ -110,10 +108,6 @@ By default, we provide a simple fan-out utility to run multiple workflows in par
 - `getContext().stream` will return a stream of events emitted by the sub-workflow
 
 ```ts
-import { until } from "@llama-flow/core/stream/until";
-import { collect } from "@llama-flow/core/stream/consumer";
-import { filter } from "@llama-flow/core/stream/filter";
-
 let condition = false;
 workflow.handle([startEvent], async (start) => {
   const { sendEvent, stream } = getContext();
@@ -121,12 +115,10 @@ workflow.handle([startEvent], async (start) => {
     sendEvent(convertEvent.with(i));
   }
   // You define the condition to stop the workflow
-  const results = await collect(
-    filter(
-      until(stream, () => condition),
-      (ev) => convertStopEvent.includes(ev),
-    ),
-  );
+  const results = await stream
+    .until(() => condition)
+    .filter(convertStopEvent)
+    .toArray();
   console.log(results.length); // 10
   return stopEvent.with();
 });
@@ -224,23 +216,23 @@ for [Async Context](https://github.com/tc39/proposal-async-context) to solve thi
 
 ## Middleware
 
-### `withStore`
+### `withState`
 
-Adding a `getStore()` method to the workflow context, which returns a store object, each store is linked to the workflow
+Adding a `state` property to the workflow context, which returns a state object, each state is linked to the workflow
 context.
 
 ```ts
-import { withStore } from "@llama-flow/core/middleware/store";
+import { createStatefulMiddleware } from "@llama-flow/core/middleware/state";
 
-const workflow = withStore(
-  () => ({
-    pendingTasks: new Set<Promise<unknown>>(),
-  }),
-  createWorkflow(),
-);
+const { withState, getContext } = createStatefulMiddleware(() => ({
+  pendingTasks: new Set<Promise<unknown>>(),
+}));
+
+const workflow = withState(createWorkflow());
 
 workflow.handle([startEvent], () => {
-  workflow.getStore().pendingTasks.add(
+  const { state } = getContext();
+  state.pendingTasks.add(
     new Promise((resolve) => {
       setTimeout(() => {
         resolve();
@@ -249,7 +241,18 @@ workflow.handle([startEvent], () => {
   );
 });
 
-const { getStore } = workflow.createContext();
+const { state } = workflow.createContext();
+```
+
+You can also create a state with input:
+
+```ts
+const { withState } = createStatefulMiddleware((input: { id: string }) => ({
+  id: input.id,
+}));
+
+const workflow = withState(createWorkflow());
+const { state } = workflow.createContext({ id: "1" });
 ```
 
 ### `withValidation`

@@ -1,6 +1,6 @@
 ---
 project: wonnx
-stars: 1726
+stars: 1728
 description: |-
     A WebGPU-accelerated ONNX inference run-time written 100% in Rust, ready for native and the web
 url: https://github.com/webonnx/wonnx

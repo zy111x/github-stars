@@ -1,6 +1,6 @@
 ---
 project: scalar
-stars: 10064
+stars: 10147
 description: |-
     Scalar is an open-source API platform:　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　🌐 Modern Rest API Client　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　📖 Beautiful API References　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　✨ 1st-Class OpenAPI/Swagger Support
 url: https://github.com/scalar/scalar
@@ -182,7 +182,6 @@ Ready? [Create your account on scalar.com](https://scalar.com).
 | [Scalar API Client](packages/api-client/README.md)          | API client             |
 | [Scalar CLI](packages/cli/README.md)                        | Command-line interface |
 | [Scalar Galaxy](packages/galaxy/README.md)                  | OpenAPI Example        |
-| [Scalar Play Button](packages/play-button/README.md)        | Quick API Client Embed |
 | [Scalar Mock Server](packages/mock-server/README.md)        | OpenAPI Mock Server    |
 | [Scalar Void Server](packages/void-server/README.md)        | HTTP Request Mirror    |
 | [Scalar Open API Parser](packages/openapi-parser/README.md) | OpenAPI SDK            |

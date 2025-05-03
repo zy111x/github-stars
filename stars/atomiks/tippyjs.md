@@ -1,6 +1,6 @@
 ---
 project: tippyjs
-stars: 12169
+stars: 12172
 description: |-
     Tooltip, popover, dropdown, and menu library
 url: https://github.com/atomiks/tippyjs

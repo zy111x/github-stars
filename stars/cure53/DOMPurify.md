@@ -1,6 +1,6 @@
 ---
 project: DOMPurify
-stars: 15055
+stars: 15090
 description: |-
     DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:
 url: https://github.com/cure53/DOMPurify
@@ -311,7 +311,7 @@ const clean = DOMPurify.sanitize(dirty, {
     TRUSTED_TYPES_POLICY: trustedTypes.createPolicy({
         createHTML(s) { return s},
         createScriptURL(s) { return s},
-    }
+    })
 });
 ```
 ### Influence how we sanitize

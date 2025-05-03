@@ -1,6 +1,6 @@
 ---
 project: tweakcn
-stars: 2088
+stars: 2301
 description: |-
     A visual no-code theme editor for shadcn/ui components
 url: https://github.com/jnsahaj/tweakcn
@@ -28,8 +28,7 @@ url: https://github.com/jnsahaj/tweakcn
 
 ## Motivation
 
-Websites made with shadcn/ui famously look the same. tweakcn is a tool that helps you customize shadcn/ui components visually, to make your components stand-out.
-Currently in beta, starting with a Tailwind CSS theme editor. Support for all other shadcn/ui components is planned.
+Websites made with shadcn/ui famously look the same. tweakcn is a tool that helps you customize shadcn/ui components visually, to make your components stand-out. The goal is to build a platform where a user can discover endless customization options and then have the ability to put their own twist on it. Check our roadmap for more information
 
 ## Current Features
 
@@ -40,6 +39,8 @@ You can find the full feature list here: https://tweakcn.com/#features
 You can find the updated roadmap here: https://tweakcn.com/#roadmap
 
 ## Run Locally
+
+**IMPORTANT: For contributions, please see [CONTRIBUTING.md](CONTRIBUTING.md).**
 
 ### Prerequisites
 

@@ -1,6 +1,6 @@
 ---
 project: handsontable
-stars: 20948
+stars: 20966
 description: |-
     JavaScript Data Grid / Data Table with a Spreadsheet Look & Feel. Works with React, Angular, and Vue. Supported by the Handsontable team ⚡
 url: https://github.com/handsontable/handsontable
@@ -91,7 +91,7 @@ You can also use [Yarn](https://yarnpkg.com/package/handsontable), [NuGet](https
 
   ```html
   <!-- Set the container's ID and apply the desired theme -->
-  <div id="handsontable-example" class="ht-theme-main-dark-auto"></div>
+  <div id="handsontable-grid" class="ht-theme-main-dark-auto"></div>
   ```
 
 ### Setup

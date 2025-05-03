@@ -1,6 +1,6 @@
 ---
 project: localForage
-stars: 25352
+stars: 25365
 description: |-
     💾 Offline storage, improved. Wraps IndexedDB, WebSQL, or localStorage using a simple but powerful API.
 url: https://github.com/localForage/localForage
