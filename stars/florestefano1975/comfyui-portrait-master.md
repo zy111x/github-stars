@@ -1,6 +1,6 @@
 ---
 project: comfyui-portrait-master
-stars: 1034
+stars: 1041
 description: This node was designed to help AI image creators to generate prompts for human portraits.
 url: https://github.com/florestefano1975/comfyui-portrait-master
 ---
@@ -10,11 +10,11 @@ ComfyUI Portrait Master
 
 This nodes was designed to help AI image creators to generate prompts for human portraits.
 
-New major version: 3!
----------------------
+Version 3.3.0
+-------------
 
--   The node has been divided into four separate modules: **Base Character**, **Skin Details**, **Style & Pose**, **Make-up**.
--   Eliminated randomization switches: selectors now have the built-in selectable option.
+-   The node has been divided into **five** separate modules: **Base Character**, **Skin Details**, **Style & Pose**, **Make-up**, **Prompt Styler**.
+-   New node: **Prompt Styler**. This node removes the declarative weights typical of the SD1.5 and SDXL models to adapt the prompt with a conversational style, more suitable for modern checkpoints such as Flux, Sana, Hidream.
 -   Improved code and performance.
 
 Donations and marketplace
@@ -64,7 +64,7 @@ Available Options
 -   **age**: the age of the subject portrayed
 -   **nationality\_1**: sets first ethnicity
 -   **nationality\_2**: sets second ethnicity
--   **nationality\_mix**: controls the mix between nationality\_1 and nationality\_2, according to the syntax \[nationality\_1: nationality\_2: nationality\_mix\]. This syntax is not natively recognized by ComfyUI; we therefore recommend the use of comfyui-prompt-control. _This feature is still being tested_
+-   **nationality\_mix**: controls the mix between nationality\_1 and nationality\_2, according to the syntax \[nationality\_1: nationality\_2: nationality\_mix\]. This syntax is not natively recognized by ComfyUI; we therefore recommend the use of comfyui-prompt-control. _This feature is still being tested_.
 -   **body\_type**: set the type of the body
 -   **body\_type\_weight**: coefficient (weight) of the body type
 -   **model\_pose**: select the pose from the list

@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 9908
+stars: 9971
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -393,6 +393,9 @@ A: 由于权限限制，您无法直接触发主仓库的 Actions。请通过 Fo
 
 -   **XHS-Downloader（小红书、XiaoHongShu、RedNote）**：https://github.com/JoeanAmier/XHS-Downloader
 -   **KS-Downloader（快手、KuaiShou）**：https://github.com/JoeanAmier/KS-Downloader
+
+⭐ Star 趋势
+=========
 
 ♥️ 支持项目
 =======
