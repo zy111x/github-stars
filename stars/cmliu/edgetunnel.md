@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 20727
+stars: 20823
 description: 在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -185,6 +185,14 @@ UPTIME
 ❌
 
 动态UUID更新时间(默认值:北京时间`3`点更新)
+
+SCV
+
+`false`或`0`
+
+❌
+
+是否跳过TLS证书验证(默认`true`开启跳过证书验证)
 
 PROXYIP
 
@@ -441,8 +449,8 @@ CF账户标准端口列表
     
     /socks5\=user:password@127.0.0.1:1080
     /?socks5\=user:password@127.0.0.1:1080
-    /socks://dXNlcjpwYXNzd29yZA\==@127.0.0.1:1080
-    /socks5://user:password@127.0.0.1:1080
+    /socks://dXNlcjpwYXNzd29yZA\==@127.0.0.1:1080 (默认激活全局SOCKS5)
+    /socks5://user:password@127.0.0.1:1080 (默认激活全局SOCKS5)
     
 
 1.  **当你的`ADDAPI`可作为`PROXYIP`时，可在`ADDAPI`变量末位添加`?proxyip=true`，即可在生成节点时使用优选IP自身作为`PROXYIP`**
