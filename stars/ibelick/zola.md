@@ -1,8 +1,8 @@
 ---
 project: zola
-stars: 609
+stars: 643
 description: |-
-    Zola is a free, open-source AI chat app with multi-model support.
+    The open source ChatGPT alternative for developers. Fast, multi-model AI chat. Agents + MCP coming soon.
 url: https://github.com/ibelick/zola
 ---
 
@@ -11,6 +11,8 @@ url: https://github.com/ibelick/zola
 [zola.chat](https://zola.chat)
 
 **Zola** is a free, open-source AI chat app with multi-model support.
+
+[![Chat with this repo](https://zola.chat/button/github.svg)](https://zola.chat/?agent=github/ibelick/zola)
 
 ![zola screenshot](./public/cover_zola.jpg)
 

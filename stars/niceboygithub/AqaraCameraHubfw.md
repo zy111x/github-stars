@@ -1,6 +1,6 @@
 ---
 project: AqaraCameraHubfw
-stars: 99
+stars: 100
 description: |-
     Aqara Camera Hub G2/G2H and Aqara Hub E1 firmwares
 url: https://github.com/niceboygithub/AqaraCameraHubfw

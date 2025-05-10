@@ -1,6 +1,6 @@
 ---
 project: git-sync
-stars: 442
+stars: 462
 description: |-
     🔄 A simple tool to backup and sync your git repositories
 url: https://github.com/AkashRajpurohit/git-sync

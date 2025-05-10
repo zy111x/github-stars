@@ -1,6 +1,6 @@
 ---
 project: You-Dont-Need-Lodash-Underscore
-stars: 19061
+stars: 19071
 description: |-
     List of JavaScript methods which you can use natively + ESLint Plugin
 url: https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore

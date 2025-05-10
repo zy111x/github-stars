@@ -1,6 +1,6 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 38337
+stars: 41361
 description: |-
     FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent & VSCode Agent (And other Open Sourced) System Prompts, Tools & AI Models.
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools

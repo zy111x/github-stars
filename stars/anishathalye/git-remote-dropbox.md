@@ -1,6 +1,6 @@
 ---
 project: git-remote-dropbox
-stars: 3097
+stars: 3098
 description: |-
     A transparent bridge between Git and Dropbox - use a Dropbox (shared) folder as a Git remote! 🎁
 url: https://github.com/anishathalye/git-remote-dropbox

@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 443
+stars: 442
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -1788,6 +1788,7 @@ url: https://github.com/progfay/shields-with-icon
 ![MicroStrategy](https://img.shields.io/badge/MicroStrategy-D9232E?style=for-the-badge&logo=MicroStrategy&logoColor=FFFFFF)
 ![MIDI](https://img.shields.io/badge/MIDI-000000?style=for-the-badge&logo=MIDI&logoColor=FFFFFF)
 ![Migadu](https://img.shields.io/badge/Migadu-0043CE?style=for-the-badge&logo=Migadu&logoColor=FFFFFF)
+![Mihon](https://img.shields.io/badge/Mihon-0058A0?style=for-the-badge&logo=Mihon&logoColor=FFFFFF)
 ![miHoYo](https://img.shields.io/badge/miHoYo-4EA4DD?style=for-the-badge&logo=miHoYo&logoColor=FFFFFF)
 ![MikroTik](https://img.shields.io/badge/MikroTik-293239?style=for-the-badge&logo=MikroTik&logoColor=FFFFFF)
 ![Milanote](https://img.shields.io/badge/Milanote-31303A?style=for-the-badge&logo=Milanote&logoColor=FFFFFF)
@@ -2341,6 +2342,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=Railway&logoColor=FFFFFF)
 ![Rainmeter](https://img.shields.io/badge/Rainmeter-19519B?style=for-the-badge&logo=Rainmeter&logoColor=FFFFFF)
 ![Rakuten](https://img.shields.io/badge/Rakuten-BF0000?style=for-the-badge&logo=Rakuten&logoColor=FFFFFF)
+![Rakuten Kobo](https://img.shields.io/badge/Rakuten%20Kobo-BF0000?style=for-the-badge&logo=Rakuten+Kobo&logoColor=FFFFFF)
 ![Ram](https://img.shields.io/badge/Ram-000000?style=for-the-badge&logo=Ram&logoColor=FFFFFF)
 ![Rancher](https://img.shields.io/badge/Rancher-0075A8?style=for-the-badge&logo=Rancher&logoColor=FFFFFF)
 ![Rapid](https://img.shields.io/badge/Rapid-0055DA?style=for-the-badge&logo=Rapid&logoColor=FFFFFF)

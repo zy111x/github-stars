@@ -1,6 +1,6 @@
 ---
 project: react-native-web
-stars: 21874
+stars: 21884
 description: |-
     Cross-platform React UI packages
 url: https://github.com/necolas/react-native-web

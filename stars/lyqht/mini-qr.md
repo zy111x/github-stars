@@ -1,6 +1,6 @@
 ---
 project: mini-qr
-stars: 1113
+stars: 1131
 description: |-
     Scan & create pretty qr codes easily 👾
 url: https://github.com/lyqht/mini-qr
@@ -128,6 +128,8 @@ docker compose up -d
 ```
 
 ## Contributing
+
+[![Crowdin](https://badges.crowdin.net/miniqr/localized.svg)](https://crowdin.com/project/miniqr)
 
 Translations and bug fixes are welcome!
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.

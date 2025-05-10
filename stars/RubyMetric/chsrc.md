@@ -1,6 +1,6 @@
 ---
 project: chsrc
-stars: 5178
+stars: 5252
 description: |-
     chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc

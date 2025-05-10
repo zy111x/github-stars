@@ -1,6 +1,6 @@
 ---
 project: particleground
-stars: 2164
+stars: 2163
 description: |-
     A jQuery plugin for snazzy background particle systems
 url: https://github.com/jnicol/particleground

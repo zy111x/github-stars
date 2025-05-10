@@ -1,6 +1,6 @@
 ---
 project: cube-ui
-stars: 9138
+stars: 9137
 description: |-
     :large_orange_diamond: A fantastic mobile ui lib implement by Vue
 url: https://github.com/didi/cube-ui

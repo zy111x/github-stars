@@ -1,6 +1,6 @@
 ---
 project: Checkmate
-stars: 5354
+stars: 5440
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations.
 url: https://github.com/bluewave-labs/Checkmate
@@ -143,9 +143,7 @@ Thanks to [Gitbook](https://gitbook.io/) for giving us a free tier for their doc
 
 Also check other developer and contributor-friendly projects of BlueWave:
 
-- [LangRoute](https://github.com/bluewave-labs/langroute), an LLM proxy and gateway
-- [DataRoom](https://github.com/bluewave-labs/bluewave-dataroom), an secure file sharing application, aka dataroom.
-- [Headcount](https://github.com/bluewave-labs/bluewave-hrm), a complete Human Resource Management platform.
-- [Guidefox](https://github.com/bluewave-labs/guidefox), an application that helps new users learn how to use your product via hints, tours, popups and banners.
 - [VerifyWise](https://github.com/bluewave-labs/verifywise), the first open source AI governance platform.
+- [DataRoom](https://github.com/bluewave-labs/bluewave-dataroom), an secure file sharing application, aka dataroom.
+- [Guidefox](https://github.com/bluewave-labs/guidefox), an application that helps new users learn how to use your product via hints, tours, popups and banners.
 

@@ -1,6 +1,6 @@
 ---
 project: cheerio
-stars: 29403
+stars: 29418
 description: |-
     The fast, flexible, and elegant library for parsing and manipulating HTML and XML.
 url: https://github.com/cheeriojs/cheerio

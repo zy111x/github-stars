@@ -1,6 +1,6 @@
 ---
 project: copilot-api
-stars: 119
+stars: 135
 description: |-
     GitHub Copilot API wrapper to make it OpenAI compatible
 url: https://github.com/ericc-ch/copilot-api
@@ -81,15 +81,16 @@ Copilot API now uses a subcommand structure with two main commands:
 
 The following command line options are available for the `start` command:
 
-| Option         | Description                                  | Default | Alias |
-| -------------- | -------------------------------------------- | ------- | ----- |
-| --port         | Port to listen on                            | 4141    | -p    |
-| --verbose      | Enable verbose logging                       | false   | -v    |
-| --business     | Use a business plan GitHub account           | false   | none  |
-| --manual       | Enable manual request approval               | false   | none  |
-| --rate-limit   | Rate limit in seconds between requests       | none    | -r    |
-| --wait         | Wait instead of error when rate limit is hit | false   | -w    |
-| --github-token | Provide GitHub token directly                | none    | -g    |
+| Option         | Description                                                                   | Default | Alias |
+| -------------- | ----------------------------------------------------------------------------- | ------- | ----- |
+| --port         | Port to listen on                                                             | 4141    | -p    |
+| --verbose      | Enable verbose logging                                                        | false   | -v    |
+| --business     | Use a business plan GitHub account                                            | false   | none  |
+| --manual       | Enable manual request approval                                                | false   | none  |
+| --rate-limit   | Rate limit in seconds between requests                                        | none    | -r    |
+| --wait         | Wait instead of error when rate limit is hit                                  | false   | -w    |
+| --github-token | Provide GitHub token directly (must be generated using the `auth` subcommand) | none    | -g    |
+| --vision       | Enable vision capabilities                                                    | false   | none  |
 
 ### Auth Command Options
 
@@ -123,14 +124,15 @@ npx copilot-api@latest start --rate-limit 30 --wait
 # Provide GitHub token directly
 npx copilot-api@latest start --github-token ghp_YOUR_TOKEN_HERE
 
+# Enable vision capabilities
+npx copilot-api@latest start --vision
+
 # Run only the auth flow
 npx copilot-api@latest auth
 
 # Run auth flow with verbose logging
 npx copilot-api@latest auth --verbose
 ```
-
-> **Note**: For backward compatibility, if no subcommand is provided, the `start` command will be used as default.
 
 ## Running from Source
 
@@ -162,16 +164,8 @@ bun run start
 When using the `--manual` flag, the server will prompt you to approve each incoming request:
 
 ```
-? Accept incoming request? › (y/N)
+? Accept incoming request? > (y/N)
 ```
 
 This helps you control usage and monitor requests in real-time.
-
-## Roadmap
-
-- [x] Manual authentication flow
-- [x] Manual request approval system
-- [x] Rate limiting implementation
-- [x] Token counting
-- [x] Enhanced error handling and recovery
 

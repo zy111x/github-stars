@@ -1,6 +1,6 @@
 ---
 project: uptime-monitor
-stars: 690
+stars: 700
 description: |-
     A uptime monitoring service that is easy and cheap to run at scale. Create endpoint checks for uptime, latency, and status code. Supports OpsGenie for alerts.
 url: https://github.com/unibeck/uptime-monitor

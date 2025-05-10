@@ -1,6 +1,6 @@
 ---
 project: react-call
-stars: 806
+stars: 809
 description: |-
     ⚛️ 📡 Call your React components
 url: https://github.com/desko27/react-call
