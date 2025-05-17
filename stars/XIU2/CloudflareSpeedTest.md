@@ -1,6 +1,6 @@
 ---
 project: CloudflareSpeedTest
-stars: 21702
+stars: 21741
 description: 🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 网站 IP ~
 url: https://github.com/XIU2/CloudflareSpeedTest
 ---
@@ -32,6 +32,17 @@ Cloudflare CDN 已**明文禁止代理**方式使用，对于**代理套 CDN** �
 
 1.  下载编译好的可执行文件（ Github Releases / 蓝奏云 ）并解压。
 2.  双击运行 `CloudflareST.exe` 文件（Windows 系统），等待测速完成...
+
+`**「 点击查看 Windows 系统下其他安装方式」**`
+
+* * *
+
+通过scoop安装:
+
+# 添加最多人使用的中文软件包仓库：dorado
+scoop bucket add dorado https://github.com/chawyehsu/dorado
+# 安装cloudflare-speedtest
+scoop install dorado/cloudflare-speedtest
 
 `**「 点击查看 Linux 系统下的使用示例 」**`
 

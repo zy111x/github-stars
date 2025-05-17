@@ -1,6 +1,6 @@
 ---
 project: bark
-stars: 37733
+stars: 37815
 description: 🔊 Text-Prompted Generative Audio Model
 url: https://github.com/suno-ai/bark
 ---

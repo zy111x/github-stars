@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 58328
+stars: 59090
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -109,7 +109,7 @@ Visit our comprehensive documentation at docs.stirlingpdf.com for:
 Supported Languages
 -------------------
 
-Stirling-PDF currently supports 39 languages!
+Stirling-PDF currently supports 40 languages!
 
 Language
 
@@ -194,6 +194,8 @@ Turkish (Türkçe) (tr\_TR)
 Ukrainian (Українська) (uk\_UA)
 
 Vietnamese (Tiếng Việt) (vi\_VN)
+
+Malayalam (മലയാളം) (ml\_ML)
 
 Stirling PDF Enterprise
 -----------------------
