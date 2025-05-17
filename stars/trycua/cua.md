@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 6092
+stars: 7316
 description: |-
     c/ua is the Docker Container for Computer-Use AI Agents.
 url: https://github.com/trycua/cua
@@ -17,14 +17,15 @@ url: https://github.com/trycua/cua
   [![Swift](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white)](#)
   [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=F0F0F0)](#)
   [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white)](https://discord.com/invite/mVnXXpdE85)
+  <br>
+  <a href="https://trendshift.io/repositories/13685" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13685" alt="trycua%2Fcua | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </div>
 
 **c/ua** (pronounced "koo-ah") enables AI agents to control full operating systems in high-performance virtual containers with near-native speed on Apple Silicon.
 
-
-
 <div align="center">
-<video src="https://github.com/user-attachments/assets/06e1974f-8f73-477d-b18a-715d83148e45" width="800" controls></video></div>
+  <video src="https://github.com/user-attachments/assets/c619b4ea-bb8e-4382-860e-f3757e36af20" width="800" controls></video>
+</div>
 
 # 🚀 Quick Start
 
@@ -46,7 +47,7 @@ This script will:
 - [UITARS-1.5](https://github.com/trycua/cua/blob/main/libs/agent/README.md#agent-loops) - Run locally on Apple Silicon with MLX, or use cloud providers
 - [OpenAI CUA](https://github.com/trycua/cua/blob/main/libs/agent/README.md#agent-loops) - Use OpenAI's Computer-Use Preview model
 - [Anthropic CUA](https://github.com/trycua/cua/blob/main/libs/agent/README.md#agent-loops) - Use Anthropic's Computer-Use capabilities
-- [OmniParser](https://github.com/trycua/cua/blob/main/libs/agent/README.md#agent-loops) - Control UI with [Set-of-Marks prompting](https://som-gpt4v.github.io/) using any vision model
+- [OmniParser-v2.0](https://github.com/trycua/cua/blob/main/libs/agent/README.md#agent-loops) - Control UI with [Set-of-Marks prompting](https://som-gpt4v.github.io/) using any vision model
 
 ### System Requirements
 
@@ -76,7 +77,7 @@ The macOS CUA image contains the default Mac apps and the Computer Server for ea
 ### Step 3: Install Python SDK
 
 ```bash
-pip install cua-computer "cua-agent[all]"
+pip install "cua-computer[all]" "cua-agent[all]"
 ```
 
 Alternatively, see the [Developer Guide](./docs/Developer-Guide.md) for building from source.
@@ -112,7 +113,7 @@ For ready-to-use examples, check out our [Notebooks](./notebooks/) collection.
 ### Lume CLI Reference
 
 ```bash
-# Install Lume CLI
+# Install Lume CLI and background service
 curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/lume/scripts/install.sh | bash
 
 # List all VMs
@@ -134,7 +135,28 @@ lume stop macos-sequoia-cua_latest
 lume delete macos-sequoia-cua_latest
 ```
 
+### Lumier CLI Reference
+
 For advanced container-like virtualization, check out [Lumier](./libs/lumier/README.md) - a Docker interface for macOS and Linux VMs.
+
+```bash
+# Install Lume CLI and background service
+curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/lume/scripts/install.sh | bash
+
+# Run macOS in a Docker container
+docker run -it --rm \
+    --name lumier-vm \
+    -p 8006:8006 \
+    -v $(pwd)/storage:/storage \
+    -v $(pwd)/shared:/shared \
+    -e VM_NAME=lumier-vm \
+    -e VERSION=ghcr.io/trycua/macos-sequoia-cua:latest \
+    -e CPU_CORES=4 \
+    -e RAM_SIZE=8192 \
+    -e HOST_STORAGE_PATH=$(pwd)/storage \
+    -e HOST_SHARED_PATH=$(pwd)/shared \
+    trycua/lumier:latest
+```
 
 ## Resources
 
@@ -149,8 +171,9 @@ For advanced container-like virtualization, check out [Lumier](./libs/lumier/REA
 | Module | Description | Installation |
 |--------|-------------|---------------|
 | [**Lume**](./libs/lume/README.md) | VM management for macOS/Linux using Apple's Virtualization.Framework | `curl -fsSL https://raw.githubusercontent.com/trycua/cua/main/libs/lume/scripts/install.sh \| bash` |
-| [**Computer**](./libs/computer/README.md) | Interface for controlling virtual machines | `pip install cua-computer` |
-| [**Agent**](./libs/agent/README.md) | AI agent framework for automating tasks | `pip install cua-agent` |
+| [**Lumier**](./libs/lumier/README.md) | Docker interface for macOS and Linux VMs | `docker pull trycua/lumier:latest` |
+| [**Computer**](./libs/computer/README.md) | Interface for controlling virtual machines | `pip install "cua-computer[all]"` |
+| [**Agent**](./libs/agent/README.md) | AI agent framework for automating tasks | `pip install "cua-agent[all]"` |
 | [**MCP Server**](./libs/mcp-server/README.md) | MCP server for using CUA with Claude Desktop | `pip install cua-mcp-server` |
 | [**SOM**](./libs/som/README.md) | Self-of-Mark library for Agent | `pip install cua-som` |
 | [**PyLume**](./libs/pylume/README.md) | Python bindings for Lume | `pip install pylume` |
@@ -302,6 +325,7 @@ Thank you to all our supporters!
       <td align="center" valign="top" width="14.28%"><a href="https://www.encona.com/"><img src="https://avatars.githubusercontent.com/u/891558?v=4?s=100" width="100px;" alt="Rahim Nathwani"/><br /><sub><b>Rahim Nathwani</b></sub></a><br /><a href="#code-rahimnathwani" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://mjspeck.github.io/"><img src="https://avatars.githubusercontent.com/u/20689127?v=4?s=100" width="100px;" alt="Matt Speck"/><br /><sub><b>Matt Speck</b></sub></a><br /><a href="#code-mjspeck" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/FinnBorge"><img src="https://avatars.githubusercontent.com/u/9272726?v=4?s=100" width="100px;" alt="FinnBorge"/><br /><sub><b>FinnBorge</b></sub></a><br /><a href="#code-FinnBorge" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jklapacz"><img src="https://avatars.githubusercontent.com/u/5343758?v=4?s=100" width="100px;" alt="Jakub Klapacz"/><br /><sub><b>Jakub Klapacz</b></sub></a><br /><a href="#code-jklapacz" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

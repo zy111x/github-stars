@@ -1,6 +1,6 @@
 ---
 project: itty-router
-stars: 1917
+stars: 1920
 description: |-
     A little router.
 url: https://github.com/kwhitley/itty-router

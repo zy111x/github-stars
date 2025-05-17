@@ -1,8 +1,8 @@
 ---
 project: zola
-stars: 643
+stars: 698
 description: |-
-    The open source ChatGPT alternative for developers. Fast, multi-model AI chat. Agents + MCP coming soon.
+    The open-source AI chat app for developers. Multi-model, agent-ready.
 url: https://github.com/ibelick/zola
 ---
 
@@ -14,16 +14,18 @@ url: https://github.com/ibelick/zola
 
 [![Chat with this repo](https://zola.chat/button/github.svg)](https://zola.chat/?agent=github/ibelick/zola)
 
-![zola screenshot](./public/cover_zola.jpg)
+![zola screenshot](./public/cover_zola.webp)
 
 ## Features
 
-- multi-model support (OpenAI, Anthropic, Mistral, Gemini, etc.)
-- light and dark mode
-- prompt suggestions
-- file uploads
-- mobile-friendly layout
-- AI agents (WIP)
+- Multi-model support: OpenAI, Mistral, Claude, Gemini
+- `@agent` mentions to customize behavior or chat with GitHub repos
+- File uploads with context-aware answers
+- Prompt suggestions to guide input
+- Clean, responsive UI with light/dark themes
+- Built with Tailwind, shadcn/ui, and prompt-kit
+- Early support for tools and MCPs
+- Fully open-source and self-hostable
 
 ## Installation
 
@@ -41,8 +43,14 @@ See [INSTALL.md](./INSTALL.md) for setup instructions.
 
 - more model support
 - search
-- MCP
-- improve agent layer and capabilities
+- improve agent / MCP layer and capabilities
+
+## Sponsors
+
+Zola is proudly sponsored by [Vercel](https://vercel.com),  
+the platform we use to build, preview, and ship the app.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ibelick/zola)
 
 ## License
 

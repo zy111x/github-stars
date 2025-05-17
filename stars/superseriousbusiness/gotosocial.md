@@ -1,6 +1,6 @@
 ---
 project: gotosocial
-stars: 4139
+stars: 4140
 description: |-
     Fast, fun, small ActivityPub server. READ ONLY MIRROR! Now on Codeberg instead: https://codeberg.org/superseriousbusiness/gotosocial
 url: https://github.com/superseriousbusiness/gotosocial

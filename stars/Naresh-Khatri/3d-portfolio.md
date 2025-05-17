@@ -1,9 +1,9 @@
 ---
-project: Portfolio
-stars: 442
+project: 3d-portfolio
+stars: 450
 description: |-
     Showcasing my web dev skills with 3D magic, slick interactions, and cutting-edge design.
-url: https://github.com/Naresh-Khatri/Portfolio
+url: https://github.com/Naresh-Khatri/3d-portfolio
 ---
 
 # 🚀 My Portfolio Website

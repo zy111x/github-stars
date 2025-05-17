@@ -1,18 +1,18 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 41361
+stars: 48077
 description: |-
-    FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent & VSCode Agent (And other Open Sourced) System Prompts, Tools & AI Models.
+    FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser & Trae AI (And other Open Sourced) System Prompts, Tools & AI Models.
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 ---
 
-# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent & VSCode Agent (And other Open Sourced) System Prompts, Tools & AI Models**  
+# **FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser & Trae AI (And other Open Sourced) System Prompts, Tools & AI Models**  
 
-(All the published system prompts are extracted by myself, except the already open sourced ones and Manus)
+(All the published system prompts are extracted by myself, except the already open sourced ones, Manus and Dia, which are contributions)
 
-🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent & VSCode Agent system prompts and internal tools.**
+🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia browser & Trae AI system prompts and internal tools.**
 
-📜 Over **6,500+ lines** of insights into their structure and functionality.  
+📜 Over **7000+ lines** of insights into their structure and functionality.  
 
 ## 📂 **Available Files**
 - **v0 Folder**  
@@ -21,10 +21,12 @@ url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 - **Devin Folder**
 - **Same.dev Folder**
 - **Replit Folder**
-- **Windsurf Agent folder**
-- **VSCode (Copilot) Agent folder**
+- **Windsurf Agent Folder**
+- **VSCode (Copilot) Agent Folder**
 - **Cursor Folder**
-- **Open Source prompts folder**
+- **Dia Folder**
+- **Trae AI Folder**
+- **Open Source prompts Folder**
   - Codex CLI
   - Cline
   - Bolt
@@ -48,17 +50,7 @@ Check out **[ZeroLeaks](https://0leaks.vercel.app)**, a service designed to help
 🚨 **Note:** We no longer use GitHub issues for roadmap and feedback.  
 Please visit [System Prompts Roadmap & Feedback](https://systemprompts.featurebase.app/) to share your suggestions and track upcoming features.
 
-🆕 **LATEST UPDATE:** 30/04/2025 
-
-## 📊 **Star History**
-
-<a href="https://www.star-history.com/#x1xhlol/system-prompts-and-models-of-ai-tools&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date" />
- </picture>
-</a>
+🆕 **LATEST UPDATE:** 15/05/2025 
 
 ## ❤️ Support the Project
 
@@ -77,6 +69,25 @@ Thank you for your support! 🙏
 ## 🔗 **Connect With Me**  
 ✖ **X:** [NotLucknite](https://x.com/NotLucknite)  
 💬 **Discord:** `x1xh`  
+
+
+## 📊 **Star History**
+
+<a href="https://www.star-history.com/#x1xhlol/system-prompts-and-models-of-ai-tools&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=x1xhlol/system-prompts-and-models-of-ai-tools&type=Date" />
+ </picture>
+</a>
+
+## 🗓️ **Zero Calendar**
+
+**An Open-Source AI-Powered Calendar for the Future of Scheduling**
+
+Zero Calendar is an open-source AI calendar solution that gives users the power to manage their schedule intelligently while integrating with external services like Google Calendar and other calendar providers. Our goal is to modernize and improve scheduling through AI agents to truly revolutionize how we manage our time.
+
+For more details, check out the [Zero Calendar repository](https://github.com/Zero-Calendar/zero-calendar).
 
 ⭐ **Drop a star if you find this useful!**
 

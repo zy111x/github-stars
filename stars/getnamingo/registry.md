@@ -1,6 +1,6 @@
 ---
 project: registry
-stars: 57
+stars: 58
 description: |-
     Open-source domain registry platform. Revolutionizing ccTLD and gTLD management with Namingo.
 url: https://github.com/getnamingo/registry
@@ -19,6 +19,8 @@ Open-source domain registry platform. Revolutionizing ccTLD and gTLD management 
 Namingo is a state-of-the-art open-source domain registry platform, diligently crafted to serve ccTLD, gTLD, brand and private domain registries. Written from scratch in 2023/2025, it adheres to the latest standards, ensuring a cutting-edge experience. 
 
 Namingo is optimally designed for the 2026 ICANN new gTLD application round, providing a straightforward and easily updatable platform. Its contemporary architecture and intuitive interface make it an ideal choice for efficient and modern domain registry management.
+
+✅ **Namingo passes ICANN OT&E RST for the `MainRSPEvaluationTest` profile**, demonstrating compliance with required operational standards.
 
 ## Get Involved
 
@@ -96,16 +98,16 @@ After installation, be sure to review all the guides in the Documentation sectio
 ### Updating
 
 To update, you **must run the update scripts sequentially** without skipping versions.  
-For example, if you're on **v1.0.18** and the latest is **v1.0.20**, first update to **v1.0.19**, then to **v1.0.20**.
+For example, if you're on **v1.0.19** and the latest is **v1.0.21**, first update to **v1.0.20**, then to **v1.0.21**.
+
+- **v1.0.20 → v1.0.21**  
+  Download and run the [`update1021.sh`](docs/update1021.sh) script.
 
 - **v1.0.19 → v1.0.20**  
   Download and run the [`update1020.sh`](docs/update1020.sh) script.
-  
+
 - **v1.0.18 → v1.0.19**  
   Download and run the [`update1019.sh`](docs/update1019.sh) script.
-  
-- **v1.0.17 → v1.0.18**  
-  Download and run the [`update1018.sh`](docs/update1018.sh) script.
 
 For **older versions**, please refer to [`update.md`](docs/update.md).
 

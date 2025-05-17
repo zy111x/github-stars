@@ -1,6 +1,6 @@
 ---
 project: indie-hacker-tools
-stars: 7214
+stars: 7274
 description: |-
     收录独立开发者出海技术栈和工具
 url: https://github.com/weijunext/indie-hacker-tools
@@ -244,7 +244,7 @@ url: https://github.com/weijunext/indie-hacker-tools
 
 | 平台 | 备注 |
 | --- | --- |
-| [Product Hunt](https://www.producthunt.com/) | 新产品主打阵地，发布后其他导航站回来爬取，首选发布地。Product Hunt 助手：[PHCopilot.AI](https://PHCopilot.AI)  |
+| [Product Hunt](https://www.producthunt.com/) | 新产品主打阵地，发布后其他导航站会来爬取，首选发布地。Product Hunt 助手：[PHCopilot.AI](https://PHCopilot.AI)  |
 | [Hacker News](https://news.ycombinator.com/) | 发布注意要写软文，否则容易被删帖 |
 | [PoweredByAI](https://poweredbyai.app/) | 免费提交产品 |
 | [Pinterest](https://www.pinterest.com) | 发布视频频道也会被Google收录（免费）|

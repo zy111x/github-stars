@@ -1,6 +1,6 @@
 ---
 project: browserslist
-stars: 13261
+stars: 13267
 description: |-
     🦔 Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env
 url: https://github.com/browserslist/browserslist

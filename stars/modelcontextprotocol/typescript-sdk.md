@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 6424
+stars: 6641
 description: |-
     The official Typescript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk
@@ -9,9 +9,10 @@ url: https://github.com/modelcontextprotocol/typescript-sdk
 # MCP TypeScript SDK ![NPM Version](https://img.shields.io/npm/v/%40modelcontextprotocol%2Fsdk) ![MIT licensed](https://img.shields.io/npm/l/%40modelcontextprotocol%2Fsdk)
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Installation](#installation)
-- [Quickstart](#quickstart)
+- [Quickstart](#quick-start)
 - [What is MCP?](#what-is-mcp)
 - [Core Concepts](#core-concepts)
   - [Server](#server)
@@ -26,11 +27,14 @@ url: https://github.com/modelcontextprotocol/typescript-sdk
   - [Echo Server](#echo-server)
   - [SQLite Explorer](#sqlite-explorer)
 - [Advanced Usage](#advanced-usage)
+  - [Dynamic Servers](#dynamic-servers)
   - [Low-Level Server](#low-level-server)
   - [Writing MCP Clients](#writing-mcp-clients)
-  - [Server Capabilities](#server-capabilities)
-  - [Proxy OAuth Server](#proxy-authorization-requests-upstream)
+  - [Proxy Authorization Requests Upstream](#proxy-authorization-requests-upstream)
   - [Backwards Compatibility](#backwards-compatibility)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Overview
 
@@ -385,6 +389,7 @@ app.listen(PORT, () => {
 ```
 
 This stateless approach is useful for:
+
 - Simple API wrappers
 - RESTful scenarios where each request is independent
 - Horizontally scaled deployments without shared session state
@@ -520,7 +525,7 @@ server.tool(
 
 ### Dynamic Servers
 
-If you want to offer an initial set of tools/prompts/resources, but later add additional ones based on user action or external state change, you can add/update/remove them _after_ the Server is connected. This will automatically emit the corresponding `listChanged` notificaions:
+If you want to offer an initial set of tools/prompts/resources, but later add additional ones based on user action or external state change, you can add/update/remove them _after_ the Server is connected. This will automatically emit the corresponding `listChanged` notifications:
 
 ```ts
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
@@ -694,7 +699,8 @@ You can proxy OAuth requests to an external authorization provider:
 
 ```typescript
 import express from 'express';
-import { ProxyOAuthServerProvider, mcpAuthRouter } from '@modelcontextprotocol/sdk';
+import { ProxyOAuthServerProvider } from '@modelcontextprotocol/sdk/server/auth/providers/proxyProvider.js';
+import { mcpAuthRouter } from '@modelcontextprotocol/sdk/server/auth/router.js';
 
 const app = express();
 
@@ -728,6 +734,7 @@ app.use(mcpAuthRouter({
 ```
 
 This setup allows you to:
+
 - Forward OAuth requests to an external provider
 - Add custom token validation logic
 - Manage client registrations
@@ -841,7 +848,7 @@ app.listen(3000);
 
 ## Contributing
 
-Issues and pull requests are welcome on GitHub at https://github.com/modelcontextprotocol/typescript-sdk.
+Issues and pull requests are welcome on GitHub at <https://github.com/modelcontextprotocol/typescript-sdk>.
 
 ## License
 

@@ -1,6 +1,6 @@
 ---
 project: fedify
-stars: 736
+stars: 740
 description: |-
     ActivityPub server framework in TypeScript
 url: https://github.com/fedify-dev/fedify
@@ -33,7 +33,7 @@ Currently, Fedify provides the following features out of the box:
  -  Type-safe objects for [Activity Vocabulary] (including some vendor-specific
     extensions)
  -  [WebFinger] client and server
- -  [HTTP Signatures]
+ -  [HTTP Signatures] & [HTTP Message Signatures]
  -  [Object Integrity Proofs][FEP-8b32] & [Linked Data Signatures]
  -  Middlewares for handling webhooks
  -  [NodeInfo] protocol
@@ -77,6 +77,7 @@ join our [Matrix chat space][Matrix] or [Discord server][Discord] or
 [Activity Vocabulary]: https://www.w3.org/TR/activitystreams-vocabulary/
 [WebFinger]: https://datatracker.ietf.org/doc/html/rfc7033
 [HTTP Signatures]: https://tools.ietf.org/html/draft-cavage-http-signatures-12
+[HTTP Message Signatures]: https://www.rfc-editor.org/rfc/rfc9421
 [FEP-8b32]: https://w3id.org/fep/8b32
 [Linked Data Signatures]: https://web.archive.org/web/20170923124140/https://w3c-dvcg.github.io/ld-signatures/
 [NodeInfo]: https://nodeinfo.diaspora.software/
@@ -113,7 +114,7 @@ financial contributors:[^2]
 
 ### Backers
 
-Robin Riley, yamanoku, taye, Encyclia, okin, Andy Piper, box464, Evan Prodromou, Rafael Goulart, malte
+Robin Riley, yamanoku, Encyclia, taye, okin, Andy Piper, box464, Evan Prodromou, Rafael Goulart, malte
 
 ### One-time donations
 

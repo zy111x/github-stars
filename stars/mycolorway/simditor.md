@@ -1,6 +1,6 @@
 ---
 project: simditor
-stars: 5031
+stars: 5030
 description: |-
     An Easy and Fast WYSIWYG Editor
 url: https://github.com/mycolorway/simditor

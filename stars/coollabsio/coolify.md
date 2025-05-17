@@ -1,6 +1,6 @@
 ---
 project: coolify
-stars: 41036
+stars: 41282
 description: |-
     An open-source & self-hostable Heroku / Netlify / Vercel alternative.
 url: https://github.com/coollabsio/coolify

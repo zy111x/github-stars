@@ -1,6 +1,6 @@
 ---
 project: blocks
-stars: 1123
+stars: 1197
 description: |-
     Shadcn marketing blocks
 url: https://github.com/tailark/blocks
@@ -12,7 +12,7 @@ Speed up your workflow with responsive, pre-built shadcn-UI and Tailwindcss bloc
 
 [Tailark](https://tailark.com)
 
-![Tailark Image](app/opengraph-image.png)
+![Tailark Image](apps/www/app/opengraph-image.png)
 
 
 ## Getting Started

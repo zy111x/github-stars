@@ -1,6 +1,6 @@
 ---
 project: tinykeys
-stars: 3867
+stars: 3869
 description: |-
     A tiny (~650 B) & modern library for keybindings.
 url: https://github.com/jamiebuilds/tinykeys

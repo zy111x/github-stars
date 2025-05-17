@@ -1,6 +1,6 @@
 ---
 project: nginxbeautifier
-stars: 169
+stars: 170
 description: |-
     Format and beautify nginx config files
 url: https://github.com/vasilevich/nginxbeautifier

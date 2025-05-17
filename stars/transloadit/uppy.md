@@ -1,6 +1,6 @@
 ---
 project: uppy
-stars: 29783
+stars: 29802
 description: |-
     The next open source file uploader for web browsers :dog: 
 url: https://github.com/transloadit/uppy

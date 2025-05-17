@@ -1,6 +1,6 @@
 ---
 project: ui-beats
-stars: 197
+stars: 198
 description: |-
     Level up your UI development with reusable components from UI Beats, crafted with React, Typescript, Tailwind CSS, and Framer Motion.
 url: https://github.com/nikhils4/ui-beats

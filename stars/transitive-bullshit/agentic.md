@@ -1,6 +1,6 @@
 ---
 project: agentic
-stars: 17474
+stars: 17505
 description: |-
     AI agent stdlib that works with any LLM and TypeScript AI SDK.
 url: https://github.com/transitive-bullshit/agentic

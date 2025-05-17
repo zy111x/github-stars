@@ -1,6 +1,6 @@
 ---
 project: webpack
-stars: 65273
+stars: 65279
 description: |-
     A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through "loaders", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.
 url: https://github.com/webpack/webpack
@@ -17,7 +17,6 @@ url: https://github.com/webpack/webpack
 
 [![node][node]][node-url]
 [![builds1][builds1]][builds1-url]
-[![builds2][builds2]][builds2-url]
 [![dependency-review][dependency-review]][dependency-review-url]
 [![coverage][cover]][cover-url]
 [![PR's welcome][prs]][prs-url]
@@ -680,8 +679,6 @@ Before we started using OpenCollective, donations were made anonymously. Now tha
 [prs-url]: https://webpack.js.org/contribute/
 [builds1]: https://github.com/webpack/webpack/actions/workflows/test.yml/badge.svg
 [builds1-url]: https://github.com/webpack/webpack/actions/workflows/test.yml
-[builds2]: https://dev.azure.com/webpack/webpack/_apis/build/status%2Fwebpack.webpack?branchName=main
-[builds2-url]: https://dev.azure.com/webpack/webpack/_build/latest?definitionId=3&branchName=main
 [dependency-review-url]: https://github.com/webpack/webpack/actions/workflows/dependency-review.yml
 [dependency-review]: https://github.com/webpack/webpack/actions/workflows/dependency-review.yml/badge.svg
 [cover]: https://codecov.io/gh/webpack/webpack/graph/badge.svg?token=mDP3mQJNnn

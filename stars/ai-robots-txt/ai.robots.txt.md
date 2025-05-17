@@ -1,6 +1,6 @@
 ---
 project: ai.robots.txt
-stars: 2562
+stars: 2605
 description: |-
     A list of AI agents and robots to block.
 url: https://github.com/ai-robots-txt/ai.robots.txt
@@ -42,6 +42,15 @@ Note that, as stated in the [httpd documentation](https://httpd.apache.org/docs/
    http-request deny if ai_robot
    ```
    (Note that the path of the `haproxy-block-ai-bots.txt` may be different in your environment.)
+
+
+[Bing uses the data it crawls for AI and training, you may opt out by adding a `meta` tag to the `head` of your site.](./docs/additional-steps/bing.md)
+
+### Related
+
+- [Robots.txt Traefik plugin](https://plugins.traefik.io/plugins/681b2f3fba3486128fc34fae/robots-txt-plugin):
+middleware plugin for [Traefik](https://traefik.io/traefik/) to automatically add rules of [robots.txt](./robots.txt)
+file on-the-fly.
 
 ## Contributing
 

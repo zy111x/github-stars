@@ -1,6 +1,6 @@
 ---
 project: miminium
-stars: 499
+stars: 500
 description: |-
     DISCONTINUED - Miminium Admin Template
 url: https://github.com/akivaron/miminium

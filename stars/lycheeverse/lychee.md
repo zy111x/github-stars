@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2684
+stars: 2695
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -452,9 +452,6 @@ Options:
 
       --exclude-loopback
           Exclude loopback IP address range and localhost from checking
-
-      --exclude-mail
-          Exclude all mail addresses from checking (deprecated; excluded by default)
 
       --include-mail
           Also check email addresses

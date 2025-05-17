@@ -1,6 +1,6 @@
 ---
 project: qr
-stars: 211
+stars: 212
 description: |-
     Minimal 0-dep QR code generator & reader
 url: https://github.com/paulmillr/qr

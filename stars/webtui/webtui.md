@@ -1,6 +1,6 @@
 ---
 project: webtui
-stars: 1158
+stars: 1273
 description: |-
     null
 url: https://github.com/webtui/webtui
@@ -10,23 +10,24 @@ url: https://github.com/webtui/webtui
 
 Modular CSS Library that brings the beauty of Terminal UIs to the browser
 
-Docs: https://webtui.ironclad.sh
-Examples: https://webtui.ironclad.sh/examples
-Discord Server: https://discord.gg/yUS6T8YnfT
+- Docs: https://webtui.ironclad.sh
+- Examples: https://webtui.ironclad.sh/examples
+- Discord Server: https://discord.gg/yUS6T8YnfT
 
-## Local Development
+## Development
 
-Ensure [Bun](https://bun.sh/) is installed
+This repository is a monorepo that contains the website and all the official WebTUI packages.
 
-1. Clone the repository
+1. Ensure [Bun](https://bun.sh/) is installed
+2. Clone the repository
     ```bash
     git clone https://github.com/webtui/webtui
     ```
-2. Install dependencies
+3. Install dependencies
     ```bash
     bun i
     ```
-3. Start the dev server
+4. Start the dev server
     ```bash
     bun run dev
     ```

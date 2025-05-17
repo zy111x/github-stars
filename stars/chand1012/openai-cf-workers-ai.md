@@ -1,6 +1,6 @@
 ---
 project: openai-cf-workers-ai
-stars: 257
+stars: 259
 description: |-
     Replacing OpenAI's API with Cloudflare AI.
 url: https://github.com/chand1012/openai-cf-workers-ai

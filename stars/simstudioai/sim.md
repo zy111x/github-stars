@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 3248
+stars: 3342
 description: |-
     Sim Studio is an open-source AI agent workflow builder. Sim Studio's interface is a lightweight, intuitive way to quickly build and deploy LLMs that connect with your favorite tools.
 url: https://github.com/simstudioai/sim
@@ -34,9 +34,8 @@ There are several ways to self-host Sim Studio:
 ### Option 1: Docker Environment (Recommended)
 
 ```bash
-# Clone your forked repository
-git clone https://github.com/YOUR_USERNAME/sim.git
-cd sim
+# Clone the repository
+git clone https://github.com/simstudioai/sim.git
 
 # Create environment file and update with required environment variables (BETTER_AUTH_SECRET)
 cp .env.example .env
