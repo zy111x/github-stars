@@ -1,6 +1,6 @@
 ---
 project: CF-Workers-docker.io
-stars: 8077
+stars: 8118
 description: 这个项目是一个基于 Cloudflare Workers 的 Docker 镜像代理工具。它能够中转对 Docker 官方镜像仓库的请求，解决一些访问限制和加速访问的问题。
 url: https://github.com/cmliu/CF-Workers-docker.io
 ---
@@ -246,4 +246,17 @@ AtomHub 可信镜像仓库平台 (只包含基础镜像，共336个)
 🙏 鸣谢
 =====
 
-muzihuaner、V2ex网友、ciiiii、ChatGPT、白嫖哥、zero\_free频道、dongyubin、kiko923
+### 💖 赞助支持 - 提供云服务器
+
+-   
+
+### 🛠 开源代码引用
+
+-   muzihuaner
+-   V2ex网友
+-   ciiiii
+-   ChatGPT
+-   白嫖哥
+-   zero\_free频道
+-   dongyubin
+-   kiko923

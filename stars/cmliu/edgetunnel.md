@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 20936
+stars: 21007
 description: 在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -204,9 +204,17 @@ PROXYIP
 
 Video
 
+HTTP
+
+`user:password@127.0.0.1:8080`或`127.0.0.1:8080`
+
+❌
+
+优先作为访问CFCDN站点的HTTP代理(支持多HTTP代理之间使用`,`或`换行`作间隔)
+
 SOCKS5
 
-`user:password@127.0.0.1:1080`
+`user:password@127.0.0.1:1080`或`127.0.0.1:1080`
 
 ❌
 
@@ -220,7 +228,7 @@ GO2SOCKS5
 
 ❌
 
-设置`SOCKS5`变量之后，可设置强制使用socks5访问名单(`*`可作为通配符，`换行`作多元素间隔)
+设置`SOCKS5`或`HTTP`变量之后，可设置强制使用socks5访问名单(设置为`*`可作为全局代理)
 
 ADD
 
@@ -452,6 +460,10 @@ CF账户标准端口列表
     /socks://dXNlcjpwYXNzd29yZA\==@127.0.0.1:1080 (默认激活全局SOCKS5)
     /socks5://user:password@127.0.0.1:1080 (默认激活全局SOCKS5)
     
+-   指定 `HTTP代理` 案例
+    
+    /http://user:password@127.0.0.1:8080 (默认激活全局SOCKS5)
+    
 
 1.  **当你的`ADDAPI`可作为`PROXYIP`时，可在`ADDAPI`变量末位添加`?proxyip=true`，即可在生成节点时使用优选IP自身作为`PROXYIP`**
 
@@ -500,3 +512,4 @@ CF账户标准端口列表
 -   SHIJS1999/cloudflare-worker-vless-ip
 -   Stanley-baby
 -   ACL4SSR
+-   股神

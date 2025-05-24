@@ -1,19 +1,18 @@
 ---
 project: BiliBiliToolPro
-stars: 7312
+stars: 7334
 description: B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。敏感肌也能用。
 url: https://github.com/RayWangQvQ/BiliBiliToolPro
 ---
 
-BiliBiliTool
+BiliTool
 
 
-================
+============
 
-**BiliBiliTool 是一个自动执行任务的工具，当我们忘记做某项任务时，它会像一个贴心小助手，按照我们预先吩咐它的命令，在指定频率、时间范围内帮助我们完成计划的任务。**  
-**BiliBiliTool is an automated task execution tool that acts as a helpful assistant, following pre-configured commands to complete planned tasks within specified frequencies and timeframes when we forget to do them.**
+**BiliTool 是一个自动执行任务的工具，当我们忘记做某项任务时，它会像一个贴心小助手，按照我们预先吩咐它的命令，在指定频率、时间范围内帮助我们完成计划的任务。** **BiliTool is an automated task execution tool that acts as a helpful assistant, following pre-configured commands to complete planned tasks within specified frequencies and timeframes when we forget to do them.**
 
-详细功能如下：
+主要功能如下：
 
 -   **扫码登录，自动更新cookie**
 -   **每日获取满额升级经验（登录、投币、点赞、分享视频）（支持指定支持up主）**
@@ -35,13 +34,11 @@ BiliBiliTool
 \[目录\]
 
 -   1\. 如何使用
-    -   1.1. 部署 BiliBiliTool
-        -   1.1.1. 方式一：青龙（推荐）
-        -   1.1.2. 方式二：Docker或Podman容器化运行
+    -   1.1. 部署 BiliTool
+        -   1.1.1. 方式一：Docker 或 Podman 容器化运行（推荐）
+        -   1.1.2. 方式二：青龙
         -   1.1.3. 方式三：下载程序包到本地或服务器运行
-        -   1.1.4. 方式四：腾讯云函数SCF
-        -   1.1.5. 方式五：GitHub Actions
-        -   1.1.6. 方式六：Chart部署
+        -   1.1.4. 方式四：Chart部署
     -   1.2. 消息推送（可选）
 -   2\. 功能任务说明
 -   3\. 个性化自定义配置
@@ -62,48 +59,36 @@ BiliBiliTool
 
 -   **本应用仅用于学习和测试，作者本人并不对其负责，请于运行测试完成后自行删除，请勿滥用！**
 -   **所有代码都是开源且透明的，任何人均可查看，程序不会保存或滥用任何用户的个人信息**
--   **应用内几乎所有功能都开放为了配置（如任务开关、日期、id等），详细信息可阅读配置文档，请对自己配置负责**
+-   **应用内几乎所有功能都开放为了配置（如任务开关、日期、id等），详细信息可阅读配置文档**
 
-本地运行图示：
-
-_（如果图片挂了，请自己架梯子，没有的也可以先参考 我的博客，但内容不保证最新)_
+运行图示：
 
 1\. 如何使用
 --------
 
-BiliBiliTool 实现自动完成任务的原理，是通过调用一系列开放的api实现的。
+BiliTool 实现自动完成任务的原理，是通过调用一系列开放的api实现的。
 
-**要使用 BiliBiliTool，很简单，按照下面教程部署完成，运行后扫码登录即可。**
+**要使用 BiliTool，很简单，按照下面教程部署完成，运行后扫码登录即可。**
 
-### 1.1. 部署 BiliBiliTool
+### 1.1. 部署 BiliTool
 
 支持多种部署方式，以下选择任一适合自己的方式即可。
 
-#### 1.1.1. 方式一：青龙（推荐）
+#### 1.1.1. 方式一：Docker 或 Podman 容器化运行（推荐）
+
+\>>Docker 部署说明
+
+\>>Podman 部署说明
+
+#### 1.1.2. 方式二：青龙
 
 \>>青龙部署教程
-
-#### 1.1.2. 方式二：Docker或Podman容器化运行
-
-\>>Docker部署说明
-
-\>>Podman部署说明
 
 #### 1.1.3. 方式三：下载程序包到本地或服务器运行
 
 \>>本地部署说明
 
-#### 1.1.4. 方式四：腾讯云函数SCF
-
-当前腾讯云函数已改为收费模式，不推荐。
-
-\>>腾讯云函数部署说明
-
-#### 1.1.5. 方式五：GitHub Actions
-
-GitHub官方反对并抵制对Actions的滥用，建议所有使用该方式运行的朋友，暂时先替换其他运行方式，避免封号。
-
-#### 1.1.6. 方式六：Chart部署
+#### 1.1.4. 方式四：Chart部署
 
 \>>Chart部署说明
 
@@ -111,26 +96,12 @@ GitHub官方反对并抵制对Actions的滥用，建议所有使用该方式运�
 
 如果配置了推送，执行成功后，指定的接收端会收到推送消息，推送效果如下所示：
 
-目前默认支持**PushPlus推送、企业微信应用推送、企业微信推送、钉钉推送、Microsoft Teams推送、Telegram推送、Server酱推送和酷推QQ推送**（以上顺序即为个人推荐的排序），如果需要推送到其他端，也可以配置为任意的可以接受消息的Api地址，关于如何配置推送请详见下面的**个性化自定义配置**章节。
+目前默认支持**Telegram推送、PushPlus推送、企业微信应用推送、企业微信推送、钉钉推送、Microsoft Teams推送、Server酱推送和酷推QQ推送**（以上顺序即为个人推荐的排序），如果需要推送到其他端，也可以配置为任意的可以接受消息的Api地址，关于如何配置推送请详见下面的**个性化自定义配置**章节。
 
 2\. 功能任务说明
 ----------
 
-这里的**任务**是指一组功能的集合，是工具每次运行的最小单位。工具启动后会根据我们输入的任务编码，运行相应的任务，如：
-
-```
-dotnet Ray.BiliBiliTool.Console.dll --runTasks=Daily
-```
-
-程序启动后，会执行任务Code为 `Daily` 的`每日经验任务`。
-
-可以通过使用 `&` 符拼接多个任务，程序启动后会按顺序依次执行指定的任务集合，如
-
-```
-dotnet Ray.BiliBiliTool.Console.dll --runTasks=Daily&LiveLottery
-```
-
-会依次运行`每日任务`和`天选抽奖任务`。
+这里的**任务**是指一组功能的集合，是工具每次运行的最小单位。
 
 任务列表如下：
 
@@ -266,11 +237,8 @@ Discussions（讨论）板块可以用来**提问**和**讨论**。
 如果你有好的想法，欢迎向仓库贡献你的代码，贡献步骤：
 
 -   搜索查看 Issue，确定是否已有人提过同类问题
-    
 -   对于不确定的主题，为避免code结束后PR不被接受，可以先新建 Issue，描述问题或建议，讨论清楚后再动手编码
-    
 -   如果确认自己可以解决，请 Fork 仓库后，在**develop 分支**进行编码开发，完成后**提交 PR 到 develop 分支**
-    
 
 我会尽快进行代码审核，测试成功后会合并入 main 主分支，提前感谢您的贡献。
 
