@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2695
+stars: 2712
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -466,8 +466,13 @@ Options:
 
           Example: --fallback-extensions html,htm,php,asp,aspx,jsp,cgi
 
-      --header <HEADER>
-          Custom request header
+  -H, --header <HEADER:VALUE>
+          Set custom header for requests
+
+          Some websites require custom headers to be passed in order to return valid responses. 
+          You can specify custom headers in the format 'Name: Value'. For example, 'Accept: text/html'.
+          This is the same format that other tools like curl or wget use. 
+          Multiple headers can be specified by using the flag multiple times.
 
   -a, --accept <ACCEPT>
           A List of accepted status codes for valid links

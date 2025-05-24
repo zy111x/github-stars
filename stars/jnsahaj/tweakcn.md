@@ -1,6 +1,6 @@
 ---
 project: tweakcn
-stars: 2962
+stars: 3145
 description: |-
     A visual no-code theme editor for shadcn/ui components
 url: https://github.com/jnsahaj/tweakcn
@@ -11,6 +11,11 @@ url: https://github.com/jnsahaj/tweakcn
 </div>
 
 <div align="center">
+  <a href="https://vercel.com/oss">
+    <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+  </a>
+  <br />
+  <br />
   <a href="https://discord.gg/Phs4u2NM3n" target="_blank">
     <img alt="Discord" src="https://img.shields.io/discord/1353416868769173576?style=for-the-badge&logo=discord&logoColor=%23ffffff">
   </a>

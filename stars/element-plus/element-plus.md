@@ -1,6 +1,6 @@
 ---
 project: element-plus
-stars: 25884
+stars: 25935
 description: |-
     🎉 A Vue.js 3 UI Library made by Element team
 url: https://github.com/element-plus/element-plus
@@ -159,6 +159,12 @@ We are now lacking of experts of `Testing`, `GitHub Actions`, `PM`, if you do fe
 This project exists thanks to all the people who contribute.
 
 And thank you to all our backers! 🙏
+
+<a href="https://openomy.app/github/element-plus/element-plus" target="_blank" style="display: block; width: 100%;" align="center">
+  <img src="https://openomy.app/svg?repo=element-plus/element-plus&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
+</a>
+
+<hr />
 
 <a href="https://github.com/element-plus/element-plus/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=element-plus/element-plus" />

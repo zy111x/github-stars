@@ -1,6 +1,6 @@
 ---
 project: 5ire
-stars: 3613
+stars: 3698
 description: |-
     5ire is a cross-platform desktop AI assistant, MCP client. It compatible with major service providers,  supports local knowledge base and  tools via model context protocol servers .
 url: https://github.com/nanbingxyz/5ire
@@ -71,6 +71,8 @@ For detailed installation instructions, please see our [Installation Guide](INST
 If you want to contribute code to 5ire or develop your own apps based on 5ire, start with the [Development Setup Guide](DEVELOPMENT.md).
 
 Visit [Wiki](https://deepwiki.com/nanbingxyz/5ire) for more details.
+
+**🚀 To integrate 5ire’s one-click server installation into your website, see the** [One-Click Server Installation Integration Guide](https://github.com/nanbingxyz/5ire/wiki/One%E2%80%90Click-Server-Installation-Integration-Guide).
 
 <br />
 

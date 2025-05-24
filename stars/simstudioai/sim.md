@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 3342
+stars: 3712
 description: |-
     Sim Studio is an open-source AI agent workflow builder. Sim Studio's interface is a lightweight, intuitive way to quickly build and deploy LLMs that connect with your favorite tools.
 url: https://github.com/simstudioai/sim
@@ -22,166 +22,113 @@ url: https://github.com/simstudioai/sim
   <strong>Sim Studio</strong> is a lightweight, user-friendly platform for building AI agent workflows.
 </p>
 
-## Run
+<p align="center">
+  <img src="apps/sim/public/static/demo.gif" alt="Sim Studio Demo" width="800"/>
+</p>
 
-1. Run on our [cloud-hosted version](https://simstudio.ai)
-2. Self-host
+## Getting Started
 
-## How to Self-Host
+1. Use our [cloud-hosted version](https://simstudio.ai)
+2. Self-host using one of the methods below
 
-There are several ways to self-host Sim Studio:
+## Self-Hosting Options
 
-### Option 1: Docker Environment (Recommended)
+### Option 1: NPM Package (Simplest)
+
+The easiest way to run Sim Studio locally is using our [NPM package](https://www.npmjs.com/package/simstudio?activeTab=readme):
+
+```bash
+npx simstudio
+```
+
+After running these commands, open [http://localhost:3000/](http://localhost:3000/) in your browser.
+
+#### Options
+
+- `-p, --port <port>`: Specify the port to run Sim Studio on (default: 3000)
+- `--no-pull`: Skip pulling the latest Docker images
+
+#### Requirements
+
+- Docker must be installed and running on your machine
+
+### Option 2: Docker Compose
 
 ```bash
 # Clone the repository
 git clone https://github.com/simstudioai/sim.git
 
-# Create environment file and update with required environment variables (BETTER_AUTH_SECRET)
-cp .env.example .env
-
-# Start Sim Studio using the provided script
-docker compose up -d --build
-
-or
-
-./start_simstudio_docker.sh
-```
-
-After running these commands:
-
-1. **Access the Application**:
-
-   - Open [http://localhost:3000/w/](http://localhost:3000/w/) in your browser
-   - The `/w/` path is where the main workspace interface is located
-
-2. **Useful Docker Commands**:
-
-   ```bash
-   # View application logs
-   docker compose logs -f simstudio
-
-   # Access PostgreSQL database
-   docker compose exec db psql -U postgres -d simstudio
-
-   # Stop the environment
-   docker compose down
-
-   # Rebuild and restart (after code changes)
-   docker compose up -d --build
-   ```
-
-#### Working with Local Models
-
-To use local models with Sim Studio, follow these steps:
-
-1. **Pull Local Models**
-
-   ```bash
-   # Run the ollama_docker.sh script to pull the required models
-   ./apps/sim/scripts/ollama_docker.sh pull <model_name>
-   ```
-
-2. **Start Sim Studio with Local Models**
-
-   ```bash
-   #Start Sim Studio with local model support
-   ./start_simstudio_docker.sh --local
-
-   # or
-
-   # Start Sim Studio with local model support if you have nvidia GPU
-   docker compose up --profile local-gpu -d --build
-
-   # or
-
-   # Start Sim Studio with local model support if you don't have nvidia GPU
-   docker compose up --profile local-cpu -d --build
-   ```
-
-The application will now be configured to use your local models. You can access it at [http://localhost:3000/w/](http://localhost:3000/w/).
-
-#### Connecting to Existing Ollama Instance
-
-If you already have an Ollama instance running on your host machine, you can connect to it using one of these methods:
-
-```bash
-# Method 1: Use host networking (simplest approach)
-docker compose up --profile local-cpu -d --build --network=host
-```
-
-Or modify your docker-compose.yml:
-
-```yaml
-# Method 2: Add host.docker.internal mapping
-services:
-  simstudio:
-    # ... existing configuration ...
-    extra_hosts:
-      - 'host.docker.internal:host-gateway'
-    environment:
-      - OLLAMA_HOST=http://host.docker.internal:11434
-```
-
-### Option 2: Dev Containers
-
-1. Open VS Code or your favorite VS Code fork (Cursor, Windsurf, etc.)
-2. Install the [Remote - Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-3. Open the project in your editor
-4. Click "Reopen in Container" when prompted
-5. The environment will automatically be set up
-6. Run `npm run dev` in the terminal or use the `sim-start` alias
-
-### Option 3: Manual Setup
-
-1. **Install Dependencies**
-
-```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/sim.git
+# Navigate to the project directory
 cd sim
 
-# Install dependencies
-npm install
+# Start Sim Studio
+docker compose -f docker-compose.prod.yml up -d
 ```
 
-2. **Set Up Environment**
+Access the application at [http://localhost:3000/](http://localhost:3000/)
+
+#### Using Local Models
+
+To use local models with Sim Studio:
+
+1. Pull models using our helper script:
 
 ```bash
-cp .env.example .env  # or create a new .env file
-
-# Configure your .env file with the required environment variables:
-# - Database connection (PostgreSQL)
-# - Authentication settings (Better-Auth Secret)
+./apps/sim/scripts/ollama_docker.sh pull <model_name>
 ```
 
-⚠️ **Important Notes:**
-
-- If `RESEND_API_KEY` is not set, verification codes for login/signup will be logged to the console.
-- You can use these logged codes for testing authentication locally.
-- For production environments, you should set up a proper email provider.
-
-3. **Set Up Database**
+2. Start Sim Studio with local model support:
 
 ```bash
-# Push the database schema
+# With NVIDIA GPU support
+docker compose --profile local-gpu -f docker-compose.ollama.yml up -d
+
+# Without GPU (CPU only)
+docker compose --profile local-cpu -f docker-compose.ollama.yml up -d
+
+# If hosting on a server, update the environment variables in the docker-compose.prod.yml file to include the server's public IP then start again (OLLAMA_URL to i.e. http://1.1.1.1:11434)
+docker compose -f docker-compose.prod.yml up -d
+```
+
+### Option 3: Dev Containers
+
+1. Open VS Code with the [Remote - Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+2. Open the project and click "Reopen in Container" when prompted
+3. Run `bun run dev` in the terminal or use the `sim-start` alias
+
+### Option 4: Manual Setup
+
+1. Clone and install dependencies:
+
+```bash
+git clone https://github.com/simstudioai/sim.git
+cd sim
+bun install
+```
+
+2. Set up environment:
+
+```bash
 cd apps/sim
-npx drizzle-kit push
+cp .env.example .env  # Configure with required variables (DATABASE_URL, BETTER_AUTH_SECRET, BETTER_AUTH_URL)
 ```
 
-4. **Start Development Server**
+3. Set up the database:
 
 ```bash
-# Start the development server
-cd ../..
-npm run dev
+bunx drizzle-kit push
 ```
 
-5. **Open [http://localhost:3000](http://localhost:3000) in your browser**
+4. Start the development server:
+
+```bash
+bun run dev
+```
 
 ## Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Runtime**: [Bun](https://bun.sh/)
 - **Database**: PostgreSQL with [Drizzle ORM](https://orm.drizzle.team)
 - **Authentication**: [Better Auth](https://better-auth.com)
 - **UI**: [Shadcn](https://ui.shadcn.com/), [Tailwind CSS](https://tailwindcss.com)
@@ -198,7 +145,4 @@ We welcome contributions! Please see our [Contributing Guide](.github/CONTRIBUTI
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
-##
-
 <p align="center">Made with ❤️ by the Sim Studio Team</p>
-

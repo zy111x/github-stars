@@ -1,10 +1,16 @@
 ---
 project: solstatus
-stars: 706
+stars: 716
 description: |-
     An uptime monitoring service that is easy and cheap to run at scale. Create endpoint checks for uptime, latency, and status code. Supports OpsGenie for alerts.
 url: https://github.com/unibeck/solstatus
 ---
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/unibeck/solstatus)
+![GitHub](https://img.shields.io/github/license/unibeck/solstatus)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/unibeck/solstatus)
+![GitHub contributors](https://img.shields.io/github/contributors/unibeck/solstatus)
+![GitHub commits since latest release (by SemVer including pre-releases)](https://img.shields.io/github/commits-since/unibeck/solstatus/latest)
 
 # SolStatus
 
@@ -112,6 +118,8 @@ pnpm deploy:api-trigger
 
 ### Maintenance
 Update dependencies
+
+Dependabot automatically creates pull requests for dependency updates weekly. For manual updates:
 ```sh
 pnpm exec ncu -t minor -u
 pnpm i
@@ -144,5 +152,10 @@ pnpm run db:studio:prod
 ```
 
 ## CI/CD
-TODO
+
+### Dependency Management
+This repository uses Dependabot to keep dependencies up to date:
+- npm dependencies are checked weekly (grouped as minor and patch updates)
+- GitHub Actions are checked monthly
+- PR limits are set to avoid overwhelming with dependency updates
 

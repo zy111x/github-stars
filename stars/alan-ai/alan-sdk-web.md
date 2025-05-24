@@ -1,6 +1,6 @@
 ---
 project: alan-sdk-web
-stars: 2405
+stars: 2404
 description: |-
     The Self-Coding System for Your App — Alan AI SDK for Web
 url: https://github.com/alan-ai/alan-sdk-web

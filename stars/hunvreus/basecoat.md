@@ -1,6 +1,6 @@
 ---
 project: basecoat
-stars: 652
+stars: 974
 description: |-
     A components library built with Tailwind CSS that works with any web stack.
 url: https://github.com/hunvreus/basecoat

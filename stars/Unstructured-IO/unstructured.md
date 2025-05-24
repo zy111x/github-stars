@@ -1,8 +1,8 @@
 ---
 project: unstructured
-stars: 11210
+stars: 11290
 description: |-
-    Open source libraries and APIs to build custom preprocessing pipelines for labeling, training, or production machine learning pipelines. 
+    Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding.
 url: https://github.com/Unstructured-IO/unstructured
 ---
 
@@ -47,14 +47,9 @@ url: https://github.com/Unstructured-IO/unstructured
 
 The `unstructured` library provides open-source components for ingesting and pre-processing images and text documents, such as PDFs, HTML, Word docs, and [many more](https://docs.unstructured.io/open-source/core-functionality/partitioning). The use cases of `unstructured` revolve around streamlining and optimizing the data processing workflow for LLMs. `unstructured` modular functions and connectors form a cohesive system that simplifies data ingestion and pre-processing, making it adaptable to different platforms and efficient in transforming unstructured data into structured outputs.
 
-## Try the Unstructured Serverless API!
+## Try the Unstructured Platform Product
 
-Looking for better pre-processing performance and less setup?
-Check out our new [Serverless API](https://unstructured.io/api-key-hosted)!
-The Unstructured Serverless API is our most performant API yet, delivering a more responsive,
-production-grade solution to better support your business and LLM needs.
-Head to our [signup page](https://app.unstructured.io/) page to get started for
-free.
+Ready to move your data processing pipeline to production, and take advantage of advanced features? Check out [Unstructured Platform](https://unstructured.io/enterprise). In addition to better processing performance, take advantage of chunking, embedding, and image and table enrichment generation, all from a low code UI or an API. [Request a demo](https://unstructured.io/contact) from our sales team to learn more about how to get started.
 
 ## :eight_pointed_black_star: Quick Start
 

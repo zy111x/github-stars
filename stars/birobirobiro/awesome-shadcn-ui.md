@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 14441
+stars: 14577
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -125,8 +125,9 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | react-highlight-popover | Headless component for text selection popovers. | [Link](https://react-highlight-popover.omsimos.com) | 2024-10-03 |
 | react-pdf-flipbook-viewer | PDF flipbook viewer with zoom and fullscreen. | [Link](https://github.com/mohitkumawat310/react-pdf-flipbook-viewer) | 2024-12-26 |
 | react-select | React-select library with shadcn styling. | [Link](https://gist.github.com/ilkou/7bf2dbd42a7faf70053b43034fc4b5a4) | 2024-07-22 |
+| react-whell-picker | iOS-like Wheel Picker for React. | [Link](https://react-wheel-picker.chanhdai.com/)
 | recursive-dnd-kanban-board | Recursive drag and drop kanban board. | [Link](https://github.com/mehrdadrafiee/recursive-dnd-kanban-board) | 2024-10-03 |
-|retro-ui|An open source component library, inspred by neo brutalism design system|[Link](https://retroui.dev)| 2025-05-13 |
+| retro-ui|An open source component library, inspred by neo brutalism design system|[Link](https://retroui.dev)| 2025-05-13 |
 | roadmap-ui | Components for interactive roadmaps. | [Link](https://github.com/haydenbleasel/roadmap-ui) | 2024-12-26 |
 | search-address | Interactive address search using OpenStreetMap. | [Link](https://github.com/UretzkyZvi/search-address) | 2024-05-07 |
 |shadboard|An admin dashboard template built with Next.js 15, React 19, Tailwind CSS v4, and Shadcn/UI components, featuring starter and full kits for scalable, user-friendly web apps.|[Link](https://github.com/Qualiora/shadboard)| 2025-04-22 |
@@ -153,7 +154,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-editor | Lexical editor with shadcn theme. | [Link](https://github.com/htmujahid/shadcn-editor) | 2024-11-08 |
 | shadcn-extends | Collection of shadcn/ui components. | [Link](https://github.com/lucioew28/extends) | 2024-06-07 |
 | shadcn-extension | Open-source component collection. | [Link](https://github.com/BelkacemYerfa/shadcn-extension) | 2024-06-07 |
-|shadcn-font-picker|Font picker using shadcn/ui components and google font API.|[Link](https://shadcn-font-picker.vercel.app)| 2025-04-22 |
+| shadcn-font-picker|Font picker using shadcn/ui components and google font API.|[Link](https://shadcn-font-picker.vercel.app)| 2025-04-22 |
 | shadcn-iconpicker | React/shadcn simple icon picker using lucide icons. | [Link](https://icon-picker.alan-courtois.fr/) | 2025-02-20 |
 | shadcn-image-cropper | Image cropper with react-image-crop. | [Link](https://github.com/sujjeee/shadcn-image-cropper) | 2024-11-08 |
 | shadcn-linear-combobox | Linear-style task priority combobox. | [Link](https://github.com/damianricobelli/shadcn-linear-combobox) | 2024-04-25 |
@@ -166,7 +167,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-pricing-page | Responsive pricing component with toggles. | [Link](https://github.com/aymanch-03/shadcn-pricing-page) | 2024-03-08 |
 | shadcn-spinner | Spinner component. | [Link](https://github.com/allipiopereira/shadcn-spinner) | 2024-12-09 |
 | shadcn-stepper | Complete stepper component. | [Link](https://github.com/damianricobelli/stepperize) | 2024-04-25 |
-|shadcn-studio|Open Source Registry of Shadcn components and blocks.|[Link](https://shadcnstudio.com/)| 2025-04-24 |
+| shadcn-studio|Open Source Registry of Shadcn components and blocks.|[Link](https://shadcnstudio.com/)| 2025-04-24 |
 | shadcn-table-maker | Tool for creating dynamic tables. | [Link](https://shadcn-table-maker.vercel.app/) | 2024-12-09 |
 | shadcn-table-v2 | Table with server-side features. | [Link](https://github.com/sadmann7/shadcn-table) | 2024-03-27 |
 | shadcn-timeline | Customizable timeline component. | [Link](https://github.com/timDeHof/shadcn-timeline) | 2024-06-22 |
@@ -303,7 +304,6 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 |----------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------| ------- |
 | anonypost | Share your thoughts and experiences anonymously by posting on the platform. Crafted using t3-stack. | [Link](https://github.com/avalynndev/anonypost) | 2024-07-17 |
 | bolhadev | The quickest path to learn English is speaking it regularly. Just find someone to chat with. | [Link](https://bolhadev.chat/) | 2024-06-04 |
-| crept-studio | Crept is a free Open Source project, made on top of Next.js, Tailwind CSS, and Shadcn UI. You can use it to deliver free TV shows and movies. | [Link](https://www.crept.studio) | 2024-12-27 |
 | enjoytown | A free anime, manga, movie, and TV-shows streaming platform. Built with Next.js, shadcn/ui. | [Link](https://github.com/avalynndev/enjoytown) | 2024-06-04 |
 | grade-calculator | A grade calculator/dashboard for students, aiming to provide a better overview of academic performance. | [Link](https://grades.nstr.dev/) | 2024-12-27 |
 | infinitunes | A simple music player web app built using Next.js, shadcn/ui, Tailwind CSS, Drizzle ORM, and more. | [Link](https://github.com/rajput-hemant/infinitunes) | 2024-06-04 |
@@ -311,6 +311,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | memergez | Quickly generate memes by entering text or an avatar URL, with support for many meme commands. | [Link](https://github.com/avalynndev/memergez) | 2024-08-26 |
 | midday-components | A collection of open-source components based on Midday features. | [Link](https://midday.ai/components) | 2024-11-21 |
 | plotwist | Easy management and reviews of your movies, series, and animes using Next.js, Tailwind CSS, Supabase, and shadcn/ui. | [Link](https://plotwist.app/en-US) | 2024-05-31 |
+| youropinion.is | Free survey platform which supports importing your exisitng shadcn/ui theme | [Link](https://youropinion.is/news/202505-match-my-style)
 
 ## Ports
 

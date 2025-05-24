@@ -1,6 +1,6 @@
 ---
 project: fetch
-stars: 25871
+stars: 25882
 description: |-
     A window.fetch JavaScript polyfill.
 url: https://github.com/JakeChampion/fetch

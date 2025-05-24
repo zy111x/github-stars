@@ -1,6 +1,6 @@
 ---
 project: sd-webui-lobe-theme
-stars: 2589
+stars: 2590
 description: |-
     🅰️ Lobe theme - The modern theme for stable diffusion webui, exquisite interface design, highly customizable UI, and efficiency boosting features.
 url: https://github.com/lobehub/sd-webui-lobe-theme

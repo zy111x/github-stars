@@ -1,6 +1,6 @@
 ---
 project: llama-flow
-stars: 133
+stars: 134
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/llama-flow

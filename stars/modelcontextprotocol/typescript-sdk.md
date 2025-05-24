@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 6641
+stars: 6932
 description: |-
     The official Typescript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk
@@ -556,7 +556,7 @@ putMessageTool.disable()
 
 const upgradeAuthTool = server.tool(
   "upgradeAuth",
-  { permission: z.enum(["write', vadmin"])},
+  { permission: z.enum(["write', admin"])},
   // Any mutations here will automatically emit `listChanged` notifications
   async ({ permission }) => {
     const { ok, err, previous } = await upgradeAuthAndStoreToken(permission)

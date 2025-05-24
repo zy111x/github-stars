@@ -1,6 +1,6 @@
 ---
 project: marked
-stars: 34656
+stars: 34718
 description: |-
     A markdown parser and compiler. Built for speed.
 url: https://github.com/markedjs/marked

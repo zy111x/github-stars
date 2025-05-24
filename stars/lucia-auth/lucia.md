@@ -1,6 +1,6 @@
 ---
 project: lucia
-stars: 10146
+stars: 10155
 description: |-
     Authentication, simple and clean
 url: https://github.com/lucia-auth/lucia

@@ -1,6 +1,6 @@
 ---
 project: rivet
-stars: 3449
+stars: 3463
 description: |-
     🔩 Serverless for stateful backends
 url: https://github.com/rivet-gg/rivet

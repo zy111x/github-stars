@@ -1,6 +1,6 @@
 ---
 project: deepwiki-mcp
-stars: 460
+stars: 528
 description: |-
     📖 MCP server for fetch deepwiki.com and get latest knowledge in Cursor and other Code Editors
 url: https://github.com/regenrek/deepwiki-mcp
@@ -193,8 +193,8 @@ Fetched https://deepwiki.com/user/repo/page2: 6200 bytes in 280ms (status: 200)
 
 ```bash
 # Clone the repository
-git clone https://github.com/regenrek/mcp-deepwiki.git
-cd mcp-deepwiki
+git clone https://github.com/regenrek/deepwiki-mcp.git
+cd deepwiki-mcp
 
 # Install dependencies
 npm install

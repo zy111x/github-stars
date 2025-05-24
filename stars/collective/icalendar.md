@@ -1,6 +1,6 @@
 ---
 project: icalendar
-stars: 1047
+stars: 1049
 description: |-
     icalendar parser library for Python
 url: https://github.com/collective/icalendar
@@ -89,14 +89,14 @@ Such a calendar can then be edited and saved again.
 
 .. code:: python
 
-    >>> calendar["X-WR-CALNAME"] = "My Modified Calendar"  # modify
-    >>> print(calendar.to_ical()[:129])  # save modification
+    >>> calendar.calendar_name = "My Modified Calendar"  # modify
+    >>> print(calendar.to_ical()[:121])  # save modification
     BEGIN:VCALENDAR
     VERSION:2.0
     PRODID:collective/icalendar
     CALSCALE:GREGORIAN
     METHOD:PUBLISH
-    X-WR-CALNAME:My Modified Calendar
+    NAME:My Modified Calendar
 
 
 Create Events, TODOs, Journals, Alarms, ...
