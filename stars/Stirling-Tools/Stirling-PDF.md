@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 60156
+stars: 60515
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -185,7 +185,7 @@ Swedish (Svenska) (sv\_SE)
 
 Thai (ไทย) (th\_TH)
 
-Tibetan (བོད་ཡིག་) (zh\_BO)
+Tibetan (བོད་ཡིག་) (bo\_CN)
 
 Traditional Chinese (繁體中文) (zh\_TW)
 
@@ -195,7 +195,7 @@ Ukrainian (Українська) (uk\_UA)
 
 Vietnamese (Tiếng Việt) (vi\_VN)
 
-Malayalam (മലയാളം) (ml\_ML)
+Malayalam (മലയാളം) (ml\_IN)
 
 Stirling PDF Enterprise
 -----------------------
