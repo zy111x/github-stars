@@ -1,6 +1,6 @@
 ---
 project: dia
-stars: 16308
+stars: 16595
 description: |-
     A TTS model capable of generating ultra-realistic dialogue in one pass.
 url: https://github.com/nari-labs/dia

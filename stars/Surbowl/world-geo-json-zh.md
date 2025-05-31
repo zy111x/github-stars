@@ -1,6 +1,6 @@
 ---
 project: world-geo-json-zh
-stars: 261
+stars: 263
 description: |-
     🌏 简体中文 GeoJSON 世界地图，带有国家（地区）的 ISO 3166 代码、中文简称与全称。A simplified Chinese world map in GeoJSON format, including ISO 3166 codes, Chinese short names, and full names of countries (regions).
 url: https://github.com/Surbowl/world-geo-json-zh

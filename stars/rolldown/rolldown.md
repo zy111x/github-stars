@@ -1,6 +1,6 @@
 ---
 project: rolldown
-stars: 11030
+stars: 11105
 description: |-
     Fast Rust bundler for JavaScript/TypeScript with Rollup-compatible API.
 url: https://github.com/rolldown/rolldown
@@ -16,9 +16,6 @@ url: https://github.com/rolldown/rolldown
 
 [![MIT licensed][badge-license]][url-license]
 [![NPM version][badge-npm-version]][url-npm]
-[![NPM Unpacked Size (with version)](https://img.shields.io/npm/unpacked-size/rolldown/latest?label=npm)][url-npm]
-[![Build Status][badge-ci]][url-ci]
-[![Code Coverage][badge-code-coverage]][url-code-coverage]
 [![CodSpeed Badge](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://codspeed.io/rolldown/rolldown)
 [![Discord chat][badge-discord]][discord-url]
 
@@ -26,11 +23,18 @@ url: https://github.com/rolldown/rolldown
 
 <div align="center">
 
+[![NPM Unpacked Size (with version)](https://img.shields.io/npm/unpacked-size/rolldown/latest?label=npm)][url-npm]
 [![NPM Unpacked Size darwin-arm64](https://img.shields.io/npm/unpacked-size/%40rolldown%2Fbinding-darwin-arm64/latest?label=darwin-arm64)](https://www.npmjs.com/package/@rolldown/binding-darwin-arm64)
 [![NPM Unpacked Size darwin-x64](https://img.shields.io/npm/unpacked-size/%40rolldown%2Fbinding-darwin-x64/latest?label=darwin-x64)](https://www.npmjs.com/package/@rolldown/binding-darwin-x64)
 [![NPM Unpacked Size linux-x64-gnu](https://img.shields.io/npm/unpacked-size/%40rolldown%2Fbinding-linux-x64-gnu/latest?label=linux-x64-gnu)](https://www.npmjs.com/package/@rolldown/binding-linux-x64-gnu)
 [![NPM Unpacked Size win32-x64](https://img.shields.io/npm/unpacked-size/%40rolldown%2Fbinding-win32-x64-msvc/latest?label=win32-x64)](https://www.npmjs.com/package/@rolldown/binding-win32-x64-msvc)
 [![NPM Unpacked Size wasm32-wasi](https://img.shields.io/npm/unpacked-size/%40rolldown%2Fbinding-wasm32-wasi/latest?label=wasm32-wasi)](https://www.npmjs.com/package/@rolldown/binding-wasm32-wasi)
+
+</div>
+
+<div align="center">
+
+[![pkg.pr.new](https://pkg.pr.new/badge/pkg.pr.new/pkg.pr.new?style=flat&color=000&logoSize=auto)](https://pkg.pr.new/~/rolldown/rolldown)
 
 </div>
 
@@ -89,10 +93,6 @@ Licenses of these projects are listed in [THIRD-PARTY-LICENSE](/THIRD-PARTY-LICE
 [discord-url]: https://chat.rolldown.rs
 [badge-license]: https://img.shields.io/badge/license-MIT-blue.svg
 [url-license]: https://github.com/rolldown/rolldown/blob/main/LICENSE
-[badge-ci]: https://github.com/rolldown/rolldown/actions/workflows/ci.yml/badge.svg?event=push&branch=main
-[url-ci]: https://github.com/rolldown/rolldown/actions/workflows/ci.yml?query=event%3Apush+branch%3Amain
-[badge-code-coverage]: https://codecov.io/github/rolldown/rolldown/branch/main/graph/badge.svg
-[url-code-coverage]: https://codecov.io/gh/rolldown/rolldown
 [badge-npm-version]: https://img.shields.io/npm/v/rolldown/latest?color=brightgreen
 [url-npm]: https://www.npmjs.com/package/rolldown/v/latest
 [badge-binary-size-windows]: [https://img.shields.io/npm/unpacked-size/%40rolldown%2Fbinding-win32-x64-msvc/latest]

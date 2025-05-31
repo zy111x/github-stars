@@ -1,6 +1,6 @@
 ---
 project: tailwindcss-motion
-stars: 3092
+stars: 3096
 description: |-
     tailwindcss-motion is a Tailwind CSS Plugin made at RomboHQ. It’s a simple, yet powerful, animation library with a simple syntax.
 url: https://github.com/romboHQ/tailwindcss-motion

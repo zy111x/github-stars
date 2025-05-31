@@ -1,6 +1,6 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 51638
+stars: 53986
 description: |-
     FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser & Trae AI (And other Open Sourced) System Prompts, Tools & AI Models.
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools

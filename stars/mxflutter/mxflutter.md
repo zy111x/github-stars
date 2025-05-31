@@ -1,6 +1,6 @@
 ---
 project: mxflutter
-stars: 2823
+stars: 2821
 description: |-
     基于JavaScript 的Flutter框架 mxflutter
 url: https://github.com/mxflutter/mxflutter

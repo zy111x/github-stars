@@ -1,8 +1,8 @@
 ---
 project: logto
-stars: 10172
+stars: 10196
 description: |-
-    🧑‍🚀 Open-source auth infrastructure for SaaS and AI apps, built on OIDC and OAuth 2.1 with multi-tenancy, SSO, and RBAC.
+    🧑‍🚀 Auth infrastructure for SaaS and AI apps, built on OIDC and OAuth 2.1 with multi-tenancy, SSO, and RBAC.
 url: https://github.com/logto-io/logto
 ---
 

@@ -1,6 +1,6 @@
 ---
 project: vue
-stars: 208897
+stars: 208917
 description: |-
     This is the repo for Vue 2. For Vue 3, go to https://github.com/vuejs/core
 url: https://github.com/vuejs/vue

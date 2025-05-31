@@ -1,6 +1,6 @@
 ---
 project: browserslist
-stars: 13277
+stars: 13288
 description: |-
     🦔 Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-preset-env
 url: https://github.com/browserslist/browserslist
@@ -245,6 +245,7 @@ You can specify the browser and Node.js versions by queries (case insensitive):
   * `cover 99.5%`: most popular browsers that provide coverage.
   * `cover 99.5% in US`: same as above, with [two-letter country code].
   * `cover 99.5% in my stats`: uses [custom usage data].
+  * `cover 99.5% in browserslist-config-mycompany stats`: uses [custom usage data] from `browserslist-config-mycompany/browserslist-stats.json`.
 * Last versions:
   * `last 2 versions`: the last 2 versions for *each* browser.
   * `last 2 Chrome versions`: the last 2 versions of Chrome browser.

@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 28693
+stars: 28765
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -31,8 +31,6 @@ If you are already familiar with React, you already know Ink.
 Since Ink is a React renderer, it means that all features of React are supported.
 Head over to [React](https://reactjs.org) website for documentation on how to use it.
 Only Ink's methods will be documented in this readme.
-
-**Note:** This is documentation for Ink 4 and 5. If you're looking for docs on Ink 3, check out [this release](https://github.com/vadimdemedes/ink/tree/v3.2.0).
 
 ---
 

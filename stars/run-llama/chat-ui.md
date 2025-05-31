@@ -1,6 +1,6 @@
 ---
 project: chat-ui
-stars: 346
+stars: 358
 description: |-
     Chat UI components for LLM apps
 url: https://github.com/run-llama/chat-ui
@@ -198,6 +198,11 @@ import '@llamaindex/chat-ui/styles/pdf.css' // pdf styling
 
 The `code.css` file uses the `atom-one-dark` theme from highlight.js by default. There are a lot of others to choose from: https://highlightjs.org/demo
 You can use any of them by copying [their CSS](https://github.com/highlightjs/highlight.js/tree/main/src/styles/) to your project and importing it.
+
+## Language renderer support (e.g. mermaid)
+
+For any language that the LLM generates, you can specify a custom renderer to render the output.
+We have an example for how to render mermaid code as SVG using [a custom renderer](./apps/web/app/demo/mermaid/).
 
 ## Example
 

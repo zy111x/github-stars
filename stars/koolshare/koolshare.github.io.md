@@ -2,7 +2,7 @@
 project: koolshare.github.io
 stars: 4682
 description: |-
-    网站切换到：https://www.koolcenter.com
+    网站切换到：https://www.asusgo.com
 url: https://github.com/koolshare/koolshare.github.io
 ---
 

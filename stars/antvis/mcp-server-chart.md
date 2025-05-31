@@ -1,8 +1,8 @@
 ---
 project: mcp-server-chart
-stars: 491
+stars: 663
 description: |-
-    🤖 A Model Context Protocol server for generating visual charts using @antvis.
+    🤖 A visualization Model Context Protocol server for generating visual charts using @antvis.
 url: https://github.com/antvis/mcp-server-chart
 ---
 
@@ -14,7 +14,7 @@ A Model Context Protocol server for generating charts using [AntV](https://githu
   <img width="380" src="https://glama.ai/mcp/servers/@antvis/mcp-server-chart/badge" />
 </a>
 
-This is a TypeScript-based MCP server that provides chart generation capabilities. It allows you to create various types of charts through MCP tools.
+This is a TypeScript-based MCP server that provides chart generation capabilities. It allows you to create various types of charts through MCP tools. You can also it use in [Dify](https://marketplace.dify.ai/plugins/antv/visualization).
 
 
 ## ✨ Features

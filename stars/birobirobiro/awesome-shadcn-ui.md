@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 14577
+stars: 14748
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui

@@ -1,6 +1,6 @@
 ---
 project: Zero
-stars: 7608
+stars: 7762
 description: |-
     Experience email the way you want with 0 – the first open source email app that puts your privacy and safety first. Join the discord: https://discord.gg/0email
 url: https://github.com/Mail-0/Zero
@@ -96,6 +96,42 @@ You can set up Zero in two ways:
 
    Visit [http://localhost:3000](http://localhost:3000)
    </details>
+
+<details open>
+<summary><b>Devcontainer Setup</b></summary>
+
+#### Quick Start guide
+
+1. **Clone and Install**
+
+   ```bash
+   # Clone the repository
+   git clone https://github.com/Mail-0/Zero.git
+   cd Zero
+   ```
+
+   Then open the code in devcontainer and install the dependencies:
+
+   ```
+   pnpm install
+
+   # Start the database locally
+   pnpm docker:db:up
+   ```
+
+2. **Set Up Environment**
+
+   - Run `pnpm nizzy env` to setup your environment variables
+   - Run `pnpm nizzy sync` to sync your environment variables and types
+   - Start the database with the provided docker compose setup: `pnpm docker:db:up`
+   - Initialize the database: `pnpm db:push`
+
+3. **Start The App**
+   ```bash
+   pnpm dev
+   ```
+   Visit [http://localhost:3000](http://localhost:3000)
+     </details>
 
 ### Environment Setup
 

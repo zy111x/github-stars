@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 50559
+stars: 50690
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -48,6 +48,7 @@ Rclone *("rsync for cloud storage")* is a command-line program to sync files and
   * Enterprise File Fabric [:page_facing_up:](https://rclone.org/filefabric/)
   * Fastmail Files [:page_facing_up:](https://rclone.org/webdav/#fastmail-files)
   * Files.com [:page_facing_up:](https://rclone.org/filescom/)
+  * FlashBlade [:page_facing_up:](https://rclone.org/s3/#pure-storage-flashblade)
   * FTP [:page_facing_up:](https://rclone.org/ftp/)
   * GoFile [:page_facing_up:](https://rclone.org/gofile/)
   * Google Cloud Storage [:page_facing_up:](https://rclone.org/googlecloudstorage/)

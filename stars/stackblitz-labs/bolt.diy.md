@@ -1,6 +1,6 @@
 ---
 project: bolt.diy
-stars: 15922
+stars: 16059
 description: |-
     Prompt, run, edit, and deploy full-stack web applications using any LLM you want!
 url: https://github.com/stackblitz-labs/bolt.diy
@@ -92,11 +92,11 @@ project, please check the [project management guide](./PROJECT.md) to get starte
 - ⬜ **HIGH PRIORITY** - Better prompting for smaller LLMs (code window sometimes doesn't start)
 - ⬜ **HIGH PRIORITY** - Run agents in the backend as opposed to a single model call
 - ✅ Deploy directly to Netlify (@xKevIsDev)
-- ⬜ Supabase Integration
+- ✅ Supabase Integration (@xKevIsDev)
 - ⬜ Have LLM plan the project in a MD file for better results/transparency
 - ⬜ VSCode Integration with git-like confirmations
 - ⬜ Upload documents for knowledge - UI design templates, a code base to reference coding style, etc.
-- ⬜ Voice prompting
+- ✅ Voice prompting
 - ⬜ Azure Open AI API Integration
 - ⬜ Vertex AI Integration
 - ⬜ Granite Integration

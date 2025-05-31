@@ -1,6 +1,6 @@
 ---
 project: rime-forge
-stars: 108
+stars: 109
 description: |-
     文正坊 - 中州韵 Rime 输入法私房菜
 url: https://github.com/riverscn/rime-forge

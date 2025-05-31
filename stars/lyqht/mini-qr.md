@@ -1,8 +1,8 @@
 ---
 project: mini-qr
-stars: 1160
+stars: 1175
 description: |-
-    Scan & create pretty qr codes easily 👾
+    Create & scan cute qr codes easily 👾
 url: https://github.com/lyqht/mini-qr
 ---
 
@@ -119,7 +119,9 @@ https://github.com/lyqht/mini-qr/assets/35736525/991b2d7e-f168-4354-9091-1678d2c
 
 ## Self-hosting with Docker 🐋
 
-Mini-QR can easily be self-hosted. We provide a [docker-compose.yml](docker-compose.yml) file as well as our own images. We are using GitHub's `ghrc.io` Container Registry.
+Mini-QR can easily be self-hosted using Docker. We provide a [docker-compose.yml](docker-compose.yml) file and a production-ready multi-stage [Dockerfile](Dockerfile).
+
+### Quick Start (using prebuilt image)
 
 ```bash
 wget https://github.com/lyqht/mini-qr/raw/main/docker-compose.yml
@@ -127,11 +129,35 @@ wget https://github.com/lyqht/mini-qr/raw/main/docker-compose.yml
 docker compose up -d
 ```
 
+This will pull the latest production image from GitHub Container Registry and start the app at [http://localhost:8081](http://localhost:8081).
+
+### Build and run locally (for development or custom builds)
+
+```bash
+docker compose up -d --build
+```
+
+Or build and run manually:
+
+```bash
+docker build -t mini-qr .
+docker run -d -p 8081:8080 mini-qr
+```
+
+### Customization
+
+- You can edit `nginx.conf` or mount your own static files by uncommenting the `volumes` section in `docker-compose.yml`.
+- The production image uses Nginx for optimal static file serving.
+- The `.dockerignore` file is included for smaller, faster builds.
+
 ## Contributing
 
 [![All Contributors](https://img.shields.io/github/all-contributors/lyqht/mini-qr?color=ee8449&style=flat-square)](#contributors) [![Crowdin](https://badges.crowdin.net/miniqr/localized.svg)](https://crowdin.com/project/miniqr)
 
 Translations and bug fixes are welcome!
+
+> [!NOTE]
+> For other issues, please create an issue/ raise it on the discussion board before working on them, as they may be rejected if they are not aligned with @lyqht's goals for this project.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
 
@@ -147,7 +173,7 @@ Thank you for everyone here for taking their time out to improve MiniQR 🧡
     <tr>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/tenekev"><img src="https://avatars.githubusercontent.com/u/30023563?v=4?s=48" width="48px;" alt="tenekev"/><br /><sub><b>tenekev</b></sub></a><br /><a href="https://github.com/lyqht/mini-qr/commits?author=tenekev" title="Code">💻</a> <a href="https://github.com/lyqht/mini-qr/commits?author=tenekev" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/tecking"><img src="https://avatars.githubusercontent.com/u/479934?v=4?s=48" width="48px;" alt="tecking"/><br /><sub><b>tecking</b></sub></a><br /><a href="#translation-tecking" title="Translation">🌍</a></td>
-      <td align="center" valign="top" width="16.66%"><a href="https://github.com/pcbimon"><img src="https://avatars.githubusercontent.com/u/8252967?v=4?s=48" width="48px;" alt="Patipat Chewprecha"/><br /><sub><b>Patipat Chewprecha</b></sub></a><br /><a href="#translation-pcbimon" title="Translation">🌍</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/pcbimon"><img src="https://avatars.githubusercontent.com/u/8252967?v=4?s=48" width="48px;" alt="Patipat Chewprecha"/><br /><sub><b>Patipat Chewprecha</b></sub></a><br /><a href="#translation-pcbimon" title="Translation">🌍</a> <a href="https://github.com/lyqht/mini-qr/commits?author=pcbimon" title="Code">💻</a> <a href="https://github.com/lyqht/mini-qr/commits?author=pcbimon" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/ssrahul96"><img src="https://avatars.githubusercontent.com/u/15570570?v=4?s=48" width="48px;" alt="Rahul Somasundaram"/><br /><sub><b>Rahul Somasundaram</b></sub></a><br /><a href="https://github.com/lyqht/mini-qr/commits?author=ssrahul96" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/itsAnuga"><img src="https://avatars.githubusercontent.com/u/828450?v=4?s=48" width="48px;" alt="Johan Ekström"/><br /><sub><b>Johan Ekström</b></sub></a><br /><a href="https://github.com/lyqht/mini-qr/commits?author=itsAnuga" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://zainf.dev/"><img src="https://avatars.githubusercontent.com/u/6315466?v=4?s=48" width="48px;" alt="Zain Fathoni"/><br /><sub><b>Zain Fathoni</b></sub></a><br /><a href="#design-zainfathoni" title="Design">🎨</a></td>
@@ -156,6 +182,7 @@ Thank you for everyone here for taking their time out to improve MiniQR 🧡
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/katullo11"><img src="https://avatars.githubusercontent.com/u/129339155?v=4?s=48" width="48px;" alt="Francesco"/><br /><sub><b>Francesco</b></sub></a><br /><a href="#translation-katullo11" title="Translation">🌍</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://furycode.org/"><img src="https://avatars.githubusercontent.com/u/22378039?v=4?s=48" width="48px;" alt="Klemens Graf"/><br /><sub><b>Klemens Graf</b></sub></a><br /><a href="https://github.com/lyqht/mini-qr/commits?author=klemensgraf" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/unililium"><img src="https://avatars.githubusercontent.com/u/3117172?v=4?s=48" width="48px;" alt="林都"/><br /><sub><b>林都</b></sub></a><br /><a href="https://github.com/lyqht/mini-qr/commits?author=unililium" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/seals187"><img src="https://avatars.githubusercontent.com/u/86856086?v=4?s=48" width="48px;" alt="seals187"/><br /><sub><b>seals187</b></sub></a><br /><a href="https://github.com/lyqht/mini-qr/pulls?q=is%3Apr+reviewed-by%3Aseals187" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
   <tfoot>

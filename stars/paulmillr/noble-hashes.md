@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 673
+stars: 677
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
@@ -18,6 +18,7 @@ Audited & minimal JS implementation of hash functions, MACs and KDFs.
 - 🦘 Includes SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF, Scrypt, Argon2 & KangarooTwelve
 - 🪶 20KB (gzipped) for everything, 2.4KB for single-hash build
 
+Check out [Upgrading](#upgrading) for information about upgrading from previous versions.
 Take a glance at [GitHub Discussions](https://github.com/paulmillr/noble-hashes/discussions) for questions and support.
 The library's initial development was funded by [Ethereum Foundation](https://ethereum.org/).
 
@@ -440,7 +441,7 @@ Benchmarks measured on Apple M4.
 
 ```
 # 32B
-sha256 x 1,968,503 ops/sec @ 508ns/op
+sha256 x 2,016,129 ops/sec @ 496ns/op
 sha512 x 740,740 ops/sec @ 1μs/op
 sha3_256 x 287,686 ops/sec @ 3μs/op
 sha3_512 x 288,267 ops/sec @ 3μs/op
@@ -493,13 +494,37 @@ pbkdf2(sha512, c: 2 ** 18) x 1 ops/sec @ 630ms/op
 scrypt(n: 2 ** 18, r: 8, p: 1) x 2 ops/sec @ 378ms/op
 ```
 
-It is possible to [make this library 3x+ faster](./benchmark/README.md) by
+It is possible to [make this library 3x+ faster](./test/benchmark/README.md) by
 _doing code generation of full loop unrolls_. We've decided against it. Reasons:
 
 - current perf is good enough, even compared to other libraries - SHA256 only takes 500 nanoseconds
 - the library must be auditable, with minimum amount of code, and zero dependencies
 - most method invocations with the lib are going to be something like hashing 32b to 64kb of data
 - hashing big inputs is 10x faster with low-level languages, which means you should probably pick 'em instead
+
+## Upgrading
+
+Upgrading from noble-hashes v1 to v2:
+
+- Bump minimum node.js version from v14 to v20.19
+- Bump compilation target from es2020 to es2022
+- Make package ESM-only
+    - node.js v20.19+ allows loading ESM modules from common.js
+- Remove extension-less exports: e.g. `sha3` became `sha3.js`
+    - This allows using package without import maps and allows package to be used in browsers directly, without bundlers
+- Only allow Uint8Array as hash inputs, prohibit `string`
+    - Strict validation checks improve security
+    - To replicate previous behavior, use `utils.utf8ToBytes`
+- Rename / remove some modules for consistency. Previously, sha384 resided in sha512, which was weird
+    - `sha256`, `sha512` => `sha2.js` (consistent with `sha3`)
+    - `blake2b`, `blake2s` => `blake2.js` (consistent with `blake1`, `blake3`)
+    - `ripemd160`, `sha1`, `md5` => `legacy.js` (all low-security hashes are there)
+    - `_assert` => `utils.js`
+    - `crypto` internal module got removed: use built-in WebCrypto instead
+- Improve typescript types
+    - Improve option autocomplete
+    - Simplify types in `utils`
+    - Use single createHasher for wrapping instead of 3 methods
 
 ## Contributing & testing
 

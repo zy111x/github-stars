@@ -1,10 +1,17 @@
 ---
 project: ai-gateway-provider
-stars: 34
+stars: 35
 description: |-
     AI Gateway Provider for Vercel AI SDK
 url: https://github.com/G4brym/ai-gateway-provider
 ---
+
+# Project Repository Moved
+
+> **Important Notice**: This project has been adopted by Cloudflare and is now maintained in the official Cloudflare AI repository. The latest version and ongoing development can be found at [github.com/cloudflare/ai](https://github.com/cloudflare/ai/tree/main/packages/ai-gateway-provider). Please use the new repository for the most up-to-date code, issues, and contributions.
+
+___________
+
 
 # AI Gateway Provider for Vercel AI SDK
 

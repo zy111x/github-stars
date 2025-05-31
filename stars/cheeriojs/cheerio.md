@@ -1,6 +1,6 @@
 ---
 project: cheerio
-stars: 29470
+stars: 29488
 description: |-
     The fast, flexible, and elegant library for parsing and manipulating HTML and XML.
 url: https://github.com/cheeriojs/cheerio
@@ -42,7 +42,13 @@ $.html();
 
 ## Installation
 
-`npm install cheerio`
+Install Cheerio using a package manager like npm, yarn, or bun.
+
+```bash
+npm install cheerio
+# or
+bun add cheerio
+```
 
 ## Features
 

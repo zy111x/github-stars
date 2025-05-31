@@ -1,6 +1,6 @@
 ---
 project: dokploy
-stars: 20254
+stars: 20554
 description: |-
     Open Source Alternative to Vercel, Netlify and Heroku.
 url: https://github.com/Dokploy/dokploy
@@ -155,19 +155,6 @@ For detailed documentation, visit [docs.dokploy.com](https://docs.dokploy.com).
 <a href="https://youtu.be/mznYKPvhcfw">
   <img src="https://dokploy.com/banner.png" alt="Watch the video" width="400" style="border-radius:20px;"/>
 </a>
-
-<!-- ## Supported OS
-
-- Ubuntu 24.04 LTS
-- Ubuntu 23.10
-- Ubuntu 22.04 LTS
-- Ubuntu 20.04 LTS
-- Ubuntu 18.04 LTS
-- Debian 12
-- Debian 11
-- Fedora 40
-- Centos 9
-- Centos 8 -->
 
 ## Contributing
 

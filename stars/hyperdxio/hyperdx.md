@@ -1,6 +1,6 @@
 ---
 project: hyperdx
-stars: 7860
+stars: 7905
 description: |-
     Resolve production issues, fast. An open source observability platform unifying session replays, logs, metrics, traces and errors powered by Clickhouse and OpenTelemetry.
 url: https://github.com/hyperdxio/hyperdx
@@ -19,58 +19,47 @@ url: https://github.com/hyperdxio/hyperdx
 
 # HyperDX
 
-[HyperDX](https://hyperdx.io) helps engineers quickly figure out why production is
-broken by centralizing and correlating logs, metrics, traces, exceptions
-and session replays in one place. An open source and developer-friendly
-alternative to Datadog and New Relic.
+[HyperDX](https://hyperdx.io), a core component of
+[ClickStack](https://clickhouse.com/use-cases/observability), helps engineers
+quickly figure out why production is broken by making it easy to search &
+visualize logs and traces on top of any ClickHouse cluster (imagine Kibana, for
+ClickHouse).
 
 <p align="center">
-  <a href="https://www.hyperdx.io/docs">Documentation</a> • <a href="https://hyperdx.io/discord">Chat on Discord</a>  • <a href="https://api.hyperdx.io/login/demo">Live Demo</a>  • <a href="https://github.com/hyperdxio/hyperdx/issues/new">Bug Reports</a> • <a href="./CONTRIBUTING.md">Contributing</a>
+  <a href="https://clickhouse.com/docs/use-cases/observability/clickstack/overview">Documentation</a> • <a href="https://hyperdx.io/discord">Chat on Discord</a>  • <a href="https://play.hyperdx.io/search">Live Demo</a>  • <a href="https://github.com/hyperdxio/hyperdx/issues/new">Bug Reports</a> • <a href="./CONTRIBUTING.md">Contributing</a> • <a href="https://clickhouse.com/use-cases/observability">Website</a>
 </p>
 
-- 🕵️ Correlate end to end, go from browser session replay to logs and traces in
-  just a few clicks
-- 🔥 Blazing fast performance powered by Clickhouse
-- 🔍 Intuitive full-text search and property search syntax (ex. `level:err`)
-- ⏱️ Monitor health and performance from HTTP requests to DB queries (APM)
-- 🤖 Automatically cluster event patterns from billions of events
+- 🕵️ Correlate/search logs, metrics, session replays and traces all in one place
+- 📝 Schema agnostic, works on top of your existing ClickHouse schema
+- 🔥 Blazing fast searches & visualizations optimized for ClickHouse
+- 🔍 Intuitive full-text search and property search syntax (ex. `level:err`),
+  SQL optional!
+- 📊 Analyze trends in anomalies with event deltas
+- 🔔 Set up alerts in just a few clicks
 - 📈 Dashboard high cardinality events without a complex query language
-- 🔔 Set up alerts on logs, metrics, or traces in just a few clicks
-- `{` Automatic JSON/structured log parsing
-- 🔭 OpenTelemetry native
+- `{` Native JSON string querying
+- ⚡ Live tail logs and traces to always get the freshest events
+- 🔭 OpenTelemetry supported out of the box
+- ⏱️ Monitor health and performance from HTTP requests to DB queries (APM)
 
 <br/>
 <img alt="Search logs and traces all in one place" src="./.github/images/search_splash.png" title="Search logs and traces all in one place">
 
-### Additional Screenshots
-
-<details>
-  <summary><b>📈 Dashboards</b></summary>
-  <img alt="Dashboard" src="./.github/images/dashboard.png">
-</details>
-<details>
-  <summary><b>🤖 Automatic Event Pattern Clustering</b></summary>
-  <img alt="Event Pattern Clustering" src="./.github/images/pattern3.png">
-</details>
-<details>
-  <summary><b>🖥️ Session Replay & RUM</b></summary>
-  <img alt="Event Pattern Clustering" src="./.github/images/session.png">
-</details>
-
 ## Spinning Up HyperDX
 
-The HyperDX stack ingests, stores, and searches/graphs your telemetry data.
-After standing up the Docker Compose stack, you'll want to instrument your app
-to send data over to HyperDX.
-
-You can get started by deploying a complete stack via Docker Compose. After
-cloning this repository, simply start the stack with:
+HyperDX can be deployed as part of ClickStack, which includes ClickHouse,
+HyperDX, OpenTelemetry Collector and MongoDB.
 
 ```bash
-docker compose up -d
+docker run -p 8080:8080 -p 4317:4317 -p 4318:4318 docker.hyperdx.io/hyperdx/hyperdx-all-in-one
 ```
 
 Afterwards, you can visit http://localhost:8080 to access the HyperDX UI.
+
+If you already have an existing ClickHouse instance, want to use a single
+container locally, or are looking for production deployment instructions, you
+can view the different deployment options in our
+[deployment docs](https://clickhouse.com/docs/use-cases/observability/clickstack/deployment).
 
 > If your server is behind a firewall, you'll need to open/forward port 8080,
 > 8000 and 4318 on your firewall for the UI, API and OTel collector
@@ -78,51 +67,11 @@ Afterwards, you can visit http://localhost:8080 to access the HyperDX UI.
 
 > We recommend at least 4GB of RAM and 2 cores for testing.
 
-**Enabling Self-instrumentation/Demo Logs**
+### Hosted ClickHouse Cloud
 
-To get a quick preview of HyperDX, you can enable self-instrumentation and demo
-logs by setting the `HYPERDX_API_KEY` to your ingestion key (go to
-[http://localhost:8080/team](http://localhost:8080/team) after creating your
-account) and then restart the stack.
-
-This will redirect internal telemetry from the frontend app, API, host metrics
-and demo logs to your new HyperDX instance.
-
-ex.
-
-```sh
-HYPERDX_API_KEY=<YOUR_INGESTION_KEY> docker compose up -d
-```
-
-> If you need to use `sudo` for docker, make sure to forward the environment
-> variable with the `-E` flag:
-> `HYPERDX_API_KEY=<YOUR_KEY> sudo -E docker compose up -d`
-
-**Changing Hostname and Port**
-
-By default, HyperDX app/api will run on localhost with port `8080`/`8000`. You
-can change this by updating `HYPERDX_APP_**` and `HYPERDX_API_**` variables in
-the `.env` file. After making your changes, rebuild images with
-`make build-local`.
-
-**DB Migration**
-
-Before running the migration, you'll need to install the migration tools:
-
-1. Install local dependencies with `make`.
-2. Install
-   [golang-migrate](https://github.com/golang-migrate/migrate/tree/master/cmd/migrate)
-   CLI.
-
-You can initiate the DB migration process by executing `make dev-migrate-db`.
-This will run the migration scripts in `/packages/api/migrations` against the
-local DB.
-
-### Hosted Cloud
-
-HyperDX is also available as a hosted cloud service at
-[hyperdx.io](https://hyperdx.io). You can sign up for a free account and start
-sending data in minutes.
+You can also deploy HyperDX with ClickHouse Cloud, you can
+[sign up for free](https://console.clickhouse.cloud/signUp) and get started in
+just minutes.
 
 ## Instrumenting Your App
 
@@ -132,11 +81,13 @@ instance.
 
 We provide a set of SDKs and integration options to make it easier to get
 started with HyperDX, such as
-[Browser](https://www.hyperdx.io/docs/install/browser),
-[Node.js](https://www.hyperdx.io/docs/install/javascript), and
-[Python](https://www.hyperdx.io/docs/install/python)
+[Browser](https://clickhouse.com/docs/use-cases/observability/clickstack/sdks/browser),
+[Node.js](https://clickhouse.com/docs/use-cases/observability/clickstack/sdks/nodejs),
+and
+[Python](https://clickhouse.com/docs/use-cases/observability/clickstack/sdks/python)
 
-You can find the full list in [our docs](https://www.hyperdx.io/docs).
+You can find the full list in
+[our docs](https://clickhouse.com/docs/use-cases/observability/clickstack).
 
 **OpenTelemetry**
 
@@ -160,18 +111,6 @@ include:
 
 Once HyperDX is running, you can point your OpenTelemetry SDK to the
 OpenTelemetry collector spun up at `http://localhost:4318`.
-
-## Local Mode
-
-Interested in using HyperDX for local development and debugging? Check out HyperDX Local, a single container local-optimized version of HyperDX that allows you to pipe OpenTelemetry telemetry (logs, metrics, traces) to a local instance of HyperDX running on your own machine.
-
-Get started with HyperDX Local by running the following Docker command:
-
-```bash
-docker run -p 8000:8000 -p 4318:4318 -p 4317:4317 -p 8080:8080 -p 8002:8002 hyperdx/hyperdx-local
-```
-
-[Read more about HyperDX Local](./LOCAL.md)
 
 ## Contributing
 
@@ -201,37 +140,22 @@ a few ways:
 3. They requiring hopping from tool to tool (logs, session replay, APM,
    exceptions, etc.) to stitch together the clues yourself.
 
-We're still early on in our journey, but are building in the open to solve these
-key issues in observability. We hope you give HyperDX a try and let us know how
-we're doing!
-
-## Open Source vs Hosted Cloud
-
-HyperDX is open core, with most of our features available here under an MIT
-license. We have a cloud-hosted version available at
-[hyperdx.io](https://hyperdx.io) with a few
-[additional features](https://www.hyperdx.io/docs/oss-vs-cloud) beyond what's
-offered in the open source version.
-
-Our cloud hosted version exists so that we can build a sustainable business and
-continue building HyperDX as an open source platform. We hope to have more
-comprehensive documentation on how we balance between cloud-only and open source
-features in the future. In the meantime, we're highly aligned with Gitlab's
-[stewardship model](https://handbook.gitlab.com/handbook/company/stewardship/).
-
-## Frequently Asked Questions
-
-#### How to suppress all logs from HyperDX itself ?
-
-To suppress logs of a service, you can comment out the `HYPERDX_API_KEY`
-environment variable in the docker-compose.yml file. The alternative is to set
-the `HYPERDX_LOG_LEVEL` environment variable to 'error' to only log errors.
+We hope you give HyperDX in ClickStack a try and let us know how we're doing!
 
 ## Contact
 
 - [Open an Issue](https://github.com/hyperdxio/hyperdx/issues/new)
 - [Discord](https://discord.gg/FErRRKU78j)
 - [Email](mailto:support@hyperdx.io)
+
+## HyperDX Usage Data
+
+HyperDX collects anonymized usage data for open source deployments. This data
+supports our mission for observability to be available to any team and helps
+support our open source product run in a variety of different environments.
+While we hope you will continue to support our mission in this way, you may opt
+out of usage data collection by setting the `USAGE_STATS_ENABLED` environment
+variable to `false`. Thank you for supporting the development of HyperDX!
 
 ## License
 

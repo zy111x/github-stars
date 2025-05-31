@@ -1,6 +1,6 @@
 ---
 project: tailwind-rn
-stars: 4271
+stars: 4272
 description: |-
     🦎 Use Tailwind CSS in React Native projects
 url: https://github.com/vadimdemedes/tailwind-rn

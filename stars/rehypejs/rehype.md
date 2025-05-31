@@ -1,6 +1,6 @@
 ---
 project: rehype
-stars: 1997
+stars: 1998
 description: |-
     HTML processor powered by plugins part of the @unifiedjs collective
 url: https://github.com/rehypejs/rehype
