@@ -1,6 +1,6 @@
 ---
 project: MetingJS
-stars: 1276
+stars: 1279
 description: :cake: A powerful plugin connect APlayer and Meting
 url: https://github.com/metowolf/MetingJS
 ---
