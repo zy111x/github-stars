@@ -1,6 +1,6 @@
 ---
 project: signoz
-stars: 22134
+stars: 22245
 description: |-
     SigNoz is an open-source observability platform native to OpenTelemetry with logs, traces and metrics in a single application. An open-source alternative to DataDog, NewRelic, etc. 🔥 🖥.   👉  Open source Application Performance Monitoring (APM) & Observability tool
 url: https://github.com/SigNoz/signoz
@@ -16,7 +16,7 @@ url: https://github.com/SigNoz/signoz
 <p align="center">All your logs, metrics, and traces in one place. Monitor your application, spot issues before they occur and troubleshoot downtime quickly with rich context. SigNoz is a cost-effective open-source alternative to Datadog and New Relic. Visit <a href="https://signoz.io" target="_blank">signoz.io</a> for the full documentation, tutorials, and guide.</p>
 
 <p align="center">
-    <img alt="Downloads" src="https://img.shields.io/docker/pulls/signoz/query-service?label=Docker Downloads"> </a>
+    <img alt="Downloads" src="https://img.shields.io/docker/pulls/signoz/signoz.svg?label=Docker%20Downloads"> </a>
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/signoz/signoz"> </a>
     <a href="https://twitter.com/intent/tweet?text=Monitor%20your%20applications%20and%20troubleshoot%20problems%20with%20SigNoz,%20an%20open-source%20alternative%20to%20DataDog,%20NewRelic.&url=https://signoz.io/&via=SigNozHQ&hashtags=opensource,signoz,observability"> 
         <img alt="tweet" src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social"> </a> 

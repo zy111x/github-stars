@@ -1,6 +1,6 @@
 ---
 project: merakiui
-stars: 2624
+stars: 2628
 description: |-
     Tailwind CSS components that support RTL languages & fully responsive based on Flexbox & CSS Grid with elegant Dark Mode 🚀 ☄️.
 url: https://github.com/merakiuilabs/merakiui

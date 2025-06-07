@@ -1,6 +1,6 @@
 ---
 project: certimate
-stars: 6751
+stars: 6802
 description: |-
     开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期。An open-source SSL certificate management tool that helps you automatically apply for and deploy SSL certificates, as well as automatically renew them when they are about to expire.
 url: https://github.com/usual2970/certimate
@@ -30,7 +30,7 @@ url: https://github.com/usual2970/certimate
 
 做个人产品或者在中小企业里负责运维的同学，会遇到要管理多个域名的情况，需要给域名申请证书。但是手动申请证书有以下缺点：
 
-- 😱 麻烦：申请证书并部署到服务的流程虽不复杂，但也挺麻烦的，犹其是你有多个域名需要维护的时候。
+- 😱 麻烦：申请证书并部署到服务的流程虽不复杂，但也挺麻烦的，尤其是你有多个域名需要维护的时候。
 - 😭 易忘：另外当前免费证书的有效期只有 90 天，这就要求你定期的操作，增加了工作量的同时，你也很容易忘掉续期，从而导致网站访问不了。
 
 Certimate 就是为了解决上述问题而产生的，它具有以下优势：

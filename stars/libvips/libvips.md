@@ -1,6 +1,6 @@
 ---
 project: libvips
-stars: 10349
+stars: 10367
 description: |-
     A fast image processing library with low memory needs.
 url: https://github.com/libvips/libvips
@@ -49,7 +49,7 @@ Full bindings are available for :
 | Python | [pyvips](https://pypi.python.org/pypi/pyvips) |
 | PHP | [php-vips](https://github.com/libvips/php-vips) |
 | C# / .NET | [NetVips](https://www.nuget.org/packages/NetVips) |
-| Go | [govips](https://github.com/davidbyttow/govips) |
+| Go | [govips](https://github.com/davidbyttow/govips), [vips-gen](https://github.com/cshum/vipsgen) |
 | Lua | [lua-vips](https://github.com/libvips/lua-vips) |
 | Crystal | [crystal-vips](https://github.com/naqvis/crystal-vips) |
 | Elixir | [vix](https://github.com/akash-akya/vix) |

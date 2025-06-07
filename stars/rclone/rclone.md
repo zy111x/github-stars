@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 50690
+stars: 50838
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -103,6 +103,7 @@ Rclone *("rsync for cloud storage")* is a command-line program to sync files and
   * rsync.net [:page_facing_up:](https://rclone.org/sftp/#rsync-net)
   * Scaleway [:page_facing_up:](https://rclone.org/s3/#scaleway)
   * Seafile [:page_facing_up:](https://rclone.org/seafile/)
+  * Seagate Lyve Cloud [:page_facing_up:](https://rclone.org/s3/#lyve)
   * SeaweedFS [:page_facing_up:](https://rclone.org/s3/#seaweedfs)
   * Selectel Object Storage [:page_facing_up:](https://rclone.org/s3/#selectel)
   * SFTP [:page_facing_up:](https://rclone.org/sftp/)

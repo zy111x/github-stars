@@ -1,6 +1,6 @@
 ---
 project: onepage-scroll
-stars: 9519
+stars: 9518
 description: |-
     Create an Apple-like one page scroller website (iPhone 5S website) with One Page Scroll plugin
 url: https://github.com/peachananr/onepage-scroll

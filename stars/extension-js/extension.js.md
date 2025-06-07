@@ -1,6 +1,6 @@
 ---
 project: extension.js
-stars: 4277
+stars: 4286
 description: |-
     🧩 The cross-browser extension framework.
 url: https://github.com/extension-js/extension.js
@@ -8,20 +8,22 @@ url: https://github.com/extension-js/extension.js
 
 [npm-version-image]: https://img.shields.io/npm/v/extension.svg?color=0971fe
 [npm-version-url]: https://www.npmjs.com/package/extension
-[downloads-image]: https://img.shields.io/npm/dm/extension.svg
+[downloads-image]: https://img.shields.io/npm/dm/extension.svg?color=2ecc40
 [downloads-url]: https://npmjs.org/package/extension
-[action-image]: https://github.com/extension-js/extension.js/actions/workflows/ci.yml/badge.svg?branch=main
+[action-image]: https://github.com/extension-js/extension.js/actions/workflows/ci.yml/badge.svg?branch=main&color=2ecc40
 [action-url]: https://github.com/extension-js/extension.js/actions
-[discord-image]: https://img.shields.io/discord/1253608412890271755?label=Discord&logo=discord&style=flat
+[coverage-image]: https://img.shields.io/codecov/c/github/extension-js/extension.js?color=2ecc40
+[coverage-url]: https://codecov.io/github/extension-js/extension.js
+[discord-image]: https://img.shields.io/discord/1253608412890271755?label=Discord&logo=discord&style=flat&color=2ecc40
 [discord-url]: https://discord.gg/v9h2RgeTSN
-[snyk-image]: https://snyk.io/test/github/extension-js/extension/badge.svg
+[snyk-image]: https://snyk.io/test/github/extension-js/extension/badge.svg?color=2ecc40
 [snyk-url]: https://snyk.io/test/github/extension-js/extension
 
 > The cross-browser extension framework
 
-# Extension.js [![Version][npm-version-image]][npm-version-url] [![Downloads][downloads-image]][downloads-url] [![workflow][action-image]][action-url] [![discord][discord-image]][discord-url]
+# Extension.js [![Version][npm-version-image]][npm-version-url] [![Downloads][downloads-image]][downloads-url] [![workflow][action-image]][action-url] [![coverage][coverage-image]][coverage-url] [![discord][discord-image]][discord-url]
 
-<img alt="Logo" align="right" src="https://github.com/user-attachments/assets/698a3b2e-c77a-4857-bd2a-1d2eb180120b" width="20%" />
+<img alt="Logo" align="right" src="https://avatars.githubusercontent.com/u/172809806" width="20%" />
 
 - [Create A New Extension](#create-a-new-extension) — How to create a new extension.
 - [Get Started Immediately](#get-started-immediately) — Get work done in no time.

@@ -1,6 +1,6 @@
 ---
 project: crypto-js
-stars: 16125
+stars: 16130
 description: |-
     JavaScript library of crypto standards.
 url: https://github.com/brix/crypto-js

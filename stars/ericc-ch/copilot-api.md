@@ -1,6 +1,6 @@
 ---
 project: copilot-api
-stars: 170
+stars: 184
 description: |-
     GitHub Copilot API wrapper to make it OpenAI compatible
 url: https://github.com/ericc-ch/copilot-api
@@ -90,7 +90,6 @@ The following command line options are available for the `start` command:
 | --rate-limit   | Rate limit in seconds between requests                                        | none    | -r    |
 | --wait         | Wait instead of error when rate limit is hit                                  | false   | -w    |
 | --github-token | Provide GitHub token directly (must be generated using the `auth` subcommand) | none    | -g    |
-| --vision       | Enable vision capabilities                                                    | false   | none  |
 
 ### Auth Command Options
 
@@ -123,9 +122,6 @@ npx copilot-api@latest start --rate-limit 30 --wait
 
 # Provide GitHub token directly
 npx copilot-api@latest start --github-token ghp_YOUR_TOKEN_HERE
-
-# Enable vision capabilities
-npx copilot-api@latest start --vision
 
 # Run only the auth flow
 npx copilot-api@latest auth

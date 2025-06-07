@@ -1,6 +1,6 @@
 ---
 project: mcp-openapi-proxy
-stars: 75
+stars: 79
 description: |-
     null
 url: https://github.com/matthewhand/mcp-openapi-proxy

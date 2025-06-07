@@ -1,6 +1,6 @@
 ---
 project: llama.ttf
-stars: 301
+stars: 306
 description: |-
     A font for writing tiny stories
 url: https://github.com/fuglede/llama.ttf

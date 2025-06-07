@@ -1,6 +1,6 @@
 ---
 project: 1chooo.com
-stars: 243
+stars: 244
 description: |-
     👨🏻‍💻 $ ls -al Hugo -- My personal portfolio and blog built with React, Next.js, Tailwind CSS and TypeScript
 url: https://github.com/1chooo/1chooo.com

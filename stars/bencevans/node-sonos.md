@@ -1,6 +1,6 @@
 ---
 project: node-sonos
-stars: 712
+stars: 711
 description: |-
     🔈 Sonos Media Player Interface/Client
 url: https://github.com/bencevans/node-sonos

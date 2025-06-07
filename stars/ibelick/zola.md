@@ -1,6 +1,6 @@
 ---
 project: zola
-stars: 739
+stars: 782
 description: |-
     The open-source interface for AI chat. Self-hostable, developer-first, and model-agnostic.
 url: https://github.com/ibelick/zola

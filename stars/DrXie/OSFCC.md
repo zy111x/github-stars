@@ -1,6 +1,6 @@
 ---
 project: OSFCC
-stars: 804
+stars: 805
 description: |-
     一个收集可用于中文字体排印的开源字体集合。
 url: https://github.com/DrXie/OSFCC

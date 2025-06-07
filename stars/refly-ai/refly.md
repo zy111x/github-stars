@@ -1,6 +1,6 @@
 ---
 project: refly
-stars: 3977
+stars: 4009
 description: |-
     🎨 Refly is an open-source AI-native creation engine. Its intuitive free-form canvas interface combines multi-threaded dialogues, artifacts,  AI knowledge base integration, chrome extension clip & save,  contextual memory, intelligent search, WYSIWYG AI editor and more, empowering you to effortlessly transform ideas into production-ready content.
 url: https://github.com/refly-ai/refly
@@ -65,6 +65,18 @@ To start deployment:
 cd deploy/docker
 cp ../../apps/api/.env.example .env # copy the example api env file
 docker compose up -d
+```
+
+### Self-deploy with Kubernetes
+
+Also, we support deploy ReflyAI to Kubernetes cluster.
+
+To start deployment:
+
+```bash
+cd deploy/kubernetes
+
+kubectl apply -f refly-deployment.yaml
 ```
 
 For the following steps, you can visit [Self-deploy Guide](https://docs.refly.ai/guide/self-deploy) for more details.

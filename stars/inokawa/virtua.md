@@ -1,6 +1,6 @@
 ---
 project: virtua
-stars: 2800
+stars: 2815
 description: |-
     A zero-config, fast and small (~3kB) virtual list (and grid) component for React, Vue, Solid and Svelte.
 url: https://github.com/inokawa/virtua

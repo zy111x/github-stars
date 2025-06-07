@@ -1,8 +1,8 @@
 ---
 project: youtube-music
-stars: 21849
+stars: 22109
 description: |-
-    YouTube Music Desktop App bundled with custom plugins (and built-in ad blocker / downloader)
+    YouTube Music Desktop App bundled with custom plugins
 url: https://github.com/th-ch/youtube-music
 ---
 
@@ -29,7 +29,7 @@ url: https://github.com/th-ch/youtube-music
 	</a>
 </div>
 
-Read this in other languages: [🇰🇷](./docs/readme/README-ko.md), [🇫🇷](./docs/readme/README-fr.md), [🇮🇸](./docs/readme/README-is.md), [🇨🇱 🇪🇸](./docs/readme/README-es.md), [🇷🇺](./docs/readme/README-ru.md), [🇺🇦](./docs/readme/README-uk.md), [🇭🇺](./docs/readme/README-hu.md), [🇧🇷](./docs/readme/README-pt.md), [🇯🇵](./docs/readme/README-ja.md)
+Read this in other languages: [한국어](./docs/readme/README-ko.md), [Française](./docs/readme/README-fr.md), [Íslenska](./docs/readme/README-is.md), [Español](./docs/readme/README-es.md), [Pусский](./docs/readme/README-ru.md), [Українська](./docs/readme/README-uk.md), [Magyar](./docs/readme/README-hu.md), [Português](./docs/readme/README-pt.md), [日本語](./docs/readme/README-ja.md)
 
 **Electron wrapper around YouTube Music featuring:**
 

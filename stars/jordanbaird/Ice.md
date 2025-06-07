@@ -1,6 +1,6 @@
 ---
 project: Ice
-stars: 19387
+stars: 19570
 description: |-
     Powerful menu bar manager for macOS
 url: https://github.com/jordanbaird/Ice
@@ -40,7 +40,7 @@ Download the "Ice.zip" file from the [latest release](https://github.com/jordanb
 Install Ice using the following command:
 
 ```sh
-brew install jordanbaird-ice
+brew install --cask jordanbaird-ice
 ```
 
 ## Features/Roadmap

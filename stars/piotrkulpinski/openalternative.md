@@ -1,6 +1,6 @@
 ---
 project: openalternative
-stars: 4490
+stars: 4515
 description: |-
     A community driven list of open source alternatives to proprietary software and applications.
 url: https://github.com/piotrkulpinski/openalternative
@@ -44,6 +44,14 @@ OpenAlternative is a community driven list of **open source alternatives to prop
 Our goal is to be your first stop when researching for a new open source service to help you grow your business. We will help you **find alternatives** of the products you already use.
 
 Join us in creating the biggest **directory of open source software**.
+
+## Other projects
+
+We are also working on other projects you might be interested in:
+
+- [EuroAlternatives](https://euroalternative.co) - A directory of European alternatives to Big Tech giants.
+- [DevSuite](https://devsuite.co) - A collection of tools for developers.
+- [Dirstarter](https://dirstarter.com) - A Next.js boilerplate for creating directory websites.
 
 ## Sponsoring
 

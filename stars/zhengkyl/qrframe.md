@@ -1,6 +1,6 @@
 ---
 project: qrframe
-stars: 3072
+stars: 3076
 description: |-
     code-based qr code designer
 url: https://github.com/zhengkyl/qrframe

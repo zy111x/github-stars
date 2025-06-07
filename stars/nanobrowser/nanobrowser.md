@@ -1,6 +1,6 @@
 ---
 project: nanobrowser
-stars: 5753
+stars: 5915
 description: |-
     Open-Source Chrome extension for AI-powered web automation. Run multi-agent workflows using your own LLM API key. Alternative to OpenAI Operator.
 url: https://github.com/nanobrowser/nanobrowser
@@ -44,7 +44,7 @@ Looking for a powerful AI web agent without the $200/month price tag of OpenAI O
 - **Flexible LLM Options** - Connect to your preferred LLM providers with the freedom to choose different models for different agents.
 - **Fully Open Source** - Complete transparency in how your browser is automated. No black boxes or hidden processes.
 
-> **Note:** We currently support OpenAI, Anthropic, Gemini, Ollama, Groq and custom OpenAI-Compatible providers, more providers will be supported.
+> **Note:** We currently support OpenAI, Anthropic, Gemini, Ollama, Groq, Cerebras and custom OpenAI-Compatible providers, more providers will be supported.
 
 
 ## 📊 Key Features

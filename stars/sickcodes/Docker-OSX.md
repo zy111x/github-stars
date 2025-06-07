@@ -1,6 +1,6 @@
 ---
 project: Docker-OSX
-stars: 50552
+stars: 50599
 description: |-
     Run macOS VM in a Docker! Run near native OSX-KVM in Docker! X11 Forwarding! CI/CD for OS X Security Research! Docker mac Containers.
 url: https://github.com/sickcodes/Docker-OSX
@@ -273,7 +273,7 @@ The easiest and most secure way is `sshfs`
 ```bash
 # on Linux/Windows
 mkdir ~/mnt/osx
-sshfs user@localhost:/ -p 50922 ~/mnt/osx
+sshfs user@localhost: -p 50922 ~/mnt/osx
 # wait a few seconds, and ~/mnt/osx will have full rootfs mounted over ssh, and in userspace
 # automated: sshpass -p <password> sshfs user@localhost:/ -p 50922 ~/mnt/osx
 ```

@@ -1,6 +1,6 @@
 ---
 project: posthog
-stars: 26766
+stars: 26919
 description: |-
     🦔 PostHog provides open-source web & product analytics, session recording, feature flagging and A/B testing that you can self-host. Get started - free.
 url: https://github.com/PostHog/posthog
@@ -10,9 +10,7 @@ url: https://github.com/PostHog/posthog
   <img alt="posthoglogo" src="https://user-images.githubusercontent.com/65415371/205059737-c8a4f836-4889-4654-902e-f302b187b6a0.png">
 </p>
 <p align="center">
-  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<a href='https://posthog.com/contributors'><img src='https://img.shields.io/badge/all_contributors-251-orange.svg?style=flat-square' /></a>
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+  <a href='https://posthog.com/contributors'><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/posthog/posthog"/></a>
   <a href='http://makeapullrequest.com'><img alt='PRs Welcome' src='https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields'/></a>
   <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/posthog/posthog"/>
   <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/posthog/posthog"/>
