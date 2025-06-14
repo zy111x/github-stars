@@ -1,6 +1,6 @@
 ---
 project: BiliBiliToolPro
-stars: 7392
+stars: 7412
 description: B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。敏感肌也能用。
 url: https://github.com/RayWangQvQ/BiliBiliToolPro
 ---
@@ -280,3 +280,7 @@ Discussions（讨论）板块可以用来**提问**和**讨论**。
 ❤️Thanks to `JetBrain` for the free certificate support:
 
 ❤️Thanks to YxVM & NodeSeekDev for sponsoring the server for testing support:
+
+❤️Thanks to DartNode for sponsoring the server for testing support:
+
+❤️Thank you for your star to this project:
