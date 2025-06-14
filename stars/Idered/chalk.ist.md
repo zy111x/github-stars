@@ -1,6 +1,6 @@
 ---
 project: chalk.ist
-stars: 1644
+stars: 1647
 description: |-
     📷 Create beautiful images of your source code
 url: https://github.com/Idered/chalk.ist

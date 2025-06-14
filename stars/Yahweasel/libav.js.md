@@ -1,6 +1,6 @@
 ---
 project: libav.js
-stars: 409
+stars: 413
 description: |-
     This is a compilation of the libraries associated with handling audio and video in ffmpeg—libavformat, libavcodec, libavfilter, libavutil, libswresample, and libswscale—for emscripten, and thus the web.
 url: https://github.com/Yahweasel/libav.js
@@ -58,7 +58,7 @@ example of using libav.js from a CDN in the browser thread:
 <!doctype html>
 <html>
     <body>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@libav.js/variant-default@6.5.7/dist/libav-6.5.7.1-default.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@libav.js/variant-default@6.6.7/dist/libav-6.6.7.1.1-default.js"></script>
         <script type="text/javascript">(async function() {
             const libav = await LibAV.LibAV({noworker: true});
             await libav.writeFile("tmp.opus", new Uint8Array(
@@ -81,7 +81,7 @@ Here's a better example, using libav.js locally:
 <!doctype html>
 <html>
     <body>
-        <script type="text/javascript" src="libav-6.5.7.1-default.js"></script>
+        <script type="text/javascript" src="libav-6.6.7.1.1-default.js"></script>
         <script type="text/javascript">(async function() {
             const libav = await LibAV.LibAV();
             await libav.writeFile("tmp.opus", new Uint8Array(
@@ -316,6 +316,30 @@ libav.js should generally build against any version of FFmpeg in the 4, 5, or 6
 series, but is not heavily tested against older versions; you should use the
 default version unless you have some specific compatibility issue that forces
 you to use a different version.
+
+
+## Modular variants
+
+In addition to the variants described above, a large number of modular variants
+are provided, each of which is sufficient for demuxing exactly one format, or
+decoding exactly one codec. The purpose of these modular variants is to make it
+easy to support every conceivable input file without making a massive
+monolithic build of libav.js.
+
+The modular variants are not available in NPM. Instead, most are provided in
+releases on GitHub with the suffix `-modular`. This release does not include
+popular reprobate codecs; you will need to build them yourself if you need
+them.
+
+Demuxer variants are named `demuxer-<format>`, e.g. `demuxer-matroska` and
+`demuxer-mp4`. Decoder variants are named `decoder-<codec>`, e.g.
+`decoder-opus` and `decoder-aac`. Each provides *only* functions related to
+demuxing or decoding, respectively.
+
+The modular variants are best paired with
+[AVGuesser](https://github.com/Yahweasel/AVGuesser) and
+[TransAVormer](https://github.com/Yahweasel/transavormer), as loading multiple
+variants on demand is complicated.
 
 
 ## Size

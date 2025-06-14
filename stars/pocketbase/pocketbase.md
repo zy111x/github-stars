@@ -1,6 +1,6 @@
 ---
 project: pocketbase
-stars: 47683
+stars: 47782
 description: |-
     Open Source realtime backend in 1 file
 url: https://github.com/pocketbase/pocketbase

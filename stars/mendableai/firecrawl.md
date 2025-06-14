@@ -1,6 +1,6 @@
 ---
 project: firecrawl
-stars: 39556
+stars: 39961
 description: |-
     🔥 Turn entire websites into LLM-ready markdown or structured data. Scrape, crawl and extract with a single API.
 url: https://github.com/mendableai/firecrawl
@@ -514,6 +514,7 @@ pip install firecrawl-py
 
 ```python
 from firecrawl.firecrawl import FirecrawlApp
+from firecrawl.firecrawl import ScrapeOptions
 
 app = FirecrawlApp(api_key="fc-YOUR_API_KEY")
 
@@ -528,7 +529,8 @@ print(scrape_status)
 crawl_status = app.crawl_url(
   'https://firecrawl.dev',
   limit=100,
-  scrapeOptions'={'formats': ['markdown', 'html']}
+  scrape_options=ScrapeOptions(
+    formats=["markdown", "html"],),
   poll_interval=30
 )
 print(crawl_status)

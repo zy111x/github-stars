@@ -1,6 +1,6 @@
 ---
 project: nanobrowser
-stars: 5915
+stars: 6788
 description: |-
     Open-Source Chrome extension for AI-powered web automation. Run multi-agent workflows using your own LLM API key. Alternative to OpenAI Operator.
 url: https://github.com/nanobrowser/nanobrowser
@@ -55,6 +55,18 @@ Looking for a powerful AI web agent without the $200/month price tag of OpenAI O
 - **Follow-up Questions**: Ask contextual follow-up questions about completed tasks
 - **Conversation History**: Easily access and manage your AI agent interaction history
 - **Multiple LLM Support**: Connect your preferred LLM providers and assign different models to different agents
+
+
+## 🌐 Browser Support
+
+**Officially Supported:**
+- **Chrome** - Full support with all features
+- **Edge** - Full support with all features
+
+**Not Supported:**
+- Firefox, Safari, and other Chromium variants (Opera, Arc, etc.)
+
+> **Note**: While Nanobrowser may function on other Chromium-based browsers, we recommend using Chrome or Edge for the best experience and guaranteed compatibility.
 
 
 ## 🚀 Quick Start

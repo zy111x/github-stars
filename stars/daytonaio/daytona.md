@@ -1,6 +1,6 @@
 ---
 project: daytona
-stars: 20544
+stars: 20549
 description: |-
     Daytona is a Secure and Elastic Infrastructure for Running AI-Generated Code
 url: https://github.com/daytonaio/daytona
@@ -53,7 +53,7 @@ url: https://github.com/daytonaio/daytona
 ### Python SDK
 
 ```bash
-pip install daytona-sdk
+pip install daytona
 ```
 
 ### TypeScript SDK
@@ -86,7 +86,7 @@ npm install @daytonaio/sdk
 ### Python SDK
 
 ```py
-from daytona_sdk import Daytona, DaytonaConfig, CreateSandboxParams
+from daytona import Daytona, DaytonaConfig, CreateSandboxParams
 
 # Initialize the Daytona client
 daytona = Daytona(DaytonaConfig(api_key="YOUR_API_KEY"))

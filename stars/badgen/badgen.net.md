@@ -1,6 +1,6 @@
 ---
 project: badgen.net
-stars: 1500
+stars: 1502
 description: |-
     Fast badge service
 url: https://github.com/badgen/badgen.net

@@ -1,6 +1,6 @@
 ---
 project: devicons
-stars: 2687
+stars: 2690
 description: |-
     Devicons - An iconic font made for developers
 url: https://github.com/vorillaz/devicons

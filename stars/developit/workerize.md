@@ -1,6 +1,6 @@
 ---
 project: workerize
-stars: 4381
+stars: 4383
 description: |-
     🏗️ Run a module in a Web Worker.
 url: https://github.com/developit/workerize

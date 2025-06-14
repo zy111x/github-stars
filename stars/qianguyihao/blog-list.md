@@ -1,6 +1,6 @@
 ---
 project: blog-list
-stars: 2171
+stars: 2199
 description: |-
     中文博客琅琊榜，只收录精品独立博客
 url: https://github.com/qianguyihao/blog-list
@@ -255,8 +255,12 @@ Notion 中文社区负责人。95 后，男生，驻京六年。主职是一名�
  博客地址：http://www.gtdstudy.com/post/
 
 
+### 王如飞 Blog
 
+- 网址：https://wangrufei.com
+- 订阅：https://wangrufei.com/feed/
 
+一个生活相关的博客，让记录督促学习和进步。保持简单，减少消费，专注创造。
 
 
 ## 三、技术人的思考
@@ -619,7 +623,11 @@ lucida.me 是我在 2014 年时创建的 blog。7 年之后，lucida.me 只有�
 
 tiankonguse, 一个安静的程序员。来自河南, 现居深圳。大学四年 acmer，最高获得亚洲区银牌。2014年7月本科毕业工作。目前就职于腾讯视频公司，从事后台开发。
 
+### xxchan
 
+- 博客地址：https://xxchan.me/
+
+喜欢编码，并希望构建一些有趣且有用的东西。代表文章：《[我对各种 AI Coding Agent 工具的看法](https://xxchan.me/ai/2025/06/08/ai-coding.html)》
 
 ### 大数据最佳实践
 

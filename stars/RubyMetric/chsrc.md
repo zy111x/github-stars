@@ -1,13 +1,13 @@
 ---
 project: chsrc
-stars: 5596
+stars: 5633
 description: |-
     chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
 ---
 
 <div align="center">
-  <img alt="chsrc logo" src="image/chsrc.png"/>
+  <img alt="chsrc logo" src="doc/image/chsrc.png"/>
 </div>
 
 全平台通用换源工具与框架 `chsrc`，**目标支持 Linux, Windows (MSYS2, Cygwin), macOS, BSD 等尽可能多的操作系统环境，龙芯、飞腾、RISC-V 等尽可能多的 CPU**。
@@ -47,9 +47,11 @@ url: https://github.com/RubyMetric/chsrc
 
 可参与的任务与挑战：
 
-1. [提供默认源地址，如Maven等的默认源URL，帮助我们进行 `chsrc reset`](https://github.com/RubyMetric/chsrc/issues/111)
+1. [Shell auto-completion 终端命令自动补全](https://github.com/RubyMetric/chsrc/issues/204)
 
-2. [CentOS (Stream) Recipe](https://github.com/RubyMetric/chsrc/issues/48)
+2. [搜集默认源地址，帮助使用 `reset` 功能](https://github.com/RubyMetric/chsrc/issues/111)
+
+3. [搜集测速地址，帮助使用 `measure` 功能](https://github.com/RubyMetric/chsrc/issues/205)
 
 <br>
 
@@ -92,7 +94,7 @@ url: https://github.com/RubyMetric/chsrc
 ## 📌 示例
 
 <div align="center">
-  <img alt="chsrc set node" src="image/example-set-nodejs.png"/>
+  <img alt="chsrc set node" src="doc/image/example-set-nodejs.png"/>
 </div>
 
 <br>

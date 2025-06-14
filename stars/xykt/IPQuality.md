@@ -1,6 +1,6 @@
 ---
 project: IPQuality
-stars: 3720
+stars: 3766
 description: |-
     IP质量检测脚本 - IP Quality Check Script
 url: https://github.com/xykt/IPQuality
@@ -165,5 +165,5 @@ bash <(curl -Ls IP.Check.Place) -l jp|es|de|fr|ru|pt
 
 **Daily Runs History:**
 
-![daily_runs_history](https://history.xykt.de/?name=ip&days=46&chartType=bar&title=IP%E8%B4%A8%E9%87%8F%E4%BD%93%E6%A3%80%E8%84%9A%E6%9C%AC%E6%AF%8F%E6%97%A5%E8%BF%90%E8%A1%8C%E9%87%8F%E7%BB%9F%E8%AE%A1&width=1024&height=400&color=green)
+![daily_runs_history](https://hits.xykt.de/history/ip.svg?days=46&chartType=bar&title=IP%E8%B4%A8%E9%87%8F%E4%BD%93%E6%A3%80%E8%84%9A%E6%9C%AC%E6%AF%8F%E6%97%A5%E8%BF%90%E8%A1%8C%E9%87%8F%E7%BB%9F%E8%AE%A1&width=1024&height=400&color=green)
 

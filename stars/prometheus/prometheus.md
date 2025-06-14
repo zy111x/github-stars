@@ -1,6 +1,6 @@
 ---
 project: prometheus
-stars: 58865
+stars: 58966
 description: |-
     The Prometheus monitoring system and time series database.
 url: https://github.com/prometheus/prometheus

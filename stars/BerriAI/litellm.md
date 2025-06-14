@@ -1,6 +1,6 @@
 ---
 project: litellm
-stars: 23731
+stars: 24036
 description: |-
     Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format - [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]
 url: https://github.com/BerriAI/litellm
@@ -269,7 +269,7 @@ echo 'LITELLM_MASTER_KEY="sk-1234"' > .env
 # It is used to encrypt / decrypt your LLM API Key credentials
 # We recommend - https://1password.com/password-generator/ 
 # password generator to get a random hash for litellm salt key
-echo 'LITELLM_SALT_KEY="sk-1234"' > .env
+echo 'LITELLM_SALT_KEY="sk-1234"' >> .env
 
 source .env
 

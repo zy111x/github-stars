@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 50838
+stars: 50983
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -73,7 +73,8 @@ Rclone *("rsync for cloud storage")* is a command-line program to sync files and
   * Magalu Object Storage [:page_facing_up:](https://rclone.org/s3/#magalu)
   * Mail.ru Cloud [:page_facing_up:](https://rclone.org/mailru/)
   * Memset Memstore [:page_facing_up:](https://rclone.org/swift/)
-  * Mega [:page_facing_up:](https://rclone.org/mega/)
+  * MEGA [:page_facing_up:](https://rclone.org/mega/)
+  * MEGA S4 Object Storage [:page_facing_up:](https://rclone.org/s3/#mega)
   * Memory [:page_facing_up:](https://rclone.org/memory/)
   * Microsoft Azure Blob Storage [:page_facing_up:](https://rclone.org/azureblob/)
   * Microsoft Azure Files Storage [:page_facing_up:](https://rclone.org/azurefiles/)

@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 14882
+stars: 15074
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -40,6 +40,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | autocomplete-select-shadcn-ui | Autocomplete component built with shadcn/ui and Fancy Multi Select by Maximilian Kaske. | [Link](https://www.armand-salle.fr/post/autocomplete-select-shadcn-ui) | 2024-04-07 |
 | auto-form | A React component that automatically creates a shadcn/ui form based on a zod schema. | [Link](https://github.com/vantezzen/auto-form) | 2024-04-29 | 2024-04-29 |
 | async-select | Async Select component built with shadcn/ui with debounce search. | [Link](https://async.rdsx.dev) | 2024-07-22 | 2024-07-22 |
+| berlix|Animated components library built using Tailwind CSS and Motion|[Link](https://berlix.vercel.app)| 2025-06-10 |
 | big-calendar | A modern, feature-rich calendar application with multiple viewing options built using Next.js, TypeScript, and Tailwind CSS. | [Link](https://github.com/lramos33/big-calendar) | 2025-03-08 |
 | buouui | A UI component library and template suite based on shadcn/ui with stunning landing pages, templates, and rich animations. | [Link](https://buouui.com) | 2025-04-06 |
 | bundui | A collection of reusable animated components built with Tailwind CSS and Framer Motion. | [Link](https://bundui.io) | 2024-09-23 |
@@ -60,8 +61,8 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | dnd-dashboard | Dashboard with drop-to-swap layouts using Next.js, shadcn/ui, and swapy. | [Link](https://github.com/olliethedev/dnd-dashboard) | 2024-10-17 |
 | downshift-shadcn-combobox | Combobox/autocomplete component built with shadcn/ui and Downshift. | [Link](https://github.com/TheOmer77/downshift-shadcn-combobox) | 2024-06-27 |
 | drag-to-resize-sidebar | Extended shadcn/ui sidebar component with persisted state drag-to-resize functionality. | [Link](https://github.com/lumpinif/drag-to-resize-sidebar) | 2024-11-21 |
-|drop-drawer|A dropdown menu on desktop and a drawer on mobile devices.|[Link](https://github.com/jiaweing/DropDrawer)| 2025-05-13 |
 | druid/ui | Intercom inspired AI chatbot and UI components built on shadcn/ui. | [Link](https://druidui.com/) | 2024-11-21 |
+| drop-drawer|A dropdown menu on desktop and a drawer on mobile devices.|[Link](https://github.com/jiaweing/DropDrawer)| 2025-05-13 |
 | dy-comps | shacn/ui & Framer Motion React components — flexible, responsive & easy to drop into any project. | [Link](https://dycomps.oimmi.com/) | 2025-03-08 |
 | echo-editor | Modern WYSIWYG rich-text editor based on tiptap and shadcn/ui. | [Link](https://github.com/Seedsa/echo-editor) | 2024-06-07 |
 | edil-ozi | React components with Gsap, framer motion, and tailwind. | [Link](https://edilozi.pro/) | 2024-06-27 |
@@ -79,8 +80,9 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | file-vault | File upload component for React. | [Link](https://github.com/ManishBisht777/file-vault) | 2024-06-07 |
 | floating-dragable-card | Dragable and resizable card using shadcn/ui elements. | [Link](https://github.com/nishansanjuka/react-drag-card) | 2024-11-13 |
 | fusion-ui | Library combining shadcn/ui and MagicUI. | [Link](https://github.com/nyxb-ui/ui) | 2024-07-02 |
+|glasscn-ui|shadcn/ui component library with glassmorphism variants, and many additional components.|[Link](https://github.com/itsjavi/glasscn-ui)| 2025-06-10 |
 | gluestack-ui | React & React Native Components with Tailwind CSS. | [Link](https://gluestack.io) | 2024-11-08 |
-|hexta-ui|Build stunning websites effortlessly. Modern, responsive, and customizable UI components for Next.js. Copy, adapt, and personalize them.|[Link](https://hextaui.com)| 2025-05-14 |
+| hexta-ui|Build stunning websites effortlessly. Modern, responsive, and customizable UI components for Next.js. Copy, adapt, and personalize them.|[Link](https://hextaui.com)| 2025-05-14 |
 | ibelick/background-snippet | Ready to use collection of modern background snippets. | [Link](https://bg.ibelick.com/) | 2024-06-09 |
 | image-upload-shadcn | Image upload component. | [Link](https://github.com/kushagrasarathe/image-upload-shadcn) | 2024-10-22 |
 | indie-ui | UI components with variants. | [Link](https://github.com/Ali-Hussein-dev/indie-ui) | 2024-06-07 |
@@ -88,6 +90,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | junwen-k/ui-x | Additional beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source. | [Link](https://ui-x.junwen-k.dev/) | 2025-02-03 |
 | kibo-ui | Kibo UI is designed to be a more comprehensive library of components that can be used to build more complex applications. | [Link](https://www.kibo-ui.com/overview) | 2025-04-04 |
 | kokonut-ui | Free Modern and Customizable components for Next.js. | [Link](https://kokonutui.com/) | 2024-11-08 |
+|ktui|Open-source collection of customizable UI components for Tailwind CSS and vanilla JavaScript|[Link](https://github.com/keenthemes/ktui)| 2025-06-10 |
 | launch-ui | Landing page components with React, Shadcn/ui and Tailwind. | [Link](https://www.launchuicomponents.com/) | 2024-11-12 |
 | lingua-time | Smart datetime picker with natural language input. | [Link](https://github.com/nainglinnkhant/lingua-time) | 2024-10-22 |
 | linked-chart | Chart component linked with data-table. | [Link](https://github.com/ardasisbot/linked-chart) | 2025-02-03 |
@@ -95,11 +98,11 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | manfromexistence-ui | Components to build beautiful designs. | [Link](https://github.com/manfromexistence/ui) | 2024-12-26 |
 | magicui | React components for landing pages with tailwindcss + framer motion. | [Link](https://magicui.design) | 2024-04-25 |
 | maily.to | Notion-like powerful email editor. | [Link](https://github.com/arikchakma/maily.to) | 2024-06-15 |
-|matsu-theme|Ghibli Studio inspired theme for shadcn/ui made by Matt Wierzbicki|[Link](https://matsu-theme.vercel.app/)| 2025-04-23 |
+| matsu-theme|Ghibli Studio inspired theme for shadcn/ui made by Matt Wierzbicki|[Link](https://matsu-theme.vercel.app/)| 2025-04-23 |
 | minimal-tiptap | Minimal WYSIWYG editor with shadcn/ui and tiptap. | [Link](https://github.com/Aslam97/shadcn-minimal-tiptap) | 2024-06-22 |
 | mixcnui | Collection of animated components for Nextjs. | [Link](https://github.com/taqui-786/mixcnui) | 2024-07-07 |
 | multi-selection | Managing multi-selection functionality with highlighter. | [Link](https://github.com/sherifawad/multi-selection-with-add-remove) | 2025-01-21 |
-|mvpblocks|Copy-paste beautiful, responsive components without worrying about styling or animations. Build faster, launch sooner.|[Link](https://blocks.mvp-subha.me)| 2025-05-14 |
+| mvpblocks|Copy-paste beautiful, responsive components without worrying about styling or animations. Build faster, launch sooner.|[Link](https://blocks.mvp-subha.me)| 2025-05-14 |
 | mynaui | TailwindCSS and shadcn/ui UI Kit for Figma and React. | [Link](https://mynaui.com/) | 2024-06-22 |
 | neobrutalism-components | Neobrutalism-styled Tailwind React and shadcn/ui components. | [Link](https://github.com/ekmas/neobrutalism-components) | 2024-04-07 |
 | nextjs-components | Next.js components with TypeScript and shadcn/ui. | [Link](https://components.bridger.to/) | 2024-06-07 |
@@ -130,7 +133,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | retro-ui|An open source component library, inspred by neo brutalism design system|[Link](https://retroui.dev)| 2025-05-13 |
 | roadmap-ui | Components for interactive roadmaps. | [Link](https://github.com/haydenbleasel/roadmap-ui) | 2024-12-26 |
 | search-address | Interactive address search using OpenStreetMap. | [Link](https://github.com/UretzkyZvi/search-address) | 2024-05-07 |
-|shadboard|An admin dashboard template built with Next.js 15, React 19, Tailwind CSS v4, and Shadcn/UI components, featuring starter and full kits for scalable, user-friendly web apps.|[Link](https://github.com/Qualiora/shadboard)| 2025-04-22 |
+| shadboard|An admin dashboard template built with Next.js 15, React 19, Tailwind CSS v4, and Shadcn/UI components, featuring starter and full kits for scalable, user-friendly web apps.|[Link](https://github.com/Qualiora/shadboard)| 2025-04-22 |
 | shadcn-address-autocomplete | Address autocomplete with Google Places API. | [Link](https://github.com/NiazMorshed2007/shadcn-address-autocomplete) | 2024-07-10 |
 | shadcn-admin | Admin Dashboard UI with shadcn/ui and Vite. | [Link](https://github.com/satnaing/shadcn-admin) | 2024-12-27 |
 | shadcn-blocks | Official pre-made customizable components. | [Link](https://ui.shadcn.com/blocks) | 2024-03-27 |
@@ -150,8 +153,9 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-date-picker | Advanced date picker with various features. | [Link](https://date-picker.luca-felix.com) | 2024-07-25 |
 | shadcn-drag-and-drop-sort | Drag-and-drop sortable list of pills of different widths using dnd-kit. | [Link](https://github.com/crystaltai/shadcn-drag-and-drop) | 2025-02-03 |
 | shadcn-drag-table | Drag-and-drop table component. | [Link](https://github.com/zenoncao/shadcn-drag-table) | 2024-02-22 |
-| shadcn-dropzone | File upload component using React-Dropzone, built with accessibility in mind. | [Link](https://github.com/janglad/shadcn-dropzone) | 2025-01-13 |
+| shadcn-dropzone | File upload component using React-Dropzone, built with accessibility in mind. | [Link](https://github.com/janglad/shadcn-dropzone) | 2025-01-13 | 
 | shadcn-editor | Lexical editor with shadcn theme. | [Link](https://github.com/htmujahid/shadcn-editor) | 2024-11-08 |
+| shadcn-examples | Dozens of advanced shadcn/ui examples. Easily integrate sample applications and components into your project. | [Link](https://github.com/shadcn-examples/shadcn-examples) | 2025-06-04 |
 | shadcn-extends | Collection of shadcn/ui components. | [Link](https://github.com/lucioew28/extends) | 2024-06-07 |
 | shadcn-extension | Open-source component collection. | [Link](https://github.com/BelkacemYerfa/shadcn-extension) | 2024-06-07 |
 | shadcn-font-picker|Font picker using shadcn/ui components and google font API.|[Link](https://shadcn-font-picker.vercel.app)| 2025-04-22 |
@@ -180,6 +184,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn-ui-templates | Free & Premium templates collection. | [Link](https://shadcnui-templates.com) | 2024-09-18 |
 | shaduxe-ui | Component variants for shadcn/ui. | [Link](https://ui.shaduxe.com) | 2024-12-27 |
 | shsfui | Motion-first React components built with Tailwind CSS + Framer Motion. | [Link](https://www.shsfui.com) | 2025-03-12 |
+| shuip | Ship fast with sh(ui)p, a collection of components and blocks for your Next.js project. | [Link](https://shuip.xyz/docs) | 2025-05-30 |
 | simple-ai | Components and blocks to easily build AI apps | [Link](https://simple-ai.dev) | 2025-01-21 |
 | simple-image-uploader | Image uploader with dnd, validation and previews | [Link](https://simple-image-uploader-bice.vercel.app/) | 2025-03-25 |
 | simplekit | Wallet and account component for Wagmi. | [Link](https://github.com/vaunblu/SimpleKit) | 2024-09-18 |
@@ -191,6 +196,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | stunning-ui | Interactive Tailwind components for Vue. | [Link](https://stunningui.design) | 2024-10-22 |
 | supabase-shadcn-database-example | supabase + shadcn/ui datatable | [Link](https://github.com/thisisfel1x/supabase-shadcn-database-example) | 2024-12-30 |
 | supercharged-shadcn-components | Type-safe form components collection. | [Link](https://github.com/slickwit/supercharged-shadcn-components) | 2024-11-25 |
+|svelte-image-uploader|Svelte image uploader with dnd, validation and previews.|[Link](https://svelte-image-uploader.vercel.app/)| 2025-06-10 |
 | tanstack-ui-table | Customizable table with @tanstack/table and shadcn/ui | [Link](https://github.com/drefahl/tanstack-ui-table) |2025-02-27 |
 | time-picker | Simple TimePicker component. | [Link](https://github.com/openstatusHQ/time-picker) | 2024-04-29 |
 | tnks-data-table | Advanced data table component built with shadcn/ui and TanStack Table featuring server-side operations, row selection, filtering, column customization, and export functionality. Fully TypeScript compatible with comprehensive documentation. | [Link](https://github.com/jacksonkasi1/tnks-data-table) | 2025-04-19 |
@@ -214,7 +220,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | shadcn/ui Components Manager | A plugin for Jetbrain products. It allows you to manage your shadcn/ui components across Svelte, React, Vue, and Solid frameworks with this plugin. Simplify tasks like adding, removing, and updating components. | [Link](https://plugins.jetbrains.com/plugin/23479-shadcn-ui-components-manager ) | 2024-03-28 |
 | vscode-shadcn-svelte | VS Code extension for shadcn/ui components in Svelte projects. | [Link](https://marketplace.visualstudio.com/items?itemName=Selemondev.vscode-shadcn-svelte&ssr=false#overview) | 2024-03-28 |
 | vscode-shadcn-ui-snippets | Easily import and use shadcn-ui components with ease using snippets within VSCode. Just type cn or shadcn in your jsx/tsx file and you will get a list of all the components to choose from. | [Link](https://marketplace.visualstudio.com/items?itemName=VeroXyle.shadcn-ui-snippets  ) | 2024-06-05 |
-| vscode-shadcn-vue | Extension for integrating shadcn/ui components into Vue.js projects. | [Link](https://marketplace.visualstudio.com/items?itemName=Selemondev.vscode-shadcn-vue) | 2024-03-28 |
+| vscode-shadcn-vue | Extension for integrating shadcn/ui components into Vue.js projects. | [Link](https://marketplace.visualstudio.com/items?itemName=Selemondev.shadcn-vue) | 2024-03-28 |
 
 ## Colors and Customizations
 
@@ -246,7 +252,6 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | Name                                | Description                                                                                                                                           | Link                                                  | Date |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------| ------- |
 | 5devs | A website to get fake Brazilian data for testing purposes. | [Link](https://www.5devs.com.br/ ) | 2024-05-31 |
-| ai-generator-shadcn-theme | AI Shadcn Theme Generator, The AI Shadcn Theme Generator crafts stunning, consistent themes for your shadcn/ui projects in seconds. | [Link](https://ipalettes.com/theme/shadcn) | 2024-12-30 |
 | bento-hub | BentoHub is an application where you can create a bento grid for your GitHub profile readme. | [Link](https://github.com/amittam104/BentoHub) | 2024-09-09 |
 | cut-it | Link shortener built using Next.js App Router, Server Actions, Drizzle ORM, Turso, and styled with shadcn/ui. | [Link](https://github.com/mehrabmp/cut-it) | 2024-06-07 |
 | country-data-in-charts | Globe Graph is a web app that visualizes countries' data like GDP, GDP per capita, and population in different years using many charts. | [Link](https://globe-graph.vercel.app/) | 2024-09-09 |
@@ -254,7 +259,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | down-dev-detector | This app lists all the services currently down and uses Atlassian Status Page and others (soon). | [Link](https://github.com/birobirobiro/downdevdetector) | 2024-11-04 |
 | cv-forge | Resume builder built with @shadcn/ui, react-hook-form, and react-pdf. | [Link](https://cvforge.app) | 2024-11-04 |
 | excelkits | Create free downloadable Shadcn-themed chart images. Supports PNG, JPEG, WEBP, and even WEBM videos. Upload your own data for more realistic designs. | [Link](https://excelkits.com/charts) | 2024-12-26 |
-|focus-brew|A free productivity toolkit that combines essential tools to help you stay focused, organized, and efficient throughout your workday.|[Link](https://focusbrew.vercel.app)| 2025-05-14 |
+| focus-brew |A free productivity toolkit that combines essential tools to help you stay focused, organized, and efficient throughout your workday.| [Link](https://focusbrew.vercel.app)| 2025-05-14 |
 | form-builder | UI-based codegen tool to easily create beautiful and type-safe @shadcn/ui forms. | [Link](https://github.com/AlandSleman/FormBuilder) | 2024-06-07 |
 | form-builder-fast | Shadcn Form Builder - Build forms in minutes for free. | [Link](https://ui.indie-starter.dev/form-builder) | 2024-12-26 |
 | hook-again | A collection of shadcn/ui installable React Hooks. | [Link](https://github.com/ilyichv/hookagain) | 2024-11-04 |
@@ -262,13 +267,12 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | invoify | An invoice generator app built using Next.js, TypeScript, and shadcn/ui. | [Link](https://github.com/aliabb01/invoify) | 2024-03-27 |
 | jobsync | JobSync is a job seekers' assistant to manage job search efficiently. | [Link](https://github.com/Gsync/jobsync) | 2024-07-17 |
 | memfree | Open-source hybrid AI search engine, instantly get accurate answers from the internet, bookmarks, notes, and docs. Built using Next.js and shadcn/ui. | [Link](https://github.com/memfreeme/memfree) | 2024-07-22 |
-| myinstants | The largest instant sound buttons website in Brazil! | [Link](https://www.myinstants.xyz/) | 2024-07-22 |
 | opensearch-ai | SearchGPT/Perplexity clone but personalized for you. | [Link](https://github.com/supermemoryai/opensearch-ai) | 2024-12-26 |
 | pagegen.ai | An AI Page Generator with Claude AI, React, and shadcn/ui. Generate web pages from text, screenshots, and templates with one click. | [Link](https://pagegen.ai) | 2024-12-26 |
 | pastecode | Pastebin alternative built with TypeScript, Next.js, Drizzle, shadcn/ui, and RSC. | [Link](https://github.com/Quorin/PasteCode.app) | 2024-06-07 |
-| postgres | The in-browser Postgres sandbox with AI assistance. | [Link](https://postgres.new/) | 2024-08-13 |
 | proxmox-helper-scripts | A catalog of scripts for your Proxmox VE homelab, built with the Next.js App Router and styled with shadcn/ui. | [Link](https://github.com/BramSuurdje/proxmox-helper-scripts) | 2024-07-16 |
 | quack-db | Open-source in-browser DuckDB SQL editor. | [Link](https://github.com/mattf96s/QuackDB) | 2024-10-03 |
+|shadcn-easy-install|Install all shadcn components easily. One-click to install all selected components.|[Link](https://shadcn-easy-install.vercel.app/)| 2025-06-10 |
 | shadcn-form-builder | Create forms with Shadcn, react-hook-form, and Zod within minutes. | [Link](https://shadcn-form-build.vercel.app/) | 2024-10-03 |
 | shadcn-pricing-page-generator | The easiest way to get a React pricing page with shadcn/ui, Radix UI, and/or Tailwind CSS. | [Link](https://shipixen.com/shadcn-pricing-page) | 2024-03-08 |
 | shadcn-theme-editor | Shadcn Theme Editor is a user-friendly component designed to simplify the process of managing and customizing theme colors in Shadcn-based projects. | [Link](https://shadcnthemeeditor.vercel.app) | 2024-08-19 |
@@ -283,7 +287,6 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | v0 | Vercel's generative UI system, built on shadcn/ui and TailwindCSS, allows effortless UI generation from text prompts and/or images. | [Link](https://v0.dev/ ) | 2024-03-27 |
 | vercel-status-tracker | Track the status of all of your projects deployed via Vercel. Built with shadcn/ui and TailwindCSS. | [Link](https://vercel-status-tracker.vercel.app) | 2025-01-02 |
 | wallhaven-desktop | Wallhaven Wallpaper software desktop. Create a Wallhaven API-based client, a true wallpaper software. | [Link](https://github.com/ErKeLost/wallhaven-desktop) | 2024-10-23 |
-| xuneix | A link rotation tool for enhanced admin panel security. Includes dynamic URLs, expiring tokens, customizable rotation. | [Link](https://xuneix.theteleporter.me/) | 2024-07-08 |
 
 ## Websites and Portfolios Inspirations
 
@@ -292,11 +295,12 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | andrewsam.xyz | A revamped version of the popular tailwind-nextjs-starter-blog using shadcn/ui, along with a resume section and experience timeline component. | [Link](https://www.andrewsam.xyz/) | 2024-09-18 |
 | birobirobiro.dev | A personal developer portfolio. | [Link](https://birobirobiro.dev/) | 2024-07-29 |
 | godly | Astronomically good web design inspiration. Only the best of the best. | [Link](https://godly.website/) | 2024-07-29 |
+|hritu.art|A clean, modern designer portfolio blending minimal aesthetics with functional UI and built-in email support via React Email.|[Link](https://github.com/suraj-xd/design-portfolio)| 2025-06-10 |
 | list.swajp.me | It has never been easier to find the right projects or designs by inspiring successful people. | [Link](https://list.swajp.me) | 2024-07-29 |
-| Nathan's AI | An AI Chatbot acting as a portfolio, built with shadcn/ui components. | [Link](https://chat.brodin.dev) | 2024-11-21 |
+| nathans-ai | An AI Chatbot acting as a portfolio, built with shadcn/ui components. | [Link](https://chat.brodin.dev) | 2024-11-21 |
 | shubhporwal.me | An eye-catching developer portfolio, built on NextJS, GSAP, Tailwind, and React. | [Link](https://www.shubhporwal.me/) | 2024-10-03 |
 | swajp.me | A visually appealing portfolio and resource hub. | [Link](https://swajp.me) | 2024-07-29 |
-| Windows 11 (clone) | A sleek Windows 11 clone built with React, Next.js, Tailwind CSS, ShadCN, and Framer-Motion, featuring smooth animations, draggable windows, and a modern design system. | [Link](https://win11.oimmi.com/) | 2025-02-20 |
+| windows-11-clone | A sleek Windows 11 clone built with React, Next.js, Tailwind CSS, ShadCN, and Framer-Motion, featuring smooth animations, draggable windows, and a modern design system. | [Link](https://win11.oimmi.com/) | 2025-02-20 |
 
 ## Platforms
 
@@ -353,6 +357,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | design-system-template | Turborepo + TailwindCSS + Storybook + shadcn/ui. | [Link](https://github.com/arevalolance/design-system-template) | 2024-06-06 |
 | easy-ui | 50+ High Quality Open Source Website Templates built using NextJS + shadcn/ui + Tailwind CSS + Framer Motion and more. | [Link](https://github.com/DarkInventor/easy-ui) | 2024-08-06 |
 | electron-shadcn | Electron app template with shadcn/ui and a bunch of other libs and tools ready to use. | [Link](https://github.com/LuanRoger/electron-shadcn) | 2024-06-17 |
+|full-stack-monorepo-starter|Full stack monorepo template built using shadcn/ui + Fastify + graphql + vitejs + Docker and more.|[Link](https://github.com/mnove/monorepo-starter-graphql)| 2025-06-10 |
 | horizon-ai-nextjs-shadcn-boilerplate | Premium AI NextJS & shadcn/ui Boilerplate + Stripe + Supabase + OAuth. | [Link](https://horizon-ui.com/boilerplate-shadcn) | 2024-05-24 |
 | kirimase | A template and boilerplate for quickly starting your next project with shadcn/ui, Tailwind CSS, and Next.js. | [Link](https://kirimase.dev/) | 2024-06-11 |
 | magicui-startup-templates | Magic UI Startup template built using shadcn/ui + TailwindCSS + Framer Motion. | [Link](https://magicui.design/docs/templates/startup) | 2024-04-25 |
@@ -375,7 +380,7 @@ A curated list of awesome things related to <a href='https://ui.shadcn.com/' tar
 | t3-app-template | Admin template for T3 Stack and shadcn/ui. | [Link](https://github.com/gaofubin/t3-app-template) | 2024-04-25 |
 | taxonomy | An open-source application built using the new router, server components, and everything new in Next.js. | [Link](https://github.com/shadcn/taxonomy) | 2024-03-21 |
 | template-next | A clean Next.js template with TypeScript, TailwindCSS, Shadcn/ui, and Prettier. | [Link](https://template-next-official.vercel.app/) | 2024-09-24 |
-|turborepo-nextjs-wxt-shadcn-boilerplate|Turborepo boilerplate featuring web and web-extension apps with shadcn/ui for shared ui components and unified Typescript, ESLint, Tailwind CSS, and Prettier configs.|[Link](https://github.com/Aniket-508/turborepo-nextjs-wxt-shadcn-boilerplate)| 2025-04-24 |
+| turborepo-nextjs-wxt-shadcn-boilerplate|Turborepo boilerplate featuring web and web-extension apps with shadcn/ui for shared ui components and unified Typescript, ESLint, Tailwind CSS, and Prettier configs.|[Link](https://github.com/Aniket-508/turborepo-nextjs-wxt-shadcn-boilerplate)| 2025-04-24 |
 | turborepo-shadcn-ui-tailwindcss | Turborepo starter with shadcn/ui & TailwindCSS pre-configured for shared UI components. | [Link](https://github.com/henriqpohl/turborepo-shadcn-ui-tailwindcss) | 2024-06-06 |
 | turborepo-launchpad | A comprehensive monorepo boilerplate for shadcn projects using Turbo. It features a highly scalable setup ideal for developing complex applications with shared components and utilities. | [Link](https://github.com/JadRizk/turborepo-launchpad) | 2024-06-10 |
 | wordpress-plugin-boilerplate | WordPress Plugin Boilerplate utilizing modern web technologies and tools such as React, TypeScript, SASS, TailwindCSS, Shadcn UI, Vite, Grunt.js, Storybook, HMR, and more. | [Link](https://github.com/prappo/wordpress-plugin-boilerplate) | 2024-09-24 |

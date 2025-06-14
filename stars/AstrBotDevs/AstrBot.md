@@ -1,14 +1,15 @@
 ---
 project: AstrBot
-stars: 9515
+stars: 9703
 description: |-
     ✨ 易上手的多平台 LLM 聊天机器人及开发框架 ✨ 平台支持 QQ、QQ频道、Telegram、微信、企微、飞书、钉钉 | 知识库、MCP 服务器、OpenAI、DeepSeek、Gemini、硅基流动、月之暗面、Ollama、OneAPI、Dify 等。 WebUI。
 url: https://github.com/AstrBotDevs/AstrBot
 ---
 
 <p align="center">
+ 
+![da32a1f2-8da6-46a6-8516-5ed57d50e4b9](https://github.com/user-attachments/assets/39dc39ae-9003-434b-81a6-006b3de5e7c2)
 
-![yjtp](https://github.com/user-attachments/assets/dcc74009-c57e-4b66-9ae3-0a81fc001255)
 
 </p>
 
@@ -39,9 +40,9 @@ AstrBot 是一个松耦合、异步、支持多消息平台部署、具有易用
 <!-- [![codecov](https://img.shields.io/codecov/c/github/soulter/astrbot?style=for-the-badge)](https://codecov.io/gh/Soulter/AstrBot)
  -->
 
-> [!NOTE]
+> [!WARNING]
 > 
-> 个人微信接入所依赖的开源项目 Gewechat 近期已停止维护，`v3.5.10` 已经支持接入 WeChatPadPro 替换 gewechat 方式。详见文档 [WeChatPadPro](https://astrbot.app/deploy/platform/wechat/wechatpadpro.html)
+> 请务必修改默认密码以及保证 AstrBot 版本 >= 3.5.13。
 
 ## ✨ 近期更新
 

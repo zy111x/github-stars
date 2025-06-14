@@ -1,6 +1,6 @@
 ---
 project: sanity
-stars: 5670
+stars: 5683
 description: |-
     Sanity Studio – Rapidly configure content workspaces powered by structured content
 url: https://github.com/sanity-io/sanity
@@ -92,11 +92,11 @@ Check out [the docs](https://www.sanity.io/docs/sanity-studio) and [plugins](htt
 
 ## Code of Conduct
 
-We aim to be an inclusive, welcoming community for everyone. To make that explicit, we have a [code of conduct](https://github.com/sanity-io/sanity/blob/current/CODE_OF_CONDUCT.md) that applies to communication around the project.
+We aim to be an inclusive, welcoming community for everyone. To make that explicit, we have a [code of conduct](https://github.com/sanity-io/sanity/blob/main/CODE_OF_CONDUCT.md) that applies to communication around the project.
 
 ## Want to contribute?
 
-Found a bug, or want to contribute code? Pull requests and issues are most welcome. Read our [contributing guidelines](https://github.com/sanity-io/sanity/blob/current/CONTRIBUTING.md) to learn how.
+Found a bug, or want to contribute code? Pull requests and issues are most welcome. Read our [contributing guidelines](https://github.com/sanity-io/sanity/blob/main/CONTRIBUTING.md) to learn how.
 
 ### Help Improve Sanity Studio translations
 
@@ -116,5 +116,5 @@ Your contributions not only improve Sanity Studio but also bring together a dive
 
 ## License
 
-Sanity Studio is available under the [_MIT License_](https://github.com/sanity-io/sanity/blob/current/LICENSE)
+Sanity Studio is available under the [_MIT License_](https://github.com/sanity-io/sanity/blob/main/LICENSE)
 

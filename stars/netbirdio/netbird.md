@@ -1,6 +1,6 @@
 ---
 project: netbird
-stars: 14993
+stars: 15658
 description: |-
     Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.
 url: https://github.com/netbirdio/netbird
@@ -20,7 +20,7 @@ url: https://github.com/netbirdio/netbird
        <img src="https://img.shields.io/badge/license-BSD--3-blue" />
      </a> 
     <br>
-    <a href="https://join.slack.com/t/netbirdio/shared_invite/zt-31rofwmxc-27akKd0Le0vyRpBcwXkP0g">
+    <a href="https://docs.netbird.io/slack-url">
         <img src="https://img.shields.io/badge/slack-@netbird-red.svg?logo=slack"/>
      </a>  
      <br>
@@ -37,7 +37,7 @@ url: https://github.com/netbirdio/netbird
   <br/>
   See <a href="https://netbird.io/docs/">Documentation</a>
   <br/>
-   Join our <a href="https://join.slack.com/t/netbirdio/shared_invite/zt-31rofwmxc-27akKd0Le0vyRpBcwXkP0g">Slack channel</a>
+   Join our <a href="https://docs.netbird.io/slack-url">Slack channel</a>
   <br/>
  
 </strong>

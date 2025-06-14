@@ -1,6 +1,6 @@
 ---
 project: CopilotKit
-stars: 20902
+stars: 21186
 description: |-
     React UI + elegant infrastructure for AI Copilots, AI chatbots, and in-app AI agents. The Agentic last-mile 🪁
 url: https://github.com/CopilotKit/CopilotKit
@@ -24,6 +24,8 @@ url: https://github.com/CopilotKit/CopilotKit
 
 <br/>
 
+<div align="center">
+
 <div style="display:flex;justify-content:center;gap:8px;">
   <a href="https://www.npmjs.com/package/@copilotkit/react-core" target="_blank">
     <img src="https://img.shields.io/npm/v/%40copilotkit%2Freact-core?logo=npm&logoColor=%23FFFFFF&label=Version&color=%236963ff" alt="NPM">
@@ -39,7 +41,8 @@ url: https://github.com/CopilotKit/CopilotKit
 </div>
 <br/>
 
-<div align="center">
+
+  
   <a href="https://discord.gg/6dffbvGU3D?ref=github_readme" target="_blank">
     <img src="./assets/btn_discord.png" alt="CopilotKit Discord" height="40px">
   </a>

@@ -1,6 +1,6 @@
 ---
 project: curl-impersonate
-stars: 1916
+stars: 1926
 description: |-
     An active fork of curl-impersonate with more versions and build targets. A series of patches that make curl requests look like Chrome and Firefox.
 url: https://github.com/lexiforest/curl-impersonate
@@ -9,7 +9,7 @@ url: https://github.com/lexiforest/curl-impersonate
 # curl-impersonate ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png "Chrome") ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_24x24.png "Edge") ![Safari](https://github.com/alrra/browser-logos/blob/main/src/safari/safari_24x24.png "Safari") ![Firefox](https://github.com/alrra/browser-logos/blob/main/src/firefox/firefox_24x24.png "Firefox") ![Tor](https://github.com/alrra/browser-logos/blob/main/src/tor/tor_24x24.png "Tor")
 
 [![Build and test](https://github.com/lexiforest/curl-impersonate/actions/workflows/build-and-test-make.yml/badge.svg)](https://github.com/lexiforest/curl-impersonate/actions/workflows/build-and-test-make.yml)
-[![Docker images](https://github.com/lexiforest/curl-impersonate/actions/workflows/build-and-test-docker.yml/badge.svg)](https://github.com/lexiforest/curl-impersonate/actions/workflows/build-and-test-docker.yml)
+[![Docker images](https://github.com/lexiforest/curl-impersonate/actions/workflows/build-push-docker.yml/badge.svg)](https://github.com/lexiforest/curl-impersonate/actions/workflows/build-push-docker.yml)
 
 > [!NOTE]
 > This is a (slightly) more active fork of [curl-impersonate](https://github.com/lwthiker/curl-impersonate).
@@ -123,6 +123,11 @@ Notes:
 
 The simplest way is to download the prebuilt binaries from the [release page](https://github.com/lexiforest/curl-impersonate/releases).
 If you want to build by yourself, please refer to the [INSTALL.md](INSTALL.md) and [docs/install.md](docs/02_install.md).
+
+You can also use the following docker images:
+
+- [lexiforest/curl-impersonate](https://hub.docker.com/r/lexiforest/curl-impersonate/tags)
+- [lexiforest/curl-impersonate:alpine](https://hub.docker.com/r/lexiforest/curl-impersonate/tags)
 
 ## Basic usage
 

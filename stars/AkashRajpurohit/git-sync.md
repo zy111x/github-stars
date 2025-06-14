@@ -1,6 +1,6 @@
 ---
 project: git-sync
-stars: 484
+stars: 500
 description: |-
     🔄 A simple tool to backup and sync your git repositories
 url: https://github.com/AkashRajpurohit/git-sync
@@ -86,6 +86,9 @@ If you encounter any problems feel free to open an [issue](https://github.com/Ak
       <td align="center" valign="top" width="14.28%"><a href="https://janusworx.com"><img src="https://avatars.githubusercontent.com/u/4888781?v=4?s=100" width="100px;" alt="Mario Jason Braganza"/><br /><sub><b>Mario Jason Braganza</b></sub></a><br /><a href="#bug-jasonbraganza" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://blog.singee.me"><img src="https://avatars.githubusercontent.com/u/11208082?v=4?s=100" width="100px;" alt="Bryan"/><br /><sub><b>Bryan</b></sub></a><br /><a href="#ideas-ImSingee" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/3timeslazy"><img src="https://avatars.githubusercontent.com/u/23486601?v=4?s=100" width="100px;" alt="Vladimir Fetisov"/><br /><sub><b>Vladimir Fetisov</b></sub></a><br /><a href="#ideas-3timeslazy" title="Ideas, Planning, & Feedback">🤔</a> <a href="#bug-3timeslazy" title="Bug reports">🐛</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.peterdavehello.org/"><img src="https://avatars.githubusercontent.com/u/3691490?v=4?s=100" width="100px;" alt="Peter Dave Hello"/><br /><sub><b>Peter Dave Hello</b></sub></a><br /><a href="#platform-PeterDaveHello" title="Packaging/porting to new platform">📦</a></td>
     </tr>
   </tbody>
 </table>

@@ -1,6 +1,6 @@
 ---
 project: 1chooo.com
-stars: 244
+stars: 245
 description: |-
     👨🏻‍💻 $ ls -al Hugo -- My personal portfolio and blog built with React, Next.js, Tailwind CSS and TypeScript
 url: https://github.com/1chooo/1chooo.com
@@ -8,63 +8,70 @@ url: https://github.com/1chooo/1chooo.com
 
 <a name="readme-top"></a>
 
-<a href="https://www.1chooo.com">
-  <img alt="Home Page of 1chooo.com" src="./.github/images/cover-transparent-with-1chooo-com.png">
-</a>
+# [1chooo.com](https://1chooo.com) &middot; [![1chooo.com GitHub license](https://img.shields.io/github/license/1chooo/1chooo.com?style=for-the-badge&labelColor=000)](https://github.com/facebook/react/blob/main/LICENSE) [![1chooo.com built with Next.js](https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000)](https://nextjs.org/) [![1chooo.com GitHub Stargazers](https://img.shields.io/github/stars/1chooo/1chooo.com?style=for-the-badge&labelColor=000)](https://github.com/1chooo/1chooo.com/stargazers) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&labelColor=000)](https://docs.1chooo.com/contributing)
 
-<p align="center">
-  <img alt="" src="https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000">
-  <img alt="" src="https://img.shields.io/github/languages/top/1chooo/1chooo.com?style=for-the-badge&labelColor=000">
-  <img alt="" src="https://img.shields.io/github/license/1chooo/1chooo.com?style=for-the-badge&labelColor=000">
-  <img src="https://img.shields.io/github/stars/1chooo/1chooo.com?style=for-the-badge&labelColor=000" alt="Novel.sh's GitHub repo">
-</p>
 
-<p align="center">
-  <strong>
-    <a href="#-abstract">📍 Abstract</a>&nbsp;&nbsp;&bull;&nbsp;
-    <a href="#-features">✨ Feature</a>&nbsp;&nbsp;&bull;&nbsp;
-    <a href="#-contributing">🌏 Contributing</a>&nbsp;&nbsp;&bull;&nbsp;
-    <a href="#-contact-info">📲 Contact Info</a>&nbsp;&nbsp;&bull;&nbsp;
-    <a href="#-license">🪪 License</a>&nbsp;&nbsp;&bull;&nbsp;
-    <a href="https://docs.1chooo.com">📚 Docs</a>
-  </strong>
-</p>
+Welcome to the monorepo of my personal website! 👋
 
-## 📍 Abstract
+A fast, responsive, and SEO-friendly portfolio + blog site to share your work, ideas, and projects -- all built with Next.js, TypeScript, and Tailwind CSS.
 
-Inspired by the [codewithsadee/vcard-personal-portfolio](https://github.com/codewithsadee/vcard-personal-portfolio), we aim to convert the `HTML/CSS` template into a [React-based](https://react.dev/) project using [Next.js Turborepo](https://turbo.build/).
+<div align="center">
+  <a href="https://1chooo.com">
+    <img 
+      alt="Home Page of 1chooo.com" 
+      src="./.github/images/cover-transparent-with-1chooo-com.png" 
+    />
+  </a>
+</div>
 
-Our goal is to provide a template where users can build their own portfolio and blog by simply modifying the **configuration and content** without changing the core code. Users will be able to set up their portfolio by updating the config and adding their own posts to the `contents` folder.
+## Features
 
-We'll also provide comprehensive documentation, including a user guide, code walkthrough, and thorough test coverage to ensure a smooth experience.
+### Tech Stack Highlights
 
-## ✨ Features
+- Next.js 15 with App Router
+- TypeScript with strict configuration
+- Tailwind CSS for styling
+- Turborepo for monorepo management
 
-- 💀 [Skeleton Loading]
-- ⚡️ [Next.js 15 with App Router]
-- ✍🏻 [Markdown Rendering]
-- 🧪 [Jest - Components Unit Testing]
-- 🟩 [GitHub Calendar Heatmap]
-- 💎 [giscus]
-- 🚨 [GitHub Alerts]
+### Blogging Essentials
 
-[Skeleton Loading]: https://github.com/dvtng/react-loading-skeleton
-[Next.js 15 with App Router]: https://nextjs.org/
-[Markdown Rendering]: https://github.com/hashicorp/next-mdx-remote
-[Jest - Components Unit Testing]: https://jestjs.io/
-[GitHub Calendar Heatmap]: https://github.com/grubersjoe/react-github-calendar
-[giscus]: https://giscus.app/
-[GitHub Alerts]: https://github.com/chrisweb/rehype-github-alerts
+- Markdown support for blog posts
+- Comment system
+- RSS feed for blog posts
+- Sitemap generation
 
-## 🌏 Contributing
+### UI & UX Enhancements
 
-[PRs](https://github.com/1chooo/1chooo.com/pulls) and [Issues](https://github.com/1chooo/1chooo.com/issues) are welcome! 🫵🏻
+- Skeleton loading for better user experience
+- Responsive design for mobile and desktop
+- GitHub calendar heatmap to showcase contributions
+- Shiki for code syntax highlighting
+- Motion for animations
 
-Please read the [Contributing Guideline] for details on our code of conduct, and the process for submitting pull requests to us.
+### Performance & SEO
+
+- Lighthouse score of nearly **100**
+- SEO optimized with meta tags and `JSON-LD`
+- Open graph images using `next/og`
+
+<div align="center">
+  <img src="./.github/images/seo.webp" alt="1chooo.com Lighthouse Score" />
+</div>
+
+### Dev Experience
+
+- ESLint and Prettier for code quality
+- Conventional commit messages
+
+## Contributing
+
+Please refer to the [Contributing Guideline] for detailed information on how to start the app locally and contribute to this project.
 
 [Contributing Guideline]: https://docs.1chooo.com/contributing
 
-## 🔩 Getting Started
+[Pull Requests](https://github.com/1chooo/1chooo.com/pulls) and [reporting issues](https://github.com/1chooo/1chooo.com/issues) are welcome 🫵🏻 in our [GitHub repository](https://github.com/1chooo/1chooo.com)!
+
+## Getting Started
 
 > [!NOTE]
 > We choose [`pnpm`](https://pnpm.io/) as our package manager. Make sure you have it installed before running the following commands.
@@ -82,27 +89,43 @@ $ cd apps/web
 $ pnpm run dev   # Open http://localhost:3000 with your browser to see the result.
 ```
 
-### Run the Docs
+## Acknowledgments
 
-```shell
-$ cd apps/docs
-$ pnpm run dev   # Open http://localhost:3001 with your browser to see the result.
-```
+This project was made possible thanks to the amazing open-source community.
 
-## 📲 Contact
+A special thanks to [@codewithsadee](https://github.com/codewithsadee) for the excellent [vcard-personal-portfolio](https://github.com/codewithsadee/vcard-personal-portfolio), which served as the foundation for this project.
 
-> **Chun-Ho (Hugo) Lin**
->
-> <aside>
->   📩 E-mail: <a href="mailto:hugo970217@gmail.com">hugo970217@gmail.com</a>
-> <br>
->   🧳 Linkedin: <a href="https://www.linkedin.com/in/1chooo/">Chun-Ho (Hugo) Lin</a>
-> <br>
->   👨🏻‍💻 GitHub: <a href="https://github.com/1chooo">1chooo</a>
->    
-> </aside>
+The project also incorporates and adapts various open-source projects, including:
 
-## 🪪 License
+- [rehype](https://github.com/rehypejs/rehype)
+- [remark](https://github.com/remarkjs/remark)
+- [Giscus](https://giscus.app/)
+- [react-scroll-motion](https://github.com/1000ship/react-scroll-motion)
+- [GitHub Calendar](https://github.com/grubersjoe/react-github-calendar)
+
+Additionally, I drew inspiration from several incredible projects, including:
+
+- [honghong.me](https://honghong.me)
+- [leerob.com](https://leerob.com)
+- [bntw.dev](https://bntw.dev)
+- [webtech-note.com](https://webtech-note.com)
+- [michaelangelo.io](https://michaelangelo.io)
+- [iamsahaj.xyz](https://iamsahaj.xyz)
+- [jinrup.dev](https://www.jinrup.dev)
+
+...and many others I can't recall but deeply appreciate.
+
+## Authors
+
+- **Chun-Ho (Hugo) Lin** <sup>[Website](https://1chooo.com) | [GitHub](https://github.com/1chooo) | [E-mail](mailto:hugo970217@gmail.com)</sup>
+
+## Deploy on Vercel
+
+The easiest way to deploy 1chooo.com app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## License
 
 > [!IMPORTANT]
 > This work is licensed under a [Creative Commons Attribution 4.0 International License][cc-by] by [Chun-Ho (Hugo) Lin][1chooo-com].
@@ -121,7 +144,7 @@ Please remove all of my personal information by running `pnpm run delete`.
 
 Made with 🖤 by [@1chooo][1chooo-com]
 
-[1chooo-com]: https://www.1chooo.com
+[1chooo-com]: https://1chooo.com
 
 <p align="right" style="font-size: 14px; color: #555; margin-top: 20px;">
     <a href="#readme-top" style="text-decoration: none; color: #007bff; font-weight: bold;">
