@@ -1,6 +1,6 @@
 ---
 project: CF-Workers-docker.io
-stars: 8220
+stars: 8248
 description: 这个项目是一个基于 Cloudflare Workers 的 Docker 镜像代理工具。它能够中转对 Docker 官方镜像仓库的请求，解决一些访问限制和加速访问的问题。
 url: https://github.com/cmliu/CF-Workers-docker.io
 ---
@@ -21,6 +21,16 @@ Warning
 根据 Cloudflare 协议 中，2.2.1 第 (j) use the Services to provide a virtual private network or other similar proxy services.
 
 使用本服务可能存在被 Cloudflare 封号的潜在风险，请自行斟酌使用风险。
+
+如果你选择了“根据主机名选择对应的上游地址”方式部署，你可能会:
+
+被 Netcraft 扫描到，收到警告邮件
+
+被 Netcraft 同步到 Google Safe Browsing 标记为钓鱼网站
+
+被 Netcraft 投诉到 Cloudflare 标记为钓鱼网站, 无法正常 pull 镜像
+
+收到律师函
 
 🚀 部署方式
 -------
@@ -181,67 +191,35 @@ DockerHub 镜像仓库
 
 镜像加地址
 
-bestcfipas镜像服务
+bestcfipas 镜像服务
 
 `https://docker.registry.cyou`
 
 `https://docker-cf.registry.cyou`
 
-zero\_free镜像服务
+`https://registry.lfree.org`
+
+zero\_free 镜像服务
 
 `https://docker.jsdelivr.fyi`
 
-`https://dockercf.jsdelivr.fyi`
+`https://docker.aeko.cn`
 
-`https://dockertest.jsdelivr.fyi`
+mingyu 镜像服务
 
-docker proxy
+`https://hubp.de`
 
-`https://dockerpull.com`
-
-docker proxy
-
-`https://dockerproxy.cn`
-
-Docker镜像加速站
-
-`https://hub.uuuadc.top`
+Docker 镜像加速站
 
 `https://docker.1panel.live`
 
+Hub Proxy
+
 `https://hub.rat.dev`
-
-DockerHub 镜像加速代理
-
-`https://docker.anyhub.us.kg`
-
-`https://docker.chenby.cn`
-
-`https://dockerhub.jobcher.com`
-
-镜像使用说明
-
-`https://dockerhub.icu`
-
-Docker镜像加速站
-
-`https://docker.ckyl.me`
-
-镜像使用说明
-
-`https://docker.awsl9527.cn`
-
-镜像使用说明
-
-`https://docker.hpcloud.cloud`
 
 DaoCloud 镜像站
 
 `https://docker.m.daocloud.io`
-
-AtomHub 可信镜像仓库平台 (只包含基础镜像，共336个)
-
-`https://atomhub.openatom.cn`
 
 🙏 鸣谢
 =====

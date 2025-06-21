@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 37991
+stars: 38067
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---
@@ -290,6 +290,8 @@ Meet other Learners
 -------------------
 
 Join our official AI Discord server to meet and network with other learners taking this course and get support.
+
+If you have product feedback or questions whilst building visit our Azure AI Foundry Developer Forum
 
 Quizzes
 -------

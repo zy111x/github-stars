@@ -1,7 +1,7 @@
 ---
 project: TikTokDownloader
-stars: 10548
-description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具
+stars: 10605
+description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
 
@@ -375,7 +375,7 @@ A: 由于权限限制，您无法直接触发主仓库的 Actions。请通过 Fo
 JetBrains 工具
 ------------
 
-**JetBrains** 支持全球开源社区认可的活跃项目，并为非商业开发提供免费许可证。
+JetBrains 支持全球开源社区认可的活跃项目，并为非商业开发提供免费许可证。
 
 * * *
 
@@ -387,14 +387,6 @@ TikHub 是一家领先的数据接口服务供应商，专注于提供高质量�
 TikHub 还提供定制化的服务，如直播间监控、作品监控和达人监控，以满足不同业务场景的需求。
 
 通过每日签到，用户可以免费获取一定额度的使用量；可以使用我的 **推荐链接**：https://user.tikhub.io/users/signup?referral\_code=ZrdH8McC 或 **推荐码**：`ZrdH8McC`，注册并充值即可获得 `$2` 额度！
-
-TikHub 提供以下服务：
-
--   丰富的数据接口
--   每日签到免费获取额度
--   高质量的 API 服务
--   官网：https://tikhub.io/
--   用户登陆地址：https://user.tikhub.io/
 
 💡 项目参考
 =======
