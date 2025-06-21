@@ -1,6 +1,6 @@
 ---
 project: feedsmith
-stars: 333
+stars: 347
 description: |-
     Robust and fast parser and generator for RSS, Atom, JSON Feed, and RDF feeds, with support for Podcast, iTunes, Dublin Core, and OPML files.
 url: https://github.com/macieklamberski/feedsmith
@@ -9,12 +9,13 @@ url: https://github.com/macieklamberski/feedsmith
 # Feedsmith
 
 [![tests](https://github.com/macieklamberski/feedsmith/actions/workflows/test.yml/badge.svg)](https://github.com/macieklamberski/feedsmith/actions/workflows/test.yml)
+[![codecov](https://codecov.io/gh/macieklamberski/feedsmith/branch/main/graph/badge.svg)](https://codecov.io/gh/macieklamberski/feedsmith)
 [![npm version](https://img.shields.io/npm/v/feedsmith.svg)](https://www.npmjs.com/package/feedsmith)
 [![license](https://img.shields.io/npm/l/feedsmith.svg)](https://github.com/macieklamberski/feedsmith/blob/main/LICENSE)
 
-Robust and fast JavaScript parser and generator for RSS, Atom, JSON Feed, and RDF feeds, with support for popular namespaces and OPML files. It provides both universal and format-specific parsers that maintain the original feed structure while offering helpful normalization.
+Robust and fast JavaScript parser and generator for RSS, Atom, JSON Feed, and RDF feeds, with support for popular namespaces and OPML files.
 
-Feedsmith maintains the original feed structure in a clean, object-oriented format. It intelligently normalizes legacy elements, providing you with complete access to all feed data without compromising simplicity.
+Feedsmith provides both universal and format-specific parsers that maintain the original feed structure in a clean, object-oriented format while intelligently normalizing legacy elements. Access all feed data without compromising simplicity.
 
 [Features](#supported-formats)
 &nbsp;&nbsp;·&nbsp;&nbsp;
@@ -38,7 +39,7 @@ Feedsmith maintains the original feed structure in a clean, object-oriented form
 * **Fast parsing** — One of the fastest feed parsers in JavaScript (see [benchmarks](#benchmarks)).
 * **Type-safe API** — TypeScript type definitions are available for each feed format, making it easy to work with the data.
 * **Tree-shakable** — Only include the parts of the library you need, reducing bundle size.
-* **Well-tested** — Comprehensive test suite with 1200+ tests and 99% code coverage.
+* **Well-tested** — Comprehensive test suite with over 2000 tests and 99% code coverage.
 
 #### Compatibility
 * Works in Node.js and all modern browsers.
@@ -57,8 +58,8 @@ Feedsmith maintains the original feed structure in a clean, object-oriented form
 
 | Format | Versions | Parsing | Generating |
 |--------|----------|---------|------------|
-| [RSS](http://cyber.law.harvard.edu/rss/rss.html) | 0.9x, 2.0 | ✅ | ⏳ |
-| [Atom](https://tools.ietf.org/html/rfc4287) | 0.3, 1.0 | ✅ | ⏳ |
+| [RSS](http://cyber.law.harvard.edu/rss/rss.html) | 0.9x, 2.0 | ✅ | ✅ |
+| [Atom](https://tools.ietf.org/html/rfc4287) | 0.3, 1.0 | ✅ | ✅ |
 | [JSON Feed](https://jsonfeed.org) | 1.0, 1.1 | ✅ | ✅ |
 | [RDF](https://web.resource.org/rss/1.0/spec) | 0.9, 1.0 | ✅ | ⏳ |
 
@@ -66,16 +67,16 @@ Feedsmith maintains the original feed structure in a clean, object-oriented form
 
 | Name | Prefix | Supported in | Parsing | Generating |
 |------|--------|--------------|---------|------------|
-| [Atom](http://www.w3.org/2005/Atom) | `<atom:*>`, `<a10:*>` | RSS, RDF | ✅ | ⏳
-| [Dublin Core](http://purl.org/dc/elements/1.1/) | `<dc:*>` | RSS, Atom, RDF | ✅ | ⏳
-| [Syndication](http://purl.org/rss/1.0/modules/syndication/) | `<sy:*>` | RSS, Atom, RDF | ✅ | ⏳
-| [Content](http://purl.org/rss/1.0/modules/content/) | `<content:*>` | RSS, RDF | ✅ | ⏳
-| [Slash](http://purl.org/rss/1.0/modules/slash/) | `<slash:*>` | RSS, Atom, RDF | ✅ | ⏳
-| [iTunes](http://www.itunes.com/dtds/podcast-1.0.dtd) | `<itunes:*>` | RSS, Atom | ✅ | ⏳
-| [Podcast](https://podcastindex.org/namespace/1.0) | `<podcast:*>` | RSS | ✅ | ⏳
-| [Media RSS](http://search.yahoo.com/mrss/) | `<media:*>` | RSS, Atom, RDF | ✅ | ⏳ |
-| [GeoRSS-Simple](http://www.georss.org/georss) | `<georss:*>` | RSS, Atom, RDF | ✅ | ⏳ |
-| [Atom Threading](https://www.ietf.org/rfc/rfc4685.txt) | `<thr:*>` | RSS, Atom | ✅ | ⏳ |
+| [Atom](http://www.w3.org/2005/Atom) | `<atom:*>`, `<a10:*>` | RSS, RDF | ✅ | ✅ |
+| [Dublin Core](http://purl.org/dc/elements/1.1/) | `<dc:*>` | RSS, Atom, RDF | ✅ | ✅ |
+| [Syndication](http://purl.org/rss/1.0/modules/syndication/) | `<sy:*>` | RSS, Atom, RDF | ✅ | ✅ |
+| [Content](http://purl.org/rss/1.0/modules/content/) | `<content:*>` | RSS, RDF | ✅ | ✅ |
+| [Slash](http://purl.org/rss/1.0/modules/slash/) | `<slash:*>` | RSS, Atom, RDF | ✅ | ✅ |
+| [iTunes](http://www.itunes.com/dtds/podcast-1.0.dtd) | `<itunes:*>` | RSS, Atom | ✅ | ✅ |
+| [Podcast](https://podcastindex.org/namespace/1.0) | `<podcast:*>` | RSS | ✅ | ✅ |
+| [Media RSS](http://search.yahoo.com/mrss/) | `<media:*>` | RSS, Atom, RDF | ✅ | ✅ |
+| [GeoRSS-Simple](http://www.georss.org/georss) | `<georss:*>` | RSS, Atom, RDF | ✅ | ✅ |
+| [Atom Threading](https://www.ietf.org/rfc/rfc4685.txt) | `<thr:*>` | RSS, Atom | ✅ | ✅ |
 | [Dublin Core Terms](http://purl.org/dc/terms/) | `<dcterms:*>` | 📋 | 📋 | 📋 |
 | [Administrative](https://web.resource.org/rss/1.0/modules/admin/) | `<admin:*>` | 📋 | 📋 | 📋 |
 | [GML](http://www.opengis.net/gml) | `<gml:*>` | 📋 | 📋 | 📋 |
@@ -398,7 +399,7 @@ try {
 
 ### Format detection
 
-You can detect feed formats without parsing them.
+You can detect feed formats without parsing them. Detect functions are designed to quickly identify the feed format by looking for its signature, such as the the root tag, version attribute or feed elements.
 
 ```ts
 import { detectAtomFeed, detectJsonFeed, detectRssFeed, detectRdfFeed } from 'feedsmith'
@@ -419,9 +420,6 @@ if (detectRdfFeed(content)) {
   console.log('This is an RDF feed')
 }
 ```
-
-> [!WARNING]
-> Detect functions are designed to quickly identify the feed format by looking for its signature, such as the `<rss>` tag in the case of RSS feeds. However, the function may detect an RSS feed even if it is invalid. The feed will be fully validated only when using the `parseRssFeed` function.
 
 ## Generating
 

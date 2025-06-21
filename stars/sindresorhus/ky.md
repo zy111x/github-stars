@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 14944
+stars: 14982
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -745,7 +745,7 @@ console.log(json.title);
 
 #### How is it different from [`got`](https://github.com/sindresorhus/got)
 
-See my answer [here](https://twitter.com/sindresorhus/status/1037406558945042432). Got is maintained by the same people as Ky.
+Got is maintained by the same people as Ky, so you probably want Ky instead. It's smaller, works in the browser too, and is more stable since it's built on Fetch.
 
 #### How is it different from [`axios`](https://github.com/axios/axios)?
 

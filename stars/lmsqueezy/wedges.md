@@ -1,6 +1,6 @@
 ---
 project: wedges
-stars: 1442
+stars: 1443
 description: |-
     An ever-expanding, open-source React UI library built with the Wedges Design System, Radix primitives, and Tailwind CSS.
 url: https://github.com/lmsqueezy/wedges

@@ -1,6 +1,6 @@
 ---
 project: snapdom
-stars: 1685
+stars: 1981
 description: |-
     snapDOM captures HTML elements to images with exceptional speed and accuracy.
 url: https://github.com/zumerlab/snapdom
@@ -15,7 +15,21 @@ url: https://github.com/zumerlab/snapdom
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@zumer/snapdom"><img src="https://img.shields.io/github/package-json/v/zumerlab/snapdom"></a>
+ <a href="https://www.npmjs.com/package/@zumer/snapdom">
+    <img alt="NPM version" src="https://img.shields.io/npm/v/@zumer/snapdom?style=flat-square&label=Version">
+  </a>
+  <a href="https://github.com/zumerlab/snapdom/graphs/contributors">
+    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/zumerlab/snapdom?style=flat-square&label=Contributors">
+  </a>
+  <a href="https://github.com/zumerlab/snapdom/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/zumerlab/snapdom?style=flat-square&label=Stars">
+  </a>
+  <a href="https://github.com/zumerlab/snapdom/network/members">
+    <img alt="GitHub forks" src="https://img.shields.io/github/forks/zumerlab/snapdom?style=flat-square&label=Forks">
+  </a>
+  <a href="https://github.com/zumerlab/snapdom/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/zumerlab/snapdom?style=flat-square">
+  </a>
 </p>
 
 **snapDOM** is a fast and accurate DOM-to-image capture tool built for **Zumly**, a zoom-based view transition framework.
@@ -130,14 +144,34 @@ Returns an object with reusable export methods:
 
 All capture methods accept an `options` object:
 
-| Option            | Type    | Default  | Description                                |
-| ----------------- | ------- | -------- | ------------------------------------------ |
-| `compress`        | boolean | `true`   | Removes redundant styles                   |
-| `fast`            | boolean | `true`   | Skips idle delay for faster results        |
-| `embedFonts`      | boolean | `false`  | Inlines fonts (icon fonts always embedded) |
-| `scale`           | number  | `1`      | Output scale multiplier                    |
-| `backgroundColor` | string  | `"#fff"` | Fallback color for JPG/WebP                |
-| `quality`         | number  | `1`      | Quality for JPG/WebP (0 to 1)              |
+| Option            | Type     | Default  | Description                                |
+| ----------------- | -------- | -------- | ------------------------------------------ |
+| `compress`        | boolean  | `true`   | Removes redundant styles                   |
+| `fast`            | boolean  | `true`   | Skips idle delay for faster results        |
+| `embedFonts`      | boolean  | `false`  | Inlines fonts (icon fonts always embedded) |
+| `scale`           | number   | `1`      | Output scale multiplier                    |
+| `backgroundColor` | string   | `"#fff"` | Fallback color for JPG/WebP                |
+| `quality`         | number   | `1`      | Quality for JPG/WebP (0 to 1)              |
+| `crossOrigin`     | function | -        | Function to determine CORS mode per image URL |
+
+### Cross-Origin Images
+
+By default, snapDOM loads images with `crossOrigin="anonymous"`. You can customize this behavior using the `crossOrigin` option:
+
+```js
+const result = await snapdom(element, {
+  crossOrigin: (url) => {
+    // Use credentials for same-origin images
+    if (url.startsWith(window.location.origin)) {
+      return "use-credentials";
+    }
+    // Use anonymous for cross-origin images
+    return "anonymous";
+  }
+});
+```
+
+This is useful when your images require authentication or when dealing with credentialed requests.
 
 ### Download options
 
@@ -172,6 +206,7 @@ import { snapdom, preCache } from './snapdom.mjs';
 
 * `embedFonts` *(boolean, default: true)* — Inlines non-icon fonts during preload.
 * `reset` *(boolean, default: false)* — Clears all existing internal caches.
+* `crossOrigin` *(function)* — Function to determine CORS mode per image URL during preload.
 
 
 ## Features
@@ -185,9 +220,10 @@ import { snapdom, preCache } from './snapdom.mjs';
 
 ## Limitations
 
-* External images must be CORS-accessible
+* External images must be CORS-accessible (use `crossOrigin` option for credentialed requests)
 * Iframes are not supported
 * When WebP format is used on Safari, it will fallback to PNG rendering.
+* `@font-face` CSS rule is well supported, but if need to use JS `FontFace()`, see this workaround [`#43`](https://github.com/zumerlab/snapdom/issues/43)
 
 ## Benchmarks
 
@@ -223,6 +259,17 @@ npm run test:benchmark
 
 They execute in **headless Chromium** using real DOM nodes.
 
+## Contributors 🙌
+
+<!-- CONTRIBUTORS:START -->
+<p>
+<a href="https://github.com/tinchox5" title="tinchox5"><img src="https://avatars.githubusercontent.com/u/11557901?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="tinchox5"/></a>
+<a href="https://github.com/domialex" title="domialex"><img src="https://avatars.githubusercontent.com/u/4694217?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="domialex"/></a>
+<a href="https://github.com/elliots" title="elliots"><img src="https://avatars.githubusercontent.com/u/622455?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="elliots"/></a>
+<a href="https://github.com/jswhisperer" title="jswhisperer"><img src="https://avatars.githubusercontent.com/u/1177690?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="jswhisperer"/></a>
+<a href="https://github.com/jhbae200" title="jhbae200"><img src="https://avatars.githubusercontent.com/u/20170610?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="jhbae200"/></a>
+</p>
+<!-- CONTRIBUTORS:END -->
 
 ## License
 

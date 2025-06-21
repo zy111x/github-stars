@@ -1,6 +1,6 @@
 ---
 project: plunk
-stars: 4251
+stars: 4270
 description: |-
     The Open-Source Email Platform
 url: https://github.com/useplunk/plunk
@@ -35,6 +35,20 @@ like [SendGrid](https://sendgrid.com/), [Resend](https://resend.com) or [Mailgun
 - **Automations**: Create automations based on user actions
 - **Broadcasts**: Send newsletters and product updates to big audiences
 
+## Sponsors
+Plunk is made possible by the support of our sponsors. If you self-host Plunk, consider supporting via [GitHub Sponsors](https://github.com/sponsors/driaug).
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="120">
+        <img src="https://avatars.githubusercontent.com/u/206509599?s=200&v=4" style="width:80px; height:80px; object-fit:contain;"/><br/>
+        <a href="https://every.news/?ref=useplunk.com">Everynews</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ## Self-hosting Plunk
 
 The easiest way to self-host Plunk is by using the `driaug/plunk` Docker image.
@@ -50,4 +64,3 @@ You are welcome to contribute to Plunk. You can find a guide on how to contribut
 <a href="https://github.com/useplunk/plunk/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=useplunk/plunk" />
 </a>
-

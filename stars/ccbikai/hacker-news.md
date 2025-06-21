@@ -1,6 +1,6 @@
 ---
 project: hacker-news
-stars: 1766
+stars: 1778
 description: |-
     一个基于 AI 的 Hacker News 中文播客项目，每天自动抓取 Hacker News 热门文章，通过 AI 生成中文总结并转换为播客内容。
 url: https://github.com/ccbikai/hacker-news
@@ -101,14 +101,16 @@ pnpm dev
 
 ```bash
 # 更新 Worker 的私有变量
-wrangler secret put --cwd worker HACKER_NEWS_WORKER_URL # 绑定域名后，修改为绑定域名
-wrangler secret put --cwd worker HACKER_NEWS_R2_BUCKET_URL
-wrangler secret put --cwd worker OPENAI_API_KEY
-wrangler secret put --cwd worker OPENAI_BASE_URL
-wrangler secret put --cwd worker OPENAI_MODEL
+pnpx wrangler secret put --cwd worker HACKER_NEWS_WORKER_URL # 绑定域名后，修改为绑定域名
+pnpx wrangler secret put --cwd worker HACKER_NEWS_R2_BUCKET_URL
+pnpx wrangler secret put --cwd worker OPENAI_API_KEY
+pnpx wrangler secret put --cwd worker OPENAI_BASE_URL
+pnpx wrangler secret put --cwd worker OPENAI_MODEL
 
 # 更新 Web 程序的私有变量
-wrangler secret put NEXT_STATIC_HOST # 绑定域名后，修改为绑定域名
+pnpx wrangler secret put NEXTJS_ENV # Next.JS 环境，建议 production
+pnpx wrangler secret put NEXT_PUBLIC_BASE_URL # Web 服务地址
+pnpx wrangler secret put NEXT_STATIC_HOST # 绑定域名后，修改为绑定域名
 ```
 
 ```bash

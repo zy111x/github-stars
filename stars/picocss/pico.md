@@ -1,6 +1,6 @@
 ---
 project: pico
-stars: 14980
+stars: 15009
 description: |-
     Minimal CSS Framework for semantic HTML
 url: https://github.com/picocss/pico

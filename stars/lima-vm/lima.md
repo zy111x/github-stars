@@ -1,6 +1,6 @@
 ---
 project: lima
-stars: 17390
+stars: 17427
 description: |-
     Linux virtual machines, with a focus on running containers
 url: https://github.com/lima-vm/lima
@@ -17,6 +17,7 @@ url: https://github.com/lima-vm/lima
 
 # Lima: Linux Machines
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/lima-vm/lima)
 [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/6505/badge)](https://www.bestpractices.dev/projects/6505)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/lima-vm/lima/badge)](https://scorecard.dev/viewer/?uri=github.com/lima-vm/lima)
 
@@ -81,7 +82,7 @@ GUI:
   - Login: <https://cloud-native.slack.com/>
 
 ### Code of Conduct
-Lima follows the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
+Lima follows the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
 
 - - -
 **We are a [Cloud Native Computing Foundation](https://cncf.io/) sandbox project.**

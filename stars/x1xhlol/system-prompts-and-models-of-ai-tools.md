@@ -1,6 +1,6 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 57401
+stars: 59225
 description: |-
     FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser & Trae AI (And other Open Sourced) System Prompts, Tools & AI Models.
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
@@ -13,6 +13,8 @@ url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 🚀 **I managed to obtain FULL official v0, Manus, Cursor, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia browser & Trae AI system prompts and internal tools.**
 
 📜 Over **7000+ lines** of insights into their structure and functionality.  
+
+[![Build Status](https://app.cloudback.it/badge/x1xhlol/system-prompts-and-models-of-ai-tools)](https://cloudback.it)
 
 ## 📂 **Available Files**
 - **v0 Folder**  
@@ -39,7 +41,7 @@ url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 🚨 **Note:** We no longer use GitHub issues for roadmap and feedback.  
 Please visit [System Prompts Roadmap & Feedback](https://systemprompts.featurebase.app/) to share your suggestions and track upcoming features.
 
-🆕 **LATEST UPDATE:** 06/06/2025 
+🆕 **LATEST UPDATE:** 16/06/2025 
 
 ## ❤️ Support the Project
 

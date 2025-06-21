@@ -1,6 +1,6 @@
 ---
 project: libav.js
-stars: 413
+stars: 417
 description: |-
     This is a compilation of the libraries associated with handling audio and video in ffmpeg—libavformat, libavcodec, libavfilter, libavutil, libswresample, and libswscale—for emscripten, and thus the web.
 url: https://github.com/Yahweasel/libav.js
@@ -58,7 +58,7 @@ example of using libav.js from a CDN in the browser thread:
 <!doctype html>
 <html>
     <body>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@libav.js/variant-default@6.6.7/dist/libav-6.6.7.1.1-default.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@libav.js/variant-default@6.7.7/dist/libav-6.7.7.1.1-default.js"></script>
         <script type="text/javascript">(async function() {
             const libav = await LibAV.LibAV({noworker: true});
             await libav.writeFile("tmp.opus", new Uint8Array(
@@ -81,7 +81,7 @@ Here's a better example, using libav.js locally:
 <!doctype html>
 <html>
     <body>
-        <script type="text/javascript" src="libav-6.6.7.1.1-default.js"></script>
+        <script type="text/javascript" src="libav-6.7.7.1.1-default.js"></script>
         <script type="text/javascript">(async function() {
             const libav = await LibAV.LibAV();
             await libav.writeFile("tmp.opus", new Uint8Array(

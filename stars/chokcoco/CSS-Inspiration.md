@@ -1,6 +1,6 @@
 ---
 project: CSS-Inspiration
-stars: 10636
+stars: 10642
 description: |-
     CSS Inspiration，在这里找到写 CSS 的灵感！
 url: https://github.com/chokcoco/CSS-Inspiration

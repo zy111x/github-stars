@@ -1,6 +1,6 @@
 ---
 project: checkcle
-stars: 670
+stars: 741
 description: |-
     CheckCle is a self-hosted open-source alternative to UptimeRobot, PagerDuty, Better Stack, and more — offering real-time server & service uptime monitoring, incident, multi-channel alerting.
 url: https://github.com/operacle/checkcle

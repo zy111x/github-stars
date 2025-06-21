@@ -1,6 +1,6 @@
 ---
 project: gateway
-stars: 8044
+stars: 8100
 description: |-
     A blazing fast AI Gateway with integrated guardrails. Route to 200+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.
 url: https://github.com/Portkey-AI/gateway

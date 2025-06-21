@@ -1,6 +1,6 @@
 ---
 project: dokploy
-stars: 20823
+stars: 20934
 description: |-
     Open Source Alternative to Vercel, Netlify and Heroku.
 url: https://github.com/Dokploy/dokploy

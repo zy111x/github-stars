@@ -1,6 +1,6 @@
 ---
 project: webtui
-stars: 1764
+stars: 1826
 description: |-
     null
 url: https://github.com/webtui/webtui
@@ -67,6 +67,10 @@ This repository is a monorepo that contains the website and all the official Web
 3. Install dependencies
     ```bash
     bun i
+    ```
+4. Build the project
+    ```bash
+    bun run build
     ```
 4. Start the dev server
     ```bash

@@ -1,6 +1,6 @@
 ---
 project: zola
-stars: 813
+stars: 855
 description: |-
     Open chat interface for all your models.
 url: https://github.com/ibelick/zola
@@ -24,7 +24,6 @@ url: https://github.com/ibelick/zola
 - Open-source and self-hostable
 - Customizable: user system prompt, multiple layout options
 - Local AI with Ollama: Run models locally with automatic model detection
-- Basic agent (wip)
 - Full MCP support (wip)
 
 ## Quick Start
@@ -65,7 +64,7 @@ docker-compose -f docker-compose.ollama.yml up
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/ibelick/zola)
 
-To unlock features like auth, file uploads, and agents, see [INSTALL.md](./INSTALL.md).
+To unlock features like auth, file uploads, see [INSTALL.md](./INSTALL.md).
 
 ## Built with
 

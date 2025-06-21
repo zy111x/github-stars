@@ -1,15 +1,14 @@
 ---
-project: 1chooo.com
-stars: 245
+project: portfolio
+stars: 266
 description: |-
-    👨🏻‍💻 $ ls -al Hugo -- My personal portfolio and blog built with React, Next.js, Tailwind CSS and TypeScript
-url: https://github.com/1chooo/1chooo.com
+    👨🏻‍💻 $ ls -al Hugo -- My personal portfolio and blog website built with React, Next.js, Tailwind CSS and TypeScript
+url: https://github.com/1chooo/portfolio
 ---
 
 <a name="readme-top"></a>
 
-# [1chooo.com](https://1chooo.com) &middot; [![1chooo.com GitHub license](https://img.shields.io/github/license/1chooo/1chooo.com?style=for-the-badge&labelColor=000)](https://github.com/facebook/react/blob/main/LICENSE) [![1chooo.com built with Next.js](https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000)](https://nextjs.org/) [![1chooo.com GitHub Stargazers](https://img.shields.io/github/stars/1chooo/1chooo.com?style=for-the-badge&labelColor=000)](https://github.com/1chooo/1chooo.com/stargazers) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&labelColor=000)](https://docs.1chooo.com/contributing)
-
+# [1chooo.com](https://1chooo.com) &middot; [![1chooo.com built with Next.js](https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=Next.js&labelColor=000)](https://nextjs.org/) [![1chooo.com GitHub Stargazers](https://img.shields.io/github/stars/1chooo/1chooo.com?style=for-the-badge&labelColor=000)](https://github.com/1chooo/portfolio/stargazers) [![1chooo.com GitHub license](https://img.shields.io/github/license/1chooo/1chooo.com?style=for-the-badge&labelColor=000)](https://github.com/facebook/react/blob/main/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&labelColor=000)](https://docs.1chooo.com/contributing)
 
 Welcome to the monorepo of my personal website! 👋
 
@@ -35,10 +34,12 @@ A fast, responsive, and SEO-friendly portfolio + blog site to share your work, i
 
 ### Blogging Essentials
 
-- Markdown support for blog posts
+- Markdown support
 - Comment system
-- RSS feed for blog posts
+- RSS feed
 - Sitemap generation
+- 🚧 View counter
+- 🚧 Like button
 
 ### UI & UX Enhancements
 
@@ -69,7 +70,7 @@ Please refer to the [Contributing Guideline] for detailed information on how to 
 
 [Contributing Guideline]: https://docs.1chooo.com/contributing
 
-[Pull Requests](https://github.com/1chooo/1chooo.com/pulls) and [reporting issues](https://github.com/1chooo/1chooo.com/issues) are welcome 🫵🏻 in our [GitHub repository](https://github.com/1chooo/1chooo.com)!
+[Pull Requests](https://github.com/1chooo/portfolio/pulls) and [reporting issues](https://github.com/1chooo/portfolio/issues) are welcome 🫵🏻 in our [GitHub repository](https://github.com/1chooo/portfolio)!
 
 ## Getting Started
 
@@ -105,7 +106,7 @@ The project also incorporates and adapts various open-source projects, including
 
 Additionally, I drew inspiration from several incredible projects, including:
 
-- [honghong.me](https://honghong.me)
+- [nelsonlai.me](https://nelsonlai.me)
 - [leerob.com](https://leerob.com)
 - [bntw.dev](https://bntw.dev)
 - [webtech-note.com](https://webtech-note.com)
@@ -117,7 +118,7 @@ Additionally, I drew inspiration from several incredible projects, including:
 
 ## Authors
 
-- **Chun-Ho (Hugo) Lin** <sup>[Website](https://1chooo.com) | [GitHub](https://github.com/1chooo) | [E-mail](mailto:hugo970217@gmail.com)</sup>
+- **Chun-Ho (Hugo) Lin** <sup>[Website](https://1chooo.com) | [GitHub](https://github.com/1chooo) | [E-mail](mailto:hugo@1chooo.com)</sup>
 
 ## Deploy on Vercel
 
@@ -128,7 +129,7 @@ Check out [Next.js deployment documentation](https://nextjs.org/docs/app/buildin
 ## License
 
 > [!IMPORTANT]
-> This work is licensed under a [Creative Commons Attribution 4.0 International License][cc-by] by [Chun-Ho (Hugo) Lin][1chooo-com].
+> This [work](https://github.com/1chooo/portfolio) is licensed under [Creative Commons Attribution 4.0 International][cc-by] <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"> by [Chun-Ho (Hugo) Lin][1chooo-com].
 >
 > [cc-by]: http://creativecommons.org/licenses/by/4.0/
 >

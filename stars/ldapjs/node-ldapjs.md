@@ -1,6 +1,6 @@
 ---
 project: node-ldapjs
-stars: 1621
+stars: 1622
 description: |-
     LDAP Client and Server API for node.js
 url: https://github.com/ldapjs/node-ldapjs

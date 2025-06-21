@@ -1,6 +1,6 @@
 ---
 project: gitalk
-stars: 7141
+stars: 7142
 description: |-
     Gitalk is a modern comment component based on Github Issue and Preact.
 url: https://github.com/gitalk/gitalk

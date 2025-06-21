@@ -1,6 +1,6 @@
 ---
 project: rivet
-stars: 3899
+stars: 4012
 description: |-
     🔩 The open-source serverless platform. Easily deploy & scale AI agents, complex workloads, and backends — all on a frictionless platform that runs anywhere.
 url: https://github.com/rivet-gg/rivet

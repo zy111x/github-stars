@@ -1,6 +1,6 @@
 ---
 project: croner
-stars: 2254
+stars: 2272
 description: |-
     Trigger functions or evaluate cron expressions in JavaScript or TypeScript. No dependencies. Most features. Node. Deno. Bun. Browser.
 url: https://github.com/Hexagon/croner
@@ -77,16 +77,16 @@ Using Deno
 
 ```typescript
 // From deno.land/x
-import { Cron } from "https://deno.land/x/croner@8.1.2/dist/croner.js";
+import { Cron } from "https://deno.land/x/croner@9.1.0/dist/croner.js";
 
 // ... or jsr.io
-import { Cron } from "jsr:@hexagon/croner@8.1.2";
+import { Cron } from "jsr:@hexagon/croner@9.1.0";
 ```
 
 In a webpage using the UMD-module
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/croner@8/dist/croner.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/croner@9/dist/croner.umd.min.js"></script>
 ```
 
 ## Documentation

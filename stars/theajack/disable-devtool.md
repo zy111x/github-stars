@@ -1,6 +1,6 @@
 ---
 project: disable-devtool
-stars: 2622
+stars: 2636
 description: |-
     Disable web developer tools from the f12 button, right-click and browser menu
 url: https://github.com/theajack/disable-devtool

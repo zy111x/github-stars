@@ -1,6 +1,6 @@
 ---
 project: mise
-stars: 16045
+stars: 16352
 description: |-
     dev tools, env vars, task runner
 url: https://github.com/jdx/mise
@@ -48,7 +48,7 @@ See [Getting started](https://mise.jdx.dev/getting-started.html) for more option
 ```sh-session
 $ curl https://mise.run | sh
 $ ~/.local/bin/mise --version
-2025.6.4 macos-arm64 (a1b2d3e 2025-06-13)
+2025.6.5 macos-arm64 (a1b2d3e 2025-06-16)
 ```
 
 Hook mise into your shell (pick the right one for your shell):
@@ -59,7 +59,7 @@ Hook mise into your shell (pick the right one for your shell):
 echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
 echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
 echo '~/.local/bin/mise activate fish | source' >> ~/.config/fish/config.fish
-echo '~/.local/bin/mise activate mise activate pwsh | Out-String | Invoke-Expression' >> ~/.config/powershell/Microsoft.PowerShell_profile.ps1
+echo '~/.local/bin/mise activate pwsh | Out-String | Invoke-Expression' >> ~/.config/powershell/Microsoft.PowerShell_profile.ps1
 ```
 
 ### Execute commands with specific tools
