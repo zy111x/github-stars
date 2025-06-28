@@ -1,6 +1,6 @@
 ---
 project: awesome-javascript-cn
-stars: 7806
+stars: 7807
 description: |-
     JavaScript 资源大全中文版，内容包括：包管理器、加载器、测试框架、运行器、QA、MVC框架和库、模板引擎等。由「开源前哨」和「前端大全」微信公号团队维护更新。
 url: https://github.com/jobbole/awesome-javascript-cn

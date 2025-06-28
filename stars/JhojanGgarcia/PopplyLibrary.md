@@ -1,6 +1,6 @@
 ---
 project: PopplyLibrary
-stars: 67
+stars: 68
 description: |-
     Components about tooltip animations for your website.
 url: https://github.com/JhojanGgarcia/PopplyLibrary

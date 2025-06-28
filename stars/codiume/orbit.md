@@ -1,6 +1,6 @@
 ---
 project: orbit
-stars: 452
+stars: 456
 description: |-
     Collection of useful integrations & components for the Astro ecosystem. ⭐️ Star to support our work!
 url: https://github.com/codiume/orbit

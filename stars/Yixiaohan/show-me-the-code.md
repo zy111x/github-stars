@@ -1,6 +1,6 @@
 ---
 project: show-me-the-code
-stars: 13545
+stars: 13550
 description: |-
     Python 练习册，每天一个小程序
 url: https://github.com/Yixiaohan/show-me-the-code

@@ -1,6 +1,6 @@
 ---
 project: openwrt-6.x
-stars: 390
+stars: 393
 description: |-
     This repository is a mirror of https://git.openwrt.org/openwrt/openwrt.git It is for reference only and is not active for check-ins.  We will continue to accept Pull Requests here. They will be merged via staging trees then into openwrt.git.
 url: https://github.com/LiBwrt/openwrt-6.x
@@ -31,16 +31,16 @@ url: https://github.com/LiBwrt/openwrt-6.x
 
 ## 使用方法
 
-### [云编译](https://github.com/breeze303/openwrt-ci)
+### [云编译1](https://github.com/breeze303/openwrt-ci) [云编译2](https://github.com/ZqinKing/wrt_release) [云编译3](https://github.com/laipeng668/openwrt-ci-roc) [云编译4](https://github.com/VIKINGYFY/OpenWRT-CI)
 
 ### 本地编译
 
 - **不要用 `root` 用户进行编译⚠**
 - 国内用户编译前最好准备好梯子
-- 默认登陆IP 192.168.1.1 密码 password
+- 默认登陆IP 192.168.1.1 密码 none
 
 
-1. 首先装好 Linux 系统， Ubuntu 20.04 LTS
+1. 首先装好 Linux 系统， Ubuntu 22.04 LTS
 
 2. 安装编译依赖
 
@@ -76,7 +76,7 @@ url: https://github.com/LiBwrt/openwrt-6.x
 
    ```bash
    cd openwrt-6.x
-   git fetch && git reset --hard origin/kernel-6.12
+   git fetch && git reset --hard origin/k6.12-nss
    ./scripts/feeds update -a && ./scripts/feeds install -a
    make menuconfig
    make V=s -j$(nproc)

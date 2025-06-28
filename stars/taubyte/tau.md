@@ -1,6 +1,6 @@
 ---
 project: tau
-stars: 4023
+stars: 4041
 description: |-
     Open source distributed Platform as a Service (PaaS). A self-hosted Vercel / Netlify / Cloudflare alternative.
 url: https://github.com/taubyte/tau

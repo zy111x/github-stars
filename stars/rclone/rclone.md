@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 51108
+stars: 51240
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -119,6 +119,7 @@ Rclone *("rsync for cloud storage")* is a command-line program to sync files and
   * WebDAV [:page_facing_up:](https://rclone.org/webdav/)
   * Yandex Disk [:page_facing_up:](https://rclone.org/yandex/)
   * Zoho WorkDrive [:page_facing_up:](https://rclone.org/zoho/)
+  * Zata.ai [:page_facing_up:](https://rclone.org/s3/#Zata)
   * The local filesystem [:page_facing_up:](https://rclone.org/local/)
 
 Please see [the full list of all storage providers and their features](https://rclone.org/overview/)

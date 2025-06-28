@@ -1,6 +1,6 @@
 ---
 project: RSS.Beauty
-stars: 409
+stars: 414
 description: |-
     Make Your RSS Beautiful!
 url: https://github.com/ccbikai/RSS.Beauty

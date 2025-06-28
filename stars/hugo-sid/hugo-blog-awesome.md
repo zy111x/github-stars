@@ -1,6 +1,6 @@
 ---
 project: hugo-blog-awesome
-stars: 621
+stars: 625
 description: |-
     Fast, minimal blog with dark mode support.
 url: https://github.com/hugo-sid/hugo-blog-awesome

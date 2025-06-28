@@ -1,6 +1,6 @@
 ---
 project: litellm
-stars: 24384
+stars: 24671
 description: |-
     Python SDK, Proxy Server (LLM Gateway) to call 100+ LLM APIs in OpenAI format - [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, Replicate, Groq]
 url: https://github.com/BerriAI/litellm

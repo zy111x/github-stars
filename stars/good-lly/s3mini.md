@@ -1,6 +1,6 @@
 ---
 project: s3mini
-stars: 1094
+stars: 1131
 description: |-
     👶 Tiny S3 client. Edge computing ready. No-dep. In Typescript. Works with @cloudflare @minio @backblaze @digitalocean @garagehq
 url: https://github.com/good-lly/s3mini
@@ -68,6 +68,7 @@ The library supports a subset of S3 operations, focusing on essential features, 
 - ✅ GetObject (getObject, getObjectResponse, getObjectWithETag, getObjectRaw, getObjectArrayBuffer, getObjectJSON)
 - ✅ PutObject (putObject)
 - ✅ DeleteObject (deleteObject)
+- ✅ DeleteObjects (deleteObjects)
 - ✅ HeadObject (objectExists, getEtag, getContentLength)
 - ✅ listMultipartUploads
 - ✅ CreateMultipartUpload (getMultipartUploadId)
@@ -107,10 +108,14 @@ mv example.env .env
 
 ## Usage
 
-```typescript
-import { s3mini, sanitizeETag } from 's3mini';
+> [!WARNING]
+> `s3mini` is a deprecated alias retained solely for backward compatibility.
+> It is scheduled for removal in a future release. Please migrate to the new `S3mini` class.
 
-const s3client = new s3mini({
+```typescript
+import { S3mini, sanitizeETag } from 's3mini';
+
+const s3client = new S3mini({
   accessKeyId: config.accessKeyId,
   secretAccessKey: config.secretAccessKey,
   endpoint: config.endpoint,
@@ -157,7 +162,7 @@ const objectData: string | null = await s3client.getObject(smallObjectKey);
 console.log('Object data:', objectData);
 
 // get the object with ETag, null if not found
-const response2: Response = await s3mini.getObject(smallObjectKey, { 'if-none-match': etag });
+const response2: Response = await S3mini.getObject(smallObjectKey, { 'if-none-match': etag });
 if (response2) {
   // ETag changed so we can get the object data and new ETag
   // Note: ETag is not guaranteed to be the same as the MD5 hash of the object
@@ -183,6 +188,10 @@ if (list) {
 
 // delete the object
 const wasDeleted: boolean = await s3client.deleteObject(smallObjectKey);
+// to delete multiple objects, use deleteObjects method
+// const keysToDelete: string[] = ['object1.txt', 'object2.txt'];
+// const deletedArray: boolean[] = await s3client.deleteObjects(keysToDelete);
+// Note: deleteObjects returns an array of booleans, one for each key, indicating if the object was deleted or not
 
 // Multipart upload
 const multipartKey = 'multipart-object.txt';

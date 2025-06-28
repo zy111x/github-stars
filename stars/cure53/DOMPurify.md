@@ -1,6 +1,6 @@
 ---
 project: DOMPurify
-stars: 15371
+stars: 15405
 description: |-
     DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:
 url: https://github.com/cure53/DOMPurify
@@ -238,6 +238,8 @@ const clean = DOMPurify.sanitize(dirty, {ALLOW_DATA_ATTR: false});
 // The same goes for their attributes. By default, the built-in or configured allow.list is used.
 //
 // You can use a RegExp literal to specify what is allowed or a predicate, examples for both can be seen below.
+// When using a predicate function for attributeNameCheck, it can optionally receive the tagName as a second parameter
+// for more granular control over which attributes are allowed for specific elements.
 // The default values are very restrictive to prevent accidental XSS bypasses. Handle with great care!
 
 const clean = DOMPurify.sanitize(
@@ -272,6 +274,26 @@ const clean = DOMPurify.sanitize(
         },
     }
 ); // <foo-bar baz="foobar"></foo-bar><div is="foo-baz"></div>
+
+// Example with attributeNameCheck receiving tagName as a second parameter
+const clean = DOMPurify.sanitize(
+    '<element-one attribute-one="1" attribute-two="2"></element-one><element-two attribute-one="1" attribute-two="2"></element-two>',
+    {
+        CUSTOM_ELEMENT_HANDLING: {
+            tagNameCheck: (tagName) => tagName.match(/^element-(one|two)$/),
+            attributeNameCheck: (attr, tagName) => {
+                if (tagName === 'element-one') {
+                    return ['attribute-one'].includes(attr);
+                } else if (tagName === 'element-two') {
+                    return ['attribute-two'].includes(attr);
+                } else {
+                    return false;
+                }
+            },
+            allowCustomizedBuiltInElements: false,
+        },
+    }
+); // <element-one attribute-one="1"></element-one><element-two attribute-two="2"></element-two>
 ```
 ### Control behavior relating to URI values
 ```js

@@ -1,6 +1,6 @@
 ---
 project: express-limiter
-stars: 422
+stars: 421
 description: |-
     Rate limiting middleware for Express
 url: https://github.com/ded/express-limiter

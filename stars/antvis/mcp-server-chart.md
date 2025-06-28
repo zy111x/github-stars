@@ -1,6 +1,6 @@
 ---
 project: mcp-server-chart
-stars: 1349
+stars: 1573
 description: |-
     🤖 A visualization Model Context Protocol server for generating 25+ visual charts using @antvis.
 url: https://github.com/antvis/mcp-server-chart

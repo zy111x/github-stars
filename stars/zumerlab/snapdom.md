@@ -1,6 +1,6 @@
 ---
 project: snapdom
-stars: 1981
+stars: 2103
 description: |-
     snapDOM captures HTML elements to images with exceptional speed and accuracy.
 url: https://github.com/zumerlab/snapdom
@@ -229,7 +229,6 @@ import { snapdom, preCache } from './snapdom.mjs';
 
 `snapDOM` is not only highly accurate — it’s **extremely fast**.
 
-
 Latest benchmarks show significant performance improvements against other libraries:
 
 | Scenario                         | vs. `modern-screenshot` | vs. `html2canvas` |
@@ -259,11 +258,39 @@ npm run test:benchmark
 
 They execute in **headless Chromium** using real DOM nodes.
 
+## Development
+
+To contribute or build snapDOM locally:
+
+```sh
+# Clone the repository
+git clone https://github.com/zumerlab/snapdom.git
+cd snapdom
+
+# Install dependencies
+npm install
+
+# Compile the library (ESM, CJS, and minified versions)
+npm run compile
+
+# Run tests
+npm test
+
+# Run Benchmarks
+npm run test:benchmark
+```
+
+The main entry point is in `src/`, and output bundles are generated in the `dist/` folder.
+
+For detailed contribution guidelines, please see [CONTRIBUTING](https://github.com/zumerlab/snapdom/blob/main/CONTRIBUTING.md).
+
+
 ## Contributors 🙌
 
 <!-- CONTRIBUTORS:START -->
 <p>
 <a href="https://github.com/tinchox5" title="tinchox5"><img src="https://avatars.githubusercontent.com/u/11557901?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="tinchox5"/></a>
+<a href="https://github.com/pedrocateexte" title="pedrocateexte"><img src="https://avatars.githubusercontent.com/u/207524750?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="pedrocateexte"/></a>
 <a href="https://github.com/domialex" title="domialex"><img src="https://avatars.githubusercontent.com/u/4694217?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="domialex"/></a>
 <a href="https://github.com/elliots" title="elliots"><img src="https://avatars.githubusercontent.com/u/622455?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="elliots"/></a>
 <a href="https://github.com/jswhisperer" title="jswhisperer"><img src="https://avatars.githubusercontent.com/u/1177690?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="jswhisperer"/></a>

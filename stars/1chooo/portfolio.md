@@ -1,6 +1,6 @@
 ---
 project: portfolio
-stars: 266
+stars: 267
 description: |-
     👨🏻‍💻 $ ls -al Hugo -- My personal portfolio and blog website built with React, Next.js, Tailwind CSS and TypeScript
 url: https://github.com/1chooo/portfolio

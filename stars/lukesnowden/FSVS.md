@@ -1,6 +1,6 @@
 ---
 project: FSVS
-stars: 724
+stars: 723
 description: |-
     Full Screen Vertical Scroll
 url: https://github.com/lukesnowden/FSVS

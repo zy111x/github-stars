@@ -1,6 +1,6 @@
 ---
 project: copilot-api
-stars: 216
+stars: 272
 description: |-
     Turn GitHub Copilot into OpenAI/Anthropic API compatible server. Usable with Claude Code!
 url: https://github.com/ericc-ch/copilot-api
@@ -13,9 +13,26 @@ url: https://github.com/ericc-ch/copilot-api
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E519XS7W)
 
+---
+
+**Note:** If you are using [opencode](https://github.com/sst/opencode), you do not need this project. Opencode supports GitHub Copilot provider out of the box.
+
+---
+
 ## Project Overview
 
 A reverse-engineered proxy for the GitHub Copilot API that exposes it as an OpenAI and Anthropic compatible service. This allows you to use GitHub Copilot with any tool that supports the OpenAI Chat Completions API or the Anthropic Messages API, including to power [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview).
+
+## Features
+
+- **OpenAI & Anthropic Compatibility**: Exposes GitHub Copilot as an OpenAI-compatible (`/v1/chat/completions`, `/v1/models`, `/v1/embeddings`) and Anthropic-compatible (`/v1/messages`) API.
+- **Claude Code Integration**: Easily configure and launch [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) to use Copilot as its backend with a simple command-line flag (`--claude-code`).
+- **Usage Dashboard**: A web-based dashboard to monitor your Copilot API usage, view quotas, and see detailed statistics.
+- **Rate Limit Control**: Manage API usage with rate-limiting options (`--rate-limit`) and a waiting mechanism (`--wait`) to prevent errors from rapid requests.
+- **Manual Request Approval**: Manually approve or deny each API request for fine-grained control over usage (`--manual`).
+- **Token Visibility**: Option to display GitHub and Copilot tokens during authentication and refresh for debugging (`--show-token`).
+- **Flexible Authentication**: Authenticate interactively or provide a GitHub token directly, suitable for CI/CD environments.
+- **Support for Different Account Types**: Works with individual, business, and enterprise GitHub Copilot plans.
 
 ## Demo
 
@@ -91,12 +108,14 @@ The following command line options are available for the `start` command:
 | --wait         | Wait instead of error when rate limit is hit                                  | false      | -w    |
 | --github-token | Provide GitHub token directly (must be generated using the `auth` subcommand) | none       | -g    |
 | --claude-code  | Generate a command to launch Claude Code with Copilot API config              | false      | -c    |
+| --show-token   | Show GitHub and Copilot tokens on fetch and refresh                           | false      | none  |
 
 ### Auth Command Options
 
-| Option    | Description            | Default | Alias |
-| --------- | ---------------------- | ------- | ----- |
-| --verbose | Enable verbose logging | false   | -v    |
+| Option       | Description               | Default | Alias |
+| ------------ | ------------------------- | ------- | ----- |
+| --verbose    | Enable verbose logging    | false   | -v    |
+| --show-token | Show GitHub token on auth | false   | none  |
 
 ## API Endpoints
 
@@ -120,6 +139,15 @@ These endpoints are designed to be compatible with the Anthropic Messages API.
 | -------------------------------- | ------ | ------------------------------------------------------------ |
 | `POST /v1/messages`              | `POST` | Creates a model response for a given conversation.           |
 | `POST /v1/messages/count_tokens` | `POST` | Calculates the number of tokens for a given set of messages. |
+
+### Usage Monitoring Endpoints
+
+New endpoints for monitoring your Copilot usage and quotas.
+
+| Endpoint                    | Method | Description                                               |
+| --------------------------- | ------ | --------------------------------------------------------- |
+| `GET /usage`               | `GET`  | Get detailed Copilot usage statistics and quota information. |
+| `GET /token`               | `GET`  | Get the current Copilot token being used by the API.     |
 
 ## Example Usage
 
@@ -156,6 +184,27 @@ npx copilot-api@latest auth
 # Run auth flow with verbose logging
 npx copilot-api@latest auth --verbose
 ```
+
+## Using the Usage Viewer
+
+After starting the server, a URL to the Copilot Usage Dashboard will be displayed in your console. This dashboard is a web interface for monitoring your API usage.
+
+1.  Start the server. For example, using npx:
+    ```sh
+    npx copilot-api@latest start
+    ```
+2.  The server will output a URL to the usage viewer. Copy and paste this URL into your browser. It will look something like this:
+    `https://ericc-ch.github.io/copilot-api?endpoint=http://localhost:4141/usage`
+    - If you use the `start.bat` script on Windows, this page will open automatically.
+
+The dashboard provides a user-friendly interface to view your Copilot usage data:
+
+-   **API Endpoint URL**: The dashboard is pre-configured to fetch data from your local server endpoint via the URL query parameter. You can change this URL to point to any other compatible API endpoint.
+-   **Fetch Data**: Click the "Fetch" button to load or refresh the usage data. The dashboard will automatically fetch data on load.
+-   **Usage Quotas**: View a summary of your usage quotas for different services like Chat and Completions, displayed with progress bars for a quick overview.
+-   **Detailed Information**: See the full JSON response from the API for a detailed breakdown of all available usage statistics.
+-   **URL-based Configuration**: You can also specify the API endpoint directly in the URL using a query parameter. This is useful for bookmarks or sharing links. For example:
+    `https://ericc-ch.github.io/copilot-api?endpoint=http://your-api-server/usage`
 
 ## Using with Claude Code
 

@@ -1,6 +1,6 @@
 ---
 project: clash-speedtest
-stars: 675
+stars: 678
 description: |-
     clash speedtest
 url: https://github.com/faceair/clash-speedtest

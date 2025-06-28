@@ -1,6 +1,6 @@
 ---
 project: pouchdb
-stars: 17283
+stars: 17297
 description: |-
     :kangaroo: - PouchDB is a pocket-sized database.
 url: https://github.com/pouchdb/pouchdb
