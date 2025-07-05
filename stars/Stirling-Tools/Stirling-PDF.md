@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 62742
+stars: 63034
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -209,6 +209,6 @@ Join our community:
 
 -   Contribution Guidelines
 -   Translation Guide (How to add custom languages)
+-   Developer Guide
 -   Issue Tracker
 -   Discord Community
--   Developer Guide

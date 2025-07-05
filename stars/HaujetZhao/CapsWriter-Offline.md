@@ -1,6 +1,6 @@
 ---
 project: CapsWriter-Offline
-stars: 3730
+stars: 3748
 description: CapsWriter 的离线版，一个好用的 PC 端的语音输入工具
 url: https://github.com/HaujetZhao/CapsWriter-Offline
 ---
