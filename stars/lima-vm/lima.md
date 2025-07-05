@@ -1,6 +1,6 @@
 ---
 project: lima
-stars: 17577
+stars: 17651
 description: |-
     Linux virtual machines, with a focus on running containers
 url: https://github.com/lima-vm/lima
@@ -29,7 +29,7 @@ to Mac users, but Lima can be used for non-container applications as well.
 Lima also supports other container engines (Docker, Podman, Kubernetes, etc.) and non-macOS hosts (Linux, NetBSD, etc.).
 
 ## Getting started
-Set up (on macOS):
+Set up (Homebrew):
 ```bash
 brew install lima
 limactl start

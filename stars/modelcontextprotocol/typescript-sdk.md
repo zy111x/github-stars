@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 8076
+stars: 8261
 description: |-
     The official Typescript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk
@@ -20,6 +20,7 @@ url: https://github.com/modelcontextprotocol/typescript-sdk
   - [Tools](#tools)
   - [Prompts](#prompts)
   - [Completions](#completions)
+  - [Sampling](#sampling)
 - [Running Your Server](#running-your-server)
   - [stdio](#stdio)
   - [Streamable HTTP](#streamable-http)
@@ -51,6 +52,8 @@ The Model Context Protocol allows applications to provide context for LLMs in a 
 ```bash
 npm install @modelcontextprotocol/sdk
 ```
+
+> ⚠️ MCP requires Node v18.x up to work fine.
 
 ## Quick Start
 
@@ -390,6 +393,68 @@ import { getDisplayName } from "@modelcontextprotocol/sdk/shared/metadataUtils.j
 const displayName = getDisplayName(tool);
 ```
 
+### Sampling
+
+MCP servers can request LLM completions from connected clients that support sampling.
+
+```typescript
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { z } from "zod";
+
+const mcpServer = new McpServer({
+  name: "tools-with-sample-server",
+  version: "1.0.0",
+});
+
+// Tool that uses LLM sampling to summarize any text
+mcpServer.registerTool(
+  "summarize",
+  {
+    description: "Summarize any text using an LLM",
+    inputSchema: {
+      text: z.string().describe("Text to summarize"),
+    },
+  },
+  async ({ text }) => {
+    // Call the LLM through MCP sampling
+    const response = await mcpServer.server.createMessage({
+      messages: [
+        {
+          role: "user",
+          content: {
+            type: "text",
+            text: `Please summarize the following text concisely:\n\n${text}`,
+          },
+        },
+      ],
+      maxTokens: 500,
+    });
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: response.content.type === "text" ? response.content.text : "Unable to generate summary",
+        },
+      ],
+    };
+  }
+);
+
+async function main() {
+  const transport = new StdioServerTransport();
+  await mcpServer.connect(transport);
+  console.log("MCP server is running...");
+}
+
+main().catch((error) => {
+  console.error("Server error:", error);
+  process.exit(1);
+});
+```
+
+
 ## Running Your Server
 
 MCP servers in TypeScript need to be connected to a transport to communicate with clients. How you start the server depends on the choice of transport:
@@ -596,8 +661,17 @@ app.delete('/mcp', async (req: Request, res: Response) => {
 
 // Start the server
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`MCP Stateless Streamable HTTP Server listening on port ${PORT}`);
+setupServer().then(() => {
+  app.listen(PORT, (error) => {
+    if (error) {
+      console.error('Failed to start server:', error);
+      process.exit(1);
+    }
+    console.log(`MCP Stateless Streamable HTTP Server listening on port ${PORT}`);
+  });
+}).catch(error => {
+  console.error('Failed to set up the server:', error);
+  process.exit(1);
 });
 
 ```
@@ -975,7 +1049,7 @@ Client-side: Handle elicitation requests
 ```typescript
 // This is a placeholder - implement based on your UI framework
 async function getInputFromUser(message: string, schema: any): Promise<{
-  action: "accept" | "reject" | "cancel";
+  action: "accept" | "decline" | "cancel";
   data?: Record<string, any>;
 }> {
   // This should be implemented depending on the app

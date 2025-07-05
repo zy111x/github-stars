@@ -1,6 +1,6 @@
 ---
 project: phone
-stars: 1054
+stars: 1056
 description: |-
     手机号码归属地库 、数据更新:2023年12月
 url: https://github.com/ls0f/phone

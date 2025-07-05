@@ -1,6 +1,6 @@
 ---
 project: ark-pixel-font
-stars: 3730
+stars: 3743
 description: |-
     Open source Pan-CJK pixel font / 开源的泛中日韩像素字体
 url: https://github.com/TakWolf/ark-pixel-font
@@ -101,9 +101,9 @@ url: https://github.com/TakWolf/ark-pixel-font
 
 | 尺寸 | 行高 |
 |---|---|
-| 10px | 16px |
-| 12px | 18px |
-| 16px | 24px |
+| 10px | 14px |
+| 12px | 16px |
+| 16px | 22px |
 
 ## 语言特定字形
 
@@ -170,9 +170,9 @@ brew install font-ark-pixel-16px-proportional
 ## 参考资料
 
 - [字体开发最佳实践](https://silnrsi.github.io/FDBP/)
-- [Microsoft - OpenType 字体文档](https://learn.microsoft.com/en-us/typography/opentype/)
+- [Microsoft - OpenType 规范](https://learn.microsoft.com/en-us/typography/opentype/spec/)
 - [Glyphs 软件教程 - 纵向量度值](https://glyphsapp.com/zh/learn/vertical-metrics)
-- [FreeType 字形约定](https://freetype.org/freetype2/docs/glyphs/index.html)
+- [FreeType - 字形约定](https://freetype.org/freetype2/docs/glyphs/index.html)
 
 ## 官方社区
 

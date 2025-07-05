@@ -1,6 +1,6 @@
 ---
 project: shadcn-table
-stars: 5095
+stars: 5123
 description: |-
     Shadcn table with server-side sorting, filtering, and pagination.
 url: https://github.com/sadmann7/shadcn-table
@@ -11,6 +11,14 @@ url: https://github.com/sadmann7/shadcn-table
 This is a shadcn table component with server-side sorting, filtering, and pagination. It is bootstrapped with `create-t3-app`.
 
 [![Shadcn Table](./public/images/screenshot.png)](https://tablecn.com)
+
+<div align="center">
+  <a href="https://vercel.com/oss">
+    <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+  </a>
+</div>
+
+<br />
 
 ## Documentation
 

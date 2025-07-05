@@ -1,6 +1,6 @@
 ---
 project: leader.js.cool
-stars: 326
+stars: 325
 description: |-
     不可替代的团队领袖培养计划
 url: https://github.com/willin/leader.js.cool

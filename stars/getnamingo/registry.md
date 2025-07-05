@@ -20,7 +20,11 @@ Namingo is a state-of-the-art open-source domain registry platform, diligently c
 
 Namingo is optimally designed for the 2026 ICANN new gTLD application round, providing a straightforward and easily updatable platform. Its contemporary architecture and intuitive interface make it an ideal choice for efficient and modern domain registry management.
 
-✅ **Namingo passes ICANN OT&E RST for the `MainRSPEvaluationTest` profile**, demonstrating compliance with required operational standards.
+> ✅ **Namingo passes ICANN OT&E RST for the `MainRSPEvaluationTest` profile**, demonstrating compliance with required operational standards.
+
+### Want to pass your own RST?
+
+You can use our open-source [ICANN RST OT&E Test Script](https://github.com/getnamingo/registry-rst) tool to easily run your ICANN OT&E and production RST tests.
 
 ## Get Involved
 
@@ -64,8 +68,8 @@ Namingo is equipped with a comprehensive suite of features to meet the diverse n
 
 - **Database Compatibility**: Fully supports MySQL/MariaDB and offers beta support for PostgreSQL, providing flexibility to match users' technical needs and infrastructure for seamless integration and peak performance.
 
-- **GDPR-Compliant Database Encryption**: Supports comprehensive database encryption to ensure GDPR compliance. For more details, see our [Encryption Guide](docs/encryption.md).
-  
+- **GDPR & NIS2 Compliance**: Namingo supports both GDPR and NIS2 requirements, including contact validation and encrypted data storage. For implementation details, see our [Encryption Guide](docs/encryption.md).
+
 - **Automation Scripts**: Ensures the continuous and smooth operation of the registry by performing routine checks and operations. Included scripts for spec 11 abuse monitoring; automated approval of domain transfers; contact and host cleanup; backup processing and upload; domain lifetime status change; generation and upload of RDE deposits, LORDN file, ICANN's monthly reports, invoices; email dispatcher system; statistics generation; TMCH and URS processing; zone generator and signing.
 
 ### Optional components
@@ -73,6 +77,8 @@ Namingo is equipped with a comprehensive suite of features to meet the diverse n
 - [**Automated Registrar Onboarding**](https://github.com/getnamingo/registrar-onboarding) - New registrars can join by filling up a form, signing the agreement online and even paying the application fee online. Then their account is activated after check by registry staff. No more emails, Word or PDF forms or copy-paste between systems.
 
 - [**Domain Registry API**](https://github.com/getnamingo/registry-api) - Provides REST API access to domain availability checks and to the domain droplist.
+
+- [**ntfy.sh Error Notifier**](https://github.com/getnamingo/registry-ntfy) - Checks for new high-severity errors and sends real-time push notifications via ntfy.sh.
 
 ## Documentation
 

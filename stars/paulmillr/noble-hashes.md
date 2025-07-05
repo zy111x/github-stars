@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 697
+stars: 698
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
@@ -76,7 +76,7 @@ import { hkdf } from '@noble/hashes/hkdf.js';
 import { pbkdf2, pbkdf2Async } from '@noble/hashes/pbkdf2.js';
 import { scrypt, scryptAsync } from '@noble/hashes/scrypt.js';
 import { argon2d, argon2i, argon2id } from '@noble/hashes/argon2.js';
-import * as utils from '@noble/hashes/utils'; // bytesToHex, bytesToUtf8, concatBytes...
+import * as utils from '@noble/hashes/utils.js'; // bytesToHex, bytesToUtf8, concatBytes...
 ```
 
 - [sha2: sha256, sha384, sha512](#sha2-sha256-sha384-sha512-and-others)
@@ -340,7 +340,7 @@ Argon2 [RFC 9106](https://datatracker.ietf.org/doc/html/rfc9106) implementation.
 #### utils
 
 ```typescript
-import { bytesToHex as toHex, randomBytes } from '@noble/hashes/utils';
+import { bytesToHex as toHex, randomBytes } from '@noble/hashes/utils.js';
 console.log(toHex(randomBytes(32)));
 ```
 

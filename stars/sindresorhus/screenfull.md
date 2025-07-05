@@ -1,6 +1,6 @@
 ---
 project: screenfull
-stars: 7129
+stars: 7128
 description: |-
     Simple wrapper for cross-browser usage of the JavaScript Fullscreen API
 url: https://github.com/sindresorhus/screenfull

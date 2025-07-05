@@ -1,6 +1,6 @@
 ---
 project: sandpack
-stars: 5535
+stars: 5554
 description: |-
     A component toolkit for creating live-running code editing experiences, using the power of CodeSandbox.
 url: https://github.com/codesandbox/sandpack

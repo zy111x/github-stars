@@ -1,6 +1,6 @@
 ---
 project: combustion
-stars: 468
+stars: 469
 description: |-
     Combustion is a sleek, modern web interface for Transmission
 url: https://github.com/Secretmapper/combustion

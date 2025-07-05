@@ -1,6 +1,6 @@
 ---
 project: marktext
-stars: 50203
+stars: 50279
 description: |-
     📝A simple and elegant markdown editor, available for Linux, macOS and Windows.
 url: https://github.com/marktext/marktext

@@ -1,14 +1,17 @@
 ---
 project: cloudflare-worker-image
-stars: 240
+stars: 301
 description: |-
-    使用 Cloudflare Worker 处理图片, 依赖 Photon，支持缩放、剪裁、水印、滤镜等功能。
+    使用 Cloudflare Worker + Container 处理图片, 依赖 Photon，支持缩放、剪裁、水印、滤镜等功能。
 url: https://github.com/ccbikai/cloudflare-worker-image
 ---
 
 # Cloudflare Worker Image
 
-使用 Cloudflare Worker 处理图片, 依赖 Photon，支持缩放、剪裁、水印、滤镜等功能。
+使用 Cloudflare Worker + Container 处理图片, 依赖 Photon，支持缩放、剪裁、水印、滤镜等功能。
+
+> [!TIP]
+> 纯 Worker 版本见 [v1](https://github.com/ccbikai/cloudflare-worker-image/tree/v1) 分支。
 
 ---
 
@@ -20,8 +23,8 @@ url: https://github.com/ccbikai/cloudflare-worker-image
 
 ## 支持特性
 
-1. 支持 PNG、JPEG、BMP、ICO、TIFF 格式图片处理
-2. 可输出 JPEG、PNG、WEBP 格式图片，默认输出 WEBP 格式图片
+1. 支持 PNG、JPEG、BMP、ICO、TIFF 等格式图片处理
+2. 可输出 JPEG、PNG、WEBP、AVIF 等格式图片
 3. 支持管道操作，可以执行多个操作
 4. 支持 Cloudflare 缓存
 5. 支持图片地址白名单，防滥用
@@ -30,7 +33,6 @@ url: https://github.com/ccbikai/cloudflare-worker-image
 ## 部署方式
 
 ```sh
-# patch 功能依赖 pnpm, 如果不使用 pnpm, 需要自己处理 patch-package https://www.npmjs.com/package/patch-package
 npm i -g pnpm
 
 # 克隆此项目
@@ -41,7 +43,7 @@ cd cloudflare-worker-image
 pnpm install
 
 # 修改白名单配置，改为图片域名或者留空不限制图片地址
-vi wrangler.toml # WHITE_LIST
+vi wrangler.jsonc # WHITE_LIST
 
 # 发布
 npm run deploy

@@ -1,12 +1,12 @@
 ---
 project: checkcle
-stars: 766
+stars: 784
 description: |-
-    CheckCle is a self-hosted open-source alternative to UptimeRobot, PagerDuty, Better Stack, and more — offering real-time server & service uptime monitoring, incident, multi-channel alerting.
+    CheckCle is a self-hosted, open-source monitoring platform for seamless, real-time full-stack systems, applications, and infrastructure. It provides real-time uptime monitoring, distributed checks, incident tracking, and alerts. All deployable anywhere.
 url: https://github.com/operacle/checkcle
 ---
 
-![CheckCle Platform](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/checkcle-black.png)
+![CheckCle Platform](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/instance-server-monitoring.png)
 
 # 🚀 What is CheckCle?
 
@@ -21,6 +21,7 @@ CheckCle is an Open Source solution for seamless, real-time monitoring of full-s
 - Monitor HTTP, DNS, and Ping protocols
 - Monitor TCP-based, API services (e.g., FTP, SMTP, HTTP)
 - Track detail uptime, response times, and performance issues
+- Distributed Regional Monitoring
 - Incident History (UP/DOWN/WARNING/PAUSE)
 - SSL & Domain Monitoring (Domain, Issuer, Expiration Date, Days Left, Status, Last Notified)
 - Infrastructure Server Monitoring, Supports Linux (🐧 Debian, Ubuntu, CentOS, Red Hat, etc.) and Windows (Beta). And Servers metrics like CPU, RAM, disk usage, and network activity) with an one-line installation angent script.
@@ -84,9 +85,11 @@ services:
 4. Follow the Quick Start Guide at https://docs.checkcle.io
 
 ###
-![checkcle-collapse-black](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/checkcle-black.png)
-![Service Detail Page](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/checkcle-detailpage.png)
-![Schedule Maintenance](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/maintenance-dahboard.png)
+![checkcle-collapse-black](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/uptime-monitoring.png)
+![Service Detail Page](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/uptime-service-detail.png)
+![checkcle-server-instance](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/instance-server-monitoring.png)
+![Schedule Maintenance](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/checkcle-schedule-maintenance.png)
+![SSL Monitoring](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/ssl-monitoring.png)
 
 ## 📝 Development Roadmap
 
@@ -100,10 +103,10 @@ services:
 - ✅ SSL & Domain Monitoring
 - ✅ Schedule Maintenance 
 - ✅ Incident Management
-- [ ] Uptime monitoring (PING - Inprogress)
 - [ ] Infrastructure Server Monitoring
 - ✅ Operational Status / Public Status Pages
-- [ ] Uptime monitoring (TCP, PING, DNS)
+- ✅ Uptime monitoring (HTTP, TCP, PING, DNS) Full functionality
+- ✅ Distributed Regional Monitoring Agent [Support Operation](https://github.com/operacle/Distributed-Regional-Monitoring)
 - ✅ System Setting Panel and Mail Settings
 - ✅ User Permission Roles
 - [ ] Notifications (Email/Slack/Discord/Signal)  
@@ -142,6 +145,10 @@ Here are some ways you can help improve CheckCle:
 CheckCle is released under the MIT License.
 
 ---
+## 👥 Contributors
+
+[![](https://contrib.rocks/image?repo=operacle/checkcle)](https://github.com/operacle/checkcle/graphs/contributors)
+
 
 ## Star History
 

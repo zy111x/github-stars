@@ -1,6 +1,6 @@
 ---
 project: anime
-stars: 61919
+stars: 62053
 description: |-
     JavaScript animation engine
 url: https://github.com/juliangarnier/anime
@@ -26,6 +26,28 @@ url: https://github.com/juliangarnier/anime
   <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/animejs?style=flat-square&logo=npm">
   <img alt="jsDelivr hits (npm)" src="https://img.shields.io/jsdelivr/npm/hm/animejs?style=flat-square&logo=jsdeliver">
   <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/juliangarnier?style=flat-square&logo=github">
+</p>
+
+## Sponsors
+
+Anime.js is 100% free and is only made possible with the help of our sponsors.
+Help the project become sustainable by sponsoring us on <a target="_blank" href="https://github.com/sponsors/juliangarnier">GitHub Sponsors</a>.
+
+### Platinum sponsors
+
+<p>
+<a target="_blank" href="https://huly.io/?ref=animejs">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/huly-logomark.png">
+    <img align="center" src="./assets/sponsors/huly-logomark-dark.png" width="250">
+  </picture>
+</a>
+<a target="_blank" href="https://ice.io/?ref=animejs">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/ice-open-network-logomark.png">
+    <img align="center" src="./assets/sponsors/ice-open-network-logomark-dark.png" width="250">
+  </picture>
+</a>
 </p>
 
 ## Usage
@@ -81,52 +103,5 @@ Then, execute the following scripts with `npm run <script>`.
 | `test-browser` | Start a local server and start all browser related tests |
 | `test-node` | Start all Node related tests |
 | `open-examples` | Start a local server to browse the examples locally |
-
-## Our sponsors
-
-Anime.js is 100% free and is only made possible with the help of our sponsors.
-Help the project become sustainable by sponsoring us on <a target="_blank" href="https://github.com/sponsors/juliangarnier">GitHub Sponsors</a>.
-
-### Platinum sponsors
-
-<table>
-  <tr>
-    <td>
-      <a target="_blank" href="https://huly.io/?ref=animejs">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/huly-logomark.svg">
-          <img align="center" src="./assets/sponsors/huly-logomark-dark.svg" width="128">
-        </picture>
-      </a>
-    </td>
-    <td>
-      <a target="_blank" href="https://ice.io/?ref=animejs">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/ice-open-network-logomark.svg">
-          <img align="center" src="./assets/sponsors/ice-open-network-logomark-dark.svg" width="128">
-        </picture>
-      </a>
-    </td>
-    <td>
-      <a target="_blank" href="https://github.com/sponsors/juliangarnier">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/placeholder.svg">
-          <img align="center" src="./assets/sponsors/placeholder-dark.svg" width="128">
-        </picture>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <a target="_blank" href="https://huly.io/?ref=animejs">Huly</a>
-    </td>
-    <td align="center">
-      <a target="_blank" href="https://ice.io/?ref=animejs">Ice Open Network</a>
-    </td>
-    <td align="center">
-      <a target="_blank" href="https://github.com/sponsors/juliangarnier">Your logo here</a>
-    </td>
-  </tr>
-</table>
 
 © [Julian Garnier](http://juliangarnier.com) | [MIT License](LICENSE.md)

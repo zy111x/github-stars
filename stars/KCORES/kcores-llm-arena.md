@@ -1,6 +1,6 @@
 ---
 project: kcores-llm-arena
-stars: 853
+stars: 855
 description: |-
     LLM Arena by KCORES team
 url: https://github.com/KCORES/kcores-llm-arena

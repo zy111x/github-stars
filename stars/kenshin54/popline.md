@@ -1,6 +1,6 @@
 ---
 project: popline
-stars: 1059
+stars: 1058
 description: |-
     Popline is an HTML5 Rich-Text-Editor Toolbar
 url: https://github.com/kenshin54/popline

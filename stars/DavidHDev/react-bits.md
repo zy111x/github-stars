@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 15761
+stars: 16872
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building stunning, memorable websites.
 url: https://github.com/DavidHDev/react-bits
@@ -26,7 +26,7 @@ url: https://github.com/DavidHDev/react-bits
 
 <div align="center">
   <a href="https://github.com/davidhdev/react-bits/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/davidhdev/react-bits"></a>
-  <a href="https://github.com/davidhdev/react-bits/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-magenta.svg"></a>
+  <a href="https://github.com/davidhdev/react-bits/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT+Commons_Clause-magenta"></a>
   
 </div>
 
@@ -78,5 +78,5 @@ React Bits may sometimes take inspiration from publicly available code examples 
 
 ## License
 
-Licensed under the [MIT license](https://github.com/davidhdev/react-bits/blob/main/LICENSE.md).
+Licensed under the [MIT + Commons Clause license](https://github.com/davidhdev/react-bits/blob/main/LICENSE.md).
 

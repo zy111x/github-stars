@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2775
+stars: 2799
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -722,6 +722,8 @@ We collect a list of common workarounds for various websites in our [troubleshoo
 
 ## Users
 
+Here is a list of some notable projects who are using lychee.
+
 - https://github.com/InnerSourceCommons/InnerSourcePatterns
 - https://github.com/opensearch-project/OpenSearch
 - https://github.com/ramitsurana/awesome-kubernetes
@@ -761,7 +763,8 @@ We collect a list of common workarounds for various websites in our [troubleshoo
 - https://github.com/gradle/gradle
 - https://github.com/forus-labs/forui
 - https://github.com/FreeBSD-Ask/FreeBSD-Ask
-- https://github.com/lycheeverse/lychee (yes, the lychee docs are checked with lychee 🤯)
+- https://github.com/prosekit/prosekit
+- https://github.com/lycheeverse/lychee (yes, lychee is checked with lychee 🤯)
 
 If you are using lychee for your project, **please add it here**.
 

@@ -1,6 +1,6 @@
 ---
 project: bootflat.github.io
-stars: 4234
+stars: 4231
 description: |-
     BOOTFLAT is an open source Flat UI KIT based on Bootstrap 3.3.0 CSS framework. It provides a faster, easier and less repetitive way for web developers to create elegant web apps.
 url: https://github.com/bootflat/bootflat.github.io

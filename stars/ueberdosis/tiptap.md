@@ -1,6 +1,6 @@
 ---
 project: tiptap
-stars: 31171
+stars: 31275
 description: |-
     The headless rich text editor framework for web artisans.
 url: https://github.com/ueberdosis/tiptap

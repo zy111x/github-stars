@@ -1,6 +1,6 @@
 ---
 project: cloudreve
-stars: 23836
+stars: 23935
 description: |-
     🌩 Self-hosted file management and sharing system, supports multiple storage providers
 url: https://github.com/cloudreve/cloudreve
@@ -46,7 +46,7 @@ url: https://github.com/cloudreve/cloudreve
 
 ## :sparkles: Features
 
-- :cloud: Support storing files into Local, Remote node, OneDrive, S3 compatible API, Qiniu, Aliyun OSS, Tencent COS, Upyun, OneDrive.
+- :cloud: Support storing files into Local, Remote node, OneDrive, S3 compatible API, Qiniu, Aliyun OSS, Tencent COS, Upyun.
 - :outbox_tray: Upload/Download in directly transmission from client to storage providers.
 - 💾 Integrate with Aria2/qBittorrent to download files in background, use multiple download nodes to share the load.
 - 📚 Compress/Extract files, download files in batch.

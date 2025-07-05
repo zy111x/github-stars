@@ -1,6 +1,6 @@
 ---
 project: rrweb
-stars: 18177
+stars: 18201
 description: |-
     record and replay the web
 url: https://github.com/rrweb-io/rrweb

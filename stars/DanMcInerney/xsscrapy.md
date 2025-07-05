@@ -1,6 +1,6 @@
 ---
 project: xsscrapy
-stars: 1711
+stars: 1713
 description: |-
     XSS spider - 66/66 wavsep XSS detected
 url: https://github.com/DanMcInerney/xsscrapy

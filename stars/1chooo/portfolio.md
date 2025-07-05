@@ -1,8 +1,8 @@
 ---
 project: portfolio
-stars: 267
+stars: 283
 description: |-
-    👨🏻‍💻 $ ls -al Hugo -- My personal portfolio and blog website built with React, Next.js, Tailwind CSS and TypeScript
+    My portfolio and blog site built with React, Next.js, Tailwind CSS and TypeScript
 url: https://github.com/1chooo/portfolio
 ---
 
@@ -113,6 +113,7 @@ Additionally, I drew inspiration from several incredible projects, including:
 - [michaelangelo.io](https://michaelangelo.io)
 - [iamsahaj.xyz](https://iamsahaj.xyz)
 - [jinrup.dev](https://www.jinrup.dev)
+- [mt.ci](https://mt.ci)
 
 ...and many others I can't recall but deeply appreciate.
 

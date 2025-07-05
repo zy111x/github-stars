@@ -1,8 +1,8 @@
 ---
 project: s3mini
-stars: 1131
+stars: 1164
 description: |-
-    👶 Tiny S3 client. Edge computing ready. No-dep. In Typescript. Works with @cloudflare @minio @backblaze @digitalocean @garagehq
+    👶 Tiny S3 client. Edge computing ready. No-dep. In Typescript. Works with @cloudflare @minio @backblaze @digitalocean @garagehq @oracle
 url: https://github.com/good-lly/s3mini
 ---
 
@@ -76,6 +76,8 @@ The library supports a subset of S3 operations, focusing on essential features, 
 - ✅ abortMultipartUpload
 - ✅ uploadPart
 - ❌ CopyObject: Not implemented (tbd)
+
+Put/Get objects with SSE-C (server-side encryption with customer-provided keys) is supported, but only tested on Cloudflare R2!
 
 ## Installation
 

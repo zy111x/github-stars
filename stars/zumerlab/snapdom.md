@@ -1,6 +1,6 @@
 ---
 project: snapdom
-stars: 2103
+stars: 2579
 description: |-
     snapDOM captures HTML elements to images with exceptional speed and accuracy.
 url: https://github.com/zumerlab/snapdom
@@ -150,9 +150,49 @@ All capture methods accept an `options` object:
 | `fast`            | boolean  | `true`   | Skips idle delay for faster results        |
 | `embedFonts`      | boolean  | `false`  | Inlines fonts (icon fonts always embedded) |
 | `scale`           | number   | `1`      | Output scale multiplier                    |
+| `width`           | number   | -        | Output specific width size                 |
+| `height`          | number   | -        | Output specific height size                |
 | `backgroundColor` | string   | `"#fff"` | Fallback color for JPG/WebP                |
 | `quality`         | number   | `1`      | Quality for JPG/WebP (0 to 1)              |
 | `crossOrigin`     | function | -        | Function to determine CORS mode per image URL |
+
+### Setting custom dimensions with width and height options
+
+Use the `width` and `height` options to generate an image with specific dimensions.
+
+**Examples:**
+
+**1. Fixed width (proportional height)**
+Sets a specific width while maintaining the aspect ratio. Height adjusts proportionally.
+
+```js
+const result = await snapdom(element, {
+  width: 400 // Outputs a 400px-wide image with auto-scaled height
+});
+```
+
+**2. Fixed height (proportional width)**
+Sets a specific height while maintaining the aspect ratio. Width adjusts proportionally.
+
+```js
+const result = await snapdom(element, {
+  height: 200 // Outputs a 200px-tall image with auto-scaled width
+});
+```
+
+**3. Fixed width and height (may distort image)**
+Forces exact dimensions, potentially distorting the image if the aspect ratio differs.
+
+```js
+const result = await snapdom(element, {
+  width: 800,  // Outputs an 800px × 200px image (may stretch/squish content)
+  height: 200  
+});
+```
+
+**Note:** If `scale` is different from  1, it takes priority over width and height.
+Example: `{ scale: 3, width: 500 }` ignores width and scales the image 3x instead.
+
 
 ### Cross-Origin Images
 
@@ -212,7 +252,7 @@ import { snapdom, preCache } from './snapdom.mjs';
 ## Features
 
 * Captures **shadow DOM** and Web Components
-* Supports `::before` and `::after` pseudo-elements
+* Supports `::before`, `::after` and `::first-letter` pseudo-elements
 * Inlines background images and fonts
 * Handles **Font Awesome**, **Material Icons**, and more
 * `data-capture="exclude"` to ignore an element
@@ -290,6 +330,7 @@ For detailed contribution guidelines, please see [CONTRIBUTING](https://github.c
 <!-- CONTRIBUTORS:START -->
 <p>
 <a href="https://github.com/tinchox5" title="tinchox5"><img src="https://avatars.githubusercontent.com/u/11557901?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="tinchox5"/></a>
+<a href="https://github.com/17biubiu" title="17biubiu"><img src="https://avatars.githubusercontent.com/u/13295895?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="17biubiu"/></a>
 <a href="https://github.com/pedrocateexte" title="pedrocateexte"><img src="https://avatars.githubusercontent.com/u/207524750?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="pedrocateexte"/></a>
 <a href="https://github.com/domialex" title="domialex"><img src="https://avatars.githubusercontent.com/u/4694217?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="domialex"/></a>
 <a href="https://github.com/elliots" title="elliots"><img src="https://avatars.githubusercontent.com/u/622455?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="elliots"/></a>

@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 6904
+stars: 6919
 description: |-
     An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici
@@ -122,8 +122,10 @@ const response = await fetch('https://api.example.com/data');
 #### Use Built-in Fetch When:
 - You want zero dependencies
 - Building isomorphic code that runs in browsers and Node.js
+- Publishing to npm and want to maximize compatibility with JS runtimes
 - Simple HTTP requests without advanced configuration
-- You're okay with the undici version bundled in your Node.js version
+- You're publishing to npm and you want to maximize compatiblity
+- You don't depend on features from a specific version of undici
 
 #### Use Undici Module When:
 - You need the latest undici features and performance improvements
@@ -217,7 +219,7 @@ The `install()` function adds the following classes to `globalThis`:
 - `fetch` - The fetch function
 - `Headers` - HTTP headers management
 - `Response` - HTTP response representation
-- `Request` - HTTP request representation  
+- `Request` - HTTP request representation
 - `FormData` - Form data handling
 - `WebSocket` - WebSocket client
 - `CloseEvent`, `ErrorEvent`, `MessageEvent` - WebSocket events

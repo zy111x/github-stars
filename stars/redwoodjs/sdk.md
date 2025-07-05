@@ -1,6 +1,6 @@
 ---
 project: sdk
-stars: 868
+stars: 894
 description: |-
     A React Framework for Cloudflare.
 url: https://github.com/redwoodjs/sdk

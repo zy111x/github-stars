@@ -1,6 +1,6 @@
 ---
 project: netbird
-stars: 16543
+stars: 16947
 description: |-
     Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.
 url: https://github.com/netbirdio/netbird
@@ -22,6 +22,9 @@ url: https://github.com/netbirdio/netbird
     <br>
     <a href="https://docs.netbird.io/slack-url">
         <img src="https://img.shields.io/badge/slack-@netbird-red.svg?logo=slack"/>
+     </a>
+    <a href="https://forum.netbird.io">
+        <img src="https://img.shields.io/badge/community forum-@netbird-red.svg?logo=discourse"/>
      </a>  
      <br>
     <a href="https://gurubase.io/g/netbird">
@@ -37,13 +40,13 @@ url: https://github.com/netbirdio/netbird
   <br/>
   See <a href="https://netbird.io/docs/">Documentation</a>
   <br/>
-   Join our <a href="https://docs.netbird.io/slack-url">Slack channel</a>
+   Join our <a href="https://docs.netbird.io/slack-url">Slack channel</a> or our <a href="https://forum.netbird.io">Community forum</a>
   <br/>
  
 </strong>
 <br>
-<a href="https://github.com/netbirdio/kubernetes-operator">
-    New: NetBird Kubernetes Operator
+<a href="https://registry.terraform.io/providers/netbirdio/netbird/latest">
+    New: NetBird terraform provider
   </a> 
 </p>
 
