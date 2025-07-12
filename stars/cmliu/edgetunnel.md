@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 21544
+stars: 21627
 description: 在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -390,6 +390,24 @@ CFPORTS
 
 CF账户标准端口列表
 
+CF\_EMAIL
+
+`admin@google.com`
+
+❌
+
+CF账户的邮箱，用于获取 Workers/Pages 请求数
+
+CF\_APIKEY
+
+`1234567890abcdef1234567890abcdef`
+
+❌
+
+CF账户的`Global API Key`，用于获取 Workers/Pages 请求数
+
+> **注意：** 只有 `CF_EMAIL` 和 `CF_APIKEY` 变量同时存在时，订阅时才会返回 CF Workers/Pages 的请求数用量信息。
+
 ❗ 注意事项
 ------
 
@@ -521,3 +539,4 @@ CF账户标准端口列表
 -   Stanley-baby
 -   ACL4SSR
 -   股神
+-   Workers/Pages Metrics

@@ -1,6 +1,6 @@
 ---
 project: enhanced-FaaS-in-China
-stars: 2295
+stars: 2318
 description: 提升部署在cloudflare、vercel或netlify的网页在中国的访问速度和稳定性 Improve the access speed and stability in China of web pages hosted on cloudflare, vercel or netlify by merely changing your CNAME record. cf优选域名 | cf优选ip | cloudflare | vercel | netlify | 加速 | 国内 | 中国 | 境内 | 大陆
 url: https://github.com/xingpingcn/enhanced-FaaS-in-China
 ---
@@ -120,6 +120,7 @@ Q&A
 **Q：为什么设置了你的 CNAME 解析后访问速度没有达到 测速对比 中的效果？**  
 A：
 
+-   测速平台问题：多对比多个测速平台的结果，看看各个测速平台的结果是否一致
 -   域名问题：你所测试的域名如果是免费的二级域名（eu.org、us.kg），或者是.xyz、.top 之类便宜的域名，也许会由于运营商的白名单机制而被墙，这种情况只能通过换域名解决（或者相信玄学等待你的域名被移入白名单）。
 -   回源问题：测试对比显示的是部署在边缘服务器的静态网页的测速效果。测试使用的是 cf page 和 vercel、netlify 上部署的静态网页。
 -   DNS 解析问题：
@@ -166,3 +167,6 @@ Custom
 
 Star History
 ------------
+
+CDN acceleration and security protection for this project are sponsored by Tencent EdgeOne
+------------------------------------------------------------------------------------------

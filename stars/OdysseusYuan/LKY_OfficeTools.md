@@ -1,6 +1,6 @@
 ---
 project: LKY_OfficeTools
-stars: 10191
+stars: 10238
 description: 一键自动化 下载、安装、激活 Office 的利器。
 url: https://github.com/OdysseusYuan/LKY_OfficeTools
 ---

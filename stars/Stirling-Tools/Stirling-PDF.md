@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 63034
+stars: 63313
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -27,7 +27,7 @@ Features
 -   API for integration with external scripts
 -   Optional Login and Authentication support (see here for documentation)
 -   Database Backup and Import (see here for documentation)
--   Enterprise features like SSO see here
+-   Enterprise features like SSO (see here for documentation)
 
 PDF Features
 ------------
