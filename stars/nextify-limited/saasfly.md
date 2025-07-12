@@ -1,6 +1,6 @@
 ---
 project: saasfly
-stars: 2508
+stars: 2520
 description: |-
     Your Next SaaS Template or Boilerplate ! A magic trip start with `bun create saasfly` . The more stars, the more surprises
 url: https://github.com/nextify-limited/saasfly
@@ -41,7 +41,7 @@ See more documentation at <https://document.saasfly.io>
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=saasfly/saasfly&type=Timeline)](https://star-history.com/#saasfly/saasfly&Timeline)
+[![Star History Chart](https://app.repohistory.com/api/svg?repo=saasfly/saasfly&type=Timeline)](https://repohistory.com)
 
 ## Sponsors
 

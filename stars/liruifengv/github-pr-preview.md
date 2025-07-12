@@ -1,6 +1,6 @@
 ---
 project: github-pr-preview
-stars: 3
+stars: 4
 description: |-
     A browser extension that adds a quick preview button to GitHub Pull Request pages, making it easier to access deployment previews from various platforms.
 url: https://github.com/liruifengv/github-pr-preview

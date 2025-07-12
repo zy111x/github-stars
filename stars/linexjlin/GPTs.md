@@ -1,6 +1,6 @@
 ---
 project: GPTs
-stars: 30118
+stars: 30145
 description: |-
     leaked prompts of GPTs
 url: https://github.com/linexjlin/GPTs

@@ -1,6 +1,6 @@
 ---
 project: oclif
-stars: 9235
+stars: 9244
 description: |-
     CLI for generating, building, and releasing oclif CLIs. Built by Salesforce.
 url: https://github.com/oclif/oclif

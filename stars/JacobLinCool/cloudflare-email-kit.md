@@ -1,6 +1,6 @@
 ---
 project: cloudflare-email-kit
-stars: 30
+stars: 31
 description: |-
     The Cloudflare Email Kit is a powerful toolkit designed to handle both incoming and outgoing emails with ease on Cloudflare Workers, providing developers with a modular approach to integrating email functionalities within serverless applications.
 url: https://github.com/JacobLinCool/cloudflare-email-kit

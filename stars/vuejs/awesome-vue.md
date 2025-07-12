@@ -1,6 +1,6 @@
 ---
 project: awesome-vue
-stars: 73050
+stars: 73082
 description: |-
     🎉 A curated list of awesome things related to Vue.js
 url: https://github.com/vuejs/awesome-vue
@@ -1361,6 +1361,7 @@ _Edit images_
 _Display images_
 
 - [TwicPics](https://github.com/TwicPics/components) - Components replacing img and video tags with lazy loading, CLS optimization, and progressive loading out-of-the-box and enabling media optimization and manipulation.
+- [hevue-img-preview](https://github.com/heyongsheng/hevue-img-preview) - Image preview for Vue 2 & 3, supports mobile and desktop. [(demo)](https://heyongsheng.github.io/en/guide/profile.html)
 
 ##### File Upload
 

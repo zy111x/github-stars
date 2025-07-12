@@ -1,6 +1,6 @@
 ---
 project: passport
-stars: 23347
+stars: 23348
 description: |-
     Simple, unobtrusive authentication for Node.js.
 url: https://github.com/jaredhanson/passport

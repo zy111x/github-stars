@@ -1,6 +1,6 @@
 ---
 project: wxt
-stars: 7401
+stars: 7454
 description: |-
     ⚡ Next-gen Web Extension Framework
 url: https://github.com/wxt-dev/wxt

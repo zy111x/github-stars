@@ -1,6 +1,6 @@
 ---
 project: mind-elixir-core
-stars: 2671
+stars: 2680
 description: |-
     ⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.
 url: https://github.com/SSShooter/mind-elixir-core
@@ -42,22 +42,34 @@ url: https://github.com/SSShooter/mind-elixir-core
 
 Mind elixir is a open source JavaScript mind map core. You can use it with any frontend framework you like.
 
-Features:
+## Features
 
-- Fluent UX
-- Well designed
-- Mobile friendly
-- Lightweight
-- High performance
-- Framework agnostic
-- Pluginable
-- Built-in drag and drop / node edit plugin
-- Export as SVG / PNG / Html
-- Summarize nodes
-- Bulk operations supported
-- Undo / Redo
-- Efficient shortcuts
-- Easily Styling your node with CSS variables
+### 🎨 **User Experience**
+
+- **Fluent UX** - Smooth and intuitive interactions
+- **Well designed** - Clean and modern interface
+- **Mobile friendly** - Touch events for mobile devices
+- **Efficient shortcuts** - Keyboard shortcuts for power users
+
+### ⚡ **Performance & Architecture**
+
+- **Lightweight** - Minimal bundle size
+- **High performance** - Optimized for large mind maps
+- **Framework agnostic** - Works with any frontend framework
+- **Pluginable** - Extensible architecture
+
+### 🛠️ **Core Features**
+
+- **Interactive editing** - Built-in drag and drop / node edit capabilities
+- **Bulk operations** - Multi-node selection and operations
+- **Undo / Redo** - Complete operation history
+- **Node connections & summarization** - Custom node linking and content summarization
+
+### 📤 **Export & Customization**
+
+- **Multiple export formats** - SVG / PNG / HTML export
+- **Easy styling** - Customize mindmap with CSS variables
+- **Theme support** - Built-in themes and custom styling
 
 <details>
 <summary>Table of Contents</summary>
@@ -93,10 +105,9 @@ https://mind-elixir.com/
 
 ### Playground
 
-- Vanilla JS - https://codepen.io/ssshooter/pen/OJrJowN
-- React - https://codesandbox.io/s/mind-elixir-3-x-react-18-x-vy9fcq
-- Vue3 - https://codesandbox.io/s/mind-elixir-3-x-vue3-lth484
-- Vue2 - https://codesandbox.io/s/mind-elixir-3-x-vue-2-x-5kdfjp
+- Vanilla JS - https://codepen.io/ssshooter/pen/vEOqWjE
+- React - https://codesandbox.io/p/devbox/mind-elixir-3-x-react-18-x-forked-f3mtcd
+- Vue3 - https://codesandbox.io/p/sandbox/mind-elixir-3-x-vue3-lth484
 
 ## Documentation
 
@@ -113,13 +124,20 @@ npm i mind-elixir -S
 ```
 
 ```javascript
-import MindElixir from 'mind-elixir'
+import MindElixir from 'mind-elixir';
+import "mind-elixir/style";
 ```
 
 #### Script tag
 
 ```html
 <script type="module" src="https://cdn.jsdelivr.net/npm/mind-elixir/dist/MindElixir.js"></script>
+```
+
+And in your CSS file:
+
+```css
+@import "https://cdn.jsdelivr.net/npm/mind-elixir/dist/style.css";
 ```
 
 ### Init
@@ -136,6 +154,7 @@ import MindElixir from 'mind-elixir'
 
 ```javascript
 import MindElixir from 'mind-elixir'
+import "mind-elixir/style";
 import example from 'mind-elixir/dist/example1'
 
 let options = {
@@ -229,8 +248,9 @@ mind.bus.addListener('operation', operation => {
   // obj: {from:target1,to:target2}
 })
 
-mind.bus.addListener('selectNode', node => {
-  console.log(node)
+
+mind.bus.addListener('selectNodes', nodes => {
+  console.log(nodes)
 })
 
 mind.bus.addListener('expandNode', node => {
@@ -277,14 +297,6 @@ import { domToPng } from '@ssshooter/modern-screenshot'
 
 const download = async () => {
   const dataUrl = await domToPng(mind.nodes, {
-    onCloneNode: node => {
-      const n = node as HTMLDivElement
-      n.style.position = ''
-      n.style.top = ''
-      n.style.left = ''
-      n.style.bottom = ''
-      n.style.right = ''
-    },
     padding: 300,
     quality: 1,
   })
@@ -410,8 +422,11 @@ Thanks for your contributions to Mind Elixir! Your support and dedication make t
 - Remove `getDataMd()`
 - MindElixir.dragMoveHelper -> instance.dragMoveHelper
 - Remove `unselectNode()`
+- Remove `selectNode` event, use `selectNodes` event instead
 - Remove `removeNode()`
 - `node.style.fontSize`: use string instead of number which means you should add `px` to the end
 - Use `instance.findEl` instead of `MindElixir.E` to get a node element
 - CSS file is separated from JS file, you need to import it manually
+  - If using a bundler with CSS support: `import "mind-elixir/style";`
+  - If using a CDN you can add to your CSS file: `@import "https://cdn.jsdelivr.net/npm/mind-elixir@^5.0.0/dist/style.css";`
 

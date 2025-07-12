@@ -1,6 +1,6 @@
 ---
 project: clash-speedtest
-stars: 681
+stars: 691
 description: |-
     clash speedtest
 url: https://github.com/faceair/clash-speedtest
@@ -31,6 +31,8 @@ Usage of clash-speedtest:
         configuration file path, also support http(s) url
   -f string
         filter proxies by name, use regexp (default ".*")
+  -b string
+        block proxies by keywords, use | to separate multiple keywords (example: -b 'rate|x1|1x')
   -server-url string
         server url for testing proxies (default "https://speed.cloudflare.com")
   -download-size int
@@ -53,6 +55,8 @@ Usage of clash-speedtest:
         filter upload speed less than this value(unit: MB/s) (default 2)
   -rename
         rename nodes with IP location and speed
+  -fast
+        enable fast mode, only test latency
 
 # 演示：
 
@@ -80,6 +84,20 @@ Premium|广港|IEPL|05                        	3.87MB/s    	249.00ms
 > clash-speedtest -c config.yaml -output result.yaml -rename
 # 重命名后的节点名称格式：🇺🇸 US | ⬇️ 15.67 MB/s
 # 包含国旗 emoji、国家代码和下载速度
+
+# 6. 快速测试模式
+> clash-speedtest -f 'HK' -fast -c ~/.config/clash/config.yaml
+# 此命令将只测试节点延迟，跳过其他测试项目，适用于：
+# - 快速检查节点是否可用
+# - 只需要检查延迟的场景
+# - 需要快速得到测试结果的场景
+🇭🇰 香港 HK-10 100% |██████████████████| (20/20, 13 it/min)
+序号    节点名称                类型            延迟
+1.      🇭🇰 香港 HK-01           Trojan          657ms
+2.      🇭🇰 香港 HK-20           Trojan          649ms
+3.      🇭🇰 香港 HK-15           Trojan          674ms
+4.      🇭🇰 香港 HK-19           Trojan          649ms
+5.      🇭🇰 香港 HK-12           Trojan          667ms
 
 ## 测速原理
 

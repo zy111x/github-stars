@@ -1,6 +1,6 @@
 ---
 project: anime
-stars: 62053
+stars: 62233
 description: |-
     JavaScript animation engine
 url: https://github.com/juliangarnier/anime
@@ -46,6 +46,17 @@ Help the project become sustainable by sponsoring us on <a target="_blank" href=
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/ice-open-network-logomark.png">
     <img align="center" src="./assets/sponsors/ice-open-network-logomark-dark.png" width="250">
+  </picture>
+</a>
+</p>
+
+### Silver sponsors
+
+<p>
+<a target="_blank" href="https://www.lambdatest.com?utm_source=animeJS&utm_medium=organic&utm_campaign=july_08&utm_term=sk&utm_content=opensource">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/lambdatest-logomark.png">
+    <img align="center" src="./assets/sponsors/lambdatest-logomark-dark.png" width="150">
   </picture>
 </a>
 </p>

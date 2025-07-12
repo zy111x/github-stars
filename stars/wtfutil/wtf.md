@@ -1,6 +1,6 @@
 ---
 project: wtf
-stars: 16165
+stars: 16182
 description: |-
     The personal information dashboard for your terminal
 url: https://github.com/wtfutil/wtf
@@ -164,8 +164,8 @@ All building is done inside a docker container. You can then copy the binary to
 your local machine.
 
 ```bash
-curl -o Dockerfile.build https://raw.githubusercontent.com/wtfutil/wtf/master/Dockerfile.build
-docker build -f Dockerfile.build -t wtfutil --build-arg=version=master .
+curl -o Dockerfile.build https://raw.githubusercontent.com/wtfutil/wtf/trunk/Dockerfile.build
+docker build -f Dockerfile.build -t wtfutil --build-arg=version=trunk .
 docker create --name wtf_build wtfutil
 docker cp wtf_build:/usr/local/bin/wtfutil ~/.local/bin
 docker rm wtf_build
@@ -183,7 +183,7 @@ You can run `wtf` inside a docker container:
 
 ```bash
 # download or create the Dockerfile
-curl -o Dockerfile https://raw.githubusercontent.com/wtfutil/wtf/master/Dockerfile
+curl -o Dockerfile https://raw.githubusercontent.com/wtfutil/wtf/trunk/Dockerfile
 
 # build the docker container
 docker build -t wtfutil .

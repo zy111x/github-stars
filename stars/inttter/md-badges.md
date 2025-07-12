@@ -1,6 +1,6 @@
 ---
 project: md-badges
-stars: 987
+stars: 1008
 description: |-
     An extensive list of Shields.io badges.
 url: https://github.com/inttter/md-badges
@@ -79,6 +79,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Google Assistant](https://img.shields.io/badge/Google%20Assistant-4285F4?logo=googleassistant&logoColor=fff)](#) | `[![Google Assistant](https://img.shields.io/badge/Google%20Assistant-4285F4?logo=googleassistant&logoColor=fff)](#)` |
 | [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](#) | `[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](#)` |
 | [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#) | `[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#)` |
+| [![Ollama](https://img.shields.io/badge/Ollama-fff?logo=ollama&logoColor=000)](#) | `[![Ollama](https://img.shields.io/badge/Ollama-fff?logo=ollama&logoColor=000)](#)` |
 | [![Perplexity](https://img.shields.io/badge/Perplexity-1FB8CD?logo=perplexity&logoColor=fff)](#) | `[![Perplexity](https://img.shields.io/badge/Perplexity-1FB8CD?logo=perplexity&logoColor=fff)](#)` |
 | [![v0](https://img.shields.io/badge/v0-000?logo=v0&logoColor=fff)](#) | `[![v0](https://img.shields.io/badge/v0-000?logo=v0&logoColor=fff)](#)` |
 
@@ -488,6 +489,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![jQuery](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=fff)](#) | `[![jQuery](https://img.shields.io/badge/jQuery-0769AD?logo=jquery&logoColor=fff)](#)` |
 | [![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=fff)](#) | `[![Keras](https://img.shields.io/badge/Keras-D00000?logo=keras&logoColor=fff)](#)` |
 | [![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=fff)](#) | `[![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=fff)](#)` |
+| [![LangChain](https://img.shields.io/badge/LangChain-1c3c3c.svg?logo=langchain&logoColor=white)](#) | `[![LangChain](https://img.shields.io/badge/LangChain-1c3c3c.svg?logo=langchain&logoColor=white)]` |
 | [![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?logo=laravel&logoColor=white)](#) | `[![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?logo=laravel&logoColor=white)](#)` |
 | [![Less](https://img.shields.io/badge/Less-1D365D?logo=less&logoColor=fff)](#) | `[![Less](https://img.shields.io/badge/Less-1D365D?logo=less&logoColor=fff)](#)` |
 | [![Mocha](https://img.shields.io/badge/Mocha-8D6748?logo=mocha&logoColor=fff)](#) | `[![Mocha](https://img.shields.io/badge/Mocha-8D6748?logo=mocha&logoColor=fff)](#)` |

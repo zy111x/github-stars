@@ -1,6 +1,6 @@
 ---
 project: supermemory
-stars: 10076
+stars: 10116
 description: |-
     Build your own second brain with supermemory. Extremely fast, scalable, memory API for the AI era.
 url: https://github.com/supermemoryai/supermemory

@@ -1,6 +1,6 @@
 ---
 project: svelte
-stars: 83312
+stars: 83376
 description: |-
     web development for the rest of us
 url: https://github.com/sveltejs/svelte

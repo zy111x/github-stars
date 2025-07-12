@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 698
+stars: 701
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
@@ -13,9 +13,10 @@ Audited & minimal JS implementation of hash functions, MACs and KDFs.
 - 🔒 [**Audited**](#security) by an independent security firm
 - 🔻 Tree-shakeable: unused code is excluded from your builds
 - 🏎 Fast: hand-optimized for caveats of JS engines
-- 🔍 Reliable: chained / sliding window / DoS tests and fuzzing ensure correctness
+- 🔍 Reliable: chained / sliding window / DoS / ACVP tests and fuzzing
 - 🔁 No unrolled loops: makes it easier to verify and reduces source code size up to 5x
-- 🦘 Includes SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF, Scrypt, Argon2 & KangarooTwelve
+- 🦘 Includes SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF, Scrypt, Argon2
+- 🥈 Optional, friendly wrapper over native WebCrypto
 - 🪶 20KB (gzipped) for everything, 2.4KB for single-hash build
 
 Check out [Upgrading](#upgrading) for information about upgrading from previous versions.
@@ -53,8 +54,8 @@ A standalone file [noble-hashes.js](https://github.com/paulmillr/noble-hashes/re
 
 ```js
 // import * from '@noble/hashes'; // Error: use sub-imports, to ensure small app size
-import { sha256 } from '@noble/hashes/sha2.js'; // ESM & Common.js
-sha256(Uint8Array.from([0xca, 0xfe, 0x01, 0x23])); // returns Uint8Array
+import { sha256 } from '@noble/hashes/sha2.js';
+const hash = sha256(Uint8Array.from([0xca, 0xfe, 0x01, 0x23]));
 
 // Available modules
 import { sha256, sha384, sha512, sha224, sha512_224, sha512_256 } from '@noble/hashes/sha2.js';
@@ -65,7 +66,7 @@ import {
 } from '@noble/hashes/sha3.js';
 import {
   cshake256, turboshake256, kmac256, tuplehash256,
-  k12, keccakprg,
+  kt128, kt256, keccakprg,
 } from '@noble/hashes/sha3-addons.js';
 import { blake3 } from '@noble/hashes/blake3.js';
 import { blake2b, blake2s } from '@noble/hashes/blake2.js';
@@ -76,16 +77,21 @@ import { hkdf } from '@noble/hashes/hkdf.js';
 import { pbkdf2, pbkdf2Async } from '@noble/hashes/pbkdf2.js';
 import { scrypt, scryptAsync } from '@noble/hashes/scrypt.js';
 import { argon2d, argon2i, argon2id } from '@noble/hashes/argon2.js';
-import * as utils from '@noble/hashes/utils.js'; // bytesToHex, bytesToUtf8, concatBytes...
+
+// sha256, sha384, sha512, hmac, hkdf, pbkdf2
+import * as webcrypto from '@noble/hashes/webcrypto.js';
+// bytesToHex, bytesToUtf8, concatBytes
+import * as utils from '@noble/hashes/utils.js';
 ```
 
 - [sha2: sha256, sha384, sha512](#sha2-sha256-sha384-sha512-and-others)
 - [sha3: FIPS, SHAKE, Keccak](#sha3-fips-shake-keccak)
-- [sha3-addons: cSHAKE, KMAC, K12, TurboSHAKE](#sha3-addons-cshake-kmac-k12-turboshake)
+- [sha3-addons: cSHAKE, KMAC, KT128, TurboSHAKE](#sha3-addons-cshake-kmac-kt128-turboshake)
 - [blake1, blake2, blake3](#blake1-blake2-blake3)
 - [legacy: sha1, md5, ripemd160](#legacy-sha1-md5-ripemd160)
-- MACs: [hmac](#hmac) | [kmac](#sha3-addons-cshake-kmac-k12-turboshake) | [blake3 key mode](#blake1-blake2-blake3)
+- MACs: [hmac](#hmac) | [kmac](#sha3-addons-cshake-kmac-kt128-turboshake) | [blake3 key mode](#blake1-blake2-blake3)
 - KDFs: [hkdf](#hkdf) | [pbkdf2](#pbkdf2) | [scrypt](#scrypt) | [argon2](#argon2)
+- [webcrypto: friendly wrapper](#webcrypto-friendly-wrapper)
 - [utils](#utils)
 - [Security](#security) | [Speed](#speed) | [Contributing & testing](#contributing--testing) | [License](#license)
 
@@ -143,7 +149,7 @@ Check out [the differences between SHA-3 and Keccak](https://crypto.stackexchang
 
 ```typescript
 import {
-  cshake128, cshake256, k12,
+  cshake128, cshake256, kt128, kt256,
   keccakprg, kmac128, kmac256,
   parallelhash256, tuplehash256,
   turboshake128, turboshake256,
@@ -155,12 +161,13 @@ const et1 = turboshake128(data);
 const et2 = turboshake256(data, { D: 0x05 });
 // tuplehash(['ab', 'c']) !== tuplehash(['a', 'bc']) !== tuplehash([data])
 const et3 = tuplehash256([utf8ToBytes('ab'), utf8ToBytes('c')]);
-// Not parallel in JS (similar to blake3 / k12), added for compat
+// Not parallel in JS (similar to blake3 / kt128), added for compat
 const ep1 = parallelhash256(data, { blockLen: 8 });
 const kk = Uint8Array.from([0xca]);
 const ek10 = kmac128(kk, data);
 const ek11 = kmac256(kk, data);
-const ek12 = k12(data);
+const ek12 = kt128(data); // kangarootwelve 128-bit
+const ek13 = kt256(data); // kangarootwelve 256-bit
 // pseudo-random generator, first argument is capacity. XKCP recommends 254 bits capacity for 128-bit security strength.
 // * with a capacity of 254 bits.
 const p = keccakprg(254);
@@ -168,11 +175,11 @@ p.feed('test');
 const rand1b = p.fetch(1);
 ```
 
-- Check out [NIST SP 800-185](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-185.pdf):
-  cSHAKE, KMAC, TupleHash, ParallelHash + XOF variants
-- Take a look at reduced-round Keccak [draft](https://datatracker.ietf.org/doc/draft-irtf-cfrg-kangarootwelve/):
-  🦘K12 (KangarooTwelve), TurboSHAKE
-- [KeccakPRG](https://keccak.team/files/CSF-0.1.pdf): Pseudo-random generator based on Keccak
+- cSHAKE, KMAC, TupleHash, ParallelHash + XOF are available, matching
+  [NIST SP 800-185](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-185.pdf)
+- Reduced-round Keccak KT128 (KangarooTwelve 🦘, K12) and TurboSHAKE are available, matching
+  [kangaroo-draft-17](https://datatracker.ietf.org/doc/draft-irtf-cfrg-kangarootwelve/).
+- [KeccakPRG](https://keccak.team/files/CSF-0.1.pdf): pseudo-random generator based on Keccak
 
 #### blake1, blake2, blake3
 
@@ -265,10 +272,10 @@ Conforms to [RFC 5869](https://datatracker.ietf.org/doc/html/rfc5869).
 ```typescript
 import { pbkdf2, pbkdf2Async } from '@noble/hashes/pbkdf2.js';
 import { sha256 } from '@noble/hashes/sha2.js';
-const pbkey1 = pbkdf2(sha256, 'password', 'salt', { c: 32, dkLen: 32 });
-const pbkey2 = await pbkdf2Async(sha256, 'password', 'salt', { c: 32, dkLen: 32 });
+const pbkey1 = pbkdf2(sha256, 'password', 'salt', { c: 524288, dkLen: 32 });
+const pbkey2 = await pbkdf2Async(sha256, 'password', 'salt', { c: 524288, dkLen: 32 });
 const pbkey3 = await pbkdf2Async(sha256, Uint8Array.from([1, 2, 3]), Uint8Array.from([4, 5, 6]), {
-  c: 32,
+  c: 524288,
   dkLen: 32,
 });
 ```
@@ -336,6 +343,33 @@ Argon2 [RFC 9106](https://datatracker.ietf.org/doc/html/rfc9106) implementation.
 > Argon2 can't be fast in JS, because there is no fast Uint64Array.
 > It is suggested to use [Scrypt](#scrypt) instead.
 > Being 5x slower than native code means brute-forcing attackers have bigger advantage.
+
+#### webcrypto: friendly wrapper
+
+```js
+import { sha256, sha384, sha512, hmac, hkdf, pbkdf2 } from '@noble/hashes/webcrypto.js';
+const whash = await sha256(Uint8Array.from([0xca, 0xfe, 0x01, 0x23]));
+
+const key = new Uint8Array(32).fill(1);
+const msg = new Uint8Array(32).fill(2);
+const wmac = await hmac(sha256, key, msg);
+
+const inputKey = randomBytes(32);
+const salt = randomBytes(32);
+const info = 'application-key';
+const hk1 = await hkdf(sha256, inputKey, salt, info, 32);
+
+const pbkey1 = await pbkdf2(sha256, 'password', 'salt', { c: 524288, dkLen: 32 });
+```
+
+Sometimes people want to use built-in `crypto.subtle` instead of pure JS implementation.
+However, it has terrible API.
+
+We simplify access to built-ins with API which mirrors noble-hashes.
+The overhead is minimal - just 30+ lines of code, which verify input correctness.
+
+> [!NOTE]
+> Webcrypto methods are always async.
 
 #### utils
 
@@ -504,7 +538,7 @@ Supported node.js versions:
 - v2: v20.19+ (ESM-only)
 - v1: v14.21+ (ESM & CJS)
 
-Changelog of v2, when upgrading from hashes v1:
+v2.0 changelog:
 
 - Bump minimum node.js version from v14 to v20.19
 - Bump compilation target from es2020 to es2022

@@ -1,6 +1,6 @@
 ---
 project: flutter
-stars: 171283
+stars: 171350
 description: |-
     Flutter makes it easy and fast to build beautiful apps for mobile and beyond
 url: https://github.com/flutter/flutter

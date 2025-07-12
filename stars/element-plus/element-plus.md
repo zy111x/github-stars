@@ -1,6 +1,6 @@
 ---
 project: element-plus
-stars: 26175
+stars: 26212
 description: |-
     🎉 A Vue.js 3 UI Library made by Element team
 url: https://github.com/element-plus/element-plus
@@ -111,6 +111,11 @@ You can also try Element Plus out with the components built-in playground.
       <td align="center" valign="middle">
         <a href="https://fantastic-admin.github.io/?from=element-plus" target="_blank">
           <img width="130px" src="https://github.com/user-attachments/assets/0dbd9c02-d132-4c9e-a162-2b5a8728fc7e">
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://el.frsimple.com" target="_blank">
+          <img width="130px" src="https://github.com/user-attachments/assets/27ec522b-5de2-4c61-88b9-be47ff3ccc69">
         </a>
       </td>
       <td align="center" valign="middle">

@@ -1,6 +1,6 @@
 ---
 project: evil.sh
-stars: 2187
+stars: 2186
 description: |-
     :speak_no_evil: Subtle and not-so-subtle shell tweaks that will slowly drive people insane.
 url: https://github.com/mathiasbynens/evil.sh

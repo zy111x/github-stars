@@ -1,6 +1,6 @@
 ---
 project: draggabilly
-stars: 3875
+stars: 3873
 description: |-
     :point_down: Make that shiz draggable
 url: https://github.com/desandro/draggabilly

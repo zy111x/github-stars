@@ -1,6 +1,6 @@
 ---
 project: data-table-filters
-stars: 1529
+stars: 1540
 description: |-
     A playground for tanstack-table
 url: https://github.com/openstatusHQ/data-table-filters

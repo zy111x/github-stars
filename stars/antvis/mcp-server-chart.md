@@ -1,14 +1,14 @@
 ---
 project: mcp-server-chart
-stars: 1727
+stars: 1873
 description: |-
-    🤖 A visualization Model Context Protocol server for generating 25+ visual charts using @antvis.
+    🤖 A visualization mcp contains 25+ visual charts using @antvis. Using for chart generation and data analysis.
 url: https://github.com/antvis/mcp-server-chart
 ---
 
 # MCP Server Chart  ![](https://badge.mcpx.dev?type=server 'MCP Server')  [![build](https://github.com/antvis/mcp-server-chart/actions/workflows/build.yml/badge.svg)](https://github.com/antvis/mcp-server-chart/actions/workflows/build.yml) [![npm Version](https://img.shields.io/npm/v/@antv/mcp-server-chart.svg)](https://www.npmjs.com/package/@antv/mcp-server-chart) [![smithery badge](https://smithery.ai/badge/@antvis/mcp-server-chart)](https://smithery.ai/server/@antvis/mcp-server-chart) [![npm License](https://img.shields.io/npm/l/@antv/mcp-server-chart.svg)](https://www.npmjs.com/package/@antv/mcp-server-chart)
 
-A Model Context Protocol server for generating charts using [AntV](https://github.com/antvis/).
+A Model Context Protocol server for generating charts using [AntV](https://github.com/antvis/). We can use this mcp server for _chart generation_ and _data analysis_.
 
 <a href="https://www.star-history.com/#antvis/mcp-server-chart&Date">
   <img width="512" src="https://api.star-history.com/svg?repos=antvis/mcp-server-chart&type=Date" />

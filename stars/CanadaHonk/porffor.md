@@ -1,6 +1,6 @@
 ---
 project: porffor
-stars: 3639
+stars: 3704
 description: |-
     An ahead-of-time JavaScript compiler
 url: https://github.com/CanadaHonk/porffor
