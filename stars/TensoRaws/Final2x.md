@@ -1,8 +1,8 @@
 ---
 project: Final2x
-stars: 6571
+stars: 6577
 description: 2^x Image Super-Resolution
-url: https://github.com/Tohrusky/Final2x
+url: https://github.com/TensoRaws/Final2x
 ---
 
 This is a powerful tool that allows for image super-resolution to arbitrary sizes using multiple models, designed to enhance the resolution and quality of images, making them clearer and more detailed.

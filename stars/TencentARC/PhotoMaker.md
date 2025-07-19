@@ -1,6 +1,6 @@
 ---
 project: PhotoMaker
-stars: 10022
+stars: 10027
 description: PhotoMaker [CVPR 2024]
 url: https://github.com/TencentARC/PhotoMaker
 ---
