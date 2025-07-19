@@ -1,6 +1,6 @@
 ---
 project: heyform
-stars: 8242
+stars: 8257
 description: |-
     Open-Source Form Builder
 url: https://github.com/heyform/heyform

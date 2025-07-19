@@ -1,6 +1,6 @@
 ---
 project: cuicui
-stars: 864
+stars: 867
 description: |-
     Simplify your UI with clean, copy-paste components that minimize JavaScript, maximize CSS, spark creativity, and empower you with code you fully own and understand.
 url: https://github.com/damien-schneider/cuicui

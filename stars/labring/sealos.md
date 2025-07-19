@@ -1,6 +1,6 @@
 ---
 project: sealos
-stars: 15970
+stars: 15997
 description: |-
     Sealos is an AI native super application platform, Application-centric Intelligent Cloud Operating System. Set up development environments for any programming language or framework, deploy high-availability databases (like MySQL, PostgreSQL, Redis, and MongoDB) and run any Docker image.
 url: https://github.com/labring/sealos

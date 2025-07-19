@@ -1,6 +1,6 @@
 ---
 project: chsrc
-stars: 5702
+stars: 5731
 description: |-
     chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
@@ -15,7 +15,7 @@ url: https://github.com/RubyMetric/chsrc
  ! Contributors  : Mikachu2333 <mikachu.23333@zohomail.com>
  !               |
  ! Created On    : <2023-12-28>
- ! Last Modified : <2025-07-12>
+ ! Last Modified : <2025-07-14>
  ! ---------------------------------------------------------- -->
 
 <div align="center">
@@ -178,6 +178,9 @@ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x86-windo
 # x64
 $ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc_latest-1_amd64.deb -o chsrc_latest-1_amd64.deb
 
+# 也可以使用 Wget
+wget https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc_latest-1_amd64.deb -O chsrc_latest-1_amd64.deb
+
 $ sudo apt install ./chsrc_latest-1_amd64.deb
 # 或
 $ sudo sudo dpkg -i chsrc_latest-1_amd64.deb
@@ -203,6 +206,9 @@ $ yay -S chsrc     # Build  from GitHub Release
 ```bash
 # 非root用户默认安装至 ~/.local/bin
 $ curl https://chsrc.run/posix | bash
+
+# 也可以使用 Wget
+$ wget -O - https://chsrc.run/posix | bash
 
 # root用户默认安装至 /usr/local/bin
 $ curl https://chsrc.run/posix | sudo bash
@@ -510,7 +516,7 @@ chsrc set conda  | anaconda
 
 另外特别感谢以下组织或项目:
 
-1. [MirrorZ 教育网镜像站](https://help.mirrors.cernet.edu.cn/)
+1. [校园网联合镜像站(MirrorZ)](https://help.mirrors.cernet.edu.cn/)
 2. [清华大学 Tuna](https://mirrors.tuna.tsinghua.edu.cn/)
 3. [上海交通大学软件源镜像服务](https://mirrors.sjtug.sjtu.edu.cn/)
 4. [中国科学技术大学 Linux 用户协会](https://github.com/ustclug)

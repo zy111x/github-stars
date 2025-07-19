@@ -1,6 +1,6 @@
 ---
 project: Checkmate
-stars: 6163
+stars: 6965
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Don't be shy, join here: https://discord.com/invite/NAb6H3UTjK :)
 url: https://github.com/bluewave-labs/Checkmate
@@ -36,7 +36,8 @@ Checkmate has been stress-tested with 1000+ active monitors without any particul
 
 - [📦 Demo](#-demo)  
 - [🔗 User's guide](#-users-guide)  
-- [🛠️ Installation](#️-installation)  
+- [🛠️ Installation](#️-installation)
+- [🚀 Deploying Checkmate with Helm](#-deploying-checkmate-with-helm)
 - [🏁 Translations](#-translations)  
 - [🚀 Performance](#-performance)  
 - [💚 Questions & Ideas](#-questions--ideas)  
@@ -58,7 +59,10 @@ Usage instructions can be found [here](https://docs.checkmate.so/checkmate-2.1).
 
 ## 🛠️ Installation
 
-See installation instructions in [Checkmate documentation portal](https://docs.checkmate.so/checkmate-2.1/users-guide/quickstart). Alternatively, you can also use [Coolify](https://coolify.io/), [Elestio](https://elest.io/open-source/checkmate) or [Pikapods](https://www.pikapods.com/) to quickly spin off a Checkmate instance. If you would like to monitor your server infrastructure, you'll need [Capture agent](https://github.com/bluewave-labs/capture). Capture repository also contains the installation instructions.
+See installation instructions in [Checkmate documentation portal](https://docs.checkmate.so/checkmate-2.1/users-guide/quickstart). 
+
+Alternatively, you can also use [Coolify](https://coolify.io/), [Elestio](https://elest.io/open-source/checkmate), [K8s](./charts/helm/checkmate/INSTALLATION.md) or [Pikapods](https://www.pikapods.com/) to quickly spin off a Checkmate instance. If you would like to monitor your server infrastructure, you'll need [Capture agent](https://github.com/bluewave-labs/capture). Capture repository also contains the installation instructions.
+
 
 ## 🏁 Translations
 

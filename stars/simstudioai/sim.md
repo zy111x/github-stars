@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 4852
+stars: 4980
 description: |-
     Sim Studio is an open-source AI agent workflow builder. Sim Studio's interface is a lightweight, intuitive way to quickly build and deploy LLMs that connect with your favorite tools.
 url: https://github.com/simstudioai/sim
@@ -95,6 +95,7 @@ docker compose -f docker-compose.prod.yml up -d
 1. Open VS Code with the [Remote - Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 2. Open the project and click "Reopen in Container" when prompted
 3. Run `bun run dev:full` in the terminal or use the `sim-start` alias
+   - This starts both the main application and the realtime socket server
 
 ### Option 4: Manual Setup
 
@@ -121,22 +122,25 @@ bunx drizzle-kit push
 
 4. Start the development servers:
 
-Next.js app:
+**Recommended approach - run both servers together (from project root):**
 
+```bash
+bun run dev:full
+```
+
+This starts both the main Next.js application and the realtime socket server required for full functionality.
+
+**Alternative - run servers separately:**
+
+Next.js app (from project root):
 ```bash
 bun run dev
 ```
 
-Start the realtime server:
-
+Realtime socket server (from `apps/sim` directory in a separate terminal):
 ```bash
+cd apps/sim
 bun run dev:sockets
-```
-
-Run both together (recommended):
-
-```bash
-bun run dev:full
 ```
 
 ## Tech Stack

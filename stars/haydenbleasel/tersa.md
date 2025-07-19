@@ -1,6 +1,6 @@
 ---
 project: tersa
-stars: 410
+stars: 426
 description: |-
     Tersa is an open source canvas for building AI workflows.
 url: https://github.com/haydenbleasel/tersa

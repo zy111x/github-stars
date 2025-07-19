@@ -1,6 +1,6 @@
 ---
 project: github-stars-video
-stars: 106
+stars: 107
 description: |-
     Generate an animation for your GitHub stars ⭐️🎞️
 url: https://github.com/scastiel/github-stars-video

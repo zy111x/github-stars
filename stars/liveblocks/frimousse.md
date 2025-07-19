@@ -1,6 +1,6 @@
 ---
 project: frimousse
-stars: 1456
+stars: 1465
 description: |-
     A lightweight, unstyled, and composable emoji picker for React.
 url: https://github.com/liveblocks/frimousse
@@ -83,6 +83,11 @@ It can be composed and combined with other shadcn/ui components like [Popover](h
 ## Documentation
 
 Find the full documentation and examples on [frimousse.liveblocks.io](https://frimousse.liveblocks.io).
+
+## Compatibility
+
+- React 18 and 19
+- TypeScript 5.1 and above
 
 ## Miscellaneous
 

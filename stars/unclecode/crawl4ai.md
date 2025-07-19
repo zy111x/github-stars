@@ -1,6 +1,6 @@
 ---
 project: crawl4ai
-stars: 47743
+stars: 48222
 description: |-
     🚀🤖 Crawl4AI: Open-source LLM Friendly Web Crawler & Scraper. Don't be shy, join here: https://discord.gg/jP8KfhDhyN
 url: https://github.com/unclecode/crawl4ai
@@ -531,15 +531,18 @@ async def test_news_crawl():
 - **🧠 Adaptive Crawling**: Your crawler now learns and adapts to website patterns automatically:
   ```python
   config = AdaptiveConfig(
-      confidence_threshold=0.7,
-      max_history=100,
-      learning_rate=0.2
+      confidence_threshold=0.7, # Min confidence to stop crawling
+      max_depth=5, # Maximum crawl depth
+      max_pages=20, # Maximum number of pages to crawl
+      strategy="statistical"
   )
   
-  result = await crawler.arun(
-      "https://news.example.com",
-      config=CrawlerRunConfig(adaptive_config=config)
-  )
+  async with AsyncWebCrawler() as crawler:
+      adaptive_crawler = AdaptiveCrawler(crawler, config)
+      state = await adaptive_crawler.digest(
+          start_url="https://news.example.com",
+          query="latest news content"
+      )
   # Crawler learns patterns and improves extraction over time
   ```
 

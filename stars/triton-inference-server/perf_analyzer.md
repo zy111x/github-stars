@@ -1,6 +1,6 @@
 ---
 project: perf_analyzer
-stars: 92
+stars: 93
 description: |-
     null
 url: https://github.com/triton-inference-server/perf_analyzer

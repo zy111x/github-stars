@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 448
+stars: 449
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -1089,6 +1089,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Git for Windows](https://img.shields.io/badge/Git%20for%20Windows-222222?style=for-the-badge&logo=Git+for+Windows&logoColor=80B3FF)
 ![Git LFS](https://img.shields.io/badge/Git%20LFS-F64935?style=for-the-badge&logo=Git+LFS&logoColor=FFFFFF)
 ![GitBook](https://img.shields.io/badge/GitBook-222222?style=for-the-badge&logo=GitBook&logoColor=BBDDE5)
+![GitCode](https://img.shields.io/badge/GitCode-DA203E?style=for-the-badge&logo=GitCode&logoColor=FFFFFF)
 ![Gitconnected](https://img.shields.io/badge/Gitconnected-2E69AE?style=for-the-badge&logo=Gitconnected&logoColor=FFFFFF)
 ![Gitea](https://img.shields.io/badge/Gitea-609926?style=for-the-badge&logo=Gitea&logoColor=FFFFFF)
 ![Gitee](https://img.shields.io/badge/Gitee-C71D23?style=for-the-badge&logo=Gitee&logoColor=FFFFFF)
@@ -2380,6 +2381,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Rarible](https://img.shields.io/badge/Rarible-222222?style=for-the-badge&logo=Rarible&logoColor=FEDA03)
 ![Rasa](https://img.shields.io/badge/Rasa-5A17EE?style=for-the-badge&logo=Rasa&logoColor=FFFFFF)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=Raspberry+Pi&logoColor=FFFFFF)
+![Ratatui](https://img.shields.io/badge/Ratatui-000000?style=for-the-badge&logo=Ratatui&logoColor=FFFFFF)
 ![Ravelry](https://img.shields.io/badge/Ravelry-EE6E62?style=for-the-badge&logo=Ravelry&logoColor=FFFFFF)
 ![Ray](https://img.shields.io/badge/Ray-028CF0?style=for-the-badge&logo=Ray&logoColor=FFFFFF)
 ![Raycast](https://img.shields.io/badge/Raycast-FF6363?style=for-the-badge&logo=Raycast&logoColor=FFFFFF)

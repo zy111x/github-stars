@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2829
+stars: 2834
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -432,13 +432,13 @@ Options:
           URLs to check (supports regex). Has preference over all excludes
 
       --exclude <EXCLUDE>
-          Exclude URLs and mail addresses from checking (supports regex)
+          Exclude URLs and mail addresses from checking. The values are treated as regular expressions
 
       --exclude-file <EXCLUDE_FILE>
           Deprecated; use `--exclude-path` instead
 
       --exclude-path <EXCLUDE_PATH>
-          Exclude file path from getting checked
+          Exclude paths from getting checked. The values are treated as regular expressions
 
   -E, --exclude-all-private
           Exclude all private IPs from checking.

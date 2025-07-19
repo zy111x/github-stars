@@ -1,6 +1,6 @@
 ---
 project: filebrowser
-stars: 30274
+stars: 30410
 description: |-
     📂 Web File Browser
 url: https://github.com/filebrowser/filebrowser

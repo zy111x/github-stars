@@ -1,6 +1,6 @@
 ---
 project: blessed-contrib
-stars: 15620
+stars: 15623
 description: |-
     Build terminal dashboards using ascii/ansi art and javascript
 url: https://github.com/yaronn/blessed-contrib

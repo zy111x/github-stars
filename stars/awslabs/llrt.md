@@ -1,6 +1,6 @@
 ---
 project: llrt
-stars: 8475
+stars: 8478
 description: |-
     LLRT (Low Latency Runtime) is an experimental, lightweight JavaScript runtime designed to address the growing demand for fast and efficient Serverless applications.
 url: https://github.com/awslabs/llrt
@@ -115,6 +115,7 @@ The test runner also has support for filters. Using filters is as simple as addi
 | Modules        | Node.js | LLRT ⚠️ |
 | -------------- | ------- | ------- |
 | assert         | ✔︎     | ✔︎️    |
+| async_hooks    | ✔︎     | ✔︎️    |
 | buffer         | ✔︎     | ✔︎️    |
 | child_process  | ✔︎     | ✔︎⏱   |
 | console        | ✔︎     | ✔︎     |
@@ -575,6 +576,12 @@ Used to explicitly specify a preferred platform for the Node.js package resolver
 ### `LLRT_TLS_VERSION=value`
 
 Set the TLS version to be used for network connections. By default only TLS 1.2 is enabled. TLS 1.3 can also be enabled by setting this variable to `1.3`
+
+### `LLRT_ASYNC_HOOKS=value`
+
+When using asynchronous hooks, the hooking function inside QuickJS is activated. This is disabled by default as there is concern that it may have a significant impact on performance.
+
+By setting this environment variable to `1`, the asynchronous hook function can be enabled, allowing you to track asynchronous processing using the `async_hooks` module.
 
 ## Benchmark Methodology
 

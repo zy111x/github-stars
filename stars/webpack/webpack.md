@@ -1,6 +1,6 @@
 ---
 project: webpack
-stars: 65429
+stars: 65447
 description: |-
     A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through "loaders", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.
 url: https://github.com/webpack/webpack
@@ -140,16 +140,6 @@ loaders](https://webpack.js.org/api/loaders/) using Node.js.
 
 Loaders are activated by using `loadername!` prefixes in `require()` statements,
 or are automatically applied via regex from your webpack configuration.
-
-#### Files
-
-|       Name        |   Status   | Install Size | Description                                              |
-| :---------------: | :--------: | :----------: | :------------------------------------------------------- |
-| [val-loader][val] | ![val-npm] | ![val-size]  | Executes code as module and considers exports as JS code |
-
-[val]: https://github.com/webpack-contrib/val-loader
-[val-npm]: https://img.shields.io/npm/v/val-loader.svg
-[val-size]: https://packagephobia.com/badge?p=val-loader
 
 #### JSON
 
