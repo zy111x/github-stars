@@ -1,6 +1,6 @@
 ---
 project: Misago
-stars: 2650
+stars: 2655
 description: |-
     Misago is fully featured modern forum application that is fast, scalable and responsive.
 url: https://github.com/rafalp/Misago

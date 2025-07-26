@@ -1,6 +1,6 @@
 ---
 project: IPQuality
-stars: 4115
+stars: 4197
 description: |-
     IP质量检测脚本 - IP Quality Check Script
 url: https://github.com/xykt/IPQuality
@@ -150,6 +150,7 @@ bash <(curl -Ls IP.Check.Place) -l jp|es|de|fr|ru|pt
 | UCloud</br>优刻得 | ![ucloud_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_ucloud.png) | [https://ucloud.cn](https://www.ucloud.cn/staticIPHost?ytag=uhost_ip_github)|
 | AaITR | ![aaitr_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_aaitr.png) | [https://aaitr.com](https://www.aaitr.com/link.php?id=5)| 
 | VIRCS</br>威尔克斯 | ![vircs_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_vircs.png) | [https://vircs.com](https://www.vircs.com/promotion?code=6)| 
+| Thordata</br>`原生IP` | ![thordata_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_thordata.png) | [https://thordata.com](https://www.thordata.com/?ls=VNSCxroa&lk=quality)| 
 
 ##### *E-Mail: sponsor@check.place Telegram Bot: https://t.me/xythebot*
 **仅接受长期稳定运营，信誉良好的商家*

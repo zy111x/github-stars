@@ -1,6 +1,6 @@
 ---
 project: refly
-stars: 4347
+stars: 4390
 description: |-
     The world's first open-source "Vibe Workflow" platform for complex tasks.
 url: https://github.com/refly-ai/refly

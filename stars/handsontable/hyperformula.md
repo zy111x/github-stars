@@ -1,6 +1,6 @@
 ---
 project: hyperformula
-stars: 2361
+stars: 2368
 description: |-
     HyperFormula is an open-source headless spreadsheet for business web apps. It comes with over 400 formulas, CRUD operations, undo-redo, clipboard support, and sorting.
 url: https://github.com/handsontable/hyperformula

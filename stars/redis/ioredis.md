@@ -1,6 +1,6 @@
 ---
 project: ioredis
-stars: 14919
+stars: 14928
 description: |-
     🚀 A robust, performance-focused, and full-featured Redis client for Node.js.
 url: https://github.com/redis/ioredis
@@ -1157,7 +1157,7 @@ const cluster = new Redis.Cluster(
   ],
   {
     natMap: (key) => {
-      if(key.indexOf('30001')) {
+      if(key.includes('30001')) {
         return { host: "203.0.113.73", port: 30001 };
       }
 

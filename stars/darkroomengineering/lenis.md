@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 11363
+stars: 11423
 description: |-
     How smooth scroll should be
 url: https://github.com/darkroomengineering/lenis

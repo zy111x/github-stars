@@ -1,6 +1,6 @@
 ---
 project: mailmason
-stars: 950
+stars: 951
 description: |-
     A complete toolset to streamline building and updating a set of consistent transactional emails.
 url: https://github.com/ActiveCampaign/mailmason

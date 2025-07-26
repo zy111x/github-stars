@@ -1,6 +1,6 @@
 ---
 project: substats
-stars: 854
+stars: 856
 description: |-
     ( ｀д′) how many followers do i have? how many!
 url: https://github.com/spencerwooo/substats

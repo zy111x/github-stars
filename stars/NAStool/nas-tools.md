@@ -1,6 +1,6 @@
 ---
 project: nas-tools
-stars: 9019
+stars: 9022
 description: |-
     NAS媒体库管理工具
 url: https://github.com/NAStool/nas-tools

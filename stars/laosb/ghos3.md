@@ -1,6 +1,6 @@
 ---
 project: ghos3
-stars: 46
+stars: 47
 description: |-
     A modernized AWS S3 storage adapter for Ghost.
 url: https://github.com/laosb/ghos3

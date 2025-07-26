@@ -1,6 +1,6 @@
 ---
 project: TextGAN-Researcher
-stars: 81
+stars: 87
 description: |-
     🧐 Open Deep Research Agent: Automated Knowledge Discovery with TextGAN
 url: https://github.com/imbue-bit/TextGAN-Researcher
@@ -24,6 +24,9 @@ url: https://github.com/imbue-bit/TextGAN-Researcher
 </p>
 
 <br>
+
+>[!IMPORTANT]
+> [Rainyun](https://www.rainyun.com/mygo_) is the best choice for low-cost deployment of advanced agents.
 
 ## 🌟 Table of Contents
 

@@ -1,6 +1,6 @@
 ---
 project: create-better-t-stack
-stars: 2235
+stars: 2404
 description: |-
     A modern CLI tool for scaffolding end-to-end type-safe TypeScript projects with best practices and customizable configurations
 url: https://github.com/AmanVarshney01/create-better-t-stack
@@ -24,6 +24,13 @@ bun create better-t-stack@latest
 # Using pnpm
 pnpm create better-t-stack@latest
 ```
+
+## Sponsors
+
+<p align="center">
+<img src="https://sponsors.amanv.dev/sponsors.png" alt="Sponsors">
+</p>
+
 
 ## Features
 
@@ -68,12 +75,6 @@ bun dev:web
 ## Want to contribute?
 
 Just fork the repository and submit a pull request!
-
-## Sponsors
-
-<p align="center">
-<img src="https://sponsors.amanv.dev/sponsors.png" alt="Sponsors" width="300">
-</p>
 
 ## Star History
 

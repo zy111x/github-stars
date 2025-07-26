@@ -1,6 +1,6 @@
 ---
 project: rolldown
-stars: 11641
+stars: 11687
 description: |-
     Fast Rust bundler for JavaScript/TypeScript with Rollup-compatible API.
 url: https://github.com/rolldown/rolldown
@@ -18,6 +18,7 @@ url: https://github.com/rolldown/rolldown
 [![NPM version][badge-npm-version]][url-npm]
 [![CodSpeed Badge](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://codspeed.io/rolldown/rolldown)
 [![Discord chat][badge-discord]][discord-url]
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/rolldown/rolldown)
 
 </div>
 

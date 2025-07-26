@@ -1,6 +1,6 @@
 ---
 project: mind-elixir-core
-stars: 2688
+stars: 2693
 description: |-
     ⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.
 url: https://github.com/SSShooter/mind-elixir-core
@@ -74,6 +74,11 @@ Mind elixir is a open source JavaScript mind map core. You can use it with any f
 <details>
 <summary>Table of Contents</summary>
 
+- [Features](#features)
+  - [🎨 **User Experience**](#-user-experience)
+  - [⚡ **Performance \& Architecture**](#-performance--architecture)
+  - [🛠️ **Core Features**](#️-core-features)
+  - [📤 **Export \& Customization**](#-export--customization)
 - [Try now](#try-now)
   - [Playground](#playground)
 - [Documentation](#documentation)
@@ -125,7 +130,7 @@ npm i mind-elixir -S
 
 ```javascript
 import MindElixir from 'mind-elixir';
-import "mind-elixir/style";
+import "mind-elixir/style.css";
 ```
 
 #### Script tag
@@ -154,7 +159,7 @@ And in your CSS file:
 
 ```javascript
 import MindElixir from 'mind-elixir'
-import "mind-elixir/style";
+import "mind-elixir/style.css";
 import example from 'mind-elixir/dist/example1'
 
 let options = {
@@ -403,6 +408,8 @@ pnpm doc
 pnpm doc:md
 ```
 
+Use [DeepWiki](https://deepwiki.com/SSShooter/mind-elixir-core) to learn more about Mind Elixir
+
 ## Thanks
 
 - [@viselect/vanilla](https://github.com/simonwep/selection/tree/master/packages/vanilla)
@@ -427,6 +434,6 @@ Thanks for your contributions to Mind Elixir! Your support and dedication make t
 - `node.style.fontSize`: use string instead of number which means you should add `px` to the end
 - Use `instance.findEl` instead of `MindElixir.E` to get a node element
 - CSS file is separated from JS file, you need to import it manually
-  - If using a bundler with CSS support: `import "mind-elixir/style";`
+  - If using a bundler with CSS support: `import "mind-elixir/style.css";`
   - If using a CDN you can add to your CSS file: `@import "https://cdn.jsdelivr.net/npm/mind-elixir@^5.0.0/dist/style.css";`
 

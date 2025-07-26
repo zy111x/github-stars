@@ -1,6 +1,6 @@
 ---
 project: webpack
-stars: 65447
+stars: 65454
 description: |-
     A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through "loaders", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.
 url: https://github.com/webpack/webpack
@@ -259,6 +259,18 @@ JavaScript** by deduplicating frequently used modules, minifying, and giving
 you full control of what is loaded initially and what is loaded at runtime
 through code splitting. It can also make your code chunks **cache
 friendly** by using hashes.
+
+### Developer Tools
+
+If you're working on webpack itself, or building advanced plugins or integrations, the tools below can help you explore internal mechanics, debug plugin life-cycles, and build custom tooling.
+
+#### Instrumentation
+
+| Name                                                      | Status                | Description                                                                                                                       |
+| --------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [tapable-tracer](https://github.com/ertgl/tapable-tracer) | ![tapable-tracer-npm] | Traces tapable hook execution in real-time and collects structured stack frames. Can export to UML for generating visualizations. |
+
+[tapable-tracer-npm]: https://img.shields.io/npm/v/tapable-tracer.svg
 
 <h2>Contributing</h2>
 

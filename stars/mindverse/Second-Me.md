@@ -1,6 +1,6 @@
 ---
 project: Second-Me
-stars: 13396
+stars: 13513
 description: |-
     Train your AI self, amplify you, bridge the world
 url: https://github.com/mindverse/Second-Me

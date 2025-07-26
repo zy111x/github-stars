@@ -1,6 +1,6 @@
 ---
 project: awesome-flutter
-stars: 56519
+stars: 56598
 description: |-
     An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more.
 url: https://github.com/Solido/awesome-flutter
@@ -16,6 +16,10 @@ url: https://github.com/Solido/awesome-flutter
 <a href="https://twitter.com/blueaquilae">
 <img alt="Awesome" src="https://img.shields.io/twitter/url/https/twitter.com/blueaquilae.svg?style=social&label=Follow%20%40blueaquilae" />
 </a>
+</p>
+
+<p align="center">
+<a href="https://trendshift.io/repositories/9391" target="_blank"><img src="https://trendshift.io/api/badge/repositories/9391" alt="Solido%2Fawesome-flutter | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
 

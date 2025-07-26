@@ -1,6 +1,6 @@
 ---
 project: RegionRestrictionCheck
-stars: 419
+stars: 420
 description: |-
     A bash script to check the status of your IP on various geo-restricted services. 
 url: https://github.com/xykt/RegionRestrictionCheck

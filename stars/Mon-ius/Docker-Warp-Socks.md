@@ -1,6 +1,6 @@
 ---
 project: Docker-Warp-Socks
-stars: 463
+stars: 464
 description: |-
     Connet to CloudFlare WARP, exposing `socks5` proxy all together.
 url: https://github.com/Mon-ius/Docker-Warp-Socks
@@ -97,7 +97,7 @@ curl -fsSL "https://get.docker.com" | sudo bash
 
 # to avoid `sudo` calling
 sudo usermod -aG docker ${USER}
-# sudo chmod 666 /var/run/docker.sock
+sudo chmod 666 /var/run/docker.sock
 sudo chown root:docker /var/run/docker.sock
 # or check https://docs.docker.com/engine/security/rootless 
 # if required a rootless install with `dockerd-rootless-setuptool.sh install`

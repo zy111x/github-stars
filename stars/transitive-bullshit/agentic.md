@@ -1,6 +1,6 @@
 ---
 project: agentic
-stars: 17805
+stars: 17837
 description: |-
     Agentic is RapidAPI for LLM Tools. Your API ⇒ Paid MCP. Instantly.
 url: https://github.com/transitive-bullshit/agentic

@@ -1,6 +1,6 @@
 ---
 project: CloudflareSpeedTest
-stars: 22351
+stars: 22447
 description: |-
     🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~
 url: https://github.com/XIU2/CloudflareSpeedTest
@@ -33,7 +33,7 @@ url: https://github.com/XIU2/CloudflareSpeedTest
 
 ### 下载运行
 
-1. 下载编译好的可执行文件（ [Github Releases](https://github.com/XIU2/CloudflareSpeedTest/releases) / [蓝奏云](https://pan.lanpw.com/b0742hkxe) ）并解压。  
+1. 下载编译好的可执行文件（ [Github Releases](https://github.com/XIU2/CloudflareSpeedTest/releases) / [蓝奏云](https://xiu.lanzoub.com/b0742hkxe) ）并解压。  
 2. 双击运行 `cfst.exe` 文件（Windows 系统），等待测速完成...
 
 <details>
@@ -41,7 +41,8 @@ url: https://github.com/XIU2/CloudflareSpeedTest
 
 ****
 
-通过scoop安装:
+如果你有 scoop(Windows 下的命令行安装程序)，则可以这样安装:
+
 ```sh
 # 添加最多人使用的中文软件包仓库：dorado
 scoop bucket add dorado https://github.com/chawyehsu/dorado
@@ -66,13 +67,13 @@ mkdir cfst
 cd cfst
 
 # 下载 CFST 压缩包（自行根据需求替换 URL 中 [版本号] 和 [文件名]）
-wget -N https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.2/cfst_linux_amd64.tar.gz
+wget -N https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.4/cfst_linux_amd64.tar.gz
 # 如果你是在国内网络环境中下载，那么请使用下面这几个镜像加速之一：
-# wget -N https://ghfast.top/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.2/cfst_linux_arm64.tar.gz
-# wget -N https://wget.la/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.2/cfst_linux_arm64.tar.gz
-# wget -N https://ghproxy.net/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.2/cfst_linux_arm64.tar.gz
-# wget -N https://gh-proxy.com/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.2/cfst_linux_arm64.tar.gz
-# wget -N https://hk.gh-proxy.com/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.2/cfst_linux_arm64.tar.gz
+# wget -N https://ghfast.top/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.4/cfst_linux_arm64.tar.gz
+# wget -N https://wget.la/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.4/cfst_linux_arm64.tar.gz
+# wget -N https://ghproxy.net/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.4/cfst_linux_arm64.tar.gz
+# wget -N https://gh-proxy.com/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.4/cfst_linux_arm64.tar.gz
+# wget -N https://hk.gh-proxy.com/https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.3.4/cfst_linux_arm64.tar.gz
 # 如果下载失败的话，尝试删除 -N 参数（如果是为了更新，则记得提前删除旧压缩包 rm cfst_linux_amd64.tar.gz ）
 
 # 解压（不需要删除旧文件，会直接覆盖，自行根据需求替换 文件名）
@@ -85,7 +86,7 @@ chmod +x cfst
 ./cfst
 
 # 运行（带参数示例）
-./cfst -dd -tll 90
+./cfst -tl 200 -dn 20
 ```
 
 > 如果平**均延迟非常低**（如 0.xx），则说明 CFST **测速时走了代理**，请先关闭代理软件后再测速。  
@@ -144,6 +145,9 @@ IP 地址           已发送  已接收  丢包率  平均延迟  下载速度(
 IP 地址,已发送,已接收,丢包率,平均延迟,下载速度(MB/s),地区码
 104.27.200.69,4,4,0.00,146.23,28.64,LAX
 ```
+
+> [!NOTE]
+> _如果你发现**下载速度为 0.00**，那么可以用**调试模式 `-debug`** 排查一下，详见：[**# 下载测速都是 0.00 ？**](https://github.com/XIU2/CloudflareSpeedTest#-%E4%B8%8B%E8%BD%BD%E6%B5%8B%E9%80%9F%E9%83%BD%E6%98%AF-000-)_
 
 > _大家可以按自己需求，对完整结果**进一步筛选处理**，或者去看一看进阶使用**指定过滤条件**！_
 
@@ -216,7 +220,7 @@ https://github.com/XIU2/CloudflareSpeedTest
         调试输出模式；会在一些非预期情况下输出更多日志以便判断原因；(默认 关闭)
         目前该功能仅针对 HTTPing 延迟测速过程 及 下载测速过程，当过程中因为各种原因导致当前 IP 测速中断都会输出错误原因
         例如：HTTPing 延迟测速过程中，因为 HTTP 状态码不符合或测速地址有问题或超时等原因而终止测速
-        例如：下载测速过程中，因为下载测速地址有问题（被阻断、403状态码、超时）等原因而终止测速
+        例如：下载测速过程中，因为下载测速地址有问题（被阻断、403状态码、超时）等原因而终止测速（导致显示 0.00）
 
     -v
         打印程序版本 + 检查版本更新
@@ -288,7 +292,9 @@ CFST 会先延迟测速，在这过程中进度条右侧会实时显示可用 IP
 
 ****
 
-另外，如果全部队列 IP 都测速完了，但一个满足下载速度条件的 IP 都没有，你可能需要调低预期的下载测速下限条件，但你需要知道当前的大概测速速度都在什么范围，那么你就可以加上 `-debug` 参数开启调试模式，这样再遇到这种情况时，就会**忽略条件返回所有测速数据**，你就能看到这些 IP 的下载速度都有多少，心里也就有数了，然后**适当调低 `-sl` 再试试**。
+另外，如果全部队列 IP 都测速完了，但一个满足下载速度条件的 IP 都没有，你可能需要调低预期的下载测速下限条件，但你需要知道当前的大概测速速度都在什么范围，那么你就可以加上 `-debug` 参数开启调试模式，这样再遇到这种情况时，就会**忽略条件返回所有测速结果**，你就能看到这些 IP 的下载速度都有多少，心里也就有数了，然后**适当调低 `-sl` 再试试**。
+
+> 注意，如果你**没有指定**下载测速下限 `-sl` 条件，那么无论什么情况下 CFST 都会**输出所有测速结果**。
 
 同样，延迟测速方面，`可用: 30`、`队列：10` 这两个数值也可以让你清楚，你设置的延迟条件对你来说是否过于苛刻。如果可用 IP 一大堆，但条件过滤后只剩下 2、3 个，那不用说就知道需要**调低预期的延迟/丢包条件**了。
 
@@ -303,9 +309,9 @@ CFST 会先延迟测速，在这过程中进度条右侧会实时显示可用 IP
 Windows 要指定参数需要在 CMD 中运行，或者把参数添加到快捷方式目标中。
 
 > [!TIP]
-> - 各参数均有**默认值**，使用默认值的参数是可以省略的（**按需选择**），参数**不分前后顺序**。  
+> - 各参数均有**默认值**，当使用默认值时参数可以省略（**按需选择**），参数**不分前后顺序**。  
 > - Windows **PowerShell** 只需把下面命令中的 `cfst.exe` 改为 `.\cfst.exe` 即可。  
-> - Linux 系统只需要把下面命令中的 `cfst.exe` 改为 `./cfst` 即可。
+> - Linux / macOS 系统只需要把下面命令中的 `cfst.exe` 改为 `./cfst` 即可。
 
 ****
 
@@ -318,18 +324,18 @@ Windows 要指定参数需要在 CMD 中运行，或者把参数添加到快捷�
 
 ****
 
-很多人打开 CMD 以**绝对路径**运行 CFST 会报错，这是因为默认的 `-f ip.txt` 参数是相对路径，需要指定绝对路径的 ip.txt 才行，但这样毕竟太麻烦了，因此还是建议进入 CFST 程序目录下，以**相对路径**方式运行：
+很多人打开 CMD 直接就以**绝对路径**运行 CFST 会报错，这是因为默认的 `-f ip.txt` 参数是相对路径，需要指定绝对路径的 ip.txt 才行，但这样毕竟太麻烦了，因此还是建议进入 CFST 程序目录下，以**相对路径**方式运行：
 
 **方式 一**：
 1. 打开 CFST 程序所在目录  
 2. 空白处按下 <kbd>Shift + 鼠标右键</kbd> 显示右键菜单  
 3. 选择 **\[在此处打开命令窗口\]** 来打开 CMD 窗口，此时默认就位于当前目录下  
-4. 输入带参数的命令，如：`cfst.exe -tll 50 -tl 200`即可运行
+4. 输入带参数的命令，如：`cfst.exe -tl 200 -dn 20` 即可运行
 
 **方式 二**：
 1. 打开 CFST 程序所在目录  
-2. 直接在文件夹地址栏中全选并输入 `cmd` 回车来打开 CMD 窗口，此时默认就位于当前目录下  
-4. 输入带参数的命令，如：`cfst.exe -tll 50 -tl 200`即可运行
+2. 直接在文件夹地址栏中全选(或清空)并输入 `cmd` 回车就能打开 CMD 窗口，此时默认就位于当前目录下  
+4. 输入带参数的命令，如：`cfst.exe -tl 200 -dn 20` 即可运行
 
 > 当然你也可以随便打开一个 CMD 窗口，然后输入如 `cd /d "D:\Program Files\cfst"` 来进入程序目录
 
@@ -352,10 +358,10 @@ Windows 要指定参数需要在 CMD 中运行，或者把参数添加到快捷�
 
 ``` bash
 # 如果要不输出结果文件，那么请加上 -o " "，引号里的是空格（没有空格会导致该参数被省略）。
-D:\ABC\cfst\cfst.exe -n 500 -t 4 -dn 20 -dt 5 -o " "
+D:\ABC\cfst\cfst.exe -tl 200 -dn 20 -o " "
 
 # 如果文件路径包含引号，则需要把启动参数放在引号外面，记得引号和 - 之间有空格。
-"D:\Program Files\cfst\cfst.exe" -n 500 -t 4 -dn 20 -dt 5 -o " "
+"D:\Program Files\cfst\cfst.exe" -tl 200 -dn 20 -o " "
 
 # 注意！快捷方式 - 起始位置 不能是空的，否则就会因为绝对路径而找不到 ip.txt 文件
 ```
@@ -608,10 +614,11 @@ cfst.exe -tlr 0.25
 cfst.exe -sl 5 -dn 10
 ```
 
-> 如果**没有找到一个满足速度**条件的 IP，那么不会输出任何内容，你可能需要调低预期的下载测速下限条件，但你需要知道当前的大概测速速度都在什么范围，那么你就可以加上 `-debug` 参数开启调试模式，这样再遇到这种情况时，就会**忽略条件返回所有测速数据**，你就能看到这些 IP 的下载速度都有多少，心里也就有数了，然后**适当调低 `-sl` 再试试**。
+> 如果**没有找到一个满足速度**条件的 IP，那么不会输出任何内容，你可能需要调低预期的下载测速下限条件，但你需要知道当前的大概测速速度都在什么范围，那么你就可以加上 `-debug` 参数开启调试模式，这样再遇到这种情况时，就会**忽略条件返回所有测速结果**，你就能看到这些 IP 的下载速度都有多少，心里也就有数了，然后**适当调低 `-sl` 再试试**。  
+> 注意，如果你**没有指定**下载测速下限 `-sl` 条件，那么无论什么情况下 CFST 都会**输出所有测速结果**。
 
 > 没有指定平均延迟上限时，如果一直**凑不够**满足条件的 IP 数量，就会**一直测速**下去。  
-> 所以建议**同时指定 [下载速度下限] + [平均延迟上限]**，这样测速到指定延迟上限还没凑够数量，就会终止测速。
+> 建议**同时指定 [下载速度下限] + [平均延迟上限]**，这样测速到指定延迟上限还没凑够数量，就会终止测速。
 
 ****
 
@@ -630,6 +637,33 @@ cfst.exe -tl 200 -sl 5.6 -dn 10
 
 > 因为 Cloudflare 公开的 IP 段是**回源 IP+任播 IP**，而**回源 IP**是无法使用的，所以下载测速是 0.00。  
 > 运行时可以加上 `-sl 0.01`（下载速度下限），过滤掉**回源 IP**（下载测速低于 0.01MB/s 的结果）。
+
+****
+
+为了避免大家迷糊，我列出了在各种条件组合下的预期输出结果都是什么样的。
+
+**没有指定任何 延迟/速度条件 (即都是默认值)：**
+- 无论如何，都直接输出 **所有测速结果**
+
+****
+
+**指定了任何 延迟条件（`-tl` `-tll`，且无论是否开启调试模式 `-debug` 都一样）：**
+- 如果找到最少 1 个满足条件的 IP，则只输出 **这几个满足条件的 IP**（如没有禁用下载测速，则会继续下载测速）  
+- 如果没找到任何满足条件的 IP，则会输出 **空**（如没有禁用下载测速，也会因为数量为 0 而跳过下载测速）
+
+****
+
+**指定了任何 下载速度条件 (`-sl`)：**
+
+且当 **关闭 调试模式** 时（即没加上 `-debug` 参数，这种情况下和延迟测速的逻辑完全一致）：
+
+- 如果找到最少 1 个满足条件的 IP，则只输出 **这几个满足条件的 IP**  
+- 如果没找到任何满足条件的 IP，则输出 **空**
+
+且当 **开启 调试模式** 时（即加上了 `-debug` 参数，延迟测速并没有加上下面第二条里的逻辑，所以依然输出 空）：
+
+- 如果找到最少 1 个满足条件的 IP，则只输出 **这几个满足条件的 IP**  
+- 如果没找到任何满足条件的 IP，则直接输出 **所有测速结果**
 
 </details>
 
@@ -692,33 +726,45 @@ cfst.exe -f 1.txt
 <summary><code><strong>「 点击展开 查看内容 」</strong></code></summary>
 
 ****
+**\#\# 原理简单解释：**
 
-首先要明白，本软件的下载测速过程，本质上和你将 `IP 下载测速地址的域名` 写入 hosts 文件，然后浏览器去访问下载测速地址是一样的，只不过软件将其自动化了（类似于 `curl -I --resolve 下载测速地址的域名:443:IP https://下载测速地址`）。
+首先要明白，CFST 下载测速过程，本质上和你将 `IP 下载测速地址域名` 写入 hosts 文件，然后浏览器去访问下载测速地址是一样的，只不过软件将其自动化了（类似于 `curl -I --resolve 下载测速地址域名:443:IP https://下载测速地址`）。
 
-因此如果下载测速结果全都是 0.00 MB/s，那么以为着下载测速失败，就只有这几种可能性。
+因此如果下载测速结果全都是 0.00 MB/s，那么代表**下载测速过程中出问题报错**，导致直接终止测速了（并最终显示为 0.00），就只有这几种可能性：
 
 1. **下载测速地址有问题**
 2. **测速的 IP 地址有问题**
 3. **你的网络有问题**
 
-但在排查具体是哪个问题前，可以先在你原先的 CFST 运行命令后追加一个 `-debug` 参数来开启调试模式，重新跑一边测速，这样下载过程中报错了就能直接看到下载测速失败的具体原因。
+****
 
-常见的下载测速失败报错原因有（因为是原生报错信息，因此基本都是英文）：
+**\#\# 调试模式排查：**
+
+接下来**请务必**先在你原先使用的 CFST 运行命令后**追加一个 `-debug` 参数来开启调试模式**，重新跑一遍测速，这样下载测速过程中出现任何报错都会显示具体原因方便你排查。
+
+常见的下载测速失败报错原因有（因为是 Go 语言的原生报错信息，因此基本都是英文）：
 
 1. `... read: connection reset by peer ...  `  
-**链接被重置**，可能是下载测速地址被阻断了，可能是蔷干的，也可能是运营商干的（比如移动或部分地区的白名单）
+**链接被重置**，可能是下载测速地址被阻断了 或测速 IP 被针对性 HTTPS 阻断了，可能是蔷干的，也可能是运营商干的（比如移动或部分地区的白名单），当然也可能是测速 IP 服务器单纯的重置了你这个不合法的链接请求
 2. `... HTTP 状态码: 403 ...`  
-像这种直接提示 **HTTP 状态码**的，比较好判断，如 403 就是下载测速地址禁止你访问，404 就是下载测速地址路径对应的文件找不到，具体可以搜索 HTTP 状态码含义
+像这种直接提示 **HTTP 状态码**的，比较好判断，如 403 就是下载测速地址禁止你访问，404 就是下载测速地址路径对应的文件找不到（具体其他的可以搜索 HTTP 状态码含义）
 3. `... context deadline exceeded (Client.Timeout exceeded while awaiting headers) ...`  
-这种一般是**请求超时**引起的，可能是 IP 或网络问题，也可能是 -dt 下载测速时间设置的太短了（当然默认的 10 秒肯定算不上短）
+这种一般是**请求超时**引起的，可能是 IP 或网络问题，也可能是 `-dt` 下载测速时间设置的太短了（当然默认的 10 秒肯定算不上短）
 4. `... tls: handshake failure ...` 或 `... tls: failed to verify certificate ...`  
-这种 **TLS 握手失败/TLS 证书错误** 代表下载测速地址和测速 IP 服务器不匹配，也就是下载测速地址与测速 IP 其中一方有误（例如下载测速地址是托管在 Fastly CDN 的，但测速 IP 是 Cloudflare CDN 的，或者反过来，总之就是你访问下载测速地址时该测速的 IP 服务器告诉你这个网站域名它不认识并把你拒之门外）
-5. `... tls: failed to verify certificate: x509: certificate signed by unknown authority.`  
-这种代表**系统证书配置有问题**，导致 TLS 握手时无法验证证书，一般是 Termux 内可能会遇到的，解决方法见：https://github.com/XIU2/CloudflareSpeedTest/discussions/61#discussioncomment-13745059
+这种 **TLS 握手失败/SSL 证书错误** 代表下载测速地址和测速 IP 服务器不匹配，也就是下载测速地址与测速 IP 其中一方有误（例如下载测速地址是托管在 Fastly CDN 的，但测速 IP 是 Cloudflare CDN 的，或者反过来，总之就是你访问下载测速地址时该测速的 IP 服务器告诉你这个网站域名它不认识并把你拒之门外）
+5. `... tls: failed to verify certificate: x509: certificate is valid for XXX.XX, not YYY.YY ...`  
+这种是 **SSL 证书里没有包含你下载测速地址的域名**，要么是下载测速地址证书配置有问题，要么就是该测速服务器 IP 上并没有该下载测速地址域名对应的 SSL 证书，也就意味着这个服务器 IP 是不能用于该下载测速地址域名的（比如你用谷歌的服务器 IP 去下载测速百度的域名就会这样，或像上面 4 的原因一样）
+6. `... tls: failed to verify certificate: x509: certificate has expired or is not yet valid: current time ...`  
+这种是 **SSL 证书过期了或者尚未到有效时间**，除了这个原因外，也可能是和上面 4、5 的原因一样（这 4、5、6 三种报错可能会同时出现在同一个服务器 IP 上）
+7. `... tls: failed to verify certificate: x509: certificate signed by unknown authority.`  
+这种代表**系统证书配置有问题**，导致 TLS 握手时无法验证证书，目前只在 Termux 内遇到过（解决方法见：https://github.com/XIU2/CloudflareSpeedTest/discussions/61 帖子末尾）
 
-> 如果你遇到了其他报错原因，且翻译后还是不懂，可以发 Issues 或 Discussions 询问，我也会更新到这里。
+> 如果你遇到了其他报错原因，且翻译后还是不懂，可以发 Issues 或 Discussions 询问，我也会更新到这里。  
+> 但注意，发 Issues 或 Discussions 询问时，请记得带上**调试模式下 CFST 输出的完整内容（或者完整截图）**。
 
-根据上面的报错原因排查一遍后，如果还是无法解决，那么可以尝试下面这些：
+根据上面的报错原因排查一遍后，如果还是无法解决，那么可以尝试下面这些进一步排查：
+
+****
 
 **一、下载测速地址有问题**：
 

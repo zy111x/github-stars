@@ -1,6 +1,6 @@
 ---
 project: WasmEdge
-stars: 9921
+stars: 9971
 description: |-
     WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud native, edge, and decentralized applications. It powers serverless apps, embedded functions, microservices, smart contracts, and IoT devices.
 url: https://github.com/WasmEdge/WasmEdge
@@ -13,7 +13,7 @@ url: https://github.com/WasmEdge/WasmEdge
 </div>
 
 <div align="center">
-  
+
 ![WasmEdge Logo](/docs/wasmedge-runtime-logo.png)
 
 # [🤩 WasmEdge is the easiest and fastest way to run LLMs on your own devices. 🤩](https://llamaedge.com/docs/user-guide/llm/get-started-with-llamaedge)
