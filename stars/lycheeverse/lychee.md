@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2561
+stars: 2834
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -401,6 +401,11 @@ Options:
 
           [default: 3]
 
+      --min-tls <MIN_TLS>
+          Minimum accepted TLS Version
+
+          [possible values: TLSv1_0, TLSv1_1, TLSv1_2, TLSv1_3]
+
       --max-concurrency <MAX_CONCURRENCY>
           Maximum number of concurrent network requests
 
@@ -427,13 +432,13 @@ Options:
           URLs to check (supports regex). Has preference over all excludes
 
       --exclude <EXCLUDE>
-          Exclude URLs and mail addresses from checking (supports regex)
+          Exclude URLs and mail addresses from checking. The values are treated as regular expressions
 
       --exclude-file <EXCLUDE_FILE>
           Deprecated; use `--exclude-path` instead
 
       --exclude-path <EXCLUDE_PATH>
-          Exclude file path from getting checked
+          Exclude paths from getting checked. The values are treated as regular expressions
 
   -E, --exclude-all-private
           Exclude all private IPs from checking.
@@ -448,9 +453,6 @@ Options:
       --exclude-loopback
           Exclude loopback IP address range and localhost from checking
 
-      --exclude-mail
-          Exclude all mail addresses from checking (deprecated; excluded by default)
-
       --include-mail
           Also check email addresses
 
@@ -464,8 +466,13 @@ Options:
 
           Example: --fallback-extensions html,htm,php,asp,aspx,jsp,cgi
 
-      --header <HEADER>
-          Custom request header
+  -H, --header <HEADER:VALUE>
+          Set custom header for requests
+
+          Some websites require custom headers to be passed in order to return valid responses.
+          You can specify custom headers in the format 'Name: Value'. For example, 'Accept: text/html'.
+          This is the same format that other tools like curl or wget use.
+          Multiple headers can be specified by using the flag multiple times.
 
   -a, --accept <ACCEPT>
           A List of accepted status codes for valid links
@@ -667,10 +674,9 @@ let client = lychee_lib::ClientBuilder::builder()
 ```
 
 All options that you set will be used for all link checks.
-See the [builder
-documentation](https://docs.rs/lychee-lib/latest/lychee_lib/struct.ClientBuilder.html)
+See the [builder documentation](https://docs.rs/lychee-lib/latest/lychee_lib/struct.ClientBuilder.html)
 for all options. For more information, check out the [examples](examples)
-folder.
+directory. The examples can be run with `cargo run --example <example>`.
 
 ## GitHub Action Usage
 
@@ -716,6 +722,8 @@ We collect a list of common workarounds for various websites in our [troubleshoo
 
 ## Users
 
+Here is a list of some notable projects who are using lychee.
+
 - https://github.com/InnerSourceCommons/InnerSourcePatterns
 - https://github.com/opensearch-project/OpenSearch
 - https://github.com/ramitsurana/awesome-kubernetes
@@ -755,14 +763,15 @@ We collect a list of common workarounds for various websites in our [troubleshoo
 - https://github.com/gradle/gradle
 - https://github.com/forus-labs/forui
 - https://github.com/FreeBSD-Ask/FreeBSD-Ask
-- https://github.com/lycheeverse/lychee (yes, the lychee docs are checked with lychee 🤯)
+- https://github.com/prosekit/prosekit
+- https://github.com/lycheeverse/lychee (yes, lychee is checked with lychee 🤯)
 
 If you are using lychee for your project, **please add it here**.
 
 ## Credits
 
 The first prototype of lychee was built in [episode 10 of Hello
-Rust](https://hello-rust.show/10/). Thanks to all GitHub and Patreon sponsors
+Rust](https://hello-rust.github.io/10/). Thanks to all GitHub and Patreon sponsors
 for supporting the development since the beginning. Also, thanks to all the
 great contributors who have since made this project more mature.
 

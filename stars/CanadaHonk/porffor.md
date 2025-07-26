@@ -1,8 +1,8 @@
 ---
 project: porffor
-stars: 3391
+stars: 3728
 description: |-
-    A from-scratch experimental AOT JS engine, written in JS
+    An ahead-of-time JavaScript compiler
 url: https://github.com/CanadaHonk/porffor
 ---
 
@@ -13,8 +13,8 @@ A from-scratch experimental **AOT** optimizing JS/TS -> Wasm/C engine/compiler/r
 
 ## Design
 Porffor is a very unique JS engine, due many wildly different approaches. It is seriously limited, but what it can do, it does pretty well. Key differences:
-- 100% AOT compiled (no JIT)
-- No constant runtime/preluded code
+- 100% AOT compiled (no JIT or interpreter)
+- Zero constant runtime/preluded code
 - Least Wasm imports possible (only I/O)
 
 Porffor is primarily built from scratch, the only thing that is not is the parser (using [Acorn](https://github.com/acornjs/acorn)). Binaryen/etc is not used, we make final wasm binaries ourself. You could imagine it as compiling a language which is a sub (some things unsupported) and super (new/custom apis) set of javascript. Not based on any particular spec version.
@@ -48,9 +48,9 @@ Expect nothing to work! Only very limited JS is currently supported. See files i
 
 ### Profiling a JS file
 > [!WARNING]
-> Very experimental WIP feature!
+> Experimental WIP feature!
 
-**`porf hotlines path/to/script.js`**
+**`porf profile path/to/script.js`**
 
 ### Debugging a JS file
 > [!WARNING]
@@ -58,11 +58,11 @@ Expect nothing to work! Only very limited JS is currently supported. See files i
 
 **`porf debug path/to/script.js`**
 
-### Debugging the compiled Wasm of a JS file
+<!-- ### Debugging the compiled Wasm of a JS file
 > [!WARNING]
 > Very experimental WIP feature!
 
-**`porf dissect path/to/script.js`**
+**`porf dissect path/to/script.js`** -->
 
 
 ### Options
@@ -81,11 +81,8 @@ Expect nothing to work! Only very limited JS is currently supported. See files i
 
 ## Sub-engines
 
-### Asur
-Asur is Porffor's own Wasm engine; it is an intentionally simple interpreter written in JS. It is very WIP. See [its readme](asur/README.md) for more details.
-
-### Rhemyn
-Rhemyn is Porffor's own regex engine; it compiles literal regex to Wasm bytecode AOT (remind you of anything?). It is quite basic and WIP. See [its readme](rhemyn/README.md) for more details.
+<!-- ### Asur
+Asur is Porffor's own Wasm engine; it is an intentionally simple interpreter written in JS. It is very WIP. See [its readme](asur/README.md) for more details. -->
 
 ### 2c
 2c is Porffor's own Wasm -> C compiler, using generated Wasm bytecode and internal info to generate specific and efficient C code. Little boilerplate/preluded code or required external files, just for CLI binaries (not like wasm2c very much).
@@ -98,11 +95,6 @@ Porffor uses a unique versioning system, here's an example: `0.48.7`. Let's brea
 
 ## Performance
 *For the features it supports most of the time*, Porffor is *blazingly fast* compared to most interpreters and common engines running without JIT. For those with JIT, it is usually slower by default, but can catch up with compiler arguments and typed input, even more so when compiling to native binaries.
-
-## Test262
-Porffor can run Test262 via some hacks/transforms which remove unsupported features whilst still doing the same asserts (eg simpler error messages using literals only). It currently passes >14% (see latest commit desc for latest and details). Use `node test262` to test, it will also show a difference of overall results between the last commit and current results.
-
-![image](https://github.com/CanadaHonk/porffor/assets/19228318/5320da7d-e945-4d16-857b-499f3a6c1180)
 
 ## Codebase
 - `compiler`: contains the compiler itself
@@ -133,10 +125,6 @@ Porffor can run Test262 via some hacks/transforms which remove unsupported featu
 - `runtime`: contains utils for running JS with the compiler
   - `index.js`: the main file, you probably want to use this
   - `repl.js`: basic repl (uses `node:repl`)
-
-- `rhemyn`: contains [Rhemyn](#rhemyn) - our regex engine (used by Porffor)
-  - `compile.js`: compiles regex ast into wasm bytecode aot
-  - `parse.js`: own regex parser
 
 - `test262`: test262 runner and utils
 

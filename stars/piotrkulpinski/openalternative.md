@@ -1,6 +1,6 @@
 ---
 project: openalternative
-stars: 4249
+stars: 4977
 description: |-
     A community driven list of open source alternatives to proprietary software and applications.
 url: https://github.com/piotrkulpinski/openalternative
@@ -45,6 +45,14 @@ Our goal is to be your first stop when researching for a new open source service
 
 Join us in creating the biggest **directory of open source software**.
 
+## Other projects
+
+We are also working on other projects you might be interested in:
+
+- [EuroAlternative](https://euroalternative.co) - A directory of European alternatives to Big Tech giants.
+- [DevSuite](https://devsuite.co) - A collection of tools for developers.
+- [Dirstarter](https://dirstarter.com) - A Next.js boilerplate for creating directory websites.
+
 ## Sponsoring
 
 OpenAlternative is an GPL-3.0-licensed open source project with its ongoing development made possible entirely by the support of these awesome backers. If you'd like to join them, please consider [sponsoring OpenAlternative's development](https://github.com/sponsors/piotrkulpinski).
@@ -58,6 +66,7 @@ OpenAlternative uses the following third-party services:
 - Database: [Neon](https://neon.tech)
 - Analytics: [Plausible](https://plausible.io), [PostHog](https://posthog.com)
 - Newsletter: [Beehiiv](https://go.openalternative.co/beehiiv)
+- Scraping: [Firecrawl](https://go.openalternative.co/firecrawl)
 - Background Jobs: [Inngest](https://inngest.com)
 - File Storage: [AWS S3](https://aws.amazon.com/s3)
 - Payments: [Stripe](https://stripe.com)
@@ -67,33 +76,24 @@ Make sure to set up accounts with these services and add the necessary environme
 
 ## Project Structure
 
-OpenAlternative is built as a Turborepo monorepo with multiple packages. The project structure is organized as follows:
+OpenAlternative is built in Next.js App Router. The project structure is organized as follows:
 
-- `/apps` - Turborepo apps
-  - `/app` - Main Next.js application using the App Router architecture
-    - `/app` - Application routes and layouts (Next.js App Router)
-    - `/components` - Reusable React components
-    - `/lib` - Core utilities and business logic
-    - `/actions` - Server actions
-    - `/utils` - Helper functions and utilities
-    - `/hooks` - React hooks
-    - `/contexts` - React context providers
-    - `/services` - Service integrations
-    - `/emails` - Email templates
-    - `/server` - Server-side code
-    - `/functions` - Utility functions
-    - `/config` - Configuration files
-    - `/content` - Content management
-    - `/types` - TypeScript type definitions
-    - `/public` - Static assets
-
-  - `/analyzer` - Data analysis tools
-
-- `/packages` - Shared packages
-  - `/db` - Database schema and utilities
-  - `/github` - GitHub integration utilities
-
-The project uses Turborepo for task orchestration and dependency management across the monorepo.
+- `/app` - Application routes and layouts (Next.js App Router)
+- `/components` - Reusable React components
+- `/lib` - Core utilities and business logic
+- `/actions` - Server actions
+- `/utils` - Helper functions and utilities
+- `/hooks` - React hooks
+- `/contexts` - React context providers
+- `/services` - Service integrations
+- `/emails` - Email templates
+- `/server` - Server-side code
+- `/functions` - Utility functions
+- `/config` - Configuration files
+- `/content` - Content management
+- `/prisma` - Prisma schema and utilities
+- `/types` - TypeScript type definitions
+- `/public` - Static assets
 
 ## Development
 

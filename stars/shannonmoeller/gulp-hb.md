@@ -1,6 +1,6 @@
 ---
 project: gulp-hb
-stars: 148
+stars: 147
 description: |-
     A sane Gulp plugin to compile Handlebars templates. Useful as a static site generator.
 url: https://github.com/shannonmoeller/gulp-hb

@@ -1,16 +1,12 @@
 ---
 project: bitcoinjs-lib
-stars: 5841
+stars: 5890
 description: |-
     A javascript Bitcoin library for node.js and browsers.
 url: https://github.com/bitcoinjs/bitcoinjs-lib
 ---
 
-<img src="./logo/Bitcoin.js-transparent.png" alt="BitcoinJS kawaii logo" width="50%" />
-
-(Logo by [@sawaratsuki1004](https://x.com/sawaratsuki1004))
-
-([LICENSE for the logo is on SAWARATSUKI Github repo](https://github.com/SAWARATSUKI/KawaiiLogos/blob/main/README_EN.md))
+# bitcoinjs-lib
 
 [![Github CI](https://github.com/bitcoinjs/bitcoinjs-lib/actions/workflows/main_ci.yml/badge.svg)](https://github.com/bitcoinjs/bitcoinjs-lib/actions/workflows/main_ci.yml) [![NPM](https://img.shields.io/npm/v/bitcoinjs-lib.svg)](https://www.npmjs.org/package/bitcoinjs-lib) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 

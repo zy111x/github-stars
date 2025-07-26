@@ -1,6 +1,6 @@
 ---
 project: AutoAgent
-stars: 3703
+stars: 5614
 description: |-
     "AutoAgent: Fully-Automated and Zero-Code LLM Agent Framework"
 url: https://github.com/HKUDS/AutoAgent
@@ -28,12 +28,16 @@ url: https://github.com/HKUDS/AutoAgent
   <hr>
 </div>
 
+<div align="center">
+<a href="https://trendshift.io/repositories/13954" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13954" alt="HKUDS%2FAutoAgent | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</div>
+
 Welcome to AutoAgent! AutoAgent is a **Fully-Automated** and highly **Self-Developing** framework that enables users to create and deploy LLM agents through **Natural Language Alone**. 
 
 ## ✨Key Features
 
 * 🏆 Top Performers on the GAIA Benchmark
-</br>AutoAgent has secured top rankings among open-sourced methods, delivering comparable performance to **OpenAI's Deep Research**.
+</br>AutoAgent has delivering comparable performance to many **Deep Research Agents**.
 
 * 📚 Agentic-RAG with Native Self-Managing Vector Database
 </br>AutoAgent equipped with a native self-managing vector database, outperforms industry-leading solutions like **LangChain**. 

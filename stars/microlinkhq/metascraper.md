@@ -1,6 +1,6 @@
 ---
 project: metascraper
-stars: 2432
+stars: 2515
 description: |-
     Get unified metadata from websites using Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more.
 url: https://github.com/microlinkhq/metascraper
@@ -91,7 +91,7 @@ The output will be something like:
   "date": "2022-07-10T22:53:04.856Z",
   "description": "Enter a URL, receive information. Normalize metadata. Get HTML markup. Take a screenshot. Identify tech stack. Generate a PDF. Automate web scraping. Run Lighthouse",
   "image": "https://cdn.microlink.io/logo/banner.jpeg",
-  "logo": "https://cdn.microlink.io/logo/trim.png",
+  "logo": "https://cdn.microlink.io/logo/logo.png",
   "publisher": "Microlink",
   "title": "Turns websites into data — Microlink",
   "url": "https://microlink.io/"
@@ -255,6 +255,40 @@ Call the instance for extracting content based on rules bundle provided at the c
 
 #### options
 
+#### html
+
+Type: `String`
+
+The HTML markup for extracting the content.
+
+#### htmlDom
+
+Type: `object`
+
+The DOM representation of the HTML markup. When it's not provided, it's get from the `html` parameter.
+
+#### omitPropNames
+
+Type: `Set`<br>
+Default: `[]`
+
+A set of property names that should be omitted. When specified, these properties will be missing in the returned metadata objects, and rules related to that will not be computed.
+
+#### pickPropNames
+
+Type: `Set`<br>
+Default: `undefined`
+
+A set of property names to pick for the metadata extraction process. When specified, only rules for these properties will be executed, and all other properties will be omitted. Takes precedence over `omitPropNames` when both are specified.
+
+#### rules
+
+Type: `Array`
+
+You can pass additional rules to add on execution time. 
+
+These rules will be merged with your loaded [rules](#rules) at the beginning.
+
 #### url
 
 *Required*<br>
@@ -266,32 +300,30 @@ It is used for resolve relative links that can be present in the HTML markup.
 
 it can be used as fallback field for different rules as well.
 
-##### html
-
-Type: `String`
-
-The HTML markup for extracting the content.
-
-##### htmlDom
-
-Type: `object`
-
-The DOM representation of the HTML markup. When it's not provided, it's get from the `html` parameter.
-
-#### rules
-
-Type: `Array`
-
-You can pass additional rules to add on execution time. 
-
-These rules will be merged with your loaded [rules](#rules) at the beginning.
-
 #### validateUrl
 
 Type: `boolean`<br>
 Default: `true`
 
 Ensure the URL provided is validated as a [WHATWG URL](https://nodejs.org/api/url.html#url_the_whatwg_url_api) API compliant.
+
+```js
+const metascraper = require('metascraper')([
+  require('metascraper-title')(),
+  require('metascraper-image')(),
+  require('metascraper-description')()
+])
+
+const html = '<title>Example</title><meta property="og:image" content="image.jpg">'
+const url = 'https://example.com'
+
+// Omit the image property
+const omitPropNames = new Set(['image'])
+const metadata = await metascraper({ url, html, omitPropNames })
+
+console.log(metadata)
+// Output: { title: 'Example', image: null, description: null }
+```
 
 ## Environment Variables
 

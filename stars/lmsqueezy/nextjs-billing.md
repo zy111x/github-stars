@@ -1,6 +1,6 @@
 ---
 project: nextjs-billing
-stars: 691
+stars: 718
 description: |-
     Next.js billing app with Lemon Squeezy
 url: https://github.com/lmsqueezy/nextjs-billing

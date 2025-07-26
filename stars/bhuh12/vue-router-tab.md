@@ -1,6 +1,6 @@
 ---
 project: vue-router-tab
-stars: 472
+stars: 475
 description: |-
     Vue.js tab components, based on Vue Router.
 url: https://github.com/bhuh12/vue-router-tab

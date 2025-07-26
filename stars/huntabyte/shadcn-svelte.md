@@ -1,13 +1,13 @@
 ---
 project: shadcn-svelte
-stars: 6407
+stars: 7068
 description: |-
     shadcn/ui, but for Svelte. ✨
 url: https://github.com/huntabyte/shadcn-svelte
 ---
 
 <p align="center">
- <img align="center" src="https://raw.githubusercontent.com/huntabyte/shadcn-svelte/main/sites/docs/static/android-chrome-192x192.png" height="96" />
+ <img align="center" src="https://raw.githubusercontent.com/huntabyte/shadcn-svelte/main/docs/static/android-chrome-192x192.png" height="96" />
  <h1 align="center">
   shadcn-svelte
  </h1>
@@ -21,7 +21,7 @@ url: https://github.com/huntabyte/shadcn-svelte
 
 Accessible and customizable components that you can copy and paste into your apps. Free. Open Source. **Use this to build your own component library**.
 
-![hero](sites/docs/static/og.png)
+![hero](docs/static/opengraph-image.png)
 
 ## Documentation
 

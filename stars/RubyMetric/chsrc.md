@@ -1,18 +1,30 @@
 ---
 project: chsrc
-stars: 5091
+stars: 5731
 description: |-
     chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
 ---
 
+<!-- -----------------------------------------------------------
+ ! SPDX-License-Identifier: GFDL-1.3-or-later
+ ! -------------------------------------------------------------
+ ! Doc Type      : Markdown
+ ! Doc Name      : README.md
+ ! Doc Authors   : Aoran Zeng  <ccmywish@qq.com>
+ ! Contributors  : Mikachu2333 <mikachu.23333@zohomail.com>
+ !               |
+ ! Created On    : <2023-12-28>
+ ! Last Modified : <2025-07-14>
+ ! ---------------------------------------------------------- -->
+
 <div align="center">
-  <img alt="chsrc logo" src="image/chsrc.png"/>
+  <img alt="chsrc logo" src="doc/image/chsrc.png"/>
 </div>
 
 全平台通用换源工具与框架 `chsrc`，**目标支持 Linux, Windows (MSYS2, Cygwin), macOS, BSD 等尽可能多的操作系统环境，龙芯、飞腾、RISC-V 等尽可能多的 CPU**。
 
-我们使用 **C99** 来完成上述目标。我们并不使用 Python 或 JS 等解释语言，因为一个简单的换源工具，不应该强行塞给用户一个庞大的解释器和数十、数百 MB 其他文件。
+我们使用 **C11** 来完成上述目标。我们并不使用 Python 或 JS 等解释语言，因为一个简单的换源工具，不应该强行塞给用户一个庞大的解释器和数十、数百 MB 其他文件。
 
 本软件为**自由软件**，SDPX 软件许可证为 `GPL-3.0-or-later and MIT`
 
@@ -36,20 +48,29 @@ url: https://github.com/RubyMetric/chsrc
 > [!TIP]
 > **`chsrc` 不仅是一个命令行工具，同时也是一个体现了 Ruby on Rails 思想的 MVC 换源框架，它甚至使你能够在不了解C语言的情况下编写出新的换源方法(recipe)。** [Write A Recipe Even If You Don't Know C](./doc/02-Write-A-Recipe-Even-If-You-Dont-Know-C.md)
 
+---
+
 > [!NOTE]
-> **`chsrc` 可换源 60+ 目标。每个人仅仅贡献和维护自己熟悉的部分，回报是得到其他所有领域专家的帮助**。欢迎对 GitHub、Gitee 协作不熟悉的人以此为契机学习参与贡献, 欢迎任何编程初学者参与贡献。[从开发到提交贡献，我们覆盖全流程文档](./doc/)
-，另外作者可提供一定的 [贡献指导](https://github.com/RubyMetric/chsrc/discussions/50)
+> 这是你可以参与的第一个现实世界中有用的C语言项目，[用 VS Code 一分钟内上手编译、运行、测试 chsrc](./doc/01-Develop.md)
+>
+> 欢迎对 GitHub、Gitee 协作不熟悉的人以此为契机学习参与贡献, 欢迎任何编程初学者。[从开发到提交PR，我们覆盖全流程文档](./doc/)
+，作者可提供一定的 [贡献指导](https://github.com/RubyMetric/chsrc/discussions/50)
+---
 
 > [!IMPORTANT]
-> [招募 recipe 维护者](https://github.com/RubyMetric/chsrc/issues/130)
+> **`chsrc` 可换源 60+ 目标。每个人仅仅贡献和维护自己熟悉的部分，回报是得到其他所有领域专家的帮助。** [欢迎成为 recipe 维护者](https://github.com/RubyMetric/chsrc/issues/130)
 
 <br>
 
 可参与的任务与挑战：
 
-1. [提供默认源地址，如Maven等的默认源URL，帮助我们进行 `chsrc reset`](https://github.com/RubyMetric/chsrc/issues/111)
+1. [Shell auto-completion 终端命令自动补全](https://github.com/RubyMetric/chsrc/issues/204)
 
-2. [CentOS (Stream) Recipe](https://github.com/RubyMetric/chsrc/issues/48)
+2. [搜集默认源地址，帮助使用 `reset` 功能](https://github.com/RubyMetric/chsrc/issues/111)
+
+3. [搜集测速地址，进行精准测速](https://github.com/RubyMetric/chsrc/issues/205)
+
+4. [chsrc-bootstrap: 为不存在预编译 `chsrc` 的平台提供支持](https://github.com/RubyMetric/chsrc/issues/230)
 
 <br>
 
@@ -62,20 +83,18 @@ url: https://github.com/RubyMetric/chsrc
 
 </details>
 
-
 <details>
 <summary>镜像站可用性</summary>
 
-1. https://github.com/RubyMetric/chsrc/wiki
-2. https://github.com/RubyMetric/chsrc/discussions
+1. <https://github.com/RubyMetric/chsrc/wiki>
+2. <https://github.com/RubyMetric/chsrc/discussions>
 
 </details>
-
 
 <details>
 <summary>打包</summary>
 
-想通过 `flatpak`,`snap`,`pacman`,`apt`,`dnf` 等系统包管理工具来安装和更新`chsrc`？若您可提供维护，请访问 [issue#16 on GitHub](https://github.com/RubyMetric/chsrc/issues/16)
+想通过 `dnf`, `flatpak`, `snap` 等系统包管理工具来安装和更新`chsrc`？若可提供维护，请访问 [issue#16 on GitHub](https://github.com/RubyMetric/chsrc/issues/16)
 
 - [x] `Homebrew`
 - [x] `Scoop`
@@ -92,7 +111,7 @@ url: https://github.com/RubyMetric/chsrc
 ## 📌 示例
 
 <div align="center">
-  <img alt="chsrc set node" src="image/example-set-nodejs.png"/>
+  <img alt="chsrc set node" src="doc/image/example-set-nodejs.png"/>
 </div>
 
 <br>
@@ -112,7 +131,7 @@ url: https://github.com/RubyMetric/chsrc
 - 可通过 `scoop` 安装，感谢 [@Gn3po4g] 与 [@niheaven]
 
 ```bash
-$ scoop install chsrc
+scoop install chsrc
 ```
 
 <br>
@@ -120,7 +139,7 @@ $ scoop install chsrc
 - 可通过 `WinGet` 安装，感谢 [@YU-7]
 
 ```bash
-$ winget install RubyMetric.chsrc
+winget install RubyMetric.chsrc
 ```
 
 <br>
@@ -130,6 +149,9 @@ $ winget install RubyMetric.chsrc
     若下方链接无法访问，可使用 `https://gitee.com/RubyMetric/chsrc/raw/main/tool/installer.ps1` 替代
 
 ```PowerShell
+# 使用 -Version 指定版本 (不指定时默认为 pre)
+#   1. 安装 pre 版本; 这比从包管理器安装的总是更新一些
+#   2. 安装旧版本; 有时新版本可能引入某些 Bug，临时使用旧版本解决燃眉之急
 "& { $(iwr -useb https://chsrc.run/windows) } -Version pre" | iex
 ```
 
@@ -144,10 +166,27 @@ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-windo
 # x86
 curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x86-windows.exe -o chsrc.exe
 ```
+
 </details>
 
 <details>
 <summary>Linux</summary>
+
+- 可通过 `apt`/`dpkg` 安装，感谢 [@sanchuanhehe]
+
+```bash
+# x64
+$ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc_latest-1_amd64.deb -o chsrc_latest-1_amd64.deb
+
+# 也可以使用 Wget
+wget https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc_latest-1_amd64.deb -O chsrc_latest-1_amd64.deb
+
+$ sudo apt install ./chsrc_latest-1_amd64.deb
+# 或
+$ sudo sudo dpkg -i chsrc_latest-1_amd64.deb
+```
+
+<br>
 
 - 支持 `AUR`，可通过 `yay` 安装，感谢 [@Jerry-Terrasse]
 
@@ -168,11 +207,19 @@ $ yay -S chsrc     # Build  from GitHub Release
 # 非root用户默认安装至 ~/.local/bin
 $ curl https://chsrc.run/posix | bash
 
+# 也可以使用 Wget
+$ wget -O - https://chsrc.run/posix | bash
+
 # root用户默认安装至 /usr/local/bin
 $ curl https://chsrc.run/posix | sudo bash
 
 # 使用 -d 指定目录安装
 $ curl https://chsrc.run/posix | bash -s -- -d ./
+
+# 使用 -v 指定版本 (不指定时默认为 pre)
+#   1. 安装 pre 版本; 这比从包管理器安装的总是更新一些
+#   2. 安装旧版本; 有时新版本可能引入某些 Bug，临时使用旧版本解决燃眉之急
+$ curl https://chsrc.run/posix | bash -s -- -v 0.2.1
 
 # 使用 -l en 输出英文
 $ curl https://chsrc.run/posix | bash -s -- -l en
@@ -204,7 +251,7 @@ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-armv7-lin
 - 可通过 `homebrew` 安装，感谢 [@Aaron-212] 与 [@chenrui333]
 
 ```bash
-$ brew install chsrc
+brew install chsrc
 ```
 
 <br>
@@ -223,6 +270,11 @@ $ curl https://chsrc.run/posix | sudo bash
 # 使用 -d 指定目录安装
 $ curl https://chsrc.run/posix | bash -s -- -d ./
 
+# 使用 -v 指定版本 (不指定时默认为 pre)
+#   1. 安装 pre 版本; 这比从包管理器安装的总是更新一些
+#   2. 安装旧版本; 有时新版本可能引入某些 Bug，临时使用旧版本解决燃眉之急
+$ curl https://chsrc.run/posix | bash -s -- -v 0.2.1
+
 # 使用 -l en 输出英文
 $ curl https://chsrc.run/posix | bash -s -- -l en
 ```
@@ -238,23 +290,49 @@ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-aarch64-m
 # x64
 curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-macos -o chsrc; chmod +x ./chsrc
 ```
+
 </details>
 
 <details>
 <summary>BSD</summary>
 
+如果已安装好了编译 `chsrc` 所需要的依赖，可直接运行:
+
 ```bash
-$ git clone https://gitee.com/RubyMetric/chsrc.git; cd chsrc
-$ clang -Iinclude -Ilib src/chsrc-main.c -o chsrc
+git clone https://gitee.com/RubyMetric/chsrc.git; cd chsrc
+clang -Iinclude -Ilib src/chsrc-main.c -o chsrc
 ```
+
+**如果还不存在这些依赖，你将会被死锁住: 我还没有换源，我该如何安装这些依赖呢？**
+
+这就是 [chsrc-bootstrap](./bootstrap/) 起作用的时刻，你可使用BSD系统的原生脚本语言编写 `bootstrapper`，[并向我们提交](https://github.com/RubyMetric/chsrc/issues/230)
+
+注: `chsrc` 实现的 `FreeBSD recipe` 长期存在问题，因此一个新的 `bootstrapper` 是相当必要的，请帮助你自己和大家!
+
+</details>
+
+<details>
+<summary>Android/Termux</summary>
+
+```bash
+wget -O - https://gitee.com/RubyMetric/chsrc/raw/main/bootstrap/Termux.bash | bash
+```
+
 </details>
 
 <details>
 <summary>其他平台</summary>
 
+若你所在的平台不存在预编译好的 `chsrc`，你需要手动编译。如果已安装好了编译 `chsrc` 所需要的依赖，可直接运行:
+
 ```bash
-$ git clone https://gitee.com/RubyMetric/chsrc.git; cd chsrc; make
+git clone https://gitee.com/RubyMetric/chsrc.git; cd chsrc; make
 ```
+
+**如果还不存在这些依赖，你将会被死锁住: 我还没有换源，我该如何安装这些依赖呢？**
+
+这就是 [chsrc-bootstrap](./bootstrap/) 起作用的时刻，你可使用该平台原生脚本语言编写 `bootstrapper`，[并向我们提交](https://github.com/RubyMetric/chsrc/issues/230)
+
 </details>
 
 <br>
@@ -307,7 +385,7 @@ reset <target>            # 重置，使用上游默认使用的源
     $ chsrc ls  ruby
     $ chsrc set ruby rubychina
 
-若您有自己的镜像地址，使用自定义URL
+若有自己的镜像，可以使用自定义URL
 
     $ chsrc set ruby https://gems.ruby-china.com/
 
@@ -432,12 +510,13 @@ chsrc set conda  | anaconda
 ## ❤️ 致谢
 
 感谢各个镜像站提供的优质免费镜像服务
+
 1. [mirror.c](./src/framework/mirror.c) 包含了通用的镜像站信息
 2. 各个recipe内部定义的专用镜像站
 
 另外特别感谢以下组织或项目:
 
-1. [MirrorZ 教育网镜像站](https://help.mirrors.cernet.edu.cn/)
+1. [校园网联合镜像站(MirrorZ)](https://help.mirrors.cernet.edu.cn/)
 2. [清华大学 Tuna](https://mirrors.tuna.tsinghua.edu.cn/)
 3. [上海交通大学软件源镜像服务](https://mirrors.sjtug.sjtu.edu.cn/)
 4. [中国科学技术大学 Linux 用户协会](https://github.com/ustclug)
@@ -453,17 +532,13 @@ chsrc set conda  | anaconda
 
 <br>
 
-
-
 [@Aaron-212]:      https://github.com/Aaron-212
 [@chenrui333]:     https://github.com/chenrui333
 [@niheaven]:       https://github.com/niheaven
 [@Gn3po4g]:        https://github.com/Gn3po4g
 [@Jerry-Terrasse]: https://github.com/Jerry-Terrasse
-[@ccmywish]:       https://github.com/ccmywish
 [@Efterklang]:     https://github.com/Efterklang
 [@wickdynex]:      https://github.com/wickdynex
 [@YU-7]:           https://github.com/YU-7
-
-[issue#98 on GitHub]: https://github.com/RubyMetric/chsrc/issues/98
+[@sanchuanhehe]:   https://github.com/sanchuanhehe
 

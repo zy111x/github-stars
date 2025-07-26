@@ -1,6 +1,6 @@
 ---
 project: element-plus
-stars: 25548
+stars: 26250
 description: |-
     🎉 A Vue.js 3 UI Library made by Element team
 url: https://github.com/element-plus/element-plus
@@ -15,7 +15,7 @@ url: https://github.com/element-plus/element-plus
     <img src="https://img.shields.io/npm/v/element-plus.svg" />
   </a>
   <a href="https://github.com/element-plus/element-plus">
-    <img src="https://img.shields.io/badge/node-%20%3E%3D%2018-47c219" />
+    <img src="https://img.shields.io/badge/node-%20%3E%3D%2020-47c219" />
   </a>
   <a href="https://npmcharts.com/compare/element-plus?minimal=true">
     <img src="https://img.shields.io/npm/dm/element-plus.svg" />
@@ -114,6 +114,11 @@ You can also try Element Plus out with the components built-in playground.
         </a>
       </td>
       <td align="center" valign="middle">
+        <a href="https://el.frsimple.com" target="_blank">
+          <img width="130px" src="https://github.com/user-attachments/assets/27ec522b-5de2-4c61-88b9-be47ff3ccc69">
+        </a>
+      </td>
+      <td align="center" valign="middle">
         <a href="https://bit.dev/?from=element-ui" target="_blank">
           <img width="130px" src="https://user-images.githubusercontent.com/10095631/41342907-e44e7196-6f2f-11e8-92f2-47702dc8f059.png">
         </a>
@@ -159,6 +164,12 @@ We are now lacking of experts of `Testing`, `GitHub Actions`, `PM`, if you do fe
 This project exists thanks to all the people who contribute.
 
 And thank you to all our backers! 🙏
+
+<a href="https://openomy.app/github/element-plus/element-plus" target="_blank" style="display: block; width: 100%;" align="center">
+  <img src="https://openomy.app/svg?repo=element-plus/element-plus&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
+</a>
+
+<hr />
 
 <a href="https://github.com/element-plus/element-plus/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=element-plus/element-plus" />

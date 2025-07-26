@@ -1,6 +1,6 @@
 ---
 project: cacheable
-stars: 1781
+stars: 1844
 description: |-
     a robust, scalable, and maintained set of caching packages
 url: https://github.com/jaredwray/cacheable
@@ -14,7 +14,7 @@ url: https://github.com/jaredwray/cacheable
 [![codecov](https://codecov.io/gh/jaredwray/cacheable/graph/badge.svg?token=lWZ9OBQ7GM)](https://codecov.io/gh/jaredwray/cacheable)
 [![license](https://img.shields.io/github/license/jaredwray/cacheable)](https://github.com/jaredwray/cacheable/blob/main/LICENSE)
 
-With over `1bn downloads` a year the goal with the `Cacheable Project` is to provide a robust, scalable, and maintained set of caching packages that can be used in various projects. The packages in this repository are:
+`Cacheable` provides a robust, scalable, and maintained set of caching packages that can be used in various projects. The packages in this repository are:
 
 | Package | Downloads | Description |
 |---------|-----------|-------------|

@@ -1,6 +1,6 @@
 ---
 project: conventionalcommits.org
-stars: 7573
+stars: 7898
 description: |-
     The conventional commits specification
 url: https://github.com/conventional-commits/conventionalcommits.org
@@ -10,7 +10,7 @@ url: https://github.com/conventional-commits/conventionalcommits.org
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
-This repo is the home of the Conventional Commits specification.
+This repo is the home of the [Conventional Commits specification](https://www.conventionalcommits.org/).
 
 ## Repo Layout
 

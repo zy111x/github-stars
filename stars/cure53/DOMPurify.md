@@ -1,6 +1,6 @@
 ---
 project: DOMPurify
-stars: 14980
+stars: 15537
 description: |-
     DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:
 url: https://github.com/cure53/DOMPurify
@@ -8,17 +8,17 @@ url: https://github.com/cure53/DOMPurify
 
 # DOMPurify
 
-[![npm version](https://badge.fury.io/js/dompurify.svg)](http://badge.fury.io/js/dompurify) ![Build and Test](https://github.com/cure53/DOMPurify/workflows/Build%20and%20Test/badge.svg) [![Downloads](https://img.shields.io/npm/dm/dompurify.svg)](https://www.npmjs.com/package/dompurify) ![npm package minimized gzipped size (select exports)](https://img.shields.io/bundlejs/size/dompurify?color=%233C1&label=minified) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/cure53/dompurify?color=%233C1) [![dependents](https://badgen.net/github/dependents-repo/cure53/dompurify?color=green&label=dependents)](https://github.com/cure53/DOMPurify/network/dependents)
+[![npm](https://badge.fury.io/js/dompurify.svg)](http://badge.fury.io/js/dompurify) ![Tests](https://github.com/cure53/DOMPurify/workflows/Build%20and%20Test/badge.svg) [![Downloads](https://img.shields.io/npm/dm/dompurify.svg)](https://www.npmjs.com/package/dompurify) ![npm package minimized gzipped size (select exports)](https://img.shields.io/bundlejs/size/dompurify?color=%233C1&label=minified) [![dependents](https://badgen.net/github/dependents-repo/cure53/dompurify?color=green&label=dependents)](https://github.com/cure53/DOMPurify/network/dependents) [![Build Status](https://app.cloudback.it/badge/cure53/DOMPurify)](https://cloudback.it)
 
 DOMPurify is a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG.
 
-It's also very simple to use and get started with. DOMPurify was [started in February 2014](https://github.com/cure53/DOMPurify/commit/a630922616927373485e0e787ab19e73e3691b2b) and, meanwhile, has reached version **v3.2.5**.
+It's also very simple to use and get started with. DOMPurify was [started in February 2014](https://github.com/cure53/DOMPurify/commit/a630922616927373485e0e787ab19e73e3691b2b) and, meanwhile, has reached version **v3.2.6**.
 
 DOMPurify is written in JavaScript and works in all modern browsers (Safari (10+), Opera (15+), Edge, Firefox and Chrome - as well as almost anything else using Blink, Gecko or WebKit). It doesn't break on MSIE or other legacy browsers. It simply does nothing.
 
 **Note that [DOMPurify v2.5.8](https://github.com/cure53/DOMPurify/releases/tag/2.5.8) is the latest version supporting MSIE. For important security updates compatible with MSIE, please use the [2.x branch](https://github.com/cure53/DOMPurify/tree/2.x).**
 
-Our automated tests cover [28 different browsers](https://github.com/cure53/DOMPurify/blob/main/test/karma.custom-launchers.config.js#L5) right now, more to come. We also cover Node.js v18.x, v19.x, v20.x, v21.x, v12.x and v23.x, running DOMPurify on [jsdom](https://github.com/jsdom/jsdom). Older Node versions are known to work as well, but hey... no guarantees.
+Our automated tests cover [28 different browsers](https://github.com/cure53/DOMPurify/blob/main/test/karma.custom-launchers.config.js#L5) right now, more to come. We also cover Node.js v18.x, v19.x, v20.x, v21.x, v22.x and v23.x, running DOMPurify on [jsdom](https://github.com/jsdom/jsdom). Older Node versions are known to work as well, but hey... no guarantees.
 
 DOMPurify is written by security people who have vast background in web attacks and XSS. Fear not. For more details please also read about our [Security Goals & Threat Model](https://github.com/cure53/DOMPurify/wiki/Security-Goals-&-Threat-Model). Please, read it. Like, really.
 
@@ -30,10 +30,10 @@ DOMPurify sanitizes HTML and prevents XSS attacks. You can feed DOMPurify with s
 
 It's easy. Just include DOMPurify on your website.
 
-### Using the unminified development version
+### Using the unminified version (source-map available)
 
 ```html
-<script type="text/javascript" src="src/purify.js"></script>
+<script type="text/javascript" src="dist/purify.js"></script>
 ```
 
 ### Using the minified and tested production version (source-map available)
@@ -238,6 +238,8 @@ const clean = DOMPurify.sanitize(dirty, {ALLOW_DATA_ATTR: false});
 // The same goes for their attributes. By default, the built-in or configured allow.list is used.
 //
 // You can use a RegExp literal to specify what is allowed or a predicate, examples for both can be seen below.
+// When using a predicate function for attributeNameCheck, it can optionally receive the tagName as a second parameter
+// for more granular control over which attributes are allowed for specific elements.
 // The default values are very restrictive to prevent accidental XSS bypasses. Handle with great care!
 
 const clean = DOMPurify.sanitize(
@@ -272,6 +274,26 @@ const clean = DOMPurify.sanitize(
         },
     }
 ); // <foo-bar baz="foobar"></foo-bar><div is="foo-baz"></div>
+
+// Example with attributeNameCheck receiving tagName as a second parameter
+const clean = DOMPurify.sanitize(
+    '<element-one attribute-one="1" attribute-two="2"></element-one><element-two attribute-one="1" attribute-two="2"></element-two>',
+    {
+        CUSTOM_ELEMENT_HANDLING: {
+            tagNameCheck: (tagName) => tagName.match(/^element-(one|two)$/),
+            attributeNameCheck: (attr, tagName) => {
+                if (tagName === 'element-one') {
+                    return ['attribute-one'].includes(attr);
+                } else if (tagName === 'element-two') {
+                    return ['attribute-two'].includes(attr);
+                } else {
+                    return false;
+                }
+            },
+            allowCustomizedBuiltInElements: false,
+        },
+    }
+); // <element-one attribute-one="1"></element-one><element-two attribute-two="2"></element-two>
 ```
 ### Control behavior relating to URI values
 ```js
@@ -311,7 +333,7 @@ const clean = DOMPurify.sanitize(dirty, {
     TRUSTED_TYPES_POLICY: trustedTypes.createPolicy({
         createHTML(s) { return s},
         createScriptURL(s) { return s},
-    }
+    })
 });
 ```
 ### Influence how we sanitize
@@ -393,7 +415,7 @@ DOMPurify.addHook(
 
 We are currently using Github Actions in combination with BrowserStack. This gives us the possibility to confirm for each and every commit that all is going according to plan in all supported browsers. Check out the build logs here: https://github.com/cure53/DOMPurify/actions
 
-You can further run local tests by executing `npm test`. The tests work fine with Node.js v0.6.2 and jsdom@8.5.0.
+You can further run local tests by executing `npm run test`.
 
 All relevant commits will be signed with the key `0x24BB6BF4` for additional security (since 8th of April 2016).
 

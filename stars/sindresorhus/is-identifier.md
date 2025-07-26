@@ -1,6 +1,6 @@
 ---
 project: is-identifier
-stars: 27
+stars: 26
 description: |-
     Check if a string is a valid JavaScript identifier
 url: https://github.com/sindresorhus/is-identifier

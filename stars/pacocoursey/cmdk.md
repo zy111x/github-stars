@@ -1,6 +1,6 @@
 ---
 project: cmdk
-stars: 10942
+stars: 11451
 description: |-
     Fast, unstyled command menu React component.
 url: https://github.com/pacocoursey/cmdk

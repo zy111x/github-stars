@@ -1,20 +1,22 @@
 ---
 project: linkwarden
-stars: 11142
+stars: 13017
 description: |-
-    ⚡️⚡️⚡️Self-hosted collaborative bookmark manager to collect, organize, and preserve webpages, articles, and documents.
+    ⚡️⚡️⚡️ Self-hosted collaborative bookmark manager to collect, read, annotate, and fully preserve what matters, all in one place.
 url: https://github.com/linkwarden/linkwarden
 ---
 
 <div align="center">
   <img src="./assets/logo.png" width="100px" />
   <h1>Linkwarden</h1>
-  <h3>Bookmark Preservation for Individuals and Teams</h3>
+  <h3>Bookmarks, Evolved</h3>
 
 <a href="https://discord.com/invite/CtuYV47nuJ"><img src="https://img.shields.io/discord/1117993124669702164?logo=discord&style=flat" alt="Discord"></a>
 <a href="https://twitter.com/LinkwardenHQ"><img src="https://img.shields.io/twitter/follow/linkwarden" alt="Twitter"></a> <a href="https://news.ycombinator.com/item?id=36942308"><img src="https://img.shields.io/badge/Hacker%20News-280-%23FF6600"></img></a>
 
 <a href="https://github.com/linkwarden/linkwarden/releases"><img alt="GitHub release" src="https://img.shields.io/github/v/release/linkwarden/linkwarden"></a>
+<a href="https://crowdin.com/project/linkwarden">
+<img src="https://badges.crowdin.net/linkwarden/localized.svg" alt="Crowdin" /></a>
 <a href="https://opencollective.com/linkwarden"><img src="https://img.shields.io/opencollective/all/linkwarden" alt="Open Collective"></a>
 
 </div>
@@ -25,42 +27,27 @@ url: https://github.com/linkwarden/linkwarden
 
 [Cloud](https://cloud.linkwarden.app) · [Website](https://linkwarden.app) · [Features](https://github.com/linkwarden/linkwarden#features) · [Docs](https://docs.linkwarden.app)
 
+<img src="./assets/home.png" />
+
 </div>
 
 ## Intro & motivation
 
-**Linkwarden is a self-hosted, open-source collaborative bookmark manager to collect, organize and archive webpages.**
+**Linkwarden is a self-hosted, open-source collaborative bookmark manager to collect, read, annotate, and fully preserve what matters, all in one place.**
 
-The objective is to organize useful webpages and articles you find across the web in one place, and since useful webpages can go away (see the inevitability of [Link Rot](https://www.howtogeek.com/786227/what-is-link-rot-and-how-does-it-threaten-the-web/)), Linkwarden also saves a copy of each webpage as a Screenshot and PDF, ensuring accessibility even if the original content is no longer available.
+The objective is to organize useful webpages and articles you find across the web in one place, and since useful webpages can go away (see the inevitability of [Link Rot](https://en.wikipedia.org/wiki/Link_rot)), Linkwarden also saves a copy of each webpage as a Screenshot and PDF, ensuring accessibility even if the original content is no longer available.
 
-Additionally, Linkwarden is designed with collaboration in mind, sharing links with the public and/or allowing multiple users to work together seamlessly.
+In addition to preservation, Linkwarden provides a user-friendly reading and annotation experience that blends the simplicity of a “read-it-later” tool with the reliability of a web archive. Whether you’re highlighting key ideas, jotting down thoughts, or revisiting content long after it’s disappeared from the web, Linkwarden keeps your knowledge accessible and organized.
+
+Linkwarden is also designed with collaboration in mind, enabling you to share links with the public and/or collaborate seamlessly with multiple users.
 
 > [!TIP]  
 > Our official [Cloud](https://linkwarden.app/#pricing) offering provides the simplest way to begin using Linkwarden and it's the preferred choice for many due to its time-saving benefits. <br> Your subscription supports our hosting infrastructure and ongoing development. <br> Alternatively, if you prefer self-hosting Linkwarden, you can do so by following our [Installation documentation](https://docs.linkwarden.app/self-hosting/installation).
 
-<img src="./assets/dashboard.png" />
-
-<div align="center">
-<img src="./assets/all_links.jpg" width="23%" />
-
-<img src="./assets/list_view.jpg" width="23%" />
-
-<img src="./assets/all_collections.jpg" width="23%" />
-
-<img src="./assets/manage_team.jpg" width="23%" />
-
-<img src="./assets/readable_view.jpg" width="23%" />
-
-<img src="./assets/preserved_formats.jpg" width="23%" />
-
-<img src="./assets/public_page.jpg" width="23%" />
-
-<img src="./assets/light_dashboard.jpg" width="23%" />
-</div>
-
 ## Features
 
-- 📸 Auto capture a screenshot, PDF, single html file, and readable view of each webpage.
+- 📸 Auto capture a screenshot, PDF, and single html file of each webpage.
+- 📖 Reader view of the webpage, with the ability to highlight and annotate text.
 - 🏛️ Send your webpage to Wayback Machine ([archive.org](https://archive.org)) for a snapshot. (Optional)
 - ✨ Local AI Tagging to automatically tag your links based on their content (Optional).
 - 📂 Organize links by collection, sub-collection, name, description and multiple tags.
@@ -102,7 +89,7 @@ Join and follow us in the following platforms to stay up to date about the most 
 
 ## Suggestions
 
-We _usually_ go after the [popular suggestions](https://github.com/linkwarden/linkwarden/issues?q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc). Feel free to open a [new issue](https://github.com/linkwarden/linkwarden/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=) to suggest one - others might be interested too! :)
+We _usually_ go after the [popular suggestions](https://github.com/linkwarden/linkwarden/issues?q=is%3Aissue%20is%3Aopen%20sort%3Areactions-%2B1-desc). Feel free to open a [new issue](https://github.com/linkwarden/linkwarden/issues/new?assignees=&labels=enhancement&projects=&template=feature_request.md&title=) to suggest one - others might be interested too! :)
 
 ## Roadmap
 
@@ -119,7 +106,16 @@ Here are some community-maintained projects that are built around Linkwarden:
 
 ## Development
 
-If you want to contribute, Thanks! Start by checking our [public roadmap](https://github.com/orgs/linkwarden/projects/1), there you'll see a [README for contributers](https://github.com/orgs/linkwarden/projects/1?pane=issue&itemId=34708277) for the rest of the info on how to contribute and the main tech stack.
+If you want to contribute, Thanks! Start by choosing one of our [popular suggestions](https://github.com/linkwarden/linkwarden/issues?q=is%3Aissue%20is%3Aopen%20sort%3Areactions-%2B1-desc), just please stay in touch with [@daniel31x13](https://github.com/daniel31x13) before starting.
+
+# Translations
+
+If you want to help us translate Linkwarden to your language, please check out our [Crowdin page](https://crowdin.com/project/linkwarden) and start translating. We would love to have your help!
+
+To start translating a new language, please create an issue so we can set it up for you. New languages will be added once they reach at least 50% translation completion.
+
+<a href="https://crowdin.com/project/linkwarden">
+<img src="https://badges.crowdin.net/linkwarden/localized.svg" alt="Crowdin" /></a>
 
 ## Security
 

@@ -1,19 +1,19 @@
 ---
 project: ark-pixel-font
-stars: 3542
+stars: 3766
 description: |-
     Open source Pan-CJK pixel font / 开源的泛中日韩像素字体
 url: https://github.com/TakWolf/ark-pixel-font
 ---
 
-![banner](docs/readme-banner.png)
+![Banner](docs/readme-banner.png)
 
 # 方舟像素字体 / Ark Pixel Font
 
-[![License OFL](https://img.shields.io/badge/license-OFL--1.1-orange)](https://openfontlicense.org)
-[![License MIT](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/license/MIT)
+[![License OFL](https://img.shields.io/badge/license-OFL--1.1-orange)](LICENSE-OFL)
+[![License MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE-MIT)
 [![Releases](https://img.shields.io/github/v/release/TakWolf/ark-pixel-font)](https://github.com/TakWolf/ark-pixel-font/releases)
-[![Itch.io](https://img.shields.io/badge/itch.io-ark--pixel--font-FF2449?logo=itch.io&logoColor=white)](https://takwolf.itch.io/ark-pixel-font)
+[![itch.io](https://img.shields.io/badge/itch.io-ark--pixel--font-FF2449?logo=itch.io&logoColor=white)](https://takwolf.itch.io/ark-pixel-font)
 [![Discord](https://img.shields.io/badge/discord-像素字体工房-4E5AF0?logo=discord&logoColor=white)](https://discord.gg/3GKtPKtjdU)
 [![QQ Group](https://img.shields.io/badge/QQ群-像素字体工房-brightgreen?logo=qq&logoColor=white)](https://qm.qq.com/q/X1mLrLLGYS)
 
@@ -41,19 +41,19 @@ url: https://github.com/TakWolf/ark-pixel-font
 
 [示例文本](https://ark-pixel-font.takwolf.com/demo-10px.html) · [等宽模式-字母表](https://ark-pixel-font.takwolf.com/alphabet-10px-monospaced.html) · [比例模式-字母表](https://ark-pixel-font.takwolf.com/alphabet-10px-proportional.html)
 
-![preview-10px](docs/preview-10px.png)
+![Preview-10px](docs/preview-10px.png)
 
 ### 12 像素
 
 [示例文本](https://ark-pixel-font.takwolf.com/demo-12px.html) · [等宽模式-字母表](https://ark-pixel-font.takwolf.com/alphabet-12px-monospaced.html) · [比例模式-字母表](https://ark-pixel-font.takwolf.com/alphabet-12px-proportional.html)
 
-![preview-12px](docs/preview-12px.png)
+![Preview-12px](docs/preview-12px.png)
 
 ### 16 像素
 
 [示例文本](https://ark-pixel-font.takwolf.com/demo-16px.html) · [等宽模式-字母表](https://ark-pixel-font.takwolf.com/alphabet-16px-monospaced.html) · [比例模式-字母表](https://ark-pixel-font.takwolf.com/alphabet-16px-proportional.html)
 
-![preview-16px](docs/preview-16px.png)
+![Preview-16px](docs/preview-16px.png)
 
 ## 字符统计
 
@@ -101,9 +101,9 @@ url: https://github.com/TakWolf/ark-pixel-font
 
 | 尺寸 | 行高 |
 |---|---|
-| 10px | 16px |
-| 12px | 18px |
-| 16px | 24px |
+| 10px | 14px |
+| 12px | 16px |
+| 16px | 22px |
 
 ## 语言特定字形
 
@@ -170,9 +170,10 @@ brew install font-ark-pixel-16px-proportional
 ## 参考资料
 
 - [字体开发最佳实践](https://silnrsi.github.io/FDBP/)
-- [Microsoft - OpenType 字体文档](https://learn.microsoft.com/en-us/typography/opentype/)
-- [Glyphs 软件教程 - 纵向量度值](https://glyphsapp.com/zh/learn/vertical-metrics)
-- [FreeType 字形约定](https://freetype.org/freetype2/docs/glyphs/index.html)
+- [Microsoft - OpenType 规范](https://learn.microsoft.com/en-us/typography/opentype/spec/)
+- [Glyphs 学习 - 纵向量度值](https://glyphsapp.com/zh/learn/vertical-metrics)
+- [Glyphs 学习 - 完美像素适配](https://glyphsapp.com/zh/learn/pixel-perfection)
+- [FreeType - 字形约定](https://freetype.org/freetype2/docs/glyphs/index.html)
 
 ## 官方社区
 

@@ -1,8 +1,8 @@
 ---
 project: ldrs
-stars: 1995
+stars: 2074
 description: |-
-    Modern, tree-shakeable loaders & spinners. Made with CSS, HTML and SVG. https://uiball.com/ldrs
+    Modern, minimalist loaders & spinners. Made with CSS, HTML and SVG. https://uiball.com/ldrs
 url: https://github.com/GriffinJohnston/ldrs
 ---
 

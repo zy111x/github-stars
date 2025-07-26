@@ -1,6 +1,6 @@
 ---
 project: bestofjs
-stars: 2851
+stars: 2903
 description: |-
     :star: A place to find the best components to build amazing web applications. The best of JavaScript!
 url: https://github.com/bestofjs/bestofjs
@@ -15,8 +15,8 @@ Made of four applications and two package:
 ├── apps
 │   ├── admin
 │   ├── backend
-│   ├── bestofjs-nextjs
-│   └── bestofjs-webui
+│   ├── web
+│   └── legacy
 └── packages
     ├── api
     └── db

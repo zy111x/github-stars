@@ -1,6 +1,6 @@
 ---
 project: nanobrowser
-stars: 5050
+stars: 7950
 description: |-
     Open-Source Chrome extension for AI-powered web automation. Run multi-agent workflows using your own LLM API key. Alternative to OpenAI Operator.
 url: https://github.com/nanobrowser/nanobrowser
@@ -16,6 +16,7 @@ url: https://github.com/nanobrowser/nanobrowser
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/nanobrowser)
 [![Twitter](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/nanobrowser_ai)
 [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/NN3ABHggMK)
+[<img src="https://deepwiki.com/badge.svg" height="28" alt="Ask DeepWiki">](https://deepwiki.com/nanobrowser/nanobrowser)
 
 </div>
 
@@ -43,7 +44,7 @@ Looking for a powerful AI web agent without the $200/month price tag of OpenAI O
 - **Flexible LLM Options** - Connect to your preferred LLM providers with the freedom to choose different models for different agents.
 - **Fully Open Source** - Complete transparency in how your browser is automated. No black boxes or hidden processes.
 
-> **Note:** We currently support OpenAI, Anthropic, Gemini, Ollama and custom OpenAI-Compatible providers, more providers will be supported.
+> **Note:** We currently support OpenAI, Anthropic, Gemini, Ollama, Groq, Cerebras and custom OpenAI-Compatible providers, more providers will be supported.
 
 
 ## 📊 Key Features
@@ -54,6 +55,18 @@ Looking for a powerful AI web agent without the $200/month price tag of OpenAI O
 - **Follow-up Questions**: Ask contextual follow-up questions about completed tasks
 - **Conversation History**: Easily access and manage your AI agent interaction history
 - **Multiple LLM Support**: Connect your preferred LLM providers and assign different models to different agents
+
+
+## 🌐 Browser Support
+
+**Officially Supported:**
+- **Chrome** - Full support with all features
+- **Edge** - Full support with all features
+
+**Not Supported:**
+- Firefox, Safari, and other Chromium variants (Opera, Arc, etc.)
+
+> **Note**: While Nanobrowser may function on other Chromium-based browsers, we recommend using Chrome or Edge for the best experience and guaranteed compatibility.
 
 
 ## 🚀 Quick Start
@@ -155,6 +168,7 @@ Nanobrowser allows you to configure different LLM models for each agent to balan
   - Zero API costs and complete privacy with no data leaving your machine
 
 - **Recommended Models**:
+  - **Qwen3 14B**
   - **Falcon3 10B**
   - **Qwen 2.5 Coder 14B**
   - **Mistral Small 24B**

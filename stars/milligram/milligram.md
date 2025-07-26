@@ -1,6 +1,6 @@
 ---
 project: milligram
-stars: 10233
+stars: 10239
 description: |-
     A minimalist CSS framework.
 url: https://github.com/milligram/milligram

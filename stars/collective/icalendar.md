@@ -1,6 +1,6 @@
 ---
 project: icalendar
-stars: 1040
+stars: 1061
 description: |-
     icalendar parser library for Python
 url: https://github.com/collective/icalendar
@@ -89,14 +89,14 @@ Such a calendar can then be edited and saved again.
 
 .. code:: python
 
-    >>> calendar["X-WR-CALNAME"] = "My Modified Calendar"  # modify
-    >>> print(calendar.to_ical()[:129])  # save modification
+    >>> calendar.calendar_name = "My Modified Calendar"  # modify
+    >>> print(calendar.to_ical()[:121])  # save modification
     BEGIN:VCALENDAR
     VERSION:2.0
     PRODID:collective/icalendar
     CALSCALE:GREGORIAN
     METHOD:PUBLISH
-    X-WR-CALNAME:My Modified Calendar
+    NAME:My Modified Calendar
 
 
 Create Events, TODOs, Journals, Alarms, ...
@@ -161,7 +161,7 @@ By default and since 6.0.0, ``zoneinfo`` timezones are created.
 
 .. code:: python
 
-    >>> dt = icalendar.Calendar.example("timezoned").walk("VEVENT")[0]["DTSTART"].dt
+    >>> dt = icalendar.Calendar.example("timezoned").events[0].start
     >>> dt.tzinfo
     ZoneInfo(key='Europe/Vienna')
 
@@ -171,7 +171,7 @@ you can receive all the latest updates, and switch back to earlier behavior:
 .. code:: python
 
     >>> icalendar.use_pytz()
-    >>> dt = icalendar.Calendar.example("timezoned").walk("VEVENT")[0]["DTSTART"].dt
+    >>> dt = icalendar.Calendar.example("timezoned").events[0].start
     >>> dt.tzinfo
     <DstTzInfo 'Europe/Vienna' CET+1:00:00 STD>
 
@@ -182,11 +182,13 @@ We expect the ``main`` branch with versions ``6+`` to receive the latest updates
 Related projects
 ================
 
+* `vobject <https://github.com/py-vobject/vobject>`_ is a different Python library for iCalendar.
 * `icalevents <https://github.com/irgangla/icalevents>`_. It is built on top of icalendar and allows you to query iCal files and get the events happening on specific dates. It manages recurrent events as well.
 * `recurring-ical-events <https://pypi.org/project/recurring-ical-events/>`_. Library to query an ``icalendar.Calendar`` object for events and other components happening at a certain date or within a certain time.
 * `x-wr-timezone <https://pypi.org/project/x-wr-timezone/>`_. Library and command line tool to make ``icalendar.Calendar`` objects and files from Google Calendar (using the non-standard ``X-WR-TIMEZONE`` property) compliant with the standard (:rfc:`5545`).
 * `ics-query <http://pypi.org/project/ics-query>`_. Command line tool to query iCalendar files for occurrences of events and other components.
 * `icalendar-compatibility <https://icalendar-compatibility.readthedocs.io/en/latest/>`_ - access to event data compatible with RFC5545 and different implementations
+* `caldav <https://caldav.readthedocs.io/>`_ is based on ``icalendar``.
 
 Further Reading
 ===============

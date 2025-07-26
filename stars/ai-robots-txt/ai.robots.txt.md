@@ -1,6 +1,6 @@
 ---
 project: ai.robots.txt
-stars: 2378
+stars: 2892
 description: |-
     A list of AI agents and robots to block.
 url: https://github.com/ai-robots-txt/ai.robots.txt
@@ -10,7 +10,7 @@ url: https://github.com/ai-robots-txt/ai.robots.txt
 
 <img src="/assets/images/noai-logo.png" width="100" />
 
-This is an open list of web crawlers associated with AI companies and the training of LLMs to block. We encourage you to contribute to and implement this list on your own site. See [information about the listed crawlers](./table-of-bot-metrics.md) and the [FAQ](https://github.com/ai-robots-txt/ai.robots.txt/blob/main/FAQ.md).
+This list contains AI-related crawlers of all types, regardless of purpose. We encourage you to contribute to and implement this list on your own site. See [information about the listed crawlers](./table-of-bot-metrics.md) and the [FAQ](https://github.com/ai-robots-txt/ai.robots.txt/blob/main/FAQ.md).
 
 A number of these crawlers have been sourced from [Dark Visitors](https://darkvisitors.com) and we appreciate the ongoing effort they put in to track these crawlers. 
 
@@ -22,6 +22,8 @@ This repository provides the following files:
 - `robots.txt`
 - `.htaccess`
 - `nginx-block-ai-bots.conf`
+- `Caddyfile`
+- `haproxy-block-ai-bots.txt`
 
 `robots.txt` implements the Robots Exclusion Protocol ([RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html)).
 
@@ -30,6 +32,25 @@ Note that, as stated in the [httpd documentation](https://httpd.apache.org/docs/
 
 `nginx-block-ai-bots.conf` implements a Nginx configuration snippet that can be included in any virtual host `server {}` block via the `include` directive.
 
+`Caddyfile` includes a Header Regex matcher group you can copy or import into your Caddyfile, the rejection can then be handled as followed `abort @aibots`
+
+`haproxy-block-ai-bots.txt` may be used to configure HAProxy to block AI bots. To implement it;
+1. Add the file to the config directory of HAProxy
+2. Add the following lines in the `frontend` section;
+   ```
+   acl ai_robot hdr_sub(user-agent) -i -f /etc/haproxy/haproxy-block-ai-bots.txt
+   http-request deny if ai_robot
+   ```
+   (Note that the path of the `haproxy-block-ai-bots.txt` may be different in your environment.)
+
+
+[Bing uses the data it crawls for AI and training, you may opt out by adding a `meta` tag to the `head` of your site.](./docs/additional-steps/bing.md)
+
+### Related
+
+- [Robots.txt Traefik plugin](https://plugins.traefik.io/plugins/681b2f3fba3486128fc34fae/robots-txt-plugin):
+middleware plugin for [Traefik](https://traefik.io/traefik/) to automatically add rules of [robots.txt](./robots.txt)
+file on-the-fly.
 
 ## Contributing
 

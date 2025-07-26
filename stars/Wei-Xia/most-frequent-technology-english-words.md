@@ -1,6 +1,6 @@
 ---
 project: most-frequent-technology-english-words
-stars: 5951
+stars: 5989
 description: |-
     程序员工作中常见的英语词汇
 url: https://github.com/Wei-Xia/most-frequent-technology-english-words
@@ -21,6 +21,18 @@ url: https://github.com/Wei-Xia/most-frequent-technology-english-words
 ## Feature Request
 
 - 请直接提 issue 来增加需要添加的新功能或单词列表
+
+## 本地开发
+
+### 使用 Docker (推荐)
+
+```bash
+# 构建并启动容器
+docker-compose up
+
+# 访问网站
+open http://localhost:4000
+```
 
 ## Get Started
 

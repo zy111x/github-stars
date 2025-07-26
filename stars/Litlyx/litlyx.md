@@ -1,6 +1,6 @@
 ---
 project: litlyx
-stars: 1123
+stars: 1502
 description: |-
     Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
 url: https://github.com/Litlyx/litlyx
@@ -17,7 +17,7 @@ url: https://github.com/Litlyx/litlyx
 
 #
 <p align="center">
-  Litlys is a modern, developer-friendly, cookie-free analytics tool.<br>
+  Litlyx is a modern, developer-friendly, cookie-free analytics tool.<br>
   Setup takes less than 30 seconds! Completely self-hostable with docker.<br>
   Alternative to Google Analytics, Matomo, Umami, Plausible & Simple Analytics.
 </p>

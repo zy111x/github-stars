@@ -1,6 +1,6 @@
 ---
 project: chat-ui
-stars: 267
+stars: 439
 description: |-
     Chat UI components for LLM apps
 url: https://github.com/run-llama/chat-ui
@@ -73,7 +73,7 @@ The easiest way to get started is to connect the whole `ChatSection` component w
 
 ```tsx
 import { ChatSection } from '@llamaindex/chat-ui'
-import { useChat } from 'ai/react'
+import { useChat } from '@ai-sdk/react'
 
 const ChatExample = () => {
   const handler = useChat()
@@ -194,10 +194,16 @@ If your app is using code, latex or pdf files, you'll need to import their CSS f
 ```tsx
 import '@llamaindex/chat-ui/styles/markdown.css' // code, latex and custom markdown styling
 import '@llamaindex/chat-ui/styles/pdf.css' // pdf styling
+import '@llamaindex/chat-ui/styles/editor.css' // document editor styling
 ```
 
 The `code.css` file uses the `atom-one-dark` theme from highlight.js by default. There are a lot of others to choose from: https://highlightjs.org/demo
 You can use any of them by copying [their CSS](https://github.com/highlightjs/highlight.js/tree/main/src/styles/) to your project and importing it.
+
+## Language renderer support (e.g. mermaid)
+
+For any language that the LLM generates, you can specify a custom renderer to render the output.
+We have an example for how to render mermaid code as SVG using [a custom renderer](./apps/web/app/demo/mermaid/).
 
 ## Example
 

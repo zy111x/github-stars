@@ -1,6 +1,6 @@
 ---
 project: masonry-flow
-stars: 28
+stars: 29
 description: |-
     A React/Vue component to render masonry layout
 url: https://github.com/CatsJuice/masonry-flow

@@ -1,6 +1,6 @@
 ---
 project: registry
-stars: 57
+stars: 61
 description: |-
     Open-source domain registry platform. Revolutionizing ccTLD and gTLD management with Namingo.
 url: https://github.com/getnamingo/registry
@@ -19,6 +19,12 @@ Open-source domain registry platform. Revolutionizing ccTLD and gTLD management 
 Namingo is a state-of-the-art open-source domain registry platform, diligently crafted to serve ccTLD, gTLD, brand and private domain registries. Written from scratch in 2023/2025, it adheres to the latest standards, ensuring a cutting-edge experience. 
 
 Namingo is optimally designed for the 2026 ICANN new gTLD application round, providing a straightforward and easily updatable platform. Its contemporary architecture and intuitive interface make it an ideal choice for efficient and modern domain registry management.
+
+> ✅ **Namingo passes ICANN OT&E RST for the `MainRSPEvaluationTest` profile**, demonstrating compliance with required operational standards.
+
+### Want to pass your own RST?
+
+You can use our open-source [ICANN RST OT&E Test Script](https://github.com/getnamingo/registry-rst) tool to easily run your ICANN OT&E and production RST tests.
 
 ## Get Involved
 
@@ -57,13 +63,13 @@ Namingo is equipped with a comprehensive suite of features to meet the diverse n
 - **RDAP Server**: Next-generation registration data access protocol server to provide public access to domain data. Also offers web RDAP client.
 
 - **DAS Server**: Efficient Domain Availability Service to quickly check domain availability.
-  
-- **DNS Interface**: Advanced zone generator supporting BIND, NSD, and KnotDNS for flexible DNS software options. Includes DNSSEC signing support with native BIND9, KnotDNS and OpenDNSSEC. For NSD, native DNSSEC signing must be enabled manually—contact us for assistance.
+
+- **DNS Interface**: Zone file generator with native DNSSEC signing for BIND 9 and Knot DNS, including NSEC3 support (RFC 9276-compliant). Also supports OpenDNSSEC and NSD via external signing.
 
 - **Database Compatibility**: Fully supports MySQL/MariaDB and offers beta support for PostgreSQL, providing flexibility to match users' technical needs and infrastructure for seamless integration and peak performance.
 
-- **GDPR-Compliant Database Encryption**: Supports comprehensive database encryption to ensure GDPR compliance. For more details, see our [Encryption Guide](docs/encryption.md).
-  
+- **GDPR & NIS2 Compliance**: Namingo supports both GDPR and NIS2 requirements, including contact validation and encrypted data storage. For implementation details, see our [Encryption Guide](docs/encryption.md).
+
 - **Automation Scripts**: Ensures the continuous and smooth operation of the registry by performing routine checks and operations. Included scripts for spec 11 abuse monitoring; automated approval of domain transfers; contact and host cleanup; backup processing and upload; domain lifetime status change; generation and upload of RDE deposits, LORDN file, ICANN's monthly reports, invoices; email dispatcher system; statistics generation; TMCH and URS processing; zone generator and signing.
 
 ### Optional components
@@ -71,6 +77,8 @@ Namingo is equipped with a comprehensive suite of features to meet the diverse n
 - [**Automated Registrar Onboarding**](https://github.com/getnamingo/registrar-onboarding) - New registrars can join by filling up a form, signing the agreement online and even paying the application fee online. Then their account is activated after check by registry staff. No more emails, Word or PDF forms or copy-paste between systems.
 
 - [**Domain Registry API**](https://github.com/getnamingo/registry-api) - Provides REST API access to domain availability checks and to the domain droplist.
+
+- [**ntfy.sh Error Notifier**](https://github.com/getnamingo/registry-ntfy) - Checks for new high-severity errors and sends real-time push notifications via ntfy.sh.
 
 ## Documentation
 
@@ -87,7 +95,7 @@ To get started, copy the command below and paste it into your server terminal (r
 wget https://namingo.org/install.sh -O install.sh && chmod +x install.sh && ./install.sh
 ```
 
-After installation, be sure to review all the guides in the Documentation section to complete your setup and configuration. If anything remains unclear, you can refer to the [Legacy Installation Guide](docs/install.md) for a detailed, step-by-step manual installation process.
+After installation, be sure to review all the guides in the Documentation section to complete your setup and configuration. If anything remains unclear, you can refer to the [Legacy Installation Guide](docs/install.md).
 
 **Note for Systems with Partial or Misconfigured IPv6 Support:** If your system has partial or misconfigured IPv6 support (e.g., `ping -6 ipv6.google.com` fails), edit `/etc/gai.conf` and add or uncomment the following line `precedence ::ffff:0:0/96 100`. In the `config.php` files for WHOIS/DAS, replace `::` with `false`, or use `0.0.0.0` for EPP.
 
@@ -96,36 +104,38 @@ After installation, be sure to review all the guides in the Documentation sectio
 ### Updating
 
 To update, you **must run the update scripts sequentially** without skipping versions.  
-For example, if you're on **v1.0.16** and the latest is **v1.0.18**, first update to **v1.0.17**, then to **v1.0.18**.
+For example, if you're on **v1.0.19** and the latest is **v1.0.21**, first update to **v1.0.20**, then to **v1.0.21**.
+
+- **v1.0.20 → v1.0.21**  
+  Download and run the [`update1021.sh`](docs/update1021.sh) script.
+
+- **v1.0.19 → v1.0.20**  
+  Download and run the [`update1020.sh`](docs/update1020.sh) script.
 
 - **v1.0.18 → v1.0.19**  
   Download and run the [`update1019.sh`](docs/update1019.sh) script.
-  
-- **v1.0.17 → v1.0.18**  
-  Download and run the [`update1018.sh`](docs/update1018.sh) script.
-
-- **v1.0.16 → v1.0.17**  
-  Download and run the [`update1017.sh`](docs/update1017.sh) script.
 
 For **older versions**, please refer to [`update.md`](docs/update.md).
 
-### [Configuration Guide](docs/configuration.md)
+### [Configuration Guide](docs/configuration.md) [Required]
 
-#### [Database Replication](docs/replication.md)
+#### [DNS Setup Guide](docs/dns.md) [Required]
 
-#### [Data Encryption](docs/encryption.md)
+#### [Registrar Payment Guide](docs/payment.md) [Required]
 
-#### [Custom Pricing per Registrar](docs/custom-registrar-pricing.md)
+#### [gTLD-Specific Setup](docs/gtld.md) [gTLD Only]
 
-#### [Minimum Data Set](docs/minimum-data-set.md)
+#### [Database Replication](docs/replication.md) [Recommended]
 
-### [Initial Operation Guide](docs/iog.md)
+#### [Data Encryption](docs/encryption.md) [Recommended]
 
-### [Namingo EPP Server](docs/epp.md)
+### [First Steps Guide](docs/iog.md) [Required]
 
-### [FAQ](docs/faq.md)
+### [EPP Operations Guide](docs/epp.md) [Required]
 
-### [Architecture of Namingo](docs/architecture.md)
+### [Registrar FAQ](docs/faq.md) [Required]
+
+### [System Architecture](docs/architecture.md) [Advanced]
 
 ## Support
 
@@ -151,6 +161,14 @@ Additionally, we extend our gratitude to:
 - [Tabler](https://tabler.io/), whose elegant and intuitive interface design has greatly influenced the user experience of Namingo.
 - [ActiveCampaign/postmark-templates](https://github.com/ActiveCampaign/postmark-templates) and [leemunroe/responsive-html-email-template](https://github.com/leemunroe/responsive-html-email-template), for providing great email templates.
 
+## 💖 Support This Project
+
+If you find Namingo Registry useful, consider donating:
+
+- [Donate via Stripe](https://donate.stripe.com/7sI2aI4jV3Offn28ww)
+- BTC: `bc1q9jhxjlnzv0x4wzxfp8xzc6w289ewggtds54uqa`
+- ETH: `0x330c1b148368EE4B8756B176f1766d52132f0Ea8`
+
 ## Licensing
 
-Namingo is licensed under the MIT License.
+Namingo Registry is licensed under the MIT License.

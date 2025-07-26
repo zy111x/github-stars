@@ -1,6 +1,6 @@
 ---
 project: 5ire
-stars: 2944
+stars: 4145
 description: |-
     5ire is a cross-platform desktop AI assistant, MCP client. It compatible with major service providers,  supports local knowledge base and  tools via model context protocol servers .
 url: https://github.com/nanbingxyz/5ire
@@ -11,12 +11,19 @@ url: https://github.com/nanbingxyz/5ire
     <img src="https://5ire.app/logo.png" alt="Logo" width="120">
   </a>
   <br />
+
    <h1>A Sleek AI Assistant & MCP Client</h1>
    <div>
-    <img src="https://badge.mcpx.dev/?type=client" />&nbsp;
+    <a href="https://modelcontextprotocol.io/clients" target="_blank"><img src="https://badge.mcpx.dev/?type=client" /></a>
     <img src="https://badge.mcpx.dev/?type=client&features=tools" />
-     <img src="https://img.shields.io/badge/license-Apache%202.0-brightgreen?style=flat"/>
-     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+    <img src="https://img.shields.io/badge/price-free-brightgreen.svg"/>
+    <a href="https://linkedin.com/in/nanbing" target="_blank"><img src="https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff" alt="follow on LinkedIn"></a>
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
+     <a href="https://github.com/nanbingxyz/5ire/graphs/commit-activity" target="_blank">
+        <img alt="Commits last month" src="https://img.shields.io/github/commit-activity/m/nanbingxyz/5ire?labelColor=%20%2332b583&color=%20%2312b76a"></a>
+     <a href="https://github.com/nanbingxyz/5ire/issues" target="_blank">
+        <img alt="Issues closed" src="https://img.shields.io/github/issues-search?query=repo%3Ananbingxyz%2F5ire%20is%3Aclosed&label=issues%20closed&labelColor=%20%237d89b0&color=%20%235d6b98"></a>
+     <a href="https://mseep.ai/app/92bbc79d-4b4d-4707-8d43-2d3d8ebb4fa8" target="_blank"><img src="https://mseep.ai/badge.svg" alt="Verified on MseeP"/></a>
   </div>
    <br />
   <img src="https://github.com/user-attachments/assets/e622e1da-09b9-4212-b71c-ad9d39bf3cd5" width="100%"/>
@@ -28,9 +35,7 @@ url: https://github.com/nanbingxyz/5ire
     <span style="font-size:12px;">/ Azure</span>
     <span style="font-size:12px;">/ Anthropic</span>
     <span style="font-size:12px;">/ Google</span>
-    <span style="font-size:12px;">/ Baidu</span>
     <span style="font-size:12px;">/ Mistral</span>
-    <span style="font-size:12px;">/ Moonshot</span>
     <span style="font-size:12px;">/ Doubao</span>
     <span style="font-size:12px;">/ Grok</span>
     <span style="font-size:12px;">/ DeepSeek</span>
@@ -57,9 +62,13 @@ These components are required as they constitute the runtime environment for the
 
 For detailed installation instructions, please see our [Installation Guide](INSTALLATION.md).
 
-### Dev Guide
+### Getting involved
 
 If you want to contribute code to 5ire or develop your own apps based on 5ire, start with the [Development Setup Guide](DEVELOPMENT.md).
+
+Visit [Wiki](https://deepwiki.com/nanbingxyz/5ire) for more details.
+
+**🚀 To integrate 5ire’s one-click server installation into your website, see the** [One-Click Server Installation Integration Guide](https://github.com/nanbingxyz/5ire/wiki/One%E2%80%90Click-Server-Installation-Integration-Guide).
 
 <br />
 

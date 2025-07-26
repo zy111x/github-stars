@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 4046
+stars: 5174
 description: |-
     PraisonAI is a production-ready Multi AI Agents framework, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. It provides a low-code solution to streamline the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
 url: https://github.com/MervinPraison/PraisonAI
@@ -127,6 +127,10 @@ agent.start('Write a movie script about a robot in Mars');
 ```
 
 ![PraisonAI CLI Demo](docs/demo/praisonai-cli-demo.gif)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=MervinPraison/PraisonAI&type=Date)](https://docs.praison.ai)
 
 ## AI Agents Flow
 
@@ -564,10 +568,6 @@ uv pip install -r pyproject.toml --extra "crewai,autogen"
 - 🔍 Internet Search Capability (using Crawl4AI and Tavily)
 - 🖼️ Vision Language Model (VLM) Support
 - 🎙️ Real-time Voice Interaction
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=MervinPraison/PraisonAI&type=Date)](https://docs.praison.ai)
 
 ## Video Tutorials
 

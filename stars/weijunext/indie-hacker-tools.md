@@ -1,6 +1,6 @@
 ---
 project: indie-hacker-tools
-stars: 7145
+stars: 7425
 description: |-
     收录独立开发者出海技术栈和工具
 url: https://github.com/weijunext/indie-hacker-tools
@@ -18,6 +18,10 @@ url: https://github.com/weijunext/indie-hacker-tools
 
 欢迎提 pr 和 issues 更新。
 
+> 本仓库由 🚀[Nexty.dev](https://nexty.dev/) 赞助，Nexty 是一款**多场景 Next.js SaaS 全栈模板**，内置了开箱即用的登录、支付、AI、邮件订阅等基础设施，让你真正专注于业务逻辑。
+>
+> 点此了解 👉[Nexty.dev](https://nexty.dev/)
+
 
 ## Web 开发模板
 
@@ -25,7 +29,7 @@ url: https://github.com/weijunext/indie-hacker-tools
 | --- | --- |
 | [smart-excel-ai（免费）](https://github.com/weijunext/smart-excel-ai) | Next.js。集成了登录、支付（lemon squeezy）、AI功能 |
 | [Opensaas（免费）](https://github.com/wasp-lang/open-saas/) | React + Node.js。集成了登录、支付（stripe）、邮件、AI功能 |
-| [Shipfast（付费）](https://shipfa.st/?via=wei) | Next.js。集成了登录、支付（stripe）、邮件、AI功能 |
+| [Nexty.dev（付费）](https://nexty.dev) | 多场景 Next.js SaaS 全栈模板，内置了开箱即用的登录、支付、AI、邮件订阅等基础设施，让你真正专注于业务逻辑  |
 | [SupaStarter（付费）](https://supastarter.dev?aff=bgO) |  有 Next.js 和 Nuxt 两种模板，功能比较齐全 |
 | [插件+落地页全栈源码和教程（付费）](https://ship.weijunext.com/) |  源码+教程形式的开发专栏，包含：插件(Plasmo)、落地页(Next.js)、服务端(Next.js)、AI(ChatGPT, DeepSeek)、数据库(Firebase)、支付(Paddle)、登录(Firebase) |
 
@@ -244,7 +248,7 @@ url: https://github.com/weijunext/indie-hacker-tools
 
 | 平台 | 备注 |
 | --- | --- |
-| [Product Hunt](https://www.producthunt.com/) | 新产品主打阵地，发布后其他导航站回来爬取，首选发布地。Product Hunt 助手：[PHCopilot.AI](https://PHCopilot.AI)  |
+| [Product Hunt](https://www.producthunt.com/) | 新产品主打阵地，发布后其他导航站会来爬取，首选发布地。Product Hunt 助手：[PHCopilot.AI](https://PHCopilot.AI)  |
 | [Hacker News](https://news.ycombinator.com/) | 发布注意要写软文，否则容易被删帖 |
 | [PoweredByAI](https://poweredbyai.app/) | 免费提交产品 |
 | [Pinterest](https://www.pinterest.com) | 发布视频频道也会被Google收录（免费）|

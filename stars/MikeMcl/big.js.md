@@ -1,6 +1,6 @@
 ---
 project: big.js
-stars: 5018
+stars: 5081
 description: |-
     A small, fast JavaScript library for arbitrary-precision decimal arithmetic.
 url: https://github.com/MikeMcl/big.js
@@ -12,6 +12,7 @@ url: https://github.com/MikeMcl/big.js
 
 [![npm version](https://img.shields.io/npm/v/big.js.svg)](https://www.npmjs.com/package/big.js)
 [![npm downloads](https://img.shields.io/npm/dw/big.js)](https://www.npmjs.com/package/big.js)
+[![CI](https://github.com/MikeMcl/big.js/actions/workflows/ci.yml/badge.svg)](https://github.com/MikeMcl/big.js/actions/workflows/ci.yml)
 
 ## Features
 
@@ -43,12 +44,13 @@ ES module:
 ```html
 <script type='module'>
 import Big from './path/to/big.mjs';
+</script>
 ```
 
 Get a minified version from a CDN:
 
 ```html
-<script src='https://cdn.jsdelivr.net/npm/big.js@6.2.2/big.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/big.js@7.0.1/big.min.js'></script>
 ```
 
 ### [Node.js](http://nodejs.org)
@@ -72,8 +74,8 @@ import Big from 'big.js';
 ### [Deno](https://deno.land/)
 
 ```javascript
-import Big from 'https://raw.githubusercontent.com/mikemcl/big.js/v6.2.2/big.mjs';
-import Big from 'https://unpkg.com/big.js@6.2.2/big.mjs';
+import Big from 'https://raw.githubusercontent.com/mikemcl/big.js/v7.0.1/big.mjs';
+import Big from 'https://unpkg.com/big.js@latest/big.mjs';
 ```
 
 ## Use

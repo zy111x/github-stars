@@ -1,6 +1,6 @@
 ---
 project: logtape
-stars: 667
+stars: 1100
 description: |-
     Simple logging library with zero dependencies for Deno, Node.js, Bun, browsers, and edge functions
 url: https://github.com/dahlia/logtape
@@ -42,10 +42,13 @@ The highlights of LogTape are:
     You can use template literals to log messages with placeholders and
     values.
 
+ -  *[Built-in data redaction]*: LogTape provides robust capabilities to redact
+    sensitive information from logs using pattern-based or field-based approaches.
+
  -  *[Dead simple sinks]*: You can easily add your own sinks to LogTape.
 
-![](./screenshots/web-console.png)
-![](./screenshots/terminal-console.png)
+![](https://raw.githubusercontent.com/dahlia/logtape/refs/heads/main/screenshots/web-console.png)
+![](https://raw.githubusercontent.com/dahlia/logtape/refs/heads/main/screenshots/terminal.png)
 
 [JSR]: https://jsr.io/@logtape/logtape
 [JSR badge]: https://jsr.io/badges/@logtape/logtape
@@ -60,6 +63,7 @@ The highlights of LogTape are:
 [Structured logging]: https://logtape.org/manual/struct
 [Hierarchical categories]: https://logtape.org/manual/categories
 [Template literals]: https://logtape.org/manual/start#how-to-log
+[Built-in data redaction]: https://logtape.org/manual/redaction
 [Dead simple sinks]: https://logtape.org/manual/sinks
 
 
@@ -78,6 +82,57 @@ bun  add     @logtape/logtape  # for Bun
 ~~~~
 
 See also the [installation manual][Runtime diversity] for more details.
+
+
+Packages
+--------
+
+LogTape is a monorepo that contains several packages.  The main package is
+*@logtape/logtape*, which provides the core logging functionality.  Other
+packages provide additional features and integrations.  The following is a
+list of the packages in the LogTape monorepo:
+
+| Package                                           | JSR                                  | npm                                  | Description                |
+|---------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|
+| [*@logtape/logtape*](/logtape/)                   | [JSR][jsr:@logtape/logtape]          | [npm][npm:@logtape/logtape]          | Core logging functionality |
+| [*@logtape/adaptor-pino*](/adaptor-pino/)         | [JSR][jsr:@logtape/adaptor-pino]     | [npm][npm:@logtape/adaptor-pino]     | [Pino] adapter             |
+| [*@logtape/adaptor-winston*](/adaptor-winston/)   | [JSR][jsr:@logtape/adaptor-winston]  | [npm][npm:@logtape/adaptor-winston]  | [winston] adapter          |
+| [*@logtape/cloudwatch-logs*](/cloudwatch-logs/)   | [JSR][jsr:@logtape/cloudwatch-logs]  | [npm][npm:@logtape/cloudwatch-logs]  | [AWS CloudWatch Logs] sink |
+| [*@logtape/file*](/file/)                         | [JSR][jsr:@logtape/file]             | [npm][npm:@logtape/file]             | File sinks                 |
+| [*@logtape/otel*](/otel/)                         | [JSR][jsr:@logtape/otel]             | [npm][npm:@logtape/otel]             | [OpenTelemetry] sink       |
+| [*@logtape/pretty*](/pretty/)                     | [JSR][jsr:@logtape/pretty]           | [npm][npm:@logtape/pretty]           | Beautiful text formatter   |
+| [*@logtape/redaction*](/redaction/)               | [JSR][jsr:@logtape/redaction]        | [npm][npm:@logtape/redaction]        | Data redaction             |
+| [*@logtape/sentry*](/sentry/)                     | [JSR][jsr:@logtape/sentry]           | [npm][npm:@logtape/sentry]           | [Sentry] sink              |
+| [*@logtape/syslog*](/syslog/)                     | [JSR][jsr:@logtape/syslog]           | [npm][npm:@logtape/syslog]           | Syslog sink                |
+| [*@logtape/windows-eventlog*](/windows-eventlog/) | [JSR][jsr:@logtape/windows-eventlog] | [npm][npm:@logtape/windows-eventlog] | Windows Event Log sink     |
+
+[AWS CloudWatch Logs]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/
+[OpenTelemetry]: https://opentelemetry.io/
+[Pino]: https://github.com/pinojs/pino
+[Sentry]: https://sentry.io/
+[winston]: https://github.com/winstonjs/winston
+[jsr:@logtape/logtape]: https://jsr.io/@logtape/logtape
+[npm:@logtape/logtape]: https://www.npmjs.com/package/@logtape/logtape
+[jsr:@logtape/adaptor-pino]: https://jsr.io/@logtape/adaptor-pino
+[npm:@logtape/adaptor-pino]: https://www.npmjs.com/package/@logtape/adaptor-pino
+[jsr:@logtape/adaptor-winston]: https://jsr.io/@logtape/adaptor-winston
+[npm:@logtape/adaptor-winston]: https://www.npmjs.com/package/@logtape/adaptor-winston
+[jsr:@logtape/cloudwatch-logs]: https://jsr.io/@logtape/cloudwatch-logs
+[npm:@logtape/cloudwatch-logs]: https://www.npmjs.com/package/@logtape/cloudwatch-logs
+[jsr:@logtape/file]: https://jsr.io/@logtape/file
+[npm:@logtape/file]: https://www.npmjs.com/package/@logtape/file
+[jsr:@logtape/otel]: https://jsr.io/@logtape/otel
+[npm:@logtape/otel]: https://www.npmjs.com/package/@logtape/otel
+[jsr:@logtape/pretty]: https://jsr.io/@logtape/pretty
+[npm:@logtape/pretty]: https://www.npmjs.com/package/@logtape/pretty
+[jsr:@logtape/redaction]: https://jsr.io/@logtape/redaction
+[npm:@logtape/redaction]: https://www.npmjs.com/package/@logtape/redaction
+[jsr:@logtape/sentry]: https://jsr.io/@logtape/sentry
+[npm:@logtape/sentry]: https://www.npmjs.com/package/@logtape/sentry
+[jsr:@logtape/syslog]: https://jsr.io/@logtape/syslog
+[npm:@logtape/syslog]: https://www.npmjs.com/package/@logtape/syslog
+[jsr:@logtape/windows-eventlog]: https://jsr.io/@logtape/windows-eventlog
+[npm:@logtape/windows-eventlog]: https://www.npmjs.com/package/@logtape/windows-eventlog
 
 
 Docs

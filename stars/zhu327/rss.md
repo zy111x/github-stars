@@ -1,6 +1,6 @@
 ---
 project: rss
-stars: 534
+stars: 536
 description: |-
     weibo weixin zhihu rss RSS工厂，生成微博，微信公众号，知乎日报RSS
 url: https://github.com/zhu327/rss
@@ -33,4 +33,6 @@ pip install -r requirements.txt
 
 注意：
 由于搜狗微信公众号搜索强大的反爬虫机制，demo服务在公众号订阅超过300订阅后就会500，所以如果你需要公众号RSS服务的话请自己尝试搭建。
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
 

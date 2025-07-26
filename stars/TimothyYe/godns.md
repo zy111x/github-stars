@@ -1,6 +1,6 @@
 ---
 project: godns
-stars: 1555
+stars: 1596
 description: |-
     A dynamic DNS client tool that supports AliDNS, Cloudflare, Google Domains, DNSPod, HE.net & DuckDNS & DreamHost, etc, written in Go.
 url: https://github.com/TimothyYe/godns
@@ -27,6 +27,8 @@ url: https://github.com/TimothyYe/godns
 [14]: https://godoc.org/github.com/TimothyYe/godns
 
 [GoDNS](https://github.com/TimothyYe/godns) is a dynamic DNS (DDNS) client tool. It is a rewrite in [Go](https://golang.org) of my early [DynDNS](https://github.com/TimothyYe/DynDNS) open-source project.
+
+[查看中文帮助文档](README_CN.md)
 
 <img src="https://github.com/TimothyYe/godns/blob/master/assets/snapshots/web-panel.jpg?raw=true" />
 
@@ -61,12 +63,14 @@ url: https://github.com/TimothyYe/godns
     - [OVH](#ovh)
     - [Dynu](#dynu)
     - [IONOS](#ionos)
+    - [TransIP](#transip)
   - [Notifications](#notifications)
     - [Email](#email)
     - [Telegram](#telegram)
     - [Slack](#slack)
     - [Discord](#discord)
     - [Pushover](#pushover)
+    - [Bark](#bark)
   - [Webhook](#webhook)
     - [Webhook with HTTP GET request](#webhook-with-http-get-request)
     - [Webhook with HTTP POST request](#webhook-with-http-post-request)
@@ -117,7 +121,8 @@ url: https://github.com/TimothyYe/godns
 | [Hetzner][hetzner]                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [OVH][ovh]                            | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
 | [Dynu][dynu]                          | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
-| [IONOS][ionos]                          | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
+| [IONOS][ionos]                        | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
+| [TransIP][transip]                    | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
 
 [cloudflare]: https://cloudflare.com
 [digitalocean]: https://digitalocean.com
@@ -138,6 +143,7 @@ url: https://github.com/TimothyYe/godns
 [ovh]: https://www.ovh.com
 [dynu]: https://www.dynu.com/
 [ionos]: https://www.ionos.com/
+[transip]: https://www.transip.net/
 
 Tip: You can follow this [issue](https://github.com/TimothyYe/godns/issues/76) to view the current status of DDNS for root domains.
 
@@ -355,7 +361,6 @@ For DigitalOcean, you need to provide an API Token with the `domain` scopes (you
   "ip_type": "IPv4",
   "interval": 300
 }
-
 ```
 
 </details>
@@ -599,12 +604,14 @@ For Scaleway, you need to provide an API Secret Key as the `login_token` ([How t
 {
   "provider": "Scaleway",
   "login_token": "API Secret Key",
-  "domains": [{
+  "domains": [
+    {
       "domain_name": "example.com",
-      "sub_domains": ["www","@"]
-    },{
+      "sub_domains": ["www", "@"]
+    },
+    {
       "domain_name": "samplednszone.example.com",
-      "sub_domains": ["www","test"]
+      "sub_domains": ["www", "test"]
     }
   ],
   "resolver": "8.8.8.8",
@@ -828,9 +835,7 @@ For Dynu, you need to configure the `password`, config 1 default domain & subdom
   "domains": [
     {
       "domain_name": "your_domain.com",
-      "sub_domains": [
-        "your_subdomain"
-      ]
+      "sub_domains": ["your_subdomain"]
     }
   ],
   "resolver": "8.8.8.8",
@@ -859,6 +864,33 @@ login_token: publicprefix.secret
 domains:
   - domain_name: example.com
     sub_domains:
+      - somesubdomain
+      - anothersubdomain
+resolver: 1.1.1.1
+ip_urls:
+  - https://api.ipify.org
+ip_type: IPv4
+interval: 300
+socks5_proxy: ""
+```
+
+</details>
+
+#### TransIP
+
+For TransIP, you need to provide your api private key as `login_token` and username as `email`, and configure all the domains & subdomains.
+
+<details>
+<summary>Example</summary>
+
+```yaml
+provider: TransIP
+email: account_name
+login_token: api_key
+domains:
+  - domain_name: example.com
+    sub_domains:
+      - "@"
       - somesubdomain
       - anothersubdomain
 resolver: 1.1.1.1
@@ -970,6 +1002,28 @@ To receive a [Pushover](https://pushover.net/) message each time the IP changes,
 The `message_template` property supports [html](https://pushover.net/api#html) if the `html` parameter is `1`. If it is left empty a default message will be used.
 If the `device` and `title` parameters are left empty, Pushover will choose defaults [see](https://pushover.net/api#messages). More details on the priority parameter
 can be found on the Pushover [API description](https://pushover.net/api#priority).
+
+#### Bark
+
+To receive a [Bark](https://bark.day.app/) message each time the IP changes, update your configuration with the following snippet:
+
+```json
+  "notify": {
+    "bark": {
+      "enabled": true,
+      "server": "https://api.day.app",
+      "device_keys": "",
+      "params": "{ \"isArchive\": 1, \"action\": \"none\" }"
+    }
+  }
+```
+
+`server` Bark server address. You can use the default official server `https://api.day.app` or set it to a self-hosted server address.  
+`device_keys` device key, supports multiple keys (comma-separated) for batch push.  
+`params` Bark request parameters, please refer to [Bark API](https://bark.day.app/#/en-us/tutorial?id=request-parameters)
+`user` Basic auth username of the self-hosted server, same with server side environment variable `BARK_SERVER_BASIC_AUTH_USER`.  
+`password` Basic auth password of the self-hosted server, same with server side environment variable `BARK_SERVER_BASIC_AUTH_PASSWORD`.  
+For more information, please refer to the [Bark official documentation](https://bark.day.app/)
 
 ### Webhook
 
@@ -1137,6 +1191,7 @@ Starting from version 3.1.0, GoDNS provides a web panel to manage the configurat
 ```
 
 After enabling the web panel, you can visit `http://localhost:9000` to manage the configuration and monitor the status of the domains.
+
 ## Running GoDNS
 
 There are a few ways to run GoDNS.
@@ -1192,6 +1247,7 @@ Note: when the program stops, it will not be restarted.
 ### As a managed daemon (with procd)
 
 `procd` is the init system on OpenWRT. If you want to use godns as a service with OpenWRT and procd:
+
 1. Copy `./config/procd/godns` to `/etc/init.d` (and tweak it to your needs)
 2. Start the service (with root privilege):
 
@@ -1258,8 +1314,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ### Setup the frontend development environment
 
 Requirements:
-* Node.js `18.19.0` or higher
-* Go `1.17` or higher
+
+- Node.js `18.19.0` or higher
+- Go `1.17` or higher
 
 The frontend project is built with [Next.js](https://nextjs.org/) and [daisyUI](https://daisyui.com/). To start the development environment, run:
 
@@ -1268,6 +1325,7 @@ cd web
 npm ci
 npm run dev
 ```
+
 ### Build the frontend
 
 To build the frontend, run:

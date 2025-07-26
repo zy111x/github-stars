@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 14622
+stars: 15089
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -11,35 +11,6 @@ url: https://github.com/sindresorhus/ky
 	<div>
 		<img width="600" height="600" src="media/logo.svg" alt="ky">
 	</div>
-	<br>
-	<br>
-	<p>
-		<p>
-			<sup>
-				Sindre's open source work is supported by the community.<br>Special thanks to:
-			</sup>
-		</p>
-		<br>
-		<br>
-		<a href="https://logto.io/?ref=sindre">
-			<div>
-				<picture>
-					<source width="200" media="(prefers-color-scheme: dark)" srcset="https://sindresorhus.com/assets/thanks/logto-logo-dark.svg?x">
-					<source width="200" media="(prefers-color-scheme: light)" srcset="https://sindresorhus.com/assets/thanks/logto-logo-light.svg?x">
-					<img width="200" src="https://sindresorhus.com/assets/thanks/logto-logo-light.svg?x" alt="Logto logo">
-				</picture>
-			</div>
-			<b>The better identity infrastructure for developers</b>
-			<div>
-				<sup>Logto is an open-source Auth0 alternative designed for every app.</sup>
-			</div>
-		</a>
-	</p>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<br>
 	<br>
 	<br>
@@ -774,7 +745,7 @@ console.log(json.title);
 
 #### How is it different from [`got`](https://github.com/sindresorhus/got)
 
-See my answer [here](https://twitter.com/sindresorhus/status/1037406558945042432). Got is maintained by the same people as Ky.
+Got is maintained by the same people as Ky, so you probably want Ky instead. It's smaller, works in the browser too, and is more stable since it's built on Fetch.
 
 #### How is it different from [`axios`](https://github.com/axios/axios)?
 

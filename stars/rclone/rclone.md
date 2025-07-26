@@ -1,28 +1,12 @@
 ---
 project: rclone
-stars: 49799
+stars: 51575
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
 ---
 
-<div align="center">
-<sup>Special thanks to our sponsor:</sup>
-<br>
-<br>
-<a href="https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=rclone_20231103">
-  <div>
-    <img src="https://rclone.org/img/logos/warp-github.svg" width="300" alt="Warp">
-  </div>
-  <b>Warp is a modern, Rust-based terminal with AI built in so you and your team can build great software, faster.</b>
-  <div>
-    <sup>Visit warp.dev to learn more.</sup>
-  </div>
-</a>
-<br>
-<hr>
-</div>
-<br>
+
 
 [<img src="https://rclone.org/img/logo_on_light__horizontal_color.svg" width="50%" alt="rclone logo">](https://rclone.org/#gh-light-mode-only)
 [<img src="https://rclone.org/img/logo_on_dark__horizontal_color.svg" width="50%" alt="rclone logo">](https://rclone.org/#gh-dark-mode-only)
@@ -63,7 +47,9 @@ Rclone *("rsync for cloud storage")* is a command-line program to sync files and
   * Dropbox [:page_facing_up:](https://rclone.org/dropbox/)
   * Enterprise File Fabric [:page_facing_up:](https://rclone.org/filefabric/)
   * Fastmail Files [:page_facing_up:](https://rclone.org/webdav/#fastmail-files)
+  * FileLu [:page_facing_up:](https://rclone.org/filelu/)
   * Files.com [:page_facing_up:](https://rclone.org/filescom/)
+  * FlashBlade [:page_facing_up:](https://rclone.org/s3/#pure-storage-flashblade)
   * FTP [:page_facing_up:](https://rclone.org/ftp/)
   * GoFile [:page_facing_up:](https://rclone.org/gofile/)
   * Google Cloud Storage [:page_facing_up:](https://rclone.org/googlecloudstorage/)
@@ -88,7 +74,8 @@ Rclone *("rsync for cloud storage")* is a command-line program to sync files and
   * Magalu Object Storage [:page_facing_up:](https://rclone.org/s3/#magalu)
   * Mail.ru Cloud [:page_facing_up:](https://rclone.org/mailru/)
   * Memset Memstore [:page_facing_up:](https://rclone.org/swift/)
-  * Mega [:page_facing_up:](https://rclone.org/mega/)
+  * MEGA [:page_facing_up:](https://rclone.org/mega/)
+  * MEGA S4 Object Storage [:page_facing_up:](https://rclone.org/s3/#mega)
   * Memory [:page_facing_up:](https://rclone.org/memory/)
   * Microsoft Azure Blob Storage [:page_facing_up:](https://rclone.org/azureblob/)
   * Microsoft Azure Files Storage [:page_facing_up:](https://rclone.org/azurefiles/)
@@ -118,6 +105,7 @@ Rclone *("rsync for cloud storage")* is a command-line program to sync files and
   * rsync.net [:page_facing_up:](https://rclone.org/sftp/#rsync-net)
   * Scaleway [:page_facing_up:](https://rclone.org/s3/#scaleway)
   * Seafile [:page_facing_up:](https://rclone.org/seafile/)
+  * Seagate Lyve Cloud [:page_facing_up:](https://rclone.org/s3/#lyve)
   * SeaweedFS [:page_facing_up:](https://rclone.org/s3/#seaweedfs)
   * Selectel Object Storage [:page_facing_up:](https://rclone.org/s3/#selectel)
   * SFTP [:page_facing_up:](https://rclone.org/sftp/)
@@ -132,6 +120,7 @@ Rclone *("rsync for cloud storage")* is a command-line program to sync files and
   * WebDAV [:page_facing_up:](https://rclone.org/webdav/)
   * Yandex Disk [:page_facing_up:](https://rclone.org/yandex/)
   * Zoho WorkDrive [:page_facing_up:](https://rclone.org/zoho/)
+  * Zata.ai [:page_facing_up:](https://rclone.org/s3/#Zata)
   * The local filesystem [:page_facing_up:](https://rclone.org/local/)
 
 Please see [the full list of all storage providers and their features](https://rclone.org/overview/)

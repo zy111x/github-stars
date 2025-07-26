@@ -1,6 +1,6 @@
 ---
 project: cloudflare-workers-nextjs-saas-template
-stars: 297
+stars: 505
 description: |-
     Cloudflare Workers/Next.js SaaS Template
 url: https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template
@@ -10,7 +10,7 @@ url: https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template
 
 [![.github/workflows/deploy.yml](https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template/actions/workflows/deploy.yml/badge.svg)](https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template/actions/workflows/deploy.yml)
 
-# [Live Demo](https://saas-stack.startupstudio.dev/sign-up)
+# [Live Demo](https://nextjs-saas-template.agenticdev.agency/sign-up)
 # [Github Repo](https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template)
 
 This is a SaaS template for Cloudflare Workers. It uses the [OpenNext](https://opennext.js.org/cloudflare) framework to build a SaaS application.
@@ -18,7 +18,7 @@ This is a SaaS template for Cloudflare Workers. It uses the [OpenNext](https://o
 Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overview of the project.
 
 > [!TIP]
-> This template is brought to you by 👉 [StartupStudio.dev](https://startupstudio.dev/?ref=github-readme-nextjs-template) 👈 - where we help businesses automate operations and boost productivity through custom AI implementations. Just like this open-source project demonstrates technical excellence, we deliver:
+> This template is brought to you by 👉 [AgenticDev](https://agenticdev.agency/?ref=github-readme-nextjs-template) 👈 - where we help businesses automate operations and boost productivity through custom AI implementations. Just like this open-source project demonstrates technical excellence, we deliver:
 >
 > - Process automation with LLM-powered workflows
 > - AI strategy consulting for sustainable scaling
@@ -111,6 +111,14 @@ Have a look at the [project plan](./cursor-docs/project-plan.md) to get an overv
   - 💾 Edge Database with D1
   - 🗄️ Session Storage with KV
   - ⚡ API Rate Limiting
+- 🏢 Multi-tenancy Support
+  - 👥 Organization Management
+  - 👤 User Roles and Permissions
+  - 🔍 Tenant Isolation
+  - 🔄 Resource Sharing Controls
+  - 📊 Per-tenant Analytics
+  - 🔐 Tenant-specific Configurations
+  - 💼 Team Collaboration Features
 
 ## Planned features (TODO):
 
@@ -138,7 +146,7 @@ After making a change to wrangler.jsonc, you need to run `pnpm cf-typegen` to ge
 
 ## Things to change and customize before deploying to production
 1. Go to `src/constants.ts` and update it with your project details
-2. Update the documentation in `./cursor-docs` with your project details so that Cursor AI can give you better suggestions
+2. Update `.cursor/rules/001-main-project-context.mdc` with your project specification so that Cursor AI can give you better suggestions
 3. Update the footer in `src/components/footer.tsx` with your project details and links
 4. Optional: Update the color palette in `src/app/globals.css`
 5. Update the metadata in `src/app/layout.tsx` with your project details
@@ -149,10 +157,11 @@ After making a change to wrangler.jsonc, you need to run `pnpm cf-typegen` to ge
 2. Set either `RESEND_API_KEY` or `BREVO_API_KEY` as a secret in your Cloudflare Worker depending on which email service you want to use.
 3. Create a Turnstile catcha in your Cloudflare account, and set the `NEXT_PUBLIC_TURNSTILE_SITE_KEY` as a Github Actions variable.
 4. Set `TURNSTILE_SECRET_KEY` as a secret in your Cloudflare Worker.
-5. Update the `wrangler.jsonc` file with the new database and KV namespaces and env variables. Search for "cloudflare-workers-nextjs-saas-template" recursively in the whole repository and change that to the name of your project. Don't forget that the name you choose at the top of the wrangler.jsonc should be the same as `services->[0]->service` in the same file.
+5. Update the `wrangler.jsonc` file with the new database and KV namespaces, env variables and account id. Search for "cloudflare-workers-nextjs-saas-template" recursively in the whole repository and change that to the name of your project. Don't forget that the name you choose at the top of the wrangler.jsonc should be the same as `services->[0]->service` in the same file.
 6. Go to https://dash.cloudflare.com/profile/api-tokens and click on "Use template" next to "Edit Cloudflare Workers". On the next, page add the following permissions in addition to the ones from the template:
     - Account:AI Gateway:Edit
     - Account:Workers AI:Edit
+    - Account:Workers AI:Read
     - Account:Queues:Edit
     - Account:Vectorize:Edit
     - Account:D1:Edit
@@ -170,10 +179,4 @@ If you want to preview and edit the email templates you can:
 2. Open http://localhost:3001
 3. Edit the email templates in the `src/react-email` folder
 4. For inspiration you can checkout https://react.email/templates
-
-
-### How to upgrade this template
-Since this template is based on the [OpenNext](https://opennext.js.org/cloudflare) framework we need to make sure that we are following the changes they are making and update this template accordingly.
-
-To see the changes clone https://github.com/cloudflare/workers-sdk and then do `git diff 869ec7b...main -- packages/create-cloudflare/templates-experimental/next/` you will see the changes that we need to make to this template.
 

@@ -1,6 +1,6 @@
 ---
 project: deno
-stars: 102581
+stars: 103628
 description: |-
     A modern runtime for JavaScript and TypeScript.
 url: https://github.com/denoland/deno
@@ -62,8 +62,8 @@ winget install --id=DenoLand.Deno
 
 ### Build and install from source
 
-Complete instructions for building Deno from source can be found in the manual
-[here](https://docs.deno.com/runtime/manual/references/contributing/building_from_source).
+Complete instructions for building Deno from source can be found
+[here](https://github.com/denoland/deno/blob/main/.github/CONTRIBUTING.md#building-from-source).
 
 ## Your first Deno program
 
@@ -103,7 +103,7 @@ Learn more about writing and running Deno programs
 ## Contributing
 
 We appreciate your help! To contribute, please read our
-[contributing instructions](https://docs.deno.com/runtime/manual/references/contributing/).
+[contributing instructions](.github/CONTRIBUTING.md).
 
 [Build status - Cirrus]: https://github.com/denoland/deno/workflows/ci/badge.svg?branch=main&event=push
 [Build status]: https://github.com/denoland/deno/actions

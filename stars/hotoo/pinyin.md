@@ -1,12 +1,12 @@
 ---
 project: pinyin
-stars: 7634
+stars: 7705
 description: |-
     :cn: 汉字拼音 ➜ hàn zì pīn yīn
 url: https://github.com/hotoo/pinyin
 ---
 
-# pīnyīn (v3)
+# pīnyīn (v4)
 
 pīnyīn, 汉字拼音转换工具。
 
@@ -15,7 +15,6 @@ pīnyīn, 汉字拼音转换工具。
 [![NPM version][npm-badge]][npm-url]
 [![Build Status][build-badge]][build-url]
 [![Coverage Status][coveralls-badge]][coveralls-url]
-[![Language Grade: JavaScript][lgtm-badge]][lgtm-url]
 [![NPM downloads][npm-downloads]][npm-url]
 
 
@@ -26,13 +25,9 @@ pīnyīn, 汉字拼音转换工具。
 [build-url]: https://github.com/hotoo/pinyin/actions
 [coveralls-badge]: https://coveralls.io/repos/hotoo/pinyin/badge.svg?branch=master
 [coveralls-url]: https://coveralls.io/r/hotoo/pinyin
-[lgtm-badge]: https://img.shields.io/lgtm/grade/javascript/g/hotoo/pinyin.svg?logo=lgtm&logoWidth=18
-[lgtm-url]: https://lgtm.com/projects/g/hotoo/pinyin/context:javascript
 
 
-Web Site: 简体中文 | [English](/en-US/) | [한국어](/ko-KR/)
-
-README: 简体中文 | [English](README.en-US.md) | [한국어](README.ko-KR.md)
+简体中文 | [English](https://pinyin.js.org/en-US/) | [한국어](https://pinyin.js.org/ko-KR/)
 
 
 转换中文字符为拼音。可以用于汉字注音、排序、检索。
@@ -309,7 +304,7 @@ npm test
 
 如果你坚持在客户端使用，你可以考虑使用 [Webpack](http://webpack.github.io/) + [Babel](http://babeljs.io/) 来转换成低端浏览器的可执行代码。
 
-实在不想折腾，可以试试 https://github.com/hotoo/pinyin/tree/gh-pages/dist
+实在不想折腾，可以试试 https://www.jsdelivr.com/package/npm/pinyin
 
 ### 为什么没有 `y`, `w`, `yu` 几个声母？
 

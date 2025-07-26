@@ -1,6 +1,6 @@
 ---
 project: xpipe
-stars: 10525
+stars: 11341
 description: |-
     Access your entire server infrastructure from your local desktop
 url: https://github.com/xpipe-io/xpipe
@@ -29,8 +29,8 @@ It currently supports:
 - [Kubernetes](https://docs.xpipe.io/guide/kubernetes) clusters, pods, and containers
 - [Tailscale](https://docs.xpipe.io/guide/tailscale) and [Teleport](https://docs.xpipe.io/guide/teleport) connections
 - Windows Subsystem for Linux, Cygwin, and MSYS2 environments
-- Powershell Remote Sessions
-- RDP and VNC connections
+- [Powershell Remote Sessions](https://docs.xpipe.io/guide/pssession)
+- [RDP](https://docs.xpipe.io/guide/rdp) and [VNC](https://docs.xpipe.io/guide/vnc) connections
 
 ## Connection hub
 
@@ -94,10 +94,12 @@ Note that this is a desktop application that should be run on your local desktop
 Installers are the easiest way to get started and come with an optional automatic update functionality:
 
 - [Windows .msi Installer (x86-64)](https://github.com/xpipe-io/xpipe/releases/latest/download/xpipe-installer-windows-x86_64.msi)
+- [Windows .msi Installer (ARM 64)](https://github.com/xpipe-io/xpipe/releases/latest/download/xpipe-installer-windows-arm64.msi)
 
 If you don't like installers, you can also use a portable version that is packaged as an archive:
 
 - [Windows .zip Portable (x86-64)](https://github.com/xpipe-io/xpipe/releases/latest/download/xpipe-portable-windows-x86_64.zip)
+- [Windows .zip Portable (ARM 64)](https://github.com/xpipe-io/xpipe/releases/latest/download/xpipe-portable-windows-arm64.zip)
 
 Alternatively, you can also use the following package managers:
 - [choco](https://community.chocolatey.org/packages/xpipe) to install it with `choco install xpipe`.
@@ -192,7 +194,7 @@ The distributed XPipe application consists out of two parts:
 - The open-source core that you can find this repository. It is licensed under the [Apache License 2.0](/LICENSE.md).
 - The closed-source extensions, mostly for homelab/professional plan features, which are not included in this repository
 
-Additional features are available in the homelab/professional plan . For more details see https://xpipe.io/pricing.
+Additional features are available in the homelab/professional plan. For more details see https://xpipe.io/pricing.
 If your enterprise puts great emphasis on having access to the full source code, there are also full source-available enterprise options available.
 
 ## Documentation

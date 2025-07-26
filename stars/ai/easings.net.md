@@ -1,6 +1,6 @@
 ---
 project: easings.net
-stars: 8250
+stars: 8368
 description: |-
     Easing Functions Cheat Sheet
 url: https://github.com/ai/easings.net
@@ -46,5 +46,5 @@ for example `fr-ca` for Canadian French) and translate all messages.
     yarn run start
      ```
 
-3. And open [localhost:1234] in browser.
+3. And open [localhost:1234](https://localhost:1234) in browser.
 

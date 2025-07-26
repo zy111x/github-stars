@@ -1,6 +1,6 @@
 ---
 project: handsontable
-stars: 20888
+stars: 21197
 description: |-
     JavaScript Data Grid / Data Table with a Spreadsheet Look & Feel. Works with React, Angular, and Vue. Supported by the Handsontable team ⚡
 url: https://github.com/handsontable/handsontable
@@ -18,8 +18,8 @@ url: https://github.com/handsontable/handsontable
   <p>
     Use it with JavaScript, TypeScript, or frameworks such as 
     <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/react-wrapper" target="_blank">React</a>, 
-    <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/angular" target="_blank">Angular</a>, and 
-    <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/vue" target="_blank">Vue</a>. With its spreadsheet-like editing features, it’s perfect for building data-rich internal apps. It allows users to enter, edit, validate, and process data from various sources. Common use cases include resource planning software (ERP), inventory management systems, digital platforms, and data modeling applications.
+    <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/angular-wrapper" target="_blank">Angular</a>, and 
+    <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/vue3" target="_blank">Vue</a>. With its spreadsheet-like editing features, it’s perfect for building data-rich internal apps. It allows users to enter, edit, validate, and process data from various sources. Common use cases include resource planning software (ERP), inventory management systems, digital platforms, and data modeling applications.
   </p>
 
 <a href="https://handsontable.com">Website</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://handsontable.com/docs">Documentation</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://handsontable.com/docs/themes">Themes</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://handsontable.com/docs/api">API</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://github.com/handsontable/handsontable/discussions">Community</a>
@@ -72,9 +72,8 @@ url: https://github.com/handsontable/handsontable
 ## 🪄 Installation
 Below, you'll find the installation guide for the JavaScript component. If you're using a specific framework, refer to its dedicated wrapper for installation instructions:
 
-- <img src="https://raw.githubusercontent.com/handsontable/handsontable/develop/resources/icons/react-icon.svg" width="12" height="12"><a href="https://github.com/handsontable/handsontable/tree/master/wrappers/react-wrapper"> React functional component</a>
-- <img src="https://raw.githubusercontent.com/handsontable/handsontable/develop/resources/icons/react-icon.svg" width="12" height="12" alt="React"> <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/react"> React class component</a>
-- <img src="https://raw.githubusercontent.com/handsontable/handsontable/develop/resources/icons/angular-icon.svg" width="12" height="12" alt="Angular"> <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/angular"> Angular</a>
+- <img src="https://raw.githubusercontent.com/handsontable/handsontable/develop/resources/icons/react-icon.svg" width="12" height="12"><a href="https://github.com/handsontable/handsontable/tree/master/wrappers/react-wrapper"> React</a>
+- <img src="https://raw.githubusercontent.com/handsontable/handsontable/develop/resources/icons/angular-icon.svg" width="12" height="12" alt="Angular"> <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/angular-wrapper"> Angular</a>
 - <img src="https://raw.githubusercontent.com/handsontable/handsontable/develop/resources/icons/vue-icon.svg" width="12" height="12" alt="Vue"> <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/vue3"> Vue</a>
 
 ---
@@ -90,8 +89,8 @@ You can also use [Yarn](https://yarnpkg.com/package/handsontable), [NuGet](https
 ### Provide an HTML container
 
   ```html
-  <!-- Set the container's ID and apply the desired theme -->
-  <div id="handsontable-example" class="ht-theme-main-dark-auto"></div>
+  <!-- Set the container's ID -->
+  <div id="handsontable-grid"></div>
   ```
 
 ### Setup
@@ -106,6 +105,9 @@ You can also use [Yarn](https://yarnpkg.com/package/handsontable), [NuGet](https
   const element = document.getElementById('handsontable-grid');
   
   new Handsontable(element, {
+    // theme name with obligatory ht-theme-* prefix
+    themeName: 'ht-theme-main-dark-auto',
+    // other options
     data: [
       { company: 'Tagcat', country: 'United Kingdom', rating: 4.4 },
       { company: 'Zoomzone', country: 'Japan', rating: 4.5 },
@@ -153,12 +155,15 @@ You can also use [Yarn](https://yarnpkg.com/package/handsontable), [NuGet](https
       />
     </head>
     <body>
-      <div id="handsontable-grid" class="ht-theme-main-dark-auto"></div>
+      <div id="handsontable-grid"></div>
       <script src="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.js"></script>
       <script>
         const element = document.getElementById("handsontable-grid");
   
         new Handsontable(element, {
+          // theme name with obligatory ht-theme-* prefix
+          themeName: 'ht-theme-main-dark-auto',
+          // other options
           data: [
             { company: "Tagcat", country: "United Kingdom", rating: 4.4 },
             { company: "Zoomzone", country: "Japan", rating: 4.5 },
@@ -228,7 +233,7 @@ At first glance, it might seem that a data table, spreadsheet, and data grid are
 If you're using Handsontable with a free, non-commercial license, you can:
 - Join the conversation on [GitHub Discussions](https://github.com/handsontable/handsontable/discussions) to share ideas, suggest features, or discuss changes.
 - Report any bugs you find on our [GitHub Issue Board](https://github.com/handsontable/handsontable/issues).
-- Connect with other developers and find answers on our [Developer Forum](https://handsontable.com/forum).
+- Connect with other developers and find answers on our [Developer Forum](https://forum.handsontable.com).
 
 If you have a commercial license, feel free to contact us directly at [support@handsontable.com](mailto:support@handsontable.com) or use our [contact form](https://handsontable.com/contact?category=technical_support).
 

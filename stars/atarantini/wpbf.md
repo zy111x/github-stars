@@ -1,6 +1,6 @@
 ---
 project: wpbf
-stars: 107
+stars: 108
 description: |-
     Remotely test password strength of WordPress bloging software
 url: https://github.com/atarantini/wpbf

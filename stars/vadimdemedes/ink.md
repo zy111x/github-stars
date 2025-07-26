@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 27977
+stars: 30082
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -31,8 +31,6 @@ If you are already familiar with React, you already know Ink.
 Since Ink is a React renderer, it means that all features of React are supported.
 Head over to [React](https://reactjs.org) website for documentation on how to use it.
 Only Ink's methods will be documented in this readme.
-
-**Note:** This is documentation for Ink 4 and 5. If you're looking for docs on Ink 3, check out [this release](https://github.com/vadimdemedes/ink/tree/v3.2.0).
 
 ---
 
@@ -79,13 +77,15 @@ render(<Counter />);
 
 <img src="media/demo.svg" width="600">
 
-You can also check it out live on [repl.it sandbox](https://ink-counter-demo.vadimdemedes.repl.run/).
 Feel free to play around with the code and fork this repl at [https://repl.it/@vadimdemedes/ink-counter-demo](https://repl.it/@vadimdemedes/ink-counter-demo).
 
 ## Who's Using Ink?
 
-- [Claude Code](https://github.com/anthropics/claude-code) - An agentic coding tool made by Anthropic.
+- [Codex](https://github.com/openai/codex) - An agentic coding tool, made by OpenAI.
+- [Claude Code](https://github.com/anthropics/claude-code) - An agentic coding tool, made by Anthropic.
+- [Gemini CLI](https://github.com/google-gemini/gemini-cli) - An agentic coding tool, made by Google.
 - [GitHub Copilot for CLI](https://githubnext.com/projects/copilot-cli) - Just say what you want the shell to do.
+- [Canva CLI](https://www.canva.dev/docs/apps/canva-cli/) - CLI for creating and managing Canva Apps.
 - [Cloudflare's Wrangler](https://github.com/cloudflare/wrangler2) - The CLI for Cloudflare Workers.
 - [Linear](https://linear.app) - Linear built an internal CLI for managing deployments, configs and other housekeeping tasks.
 - [Gatsby](https://www.gatsbyjs.org) - Gatsby is a modern web framework for blazing fast websites.
@@ -2109,7 +2109,7 @@ npx react-devtools
 ```
 
 After it starts up, you should see the component tree of your CLI.
-You can even inspect and change the props of components, and see the results immediatelly in the CLI, without restarting it.
+You can even inspect and change the props of components, and see the results immediately in the CLI, without restarting it.
 
 **Note**: You must manually quit your CLI via <kbd>Ctrl</kbd>+<kbd>C</kbd> after you're done testing.
 
@@ -2150,8 +2150,8 @@ npm run example examples/[example name]
 # e.g. npm run example examples/borders
 ```
 
-- [Jest](examples/jest/jest.tsx) - Implementation of basic Jest UI [(live demo)](https://ink-jest-demo.vadimdemedes.repl.run/).
-- [Counter](examples/counter/counter.tsx) - Simple counter that increments every 100ms [(live demo)](https://ink-counter-demo.vadimdemedes.repl.run/).
+- [Jest](examples/jest/jest.tsx) - Implementation of basic Jest UI.
+- [Counter](examples/counter/counter.tsx) - Simple counter that increments every 100ms.
 - [Form with validation](https://github.com/final-form/rff-cli-example) - Manage form state using [Final Form](https://github.com/final-form/final-form#-final-form).
 - [Borders](examples/borders/borders.tsx) - Add borders to `<Box>` component.
 - [Suspense](examples/suspense/suspense.tsx) - Use React Suspense.

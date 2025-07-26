@@ -1,6 +1,6 @@
 ---
 project: number-flow
-stars: 6056
+stars: 6388
 description: |-
     An animated number component for React, Vue, Svelte, and TS/JS.
 url: https://github.com/barvian/number-flow
@@ -18,13 +18,4 @@ An animated number component for React, Vue, Svelte, and TS/JS.
 ## Documentation
 
 For full documentation, visit [number-flow.barvian.me](https://number-flow.barvian.me).
-
-## Sponsors
-
-<p>
-  <a href="https://frigade.com/?source=numberflow">
-    <img alt="Frigade logo" src="./sponsors/frigade.png" width="600">
-  </a>
-</p>
-<p>NumberFlow is proudly sponsored by <a href="https://frigade.com/?source=numberflow">Frigade</a>, a developer tool for building better product onboarding: guided tours, getting started checklists, announcements, and more.</p>
 

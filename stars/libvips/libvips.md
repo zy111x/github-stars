@@ -1,6 +1,6 @@
 ---
 project: libvips
-stars: 10208
+stars: 10489
 description: |-
     A fast image processing library with low memory needs.
 url: https://github.com/libvips/libvips
@@ -24,11 +24,11 @@ libvips is licensed under the [LGPL-2.1-or-later](
 https://spdx.org/licenses/LGPL-2.1-or-later).
 
 It has around [300
-operations](https://libvips.github.io/libvips/API/current/func-list.html)
+operations](https://www.libvips.org/API/current/function-list.html)
 covering arithmetic, histograms, convolution, morphological
 operations, frequency filtering, colour, resampling,
 statistics and others. It supports a large range of [numeric
-types](https://libvips.github.io/libvips/API/current/VipsImage.html#VipsBandFormat),
+types](https://www.libvips.org/API/current/enum.BandFormat.html),
 from 8-bit int to 128-bit complex. Images can have any number of bands.
 It supports a good range of image formats, including JPEG, JPEG 2000, JPEG XL,
 TIFF, PNG, WebP, HEIC, AVIF, FITS, Matlab, OpenEXR, PDF, SVG, HDR, PPM / PGM /
@@ -37,10 +37,10 @@ images via ImageMagick or GraphicsMagick, letting it work with formats
 like DICOM.
 
 It comes with bindings for
-[C](https://libvips.github.io/libvips/API/current/using-from-c.html),
-[C++](https://libvips.github.io/libvips/API/current/libvips-from-C++.html),
+[C](https://www.libvips.org/API/current/using-from-c.html),
+[C++](https://www.libvips.org/API/current/using-from-cplusplus.html),
 and the
-[command-line](https://libvips.github.io/libvips/API/current/using-cli.html).
+[command-line](https://www.libvips.org/API/current/function-list.html).
 Full bindings are available for :
 
 | Language | Binding |
@@ -49,7 +49,7 @@ Full bindings are available for :
 | Python | [pyvips](https://pypi.python.org/pypi/pyvips) |
 | PHP | [php-vips](https://github.com/libvips/php-vips) |
 | C# / .NET | [NetVips](https://www.nuget.org/packages/NetVips) |
-| Go | [govips](https://github.com/davidbyttow/govips) |
+| Go | [govips](https://github.com/davidbyttow/govips), [vips-gen](https://github.com/cshum/vipsgen) |
 | Lua | [lua-vips](https://github.com/libvips/lua-vips) |
 | Crystal | [crystal-vips](https://github.com/naqvis/crystal-vips) |
 | Elixir | [vix](https://github.com/akash-akya/vix) |
@@ -81,8 +81,8 @@ macOS. Check your package manager.
 There are binaries for Windows in
 [releases](https://github.com/libvips/libvips/releases).
 
-The [libvips website](https://libvips.github.io/libvips) has [detailed
-install notes](https://libvips.github.io/libvips/install.html).
+The [libvips website](https://www.libvips.org) has [detailed
+install notes](https://www.libvips.org/install.html).
 
 # Building from source
 

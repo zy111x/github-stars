@@ -1,6 +1,6 @@
 ---
 project: fedify
-stars: 695
+stars: 792
 description: |-
     ActivityPub server framework in TypeScript
 url: https://github.com/fedify-dev/fedify
@@ -33,7 +33,7 @@ Currently, Fedify provides the following features out of the box:
  -  Type-safe objects for [Activity Vocabulary] (including some vendor-specific
     extensions)
  -  [WebFinger] client and server
- -  [HTTP Signatures]
+ -  [HTTP Signatures] & [HTTP Message Signatures]
  -  [Object Integrity Proofs][FEP-8b32] & [Linked Data Signatures]
  -  Middlewares for handling webhooks
  -  [NodeInfo] protocol
@@ -77,6 +77,7 @@ join our [Matrix chat space][Matrix] or [Discord server][Discord] or
 [Activity Vocabulary]: https://www.w3.org/TR/activitystreams-vocabulary/
 [WebFinger]: https://datatracker.ietf.org/doc/html/rfc7033
 [HTTP Signatures]: https://tools.ietf.org/html/draft-cavage-http-signatures-12
+[HTTP Message Signatures]: https://www.rfc-editor.org/rfc/rfc9421
 [FEP-8b32]: https://w3id.org/fep/8b32
 [Linked Data Signatures]: https://web.archive.org/web/20170923124140/https://w3c-dvcg.github.io/ld-signatures/
 [NodeInfo]: https://nodeinfo.diaspora.software/
@@ -86,6 +87,39 @@ join our [Matrix chat space][Matrix] or [Discord server][Discord] or
 [Lemmy]: https://join-lemmy.org/
 [Pixelfed]: https://pixelfed.org/
 [PeerTube]: https://joinpeertube.org/
+
+
+Packages
+--------
+
+Fedify is a monorepo that contains several packages, each of which provides
+different features and functionalities.  The main package is *@fedify/fedify*,
+which provides the core functionality of the framework.  Other packages provide
+integrations with various web frameworks, database drivers, and other features.
+Here is the list of packages:
+
+| Package                        | JSR                         | npm                         | Description                             |
+| ------------------------------ | --------------------------- | --------------------------- | --------------------------------------- |
+| [@fedify/fedify](/fedify/)     | [JSR]                       | [npm]                       | The core framework of Fedify            |
+| [@fedify/cli](/cli/)           | [JSR][jsr:@fedify/cli]      | [npm][npm:@fedify/cli]      | CLI toolchain for testing and debugging |
+| [@fedify/amqp](/amqp/)         | [JSR][jsr:@fedify/amqp]     | [npm][npm:@fedify/amqp]     | AMQP/RabbitMQ driver                    |
+| [@fedify/express](/express/)   | [JSR][jsr:@fedify/express]  | [npm][npm:@fedify/express]  | Express integration                     |
+| [@fedify/h3](/h3/)             | [JSR][jsr:@fedify/h3]       | [npm][npm:@fedify/h3]       | H3 integration                          |
+| [@fedify/postgres](/postgres/) | [JSR][jsr:@fedify/postgres] | [npm][npm:@fedify/postgres] | PostgreSQL driver                       |
+| [@fedify/redis](/redis/)       | [JSR][jsr:@fedify/redis]    | [npm][npm:@fedify/redis]    | Redis driver                            |
+
+[jsr:@fedify/cli]: https://jsr.io/@fedify/cli
+[npm:@fedify/cli]: https://www.npmjs.com/package/@fedify/cli
+[jsr:@fedify/amqp]: https://jsr.io/@fedify/amqp
+[npm:@fedify/amqp]: https://www.npmjs.com/package/@fedify/amqp
+[jsr:@fedify/express]: https://jsr.io/@fedify/express
+[npm:@fedify/express]: https://www.npmjs.com/package/@fedify/express
+[jsr:@fedify/h3]: https://jsr.io/@fedify/h3
+[npm:@fedify/h3]: https://www.npmjs.com/package/@fedify/h3
+[jsr:@fedify/postgres]: https://jsr.io/@fedify/postgres
+[npm:@fedify/postgres]: https://www.npmjs.com/package/@fedify/postgres
+[jsr:@fedify/redis]: https://jsr.io/@fedify/redis
+[npm:@fedify/redis]: https://www.npmjs.com/package/@fedify/redis
 
 
 Sponsors
@@ -109,14 +143,15 @@ financial contributors:[^2]
 - [Daniel Supernault](https://pixelfed.org/)
 - [tkgka](https://opencollective.com/tkgka)
 - [Blaine](https://opencollective.com/blaine)
+- [Erick González Aguilar](https://opencollective.com/erick-gonzalez-aguilar)
 
 ### Backers
 
-yamanoku, Encyclia, taye, okin, Andy Piper, box464, Evan Prodromou, Rafael Goulart, malte
+Robin Riley, yamanoku, Encyclia, taye, okin, Andy Piper, box464, Evan Prodromou, Rafael Goulart, malte
 
 ### One-time donations
 
-Markus P, Nils Bergmann, Rameez
+Robin Riley, Markus P, Nils Bergmann, Rameez
 
 <!-- /DO NOT EDIT -->
 <!-- cSpell: enable -->

@@ -1,15 +1,18 @@
 ---
 project: QQStars
-stars: 491
+stars: 493
 description: |-
     基于webqq协议的qq客户端，qt开发，可跨平台
 url: https://github.com/zccrs/QQStars
 ---
 
-#### 接口都已失效，此程序不在更新。
+#### 接口都已失效，此程序不再更新。
 
 QQStars
 =======
+
+[![Powered by DartNode](https://dartnode.com/branding/DN-Open-Source-sm.png)](https://dartnode.com "Powered by DartNode - Free VPS for Open Source")
+
 <b>此开源代码使用GPL授权方式</b>
 
 

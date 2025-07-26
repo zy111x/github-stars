@@ -1,6 +1,6 @@
 ---
 project: laf
-stars: 7466
+stars: 7552
 description: |-
     Laf is a vibrant cloud development platform that provides essential tools like cloud functions, databases, and storage solutions. It enables developers to quickly unleash their creativity and bring innovative ideas to life with ease.
 url: https://github.com/labring/laf
@@ -40,8 +40,8 @@ laf 是开源的云开发平台，提供云函数、云数据库、云存储等�
 
 ## 🖥 在线体验
 
-🎉 [laf.run](https://laf.run) （国内版）<br/>
-🎉 [laf.dev](https://laf.dev) （海外版）
+🎉 [sealos.run](https://sealos.run) <br/>
+
 
 ## 🎉 `laf` 有什么
 

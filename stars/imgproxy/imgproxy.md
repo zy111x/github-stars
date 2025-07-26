@@ -1,6 +1,6 @@
 ---
 project: imgproxy
-stars: 9462
+stars: 9713
 description: |-
     Fast and secure standalone server for resizing and converting remote images
 url: https://github.com/imgproxy/imgproxy
@@ -16,18 +16,19 @@ url: https://github.com/imgproxy/imgproxy
   </a>
 </p>
 
-<h4 align="center">
+<p align="center"><strong>
   <a href="https://imgproxy.net">Website</a> |
   <a href="https://imgproxy.net/blog/">Blog</a> |
   <a href="https://docs.imgproxy.net">Documentation</a> |
   <a href="https://imgproxy.net/#pro">imgproxy Pro</a>
-</h4>
+</strong></p>
 
 <p align="center">
-  <a href="https://github.com/imgproxy/imgproxy/pkgs/container/imgproxy"><img alt="Docker" src="https://img.shields.io/badge/Docker-177bd3?style=for-the-badge&logo=docker&logoColor=fff" /></a>
-  <a href="https://bsky.app/profile/imgproxy.net"><img alt="Bluesky" src="https://img.shields.io/badge/Bluesky-177bd3?style=for-the-badge&logo=bluesky&logoColor=fff" /></a>
-  <a href="https://x.com/imgproxy_net"><img alt="X" src="https://img.shields.io/badge/X.com-177bd3?style=for-the-badge&logo=x&logoColor=fff" /></a>
-  <a href="https://discord.gg/5GgpXgtC9u"><img alt="Discord" src="https://img.shields.io/badge/Discord-177bd3?style=for-the-badge&logo=discord&logoColor=fff" /></a>
+  <a href="https://github.com/imgproxy/imgproxy/pkgs/container/imgproxy"><img alt="Docker" src="https://img.shields.io/badge/Docker-0068F1?style=for-the-badge&logo=docker&logoColor=fff" /></a>
+  <a href="https://bsky.app/profile/imgproxy.net"><img alt="Bluesky" src="https://img.shields.io/badge/Bluesky-0068F1?style=for-the-badge&logo=bluesky&logoColor=fff" /></a>
+  <a href="https://x.com/imgproxy_net"><img alt="X" src="https://img.shields.io/badge/X.com-0068F1?style=for-the-badge&logo=x&logoColor=fff" /></a>
+  <a href="https://mastodon.social/@imgproxy"><img alt="X" src="https://img.shields.io/badge/Mastodon-0068F1?style=for-the-badge&logo=mastodon&logoColor=fff" /></a>
+  <a href="https://discord.gg/5GgpXgtC9u"><img alt="Discord" src="https://img.shields.io/badge/Discord-0068F1?style=for-the-badge&logo=discord&logoColor=fff" /></a>
 </p>
 
 <p align="center">
@@ -85,11 +86,9 @@ Sergey "[DarthSim](https://github.com/DarthSim)" Alexandrovich
 Many thanks to:
 
 * [Evil Martians](https://evilmartians.com) for providing a steady launch pad for imgproxy
-* [Roman Shamin](https://github.com/romashamin) for the awesome logo
-* [Alena Kirdina](https://github.com/egodyston), [Alexander Madyankin](https://github.com/madyankin), and [Aleksandr Slepchenkov](https://github.com/AleksandrSl) for the great website
+* [Roman Shamin](https://github.com/romashamin) for the awesome logo and website design
 * [John Cupitt](https://github.com/jcupitt) and [Kleis Auke Wolthuizen](https://github.com/kleisauke) for developing [libvips](https://github.com/libvips/libvips) and for helping me optimize its usage with imgproxy
-* [Kirill Kuznetsov](https://github.com/dragonsmith) and [Andrew Kozin](https://github.com/nepalez) for the [Helm chart](https://github.com/imgproxy/imgproxy-helm)
-* [Travis Turner](https://github.com/Travis-Turner) and [Andy Baranov](https://github.com/progapandist) for keeping the documentation in good shape
+* [Kirill Kuznetsov](https://github.com/dragonsmith) for the [Helm chart](https://github.com/imgproxy/imgproxy-helm)
 
 ## License
 

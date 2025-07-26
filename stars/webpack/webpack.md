@@ -1,6 +1,6 @@
 ---
 project: webpack
-stars: 65190
+stars: 65447
 description: |-
     A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows for loading parts of the application on demand. Through "loaders", modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.
 url: https://github.com/webpack/webpack
@@ -17,7 +17,6 @@ url: https://github.com/webpack/webpack
 
 [![node][node]][node-url]
 [![builds1][builds1]][builds1-url]
-[![builds2][builds2]][builds2-url]
 [![dependency-review][dependency-review]][dependency-review-url]
 [![coverage][cover]][cover-url]
 [![PR's welcome][prs]][prs-url]
@@ -141,16 +140,6 @@ loaders](https://webpack.js.org/api/loaders/) using Node.js.
 
 Loaders are activated by using `loadername!` prefixes in `require()` statements,
 or are automatically applied via regex from your webpack configuration.
-
-#### Files
-
-|       Name        |   Status   | Install Size | Description                                              |
-| :---------------: | :--------: | :----------: | :------------------------------------------------------- |
-| [val-loader][val] | ![val-npm] | ![val-size]  | Executes code as module and considers exports as JS code |
-
-[val]: https://github.com/webpack-contrib/val-loader
-[val-npm]: https://img.shields.io/npm/v/val-loader.svg
-[val-size]: https://packagephobia.com/badge?p=val-loader
 
 #### JSON
 
@@ -680,10 +669,8 @@ Before we started using OpenCollective, donations were made anonymously. Now tha
 [prs-url]: https://webpack.js.org/contribute/
 [builds1]: https://github.com/webpack/webpack/actions/workflows/test.yml/badge.svg
 [builds1-url]: https://github.com/webpack/webpack/actions/workflows/test.yml
-[builds2]: https://dev.azure.com/webpack/webpack/_apis/build/status%2Fwebpack.webpack?branchName=main
-[builds2-url]: https://dev.azure.com/webpack/webpack/_build/latest?definitionId=3&branchName=main
 [dependency-review-url]: https://github.com/webpack/webpack/actions/workflows/dependency-review.yml
 [dependency-review]: https://github.com/webpack/webpack/actions/workflows/dependency-review.yml/badge.svg
-[cover]: https://codecov.io/gh/webpack/webpack/branch/master/graph/badge.svg?token=mDP3mQJNnn
+[cover]: https://codecov.io/gh/webpack/webpack/graph/badge.svg?token=mDP3mQJNnn
 [cover-url]: https://codecov.io/gh/webpack/webpack
 

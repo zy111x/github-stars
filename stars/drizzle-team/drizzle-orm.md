@@ -1,6 +1,6 @@
 ---
 project: drizzle-orm
-stars: 27446
+stars: 29304
 description: |-
     Headless TypeScript ORM with a head. Runs on Node, Bun and Deno. Lives on the Edge and yes, it's a JavaScript ORM too 😅
 url: https://github.com/drizzle-team/drizzle-orm

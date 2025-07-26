@@ -1,6 +1,6 @@
 ---
 project: wordplate
-stars: 2131
+stars: 2143
 description: |-
     A boilerplate for WordPress, built with Composer and designed with sensible defaults.
 url: https://github.com/vinkla/wordplate
@@ -67,10 +67,6 @@ WordPlate is a boilerplate for WordPress, built with Composer and designed with 
   
     Enhance the WordPress dashboard and improves the [user experience](https://user-images.githubusercontent.com/499192/143415951-b01e9498-5f18-44dd-9d4b-51fb2d479a22.png) for clients.
 
-- **Security**
-
-    We've replaced WordPress' outdated and insecure MD5-based password hashing with modern and secure bcrypt using the  [`roots/wp-password-bcrypt`](https://github.com/roots/wp-password-bcrypt#readme) package.
-
 ## Installation
 
 Before using WordPlate, make sure you have PHP 8.2 and MySQL 8.0 installed on your computer. You'll also need to have Composer, a package manager for PHP, installed on your computer.
@@ -120,8 +116,8 @@ It's important to note that your `.env` file should not be committed to your app
 
 To learn more about managing environment variables in WordPlate, you can refer to Laravel's documentation on the topic:
 
-- [Environment Variable Types](https://laravel.com/docs/11.x/configuration#environment-variable-types)
-- [Retrieving Environment Configuration](https://laravel.com/docs/11.x/configuration#retrieving-environment-configuration)
+- [Environment Variable Types](https://laravel.com/docs/12.x/configuration#environment-variable-types)
+- [Retrieving Environment Configuration](https://laravel.com/docs/12.x/configuration#retrieving-environment-configuration)
 
 ### Salt Keys
 
@@ -326,9 +322,9 @@ By default WordPlate will put the WordPress in `public/wordpress`. If you want t
 For most applications you may leave the theme directory as it is. If you want to rename the `wordplate` theme to something else you'll also need to update the `WP_DEFAULT_THEME` environment variable in the `.env` file.
 </details>
 <details>
-<summary><strong>Can I use WordPlate with Laravel Herd or Valet?</strong></summary>
+<summary><strong>Can I use WordPlate with Laravel Herd?</strong></summary>
 
-If you're using Laravel Herd or Valet together with WordPlate, you may use our [custom driver](https://laravel.com/docs/11.x/valet#custom-valet-drivers):
+If you're using Laravel Herd or Valet together with WordPlate, you may use our [custom driver](https://herd.laravel.com/docs/macos/extending-herd/custom-drivers):
 
 ```php
 <?php
@@ -589,7 +585,6 @@ WordPlate wouldn't be possible without these amazing open-source projects.
 - [`outlandish/wpackagist`](https://github.com/outlandishideas/wpackagist)
 - [`roots/bedrock-autoloader`](https://github.com/roots/bedrock-autoloader)
 - [`roots/wordpress`](https://github.com/roots/wordpress)
-- [`roots/wp-password-bcrypt`](https://github.com/roots/wp-password-bcrypt)
 - [`symfony/http-foundation`](https://github.com/symfony/http-foundation)
 - [`symfony/var-dumper`](https://github.com/symfony/var-dumper)
 - [`tailwindlabs/tailwindcss`](https://github.com/tailwindlabs/tailwindcss)

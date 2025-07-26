@@ -1,6 +1,6 @@
 ---
 project: sql-formatter
-stars: 2517
+stars: 2620
 description: |-
     A whitespace formatter for different query languages
 url: https://github.com/sql-formatter-org/sql-formatter
@@ -15,7 +15,7 @@ url: https://github.com/sql-formatter-org/sql-formatter
 It started as a port of a [PHP Library][], but has since considerably diverged.
 
 It supports various SQL dialects:
-GCP BigQuery, IBM DB2, Apache Hive, MariaDB, MySQL, TiDB, Couchbase N1QL, Oracle PL/SQL, PostgreSQL, Amazon Redshift, SingleStoreDB, Snowflake, Spark, SQL Server Transact-SQL, Trino (and Presto).
+GCP BigQuery, IBM DB2, DuckDB, Apache Hive, MariaDB, MySQL, TiDB, Couchbase N1QL, Oracle PL/SQL, PostgreSQL, Amazon Redshift, SingleStoreDB, Snowflake, Spark, SQL Server Transact-SQL, Trino (and Presto).
 See [language option docs](docs/language.md) for more details.
 
 It does not support:
@@ -291,7 +291,7 @@ Bugs will get fixed if feasible, but new features will likely not be added.
 I have started a new SQL formatting tool: [prettier-plugin-sql-cst][].
 
 - It solves several problems which can't be fixed in SQL Formatter because
-  of fundamental problems in its arhictecture.
+  of fundamental problems in its architecture.
 - It makes use of the Prettier layout algorithm,
   doing a better job of splitting long expressions to multiple lines.
 - It takes much more opinionated approach to SQL formatting,

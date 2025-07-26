@@ -1,6 +1,6 @@
 ---
 project: blog-list
-stars: 1830
+stars: 2251
 description: |-
     中文博客琅琊榜，只收录精品独立博客
 url: https://github.com/qianguyihao/blog-list
@@ -255,8 +255,12 @@ Notion 中文社区负责人。95 后，男生，驻京六年。主职是一名�
  博客地址：http://www.gtdstudy.com/post/
 
 
+### 王如飞 Blog
 
+- 网址：https://wangrufei.com
+- 订阅：https://wangrufei.com/feed/
 
+一个生活相关的博客，让记录督促学习和进步。保持简单，减少消费，专注创造。
 
 
 ## 三、技术人的思考
@@ -318,7 +322,11 @@ Notion 中文社区负责人。95 后，男生，驻京六年。主职是一名�
 
 著有电子书：《[Markdown 书写风格指南](https://einverne.github.io/markdown-style-guide/zh.html)》《[Gitbook 使用教程](https://einverne.github.io/gitbook-tutorial)》《[Kafka 官方文档中文版](https://einverne.gitbook.io/kafka/)》等。
 
+### Computing Life
 
+- 博客地址：https://yage.ai/
+
+有很多跟 AI 相关的文章。
 
 ### yihong0618
 
@@ -615,7 +623,11 @@ lucida.me 是我在 2014 年时创建的 blog。7 年之后，lucida.me 只有�
 
 tiankonguse, 一个安静的程序员。来自河南, 现居深圳。大学四年 acmer，最高获得亚洲区银牌。2014年7月本科毕业工作。目前就职于腾讯视频公司，从事后台开发。
 
+### xxchan
 
+- 博客地址：https://xxchan.me/
+
+喜欢编码，并希望构建一些有趣且有用的东西。代表文章：《[我对各种 AI Coding Agent 工具的看法](https://xxchan.me/ai/2025/06/08/ai-coding.html)》
 
 ### 大数据最佳实践
 
@@ -793,6 +805,12 @@ SHEIN 研发效能工程师，曾经作为咨询师和软件工程师为各行�
 - 博客地址：https://guangzhengli.com/
 
 一个还在重新学习，重塑思想的开发者。
+
+### Random Thoughts
+
+- 博客地址：https://blog.joway.io/
+
+住在新加坡，担任基础设施工程师；是一个博主、[摄影师](https://pho.joway.io/)和[旅行者](https://blog.joway.io/travel/)。
 
 
 
@@ -1143,6 +1161,10 @@ PHP 方向的开发者，博客内容整理非常多。
 - 博客地址：https://weijunext.com/
 
 全栈工程师，Next.js开源手艺人。目前致力于 Next.js 和 Node.js 的项目开发和知识分享。
+
+### 姜绍彬
+
+- 播客地址：https://shaobin-jiang.github.io/blog/
 
 
 ## 五、创业者&独立开发者的博客

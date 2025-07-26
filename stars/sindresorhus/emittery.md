@@ -1,6 +1,6 @@
 ---
 project: emittery
-stars: 1923
+stars: 1961
 description: |-
     Simple and modern async event emitter
 url: https://github.com/sindresorhus/emittery
@@ -305,11 +305,11 @@ await emitter.emit('🦊', 'c'); // Nothing happens
 
 ##### listener(data)
 
-#### once(eventName | eventName[])
+#### once(eventName | eventName[], predicate?)
 
-Subscribe to one or more events only once. It will be unsubscribed after the first event.
+Subscribe to one or more events only once. It will be unsubscribed after the first event that matches the predicate (if provided).
 
-Returns a promise for the event data when `eventName` is emitted. This promise is extended with an `off` method.
+Returns a promise for the event data when `eventName` is emitted and predicate matches (if provided). This promise is extended with an `off` method.
 
 ```js
 import Emittery from 'emittery';
@@ -325,8 +325,16 @@ emitter.once(['🦄', '🐶']).then(data => {
 	console.log(data);
 });
 
+// With predicate
+emitter.once('data', data => data.ok === true).then(data => {
+	console.log(data);
+	//=> {ok: true, value: 42}
+});
+
 emitter.emit('🦄', '🌈'); // Log => '🌈' x2
 emitter.emit('🐶', '🍖'); // Nothing happens
+emitter.emit('data', {ok: false}); // Nothing happens
+emitter.emit('data', {ok: true, value: 42}); // Log => {ok: true, value: 42}
 ```
 
 #### events(eventName)
