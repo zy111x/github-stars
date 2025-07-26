@@ -1,6 +1,6 @@
 ---
 project: orama
-stars: 9576
+stars: 9577
 description: |-
     🌌  A complete search engine and RAG pipeline in your browser, server or edge network with support for full-text, vector, and hybrid search in less than 2kb.
 url: https://github.com/oramasearch/orama

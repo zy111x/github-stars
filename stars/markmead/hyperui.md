@@ -1,6 +1,6 @@
 ---
 project: hyperui
-stars: 11458
+stars: 11457
 description: |-
     Free Tailwind CSS v4 components for your next project, designed to enhance your web development with the latest features and styles 🚀
 url: https://github.com/markmead/hyperui

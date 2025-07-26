@@ -1,6 +1,6 @@
 ---
 project: verdaccio
-stars: 17032
+stars: 17033
 description: |-
     A lightweight Node.js private proxy registry
 url: https://github.com/verdaccio/verdaccio

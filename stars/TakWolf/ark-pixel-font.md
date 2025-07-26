@@ -1,6 +1,6 @@
 ---
 project: ark-pixel-font
-stars: 3777
+stars: 3779
 description: |-
     Open source Pan-CJK pixel font / 开源的泛中日韩像素字体
 url: https://github.com/TakWolf/ark-pixel-font

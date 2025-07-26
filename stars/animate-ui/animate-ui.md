@@ -1,6 +1,6 @@
 ---
 project: animate-ui
-stars: 2021
+stars: 2024
 description: |-
     Fully animated, open-source component distribution built with React, TypeScript, Tailwind CSS, Motion, and Shadcn CLI. Browse a list of components you can install, modify, and use in your projects.
 url: https://github.com/animate-ui/animate-ui
