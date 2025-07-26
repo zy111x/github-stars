@@ -1,6 +1,6 @@
 ---
 project: v2rayN
-stars: 83332
+stars: 83749
 description: A GUI client for Windows, Linux and macOS, support Xray and sing-box and others
 url: https://github.com/2dust/v2rayN
 ---

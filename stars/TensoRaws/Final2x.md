@@ -1,6 +1,6 @@
 ---
 project: Final2x
-stars: 6577
+stars: 6586
 description: 2^x Image Super-Resolution
 url: https://github.com/TensoRaws/Final2x
 ---

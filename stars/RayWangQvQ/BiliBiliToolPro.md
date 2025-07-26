@@ -1,6 +1,6 @@
 ---
 project: BiliBiliToolPro
-stars: 7574
+stars: 7619
 description: B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。敏感肌也能用。
 url: https://github.com/RayWangQvQ/BiliBiliToolPro
 ---
@@ -10,7 +10,9 @@ BiliTool
 
 ============
 
-**BiliTool 是一个自动执行任务的工具，当我们忘记做某项任务时，它会像一个贴心小助手，按照我们预先吩咐它的命令，在指定频率、时间范围内帮助我们完成计划的任务。** **BiliTool is an automated task execution tool that acts as a helpful assistant, following pre-configured commands to complete planned tasks within specified frequencies and timeframes when we forget to do them.**
+**BiliTool 是一个自动执行任务的工具，当我们忘记做某项任务时，它会像一个贴心小助手，按照我们预先吩咐它的命令，在指定频率、时间范围内帮助我们完成计划的任务。**
+
+**BiliTool is an automated task execution tool that acts as a helpful assistant, following pre-configured commands to complete planned tasks within specified frequencies and timeframes when we forget to do them.**
 
 主要功能如下：
 
@@ -35,10 +37,11 @@ BiliTool
 
 -   1\. 如何使用
     -   1.1. 部署 BiliTool
-        -   1.1.1. 方式一：Docker 或 Podman 容器化运行（推荐）
+        -   1.1.1. 方案一：免费在线容器
         -   1.1.2. 方式二：青龙
-        -   1.1.3. 方式三：下载程序包到本地或服务器运行
-        -   1.1.4. 方式四：Chart部署
+        -   1.1.3. 方式三：Docker 或 Podman 运行
+        -   1.1.4. 方式四：下载程序包到本地或服务器运行
+        -   1.1.5. 方式五：Chart部署
     -   1.2. 消息推送（可选）
 -   2\. 功能任务说明
 -   3\. 个性化自定义配置
@@ -63,6 +66,10 @@ BiliTool
 
 运行图示：
 
+  
+  
+  
+
 1\. 如何使用
 --------
 
@@ -74,21 +81,29 @@ BiliTool 实现自动完成任务的原理，是通过调用一系列开放的ap
 
 支持多种部署方式，以下选择任一适合自己的方式即可。
 
-#### 1.1.1. 方式一：Docker 或 Podman 容器化运行（推荐）
+#### 1.1.1. 方案一：免费在线容器
 
-\>>Docker 部署说明
+有很多平台会提供一定免费额度的在线容器，基于官方镜像，部署 BiliTool 很容易。
 
-\>>Podman 部署说明
+以下以 ClawCloud 为例，其他平台操作类似：
+
+\>>ClawCloud 部署教程
 
 #### 1.1.2. 方式二：青龙
 
 \>>青龙部署教程
 
-#### 1.1.3. 方式三：下载程序包到本地或服务器运行
+#### 1.1.3. 方式三：Docker 或 Podman 运行
+
+\>>Docker 部署说明
+
+\>>Podman 部署说明
+
+#### 1.1.4. 方式四：下载程序包到本地或服务器运行
 
 \>>本地部署说明
 
-#### 1.1.4. 方式四：Chart部署
+#### 1.1.5. 方式五：Chart部署
 
 \>>Chart部署说明
 
