@@ -1,6 +1,6 @@
 ---
 project: denoflare
-stars: 806
+stars: 807
 description: |-
     Develop, test, and deploy Cloudflare Workers with Deno.
 url: https://github.com/skymethod/denoflare

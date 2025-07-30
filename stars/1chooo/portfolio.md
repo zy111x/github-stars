@@ -1,6 +1,6 @@
 ---
 project: portfolio
-stars: 299
+stars: 300
 description: |-
     My portfolio and blog site built with React, Next.js, Tailwind CSS and TypeScript
 url: https://github.com/1chooo/portfolio

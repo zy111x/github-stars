@@ -1,6 +1,6 @@
 ---
 project: codice
-stars: 121
+stars: 122
 description: |-
     Code presenting story in minimalism
 url: https://github.com/huozhi/codice

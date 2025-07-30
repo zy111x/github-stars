@@ -1,6 +1,6 @@
 ---
 project: node-schedule
-stars: 9199
+stars: 9200
 description: |-
     A cron-like and not-cron-like job scheduler for Node.
 url: https://github.com/node-schedule/node-schedule

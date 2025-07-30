@@ -1,6 +1,6 @@
 ---
 project: TheaterJS
-stars: 3232
+stars: 3233
 description: |-
     Typing animation mimicking human behavior.
 url: https://github.com/zhouzi/TheaterJS

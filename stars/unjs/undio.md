@@ -1,6 +1,6 @@
 ---
 project: undio
-stars: 239
+stars: 240
 description: |-
     ⇔ Conventionally and Safely convert between various JavaScript data types
 url: https://github.com/unjs/undio

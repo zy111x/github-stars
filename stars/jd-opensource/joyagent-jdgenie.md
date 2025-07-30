@@ -1,12 +1,13 @@
 ---
 project: joyagent-jdgenie
-stars: 1533
+stars: 2788
 description: |-
     开源的端到端产品级通用智能体
 url: https://github.com/jd-opensource/joyagent-jdgenie
 ---
 
 # Agent开源git开源文档
+简体中文 | [English Version](README_EN.md)
 
 ## 业界首个开源高完成度轻量化通用多智能体产品(JoyAgent-JDGenie)
 **解决快速构建多智能体产品的最后一公里问题**
@@ -184,7 +185,7 @@ JoyAgent-JDGenie是一个通用的多智能体框架，对于用户需要定制�
 | Skywork                   | 0.8242     | 0.9245       | 0.8372       | 0.5769       | 天工         |
 | AWorld                    | 0.7758     | 0.8868       | 0.7791       | 0.5385       | Ant Group  |
 | Langfun                   | 0.7697     | 0.8679       | 0.7674       | 0.5769       | DeepMind   |
-| **JoyAgent-JDGenie(Our)** | **0.7515** | **0.8679**   | **0.7791**   | **0.4230**   | **Our**    |
+| **JoyAgent-JDGenie** | **0.7515** | **0.8679**   | **0.7791**   | **0.4230**   | **JD**    |
 | OWL                       | 0.6909     | 0.8491       | 0.6744       | 0.4231       | CAMEL      |
 | Smolagent                 | 0.5515     | 0.6792       | 0.5349       | 0.3462       | Huggingface |
 | AutoAgent                 | 0.5515     | 0.7170       | 0.5349       | 0.2692       | HKU        |
@@ -231,22 +232,26 @@ JoyAgent-JDGenie是一个通用的多智能体框架，对于用户需要定制�
 
 ## 快速开始
 
-### 方式1: docker 一键启动服务（推荐）
+### 方式1: docker 一键启动服务
 
 ```
-git clone https://github.com/jd-opensource/joyagent-jdgenie.git
+1. git clone https://github.com/jd-opensource/joyagent-jdgenie.git
 
-cd genie-tool
+2. 手动更新 genie-backend/src/main/resources/application.yml中 base_url、apikey、model、max_tokens、model_name等配置
+使用DeepSeek时: 注意deepseek-chat 为max_tokens: 8192
 
-修改.env_template执行工具使用的配置
+手动更新 genie-tool/.env_template 中的 OPENAI_API_KEY、OPENAI_BASE_URL、DEFAULT_MODEL、SERPER_SEARCH_API_KEY
+使用DeepSeek时: 设置DEEPSEEK_API_KEY、DEEPSEEK_API_BASE，DEFAULT_MODEL 设置为 deepseek/deepseek-chat，所有 ${DEFAULT_MODEL} 也都改成deepseek/deepseek-chat
 
-回到根目录
-
+3. 编译dockerfile
 docker build -t genie:latest .
 
-# -e 设置对话模型服务地址、APIKEY
-docker run -d -p 3000:3000 -p 8080:8080 -p 1601:1601 -e OPENAI_BASE_URL="" -e OPENAI_API_KEY="" --name genie-app genie:latest
+4. 启动dockerfile
+docker run -d -p 3000:3000 -p 8080:8080 -p 1601:1601 --name genie-app genie:latest
+
+5. 浏览器输入 localhost:3000 访问genie
 ```
+如果部署遇到问题，可以参考视频:【5分钟使用deepseek启动开源智能体应用joyagent-genie-哔哩哔哩】 https://b23.tv/8VQDBOK
 
 ### 方式2: 手动初始化环境，启动服务
 
@@ -263,11 +268,13 @@ docker run -d -p 3000:3000 -p 8080:8080 -p 1601:1601 -e OPENAI_BASE_URL="" -e OP
 手动超详细攻略参考 [Step by Step](./Deploy.md)
 
 #### 方案2：手动一键启动部署（推荐）
+
 直接通过shell启动所有服务
 ```
 sh check_dep_port.sh # 检查所有依赖和端口占用情况
 sh Genie_start.sh  # 直接启动，以后改动配置直接重启动脚本即可，control+c 一键kill所有服务
 ```
+部署时可以参考视频:【joyagent-jdgenie部署演示】 https://www.bilibili.com/video/BV1Py8Yz4ELK/?vd_source=a5601a346d433a490c55293e76180c9d
 
 ## 二次开发
 
@@ -276,6 +283,7 @@ sh Genie_start.sh  # 直接启动，以后改动配置直接重启动脚本即�
 #### 配置文件
 
 在 `genie-backend/src/main/resources/application.yml` 添加mcp_server服务，多个server逗号分隔
+在 `ui/.env` 中可以修改前端请求后端的路径
 
 ```yaml
 mcp_server_url: "http://ip1:port1/sse,http://ip2:port2/sse"
@@ -348,7 +356,7 @@ sh start_genie.sh
 
 
 ## 项目共建者
-贡献者：Liu Shangkun,Li Yang,Jia Shilin,Tian Shaohua,Wang zhen,Yao Ting,Wang Hongtao,Zhou xiaoqing,Liu min,Zhang Shuang,Liuwen,Yangdong,Xu Jialei,Zhou Meilei,Zhao Tingchong,Wu jiaxing, Wang Hanmin,Xu Shiyue,Liu Jiarun
+贡献者：Liu Shangkun,Li Yang,Jia Shilin,Tian Shaohua,Wang Zhen,Yao Ting,Wang Hongtao,Zhou Xiaoqing,Liu min,Zhang Shuang,Liuwen,Yangdong,Xu Jialei,Zhou Meilei,Zhao Tingchong,Wu jiaxing, Wang Hanmin,Xu Shiyue,Liu Jiarun
 
 所属机构:京东CHO企业信息化团队（EI）
 
@@ -360,7 +368,7 @@ sh start_genie.sh
 
 ## 引用
 
-如需学术引用或联系，请使用以下 BibTeX：
+如需学术引用，请使用以下 BibTeX：
 ```bibtex
 @software{JoyAgent-JDGenie,
   author = {Agent Team at JDCHO},

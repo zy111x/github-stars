@@ -1,6 +1,6 @@
 ---
 project: Glider.js
-stars: 3323
+stars: 3324
 description: |-
     A fast, lightweight, dependency free, native scrolling carousel alternative!
 url: https://github.com/NickPiscitelli/Glider.js

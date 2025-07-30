@@ -1,6 +1,6 @@
 ---
 project: coze-studio
-stars: 4298
+stars: 12794
 description: |-
     An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment like never before. Coze your way to AI Agent creation.
 url: https://github.com/coze-dev/coze-studio
@@ -82,6 +82,7 @@ Deployment steps:
    cp .env.example .env
    docker compose --profile "*" up -d
    ```
+   After the service starts, it is normal for the `coze-minio-setup` , `coze-mysql-setup-init-sql` , and `coze-mysql-setup-schema` containers to be in an exited state (exit 0). For common startup failure issues, **please refer to the [FAQ](https://github.com/coze-dev/coze-studio/wiki/9.-FAQ)**.
 4. After starting the service, you can open Coze Studio by accessing `http://localhost:8888/` through your browser.
 
 
@@ -91,7 +92,7 @@ Deployment steps:
    * [Model Configuration](https://github.com/coze-dev/coze-studio/wiki/3.-Model-configuration): Before deploying the open-source version of Coze Studio, you must configure the model service. Otherwise, you cannot select models when building agents, workflows, and apps.
    * [Plugin Configuration](https://github.com/coze-dev/coze-studio/wiki/4.-Plugin-Configuration): To use official plugins from the plugin store, you must first configure the plugins and add the authentication keys for third-party services.
    * [Basic Component Configuration](https://github.com/coze-dev/coze-studio/wiki/5.-Basic-component-configuration): Learn how to configure components such as image uploaders to use functions like image uploading in Coze Studio .
-* [API Reference](https://github.com/coze-dev/coze-studio/wiki/6.-API-Reference): Unlike the commercial edition, the open-source version of Coze Studio only supports personal access token (PAT) authentication and supports APIs related to chat and workflows.
+* [API Reference](https://github.com/coze-dev/coze-studio/wiki/6.-API-Reference): The Coze Studio Community Edition API and Chat SDK are authenticated using Personal Access Token, providing APIs for conversations and workflows.
 * [Development Guidelines](https://github.com/coze-dev/coze-studio/wiki/7.-Development-Standards):
    * [Project Architecture](https://github.com/coze-dev/coze-studio/wiki/7.-Development-Standards#project-architecture): Learn about the technical architecture and core components of the open-source version of Coze Studio.
    * [Code Development and Testing](https://github.com/coze-dev/coze-studio/wiki/7.-Development-Standards#code-development-and-testing): Learn how to perform secondary development and testing based on the open-source version of Coze Studio.
@@ -115,10 +116,28 @@ We welcome community contributions. For contribution guidelines, please refer to
 ## Security and privacy
 If you discover potential security issues in the project, or believe you may have found a security issue, please notify the ByteDance security team through our [security center](https://security.bytedance.com/src) or [vulnerability reporting mailbox](https://code.byted.org/flowdevops/cozeloop/blob/feat/release/sec@bytedance.com).
 Please **do not** create public GitHub Issues.
-## Join the community
-Scan the QR code below using the Lark mobile app to join the Coze Studio technical exchange group.
+## Join Community
+
+We are committed to building an open and friendly developer community. All developers interested in AI Agent development are welcome to join us!
+
+### 🐛 Issue Reports & Feature Requests
+To efficiently track and resolve issues while ensuring transparency and collaboration, we recommend participating through:
+- **GitHub Issues**: [Submit bug reports or feature requests](https://github.com/coze-dev/coze-studio/issues)
+- **Pull Requests**: [Contribute code or documentation improvements](https://github.com/coze-dev/coze-studio/pulls)
+
+### 💬 Technical Discussion & Communication
+Join our technical discussion groups to share experiences with other developers and stay updated with the latest project developments:
+
+**Feishu Group Chat**  
+Scan the QR code below with Feishu mobile app to join:
 
 ![Image](https://p9-arcosite.byteimg.com/tos-cn-i-goo7wpa0wc/0a49081e8f3743e8bf3dcdded4bb571a~tplv-goo7wpa0wc-image.image)
+
+**Discord Server**  
+Click to join: [Coze Community](https://discord.gg/sTVN9EVS4B)
+
+**Telegram Group**  
+Click to join: Telegram Group [Coze](https://t.me/+pP9CkPnomDA0Mjgx)
 
 ## Acknowledgments
 Thank you to all the developers and community members who have contributed to the Coze Studio project. Special thanks:

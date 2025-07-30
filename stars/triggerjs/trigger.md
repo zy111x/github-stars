@@ -1,6 +1,6 @@
 ---
 project: trigger
-stars: 1265
+stars: 1266
 description: |-
     A library for creating scroll-based animation with HTML attributes and CSS variables.
 url: https://github.com/triggerjs/trigger

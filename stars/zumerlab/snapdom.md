@@ -1,6 +1,6 @@
 ---
 project: snapdom
-stars: 3539
+stars: 3892
 description: |-
     snapDOM captures HTML elements to images with exceptional speed and accuracy.
 url: https://github.com/zumerlab/snapdom
@@ -42,7 +42,7 @@ It captures any HTML element as a scalable SVG image, preserving styles, fonts, 
 
 * 📸 Full DOM capture
 * 🎨 Embedded styles, pseudo-elements, and fonts
-* 🖼️ Export to SVG, PNG, JPG, WebP, or `canvas`
+* 🖼️ Export to SVG, PNG, JPG, WebP, `canvas`, or Blob
 * ⚡ Ultra fast, no dependencies
 * 📦 100% based on standard Web APIs
 
@@ -60,6 +60,12 @@ npm i @zumer/snapdom
 
 ```sh
 yarn add @zumer/snapdom
+```
+
+Then import it in your code:
+
+```js
+import { snapdom } from '@zumer/snapdom';
 ```
 
 ### CDN
@@ -154,6 +160,7 @@ All capture methods accept an `options` object:
 | `fast`            | boolean  | `true`   | Skips idle delay for faster results        |
 | `embedFonts`      | boolean  | `false`  | Inlines fonts (icon fonts always embedded) |
 | `scale`           | number   | `1`      | Output scale multiplier                    |
+| `dpr`             | number   | `devicePixelRatio` | Device pixel ratio                 |
 | `width`           | number   | -        | Output specific width size                 |
 | `height`          | number   | -        | Output specific height size                |
 | `backgroundColor` | string   | `"#fff"` | Fallback color for JPG/WebP                |
@@ -225,7 +232,7 @@ const result = await snapdom(element, {
 
 ### `preCache()` – Optional helper
 
-The `preCache()` function can be used to load external resources (like images and fonts) in advance. It is specially useful when the element to capure is big and complex.
+The `preCache()` function can be used to load external resources (like images and fonts) in advance. It is specially useful when the element to capture is big and complex.
 
 ```js
 import { preCache } from '@zumer/snapdom';
@@ -258,7 +265,7 @@ import { snapdom, preCache } from './snapdom.mjs';
 
 ## Limitations
 
-* External images shloud be CORS-accessible (use `useProxy` option for handling CORS denied)
+* External images should be CORS-accessible (use `useProxy` option for handling CORS denied)
 * Iframes are not supported
 * When WebP format is used on Safari, it will fallback to PNG rendering.
 * `@font-face` CSS rule is well supported, but if need to use JS `FontFace()`, see this workaround [`#43`](https://github.com/zumerlab/snapdom/issues/43)
@@ -319,6 +326,36 @@ npm install
 npm run test:benchmark
 ```
 
+
+## Roadmap
+
+Planned improvements for future versions of SnapDOM:
+
+* [ ] **Implement plugin system**
+  SnapDOM will support external plugins to extend or override internal behavior (e.g. custom node transformers, exporters, or filters).
+
+* [ ] **Refactor to modular architecture**
+  Internal logic will be split into smaller, focused modules to improve maintainability and code reuse.
+
+* [ ] **Decouple internal logic from global options**
+  Functions will be redesigned to avoid relying directly on `options`. A centralized capture context will improve clarity, autonomy, and testability.
+
+* [ ] **Expose cache control**
+  Users will be able to manually clear image and font caches or configure their own caching strategies.
+
+* [ ] **Auto font preloading**
+  Required fonts will be automatically detected and preloaded before capture, reducing the need for manual `preCache()` calls.
+
+* [ ] **Document plugin development**
+  A full guide will be provided for creating and registering custom SnapDOM plugins.
+
+* [ ] **Make export utilities tree-shakeable**
+  Export functions like `toPng`, `toJpg`, `toBlob`, etc. will be restructured into independent modules to support tree shaking and minimal builds.
+
+Have ideas or feature requests?
+Feel free to share suggestions or feedback in [GitHub Discussions](https://github.com/zumerlab/snapdom/discussions).
+
+
 ## Development
 
 To contribute or build snapDOM locally:
@@ -359,10 +396,12 @@ For detailed contribution guidelines, please see [CONTRIBUTING](https://github.c
 <a href="https://github.com/tinchox5" title="tinchox5"><img src="https://avatars.githubusercontent.com/u/11557901?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="tinchox5"/></a>
 <a href="https://github.com/tarwin" title="tarwin"><img src="https://avatars.githubusercontent.com/u/646149?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="tarwin"/></a>
 <a href="https://github.com/17biubiu" title="17biubiu"><img src="https://avatars.githubusercontent.com/u/13295895?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="17biubiu"/></a>
+<a href="https://github.com/av01d" title="av01d"><img src="https://avatars.githubusercontent.com/u/6247646?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="av01d"/></a>
 <a href="https://github.com/pedrocateexte" title="pedrocateexte"><img src="https://avatars.githubusercontent.com/u/207524750?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="pedrocateexte"/></a>
 <a href="https://github.com/domialex" title="domialex"><img src="https://avatars.githubusercontent.com/u/4694217?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="domialex"/></a>
 <a href="https://github.com/elliots" title="elliots"><img src="https://avatars.githubusercontent.com/u/622455?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="elliots"/></a>
 <a href="https://github.com/jswhisperer" title="jswhisperer"><img src="https://avatars.githubusercontent.com/u/1177690?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="jswhisperer"/></a>
+<a href="https://github.com/sharuzzaman" title="sharuzzaman"><img src="https://avatars.githubusercontent.com/u/7421941?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="sharuzzaman"/></a>
 <a href="https://github.com/simon1uo" title="simon1uo"><img src="https://avatars.githubusercontent.com/u/60037549?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="simon1uo"/></a>
 <a href="https://github.com/titoBouzout" title="titoBouzout"><img src="https://avatars.githubusercontent.com/u/64156?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="titoBouzout"/></a>
 <a href="https://github.com/jhbae200" title="jhbae200"><img src="https://avatars.githubusercontent.com/u/20170610?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="jhbae200"/></a>

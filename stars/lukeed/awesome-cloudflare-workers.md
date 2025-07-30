@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare-workers
-stars: 556
+stars: 557
 description: |-
     😎 Awesome Cloudflare Workers
 url: https://github.com/lukeed/awesome-cloudflare-workers

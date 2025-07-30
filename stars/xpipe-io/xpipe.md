@@ -1,6 +1,6 @@
 ---
 project: xpipe
-stars: 11381
+stars: 11388
 description: |-
     Access your entire server infrastructure from your local desktop
 url: https://github.com/xpipe-io/xpipe

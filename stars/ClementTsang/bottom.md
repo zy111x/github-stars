@@ -1,6 +1,6 @@
 ---
 project: bottom
-stars: 11653
+stars: 11667
 description: |-
     Yet another cross-platform graphical process/system monitor.
 url: https://github.com/ClementTsang/bottom
@@ -550,6 +550,7 @@ Thanks to all contributors:
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/benjamb"><img src="https://avatars.githubusercontent.com/u/8291297?v=4?s=100" width="100px;" alt="Ben Brown"/><br /><sub><b>Ben Brown</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=benjamb" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nyurik"><img src="https://avatars.githubusercontent.com/u/1641515?v=4?s=100" width="100px;" alt="Yuri Astrakhan"/><br /><sub><b>Yuri Astrakhan</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=nyurik" title="Code">💻</a> <a href="https://github.com/ClementTsang/bottom/commits?author=nyurik" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://kachick.github.io/"><img src="https://avatars.githubusercontent.com/u/1180335?v=4?s=100" width="100px;" alt="Kenichi Kamiya"/><br /><sub><b>Kenichi Kamiya</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=kachick" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/yahlia"><img src="https://avatars.githubusercontent.com/u/40295453?v=4?s=100" width="100px;" alt="yahlia"/><br /><sub><b>yahlia</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=yahlia" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

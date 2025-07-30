@@ -1,6 +1,6 @@
 ---
 project: puter
-stars: 34225
+stars: 34362
 description: |-
     🌐 The Internet OS! Free, Open-Source, and Self-Hostable.
 url: https://github.com/HeyPuter/puter
@@ -55,7 +55,7 @@ cd puter
 npm install
 npm start
 ```
-✨ This should launch Puter at 
+**→** This should launch Puter at 
 <font color="red"> http://puter.localhost:4100 (or the next available port). </font>
 
 
@@ -70,7 +70,7 @@ troubleshooting steps.
 ```bash
 mkdir puter && cd puter && mkdir -p puter/config puter/data && sudo chown -R 1000:1000 puter && docker run --rm -p 4100:4100 -v `pwd`/puter/config:/etc/puter -v `pwd`/puter/data:/var/puter  ghcr.io/heyputer/puter
 ```
-✨ This should launch Puter at 
+**→** This should launch Puter at 
 <font color="red"> http://puter.localhost:4100 (or the next available port). </font>
 
 <br/>
@@ -85,7 +85,7 @@ sudo chown -R 1000:1000 puter
 wget https://raw.githubusercontent.com/HeyPuter/puter/main/docker-compose.yml
 docker compose up
 ```
-✨ This should be available at 
+**→** This should be available at 
 <font color="red"> http://puter.localhost:4100 (or the next available port). </font>
 
 <br/>
@@ -100,7 +100,7 @@ New-Item -Path "puter\data" -ItemType Directory -Force
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/HeyPuter/puter/main/docker-compose.yml" -OutFile "docker-compose.yml"
 docker compose up
 ```
-✨ This should launch Puter at 
+**→** This should launch Puter at 
 <font color="red"> http://puter.localhost:4100 (or the next available port). </font>
 
 <br/>
