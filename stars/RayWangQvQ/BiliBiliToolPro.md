@@ -1,6 +1,6 @@
 ---
 project: BiliBiliToolPro
-stars: 7619
+stars: 7654
 description: B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。敏感肌也能用。
 url: https://github.com/RayWangQvQ/BiliBiliToolPro
 ---
@@ -113,7 +113,7 @@ BiliTool 实现自动完成任务的原理，是通过调用一系列开放的ap
 
 目前默认支持**Telegram推送、PushPlus推送、企业微信应用推送、企业微信推送、钉钉推送、Microsoft Teams推送、Server酱推送和酷推QQ推送**（以上顺序即为个人推荐的排序），如果需要推送到其他端，也可以配置为任意的可以接受消息的Api地址，关于如何配置推送请详见下面的**个性化自定义配置**章节。
 
-_(web版的推送还在开发中，收不到的先不用折腾啦，下个版本上)_
+推送配置见：confifuration
 
 2\. 功能任务说明
 ----------
