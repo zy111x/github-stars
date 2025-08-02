@@ -1,6 +1,6 @@
 ---
 project: splide
-stars: 5157
+stars: 5161
 description: |-
     Splide is a lightweight, flexible and accessible slider/carousel written in TypeScript. No dependencies, no Lighthouse errors.
 url: https://github.com/Splidejs/splide

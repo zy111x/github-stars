@@ -1,6 +1,6 @@
 ---
 project: counterscale
-stars: 1774
+stars: 1776
 description: |-
     Scalable web analytics you run yourself on Cloudflare
 url: https://github.com/benvinegar/counterscale
@@ -105,6 +105,16 @@ Counterscale.init({
     reporterUrl: "https://{subdomain-emitted-during-deploy}.workers.dev/collect",
 });
 ```
+
+__Available Methods__
+| Method | Parameters | Return Type | Description |
+|--------|------------|-------------|-------------|
+| `init(opts)` | `ClientOpts` | `void` | Initializes the Counterscale client with site configuration. Creates a global client instance if one doesn't exist. |
+| `isInitialized()` | None | `boolean` | Checks if the Counterscale client has been initialized. Returns true if client exists, false otherwise. |
+| `getInitializedClient()` | None | `Client \| undefined` | Returns the initialized client instance or undefined if not initialized. |
+| `trackPageview(opts?)` | `TrackPageviewOpts?` | `void` | Tracks a pageview event. Requires client to be initialized first. Automatically detects URL and referrer if not provided. |
+| `cleanup()` | None | `void` | Cleans up the client instance and removes event listeners. Sets global client to undefined. |
+
 
 ## Upgrading
 

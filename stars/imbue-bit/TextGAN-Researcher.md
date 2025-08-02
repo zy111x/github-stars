@@ -1,6 +1,6 @@
 ---
 project: TextGAN-Researcher
-stars: 91
+stars: 92
 description: |-
     🧐 Open Deep Research Agent: Automated Knowledge Discovery with TextGAN
 url: https://github.com/imbue-bit/TextGAN-Researcher

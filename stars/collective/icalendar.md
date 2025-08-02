@@ -1,6 +1,6 @@
 ---
 project: icalendar
-stars: 1065
+stars: 1062
 description: |-
     icalendar parser library for Python
 url: https://github.com/collective/icalendar

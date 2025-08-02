@@ -1,6 +1,6 @@
 ---
 project: bowser
-stars: 5606
+stars: 5607
 description: |-
     a browser detector
 url: https://github.com/bowser-js/bowser

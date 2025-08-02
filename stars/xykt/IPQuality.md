@@ -1,6 +1,6 @@
 ---
 project: IPQuality
-stars: 4236
+stars: 4261
 description: |-
     IP质量检测脚本 - IP Quality Check Script
 url: https://github.com/xykt/IPQuality
@@ -30,6 +30,24 @@ url: https://github.com/xykt/IPQuality
 ![截图](https://raw.githubusercontent.com/xykt/IPQuality/main/res/cn_IPv4.svg)
 
 ## 使用方法
+
+### 便捷模式：交互界面
+
+![Net](https://github.com/xykt/ScriptMenu/raw/main/res/IP_CN.png)
+
+##### Bash：
+````bash
+bash <(curl -Ls https://Check.Place) -I
+````
+
+##### Docker：
+````bash
+docker run --rm --net=host -it xykt/check -I && docker rmi xykt/check > /dev/null 2>&1
+````
+
+### 高级模式：参数运行
+
+![Help](https://github.com/xykt/IPQuality/raw/main/res/help.png)
 
 ##### 默认双栈检测：
 ````bash
@@ -96,7 +114,21 @@ bash <(curl -Ls https://IP.Check.Place) -o /path/to/file.txtoranyother
 bash <(curl -Ls https://IP.Check.Place) -l jp|es|de|fr|ru|pt
 ````
 
+##### 隐私模式——禁用在线报告生成功能：
+````bash
+bash <(curl -Ls https://IP.Check.Place) -p
+````
+
+##### Docker（支持运行参数，须在```&&```前插入）：
+````bash
+docker run --rm --net=host -it xykt/ipquality && docker rmi xykt/ipquality > /dev/null 2>&1
+````
+
 ## 脚本更新
+
+2025/08/03 00:00 增加Docker运行方式
+
+2025/08/01 16:15 增加-p隐私模式，禁用在线报告生成功能
 
 2025/07/30 16:30 将所有HTTP请求替换为HTTPS以提升脚本安全性
 
@@ -154,6 +186,7 @@ bash <(curl -Ls https://IP.Check.Place) -l jp|es|de|fr|ru|pt
 | VIRCS</br>威尔克斯 | ![vircs_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_vircs.png) | [https://vircs.com](https://www.vircs.com/promotion?code=6)| 
 | Thordata</br>`原生IP` | ![thordata_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_thordata.png) | [https://thordata.com](https://www.thordata.com/?ls=VNSCxroa&lk=quality)| 
 | BestProxy</br>`原生IP` | ![bestproxy_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_bestproxy.png) | [https://bestproxy.com](https://bestproxy.com/?keyword=nstdqben)| 
+| RapidProxy</br>`原生IP` | ![rapidproxy_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_rapidproxy.png) | [https://rapidproxy.io](https://www.rapidproxy.io/?ref=gitipquality)| 
 
 ##### *E-Mail: sponsor@check.place Telegram Bot: https://t.me/xythebot*
 **仅接受长期稳定运营，信誉良好的商家*

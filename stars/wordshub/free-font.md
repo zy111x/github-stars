@@ -1,6 +1,6 @@
 ---
 project: free-font
-stars: 5304
+stars: 5305
 description: |-
     大概是2020年最全的免费可商用字体，这里收录的商免字体都能找到明确的授权出处，可以放心使用，持续更新中...
 url: https://github.com/wordshub/free-font

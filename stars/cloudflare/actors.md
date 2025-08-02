@@ -1,6 +1,6 @@
 ---
 project: actors
-stars: 137
+stars: 140
 description: |-
     An easier way to build with Cloudflare Durable Objects
 url: https://github.com/cloudflare/actors

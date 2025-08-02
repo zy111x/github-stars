@@ -1,6 +1,6 @@
 ---
 project: tremor-npm
-stars: 16387
+stars: 16386
 description: |-
     React components to build charts and dashboards
 url: https://github.com/tremorlabs/tremor-npm

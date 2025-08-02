@@ -1,8 +1,8 @@
 ---
 project: lenis
-stars: 11448
+stars: 11481
 description: |-
-    How smooth scroll should be
+    Smooth scroll at it should be
 url: https://github.com/darkroomengineering/lenis
 ---
 
@@ -35,7 +35,7 @@ Read our [Manifesto](https://github.com/darkroomengineering/lenis/blob/main/MANI
 - [Troubleshooting](#troubleshooting)
 - [Tutorials](#tutorials)
 - [Plugins](#plugins)
-- [Lenis is Use](#lenis-in-use)
+- [Lenis in Use](#lenis-in-use)
 - [License](#license)
 
 <br/>

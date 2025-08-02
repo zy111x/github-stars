@@ -1,6 +1,6 @@
 ---
 project: motia
-stars: 4239
+stars: 4631
 description: |-
     Unified Backend Framework for APIs, Events, and AI Agents
 url: https://github.com/MotiaDev/motia
