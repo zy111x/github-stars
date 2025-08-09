@@ -1,6 +1,6 @@
 ---
 project: s3mini
-stars: 1196
+stars: 1201
 description: |-
     👶 Tiny S3 client. Edge computing ready. No-dep. In Typescript. Works with @cloudflare @minio @backblaze @digitalocean @garagehq @oracle
 url: https://github.com/good-lly/s3mini

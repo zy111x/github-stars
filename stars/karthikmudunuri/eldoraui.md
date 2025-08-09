@@ -1,6 +1,6 @@
 ---
 project: eldoraui
-stars: 1638
+stars: 1640
 description: |-
     Eldora UI is a collection of re-usable components that you can copy and paste into your web apps. It primarily features components, blocks, and templates.
 url: https://github.com/karthikmudunuri/eldoraui

@@ -1,6 +1,6 @@
 ---
 project: firecrawl
-stars: 44449
+stars: 45994
 description: |-
     🔥 Turn entire websites into LLM-ready markdown or structured data. Scrape, crawl and extract with a single API.
 url: https://github.com/mendableai/firecrawl

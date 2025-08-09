@@ -1,6 +1,6 @@
 ---
 project: mousetrap
-stars: 11763
+stars: 11768
 description: |-
     Simple library for handling keyboard shortcuts in Javascript
 url: https://github.com/ccampbell/mousetrap

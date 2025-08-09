@@ -1,10 +1,14 @@
 ---
 project: motia
-stars: 4631
+stars: 5662
 description: |-
-    Unified Backend Framework for APIs, Events, and AI Agents
+    Modern Backend Framework that unifies APIs, background jobs, workflows, and AI agents into a single cohesive system with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
 ---
+
+<a href="https://motia.dev">
+  <img src="packages/docs/public/github-readme-banner.png" alt="Motia Banner" width="100%">
+</a>
 
 <p align="center">
   <a href="https://trendshift.io/repositories/14032">
@@ -13,14 +17,7 @@ url: https://github.com/MotiaDev/motia
 </p>
 
 <p align="center">
-  <!-- shows in LIGHT mode only -->
-  <img src="assets/motia-logo-dark.png#gh-light-mode-only"  width="400" alt="Motia logo" />
-  <!-- shows in DARK mode only -->
-  <img src="assets/motia-logo-light.png#gh-dark-mode-only" width="400" alt="Motia logo (dark)" />
-</p>
-
-<p align="center">
-  <strong>🔥 A Modern Unified Backend Framework for APIs, Events and Agents 🔥</strong>
+  <strong>🔥 A Modern Unified Backend Framework for APIs, background jobs, workflows, and Agents 🔥</strong>
 </p>
 
 <p align="center">
@@ -36,11 +33,10 @@ url: https://github.com/MotiaDev/motia
   <a href="https://twitter.com/motiadev" target="_blank">
     <img src="https://img.shields.io/badge/Follow-@motiadev-1DA1F2?style=flat&logo=twitter&logoColor=white&labelColor=000000" alt="Twitter Follow">
   </a>
-  <a href="https://discord.com/invite/nJFfsH5d6v" target="_blank">
+  <a href="https://discord.gg/motia" target="_blank">
     <img src="https://img.shields.io/discord/1322278831184281721?style=flat&logo=discord&logoColor=white&color=5865F2&label=Discord&labelColor=000000" alt="Discord">
   </a>
 </p>
-
 <p align="center">
   <a href="https://www.motia.dev/manifesto">💡 Motia Manifesto</a> •
   <a href="https://www.motia.dev/docs/getting-started/quick-start">🚀 Quick Start</a> •
@@ -56,7 +52,67 @@ Motia is a **modern backend framework** that unifies APIs, background jobs, work
 
 Motia brings cohesion to the fragmented backend world with our core primitive: the **Step**.
 
-![Motia combines APIs, background queues, and AI agents into one system](assets/Motia_Github_Repository_GIF.gif)
+[![Motia combines APIs, background queues, and AI agents into one system](assets/Motia_Github_Repository_GIF.gif)](https://motia.dev)
+
+## 🚀 Quickstart
+
+Get Motia project up and running in **under 60 seconds**:
+
+### 1. Bootstrap a New Motia Project
+
+```bash
+npx motia@latest create -i   # runs the interactive terminal
+```
+
+Follow the prompts to pick a template, project name, and language.
+
+### 2. Start the Workbench
+
+Inside your new project folder, launch the dev server:
+
+```bash
+npx motia dev # ➜ http://localhost:3000
+```
+
+This spins up the Motia Workbench – a local UI for building, testing & observing your backend in real-time.
+
+![motia-terminal](assets/motia-terminal.gif)
+
+### 3. Hit Your First Endpoint
+
+Open a new terminal tab and run:
+
+```bash
+curl http://localhost:3000/default
+```
+
+You should see the JSON response:
+
+```json
+{ "message": "Hello World from Motia!" }
+```
+
+### 4. Explore the Workbench UI
+
+![new-workbench](assets/new-workbench.png)
+The Workbench is your command centre:
+
+- **🌊 Flows** – Visualise how your Steps connect.
+- **🔌 Endpoints** – Test APIs with one click and stream results live.
+- **👁️ Traces** – Inspect end-to-end traces of every execution.
+- **📊 Logs** – View structured logs grouped by trace.
+- **🏪 State** – Inspect the key-value store across Steps.
+
+---
+
+🎉 **That's it!** You now have a fully-featured Motia project with:
+
+- ✅ `/default` API endpoint
+- ✅ Visual debugger & flow inspector
+- ✅ Built-in observability
+- ✅ Hot-reload for instant feedback
+
+---
 
 ### 🧱 The Step Philosophy
 
@@ -146,83 +202,15 @@ Every execution generates a full trace, capturing step timelines, state operatio
 
 ---
 
-## 🚀 Quickstart
-
-Get Motia project up and running in **under 60 seconds**:
-
-### **Prerequisites**
-
-- **Node.js 18+** (we recommend the latest LTS)
-- **npm** ≥ 8 (or **pnpm** / **yarn** – your choice)
-
----
-
-### 1. Bootstrap a New Motia Project
-
-```bash
-npx motia@latest create -i   # runs the interactive terminal
-```
-
-Follow the prompts to pick a template, project name, and language.
-
-### 2. Start the Workbench
-
-Inside your new project folder, launch the dev server:
-
-```bash
-npx motia dev
-# ➜ http://localhost:3000
-```
-
-This spins up the Motia Workbench – a local UI for building, testing & observing your backend in real-time.
-
-![motia-terminal](assets/motia-terminal.gif)
-
-### 3. Hit Your First Endpoint
-
-Open a new terminal tab and run:
-
-```bash
-curl http://localhost:3000/default
-```
-
-You should see the JSON response:
-
-```json
-{ "message": "Hello World from Motia!" }
-```
-
-### 4. Explore the Workbench UI
-
-![new-workbench](assets/new-workbench.png)
-The Workbench is your command centre:
-
-- **🌊 Flows** – Visualise how your Steps connect.
-- **🔌 Endpoints** – Test APIs with one click and stream results live.
-- **👁️ Traces** – Inspect end-to-end traces of every execution.
-- **📊 Logs** – View structured logs grouped by trace.
-- **🏪 State** – Inspect the key-value store across Steps.
-
----
-
-🎉 **That's it!** You now have a fully-featured Motia project with:
-
-- ✅ `/default` API endpoint
-- ✅ Visual debugger & flow inspector
-- ✅ Built-in observability
-- ✅ Hot-reload for instant feedback
-
----
-
 ## 🗂 Examples
 
 | [Finance Agent](https://github.com/MotiaDev/motia-examples/tree/main/examples/finance-agent) | [GitHub Agent](https://github.com/MotiaDev/motia-examples/tree/main/examples/github-integration-workflow) | [Gmail Manager](https://github.com/MotiaDev/motia-examples/tree/main/examples/gmail-workflow) |
 | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| ![Finance](assets/examples/finance-agent.png)<br>Financial insights                          | ![GitHub](assets/examples/github-pr-management.png)<br>PR automation                                      | ![Gmail](assets/examples/gmail-flow.png)<br>Email automation                                  |
+| ![Finance](assets/examples/finance-agent.png)                          | ![GitHub](assets/examples/github-pr-management.png)                                      | ![Gmail](assets/examples/gmail-flow.png)                                |
 
 | [Trello Automation](https://github.com/MotiaDev/motia-examples/tree/main/examples/trello-flow) | [RAG Agent](https://github.com/MotiaDev/motia-examples/tree/main/examples/rag_example) | [AI Image Gen](https://github.com/MotiaDev/motia-examples/tree/main/examples/vision-example) |
 | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| ![Trello](assets/examples/trello-manager.png)<br>Task automation                               | ![RAG](assets/examples/parse-embed-rag.png)<br>Knowledge retrieval                     | ![AI Image](assets/examples/generate-image.png)<br>Generate images                           |
+| ![Trello](assets/examples/trello-manager.png)                               | ![RAG](assets/examples/parse-embed-rag.png)                     | ![AI Image](assets/examples/generate-image.png)                          |
 
 ---
 
@@ -243,10 +231,24 @@ Write steps in your preferred language:
 
 ### 💬 **Get Help**
 
-- **📋 Questions**: Use our [Discord community](https://discord.gg/7rXsekMK)
+- **📋 Questions**: Use our [Discord community](https://discord.gg/motia)
 - **🐛 Bug Reports**: [GitHub Issues](https://github.com/MotiaDev/motia/issues)
 - **📖 Documentation**: [Official Docs](https://motia.dev/docs)
-- **🎥 Blog**: [Motia Blog](https://dev.to/motiadev)
+- **🎥 Blog**: [Motia Blog](https://blog.motia.dev)
+
+### 🤝 **Contributing**
+
+We welcome contributions! Whether it's:
+
+- 🐛 Bug fixes and improvements
+- ✨ New features and step types
+- 📚 Documentation and examples
+- 🌍 Language support additions
+- 🎨 Workbench UI enhancements
+
+Check out our [Contributing Guide](https://github.com/MotiaDev/motia/blob/main/CONTRIBUTING.md) to get started.
+
+---
 
 <div align="center">
 
@@ -262,23 +264,9 @@ Write steps in your preferred language:
 
 [![Star History Chart](https://api.star-history.com/svg?repos=motiadev/motia&type=Date)](https://www.star-history.com/#motiadev/motia&Date)
 
-<sub>Built with ❤️ by the Motia team • **Star us if you find Motia useful!** ⭐</sub>
+<sub>Built with ❤️ by the Motia team • **Star us if you find [Motia](https://github.com/orgs/MotiaDev/motia) useful!** ⭐</sub>
 
 </div>
-
-### 🤝 **Contributing**
-
-We welcome contributions! Whether it's:
-
-- 🐛 Bug fixes and improvements
-- ✨ New features and step types
-- 📚 Documentation and examples
-- 🌍 Language support additions
-- 🎨 Workbench UI enhancements
-
-Check out our [Contributing Guide](https://github.com/MotiaDev/motia/blob/main/CONTRIBUTING.md) to get started.
-
----
 
 ### 🚧 Roadmap
 
@@ -310,4 +298,3 @@ Feel free to add comments to the issues, or create a new issue if you have a fea
 | New languages: Ruby                   | Planned | [#493](https://github.com/MotiaDev/motia/issues/493) | Add support for Ruby                   |
 | New languages: C#                     | Planned | [#494](https://github.com/MotiaDev/motia/issues/494) | Add support for C#                     |
 | BYOC: Kubernetes                      | Planned | [#496](https://github.com/MotiaDev/motia/issues/496) | Add support for Kubernetes             |
-

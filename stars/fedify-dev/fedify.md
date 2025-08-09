@@ -1,6 +1,6 @@
 ---
 project: fedify
-stars: 807
+stars: 818
 description: |-
     ActivityPub server framework in TypeScript
 url: https://github.com/fedify-dev/fedify
@@ -103,9 +103,11 @@ Here is the list of packages:
 | [@fedify/fedify](/packages/fedify/)     | [JSR]                       | [npm]                       | The core framework of Fedify            |
 | [@fedify/cli](/packages/cli/)           | [JSR][jsr:@fedify/cli]      | [npm][npm:@fedify/cli]      | CLI toolchain for testing and debugging |
 | [@fedify/amqp](/packages/amqp/)         | [JSR][jsr:@fedify/amqp]     | [npm][npm:@fedify/amqp]     | AMQP/RabbitMQ driver                    |
+| [@fedify/elysia](/packages/elysia/)     |                             | [npm][npm:@fedify/elysia]   | Elysia integration                      |
 | [@fedify/express](/packages/express/)   | [JSR][jsr:@fedify/express]  | [npm][npm:@fedify/express]  | Express integration                     |
 | [@fedify/h3](/packages/h3/)             | [JSR][jsr:@fedify/h3]       | [npm][npm:@fedify/h3]       | H3 integration                          |
 | [@fedify/nestjs](/packages/nestjs/)     |                             | [npm][npm:@fedify/nestjs]   | NestJS integration                      |
+| [@fedify/next](/packages/next/)         |                             | [npm][npm:@fedify/next]     | Next.js integration                     |
 | [@fedify/postgres](/packages/postgres/) | [JSR][jsr:@fedify/postgres] | [npm][npm:@fedify/postgres] | PostgreSQL driver                       |
 | [@fedify/redis](/packages/redis/)       | [JSR][jsr:@fedify/redis]    | [npm][npm:@fedify/redis]    | Redis driver                            |
 | [@fedify/sqlite](/packages/sqlite/)     | [JSR][jsr:@fedify/sqlite]   | [npm][npm:@fedify/sqlite]   | SQLite driver                           |
@@ -115,11 +117,13 @@ Here is the list of packages:
 [npm:@fedify/cli]: https://www.npmjs.com/package/@fedify/cli
 [jsr:@fedify/amqp]: https://jsr.io/@fedify/amqp
 [npm:@fedify/amqp]: https://www.npmjs.com/package/@fedify/amqp
+[npm:@fedify/elysia]: https://www.npmjs.com/package/@fedify/elysia
 [jsr:@fedify/express]: https://jsr.io/@fedify/express
 [npm:@fedify/express]: https://www.npmjs.com/package/@fedify/express
 [jsr:@fedify/h3]: https://jsr.io/@fedify/h3
 [npm:@fedify/h3]: https://www.npmjs.com/package/@fedify/h3
 [npm:@fedify/nestjs]: https://www.npmjs.com/package/@fedify/nestjs
+[npm:@fedify/next]: https://www.npmjs.com/package/@fedify/next
 [jsr:@fedify/postgres]: https://jsr.io/@fedify/postgres
 [npm:@fedify/postgres]: https://www.npmjs.com/package/@fedify/postgres
 [jsr:@fedify/redis]: https://jsr.io/@fedify/redis

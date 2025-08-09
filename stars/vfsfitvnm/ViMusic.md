@@ -1,6 +1,6 @@
 ---
 project: ViMusic
-stars: 9355
+stars: 9363
 description: |-
     An Android application for streaming music from YouTube Music.
 url: https://github.com/vfsfitvnm/ViMusic

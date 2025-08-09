@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 449
+stars: 450
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -1518,6 +1518,7 @@ url: https://github.com/progfay/shields-with-icon
 ![KeeWeb](https://img.shields.io/badge/KeeWeb-528BFF?style=for-the-badge&logo=KeeWeb&logoColor=FFFFFF)
 ![Kenmei](https://img.shields.io/badge/Kenmei-545C64?style=for-the-badge&logo=Kenmei&logoColor=FFFFFF)
 ![Kentico](https://img.shields.io/badge/Kentico-F05A22?style=for-the-badge&logo=Kentico&logoColor=FFFFFF)
+![Keploy](https://img.shields.io/badge/Keploy-222222?style=for-the-badge&logo=Keploy&logoColor=FF914D)
 ![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=Keras&logoColor=FFFFFF)
 ![Keybase](https://img.shields.io/badge/Keybase-33A0FF?style=for-the-badge&logo=Keybase&logoColor=FFFFFF)
 ![KeyCDN](https://img.shields.io/badge/KeyCDN-047AED?style=for-the-badge&logo=KeyCDN&logoColor=FFFFFF)
@@ -2594,6 +2595,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=Sentry&logoColor=FFFFFF)
 ![SEPA](https://img.shields.io/badge/SEPA-2350A9?style=for-the-badge&logo=SEPA&logoColor=FFFFFF)
 ![Sequelize](https://img.shields.io/badge/Sequelize-222222?style=for-the-badge&logo=Sequelize&logoColor=52B0E7)
+![ServBay](https://img.shields.io/badge/ServBay-00103C?style=for-the-badge&logo=ServBay&logoColor=FFFFFF)
 ![Server Fault](https://img.shields.io/badge/Server%20Fault-E7282D?style=for-the-badge&logo=Server+Fault&logoColor=FFFFFF)
 ![Serverless](https://img.shields.io/badge/Serverless-FD5750?style=for-the-badge&logo=Serverless&logoColor=FFFFFF)
 ![Session](https://img.shields.io/badge/Session-000000?style=for-the-badge&logo=Session&logoColor=FFFFFF)
@@ -3338,6 +3340,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Zod](https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=Zod&logoColor=FFFFFF)
 ![Zoho](https://img.shields.io/badge/Zoho-E42527?style=for-the-badge&logo=Zoho&logoColor=FFFFFF)
 ![Zoiper](https://img.shields.io/badge/Zoiper-F47920?style=for-the-badge&logo=Zoiper&logoColor=FFFFFF)
+![Zola](https://img.shields.io/badge/Zola-222222?style=for-the-badge&logo=Zola&logoColor=EAE7D6)
 ![Zomato](https://img.shields.io/badge/Zomato-E23744?style=for-the-badge&logo=Zomato&logoColor=FFFFFF)
 ![Zoom](https://img.shields.io/badge/Zoom-0B5CFF?style=for-the-badge&logo=Zoom&logoColor=FFFFFF)
 ![Zorin](https://img.shields.io/badge/Zorin-15A6F0?style=for-the-badge&logo=Zorin&logoColor=FFFFFF)

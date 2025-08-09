@@ -1,6 +1,6 @@
 ---
 project: itty-router
-stars: 1960
+stars: 1963
 description: |-
     A little router.
 url: https://github.com/kwhitley/itty-router
@@ -24,7 +24,7 @@ url: https://github.com/kwhitley/itty-router
 [![Github](https://img.shields.io/github/stars/kwhitley/itty-router?style=social)](https://github.com/kwhitley/itty-router)
 [![Follow @ittydev](https://img.shields.io/twitter/follow/ittydev.svg?style=social&label=Follow)](https://www.twitter.com/ittydev)
 
-###  [v5 Documentation](https://itty.dev/itty-router) &nbsp;| &nbsp; [v4 -> v5 Migration Guide](https://itty.dev/itty-router/migrations/v4-v5) &nbsp;| &nbsp; [Discord](https://discord.gg/53vyrZAu9u) 
+###  [v5 Documentation](https://itty.dev/itty-router) &nbsp;| &nbsp; [v4 -> v5 Migration Guide](https://itty.dev/itty-router/migrations/v4-v5) &nbsp;| &nbsp; [Discord](https://discord.gg/53vyrZAu9u)
 
 ---
 
@@ -53,7 +53,7 @@ router
   .get('/json', () => [1,2,3])
   .get('/promises', () => Promise.resolve('foo'))
 
-export default router
+export default { ...router } // strips the proxy
 
 // that's it ^-^
 ```

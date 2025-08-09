@@ -1,6 +1,6 @@
 ---
 project: youtube-music
-stars: 26514
+stars: 26723
 description: |-
     YouTube Music Desktop App bundled with custom plugins
 url: https://github.com/th-ch/youtube-music

@@ -1,6 +1,6 @@
 ---
 project: bottom
-stars: 11687
+stars: 11734
 description: |-
     Yet another cross-platform graphical process/system monitor.
 url: https://github.com/ClementTsang/bottom
@@ -170,8 +170,8 @@ Alternatively, you can use `cargo install` using the repo as the source.
 rustup update stable
 
 # Option 1 - Download an archive from releases and install
-curl -LO https://github.com/ClementTsang/bottom/archive/0.10.2.tar.gz
-tar -xzvf 0.10.2.tar.gz
+curl -LO https://github.com/ClementTsang/bottom/archive/0.11.0.tar.gz
+tar -xzvf 0.11.0.tar.gz
 cargo install --path . --locked
 
 # Option 2 - Manually clone the repo and install
@@ -223,20 +223,20 @@ Some examples of installing it this way:
 
 ```bash
 # x86-64
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.10.2/bottom_0.10.2-1_amd64.deb
-sudo dpkg -i bottom_0.10.2-1_amd64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.0/bottom_0.11.0-1_amd64.deb
+sudo dpkg -i bottom_0.11.0-1_amd64.deb
 
 # ARM64
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.10.2/bottom_0.10.2-1_arm64.deb
-sudo dpkg -i bottom_0.10.2-1_arm64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.0/bottom_0.11.0-1_arm64.deb
+sudo dpkg -i bottom_0.11.0-1_arm64.deb
 
 # ARM
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.10.2/bottom_0.10.2-1_armhf.deb
-sudo dpkg -i bottom_0.10.2-1_armhf.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.0/bottom_0.11.0-1_armhf.deb
+sudo dpkg -i bottom_0.11.0-1_armhf.deb
 
 # musl-based
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.10.2/bottom-musl_0.10.2-1_amd64.deb
-sudo dpkg -i bottom-musl_0.10.2-1_amd64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.0/bottom-musl_0.11.0-1_amd64.deb
+sudo dpkg -i bottom-musl_0.11.0-1_amd64.deb
 ```
 
 ### Exherbo Linux
@@ -268,8 +268,8 @@ sudo dnf install bottom
 For example:
 
 ```bash
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.10.2/bottom-0.10.2-1.x86_64.rpm
-sudo rpm -i bottom-0.10.2-1.x86_64.rpm
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.0/bottom-0.11.0-1.x86_64.rpm
+sudo rpm -i bottom-0.11.0-1.x86_64.rpm
 ```
 
 ### Gentoo
@@ -551,6 +551,7 @@ Thanks to all contributors:
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nyurik"><img src="https://avatars.githubusercontent.com/u/1641515?v=4?s=100" width="100px;" alt="Yuri Astrakhan"/><br /><sub><b>Yuri Astrakhan</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=nyurik" title="Code">💻</a> <a href="https://github.com/ClementTsang/bottom/commits?author=nyurik" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://kachick.github.io/"><img src="https://avatars.githubusercontent.com/u/1180335?v=4?s=100" width="100px;" alt="Kenichi Kamiya"/><br /><sub><b>Kenichi Kamiya</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=kachick" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yahlia"><img src="https://avatars.githubusercontent.com/u/40295453?v=4?s=100" width="100px;" alt="yahlia"/><br /><sub><b>yahlia</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=yahlia" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Bucket-Bucket-Bucket"><img src="https://avatars.githubusercontent.com/u/107044719?v=4?s=100" width="100px;" alt="Bucket-Bucket-Bucket"/><br /><sub><b>Bucket-Bucket-Bucket</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=Bucket-Bucket-Bucket" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

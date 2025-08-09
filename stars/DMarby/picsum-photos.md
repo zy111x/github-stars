@@ -1,6 +1,6 @@
 ---
 project: picsum-photos
-stars: 2346
+stars: 2351
 description: |-
     Lorem Ipsum... but for photos.
 url: https://github.com/DMarby/picsum-photos

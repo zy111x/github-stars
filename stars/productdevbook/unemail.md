@@ -1,6 +1,6 @@
 ---
 project: unemail
-stars: 148
+stars: 149
 description: |-
     📫 Lightweight, zero-dependency TypeScript email library with pluggable providers and MailCrab support for local development.
 url: https://github.com/productdevbook/unemail
@@ -249,6 +249,7 @@ Send emails with a variety of options:
 ```typescript
 import { Buffer } from 'node:buffer'
 import fs from 'node:fs'
+
 const result = await emailService.sendEmail({
   // Required fields
   from: { email: 'sender@example.com', name: 'Sender Name' },

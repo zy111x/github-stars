@@ -1,6 +1,6 @@
 ---
 project: WebRTC-Screen-Mirror
-stars: 240
+stars: 243
 description: |-
     一个基于 WebRTC 和 Cloudflare Durable Objects 实现的简单高效的屏幕共享工具。通过 WebSocket 实现实时信令服务，配合 WebRTC 技术，实现低延迟的屏幕共享功能。只需输入投屏码，即可实现跨设备的屏幕分享。
 url: https://github.com/akazwz/WebRTC-Screen-Mirror

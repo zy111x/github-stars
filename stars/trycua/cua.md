@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 9108
+stars: 9211
 description: |-
     c/ua is the Docker Container for Computer-Use AI Agents.
 url: https://github.com/trycua/cua
@@ -151,8 +151,9 @@ pip install "cua-computer[all]" "cua-agent[all]"
 ### Step 4: Use in Your Code
 
 ```python
+import asyncio
 from computer import Computer
-from agent import ComputerAgent, LLM
+from agent import ComputerAgent
 
 async def main():
     # Start a local macOS VM

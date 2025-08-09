@@ -1,6 +1,6 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 73188
+stars: 74479
 description: |-
     FULL v0, Cursor, Manus, Same.dev, Lovable, Devin, Replit Agent, Windsurf Agent, VSCode Agent, Dia Browser, Xcode, Trae AI, Cluely & Orchids.app (And other Open Sourced) System Prompts, Tools & AI Models.
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
@@ -24,6 +24,12 @@ It’s not marketing fluff, it’s just a better way to build.
 **Build. Ship. Done.**
 
 ---
+<a href="https://discord.gg/NwzrWErdMU" target="_blank">
+  <img src="https://img.shields.io/discord/1402660735833604126?label=LeaksLab%20Discord&logo=discord&style=for-the-badge" alt="LeaksLab Discord" />
+</a>
+
+> **Join the Conversation:** New system instructions are released on Discord **before** they appear in this repository. Get early access and discuss them in real time.
+
 
 <a href="https://trendshift.io/repositories/14084" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14084" alt="x1xhlol%2Fsystem-prompts-and-models-of-ai-tools | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
@@ -66,28 +72,32 @@ You can show your support via:
 
 ## 📂 Available Files
 
-- **v0 Folder**
-- **Spawn Folder**  
-- **Manus Folder**  
-- **Lovable Folder**  
-- **Devin Folder**  
-- **Same.dev Folder**  
-- **Replit Folder**  
-- **Windsurf Agent Folder**  
-- **VSCode (Copilot) Agent Folder**  
-- **Cursor Folder**  
-- **Dia Folder**  
-- **Trae AI Folder**
-- **Perplexity Folder**  
-- **Cluely Folder**
-- **Xcode Folder**
-- **Orchids.app Folder**
-- **Open Source prompts Folder**  
-  - Codex CLI  
-  - Cline  
-  - Bolt  
-  - RooCode
-  - Lumo
+- [**v0 Folder**](./v0%20Prompts%20and%20Tools/)
+- [**Spawn Folder**](./-Spawn/)
+- [**Manus Folder**](./Manus%20Agent%20Tools%20&%20Prompt/)
+- [**Lovable Folder**](./Lovable/)
+- [**Devin Folder**](./Devin%20AI/)
+- [**Same.dev Folder**](./Same.dev/)
+- [**Replit Folder**](./Replit/)
+- [**Windsurf Agent Folder**](./Windsurf/)
+- [**VSCode (Copilot) Agent Folder**](./VSCode%20Agent/)
+- [**Cursor Folder**](./Cursor%20Prompts/)
+- [**Dia Folder**](./dia/)
+- [**Trae AI Folder**](./Trae/)
+- [**Perplexity Folder**](./Perplexity/)
+- [**Cluely Folder**](./Cluely/)
+- [**Xcode Folder**](./Xcode/)
+- [**Orchids.app Folder**](./Orchids.app/)
+- [**Junie Folder**](./Junie/)
+- [**Kiro**](./Kiro/)
+- [**Wrap.dev**](./Warp.dev/)
+- [**Z.ai Code**](./Z.ai%20Code/)
+- [**Open Source prompts Folder**](./Open%20Source%20prompts/)
+  - [Codex CLI](./Open%20Source%20prompts/Codex%20CLI/)
+  - [Cline](./Open%20Source%20prompts/Cline/)
+  - [Bolt](./Open%20Source%20prompts/Bolt/)
+  - [RooCode](./Open%20Source%20prompts/RooCode/)
+  - [Lumo](./Open%20Source%20prompts/Lumo/)
 
 ---
 
@@ -95,7 +105,7 @@ You can show your support via:
 
 > Open an issue.
 
-> **Latest Update:** 31/07/2025
+> **Latest Update:** 08/08/2025
 
 ---
 
