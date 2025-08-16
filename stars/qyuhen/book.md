@@ -1,6 +1,6 @@
 ---
 project: book
-stars: 12560
+stars: 12559
 description: |-
     学习笔记
 url: https://github.com/qyuhen/book

@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 7146
+stars: 7275
 description: |-
     Sim is an open-source AI agent workflow builder. Sim Studio's interface is a lightweight, intuitive way to quickly build and deploy LLMs that connect with your favorite tools.
 url: https://github.com/simstudioai/sim

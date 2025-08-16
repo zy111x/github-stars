@@ -1,6 +1,6 @@
 ---
 project: checkcle
-stars: 1296
+stars: 1403
 description: |-
     CheckCle is a self-hosted, open-source monitoring platform for seamless, real-time full-stack systems, applications, and infrastructure. It provides real-time uptime monitoring, distributed checks, incident tracking, and alerts. All deployable anywhere.
 url: https://github.com/operacle/checkcle
@@ -26,6 +26,12 @@ url: https://github.com/operacle/checkcle
       <a href="docs/README_ja.md">
         <img src="https://flagcdn.com/24x18/jp.png" alt="Japanese" />  
         <br/><strong>Japanese</strong>
+      </a>
+    </td>
+    <td align="center">
+      <a href="docs/README_zhcn.md">
+        <img src="https://flagcdn.com/24x18/cn.png" alt="Chinese" />  
+        <br/><strong>Chinese</strong>
       </a>
     </td>
   </tr>
@@ -119,7 +125,7 @@ docker run -d \
 ![Service Detail Page](https://cdn.checkcle.io/images/uptime/uptime-regional-detail.png)
 ![checkcle-server-instance](https://cdn.checkcle.io/images/server/server-list.png)
 ![SSL Monitoring](https://cdn.checkcle.io/images/ssl-domain/ssl-list.png)
-![Schedule Maintenance](https://pub-4a4062303020445f8f289a2fee84f9e8.r2.dev/images/checkcle-schedule-maintenance.png)
+![Notification System](https://cdn.checkcle.io/general/powerfull_notification.png)
 
 
 ## 🌟 CheckCle for Communities?
@@ -132,19 +138,42 @@ docker run -d \
 ## Sponsors
 🙏 We're incredibly thankful to our sponsors. Your contributions enable us to maintain infrastructure (hosting, domains), run tests, and continue developing valuable features.
 
-### 🥈 Silver Uptime Ally
+### 🥈 Silver Uptime 
 
-<a href="https://github.com/sponsors/tolaleng">
-  <img src="https://avatars.githubusercontent.com/u/135371107?v=4" width="75" height="75" style="border-radius: 50%" />
+<a href="https://github.com/michaelortnerit">
+  <img src="https://avatars.githubusercontent.com/u/135371107?v=4" width="75" height="75" style="border-radius: 50%; display: block;" />
 </a>
 
 ### 🧡 Ping Supporter
 
-<a href="https://github.com/sponsors/tolaleng">
-  <img src="https://avatars.githubusercontent.com/u/4575656?v=4" width="75" height="75" style="border-radius: 50%" />
+<a href="https://github.com/samang-dauth">
+  <img src="https://avatars.githubusercontent.com/u/4575656?v=4" width="75" height="75" style="border-radius: 50%; display: block;" />
 </a>
 
+### 🤝 Ecosystem & Community Partner
+<div style="display: flex; align-items: center; gap: 10px;">
+  <a href="https://github.com/gitbookio">
+    <img src="https://avatars.githubusercontent.com/u/7111340?s=200&v=4" 
+         width="75" height="75" 
+         style="border-radius: 50%;" 
+         alt="GitBook Logo" />
+  </a>
+
+  <a href="https://m.do.co/c/0c27ef82475f">
+    <img src="https://cdn.checkcle.io/images/sponsor/digitalocean_checkcle.png" 
+         height="50" 
+         alt="DigitalOcean Logo" />
+  </a>
+</div>
+
+
+
+
+
+
+
 ---
+
 
 ## 👥 Contributors
 Thank you for contributing and continuously making CheckCle better, you're awesome 🫶
@@ -167,7 +196,7 @@ Here are some ways you can help improve CheckCle:
 
 ## 🌍 Stay Connected
 - Website: [checkcle.io](https://checkcle.io)
-- Documentation: [docs.checkcle.io](https://docs.checkcle.io)
+- Documentation: [docs.checkcle.io](https://docs.checkcle.io) | Big thanks to [GitBook](https://github.com/gitbookio) for sponsoring the OSS site plan for CheckCle!
 - Chat on Discord: Join our community [@discord](https://discord.gg/xs9gbubGwX)
 - Follow us on X: [@checkcle_oss](https://x.com/checkcle_oss)
 
@@ -176,6 +205,4 @@ Here are some ways you can help improve CheckCle:
 CheckCle is released under the MIT License.
 
 ---
-
-
 

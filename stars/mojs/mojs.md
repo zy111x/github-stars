@@ -1,6 +1,6 @@
 ---
 project: mojs
-stars: 18642
+stars: 18645
 description: |-
     The motion graphics toolbelt for the web
 url: https://github.com/mojs/mojs

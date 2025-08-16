@@ -1,6 +1,6 @@
 ---
 project: little-date
-stars: 1925
+stars: 1927
 description: |-
     A friendly formatter to make date ranges small & sweet
 url: https://github.com/vercel/little-date

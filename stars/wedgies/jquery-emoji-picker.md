@@ -1,6 +1,6 @@
 ---
 project: jquery-emoji-picker
-stars: 205
+stars: 204
 description: |-
     A jQuery picker for emojis
 url: https://github.com/wedgies/jquery-emoji-picker

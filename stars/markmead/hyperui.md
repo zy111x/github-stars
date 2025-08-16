@@ -1,12 +1,16 @@
 ---
 project: hyperui
-stars: 11500
+stars: 11529
 description: |-
     Free Tailwind CSS v4 components for your next project, designed to enhance your web development with the latest features and styles 🚀
 url: https://github.com/markmead/hyperui
 ---
 
 # 🚀 HyperUI
+
+![](https://img.shields.io/github/stars/markmead/hyperui?style=social)
+![](https://img.shields.io/github/issues/markmead/hyperui)
+![](https://img.shields.io/github/license/markmead/hyperui)
 
 HyperUI is a collection of free Tailwind CSS components that can be used in your next project. With a range of components, you can build your next marketing website, admin dashboard, eCommerce store and much more.
 
@@ -28,7 +32,7 @@ There is no HyperUI installation, if you have a Tailwind CSS project, you can co
 
 ## Usage
 
-Browse the website for the components you need, copy the code and paste it into your project. Some components will have support for dark mode.
+Browse the website for the components you need, copy the code and paste it into your project.
 
 1. Browse the website for a component you like.
 2. Preview the component at different breakpoints and check its compatibility with:
@@ -38,6 +42,9 @@ Browse the website for the components you need, copy the code and paste it into 
 
 3. Click on the 'Copy' button to copy the source code.
 4. Paste the copied code into your project.
+
+> [!NOTE]
+> Not all components support dark mode but this is being worked on.
 
 ## Components
 

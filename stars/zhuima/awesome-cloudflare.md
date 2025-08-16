@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare
-stars: 11589
+stars: 11704
 description: |-
     ⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.
 url: https://github.com/zhuima/awesome-cloudflare
@@ -81,6 +81,7 @@ url: https://github.com/zhuima/awesome-cloudflare
 | [CloudFlare-ImgBed](https://github.com/MarSeventh/CloudFlare-ImgBed) |基于CloudFlare和Telegraph的免费图床，本仓库基于<https://github.com/cf-pages/Telegraph-Image> ，是原项目前端页面的重制版。开源、清晰、美观、动画丝滑、玩法多样！ |  <https://demo-cloudflare-imgbed.pages.dev/> |维护中|
 | [imgUU](https://github.com/yestool/imgUU) |一个基于Cloudflare D1和R2构建的免费图片上传应用Github登陆管理。 |  <https://imguu.net/> |维护中|
 | [cloudflare-r2-telegram-bot](https://github.com/xinycai/cloudflare-r2-telegram-bot) |基于cloudflare worker与R2存储桶的图床机器人。 |   |维护中|
+| [PixR2](https://github.com/WangQueXL/PixR2) |基于 Cloudflare Workers + R2 的多入口图床与图片管理平台 |   |维护中|
 
 
 ## 邮箱

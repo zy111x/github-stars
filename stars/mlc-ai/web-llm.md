@@ -1,6 +1,6 @@
 ---
 project: web-llm
-stars: 16179
+stars: 16225
 description: |-
     High-performance In-browser LLM Inference Engine 
 url: https://github.com/mlc-ai/web-llm

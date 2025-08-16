@@ -1,6 +1,6 @@
 ---
 project: counterscale
-stars: 1780
+stars: 1788
 description: |-
     Scalable web analytics you run yourself on Cloudflare
 url: https://github.com/benvinegar/counterscale
@@ -58,7 +58,10 @@ Afterwards, run the Counterscale installer:
 npx @counterscale/cli@latest install
 ```
 
-Follow the prompts. You will be asked for the Cloudflare API token you created earlier.
+Follow the prompts. You will be asked for the Cloudflare API token you created earlier. You'll also be asked if you want to protect your dashboard with a password:
+
+- If you choose **Yes** (recommended for public deployments), you'll be prompted to create a password that will be required to access your analytics dashboard.
+- If you choose **No**, your dashboard will be publicly accessible without authentication.
 
 Once the script has finished, the server application should be deployed. Visit `https://{subdomain-emitted-during-deploy}.workers.dev` to verify.
 
@@ -158,6 +161,59 @@ Counterscale.trackPageview();
 ### Custom Domains
 
 The deployment URL can always be changed to go behind a custom domain you own. [More here](https://developers.cloudflare.com/workers/configuration/routing/custom-domains/).
+
+## CLI Commands
+
+Counterscale provides a command-line interface (CLI) to help you install, configure, and manage your deployment.
+
+### Available Commands
+
+#### `install`
+
+The main command for installing and deploying Counterscale to Cloudflare.
+
+```bash
+npx @counterscale/cli@latest install
+```
+
+Options:
+
+- `--advanced` - Enable advanced mode to customize worker name and analytics dataset
+- `--verbose` - Show additional logging information
+
+#### `auth`
+
+Manage authentication settings for your Counterscale deployment.
+
+```bash
+npx @counterscale/cli@latest auth [subcommand]
+```
+
+Available subcommands:
+
+- `enable` - Enable authentication for your Counterscale deployment
+- `disable` - Disable authentication for your Counterscale deployment
+- `roll` - Update/roll the authentication password
+
+##### Examples:
+
+Enable authentication:
+
+```bash
+npx @counterscale/cli@latest auth enable
+```
+
+Disable authentication:
+
+```bash
+npx @counterscale/cli@latest auth disable
+```
+
+Update/roll the password:
+
+```bash
+npx @counterscale/cli@latest auth roll
+```
 
 ## Development
 

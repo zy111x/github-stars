@@ -1,9 +1,9 @@
 ---
 project: bidc
-stars: 906
+stars: 1002
 description: |-
     Bidirectional Channels for JavaScript
-url: https://github.com/shuding/bidc
+url: https://github.com/vercel/bidc
 ---
 
 # BIDC - Bidirectional Channels for JavaScript

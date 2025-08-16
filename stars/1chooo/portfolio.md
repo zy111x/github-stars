@@ -21,7 +21,7 @@ url: https://github.com/1chooo/portfolio
   </a>
 </div>
 
-Welcome to the monorepo of my personal website! 👋
+Welcome to the monorepo of my personal portfolio and blog! 👋
 
 ## Features
 

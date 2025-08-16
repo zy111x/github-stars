@@ -1,18 +1,21 @@
 ---
 project: motia
-stars: 5662
+stars: 6021
 description: |-
     Modern Backend Framework that unifies APIs, background jobs, workflows, and AI agents into a single cohesive system with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
 ---
 
 <a href="https://motia.dev">
-  <img src="packages/docs/public/github-readme-banner.png" alt="Motia Banner" width="100%">
+  <img src="assets/github-readme-banner.png" alt="Motia Banner" width="100%">
 </a>
 
 <p align="center">
-  <a href="https://trendshift.io/repositories/14032">
-    <img src="https://trendshift.io/api/badge/repositories/14032" alt="Motia" style="width: 250px; height: 55px;" width="250" height="55"/>
+  <a href="https://trendshift.io/repositories/14032" style="margin-right:8px;">
+    <img src="https://trendshift.io/api/badge/repositories/14032" alt="Motia" style="width: 250px; height: 55px; margin-right:8px;" width="250" height="55"/>
+  </a>
+  <a href="https://vercel.com/blog/summer-2025-oss-program#motia" target="_blank" style="margin-left:8px;">
+    <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" style="width: 250px; height: 55px; margin-left:8px;" width="250" height="55"/>
   </a>
 </p>
 
@@ -41,7 +44,7 @@ url: https://github.com/MotiaDev/motia
   <a href="https://www.motia.dev/manifesto">💡 Motia Manifesto</a> •
   <a href="https://www.motia.dev/docs/getting-started/quick-start">🚀 Quick Start</a> •
   <a href="https://www.motia.dev/docs/concepts/steps/defining-steps">📋 Defining Steps</a> •
-  <a href="https://motia.dev/docs">📚 Docs</a>
+  <a href="https://www.motia.dev/docs">📚 Docs</a>
 </p>
 
 ---
@@ -111,8 +114,6 @@ The Workbench is your command centre:
 - ✅ Visual debugger & flow inspector
 - ✅ Built-in observability
 - ✅ Hot-reload for instant feedback
-
----
 
 ### 🧱 The Step Philosophy
 
@@ -298,3 +299,4 @@ Feel free to add comments to the issues, or create a new issue if you have a fea
 | New languages: Ruby                   | Planned | [#493](https://github.com/MotiaDev/motia/issues/493) | Add support for Ruby                   |
 | New languages: C#                     | Planned | [#494](https://github.com/MotiaDev/motia/issues/494) | Add support for C#                     |
 | BYOC: Kubernetes                      | Planned | [#496](https://github.com/MotiaDev/motia/issues/496) | Add support for Kubernetes             |
+

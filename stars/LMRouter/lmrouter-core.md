@@ -1,6 +1,6 @@
 ---
 project: lmrouter-core
-stars: 82
+stars: 103
 description: |-
     LMRouter Core
 url: https://github.com/LMRouter/lmrouter-core

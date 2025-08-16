@@ -1,6 +1,6 @@
 ---
 project: tmexclude
-stars: 226
+stars: 227
 description: |-
     Exclude undesired files (node_modules, target, etc) from your TimeMachine backup.
 url: https://github.com/PhotonQuantum/tmexclude

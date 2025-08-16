@@ -1,6 +1,6 @@
 ---
 project: clean-code-javascript
-stars: 93324
+stars: 93358
 description: |-
     Clean Code concepts adapted for JavaScript
 url: https://github.com/ryanmcdermott/clean-code-javascript

@@ -1,6 +1,6 @@
 ---
 project: Haraka
-stars: 5345
+stars: 5347
 description: |-
     A fast, highly extensible, and event driven SMTP server
 url: https://github.com/haraka/Haraka

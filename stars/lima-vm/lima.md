@@ -1,6 +1,6 @@
 ---
 project: lima
-stars: 17860
+stars: 17894
 description: |-
     Linux virtual machines, with a focus on running containers
 url: https://github.com/lima-vm/lima
@@ -61,6 +61,14 @@ kubectl apply -f ...
 ```
 
 See <https://lima-vm.io/docs/> for the further information.
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](https://lima-vm.io/docs/community/contributing/) for details on:
+
+- **Developer Certificate of Origin (DCO)**: All commits must be signed off with `git commit -s`
+- Code licensing and pull request guidelines
+- Testing requirements
 
 ## Community
 ### Adopters

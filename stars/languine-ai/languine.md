@@ -1,6 +1,6 @@
 ---
 project: languine
-stars: 1875
+stars: 1880
 description: |-
     Translate your application with Languine CLI powered by AI.
 url: https://github.com/languine-ai/languine
