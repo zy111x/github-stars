@@ -1,6 +1,6 @@
 ---
 project: poster-design
-stars: 4430
+stars: 4439
 description: 迅排设计 - 美观且功能强大的图片编辑器、在线海报设计，仿稿定设计，适用于多种场景：海报生成、电商产品图、文章长图、视频/公众号封面等。A beautiful online image designer, suitable for various scenarios like generate posters, making design easier!
 url: https://github.com/palxiao/poster-design
 ---

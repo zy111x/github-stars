@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 11174
+stars: 11283
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -25,6 +25,8 @@ DouK-Downloader
 
 📝 项目功能
 =======
+
+功能列表（点击展开）
 
 -   ✅ 下载抖音无水印视频/图集
 -   ✅ 下载抖音无水印实况/动图
@@ -112,14 +114,6 @@ def demo():
     print(response.json())
 
 demo()
-
-📈 项目状态
-=======
-
--   🟢 经过测试，Releases 发布的源码已经验证所有功能正常可用
--   🟡 DouK-Downloader 开发计划及进度可前往 Projects 查阅
--   🔴 请注意，最新源码(Beta 版本)可能存在一些不稳定的 Bug
--   🔴 如果在使用过程中发现程序 Bug，请及时告知作者修复
 
 📋 项目说明
 =======
@@ -214,17 +208,10 @@ Docker 容器无法直接访问宿主机的文件系统，部分功能不可用�
 -   本项目并未针对程序多开的情况进行优化，如需程序多开，请复制整个项目的文件夹，避免出现预期之外的问题
 -   程序运行过程中，如需终止程序或 `ffmpeg`，请按下 `Ctrl + C` 终止运行，不要直接点击终端窗口的关闭按钮
 
-* * *
-
-程序更新
-----
-
-**方案一：**下载并解压文件，将旧版本的 `_internal\Volume` 文件夹复制到新版本的 `_internal` 文件夹。
-
-**方案二：**下载并解压文件（不要运行程序），复制全部文件，直接覆盖旧版本文件。
-
 构建可执行文件指南
 ---------
+
+**构建可执行文件指南（点击展开）**
 
 本指南将引导您通过 Fork 本仓库并执行 GitHub Actions 自动完成基于最新源码的程序构建和打包！
 
@@ -307,6 +294,13 @@ A:
 
 A: 由于权限限制，您无法直接触发主仓库的 Actions。请通过 Fork 仓库的方式执行打包流程
 
+程序更新
+----
+
+**方案一：**下载并解压文件，将旧版本的 `_internal\Volume` 文件夹复制到新版本的 `_internal` 文件夹。
+
+**方案二：**下载并解压文件（不要运行程序），复制全部文件，直接覆盖旧版本文件。
+
 ⚠️ 免责声明
 =======
 
@@ -345,23 +339,6 @@ A: 由于权限限制，您无法直接触发主仓库的 Actions。请通过 Fo
 -   贡献者公约
 -   如何为开源做贡献
 
-✉️ 联系作者
-=======
-
--   作者邮箱：yonglelolu@foxmail.com
--   作者微信: Downloader\_Tools
--   微信公众号: Downloader Tools
--   **Discord 社区**: 点击加入社区
--   QQ 群聊(项目交流): 扫码加入群聊
-
-✨ **作者的其他开源项目：**
-
--   **XHS-Downloader（小红书、XiaoHongShu、RedNote）**：https://github.com/JoeanAmier/XHS-Downloader
--   **KS-Downloader（快手、KuaiShou）**：https://github.com/JoeanAmier/KS-Downloader
-
-⭐ Star 趋势
-=========
-
 ♥️ 支持项目
 =======
 
@@ -388,12 +365,36 @@ ZMTO：一家专业的云基础设施提供商，以可靠的尖端技术与专�
 
 * * *
 
+Thordata
+--------
+
+Thordata 是全球代理 IP 解决方案提供商，支持大规模采集公共网络数据，提供 195+ 国家城市、6000 万住宅 IP，价格低至 $0.65/GB，支持不限流量、不限 IP、不限并发；还包括本土独享 ISP 静态代理和高性能数据中心代理（均为 $0.75/IP，弹性定价）；点击图片注册后联系中文客服即可免费试用，现在首充还有赠送同额金额活动；可与 EasySpider 工具配合使用，高效采集网络数据。
+
+* * *
+
 TikHub
 ------
 
 TikHub：第三方 API 服务供应商，专注于提供各平台 API。
 
 通过每日签到，用户可以免费获取少量使用额度；可以使用我的 **推荐链接**：https://user.tikhub.io/users/signup?referral\_code=ZrdH8McC 或 **推荐码**：`ZrdH8McC`，注册并充值即可获得 `$2` 额度！
+
+✉️ 联系作者
+=======
+
+-   作者邮箱：yonglelolu@foxmail.com
+-   作者微信: Downloader\_Tools
+-   微信公众号: Downloader Tools
+-   **Discord 社区**: 点击加入社区
+-   QQ 群聊(项目交流): 扫码加入群聊
+
+✨ **作者的其他开源项目：**
+
+-   **XHS-Downloader（小红书、XiaoHongShu、RedNote）**：https://github.com/JoeanAmier/XHS-Downloader
+-   **KS-Downloader（快手、KuaiShou）**：https://github.com/JoeanAmier/KS-Downloader
+
+⭐ Star 趋势
+=========
 
 💡 项目参考
 =======

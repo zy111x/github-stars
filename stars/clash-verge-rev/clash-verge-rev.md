@@ -1,6 +1,6 @@
 ---
 project: clash-verge-rev
-stars: 69383
+stars: 70354
 description: A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience
 url: https://github.com/clash-verge-rev/clash-verge-rev
 ---
@@ -112,8 +112,14 @@ See CONTRIBUTING.md for more details.
 
 To run the development server, execute the following commands after all prerequisites for **Tauri** are installed:
 
+Note
+
+**If you are using a Windows ARM device, you additionally need to install LLVM (including clang) and set the environment variable.**
+
+Because the `ring` crate is compiled based on `clang` under Windows ARM.
+
 pnpm i
-pnpm run check
+pnpm run prebuild
 pnpm dev
 
 Contributions

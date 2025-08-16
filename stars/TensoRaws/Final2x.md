@@ -1,21 +1,20 @@
 ---
 project: Final2x
-stars: 6602
-description: 2^x Image Super-Resolution
+stars: 6615
+description: a cross-platform image super-resolution tool
 url: https://github.com/TensoRaws/Final2x
 ---
 
-This is a powerful tool that allows for image super-resolution to arbitrary sizes using multiple models, designed to enhance the resolution and quality of images, making them clearer and more detailed.
+Final2x
+=======
 
+A cross-platform image super-resolution tool.
+
+-   News🎉: Enhance a video? Try VSET!
+-   News🎉: Final2x v3.0.0 is now available, support Nvidia 50 series GPUs now!
 -   News🎉: We are thrilled to announce the release of Final2x v2.0.0, which marks a major milestone as we transition to utilizing ccrestoration (PyTorch) for our algorithm implementation.
--   News🎉: Want to enhance your video? Try FinalRip!
 
-### Comparison
-
-##### use Final2x to perform 4x super-resolution on a 256x256 Hutao RGBA image
-
-Screenshots
------------
+### Screenshots
 
 ### Installation
 
