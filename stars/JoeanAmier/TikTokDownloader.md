@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 11283
+stars: 11359
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -77,10 +77,12 @@ DouK-Downloader
 💻 程序截图
 =======
 
+前往 bilibili 观看演示；前往 YouTube 观看演示
+
 终端交互模式
 ------
 
-**🎥 点击图片观看演示视频，建议通过配置文件管理账号，更多介绍请查阅 文档**
+建议通过配置文件管理账号，更多介绍请查阅 文档
 
 * * *
 
