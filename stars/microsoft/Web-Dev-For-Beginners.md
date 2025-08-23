@@ -1,6 +1,6 @@
 ---
 project: Web-Dev-For-Beginners
-stars: 91385
+stars: 91535
 description: |-
     24 Lessons, 12 Weeks, Get Started as a Web Developer
 url: https://github.com/microsoft/Web-Dev-For-Beginners

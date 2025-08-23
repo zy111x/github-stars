@@ -1,6 +1,6 @@
 ---
 project: workflows-ts
-stars: 197
+stars: 200
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/workflows-ts
@@ -253,6 +253,18 @@ const { withState } = createStatefulMiddleware((input: { id: string }) => ({
 
 const workflow = withState(createWorkflow());
 const { state } = workflow.createContext({ id: "1" });
+```
+
+`withState` also supports snapshot, you can use `snapshot` to save the state of the workflow, and `resume` to restore the state of the workflow.
+
+```ts
+const { snapshot, resume } = workflow.createContext();
+
+// create snapshot
+const [req, snapshotData] = await snapshot();
+
+// resume workflow from snapshot
+const { stream } = workflow.resume(["hello"], snapshotData);
 ```
 
 ### `withValidation`

@@ -1,6 +1,6 @@
 ---
 project: GoViewFIle
-stars: 111
+stars: 112
 description: |-
     golang 在线预览word,excel,pdf,MarkDown,msg,eml(Online Preview Word,Excel,PPT,PDF,Image by Golang)
 url: https://github.com/CZHIC/GoViewFIle

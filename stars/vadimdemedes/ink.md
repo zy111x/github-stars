@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 30746
+stars: 30892
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -130,6 +130,7 @@ Feel free to play around with the code and fork this repl at [https://repl.it/@v
 - [srtd](https://github.com/t1mmen/srtd) - Live-reloading SQL templates for Supabase projects.
 - [tweakcc](https://github.com/Piebald-AI/tweakcc) - Customize your Claude Code styling.
 - [argonaut](https://github.com/darksworm/argonaut) - Manage Argo CD resources.
+- [Qodo Command](https://github.com/qodo-ai/command) - Build, run, and manage AI agents.
 
 ## Contents
 

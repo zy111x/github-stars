@@ -1,6 +1,6 @@
 ---
 project: webtui
-stars: 2014
+stars: 2021
 description: |-
     null
 url: https://github.com/webtui/webtui

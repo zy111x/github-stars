@@ -1,8 +1,8 @@
 ---
 project: cua
-stars: 9318
+stars: 9390
 description: |-
-    Cua is the Docker Container for Computer-Use AI Agents.
+    Cua is Docker for Computer-Use AI Agents
 url: https://github.com/trycua/cua
 ---
 

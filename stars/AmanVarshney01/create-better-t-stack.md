@@ -1,6 +1,6 @@
 ---
 project: create-better-t-stack
-stars: 3103
+stars: 3206
 description: |-
     A modern CLI tool for scaffolding end-to-end type-safe TypeScript projects with best practices and customizable configurations
 url: https://github.com/AmanVarshney01/create-better-t-stack
@@ -47,7 +47,7 @@ npx create-better-t-stack@latest
 - Databases: SQLite, PostgreSQL, MySQL, MongoDB (or none)
 - ORMs: Drizzle, Prisma, Mongoose (or none)
 - Auth: Better-Auth (optional)
-- Addons: Turborepo, PWA, Tauri, Biome, Husky, Starlight, Fumadocs, Ultracite, Oxlint
+- Addons: Turborepo, PWA, Tauri, Biome, Husky, Starlight, Fumadocs, Ruler, Ultracite, Oxlint
 - Examples: Todo, AI
 - DB Setup: Turso, Neon, Supabase, Prisma PostgreSQL, MongoDB Atlas, Cloudflare D1, Docker
 - Web Deploy: Cloudflare Workers

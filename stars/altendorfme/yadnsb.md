@@ -1,6 +1,6 @@
 ---
 project: yadnsb
-stars: 154
+stars: 155
 description: |-
     A DNS performance testing IPv4, IPv6, DNS over HTTPS (DoH), DNS over TLS (DoT), and DNS over QUIC (DoQ).
 url: https://github.com/altendorfme/yadnsb

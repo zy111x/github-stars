@@ -1,6 +1,6 @@
 ---
 project: agentic
-stars: 17903
+stars: 17925
 description: |-
     Your API ⇒ Paid MCP. Instantly.
 url: https://github.com/transitive-bullshit/agentic

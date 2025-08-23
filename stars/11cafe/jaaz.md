@@ -1,6 +1,6 @@
 ---
 project: jaaz
-stars: 2129
+stars: 2296
 description: |-
     AI design agent, local alternative for Lovart. Canva + Cursor. AI agent with ability to design, edit and generate images, posters, storyboards, etc.
 url: https://github.com/11cafe/jaaz
@@ -154,7 +154,7 @@ Support for multi-user private deployment of enterprise teams, ensuring privacy 
 Please contact via email: aifoxdw@gmail.com
 
 WeChat: aifox1
-
+<img width="600" alt="Screenshot 2025-06-02 at 3 51 56 AM" src="https://github.com/user-attachments/assets/dc479c9b-d6ad-43ef-ad89-ad672991d86c" />
 
 ## Manual Install (For Linux or local builds)
 
@@ -193,6 +193,8 @@ VSCode/Cursor Install Extensions：
 `pip install -r requirements.txt`
 
 `python main.py`
+
+
 
 
 

@@ -1,6 +1,6 @@
 ---
 project: shadowsocks
-stars: 33644
+stars: 33652
 description: |-
     null
 url: https://github.com/shadowsocks/shadowsocks

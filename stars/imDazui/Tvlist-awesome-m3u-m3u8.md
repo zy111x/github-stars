@@ -1,6 +1,6 @@
 ---
 project: Tvlist-awesome-m3u-m3u8
-stars: 27532
+stars: 27536
 description: |-
     直播源相关资源汇总 📺 💯 IPTV、M3U —— 勤洗手、戴口罩，祝愿所有人百毒不侵
 url: https://github.com/imDazui/Tvlist-awesome-m3u-m3u8

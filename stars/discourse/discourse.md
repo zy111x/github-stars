@@ -1,6 +1,6 @@
 ---
 project: discourse
-stars: 44821
+stars: 44883
 description: |-
     A platform for community discussion. Free, open, simple.
 url: https://github.com/discourse/discourse
@@ -72,7 +72,7 @@ Discourse supports the **latest, stable releases** of all major browsers and pla
 | Microsoft Edge        |              |              |
 | Mozilla Firefox       |              |              |
 
-Additionally, we aim to support Safari on iOS 15.7+.
+Additionally, we aim to support Safari on iOS 16.4+.
 
 ## Built With
 

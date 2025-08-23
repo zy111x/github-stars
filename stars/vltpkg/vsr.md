@@ -1,6 +1,6 @@
 ---
 project: vsr
-stars: 237
+stars: 238
 description: |-
     a minimal npm-compatible package registry
 url: https://github.com/vltpkg/vsr

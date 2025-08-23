@@ -1,12 +1,14 @@
 ---
 project: openai-api-proxy
-stars: 98
+stars: 99
 description: |-
     Provides the same proxy OpenAI API interface for different LLM models, and supports deployment to any Edge Runtime environment.
 url: https://github.com/rxliuli/openai-api-proxy
 ---
 
 # OpenAI API Proxy
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/rxliuli)
 
 ## Introduction
 

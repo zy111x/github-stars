@@ -1,6 +1,6 @@
 ---
 project: extension.js
-stars: 4390
+stars: 4401
 description: |-
     🧩 The cross-browser extension framework.
 url: https://github.com/extension-js/extension.js
@@ -112,19 +112,33 @@ Done. You are all set!
 
 ## Using a specific browser for development
 
-### Desktop Browsers
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chromium/chromium.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari-ios/safari-ios.svg" width="70"> |
+| :-----------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
+|                                          Chrome browser<br>✅                                           |                                         Edge browser<br>✅                                          |                                           Firefox browser<br>✅                                           |                                          Opera browser<br>☑️                                          |                                          Safari browser<br>❌                                           |                                            Chromium-based<br>☑️                                             |                                             Gecko-based<br>☑️                                             |                                          Firefox (Android)<br>❌                                          |                                               Safari (iOS)<br>❌                                                |
 
-| <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chromium/chromium.svg" width="70"> |
-| :-----------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
-|                                              Chrome<br>✅                                               |                                             Edge<br>✅                                              |                                               Firefox<br>✅                                               |                                              Opera<br>☑️                                              |                                              Safari<br>⛔️                                              |                                               Chromium<br>☑️                                                |
+### Browser flags and custom binaries
 
-The browsers listed above represent those with official extension stores. Note that Chromium-based browsers (like Arc, Brave, Vivaldi, and many others) are theoretically supported through the Chrome/Chromium compatibility layer.
+Use these flags with `extension dev`, `extension start`, or `extension preview`:
 
-### Mobile Browsers
+- Select a browser: `--browser <chrome | edge | firefox>`
+- Custom Chromium binary: `--chromium-binary <path-to-binary>`
+- Custom Gecko (Firefox) binary: `--gecko-binary <path-to-binary>`
 
-| <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari-ios/safari-ios.svg" width="70"> |
-| :-------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
-|                                         Firefox (Android)<br>⛔️                                          |                                               Safari (iOS)<br>⛔️                                               |
+Examples:
+
+```bash
+# Chrome (system default)
+npx extension@latest dev --browser=chrome
+
+# Edge
+npx extension@latest dev --browser=edge
+
+# Custom Chrome/Chromium path
+npx extension@latest dev --chromium-binary "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+# Custom Firefox path
+npx extension@latest dev --gecko-binary "/Applications/Firefox.app/Contents/MacOS/firefox"
+```
 
 ## License
 

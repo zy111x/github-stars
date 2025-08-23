@@ -1,6 +1,6 @@
 ---
 project: coze-studio
-stars: 15612
+stars: 15998
 description: |-
     An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment like never before. Coze your way to AI Agent creation.
 url: https://github.com/coze-dev/coze-studio
@@ -116,7 +116,7 @@ This project uses the Apache 2.0 license. For details, please refer to the [LICE
 ## Community contributions
 We welcome community contributions. For contribution guidelines, please refer to [CONTRIBUTING](https://github.com/coze-dev/coze-studio/blob/main/CONTRIBUTING.md) and [Code of conduct](https://github.com/coze-dev/coze-studio/blob/main/CODE_OF_CONDUCT.md). We look forward to your contributions!
 ## Security and privacy
-If you discover potential security issues in the project, or believe you may have found a security issue, please notify the ByteDance security team through our [security center](https://security.bytedance.com/src) or [vulnerability reporting email](sec@bytedance.com).
+If you discover potential security issues in the project, or believe you may have found a security issue, please notify the ByteDance security team through our [security center](https://security.bytedance.com/src) or [vulnerability reporting email](mailto:sec@bytedance.com).
 Please **do not** create public GitHub Issues.
 ## Join Community
 

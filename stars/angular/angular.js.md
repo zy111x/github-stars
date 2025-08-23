@@ -1,6 +1,6 @@
 ---
 project: angular.js
-stars: 58759
+stars: 58756
 description: |-
     AngularJS - HTML enhanced for web apps!
 url: https://github.com/angular/angular.js

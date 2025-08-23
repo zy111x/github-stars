@@ -1,6 +1,6 @@
 ---
 project: KittenTTS
-stars: 7808
+stars: 8212
 description: |-
      State-of-the-art TTS model under 25MB 😻 
 url: https://github.com/KittenML/KittenTTS
@@ -42,7 +42,7 @@ pip install https://github.com/KittenML/KittenTTS/releases/download/0.1/kittentt
 
 ```
 from kittentts import KittenTTS
-m = KittenTTS("KittenML/kitten-tts-nano-0.1")
+m = KittenTTS("KittenML/kitten-tts-nano-0.2")
 
 audio = m.generate("This high quality TTS model works without a GPU", voice='expr-voice-2-f' )
 

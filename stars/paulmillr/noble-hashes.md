@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 714
+stars: 717
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
@@ -45,8 +45,6 @@ The library's initial development was funded by [Ethereum Foundation](https://et
 > `npm install @noble/hashes`
 
 > `deno add jsr:@noble/hashes`
-
-> `deno doc jsr:@noble/hashes` # command-line documentation
 
 We support all major platforms and runtimes.
 For React Native, you may need a [polyfill for getRandomValues](https://github.com/LinusU/react-native-get-random-values).
@@ -439,7 +437,7 @@ can read application memory, you are doomed in any case:
 
 For this package, there are 0 dependencies; and a few dev dependencies:
 
-- micro-bmark, micro-should and jsbt are used for benchmarking / testing / build tooling and developed by the same author
+- jsbt contains helpers for building, benchmarking & testing secure JS apps. It is developed by the same author
 - prettier, fast-check and typescript are used for code quality / test generation / ts compilation. It's hard to audit their source code thoroughly and fully because of their size
 
 ### Randomness

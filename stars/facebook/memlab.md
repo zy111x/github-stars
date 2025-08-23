@@ -1,6 +1,6 @@
 ---
 project: memlab
-stars: 4576
+stars: 4579
 description: |-
     A framework for finding JavaScript memory leaks and analyzing heap snapshots
 url: https://github.com/facebook/memlab
@@ -198,7 +198,7 @@ memlab.run({scenario});
 
 ## Visual Debugging for Memory Leaks in Browser
 
-Check out this [tutorial page](https://facebook.github.io/memlab/docs/guides/visually-debug-memory-leaks-with-memlens)
+Please check out this [tutorial page](https://facebook.github.io/memlab/docs/guides/visually-debug-memory-leaks-with-memlens)
 on how to use MemLens (a debugging utility) to
 visualize memory leaks in the browser for easier memory debugging.
 
