@@ -1,6 +1,6 @@
 ---
 project: copilot-api
-stars: 367
+stars: 842
 description: |-
     Turn GitHub Copilot into OpenAI/Anthropic API compatible server. Usable with Claude Code!
 url: https://github.com/ericc-ch/copilot-api
@@ -10,6 +10,20 @@ url: https://github.com/ericc-ch/copilot-api
 
 > [!WARNING]
 > This is a reverse-engineered proxy of GitHub Copilot API. It is not supported by GitHub, and may break unexpectedly. Use at your own risk.
+
+> [!WARNING]
+> **GitHub Security Notice:**  
+> Excessive automated or scripted use of Copilot (including rapid or bulk requests, such as via automated tools) may trigger GitHub's abuse-detection systems.  
+> You may receive a warning from GitHub Security, and further anomalous activity could result in temporary suspension of your Copilot access.
+>
+> GitHub prohibits use of their servers for excessive automated bulk activity or any activity that places undue burden on their infrastructure.
+>
+> Please review:
+>
+> - [GitHub Acceptable Use Policies](https://docs.github.com/site-policy/acceptable-use-policies/github-acceptable-use-policies#4-spam-and-inauthentic-activity-on-github)
+> - [GitHub Copilot Terms](https://docs.github.com/site-policy/github-terms/github-terms-for-additional-products-and-features#github-copilot)
+>
+> Use this proxy responsibly to avoid account restrictions.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/E1E519XS7W)
 
@@ -62,8 +76,53 @@ docker build -t copilot-api .
 Run the container
 
 ```sh
-docker run -p 4141:4141 copilot-api
+# Create a directory on your host to persist the GitHub token and related data
+mkdir -p ./copilot-data
+
+# Run the container with a bind mount to persist the token
+# This ensures your authentication survives container restarts
+
+docker run -p 4141:4141 -v $(pwd)/copilot-data:/root/.local/share/copilot-api copilot-api
 ```
+
+> **Note:**
+> The GitHub token and related data will be stored in `copilot-data` on your host. This is mapped to `/root/.local/share/copilot-api` inside the container, ensuring persistence across restarts.
+
+### Docker with Environment Variables
+
+You can pass the GitHub token directly to the container using environment variables:
+
+```sh
+# Build with GitHub token
+docker build --build-arg GH_TOKEN=your_github_token_here -t copilot-api .
+
+# Run with GitHub token
+docker run -p 4141:4141 -e GH_TOKEN=your_github_token_here copilot-api
+
+# Run with additional options
+docker run -p 4141:4141 -e GH_TOKEN=your_token copilot-api start --verbose --port 4141
+```
+
+### Docker Compose Example
+
+```yaml
+version: "3.8"
+services:
+  copilot-api:
+    build: .
+    ports:
+      - "4141:4141"
+    environment:
+      - GH_TOKEN=your_github_token_here
+    restart: unless-stopped
+```
+
+The Docker image includes:
+
+- Multi-stage build for optimized image size
+- Non-root user for enhanced security
+- Health check for container monitoring
+- Pinned base image version for reproducible builds
 
 ## Using with npx
 
@@ -87,10 +146,12 @@ npx copilot-api@latest auth
 
 ## Command Structure
 
-Copilot API now uses a subcommand structure with two main commands:
+Copilot API now uses a subcommand structure with these main commands:
 
 - `start`: Start the Copilot API server. This command will also handle authentication if needed.
 - `auth`: Run GitHub authentication flow without starting the server. This is typically used if you need to generate a token for use with the `--github-token` option, especially in non-interactive environments.
+- `check-usage`: Show your current GitHub Copilot usage and quota information directly in the terminal (no server required).
+- `debug`: Display diagnostic information including version, runtime details, file paths, and authentication status. Useful for troubleshooting and support.
 
 ## Command Line Options
 
@@ -116,6 +177,12 @@ The following command line options are available for the `start` command:
 | ------------ | ------------------------- | ------- | ----- |
 | --verbose    | Enable verbose logging    | false   | -v    |
 | --show-token | Show GitHub token on auth | false   | none  |
+
+### Debug Command Options
+
+| Option | Description               | Default | Alias |
+| ------ | ------------------------- | ------- | ----- |
+| --json | Output debug info as JSON | false   | none  |
 
 ## API Endpoints
 
@@ -144,10 +211,10 @@ These endpoints are designed to be compatible with the Anthropic Messages API.
 
 New endpoints for monitoring your Copilot usage and quotas.
 
-| Endpoint                    | Method | Description                                               |
-| --------------------------- | ------ | --------------------------------------------------------- |
-| `GET /usage`               | `GET`  | Get detailed Copilot usage statistics and quota information. |
-| `GET /token`               | `GET`  | Get the current Copilot token being used by the API.     |
+| Endpoint     | Method | Description                                                  |
+| ------------ | ------ | ------------------------------------------------------------ |
+| `GET /usage` | `GET`  | Get detailed Copilot usage statistics and quota information. |
+| `GET /token` | `GET`  | Get the current Copilot token being used by the API.         |
 
 ## Example Usage
 
@@ -183,6 +250,15 @@ npx copilot-api@latest auth
 
 # Run auth flow with verbose logging
 npx copilot-api@latest auth --verbose
+
+# Show your Copilot usage/quota in the terminal (no server needed)
+npx copilot-api@latest check-usage
+
+# Display debug information for troubleshooting
+npx copilot-api@latest debug
+
+# Display debug information in JSON format
+npx copilot-api@latest debug --json
 ```
 
 ## Using the Usage Viewer
@@ -199,12 +275,12 @@ After starting the server, a URL to the Copilot Usage Dashboard will be displaye
 
 The dashboard provides a user-friendly interface to view your Copilot usage data:
 
--   **API Endpoint URL**: The dashboard is pre-configured to fetch data from your local server endpoint via the URL query parameter. You can change this URL to point to any other compatible API endpoint.
--   **Fetch Data**: Click the "Fetch" button to load or refresh the usage data. The dashboard will automatically fetch data on load.
--   **Usage Quotas**: View a summary of your usage quotas for different services like Chat and Completions, displayed with progress bars for a quick overview.
--   **Detailed Information**: See the full JSON response from the API for a detailed breakdown of all available usage statistics.
--   **URL-based Configuration**: You can also specify the API endpoint directly in the URL using a query parameter. This is useful for bookmarks or sharing links. For example:
-    `https://ericc-ch.github.io/copilot-api?endpoint=http://your-api-server/usage`
+- **API Endpoint URL**: The dashboard is pre-configured to fetch data from your local server endpoint via the URL query parameter. You can change this URL to point to any other compatible API endpoint.
+- **Fetch Data**: Click the "Fetch" button to load or refresh the usage data. The dashboard will automatically fetch data on load.
+- **Usage Quotas**: View a summary of your usage quotas for different services like Chat and Completions, displayed with progress bars for a quick overview.
+- **Detailed Information**: See the full JSON response from the API for a detailed breakdown of all available usage statistics.
+- **URL-based Configuration**: You can also specify the API endpoint directly in the URL using a query parameter. This is useful for bookmarks or sharing links. For example:
+  `https://ericc-ch.github.io/copilot-api?endpoint=http://your-api-server/usage`
 
 ## Using with Claude Code
 

@@ -1,6 +1,6 @@
 ---
 project: fedify
-stars: 792
+stars: 828
 description: |-
     ActivityPub server framework in TypeScript
 url: https://github.com/fedify-dev/fedify
@@ -98,28 +98,40 @@ which provides the core functionality of the framework.  Other packages provide
 integrations with various web frameworks, database drivers, and other features.
 Here is the list of packages:
 
-| Package                        | JSR                         | npm                         | Description                             |
-| ------------------------------ | --------------------------- | --------------------------- | --------------------------------------- |
-| [@fedify/fedify](/fedify/)     | [JSR]                       | [npm]                       | The core framework of Fedify            |
-| [@fedify/cli](/cli/)           | [JSR][jsr:@fedify/cli]      | [npm][npm:@fedify/cli]      | CLI toolchain for testing and debugging |
-| [@fedify/amqp](/amqp/)         | [JSR][jsr:@fedify/amqp]     | [npm][npm:@fedify/amqp]     | AMQP/RabbitMQ driver                    |
-| [@fedify/express](/express/)   | [JSR][jsr:@fedify/express]  | [npm][npm:@fedify/express]  | Express integration                     |
-| [@fedify/h3](/h3/)             | [JSR][jsr:@fedify/h3]       | [npm][npm:@fedify/h3]       | H3 integration                          |
-| [@fedify/postgres](/postgres/) | [JSR][jsr:@fedify/postgres] | [npm][npm:@fedify/postgres] | PostgreSQL driver                       |
-| [@fedify/redis](/redis/)       | [JSR][jsr:@fedify/redis]    | [npm][npm:@fedify/redis]    | Redis driver                            |
+| Package                                 | JSR                         | npm                         | Description                             |
+| --------------------------------------- | --------------------------- | --------------------------- | --------------------------------------- |
+| [@fedify/fedify](/packages/fedify/)     | [JSR]                       | [npm]                       | The core framework of Fedify            |
+| [@fedify/cli](/packages/cli/)           | [JSR][jsr:@fedify/cli]      | [npm][npm:@fedify/cli]      | CLI toolchain for testing and debugging |
+| [@fedify/amqp](/packages/amqp/)         | [JSR][jsr:@fedify/amqp]     | [npm][npm:@fedify/amqp]     | AMQP/RabbitMQ driver                    |
+| [@fedify/elysia](/packages/elysia/)     |                             | [npm][npm:@fedify/elysia]   | Elysia integration                      |
+| [@fedify/express](/packages/express/)   | [JSR][jsr:@fedify/express]  | [npm][npm:@fedify/express]  | Express integration                     |
+| [@fedify/h3](/packages/h3/)             | [JSR][jsr:@fedify/h3]       | [npm][npm:@fedify/h3]       | H3 integration                          |
+| [@fedify/nestjs](/packages/nestjs/)     |                             | [npm][npm:@fedify/nestjs]   | NestJS integration                      |
+| [@fedify/next](/packages/next/)         |                             | [npm][npm:@fedify/next]     | Next.js integration                     |
+| [@fedify/postgres](/packages/postgres/) | [JSR][jsr:@fedify/postgres] | [npm][npm:@fedify/postgres] | PostgreSQL driver                       |
+| [@fedify/redis](/packages/redis/)       | [JSR][jsr:@fedify/redis]    | [npm][npm:@fedify/redis]    | Redis driver                            |
+| [@fedify/sqlite](/packages/sqlite/)     | [JSR][jsr:@fedify/sqlite]   | [npm][npm:@fedify/sqlite]   | SQLite driver                           |
+| [@fedify/testing](/packages/testing/)   | [JSR][jsr:@fedify/testing]  | [npm][npm:@fedify/testing]  | Testing utilities                       |
 
 [jsr:@fedify/cli]: https://jsr.io/@fedify/cli
 [npm:@fedify/cli]: https://www.npmjs.com/package/@fedify/cli
 [jsr:@fedify/amqp]: https://jsr.io/@fedify/amqp
 [npm:@fedify/amqp]: https://www.npmjs.com/package/@fedify/amqp
+[npm:@fedify/elysia]: https://www.npmjs.com/package/@fedify/elysia
 [jsr:@fedify/express]: https://jsr.io/@fedify/express
 [npm:@fedify/express]: https://www.npmjs.com/package/@fedify/express
 [jsr:@fedify/h3]: https://jsr.io/@fedify/h3
 [npm:@fedify/h3]: https://www.npmjs.com/package/@fedify/h3
+[npm:@fedify/nestjs]: https://www.npmjs.com/package/@fedify/nestjs
+[npm:@fedify/next]: https://www.npmjs.com/package/@fedify/next
 [jsr:@fedify/postgres]: https://jsr.io/@fedify/postgres
 [npm:@fedify/postgres]: https://www.npmjs.com/package/@fedify/postgres
 [jsr:@fedify/redis]: https://jsr.io/@fedify/redis
 [npm:@fedify/redis]: https://www.npmjs.com/package/@fedify/redis
+[jsr:@fedify/sqlite]: https://jsr.io/@fedify/sqlite
+[npm:@fedify/sqlite]: https://www.npmjs.com/package/@fedify/sqlite
+[jsr:@fedify/testing]: https://jsr.io/@fedify/testing
+[npm:@fedify/testing]: https://www.npmjs.com/package/@fedify/testing
 
 
 Sponsors

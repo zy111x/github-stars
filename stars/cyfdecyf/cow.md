@@ -1,6 +1,6 @@
 ---
 project: cow
-stars: 8459
+stars: 8464
 description: |-
     HTTP proxy written in Go. COW can automatically identify blocked sites and use parent proxies to access.
 url: https://github.com/cyfdecyf/cow

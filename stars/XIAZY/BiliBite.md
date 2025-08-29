@@ -1,6 +1,6 @@
 ---
 project: BiliBite
-stars: 77
+stars: 76
 description: |-
     The most elegant Bilibili client in the west hemisphere
 url: https://github.com/XIAZY/BiliBite

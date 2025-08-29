@@ -1,27 +1,27 @@
 ---
 project: refly
-stars: 4347
+stars: 4563
 description: |-
-    The world's first open-source "Vibe Workflow" platform for complex tasks.
+    The Open-Source Agentic Workspace for Human-AI Collaboration.
 url: https://github.com/refly-ai/refly
 ---
 
-![refly-cover](https://github.com/user-attachments/assets/2930c555-09a7-4ea2-a18a-2b1d8a7ef4ae)
+![refly-cover](https://static.refly.ai/landing/refly-cover.webp)
 
 <div align="center">
 
 <h1 align="center" style="border-bottom: none">
     <b>
-        <a href="https://www.refly.ai">Refly.AI</a><br>
+        <a href="https://refly.ai">Refly.AI</a><br>
     </b>
-    ⭐️  The Open Source Vibe Workflow Platform ⭐️ <br>
+    ⭐️  The Open-Source Agentic Workspace for Human-AI Collaboration ⭐️ <br>
 </h1>
 
-Refly is a pioneering vibe workflow platform designed to solve your most complex challenges. Effortlessly design, build, and reuse intelligent workflows to boost productivity with AI agents and infinite expansion of MCP tools.
+Refly.AI is the open-source Agentic Workspace for Human–AI Collaboration. Seamlessly blend human insight with AI execution across real-world scenarios—whether you’re rapidly prototyping a product design, creating polished presentations, conducting hot-topic analysis, automating deep research workflows, generating multimodal marketing content, or orchestrating complex operational pipelines, Refly empowers your team to achieve any task with transparency and control.
 
-[🚀 v0.8.0 Released! Multimodal Agent Is Officially Launched 🚀](https://docs.refly.ai/changelog/v0.8.0)
+[🚀 v0.9.0 Released! A milestone update focused on creative freedom, clarity, and control. 🚀](https://docs.refly.ai/changelog/v0.9.0)
 
-[Refly Cloud](https://refly.ai/) · [Self-hosting](https://docs.refly.ai/guide/self-deploy) · [Forum](https://github.com/refly-ai/refly/discussions) · [Discord](https://discord.gg/bWjffrb89h) · [Twitter](https://x.com/reflyai) · [Documentation](https://docs.refly.ai/)
+[Refly Cloud](https://refly.ai/) · [Self-hosting](https://docs.refly.ai/community-version/self-deploy) · [Forum](https://github.com/refly-ai/refly/discussions) · [Discord](https://discord.gg/bWjffrb89h) · [Twitter](https://x.com/reflyai) · [Documentation](https://docs.refly.ai/)
 
 <p align="center">
     <a href="https://refly.ai" target="_blank">
@@ -79,9 +79,9 @@ cd deploy/kubernetes
 kubectl apply -f refly-deployment.yaml
 ```
 
-For the following steps, you can visit [Self-deploy Guide](https://docs.refly.ai/guide/self-deploy) for more details.
+For the following steps, you can visit [Self-deploy Guide](https://docs.refly.ai/community-version/self-deploy/) for more details.
 
-For core deployment tutorials, environment variable configuration, and FAQs, please refer to 👉 [Deployment Guide](https://docs.refly.ai/guide/self-deploy).
+For core deployment tutorials, environment variable configuration, and FAQs, please refer to 👉 [Deployment Guide](https://docs.refly.ai/community-version/self-deploy/).
 
 ### Local Development
 
@@ -229,7 +229,7 @@ We would also like to thank the following open-source projects that make ReflyAI
 15. [Resend](https://github.com/resend/react-email) - Library for building email sending functionality.
 16. Other upstream dependencies.
 
-We are deeply grateful to the community for providing such powerful yet simple libraries that allow us to focus more on implementing product logic. We hope that our project will also provide an easier-to-use Vibe Workflow Platform for everyone in the future.
+We are deeply grateful to the community for providing such powerful yet simple libraries that allow us to focus more on implementing product logic. We hope that our project will also provide an easier-to-use **Agentic Workspace for Human-AI Collaboration** for everyone in the future.
 
 ## Security Issues
 

@@ -1,6 +1,6 @@
 ---
 project: extension.js
-stars: 4338
+stars: 4401
 description: |-
     🧩 The cross-browser extension framework.
 url: https://github.com/extension-js/extension.js
@@ -50,7 +50,7 @@ https://github.com/cezaraugusto/extension/assets/4672033/7263d368-99c4-434f-a60a
 
 <!-- For a preview of extensions running these technologies, see the [templates](https://templates.extension.land) website. -->
 
-| <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/a9e2541a-96f0-4caa-9fc9-5fc5c3e901c8" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/b42c5330-9e2a-4045-99c3-1f7d264dfaf4" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/f19edff3-9005-4f50-b05c-fba615896a7f" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/ff64721d-d145-4213-930d-e70193f8d57e" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/15f1314a-aa65-4ce2-a3f3-cf53c4f730cf" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/de1082fd-7cf6-4202-8c12-a5c3cd3e5b42" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/78e5fe3d-dc79-4aa2-954e-1a5973d1d9db" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/c5f8a127-3c2a-4ceb-bb46-948cf2c8bd89" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/8807efd9-93e5-4db5-a1d2-9ac524f7ecc2" width="70"> |
+| <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/a9e2541a-96f0-4caa-9fc9-5fc5c3e901c8" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/b42c5330-9e2a-4045-99c3-1f7d264dfaf4" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/f19edff3-9005-4f50-b05c-fba615896a7f" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/ff64721d-d145-4213-930d-e70193f8d57e" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/15f1314a-aa65-4ce2-a3f3-cf53c4f730cf" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/de1082fd-7cf6-4202-8c12-a5c3cd3e5b42" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/8807efd9-93e5-4db5-a1d2-9ac524f7ecc2" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/c5f8a127-3c2a-4ceb-bb46-948cf2c8bd89" width="70"> | <img src="https://github.com/cezaraugusto/extension.js/assets/4672033/78e5fe3d-dc79-4aa2-954e-1a5973d1d9db" width="70"> |
 | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: |
 |                                                    ESNext<br>latest                                                     |                                                  TypeScript<br>latest                                                   |                                                     WASM<br>latest                                                      |                                                      React<br>18+                                                       |                                                        Vue<br>3+                                                        |                                                      Svelte<br>5+                                                       |                                                      Preact<br>10+                                                      |                                                      Angular<br>👋                                                      |                                                       Solid<br>👋                                                       |
 
@@ -112,19 +112,33 @@ Done. You are all set!
 
 ## Using a specific browser for development
 
-### Desktop Browsers
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chromium/chromium.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari-ios/safari-ios.svg" width="70"> |
+| :-----------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
+|                                          Chrome browser<br>✅                                           |                                         Edge browser<br>✅                                          |                                           Firefox browser<br>✅                                           |                                          Opera browser<br>☑️                                          |                                          Safari browser<br>❌                                           |                                            Chromium-based<br>☑️                                             |                                             Gecko-based<br>☑️                                             |                                          Firefox (Android)<br>❌                                          |                                               Safari (iOS)<br>❌                                                |
 
-| <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari/safari.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chromium/chromium.svg" width="70"> |
-| :-----------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
-|                                              Chrome<br>✅                                               |                                             Edge<br>✅                                              |                                               Firefox<br>✅                                               |                                              Opera<br>☑️                                              |                                              Safari<br>⛔️                                              |                                               Chromium<br>☑️                                                |
+### Browser flags and custom binaries
 
-The browsers listed above represent those with official extension stores. Note that Chromium-based browsers (like Arc, Brave, Vivaldi, and many others) are theoretically supported through the Chrome/Chromium compatibility layer.
+Use these flags with `extension dev`, `extension start`, or `extension preview`:
 
-### Mobile Browsers
+- Select a browser: `--browser <chrome | edge | firefox>`
+- Custom Chromium binary: `--chromium-binary <path-to-binary>`
+- Custom Gecko (Firefox) binary: `--gecko-binary <path-to-binary>`
 
-| <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox.svg" width="70"> | <img src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/safari-ios/safari-ios.svg" width="70"> |
-| :-------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
-|                                         Firefox (Android)<br>⛔️                                          |                                               Safari (iOS)<br>⛔️                                               |
+Examples:
+
+```bash
+# Chrome (system default)
+npx extension@latest dev --browser=chrome
+
+# Edge
+npx extension@latest dev --browser=edge
+
+# Custom Chrome/Chromium path
+npx extension@latest dev --chromium-binary "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+
+# Custom Firefox path
+npx extension@latest dev --gecko-binary "/Applications/Firefox.app/Contents/MacOS/firefox"
+```
 
 ## License
 

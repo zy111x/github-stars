@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 701
+stars: 717
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
@@ -17,7 +17,7 @@ Audited & minimal JS implementation of hash functions, MACs and KDFs.
 - 🔁 No unrolled loops: makes it easier to verify and reduces source code size up to 5x
 - 🦘 Includes SHA, RIPEMD, BLAKE, HMAC, HKDF, PBKDF, Scrypt, Argon2
 - 🥈 Optional, friendly wrapper over native WebCrypto
-- 🪶 20KB (gzipped) for everything, 2.4KB for single-hash build
+- 🪶 21KB (gzipped) for everything, 2.4KB for single-hash build
 
 Check out [Upgrading](#upgrading) for information about upgrading from previous versions.
 Take a glance at [GitHub Discussions](https://github.com/paulmillr/noble-hashes/discussions) for questions and support.
@@ -35,7 +35,7 @@ The library's initial development was funded by [Ethereum Foundation](https://et
   [curves](https://github.com/paulmillr/noble-curves),
   [hashes](https://github.com/paulmillr/noble-hashes),
   [post-quantum](https://github.com/paulmillr/noble-post-quantum),
-  4kb [secp256k1](https://github.com/paulmillr/noble-secp256k1) /
+  5kb [secp256k1](https://github.com/paulmillr/noble-secp256k1) /
   [ed25519](https://github.com/paulmillr/noble-ed25519)
 - [Check out homepage](https://paulmillr.com/noble/)
   for reading resources, documentation and apps built with noble
@@ -45,8 +45,6 @@ The library's initial development was funded by [Ethereum Foundation](https://et
 > `npm install @noble/hashes`
 
 > `deno add jsr:@noble/hashes`
-
-> `deno doc jsr:@noble/hashes` # command-line documentation
 
 We support all major platforms and runtimes.
 For React Native, you may need a [polyfill for getRandomValues](https://github.com/LinusU/react-native-get-random-values).
@@ -77,11 +75,10 @@ import { hkdf } from '@noble/hashes/hkdf.js';
 import { pbkdf2, pbkdf2Async } from '@noble/hashes/pbkdf2.js';
 import { scrypt, scryptAsync } from '@noble/hashes/scrypt.js';
 import { argon2d, argon2i, argon2id } from '@noble/hashes/argon2.js';
-
-// sha256, sha384, sha512, hmac, hkdf, pbkdf2
 import * as webcrypto from '@noble/hashes/webcrypto.js';
-// bytesToHex, bytesToUtf8, concatBytes
+// const { sha256, sha384, sha512, hmac, hkdf, pbkdf2 } = webcrypto;
 import * as utils from '@noble/hashes/utils.js';
+const { bytesToHex, concatBytes, equalBytes, hexToBytes } = utils;
 ```
 
 - [sha2: sha256, sha384, sha512](#sha2-sha256-sha384-sha512-and-others)
@@ -160,7 +157,7 @@ const ec2 = cshake256(data, { personalization: 'def' });
 const et1 = turboshake128(data);
 const et2 = turboshake256(data, { D: 0x05 });
 // tuplehash(['ab', 'c']) !== tuplehash(['a', 'bc']) !== tuplehash([data])
-const et3 = tuplehash256([utf8ToBytes('ab'), utf8ToBytes('c')]);
+const et3 = tuplehash256([new TextEncoder().encode('ab'), new TextEncoder().encode('c')]);
 // Not parallel in JS (similar to blake3 / kt128), added for compat
 const ep1 = parallelhash256(data, { blockLen: 8 });
 const kk = Uint8Array.from([0xca]);
@@ -440,7 +437,7 @@ can read application memory, you are doomed in any case:
 
 For this package, there are 0 dependencies; and a few dev dependencies:
 
-- micro-bmark, micro-should and jsbt are used for benchmarking / testing / build tooling and developed by the same author
+- jsbt contains helpers for building, benchmarking & testing secure JS apps. It is developed by the same author
 - prettier, fast-check and typescript are used for code quality / test generation / ts compilation. It's hard to audit their source code thoroughly and fully because of their size
 
 ### Randomness

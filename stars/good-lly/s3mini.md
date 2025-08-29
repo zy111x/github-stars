@@ -1,6 +1,6 @@
 ---
 project: s3mini
-stars: 1181
+stars: 1219
 description: |-
     👶 Tiny S3 client. Edge computing ready. No-dep. In Typescript. Works with @cloudflare @minio @backblaze @digitalocean @garagehq @oracle
 url: https://github.com/good-lly/s3mini
@@ -31,6 +31,12 @@ Dev:
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/good-lly/s3mini/dev?color=greeen)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/good-lly/s3mini)
 [![CodeQL Advanced](https://github.com/good-lly/s3mini/actions/workflows/codeql.yml/badge.svg?branch=dev)](https://github.com/good-lly/s3mini/actions/workflows/codeql.yml)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=good-lly_s3mini&metric=bugs)](https://sonarcloud.io/summary/new_code?id=good-lly_s3mini)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=good-lly_s3mini&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=good-lly_s3mini)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=good-lly_s3mini&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=good-lly_s3mini)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=good-lly_s3mini&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=good-lly_s3mini)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=good-lly_s3mini&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=good-lly_s3mini)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=good-lly_s3mini&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=good-lly_s3mini)
 [![Test:e2e(all)](https://github.com/good-lly/s3mini/actions/workflows/test-e2e.yml/badge.svg?branch=dev)](https://github.com/good-lly/s3mini/actions/workflows/test-e2e.yml)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/good-lly/s3mini?style=social)

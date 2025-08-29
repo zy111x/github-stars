@@ -1,6 +1,6 @@
 ---
 project: 5ire
-stars: 4145
+stars: 4402
 description: |-
     5ire is a cross-platform desktop AI assistant, MCP client. It compatible with major service providers,  supports local knowledge base and  tools via model context protocol servers .
 url: https://github.com/nanbingxyz/5ire
@@ -16,6 +16,7 @@ url: https://github.com/nanbingxyz/5ire
    <div>
     <a href="https://modelcontextprotocol.io/clients" target="_blank"><img src="https://badge.mcpx.dev/?type=client" /></a>
     <img src="https://badge.mcpx.dev/?type=client&features=tools" />
+    <a href="https://discord.gg/ADfBTGd5jd"><img src="https://dcbadge.limes.pink/api/server/ADfBTGd5jd?style=flat&theme=clean" alt="5ire discord server"/></a>
     <img src="https://img.shields.io/badge/price-free-brightgreen.svg"/>
     <a href="https://linkedin.com/in/nanbing" target="_blank"><img src="https://custom-icon-badges.demolab.com/badge/LinkedIn-0A66C2?logo=linkedin-white&logoColor=fff" alt="follow on LinkedIn"></a>
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/>
@@ -62,7 +63,9 @@ These components are required as they constitute the runtime environment for the
 
 For detailed installation instructions, please see our [Installation Guide](INSTALLATION.md).
 
-### Getting involved
+<br/>
+
+### 💪 Getting involved
 
 If you want to contribute code to 5ire or develop your own apps based on 5ire, start with the [Development Setup Guide](DEVELOPMENT.md).
 
@@ -70,7 +73,18 @@ Visit [Wiki](https://deepwiki.com/nanbingxyz/5ire) for more details.
 
 **🚀 To integrate 5ire’s one-click server installation into your website, see the** [One-Click Server Installation Integration Guide](https://github.com/nanbingxyz/5ire/wiki/One%E2%80%90Click-Server-Installation-Integration-Guide).
 
-<br />
+<br/>
+
+### 💬 Community
+
+**[Join the Discord](https://discord.gg/ADfBTGd5jd)**,  By joining, you’ll get:
+
+- Faster responses to your questions and issues
+- Direct input on new features and improvements
+- A place to share ideas, tips, and feedback with other 5ire users
+- Opportunities to co-build and shape the future of 5ire together
+
+<br/>
 
 # Features
 

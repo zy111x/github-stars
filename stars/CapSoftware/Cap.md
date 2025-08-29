@@ -1,6 +1,6 @@
 ---
 project: Cap
-stars: 10486
+stars: 11294
 description: |-
     Open source Loom alternative. Beautiful, shareable screen recordings.
 url: https://github.com/CapSoftware/Cap
@@ -42,6 +42,8 @@ Cap Desktop can connect to your self-hosted Cap Web instance regardless of if yo
 # Monorepo App Architecture
 
 We use a combination of Rust, React (Next.js), TypeScript, Tauri, Drizzle (ORM), MySQL, TailwindCSS throughout this Turborepo powered monorepo.
+
+> A note about database: The codebase is currently designed to work with MySQL only. MariaDB or other compatible databases might partially work but are not officially supported.
 
 ### Apps:
 

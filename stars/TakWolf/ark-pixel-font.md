@@ -1,6 +1,6 @@
 ---
 project: ark-pixel-font
-stars: 3766
+stars: 3839
 description: |-
     Open source Pan-CJK pixel font / 开源的泛中日韩像素字体
 url: https://github.com/TakWolf/ark-pixel-font
@@ -121,27 +121,6 @@ url: https://github.com/TakWolf/ark-pixel-font
 | ja | 日语 | 字形采用日本参考规范 [《常用汉字表》](https://zh.wikipedia.org/wiki/%E5%B8%B8%E7%94%A8%E6%BC%A2%E5%AD%97) 中的写法。 |
 | ko | 朝鲜语 | |
 
-## 下载
-
-可通过以下渠道下载最新的版本：
-
-- [GitHub Releases](https://github.com/TakWolf/ark-pixel-font/releases)
-- [itch.io](https://takwolf.itch.io/ark-pixel-font)
-
-## 使用包管理器安装 
-
-### [Homebrew](https://brew.sh)
-
-```shell
-brew install font-ark-pixel-10px-monospaced
-brew install font-ark-pixel-12px-monospaced
-brew install font-ark-pixel-16px-monospaced
-
-brew install font-ark-pixel-10px-proportional
-brew install font-ark-pixel-12px-proportional
-brew install font-ark-pixel-16px-proportional
-```
-
 ## 字形依赖
 
 - [像素字形 - 谚文音节](https://github.com/TakWolf/pixel-glyphs-hangul-syllables)
@@ -165,7 +144,8 @@ brew install font-ark-pixel-16px-proportional
 - [SYMBL - Unicode 查询工具](https://symbl.cc)
 - [字嗨 - 漢字部件檢索](https://zi-hi.com/sp/uni/CJKSeeker)
 - [字統网 - 字形檢字](https://zi.tools/?secondary=search)
-- [思源映射查看器](https://github.com/TakWolf/source-han-mapping-viewer)
+- [汉语国学 - 汉语字典在线查字](https://www.hanyuguoxue.com)
+- [思源映射查看器](https://source-han-mapping-viewer.takwolf.com)
 
 ## 参考资料
 
@@ -198,8 +178,4 @@ brew install font-ark-pixel-16px-proportional
 
 [![赞赏码](https://raw.githubusercontent.com/TakWolf/TakWolf/master/images/badge-payqr@2x.png)](https://github.com/TakWolf/TakWolf/blob/master/payment-qr-codes.md)
 [![爱发电](https://raw.githubusercontent.com/TakWolf/TakWolf/master/images/badge-afdian@2x.png)](https://afdian.com/a/takwolf)
-
-请通过下面的链接来查看收到的赞助的具体情况：
-
-[赞助详情](https://github.com/TakWolf/TakWolf/blob/master/sponsors.md)
 

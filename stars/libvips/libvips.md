@@ -1,6 +1,6 @@
 ---
 project: libvips
-stars: 10489
+stars: 10582
 description: |-
     A fast image processing library with low memory needs.
 url: https://github.com/libvips/libvips
@@ -150,6 +150,11 @@ If available, libvips adds support for EXIF metadata in JPEG files.
 
 The usual SVG loader. If this is not present, vips will try to load SVGs
 via imagemagick instead.
+
+### libraw
+
+The usual camera RAW loader. If this is not present, vips will try to load raw
+camera images via imagemagick instead.
 
 ### PDFium
 

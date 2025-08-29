@@ -1,6 +1,6 @@
 ---
 project: vee-validate
-stars: 11075
+stars: 11111
 description: |-
     ✅  Painless Vue forms
 url: https://github.com/logaretm/vee-validate
@@ -26,7 +26,7 @@ Painless Vue forms
   <img src="https://img.shields.io/npm/dm/vee-validate.svg?color=05bd6d&label=">
 </a>
 
-<a href="https://vee-validate.logaretm.com/v4/" target="_blank">
+<a href="https://vee-validate.logaretm.com/v5/" target="_blank">
   <img src="https://img.shields.io/badge/-docs%20and%20demos-009f53">
 </a>
 
@@ -77,7 +77,7 @@ The main v4 version supports Vue 3.x only, for previous versions of Vue, check t
 | vue Version | vee-validate version | Documentation Link                                                                       |
 | ----------- | -------------------- | ---------------------------------------------------------------------------------------- |
 | `2.x`       | `2.x` or `3.x`       | [v2](https://vee-validate.logaretm.com/v2) or [v3](https://vee-validate.logaretm.com/v3) |
-| `3.x`       | `4.x`                | [v4](https://vee-validate.logaretm.com/v4)                                               |
+| `3.x`       | `4.x` or `5.x`       | [v4](https://vee-validate.logaretm.com/v4) or [v5](https://vee-validate.logaretm.com/v5) |
 
 ### Usage
 
@@ -125,7 +125,7 @@ const onSubmit = handleSubmit(values => {
 </template>
 ```
 
-You can do so much more than this, for more info [check the composition API documentation](https://vee-validate.logaretm.com/v4/guide/composition-api/getting-started/).
+You can do so much more than this, for more info [check the composition API documentation](https://vee-validate.logaretm.com/v5/guide/composition-api/getting-started/).
 
 #### Declarative Components
 
@@ -158,7 +158,7 @@ function onSubmit(values) {
 </template>
 ```
 
-The `Field` component renders an `input` of type `text` by default but you can [control that](https://vee-validate.logaretm.com/v4/api/field#rendering-fields)
+The `Field` component renders an `input` of type `text` by default but you can [control that](https://vee-validate.logaretm.com/v5/api/field#rendering-fields)
 
 ## 📚 Documentation
 

@@ -1,6 +1,6 @@
 ---
 project: raycast-sink
-stars: 20
+stars: 22
 description: |-
     Raycast extension for managing short links via Sink - the Cloudflare-powered link shortener. Create, edit, and manage short URLs efficiently from your Mac command bar.
 url: https://github.com/foru17/raycast-sink

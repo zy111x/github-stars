@@ -1,6 +1,6 @@
 ---
 project: transition.css
-stars: 1973
+stars: 1982
 description: |-
     :octocat: Drop-in CSS transitions
 url: https://github.com/argyleink/transition.css

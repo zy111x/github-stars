@@ -1,6 +1,6 @@
 ---
 project: anime
-stars: 62396
+stars: 63351
 description: |-
     JavaScript animation engine
 url: https://github.com/juliangarnier/anime
@@ -36,12 +36,6 @@ Help the project become sustainable by sponsoring us on <a target="_blank" href=
 ### Platinum sponsors
 
 <p>
-<a target="_blank" href="https://huly.io/?ref=animejs">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/huly-logomark.png">
-    <img align="center" src="./assets/sponsors/huly-logomark-dark.png" width="250">
-  </picture>
-</a>
 <a target="_blank" href="https://ice.io/?ref=animejs">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/ice-open-network-logomark.png">
@@ -57,6 +51,12 @@ Help the project become sustainable by sponsoring us on <a target="_blank" href=
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/lambdatest-logomark.png">
     <img align="center" src="./assets/sponsors/lambdatest-logomark-dark.png" width="150">
+  </picture>
+</a>
+<a target="_blank" href="https://inspatialapp.com/?ref=animejs">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/sponsors/inspatial-logomark.png">
+    <img align="center" src="./assets/sponsors/inspatial-logomark-dark.png" width="150">
   </picture>
 </a>
 </p>

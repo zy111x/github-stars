@@ -1,6 +1,6 @@
 ---
 project: bunchee
-stars: 1267
+stars: 1287
 description: |-
     Zero config bundler for npm packages
 url: https://github.com/huozhi/bunchee
@@ -518,6 +518,21 @@ output
 ```js
 export default 'hello world'
 ```
+
+#### Raw Imports with `?raw` Query
+
+You can also import any file as raw text content by adding the `?raw` query parameter to the import statement. This works with any file type:
+
+```js
+import readme from './README.md?raw'
+import config from './config.json?raw'
+import styles from './styles.css?raw'
+import content from './data.xml?raw'
+
+export { readme, config, styles, content }
+```
+
+All these imports will be bundled as string content, regardless of the original file extension.
 
 ### Node.js API
 

@@ -1,6 +1,6 @@
 ---
 project: chsrc
-stars: 5731
+stars: 6206
 description: |-
     chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
@@ -11,24 +11,26 @@ url: https://github.com/RubyMetric/chsrc
  ! -------------------------------------------------------------
  ! Doc Type      : Markdown
  ! Doc Name      : README.md
- ! Doc Authors   : Aoran Zeng  <ccmywish@qq.com>
+ ! Doc Authors   : 曾奥然 <ccmywish@qq.com>
  ! Contributors  : Mikachu2333 <mikachu.23333@zohomail.com>
  !               |
  ! Created On    : <2023-12-28>
- ! Last Modified : <2025-07-14>
+ ! Last Modified : <2025-08-22>
  ! ---------------------------------------------------------- -->
 
 <div align="center">
   <img alt="chsrc logo" src="doc/image/chsrc.png"/>
 </div>
 
-全平台通用换源工具与框架 `chsrc`，**目标支持 Linux, Windows (MSYS2, Cygwin), macOS, BSD 等尽可能多的操作系统环境，龙芯、飞腾、RISC-V 等尽可能多的 CPU**。
+全平台通用换源工具与框架 `chsrc`，**目标支持 Linux, Windows (native, MSYS2, Cygwin), macOS, BSD, Android 等尽可能多的操作系统环境，龙芯、飞腾、RISC-V 等尽可能多的 CPU**。
 
-我们使用 **C11** 来完成上述目标。我们并不使用 Python 或 JS 等解释语言，因为一个简单的换源工具，不应该强行塞给用户一个庞大的解释器和数十、数百 MB 其他文件。
+我们使用 **C11** 来完成上述目标。我们并不使用 Python 或 JavaScript 等解释语言，因为一个简单的换源工具，不应该强行塞给用户一个庞大的解释器和数十、数百 MB 其他文件。
 
 本软件为**自由软件**，SDPX 软件许可证为 `GPL-3.0-or-later and MIT`
 
 <br>
+
+
 
 <table align="center">
   <tr>
@@ -43,22 +45,37 @@ url: https://github.com/RubyMetric/chsrc
 
 <br>
 
+
+
+## ❤️ 致所有的朋友们
+
+2025年8月11日，我因通宵重构本项目代码而被送去抢救（[#252](https://github.com/RubyMetric/chsrc/issues/252)，[突发！换源工具 chsrc 作者在重构过程中被送去 120 抢救](https://v2ex.com/t/1151802)）。大家给予的关心和帮助让我非常非常感动！在此，我衷心感谢每一位朋友！**无论是开源还是闭源，无论是否为职业程序员，我们其实都是一群使用软件、热心互助、充满友爱的人，这是一个温暖的大家庭**。
+
+我为 `chsrc` 采用 GPL 协议，怀着殷切的期望：**希望能够营造像 Richard Stallman 在创建 GNU 项目之前，在 MIT 那样的氛围——写自己用得上的软件，与大家一起开发、维护，简单纯粹，无关商业利益。就像小区、校园自发组建的足球篮球队，从一次偶然的加入，逐渐成长为互相支持的伙伴**。
+
+这次经历让我更加深刻地体会到：开源，是一种把大家联系在一起的方式，**它让友情、互助和协作成为可能，也让我们在共同的目标中建立起长期的纽带**。
+
+最后，希望大家能够**时刻关注**自己的身体，**你可以随时 `chsrc` `chown` `chgrp` `chmod` 无限次，但是无法 `chbody`**！
+
+<br>
+
+
+
 ## 🤝 协作与贡献
 
 > [!TIP]
-> **`chsrc` 不仅是一个命令行工具，同时也是一个体现了 Ruby on Rails 思想的 MVC 换源框架，它甚至使你能够在不了解C语言的情况下编写出新的换源方法(recipe)。** [Write A Recipe Even If You Don't Know C](./doc/02-Write-A-Recipe-Even-If-You-Dont-Know-C.md)
+> **`chsrc` 不仅是一个命令行工具，同时也是一个体现了 Ruby on Rails 思想的 MVC 换源框架，它甚至使你能够在不了解C语言的情况下编写出新的换源方法 (recipe)。** 配合使用 [rawstr4c], 这将比写 shell 脚本更加轻松。 [如何编写 recipe?](./doc/10-如何编写recipe.md)
 
 ---
 
 > [!NOTE]
-> 这是你可以参与的第一个现实世界中有用的C语言项目，[用 VS Code 一分钟内上手编译、运行、测试 chsrc](./doc/01-Develop.md)
+> 这也许是你可以参与的第一个现实世界中有用的C语言项目，[用 VS Code 一分钟内上手编译、运行、测试 chsrc](./doc/01-开发与构建.md)
 >
 > 欢迎对 GitHub、Gitee 协作不熟悉的人以此为契机学习参与贡献, 欢迎任何编程初学者。[从开发到提交PR，我们覆盖全流程文档](./doc/)
-，作者可提供一定的 [贡献指导](https://github.com/RubyMetric/chsrc/discussions/50)
 ---
 
 > [!IMPORTANT]
-> **`chsrc` 可换源 60+ 目标。每个人仅仅贡献和维护自己熟悉的部分，回报是得到其他所有领域专家的帮助。** [欢迎成为 recipe 维护者](https://github.com/RubyMetric/chsrc/issues/130)
+> **`chsrc` 可换源 65+ 目标。每个人仅仅贡献和维护自己熟悉的部分，回报是得到其他所有领域专家的帮助。** [欢迎成为 recipe 维护者](https://github.com/RubyMetric/chsrc/issues/275)
 
 <br>
 
@@ -108,13 +125,27 @@ url: https://github.com/RubyMetric/chsrc
 
 <br>
 
+
+
 ## 📌 示例
+
+桌面端:
 
 <div align="center">
   <img alt="chsrc set node" src="doc/image/example-set-nodejs.png"/>
 </div>
 
 <br>
+
+安卓:
+
+<div align="center">
+  <img alt="chsrc set python and chsrc set termux" src="doc/image/chsrc-on-Android-set-python-and-termux.jpg" width="300" height="750"/>
+</div>
+
+<br>
+
+
 
 ## 🚀 安装
 
@@ -169,6 +200,8 @@ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x86-windo
 
 </details>
 
+
+
 <details>
 <summary>Linux</summary>
 
@@ -176,10 +209,10 @@ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x86-windo
 
 ```bash
 # x64
-$ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc_latest-1_amd64.deb -o chsrc_latest-1_amd64.deb
+$ curl -LO https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc_latest-1_amd64.deb
 
 # 也可以使用 Wget
-wget https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc_latest-1_amd64.deb -O chsrc_latest-1_amd64.deb
+wget https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc_latest-1_amd64.deb
 
 $ sudo apt install ./chsrc_latest-1_amd64.deb
 # 或
@@ -243,7 +276,11 @@ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-riscv64-l
 curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-armv7-linux -o chsrc; chmod +x ./chsrc
 ```
 
+如果你所在的处理器架构没有预编译版本，可以使用 [chsrc-bootstrap]
+
 </details>
+
+
 
 <details>
 <summary>macOS</summary>
@@ -293,6 +330,8 @@ curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-x64-macos
 
 </details>
 
+
+
 <details>
 <summary>BSD</summary>
 
@@ -305,20 +344,33 @@ clang -Iinclude -Ilib src/chsrc-main.c -o chsrc
 
 **如果还不存在这些依赖，你将会被死锁住: 我还没有换源，我该如何安装这些依赖呢？**
 
-这就是 [chsrc-bootstrap](./bootstrap/) 起作用的时刻，你可使用BSD系统的原生脚本语言编写 `bootstrapper`，[并向我们提交](https://github.com/RubyMetric/chsrc/issues/230)
+这就是 [chsrc-bootstrap] 起作用的时刻，你可使用BSD系统的原生脚本语言编写 `bootstrapper`，[并向我们提交](https://github.com/RubyMetric/chsrc/issues/230)
 
 注: `chsrc` 实现的 `FreeBSD recipe` 长期存在问题，因此一个新的 `bootstrapper` 是相当必要的，请帮助你自己和大家!
 
 </details>
 
+
+
 <details>
 <summary>Android/Termux</summary>
 
+Termux 中默认无 `Wget`，我们都用 `cURL` 来下载安装
+
 ```bash
-wget -O - https://gitee.com/RubyMetric/chsrc/raw/main/bootstrap/Termux.bash | bash
+# arm64/aarch64
+curl -L https://gitee.com/RubyMetric/chsrc/releases/download/pre/chsrc-arm64-android -o chsrc; chmod +x ./chsrc
+```
+
+如果你所在的处理器架构没有预编译版本，可以使用 [chsrc-bootstrap]:
+
+```bash
+curl -L https://gitee.com/RubyMetric/chsrc/raw/main/bootstrap/Termux.bash | bash
 ```
 
 </details>
+
+
 
 <details>
 <summary>其他平台</summary>
@@ -331,7 +383,7 @@ git clone https://gitee.com/RubyMetric/chsrc.git; cd chsrc; make
 
 **如果还不存在这些依赖，你将会被死锁住: 我还没有换源，我该如何安装这些依赖呢？**
 
-这就是 [chsrc-bootstrap](./bootstrap/) 起作用的时刻，你可使用该平台原生脚本语言编写 `bootstrapper`，[并向我们提交](https://github.com/RubyMetric/chsrc/issues/230)
+这就是 [chsrc-bootstrap] 起作用的时刻，你可使用该平台原生脚本语言编写 `bootstrapper`，[并向我们提交](https://github.com/RubyMetric/chsrc/issues/230)
 
 </details>
 
@@ -340,33 +392,37 @@ git clone https://gitee.com/RubyMetric/chsrc.git; cd chsrc; make
 ## 💡 使用
 
 ```bash
-使用: chsrc <command> [options] [target] [mirror]
+名称:
+   chsrc - Change Source - (GPLv3+)
 
-help                      # 打印此帮助，或 h, -h, --help
-issue                     # 查看相关issue
+使用:
+   chsrc <command> [options] [target] [mirror]
 
-list (或 ls, 或 l)        # 列出可用镜像源，和可换源目标
-list mirror/target        # 列出可用镜像源，或可换源目标
-list os/lang/ware         # 列出可换源的操作系统/编程语言/软件
+命令:
+   help,  h                   打印此帮助，或 -h, --help
+   issue, i                   查看相关issue
 
-measure <target>          # 对该目标所有源测速
-cesu    <target>
+   list, ls, l                列出可用镜像站和可换源目标
+   list  mirror|target        列出支持的: 镜像站/换源目标
+   list  os|lang|ware         列出支持的: 操作系统/编程语言/软件
+   list   <target>            查看该目标可用源与支持功能
 
-list <target>             # 查看该目标可用源与支持功能
-get  <target>             # 查看该目标当前源的使用情况
+   measure, m, cesu <target>  对该目标所有源测速
 
-set  <target>             # 换源，自动测速后挑选最快源
-set  <target>  first      # 换源，使用维护团队测速第一的源
-set  <target> <mirror>    # 换源，指定使用某镜像站 (通过list命令查看)
-set  <target> https://url # 换源，用户自定义源URL
-reset <target>            # 重置，使用上游默认使用的源
+   get, g <target>            查看该目标当前源的使用情况
+
+   set, s <target>            换源，自动测速后挑选最快源
+   set    <target>  first     换源，使用维护团队测速第一的源
+   set    <target> <mirror>   换源，指定使用某镜像站 (通过list <target>查看)
+   set    <target>  <URL>     换源，用户自定义源URL
+   reset  <target>            重置，使用上游默认使用的源
 
 选项:
--dry                      # Dry Run，模拟换源过程，命令仅打印并不运行
--local                    # 仅对某项目而非全局换源 (仅部分软件如bundler,pdm支持)
--ipv6                     # 使用IPv6测速
--en(glish)                # 使用英文输出
--no-color                 # 无颜色输出
+   -dry                       Dry Run，模拟换源过程，命令仅打印并不运行
+   -local                     仅对本项目而非全局换源 (通过ls <target>查看支持情况)
+   -ipv6                      使用IPv6测速
+   -en(glish)                 使用英文输出
+   -no-color                  无颜色输出
 ```
 
 <br>
@@ -444,10 +500,12 @@ chsrc set julia
 
 ```bash
 sudo chsrc set ubuntu
-sudo chsrc set linuxmint | mint
+sudo chsrc set zorinos
+sudo chsrc set linuxmint
 sudo chsrc set debian
 sudo chsrc set fedora
-sudo chsrc set suse  | opensuse
+# 同时支持 Leap 和 Tumbleweed
+sudo chsrc set opensuse
 sudo chsrc set kali
 sudo chsrc set arch
 sudo chsrc set archlinuxcn
@@ -456,11 +514,11 @@ sudo chsrc set gentoo
 sudo chsrc set rocky | rockylinux
 sudo chsrc set alma  | almalinux
 sudo chsrc set alpine
-sudo chsrc set void  | voidlinux
+sudo chsrc set voidlinux
 sudo chsrc set solus
 sudo chsrc set ros   | ros2
 sudo chsrc set trisquel
-sudo chsrc set lite  | linuxlite
+sudo chsrc set linuxlite
 sudo chsrc set raspi | raspberrypi
 sudo chsrc set armbian
 sudo chsrc set openwrt
@@ -526,11 +584,16 @@ chsrc set conda  | anaconda
 
 ## 🚀 赞赏支持
 
-你是否因为使用 `chsrc` 而节省了时间和精力 or whatever?
+你是否因为 `chsrc` 而受到启发、节省了时间精力 or whatever?
 
-<img src="https://raw.githubusercontent.com/ccmywish/support-my-oss-work/main/wechat.png" alt="wechat-reward" style="width:300px;"/>
+爱发电主页: <https://afdian.com/a/ccmywish>
+
+<img src="https://raw.githubusercontent.com/ccmywish/support-my-oss-work/main/wechat-reward.png" alt="wechat-reward" style="width:300px;"/>
 
 <br>
+
+[rawstr4c]:        https://github.com/RubyMetric/rawstr4c
+[chsrc-bootstrap]: ./bootstrap/
 
 [@Aaron-212]:      https://github.com/Aaron-212
 [@chenrui333]:     https://github.com/chenrui333

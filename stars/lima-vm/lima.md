@@ -1,6 +1,6 @@
 ---
 project: lima
-stars: 17732
+stars: 17928
 description: |-
     Linux virtual machines, with a focus on running containers
 url: https://github.com/lima-vm/lima
@@ -62,6 +62,14 @@ kubectl apply -f ...
 
 See <https://lima-vm.io/docs/> for the further information.
 
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](https://lima-vm.io/docs/community/contributing/) for details on:
+
+- **Developer Certificate of Origin (DCO)**: All commits must be signed off with `git commit -s`
+- Code licensing and pull request guidelines
+- Testing requirements
+
 ## Community
 ### Adopters
 
@@ -76,10 +84,14 @@ GUI:
 - [lima-gui](https://github.com/afbjorklund/lima-gui): Qt GUI for Lima
 
 ### Communication channels
+<!-- Duplicated from https://lima-vm.io/docs/community/ -->
 - [GitHub Discussions](https://github.com/lima-vm/lima/discussions)
 - `#lima` channel in the CNCF Slack
   - New account: <https://slack.cncf.io/>
   - Login: <https://cloud-native.slack.com/>
+- Zoom meetings (tentatively monthly)
+  - Meeting notes & agenda proposals: https://github.com/lima-vm/lima/discussions/categories/meetings
+  - Calendar: https://zoom-lfx.platform.linuxfoundation.org/meetings/lima
 
 ### Code of Conduct
 Lima follows the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).

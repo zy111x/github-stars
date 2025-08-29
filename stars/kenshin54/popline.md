@@ -1,6 +1,6 @@
 ---
 project: popline
-stars: 1058
+stars: 1057
 description: |-
     Popline is an HTML5 Rich-Text-Editor Toolbar
 url: https://github.com/kenshin54/popline
@@ -122,4 +122,6 @@ Copyright (c) 2014 kenshin54. Distributed under the MIT License. See LICENSE.txt
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kenshin54/popline/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTkwMjQ4NjVdfQ==
+-->

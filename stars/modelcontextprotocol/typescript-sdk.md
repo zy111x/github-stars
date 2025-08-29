@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 8643
+stars: 9367
 description: |-
     The official TypeScript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk
@@ -579,7 +579,6 @@ app.listen(3000);
 
 > [!TIP]
 > When using this in a remote environment, make sure to allow the header parameter `mcp-session-id` in CORS. Otherwise, it may result in a `Bad Request: No valid session ID provided` error. Read the following section for examples.
-> ```
 
 
 #### CORS Configuration for Browser-Based Clients
@@ -907,7 +906,7 @@ const upgradeAuthTool = server.tool(
       // If we've just upgraded to 'write' permissions, we can still call 'upgradeAuth' 
       // but can only upgrade to 'admin'. 
       upgradeAuthTool.update({
-        paramSchema: { permission: z.enum(["admin"]) }, // change validation rules
+        paramsSchema: { permission: z.enum(["admin"]) }, // change validation rules
       })
     } else {
       // If we're now an admin, we no longer have anywhere to upgrade to, so fully remove that tool

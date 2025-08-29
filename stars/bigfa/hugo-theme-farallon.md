@@ -1,6 +1,6 @@
 ---
 project: hugo-theme-farallon
-stars: 54
+stars: 55
 description: |-
     ✒️ single column hugo theme
 url: https://github.com/bigfa/hugo-theme-farallon
@@ -23,6 +23,74 @@ echo "theme = 'farallon'" >> hugo.toml
 [Full demo site](https://github.com/bigfa/bigfa.github.io)
 
 ## Release Notes
+
+### 0.7.6
+
+-   add custom pagination
+
+### 0.7.5
+
+-   fixed category archive cover link error
+-   add link shortcode
+
+### 0.7.4
+
+-   style enhancement
+-   fixed pagination error
+-   fixed permalink error
+
+### 0.7.3
+
+-   fixed avatar logo error in memo post
+-   change summary longth
+-   style enhancement
+-   make remote term cover url compatible
+
+### 0.7.2
+
+-   make adjcent link under same section
+-   local image resize support
+-   hide year when in the same year
+-   style enhancement
+-   update translation
+-   add term views when term file exists
+-   remote default logo
+
+> [!NOTE]
+> if you want to custom your logo,put `logo.jpg` under your`assets/images/` folder
+
+### 0.7.1
+
+-   style enhancement
+
+### 0.7.0
+
+-   style enhancement
+
+### 0.6.3
+
+-   make post archives a page template
+-   style enhancement
+-   fixed search result issues
+
+### 0.6.2
+
+-   style enhancement
+
+### 0.6.1
+
+-   fixed term header style issues
+
+### 0.6.0
+
+> [!IMPORTANT]
+> scss class name has breaking changes
+
+-   style enhancement
+
+### 0.5.1
+
+-   update theme config
 
 ### 0.5.0
 

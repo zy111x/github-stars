@@ -1,6 +1,6 @@
 ---
 project: indie-hacker-tools
-stars: 7425
+stars: 7502
 description: |-
     收录独立开发者出海技术栈和工具
 url: https://github.com/weijunext/indie-hacker-tools
@@ -218,7 +218,7 @@ url: https://github.com/weijunext/indie-hacker-tools
 | [Tinypng](https://tinypng.com/) | 图片压缩 |
 | [tiny-img](https://tiny-img.com/webp/) | PNG、JPG 压缩并转 WEBP |
 | [video-to-gif](https://ezgif.com/video-to-gif) | 视频转 GIF|
-| [OG Image Generator](https://ogimage.click/) | 免费 OG Image 生成器|
+| [OG Image Generator](https://myogimage.com/) | 免费 OG Image 生成器|
 
 ### 录屏
 

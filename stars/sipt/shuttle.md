@@ -1,6 +1,6 @@
 ---
 project: shuttle
-stars: 2063
+stars: 2064
 description: |-
     A web proxy in Golang with amazing features.
 url: https://github.com/sipt/shuttle

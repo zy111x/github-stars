@@ -1,6 +1,6 @@
 ---
 project: vue-virtual-keyboard
-stars: 64
+stars: 63
 description: |-
     ⌨️ Vue Virtual Keyboard
 url: https://github.com/CodeDaraW/vue-virtual-keyboard

@@ -1,6 +1,6 @@
 ---
 project: harness
-stars: 32981
+stars: 33119
 description: |-
     Harness Open Source is an end-to-end developer platform with Source Control Management, CI/CD Pipelines, Hosted Developer Environments, and Artifact Registries.
 url: https://github.com/harness/harness
@@ -21,7 +21,7 @@ To install Harness yourself, simply run the command below. Once the container is
 ```bash
 docker run -d \
   -p 3000:3000 \
-  -p 22:22 \
+  -p 3022:3022 \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v /tmp/harness:/data \
   --name harness \

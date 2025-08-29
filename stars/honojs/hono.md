@@ -1,6 +1,6 @@
 ---
 project: hono
-stars: 25297
+stars: 25947
 description: |-
     Web framework built on Web Standards
 url: https://github.com/honojs/hono
@@ -11,13 +11,6 @@ url: https://github.com/honojs/hono
     <img src="https://raw.githubusercontent.com/honojs/hono/main/docs/images/hono-title.png" width="500" height="auto" alt="Hono"/>
   </a>
 </div>
-
-<hr />
-
-<p align="center">
-<a href="https://hono.dev"><b>Documentation 👉 hono.dev</b></a><br />
-<i>Now supports <a href="https://jsr.io/@hono/hono">JSR</a> and <code>deno.land/x</code> is deprecated! See <a href="docs/MIGRATION.md">Migration guide</a>.</i>
-</p>
 
 <hr />
 

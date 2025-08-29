@@ -1,6 +1,6 @@
 ---
 project: textual
-stars: 29750
+stars: 30626
 description: |-
     The lean application framework for Python.  Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser.
 url: https://github.com/Textualize/textual

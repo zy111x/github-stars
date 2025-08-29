@@ -1,6 +1,6 @@
 ---
 project: saasfly
-stars: 2531
+stars: 2573
 description: |-
     Your Next SaaS Template or Boilerplate ! A magic trip start with `bun create saasfly` . The more stars, the more surprises
 url: https://github.com/nextify-limited/saasfly
@@ -47,21 +47,28 @@ See more documentation at <https://document.saasfly.io>
 
 <table>
   <tr>
-    <td>
+   <td style="width: 64px;">
+      <a href="https://libra.dev/">
+        <div style="width: 64px;">
+          <img alt="Clerk" src="https://raw.githubusercontent.com/nextify-limited/libra/main/logo.svg">
+        </div>
+      </a>
+    </td>
+    <td style="width: 64px;">
       <a href="https://go.clerk.com/uKDp7Au">
         <div style="width: 64px;">
           <img alt="Clerk" src="/clerk.png">
         </div>
       </a>
     </td>
-    <td>
+    <td style="width: 64px;">
       <a href="https://www.twillot.com/">
         <div style="width: 64px;">
           <img alt="Take Control of All Your Twitter Assets" src="/twillot.png">
         </div>
       </a>
     </td>
-    <td>
+    <td style="width: 64px;">
       <a href="https://www.setupyourpay.com/" title="如何注册美国公司进行收款">
         <div style="width: 64px;">
           <img alt="全球收款手册" src="/setupyourpay.png">

@@ -1,6 +1,6 @@
 ---
 project: unavatar
-stars: 1318
+stars: 1327
 description: |-
     Get unified user avatar from social networks, including Instagram, SoundCloud, Telegram, Twitter, YouTube & more.
 url: https://github.com/microlinkhq/unavatar
@@ -171,14 +171,6 @@ e.g., https://unavatar.io/microlink/microlink.io
 It resolves user avatar using **onlyfans.com**.
 
 e.g., https://unavatar.io/onlyfans/amandaribas
-
-### Read.cv
-
-Type: `username`
-
-It resolves user avatar against **read.cv**.
-
-e.g., https://unavatar.io/readcv/elenatorro
 
 <!-- ### Reddit
 

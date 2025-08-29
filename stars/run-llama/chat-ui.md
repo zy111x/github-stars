@@ -1,6 +1,6 @@
 ---
 project: chat-ui
-stars: 439
+stars: 479
 description: |-
     Chat UI components for LLM apps
 url: https://github.com/run-llama/chat-ui
@@ -91,7 +91,7 @@ Components are designed to be composable. You can use them as is:
 
 ```tsx
 import { ChatSection } from '@llamaindex/chat-ui'
-import { useChat } from 'ai/react'
+import { useChat } from '@ai-sdk/react'
 
 const ChatExample = () => {
   const handler = useChat()
@@ -104,7 +104,7 @@ Or you can extend them with your own children components:
 ```tsx
 import { ChatSection, ChatMessages, ChatInput } from '@llamaindex/chat-ui'
 import LlamaCloudSelector from './components/LlamaCloudSelector' // your custom component
-import { useChat } from 'ai/react'
+import { useChat } from '@ai-sdk/react'
 
 const ChatExample = () => {
   const handler = useChat()
@@ -166,7 +166,7 @@ Additionally, you can also override each component's styles by setting custom cl
 
 ```tsx
 import { ChatSection, ChatMessages, ChatInput } from '@llamaindex/chat-ui'
-import { useChat } from 'ai/react'
+import { useChat } from '@ai-sdk/react'
 
 const ChatExample = () => {
   const handler = useChat()

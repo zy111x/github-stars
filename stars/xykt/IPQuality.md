@@ -1,6 +1,6 @@
 ---
 project: IPQuality
-stars: 4115
+stars: 4455
 description: |-
     IP质量检测脚本 - IP Quality Check Script
 url: https://github.com/xykt/IPQuality
@@ -14,7 +14,7 @@ url: https://github.com/xykt/IPQuality
 
 ## IP质量体检脚本  -  [IP Quality Check Script (EN)](https://github.com/xykt/IPQuality/blob/main/README_EN.md)
 
-**支持OS/Platform：Ubuntu | Debian | Linux Mint | Fedora | Red Hat Enterprise Linux (RHEL) | CentOS | Arch Linux | Manjaro | Alpine Linux | AlmaLinux | Rocky Linux | macOS | Anolis OS | Alibaba Cloud Linux | SUSE Linux | openSUSE | Void Linux**
+**支持OS/Platform：Ubuntu | Debian | Linux Mint | Fedora | Red Hat Enterprise Linux (RHEL) | CentOS | Arch Linux | Manjaro | Alpine Linux | AlmaLinux | Rocky Linux | macOS | Anolis OS | Alibaba Cloud Linux | SUSE Linux | openSUSE | Void Linux | Windows (via Docker)**
 
 - 中英文双语言支持
 - 支持IPv4/IPv6双栈查询
@@ -31,72 +31,118 @@ url: https://github.com/xykt/IPQuality
 
 ## 使用方法
 
+### 便捷模式：交互界面
+
+![Net](https://github.com/xykt/ScriptMenu/raw/main/res/IP_CN.png)
+
+##### Bash：
+````bash
+bash <(curl -Ls https://Check.Place) -I
+````
+
+##### Docker：
+- Linux
+````bash
+docker run --rm --net=host -it xykt/check -I && docker rmi xykt/check > /dev/null 2>&1
+````
+
+- Windows (CMD)
+````bash
+docker run --rm --net=host -it xykt/check -I & docker rmi xykt/check > NUL 2>&1
+````
+
+### 高级模式：参数运行
+
+![Help](https://github.com/xykt/IPQuality/raw/main/res/help.png)
+
 ##### 默认双栈检测：
 ````bash
-bash <(curl -Ls IP.Check.Place)
+bash <(curl -Ls https://IP.Check.Place)
 ````
 
 ##### 只检测IPv4结果：
 ````bash
-bash <(curl -Ls IP.Check.Place) -4
+bash <(curl -Ls https://IP.Check.Place) -4
 ````
 
 ##### 只检测IPv6结果：
 ````bash
-bash <(curl -Ls IP.Check.Place) -6
+bash <(curl -Ls https://IP.Check.Place) -6
 ````
 
 ##### 指定检测网卡：
 ````bash
-bash <(curl -Ls IP.Check.Place) -i eth0
+bash <(curl -Ls https://IP.Check.Place) -i eth0
 ````
 
 ##### 指定代理服务器：
 ````bash
-bash <(curl -Ls IP.Check.Place) -x http://username:password@proxyserver:port
-bash <(curl -Ls IP.Check.Place) -x https://username:password@proxyserver:port
-bash <(curl -Ls IP.Check.Place) -x socks5://username:password@socksproxy:port
+bash <(curl -Ls https://IP.Check.Place) -x http://username:password@proxyserver:port
+bash <(curl -Ls https://IP.Check.Place) -x https://username:password@proxyserver:port
+bash <(curl -Ls https://IP.Check.Place) -x socks5://username:password@socksproxy:port
 ````
 
 ##### 选择脚本语言为英文（任选其一）：
 ````bash
-bash <(curl -Ls IP.Check.Place) -E
-bash <(curl -Ls IP.Check.Place) -l en
+bash <(curl -Ls https://IP.Check.Place) -E
+bash <(curl -Ls https://IP.Check.Place) -l en
 ````
 
 ##### 跳过检测系统及安装依赖：
 ````bash
-bash <(curl -Ls Net.Check.Place) -n
+bash <(curl -Ls https://IP.Check.Place) -n
 ````
 
 ##### 自动安装依赖：
 ````bash
-bash <(curl -Ls Net.Check.Place) -y
+bash <(curl -Ls https://IP.Check.Place) -y
 ````
 
 ##### 报告展示完整IP地址：
 ````bash
-bash <(curl -Ls IP.Check.Place) -f
+bash <(curl -Ls https://IP.Check.Place) -f
 ````
 
 ##### 输出JSON结果：
 ````bash
-bash <(curl -Ls IP.Check.Place) -j
+bash <(curl -Ls https://IP.Check.Place) -j
 ````
 
 ##### 输出报告ANSI/JSON/纯文本至文件：
 ````bash
-bash <(curl -Ls IP.Check.Place) -o /path/to/file.ansi
-bash <(curl -Ls IP.Check.Place) -o /path/to/file.json
-bash <(curl -Ls IP.Check.Place) -o /path/to/file.txtoranyother
+bash <(curl -Ls https://IP.Check.Place) -o /path/to/file.ansi
+bash <(curl -Ls https://IP.Check.Place) -o /path/to/file.json
+bash <(curl -Ls https://IP.Check.Place) -o /path/to/file.txtoranyother
 ````
 
 ##### 基础信息多语言支持：
 ````bash
-bash <(curl -Ls IP.Check.Place) -l jp|es|de|fr|ru|pt
+bash <(curl -Ls https://IP.Check.Place) -l jp|es|de|fr|ru|pt
+````
+
+##### 隐私模式——禁用在线报告生成功能：
+````bash
+bash <(curl -Ls https://IP.Check.Place) -p
+````
+
+##### Docker（支持运行参数，须在```&```前插入）：
+- Linux
+````bash
+docker run --rm --net=host -it xykt/ipquality && docker rmi xykt/ipquality > /dev/null 2>&1
+````
+
+- Windows (CMD)
+````cmd
+docker run --rm --net=host -it xykt/ipquality & docker rmi xykt/ipquality > NUL 2>&1
 ````
 
 ## 脚本更新
+
+2025/08/03 00:00 增加Docker运行方式
+
+2025/08/01 16:15 增加-p隐私模式，禁用在线报告生成功能
+
+2025/07/30 16:30 将所有HTTP请求替换为HTTPS以提升脚本安全性
 
 2025/06/02 21:25 修复25端口检测的错误逻辑，规范化邮件服务商连通性检测方法
 
@@ -138,6 +184,18 @@ bash <(curl -Ls IP.Check.Place) -l jp|es|de|fr|ru|pt
 
 ## 脚本贡献
 
+**Acknowledgments:**
+
+| 赞助商 | 商标 | 网址 | 
+| - | - | - | 
+| IP2Location | ![ip2location_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_ip2location.png) | [https://ip2location.io](https://ip2location.io)</br>[https://ip2location.com](https://ip2location.com) | 
+
+- 衷心感谢主流IP风险数据库[AbuseIPDB](https://www.abuseipdb.com/)/[Cloudflare](https://cloudflare.com/)/[DB-IP](https://db-ip.com/)/[IP2Location](https://www.ip2location.io/)/[ipapi](https://ipapi.is/)/[IPinfo](https://ipinfo.io/)/[IPQS](https://www.ipqualityscore.com/)/[ipregistry](https://ipregistry.co/)/[IPWHOIS](https://ipwhois.io/)/[SCAMALYTICS](https://scamalytics.com/)提供的风险数据（排名不分先后）
+
+- 感谢[lmc999](https://github.com/lmc999/RegionRestrictionCheck)，本脚本局部代码参考原版流媒体解锁检测脚本
+
+- 感谢[spiritLHLS](https://github.com/spiritLHLS/ecs)，本脚本局部代码参考融合怪测评脚本
+
 **服务器赞助商（排名不分先后）**
 
 | 赞助商 | 商标 | 网址 | 
@@ -150,17 +208,12 @@ bash <(curl -Ls IP.Check.Place) -l jp|es|de|fr|ru|pt
 | UCloud</br>优刻得 | ![ucloud_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_ucloud.png) | [https://ucloud.cn](https://www.ucloud.cn/staticIPHost?ytag=uhost_ip_github)|
 | AaITR | ![aaitr_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_aaitr.png) | [https://aaitr.com](https://www.aaitr.com/link.php?id=5)| 
 | VIRCS</br>威尔克斯 | ![vircs_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_vircs.png) | [https://vircs.com](https://www.vircs.com/promotion?code=6)| 
+| Thordata</br>`原生IP` | ![thordata_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_thordata.png) | [https://thordata.com](https://www.thordata.com/?ls=VNSCxroa&lk=quality)| 
+| BestProxy</br>`原生IP` | ![bestproxy_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_bestproxy.png) | [https://bestproxy.com](https://bestproxy.com/?keyword=nstdqben)| 
+| RapidProxy</br>`原生IP` | ![rapidproxy_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_rapidproxy.png) | [https://rapidproxy.io](https://www.rapidproxy.io/?ref=gitipquality)| 
 
 ##### *E-Mail: sponsor@check.place Telegram Bot: https://t.me/xythebot*
 **仅接受长期稳定运营，信誉良好的商家*
-
-**Acknowledgments:**
-
-- 衷心感谢主流IP风险数据库[IPinfo](https://ipinfo.io/)/[ipregistry](https://ipregistry.co/)/[ipapi](https://ipapi.is/)/[AbuseIPDB](https://www.abuseipdb.com/)/[IP2LOCATION](https://www.ip2location.com/)/[IPQS](https://www.ipqualityscore.com/)/[DB-IP](https://db-ip.com/)/[SCAMALYTICS](https://scamalytics.com/)/[IPWHOIS](https://ipwhois.io/)/[Cloudflare](https://cloudflare.com/)提供的风险数据
-
-- 感谢[lmc999](https://github.com/lmc999/RegionRestrictionCheck)，本脚本局部代码参考原版流媒体解锁检测脚本
-
-- 感谢[spiritLHLS](https://github.com/spiritLHLS/ecs)，本脚本局部代码参考融合怪测评脚本
 
 **Stars History:**
 

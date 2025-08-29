@@ -1,6 +1,6 @@
 ---
 project: verdaccio
-stars: 17023
+stars: 17096
 description: |-
     A lightweight Node.js private proxy registry
 url: https://github.com/verdaccio/verdaccio
@@ -337,7 +337,7 @@ You can find and chat with them over Discord, click [here](http://chat.verdaccio
 - [NX](https://github.com/nrwl/nx) _(+6.1k ⭐️)_
 - [Mozilla Neutrino](https://github.com/neutrinojs/neutrino) _(+3.7k ⭐️)_
 - [workshopper how to npm](https://github.com/workshopper/how-to-npm) _(+1k ⭐️)_
-- [Amazon SDK v3](https://github.com/aws/aws-sdk-js-v3)
+- [Amazon SDK for JavaScript (v3)](https://github.com/aws/aws-sdk-js-v3)
 - [Amazon Encryption SDK for Javascript](https://github.com/aws/aws-encryption-sdk-javascript)
 
 🤓 Don't be shy, add yourself to this readme.

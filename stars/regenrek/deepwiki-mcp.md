@@ -1,12 +1,14 @@
 ---
 project: deepwiki-mcp
-stars: 819
+stars: 947
 description: |-
     📖 MCP server for fetch deepwiki.com and get latest knowledge in Cursor and other Code Editors
 url: https://github.com/regenrek/deepwiki-mcp
 ---
 
 # Deepwiki MCP Server
+
+> ⚠️ **IMPORTANT NOTICE**: This server is currently not working since DeepWiki has cut off the possibility to scrape it. We recommend using the official DeepWiki MCP server at https://docs.devin.ai/work-with-devin/deepwiki-mcp for the time being.
 
 This is an **unofficial Deepwiki MCP Server**
 

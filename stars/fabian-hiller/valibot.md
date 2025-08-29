@@ -1,6 +1,6 @@
 ---
 project: valibot
-stars: 7791
+stars: 7910
 description: |-
     The modular and type safe schema library for validating structural data 🤖
 url: https://github.com/fabian-hiller/valibot
@@ -69,9 +69,15 @@ For example, this allows a bundler to use the import statements to remove code t
 
 In addition, it allows you to easily extend my functionality with external code and makes my source code more robust and secure because the functionality of the individual functions can be tested much more easily through unit tests.
 
+## Partners
+
+Thanks to our partners who support my development! [Join them](https://github.com/sponsors/fabian-hiller) and contribute to the sustainability of open source software!
+
+![Partners of Valibot](https://github.com/fabian-hiller/valibot/blob/main/partners.webp?raw=true)
+
 ## Credits
 
-My friend [Fabian](https://github.com/fabian-hiller) created me as part of his bachelor thesis at [Stuttgart Media University](https://www.hdm-stuttgart.de/en/), supervised by Walter Kriha, [Miško Hevery](https://github.com/mhevery) and [Ryan Carniato](https://github.com/ryansolid). My role models also include [Colin McDonnell](https://github.com/colinhacks), who had a big influence on my API design with [Zod](https://zod.dev/).
+My friend [Fabian](https://github.com/fabian-hiller) created me as part of his [bachelor thesis](https://valibot.dev/thesis.pdf) at [Stuttgart Media University](https://www.hdm-stuttgart.de/en/), supervised by Walter Kriha, [Miško Hevery](https://github.com/mhevery) and [Ryan Carniato](https://github.com/ryansolid). My role models also include [Colin McDonnell](https://github.com/colinhacks), who had a big influence on my API design with [Zod](https://zod.dev/).
 
 ## Feedback
 

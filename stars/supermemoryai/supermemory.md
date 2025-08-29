@@ -1,98 +1,84 @@
 ---
 project: supermemory
-stars: 10135
+stars: 10725
 description: |-
     Build your own second brain with supermemory. Extremely fast, scalable, memory API for the AI era.
 url: https://github.com/supermemoryai/supermemory
 ---
 
-<div align="center">
+<div align="center" style="padding-bottom:20px;padding-top:20px">
   <img src="logo.svg" alt="supermemory Logo" width="400" />
-  <p><strong>The Memory API for the AI era</strong></p>
 </div>
 
-> [!WARNING]
-> This repo contains archived code for supermemory v1 and no longer receives updates or support.
+<div align="center" style="padding-bottom:10px;padding-top:10px">
+  <img src="apps/web/public/landing-page.jpeg" alt="supermemory" width="100%" />
+</div>
 
-## 🧠 What is supermemory?
+## Features
 
-supermemory is a powerful, developer-friendly API that seamlessly integrates external knowledge into your AI applications. It serves as the perfect memory layer for your AI stack, providing semantic search and retrieval capabilities that enhance your models with relevant context.
+### Core Functionality
 
-With supermemory, you can:
+- **[Add Memories from Any Content](#add-memory)**: Easily add memories from URLs, PDFs, and plain text—just paste, upload, or link.
+- **[Chat with Your Memories](#chat-memories)**: Converse with your stored content using natural language chat.
+- **[Supermemory MCP Integration](#mcp-integration)**: Seamlessly connect with all major AI tools (Claude, Cursor, etc.) via Supermemory MCP.
 
-- **Store and organize knowledge** in a searchable database that understands meaning, not just keywords
-- **Enhance AI responses** with accurate, up-to-date information from your data
-- **Eliminate hallucinations** by grounding AI outputs in your trusted content
-- **Connect to any source** with pre-built integrations for websites, PDFs, images, and more
+## How do i use this?
 
-## ✨ Key Features
+Go to [app.supermemory.ai](https://app.supermemory.ai) and sign into with your account
 
-- **Universal Content Handling**: Automatically process and index content from URLs, PDFs, text, and more
-- **Semantic Search**: Find information based on meaning, not just keyword matching
-- **Advanced Filtering**: Organize and retrieve information using metadata, categories, and user partitioning
-- **Query Enhancement**: Rewriting and reranking for more relevant results
-- **Simple Integration**: Clean, consistent API with SDKs for TypeScript and Python
+1. <a id="add-memory"></a>Start Adding Memory with your choose of format (Note, Link, File)
+<div align="center" style="padding-bottom:10px;padding-top:10px">
+  <img src="apps/web/public/add-memory.png" alt="supermemory" width="100%" />
+</div>
 
-## 🚀 Getting Started
+2. You can also Connect to your favourite services (Notion, Google Drive, OneDrive)
+<div align="center" style="padding-bottom:10px;padding-top:10px">
+  <img src="apps/web/public/add-connections.png" alt="supermemory" width="100%" />
+</div>
 
-Getting started with supermemory takes just minutes:
+3. <a id="chat-memories"></a>Once Memories are added, you can chat with Supermemory by clicking on "Open Chat" and retrieve info from your saved memories
+<div align="center" style="padding-bottom:10px;padding-top:10px">
+  <img src="apps/web/public/chat.png" alt="supermemory" width="100%" />
+</div>
 
-1. Sign up at [console.supermemory.ai](https://console.supermemory.ai)
-2. Create your API key
-3. Start adding and querying content
+4. <a id="mcp-integration"></a>Add MCP to your AI Tools (by clicking on "Connect to your AI" and select the AI tool you are trying to integrate)
+<div align="center" style="padding-bottom:10px;padding-top:10px">
+  <img src="apps/web/public/mcp.png" alt="supermemory" width="100%" />
+</div>
 
-```javascript
-// Install: npm install supermemory
-import { supermemory } from 'supermemory';
-
-const client = new supermemory({
-  apiKey: 'YOUR_API_KEY',
-});
-
-// Add content to your knowledge base
-await client.memory.create({
-  content: "https://en.wikipedia.org/wiki/Artificial_intelligence",
-  metadata: {
-    source: "wikipedia",
-    category: "AI"
-  }
-});
-
-// Query your knowledge base
-const results = await client.search.create({
-  q: "What are the ethical considerations in AI development?",
-  limit: 5
-});
-```
-
-## 📚 Documentation
-
-We've created comprehensive documentation to help you get the most out of supermemory:
-
-- [Quick Start Guide](https://docs.supermemory.ai/quickstart/overview)
-- [API Reference](https://docs.supermemory.ai/api-reference)
-- [SDK Documentation](https://docs.supermemory.ai/sdks)
-- [Use Cases & Examples](https://docs.supermemory.ai/overview/use-cases)
-
-## 🌟 Use Cases
-
-supermemory powers a wide range of AI-enhanced applications:
-
-- **RAG (Retrieval Augmented Generation)**: Enhance LLM outputs with accurate data
-- **Knowledge Bases & Documentation**: Create intelligent, searchable repositories
-- **Customer Support**: Build chatbots with access to your support documentation
-- **Research Assistants**: Query across papers, notes, and references
-- **Content Management**: Organize and retrieve multimedia content semantically
-
-## 💬 Support
+## Support
 
 Have questions or feedback? We're here to help:
+
 - Email: [dhravya@supermemory.com](mailto:dhravya@supermemory.com)
 - Documentation: [docs.supermemory.ai](https://docs.supermemory.ai)
 
-## 🔄 Updates & Roadmap
+## Contributing
+
+We welcome contributions from developers of all skill levels! Whether you're fixing bugs, adding features, or improving documentation, your help makes supermemory better for everyone.
+
+### Quick Start for Contributors
+
+1. **Fork and clone** the repository
+2. **Install dependencies** with `bun install`
+3. **Set up your environment** by copying `.env.example` to `.env.local`
+4. **Start developing** with `bun run dev`
+
+For detailed guidelines, development setup, coding standards, and the complete contribution workflow, please see our [**Contributing Guide**](CONTRIBUTE.md).
+
+### Ways to Contribute
+
+- 🐛 **Bug fixes** - Help us squash those pesky issues
+- ✨ **New features** - Add functionality that users will love
+- 🎨 **UI/UX improvements** - Make the interface more intuitive
+- ⚡ **Performance optimizations** - Help us make supermemory faster
+
+Check out our [Issues](https://github.com/supermemoryai/supermemory/issues) page for `good first issue` and `help wanted` labels to get started!
+
+## Updates & Roadmap
 
 Stay up to date with the latest improvements:
+
 - [Changelog](https://docs.supermemory.ai/changelog/overview)
 - [X](https://x.com/supermemoryai)
 

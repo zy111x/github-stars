@@ -1,6 +1,6 @@
 ---
 project: memlab
-stars: 4558
+stars: 4579
 description: |-
     A framework for finding JavaScript memory leaks and analyzing heap snapshots
 url: https://github.com/facebook/memlab
@@ -33,10 +33,12 @@ Features:
   API, and memlab will automatically compare JavaScript heap snapshots, filter
   out memory leaks, and aggregate the results
 - **Object-oriented heap traversing API** - Supports the creation of
-  self-defined memory leak detector, and enables programmatic analysis JS heap
+  self-defined memory leak detector, and enables programmatic analysis of JS heap
   snapshots taken from Chromium-based browsers, Node.js, Electron.js, and Hermes
 - **Memory CLI toolbox** - Built-in toolbox and APIs for finding memory
   optimization opportunities (not necessarily just memory leaks)
+- **MemLens: Browser Memory Debugging Tools** - Enables visualization of memory
+  leaks and interactive memory debugging in the browser.
 - **Memory assertions in Node.js** - Enables unit tests or running node.js
   programs to take a heap snapshot of their own state, perform self memory
   checking, or write advanced memory assertions
@@ -193,6 +195,14 @@ const scenario = {
 };
 memlab.run({scenario});
 ```
+
+## Visual Debugging for Memory Leaks in Browser
+
+Please check out this [tutorial page](https://facebook.github.io/memlab/docs/guides/visually-debug-memory-leaks-with-memlens)
+on how to use MemLens (a debugging utility) to
+visualize memory leaks in the browser for easier memory debugging.
+
+![](./website/static/img/memlens.png)
 
 ## Memory Assertions
 
