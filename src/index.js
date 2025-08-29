@@ -31,6 +31,6 @@ export default {
     if (env.MCP_API_KEY && apiKey !== env.MCP_API_KEY) {
       return new Response('Unauthorized', { status: 401 })
     }
-    return GitHubStarsMCP.mount('/').fetch(req, env, ctx)
+    return GitHubStarsMCP.serve('/').fetch(req, env, ctx)
   },
 }

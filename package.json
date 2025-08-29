@@ -2,7 +2,7 @@
   "name": "mcp-github-stars",
   "type": "module",
   "version": "0.0.2",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.15.0",
   "description": "",
   "author": "",
   "license": "MIT",
@@ -19,9 +19,9 @@
     "postinstall": "simple-git-hooks"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.17.0",
-    "agents": "^0.0.109",
-    "fs-extra": "^11.3.0",
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "agents": "^0.0.113",
+    "fs-extra": "^11.3.1",
     "ofetch": "^1.4.1",
     "zod": "^3.25.76"
   },
@@ -29,12 +29,12 @@
     "registry": "https://registry.npmjs.org"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.19.0",
-    "eslint": "^9.32.0",
+    "@antfu/eslint-config": "^5.2.1",
+    "eslint": "^9.34.0",
     "eslint-plugin-format": "^1.0.1",
-    "lint-staged": "^16.1.2",
-    "simple-git-hooks": "^2.13.0",
-    "wrangler": "^4.26.0"
+    "lint-staged": "^16.1.5",
+    "simple-git-hooks": "^2.13.1",
+    "wrangler": "^4.33.0"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

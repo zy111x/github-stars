@@ -52,6 +52,7 @@ This project creates a searchable database of your GitHub starred repositories b
 4. Configure Cloudflare AutoRAG:
    - Create an AutoRAG instance in Cloudflare
    - Set the `AUTO_RAG_NAME` environment variable in your Cloudflare Worker
+   - `MCP_API_KEY`: API key for securing MCP server access (generate a secure random string)
 
 ### Local Development
 
@@ -86,7 +87,17 @@ The GitHub Action will automatically:
 
 Once deployed, you can interact with the MCP Server using any MCP-compatible client:
 
-SSE: `https://your-worker-url.workers.dev`
+### API Key Authentication
+
+The MCP server requires API key authentication for security. Include your `MCP_API_KEY` in the request headers:
+
+```http
+Authorization: Bearer your-mcp-api-key
+```
+
+### Endpoint
+
+Streamable HTTP: `https://your-worker-url.workers.dev`
 
 ## API Reference
 
