@@ -1,6 +1,6 @@
 ---
 project: kosmos_chs_tutorial
-stars: 400
+stars: 399
 description: |-
     A Chinese version tutorial about installing kosmos
 url: https://github.com/ln93/kosmos_chs_tutorial

@@ -1,8 +1,8 @@
 ---
 project: jaaz
-stars: 2296
+stars: 2359
 description: |-
-    AI design agent, local alternative for Lovart. Canva + Cursor. AI agent with ability to design, edit and generate images, posters, storyboards, etc.
+    The world's first open-source multimodal creative assistant  This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.
 url: https://github.com/11cafe/jaaz
 ---
 

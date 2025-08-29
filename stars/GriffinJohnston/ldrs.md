@@ -1,6 +1,6 @@
 ---
 project: ldrs
-stars: 2089
+stars: 2092
 description: |-
     Modern, minimalist loaders & spinners. Made with CSS, HTML and SVG. https://uiball.com/ldrs
 url: https://github.com/GriffinJohnston/ldrs

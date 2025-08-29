@@ -1,6 +1,6 @@
 ---
 project: rivet
-stars: 4253
+stars: 4259
 description: |-
     🔩 The open-source alternative to Durable Objects. Rivet Actors provide long-lived processes with durable state, realtime, and scalability.
 url: https://github.com/rivet-gg/rivet

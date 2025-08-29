@@ -1,6 +1,6 @@
 ---
 project: browserhacks
-stars: 1265
+stars: 1264
 description: |-
     An extensive list of CSS/JS browserhacks from all over the interwebs.
 url: https://github.com/4ae9b8/browserhacks

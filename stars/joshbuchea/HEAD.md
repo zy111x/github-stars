@@ -1,6 +1,6 @@
 ---
 project: HEAD
-stars: 30222
+stars: 30219
 description: |-
     A simple guide to HTML <head> elements
 url: https://github.com/joshbuchea/HEAD
@@ -406,6 +406,16 @@ Users share web pages to qq wechat will have a formatted message
 <meta name="description" itemprop="description" content="share content">
 ```
 - 📖 [Code Format Docs](http://open.mobile.qq.com/api/mqq/index#api:setShareInfo)
+
+**[⬆ back to top](#table-of-contents)**
+
+### Fediverse
+
+Some Fediverse software such as Mastodon allow you to put your Fediverse handle in a meta tag which will show up in embeds to your website. In addition to the tag you will also need to add your domain to the list of allowed websites in "Settings -> Public profile -> Verification -> Author attribution" (for Mastodon).
+
+```html
+<meta name="fediverse:creator" content="@handle@example.org">
+```
 
 **[⬆ back to top](#table-of-contents)**
 

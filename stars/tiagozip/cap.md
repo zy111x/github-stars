@@ -1,9 +1,9 @@
 ---
 project: cap
-stars: 3965
+stars: 4015
 description: |-
     Cap is a lightweight, modern open-source CAPTCHA alternative using SHA-256 proof-of-work
-url: https://github.com/tiagorangel1/cap
+url: https://github.com/tiagozip/cap
 ---
 
 <p align="center">
@@ -17,7 +17,7 @@ url: https://github.com/tiagorangel1/cap
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
   <a href="https://capjs.js.org/guide/demo.html">Demo</a>
   <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-  <a href="https://github.com/tiagorangel1/cap/issues/new">Issues</a>
+  <a href="https://github.com/tiagozip/cap/issues/new">Issues</a>
   <br />
 </div>
 

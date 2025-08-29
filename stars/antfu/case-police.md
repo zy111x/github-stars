@@ -1,6 +1,6 @@
 ---
 project: case-police
-stars: 1383
+stars: 1390
 description: |-
     🚨 Make the case correct, PLEASE!
 url: https://github.com/antfu/case-police

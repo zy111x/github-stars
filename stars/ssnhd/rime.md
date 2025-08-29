@@ -1,6 +1,6 @@
 ---
 project: rime
-stars: 3350
+stars: 3354
 description: |-
     Rime Squirrel 鼠须管配置文件（朙月拼音、小鹤双拼、自然码双拼）
 url: https://github.com/ssnhd/rime
@@ -21,9 +21,9 @@ url: https://github.com/ssnhd/rime
 * 速度快、开源、保护隐私、自定义强
 
 
-### [出售🇬🇧英国、🇺🇸美国、🇳🇿新西兰实体 SIM 卡；Google Voice、Gmail 靓号、Apple ID、礼品卡](https://t.me/GVStore)
+### [出售英国、美国、新西兰实体 SIM 卡、GV、Gmail、Apple ID、礼品卡](https://github.com/ssnhd/sim)
 
-[![](https://i.imgur.com/RELjhoN.png)](https://t.me/GVStore)
+[![](https://i.imgur.com/vFuRggb.jpg)](https://github.com/ssnhd/sim)
 
 
 ## 安装

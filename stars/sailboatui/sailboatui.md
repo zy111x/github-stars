@@ -1,6 +1,6 @@
 ---
 project: sailboatui
-stars: 1311
+stars: 1310
 description: |-
     Sailboat UI is a modern UI component library for Tailwind CSS 
 url: https://github.com/sailboatui/sailboatui

@@ -1,6 +1,6 @@
 ---
 project: workflows-ts
-stars: 200
+stars: 202
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/workflows-ts
@@ -104,13 +104,13 @@ const allEvents = await runAndCollect(
 
 By default, we provide a simple fan-out utility to run multiple workflows in parallel
 
-- `getContext().sendEvent` will emit a new event to current workflow
-- `getContext().stream` will return a stream of events emitted by the sub-workflow
+- `context.sendEvent` will emit a new event to current workflow
+- `context.stream` will return a stream of events emitted by the sub-workflow
 
 ```ts
 let condition = false;
-workflow.handle([startEvent], async (start) => {
-  const { sendEvent, stream } = getContext();
+workflow.handle([startEvent], async (context, start) => {
+  const { sendEvent, stream } = context;
   for (let i = 0; i < 10; i++) {
     sendEvent(convertEvent.with(i));
   }
@@ -181,11 +181,11 @@ serve(app, ({ port }) => {
 
 ### Error Handling
 
-You can use `signal` in `getContext` to handle error
+You can use `signal` in the context parameter to handle error
 
 ```ts
-workflow.handle([convertEvent], () => {
-  const { signal } = getContext();
+workflow.handle([convertEvent], (context) => {
+  const { signal } = context;
 
   signal.onabort = () => {
     console.error("error in convert event:", abort.reason);
@@ -193,26 +193,17 @@ workflow.handle([convertEvent], () => {
 });
 ```
 
-### Pitfall in **browser**
+### Context Parameter
 
-You must call `getContext()` in the top level of the workflow, otherwise we will lose the async context of the workflow.
+Workflow handlers receive the context as the first parameter, providing access to `sendEvent`, `stream`, and `signal`.
 
 ```ts
-workflow.handle([startEvent], async () => {
-  const { stream } = getContext(); // ✅ this is ok
-  await fetchData();
-});
-
-workflow.handle([startEvent], async () => {
-  await fetchData();
-  const { stream } = getContext(); // ❌ this is not ok
-  // we have no way to know this code was originally part of the workflow
-  // w/o AsyncContext
+workflow.handle([startEvent], async (context) => {
+  const { sendEvent, stream, signal } = context;
+  // Use context properties directly
+  sendEvent(processEvent.with());
 });
 ```
-
-Due to missing API of `async_hooks` in browser, we are looking
-for [Async Context](https://github.com/tc39/proposal-async-context) to solve this problem in the future.
 
 ## Middleware
 
@@ -224,14 +215,14 @@ context.
 ```ts
 import { createStatefulMiddleware } from "@llamaindex/workflow-core/middleware/state";
 
-const { withState, getContext } = createStatefulMiddleware(() => ({
+const { withState } = createStatefulMiddleware(() => ({
   pendingTasks: new Set<Promise<unknown>>(),
 }));
 
 const workflow = withState(createWorkflow());
 
-workflow.handle([startEvent], () => {
-  const { state } = getContext();
+workflow.handle([startEvent], (context) => {
+  const { state } = context;
   state.pendingTasks.add(
     new Promise((resolve) => {
       setTimeout(() => {
@@ -261,10 +252,11 @@ const { state } = workflow.createContext({ id: "1" });
 const { snapshot, resume } = workflow.createContext();
 
 // create snapshot
-const [req, snapshotData] = await snapshot();
+const snapshotData = await snapshot();
 
 // resume workflow from snapshot
-const { stream } = workflow.resume(["hello"], snapshotData);
+const { stream, sendEvent } = workflow.resume(snapshotData);
+sendEvent(humanResponseEvent.with("hello"));
 ```
 
 ### `withValidation`
@@ -324,9 +316,9 @@ workflow.handle(
   }),
 );
 
-workflow.handle([startEvent], () => {
-  getContext().sendEvent(messageEvent.with());
-  getContext().sendEvent(messageEvent.with());
+workflow.handle([startEvent], (context) => {
+  context.sendEvent(messageEvent.with());
+  context.sendEvent(messageEvent.with());
 });
 
 {
@@ -367,8 +359,8 @@ For example:
     <summary>without substream</summary>
 
   ```ts
-  workflow.handle([startEvent], async ({ data: uuid }) => {
-    const { sendEvent, stream } = getContext();
+  workflow.handle([startEvent], async (context, { data: uuid }) => {
+    const { sendEvent, stream } = context;
     const ev = networkRequestEvent.with(uuid);
     sendEvent(networkRequestEvent);
     // you need bypass uuid to all events to get the correct response
@@ -384,8 +376,8 @@ For example:
   </details>
 
   ```ts
-  workflow.handle([startEvent], async () => {
-    const { sendEvent, stream } = getContext();
+  workflow.handle([startEvent], async (context) => {
+    const { sendEvent, stream } = context;
     const ev = networkRequestEvent.with();
     sendEvent(networkRequestEvent);
     const responses = await collect(workflow.substream(ev, stream));
@@ -451,8 +443,8 @@ the `HandlerContext` from root to leaf is:
 
 ```ts
 let once = false;
-workflow.handle([startEvent], () => {
-  const { sendEvent } = getContext();
+workflow.handle([startEvent], (context) => {
+  const { sendEvent } = context;
   if (once) {
     return;
   }

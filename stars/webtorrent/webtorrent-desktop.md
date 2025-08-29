@@ -1,6 +1,6 @@
 ---
 project: webtorrent-desktop
-stars: 9911
+stars: 9916
 description: |-
     ❤️ Streaming torrent app for Mac, Windows, and Linux
 url: https://github.com/webtorrent/webtorrent-desktop

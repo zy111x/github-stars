@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 7027
+stars: 7085
 description: |-
     An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici

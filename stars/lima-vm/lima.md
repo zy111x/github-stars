@@ -1,6 +1,6 @@
 ---
 project: lima
-stars: 17928
+stars: 17962
 description: |-
     Linux virtual machines, with a focus on running containers
 url: https://github.com/lima-vm/lima
@@ -37,8 +37,7 @@ limactl start
 
 To run Linux commands:
 ```bash
-lima sudo apt-get install -y neofetch
-lima neofetch
+lima uname -a
 ```
 
 To run containers with containerd:

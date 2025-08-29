@@ -1,6 +1,6 @@
 ---
 project: icones
-stars: 6876
+stars: 6884
 description: |-
     ⚡️ Icon Explorer with Instant searching, powered by Iconify
 url: https://github.com/antfu-collective/icones

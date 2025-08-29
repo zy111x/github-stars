@@ -1,6 +1,6 @@
 ---
 project: noble-hashes
-stars: 717
+stars: 723
 description: |-
     Audited & minimal JS implementation of hash functions, MACs and KDFs.
 url: https://github.com/paulmillr/noble-hashes
@@ -537,25 +537,22 @@ Supported node.js versions:
 
 v2.0 changelog:
 
-- Bump minimum node.js version from v14 to v20.19
-- Bump compilation target from es2020 to es2022
-- Make package ESM-only
-    - node.js v20.19+ allows loading ESM modules from common.js
-- Remove extension-less exports: e.g. `sha3` became `sha3.js`
-    - This allows using package without import maps and allows package to be used in browsers directly, without bundlers
+- The package is now ESM-only. ESM can finally be loaded from common.js on node v20.19+
+- `.js` extension must be used for all modules
+    - Old: `@noble/hashes/sha3`
+    - New: `@noble/hashes/sha3.js`
+    - This simplifies working in browsers natively without transpilers
 - Only allow Uint8Array as hash inputs, prohibit `string`
     - Strict validation checks improve security
     - To replicate previous behavior, use `utils.utf8ToBytes`
 - Rename / remove some modules for consistency. Previously, sha384 resided in sha512, which was weird
-    - `sha256`, `sha512` => `sha2.js` (consistent with `sha3`)
-    - `blake2b`, `blake2s` => `blake2.js` (consistent with `blake1`, `blake3`)
+    - `sha256`, `sha512` => `sha2.js` (consistent with `sha3.js`)
+    - `blake2b`, `blake2s` => `blake2.js` (consistent with `blake3.js`, `blake1.js`)
     - `ripemd160`, `sha1`, `md5` => `legacy.js` (all low-security hashes are there)
     - `_assert` => `utils.js`
     - `crypto` internal module got removed: use built-in WebCrypto instead
-- Improve typescript types
-    - Improve option autocomplete
-    - Simplify types in `utils`
-    - Use single createHasher for wrapping instead of 3 methods
+- Improve typescript types & option autocomplete
+- Bump compilation target from es2020 to es2022
 
 ## Contributing & testing
 
@@ -563,21 +560,17 @@ v2.0 changelog:
 
 - `npm install && npm run build && npm test` will build the code and run tests.
 - `npm run lint` / `npm run format` will run linter / fix linter issues.
-- `npm run bench` will run benchmarks, which may need their deps first (`npm run bench:install`)
+- `npm run bench` will run benchmarks
 - `npm run build:release` will build single file
 - There is **additional** 20-min DoS test `npm run test:dos` and 2-hour "big" multicore test `npm run test:big`.
   See [our approach to testing](./test/README.md)
 
-NTT hashes are outside of scope of the library. They depend on some math which is not available in noble-hashes, it doesn't make sense to add it here. You can view some of them in different repos:
-
-- [Pedersen in micro-zk-proofs](https://github.com/paulmillr/micro-zk-proofs/blob/1ed5ce1253583b2e540eef7f3477fb52bf5344ff/src/pedersen.ts)
-- [Poseidon in noble-curves](https://github.com/paulmillr/noble-curves/blob/3d124dd3ecec8b6634cc0b2ba1c183aded5304f9/src/abstract/poseidon.ts)
-
-Polynomial MACs are also outside of scope of the library. They are rarely used outside of encryption. Check out [Poly1305 & GHash in noble-ciphers](https://github.com/paulmillr/noble-ciphers).
-
 Additional resources:
 
-- Check out [guidelines](https://github.com/paulmillr/guidelines) for coding practices
+- NTT hashes are outside of scope of the library. They depend on some math which is not available in noble-hashes, it doesn't make sense to add it here. You can view some of them in different repos:
+    - [Pedersen in micro-zk-proofs](https://github.com/paulmillr/micro-zk-proofs/blob/1ed5ce1253583b2e540eef7f3477fb52bf5344ff/src/pedersen.ts)
+    - [Poseidon in noble-curves](https://github.com/paulmillr/noble-curves/blob/3d124dd3ecec8b6634cc0b2ba1c183aded5304f9/src/abstract/poseidon.ts)
+- Polynomial MACs are also outside of scope of the library. They are rarely used outside of encryption. Check out [Poly1305 & GHash in noble-ciphers](https://github.com/paulmillr/noble-ciphers).
 - See [paulmillr.com/noble](https://paulmillr.com/noble/) for useful resources, articles, documentation and demos
   related to the library.
 

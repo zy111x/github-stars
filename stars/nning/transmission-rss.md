@@ -1,6 +1,6 @@
 ---
 project: transmission-rss
-stars: 456
+stars: 455
 description: |-
     Adds torrents from RSS feeds to Transmission web frontend
 url: https://github.com/nning/transmission-rss

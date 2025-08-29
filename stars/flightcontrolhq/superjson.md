@@ -1,6 +1,6 @@
 ---
 project: superjson
-stars: 5013
+stars: 5019
 description: |-
     Safely serialize JavaScript expressions to a superset of JSON, which includes Dates, BigInts, and more.
 url: https://github.com/flightcontrolhq/superjson

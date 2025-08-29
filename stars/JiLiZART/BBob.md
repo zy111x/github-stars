@@ -1,6 +1,6 @@
 ---
 project: BBob
-stars: 182
+stars: 183
 description: |-
     ⚡️Blazing fast js bbcode parser, that transforms and parses bbcode to AST and transform it to HTML, React, Vue with plugin support in pure javascript, no dependencies 
 url: https://github.com/JiLiZART/BBob

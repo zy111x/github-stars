@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 505
+stars: 614
 description: |-
     Render your React components to images. Available for Rust, Node.js, and WebAssembly.
 url: https://github.com/kane50613/takumi
@@ -21,13 +21,13 @@ For newcomers, check out the [Getting Started](https://takumi.kane.tw/docs/getti
 - Takes your existing JSX components and drops them in. It should just work.
 - RTL support.
 - WOFF2 font support. Trims your bundle size.
-- PNG, JPEG, WebP output support.
+- PNG, JPEG, WebP, AVIF output support.
 
 ## Showcase
 
-Takumi's Open Graph image is generated with Takumi.
+Takumi's Open Graph image is generated with Takumi [(source)](./example/twitter-images/components/og-image.tsx).
 
-[![Takumi OG Image](./example/og-image/og-image.png)](example/og-image/index.tsx)
+![Takumi OG Image](./example/twitter-images/output/og-image.png)
 
 ## License
 

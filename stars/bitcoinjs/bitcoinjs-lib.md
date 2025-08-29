@@ -1,6 +1,6 @@
 ---
 project: bitcoinjs-lib
-stars: 5896
+stars: 5898
 description: |-
     A javascript Bitcoin library for node.js and browsers.
 url: https://github.com/bitcoinjs/bitcoinjs-lib
@@ -81,7 +81,7 @@ Unfortunately, this isn't a silver bullet.
 Often, Javascript itself is working against us by bypassing these counter-measures.
 
 Problems in [`Buffer (UInt8Array)`](https://github.com/feross/buffer), for example, can trivially result in **catastrophic fund loss** without any warning.
-It can do this through undermining your random number generation, accidentally producing a [duplicate `k` value](https://www.nilsschneider.net/2013/01/28/recovering-bitcoin-private-keys.html), sending Bitcoin to a malformed output script, or any of a million different ways.
+It can do this through undermining your random number generation, accidentally producing a [duplicate `k` value](https://web.archive.org/web/20160308014317/http://www.nilsschneider.net/2013/01/28/recovering-bitcoin-private-keys.html), sending Bitcoin to a malformed output script, or any of a million different ways.
 Running tests in your target environment is important and a recommended step to verify continuously.
 
 Finally, **adhere to best practice**.

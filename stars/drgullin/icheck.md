@@ -1,6 +1,6 @@
 ---
 project: icheck
-stars: 7348
+stars: 7347
 description: |-
     Highly customizable checkboxes and radio buttons (jQuery & Zepto)
 url: https://github.com/drgullin/icheck

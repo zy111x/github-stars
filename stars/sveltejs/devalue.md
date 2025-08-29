@@ -1,6 +1,6 @@
 ---
 project: devalue
-stars: 2460
+stars: 2479
 description: |-
     Gets the job done when JSON.stringify can't
 url: https://github.com/sveltejs/devalue
@@ -18,6 +18,8 @@ Like `JSON.stringify`, but handles
 - `Map` and `Set`
 - `BigInt`
 - `ArrayBuffer` and Typed Arrays
+- `URL` and `URLSearchParams`
+- `Temporal`
 - custom types via replacers, reducers and revivers
 
 Try it out [here](https://svelte.dev/repl/138d70def7a748ce9eda736ef1c71239?version=3.49.0).

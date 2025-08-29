@@ -1,6 +1,6 @@
 ---
 project: riapi
-stars: 251
+stars: 252
 description: |-
     RESTful Image API Specification
 url: https://github.com/riapi/riapi

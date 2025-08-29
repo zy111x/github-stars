@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 11638
+stars: 12848
 description: |-
     Sim is an open-source AI agent workflow builder. Sim's interface is a lightweight, intuitive way to rapidly build and deploy LLMs that connect with your favorite tools.
 url: https://github.com/simstudioai/sim
@@ -168,7 +168,6 @@ Copilot is a Sim-managed service. To use Copilot on a self-hosted instance:
 
 - Go to https://sim.ai → Settings → Copilot and generate a Copilot API key
 - Set `COPILOT_API_KEY` in your self-hosted environment to that value
-- Host Sim on a publicly available DNS and set NEXT_PUBLIC_APP_URL and BETTER_AUTH_URL to that value ([ngrok](https://ngrok.com/))
 
 ## Tech Stack
 

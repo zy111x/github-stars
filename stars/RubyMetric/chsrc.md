@@ -1,6 +1,6 @@
 ---
 project: chsrc
-stars: 6206
+stars: 6232
 description: |-
     chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
@@ -13,6 +13,7 @@ url: https://github.com/RubyMetric/chsrc
  ! Doc Name      : README.md
  ! Doc Authors   : 曾奥然 <ccmywish@qq.com>
  ! Contributors  : Mikachu2333 <mikachu.23333@zohomail.com>
+ !               | BingChunMoLi <bingchunmoli@bingchunmoli.com>
  !               |
  ! Created On    : <2023-12-28>
  ! Last Modified : <2025-08-22>
@@ -482,7 +483,7 @@ chsrc set rust | cargo | crate
 chsrc set rustup
 
 chsrc set go
-chsrc set java    | maven | mvn | gradle
+chsrc set java    | maven | mvn | maven-daemon | mvnd | gradle
 chsrc set clojure | clojars
 chsrc set dart    | pub
 chsrc set flutter
