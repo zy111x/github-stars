@@ -1,6 +1,6 @@
 ---
 project: lmrouter
-stars: 114
+stars: 117
 description: |-
     An open-source, all-in-one AI API router.
 url: https://github.com/LMRouter/lmrouter
@@ -16,7 +16,7 @@ It’s an **open-source alternative to OpenRouter**, but goes far beyond languag
 
 - **Language**: Chat Completions, Responses API, Anthropic Messages
 - **Image**: Image generation and editing
-- **Audio**: Speech-to-text and audio models (coming soon)
+- **Audio**: Speech-to-text and audio models
 - **Video**: Video generation (coming soon)
 - **Embeddings**: Semantic search and RAG
 - **Search**: Jina, Exa, and other web search APIs (coming soon)
@@ -74,16 +74,19 @@ LMRouter provides drop-in compatibility with existing APIs, so applications that
 
 ```
 OpenAI API
-  /v1/openai/v1/chat/completions   — Chat Completions
-  /v1/openai/v1/images/generations — Image generation
-  /v1/openai/v1/images/edits       — Image editing
-  /v1/openai/v1/embeddings         — Embeddings
-  /v1/openai/v1/responses          — Responses
-  /v1/openai/v1/models             — List available models
+  /v1/openai/v1/chat/completions     — Chat Completions
+  /v1/openai/v1/images/generations   — Image generation
+  /v1/openai/v1/images/edits         — Image editing
+  /v1/openai/v1/embeddings           — Embeddings
+  /v1/openai/v1/responses            — Responses
+  /v1/openai/v1/audio/speech         — Audio speech
+  /v1/openai/v1/audio/transcriptions — Audio transcriptions
+  /v1/openai/v1/audio/translations   — Audio translations
+  /v1/openai/v1/models               — List available models
 
 Anthropic API
-  /v1/anthropic/v1/messages        — Messages
-  /v1/anthropic/v1/models          — List available models
+  /v1/anthropic/v1/messages          — Messages
+  /v1/anthropic/v1/models            — List available models
 ```
 
 ### Multi-Provider Support

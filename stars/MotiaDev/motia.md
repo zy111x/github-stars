@@ -1,6 +1,6 @@
 ---
 project: motia
-stars: 7475
+stars: 7509
 description: |-
     Modern Backend Framework that unifies APIs, background jobs, workflows, and AI Agents into a single core primitive with built-in observability and state management.
 url: https://github.com/MotiaDev/motia

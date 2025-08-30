@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 614
+stars: 630
 description: |-
     Render your React components to images. Available for Rust, Node.js, and WebAssembly.
 url: https://github.com/kane50613/takumi
@@ -20,6 +20,7 @@ For newcomers, check out the [Getting Started](https://takumi.kane.tw/docs/getti
 - Minimal binary size targets to run everywhere. Node.js, web, embedded in Rust, pre-built http server.
 - Takes your existing JSX components and drops them in. It should just work.
 - RTL support.
+- Variable fonts support.
 - WOFF2 font support. Trims your bundle size.
 - PNG, JPEG, WebP, AVIF output support.
 

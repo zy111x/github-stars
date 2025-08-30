@@ -1,6 +1,6 @@
 ---
 project: css-protips
-stars: 29365
+stars: 29374
 description: |-
     ⚡️ A collection of tips to help take your CSS skills pro 🦾
 url: https://github.com/AllThingsSmitty/css-protips

@@ -1,6 +1,6 @@
 ---
 project: mini-qr
-stars: 1407
+stars: 1405
 description: |-
     Create & scan cute qr codes easily 👾
 url: https://github.com/lyqht/mini-qr

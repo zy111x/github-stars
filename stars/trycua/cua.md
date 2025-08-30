@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 9453
+stars: 9476
 description: |-
     Cua is Docker for Computer-Use AI Agents
 url: https://github.com/trycua/cua
@@ -55,7 +55,7 @@ Missing a model? [Raise a feature request](https://github.com/trycua/cua/issues/
 
 - [Get started with a Computer-Use Agent UI](https://docs.trycua.com/docs/quickstart-ui)
 - [Get started with the Computer-Use Agent CLI](https://docs.trycua.com/docs/quickstart-cli)
-- [Get Started with the Python SDKs](https://docs.trycua.com/docs/quickstart-devs)
+- [Get started with the Python SDKs](https://docs.trycua.com/docs/quickstart-devs)
 
 <br/>
 
@@ -194,6 +194,14 @@ Cua is open-sourced under the MIT License - see the [LICENSE](LICENSE) file for 
 The base image `kasmweb/core-ubuntu-jammy` is maintained by [Kasm Technologies](https://github.com/kasmtech/workspaces-core-images) and distributed under the Apache License 2.0. Usage of that image is subject to its own license terms.  
 
 Microsoft's OmniParser, which is used in this project, is licensed under the Creative Commons Attribution 4.0 International License (CC-BY-4.0) - see the [OmniParser LICENSE](https://github.com/microsoft/OmniParser/blob/master/LICENSE) file for details.
+
+### Third-Party Licenses and Optional Components
+
+Some optional extras for this project depend on third-party packages that are licensed under terms different from the MIT License.
+
+- The optional "omni" extra (installed via `pip install "cua-agent[omni]"`) installs the `cua-som` module, which includes `ultralytics` and is licensed under the AGPL-3.0.
+
+When you choose to install and use such optional extras, your use, modification, and distribution of those third-party components are governed by their respective licenses (e.g., AGPL-3.0 for `ultralytics`).
 
 ## Contributing
 
