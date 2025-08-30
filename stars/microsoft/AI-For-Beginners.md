@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 39752
+stars: 39883
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---
@@ -11,6 +11,17 @@ Artificial Intelligence for Beginners - A Curriculum
 AI For Beginners - _Sketchnote by @girlie\_mac_
 
 Explore the world of **Artificial Intelligence** (AI) with our 12-week, 24-lesson curriculum! It includes practical lessons, quizzes, and labs. The curriculum is beginner-friendly and covers tools like TensorFlow and PyTorch, as well as ethics in AI
+
+### 🌐 Multi-Language Support
+
+#### Supported via GitHub Action (Automated & Always Up-to-Date)
+
+French | Spanish | German | Russian | Arabic | Persian (Farsi) | Urdu | Chinese (Simplified) | Chinese (Traditional, Macau) | Chinese (Traditional, Hong Kong) | Chinese (Traditional, Taiwan) | Japanese | Korean | Hindi | Bengali | Marathi | Nepali | Punjabi (Gurmukhi) | Portuguese (Portugal) | Portuguese (Brazil) | Italian | Polish | Turkish | Greek | Thai | Swedish | Danish | Norwegian | Finnish | Dutch | Hebrew | Vietnamese | Indonesian | Malay | Tagalog (Filipino) | Swahili | Hungarian | Czech | Slovak | Romanian | Bulgarian | Serbian (Cyrillic) | Croatian | Slovenian | Ukrainian | Burmese (Myanmar)
+
+**If you wish to have additional translations languages supported are listed here**
+
+Join the Community
+------------------
 
 What you will learn
 -------------------
@@ -296,7 +307,7 @@ If you have product feedback or questions whilst building visit our Azure AI Fou
 Quizzes
 -------
 
-> **A note about quizzes**: All quizzes are contained in the Quiz-app folder in etc\\quiz-app, They are linked from within the lessons the quiz app can be run locally or deployed to Azure; follow the instruction in the `quiz-app` folder. They are gradually being localized.
+> **A note about quizzes**: All quizzes are contained in the Quiz-app folder in etc\\quiz-app, or Online Here They are linked from within the lessons the quiz app can be run locally or deployed to Azure; follow the instruction in the `quiz-app` folder. They are gradually being localized.
 
 Help Wanted
 -----------

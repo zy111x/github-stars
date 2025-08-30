@@ -1,6 +1,6 @@
 ---
 project: clone-voice
-stars: 8701
+stars: 8705
 description: A sound cloning tool with a web interface, using your voice or any sound to record audio / 一个带web界面的声音克隆工具，使用你的音色或任意声音来录制音频
 url: https://github.com/jianchang512/clone-voice
 ---
@@ -21,12 +21,6 @@ CV声音克隆工具
 为保证合成效果，建议录制时长5秒到20秒，发音清晰准确，不要存在背景噪声。
 
 英文效果很棒，中文效果还凑合。
-
-> **\[赞助商\]**
-> 
-> 302.AI是一个按需付费的一站式AI应用平台，开放平台，开源生态, 302.AI开源地址
-> 
-> 集合了最新最全的AI模型和品牌/按需付费零月费/管理和使用分离/所有AI能力均提供API/每周推出2-3个新应用
 
 视频演示
 ====
