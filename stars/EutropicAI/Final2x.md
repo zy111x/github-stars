@@ -1,8 +1,8 @@
 ---
 project: Final2x
-stars: 6637
+stars: 6640
 description: a cross-platform image super-resolution tool
-url: https://github.com/TensoRaws/Final2x
+url: https://github.com/EutropicAI/Final2x
 ---
 
 Final2x
