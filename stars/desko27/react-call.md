@@ -1,6 +1,6 @@
 ---
 project: react-call
-stars: 902
+stars: 903
 description: |-
     ⚛️ 📡 Call your React components
 url: https://github.com/desko27/react-call
@@ -103,6 +103,40 @@ const accepted = await Confirm.call({ message: 'Continue?' })
 ```
 
 Check out [the demo site](https://react-call.desko.dev/) to see some live examples of other React components being called.
+
+# Lazy loading
+
+Use React.lazy to code-split callable components and load them on demand.
+
+```tsx
+import { createCallable } from 'react-call'
+import { lazy, Suspense } from 'react'
+
+// 1) Lazy-load your component
+const Confirm = createCallable(
+  lazy(() => import('./Confirm')), // default export required
+)
+
+// 2) Place Root inside a Suspense boundary
+export function App() {
+  return (
+    <>
+      {/* Other app UI */}
+      <Suspense fallback={null}>
+        <Confirm.Root />
+      </Suspense>
+    </>
+  )
+}
+
+// 3) Call it as usual (component is fetched on first call)
+const accepted = await Confirm.call({ message: 'Continue?' })
+```
+
+Notes:
+- Make sure the lazily imported file has a default export (React.lazy requirement).
+- Wrap `<Confirm.Root />` (or an ancestor) in `<Suspense>` to handle the loading state.
+- The lazy component is split into a separate chunk and downloaded only when first called.
 
 # Advanced usage
 

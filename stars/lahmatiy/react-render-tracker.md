@@ -1,6 +1,6 @@
 ---
 project: react-render-tracker
-stars: 2392
+stars: 2393
 description: |-
     React render tracker – a tool to discover performance issues related to unintentional re-renders and unmounts
 url: https://github.com/lahmatiy/react-render-tracker

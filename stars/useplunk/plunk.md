@@ -1,6 +1,6 @@
 ---
 project: plunk
-stars: 4464
+stars: 4491
 description: |-
     The Open-Source Email Platform
 url: https://github.com/useplunk/plunk

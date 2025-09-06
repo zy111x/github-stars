@@ -1,6 +1,6 @@
 ---
 project: solidtime
-stars: 7303
+stars: 7344
 description: |-
     Modern open-source time-tracking app
 url: https://github.com/solidtime-io/solidtime

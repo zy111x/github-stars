@@ -1,6 +1,6 @@
 ---
 project: oblivion-desktop
-stars: 7958
+stars: 8000
 description: |-
     Oblivion Desktop - Unofficial Warp Client for Windows/Mac/Linux
 url: https://github.com/bepass-org/oblivion-desktop
@@ -60,9 +60,10 @@ technology.
         <tr>
             <td>Method</td>
             <td>
-                :white_check_mark:  WARP & WARP+ <br>
+                :white_check_mark:  WARP<br>
                 :white_check_mark:  Gool<br>
-                :white_check_mark:  Cfon <small>(Psiphon)</small>
+                :white_check_mark:  Cfon <small>(Psiphon)</small><br>
+                :white_check_mark:  Masque
             </td>
         </tr>
         <tr>
@@ -234,6 +235,7 @@ This project owes its existence to the groundbreaking work of others. We extend 
 - [warp-plus](https://github.com/bepass-org/warp-plus/) (Yousef Ghobadi & Mark Pashmfouroush)
 - [Oblivion](https://github.com/bepass-org/oblivion)
 - [Oblivion Helper](https://github.com/ShadowZagrosDev/oblivion-helper) (GPLv3)
+- [Masque-Plus](https://github.com/ircfspace/masque-plus)
 - [Electron](https://www.electronjs.org/)
 - [React](https://github.com/facebook/react)
 - [electron-react-boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate)

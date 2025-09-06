@@ -1,6 +1,6 @@
 ---
 project: lmrouter
-stars: 117
+stars: 186
 description: |-
     An open-source, all-in-one AI API router.
 url: https://github.com/LMRouter/lmrouter
@@ -33,19 +33,19 @@ The demo environment proxies requests to OpenRouter and supports both the **Open
 **Connect Claude Code to LMRouter**
 
 ```bash
-ANTHROPIC_BASE_URL=https://api.lmrouter.com/v1/anthropic \
+ANTHROPIC_BASE_URL=https://api.lmrouter.com/anthropic \
 ANTHROPIC_AUTH_TOKEN=BYOK:<YOUR_OPENROUTER_API_KEY> \
 ANTHROPIC_MODEL=<YOUR_MODEL_NAME> claude
 ```
 
 ### Local Development/Deployment
 
-To setup LMRouter locally, make sure you have Node.js installed, then follow these steps:
+To setup LMRouter locally, make sure you have Node.js and [pnpm](https://pnpm.io/installation) installed, then follow these steps:
 
 ```bash
 git clone https://github.com/LMRouter/lmrouter
 cd lmrouter
-npm install
+pnpm i
 cp config/config.example.yaml config/config.yaml
 ```
 
@@ -53,17 +53,17 @@ Edit `config/config.yaml` to set up your own provider and model configurations.
 
 ```bash
 # Run the server in development mode
-npm run dev
+pnpm dev
 
 # Run the server in production mode
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
-Alternatively, you can use `npx` to run the server:
+Alternatively, you can use `pnpx` to run the server:
 
 ```bash
-npx @lmrouter/cli /path/to/config.yaml
+pnpx @lmrouter/cli /path/to/config.yaml
 ```
 
 ## Features
@@ -74,19 +74,19 @@ LMRouter provides drop-in compatibility with existing APIs, so applications that
 
 ```
 OpenAI API
-  /v1/openai/v1/chat/completions     — Chat Completions
-  /v1/openai/v1/images/generations   — Image generation
-  /v1/openai/v1/images/edits         — Image editing
-  /v1/openai/v1/embeddings           — Embeddings
-  /v1/openai/v1/responses            — Responses
-  /v1/openai/v1/audio/speech         — Audio speech
-  /v1/openai/v1/audio/transcriptions — Audio transcriptions
-  /v1/openai/v1/audio/translations   — Audio translations
-  /v1/openai/v1/models               — List available models
+  /openai/v1/chat/completions     — Chat Completions
+  /openai/v1/images/generations   — Image generation
+  /openai/v1/images/edits         — Image editing
+  /openai/v1/embeddings           — Embeddings
+  /openai/v1/responses            — Responses
+  /openai/v1/audio/speech         — Audio speech
+  /openai/v1/audio/transcriptions — Audio transcriptions
+  /openai/v1/audio/translations   — Audio translations
+  /openai/v1/models               — List available models
 
 Anthropic API
-  /v1/anthropic/v1/messages          — Messages
-  /v1/anthropic/v1/models            — List available models
+  /anthropic/v1/messages          — Messages
+  /anthropic/v1/models            — List available models
 ```
 
 ### Multi-Provider Support

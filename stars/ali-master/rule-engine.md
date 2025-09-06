@@ -1,6 +1,6 @@
 ---
 project: rule-engine
-stars: 50
+stars: 189
 description: |-
     The ultimate JSON-based rule engine that turns complex business logic into declarative configurations. Built for developers who believe code should be expressive, not repetitive.
 url: https://github.com/ali-master/rule-engine
@@ -514,7 +514,7 @@ console.log(insights);
 | Complex Rules (priority-based) | ~8,000 | 0.126ms | ⚡ Very Fast |
 | Array Operations | ~45,400 | 0.022ms | 🚀 Ultra Fast |
 
-### Advanced Features  
+### Advanced Features
 | Feature | Hz (ops/sec) | Avg Time | Performance Grade |
 |---------|-------------|----------|-------------------|
 | **JSONPath Resolution (simple)** | **~55,000** | **0.018ms** | **🔥 Blazing Fast** |
@@ -800,6 +800,16 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENCE) fi
 - 🐛 **[Issue Tracker](https://github.com/ali-master/rule-engine/issues)** - Bug reports and feature requests
 - 💭 **[Discussions](https://github.com/ali-master/rule-engine/discussions)** - Community Q&A and ideas
 - 📧 **[Email](mailto:ali_4286@live.com)** - Direct contact
+
+## Star History
+
+<a href="https://www.star-history.com/#ali-master/rule-engine&Date&LogScale">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=ali-master/rule-engine&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=ali-master/rule-engine&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=ali-master/rule-engine&type=Date" />
+ </picture>
+</a>
 
 ---
 

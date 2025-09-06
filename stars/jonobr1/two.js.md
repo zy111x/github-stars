@@ -1,6 +1,6 @@
 ---
 project: two.js
-stars: 8519
+stars: 8520
 description: |-
     A renderer agnostic two-dimensional drawing api for the web
 url: https://github.com/jonobr1/two.js

@@ -1,6 +1,6 @@
 ---
 project: VeryNginx
-stars: 5992
+stars: 5993
 description: |-
      A very powerful and friendly  nginx base on lua-nginx-module( openresty ) which provide WAF, Control Panel, and Dashboards. 
 url: https://github.com/alexazhou/VeryNginx

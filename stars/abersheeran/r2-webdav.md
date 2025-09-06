@@ -1,6 +1,6 @@
 ---
 project: r2-webdav
-stars: 266
+stars: 267
 description: |-
     Use Cloudflare Workers to provide a WebDav interface for Cloudflare R2.
 url: https://github.com/abersheeran/r2-webdav

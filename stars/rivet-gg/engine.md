@@ -1,9 +1,9 @@
 ---
-project: rivet
-stars: 4264
+project: engine
+stars: 4352
 description: |-
-    🔩 The open-source alternative to Durable Objects. Rivet Actors provide long-lived processes with durable state, realtime, and scalability.
-url: https://github.com/rivet-gg/rivet
+    Scale and orchestrate RivetKit
+url: https://github.com/rivet-gg/engine
 ---
 
 <!-- 

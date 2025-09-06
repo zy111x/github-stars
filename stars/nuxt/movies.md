@@ -1,6 +1,6 @@
 ---
 project: movies
-stars: 2147
+stars: 2146
 description: |-
     🍿 A TMDB client built with Nuxt 3
 url: https://github.com/nuxt/movies

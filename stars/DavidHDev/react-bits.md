@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 23125
+stars: 23839
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building memorable websites.
 url: https://github.com/DavidHDev/react-bits
@@ -36,21 +36,20 @@ Go to [reactbits.dev](https://reactbits.dev/) to view the documentation.
 
 ## About
 
-React Bits is a large collection of animated React components made to spice up your web creations. We've got animations, components, backgrounds, and awesome stuff that you won't be able to find anywhere else - all free for you to use! These components are all enhanced with customization options as props, to make it easy for you to get exactly what you need.
+React Bits is a collection of animated React components, made to help you stand out through your web creations. We have four main component categories - text animations, animations, components and backgrounds - all free for you to use and all enhanced with customization options as props, to make it easy for you to get exactly what you need out of the box.
 
 ## Key Features
-- 100+ total components (text animations, animations, components, backgrounds), growing every week
-- All components have minimal dependencies, and are highly customizable through props
-- Designed to integrate seamlessly with any modern React project
-- Each component comes in 4 variants, to keep everyone happy:
-  - JS + CSS
-  - JS + Tailwind CSS
-  - TS + CSS
-  - TS + Tailwind CSS
 
-## CLI (<a href="https://jsrepo.dev"><img src="https://jsrepo.dev/badges/jsrepo.svg" width="50" alt="jsrepo"></a>)
-React Bits uses [jsrepo](https://jsrepo.dev) for installing components via CLI. </br>
-The setup steps can be found on each component's page in the [documentation](https://reactbits.dev/).
+- 110+ total components (text animations, animations, components, backgrounds), growing every week
+- All components are built with minimal dependencies, and are highly customizable through props
+- You get the code, so you can further personalize and enhance the components
+- Designed to integrate seamlessly with any modern React project
+- Components come in 4 variants, to keep everyone happy: JS-CSS, JS-TW, TS-CSS, TS-TW
+
+## Installing Components Via CLI
+
+React Bits supports both [shadcn](https://ui.shadcn.com/) and [jsrepo](https://jsrepo.dev) for quick installs. </br>
+Each component demo provides CLI commands, ready for you to copy and run. Detailed instructions can also be found [here](https://reactbits.dev/get-started/installation).
 
 ## How To Contribute?
 
@@ -72,13 +71,16 @@ Please review the [Contribution Guide](https://github.com/DavidHDev/react-bits/b
 VueJS → https://vue-bits.dev/
 
 ## Stats
-![Alt](https://repobeats.axiom.co/api/embed/b1bf4dc0226458617adbdbf5586f2df953eb0922.svg "Repobeats analytics image")
+
+![Alt](https://repobeats.axiom.co/api/embed/b1bf4dc0226458617adbdbf5586f2df953eb0922.svg 'Repobeats analytics image')
 
 ## Sponsorship
+
 You can help support the project by using the Sponsor button on the page - please note that any donations received will go strictly towards paying hosting costs, nothing else.
 
 ## Credit
-React Bits may sometimes take inspiration from publicly available code examples online. These examples are rewritten as full-fledged, customizable, and reusable components for JS, TS, CSS, and Tailwind codebases. If you recognize your work here, just request credit and it will be granted.
+
+React Bits may sometimes take inspiration from publicly available code examples online. These examples are rewritten as full-fledged, customizable, and reusable components for JS, TS, CSS, and Tailwind codebases. If you recognize any of your work here, just request credit and it will be granted.
 
 ## License
 

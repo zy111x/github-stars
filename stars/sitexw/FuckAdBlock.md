@@ -1,6 +1,6 @@
 ---
 project: FuckAdBlock
-stars: 1907
+stars: 1906
 description: |-
     Detects ad blockers (AdBlock, ...)
 url: https://github.com/sitexw/FuckAdBlock

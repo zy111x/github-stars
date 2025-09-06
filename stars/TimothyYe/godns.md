@@ -1,6 +1,6 @@
 ---
 project: godns
-stars: 1609
+stars: 1611
 description: |-
     A dynamic DNS client tool that supports AliDNS, Cloudflare, Google Domains, DNSPod, HE.net & DuckDNS & DreamHost, etc, written in Go.
 url: https://github.com/TimothyYe/godns
@@ -39,6 +39,7 @@ url: https://github.com/TimothyYe/godns
 - [Usage](#usage)
 - [Configuration](#configuration)
   - [Overview](#overview)
+  - [Multi-Provider Support](#multi-provider-support)
   - [Configuration file format](#configuration-file-format)
   - [Dynamic loading of configuration](#dynamic-loading-of-configuration)
   - [Configuration properties](#configuration-properties)
@@ -204,6 +205,17 @@ Usage of ./godns:
 - Configure your provider, domain/subdomain info, credentials, etc.
 - Configure a notification medium (e.g. SMTP to receive emails) to get notified when your IP address changes
 - Place the file in the same directory of GoDNS or use the `-c=path/to/your/file.json` option
+
+### Multi-Provider Support
+
+🆕 **GoDNS now supports multiple DNS providers simultaneously!**
+
+You can now configure domains from different DNS providers in a single configuration file, allowing you to:
+- Manage domains across multiple DNS services (Cloudflare, DNSPod, DigitalOcean, etc.)
+- Use provider-specific credentials for each service
+- Maintain full backward compatibility with existing single-provider configurations
+
+📖 **[View the complete Multi-Provider Configuration Guide](MULTI_PROVIDER.md)** for detailed setup instructions and examples.
 
 ### Configuration file format
 
