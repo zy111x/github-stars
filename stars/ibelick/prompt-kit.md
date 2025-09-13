@@ -1,6 +1,6 @@
 ---
 project: prompt-kit
-stars: 1994
+stars: 2011
 description: |-
     Core building blocks for AI apps.  High-quality, accessible, and customizable components for AI interfaces.
 url: https://github.com/ibelick/prompt-kit

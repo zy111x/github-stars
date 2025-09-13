@@ -1,6 +1,6 @@
 ---
 project: godns
-stars: 1611
+stars: 1629
 description: |-
     A dynamic DNS client tool that supports AliDNS, Cloudflare, Google Domains, DNSPod, HE.net & DuckDNS & DreamHost, etc, written in Go.
 url: https://github.com/TimothyYe/godns
@@ -62,6 +62,7 @@ url: https://github.com/TimothyYe/godns
     - [Infomaniak](#infomaniak)
     - [Hetzner](#hetzner)
     - [OVH](#ovh)
+    - [Porkbun](#porkbun)
     - [Dynu](#dynu)
     - [IONOS](#ionos)
     - [TransIP](#transip)
@@ -121,6 +122,7 @@ url: https://github.com/TimothyYe/godns
 | [Infomaniak][infomaniak]              | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
 | [Hetzner][hetzner]                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [OVH][ovh]                            | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
+| [Porkbun][porkbun]                    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | [Dynu][dynu]                          | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
 | [IONOS][ionos]                        | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
 | [TransIP][transip]                    | :white_check_mark: | :white_check_mark: |        :x:         | :white_check_mark: |
@@ -142,6 +144,7 @@ url: https://github.com/TimothyYe/godns
 [infomaniak]: https://www.infomaniak.com/
 [hetzner]: https://hetzner.com/
 [ovh]: https://www.ovh.com
+[porkbun]: https://porkbun.com/
 [dynu]: https://www.dynu.com/
 [ionos]: https://www.ionos.com/
 [transip]: https://www.transip.net/
@@ -831,6 +834,32 @@ More info: [help.ovhcloud.com](https://help.ovhcloud.com/csm/en-gb-api-getting-s
 }
 ```
 
+</details>
+
+#### Porkbun
+For Porkbun, you need to provide your API key as `login_token` and secret key as `password`.
+Get your API credentials from [Porkbun API Management](https://porkbun.com/account/api).
+
+<details>
+<summary>Example</summary>
+
+```json
+{
+  "provider": "Porkbun",
+  "login_token": "pk1_your_api_key",
+  "password": "sk1_your_secret_key",
+  "domains": [
+    {
+      "domain_name": "example.com",
+      "sub_domains": ["@", "www", "test"]
+    }
+  ],
+  "resolver": "8.8.8.8",
+  "ip_urls": ["https://api.ipify.org"],
+  "ip_type": "IPv4",
+  "interval": 300
+}
+```
 </details>
 
 #### Dynu

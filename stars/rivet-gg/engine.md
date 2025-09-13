@@ -1,6 +1,6 @@
 ---
 project: engine
-stars: 4352
+stars: 4370
 description: |-
     Scale and orchestrate RivetKit
 url: https://github.com/rivet-gg/engine
@@ -48,15 +48,14 @@ Public-facing projects:
 
 - **Rivet Engine** (you are here): Engine that powers Rivet Actors at scale
 - **[RivetKit](https://github.com/rivet-gg/rivetkit)**: Lightweight TypeScript library for building Rivet Actors — works with Redis or Rivet Engine
-- **[Rivet Studio](/frontend/apps/studio)**: Like Postman, but for Rivet Actors
-- **[Rivet Hub](/frontend/apps/hub)**: UI for Rivet Engine
+- **[Rivet Hub](/frontend/)**: UI for Rivet Engine
 - **[Rivet Documentation](/site/src/content/docs)**
 
 Projects powering Rivet Engine:
 
-- **[Pegboard](packages/edge/services/pegboard/)**: Actor orchestrator
-- **[Guard](packages/edge/infra/guard/)**: Proxy for routing traffic to Rivet Actors
-- **[Chirp](packages/common/chirp-workflow/)**: Core workflow engine that powers Rivet
+- **[Pegboard](packages/services/pegboard/)**: Actor orchestrator
+- **[Guard](packages/core/guard/)**: Proxy for routing traffic to Rivet Actors
+- **[Gasoline](packages/common/gasoline/)**: Core durable execution engine that powers Rivet
 
 ## Get Started
 

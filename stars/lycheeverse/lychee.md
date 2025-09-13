@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2929
+stars: 2943
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -125,6 +125,12 @@ pkg install lychee
 ```sh
  # available for Alpine Edge in testing repositories
 apk add lychee
+```
+
+### WinGet (Windows)
+
+```sh
+winget install --id lycheeverse.lychee
 ```
 
 ### Chocolatey (Windows)

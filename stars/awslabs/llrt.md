@@ -1,6 +1,6 @@
 ---
 project: llrt
-stars: 8606
+stars: 8609
 description: |-
     LLRT (Low Latency Runtime) is an experimental, lightweight JavaScript runtime designed to address the growing demand for fast and efficient Serverless applications.
 url: https://github.com/awslabs/llrt
@@ -538,6 +538,10 @@ Set a memory threshold in MB for garbage collection. Default threshold is 20MB
 ### `LLRT_HTTP_VERSION=value`
 
 Extends the HTTP request version. By default, only HTTP/1.1 is enabled. Specifying '2' will enable HTTP/1.1 and HTTP/2.
+
+### `LLRT_SDK_CONNECTION_WARMUP=1`
+
+Initializes TLS connections in parallel during function init which significantly reduces cold starts due. Enabled by default, can be disabled with value `0` or `false`
 
 ### `LLRT_LOG=[target][=][level][,...]`
 

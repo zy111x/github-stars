@@ -1,6 +1,6 @@
 ---
 project: jaaz
-stars: 2507
+stars: 4419
 description: |-
     The world's first open-source multimodal creative assistant  This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.
 url: https://github.com/11cafe/jaaz
@@ -17,8 +17,17 @@ url: https://github.com/11cafe/jaaz
 </p>
 
 </h2>
-<p align="center">The world's first open-source multimodal creative assistant</p>
+<p align="center">The world's first open-source multimodal canvas creative agent</p>
 <p align="center">This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.</p>
+<p>
+  <b>📣 [New!] Enterprise Cloud “Full” Edition</b> — Private/on-prem deployment & commercial licensing (Docker image or full source). Includes all jaaz.app online features. 
+  <b>30% OFF</b> through <b>Sep 15, 2025</b>. 
+  <a href="mailto:info@jaaz.app">Contact us →</a> info@jaaz.app
+  <br>
+  <br>
+  <b>📣 [New!] 企业云端完整版</b> — 支持<span>私有化部署</span>与<span>商业授权</span>（Docker 镜像或源码交付），包含 jaaz.app 全量线上功能。限时 <b>30% OFF</b>，截止 <b>2025-09-15</b>。 
+  <a href="mailto:info@jaaz.app">了解/洽谈 →</a> info@jaaz.app
+</p>
 <br><br>
 
 <p align="center">
@@ -154,7 +163,8 @@ Support for multi-user private deployment of enterprise teams, ensuring privacy 
 Please contact via email: aifoxdw@gmail.com
 
 WeChat: aifox1
-<img width="600" alt="Screenshot 2025-06-02 at 3 51 56 AM" src="https://github.com/user-attachments/assets/dc479c9b-d6ad-43ef-ad89-ad672991d86c" />
+<img width="500" alt="Screenshot 2025-06-02 at 3 51 56 AM" src="https://github.com/user-attachments/assets/d5c54eda-120b-4fc2-a571-68fcab440868" />
+
 
 ## Manual Install (For Linux or local builds)
 
@@ -193,6 +203,12 @@ VSCode/Cursor Install Extensions：
 `pip install -r requirements.txt`
 
 `python main.py`
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 ---
 project: CloudflareSpeedTest
-stars: 22879
+stars: 22939
 description: |-
     🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~
 url: https://github.com/XIU2/CloudflareSpeedTest
@@ -848,8 +848,8 @@ _**English language version of CFST (Text language differences only) [#64](https
 
 - _https://github.com/Spedoske/CloudflareScanner_
 
-> _因为该项目已经很长时间没更新了，而我又产生了很多功能需求，所以我临时学了下 Go 语言就上手了（菜）..._  
-> _本软件基于该项目制作，但**已添加大量功能及修复 BUG**，并根据大家的使用反馈积极添加、优化功能（闲）..._
+> _因为该项目已经很长时间没更新了，而我又产生了很多功能需求，所以我临时学了下 Go 语言就上手了 (菜)..._  
+> _本软件基于该项目，但**已彻底重构并添加大量功能/修复BUG**，根据大家的使用反馈积极添加/优化功能 (闲)..._
 
 ****
 

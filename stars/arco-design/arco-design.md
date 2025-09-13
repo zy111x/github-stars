@@ -1,6 +1,6 @@
 ---
 project: arco-design
-stars: 5403
+stars: 5412
 description: |-
     A comprehensive React UI components library based on Arco Design
 url: https://github.com/arco-design/arco-design

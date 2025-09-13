@@ -1,6 +1,6 @@
 ---
 project: valibot
-stars: 7967
+stars: 7976
 description: |-
     The modular and type safe schema library for validating structural data 🤖
 url: https://github.com/fabian-hiller/valibot

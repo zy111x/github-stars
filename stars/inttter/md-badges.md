@@ -1,6 +1,6 @@
 ---
 project: md-badges
-stars: 1172
+stars: 1198
 description: |-
     An extensive list of Shields.io badges.
 url: https://github.com/inttter/md-badges

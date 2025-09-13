@@ -1,10 +1,14 @@
 ---
 project: solstatus
-stars: 758
+stars: 757
 description: |-
     An uptime monitoring service that is easy and cheap to run at scale. Create endpoint checks for uptime, latency, and status code. Supports OpsGenie for alerts.
 url: https://github.com/unibeck/solstatus
 ---
+
+> [!IMPORTANT]
+> This project has been archived. The original purpose was to run affordable URL checks at scale, though now Checkly offers 
+> affordable basic checks with more integrations and features.
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/unibeck/solstatus)
 ![GitHub](https://img.shields.io/github/license/unibeck/solstatus)

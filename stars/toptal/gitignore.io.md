@@ -1,6 +1,6 @@
 ---
 project: gitignore.io
-stars: 8560
+stars: 8566
 description: |-
     Create useful .gitignore files for your project
 url: https://github.com/toptal/gitignore.io

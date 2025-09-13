@@ -1,6 +1,6 @@
 ---
 project: synesthesia
-stars: 20
+stars: 21
 description: |-
     null
 url: https://github.com/panphora/synesthesia

@@ -1,6 +1,6 @@
 ---
 project: opennhp
-stars: 13683
+stars: 13684
 description: |-
     A lightweight, cryptography-powered, open-source toolkit built to enforce Zero Trust security for infrastructure, applications, and data in the AI-driven world.
 url: https://github.com/OpenNHP/opennhp
@@ -70,7 +70,7 @@ Follow our [quick start tutorial](https://opennhp.org/nhp_quick_start/) to build
 
 ---
 
-## Vision: Making the Internet Trustworthy
+## Vision: Reinventing the Internet for Trust in the AI Era
 
 The openness of TCP/IP protocols has driven the explosive growth of internet applications but also exposed vulnerabilities, allowing malicious actors to gain unauthorized access and exploit any exposed IP address. Although the [OSI network model](https://en.wikipedia.org/wiki/OSI_model) defines the *5th layer (Session Layer)* for managing connections, few effective solutions have been implemented to address this.
 
@@ -203,6 +203,15 @@ The Single Packet Authorization (SPA) protocol is included in the [Software Defi
 | **Extensibility** | None, only for SDP | All-purpose | Support any scenario that needs service darkening |
 | **Interoperability** | Not available | Customizable| NHP can seamlessly integrate with existing protocols (e.g., DNS, FIDO, etc.) |
 
+## Performance Benchmarks
+
+| Operation | Throughput | Latency |
+|-----------|------------|---------|
+| Authentication | 10K req/s | < 10ms |
+| Port Hiding | 100K req/s | < 1ms |
+| DNS Resolution | 50K req/s | < 5ms |
+
+*Tested on AWS t3.xlarge instance
 
 ## Contributing
 

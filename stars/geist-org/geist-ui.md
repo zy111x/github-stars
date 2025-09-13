@@ -1,6 +1,6 @@
 ---
 project: geist-ui
-stars: 4478
+stars: 4477
 description: |-
     A design system for building modern websites and applications.
 url: https://github.com/geist-org/geist-ui

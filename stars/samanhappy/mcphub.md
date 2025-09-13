@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 1185
+stars: 1225
 description: |-
     A unified hub for centralized management and dynamic organization of multiple MCP servers into streamable HTTP (SSE) endpoints, with support for flexible routing strategies
 url: https://github.com/samanhappy/mcphub
@@ -8,7 +8,7 @@ url: https://github.com/samanhappy/mcphub
 
 # MCPHub: The Unified Hub for Model Context Protocol (MCP) Servers
 
-English | [中文版](README.zh.md)
+English | [Français](README.fr.md) | [中文版](README.zh.md)
 
 MCPHub makes it easy to manage and scale multiple MCP (Model Context Protocol) servers by organizing them into flexible Streamable HTTP (SSE) endpoints—supporting access to all servers, individual servers, or logical server groups.
 

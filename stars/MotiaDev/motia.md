@@ -1,6 +1,6 @@
 ---
 project: motia
-stars: 7701
+stars: 8267
 description: |-
     Modern Backend Framework that unifies APIs, background jobs, workflows, and AI Agents into a single core primitive with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
@@ -57,13 +57,13 @@ url: https://github.com/MotiaDev/motia
 
 **Motia solves backend fragmentation.** 
 
-Modern software engineering is splintered – APIs live in one framework, background jobs in another, queues have their own tooling, and AI agents are springing up in yet more isolated runtimes. **This fragmentation demands a unified system.**
+Modern software engineering is disjointed – APIs live in one framework, background jobs in another, queues have their own tooling, and AI agents are springing up in yet more isolated runtimes. **This fragmentation demands a unified system.**
 
-Motia unifies APIs, background jobs, workflows, and AI agents into a **single coherent system** with shared observability and developer experience. Similar to how React simplified frontend development where everything is a component, **Motia simplifies backend development where everything is a Step**.
+Motia unifies APIs, background jobs, workflows, and AI agents into a **single coherent system** with shared observability and developer experience. Similar to how React simplified frontend development, where everything is a component, **Motia simplifies backend development, where everything is a Step**.
 
 Write **JavaScript, TypeScript, Python, and more** in the same workflow. **What used to take 5 frameworks to build now comes out of the box with Motia.**
 
-[![Motia combines APIs, background queues, and AI agents into one system](assets/Motia_Github_Repository_GIF.gif)](https://motia.dev)
+[![Motia combines APIs, background queues, and AI agents into one system](assets/github-readme-banner.gif)](https://motia.dev)
 
 ## 🚀 Quickstart
 
@@ -72,7 +72,7 @@ Get Motia project up and running in **under 60 seconds**:
 ### 1. Bootstrap a New Motia Project
 
 ```bash
-npx motia@latest create -i   # runs the interactive terminal
+npx motia@latest create   # runs the interactive terminal
 ```
 
 Follow the prompts to pick a template, project name, and language.

@@ -1,6 +1,6 @@
 ---
 project: rss.style
-stars: 28
+stars: 29
 description: |-
     Better-looking RSS & Atom links when viewed in a browser
 url: https://github.com/fileformat/rss.style

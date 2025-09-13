@@ -1,6 +1,6 @@
 ---
 project: mcp-handler
-stars: 343
+stars: 381
 description: |-
     Easily spin up an MCP Server on Next.js, Nuxt, Svelte, and more
 url: https://github.com/vercel/mcp-handler
@@ -8,7 +8,7 @@ url: https://github.com/vercel/mcp-handler
 
 # mcp-handler
 
-A Vercel adapter for the Model Context Protocol (MCP), enabling real-time communication between your applications and AI models. Currently supports Next.js with more framework adapters coming soon.
+A Vercel adapter for the Model Context Protocol (MCP), enabling real-time communication between your applications and AI models. Currently supports Next.js and Nuxt with more framework adapters coming soon.
 
 ## Installation
 
@@ -58,11 +58,12 @@ const handler = createMcpHandler(
 export { handler as GET, handler as POST };
 ```
 
-## Advanced Routing
+### Advanced Routing
+
 ```typescript
 // app/dynamic/[p]/[transport]/route.ts
 
-import { createMcpHandler } from "@vercel/mcp-adapter";
+import { createMcpHandler } from "mcp-handler";
 import type { NextRequest } from "next/server";
 import { z } from "zod";
 
@@ -104,8 +105,36 @@ const handler = async (
   )(req);
 };
 export { handler as GET, handler as POST, handler as DELETE };
+```
 
+## Nuxt Usage
 
+```typescript
+// server/api/mcp/[transport].ts
+
+import { createMcpHandler } from "mcp-handler";
+import { getHeader, defineEventHandler, fromWebHandler } from "h3";
+import { z } from "zod";
+
+const handler = createMcpHandler((server) => {
+  server.tool(
+    "roll_dice",
+    "Rolls an N-sided die",
+    {
+      sides: z.number().int().min(2)
+    },
+    async ({ sides }) => {
+      const value = 1 + Math.floor(Math.random() * sides)
+      return {
+        content: [{ type: "text", text: `🎲 You rolled a ${value}!` }]
+      }
+    }
+  )
+}, {
+  // Optional server options
+});
+
+export default fromWebHandler(handler);
 ```
 
 ## Connecting to your MCP server via stdio

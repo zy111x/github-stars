@@ -1,6 +1,6 @@
 ---
 project: cssesc
-stars: 173
+stars: 174
 description: |-
     A JavaScript library for escaping CSS strings and identifiers while generating the shortest possible ASCII-only output.
 url: https://github.com/mathiasbynens/cssesc

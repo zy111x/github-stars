@@ -1,6 +1,6 @@
 ---
 project: animate-ui
-stars: 2283
+stars: 2518
 description: |-
     Fully animated, open-source component distribution built with React, TypeScript, Tailwind CSS, Motion, and Shadcn CLI. Browse a list of components you can install, modify, and use in your projects.
 url: https://github.com/imskyleen/animate-ui
@@ -12,17 +12,13 @@ url: https://github.com/imskyleen/animate-ui
     A fully animated, open-source component distribution built with React, TypeScript, Tailwind CSS, and Motion.
 </p>
 
-<a href="https://github.com/animate-ui/animate-ui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/animate-ui/animate-ui?style=for-the-badge"></a>
+<a href="https://github.com/imskyleen/animate-ui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/animate-ui/animate-ui?style=for-the-badge"></a>
 <a href="https://twitter.com/animate_ui"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/animate_ui?style=for-the-badge&logo=x"></a>
-<a href="https://github.com/animate-ui/animate-ui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge"></a>
+<a href="https://github.com/imskyleen/animate-ui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge"></a>
 
 </div>
 
 ![hero](https://animate-ui.com/og-image.png)
-
-## Beta
-
-Animate UI is currently in **Beta phase**, so it's possible that the components contain **bugs** and that these will be **modified regularly**.
 
 ## Documentation
 
@@ -30,9 +26,14 @@ Visit [animate-ui.com](https://animate-ui.com/docs) to view the documentation.
 
 ## Contributing
 
-Visit our [contributing guide](https://github.com/animate-ui/animate-ui/blob/main/CONTRIBUTING.md) to learn how to contribute.
+Visit our [contributing guide](https://github.com/imskyleen/animate-ui/blob/main/CONTRIBUTING.md) to learn how to contribute.
+
+## Code of Conduct
+
+This project follows a Code of Conduct to help create a welcoming community.
+Please read [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) before contributing.
 
 ## License
 
-Licensed under the [MIT license](https://github.com/animate-ui/animate-ui/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/imskyleen/animate-ui/blob/main/LICENSE.md).
 

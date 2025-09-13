@@ -1,8 +1,8 @@
 ---
 project: YOURLS
-stars: 11529
+stars: 11535
 description: |-
-    🔗 The de facto standard self hosted URL shortener in PHP
+    🔗 The 𝘥𝘦 𝘧𝘢𝘤𝘵𝘰 standard self hosted URL shortener in PHP
 url: https://github.com/YOURLS/YOURLS
 ---
 

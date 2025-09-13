@@ -1,6 +1,6 @@
 ---
 project: solito
-stars: 3855
+stars: 3857
 description: |-
     🧍‍♂️ React Native + Next.js, unified.
 url: https://github.com/nandorojo/solito

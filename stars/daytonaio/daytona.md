@@ -1,6 +1,6 @@
 ---
 project: daytona
-stars: 21467
+stars: 21472
 description: |-
     Daytona is a Secure and Elastic Infrastructure for Running AI-Generated Code
 url: https://github.com/daytonaio/daytona
@@ -86,13 +86,13 @@ npm install @daytonaio/sdk
 ### Python SDK
 
 ```py
-from daytona import Daytona, DaytonaConfig, CreateSandboxParams
+from daytona import Daytona, DaytonaConfig, CreateSandboxBaseParams
 
 # Initialize the Daytona client
 daytona = Daytona(DaytonaConfig(api_key="YOUR_API_KEY"))
 
 # Create the Sandbox instance
-sandbox = daytona.create(CreateSandboxParams(language="python"))
+sandbox = daytona.create(CreateSandboxBaseParams(language="python"))
 
 # Run code securely inside the Sandbox
 response = sandbox.process.code_run('print("Sum of 3 and 4 is " + str(3 + 4))')
@@ -102,7 +102,7 @@ else:
     print(response.result)
 
 # Clean up the Sandbox
-daytona.remove(sandbox)
+daytona.delete(sandbox)
 ```
 
 ### Typescript SDK
@@ -132,7 +132,7 @@ async function main() {
   } catch (error) {
     console.error('Sandbox flow error:', error)
   } finally {
-    if (sandbox) await daytona.remove(sandbox)
+    if (sandbox) await daytona.delete(sandbox)
   }
 }
 
