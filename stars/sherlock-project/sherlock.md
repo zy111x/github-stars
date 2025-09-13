@@ -1,6 +1,6 @@
 ---
 project: sherlock
-stars: 68502
+stars: 68619
 description: Hunt down social media accounts by username across social networks
 url: https://github.com/sherlock-project/sherlock
 ---
@@ -109,7 +109,7 @@ $ echo '{"usernames":\["user123"\]}' | apify call -so netmilk/sherlock
   \]
 }\]
 
-Read more about the Sherlock Actor, including how to use it programmaticaly via the Apify API, CLI and JS/TS and Python SDKs.
+Read more about the Sherlock Actor, including how to use it programmatically via the Apify API, CLI and JS/TS and Python SDKs.
 
 Credits
 -------
