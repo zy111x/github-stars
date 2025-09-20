@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 23012
+stars: 23116
 description: 在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -530,6 +530,8 @@ CF账户的`Global API Key`，用于获取 Workers/Pages 请求数
 
 -   NodeLoc
 -   Alice
+-   EasyLinks
+-   ZMTO(VTEXS)
 
 ### 🛠 开源代码引用
 

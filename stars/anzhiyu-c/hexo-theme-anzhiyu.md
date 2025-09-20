@@ -1,6 +1,6 @@
 ---
 project: hexo-theme-anzhiyu
-stars: 2213
+stars: 2225
 description: 安知鱼主题，这是一个简洁美丽的hexo主题。
 url: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
 ---
@@ -66,7 +66,7 @@ cp -rf ./themes/anzhiyu/\_config.yml ./\_config.anzhiyu.yml
 ----
 
 -   ✅ 无比详实的用户文档
--   ✅ 页面组件懒加载(pjax方案)
+-   ✅ 页面组件懒加载(pjax 方案)
 -   ✅ 图片懒加载
 -   ✅ 多种代码高亮方案
 -   ✅ 多语言配置
@@ -74,26 +74,26 @@ cp -rf ./themes/anzhiyu/\_config.yml ./\_config.anzhiyu.yml
 -   ✅ 内置网页访问统计
 -   ✅ 支持暗色模式
 -   ✅ 支持脚注语法
--   ✅ 支持自定义CDN静态资源
+-   ✅ 支持自定义 CDN 静态资源
 -   ✅ 丰富多样化的标签选项快速构建你想要的功能
 -   ✅ 支持定制化的右键菜单
 -   ✅ 支持定制化的主色调随封面图片颜色变化
 -   ✅ 支持沉浸式状态栏
 -   ✅ 支持文章字数统计
 -   ✅ 支持聊天系统
--   ✅ 支持谷歌分析、百度分析、微软分析、cloudflare分析、cnzz分析
+-   ✅ 支持谷歌分析、百度分析、微软分析、cloudflare 分析、cnzz 分析
 -   ✅ 支持广告挂载
 -   ✅ 支持图片大图查看
 -   ✅ 支持瀑布流即刻说说
 -   ✅ 支持瀑布流相册集
--   ✅ 支持阿里图标与fontawesome
--   ✅ 支持高速缓存的swpp，pwa特性
+-   ✅ 支持阿里图标与 fontawesome
+-   ✅ 支持高速缓存的 swpp，pwa 特性
 -   ✅ 优秀的隐私协议支持
--   ✅ 文章AI摘要支持
+-   ✅ 文章 AI 摘要支持
 -   ✅ 支持音乐球
 -   ✅ 支持全局中控台
 -   ✅ 支持快捷键选项
--   ✅ 支持本地搜索/algolia搜索🔍/Docsearch
+-   ✅ 支持本地搜索/algolia 搜索 🔍/Docsearch
 -   ✅ 支持 LaTeX 数学公式
 -   ✅ 支持 mermaid 流程图
 
@@ -104,7 +104,7 @@ cp -rf ./themes/anzhiyu/\_config.yml ./\_config.anzhiyu.yml
 
 **高低自定义的右键菜单** 高度定制。
 
-**AI摘要** 迅速读取文章内容。
+**AI 摘要** 迅速读取文章内容。
 
 **让人眼前一亮的清爽界面**
 
