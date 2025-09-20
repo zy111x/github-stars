@@ -1,6 +1,6 @@
 ---
 project: agenticSeek
-stars: 21843
+stars: 21915
 description: |-
     Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity. 🔔 Official updates only via twitter @Martin993886460 (Beware of fake account)
 url: https://github.com/Fosowl/agenticSeek
@@ -129,7 +129,15 @@ To run LLMs locally, you'll need sufficient hardware. At a minimum, a GPU capabl
 
 **Setup your local provider**  
 
-Start your local provider, for example with ollama:
+Start your local provider (for example with ollama):
+
+Unless you wish to to run AgenticSeek on host (CLI mode), export or set the provider listen address:
+
+```sh
+export OLLAMA_HOST=0.0.0.0:11434
+```
+
+Then, start you provider:
 
 ```sh
 ollama serve
@@ -239,6 +247,7 @@ provider_server_address = # Typically ignored or can be left blank when is_local
 | Deepseek     | `deepseek`      | No     | Use Deepseek models via their API.                | [platform.deepseek.com](https://platform.deepseek.com) |
 | Hugging Face | `huggingface`   | No     | Use models from Hugging Face Inference API.       | [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) |
 | TogetherAI   | `togetherAI`    | No     | Use various open-source models via TogetherAI API.| [api.together.ai/settings/api-keys](https://api.together.ai/settings/api-keys) |
+| OpenRouter   | `openrouter`    | No     | Use OpenRouter Models| [https://openrouter.ai/](https://openrouter.ai/) |
 
 *Note:*
 *   We advise against using `gpt-4o` or other OpenAI models for complex web browsing and task planning as current prompt optimizations are geared towards models like Deepseek.

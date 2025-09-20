@@ -1,6 +1,6 @@
 ---
 project: actors
-stars: 195
+stars: 206
 description: |-
     An easier way to build with Cloudflare Durable Objects
 url: https://github.com/cloudflare/actors
@@ -63,12 +63,17 @@ Notice the code class name in your Typescript implementation must match the bind
 import { Actor, handler } from "@cloudflare/actors";
 
 export class MyActor extends Actor<Env> {
-  async fetch(request: Request): Promise<Response> {
+  async onRequest(request: Request): Promise<Response> {
     return new Response("Hello, World!");
   }
 }
 
 export default handler(MyActor);
+```
+
+### Step 4: Deploy
+```curl
+npm run deploy
 ```
 
 ## Examples
@@ -82,6 +87,27 @@ export default handler(MyActor);
 - [How to use without Actor class](./examples/durable-objects/)
 
 ## FAQ
+
+### Alarms
+
+<details>
+  <summary>What is the lifecycle of an Alarm trigger?</summary>
+  When an Actor is awoken by an Alarm trigger, it currently behaves in a slightly different order than if the Actor was already in memory. Below is the sequence of events.
+
+Cold Start:
+
+- [Callback]
+- onInit
+- onAlarm
+
+Warm Start:
+
+- onAlarm
+- [Callback]
+
+For the warm start instance, `onInit` would have already been called earlier before the alarm trigger.
+
+</details>
 
 ### General
 

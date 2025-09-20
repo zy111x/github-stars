@@ -1,6 +1,6 @@
 ---
 project: Second-Me
-stars: 14195
+stars: 14251
 description: |-
     Train your AI self, amplify you, bridge the world
 url: https://github.com/mindverse/Second-Me
@@ -10,7 +10,7 @@ url: https://github.com/mindverse/Second-Me
 
 <div align="center">
   
-[![Homepage](https://img.shields.io/badge/Second_Me-Homepage-blue?style=flat-square&logo=homebridge)](https://www.secondme.io/)
+[![Homepage](https://img.shields.io/badge/Second_Me-Homepage-blue?style=flat-square&logo=homebridge)](https://home.second.me/)
 [![AI-native Memory](https://img.shields.io/badge/AI--native_Memory-arXiv-orange?style=flat-square&logo=academia)](https://arxiv.org/abs/2406.18312)
 [![AI-native Memory 2.0](https://img.shields.io/badge/AI--native_Memory_2.0-arXiv-red?style=flat-square&logo=arxiv)](https://arxiv.org/abs/2503.08102)
 [![Discord](https://img.shields.io/badge/Chat-Discord-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/GpWHQNUwrg)

@@ -1,6 +1,6 @@
 ---
 project: lulu
-stars: 2815
+stars: 2816
 description: |-
     跨端跨框架的原生 UI 组件库，即插即用
 url: https://github.com/yued-fe/lulu

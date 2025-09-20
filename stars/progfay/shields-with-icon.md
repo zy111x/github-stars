@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 450
+stars: 451
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -147,6 +147,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Angular](https://img.shields.io/badge/Angular-0F0F11?style=for-the-badge&logo=Angular&logoColor=FFFFFF)
 ![AniList](https://img.shields.io/badge/AniList-02A9FF?style=for-the-badge&logo=AniList&logoColor=FFFFFF)
 ![Animal Planet](https://img.shields.io/badge/Animal%20Planet-0073FF?style=for-the-badge&logo=Animal+Planet&logoColor=FFFFFF)
+![Anime.js](https://img.shields.io/badge/Anime.js-000000?style=for-the-badge&logo=Anime.js&logoColor=FFFFFF)
 ![AnkerMake](https://img.shields.io/badge/AnkerMake-222222?style=for-the-badge&logo=AnkerMake&logoColor=88F387)
 ![Anki](https://img.shields.io/badge/Anki-222222?style=for-the-badge&logo=Anki&logoColor=80C2EE)
 ![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=Ansible&logoColor=FFFFFF)
@@ -1068,6 +1069,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Gamemaker](https://img.shields.io/badge/Gamemaker-000000?style=for-the-badge&logo=Gamemaker&logoColor=FFFFFF)
 ![Gandi](https://img.shields.io/badge/Gandi-6640FE?style=for-the-badge&logo=Gandi&logoColor=FFFFFF)
 ![Garmin](https://img.shields.io/badge/Garmin-000000?style=for-the-badge&logo=Garmin&logoColor=FFFFFF)
+![Garuda Linux](https://img.shields.io/badge/Garuda%20Linux-8839EF?style=for-the-badge&logo=Garuda+Linux&logoColor=FFFFFF)
 ![Gatling](https://img.shields.io/badge/Gatling-222222?style=for-the-badge&logo=Gatling&logoColor=FF9E2A)
 ![Gatsby](https://img.shields.io/badge/Gatsby-663399?style=for-the-badge&logo=Gatsby&logoColor=FFFFFF)
 ![Gcore](https://img.shields.io/badge/Gcore-FF4C00?style=for-the-badge&logo=Gcore&logoColor=FFFFFF)
@@ -1673,6 +1675,7 @@ url: https://github.com/progfay/shields-with-icon
 ![LITIENGINE](https://img.shields.io/badge/LITIENGINE-00A5BC?style=for-the-badge&logo=LITIENGINE&logoColor=FFFFFF)
 ![LiveChat](https://img.shields.io/badge/LiveChat-FF5100?style=for-the-badge&logo=LiveChat&logoColor=FFFFFF)
 ![LiveJournal](https://img.shields.io/badge/LiveJournal-00B0EA?style=for-the-badge&logo=LiveJournal&logoColor=FFFFFF)
+![LiveKit](https://img.shields.io/badge/LiveKit-222222?style=for-the-badge&logo=LiveKit&logoColor=FFFFFF)
 ![Livewire](https://img.shields.io/badge/Livewire-4E56A6?style=for-the-badge&logo=Livewire&logoColor=FFFFFF)
 ![LLVM](https://img.shields.io/badge/LLVM-262D3A?style=for-the-badge&logo=LLVM&logoColor=FFFFFF)
 ![LMMS](https://img.shields.io/badge/LMMS-10B146?style=for-the-badge&logo=LMMS&logoColor=FFFFFF)
@@ -1695,7 +1698,7 @@ url: https://github.com/progfay/shields-with-icon
 ![LOT Polish Airlines](https://img.shields.io/badge/LOT%20Polish%20Airlines-11397E?style=for-the-badge&logo=LOT+Polish+Airlines&logoColor=FFFFFF)
 ![LottieFiles](https://img.shields.io/badge/LottieFiles-222222?style=for-the-badge&logo=LottieFiles&logoColor=00DDB3)
 ![LTspice](https://img.shields.io/badge/LTspice-900028?style=for-the-badge&logo=LTspice&logoColor=FFFFFF)
-![Lua](https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=Lua&logoColor=FFFFFF)
+![Lua](https://img.shields.io/badge/Lua-000080?style=for-the-badge&logo=Lua&logoColor=FFFFFF)
 ![Luau](https://img.shields.io/badge/Luau-00A2FF?style=for-the-badge&logo=Luau&logoColor=FFFFFF)
 ![Lubuntu](https://img.shields.io/badge/Lubuntu-0068C8?style=for-the-badge&logo=Lubuntu&logoColor=FFFFFF)
 ![Lucia](https://img.shields.io/badge/Lucia-5F57FF?style=for-the-badge&logo=Lucia&logoColor=FFFFFF)
@@ -2085,6 +2088,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Opsgenie](https://img.shields.io/badge/Opsgenie-172B4D?style=for-the-badge&logo=Opsgenie&logoColor=FFFFFF)
 ![OpsLevel](https://img.shields.io/badge/OpsLevel-0A53E0?style=for-the-badge&logo=OpsLevel&logoColor=FFFFFF)
 ![Optimism](https://img.shields.io/badge/Optimism-FF0420?style=for-the-badge&logo=Optimism&logoColor=FFFFFF)
+![Optuna](https://img.shields.io/badge/Optuna-002C76?style=for-the-badge&logo=Optuna&logoColor=FFFFFF)
 ![Orange](https://img.shields.io/badge/Orange-FF7900?style=for-the-badge&logo=Orange&logoColor=FFFFFF)
 ![ORCID](https://img.shields.io/badge/ORCID-222222?style=for-the-badge&logo=ORCID&logoColor=A6CE39)
 ![Org](https://img.shields.io/badge/Org-77AA99?style=for-the-badge&logo=Org&logoColor=FFFFFF)
@@ -2196,6 +2200,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Pinboard](https://img.shields.io/badge/Pinboard-0000FF?style=for-the-badge&logo=Pinboard&logoColor=FFFFFF)
 ![Pine Script](https://img.shields.io/badge/Pine%20Script-00B453?style=for-the-badge&logo=Pine+Script&logoColor=FFFFFF)
 ![Pingdom](https://img.shields.io/badge/Pingdom-222222?style=for-the-badge&logo=Pingdom&logoColor=FFF000)
+![Pinia](https://img.shields.io/badge/Pinia-222222?style=for-the-badge&logo=Pinia&logoColor=FFD859)
 ![pino](https://img.shields.io/badge/pino-687634?style=for-the-badge&logo=pino&logoColor=FFFFFF)
 ![Pinterest](https://img.shields.io/badge/Pinterest-BD081C?style=for-the-badge&logo=Pinterest&logoColor=FFFFFF)
 ![Pioneer DJ](https://img.shields.io/badge/Pioneer%20DJ-1A1928?style=for-the-badge&logo=Pioneer+DJ&logoColor=FFFFFF)
@@ -2652,6 +2657,7 @@ url: https://github.com/progfay/shields-with-icon
 ![SitePoint](https://img.shields.io/badge/SitePoint-258AAF?style=for-the-badge&logo=SitePoint&logoColor=FFFFFF)
 ![SiYuan](https://img.shields.io/badge/SiYuan-D23F31?style=for-the-badge&logo=SiYuan&logoColor=FFFFFF)
 ![Skaffold](https://img.shields.io/badge/Skaffold-2AA2D6?style=for-the-badge&logo=Skaffold&logoColor=FFFFFF)
+![Skeleton](https://img.shields.io/badge/Skeleton-000000?style=for-the-badge&logo=Skeleton&logoColor=FFFFFF)
 ![Sketch](https://img.shields.io/badge/Sketch-222222?style=for-the-badge&logo=Sketch&logoColor=F7B500)
 ![Sketchfab](https://img.shields.io/badge/Sketchfab-1CAAD9?style=for-the-badge&logo=Sketchfab&logoColor=FFFFFF)
 ![SketchUp](https://img.shields.io/badge/SketchUp-005F9E?style=for-the-badge&logo=SketchUp&logoColor=FFFFFF)
@@ -2669,6 +2675,7 @@ url: https://github.com/progfay/shields-with-icon
 ![smart](https://img.shields.io/badge/smart-222222?style=for-the-badge&logo=smart&logoColor=D7E600)
 ![SmartThings](https://img.shields.io/badge/SmartThings-222222?style=for-the-badge&logo=SmartThings&logoColor=15BFFF)
 ![Smashing Magazine](https://img.shields.io/badge/Smashing%20Magazine-E85C33?style=for-the-badge&logo=Smashing+Magazine&logoColor=FFFFFF)
+![Smoothcomp](https://img.shields.io/badge/Smoothcomp-000000?style=for-the-badge&logo=Smoothcomp&logoColor=FFFFFF)
 ![SMRT](https://img.shields.io/badge/SMRT-EE2E24?style=for-the-badge&logo=SMRT&logoColor=FFFFFF)
 ![SmugMug](https://img.shields.io/badge/SmugMug-222222?style=for-the-badge&logo=SmugMug&logoColor=6DB944)
 ![Snapchat](https://img.shields.io/badge/Snapchat-222222?style=for-the-badge&logo=Snapchat&logoColor=FFFC00)
@@ -3075,6 +3082,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Unraid](https://img.shields.io/badge/Unraid-F15A2C?style=for-the-badge&logo=Unraid&logoColor=FFFFFF)
 ![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-0E1128?style=for-the-badge&logo=Unreal+Engine&logoColor=FFFFFF)
 ![Unsplash](https://img.shields.io/badge/Unsplash-000000?style=for-the-badge&logo=Unsplash&logoColor=FFFFFF)
+![Unstop](https://img.shields.io/badge/Unstop-1C4980?style=for-the-badge&logo=Unstop&logoColor=FFFFFF)
 ![Untappd](https://img.shields.io/badge/Untappd-222222?style=for-the-badge&logo=Untappd&logoColor=FFC000)
 ![UpCloud](https://img.shields.io/badge/UpCloud-7B00FF?style=for-the-badge&logo=UpCloud&logoColor=FFFFFF)
 ![Uphold](https://img.shields.io/badge/Uphold-222222?style=for-the-badge&logo=Uphold&logoColor=49CC68)

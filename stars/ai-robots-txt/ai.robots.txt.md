@@ -1,6 +1,6 @@
 ---
 project: ai.robots.txt
-stars: 3064
+stars: 3088
 description: |-
     A list of AI agents and robots to block.
 url: https://github.com/ai-robots-txt/ai.robots.txt
@@ -72,6 +72,13 @@ https://github.com/ai-robots-txt/ai.robots.txt/releases.atom
 You can subscribe with [Feedly](https://feedly.com/i/subscription/feed/https://github.com/ai-robots-txt/ai.robots.txt/releases.atom), [Inoreader](https://www.inoreader.com/?add_feed=https://github.com/ai-robots-txt/ai.robots.txt/releases.atom), [The Old Reader](https://theoldreader.com/feeds/subscribe?url=https://github.com/ai-robots-txt/ai.robots.txt/releases.atom), [Feedbin](https://feedbin.me/?subscribe=https://github.com/ai-robots-txt/ai.robots.txt/releases.atom), or any other reader app.
 
 Alternatively, you can also subscribe to new releases with your GitHub account by clicking the ⬇️ on "Watch" button at the top of this page, clicking "Custom" and selecting "Releases".
+
+## License content with RSL
+
+It is also possible to license your content to AI companies in `robots.txt` using 
+the [Really Simple Licensing](https://rslstandard.org) standard, with an option of 
+collective bargaining. A [plugin](https://github.com/Jameswlepage/rsl-wp) currently
+implements RSL as well as payment processing for WordPress sites.
 
 ## Report abusive crawlers
 

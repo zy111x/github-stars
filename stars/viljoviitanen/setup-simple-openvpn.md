@@ -1,6 +1,6 @@
 ---
 project: setup-simple-openvpn
-stars: 178
+stars: 179
 description: |-
     This is a very old repo, and a script that used to work years ago. Please find a newer vpn setup.
 url: https://github.com/viljoviitanen/setup-simple-openvpn

@@ -1,6 +1,6 @@
 ---
 project: ecapture
-stars: 14612
+stars: 14629
 description: |-
     Capturing SSL/TLS plaintext without a CA certificate using eBPF. Supported on Linux/Android kernels for amd64/arm64.
 url: https://github.com/gojue/ecapture
@@ -76,6 +76,23 @@ docker run --rm --privileged=true --net=host -v ${HOST_PATH}:${CONTAINER_PATH} g
 ```
 
 see [Docker Hub](https://hub.docker.com/r/gojue/ecapture) for more information.
+
+### eCaptureQ GUI Application
+
+[eCaptureQ](https://github.com/gojue/ecaptureq) is a cross-platform graphical user interface client for eCapture,
+visualizing eBPF TLS capture
+capabilities. Built using the Rust + Tauri + React technology stack, it provides a real-time, responsive interface,
+enabling easy analysis of encrypted traffic without the need for CA certificates. It simplifies complex eBPF capture
+techniques, making them easy to use. Supports two modes:
+
+* Integrated Mode: Unified Linux/Android execution
+* Remote Mode: Windows/macOS/Linux client connects to a remote eCapture service
+
+#### Video Demonstration
+
+https://github.com/user-attachments/assets/c8b7a84d-58eb-4fdb-9843-f775c97bdbfb
+
+🔗 [GitHub Repository](https://github.com/gojue/ecaptureq)
 
 ## Capture openssl text content.
 

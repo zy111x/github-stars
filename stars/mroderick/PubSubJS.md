@@ -1,6 +1,6 @@
 ---
 project: PubSubJS
-stars: 4865
+stars: 4867
 description: |-
     Dependency free publish/subscribe for JavaScript
 url: https://github.com/mroderick/PubSubJS

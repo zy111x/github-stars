@@ -1,6 +1,6 @@
 ---
 project: jaaz
-stars: 4419
+stars: 4736
 description: |-
     The world's first open-source multimodal creative assistant  This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.
 url: https://github.com/11cafe/jaaz
@@ -27,6 +27,8 @@ url: https://github.com/11cafe/jaaz
   <br>
   <b>📣 [New!] 企业云端完整版</b> — 支持<span>私有化部署</span>与<span>商业授权</span>（Docker 镜像或源码交付），包含 jaaz.app 全量线上功能。限时 <b>30% OFF</b>，截止 <b>2025-09-15</b>。 
   <a href="mailto:info@jaaz.app">了解/洽谈 →</a> info@jaaz.app
+  
+  Download:https://github.com/11cafe/jaaz/releases
 </p>
 <br><br>
 
@@ -37,21 +39,12 @@ url: https://github.com/11cafe/jaaz
 
 
 <p align="center">
- <a href="https://discord.gg/https://discord.gg/SMRe5n3m">
+ <a href="https://discord.gg/dS7kuT66wc">
   <img src="https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white&style=for-the-badge" alt="Discord" />
   </a>
    <a href="https://github.com/11cafe/jaaz/stargazers">
     <img src="https://img.shields.io/github/stars/11cafe/jaaz?style=for-the-badge&logo=github" alt="GitHub Stars" />
      </a>  
-<!-- Download for Mac -->
-  <a href="https://jaaz.app/api/downloads/mac-latest">
-    <img src="https://img.shields.io/badge/For%20Mac-000000?logo=apple&logoColor=white&style=for-the-badge" alt="Download for Mac" />
-  </a>
-
-  <!-- Download for Windows -->
-  <a href="https://jaaz.app/api/downloads/windows-latest">
-    <img src="https://img.shields.io/badge/For%20Windows-0078D6?logo=laptop&logoColor=white&style=for-the-badge" alt="Download for Windows" />
-  </a>
 </p>
 <p align="center">
 Magic Canva!
@@ -162,7 +155,6 @@ Support for multi-user private deployment of enterprise teams, ensuring privacy 
 
 Please contact via email: aifoxdw@gmail.com
 
-WeChat: aifox1
 <img width="500" alt="Screenshot 2025-06-02 at 3 51 56 AM" src="https://github.com/user-attachments/assets/d5c54eda-120b-4fc2-a571-68fcab440868" />
 
 
@@ -203,6 +195,11 @@ VSCode/Cursor Install Extensions：
 `pip install -r requirements.txt`
 
 `python main.py`
+
+
+
+
+
 
 
 

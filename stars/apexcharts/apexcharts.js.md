@@ -1,6 +1,6 @@
 ---
 project: apexcharts.js
-stars: 14854
+stars: 14857
 description: |-
     📊 Interactive JavaScript Charts built on SVG
 url: https://github.com/apexcharts/apexcharts.js

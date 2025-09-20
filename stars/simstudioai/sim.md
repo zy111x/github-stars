@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 14856
+stars: 15272
 description: |-
     Open-source platform to build and deploy AI agent workflows.
 url: https://github.com/simstudioai/sim
@@ -133,10 +133,11 @@ Update your `.env` file with the database URL:
 DATABASE_URL="postgresql://postgres:your_password@localhost:5432/simstudio"
 ```
 
-4. Set up the database:
+4. Set up the database (from packages/db):
 
 ```bash
-bunx drizzle-kit migrate 
+cd packages/db
+bunx drizzle-kit migrate --config=./drizzle.config.ts
 ```
 
 5. Start the development servers:

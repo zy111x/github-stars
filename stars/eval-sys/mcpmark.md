@@ -1,8 +1,8 @@
 ---
 project: mcpmark
-stars: 144
+stars: 151
 description: |-
-    MCP Servers are shaping the future of software. MCPMark is a comprehensive, stress-testing benchmark designed to evaluate model and agent capabilities in real-world MCP use.
+    MCPMark is a comprehensive, stress-testing MCP benchmark designed to evaluate model and agent capabilities in real-world MCP use.
 url: https://github.com/eval-sys/mcpmark
 ---
 

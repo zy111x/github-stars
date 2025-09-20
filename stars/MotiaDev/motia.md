@@ -1,6 +1,6 @@
 ---
 project: motia
-stars: 8267
+stars: 8561
 description: |-
     Modern Backend Framework that unifies APIs, background jobs, workflows, and AI Agents into a single core primitive with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
@@ -59,11 +59,14 @@ url: https://github.com/MotiaDev/motia
 
 Modern software engineering is disjointed – APIs live in one framework, background jobs in another, queues have their own tooling, and AI agents are springing up in yet more isolated runtimes. **This fragmentation demands a unified system.**
 
-Motia unifies APIs, background jobs, workflows, and AI agents into a **single coherent system** with shared observability and developer experience. Similar to how React simplified frontend development, where everything is a component, **Motia simplifies backend development, where everything is a Step**.
+Motia unifies `APIs, background jobs, queueing, streaming, states, workflows, AI agents, observability, scaling, and deployment` into a **single coherent system** with shared observability and developer experience. Similar to how React simplified frontend development, where everything is a component, **Motia simplifies backend development, where everything is a Step**.
 
 Write **JavaScript, TypeScript, Python, and more** in the same workflow. **What used to take 5 frameworks to build now comes out of the box with Motia.**
 
 [![Motia combines APIs, background queues, and AI agents into one system](assets/github-readme-banner.gif)](https://motia.dev)
+
+## 💻 Remix your own Motia App in Replit
+[![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit&style=for-the-badge)](https://replit.com/@motiadev/motia)
 
 ## 🚀 Quickstart
 

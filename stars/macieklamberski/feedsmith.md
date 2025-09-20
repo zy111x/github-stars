@@ -1,6 +1,6 @@
 ---
 project: feedsmith
-stars: 385
+stars: 418
 description: |-
     Fast, all-in-one parser and generator for RSS, Atom, RDF, and JSON Feed, with support for Podcast, iTunes, Dublin Core, and OPML files.
 url: https://github.com/macieklamberski/feedsmith
@@ -48,7 +48,8 @@ Feedsmith offers universal and format‑specific parsers that maintain the origi
 * **Well-tested** 🔬 — Comprehensive test suite with over 2000 tests and 99% code coverage.
 
 ### Compatibility
-* Works in Node.js and modern browsers.
+* Works in Node.js 14.0.0+ and modern browsers.
+* Supports both CommonJS and ES modules.
 * Works with plain JavaScript, you don't need to use TypeScript.
 
 ## Supported Formats
@@ -81,6 +82,7 @@ Feedsmith aims to fully support all major feed formats and namespaces in complet
 | [Slash](http://purl.org/rss/1.0/modules/slash/) | `<slash:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [iTunes](http://www.itunes.com/dtds/podcast-1.0.dtd) | `<itunes:*>` | RSS, Atom | ✅ | ✅ |
 | [Podcast](https://podcastindex.org/namespace/1.0) | `<podcast:*>` | RSS | ✅ | ✅ |
+| [Podlove Simple Chapters](http://podlove.org/simple-chapters) | `<psc:*>` | RSS, Atom | ✅ | ✅ |
 | [Media RSS](http://search.yahoo.com/mrss/) | `<media:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [GeoRSS-Simple](http://www.georss.org/georss) | `<georss:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [Atom Threading](https://www.ietf.org/rfc/rfc4685.txt) | `<thr:*>` | RSS, Atom | ✅ | ✅ |
@@ -127,7 +129,7 @@ if (format === 'rss') {
 }
 ```
 
-### Use Format-Specific Parsers
+### Parse Specific Feed Formats
 
 If you know the format in advance, you can use the format-specific parsers:
 
@@ -140,10 +142,10 @@ import {
 } from 'feedsmith'
 
 // Parse specific formats
-const atomFeed = parseAtomFeed('atom content')
-const jsonFeed = parseJsonFeed('json content')
 const rssFeed = parseRssFeed('rss content')
+const atomFeed = parseAtomFeed('atom content')
 const rdfFeed = parseRdfFeed('rdf content')
+const jsonFeed = parseJsonFeed('json content')
 
 // Access typed data
 rssFeed.title

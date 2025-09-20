@@ -1,6 +1,6 @@
 ---
 project: llrt
-stars: 8609
+stars: 8610
 description: |-
     LLRT (Low Latency Runtime) is an experimental, lightweight JavaScript runtime designed to address the growing demand for fast and efficient Serverless applications.
 url: https://github.com/awslabs/llrt
@@ -112,35 +112,36 @@ The test runner also has support for filters. Using filters is as simple as addi
 > [!NOTE]
 > LLRT only support a fraction of the Node.js APIs. It is **NOT** a drop in replacement for Node.js, nor will it ever be. Below is a high level overview of partially supported APIs and modules. For more details consult the [API](API.md) documentation
 
-| Modules        | Node.js | LLRT ⚠️ |
-| -------------- | ------- | ------- |
-| assert         | ✔︎     | ✔︎️    |
-| async_hooks    | ✔︎     | ✔︎️    |
-| buffer         | ✔︎     | ✔︎️    |
-| child_process  | ✔︎     | ✔︎⏱   |
-| console        | ✔︎     | ✔︎     |
-| crypto         | ✔︎     | ✔︎     |
-| dns            | ✔︎     | ✔︎     |
-| events         | ✔︎     | ✔︎     |
-| fs/promises    | ✔︎     | ✔︎     |
-| fs             | ✔︎     | ✘⏱     |
-| http           | ✔︎     | ✘⏱\*\* |
-| https          | ✔︎     | ✘⏱\*\* |
-| net:sockets    | ✔︎     | ✔︎⏱   |
-| net:server     | ✔︎     | ✔︎     |
-| os             | ✔︎     | ✔︎     |
-| path           | ✔︎     | ✔︎     |
-| perf_hooks     | ✔︎     | ✔︎     |
-| process        | ✔︎     | ✔︎     |
-| streams        | ✔︎     | ✔︎\*   |
-| string_decoder | ✔︎     | ✔︎     |
-| timers         | ✔︎     | ✔︎     |
-| tty            | ✔︎     | ✔︎     |
-| url            | ✔︎     | ✔︎     |
-| util           | ✔︎     | ✔︎     |
-| tls            | ✔︎     | ✘⏱     |
-| zlib           | ✔︎     | ✔︎     |
-| Other modules  | ✔︎     | ✘       |
+| Modules         | Node.js | LLRT ⚠️ |
+| --------------- | ------- | ------- |
+| assert          | ✔︎     | ✔︎️    |
+| async_hooks     | ✔︎     | ✔︎️    |
+| buffer          | ✔︎     | ✔︎️    |
+| child_process   | ✔︎     | ✔︎⏱   |
+| console         | ✔︎     | ✔︎     |
+| crypto          | ✔︎     | ✔︎     |
+| dns             | ✔︎     | ✔︎     |
+| events          | ✔︎     | ✔︎     |
+| fs/promises     | ✔︎     | ✔︎     |
+| fs              | ✔︎     | ✘⏱     |
+| http            | ✔︎     | ✘⏱\*\* |
+| https           | ✔︎     | ✘⏱\*\* |
+| net:sockets     | ✔︎     | ✔︎⏱   |
+| net:server      | ✔︎     | ✔︎     |
+| os              | ✔︎     | ✔︎     |
+| path            | ✔︎     | ✔︎     |
+| perf_hooks      | ✔︎     | ✔︎     |
+| process         | ✔︎     | ✔︎     |
+| stream/promises | ✔︎     | ✔︎\*   |
+| stream          | ✔︎     | ✔︎\*   |
+| string_decoder  | ✔︎     | ✔︎     |
+| timers          | ✔︎     | ✔︎     |
+| tty             | ✔︎     | ✔︎     |
+| url             | ✔︎     | ✔︎     |
+| util            | ✔︎     | ✔︎     |
+| tls             | ✔︎     | ✘⏱     |
+| zlib            | ✔︎     | ✔︎     |
+| Other modules   | ✔︎     | ✘       |
 
 | Features    | Node.js | LLRT ⚠️ |
 | ----------- | ------- | ------- |

@@ -1,6 +1,6 @@
 ---
 project: morphic
-stars: 8116
+stars: 8145
 description: |-
     An AI-powered search engine with a generative UI
 url: https://github.com/miurla/morphic
@@ -99,6 +99,7 @@ Models are configured in `public/config/models.json`. Each model requires its co
 - Alternative providers:
   - [SearXNG](https://docs.searxng.org/) - Self-hosted search
   - [Exa](https://exa.ai/) - Neural search
+  - [Firecrawl](https://firecrawl.dev/) - Web, news, and image search with crawling, scraping, LLM-ready extraction, and [open source](https://github.com/firecrawl/firecrawl).
 
 ### Data Storage
 

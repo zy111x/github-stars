@@ -1,6 +1,6 @@
 ---
 project: images
-stars: 2391
+stars: 2396
 description: |-
     Source code of wsrv.nl (formerly images.weserv.nl), to be used on your own server(s).
 url: https://github.com/weserv/images
@@ -26,7 +26,7 @@ and [nginx](https://github.com/nginx/nginx) (used as web server, forward proxy a
 - Linux, [nginx](https://github.com/nginx/nginx) and [libvips](https://github.com/libvips/libvips)
  (without these technologies, this project would never have been possible)
 - [Cloudflare](https://www.cloudflare.com/) (for CDN caching and IP-blocking)
-- [Redis](https://github.com/antirez/redis) (for rate limiting)
+- [Valkey](https://github.com/valkey-io/valkey) (for rate limiting)
 - [OpenDNS](https://www.opendns.com/) (for DNS-filtering)
 
 ## Documentation

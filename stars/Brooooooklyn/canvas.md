@@ -1,6 +1,6 @@
 ---
 project: canvas
-stars: 2006
+stars: 2011
 description: |-
     High performance skia binding to Node.js. Zero system dependencies and pure npm packages without any postinstall scripts nor node-gyp.
 url: https://github.com/Brooooooklyn/canvas

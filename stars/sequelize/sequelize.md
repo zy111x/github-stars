@@ -1,6 +1,6 @@
 ---
 project: sequelize
-stars: 30157
+stars: 30167
 description: |-
     Feature-rich ORM for modern Node.js and TypeScript, it supports PostgreSQL (with JSON and JSONB support), MySQL, MariaDB, SQLite, MS SQL Server, Snowflake, Oracle DB (v6), DB2 and DB2 for IBM i.
 url: https://github.com/sequelize/sequelize

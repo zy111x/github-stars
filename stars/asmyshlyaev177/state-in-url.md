@@ -1,6 +1,6 @@
 ---
 project: state-in-url
-stars: 372
+stars: 373
 description: |-
     Store any user state in query parameters; imagine JSON in a browser URL, while keeping types and structure of data, e.g.numbers will be decoded as numbers not strings. With TS validation. Shared state and URL state sync without any hassle or boilerplate. Supports Next.js@14-15, react-router@6-7, and Remix@2.
 url: https://github.com/asmyshlyaev177/state-in-url
@@ -768,6 +768,10 @@ See [Contributing doc](CONTRIBUTING.md)
 ## License
 
 This project is licensed under the [MIT license](LICENSE).
+
+## Personal website
+
+[Portfolio site](https://asmyshlyaev177.dev)
 
 ## Inspiration
 

@@ -1,6 +1,6 @@
 ---
 project: recyclerlistview
-stars: 5414
+stars: 5415
 description: |-
     High performance listview for React Native and web!
 url: https://github.com/Flipkart/recyclerlistview

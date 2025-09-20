@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 12071
+stars: 12160
 description: |-
     ✨ 一站式 LLM 聊天机器人平台及开发框架 ✨ 支持 QQ、QQ频道、Telegram、企微、飞书、钉钉 | 知识库、MCP 服务器、OpenAI、DeepSeek、Gemini、硅基流动、月之暗面、Ollama、OneAPI、Dify
 url: https://github.com/AstrBotDevs/AstrBot
@@ -118,7 +118,6 @@ uv run main.py
 
 <a href="https://discord.gg/hAVk6tgV36"><img alt="Discord_community" src="https://img.shields.io/badge/Discord-AstrBot-purple?style=for-the-badge&color=76bad9"></a>
 
-
 ## ⚡ 消息平台支持情况
 
 | 平台    | 支持性 |
@@ -135,6 +134,8 @@ uv run main.py
 | Discord   | ✔    |
 | [KOOK](https://github.com/wuyan1003/astrbot_plugin_kook_adapter)   | ✔    |
 | [VoceChat](https://github.com/HikariFroya/astrbot_plugin_vocechat)   | ✔    |
+| Satori   | ✔    |
+| Misskey   | ✔    |
 
 ## ⚡ 提供商支持情况
 
@@ -180,7 +181,6 @@ pip install pre-commit
 pre-commit install
 ```
 
-
 ## ❤️ Special Thanks
 
 特别感谢所有 Contributors 和插件开发者对 AstrBot 的贡献 ❤️
@@ -208,15 +208,12 @@ pre-commit install
 > 如果本项目对您的生活 / 工作产生了帮助，或者您关注本项目的未来发展，请给项目 Star，这是我维护这个开源项目的动力 <3
 
 <div align="center">
-    
+
 [![Star History Chart](https://api.star-history.com/svg?repos=soulter/astrbot&type=Date)](https://star-history.com/#soulter/astrbot&Date)
 
 </div>
 
-
 </details>
 
-
 _私は、高性能ですから!_
-
 

@@ -1,6 +1,6 @@
 ---
 project: pines
-stars: 3198
+stars: 3202
 description: |-
     The Pines UI library
 url: https://github.com/thedevdojo/pines

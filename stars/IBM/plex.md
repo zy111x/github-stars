@@ -1,6 +1,6 @@
 ---
 project: plex
-stars: 10915
+stars: 10929
 description: |-
     The package of IBM’s typeface, IBM Plex.
 url: https://github.com/IBM/plex

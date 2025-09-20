@@ -1,9 +1,9 @@
 ---
 project: engine
-stars: 4370
+stars: 4381
 description: |-
     Scale and orchestrate RivetKit
-url: https://github.com/rivet-gg/engine
+url: https://github.com/rivet-dev/engine
 ---
 
 <!-- 

@@ -1,6 +1,6 @@
 ---
 project: workflows-ts
-stars: 209
+stars: 216
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/workflows-ts
@@ -32,6 +32,10 @@ bun add @llamaindex/workflow-core
 
 deno add npm:@llamaindex/workflow-core
 ```
+
+### Demos
+
+For examples, check out the [demo folder](./demo).
 
 ### First, define events
 

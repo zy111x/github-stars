@@ -1,6 +1,6 @@
 ---
 project: orama
-stars: 9776
+stars: 9794
 description: |-
     🌌  A complete search engine and RAG pipeline in your browser, server or edge network with support for full-text, vector, and hybrid search in less than 2kb.
 url: https://github.com/oramasearch/orama
@@ -268,7 +268,7 @@ const response = await session.ask({
 console.log(response) // Hello, John Doe! How are you doing?
 ```
 
-Read the complete documentation [here](https://docs.orama.com/docs/orama-js/usage/answer-engine/introduction).
+Read the complete [documentation](https://docs.orama.com/docs/orama-js/answer-engine).
 
 # Official Docs
 

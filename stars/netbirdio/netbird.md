@@ -1,10 +1,11 @@
 ---
 project: netbird
-stars: 18506
+stars: 18601
 description: |-
     Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.
 url: https://github.com/netbirdio/netbird
 ---
+
 
 <div align="center">
 <br/>
@@ -60,7 +61,7 @@ url: https://github.com/netbirdio/netbird
 
 ### Open Source Network Security in a Single Platform
 
-<img width="1188" alt="centralized-network-management 1" src="https://github.com/user-attachments/assets/c28cc8e4-15d2-4d2f-bb97-a6433db39d56" />
+https://github.com/user-attachments/assets/10cec749-bb56-4ab3-97af-4e38850108d2
 
 ### NetBird on Lawrence Systems (Video)
 [![Watch the video](https://img.youtube.com/vi/Kwrff6h0rEw/0.jpg)](https://www.youtube.com/watch?v=Kwrff6h0rEw)

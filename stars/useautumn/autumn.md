@@ -1,6 +1,6 @@
 ---
 project: autumn
-stars: 1887
+stars: 1932
 description: |-
     Autumn is an open-source pricing & billing platform
 url: https://github.com/useautumn/autumn
@@ -41,7 +41,13 @@ bun install
 ```bash
 bun setup
 ```
-4. Run Autumn:
+
+4. Generate the relevant tables in your postgres DB
+```bash
+bun db:generate && bun db:migrate
+```
+
+5. Run Autumn:
 
 For Windows
 ```bash

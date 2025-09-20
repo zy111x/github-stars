@@ -1,6 +1,6 @@
 ---
 project: appletv-demo
-stars: 15
+stars: 16
 description: |-
     A demo application for AppleTV using atvjs with presentation
 url: https://github.com/emadalam/appletv-demo

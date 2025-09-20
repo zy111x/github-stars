@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 2943
+stars: 2987
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -342,7 +342,12 @@ Usage: lychee [OPTIONS] [inputs]...
 
 Arguments:
   [inputs]...
-          The inputs (where to get links to check from). These can be: files (e.g. `README.md`), file globs (e.g. `"~/git/*/README.md"`), remote URLs (e.g. `https://example.com/README.md`) or standard input (`-`). Alternatively, use `--files-from` to read inputs from a file. NOTE: Use `--` to separate inputs from options that allow multiple arguments
+          Inputs for link checking (where to get links to check from). These can be:
+          files (e.g. `README.md`), file globs (e.g. `'~/git/*/README.md'`), remote URLs
+          (e.g. `https://example.com/README.md`), or standard input (`-`). Alternatively,
+          use `--files-from` to read inputs from a file.
+
+          NOTE: Use `--` to separate inputs from options that allow multiple arguments.
 
 Options:
       --files-from <PATH>
@@ -385,6 +390,11 @@ Options:
 
           [default: md,mkd,mdx,mdown,mdwn,mkdn,mkdown,markdown,html,htm,txt]
 
+      --default-extension <EXTENSION>
+          Default file extension to treat files without extensions as having.
+
+          This is useful for files without extensions or with unknown extensions. The extension will be used to determine the file type for processing. Examples: --default-extension md, --default-extension html
+
       --cache
           Use request cache stored on disk at `.lycheecache`
 
@@ -405,9 +415,9 @@ Options:
           - 500..=599 (excludes any status code from 500 to 599 inclusive)
           - 500..600 (excludes any status code from 500 to 600 excluding 600, same as 500..=599)
 
-          Use "lychee --cache-exclude-status '429, 500..502' <inputs>..." to provide a comma- separated
-          list of excluded status codes. This example will not cache results with a status code of 429, 500
-          and 501.
+          Use "lychee --cache-exclude-status '429, 500..502' <inputs>..." to provide a
+          comma-separated list of excluded status codes. This example will not cache results
+          with a status code of 429, 500 and 501.
 
           [default: ]
 
@@ -457,7 +467,8 @@ Options:
           Proceed for server connections considered insecure (invalid TLS)
 
   -s, --scheme <SCHEME>
-          Only test links with the given schemes (e.g. https). Omit to check links with any other scheme. At the moment, we support http, https, file, and mailto
+          Only test links with the given schemes (e.g. https). Omit to check links with
+          any other scheme. At the moment, we support http, https, file, and mailto.
 
       --offline
           Only check local files and block network requests
@@ -649,7 +660,9 @@ Options:
           When HTTPS is available, treat HTTP links as errors
 
       --cookie-jar <COOKIE_JAR>
-          Tell lychee to read cookies from the given file. Cookies will be stored in the cookie jar and sent with requests. New cookies will be stored in the cookie jar and existing cookies will be updated
+          Tell lychee to read cookies from the given file. Cookies will be stored in the
+          cookie jar and sent with requests. New cookies will be stored in the cookie jar
+          and existing cookies will be updated.
 
       --include-wikilinks
           Check WikiLinks in Markdown files
