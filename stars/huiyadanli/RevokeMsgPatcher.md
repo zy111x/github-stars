@@ -1,6 +1,6 @@
 ---
 project: RevokeMsgPatcher
-stars: 34665
+stars: 34745
 description: :trollface: A hex editor for WeChat/QQ/TIM - PC版微信/QQ/TIM防撤回补丁（我已经看到了，撤回也没用了）
 url: https://github.com/huiyadanli/RevokeMsgPatcher
 ---

@@ -1,6 +1,6 @@
 ---
 project: MetingJS
-stars: 1314
+stars: 1317
 description: :cake: A powerful plugin connect APlayer and Meting
 url: https://github.com/metowolf/MetingJS
 ---
@@ -27,8 +27,8 @@ Latest
 CDN
 ---
 
--   https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js
--   https://unpkg.com/meting@2.0.1/dist/Meting.min.js
+-   https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js
+-   https://unpkg.com/meting@2/dist/Meting.min.js
 
 Quick Start
 -----------
@@ -109,6 +109,12 @@ auto
 options
 
 music link, support: `netease`, `tencent`, `xiami`
+
+api
+
+options
+
+custom api url, support self-hosted Meting API
 
 fixed
 
@@ -195,11 +201,32 @@ Advanced
 
 MetingJS allow you to use self-hosted API, more information about Meting.
 
+### Global API Configuration
+
 <script\>
 var meting\_api\='http://example.com/api.php?server=:server&type=:type&id=:id&auth=:auth&r=:r';
 </script\>
 
 <script src\="dist/Meting.min.js"\></script\>
+
+### Per-Element API Configuration
+
+You can also set a custom API for individual `<meting-js>` elements using the `api` attribute:
+
+<meting-js
+	server\="netease"
+	type\="song"
+	id\="28391863"
+	api\="https://your-custom-api.com/meting?server=:server&type=:type&id=:id&r=:r"\>
+</meting-js\>
+
+### API Priority
+
+The API selection follows this priority order:
+
+1.  **Element `api` attribute** (highest priority)
+2.  **Global `window.meting_api` variable**
+3.  **Built-in default API** (lowest priority)
 
 Browser support
 ---------------

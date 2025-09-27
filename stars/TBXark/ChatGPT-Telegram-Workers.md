@@ -1,6 +1,6 @@
 ---
 project: ChatGPT-Telegram-Workers
-stars: 3749
+stars: 3755
 description: Easily deploy your Telegram ChatGPT bot on Cloudflare Workers (or Vercel, Docker...).
 url: https://github.com/TBXark/ChatGPT-Telegram-Workers
 ---

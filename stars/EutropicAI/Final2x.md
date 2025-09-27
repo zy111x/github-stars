@@ -1,6 +1,6 @@
 ---
 project: Final2x
-stars: 6651
+stars: 6655
 description: a cross-platform image super-resolution tool
 url: https://github.com/EutropicAI/Final2x
 ---
@@ -12,7 +12,6 @@ A cross-platform image super-resolution tool.
 
 -   News🎉: Enhance a video? Try VSET!
 -   News🎉: Final2x v3.0.0 is now available, support Nvidia 50 series GPUs now!
--   News🎉: We are thrilled to announce the release of Final2x v2.0.0, which marks a major milestone as we transition to utilizing ccrestoration (PyTorch) for our algorithm implementation.
 
 ### Screenshots
 
@@ -22,11 +21,7 @@ A cross-platform image super-resolution tool.
 
 #### Windows
 
-Just Run! Furthermore, you can use package mananger to install and upgrade.
-
-##### winget
-
-winget install Final2x
+You can also use a package manager like winget or scoop to install and upgrade. Please note that the versions available through package managers may not always be the latest.
 
 #### MacOS
 
@@ -51,9 +46,6 @@ apt install -y libomp5 xdg-utils
 The following references were referenced in the development of this project:
 
 -   Final2x-core
--   ccrestoration
--   PyTorch
--   ncnn
 -   naive-ui
 -   electron-vite
 
