@@ -1,6 +1,6 @@
 ---
 project: ytmd
-stars: 28106
+stars: 28262
 description: |-
     YouTube Music Desktop App bundled with custom plugins
 url: https://github.com/ytmd-devs/ytmd

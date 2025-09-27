@@ -1,6 +1,6 @@
 ---
 project: react-pdf
-stars: 16020
+stars: 16035
 description: |-
     📄  Create PDF files using React
 url: https://github.com/diegomura/react-pdf
@@ -27,9 +27,6 @@ url: https://github.com/diegomura/react-pdf
     </a>
   </p>
 </p>
-
-> [!NOTE]  
-> Generating PDFs in bulk? [Talk to us.](https://axxy020tu5c.typeform.com/to/eU21hXDy)
 
 ## Lost?
 
@@ -124,5 +121,5 @@ MIT © [Diego Muracciole](http://github.com/diegomura)
 
 ---
 
-![](https://img.shields.io/npm/dt/@react-pdf/renderer.svg?style=flat)
+[![](https://img.shields.io/npm/dt/@react-pdf/renderer.svg?style=flat)](https://www.npmjs.com/package/@react-pdf/renderer)
 

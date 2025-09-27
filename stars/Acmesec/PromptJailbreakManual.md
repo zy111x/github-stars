@@ -1,6 +1,6 @@
 ---
 project: PromptJailbreakManual
-stars: 2828
+stars: 2842
 description: |-
     Prompt越狱手册
 url: https://github.com/Acmesec/PromptJailbreakManual

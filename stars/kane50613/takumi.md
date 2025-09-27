@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 747
+stars: 752
 description: |-
     Render your React components to images. Available for Rust, Node.js, and WebAssembly.
 url: https://github.com/kane50613/takumi

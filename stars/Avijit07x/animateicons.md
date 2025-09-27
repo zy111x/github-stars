@@ -1,6 +1,6 @@
 ---
 project: animateicons
-stars: 419
+stars: 431
 description: |-
     A sleek React library for animated SVG icons that move with purpose. Transform static designs into engaging user experiences with smooth, performant animations.
 url: https://github.com/Avijit07x/animateicons
@@ -14,7 +14,7 @@ A sleek React library for animated SVG icons that move with purpose. Transform s
 
 ---
 
-## 📦 Installation
+## Installation
 
 You can install any icon directly into your project using the **shadcn** CLI:
 
@@ -35,7 +35,7 @@ View all icons → **[animateicons.vercel.app](https://animateicons.vercel.app)*
 
 ---
 
-## 🚀 Usage
+## Usage
 
 After installing an icon, import it into your component:
 
@@ -56,7 +56,6 @@ import { useRef } from "react";
 import { BellRingIcon, BellRingIconHandle } from "./components/ui/BellRingIcon";
 
 export default function Page() {
-    
 	const bellRef = useRef<BellRingIconHandle>(null);
 
 	return (
@@ -75,13 +74,13 @@ export default function Page() {
 
 ---
 
-## ✨ Features
+## Features
 
-- 🎯 Smooth, purposeful animations out-of-the-box
-- ⚡ Lightweight & built with `motion/react`
-- 🎨 100+ customizable SVG icons
-- 📱 Works with React & Next.js
-- 🔧 Optimized for performance
+- Smooth, purposeful animations out-of-the-box
+- Lightweight & built with `motion/react`
+- 100+ customizable SVG icons
+- Works with React & Next.js
+- Optimized for performance
 
 ---
 

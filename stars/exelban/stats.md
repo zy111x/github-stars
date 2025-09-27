@@ -1,9 +1,21 @@
 ---
 project: stats
-stars: 33826
+stars: 33944
 description: |-
     macOS system monitor in your menu bar
 url: https://github.com/exelban/stats
+---
+
+<div align="center" markdown="1">
+ <sup>Special thanks to:</sup>
+ <br><br>
+ <a href="https://go.warp.dev/stats">
+  <img width="400" alt="Warp sponsorship" src="https://github.com/user-attachments/assets/67ff3655-983d-43cf-9e99-51ce76afa3e7"/>
+ </a>
+ <br><br>
+ <a href="https://go.warp.dev/stats">Warp is built for coding with multiple AI agents</a>
+</div>
+
 ---
 
 # Stats

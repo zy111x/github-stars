@@ -1,6 +1,6 @@
 ---
 project: joyagent-jdgenie
-stars: 7131
+stars: 10298
 description: |-
     开源的端到端产品级通用智能体
 url: https://github.com/jd-opensource/joyagent-jdgenie
@@ -18,7 +18,8 @@ url: https://github.com/jd-opensource/joyagent-jdgenie
 
 [**<font color=red>JoyDataAgent：首个开源的包含数据治理DGP协议、智能问数和智能诊断分析的智能体</font>**](README_DataAgent.md)
 （注意使用data_agent分支）
-![archi](./docs/img/dataagent.png)
+<img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/3a449185-4863-4171-8dda-72cb70b2fa91" />
+
 **多模态RAG：敬请期待**
 ## 简介
 
@@ -364,9 +365,9 @@ sh start_genie.sh
 
 
 ## 项目共建者
-贡献者：Liu Shangkun,[Li Yang](https://scholar.google.com.hk/citations?hl=zh-CN&user=AeCTbv8AAAAJ&view_op=list_works&gmla=AH8HC4zYqeayQxrQFmScZ7XYxLah1enc8ynhQYMtBdPmjwfpMBvsTj_OoBkFTPCw1Xi2xk7gbTzHPH-QpJSw_sGkCKdYDVXSu8Ty2tNJMhs),Jia Shilin,Tian Shaohua,Wang Zhen,Yao Ting,Wang Hongtao,Zhou Xiaoqing,Liu min,Zhang Shuang,Liuwen,Yangdong,Xu Jialei,Zhou Meilei,Zhao Tingchong,Wu jiaxing, Wang Hanmin, Zhou Zhiyuan, Xu Shiyue,Liu Jiarun, Hou Kang, Jing Lingtuan, Guo Hongliang
+贡献者：Liu Shangkun,[Li Yang](https://scholar.google.com.hk/citations?hl=zh-CN&user=AeCTbv8AAAAJ&view_op=list_works&gmla=AH8HC4zYqeayQxrQFmScZ7XYxLah1enc8ynhQYMtBdPmjwfpMBvsTj_OoBkFTPCw1Xi2xk7gbTzHPH-QpJSw_sGkCKdYDVXSu8Ty2tNJMhs),Jia Shilin,Tian Shaohua,Wang Zhen,Yao Ting,Wang Hongtao,Zhou Xiaoqing,Liu min,Zhang Shuang,Liuwen,Yangdong,Xu Jialei,Zhou Meilei,Zhao Tingchong,Wu jiaxing, Wang Hanmin, Zhou Zhiyuan, Xu Shiyue,Liu Jiarun, Hou Kang, Jing Lingtuan, Guo Hongliang, Wang Zhijiang, Liu Yanchen, Chen Kun, Ke Huilin, Pan Zheyi, Duan Zhewen, Tu Shengkun, Zhang Haidong, Wang Heng, [Wang Haofen](https://tjdi.tongji.edu.cn/TeacherDetail.do?id=4991&lang=), Zhang Junbo
 
-所属机构:京东CHO企业信息化团队（EI）
+所属机构:京东CHO企业信息化团队（EI）、京东科技协同办公团队、京东物流数据资产团队
 
 ## 贡献和合作
 
@@ -399,7 +400,8 @@ sh start_genie.sh
 [![Star History Chart](https://api.star-history.com/svg?repos=jd-opensource/joyagent-jdgenie&type=Date&cache=false)](https://star-history.com/#jd-opensource/joyagent-jdgenie&Date)
 
 欢迎沟通和联系我们  
-<img width="396" height="396" alt="image" src="https://github.com/user-attachments/assets/275e8ca5-da74-4bf1-84e5-f5712aea0b94" />
+<img width="396" height="396" alt="ME1758722833951" src="https://github.com/user-attachments/assets/0c47720f-78a4-4a98-b634-a8274072d36c" />
+
 
 [//]: # (![contact]&#40;./docs/img/contact.jpg&#41;)
 

@@ -1,6 +1,6 @@
 ---
 project: redis
-stars: 1764
+stars: 1765
 description: |-
     《Redis Command Reference》全文的中文翻译版。
 url: https://github.com/huangzworks/redis

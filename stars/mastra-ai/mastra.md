@@ -1,6 +1,6 @@
 ---
 project: mastra
-stars: 16745
+stars: 16907
 description: |-
     The TypeScript AI agent framework. ⚡ Assistants, RAG, observability. Supports any LLM: GPT-4, Claude, Gemini, Llama.
 url: https://github.com/mastra-ai/mastra

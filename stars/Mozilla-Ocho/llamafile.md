@@ -1,6 +1,6 @@
 ---
 project: llamafile
-stars: 23141
+stars: 23165
 description: |-
     Distribute and run LLMs with a single file.
 url: https://github.com/Mozilla-Ocho/llamafile

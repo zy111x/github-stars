@@ -1,6 +1,6 @@
 ---
 project: horizon
-stars: 590
+stars: 593
 description: |-
     The current sky at your approximate location, rendered as a CSS gradient
 url: https://github.com/dnlzro/horizon

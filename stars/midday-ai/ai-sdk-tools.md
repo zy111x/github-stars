@@ -1,6 +1,6 @@
 ---
 project: ai-sdk-tools
-stars: 587
+stars: 646
 description: |-
     A collection of essential utilities for AI development. State management, debugging tools, and artifact handling - everything you need to build production-ready AI applications.
 url: https://github.com/midday-ai/ai-sdk-tools

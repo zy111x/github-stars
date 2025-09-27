@@ -1,6 +1,6 @@
 ---
 project: umbrella
-stars: 2330
+stars: 2332
 description: |-
     :umbrella: Lightweight javascript library for DOM manipulation and events
 url: https://github.com/franciscop/umbrella

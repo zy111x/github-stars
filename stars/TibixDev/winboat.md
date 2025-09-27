@@ -1,6 +1,6 @@
 ---
 project: winboat
-stars: 4522
+stars: 4926
 description: |-
     Run Windows apps on 🐧 Linux with ✨ seamless integration
 url: https://github.com/TibixDev/winboat
@@ -10,7 +10,7 @@ url: https://github.com/TibixDev/winboat
   <table>
     <tr>
       <td>
-        <img src="gh-assets/winboat_logo.png" alt="WinBoat Logo" width="150">
+        <img src="gh-assets/winboat_logo.svg" alt="WinBoat Logo" width="150">
       </td>
       <td>
         <h1 style="color: #7C86FF; margin: 0; font-size: 32px;">WinBoat</h1>

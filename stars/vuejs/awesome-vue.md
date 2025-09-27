@@ -1,6 +1,6 @@
 ---
 project: awesome-vue
-stars: 73267
+stars: 73282
 description: |-
     🎉 A curated list of awesome things related to Vue.js
 url: https://github.com/vuejs/awesome-vue
@@ -1604,6 +1604,7 @@ _LocalStorage etc._
 - [pinia-persistedstate-2](https://github.com/iendeavor/pinia-plugin-persistedstate-2) - Persist and rehydrate your Pinia state between page reloads.
 - [@tauri-store/pinia](https://github.com/ferreira-tb/tauri-store/tree/main/packages/plugin-pinia) - Persistent Pinia stores for Tauri.
 - [pinia-plugin-unstorage](https://github.com/litingyes/pinia-plugin-unstorage) - The best persistence plugin with unjs/unstorage for pinia.
+- [@erlihs/pinia-plugin-storage](https://github.com/erlihs/pinia-plugin-storage) - A comprehensive state persistence and synchronization, yet as simple as it can be.
 
 ##### Authentication/Authorization
 

@@ -1,6 +1,6 @@
 ---
 project: forgeui
-stars: 84
+stars: 101
 description: |-
     ForgeUI is a customizable, developer-friendly React component library, enabling rapid UI development with modern design, seamless integration, and reusable components tailored for modern web projects.
 url: https://github.com/AmanShakya0018/forgeui

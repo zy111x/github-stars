@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 29923
+stars: 30012
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
@@ -62,14 +62,14 @@ and can also be used for remote monitoring of systems via a web interface or com
 line interface. It is easy to install and use and can be customized to show only
 the information that you are interested in.
 
-.. image:: https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-summary.png
+.. image:: ./docs/_static/glances-summary.png
 
 In client/server mode, remote monitoring could be done via terminal,
 Web interface or API (XML-RPC and RESTful).
 Stats can also be exported to files or external time/value databases, CSV or direct
 output to STDOUT.
 
-.. image:: https://raw.githubusercontent.com/nicolargo/glances/develop/docs/_static/glances-responsive-webdesign.png
+.. image:: ./docs/_static/glances-responsive-webdesign.png
 
 Glances is written in Python and uses libraries to grab information from
 your system. It is based on an open architecture where developers can
@@ -150,6 +150,16 @@ or in a JSON format thanks to the stdout-json option (attribute not supported in
     cpu: {"total": 29.0, "user": 24.7, "nice": 0.0, "system": 3.8, "idle": 71.4, "iowait": 0.0, "irq": 0.0, "softirq": 0.0, "steal": 0.0, "guest": 0.0, "guest_nice": 0.0, "time_since_update": 1, "cpucore": 4, "ctx_switches": 0, "interrupts": 0, "soft_interrupts": 0, "syscalls": 0}
     mem: {"total": 7837949952, "available": 2919079936, "percent": 62.8, "used": 4918870016, "free": 2919079936, "active": 2841214976, "inactive": 3340550144, "buffers": 546799616, "cached": 3068141568, "shared": 788156416}
     ...
+
+Last but not least, you can use the fetch mode to get a quick look of a machine:
+
+.. code-block:: console
+
+    $ glances --fetch
+
+Results look like this:
+
+.. image:: ./docs/_static/screenshot-fetch.png
 
 and RTFM, always.
 
@@ -484,6 +494,7 @@ Dependencies:
 - ``packaging`` (for the version comparison)
 - ``windows-curses`` (Windows Curses implementation) [Windows-only]
 - ``shtab`` (Shell autocompletion) [All but Windows]
+- ``jinja2`` (for fetch mode and templating)
 
 Optional dependencies:
 
@@ -498,7 +509,6 @@ Optional dependencies:
 - ``hddtemp`` (for HDD temperature monitoring support) [Linux-only]
 - ``influxdb`` (for the InfluxDB version 1 export module)
 - ``influxdb-client``  (for the InfluxDB version 2 export module)
-- ``jinja2`` (for templating, used under the hood by FastAPI)
 - ``kafka-python`` (for the Kafka export module)
 - ``netifaces2`` (for the IP plugin)
 - ``nvidia-ml-py`` (for the GPU plugin)

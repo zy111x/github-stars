@@ -1,6 +1,6 @@
 ---
 project: wfd-vue
-stars: 1056
+stars: 1058
 description: |-
     flowable workflow designer for Vue base on @antv/g6
 url: https://github.com/guozhaolong/wfd-vue

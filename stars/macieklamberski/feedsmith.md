@@ -1,6 +1,6 @@
 ---
 project: feedsmith
-stars: 418
+stars: 431
 description: |-
     Fast, all-in-one parser and generator for RSS, Atom, RDF, and JSON Feed, with support for Podcast, iTunes, Dublin Core, and OPML files.
 url: https://github.com/macieklamberski/feedsmith
