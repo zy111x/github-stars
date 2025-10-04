@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 3007
+stars: 3015
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -603,6 +603,9 @@ Options:
 
           Basically, the base URL option resolves links as if the local files were hosted
           at the given base URL address.
+
+          The provided base URL value must either be a URL (with scheme) or an absolute path.
+          Note that certain URL schemes cannot be used as a base, e.g., `data` and `mailto`.
 
       --root-dir <ROOT_DIR>
           Root directory to use when checking absolute links in local files. This option is

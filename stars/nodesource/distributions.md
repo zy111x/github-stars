@@ -1,6 +1,6 @@
 ---
 project: distributions
-stars: 13764
+stars: 13763
 description: |-
     NodeSource Node.js Binary Distributions
 url: https://github.com/nodesource/distributions

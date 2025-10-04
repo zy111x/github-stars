@@ -1,6 +1,6 @@
 ---
 project: rule-engine
-stars: 315
+stars: 323
 description: |-
     The ultimate JSON-based rule engine that turns complex business logic into declarative configurations. Built for developers who believe code should be expressive, not repetitive.
 url: https://github.com/ali-master/rule-engine
@@ -28,6 +28,8 @@ url: https://github.com/ali-master/rule-engine
     <a href="#-documentation">Documentation</a> •
     <a href="#-why-choose-this">Why This?</a>
   </p>
+
+<a href="https://www.producthunt.com/products/open-source-rule-engine?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-open&#0045;source&#0045;rule&#0045;engine" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1012148&theme=light&t=1759345778417" alt="Open&#0032;Source&#0032;Rule&#0032;Engine - A&#0032;JSON&#0032;rule&#0032;engine&#0032;for&#0032;declarative&#0032;business&#0032;logic&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 </div>
 
 ---

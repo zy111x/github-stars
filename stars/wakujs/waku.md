@@ -1,6 +1,6 @@
 ---
 project: waku
-stars: 5763
+stars: 5786
 description: |-
     ⛩️ The minimal React framework
 url: https://github.com/wakujs/waku
@@ -1432,13 +1432,6 @@ Note: When rendering in static mode, please be sure to return `render: 'static'`
 ```sh
 npm run build -- --with-cloudflare
 npx wrangler dev # or deploy
-```
-
-### PartyKit (experimental)
-
-```sh
-npm run build -- --with-partykit
-npx partykit dev # or deploy
 ```
 
 ### Deno Deploy (experimental)

@@ -1,6 +1,6 @@
 ---
 project: zhuque
-stars: 3172
+stars: 3173
 description: |-
     朱雀仿宋/朱雀宋朝/Zhuque Fangsong: An open-source Fangsong typeface project
 url: https://github.com/TrionesType/zhuque

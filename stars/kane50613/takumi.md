@@ -1,8 +1,8 @@
 ---
 project: takumi
-stars: 752
+stars: 770
 description: |-
-    Render your React components to images. Available for Rust, Node.js, and WebAssembly.
+    Render your React component to images, satori but with more features.
 url: https://github.com/kane50613/takumi
 ---
 
@@ -24,6 +24,7 @@ For newcomers, check out the [Getting Started](https://takumi.kane.tw/docs/getti
 - WOFF2 font format support. Trims your bundle size.
 - PNG, JPEG, WebP, AVIF output support.
 - Host Takumi as a standalone service for easier load balancing and scaling (coming soon).
+- WebP, APNG animation rendering support.
 
 ## Showcase
 

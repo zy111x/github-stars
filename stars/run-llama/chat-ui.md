@@ -1,6 +1,6 @@
 ---
 project: chat-ui
-stars: 514
+stars: 517
 description: |-
     Chat UI components for LLM apps
 url: https://github.com/run-llama/chat-ui

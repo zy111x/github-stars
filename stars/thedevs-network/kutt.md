@@ -1,6 +1,6 @@
 ---
 project: kutt
-stars: 10146
+stars: 10154
 description: |-
     Free Modern URL Shortener.
 url: https://github.com/thedevs-network/kutt

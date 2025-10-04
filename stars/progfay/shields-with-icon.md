@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 452
+stars: 451
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -372,7 +372,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Blogger](https://img.shields.io/badge/Blogger-FF5722?style=for-the-badge&logo=Blogger&logoColor=FFFFFF)
 ![Bloglovin](https://img.shields.io/badge/Bloglovin-000000?style=for-the-badge&logo=Bloglovin&logoColor=FFFFFF)
 ![Blueprint](https://img.shields.io/badge/Blueprint-137CBD?style=for-the-badge&logo=Blueprint&logoColor=FFFFFF)
-![Bluesky](https://img.shields.io/badge/Bluesky-0285FF?style=for-the-badge&logo=Bluesky&logoColor=FFFFFF)
+![Bluesky](https://img.shields.io/badge/Bluesky-1185FE?style=for-the-badge&logo=Bluesky&logoColor=FFFFFF)
 ![Bluesound](https://img.shields.io/badge/Bluesound-0F131E?style=for-the-badge&logo=Bluesound&logoColor=FFFFFF)
 ![Bluetooth](https://img.shields.io/badge/Bluetooth-0082FC?style=for-the-badge&logo=Bluetooth&logoColor=FFFFFF)
 ![BMC Software](https://img.shields.io/badge/BMC%20Software-FE5000?style=for-the-badge&logo=BMC+Software&logoColor=FFFFFF)

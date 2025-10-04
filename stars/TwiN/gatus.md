@@ -1,6 +1,6 @@
 ---
 project: gatus
-stars: 8609
+stars: 8671
 description: |-
     ⛑ Automated developer-oriented status page
 url: https://github.com/TwiN/gatus
@@ -59,6 +59,7 @@ Have any feedback or questions? [Create a discussion](https://github.com/TwiN/ga
     - [Functions](#functions)
   - [Storage](#storage)
   - [Client configuration](#client-configuration)
+  - [Tunneling](#tunneling)
   - [Alerting](#alerting)
     - [Configuring AWS SES alerts](#configuring-aws-ses-alerts)
     - [Configuring Datadog alerts](#configuring-datadog-alerts)
@@ -78,6 +79,7 @@ Have any feedback or questions? [Create a discussion](https://github.com/TwiN/ga
     - [Configuring Matrix alerts](#configuring-matrix-alerts)
     - [Configuring Mattermost alerts](#configuring-mattermost-alerts)
     - [Configuring Messagebird alerts](#configuring-messagebird-alerts)
+    - [Configuring n8n alerts](#configuring-n8n-alerts)
     - [Configuring New Relic alerts](#configuring-new-relic-alerts)
     - [Configuring Ntfy alerts](#configuring-ntfy-alerts)
     - [Configuring Opsgenie alerts](#configuring-opsgenie-alerts)
@@ -605,24 +607,25 @@ See [examples/docker-compose-postgres-storage](.examples/docker-compose-postgres
 In order to support a wide range of environments, each monitored endpoint has a unique configuration for
 the client used to send the request.
 
-| Parameter                              | Description                                                                 | Default         |
-|:---------------------------------------|:----------------------------------------------------------------------------|:----------------|
-| `client.insecure`                      | Whether to skip verifying the server's certificate chain and host name.     | `false`         |
-| `client.ignore-redirect`               | Whether to ignore redirects (true) or follow them (false, default).         | `false`         |
-| `client.timeout`                       | Duration before timing out.                                                 | `10s`           |
-| `client.dns-resolver`                  | Override the DNS resolver using the format `{proto}://{host}:{port}`.       | `""`            |
-| `client.oauth2`                        | OAuth2 client configuration.                                                | `{}`            |
-| `client.oauth2.token-url`              | The token endpoint URL                                                      | required `""`   |
-| `client.oauth2.client-id`              | The client id which should be used for the `Client credentials flow`        | required `""`   |
-| `client.oauth2.client-secret`          | The client secret which should be used for the `Client credentials flow`    | required `""`   |
-| `client.oauth2.scopes[]`               | A list of `scopes` which should be used for the `Client credentials flow`.  | required `[""]` |
-| `client.proxy-url`                     | The URL of the proxy to use for the client                                  | `""`            |
-| `client.identity-aware-proxy`          | Google Identity-Aware-Proxy client configuration.                           | `{}`            |
-| `client.identity-aware-proxy.audience` | The Identity-Aware-Proxy audience. (client-id of the IAP oauth2 credential) | required `""`   |
-| `client.tls.certificate-file`          | Path to a client certificate (in PEM format) for mTLS configurations.       | `""`            |
-| `client.tls.private-key-file`          | Path to a client private key (in PEM format) for mTLS configurations.       | `""`            |
-| `client.tls.renegotiation`             | Type of renegotiation support to provide. (`never`, `freely`, `once`).      | `"never"`       |
-| `client.network`                       | The network to use for ICMP endpoint client (`ip`, `ip4` or `ip6`).         | `"ip"`          |
+| Parameter                              | Description                                                                   | Default         |
+|:---------------------------------------|:------------------------------------------------------------------------------|:----------------|
+| `client.insecure`                      | Whether to skip verifying the server's certificate chain and host name.       | `false`         |
+| `client.ignore-redirect`               | Whether to ignore redirects (true) or follow them (false, default).           | `false`         |
+| `client.timeout`                       | Duration before timing out.                                                   | `10s`           |
+| `client.dns-resolver`                  | Override the DNS resolver using the format `{proto}://{host}:{port}`.         | `""`            |
+| `client.oauth2`                        | OAuth2 client configuration.                                                  | `{}`            |
+| `client.oauth2.token-url`              | The token endpoint URL                                                        | required `""`   |
+| `client.oauth2.client-id`              | The client id which should be used for the `Client credentials flow`          | required `""`   |
+| `client.oauth2.client-secret`          | The client secret which should be used for the `Client credentials flow`      | required `""`   |
+| `client.oauth2.scopes[]`               | A list of `scopes` which should be used for the `Client credentials flow`.    | required `[""]` |
+| `client.proxy-url`                     | The URL of the proxy to use for the client                                    | `""`            |
+| `client.identity-aware-proxy`          | Google Identity-Aware-Proxy client configuration.                             | `{}`            |
+| `client.identity-aware-proxy.audience` | The Identity-Aware-Proxy audience. (client-id of the IAP oauth2 credential)   | required `""`   |
+| `client.tls.certificate-file`          | Path to a client certificate (in PEM format) for mTLS configurations.         | `""`            |
+| `client.tls.private-key-file`          | Path to a client private key (in PEM format) for mTLS configurations.         | `""`            |
+| `client.tls.renegotiation`             | Type of renegotiation support to provide. (`never`, `freely`, `once`).        | `"never"`       |
+| `client.network`                       | The network to use for ICMP endpoint client (`ip`, `ip4` or `ip6`).           | `"ip"`          |
+| `client.tunnel`                        | Name of the SSH tunnel to use for this endpoint. See [Tunneling](#tunneling). | `""`            |
 
 
 > 📝 Some of these parameters are ignored based on the type of endpoint. For instance, there's no certificate involved
@@ -713,6 +716,48 @@ endpoints:
 
 > 📝 Note that if running in a container, you must volume mount the certificate and key into the container.
 
+### Tunneling
+Gatus supports SSH tunneling to monitor internal services through jump hosts or bastion servers. 
+This is particularly useful for monitoring services that are not directly accessible from where Gatus is deployed.
+
+SSH tunnels are defined globally in the `tunneling` section and then referenced by name in endpoint client configurations.
+
+| Parameter                             | Description                                                 | Default       |
+|:--------------------------------------|:------------------------------------------------------------|:--------------|
+| `tunneling`                           | SSH tunnel configurations                                   | `{}`          |
+| `tunneling.<tunnel-name>`             | Configuration for a named SSH tunnel                        | `{}`          |
+| `tunneling.<tunnel-name>.type`        | Type of tunnel (currently only `SSH` is supported)          | Required `""` |
+| `tunneling.<tunnel-name>.host`        | SSH server hostname or IP address                           | Required `""` |
+| `tunneling.<tunnel-name>.port`        | SSH server port                                             | `22`          |
+| `tunneling.<tunnel-name>.username`    | SSH username                                                | Required `""` |
+| `tunneling.<tunnel-name>.password`    | SSH password (use either this or private-key)               | `""`          |
+| `tunneling.<tunnel-name>.private-key` | SSH private key in PEM format (use either this or password) | `""`          |
+| `client.tunnel`                       | Name of the tunnel to use for this endpoint                 | `""`          |
+
+```yaml
+tunneling:
+  production:
+    type: SSH
+    host: "jumphost.example.com"
+    username: "monitoring"
+    private-key: |
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEpAIBAAKCAQEA...
+      -----END RSA PRIVATE KEY-----
+
+endpoints:
+  - name: "internal-api"
+    url: "http://internal-api.example.com:8080/health"
+    client:
+      tunnel: "production"
+    conditions:
+      - "[STATUS] == 200"
+```
+
+> ⚠️ **WARNING**:: Tunneling may introduce additional latency, especially if the connection to the tunnel is retried frequently. 
+> This may lead to inaccurate response time measurements.
+
+
 ### Alerting
 Gatus supports multiple alerting providers, such as Slack and PagerDuty, and supports different alerts for each
 individual endpoints with configurable descriptions and thresholds.
@@ -781,6 +826,7 @@ endpoints:
 | `alerting.matrix`          | Configuration for alerts of type `matrix`. <br />See [Configuring Matrix alerts](#configuring-matrix-alerts).                           | `{}`    |
 | `alerting.mattermost`      | Configuration for alerts of type `mattermost`. <br />See [Configuring Mattermost alerts](#configuring-mattermost-alerts).               | `{}`    |
 | `alerting.messagebird`     | Configuration for alerts of type `messagebird`. <br />See [Configuring Messagebird alerts](#configuring-messagebird-alerts).            | `{}`    |
+| `alerting.n8n`             | Configuration for alerts of type `n8n`. <br />See [Configuring n8n alerts](#configuring-n8n-alerts).                                    | `{}`    |
 | `alerting.newrelic`        | Configuration for alerts of type `newrelic`. <br />See [Configuring New Relic alerts](#configuring-new-relic-alerts).                   | `{}`    |
 | `alerting.ntfy`            | Configuration for alerts of type `ntfy`. <br />See [Configuring Ntfy alerts](#configuring-ntfy-alerts).                                 | `{}`    |
 | `alerting.opsgenie`        | Configuration for alerts of type `opsgenie`. <br />See [Configuring Opsgenie alerts](#configuring-opsgenie-alerts).                     | `{}`    |
@@ -1543,8 +1589,8 @@ alerting:
     region: "US"  # or "EU" for European region
 
 endpoints:
-  - name: website
-    url: "https://twin.sh/health"
+  - name: example
+    url: "https://example.org"
     interval: 5m
     conditions:
       - "[STATUS] == 200"
@@ -1552,6 +1598,50 @@ endpoints:
       - type: newrelic
         send-on-resolved: true
 ```
+
+
+#### Configuring n8n alerts
+| Parameter                        | Description                                                                                | Default       |
+|:---------------------------------|:-------------------------------------------------------------------------------------------|:--------------|
+| `alerting.n8n`                   | Configuration for alerts of type `n8n`                                                     | `{}`          |
+| `alerting.n8n.webhook-url`       | n8n webhook URL                                                                            | Required `""` |
+| `alerting.n8n.title`             | Title of the alert sent to n8n                                                             | `""`          |
+| `alerting.n8n.default-alert`     | Default alert configuration. <br />See [Setting a default alert](#setting-a-default-alert) | N/A           |
+| `alerting.n8n.overrides`         | List of overrides that may be prioritized over the default configuration                   | `[]`          |
+| `alerting.n8n.overrides[].group` | Endpoint group for which the configuration will be overridden by this configuration        | `""`          |
+| `alerting.n8n.overrides[].*`     | See `alerting.n8n.*` parameters                                                            | `{}`          |
+
+[n8n](https://n8n.io/) is a workflow automation platform that allows you to automate tasks across different applications and services using webhooks.
+
+Example:
+```yaml
+alerting:
+  n8n:
+    webhook-url: "https://your-n8n-instance.com/webhook/your-webhook-id"
+    title: "Gatus Monitoring"
+    default-alert:
+      send-on-resolved: true
+
+endpoints:
+  - name: example
+    url: "https://example.org"
+    interval: 5m
+    conditions:
+      - "[STATUS] == 200"
+    alerts:
+      - type: n8n
+        description: "Health check alert"
+```
+
+The JSON payload sent to the n8n webhook will include:
+- `title`: The configured title
+- `endpoint_name`: Name of the endpoint
+- `endpoint_group`: Group of the endpoint (if any)
+- `endpoint_url`: URL being monitored
+- `alert_description`: Custom alert description
+- `resolved`: Boolean indicating if the alert is resolved
+- `message`: Human-readable alert message
+- `condition_results`: Array of condition results with their success status
 
 
 #### Configuring Ntfy alerts
@@ -2949,12 +3039,13 @@ endpoints:
       password: "password"
     body: |
       {
-        "command": "uptime"
+        "command": "echo '{\"memory\": {\"used\": 512}}'"
       }
     interval: 1m
     conditions:
       - "[CONNECTED] == true"
       - "[STATUS] == 0"
+      - "[BODY].memory.used > 500"
 ```
 
 you can also use no authentication to monitor the endpoint by not specifying the username
@@ -2977,6 +3068,7 @@ endpoints:
 The following placeholders are supported for endpoints of type SSH:
 - `[CONNECTED]` resolves to `true` if the SSH connection was successful, `false` otherwise
 - `[STATUS]` resolves the exit code of the command executed on the remote server (e.g. `0` for success)
+- `[BODY]` resolves to the stdout output of the command executed on the remote server
 - `[IP]` resolves to the IP address of the server
 - `[RESPONSE_TIME]` resolves to the time it took to establish the connection and execute the command
 

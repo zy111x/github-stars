@@ -1,6 +1,6 @@
 ---
 project: xbmc-addons-chinese
-stars: 3194
+stars: 3196
 description: |-
     Addon scripts, plugins, and skins for XBMC Media Center. Special for chinese laguage.
 url: https://github.com/taxigps/xbmc-addons-chinese

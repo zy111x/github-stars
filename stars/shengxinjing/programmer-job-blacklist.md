@@ -1,6 +1,6 @@
 ---
 project: programmer-job-blacklist
-stars: 28462
+stars: 28465
 description: |-
     :see_no_evil:程序员找工作黑名单，换工作和当技术合伙人需谨慎啊 更新有赞
 url: https://github.com/shengxinjing/programmer-job-blacklist

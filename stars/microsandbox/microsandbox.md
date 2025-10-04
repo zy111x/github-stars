@@ -1,8 +1,8 @@
 ---
 project: microsandbox
-stars: 3788
+stars: 3810
 description: |-
-    Self-hosted plaform for secure execution of untrusted user/AI code
+    Microsandbox — Self-Hosted Plaform for Secure Execution of Untrusted User/AI Code
 url: https://github.com/microsandbox/microsandbox
 ---
 

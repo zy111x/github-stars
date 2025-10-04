@@ -1,6 +1,6 @@
 ---
 project: is.js
-stars: 9117
+stars: 9113
 description: |-
     Micro check library
 url: https://github.com/arasatasaygin/is.js

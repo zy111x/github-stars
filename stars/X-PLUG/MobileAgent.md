@@ -1,6 +1,6 @@
 ---
 project: MobileAgent
-stars: 5918
+stars: 5944
 description: |-
      Mobile-Agent: The Powerful GUI Agent Family
 url: https://github.com/X-PLUG/MobileAgent
@@ -30,6 +30,8 @@ url: https://github.com/X-PLUG/MobileAgent
 
 👏 Welcome to try Mobile-Agent-v3 via our **[<img src="./assets/tongyi.png" width="14px" style="display:inline;"> Modelscope online demo](https://modelscope.cn/studios/wangjunyang/Mobile-Agent-v3)** or **[<img src="./assets/aliyun.png" width="14px" style="display:inline;"> Bailian online demo](https://bailian.console.aliyun.com/next?tab=demohouse#/experience/adk-computer-use/pc)**!
 
+❗️We provide the limited-time free Mobile-Agent-v3 API on <img src="./assets/aliyun.png" width="14px" style="display:inline;">Bailian for quick experience. View the [documentation](https://help.aliyun.com/zh/model-studio/ui-agent-api).
+
 <p align="center">
 	🤗 <a href="https://huggingface.co/mPLUG/GUI-Owl-32B" target="_blank">GUI-Owl-32B</a> | 
 	<img src="./assets/tongyi.png" width="14px" style="display:inline;"> <a href="https://modelscope.cn/models/iic/GUI-Owl-32B" target="_blank">GUI-Owl-32B</a> ｜
@@ -45,7 +47,7 @@ url: https://github.com/X-PLUG/MobileAgent
 
 ## 📢News
 
-- `[2025.9.24]`🔥🔥 We've released the demo on ModelScope that's based on Wuying Cloud Desktop and Phone. No need to deploy models locally or prepare devices, just input your instruction to experience Mobile-Agent-v3! [<img src="./assets/tongyi.png" width="14px" style="display:inline;"> ModelScope Demo Link](https://modelscope.cn/studios/wangjunyang/Mobile-Agent-v3) and [<img src="./assets/aliyun.png" width="14px" style="display:inline;"> Bailian Demo Link](https://bailian.console.aliyun.com/next?tab=demohouse#/experience/adk-computer-use/pc). The new version based on Qwen-3-VL is coming soon.
+- `[2025.9.24]`🔥🔥 We've released the demo on ModelScope that's based on Wuying Cloud Desktop and Phone. No need to deploy models locally or prepare devices, just input your instruction to experience Mobile-Agent-v3! [<img src="./assets/tongyi.png" width="14px" style="display:inline;"> ModelScope Demo Link](https://modelscope.cn/studios/wangjunyang/Mobile-Agent-v3) and [<img src="./assets/aliyun.png" width="14px" style="display:inline;"> Bailian Demo Link](https://bailian.console.aliyun.com/next?tab=demohouse#/experience/adk-computer-use/pc). For a limited-time free Mobile-Agent-v3 API, please check the [documentation](https://help.aliyun.com/zh/model-studio/ui-agent-api). The new version based on Qwen-3-VL is coming soon.
 - `[2025.9.19]`🔥 GUI-Critic-R1 has been accepted by **The Thirty-ninth Annual Conference on Neural Information Processing Systems (NeurIPS 2025)**. 
 - `[2025.9.16]`🔥 We have released our latest work, **UI-S1: Advancing GUI Automation via Semi-online Reinforcement Learning**. The [paper](https://www.arxiv.org/abs/2509.11543), [code](https://github.com/X-PLUG/MobileAgent/tree/main/UI-S1), and [model](https://huggingface.co/mPLUG/UI-S1-7B) are now open-sourced.
 - `[2025.9.16]`🔥 We've open-sourced the code of GUI-Owl and Mobile-Agent-v3 on OSWorld, AndroidWorld, and real-world mobile scenarios. See the [OSWorld Code](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-v3#evaluation-on-osworld). The OSWorld RL-tuned [checkpoint](https://huggingface.co/mPLUG/GUI-Owl-7B-Desktop-RL) of GUI-Owl is also released. See the [AndroidWorld Code](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-v3#evaluation-on-androidworld) and [Real-world Scenarios Code](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-v3#deploy-mobile-agent-v3-on-your-mobile-device).

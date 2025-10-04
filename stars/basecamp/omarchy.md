@@ -1,6 +1,6 @@
 ---
 project: omarchy
-stars: 11227
+stars: 12427
 description: |-
     Opinionated Arch/Hyprland Setup
 url: https://github.com/basecamp/omarchy

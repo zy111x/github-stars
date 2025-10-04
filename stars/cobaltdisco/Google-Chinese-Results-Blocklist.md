@@ -1,6 +1,6 @@
 ---
 project: Google-Chinese-Results-Blocklist
-stars: 7522
+stars: 7520
 description: |-
     我终于能用谷歌搜中文了……
 url: https://github.com/cobaltdisco/Google-Chinese-Results-Blocklist

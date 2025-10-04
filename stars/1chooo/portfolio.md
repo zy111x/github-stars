@@ -1,6 +1,6 @@
 ---
 project: portfolio
-stars: 309
+stars: 310
 description: |-
     null
 url: https://github.com/1chooo/portfolio
@@ -13,7 +13,7 @@ url: https://github.com/1chooo/portfolio
 [1chooo.com]: https://1chooo.com
 
 <div align="center">
-  <a href="https://1chooo.com">
+  <a href="https://youtu.be/sEmmyETf3Ao">
     <img 
       alt="Home Page of 1chooo.com" 
       src="./.github/images/cover-transparent-with-1chooo-com.png" 

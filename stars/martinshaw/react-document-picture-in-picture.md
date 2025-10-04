@@ -1,6 +1,6 @@
 ---
 project: react-document-picture-in-picture
-stars: 40
+stars: 41
 description: |-
     Feature-packed and optimised React component for Chrome's new Document Picture-in-Picture API
 url: https://github.com/martinshaw/react-document-picture-in-picture

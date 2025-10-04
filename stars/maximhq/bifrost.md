@@ -1,6 +1,6 @@
 ---
 project: bifrost
-stars: 615
+stars: 632
 description: |-
     The Fastest LLM Gateway with built in OTel observability and MCP gateway
 url: https://github.com/maximhq/bifrost

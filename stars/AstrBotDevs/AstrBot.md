@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 12312
+stars: 12394
 description: |-
     ✨ 一站式 LLM 聊天机器人平台及开发框架 ✨ 支持 QQ、QQ频道、Telegram、企微、飞书、钉钉 | 知识库、MCP 服务器、OpenAI、DeepSeek、Gemini、硅基流动、月之暗面、Ollama、OneAPI、Dify
 url: https://github.com/AstrBotDevs/AstrBot
@@ -200,7 +200,7 @@ pre-commit install
 - [koishijs/koishi](https://github.com/koishijs/koishi) - 扩展性极强的 Bot 框架
 - [MaiM-with-u/MaiBot](https://github.com/MaiM-with-u/MaiBot) - 注重拟人功能的 ChatBot
 - [langbot-app/LangBot](https://github.com/langbot-app/LangBot) - 功能丰富的 Bot 平台
-- [LroMiose/nekro-agent](https://github.com/KroMiose/nekro-agent) - 注重 Agent 的 ChatBot
+- [KroMiose/nekro-agent](https://github.com/KroMiose/nekro-agent) - 注重 Agent 的 ChatBot
 - [zhenxun-org/zhenxun_bot](https://github.com/zhenxun-org/zhenxun_bot) - 功能完善的 ChatBot
 
 ## ⭐ Star History

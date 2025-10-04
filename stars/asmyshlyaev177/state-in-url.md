@@ -1,6 +1,6 @@
 ---
 project: state-in-url
-stars: 375
+stars: 380
 description: |-
     Store any user state in query parameters; imagine JSON in a browser URL, while keeping types and structure of data, e.g.numbers will be decoded as numbers not strings. With TS validation. Shared state and URL state sync without any hassle or boilerplate. Supports Next.js@14-15, react-router@6-7, and Remix@2.
 url: https://github.com/asmyshlyaev177/state-in-url
@@ -83,7 +83,7 @@ This library is a good alternative for NUQS.
 ### Use cases
 
 - Store unsaved user forms or page filters in URL
-- Sycn URL with React state
+- Sync URL with React state
 - Just sync data between unrelated client components without touching URI
 - Shareable URLs with application state (Deep linking, URL state synchronization)
 - Easy state persistence across page reloads

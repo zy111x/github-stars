@@ -1,6 +1,6 @@
 ---
 project: tinkses
-stars: 11
+stars: 10
 description: |-
     null
 url: https://github.com/tinkink-net/tinkses

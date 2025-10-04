@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 7157
+stars: 7170
 description: |-
     An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici
@@ -199,12 +199,12 @@ console.log('trailers', trailers)
 Undici provides a powerful HTTP caching interceptor that follows HTTP caching best practices. Here's how to use it:
 
 ```js
-import { fetch, Agent, interceptors } from 'undici';
+import { fetch, Agent, interceptors, cacheStores } from 'undici';
 
 // Create a client with cache interceptor
 const client = new Agent().compose(interceptors.cache({
   // Optional: Configure cache store (defaults to MemoryCacheStore)
-  store: new interceptors.cacheStores.MemoryCacheStore({
+  store: new cacheStores.MemoryCacheStore({
     maxSize: 100 * 1024 * 1024, // 100MB
     maxCount: 1000,
     maxEntrySize: 5 * 1024 * 1024 // 5MB
