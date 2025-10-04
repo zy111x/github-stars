@@ -1,6 +1,6 @@
 ---
 project: enhanced-FaaS-in-China
-stars: 2501
+stars: 2511
 description: 提升部署在cloudflare、vercel或netlify的网页在中国的访问速度和稳定性 Improve the access speed and stability in China of web pages hosted on cloudflare, vercel or netlify by merely changing your CNAME record. cf优选域名 | cf优选ip | cloudflare | vercel | netlify | 加速 | 国内 | 中国 | 境内 | 大陆
 url: https://github.com/xingpingcn/enhanced-FaaS-in-China
 ---
@@ -71,7 +71,7 @@ Note
 
 _注：目前似乎只有泉州被墙（红）；测速结果未能及时更新，现在显示的是之前的测速结果；测速速度没太大变化_
 
-vercel-23 点晚高峰 cf-23 点晚高峰
+cf-23 点晚高峰 vercel-23 点晚高峰
 
 测速对比
 ----
@@ -82,7 +82,7 @@ _注：目前似乎只有泉州被墙（红）；测速结果未能及时更新�
 
 点击查看结果
 
-cf-23 点晚高峰 cf-22 点晚高峰 cf-23 点晚高峰-官方 cf-22 点晚高峰-官方 vercel-23 点晚高峰 vercel-23 点晚高峰-官方 netlify-23 点晚高峰 netlify-23 点晚高峰-官方 vercel 中午 vercel 中午-官方 netlify 中午 netlify 中午-官方
+cf-23 点晚高峰 cf-23 点晚高峰 cf-22 点晚高峰 cf-23 点晚高峰-官方 cf-22 点晚高峰-官方 vercel-23 点晚高峰 vercel-23 点晚高峰-官方 netlify-23 点晚高峰 netlify-23 点晚高峰-官方 vercel 中午 vercel 中午-官方 netlify 中午 netlify 中午-官方
 
 How it works
 ------------

@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 42562
+stars: 42905
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---
@@ -286,6 +286,19 @@ Each lesson contains
 Getting Started
 ---------------
 
+### 🎯 New to AI? Start Here!
+
+If you're completely new to AI and want quick, hands-on examples, check out our **Beginner-Friendly Examples**! These include:
+
+-   🌟 **Hello AI World** - Your first AI program (pattern recognition)
+-   🧠 **Simple Neural Network** - Build a neural network from scratch
+-   🖼️ **Image Classifier** - Classify images with detailed comments
+-   💬 **Text Sentiment** - Analyze positive/negative text
+
+These examples are designed to help you understand AI concepts before diving into the full curriculum.
+
+### 📚 Full Curriculum Setup
+
 -   We have created a setup lesson to help you with setting up your development environment. - For Educators, we have created a curricula setup lesson for you too!
 -   How to Run the code in a VSCode or a Codepace
 
@@ -342,3 +355,10 @@ Our team produces other curricula! Check out:
 -   Mastering GitHub Copilot for Agentic use
 -   Mastering GitHub Copilot for C#/.NET Developers
 -   Choose Your Own Copilot Adventure
+
+Getting Help
+------------
+
+If you get stuck or have any questions about building AI apps, join:
+
+If you have product feedback or errors while building visit:
