@@ -1,6 +1,6 @@
 ---
 project: viewScroller.js
-stars: 302
+stars: 301
 description: |-
     Improve your websites using fullpage scrolling
 url: https://github.com/Viewdesic/viewScroller.js

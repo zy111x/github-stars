@@ -1,8 +1,8 @@
 ---
 project: takumi
-stars: 770
+stars: 781
 description: |-
-    Render your React component to images, satori but with more features.
+    Render your React component to images, satori + resvg but with more features.
 url: https://github.com/kane50613/takumi
 ---
 
@@ -10,21 +10,26 @@ url: https://github.com/kane50613/takumi
 
 # Takumi
 
-Takumi is a **image rendering engine** written in Rust and **provide bindings for Node.js, WebAssembly**. Suitable for high-throughput image rendering workloads like Open Graph images, Twitter images, etc.
+Takumi is an **image rendering engine** written in Rust that provides bindings for Node.js and WebAssembly. Suitable for high-throughput image rendering workloads such as Open Graph images and Twitter images.
 
-For newcomers, check out the [Getting Started](https://takumi.kane.tw/docs/getting-started) documentation for installation and usage.
+For newcomers, check out the [Overview](https://takumi.kane.tw/docs) page for installation and usage.
 
 ## Why build a satori alternative?
 
 - All in one. No need to output SVG then have [resvg-js](https://github.com/thx/resvg-js) rendering it again to output PNG.
-- Minimal binary size targets to run everywhere. Node.js, web, embedded in Rust, pre-built http server.
-- Takes your existing JSX components and drops them in. It should just work.
+- Inline layout support (display `block` or `inline`).
 - RTL support.
 - Variable fonts support.
-- WOFF2 font format support. Trims your bundle size.
+- WOFF2 font format support.
 - PNG, JPEG, WebP, AVIF output support.
-- Host Takumi as a standalone service for easier load balancing and scaling (coming soon).
 - WebP, APNG animation rendering support.
+
+## Goals
+
+- Takes your existing JSX components and drops them in, it should just work.
+- Minimal binary size targets to run everywhere.
+- Be the go-to library for image/animation rendering.
+- Have a great developer experience.
 
 ## Showcase
 
@@ -32,9 +37,13 @@ For newcomers, check out the [Getting Started](https://takumi.kane.tw/docs/getti
 
   ![Takumi OG Image](./example/twitter-images/output/og-image.png)
 
+- X Post Image clone in embed [(source)](./example/twitter-images/components/x-post-image.tsx).
+
+  ![X OG Image](./example/twitter-images/output/x-post-image.png)
+
 - [shiki-image](https://github.com/pi0/shiki-image) Convert code snippets into images.
 
-  ![Shiki Image Example](https://github.com/pi0/shiki-image/blob/7ec449c53c20ce5d3260b76cb4bf2cb32e3938e3/test/.snapshot/image.webp)
+  ![Shiki Image Example](https://github.com/pi0/shiki-image/blob/main/test/.snapshot/image.webp)
 
 - [Takumi Playground](https://takumi-playground.kapadiya.net/) In‑browser playground for designing and rendering Open Graph style images.
 

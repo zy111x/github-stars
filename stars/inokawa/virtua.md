@@ -1,6 +1,6 @@
 ---
 project: virtua
-stars: 3134
+stars: 3159
 description: |-
     A zero-config, fast and small (~3kB) virtual list (and grid) component for React, Vue, Solid and Svelte.
 url: https://github.com/inokawa/virtua
@@ -51,6 +51,7 @@ If you use ESM and webpack 5, use react >= 18 to avoid [Can't resolve `react/jsx
 ```tsx
 import { VList } from "virtua";
 
+// children
 export const App = () => {
   return (
     <VList style={{ height: 800 }}>
@@ -66,6 +67,29 @@ export const App = () => {
           {i}
         </div>
       ))}
+    </VList>
+  );
+};
+
+// or render prop
+export const App = () => {
+  const items = Array.from({ length: 1000 }).map(
+    () => Math.floor(Math.random() * 10) * 10 + 10
+  );
+  return (
+    <VList data={items} style={{ height: 800 }}>
+      {(d, i) => (
+        <div
+          key={i}
+          style={{
+            height: d,
+            borderBottom: "solid 1px gray",
+            background: "white",
+          }}
+        >
+          {i}
+        </div>
+      )}
     </VList>
   );
 };
@@ -105,7 +129,7 @@ import { Virtualizer } from "virtua";
 
 export const App = () => {
   return (
-    <div style={{ overflowY: "auto", height: 800 }}>
+    <div style={{ overflowY: "auto", overflowAnchor: "none", height: 800 }}>
       <div style={{ height: 40 }}>header</div>
       <Virtualizer startMargin={40}>
         {Array.from({ length: 1000 }).map((_, i) => (
@@ -237,7 +261,7 @@ const data = Array.from({ length: 1000 }).map((_, i) => sizes[i % 4]);
 import { VList } from "virtua/solid";
 
 export const App = () => {
-  const sizes = [20, 40, 80, 77];
+  const sizes = [20, 40, 180, 77];
   const data = Array.from({ length: 1000 }).map((_, i) => sizes[i % 4]);
 
   return (
@@ -323,9 +347,8 @@ The other solution is using [`render prop`](https://legacy.reactjs.org/docs/rend
 ```tsx
 const Component = memo(HeavyItem);
 
-<VList count={items.length}>
-  {(i) => {
-    const item = items[i];
+<VList data={items}>
+  {(item) => {
     return <Component key={item.id} data={item} />;
   }}
 </VList>;
@@ -365,10 +388,10 @@ This package uses [exports of package.json](https://nodejs.org/api/packages.html
 | Bundle size                                                                                                                                                    | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/virtua)](https://bundlephobia.com/package/virtua) | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-virtuoso)](https://bundlephobia.com/package/react-virtuoso) | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-window)](https://bundlephobia.com/package/react-window) | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-virtualized)](https://bundlephobia.com/package/react-virtualized)                                 | [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@tanstack/react-virtual)](https://bundlephobia.com/package/@tanstack/react-virtual) |
 | Vertical scroll                                                                                                                                                | ✅                                                                                                               | ✅                                                                                                                               | ✅                                                                                                                           | ✅                                                                                                                                                                     | 🟠 (needs customization)                                                                                                                           |
 | Horizontal scroll                                                                                                                                              | ✅                                                                                                               | ✅                                                                                                                               | ✅                                                                                                                           | ✅                                                                                                                                                                     | 🟠 (needs customization)                                                                                                                           |
-| Horizontal scroll in RTL direction                                                                                                                             | ✅                                                                                                               | ❌                                                                                                                               | ✅                                                                                                                           | ❌                                                                                                                                                                     | ❌                                                                                                                                                 |
+| Horizontal scroll in RTL direction                                                                                                                             | ✅                                                                                                               | ❌                                                                                                                               | ✅                                                                                                                           | ❌                                                                                                                                                                     | 🟠 (isRtl)                                                                                                                                         |
 | Grid (Virtualization for two dimension)                                                                                                                        | 🟠 (experimental_VGrid)                                                                                          | ❌                                                                                                                               | ✅ ([Grid](https://react-window.vercel.app/grid/grid))                                                                       | ✅ ([Grid](https://github.com/bvaughn/react-virtualized/blob/master/docs/Grid.md))                                                                                     | 🟠 (needs customization)                                                                                                                           |
 | Table                                                                                                                                                          | 🟠 (needs customization)                                                                                         | ✅ (TableVirtuoso)                                                                                                               | 🟠 ([Supported](https://react-window.vercel.app/list/tabular-data))                                                          | 🟠 ([Table](https://github.com/bvaughn/react-virtualized/blob/master/docs/Table.md) but it's built with div)                                                           | 🟠 (needs customization)                                                                                                                           |
-| Masonry                                                                                                                                                        | ❌                                                                                                               | ✅ (VirtuosoMasonry)                                                                                                             | ❌                                                                                                                           | ✅ ([Masonry](https://github.com/bvaughn/react-virtualized/blob/master/docs/Masonry.md))                                                                               | ❌                                                                                                                                                 |
+| Masonry                                                                                                                                                        | ❌                                                                                                               | ✅ (VirtuosoMasonry)                                                                                                             | ❌                                                                                                                           | ✅ ([Masonry](https://github.com/bvaughn/react-virtualized/blob/master/docs/Masonry.md))                                                                               | 🟠 (needs customization)                                                                                                                           |
 | Window scroller                                                                                                                                                | ✅ (WindowVirtualizer)                                                                                           | ✅                                                                                                                               | ❌                                                                                                                           | ✅ ([WindowScroller](https://github.com/bvaughn/react-virtualized/blob/master/docs/WindowScroller.md))                                                                 | ✅ (useWindowVirtualizer)                                                                                                                          |
 | Dynamic list size                                                                                                                                              | ✅                                                                                                               | ✅                                                                                                                               | ✅                                                                                                                           | 🟠 (needs [AutoSizer](https://github.com/bvaughn/react-virtualized/blob/master/docs/AutoSizer.md))                                                                     | ✅                                                                                                                                                 |
 | Dynamic item size                                                                                                                                              | ✅                                                                                                               | ✅                                                                                                                               | 🟠 (needs additional codes and has wrong destination when scrolling to item imperatively)                                    | 🟠 (needs [CellMeasurer](https://github.com/bvaughn/react-virtualized/blob/master/docs/CellMeasurer.md) and has wrong destination when scrolling to item imperatively) | ✅                                                                                                                                                 |

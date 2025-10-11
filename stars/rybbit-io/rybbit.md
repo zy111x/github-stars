@@ -1,6 +1,6 @@
 ---
 project: rybbit
-stars: 8152
+stars: 8330
 description: |-
     🐸 Rybbit - open-source and privacy-friendly alternative to Google Analytics that is 10x more intuitive.
 url: https://github.com/rybbit-io/rybbit
@@ -107,4 +107,21 @@ There are two ways to start using Rybbit:
 ## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=rybbit-io/rybbit&type=Date)](https://www.star-history.com/#rybbit-io/rybbit&Date)
+
+## Partners
+
+<table align="center">
+  <tr>
+    <td>
+      <a href="https://onyx.app" >
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/d945a61b-3588-4ca1-bc03-abf41bcda867" height="70" />
+          <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/d945a61b-3588-4ca1-bc03-abf41bcda867" height="70" />
+          <img src="https://github.com/user-attachments/assets/d945a61b-3588-4ca1-bc03-abf41bcda867" height="70" alt="Onyx" />
+        </picture>
+      </a>
+    </td>
+  </tr>
+</table>
+
 

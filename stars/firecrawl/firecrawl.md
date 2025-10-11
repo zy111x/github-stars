@@ -1,6 +1,6 @@
 ---
 project: firecrawl
-stars: 61342
+stars: 62451
 description: |-
     The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data 🔥
 url: https://github.com/firecrawl/firecrawl
@@ -50,6 +50,8 @@ _This repository is in development, and we’re still integrating custom modules
 ## What is Firecrawl?
 
 [Firecrawl](https://firecrawl.dev?ref=github) is an API service that takes a URL, crawls it, and converts it into clean markdown or structured data. We crawl all accessible subpages and give you clean data for each. No sitemap required. Check out our [documentation](https://docs.firecrawl.dev).
+
+Looking for our MCP? Check out the [repo here](https://github.com/firecrawl/firecrawl-mcp-server).
 
 _Pst. hey, you, join our stargazers :)_
 

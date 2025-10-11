@@ -1,6 +1,6 @@
 ---
 project: textual
-stars: 31278
+stars: 31471
 description: |-
     The lean application framework for Python.  Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser.
 url: https://github.com/Textualize/textual
@@ -9,7 +9,7 @@ url: https://github.com/Textualize/textual
 
 
 [![Discord](https://img.shields.io/discord/1026214085173461072)](https://discord.gg/Enf6Z3qhVr)
-[![Supported Python Versions](https://img.shields.io/pypi/pyversions/textual/1.0.0)](https://pypi.org/project/textual/)
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/textual)](https://pypi.org/project/textual/)
 [![PyPI version](https://badge.fury.io/py/textual.svg?)](https://badge.fury.io/py/textual)
 ![OS support](https://img.shields.io/badge/OS-macOS%20Linux%20Windows-red)
 

@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 15565
+stars: 15588
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -263,7 +263,9 @@ Hooks allow modifications during the request lifecycle. Hook functions may be as
 Type: `Function[]`\
 Default: `[]`
 
-This hook enables you to modify the request right before it is sent. Ky will make no further changes to the request after this. The hook function receives `request` and `options` as arguments. You could, for example, modify the `request.headers` here.
+This hook enables you to modify the request right before it is sent. Ky will make no further changes to the request after this. The hook function receives the normalized request, options, and a state object. You could, for example, modify the `request.headers` here.
+
+The `state.retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between initial requests and retries, which is useful when you need different behavior for retries (e.g., avoiding overwriting headers set in `beforeRetry`).
 
 The hook can return a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) to replace the outgoing request, or return a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) to completely avoid making an HTTP request. This can be used to mock a request, check an internal cache, etc. An **important** consideration when returning a request or response from this hook is that any remaining `beforeRequest` hooks will be skipped, so you may want to only return them from the last hook.
 
@@ -273,8 +275,12 @@ import ky from 'ky';
 const api = ky.extend({
 	hooks: {
 		beforeRequest: [
-			request => {
-				request.headers.set('X-Requested-With', 'ky');
+			(request, options, {retryCount}) => {
+				// Only set default auth header on initial request, not on retries
+				// (retries may have refreshed token set by beforeRetry)
+				if (retryCount === 0) {
+					request.headers.set('Authorization', 'token initial-token');
+				}
 			}
 		]
 	}
@@ -322,11 +328,12 @@ import ky from 'ky';
 await ky('https://example.com', {
 	hooks: {
 		beforeError: [
-			error => {
+			async error => {
 				const {response} = error;
-				if (response && response.body) {
+				if (response) {
+					const body = await response.json();
 					error.name = 'GitHubError';
-					error.message = `${response.body.message} (${response.status})`;
+					error.message = `${body.message} (${response.status})`;
 				}
 
 				return error;
@@ -630,13 +637,21 @@ Be aware that some types of errors, such as network errors, inherently mean that
 If you need to read the actual response when an `HTTPError` has occurred, call the respective parser method on the response object. For example:
 
 ```js
-import { HTTPError } from "ky";
+import {isKyError, isHTTPError, isTimeoutError} from 'ky';
 
 try {
 	await ky('https://example.com').json();
 } catch (error) {
-	if (error instanceof HTTPError) {
-		const errorJson = await error.response.json();
+	if (isKyError(error)) {
+		if (isHTTPError(error)) {
+			console.log('Status:', error.response.status);
+		  const errorJson = await error.response.json();
+		} else if (isTimeoutError(error)) {
+			console.log('Timeout URL:', error.request.url);
+		}
+	} else {
+		// Handle other errors
+		console.log('Unknown error:', error);
 	}
 }
 ```

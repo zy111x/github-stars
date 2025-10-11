@@ -1,6 +1,6 @@
 ---
 project: nhost
-stars: 8807
+stars: 8820
 description: |-
     The Open Source Firebase Alternative with GraphQL.
 url: https://github.com/nhost/nhost
@@ -41,8 +41,8 @@ Nhost consists of open source software:
 
 - Database: [PostgreSQL](https://www.postgresql.org/)
 - Instant GraphQL API: [Hasura](https://hasura.io/)
-- Authentication: [Hasura Auth](https://github.com/nhost/hasura-auth/)
-- Storage: [Hasura Storage](https://github.com/nhost/hasura-storage)
+- Authentication: [Auth](https://github.com/nhost/nhost/tree/main/services/auth)
+- Storage: [Storage](https://github.com/nhost/nhost/tree/main/services/storage)
 - Serverless Functions: Node.js (JavaScript and TypeScript)
 - [Nhost CLI](https://docs.nhost.io/platform/cli/local-development) for local development
 

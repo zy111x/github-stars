@@ -1,8 +1,8 @@
 ---
 project: ai-sdk-tools
-stars: 678
+stars: 1027
 description: |-
-    A collection of essential utilities for AI development. State management, debugging tools, and artifact handling - everything you need to build production-ready AI applications.
+    Essential utilities for building production-ready AI applications with Vercel AI SDK. State management, debugging, structured streaming, intelligent agents, and caching.
 url: https://github.com/midday-ai/ai-sdk-tools
 ---
 
@@ -10,64 +10,43 @@ url: https://github.com/midday-ai/ai-sdk-tools
 
 ![AI SDK Tools](image.png)
 
-Essential utilities that extend and improve the Vercel AI SDK experience. State management, debugging tools, and structured artifact streaming - everything you need to build production-ready AI applications beyond simple chat interfaces.
+Essential utilities for building production-ready AI applications with Vercel AI SDK. State management, debugging, structured streaming, intelligent agents, and caching.
 
 ## Packages
 
-### 🗄️ [@ai-sdk-tools/store](./packages/store)
-AI chat state that scales with your application. Eliminates prop drilling within your chat components, ensuring better performance and cleaner architecture.
+### [@ai-sdk-tools/store](./packages/store)
+AI chat state management that eliminates prop drilling. Clean architecture and better performance for chat components.
 
 ```bash
 npm i @ai-sdk-tools/store
 ```
 
-### 🔧 [@ai-sdk-tools/devtools](./packages/devtools)
-Development tools for debugging AI applications. A development-only debugging tool that integrates directly into your codebase, just like react-query-devtools.
+### [@ai-sdk-tools/devtools](./packages/devtools)
+Development tools for debugging AI applications. Inspect tool calls, messages, and execution flow directly in your app.
 
 ```bash
 npm i @ai-sdk-tools/devtools
 ```
 
-### 📦 [@ai-sdk-tools/artifacts](./packages/artifacts)
-Advanced streaming interfaces for AI applications. Create structured, type-safe artifacts that stream real-time updates from AI tools to React components. Perfect for dashboards, analytics, documents, and interactive experiences beyond chat.
+### [@ai-sdk-tools/artifacts](./packages/artifacts)
+Stream structured, type-safe artifacts from AI tools to React components. Build dashboards, analytics, and interactive experiences beyond chat.
 
 ```bash
 npm i @ai-sdk-tools/artifacts @ai-sdk-tools/store
 ```
 
-## Quick Example
+### [@ai-sdk-tools/agents](./packages/agents)
+Multi-agent orchestration with automatic handoffs and routing. Build intelligent workflows with specialized agents for any AI provider.
 
-Build advanced AI interfaces with structured streaming:
+```bash
+npm i @ai-sdk-tools/agents ai zod
+```
 
-```tsx
-// Define an artifact
-const BurnRate = artifact('burn-rate', z.object({
-  title: z.string(),
-  data: z.array(z.object({
-    month: z.string(),
-    burnRate: z.number()
-  }))
-}));
+### [@ai-sdk-tools/cache](./packages/cache)
+Universal caching for AI SDK tools. Cache expensive operations with zero configuration - works with regular tools, streaming, and artifacts.
 
-// Stream from AI tool
-const analysis = BurnRate.stream({ title: 'Q4 Analysis' });
-await analysis.update({ data: [{ month: '2024-01', burnRate: 50000 }] });
-await analysis.complete({ title: 'Q4 Analysis Complete' });
-
-// Consume in React
-function Dashboard() {
-  const { data, status, progress } = useArtifact(BurnRate);
-  
-  return (
-    <div>
-      <h2>{data?.title}</h2>
-      {status === 'loading' && <div>Loading... {progress * 100}%</div>}
-      {data?.data.map(item => (
-        <div key={item.month}>{item.month}: ${item.burnRate}</div>
-      ))}
-    </div>
-  );
-}
+```bash
+npm i @ai-sdk-tools/cache
 ```
 
 ## Getting Started
@@ -83,3 +62,4 @@ Visit our [website](https://ai-sdk-tools.dev) to explore interactive demos and d
 ## License
 
 MIT
+

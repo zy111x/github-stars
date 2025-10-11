@@ -1,6 +1,6 @@
 ---
 project: better-auth
-stars: 21403
+stars: 21748
 description: |-
     The most comprehensive authentication framework for TypeScript
 url: https://github.com/better-auth/better-auth

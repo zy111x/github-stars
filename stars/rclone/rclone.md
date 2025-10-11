@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 52792
+stars: 52891
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -58,6 +58,7 @@ directories to and from different cloud storage providers.
 - Google Drive [:page_facing_up:](https://rclone.org/drive/)
 - Google Photos [:page_facing_up:](https://rclone.org/googlephotos/)
 - HDFS (Hadoop Distributed Filesystem) [:page_facing_up:](https://rclone.org/hdfs/)
+- Hetzner Object Storage [:page_facing_up:](https://rclone.org/s3/#hetzner)
 - Hetzner Storage Box [:page_facing_up:](https://rclone.org/sftp/#hetzner-storage-box)
 - HiDrive [:page_facing_up:](https://rclone.org/hidrive/)
 - HTTP [:page_facing_up:](https://rclone.org/http/)
@@ -103,6 +104,7 @@ directories to and from different cloud storage providers.
 - Proton Drive [:page_facing_up:](https://rclone.org/protondrive/)
 - QingStor [:page_facing_up:](https://rclone.org/qingstor/)
 - Qiniu Cloud Object Storage (Kodo) [:page_facing_up:](https://rclone.org/s3/#qiniu)
+- Rabata Cloud Storage [:page_facing_up:](https://rclone.org/s3/#Rabata)
 - Quatrix [:page_facing_up:](https://rclone.org/quatrix/)
 - Rackspace Cloud Files [:page_facing_up:](https://rclone.org/swift/)
 - RackCorp Object Storage [:page_facing_up:](https://rclone.org/s3/#RackCorp)

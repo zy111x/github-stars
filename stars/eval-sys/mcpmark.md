@@ -1,6 +1,6 @@
 ---
 project: mcpmark
-stars: 211
+stars: 244
 description: |-
     MCPMark is a comprehensive, stress-testing MCP benchmark designed to evaluate model and agent capabilities in real-world MCP use.
 url: https://github.com/eval-sys/mcpmark

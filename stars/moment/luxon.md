@@ -1,6 +1,6 @@
 ---
 project: luxon
-stars: 16151
+stars: 16167
 description: |-
     ⏱ A library for working with dates and times in JS
 url: https://github.com/moment/luxon
@@ -15,6 +15,10 @@ Luxon is a library for working with dates and times in JavaScript.
 ```js
 DateTime.now().setZone("America/New_York").minus({ weeks: 1 }).endOf("day").toISO();
 ```
+
+## 🚀 The road to Luxon 4.0
+
+Please [read about and share your feedback](https://github.com/moment/luxon/discussions/1742) on the plans for the next major version of Luxon!
 
 ## Upgrading to 3.0
 

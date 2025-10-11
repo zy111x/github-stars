@@ -1,6 +1,6 @@
 ---
 project: signale
-stars: 8995
+stars: 8997
 description: |-
     Highly configurable logging library
 url: https://github.com/klaudiosinani/signale
@@ -11,7 +11,7 @@ url: https://github.com/klaudiosinani/signale
 </h1>
 
 <h4 align="center">
-  Highly configurable logging utility
+  Highly configurable logging library
 </h4>
 
 <div align="center">
@@ -25,7 +25,6 @@ url: https://github.com/klaudiosinani/signale
 </p>
 
 <div align="center">
-  <!-- <br> -->
   <br>
   <sup><b>Sponsored by:</b></sup>
   <br>
@@ -43,7 +42,7 @@ url: https://github.com/klaudiosinani/signale
 
 Hackable and configurable to the core, signale can be used for logging purposes, status reporting, as well as for handling the output rendering process of other node modules and applications.
 
-Read this document in: [简体中文](https://github.com/klaudiosinani/signale/blob/master/docs/readme.zh_CN.md).
+Read this document in: [Albanian - Shqip](https://github.com/klaudiosinani/signale/blob/master/docs/readme.AL.md), [简体中文 - Simplified Chinese](https://github.com/klaudiosinani/signale/blob/master/docs/readme.zh_CN.md), [German - Deutsch](https://github.com/klaudiosinani/signale/blob/master/docs/readme.DE.md).
 
 You can now support the development process through [GitHub Sponsors](https://github.com/sponsors/klaudiosinani).
 

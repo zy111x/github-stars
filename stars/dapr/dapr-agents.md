@@ -1,6 +1,6 @@
 ---
 project: dapr-agents
-stars: 550
+stars: 552
 description: |-
     Build autonomous, resilient and observable AI agents with built-in workflow orchestration, security, statefulness and telemetry.
 url: https://github.com/dapr/dapr-agents
@@ -121,7 +121,7 @@ To start running Dapr Agents locally, see our [quickstarts](./quickstarts/README
 Dapr Agents is an open-source project under the CNCF umbrella, and we welcome contributions from developers and organizations worldwide!
 
 - GitHub Repository: [https://github.com/dapr/dapr-agents](https://github.com/dapr/dapr-agents)
-- Documentation: [https://dapr.github.io/dapr-agents/](https://docs.dapr.io/developing-applications/dapr-agents/)
+- Documentation: [https://docs.dapr.io/developing-applications/dapr-agents/](https://docs.dapr.io/developing-applications/dapr-agents/)
 - Community Discord: [Join the discussion](https://bit.ly/dapr-discord). 
 - Contribute: Open an issue or submit a PR to help improve Dapr Agents!
 

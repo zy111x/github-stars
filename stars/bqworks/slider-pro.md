@@ -1,6 +1,6 @@
 ---
 project: slider-pro
-stars: 872
+stars: 871
 description: |-
     A modular, responsive and touch-enabled jQuery slider plugin that enables you to create elegant and professionally looking sliders.
 url: https://github.com/bqworks/slider-pro

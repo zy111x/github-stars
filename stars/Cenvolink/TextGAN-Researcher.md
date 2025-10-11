@@ -3,7 +3,7 @@ project: TextGAN-Researcher
 stars: 94
 description: |-
     🧐 Open Deep Research Agent: Automated Knowledge Discovery with TextGAN
-url: https://github.com/Cotix-AI/TextGAN-Researcher
+url: https://github.com/Cenvolink/TextGAN-Researcher
 ---
 
 <div align="center">

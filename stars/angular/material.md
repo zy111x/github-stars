@@ -1,6 +1,6 @@
 ---
 project: material
-stars: 16467
+stars: 16466
 description: |-
     Material design for AngularJS
 url: https://github.com/angular/material

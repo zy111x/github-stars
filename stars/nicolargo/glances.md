@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 30085
+stars: 30172
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
@@ -62,8 +62,6 @@ and can also be used for remote monitoring of systems via a web interface or com
 line interface. It is easy to install and use and can be customized to show only
 the information that you are interested in.
 
-.. image:: ./docs/_static/glances-summary.png
-
 In client/server mode, remote monitoring could be done via terminal,
 Web interface or API (XML-RPC and RESTful).
 Stats can also be exported to files or external time/value databases, CSV or direct
@@ -84,6 +82,8 @@ For the standalone mode, just run:
 
     $ glances
 
+.. image:: ./docs/_static/glances-summary.png
+
 For the Web server mode, run:
 
 .. code-block:: console
@@ -91,6 +91,8 @@ For the Web server mode, run:
     $ glances -w
 
 and enter the URL ``http://<ip>:61208`` in your favorite web browser.
+
+.. image:: ./docs/_static/screenshot-web.png
 
 For the client/server mode, run:
 
@@ -168,7 +170,7 @@ Documentation 📜
 
 For complete documentation have a look at the readthedocs_ website.
 
-If you have any question (after RTFM!), please post it on the official Q&A `forum`_.
+If you have any question (after RTFM!), please post it on the official Reddit `forum`_.
 
 Gateway to other services 🌐
 ============================
@@ -275,6 +277,15 @@ Install Glances (with all features):
     pipx install 'glances[all]'
 
 The glances script will be installed in the ~/.local/bin folder.
+
+Brew: The missing package manager
+---------------------------------
+
+For Linux and Mac OS, it is also possible to install Glances with `Brew`_:
+
+.. code-block:: console
+
+    brew install glances
 
 Docker: the cloudy way
 ----------------------
@@ -575,10 +586,11 @@ Please give us a star on `GitHub`_ if you like this project.
     :alt: Star history
 
 .. _psutil: https://github.com/giampaolo/psutil
+.. _Brew: https://formulae.brew.sh/formula/glances
 .. _Python: https://www.python.org/getit/
 .. _Termux: https://play.google.com/store/apps/details?id=com.termux
 .. _readthedocs: https://glances.readthedocs.io/
-.. _forum: https://groups.google.com/forum/?hl=en#!forum/glances-users
+.. _forum: https://www.reddit.com/r/glances/
 .. _wiki: https://github.com/nicolargo/glances/wiki/How-to-contribute-to-Glances-%3F
 .. _package: https://repology.org/project/glances/versions
 .. _sponsors: https://github.com/sponsors/nicolargo

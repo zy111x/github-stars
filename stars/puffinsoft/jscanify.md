@@ -1,6 +1,6 @@
 ---
 project: jscanify
-stars: 1645
+stars: 1649
 description: |-
     The Javascript document scanning library.
 url: https://github.com/puffinsoft/jscanify

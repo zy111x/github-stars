@@ -1,6 +1,6 @@
 ---
 project: HEAD
-stars: 30233
+stars: 30235
 description: |-
     A simple guide to HTML <head> elements
 url: https://github.com/joshbuchea/HEAD

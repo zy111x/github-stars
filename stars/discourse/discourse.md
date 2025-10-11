@@ -1,6 +1,6 @@
 ---
 project: discourse
-stars: 45214
+stars: 45251
 description: |-
     A platform for community discussion. Free, open, simple.
 url: https://github.com/discourse/discourse

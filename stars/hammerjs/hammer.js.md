@@ -1,6 +1,6 @@
 ---
 project: hammer.js
-stars: 24341
+stars: 24343
 description: |-
     A javascript library for multi-touch gestures :// You can touch this
 url: https://github.com/hammerjs/hammer.js

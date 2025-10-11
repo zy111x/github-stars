@@ -1,6 +1,6 @@
 ---
 project: lmrouter
-stars: 239
+stars: 241
 description: |-
     An open-source, all-in-one AI API router
 url: https://github.com/LMRouter/lmrouter

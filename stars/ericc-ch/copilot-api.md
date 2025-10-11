@@ -1,6 +1,6 @@
 ---
 project: copilot-api
-stars: 1210
+stars: 1258
 description: |-
     Turn GitHub Copilot into OpenAI/Anthropic API compatible server. Usable with Claude Code!
 url: https://github.com/ericc-ch/copilot-api
@@ -170,6 +170,7 @@ The following command line options are available for the `start` command:
 | --github-token | Provide GitHub token directly (must be generated using the `auth` subcommand) | none       | -g    |
 | --claude-code  | Generate a command to launch Claude Code with Copilot API config              | false      | -c    |
 | --show-token   | Show GitHub and Copilot tokens on fetch and refresh                           | false      | none  |
+| --proxy-env    | Initialize proxy from environment variables                                   | false      | none  |
 
 ### Auth Command Options
 
@@ -259,6 +260,9 @@ npx copilot-api@latest debug
 
 # Display debug information in JSON format
 npx copilot-api@latest debug --json
+
+# Initialize proxy from environment variables (HTTP_PROXY, HTTPS_PROXY, etc.)
+npx copilot-api@latest start --proxy-env
 ```
 
 ## Using the Usage Viewer

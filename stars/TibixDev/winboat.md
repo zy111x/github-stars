@@ -1,6 +1,6 @@
 ---
 project: winboat
-stars: 5806
+stars: 9937
 description: |-
     Run Windows apps on 🐧 Linux with ✨ seamless integration
 url: https://github.com/TibixDev/winboat
@@ -47,7 +47,7 @@ Before running WinBoat, ensure your system meets the following requirements:
 
 - **RAM**: At least 4 GB of RAM
 - **CPU**: At least 2 CPU threads  
-- **Storage**: At least 32 GB free space in `/var`
+- **Storage**: At least 32 GB free space on the drive your selected install folder corresponds to
 - **Virtualization**: KVM enabled in BIOS/UEFI
   - [How to enable virtualization](https://duckduckgo.com/?t=h_&q=how+to+enable+virtualization+in+%3Cmotherboard+brand%3E+bios&ia=web)
 - **Docker**: Required for containerization
@@ -59,7 +59,7 @@ Before running WinBoat, ensure your system meets the following requirements:
   - [Setup Instructions](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 - **FreeRDP**: Required for remote desktop connection (Please make sure you have **Version 3.x.x** with sound support included)
   - [Installation Guide](https://github.com/FreeRDP/FreeRDP/wiki/PreBuilds)
-- **Kernel Modules**: `iptables` and `iptable_nat` modules must be loaded
+- [OPTIONAL] **Kernel Modules**: The `iptables` / `nftables` and `iptable_nat` kernel modules can be loaded for network autodiscovery and better shared filesystem performance, but this is not obligatory in newer versions of WinBoat
   - [Module loading instructions](https://rentry.org/rmfq2e5e)
 
 ## Downloading
@@ -121,6 +121,7 @@ They're awesome and you should check them out:
 - [![Bluesky](https://img.shields.io/badge/Bluesky-winboat.app-00A8E8?style=flat&logo=bluesky&logoColor=white)](http://bsky.app/profile/winboat.app)
 - [![Discord](https://img.shields.io/badge/Discord-Join_Community-5865F2?style=flat&logo=discord&logoColor=white)](http://discord.gg/MEwmpWm4tN)
 - [![Email](https://img.shields.io/badge/Email-staff@winboat.app-D14836?style=flat&logo=gmail&logoColor=white)](mailto:staff@winboat.app)
+- [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/TibixDev/winboat)
 
 ## Star History
 <a href="https://www.star-history.com/#tibixdev/winboat&Date">

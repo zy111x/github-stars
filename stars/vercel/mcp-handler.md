@@ -1,6 +1,6 @@
 ---
 project: mcp-handler
-stars: 403
+stars: 418
 description: |-
     Easily spin up an MCP Server on Next.js, Nuxt, Svelte, and more
 url: https://github.com/vercel/mcp-handler
@@ -332,7 +332,9 @@ const handler = protectedResourceHandler({
   authServerUrls: ["https://auth-server.com"],
 });
 
-export { handler as GET, metadataCorsOptionsRequestHandler as OPTIONS };
+const corsHandler = metadataCorsOptionsRequestHandler()
+
+export { handler as GET, corsHandler as OPTIONS };
 ```
 
 This endpoint provides:
