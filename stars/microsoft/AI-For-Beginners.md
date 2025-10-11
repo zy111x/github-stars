@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 42905
+stars: 43078
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---
@@ -16,7 +16,7 @@ Explore the world of **Artificial Intelligence** (AI) with our 12-week, 24-lesso
 
 #### Supported via GitHub Action (Automated & Always Up-to-Date)
 
-French | Spanish | German | Russian | Arabic | Persian (Farsi) | Urdu | Chinese (Simplified) | Chinese (Traditional, Macau) | Chinese (Traditional, Hong Kong) | Chinese (Traditional, Taiwan) | Japanese | Korean | Hindi | Bengali | Marathi | Nepali | Punjabi (Gurmukhi) | Portuguese (Portugal) | Portuguese (Brazil) | Italian | Polish | Turkish | Greek | Thai | Swedish | Danish | Norwegian | Finnish | Dutch | Hebrew | Vietnamese | Indonesian | Malay | Tagalog (Filipino) | Swahili | Hungarian | Czech | Slovak | Romanian | Bulgarian | Serbian (Cyrillic) | Croatian | Slovenian | Ukrainian | Burmese (Myanmar)
+Arabic | Bengali | Bulgarian | Burmese (Myanmar) | Chinese (Simplified) | Chinese (Traditional, Hong Kong) | Chinese (Traditional, Macau) | Chinese (Traditional, Taiwan) | Croatian | Czech | Danish | Dutch | Estonian | Finnish | French | German | Greek | Hebrew | Hindi | Hungarian | Indonesian | Italian | Japanese | Korean | Lithuanian | Malay | Marathi | Nepali | Norwegian | Persian (Farsi) | Polish | Portuguese (Brazil) | Portuguese (Portugal) | Punjabi (Gurmukhi) | Romanian | Russian | Serbian (Cyrillic) | Slovak | Slovenian | Spanish | Swahili | Swedish | Tagalog (Filipino) | Tamil | Thai | Turkish | Ukrainian | Urdu | Vietnamese
 
 **If you wish to have additional translations languages supported are listed here**
 

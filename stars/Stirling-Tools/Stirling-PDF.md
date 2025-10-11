@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 68208
+stars: 68532
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -19,80 +19,103 @@ All documentation available at https://docs.stirlingpdf.com/
 Features
 --------
 
--   50+ PDF Operations
 -   Parallel file processing and downloads
 -   Dark mode support
 -   Custom download options
--   Custom 'Pipelines' to run multiple features in a automated queue
+-   Custom 'Pipelines' to run multiple features in an automated queue
 -   API for integration with external scripts
 -   Optional Login and Authentication support (see here for documentation)
--   Database Backup and Import (see here for documentation)
 -   Enterprise features like SSO (see here for documentation)
+-   Database Backup and Import (see here for documentation)
 
-PDF Features
-------------
+### 50+ PDF Operations
 
-### Page Operations
+#### Organise
 
--   View and modify PDFs - View multi-page PDFs with custom viewing, sorting, and searching. Plus, on-page edit features like annotating, drawing, and adding text and images. (Using PDF.js with Joxit and Liberation fonts)
--   Full interactive GUI for merging/splitting/rotating/moving PDFs and their pages
--   Merge multiple PDFs into a single resultant file
--   Split PDFs into multiple files at specified page numbers or extract all pages as individual files
--   Reorganize PDF pages into different orders
--   Rotate PDFs in 90-degree increments
--   Remove pages
--   Multi-page layout (format PDFs into a multi-paged page)
--   Scale page contents size by set percentage
--   Adjust contrast
--   Crop PDF
--   Auto-split PDF (with physically scanned page dividers)
--   Extract page(s)
--   Convert PDF to a single page
--   Overlay PDFs on top of each other
--   PDF to a single page
--   Split PDF by sections
+-   **Merge**: Combine multiple PDFs into one
+-   **Split**: Divide PDFs into multiple files
+-   **Extract page(s)**: Extract specific pages from PDF
+-   **Remove**: Delete pages from PDF
+-   **Crop PDF**: Adjust PDF page boundaries
+-   **Rotate**: Rotate pages in 90-degree increments
+-   **Adjust page size/scale**: Resize page contents
+-   **Multi-Page Layout**: Add multiple pages to PDF
+-   **PDF to Single Large Page**: Convert to single continuous page
+-   **Organize**: Rearrange PDF pages
 
-### Conversion Operations
+#### Convert to PDF
 
--   Convert PDFs to and from images
--   Convert any common file to PDF (using LibreOffice)
--   Convert PDF to Word/PowerPoint/others (using LibreOffice)
--   Convert HTML to PDF
--   Convert PDF to XML
--   Convert PDF to CSV
--   URL to PDF
--   Markdown to PDF
+-   **Image to PDF**: Convert images to PDF format
+-   **Convert file to PDF**: Convert various common file types to PDF
+-   **HTML to PDF**: Transform HTML documents to PDF
+-   **Markdown to PDF**: Convert Markdown files to PDF
+-   **CBZ to PDF**: Convert comic book archives
+-   **CBR to PDF**: Convert comic book rar archives
+-   **Email to PDF**: Convert email files to PDF
 
-### Security & Permissions
+#### Convert from PDF
 
--   Add and remove passwords
--   Change/set PDF permissions
--   Add watermark(s)
--   Certify/sign PDFs
--   Sanitize PDFs
--   Auto-redact text
+-   **PDF to Word**: Convert to documet (docx, doc, odt) format
+-   **PDF to Image**: Extract PDF pages as images
+-   **PDF to RTF (Text)**: Convert to Rich Text Format
+-   **PDF to Presentation**: Convert to presentation (pptx, ppt, odp) format
+-   **PDF to CSV**: Extract tables to CSV
+-   **PDF to XML**: Convert to XML format
+-   **PDF to HTML**: Transform to HTML
+-   **PDF to PDF/A**: Convert to archival (PDF/A-1b, PDF/A-2b) format
+-   **PDF to Markdown**: Convert PDF to Markdown
+-   **PDF to CBZ**: Convert to comic book archive
+-   **PDF to CBR**: Convert to comic book rar archive
 
-### Other Operations
+#### Sign & Security
 
--   Add/generate/write signatures
--   Split by Size or PDF
--   Repair PDFs
--   Detect and remove blank pages
--   Compare two PDFs and show differences in text
--   Add images to PDFs
--   Compress PDFs to decrease their filesize (using qpdf)
--   Extract images from PDF
--   Remove images from PDF
--   Extract images from scans
--   Remove annotations
--   Add page numbers
--   Auto-rename files by detecting PDF header text
--   OCR on PDF (using Tesseract OCR)
--   PDF/A conversion (using LibreOffice)
--   Edit metadata
--   Flatten PDFs
--   Get all information on a PDF to view or export as JSON
--   Show/detect embedded JavaScript
+-   **Sign**: Add digital signatures
+-   **Remove Password**: Remove PDF security
+-   **Add Watermark**: Apply watermarks
+-   **Sign with Certificate**: Certificate-based signing
+-   **Add Stamp to PDF**: Apply digital stamps
+-   **Auto Redact**: Automatically redact content
+-   **Change Permissions**: Modify access permissions
+-   **Add Password**: Apply PDF encryption
+-   **Manual Redaction**: Manual content redaction
+-   **Remove Certificate Sign**: Remove digital signatures
+-   **Sanitize**: Clean PDF of potential security issues
+-   **Validate PDF Signature**: Verify digital signatures
+
+#### View & Edit
+
+-   **OCR / Cleanup scans**: Optical Character Recognition
+-   **Add Image**: Insert images into PDF
+-   **Extract Images**: Extract embedded images
+-   **Change Metadata**: Edit PDF metadata
+-   **Get ALL Info on PDF**: Comprehensive PDF analysis
+-   **Advanced Colour options**: Colour manipulation (various options for colour inversion, CMYK conversion)
+-   **Compare**: Compare PDF documents
+-   **Add Page Numbers**: Insert page numbering
+-   **Flatten**: Flatten PDF layers, and interactive elements
+-   **Remove Annotations**: Delete comments and markups
+-   **Remove Blank pages**: Delete empty pages
+-   **Remove Image**: Delete embedded images
+-   **View/Edit PDF**: Interactive PDF editing
+-   **Unlock PDF Forms**: Enable form editing
+-   **Add Attachments**: Attach files to PDF
+
+#### Advanced
+
+-   **Compress**: Reduce file size
+-   **Pipeline**: Automated workflow processing (OCR images pipeline, prepare PDFs for emailing pipeline)
+-   **Adjust Colours/Contrast**: Colour and contrast adjustment
+-   **Auto Rename PDF File**: Automatic file renaming
+-   **Auto Split Pages**: Automatic page splitting
+-   **Detect/Split Scanned photos**: Photo detection and splitting
+-   **Overlay PDFs**: Layer PDFs over each other
+-   **Repair**: Fix corrupted PDFs
+-   **Show JavaScript**: Display embedded JavaScript
+-   **Auto Split by Size/Count**: Split by file size or page count
+-   **Split PDF by Chapters**: Chapter-based splitting
+-   **Split PDF by Sections**: Section-based splitting
+-   **Scanner Effect**: Apply scanner-like effects
+-   **Edit Table of Contents**: Modify PDF bookmarks and TOC
 
 📖 Get Started
 ==============

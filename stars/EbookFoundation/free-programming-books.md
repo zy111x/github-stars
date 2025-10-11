@@ -1,6 +1,6 @@
 ---
 project: free-programming-books
-stars: 371461
+stars: 372228
 description: :books: Freely available programming books
 url: https://github.com/EbookFoundation/free-programming-books
 ---
@@ -66,7 +66,7 @@ English, By Subject
 -   Burmese / မြန်မာဘာသာ
 -   Chinese / 中文
 -   Czech / čeština / český jazyk
--   Catalan / catalan/ català
+-   Catalan / catalan / català
 -   Danish / dansk
 -   Dutch / Nederlands
 -   Estonian / eesti keel
@@ -122,7 +122,7 @@ English, By Subject
 -   Indonesian / Bahasa Indonesia
 -   Italian / italiano
 -   Japanese / 日本語
--   Kannada/ಕನ್ನಡ
+-   Kannada / ಕನ್ನಡ
 -   Kazakh / қазақша
 -   Khmer / ភាសាខ្មែរ
 -   Korean / 한국어
@@ -134,6 +134,8 @@ English, By Subject
 -   Polish / polski / język polski / polszczyzna
 -   Portuguese (Brazil)
 -   Portuguese (Portugal)
+-   Punjabi / ਪੰਜਾਬੀ / پنجابی
+-   Romanian (Romania) / limba română / român
 -   Russian / Русский язык
 -   Sinhala / සිංහල
 -   Spanish / español / castellano

@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 11847
+stars: 11909
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -370,9 +370,9 @@ ZMTO：一家专业的云基础设施提供商，以可靠的尖端技术与专�
 TikHub
 ------
 
-TikHub：第三方 API 服务供应商，专注于提供各平台 API。
+TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台获取与分析数据 —— 包括视频、用户、评论、商店、商品与趋势等，一站式完成所有数据访问与分析。
 
-通过每日签到，用户可以免费获取少量使用额度；可以使用我的 **推荐链接**：https://user.tikhub.io/users/signup?referral\_code=ZrdH8McC 或 **推荐码**：`ZrdH8McC`，注册并充值即可获得 `$2` 额度！
+通过 **邀请链接**：https://user.tikhub.io/users/signup?referral\_code=ZrdH8McC 或 **邀请码**：`ZrdH8McC`，注册并充值即可获得 `$2` 额度！
 
 ✉️ 联系作者
 =======
