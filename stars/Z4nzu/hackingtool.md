@@ -1,6 +1,6 @@
 ---
 project: hackingtool
-stars: 53719
+stars: 53795
 description: ALL IN ONE Hacking Tool For Hackers
 url: https://github.com/Z4nzu/hackingtool
 ---
@@ -289,7 +289,7 @@ Step : 4 Run hackingtool
 ------------------------
 
 ```
-sudo bash install.sh
+sudo python install.py
 ```
 
 Step : 5 For installing tools in directory

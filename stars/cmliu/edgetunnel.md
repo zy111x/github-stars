@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 23360
+stars: 23469
 description: 在原版的基础上修改了显示 VLESS 配置信息转换为订阅内容。使用该脚本，你可以方便地将 VLESS 配置信息使用在线配置转换到 Clash 或 Singbox 等工具中。
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -229,14 +229,6 @@ GO2SOCKS5
 ❌
 
 设置`SOCKS5`或`HTTP`变量之后，可设置强制使用socks5访问名单(设置为`*`可作为全局代理)
-
-NAT64
-
-`dns64.cmi.ztvi.org`或`2001:67c:2960:6464::/96`
-
-❌
-
-作为PROXYIP失效后的应急兜底，自行查询nat64.xyz的`DNS64 Server`或`NAT64 Prefix`
 
 ADD
 
@@ -543,3 +535,4 @@ CF账户的`Global API Key`，用于获取 Workers/Pages 请求数
 -   股神
 -   Workers/Pages Metrics
 -   白嫖哥
+-   Mingyu

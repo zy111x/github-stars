@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 68532
+stars: 68836
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -52,6 +52,7 @@ Features
 -   **CBZ to PDF**: Convert comic book archives
 -   **CBR to PDF**: Convert comic book rar archives
 -   **Email to PDF**: Convert email files to PDF
+-   **Vector Image to PDF**: Convert vector images (PS, EPS, EPSF) to PDF format
 
 #### Convert from PDF
 
@@ -66,6 +67,7 @@ Features
 -   **PDF to Markdown**: Convert PDF to Markdown
 -   **PDF to CBZ**: Convert to comic book archive
 -   **PDF to CBR**: Convert to comic book rar archive
+-   **PDF to Vector Image**: Convert PDF to vector image (EPS, PS, PCL, XPS) format
 
 #### Sign & Security
 
