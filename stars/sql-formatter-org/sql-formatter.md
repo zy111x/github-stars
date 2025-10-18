@@ -1,6 +1,6 @@
 ---
 project: sql-formatter
-stars: 2707
+stars: 2723
 description: |-
     A whitespace formatter for different query languages
 url: https://github.com/sql-formatter-org/sql-formatter
@@ -209,6 +209,14 @@ This makes SQL Formatter available as a global variable `window.sqlFormatter`.
   - [Repo](https://github.com/sql-formatter-org/sql-formatter-vscode)
 - [Vim extension](https://github.com/fannheyward/coc-sql/)
 - [Prettier plugin](https://github.com/un-ts/prettier/tree/master/packages/sql)
+
+We provide **JSON Schema** for `.sql-formatter.json` configuration file, enabling autocompletion and IntelliSense support in editors.
+
+- [JSON Schema link](https://raw.githubusercontent.com/sql-formatter-org/sql-formatter/refs/heads/master/schema.json)
+- **Usage Guides:**
+  - [Using the schema in VSCode](https://code.visualstudio.com/docs/languages/json#_mapping-in-the-user-settings)
+  - [Using the schema in Zed](https://zed.dev/docs/languages/json#schema-specification-via-settings)
+
 
 ### Usage as ESLint plugin
 

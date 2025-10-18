@@ -1,6 +1,6 @@
 ---
 project: Web-Dev-For-Beginners
-stars: 92247
+stars: 92345
 description: |-
     24 Lessons, 12 Weeks, Get Started as a Web Developer
 url: https://github.com/microsoft/Web-Dev-For-Beginners
@@ -46,6 +46,10 @@ Follow these steps to get started using these resources:
 #### 🧑‍🎓 _Are you a student?_
 
 Visit [**Student Hub page**](https://docs.microsoft.com/learn/student-hub/?WT.mc_id=academic-77807-sagibbon) where you will find beginner resources, Student packs and even ways to get a free certificate voucher. This is the page you want to bookmark and check from time to time as we switch out content monthly.
+
+### 📣 Announcement - New GitHub Copilot Agent mode challenges to complete!
+
+New Challenge added, look for "GitHub Copilot Agent Challenge 🚀" in most chapters. That's a new challenge for you to complete using GitHub Copilot and Agent mode. If you haven't used Agent mode before it's capable of not just generating text but can also create and edit files, run commands and more.
 
 ### 📣 Announcement - _New Project to build using Generative AI_ 
 

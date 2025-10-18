@@ -1,6 +1,6 @@
 ---
 project: You-Dont-Need-JavaScript
-stars: 20312
+stars: 20344
 description: |-
     CSS is powerful, you can do a lot of things without JS.
 url: https://github.com/you-dont-need/You-Dont-Need-JavaScript
@@ -57,12 +57,15 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Climbing Loading](#Climbing-Loading)
 - [Download_buttons](#Download_buttons)
 - [Dog Box Animation](#dog-box-animation)
+- [Dismissible Alert](#dismissible-alert)
 - [Dropdown Menu](#dropdown-menu)
 - [Dynamic Image Colorizing](#dynamic-image-colorizing)
+- [Earth](#earth)
 - [Enable Dark Mode](#darkmode)
 - [Fancy Menu](#fancy-menu)
 - [Flip the grid](#flip-grid)
 - [Flip on Click](#flip-on-click)
+- [Flipbook Storyboard](#flipbook-storyboard)
 - [Floating Label on Textfield](#floating-label-on-textfield)
 - [Floating Labels V2](#floating-labelv2)
 - [Font-Face (Latin)](#font-face-latin)
@@ -75,6 +78,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Image Comparison Slider](#image-comparison-slider)
 - [Infinite Carousel](#infinite-carousel)
 - [Info on Hover / Popover](#info-on-hover-popover)
+- [Interactive Resume](#interactive-resume)
 - [Jumping Ball](#jumping-ball)
 - [Light Bulb Animation](#light-bulb-animation)
 - [Loaders](#loaders)
@@ -83,7 +87,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [MasterCard](#mastercard)
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
+- [Mondrian Composition](#mondrian-composition)
 - [Mouse Tracking](#mouse-tracking)
+- [Multi Step Checkout](#multi-step-checkout)
 - [NavBar](#navbar)
 - [Neon Button](#neon-button)
 - [Neon Card](#neon-card)
@@ -98,8 +104,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Retro Loader](#RetroLoader)
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
+- [Resizable Split Panel](#resizable-split-panel)
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
+- [Scroll Video Cinematic Animation](#scroll-video-cinematic)
 - [Shake Button](#shake-button)
 - [Shuffling Squares](#shuffling-squares)
 - [Star Wars Intro](#star-wars-intro)
@@ -129,6 +137,12 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 
 ---
 
+## <a id="earth"></a>EARTH
+
+[EARTH](/You-Dont-Need-JavaScript/EARTH/earth.mp4)
+
+**[⬆ back to top](#quick-links)**
+
 ## <a id="image-hover-effect"></a>Image Hover Effect
 
 [<img src="Image-Hover-Effect\image.png" height="230" title="Image Hover Effect" alt="Image-Hover-Effect">](http://url-to-page)
@@ -151,6 +165,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 ##### Light Theme:
 
 [<video width="400" height="200" controls>
+
 <source src="https://github.com/user-attachments/assets/4786bfb6-78e7-4682-b098-c49f3f518b5f" type="video/mp4">
 Your browser does not support the video tag.
 </video>](http://url-to-light-theme-page)
@@ -158,6 +173,7 @@ Your browser does not support the video tag.
 ##### Dark Theme:
 
 [<video width="400" height="200" controls>
+
 <source src="https://github.com/user-attachments/assets/1b305f75-26b3-41c3-a19a-6f7bd043d393" type="video/mp4">
 Your browser does not support the video tag.
 </video>](http://url-to-dark-theme-page)
@@ -402,7 +418,7 @@ Your browser does not support the video tag.
 [<img src="./images/css-loader-purna.gif" alt="CSS-Loader-Purna" height="230" title="CSS-Loader-Purna">](https://codepen.io/purnaaa/pen/vYVVygB)
 [<img src="images/loader10.png" height="230" title="Demo 10">](https://codepen.io/Sahil-Patil-the-sans/pen/WNPbVqK)
 [<img src="images/loader11.gif" height="230" title="Demo 11">](https://codepen.io/sugeng-sulistiyawan/pen/PoyjPWd)
-[<img src="images/loader12.gif" height="230" title="Demo 12">](https://github.com/TechGenie-awake/You-Dont-Need-JavaScript/blob/patch-1/Loading/loading.gif)
+[<img src="images/loader12.gif" height="230" title="Demo 12">](http://codepen.io/rcjasub/pen/zxrddOP)
 
 **[⬆ back to top](#quick-links)**
 
@@ -500,6 +516,13 @@ Your browser does not support the video tag.
 
 ---
 
+## <a id="mondrian-composition"></a>Mondrian Composition
+[<img src="images/mondrian_composition.png" height="230" title="Mondrian Art Demo">](https://codepen.io/VINAY-MADIVAL/pen/VYerdxY)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="Mouse"></a>Mouse tracking
 
 [<img src="images/mousetracking.png" height="230" title="Demo 1">](https://codepen.io/Momciloo/pen/GoGRrQ)
@@ -546,6 +569,14 @@ Your browser does not support the video tag.
 ## <a id="flip-grid"></a>Flip grid
 
 [<img src="flip grid animation/flip.gif" height="230" title="Demo">](https://codepen.io/Rajat-Hegde/pen/bNEqjRp)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="flipbook-storyboard"></a>Flipbook Storyboard
+
+[<img src="flipbook-storyboard/preview.png" height="230" title="Flipbook Storyboard Demo - CSS Only Interactive Flipbook with Glassmorphism Design">](./flipbook-storyboard/index.html)
 
 **[⬆ back to top](#quick-links)**
 
@@ -639,6 +670,14 @@ Your browser does not support the video tag.
 ## <a id="Redar Loader"></a>Readar Loader
 
 [<img src="images/redar_loader.gif" title="Redar Loader">](https://codepen.io/shail2604/pen/JoGKqda)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="resizable-split-panel"></a>Resizable Split Panel
+
+[<img src="images/resizable_panel_demo.gif" title="Resizable Split Panel Demo">](https://codepen.io/VINAY-MADIVAL/pen/ogboooB)
 
 **[⬆ back to top](#quick-links)**
 
@@ -890,6 +929,16 @@ Your browser does not support the video tag.
 ## <a id="scary-animation"></a>scary-animation
 
 [<img src="images/Scary-animation.gif" height="230" title="scary-animation">](https://im4.ezgif.com/tmp/ezgif-4-04e4dfec68.gif)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="scroll-video-cinematic"></a>Scroll Video Cinematic Animation
+
+[<img src="CSS-Scroll-Video-Cinematic/preview.gif" height="230" title="CSS Scroll Video Cinematic Animation">](CSS-Scroll-Video-Cinematic/index.html)
+
+A modern, interactive scroll-driven video animation created with pure CSS. Features cinematic video effects, gradient overlays, and smooth scroll animations - no JavaScript required!
 
 **[⬆ back to top](#quick-links)**
 
@@ -1156,11 +1205,60 @@ Your browser does not support the video tag.
 
 ---
 
+## <a id="multi-step-checkout"></a>Mutli Step Checkout
+
+<img src="./Multi-Step-Checkout/img/Multi_Step_Checkout.png" height="230" title="multi-step-checkout">
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="carousel-effect"></a>Carousel Effect
 
 [Download the demo video](https://raw.githubusercontent.com/amrutha-m206/You-Dont-Need-JavaScript/carousel_effect-feature/images/carousel_demo.mp4)
 
 **[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="piano"></a>Piano
+
+[<img src="images/piano.png" height="230" title="Piano">](Piano/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+---
+
+## <a id="interactive-resume"></a>Interactive Resume
+
+An interactive resume built entirely using **HTML and CSS** — featuring animations, hover effects, and smooth transitions that bring your profile to life.  
+**No JavaScript used.**
+
+[<img src="./Interactive Resume/preview-images/i1.png" width="32%">](./Interactive%20Resume/index.html)
+[<img src="./Interactive Resume/preview-images/i2.png" width="32%">](./Interactive%20Resume/index.html)
+[<img src="./Interactive Resume/preview-images/i3.png" width="32%">](./Interactive%20Resume/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="mewtwo-card"></a>Mewtwo Pokémon Card
+
+[<img src="images/mewtwo-card.png" height="230" title="Mewtwo Pokémon Card">](Pokemon-Mewtwo-Card/mewtwo.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="kaleidoscope"></a>Kaleidoscope
+
+[<img src="images/kaleidoscope.png" height="230" title="Kaleidoscope">](Kaleidoscope/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## Contributors
 

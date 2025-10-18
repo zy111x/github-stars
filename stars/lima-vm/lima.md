@@ -1,6 +1,6 @@
 ---
 project: lima
-stars: 18169
+stars: 18200
 description: |-
     Linux virtual machines, with a focus on running containers
 url: https://github.com/lima-vm/lima
@@ -96,7 +96,7 @@ GUI:
 Lima follows the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/main/code-of-conduct.md).
 
 - - -
-**We are a [Cloud Native Computing Foundation](https://cncf.io/) sandbox project.**
+**We are a [Cloud Native Computing Foundation](https://cncf.io/) incubating project.**
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://www.cncf.io/wp-content/uploads/2022/07/cncf-white-logo.svg">

@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 15588
+stars: 15660
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -213,6 +213,7 @@ Default:
 - `maxRetryAfter`: `undefined`
 - `backoffLimit`: `undefined`
 - `delay`: `attemptCount => 0.3 * (2 ** (attemptCount - 1)) * 1000`
+- `jitter`: `undefined`
 
 An object representing `limit`, `methods`, `statusCodes`, `afterStatusCodes`, and `maxRetryAfter` fields for maximum retry count, allowed methods, allowed status codes, status codes allowed to use the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time, and maximum [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time.
 
@@ -228,6 +229,10 @@ By default, the delay is calculated with `0.3 * (2 ** (attemptCount - 1)) * 1000
 
 The `delay` option can be used to change how the delay between retries is calculated. The function receives one parameter, the attempt count, starting at `1`.
 
+The `jitter` option adds random jitter to retry delays to prevent thundering herd problems. When many clients retry simultaneously (e.g., after hitting a rate limit), they can overwhelm the server again. Jitter adds randomness to break this synchronization. Set to `true` to use full jitter, which randomizes the delay between 0 and the computed delay. Alternatively, pass a function to implement custom jitter strategies.
+
+**Note:** Jitter is not applied when the server provides a `Retry-After` header, as the server's explicit timing should be respected.
+
 Retries are not triggered following a [timeout](#timeout).
 
 ```js
@@ -242,6 +247,28 @@ const json = await ky('https://example.com', {
 	}
 }).json();
 ```
+
+```js
+import ky from 'ky';
+
+const json = await ky('https://example.com', {
+	retry: {
+		limit: 5,
+
+		// Full jitter (randomizes delay between 0 and computed value)
+		jitter: true
+
+		// Percentage jitter (80-120% of delay)
+		// jitter: delay => delay * (0.8 + Math.random() * 0.4)
+
+		// Absolute jitter (±100ms)
+		// jitter: delay => delay + (Math.random() * 200 - 100)
+	}
+}).json();
+```
+
+> [!NOTE]
+> Chromium-based browsers automatically retry `408 Request Timeout` responses at the network layer for keep-alive connections. This means requests may be retried by both the browser and ky. If you want to avoid duplicate retries, you can either set `keepalive: false` in your request options (though this may impact performance for multiple requests) or remove `408` from the retry status codes.
 
 ##### timeout
 
@@ -296,6 +323,8 @@ Default: `[]`
 
 This hook enables you to modify the request right before retry. Ky will make no further changes to the request after this. The hook function receives an object with the normalized request and options, an error instance, and the retry count. You could, for example, modify `request.headers` here.
 
+The `retryCount` is always `>= 1` since this hook is only called during retries, not on the initial request.
+
 If the request received a response, the error will be of type `HTTPError` and the `Response` object will be available at `error.response`. Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will not be an instance of `HTTPError`.
 
 You can prevent Ky from retrying the request by throwing an error. Ky will not handle it in any way and the error will be propagated to the request initiator. The rest of the `beforeRetry` hooks will not be called in this case. Alternatively, you can return the [`ky.stop`](#kystop) symbol to do the same thing but without propagating an error (this has some limitations, see `ky.stop` docs for details).
@@ -320,7 +349,9 @@ const response = await ky('https://example.com', {
 Type: `Function[]`\
 Default: `[]`
 
-This hook enables you to modify the `HTTPError` right before it is thrown. The hook function receives a `HTTPError` as an argument and should return an instance of `HTTPError`.
+This hook enables you to modify the `HTTPError` right before it is thrown. The hook function receives a `HTTPError` and a state object as arguments and should return an instance of `HTTPError`.
+
+The `state.retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between the initial request and retries, which is useful when you need different error handling based on retry attempts (e.g., showing different error messages on the final attempt).
 
 ```js
 import ky from 'ky';
@@ -337,6 +368,15 @@ await ky('https://example.com', {
 				}
 
 				return error;
+			},
+
+			// Or show different message based on retry count
+			(error, state) => {
+				if (state.retryCount === error.options.retry.limit) {
+					error.message = `${error.message} (failed after ${state.retryCount} retries)`;
+				}
+
+				return error;
 			}
 		]
 	}
@@ -348,7 +388,9 @@ await ky('https://example.com', {
 Type: `Function[]`\
 Default: `[]`
 
-This hook enables you to read and optionally modify the response. The hook function receives normalized request, options, and a clone of the response as arguments. The return value of the hook function will be used by Ky as the response object if it's an instance of [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response).
+This hook enables you to read and optionally modify the response. The hook function receives normalized request, options, a clone of the response, and a state object. The return value of the hook function will be used by Ky as the response object if it's an instance of [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response).
+
+The `state.retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between initial requests and retries, which is useful when you need different behavior for retries (e.g., showing a notification only on the final retry).
 
 ```js
 import ky from 'ky';
@@ -373,7 +415,16 @@ const response = await ky('https://example.com', {
 					// Retry with the token
 					request.headers.set('Authorization', `token ${token}`);
 
-					return ky(request);
+					return ky(request, options);
+				}
+			},
+
+			// Or show a notification only on the last retry for 5xx errors
+			(request, options, response, {retryCount}) => {
+				if (response.status >= 500 && response.status <= 599) {
+					if (retryCount === options.retry.limit) {
+						showNotification('Request failed after all retries');
+					}
 				}
 			}
 		]
@@ -634,26 +685,42 @@ Exposed for `instanceof` checks. The error has a `response` property with the [`
 
 Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will not be an instance of HTTPError and will not contain a `response` property.
 
-If you need to read the actual response when an `HTTPError` has occurred, call the respective parser method on the response object. For example:
+> [!IMPORTANT]
+> When catching an `HTTPError`, you must consume or cancel the `error.response` body to prevent resource leaks (especially in Deno and Bun).
 
 ```js
-import {isKyError, isHTTPError, isTimeoutError} from 'ky';
+import {isHTTPError} from 'ky';
 
 try {
 	await ky('https://example.com').json();
 } catch (error) {
-	if (isKyError(error)) {
-		if (isHTTPError(error)) {
-			console.log('Status:', error.response.status);
-		  const errorJson = await error.response.json();
-		} else if (isTimeoutError(error)) {
-			console.log('Timeout URL:', error.request.url);
-		}
-	} else {
-		// Handle other errors
-		console.log('Unknown error:', error);
+	if (isHTTPError(error)) {
+		// Option 1: Read the error response body
+		const errorJson = await error.response.json();
+
+		// Option 2: Cancel the body if you don't need it
+		// await error.response.body?.cancel();
 	}
 }
+```
+
+You can also use the `beforeError` hook:
+
+```js
+await ky('https://example.com', {
+	hooks: {
+		beforeError: [
+			async error => {
+				const {response} = error;
+				if (response) {
+					error.message = `${error.message}: ${await response.text()}`;
+				}
+
+				return error;
+			}
+		]
+	}
+});
 ```
 
 ⌨️ **TypeScript:** Accepts an optional [type parameter](https://www.typescriptlang.org/docs/handbook/2/generics.html), which defaults to [`unknown`](https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown), and is passed through to the return type of `error.response.json()`.
@@ -666,7 +733,7 @@ The error thrown when the request times out. It has a `request` property with th
 
 ### Sending form data
 
-Sending form data in Ky is identical to `fetch`. Just pass a [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) instance to the `body` option. The `Content-Type` header will be automatically set to `multipart/form-data`.
+Sending form data in Ky is identical to `fetch`. Just pass a [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) instance to the `body` option. The `Content-Type` header will be automatically set to `multipart/form-data`, overriding any existing `Content-Type` header.
 
 ```js
 import ky from 'ky';
@@ -679,7 +746,7 @@ formData.append('drink', 'icetea');
 const response = await ky.post(url, {body: formData});
 ```
 
-If you want to send the data in `application/x-www-form-urlencoded` format, you will need to encode the data with [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams).
+If you want to send the data in `application/x-www-form-urlencoded` format, you will need to encode the data with [`URLSearchParams`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams). Like `FormData`, this will override any existing `Content-Type` headers.
 
 ```js
 import ky from 'ky';
@@ -690,6 +757,35 @@ searchParams.set('food', 'fries');
 searchParams.set('drink', 'icetea');
 
 const response = await ky.post(url, {body: searchParams});
+```
+
+#### Modifying FormData in hooks
+
+If you need to modify FormData in a `beforeRequest` hook (for example, to transform field names), delete the `Content-Type` header before creating a new `Request`:
+
+```js
+import ky from 'ky';
+
+const response = await ky.post(url, {
+	body: formData,
+	hooks: {
+		beforeRequest: [
+			request => {
+				const newFormData = new FormData();
+
+				// Modify FormData as needed
+				for (const [key, value] of formData) {
+					newFormData.set(key.toLowerCase(), value);
+				}
+
+				// Delete `Content-Type` to let Request regenerate it with correct boundary
+				request.headers.delete('content-type');
+
+				return new Request(request, {body: newFormData});
+			}
+		]
+	}
+});
 ```
 
 ### Setting a custom `Content-Type`
@@ -737,6 +833,99 @@ try {
 		console.error('Fetch error:', error);
 	}
 }
+```
+
+### Proxy support (Node.js)
+
+#### Native proxy support
+
+Node.js 24.5+ supports automatic proxy configuration via environment variables. Set `NODE_USE_ENV_PROXY=1` or use the `--use-env-proxy` CLI flag.
+
+```sh
+NODE_USE_ENV_PROXY=1 HTTP_PROXY=http://proxy.example.com:8080 node app.js
+```
+
+Or:
+
+```sh
+node --use-env-proxy app.js
+```
+
+Supported environment variables:
+- `HTTP_PROXY` / `http_proxy`: Proxy URL for HTTP requests
+- `HTTPS_PROXY` / `https_proxy`: Proxy URL for HTTPS requests
+- `NO_PROXY` / `no_proxy`: Comma-separated list of hosts to bypass the proxy
+
+#### Using ProxyAgent
+
+For more control, use `ProxyAgent` or `EnvHttpProxyAgent` with the `dispatcher` option.
+
+```js
+import ky from 'ky';
+import {ProxyAgent} from 'undici';
+
+const proxyAgent = new ProxyAgent('http://proxy.example.com:8080');
+
+const response = await ky('https://example.com', {
+	// @ts-expect-error - dispatcher is not in the type definition, but it's passed through to fetch.
+	dispatcher: proxyAgent
+}).json();
+```
+
+Using `EnvHttpProxyAgent` to automatically read proxy settings from environment variables:
+
+```js
+import ky from 'ky';
+import {EnvHttpProxyAgent} from 'undici';
+
+const proxyAgent = new EnvHttpProxyAgent();
+
+const api = ky.extend({
+	// @ts-expect-error - dispatcher is not in the type definition, but it's passed through to fetch.
+	dispatcher: proxyAgent
+});
+
+const response = await api('https://example.com').json();
+```
+
+### HTTP/2 support (Node.js)
+
+Undici supports HTTP/2, but it's not enabled by default. Create a custom dispatcher with the `allowH2` option:
+
+```js
+import ky from 'ky';
+import {Agent, Pool} from 'undici';
+
+const agent = new Agent({
+	factory(origin, options) {
+		return new Pool(origin, {
+			...options,
+			allowH2: true
+		});
+	}
+});
+
+const response = await ky('https://example.com', {
+	// @ts-expect-error - dispatcher is not in the type definition, but it's passed through to fetch.
+	dispatcher: agent
+}).json();
+```
+
+Combine proxy and HTTP/2:
+
+```js
+import ky from 'ky';
+import {ProxyAgent} from 'undici';
+
+const proxyAgent = new ProxyAgent({
+	uri: 'http://proxy.example.com:8080',
+	allowH2: true
+});
+
+const response = await ky('https://example.com', {
+	// @ts-expect-error - dispatcher is not in the type definition, but it's passed through to fetch.
+	dispatcher: proxyAgent
+}).json();
 ```
 
 ## FAQ

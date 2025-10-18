@@ -1,6 +1,6 @@
 ---
 project: orama
-stars: 9835
+stars: 9848
 description: |-
     🌌  A complete search engine and RAG pipeline in your browser, server or edge network with support for full-text, vector, and hybrid search in less than 2kb.
 url: https://github.com/oramasearch/orama
@@ -23,6 +23,7 @@ If you need more info, help, or want to provide general feedback on Orama, join 
 - [GenAI Chat Sessions](https://docs.orama.com/docs/orama-js/answer-engine)
 - [Search Filters](https://docs.orama.com/docs/orama-js/search/filters)
 - [Geosearch](https://docs.orama.com/docs/orama-js/search/geosearch)
+- [Pinning Rules (Merchandising)](https://docs.orama.com/docs/orama-js/results-pinning)
 - [Facets](https://docs.orama.com/docs/orama-js/search/facets)
 - [Fields Boosting](https://docs.orama.com/docs/orama-js/search/fields-boosting)
 - [Typo Tolerance](https://docs.orama.com/docs/orama-js/search#typo-tolerance)

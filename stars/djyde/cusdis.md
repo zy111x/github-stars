@@ -1,6 +1,6 @@
 ---
 project: cusdis
-stars: 2726
+stars: 2728
 description: |-
     lightweight, privacy-friendly alternative to Disqus.
 url: https://github.com/djyde/cusdis

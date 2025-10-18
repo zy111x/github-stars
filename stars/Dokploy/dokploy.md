@@ -1,6 +1,6 @@
 ---
 project: dokploy
-stars: 25527
+stars: 25786
 description: |-
     Open Source Alternative to Vercel, Netlify and Heroku.
 url: https://github.com/Dokploy/dokploy
@@ -85,6 +85,10 @@ For detailed documentation, visit [docs.dokploy.com](https://docs.dokploy.com).
 <div>
   <a href="https://www.hostinger.com/vps-hosting?ref=dokploy"><img src=".github/sponsors/hostinger.jpg" alt="Hostinger" width="300"/></a>
   <a href="https://www.lxaer.com/?ref=dokploy"><img src=".github/sponsors/lxaer.png" alt="LX Aer" width="100"/></a>
+        <a href="https://www.lambdatest.com/?utm_source=dokploy&utm_medium=sponsor" target="_blank">
+            <img src="https://www.lambdatest.com/blue-logo.png"  width="450" height="100" />
+        </a>
+
 </div>
 
 <!-- Premium Supporters 🥇 -->

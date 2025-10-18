@@ -1,8 +1,8 @@
 ---
 project: takumi
-stars: 781
+stars: 836
 description: |-
-    Render your React component to images, satori + resvg but with more features.
+    Render your React component to images. satori + resvg but with variable fonts, RTL, inline layout, WOFF2 support.
 url: https://github.com/kane50613/takumi
 ---
 
@@ -12,7 +12,7 @@ url: https://github.com/kane50613/takumi
 
 Takumi is an **image rendering engine** written in Rust that provides bindings for Node.js and WebAssembly. Suitable for high-throughput image rendering workloads such as Open Graph images and Twitter images.
 
-For newcomers, check out the [Overview](https://takumi.kane.tw/docs) page for installation and usage.
+For newcomers, you can try out Takumi in [playground](https://takumi.kane.tw/playground) without installation. Or check [Getting Started](https://takumi.kane.tw/docs/getting-started/) page for usage.
 
 ## Why build a satori alternative?
 
@@ -45,7 +45,7 @@ For newcomers, check out the [Overview](https://takumi.kane.tw/docs) page for in
 
   ![Shiki Image Example](https://github.com/pi0/shiki-image/blob/main/test/.snapshot/image.webp)
 
-- [Takumi Playground](https://takumi-playground.kapadiya.net/) In‑browser playground for designing and rendering Open Graph style images.
+- [(Unofficial) Takumi Playground](https://takumi-playground.kapadiya.net/) In-browser playground for designing and rendering Open Graph style images.
 
 ## License
 

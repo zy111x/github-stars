@@ -1,13 +1,13 @@
 ---
 project: git-sync
-stars: 630
+stars: 638
 description: |-
     🔄 A simple tool to backup and sync your git repositories
 url: https://github.com/AkashRajpurohit/git-sync
 ---
 
 <div align="center" width="100%">
-  <img src="./assets/logo.png" alt="Git sync logo" width="150" />
+  <img src="./assets/logo.png" alt="Git sync logo" width="400" />
 </div>
 <div align="center" width="100%">
     <h2>🔄 git-sync</h2>

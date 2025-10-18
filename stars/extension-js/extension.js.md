@@ -1,6 +1,6 @@
 ---
 project: extension.js
-stars: 4432
+stars: 4438
 description: |-
     🧩 The cross-browser extension framework.
 url: https://github.com/extension-js/extension.js
@@ -139,6 +139,15 @@ npx extension@latest dev --chromium-binary "/Applications/Google Chrome.app/Cont
 # Custom Firefox path
 npx extension@latest dev --gecko-binary "/Applications/Firefox.app/Contents/MacOS/firefox"
 ```
+
+<div align="center">
+  <p>
+    <span style="font-size:21px; color:black;">Browser testing via</span><br>
+    <a href="https://www.lambdatest.com/?utm_source=extensionjs&utm_medium=sponsor" target="_blank">
+      <img src="https://www.lambdatest.com/blue-logo.png" width="250" height="45" alt="LambdaTest Logo" />
+    </a>
+  </p>
+</div>
 
 ## License
 

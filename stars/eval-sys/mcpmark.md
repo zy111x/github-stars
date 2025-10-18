@@ -1,6 +1,6 @@
 ---
 project: mcpmark
-stars: 244
+stars: 284
 description: |-
     MCPMark is a comprehensive, stress-testing MCP benchmark designed to evaluate model and agent capabilities in real-world MCP use.
 url: https://github.com/eval-sys/mcpmark
@@ -78,6 +78,8 @@ pip install -e .
 # If you'll use browser-based tasks, install Playwright browsers first
 playwright install
 ```
+
+MCPMark defaults to the built-in orchestration agent (`MCPMarkAgent`). To experiment with the ReAct-style agent, pass `--agent react` to `pipeline.py` (other settings stay the same).
 
 Docker
 ```bash

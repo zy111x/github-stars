@@ -1,6 +1,6 @@
 ---
 project: solved-by-flexbox
-stars: 12964
+stars: 12963
 description: |-
     A showcase of problems once hard or impossible to solve with CSS alone, now made trivially easy with Flexbox.
 url: https://github.com/philipwalton/solved-by-flexbox

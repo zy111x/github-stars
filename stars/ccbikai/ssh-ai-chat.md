@@ -1,6 +1,6 @@
 ---
 project: ssh-ai-chat
-stars: 732
+stars: 733
 description: |-
     Chat with AI over SSH.
 url: https://github.com/ccbikai/ssh-ai-chat

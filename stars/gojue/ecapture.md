@@ -1,12 +1,12 @@
 ---
 project: ecapture
-stars: 14647
+stars: 14699
 description: |-
     Capturing SSL/TLS plaintext without a CA certificate using eBPF. Supported on Linux/Android kernels for amd64/arm64.
 url: https://github.com/gojue/ecapture
 ---
 
-![](./images/ecapture-logo-400x400.png)
+<img src="./images/ecapture-logo.png" alt="eCapture Logo" width="300" height="300"/>
 
 [简体中文](./README_CN.md) | English | [日本語](./README_JA.md)
 
@@ -76,23 +76,6 @@ docker run --rm --privileged=true --net=host -v ${HOST_PATH}:${CONTAINER_PATH} g
 ```
 
 see [Docker Hub](https://hub.docker.com/r/gojue/ecapture) for more information.
-
-### eCaptureQ GUI Application
-
-[eCaptureQ](https://github.com/gojue/ecaptureq) is a cross-platform graphical user interface client for eCapture,
-visualizing eBPF TLS capture
-capabilities. Built using the Rust + Tauri + React technology stack, it provides a real-time, responsive interface,
-enabling easy analysis of encrypted traffic without the need for CA certificates. It simplifies complex eBPF capture
-techniques, making them easy to use. Supports two modes:
-
-* Integrated Mode: Unified Linux/Android execution
-* Remote Mode: Windows/macOS/Linux client connects to a remote eCapture service
-
-#### Video Demonstration
-
-https://github.com/user-attachments/assets/c8b7a84d-58eb-4fdb-9843-f775c97bdbfb
-
-🔗 [GitHub Repository](https://github.com/gojue/ecaptureq)
 
 ## Capture openssl text content.
 
@@ -308,6 +291,23 @@ such as `bash\mysqld\postgres` modules, you can use `ecapture -h` to view the li
 * Youtube video: [How to use eCapture v0.1.0](https://www.youtube.com/watch?v=CoDIjEQCvvA "eCapture User Manual")
 * [eCapture:supports capturing plaintext of Golang TLS/HTTPS traffic](https://medium.com/@cfc4ncs/ecapture-supports-capturing-plaintext-of-golang-tls-https-traffic-f16874048269)
 
+
+## eCaptureQ GUI Application
+
+[eCaptureQ](https://github.com/gojue/ecaptureq) is a cross-platform graphical user interface client for eCapture,
+visualizing eBPF TLS capture
+capabilities. Built using the Rust + Tauri + React technology stack, it provides a real-time, responsive interface,
+enabling easy analysis of encrypted traffic without the need for CA certificates. It simplifies complex eBPF capture
+techniques, making them easy to use. Supports two modes:
+
+* Integrated Mode: Unified Linux/Android execution
+* Remote Mode: Windows/macOS/Linux client connects to a remote eCapture service
+
+### Video Demonstration
+
+https://github.com/user-attachments/assets/c8b7a84d-58eb-4fdb-9843-f775c97bdbfb
+
+🔗 [GitHub Repository](https://github.com/gojue/ecaptureq)
 
 ## Stargazers over time
 [![Stargazers over time](https://starchart.cc/gojue/ecapture.svg)](https://starchart.cc/gojue/ecapture)

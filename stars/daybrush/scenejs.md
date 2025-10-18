@@ -1,6 +1,6 @@
 ---
 project: scenejs
-stars: 2765
+stars: 2768
 description: |-
     🎬 Scene.js is JavaScript & CSS timeline-based animation library
 url: https://github.com/daybrush/scenejs

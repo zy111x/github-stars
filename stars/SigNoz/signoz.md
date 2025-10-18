@@ -1,6 +1,6 @@
 ---
 project: signoz
-stars: 23838
+stars: 23911
 description: |-
     SigNoz is an open-source observability platform native to OpenTelemetry with logs, traces and metrics in a single application. An open-source alternative to DataDog, NewRelic, etc. 🔥 🖥.   👉  Open source Application Performance Monitoring (APM) & Observability tool
 url: https://github.com/SigNoz/signoz
@@ -244,7 +244,7 @@ Not sure how to get started? Just ping us on `#contributing` in our [slack commu
 #### DevOps
 
 - [Prashant Shahi](https://github.com/prashant-shahi)
-- [Vibhu Pandey](https://github.com/grandwizard28)
+- [Vibhu Pandey](https://github.com/therealpandey)
 
 <br /><br />
 

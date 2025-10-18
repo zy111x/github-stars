@@ -1,13 +1,10 @@
 ---
 project: mediabunny
-stars: 3912
+stars: 4018
 description: |-
     Pure TypeScript media toolkit for reading, writing, and converting video and audio files, directly in the browser.
 url: https://github.com/Vanilagy/mediabunny
 ---
-
-> [!NOTE]
-> I'm on vacation until 18 October, so expect slow or no replies to issues during that time. 🏖️
 
 # Mediabunny - JavaScript media toolkit
 

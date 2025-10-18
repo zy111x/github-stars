@@ -1,6 +1,6 @@
 ---
 project: Pixelle-MCP
-stars: 674
+stars: 688
 description: |-
     An Open-Source Multimodal AIGC Solution based on ComfyUI + MCP + LLM  https://pixelle.ai
 url: https://github.com/AIDC-AI/Pixelle-MCP
@@ -243,10 +243,6 @@ $<param_name>.[~]<field_name>[!][:<description>]
 
 > 📝 Note: `LoadImage`, `VHS_LoadAudioUpload`, `VHS_LoadVideo` and other nodes have built-in functionality, no need to add `~` marker
 
-**Optional parameter example:**
-
-- Set EmptyLatentImage node title to: `$width.width:Image width, default 512`
-- Meaning: Creates an optional parameter named `width`, mapped to the node's `width` field, default value is 512
 
 ### 🎯 Type Inference Rules
 

@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 30172
+stars: 30265
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
@@ -507,7 +507,7 @@ Dependencies:
 - ``shtab`` (Shell autocompletion) [All but Windows]
 - ``jinja2`` (for fetch mode and templating)
 
-Optional dependencies:
+Extra dependencies:
 
 - ``batinfo`` (for battery monitoring)
 - ``bernhard`` (for the Riemann export module)

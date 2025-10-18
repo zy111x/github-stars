@@ -1,6 +1,6 @@
 ---
 project: tiptap
-stars: 32925
+stars: 33078
 description: |-
     The headless rich text editor framework for web artisans.
 url: https://github.com/ueberdosis/tiptap
@@ -113,10 +113,6 @@ For help, discussion about best practices, or any other conversation that would 
       </a>
     </td>
   </tr>
-</table>
-
-<table>
-
 </table>
 
 [iFixit](https://www.ifixit.com/), [ApostropheCMS](https://apostrophecms.com/), [Novadiscovery](http://www.novadiscovery.com/), [Omics Data Automation](https://www.omicsautomation.com), [Flow Mobile](https://www.flowmobile.app/), [DocIQ](https://www.dociq.io/) and [hundreds of awesome individuals](https://github.com/sponsors/ueberdosis).

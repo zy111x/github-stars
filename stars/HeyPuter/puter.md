@@ -1,6 +1,6 @@
 ---
 project: puter
-stars: 36781
+stars: 36847
 description: |-
     🌐 The Internet Computer! Free, Open-Source, and Self-Hostable.
 url: https://github.com/HeyPuter/puter
@@ -183,4 +183,10 @@ This repository, including all its contents, sub-projects, modules, and componen
 - [Ukrainian / Українська](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.ua.md)
 - [Urdu / اردو](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.ur.md)
 - [Vietnamese / Tiếng Việt](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.vi.md)
+
+
+## Links to Other READMEs
+### Backend
+- [PuterAI Module](./src/backend/doc/modules/puterai/README.md)
+- [Metering and Billing Service](./src/backend/src/services/MeteringService/README.md)
 

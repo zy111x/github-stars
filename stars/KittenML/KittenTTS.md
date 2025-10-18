@@ -1,6 +1,6 @@
 ---
 project: KittenTTS
-stars: 8907
+stars: 8965
 description: |-
      State-of-the-art TTS model under 25MB 😻 
 url: https://github.com/KittenML/KittenTTS

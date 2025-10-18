@@ -1,6 +1,6 @@
 ---
 project: flowgram.ai
-stars: 6948
+stars: 7028
 description: |-
     FlowGram is a node-based flow building engine that helps developers quickly create workflows in either fixed layout or free connection layout modes
 url: https://github.com/bytedance/flowgram.ai

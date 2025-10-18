@@ -1,6 +1,6 @@
 ---
 project: vCards
-stars: 5996
+stars: 6001
 description: |-
     📡️ vCards 中国黄页 - 优化 iOS/Android 来电、信息界面体验
 url: https://github.com/metowolf/vCards
@@ -84,7 +84,7 @@ url: https://github.com/metowolf/vCards
 ## 参与维护
 
 1. 在 `/data/类别/` 目录下添加 `yaml` 和 `png` 文件
-2. 在根目录执行 `yarn test` 检查格式规范
+2. 在根目录执行 `npm test` 检查格式规范
 3. 提交 Pull Request，等待合并
 
 ---
