@@ -1,6 +1,6 @@
 ---
 project: lovefield
-stars: 6793
+stars: 6792
 description: |-
     Lovefield is a relational database for web apps. Written in JavaScript, works cross-browser. Provides SQL-like APIs that are fast, safe, and easy to use.
 url: https://github.com/google/lovefield

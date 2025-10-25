@@ -1,6 +1,6 @@
 ---
 project: 7-days-nodejs
-stars: 3088
+stars: 3089
 description: |-
     七天学会NodeJS
 url: https://github.com/nqdeng/7-days-nodejs

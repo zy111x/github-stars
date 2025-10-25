@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 3049
+stars: 3062
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -430,7 +430,7 @@ Options:
           and existing cookies will be updated.
 
       --default-extension <EXTENSION>
-          Default file extension to treat files without extensions as having.
+          This is the default file extension that is applied to files without an extension.
 
           This is useful for files without extensions or with unknown extensions. The extension will be used to determine the file type for processing. Examples: --default-extension md, --default-extension html
 

@@ -1,6 +1,6 @@
 ---
 project: CloudflareSpeedTest
-stars: 23201
+stars: 23253
 description: |-
     🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~
 url: https://github.com/XIU2/CloudflareSpeedTest
@@ -836,6 +836,9 @@ _**CFST OpenWrt 路由器插件版 [#174](https://github.com/XIU2/CloudflareSpee
 
 - _https://github.com/immortalwrt-collections/openwrt-cdnspeedtest_  
 _**CFST OpenWrt 原生编译版本 [#64](https://github.com/XIU2/CloudflareSpeedTest/discussions/64)**_
+
+- _https://github.com/GuangYu-yu/CloudflareST-Rust_  
+_**CFST Rust 版本**_
 
 - _https://github.com/hoseinnikkhah/CloudflareSpeedTest-English_  
 _**English language version of CFST (Text language differences only) [#64](https://github.com/XIU2/CloudflareSpeedTest/issues/68)**_

@@ -1,6 +1,6 @@
 ---
 project: min-max-calculator
-stars: 233
+stars: 234
 description: |-
     A tool that calculates the CSS clamp formula to interpolate between two values in a given viewport range.
 url: https://github.com/9elements/min-max-calculator

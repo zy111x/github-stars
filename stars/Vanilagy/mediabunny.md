@@ -1,6 +1,6 @@
 ---
 project: mediabunny
-stars: 4018
+stars: 4108
 description: |-
     Pure TypeScript media toolkit for reading, writing, and converting video and audio files, directly in the browser.
 url: https://github.com/Vanilagy/mediabunny
@@ -208,7 +208,7 @@ npm run lint # ESLint
 
 npm run docs:generate # Generates API docs
 npm run docs:dev # Start docs development server
-npm run dev # Start examples development server
-
+npm run dev # Start examples development server, will run at http://localhost:5173/examples/[name]/
+  
 npm run docs:build # Build docs and examples
 ```

@@ -1,6 +1,6 @@
 ---
 project: dub
-stars: 22470
+stars: 22517
 description: |-
     The modern link attribution platform. Loved by world-class marketing teams like Framer, Perplexity, Superhuman, Twilio, Buffer and more.
 url: https://github.com/dubinc/dub
@@ -69,10 +69,6 @@ We love our contributors! Here's how you can contribute:
 - [Open an issue](https://github.com/dubinc/dub/issues) if you believe you've encountered a bug.
 - Follow the [local development guide](https://dub.co/docs/local-development) to get your local dev environment set up.
 - Make a [pull request](https://github.com/dubinc/dub/pull) to add new features/make quality-of-life improvements/fix bugs.
-
-<a href="https://github.com/dubinc/dub/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=dubinc/dub" />
-</a>
 
 ### Recommended Versions
 

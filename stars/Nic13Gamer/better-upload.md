@@ -1,6 +1,6 @@
 ---
 project: better-upload
-stars: 796
+stars: 801
 description: |-
     Simple and easy file uploads for React. Upload files directly to any S3-compatible service with minimal setup.
 url: https://github.com/Nic13Gamer/better-upload

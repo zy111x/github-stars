@@ -1,6 +1,6 @@
 ---
 project: mind-elixir-core
-stars: 2794
+stars: 2799
 description: |-
     ⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.
 url: https://github.com/SSShooter/mind-elixir-core
@@ -11,6 +11,10 @@ url: https://github.com/SSShooter/mind-elixir-core
     <img width="150" src="https://raw.githubusercontent.com/ssshooter/mind-elixir-core/master/images/logo2.png" alt="mindelixir logo2">
   </a>
   <h1 align="center">Mind Elixir</h1>
+</p>
+
+<p align="center">
+<a href="https://trendshift.io/repositories/13049" target="_blank"><img src="https://trendshift.io/api/badge/repositories/13049" alt="SSShooter%2Fmind-elixir-core | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
 <p align="center">
@@ -92,6 +96,7 @@ Mind elixir is a open source JavaScript mind map core. You can use it with any f
   - [Data Structure](#data-structure)
   - [Event Handling](#event-handling)
   - [Data Export And Import](#data-export-and-import)
+  - [Markdown Support](#markdown-support)
   - [Operation Guards](#operation-guards)
 - [Export as a Image](#export-as-a-image)
 - [Theme](#theme)

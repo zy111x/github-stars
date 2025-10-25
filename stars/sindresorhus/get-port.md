@@ -1,6 +1,6 @@
 ---
 project: get-port
-stars: 914
+stars: 915
 description: |-
     Get an available TCP port
 url: https://github.com/sindresorhus/get-port

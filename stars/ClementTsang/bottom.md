@@ -1,6 +1,6 @@
 ---
 project: bottom
-stars: 12052
+stars: 12089
 description: |-
     Yet another cross-platform graphical process/system monitor.
 url: https://github.com/ClementTsang/bottom

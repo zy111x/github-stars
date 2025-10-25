@@ -1,6 +1,6 @@
 ---
 project: lobe-icons
-stars: 1089
+stars: 1113
 description: |-
     🥨 Lobe Icons - Brings AI/LLM brand logos to your React & React Native apps — static SVG/PNG/WebP, no dependencies.
 url: https://github.com/lobehub/lobe-icons

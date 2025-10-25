@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 32316
+stars: 32430
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -81,7 +81,6 @@ Feel free to play around with the code and fork this Repl at [https://repl.it/@v
 
 ## Who's Using Ink?
 
-- [Codex](https://github.com/openai/codex) - An agentic coding tool made by OpenAI.
 - [Claude Code](https://github.com/anthropics/claude-code) - An agentic coding tool made by Anthropic.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) - An agentic coding tool made by Google.
 - [GitHub Copilot for CLI](https://githubnext.com/projects/copilot-cli) - Just say what you want the shell to do.
@@ -131,6 +130,7 @@ Feel free to play around with the code and fork this Repl at [https://repl.it/@v
 - [tweakcc](https://github.com/Piebald-AI/tweakcc) - Customize your Claude Code styling.
 - [argonaut](https://github.com/darksworm/argonaut) - Manage Argo CD resources.
 - [Qodo Command](https://github.com/qodo-ai/command) - Build, run, and manage AI agents.
+- [Nanocoder](https://github.com/nano-collective/nanocoder) - A community-built, local-first AI coding agent with multi-provider support.
 
 *(PRs welcome. Append new entries at the end. Repos must have 100+ stars and showcase Ink beyond a basic list picker.)*
 
@@ -2016,6 +2016,13 @@ Type: `stream.Readable`\
 Default: `process.stdin`
 
 Input stream where app will listen for input.
+
+###### stderr
+
+Type: `stream.Writable`\
+Default: `process.stderr`
+
+Error stream.
 
 ###### exitOnCtrlC
 

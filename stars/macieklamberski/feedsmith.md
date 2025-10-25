@@ -1,6 +1,6 @@
 ---
 project: feedsmith
-stars: 443
+stars: 448
 description: |-
     Fast, all‑in‑one JavaScript feed parser and generator for RSS, Atom, RDF, and JSON Feed, with support for popular namespaces and OPML files.
 url: https://github.com/macieklamberski/feedsmith
@@ -82,13 +82,17 @@ Feedsmith aims to fully support all major feed formats and namespaces in complet
 | [Slash](http://purl.org/rss/1.0/modules/slash/) | `<slash:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [iTunes](http://www.itunes.com/dtds/podcast-1.0.dtd) | `<itunes:*>` | RSS, Atom | ✅ | ✅ |
 | [Podcast](https://podcastindex.org/namespace/1.0) | `<podcast:*>` | RSS | ✅ | ✅ |
+| [RawVoice](https://blubrry.com/developer/rawvoice-rss/) | `<rawvoice:*>` | RSS | ✅ | ✅ |
 | [Podlove Simple Chapters](http://podlove.org/simple-chapters) | `<psc:*>` | RSS, Atom | ✅ | ✅ |
+| [Spotify](http://www.spotify.com/ns/rss) | `<spotify:*>` | RSS | ✅ | ✅ |
 | [Media RSS](http://search.yahoo.com/mrss/) | `<media:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [GeoRSS-Simple](http://www.georss.org/georss) | `<georss:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [Atom Threading](https://www.ietf.org/rfc/rfc4685.txt) | `<thr:*>` | RSS, Atom | ✅ | ✅ |
 | [Dublin Core Terms](http://purl.org/dc/terms/) | `<dcterms:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [Well-Formed Web](http://wellformedweb.org/CommentAPI/) | `<wfw:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [Source](http://source.scripting.com/) | `<source:*>` | RSS | ✅ | ✅ |
+| [Creative Commons](http://backend.userland.com/creativeCommonsRssModule) | `<creativeCommons:*>` | RSS, Atom | ✅ | ✅ |
+| [FeedPress](https://feedpress.com/xmlns) | `<feedpress:*>` | RSS | ✅ | ✅ |
 | [YouTube](https://www.youtube.com/feeds/videos.xml) | `<yt:*>` | Atom | ✅ | ✅ |
 
 ### Other
@@ -190,15 +194,38 @@ console.log(rss) // Complete RSS XML
 // - generateOpml() for OPML files
 ```
 
-### Handle Errors
+### Error Handling
+
+If the feed is unrecognized or invalid, an `Error` will be thrown with a descriptive message.
 
 ```typescript
+import { parseFeed, parseJsonFeed } from 'feedsmith'
+
 try {
-  const { format, feed } = parseFeed(content)
-  // Use the feed
+  const universalFeed = parseFeed('<not-a-feed></not-a-feed>')
 } catch (error) {
-  console.error('Invalid feed:', error.message)
+  // Error: Unrecognized feed format
 }
+
+try {
+  const jsonFeed = parseJsonFeed('{}')
+} catch (error) {
+  // Error: Invalid feed format
+}
+```
+
+### TypeScript Types
+
+Feedsmith provides comprehensive TypeScript types for all feed formats:
+
+```typescript
+import type { Rss, Atom, Json, Opml } from 'feedsmith/types'
+
+// Access all types for a format
+type Feed = Rss.Feed
+type Item = Rss.Item
+type Category = Rss.Category
+type Enclosure = Rss.Enclosure
 ```
 
 ## Why Feedsmith?

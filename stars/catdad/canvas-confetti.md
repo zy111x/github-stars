@@ -1,6 +1,6 @@
 ---
 project: canvas-confetti
-stars: 12025
+stars: 12048
 description: |-
     🎉 performant confetti animation in the browser
 url: https://github.com/catdad/canvas-confetti
@@ -38,7 +38,7 @@ You can then `require('canvas-confetti');` to use it in your project build. _Not
 You can also include this library in your HTML page directly from a CDN:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
 ```
 
 _Note: you should use the latest version at the time that you include your project. You can see all versions [on the releases page](https://github.com/catdad/canvas-confetti/releases)._

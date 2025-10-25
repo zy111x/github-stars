@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 452
+stars: 453
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -165,6 +165,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=Apache&logoColor=FFFFFF)
 ![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=Apache+Airflow&logoColor=FFFFFF)
 ![Apache Ant](https://img.shields.io/badge/Apache%20Ant-A81C7D?style=for-the-badge&logo=Apache+Ant&logoColor=FFFFFF)
+![Apache Avro](https://img.shields.io/badge/Apache%20Avro-30638E?style=for-the-badge&logo=Apache+Avro&logoColor=FFFFFF)
 ![Apache Cassandra](https://img.shields.io/badge/Apache%20Cassandra-1287B1?style=for-the-badge&logo=Apache+Cassandra&logoColor=FFFFFF)
 ![Apache CloudStack](https://img.shields.io/badge/Apache%20CloudStack-2AA5DC?style=for-the-badge&logo=Apache+CloudStack&logoColor=FFFFFF)
 ![Apache Cordova](https://img.shields.io/badge/Apache%20Cordova-222222?style=for-the-badge&logo=Apache+Cordova&logoColor=E8E8E8)
@@ -634,6 +635,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Convertio](https://img.shields.io/badge/Convertio-FF3333?style=for-the-badge&logo=Convertio&logoColor=FFFFFF)
 ![Cookiecutter](https://img.shields.io/badge/Cookiecutter-222222?style=for-the-badge&logo=Cookiecutter&logoColor=D4AA00)
 ![Cooler Master](https://img.shields.io/badge/Cooler%20Master-1E1E28?style=for-the-badge&logo=Cooler+Master&logoColor=FFFFFF)
+![Coolify](https://img.shields.io/badge/Coolify-6B16ED?style=for-the-badge&logo=Coolify&logoColor=FFFFFF)
 ![Copa Airlines](https://img.shields.io/badge/Copa%20Airlines-0032A0?style=for-the-badge&logo=Copa+Airlines&logoColor=FFFFFF)
 ![Coppel](https://img.shields.io/badge/Coppel-0266AE?style=for-the-badge&logo=Coppel&logoColor=FFFFFF)
 ![Cora](https://img.shields.io/badge/Cora-E61845?style=for-the-badge&logo=Cora&logoColor=FFFFFF)
@@ -975,6 +977,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Fireship](https://img.shields.io/badge/Fireship-EB844E?style=for-the-badge&logo=Fireship&logoColor=FFFFFF)
 ![Firewalla](https://img.shields.io/badge/Firewalla-C8332D?style=for-the-badge&logo=Firewalla&logoColor=FFFFFF)
 ![FIRST](https://img.shields.io/badge/FIRST-0066B3?style=for-the-badge&logo=FIRST&logoColor=FFFFFF)
+![Fish Audio](https://img.shields.io/badge/Fish%20Audio-9B90E8?style=for-the-badge&logo=Fish+Audio&logoColor=FFFFFF)
 ![fish shell](https://img.shields.io/badge/fish%20shell-222222?style=for-the-badge&logo=fish+shell&logoColor=34C534)
 ![Fitbit](https://img.shields.io/badge/Fitbit-00B0B9?style=for-the-badge&logo=Fitbit&logoColor=FFFFFF)
 ![FiveM](https://img.shields.io/badge/FiveM-F40552?style=for-the-badge&logo=FiveM&logoColor=FFFFFF)
@@ -1668,6 +1671,7 @@ url: https://github.com/progfay/shields-with-icon
 ![LinuxServer](https://img.shields.io/badge/LinuxServer-DA3B8A?style=for-the-badge&logo=LinuxServer&logoColor=FFFFFF)
 ![Lion Air](https://img.shields.io/badge/Lion%20Air-ED3237?style=for-the-badge&logo=Lion+Air&logoColor=FFFFFF)
 ![Liquibase](https://img.shields.io/badge/Liquibase-2962FF?style=for-the-badge&logo=Liquibase&logoColor=FFFFFF)
+![ListenHub](https://img.shields.io/badge/ListenHub-000000?style=for-the-badge&logo=ListenHub&logoColor=FFFFFF)
 ![listmonk](https://img.shields.io/badge/listmonk-0055D4?style=for-the-badge&logo=listmonk&logoColor=FFFFFF)
 ![Lit](https://img.shields.io/badge/Lit-324FFF?style=for-the-badge&logo=Lit&logoColor=FFFFFF)
 ![Litecoin](https://img.shields.io/badge/Litecoin-222222?style=for-the-badge&logo=Litecoin&logoColor=A6A9AA)
@@ -1708,6 +1712,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Lufthansa](https://img.shields.io/badge/Lufthansa-05164D?style=for-the-badge&logo=Lufthansa&logoColor=FFFFFF)
 ![Lumen](https://img.shields.io/badge/Lumen-E74430?style=for-the-badge&logo=Lumen&logoColor=FFFFFF)
 ![Lunacy](https://img.shields.io/badge/Lunacy-179DE3?style=for-the-badge&logo=Lunacy&logoColor=FFFFFF)
+![Luogu](https://img.shields.io/badge/Luogu-5B9BD5?style=for-the-badge&logo=Luogu&logoColor=FFFFFF)
 ![Lutris](https://img.shields.io/badge/Lutris-222222?style=for-the-badge&logo=Lutris&logoColor=FF9900)
 ![LVGL](https://img.shields.io/badge/LVGL-343839?style=for-the-badge&logo=LVGL&logoColor=FFFFFF)
 ![Lydia](https://img.shields.io/badge/Lydia-0180FF?style=for-the-badge&logo=Lydia&logoColor=FFFFFF)

@@ -1,6 +1,6 @@
 ---
 project: tiny-slider
-stars: 5321
+stars: 5319
 description: |-
     Vanilla javascript slider for all purposes.
 url: https://github.com/ganlanyuan/tiny-slider

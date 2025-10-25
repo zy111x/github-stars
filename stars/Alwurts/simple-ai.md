@@ -1,6 +1,6 @@
 ---
 project: simple-ai
-stars: 570
+stars: 575
 description: |-
     A collection of beautifully designed AI interface components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
 url: https://github.com/Alwurts/simple-ai
@@ -31,13 +31,15 @@ Visit [simple-ai.dev/docs](https://simple-ai.dev/docs) to view the documentation
 
 ```bash
 # Install shadcn/ui first
-npx shadcn-ui@latest init
+npx shadcn@latest init
 
 # Then you can add simple-ai components
-npx shadcn@latest add https://simple-ai.dev/r/chat-message.json
+npx shadcn@latest add @simple-ai/chat-input
 ```
 
 ## License
 
 Licensed under the MIT License.
 
+- [ ] Check proper use of sitemap
+- [ ] Check use of og and how its used in metadata in layouts like /block/layout

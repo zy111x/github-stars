@@ -1,6 +1,6 @@
 ---
 project: koolshare.github.io
-stars: 4679
+stars: 4681
 description: |-
     网站切换到：https://www.asusgo.com
 url: https://github.com/koolshare/koolshare.github.io

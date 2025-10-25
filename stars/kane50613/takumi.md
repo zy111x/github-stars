@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 836
+stars: 843
 description: |-
     Render your React component to images. satori + resvg but with variable fonts, RTL, inline layout, WOFF2 support.
 url: https://github.com/kane50613/takumi

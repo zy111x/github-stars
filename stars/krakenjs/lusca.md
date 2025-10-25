@@ -1,6 +1,6 @@
 ---
 project: lusca
-stars: 1783
+stars: 1782
 description: |-
     Application security for express apps.
 url: https://github.com/krakenjs/lusca

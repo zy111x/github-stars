@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 13656
+stars: 13886
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -45,6 +45,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [damon](https://github.com/hashicorp/damon) TUI interface for Hashicorp Nomad
 - [dashbrew](https://github.com/rasjonell/dashbrew) TUI dashboard builder that lets you visualize data from scripts and APIs.
 - [dolphie](https://github.com/charles-001/dolphie) Your single pane of glass for real-time analytics into MySQL/MariaDB & ProxySQL
+- [framework-tool-tui](https://github.com/grouzen/framework-tool-tui) TUI for controlling and monitoring Framework Computers hardware built in Rust
 - [fubar](https://github.com/irishmaestro/fubar) Formidable Unix Binary Arsenal & Repository. TUI built for gtfobins power users.
 - [Glances](https://github.com/nicolargo/glances) Glances an Eye on your system. A top/htop alternative.
 - [Goaccess](https://github.com/allinurl/goaccess) GoAccess is a real-time web log analyzer and interactive viewer that runs in a terminal in nix systems or through your browser.
@@ -141,6 +142,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [pudb](https://github.com/inducer/pudb) A console-based visual debugger for Python
 - [pyautogit](https://github.com/jwlodek/pyautogit) A terminal UI for managing git repositories, written using py_cui
 - [rainfrog](https://github.com/achristmascarl/rainfrog) A database management TUI for Postgres, MySQL, and SQLite written in Rust
+- [regex-tui](https://github.com/vitor-mariano/regex-tui) A simple TUI to visualize and test regular expressions
 - [runme](https://github.com/stateful/runme) Discover and run code snippets directly from your README.md or other markdowns
 - [sls-dev-tools](https://github.com/Theodo-UK/sls-dev-tools) Dev Tools for the Serverless World
 - [stu](https://github.com/lusingander/stu) A TUI for Amazon S3
@@ -173,6 +175,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [kubetui](https://github.com/sarub0b0/kubetui) A TUI tool designed for monitoring Kubernetes resources.
 - [lazycontainer](https://github.com/andreybleme/lazycontainer) TUI for managing Apple containers
 - [lazydocker](https://github.com/jesseduffield/lazydocker) The lazier way to manage everything docker
+- [lazytrivy](https://github.com/owenrumney/lazytrivy) The lazier way to scan images, k8s and the filesytem with Trivy
 - [oxker](https://github.com/mrjackwills/oxker) A simple tui to view & control docker containers
 - [Pocker](https://github.com/pommee/Pocker) TUI based application for docker related tasks.
 - [Podman-tui](https://github.com/containers/podman-tui) TUI for Podman containers
@@ -243,7 +246,6 @@ url: https://github.com/rothgar/awesome-tuis
 - [GitType](https://github.com/unhappychoice/gittype) A CLI code-typing game that turns your source code into typing challenges
 - [go-life](https://github.com/sachaos/go-life) Terminal based Conway's Game of Life
 - [Greed](https://gitlab.com/esr/greed) A game of consumption. Eat as much as you can before munching yourself into a corner!
-- [MAL-Cli](https://github.com/L4z3x/mal-tui) A terminal interface for the official myanimelist api written in rust.
 - [Maze TUI](https://github.com/agl-alexglopez/maze-tui) Build mazes and solve them with various algorithms.
 - [Micro Snake](https://github.com/troglobit/snake) A small snake game, utilizing ANSI escape sequences to draw the board.
 - [Micro Tetris](https://github.com/troglobit/tetris) One of the smallest Tetris implementations in the world, utilizing only ANSI escape sequences to draw the board.
@@ -305,6 +307,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [ncurses](https://invisible-island.net/ncurses/announce.html) A classic **C** library with bindings for many languages
 - [nimwave](https://github.com/ansiwave/nimwave) Build text interfaces for the terminal or browser in **Nim**
 - [notcurses](https://github.com/dankamongmen/notcurses) blingful character graphics/TUI library for **C** and **Python**. definitely not curses.
+- [OpenTUI](https://github.com/sst/opentui) A **TypeScript** library for building terminal user interfaces (TUIs)
 - [php-tui](https://github.com/php-tui/php-tui) comprehensive TUI library for **PHP** based heavily on Ratatui.
 - [pterm](https://github.com/pterm/pterm/) A modern **Go** module to beautify console output. Featuring charts, progressbars, tables, trees, and much more! It's completely configurable and 100% cross-platform compatible.
 - [py_cui](https://github.com/jwlodek/py_cui) **Python** library aimed at making widget based TUI/CUI interfaces as simple as possible. Supports standard widgets and popups like menus, textboxes, forms, file explorers etc.
@@ -334,6 +337,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [urwid](https://github.com/urwid/urwid) A console user interface library for **Python** on Linux, OSX, Cygwin or other unix-like OS.
 - [libuv](https://github.com/libuv/libuv) Cross-platform asynchronous I/O library - written in **C**
 - [uvw](https://github.com/skypjack/uvw) Header-only, event based, tiny and easy to use libuv wrapper in modern **C++** - now available as also shared/static library!
+- [Vindauga](https://github.com/gabbpuy/vindauga) A **Python** implementation of the BSD licensed C++ Turbo Vision library.
 - [xtd](https://github.com/gammasoft71/xtd) Free open-source modern **C++** framework to create console (CLI), forms (GUI like WinForms) and unit test (xUnit) applications and libraries on Windows, macOS, Linux, iOS, Android, FreeBSD, and Haiku.
 
 ---
@@ -422,7 +426,6 @@ url: https://github.com/rothgar/awesome-tuis
 - [oha](https://github.com/hatoo/oha) HTTP load generator
 - [packemon](https://github.com/ddddddO/packemon) Packet generator and monitor.
 - [PesterExplorer](https://github.com/HeyItsGilbert/PesterExplorer) A TUI to explore Pester results.
-- [pola](https://github.com/Sethispr/pola) A TUI for efficiently searching skins, checking values and finding owners in Silent Assassin.
 - [pug](https://github.com/leg100/pug) terraform and tofu module and infrastructure management.
 - [profanity](https://github.com/profanity-im/profanity) A cross-platfrom XMPP client.
 - [physics-TUI](https://github.com/ClaudioRMalvino/physics_TUI) Physics TUI application for undergraduate study
@@ -440,6 +443,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [thokr](https://github.com/coloradocolby/thokr) a sleek typing tui written in rust
 - [tlock](https://github.com/eklairs/tlock) Two-Factor Authentication Tokens Manager in Terminal
 - [tray-tui](https://github.com/Levizor/tray-tui) System tray in your terminal
+- [tttui](https://github.com/reidoboss/tttui) A Monkeytype-inspired typing test that runs entirely in your terminal
 - [ttyper](https://github.com/max-niederman/ttyper) Terminal-based typing test
 - [tui-shop](https://github.com/Gcat101/tui-shop) Something between a CLI and a GUI way of downloading TUIs/CLIs
 - [tweakcc](https://github.com/Piebald-AI/tweakcc) TUI to customize your Claude Code themes, thinking verbs, and more.
@@ -473,7 +477,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [jellyfin-tui](https://github.com/dhonus/jellyfin-tui) Jellyfin client
 - [kew](https://github.com/ravachol/kew) A terminal music player for Linux
 - [line](https://github.com/pd3v/line) Tiny command-line midi sequencer and language for live coding
-- [mal-cli](https://github.com/L4z3x/mal-cli) A TUI for myanimelist api.
+- [MAL-Cli](https://github.com/L4z3x/mal-tui) A terminal interface for the official myanimelist api written in rust.
 - [managarr](https://github.com/Dark-Alex-17/managarr) A TUI and CLI for managing your *arr servers
 - [manga-tui](https://github.com/josueBarretogit/manga-tui) Terminal-based manga reader and downloader with image rendering support
 - [marstui-audio](https://github.com/schooldanlp6/marstui-rustio) A nice audio management Interface, similar to pavucontrol with the benefit of customizing everything
@@ -509,6 +513,7 @@ url: https://github.com/rothgar/awesome-tuis
 <details open><summary><h2>Productivity</h2></summary>
 
 - [abook](https://abook.sourceforge.io/) TUI addressbook with [mutt](http://www.mutt.org/) integration
+- [awsui](https://github.com/junminhong/awsui) A powerful, user-friendly terminal interface for AWS Profile and SSO management.
 - [Bagels](https://github.com/EnhancedJax/Bagels) TUI expense tracker
 - [calcure](https://github.com/anufrievroman/calcure) Modern TUI calendar and task manager with minimal and customizable UI.
 - [calcurse](https://calcurse.org/) calendar and scheduling application for the command line

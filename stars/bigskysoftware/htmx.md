@@ -1,6 +1,6 @@
 ---
 project: htmx
-stars: 46274
+stars: 46329
 description: |-
     </> htmx - high power tools for HTML
 url: https://github.com/bigskysoftware/htmx
@@ -40,7 +40,7 @@ By removing these arbitrary constraints htmx completes HTML as a
 ## quick start
 
 ```html
-  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
   <!-- have a button POST a click via AJAX -->
   <button hx-post="/clicked" hx-swap="outerHTML">
     Click Me

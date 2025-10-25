@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 15660
+stars: 15778
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -214,8 +214,10 @@ Default:
 - `backoffLimit`: `undefined`
 - `delay`: `attemptCount => 0.3 * (2 ** (attemptCount - 1)) * 1000`
 - `jitter`: `undefined`
+- `retryOnTimeout`: `false`
+- `shouldRetry`: `undefined`
 
-An object representing `limit`, `methods`, `statusCodes`, `afterStatusCodes`, and `maxRetryAfter` fields for maximum retry count, allowed methods, allowed status codes, status codes allowed to use the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time, and maximum [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time.
+An object representing `limit`, `methods`, `statusCodes`, `afterStatusCodes`, `maxRetryAfter`, `backoffLimit`, `delay`, `jitter`, `retryOnTimeout`, and `shouldRetry` fields for maximum retry count, allowed methods, allowed status codes, status codes allowed to use the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time, maximum [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) time, backoff limit, delay calculation function, retry jitter, timeout retry behavior, and custom retry logic.
 
 If `retry` is a number, it will be used as `limit` and other defaults will remain in place.
 
@@ -233,7 +235,20 @@ The `jitter` option adds random jitter to retry delays to prevent thundering her
 
 **Note:** Jitter is not applied when the server provides a `Retry-After` header, as the server's explicit timing should be respected.
 
-Retries are not triggered following a [timeout](#timeout).
+The `retryOnTimeout` option determines whether to retry when a request times out. By default, retries are not triggered following a [timeout](#timeout).
+
+The `shouldRetry` option provides custom retry logic that **takes precedence over all other retry checks**. This function is called first, before any other retry validation.
+
+**Note:** This is different from the `beforeRetry` hook:
+- `shouldRetry`: Controls WHETHER to retry (called before the retry decision is made)
+- `beforeRetry`: Called AFTER retry is confirmed, allowing you to modify the request
+
+The function receives a state object with the error and retry count (starts at 1 for the first retry), and should return:
+- `true` to force a retry (bypasses `retryOnTimeout`, status code checks, and other validations)
+- `false` to prevent a retry (no retry will occur)
+- `undefined` to use the default retry logic (`retryOnTimeout`, status codes, etc.)
+
+**General example**
 
 ```js
 import ky from 'ky';
@@ -247,6 +262,22 @@ const json = await ky('https://example.com', {
 	}
 }).json();
 ```
+
+**Retrying on timeout:**
+
+```js
+import ky from 'ky';
+
+const json = await ky('https://example.com', {
+	timeout: 5000,
+	retry: {
+		limit: 3,
+		retryOnTimeout: true
+	}
+}).json();
+```
+
+**Using jitter to prevent thundering herd:**
 
 ```js
 import ky from 'ky';
@@ -263,6 +294,37 @@ const json = await ky('https://example.com', {
 
 		// Absolute jitter (±100ms)
 		// jitter: delay => delay + (Math.random() * 200 - 100)
+	}
+}).json();
+```
+
+**Custom retry logic:**
+
+```js
+import ky, {HTTPError} from 'ky';
+
+const json = await ky('https://example.com', {
+	retry: {
+		limit: 3,
+		shouldRetry: ({error, retryCount}) => {
+			// Retry on specific business logic errors from API
+			if (error instanceof HTTPError) {
+				const status = error.response.status;
+
+				// Retry on 429 (rate limit) but only for first 2 attempts
+				if (status === 429 && retryCount <= 2) {
+					return true;
+				}
+
+				// Don't retry on 4xx errors except rate limits
+				if (status >= 400 && status < 500) {
+					return false;
+				}
+			}
+
+			// Use default retry logic for other errors
+			return undefined;
+		}
 	}
 }).json();
 ```
@@ -323,11 +385,15 @@ Default: `[]`
 
 This hook enables you to modify the request right before retry. Ky will make no further changes to the request after this. The hook function receives an object with the normalized request and options, an error instance, and the retry count. You could, for example, modify `request.headers` here.
 
+The hook can return a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) to replace the outgoing retry request, or return a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) to skip the retry and use that response instead. **Note:** Returning a request or response skips remaining `beforeRetry` hooks.
+
 The `retryCount` is always `>= 1` since this hook is only called during retries, not on the initial request.
 
 If the request received a response, the error will be of type `HTTPError` and the `Response` object will be available at `error.response`. Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will not be an instance of `HTTPError`.
 
 You can prevent Ky from retrying the request by throwing an error. Ky will not handle it in any way and the error will be propagated to the request initiator. The rest of the `beforeRetry` hooks will not be called in this case. Alternatively, you can return the [`ky.stop`](#kystop) symbol to do the same thing but without propagating an error (this has some limitations, see `ky.stop` docs for details).
+
+**Modifying headers:**
 
 ```js
 import ky from 'ky';
@@ -338,6 +404,47 @@ const response = await ky('https://example.com', {
 			async ({request, options, error, retryCount}) => {
 				const token = await ky('https://example.com/refresh-token');
 				request.headers.set('Authorization', `token ${token}`);
+			}
+		]
+	}
+});
+```
+
+**Modifying the request URL:**
+
+```js
+import ky from 'ky';
+
+const response = await ky('https://example.com/api', {
+	hooks: {
+		beforeRetry: [
+			async ({request, error}) => {
+				// Add query parameters based on error response
+				if (error.response) {
+					const body = await error.response.json();
+					const url = new URL(request.url);
+					url.searchParams.set('processId', body.processId);
+					return new Request(url, request);
+				}
+			}
+		]
+	}
+});
+```
+
+**Returning a cached response:**
+
+```js
+import ky from 'ky';
+
+const response = await ky('https://example.com/api', {
+	hooks: {
+		beforeRetry: [
+			({error, retryCount}) => {
+				// Use cached response instead of retrying
+				if (retryCount > 1 && cachedResponse) {
+					return cachedResponse;
+				}
 			}
 		]
 	}
@@ -558,6 +665,68 @@ import ky from 'ky';
 import fetch from 'isomorphic-unfetch';
 
 const json = await ky('https://example.com', {fetch}).json();
+```
+
+##### context
+
+Type: `object<string, unknown>`\
+Default: `{}`
+
+User-defined data passed to hooks.
+
+This option allows you to pass arbitrary contextual data to hooks without polluting the request itself. The context is available in all hooks and is **guaranteed to always be an object** (never `undefined`), so you can safely access properties without optional chaining.
+
+Use cases:
+- Pass authentication tokens or API keys to hooks
+- Attach request metadata for logging or debugging
+- Implement conditional logic in hooks based on the request context
+- Pass serverless environment bindings (e.g., Cloudflare Workers)
+
+**Note:** Context is shallow merged. Top-level properties are merged, but nested objects are replaced. Only enumerable properties are copied.
+
+```js
+import ky from 'ky';
+
+// Pass data to hooks
+const api = ky.create({
+	hooks: {
+		beforeRequest: [
+			(request, options) => {
+				const {token} = options.context;
+				if (token) {
+					request.headers.set('Authorization', `Bearer ${token}`);
+				}
+			}
+		]
+	}
+});
+
+await api('https://example.com', {
+	context: {
+		token: 'secret123'
+	}
+}).json();
+
+// Shallow merge: only top-level properties are merged
+const instance = ky.create({
+	context: {
+		a: 1,
+		b: {
+			nested: true
+		}
+	}
+});
+
+const extended = instance.extend({
+	context: {
+		b: {
+			updated: true
+		},
+		c: 3
+	}
+});
+// Result: {a: 1, b: {updated: true}, c: 3}
+// Note: The original `b.nested` is gone (shallow merge)
 ```
 
 ### ky.extend(defaultOptions)
@@ -926,6 +1095,21 @@ const response = await ky('https://example.com', {
 	// @ts-expect-error - dispatcher is not in the type definition, but it's passed through to fetch.
 	dispatcher: proxyAgent
 }).json();
+```
+
+### Consuming Server-Sent Events (SSE)
+
+Use [`parse-sse`](https://github.com/sindresorhus/parse-sse):
+
+```js
+import ky from 'ky';
+import {parseServerSentEvents} from 'parse-sse';
+
+const response = await ky('https://api.example.com/events');
+
+for await (const event of parseServerSentEvents(response)) {
+	console.log(event.data);
+}
 ```
 
 ## FAQ

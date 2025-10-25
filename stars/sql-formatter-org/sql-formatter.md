@@ -1,6 +1,6 @@
 ---
 project: sql-formatter
-stars: 2723
+stars: 2731
 description: |-
     A whitespace formatter for different query languages
 url: https://github.com/sql-formatter-org/sql-formatter
@@ -240,7 +240,7 @@ pick the proper dialect, like:
 format('select [col] from tbl', { language: 'transactsql' });
 ```
 
-Or when using the VSCode extension: Settings -> SQL-Formatter-VSCode: SQLFlavourOverride.
+Or when using the VSCode extension: Settings -> SQL-Formatter-VSCode -> Dialect.
 
 ### Module parse failed: Unexpected token
 

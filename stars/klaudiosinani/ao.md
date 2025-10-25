@@ -1,6 +1,6 @@
 ---
 project: ao
-stars: 2165
+stars: 2166
 description: |-
     Elegant Microsoft To-Do desktop app
 url: https://github.com/klaudiosinani/ao

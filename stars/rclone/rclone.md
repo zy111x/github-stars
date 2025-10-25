@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 53031
+stars: 53137
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -42,6 +42,7 @@ directories to and from different cloud storage providers.
 - China Mobile Ecloud Elastic Object Storage (EOS) [:page_facing_up:](https://rclone.org/s3/#china-mobile-ecloud-eos)
 - Cloudflare R2 [:page_facing_up:](https://rclone.org/s3/#cloudflare-r2)
 - Citrix ShareFile [:page_facing_up:](https://rclone.org/sharefile/)
+- Cubbit DS3 [:page_facing_up:](https://rclone.org/s3/#Cubbit)
 - DigitalOcean Spaces [:page_facing_up:](https://rclone.org/s3/#digitalocean-spaces)
 - Digi Storage [:page_facing_up:](https://rclone.org/koofr/#digi-storage)
 - Dreamhost [:page_facing_up:](https://rclone.org/s3/#dreamhost)

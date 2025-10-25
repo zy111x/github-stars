@@ -1,6 +1,6 @@
 ---
 project: twblocks
-stars: 742
+stars: 744
 description: |-
     Website blocks to copy/paste - based on shadcn & Radix using Tailwind and NextJS
 url: https://github.com/tommyjepsen/twblocks

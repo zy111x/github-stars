@@ -1,6 +1,6 @@
 ---
 project: crx
-stars: 523
+stars: 525
 description: |-
     A node.js command line app for packing Google Chrome extensions.
 url: https://github.com/thom4parisot/crx
