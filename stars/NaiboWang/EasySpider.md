@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 43088
+stars: 43166
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -24,9 +24,11 @@ Refer to the Releases Page to download the latest version of EasySpider.
 
 亮数据BrightData是代理市场领导者，覆盖全球的7200万IP，提供真人住宅IP，即时批量采集网络公开数据，成功率亲测有保证。需要性价比高代理IP的可**点击上方图片注册**后联系中文客服，开通后免费试用，**现在有首充多少就送多少的活动**。BrightData可配合EasySpider进行数据采集。
 
-BestProxy全球独享专属资源池，优选海外195+国家/地区高质量住宅IP，本地ISP原生IP，不限量住宅代理、长效ISP代理、静态数据中心代理、网页爬虫API，城市级精准定位，支持HTTP(S)和SOCKS5协议，低检测风险，全方位代理服务解决方案，助力各种场景业务IP代理需求。$0.66/G起按需付费和长期套餐，适合不同预算需求，24/7多语言支持，联系客服免费试用500M。可与EasySpider工具配合使用，高效采集网络数据。
+Thordata - 高品质网络数据抓取代理服务 超过6000万个住宅代理的全球网络，可用性高达99.7%，确保稳定可靠的网络数据抓取，以支持 AI、BI和工作流。超过500GB可享60%限时折扣，最低0.7/GB，从易于使用、高质量且价格实惠的代理开始您的网络数据抓取之旅。
 
-IPdodo专注为跨境用户，提供独享/纯净/家宽/原生/双ISP的全球代理IP，不限流量。全球8000万真实住宅IP，覆盖200+国家/地区，99.9%匿名保护，且支持Http/Https/Socks5协议，满足爬虫、数据采集、跨境电商、tk/fb流媒体等业务场景。现在前往IPdodo注册，支持免费试用。
+全套餐30%优惠码：**THOR3333**
+
+BestProxy全球独享专属资源池，优选海外195+国家/地区高质量住宅IP，本地ISP原生IP，不限量住宅代理、长效ISP代理、静态数据中心代理、网页爬虫API，城市级精准定位，支持HTTP(S)和SOCKS5协议，低检测风险，全方位代理服务解决方案，助力各种场景业务IP代理需求。$0.66/G起按需付费和长期套餐，适合不同预算需求，24/7多语言支持，联系客服免费试用500M。可与EasySpider工具配合使用，高效采集网络数据。
 
 官方网站/Official Website
 ---------------------

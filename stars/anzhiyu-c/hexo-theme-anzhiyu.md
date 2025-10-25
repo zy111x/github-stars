@@ -1,6 +1,6 @@
 ---
 project: hexo-theme-anzhiyu
-stars: 2268
+stars: 2281
 description: 安知鱼主题，这是一个简洁美丽的hexo主题。
 url: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
 ---
@@ -16,6 +16,8 @@ url: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
 文档: 📖 anzhiyu Docs
 
 一款基于hexo-theme-butterfly修改的主題
+
+如果你希望有一个类似于wordpress的可以后台编辑的，那么你可以看看这个项目 安和鱼
 
 hexo-theme-anzhiyu
 ==================

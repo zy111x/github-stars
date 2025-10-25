@@ -1,6 +1,6 @@
 ---
 project: free-programming-books
-stars: 373107
+stars: 374976
 description: :books: Freely available programming books
 url: https://github.com/EbookFoundation/free-programming-books
 ---
@@ -92,6 +92,7 @@ English, By Subject
 -   Russian / Русский язык
 -   Serbian / српски језик / srpski jezik
 -   Slovak / slovenčina
+-   Slovenian / Slovenščina
 -   Spanish / español / castellano
 -   Swedish / Svenska
 -   Tamil / தமிழ்
