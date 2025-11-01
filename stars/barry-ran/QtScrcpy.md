@@ -1,6 +1,6 @@
 ---
 project: QtScrcpy
-stars: 26493
+stars: 26616
 description: Android real-time display control software
 url: https://github.com/barry-ran/QtScrcpy
 ---
@@ -40,7 +40,7 @@ QuickMirror function&features:
 -   Perfect Chinese input: Supports Xianyu app, supports Samsung phones
 -   The free version can cast up to 10 screens, with unlimited functionality (except for automatic screen mirroring)
 -   QuickMirror tutorial: https://lrbnfell4p.feishu.cn/docx/EMkvdfIvDowy3UxsXUCcpPV8nDh
--   QuickMirror Telegram communication group: https://t.me/+Ylf\_5V\_rDCMyODQ1
+-   QuickMirror Telegram communication group: https://t.me/+EnQNmb47C\_liYmRl
 -   Preview of QuickMirror Interface:
 
 Mapping Keys
@@ -73,7 +73,7 @@ If you don't know how to manually write mapping rules, you can also use the `Qui
 -   Low latency: USB screen mirroring 1080p latency is within 30ms, which is lower than all screen mirroring software on the market in terms of latency at the same resolution and smoothness
 -   Low CPU usage: pure C++development, high-performance GPU video rendering
 -   High resolution: adjustable, maximum support for native resolution of Android terminals
--   Telegram Group：https://t.me/+EnQNmb47C\_liYmRl
+-   Telegram Group：https://t.me/+Ylf\_5V\_rDCMyODQ1
 -   QuickAssistant
 
 Group control

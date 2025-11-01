@@ -1,6 +1,6 @@
 ---
 project: ab-download-manager
-stars: 11061
+stars: 11243
 description: A Download Manager that speeds up your downloads
 url: https://github.com/amir1376/ab-download-manager
 ---
@@ -43,6 +43,10 @@ winget install amir1376.ABDownloadManager
 **scoop**:
 
 scoop install extras/abdownloadmanager
+
+#### Homebrew (for macOS)
+
+brew tap amir1376/tap && brew install --cask ab-download-manager
 
 ### Browser Extensions
 
@@ -132,6 +136,8 @@ If you’d like to help translate AB Download Manager into another language, or 
 
 Contribution
 ------------
+
+> ❌ **Important Notice:** The entire codebase is being completely rewritten. Pull requests are **not accepted** at this time, as incoming changes may be lost or conflict heavily with ongoing refactoring. Please wait until the refactor is complete before submitting any PRs.
 
 Contributions to this project are very welcome!
 

@@ -1,6 +1,6 @@
 ---
 project: Stirling-PDF
-stars: 69146
+stars: 69406
 description: #1 Locally hosted web application that allows you to perform various operations on PDF files
 url: https://github.com/Stirling-Tools/Stirling-PDF
 ---
@@ -56,7 +56,7 @@ Features
 
 #### Convert from PDF
 
--   **PDF to Word**: Convert to documet (docx, doc, odt) format
+-   **PDF to Word**: Convert to document (docx, doc, odt) format
 -   **PDF to Image**: Extract PDF pages as images
 -   **PDF to RTF (Text)**: Convert to Rich Text Format
 -   **PDF to Presentation**: Convert to presentation (pptx, ppt, odp) format
