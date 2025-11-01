@@ -1,6 +1,6 @@
 ---
 project: virtua
-stars: 3192
+stars: 3202
 description: |-
     A zero-config, fast and small (~3kB) virtual list (and grid) component for React, Vue, Solid and Svelte.
 url: https://github.com/inokawa/virtua
@@ -189,8 +189,9 @@ export const App = () => {
         <div
           style={{
             width: ((colIndex % 3) + 1) * 100,
-            border: "solid 1px gray",
             background: "white",
+            borderLeft: colIndex !== 0 ? "solid 1px gray" : undefined,
+            borderTop: rowIndex !== 0 ? "solid 1px gray" : undefined,
           }}
         >
           {rowIndex} / {colIndex}

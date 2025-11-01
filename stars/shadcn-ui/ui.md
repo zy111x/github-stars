@@ -1,6 +1,6 @@
 ---
 project: ui
-stars: 98385
+stars: 98816
 description: |-
     A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.
 url: https://github.com/shadcn-ui/ui
@@ -8,9 +8,9 @@ url: https://github.com/shadcn-ui/ui
 
 # shadcn/ui
 
-Accessible and customizable components that you can copy and paste into your apps. Free. Open Source. **Use this to build your own component library**.
+A set of beautifully designed components that you can customize, extend, and build on. Start here then make it your own. Open Source. Open Code. **Use this to build your own component library**.
 
-![hero](apps/www/public/og.jpg)
+![hero](apps/v4/public/opengraph-image.png)
 
 ## Documentation
 

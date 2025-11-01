@@ -1,6 +1,6 @@
 ---
 project: You-Dont-Need-JavaScript
-stars: 20366
+stars: 20381
 description: |-
     CSS is powerful, you can do a lot of things without JS.
 url: https://github.com/you-dont-need/You-Dont-Need-JavaScript
@@ -73,6 +73,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Gradient Animation](#gradient-animation)
 - [Growing Flower](#growing-flower)
 - [Horizontal image slider](#horizontal-image-slider)
+- [Hourglass Sand Timer](#hourglass-sand-timer)
 - [Hover Animation](#hover-animation)
 - [Image Gallery](#image-gallery)
 - [Image Hover Effect]()
@@ -92,6 +93,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Mobile Menu Off Canvas](#mobile-menu-off-canvas)
 - [Modal/Popup](#modalpopup)
 - [Mondrian Composition](#mondrian-composition)
+- [Morph Loader](#morph-loader)
 - [Mouse Tracking](#mouse-tracking)
 - [Multi Step Checkout](#multi-step-checkout)
 - [NavBar](#navbar)
@@ -111,7 +113,7 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Ripple Effect](#ripple-effect)
 - [Redar Loader](#Redar-Loader)
 - [Resizable Split Panel](#resizable-split-panel)
-- [Rotating Text](#rotating-text) 
+- [Rotating Text](#rotating-text)
 - [Scary Animation](#scary-animation)
 - [Scenery](#scenery)
 - [Scroll Video Cinematic Animation](#scroll-video-cinematic)
@@ -124,8 +126,10 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Tables](#css-tables)
 - [Tabs](#tabs)
 - [MakemyTrip](#mmt)
+- [Text Hover Gallery](#text-hover-gallery)
 - [Text Spoiler Effect](#text-spoiler)
 - [Timeline](#timeline)
+- [Time Travel](#time-travel)
 - [Thank You Animation](#thankyou-animation)
 - [Toast Notification](#toast-notifications)
 - [Todo List](#todo-list)
@@ -141,7 +145,9 @@ Please be aware that the demos may exhibit significant accessibility issues, suc
 - [Progress Bar On Scroll](#ProgressOnScroll)
 - [Password Strength Checker](#password-strength-checker)
 - [Pricing Table](#pricing-table)
+- [Text Change Animation](#text-change-animaton) 
 - [Glide to Reveal](#glide-to-reveal)
+- [Terminal Animation](#terminal-animation)
 - **Contribution**
   - [Contributors](#contributors)
   - [Contributing](#contributing)
@@ -190,8 +196,6 @@ Your browser does not support the video tag.
 </video>](http://url-to-dark-theme-page)
 
 **[⬆ back to top](#quick-links)**
-
-
 
 ## <a id="blog-cards"></a>Blog Post Cards
 
@@ -346,6 +350,14 @@ Your browser does not support the video tag.
 
 ---
 
+## <a id="text-hover-gallery"></a>Badge
+
+[<img src="images/textHoverGallery.gif" height="230" title="Demo">](./Text%20Hover%20gallery/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="Font"></a>Font-Face (Latin)
 
 [<img src="images/sansfont.png" height="230" title="Demo">](https://yusugomori.com/projects/css-sans/fonts)
@@ -395,7 +407,6 @@ Your browser does not support the video tag.
 [<img src="./Author/a-img2.jpg" height="230" title="Demo 5">]()
 [<img src="images/infinite-slider.png" height="230" title="Demo 6">]()
 
-
 **[⬆ back to top](#quick-links)**
 
 ---
@@ -441,7 +452,7 @@ Your browser does not support the video tag.
 
 ## <a id="MasterCard"></a>MasterCard
 
-[<img src="images/screenshot.png" height="230" title="Website_Demo">](https://github.com/2div/You-Dont-Need-JavaScript/MasterCard/images/screenshot.png)
+[<img src="MasterCard/screenshot.PNG" height="230" title="Website_Demo">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/blob/master/MasterCard/screenshot.PNG)
 
 **[⬆ back to top](#quick-links)**
 
@@ -497,6 +508,14 @@ Your browser does not support the video tag.
 
 ---
 
+## <a id="morph-loader"></a>Morph Loader
+
+[<img src="images/morphLoader.gif" height="230" title="Morph Loader Demo">](./MorphLoader/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
 ## <a id="compassloader"></a>Compass Loader
 
 [<img src="images/CompassLoader.gif" height="230" title="Demo">](<[https://codepen.io/eduardoboucas/pen/BNyKwO](https://codepen.io/Aman-Pathan-the-typescripter/pen/dyaPmrE)>)
@@ -532,6 +551,7 @@ Your browser does not support the video tag.
 ---
 
 ## <a id="mondrian-composition"></a>Mondrian Composition
+
 [<img src="images/mondrian_composition.png" height="230" title="Mondrian Art Demo">](https://codepen.io/VINAY-MADIVAL/pen/VYerdxY)
 
 **[⬆ back to top](#quick-links)**
@@ -568,6 +588,16 @@ Your browser does not support the video tag.
 
 [<img src="images/tabs.png" height="230" title="Demo 1">](https://codepen.io/llgruff/pen/ZGBxOa)
 [<img src="images/tabs2.png" height="230" title="Demo 2">](https://codepen.io/fusco/pen/Wvzjrm)
+
+**[⬆ back to top](#quick-links)**
+
+---
+
+## <a id="time-travel"></a>Time Travel
+
+[<img src="Time-Travel/preview.png" height="230" title="Time Travel">](Time-Travel/index.html)
+
+A pure CSS time travel timeline that allows you to explore different eras.
 
 **[⬆ back to top](#quick-links)**
 
@@ -1104,6 +1134,7 @@ A modern, interactive scroll-driven video animation created with pure CSS. Featu
 **[⬆ back to top](#quick-links)**
 
 ---
+
 ## <a id="Timeline"></a>Timeline
 
 ![img_source](Timeline/Timeline.gif)
@@ -1331,8 +1362,17 @@ An interactive resume built entirely using **HTML and CSS** — featuring animat
 
 ## <a id="input-text"></a>Input Text Field
 
-[<video height="230" width="230" controls> 
+[<video height="230" width="230" controls>
+
 <source src="images/input-text.mp4" type="video/mp4">
+</video>
+]()
+
+## <a id="night-fire-camp"></a>Night fire camp
+
+[<video height="230" width="230" controls>
+
+<source src="images/nightfirecamp.mp4" type="video/mp4">
 </video>
 ]()
 
@@ -1340,8 +1380,29 @@ An interactive resume built entirely using **HTML and CSS** — featuring animat
 
 ---
 
+**[⬆ back to top](#quick-links)**
+
+## <a id="Robot"></a>Carousel
+
+[<img src="images/Robot.png" height="230" title="Robot">](Robot/Robot.html)
 
 **[⬆ back to top](#quick-links)**
+
+
+---
+
+## <a id="terminal-animation"></a>Terminal Animation
+
+[<img src="./images/Terminal Animation.gif" height="230" title="terminal-animation">](https://github.com/you-dont-need/You-Dont-Need-JavaScript/terminal-animation/index.html)
+---
+
+## <a id="text-change-animation"></a>Text Change Animaton
+
+<img src="./images/text-change-animation.gif" height="230" title="Text Change Animation"> (./Text Change Animation/index.html)
+
+**[⬆ back to top](#quick-links)**
+
+---
 
 ## Contributors
 
@@ -1364,3 +1425,4 @@ Let's build something great together!
 ## License
 
 This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)** — see the [LICENSE](LICENSE) file for details.
+

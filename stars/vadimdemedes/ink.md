@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 32430
+stars: 32550
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -2042,6 +2042,13 @@ When any of the `console.*` methods are called (like `console.log()`), Ink inter
 That way, both are visible and don't overlap each other.
 
 This functionality is powered by [patch-console](https://github.com/vadimdemedes/patch-console), so if you need to disable Ink's interception of output but want to build something custom, you can use that.
+
+###### onRender
+
+Type: `({renderTime: number}) => void`\
+Default: `undefined`
+
+Runs the given callback after each render and re-render with a metrics object.
 
 ###### debug
 

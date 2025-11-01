@@ -1,6 +1,6 @@
 ---
 project: feedsmith
-stars: 448
+stars: 455
 description: |-
     Fast, all‑in‑one JavaScript feed parser and generator for RSS, Atom, RDF, and JSON Feed, with support for popular namespaces and OPML files.
 url: https://github.com/macieklamberski/feedsmith
@@ -91,6 +91,7 @@ Feedsmith aims to fully support all major feed formats and namespaces in complet
 | [Dublin Core Terms](http://purl.org/dc/terms/) | `<dcterms:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [Well-Formed Web](http://wellformedweb.org/CommentAPI/) | `<wfw:*>` | RSS, Atom, RDF | ✅ | ✅ |
 | [Source](http://source.scripting.com/) | `<source:*>` | RSS | ✅ | ✅ |
+| [ccREL](http://creativecommons.org/ns#) | `<cc:*>` | RSS, Atom | ✅ | ✅ |
 | [Creative Commons](http://backend.userland.com/creativeCommonsRssModule) | `<creativeCommons:*>` | RSS, Atom | ✅ | ✅ |
 | [FeedPress](https://feedpress.com/xmlns) | `<feedpress:*>` | RSS | ✅ | ✅ |
 | [YouTube](https://www.youtube.com/feeds/videos.xml) | `<yt:*>` | Atom | ✅ | ✅ |

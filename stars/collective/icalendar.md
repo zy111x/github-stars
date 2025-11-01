@@ -1,6 +1,6 @@
 ---
 project: icalendar
-stars: 1084
+stars: 1085
 description: |-
     icalendar parser library for Python
 url: https://github.com/collective/icalendar
@@ -120,7 +120,7 @@ in the iCalendar (:rfc:`5545`) standard.
 
 
 Have a look at `more examples
-<https://icalendar.readthedocs.io/en/latest/usage.html>`_.
+<https://icalendar.readthedocs.io/en/latest/how-to/usage.html>`_.
 
 Use timezones of your choice
 ----------------------------

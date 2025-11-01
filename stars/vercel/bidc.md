@@ -1,6 +1,6 @@
 ---
 project: bidc
-stars: 1172
+stars: 1179
 description: |-
     Bidirectional Channels for JavaScript
 url: https://github.com/vercel/bidc

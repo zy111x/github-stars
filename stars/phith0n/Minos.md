@@ -1,6 +1,6 @@
 ---
 project: Minos
-stars: 675
+stars: 674
 description: |-
     一个基于Tornado/mongodb/redis的社区系统。
 url: https://github.com/phith0n/Minos

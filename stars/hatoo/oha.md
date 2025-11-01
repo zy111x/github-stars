@@ -1,6 +1,6 @@
 ---
 project: oha
-stars: 9477
+stars: 9547
 description: |-
     Ohayou(おはよう), HTTP load generator, inspired by rakyll/hey with tui animation.
 url: https://github.com/hatoo/oha
@@ -93,6 +93,11 @@ bun run pgo.js
 
 And the binary will be available at `target/[target-triple]/pgo/oha`.
 
+**Note**: Please keep in mind that in order to run the aforementioned command,
+you need to have installed `cargo-pgo` cargo package.
+
+You can install it via `cargo install cargo-pgo`.
+
 # Platform
 
 - Linux - Tested on Ubuntu 18.04 gnome-terminal
@@ -157,7 +162,7 @@ Options:
   -t <TIMEOUT>
           Timeout for each request. Default to infinite.
       --connect-timeout <CONNECT_TIMEOUT>
-          Timeout for establishing a new connection. Default to 5s.
+          Timeout for establishing a new connection. Default to 5s. [default: 5s]
   -A <ACCEPT_HEADER>
           HTTP Accept Header.
   -d <BODY_STRING>

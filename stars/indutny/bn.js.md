@@ -1,6 +1,6 @@
 ---
 project: bn.js
-stars: 1227
+stars: 1226
 description: |-
     BigNum in pure javascript
 url: https://github.com/indutny/bn.js

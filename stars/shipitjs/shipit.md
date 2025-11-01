@@ -1,6 +1,6 @@
 ---
 project: shipit
-stars: 5317
+stars: 5316
 description: |-
     Universal automation and deployment tool ⛵️
 url: https://github.com/shipitjs/shipit

@@ -1,6 +1,6 @@
 ---
 project: ui-thing
-stars: 564
+stars: 568
 description: |-
     A modern set of Nuxt components built with Reka UI & TailwindCSS. Inspired by shadcn/ui & shadcn-vue.
 url: https://github.com/BayBreezy/ui-thing

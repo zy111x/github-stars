@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 53137
+stars: 53274
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -139,6 +139,7 @@ Please see [the full list of all storage providers and their features](https://r
 These backends adapt or modify other storage providers
 
 - Alias: rename existing remotes [:page_facing_up:](https://rclone.org/alias/)
+- Archive: read archive files [:page_facing_up:](https://rclone.org/archive/)
 - Cache: cache remotes (DEPRECATED) [:page_facing_up:](https://rclone.org/cache/)
 - Chunker: split large files [:page_facing_up:](https://rclone.org/chunker/)
 - Combine: combine multiple remotes into a directory tree [:page_facing_up:](https://rclone.org/combine/)

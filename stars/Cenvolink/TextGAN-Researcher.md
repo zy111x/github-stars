@@ -1,6 +1,6 @@
 ---
 project: TextGAN-Researcher
-stars: 94
+stars: 93
 description: |-
     🧐 Open Deep Research Agent: Automated Knowledge Discovery with TextGAN
 url: https://github.com/Cenvolink/TextGAN-Researcher

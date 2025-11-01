@@ -1,6 +1,6 @@
 ---
 project: twemoji
-stars: 17236
+stars: 17247
 description: |-
     Emoji for everyone. https://twemoji.twitter.com/
 url: https://github.com/twitter/twemoji

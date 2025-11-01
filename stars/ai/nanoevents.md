@@ -1,6 +1,6 @@
 ---
 project: nanoevents
-stars: 1594
+stars: 1595
 description: |-
     Simple and tiny (107 bytes) event emitter library for JavaScript
 url: https://github.com/ai/nanoevents

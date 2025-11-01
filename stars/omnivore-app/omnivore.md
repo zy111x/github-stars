@@ -1,6 +1,6 @@
 ---
 project: omnivore
-stars: 15518
+stars: 15526
 description: |-
     Omnivore is a complete, open source read-it-later solution for people who like reading.
 url: https://github.com/omnivore-app/omnivore
@@ -16,7 +16,11 @@ url: https://github.com/omnivore-app/omnivore
 
 <img align="right" src="https://avatars.githubusercontent.com/u/70113176?s=400&u=506b21d9f019f3160963c010ef363667fb24c7c9&v=4" height="150px" alt="Omnivore Logo">
 
+
 [Omnivore](https://omnivore.work) is a complete, open source read-it-later solution for people who like text.
+
+> [!IMPORTANT]  
+> Omnivore is now a completely Self-Hosted application. The Cloud application was deprecated in November of 2024. The community still exists on Discord, and we endeavour to keep things updated and bug-fixes ongoing. 
 
 We built Omnivore because we love reading and we want it to be more social. Join us!
 
@@ -62,6 +66,23 @@ Omnivore takes advantage of some great open source software:
 - [Radix](https://www.radix-ui.com/) - We use Radix UI's components on our frontend.
 - [PDF.js](https://github.com/mozilla/pdf.js) - PDF.js is used to have open source pdf functionality. 
 - And many more awesome libraries, just checkout our package files to see what we are using.
+
+## Shoutouts: Community 🧑‍🤝‍🧑
+- [Poudlardo](https://github.com/Poudlardo) - Providing a Podman-compose file for self-hosting.
+- [leopku](https://github.com/leopku) - Fixing build issues with v3 manifest
+- [travisemslander-fn](https://github.com/travisemslander-fn) - Providing fixes for SNS Emails.
+- [andrew-craig](https://github.com/andrew-craig) & [lukebtaylor](https://github.com/lukebtaylor) - Providing fixes for emails.
+- [Benature](https://github.com/Benature) - Providing fixes for Minio
+- [rbarbazz](https://github.com/rbarbazz) - Providing a HTML toggle for notes.
+- [pgrosslicht](https://github.com/pgrosslicht) - various fixes to iOs Applications
+- [Adil, m1xxos, Mike Baker, David Adams, Russ Taylor,  William Theaker, keumky2](https://github.com/omnivore-app/omnivore/commit/4e582fb55db5537a462061c9eb0805b482cc9a00) - Who contributed to the initial commit for self-hosting, which was squashed - unfortunately losing the history in the process.
+- mollydot on Discord - For continuing to moderate, and be an active part of our community!
+
+And of course... 
+- [jacksonh](https://github.com/jacksonh), [sywhb](https://github.com/sywhb) and [satindar](https://github.com/satindar) - who provided the initial repo, and core functionality. 
+
+and many more who contributed in the past. If you feel like your name is missing from this list, please contact me (Podginator) via our Discord. 
+
 
 ## Importing Libraries
 

@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 12879
+stars: 13083
 description: |-
     ✨ 一站式 LLM 聊天机器人平台及开发框架 ✨ 支持 QQ、QQ频道、Telegram、企微、飞书、钉钉 | 知识库、MCP 服务器、OpenAI、DeepSeek、Gemini、硅基流动、月之暗面、Ollama、OneAPI、Dify
 url: https://github.com/AstrBotDevs/AstrBot
@@ -16,7 +16,7 @@ url: https://github.com/AstrBotDevs/AstrBot
 
 <div>
 <a href="https://trendshift.io/repositories/12875" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12875" alt="Soulter%2FAstrBot | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-<a href="https://hellogithub.com/repository/AstrBotDevs/AstrBot" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=d127d50cd5e54c5382328acc3bb25483&claim_uid=ZO9by7qCXgSd6Lp" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+<a href="https://hellogithub.com/repository/AstrBotDevs/AstrBot" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=d127d50cd5e54c5382328acc3bb25483&claim_uid=ZO9by7qCXgSd6Lp&t=1" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 </div>
 
 <br>
@@ -32,12 +32,12 @@ url: https://github.com/AstrBotDevs/AstrBot
 
 <br>
 
-<a href="https://github.com/Soulter/AstrBot/blob/master/README_en.md">English</a> ｜
-<a href="https://github.com/Soulter/AstrBot/blob/master/README_ja.md">日本語</a> ｜
+<a href="https://github.com/AstrBotDevs/AstrBot/blob/master/README_en.md">English</a> ｜
+<a href="https://github.com/AstrBotDevs/AstrBot/blob/master/README_ja.md">日本語</a> ｜
 <a href="https://astrbot.app/">文档</a> ｜
 <a href="https://blog.astrbot.app/">Blog</a> ｜
 <a href="https://astrbot.featurebase.app/roadmap">路线图</a> ｜
-<a href="https://github.com/Soulter/AstrBot/issues">问题提交</a>
+<a href="https://github.com/AstrBotDevs/AstrBot/issues">问题提交</a>
 </div>
 
 AstrBot 是一个开源的一站式 Agent 聊天机器人平台及开发框架。
@@ -80,7 +80,7 @@ AstrBot 已由雨云官方上架至云应用平台，可一键部署。
 
 社区贡献的部署方式。
 
-[![Run on Repl.it](https://repl.it/badge/github/Soulter/AstrBot)](https://repl.it/github/Soulter/AstrBot)
+[![Run on Repl.it](https://repl.it/badge/github/AstrBotDevs/AstrBot)](https://repl.it/github/AstrBotDevs/AstrBot)
 
 #### Windows 一键安装器部署
 
@@ -218,7 +218,7 @@ uv run main.py
 AstrBot 使用 `ruff` 进行代码格式化和检查。
 
 ```bash
-git clone https://github.com/Soulter/AstrBot
+git clone https://github.com/AstrBotDevs/AstrBot
 pip install pre-commit
 pre-commit install
 ```

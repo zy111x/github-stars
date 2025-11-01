@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 15778
+stars: 15837
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -541,12 +541,14 @@ const response = await ky('https://example.com', {
 
 ##### throwHttpErrors
 
-Type: `boolean`\
+Type: `boolean | (status: number) => boolean`\
 Default: `true`
 
 Throw an `HTTPError` when, after following redirects, the response has a non-2xx status code. To also throw for redirects instead of following them, set the [`redirect`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters) option to `'manual'`.
 
 Setting this to `false` may be useful if you are checking for resource availability and are expecting error responses.
+
+You can also pass a function that accepts the HTTP status code and returns a boolean for selective error handling. Note that this can violate the principle of least surprise, so it's recommended to use the boolean form unless you have a specific use case like treating 404 responses differently.
 
 Note: If `false`, error responses are considered successful and the request will not be retried.
 
@@ -1111,6 +1113,34 @@ for await (const event of parseServerSentEvents(response)) {
 	console.log(event.data);
 }
 ```
+
+### Extending types
+
+Ky's TypeScript types are intentionally defined as type aliases rather than interfaces to prevent global module augmentation, which can lead to type conflicts and unexpected behavior across your codebase. If you need to add custom properties to Ky's types like `KyResponse` or `HTTPError`, create local wrapper types instead:
+
+```ts
+import ky, {HTTPError} from 'ky';
+
+interface CustomError extends HTTPError {
+	customProperty: unknown;
+}
+
+const api = ky.extend({
+	hooks: {
+		beforeError: [
+			async error => {
+				(error as CustomError).customProperty = 'value';
+				return error;
+			}
+		]
+	}
+});
+
+// Use with type assertion
+const data = (error as CustomError).customProperty;
+```
+
+This approach keeps your types scoped to where they're needed without polluting the global namespace.
 
 ## FAQ
 

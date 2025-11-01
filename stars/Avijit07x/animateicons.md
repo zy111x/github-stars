@@ -1,6 +1,6 @@
 ---
 project: animateicons
-stars: 536
+stars: 543
 description: |-
     A sleek React library for animated SVG icons that move with purpose. Transform static designs into engaging user experiences with smooth, performant animations.
 url: https://github.com/Avijit07x/animateicons
@@ -8,7 +8,7 @@ url: https://github.com/Avijit07x/animateicons
 
 # AnimateIcons
 
-![Animate Icons Preview](https://animateicons.vercel.app/_next/static/media/og.8b896778.png)
+![Animate Icons Preview](./src/app/og.png)
 
 A sleek React library for animated SVG icons that move with purpose. Transform static designs into engaging user experiences with smooth, performant animations.
 

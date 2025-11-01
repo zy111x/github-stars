@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 13886
+stars: 14079
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -339,6 +339,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [uvw](https://github.com/skypjack/uvw) Header-only, event based, tiny and easy to use libuv wrapper in modern **C++** - now available as also shared/static library!
 - [Vindauga](https://github.com/gabbpuy/vindauga) A **Python** implementation of the BSD licensed C++ Turbo Vision library.
 - [xtd](https://github.com/gammasoft71/xtd) Free open-source modern **C++** framework to create console (CLI), forms (GUI like WinForms) and unit test (xUnit) applications and libraries on Windows, macOS, Linux, iOS, Android, FreeBSD, and Haiku.
+- [Zaz](https://github.com/raphamorim/zaz) A **Rust** TUI library for efficient terminal rendering.
 
 ---
 </details>
@@ -355,6 +356,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [Gomphotherium](https://github.com/mrusme/gomphotherium) A command line Mastodon client.
 - [gomuks](https://github.com/tulir/gomuks) Matrix client
 - [gurk-rs](https://github.com/boxdot/gurk-rs) Signal Messenger client for terminal
+- [iamb](https://iamb.chat) A Matrix client for Vim addicts written in Rust
 - [instagram-cli](https://github.com/supreme-gg-gg/instagram-cli) Use Instagram from your terminal, the end of brainrot is here
 - [irssi](https://irssi.org/) An IRC terminal client
 - [mastui](https://github.com/kimusan/mastui) Mastodon TUI
@@ -518,6 +520,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [calcure](https://github.com/anufrievroman/calcure) Modern TUI calendar and task manager with minimal and customizable UI.
 - [calcurse](https://calcurse.org/) calendar and scheduling application for the command line
 - [clipse](https://github.com/savedra1/clipse) TUI-based clipboard manager application
+- [Desktop-TUI](https://github.com/Julien-cpsn/desktop-tui) A desktop environment without graphics
 - [dvtm](https://github.com/martanne/dvtm) A terminal multiplexer with dwm like window management
 - [elia](https://github.com/darrenburns/elia) A terminal ChatGPT client build with Textual
 - [fjira](https://github.com/mk-5/fjira) TUI application for Atlassian Jira
@@ -529,6 +532,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [hnjobs](https://github.com/mwinters0/hnjobs) Find your next job on Who's Hiring
 - [hygg](https://github.com/kruserr/hygg) 📚 Simplifying the way you read. Minimalistic Vim-like TUI document reader.
 - [HydroToDo](https://github.com/Henriquehnnm/hydrotodo) A simple and beautiful TUI to-do list
+- [intelli-shell](https://github.com/lasantosr/intelli-shell) - Manage command templates/snippets with dynamic completions and AI integration
 - [Judo](https://github.com/giacomopiccinini/judo) A multi-database TUI for ToDo lists, using Rust + Ratatui + SQLite
 - [kabmat](https://github.com/PlankCipher/kabmat) TUI program for managing kanban boards with vim-like keybindings
 - [kanban-python](https://github.com/Zaloog/kanban-python) Kanban Terminal App written in Python

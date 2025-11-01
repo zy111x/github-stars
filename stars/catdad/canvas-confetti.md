@@ -1,6 +1,6 @@
 ---
 project: canvas-confetti
-stars: 12048
+stars: 12076
 description: |-
     🎉 performant confetti animation in the browser
 url: https://github.com/catdad/canvas-confetti

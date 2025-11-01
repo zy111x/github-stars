@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 29183
+stars: 29732
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building memorable websites.
 url: https://github.com/DavidHDev/react-bits
@@ -73,10 +73,6 @@ VueJS → https://vue-bits.dev/
 ## Stats
 
 ![Alt](https://repobeats.axiom.co/api/embed/b1bf4dc0226458617adbdbf5586f2df953eb0922.svg 'Repobeats analytics image')
-
-## Sponsorship
-
-You can help support the project by using the Sponsor button on the page - please note that any donations received will go strictly towards paying hosting costs, nothing else.
 
 ## Credit
 

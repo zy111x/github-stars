@@ -1,6 +1,6 @@
 ---
 project: ncc
-stars: 9702
+stars: 9713
 description: |-
     Compile a Node.js project into a single file. Supports TypeScript, binary addons, dynamic requires.
 url: https://github.com/vercel/ncc
@@ -8,7 +8,7 @@ url: https://github.com/vercel/ncc
 
 # ncc
 
-[![CI Status](https://github.com/vercel/ncc/workflows/CI/badge.svg)](https://github.com/vercel/ncc/actions?workflow=CI)
+[![CI Status](https://github.com/vercel/ncc/actions/workflows/ci.yml/badge.svg)](https://github.com/vercel/ncc/actions/workflows/ci.yml)
 
 Simple CLI for compiling a Node.js module into a single file,
 together with all its dependencies, gcc-style.

@@ -1,6 +1,6 @@
 ---
 project: hugo-blog-awesome
-stars: 705
+stars: 707
 description: |-
     Fast, minimal blog with dark mode support.
 url: https://github.com/hugo-sid/hugo-blog-awesome
@@ -138,26 +138,32 @@ url = "/index.xml"
 | --------------- | ------------------------------- |
 | `123rf`         | 123rf.com                       |
 | `adobestock`    | stock.adobe.com                 |
+| `anilist`       | anilist.co                      |
 | `applemusic`    | music.apple.com                 |
+| `applepodcasts` | podcasts.apple.com              |
 | `behance`       | behance.net                     |
 | `bilibili`      | bilibili.com                    |
 | `bitcoin`       | -                               |
 | `bluesky`       | bsky.app                        |
 | `buymeacoffee`  | buymeacoffee.com                |
 | `calendly`      | calendly.com                    |
+| `codeforces`    | codeforces.com                  |
 | `codepen`       | codepen.io                      |
 | `cryptohack`    | cryptohack.org                  |
 | `ctftime`       | ctftime.org                     |
 | `cv`            | -                               |
 | `deezer`        | deezer.com                      |
 | `dev`           | dev.to                          |
+| `deviantart`    | deviantart.com                  |
 | `discogs`       | discogs.com                     |
 | `discord`       | discord.com                     |
 | `dreamstime`    | dreamstime.com                  |
 | `dribbble`      | dribbble.com                    |
+| `douban`        | douban.com                      |
 | `email`         | -                               |
 | `facebook`      | facebook.com                    |
 | `flickr`        | flickr.com                      |
+| `forgejo`       | forgejo.org/                    |
 | `freepik`       | freepik.com                     |
 | `gitea`         | gitea.io                        |
 | `github`        | github.com                      |
@@ -170,20 +176,21 @@ url = "/index.xml"
 | `hackthebox`    | hackthebox.eu                   |
 | `instagram`     | instagram.com                   |
 | `itchio`        | itch.io                         |
-| `kaggle`        | -                               |
+| `kaggle`        | kaggle.com                      |
 | `kakaotalk`     | kakaocorp.com/service/KakaoTalk |
 | `key`           | -                               |
 | `keybase`       | keybase.io                      |
 | `kofi`          | ko-fi.com                       |
-| `komoot`        | -                               |
+| `komoot`        | komoot.com                      |
 | `lastfm`        | last.fm                         |
 | `leetcode`      | leetcode.com                    |
-| `letterboxd`    | -                               |
+| `letterboxd`    | letterboxd.com                  |
 | `liberapay`     | liberapay.com                   |
 | `linkedin`      | linkedin.com                    |
 | `mastodon`      | mastodon.social                 |
 | `matrix`        | matrix.org                      |
 | `medium`        | medium.com                      |
+| `microblog`     | micro.blog                      |
 | `monero`        | -                               |
 | `mixcloud`      | mixcloud.com                    |
 | `nuget`         | nuget.org                       |
@@ -193,6 +200,7 @@ url = "/index.xml"
 | `phone`         | -                               |
 | `ploywork`      | ploywork.com                    |
 | `qq`            | qq.com                          |
+| `radicle`       | radicle.xyz                     |
 | `reddit`        | reddit.com                      |
 | `researchgate`  | researchgate.net                |
 | `rss`           | -                               |
@@ -212,13 +220,15 @@ url = "/index.xml"
 | `threads`       | threads.net                     |
 | `tiktok`        | tiktok.com                      |
 | `twitch`        | twitch.tv                       |
-| `twitter` (the blue bird logo)       | twitter.com                     |
+| `twitter` (the blue bird logo) | twitter.com      |
 | `unsplash`      | unsplash.com                    |
-| `x` (formerly Twitter)             | x.com                           |
+| `x` (formerly Twitter) | x.com                    |
 | `xda`           | xda-developers.com              |
 | `xing`          | xing.com                        |
 | `ycombinator`   | ycombinator.com                 |
 | `youtube`       | youtube.com                     |
+| `zhihu`         | zhihu.com                       |
+| `zulip`         | zulip.com                       |
 | `other`         | -                               |
 
 </details>

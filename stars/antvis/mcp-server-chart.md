@@ -1,12 +1,12 @@
 ---
 project: mcp-server-chart
-stars: 3046
+stars: 3072
 description: |-
     🤖 A visualization mcp contains 25+ visual charts using @antvis. Using for chart generation and data analysis.
 url: https://github.com/antvis/mcp-server-chart
 ---
 
-# MCP Server Chart ![](https://badge.mcpx.dev?type=server "MCP Server") [![build](https://github.com/antvis/mcp-server-chart/actions/workflows/build.yml/badge.svg)](https://github.com/antvis/mcp-server-chart/actions/workflows/build.yml) [![npm Version](https://img.shields.io/npm/v/@antv/mcp-server-chart.svg)](https://www.npmjs.com/package/@antv/mcp-server-chart) [![smithery badge](https://smithery.ai/badge/@antvis/mcp-server-chart)](https://smithery.ai/server/@antvis/mcp-server-chart) [![npm License](https://img.shields.io/npm/l/@antv/mcp-server-chart.svg)](https://www.npmjs.com/package/@antv/mcp-server-chart) [![Trust Score](https://archestra.ai/mcp-catalog/api/badge/quality/antvis/mcp-server-chart)](https://archestra.ai/mcp-catalog/antvis__mcp-server-chart)
+# MCP Server Chart ![](https://badge.mcpx.dev?type=server "MCP Server") [![build](https://github.com/antvis/mcp-server-chart/actions/workflows/build.yml/badge.svg)](https://github.com/antvis/mcp-server-chart/actions/workflows/build.yml) [![npm Version](https://img.shields.io/npm/v/@antv/mcp-server-chart.svg)](https://www.npmjs.com/package/@antv/mcp-server-chart) [![smithery badge](https://smithery.ai/badge/@antvis/mcp-server-chart)](https://smithery.ai/server/@antvis/mcp-server-chart) [![npm License](https://img.shields.io/npm/l/@antv/mcp-server-chart.svg)](https://www.npmjs.com/package/@antv/mcp-server-chart) [![Trust Score](https://archestra.ai/mcp-catalog/api/badge/quality/antvis/mcp-server-chart)](https://archestra.ai/mcp-catalog/antvis__mcp-server-chart) [![codecov](https://codecov.io/gh/antvis/mcp-server-chart/graph/badge.svg?token=7R98VGO5GL)](https://codecov.io/gh/antvis/mcp-server-chart)
 
 A Model Context Protocol server for generating charts using [AntV](https://github.com/antvis/). We can use this mcp server for _chart generation_ and _data analysis_.
 
@@ -275,7 +275,6 @@ Start the MCP server with Streamable transport:
 ```bash
 node build/index.js -t streamable
 ```
-
 
 ## 📄 License
 

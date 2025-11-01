@@ -1,6 +1,6 @@
 ---
 project: simple-git-hooks
-stars: 1580
+stars: 1583
 description: |-
     A simple git hooks manager for small projects
 url: https://github.com/toplenboren/simple-git-hooks
@@ -233,4 +233,33 @@ example, on macOS, add this to `~/.zshenv`:
 ```sh
 export SIMPLE_GIT_HOOKS_RC="$HOME/.simple-git-hooks.rc"
 ```
+
+### When migrating from `husky` git hooks are not running
+
+**Why is this happening?**
+
+Husky might change the `core.gitHooks` value to `.husky`, this way, git hooks would search `.husky` directory instead of `.git/hooks/`.
+
+Read more on git configuration in [Git book](https://git-scm.com/docs/githooks)
+
+You can check it by running this command inside of your repo:
+
+`git config core.hooksPath`
+
+If it outputs `.husky` then this is your case
+
+**How to fix?**
+
+you need to point `core.gitHooks` value to `your-awesome-project/.git/hooks`. You can use this command:
+
+`git config core.hooksPath .git/hooks/`
+
+validate the value is set:
+
+`git config core.hooksPath`
+
+should output: `.git/hooks/`
+
+Then remove the `.husky` folder that are generated previously by `husky`.
+
 
