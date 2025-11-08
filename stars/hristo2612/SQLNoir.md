@@ -1,6 +1,6 @@
 ---
 project: SQLNoir
-stars: 1522
+stars: 1532
 description: |-
     Solve mysteries through SQL.
 url: https://github.com/hristo2612/SQLNoir

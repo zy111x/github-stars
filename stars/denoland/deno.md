@@ -1,6 +1,6 @@
 ---
 project: deno
-stars: 104994
+stars: 105076
 description: |-
     A modern runtime for JavaScript and TypeScript.
 url: https://github.com/denoland/deno

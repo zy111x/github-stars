@@ -1,6 +1,6 @@
 ---
 project: hyperui
-stars: 11764
+stars: 11776
 description: |-
     Free Tailwind CSS v4 components for your next project, designed to enhance your web development with the latest features and styles 🚀
 url: https://github.com/markmead/hyperui
@@ -52,7 +52,7 @@ HyperUI has a wide range of freely available components. These components includ
 
 ### Application
 
-- [Alerts](https://www.hyperui.dev/components/application/alerts)
+- [Accordions](https://www.hyperui.dev/components/application/accordions)
 - [Badges](https://www.hyperui.dev/components/application/badges)
 - [Breadcrumbs](https://www.hyperui.dev/components/application/breadcrumbs)
 - [Button Groups](https://www.hyperui.dev/components/application/button-groups)
@@ -74,8 +74,10 @@ HyperUI has a wide range of freely available components. These components includ
 - [Stats](https://www.hyperui.dev/components/application/stats)
 - [Steps](https://www.hyperui.dev/components/application/steps)
 - [Tables](https://www.hyperui.dev/components/application/tables)
+- [Tabs](https://www.hyperui.dev/components/application/tabs)
 - [Textareas](https://www.hyperui.dev/components/application/textareas)
 - [Timelines](https://www.hyperui.dev/components/application/timelines)
+- [Toasts](https://www.hyperui.dev/components/application/toasts)
 - [Toggles](https://www.hyperui.dev/components/application/toggles)
 - [Vertical Menu](https://www.hyperui.dev/components/application/vertical-menu)
 

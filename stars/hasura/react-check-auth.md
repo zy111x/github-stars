@@ -1,6 +1,6 @@
 ---
 project: react-check-auth
-stars: 542
+stars: 541
 description: |-
     Add auth protection anywhere in your react/react-native app
 url: https://github.com/hasura/react-check-auth

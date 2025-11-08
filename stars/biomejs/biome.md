@@ -1,6 +1,6 @@
 ---
 project: biome
-stars: 21967
+stars: 22102
 description: |-
     A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP.
 url: https://github.com/biomejs/biome
@@ -191,6 +191,9 @@ Biome offers [enterprise support](https://biomejs.dev/enterprise), where Core Co
       </td>
       <td align="center" valign="middle">
         <a href="https://www.convex.dev/?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://avatars.githubusercontent.com/u/81530787?s=200&v=4" width="80" alt="Convex logo"></a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://graphite.dev/?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://avatars.githubusercontent.com/u/61942612?s=200&v=4" width="80" alt="Graphite logo"></a>
       </td>
     </tr>
   </tbody>

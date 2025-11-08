@@ -1,18 +1,26 @@
 ---
 project: glances
-stars: 30393
+stars: 30490
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
 ---
 
-===============================
-Glances - An Eye on your System
-===============================
+.. raw:: html
+
+   <div align="center">
+
+.. image:: ./docs/_static/glances-responsive-webdesign.png
+
+.. raw:: html
+
+   <h1>Glances</h1>
+
+An Eye on your System
 
 |  |pypi| |test| |contributors| |quality|
-|  |starts| |docker| |pypistat|
-|  |sponsors| |twitter|
+|  |starts| |docker| |pypistat| |sponsors|
+|  |reddit|
 
 .. |pypi| image:: https://img.shields.io/pypi/v/glances.svg
     :target: https://pypi.python.org/pypi/Glances
@@ -45,9 +53,17 @@ Glances - An Eye on your System
     :target: https://github.com/sponsors/nicolargo
     :alt: Sponsors
 
-.. |twitter| image:: https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40nicolargo
+.. |twitter| image:: https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white
     :target: https://twitter.com/nicolargo
     :alt: @nicolargo
+
+.. |reddit| image:: https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white
+    :target: https://www.reddit.com/r/glances/
+    :alt: @reddit
+
+.. raw:: html
+
+   </div>
 
 Summary 🌟
 ==========
@@ -66,8 +82,6 @@ In client/server mode, remote monitoring could be done via terminal,
 Web interface or API (XML-RPC and RESTful).
 Stats can also be exported to files or external time/value databases, CSV or direct
 output to STDOUT.
-
-.. image:: ./docs/_static/glances-responsive-webdesign.png
 
 Glances is written in Python and uses libraries to grab information from
 your system. It is based on an open architecture where developers can
@@ -92,21 +106,21 @@ For the Web server mode, run:
 
 and enter the URL ``http://<ip>:61208`` in your favorite web browser.
 
+In this mode, a HTTP/Restful API is exposed, see document `RestfulApi`_ for more details.
+
 .. image:: ./docs/_static/screenshot-web.png
 
-For the client/server mode, run:
+For the client/server mode (remote monitoring through XML-RPC), run the following command on the server:
 
 .. code-block:: console
 
     $ glances -s
 
-on the server side and run:
+and this one on the client:
 
 .. code-block:: console
 
     $ glances -c <ip>
-
-on the client one.
 
 You can also detect and display all Glances servers available on your
 network (or defined in the configuration file) in TUI:
@@ -163,14 +177,71 @@ Results look like this:
 
 .. image:: ./docs/_static/screenshot-fetch.png
 
-and RTFM, always.
+Use Glances as a Python library 📚
+==================================
+
+You can access the Glances API by importing the `glances.api` module and creating an
+instance of the `GlancesAPI` class. This instance provides access to all Glances plugins
+and their fields. For example, to access the CPU plugin and its total field, you can
+use the following code:
+
+.. code-block:: python
+
+    >>> from glances import api
+    >>> gl = api.GlancesAPI()
+    >>> gl.cpu
+    {'cpucore': 16,
+     'ctx_switches': 1214157811,
+     'guest': 0.0,
+     'idle': 91.4,
+     'interrupts': 991768733,
+     'iowait': 0.3,
+     'irq': 0.0,
+     'nice': 0.0,
+     'soft_interrupts': 423297898,
+     'steal': 0.0,
+     'syscalls': 0,
+     'system': 5.4,
+     'total': 7.3,
+     'user': 3.0}
+    >>> gl.cpu["total"]
+    7.3
+    >>> gl.mem["used"]
+    12498582144
+    >>> gl.auto_unit(gl.mem["used"])
+    11.6G
+
+If the stats return a list of items (like network interfaces or processes), you can
+access them by their name:
+
+.. code-block:: python
+
+    >>> gl.network.keys()
+    ['wlp0s20f3', 'veth33b370c', 'veth19c7711']
+    >>> gl.network["wlp0s20f3"]
+    {'alias': None,
+     'bytes_all': 362,
+     'bytes_all_gauge': 9242285709,
+     'bytes_all_rate_per_sec': 1032.0,
+     'bytes_recv': 210,
+     'bytes_recv_gauge': 7420522678,
+     'bytes_recv_rate_per_sec': 599.0,
+     'bytes_sent': 152,
+     'bytes_sent_gauge': 1821763031,
+     'bytes_sent_rate_per_sec': 433.0,
+     'interface_name': 'wlp0s20f3',
+     'key': 'interface_name',
+     'speed': 0,
+     'time_since_update': 0.3504955768585205}
+
+For a complete example of how to use Glances as a library, have a look to the `PythonApi`_.
 
 Documentation 📜
 ================
 
 For complete documentation have a look at the readthedocs_ website.
 
-If you have any question (after RTFM!), please post it on the official Reddit `forum`_.
+If you have any question (after RTFM! and the `FAQ`_), please post it on the official Reddit `forum`_ or in GitHub `Discussions`_.
 
 Gateway to other services 🌐
 ============================
@@ -202,8 +273,7 @@ There are several methods to test/install Glances on your system. Choose your we
 PyPI: Pip, the standard way
 ---------------------------
 
-Glances is on ``PyPI``. By using PyPI, you will be using the latest
-stable version.
+Glances is on ``PyPI``. By using PyPI, you will be using the latest stable version.
 
 To install Glances, simply use the ``pip`` command line.
 
@@ -595,6 +665,10 @@ Please give us a star on `GitHub`_ if you like this project.
 .. _package: https://repology.org/project/glances/versions
 .. _sponsors: https://github.com/sponsors/nicolargo
 .. _wishlist: https://www.amazon.fr/hz/wishlist/ls/BWAAQKWFR3FI?ref_=wl_share
-.. _Docker: https://github.com/nicolargo/glances/blob/develop/docs/docker.rst
+.. _Docker: https://github.com/nicolargo/glances/blob/master/docs/docker.rst
 .. _GitHub: https://github.com/nicolargo/glances
+.. _PythonApi: https://glances.readthedocs.io/en/develop/api/python.html
+.. _RestfulApi: https://glances.readthedocs.io/en/develop/api/restful.html
+.. _FAQ: https://github.com/nicolargo/glances/blob/develop/docs/faq.rst
+.. _Discussions: https://github.com/nicolargo/glances/discussions
 

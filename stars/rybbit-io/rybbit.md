@@ -1,6 +1,6 @@
 ---
 project: rybbit
-stars: 9350
+stars: 9481
 description: |-
     🐸 Rybbit - open-source and privacy-friendly alternative to Google Analytics that is 10x more intuitive.
 url: https://github.com/rybbit-io/rybbit
@@ -19,7 +19,7 @@ url: https://github.com/rybbit-io/rybbit
     <a href="https://github.com/rybbit-io/rybbit/blob/master/CONTRIBUTE.md" target="_blank">Contribute</a>
 </p>
 
-<a href="https://rybbit.io/" target="_blank">Rybbit</a> is the modern open source and privacy friendly alternative to Google Analytics. It takes only a couple minutes to setup and is super intuitive to use.
+<a href="https://rybbit.com/" target="_blank">Rybbit</a> is the modern open source and privacy friendly alternative to Google Analytics. It takes only a couple minutes to setup and is super intuitive to use.
 
 <p align="center">
   <a href="https://www.producthunt.com/products/rybbit?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-rybbit" target="_blank">
@@ -39,12 +39,12 @@ url: https://github.com/rybbit-io/rybbit
 
 There are two ways to start using Rybbit:
 
-| Option                                                  | Description                                                   |
-| ------------------------------------------------------- | ------------------------------------------------------------- |
-| **[Hosted Service](https://rybbit.io)**                 | Free tier available - the fastest way to get started          |
-| **[Self-Hosting](https://rybbit.io/docs/self-hosting)** | Deploy and manage Rybbit on your own VPS for complete control |
+| Option                                                   | Description                                                   |
+| -------------------------------------------------------- | ------------------------------------------------------------- |
+| **[Hosted Service](https://rybbit.com)**                 | Free tier available - the fastest way to get started          |
+| **[Self-Hosting](https://rybbit.com/docs/self-hosting)** | Deploy and manage Rybbit on your own VPS for complete control |
 
-📚 Explore our [documentation](https://rybbit.io/docs) to learn more about installation, configuration, and usage.
+📚 Explore our [documentation](https://rybbit.com/docs) to learn more about installation, configuration, and usage.
 
 <hr>
 
@@ -52,7 +52,7 @@ There are two ways to start using Rybbit:
 
 - All key web analytics metrics including sessions, unique users, pageviews, bounce rate, session duration
 - Session replays
-- No cookies or user tracking - GDPR & CCPA compliant
+- No cookies & privacy friendly
 - Customizable goals. retention, user journeys, and funnels dashboards
 - Advanced filtering across 15+ dimensions
 - Custom events with JSON properties
@@ -66,30 +66,32 @@ There are two ways to start using Rybbit:
 
 See how Rybbit compares to other analytics solutions:
 
-| Feature                  | Rybbit  | GA4        | Plausible  | Cloudflare |
-| ------------------------ | ------- | ---------- | ---------- | ---------- |
-| **Open Source**          | ✅      | ❌         | ✅         | ❌         |
-| **Self-Hosting**         | ✅      | ❌         | ✅\*       | ❌         |
-| **GDPR Compliant**       | ✅      | ❌         | ✅         | ✅         |
-| **Advanced Maps**        | ✅      | ❌         | ❌         | ❌         |
-| **Advanced Filters**     | ✅      | ⚠️ Limited | ⚠️ Limited | ❌         |
-| **Web Vitals**           | ⚠️ Paid | ❌         | ❌         | ❌         |
-| **Session Details**      | ✅      | ❌         | ❌         | ❌         |
-| **User Profiles**        | ✅      | ❌         | ❌         | ❌         |
-| **Session Replays**      | ✅      | ❌         | ❌         | ❌         |
-| **Funnels**              | ✅      | ✅         | ⚠️ Paid    | ❌         |
-| **User Journeys**        | ✅      | ✅         | ❌         | ❌         |
-| **Retention Analysis**   | ✅      | ✅         | ❌         | ❌         |
-| **Goals & Events**       | ✅      | ✅         | ✅         | ❌         |
-| **Real-time Dashboard**  | ✅      | ✅         | ✅         | ✅         |
-| **Custom Events (JSON)** | ✅      | ✅         | ⚠️ Limited | ❌         |
-| **Error Tracking**       | ✅      | ❌         | ❌         | ❌         |
-| **Public Dashboards**    | ✅      | ❌         | ✅         | ❌         |
-| **Organizations**        | ✅      | ✅         | ✅         | ✅         |
-| **Free Tier**            | ✅      | ✅         | ❌         | ✅         |
-| **Frog 🐸**              | ✅      | ❌         | ❌         | ❌         |
+| Feature                           | Rybbit | GA4        | Plausible  | Cloudflare |
+| --------------------------------- | ------ | ---------- | ---------- | ---------- |
+| **Open Source**                   | ✅     | ❌         | ✅         | ❌         |
+| **Self-Hosting**                  | ✅     | ❌         | ✅\*       | ❌         |
+| **Cookieless & Privacy friendly** | ✅     | ❌         | ✅         | ✅         |
+| **Advanced Maps**                 | ✅     | ❌         | ❌         | ❌         |
+| **Advanced Filters**              | ✅     | ⚠️ Limited | ⚠️ Limited | ❌         |
+| **Web Vitals**                    | ✅\*\* | ❌         | ❌         | ❌         |
+| **Session Details**               | ✅     | ❌         | ❌         | ❌         |
+| **User Profiles**                 | ✅     | ❌         | ❌         | ❌         |
+| **Session Replays**               | ✅     | ❌         | ❌         | ❌         |
+| **Funnels**                       | ✅     | ✅         | ✅\*\*     | ❌         |
+| **User Journeys**                 | ✅     | ✅         | ❌         | ❌         |
+| **Retention Analysis**            | ✅     | ✅         | ❌         | ❌         |
+| **Goals & Events**                | ✅     | ✅         | ✅         | ❌         |
+| **Real-time Dashboard**           | ✅     | ✅         | ✅         | ✅         |
+| **Custom Events (JSON)**          | ✅     | ✅         | ⚠️ Limited | ❌         |
+| **Error Tracking**                | ✅     | ❌         | ❌         | ❌         |
+| **Public Dashboards**             | ✅     | ❌         | ✅         | ❌         |
+| **Organizations**                 | ✅     | ✅         | ✅         | ✅         |
+| **Free Tier**                     | ✅     | ✅         | ❌         | ✅         |
+| **Frog 🐸**                       | ✅     | ❌         | ❌         | ❌         |
 
 \* Plausible's Community Edition has very limited features compared to their cloud version
+
+\*\* Only available on paid tiers
 
 <hr>
 

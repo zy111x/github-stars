@@ -1,6 +1,6 @@
 ---
 project: create-better-t-stack
-stars: 4153
+stars: 4206
 description: |-
     A modern CLI tool for scaffolding end-to-end type-safe TypeScript projects with best practices and customizable configurations
 url: https://github.com/AmanVarshney01/create-better-t-stack
@@ -9,6 +9,11 @@ url: https://github.com/AmanVarshney01/create-better-t-stack
 # Better-T-Stack
 
 A modern CLI tool for scaffolding end-to-end type-safe TypeScript projects with best practices and customizable configurations
+
+<br />
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+</a>
 
 ## Sponsors
 

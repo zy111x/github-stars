@@ -1,6 +1,6 @@
 ---
 project: saasfly
-stars: 2730
+stars: 2744
 description: |-
     Your Next SaaS Template or Boilerplate ! A magic trip start with `bun create saasfly` . The more stars, the more surprises
 url: https://github.com/nextify-limited/saasfly

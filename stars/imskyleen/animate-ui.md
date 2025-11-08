@@ -1,6 +1,6 @@
 ---
 project: animate-ui
-stars: 2775
+stars: 2850
 description: |-
     Fully animated, open-source component distribution built with React, TypeScript, Tailwind CSS, Motion, and Shadcn CLI. Browse a list of components you can install, modify, and use in your projects.
 url: https://github.com/imskyleen/animate-ui
@@ -36,4 +36,10 @@ Please read [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) before contributing.
 ## License
 
 Licensed under the [MIT license](https://github.com/imskyleen/animate-ui/blob/main/LICENSE.md).
+
+<br />
+<br />
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+</a>
 

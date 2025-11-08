@@ -1,6 +1,6 @@
 ---
 project: scira
-stars: 10895
+stars: 10919
 description: |-
     Scira (Formerly MiniPerplx) is a minimalistic AI-powered search engine that helps you find information on the internet and cites it too. Powered by Vercel AI SDK! Open Source perplexity alternative.
 url: https://github.com/zaidmukaddam/scira
@@ -8,13 +8,23 @@ url: https://github.com/zaidmukaddam/scira
 
 # Scira
 
+A minimalistic AI-powered search engine that helps you find information on the internet.
+
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
+</a>
+
+<br />
+
+
 ![Scira](/app/opengraph-image.png)
 
-A minimalistic AI-powered search engine that helps you find information on the internet.
+<br />
 
 🔗 **[Try Scira at scira.ai](https://scira.ai)**
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/zaidmukaddam/scira)
+
 
 ## Powered By
 

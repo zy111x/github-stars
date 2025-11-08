@@ -1,6 +1,6 @@
 ---
 project: sealos
-stars: 16518
+stars: 16551
 description: |-
     The Intelligent Cloud OS. Use AI to automate the full lifecycle of your development and production environments, from provisioning custom dev stacks and deploying self-optimizing databases (MySQL, PostgreSQL, Redis, MongoDB) to running any Dockerized service.
 url: https://github.com/labring/sealos
@@ -123,13 +123,6 @@ https://github.com/user-attachments/assets/cc8599da-6c3e-4503-bb53-55e13bf61ef6
 3. View your app details and access your service.
 
    <img width="1016" alt="image" src="https://github.com/user-attachments/assets/a54884cf-a1e8-4178-88af-655234ec7eef">
-
-## Self hosting
-
-- Install Sealos cloud: 
-   - Self host guide (coming soon) | Chinese: [集群部署](https://sealos.run/docs/self-hosting/install)
-- Install Kubernetes and kubernetes lifecycle managemant: 
-   - One command install kubernetes HA cluster (coming soon) | Chinese: [安装K8s集群](https://sealos.run/docs/k8s/quick-start/deploy-kubernetes)
 
 ## 💡 Core features
 

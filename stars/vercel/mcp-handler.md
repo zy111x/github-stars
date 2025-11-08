@@ -1,6 +1,6 @@
 ---
 project: mcp-handler
-stars: 459
+stars: 470
 description: |-
     Easily spin up an MCP Server on Next.js, Nuxt, Svelte, and more
 url: https://github.com/vercel/mcp-handler

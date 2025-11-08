@@ -1,6 +1,6 @@
 ---
 project: node-sonos-http-api
-stars: 1895
+stars: 1896
 description: |-
     An HTTP API bridge for Sonos easing automation. Hostable on any node.js capable device, like a raspberry pi or similar.
 url: https://github.com/jishi/node-sonos-http-api

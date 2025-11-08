@@ -1,6 +1,6 @@
 ---
 project: dub
-stars: 22546
+stars: 22578
 description: |-
     The modern link attribution platform. Loved by world-class marketing teams like Framer, Perplexity, Superhuman, Twilio, Buffer and more.
 url: https://github.com/dubinc/dub

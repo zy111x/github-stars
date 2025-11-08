@@ -1,6 +1,6 @@
 ---
 project: hacker-news
-stars: 2272
+stars: 2289
 description: |-
     一个基于 AI 的 Hacker News 中文播客项目，每天自动抓取 Hacker News 热门文章，通过 AI 生成中文总结并转换为播客内容。
 url: https://github.com/ccbikai/hacker-news
@@ -24,7 +24,7 @@ url: https://github.com/ccbikai/hacker-news
 
 - 🤖 自动抓取 Hacker News 每日热门文章
 - 🎯 使用 AI 智能总结文章内容和评论
-- 🎙️ 通过 Edge TTS 生成中文播报
+- 🎙️ 通过 TTS 生成中文播报
 - 📱 支持网页和播客 App 收听
 - 🔄 每日自动更新
 - 📝 提供文章摘要和完整播报文本
@@ -33,7 +33,7 @@ url: https://github.com/ccbikai/hacker-news
 
 - Next.js 应用框架
 - Cloudflare Workers 部署和运行环境
-- Edge TTS 语音合成
+- TTS 语音合成
 - OpenAI API 内容生成
 - Tailwind CSS 样式处理
 - shadcn-ui 组件库
@@ -42,7 +42,7 @@ url: https://github.com/ccbikai/hacker-news
 
 1. 定时抓取 Hacker News 热门文章
 2. 使用 AI 生成中文摘要和播报文稿
-3. 通过 TTS 转换为音频, 感谢 [Minimax Audio](https://hailuoai.com/audio) 赞助 TTS 服务。
+3. 通过 TTS 转换为音频。
 4. 存储到 Cloudflare R2 和 KV
 5. 通过 RSS feed 和网页提供访问
 
@@ -118,6 +118,12 @@ pnpx wrangler secret put NEXT_STATIC_HOST # 绑定域名后，修改为绑定域
 pnpm deploy:worker
 pnpm deploy
 ```
+
+## 致谢
+
+特别感谢以下开源项目：
+
+- **[Podify](https://github.com/sun0225SUN/podify)** - 一个优雅的播客主题，为本项目提供了设计灵感和参考
 
 ## 贡献
 

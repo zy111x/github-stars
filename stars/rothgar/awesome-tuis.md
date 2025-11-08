@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 14079
+stars: 14281
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -85,6 +85,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [ttop](https://github.com/inv2004/ttop) System monitoring tool with historical data service, triggers and top-like TUI
 - [tufw](https://github.com/peltho/tufw) Terminal UI for ufw
 - [tuicamp](https://github.com/AbeEstrada/tuicamp) Unofficial TimeCamp TUI
+- [updo](https://github.com/Owloops/updo) Website monitoring tool with uptime tracking, response time metrics, and SSL certificate monitoring.
 - [tmd-top](https://github.com/CDWEN0526/tmd-top)   Used to monitor the process tcp traffic of the linux system, detailed to each IP connection
 - [wander](https://github.com/robinovitch61/wander) HashiCorp Nomad terminal client
 - [WTF](https://github.com/senorprogrammer/wtf) The personal information dashboard for your terminal.
@@ -150,10 +151,12 @@ url: https://github.com/rothgar/awesome-tuis
 - [terraform-tui](https://github.com/idoavrah/terraform-tui) view and interact with Terraform state
 - [toolui](https://github.com/jinek/ToolUI) Dotnet core application to manage installed nuget tools
 - [tokui](https://github.com/zdyxry/tokui) An interactive TUI for visualizing code statistics from tokei.
+- [serie](https://github.com/lusingander/serie) A rich git commit graph
 - [soft-serve](https://github.com/charmbracelet/soft-serve) A tasty, self-hostable Git server for the command lineicecream
 - [tig](https://github.com/jonas/tig) Text-mode interface for git
 - [vctui](https://github.com/thebsdbox/vctui) Console interface for vCenter
 - [violet](https://github.com/braheezy/violet) Colorful TUI frontend to run Vagrant commands
+- [VT Code](https://github.com/vinhnx/vtcode) VT Code - Semantic Coding Agent
 
 ---
 </details>
@@ -245,6 +248,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [Gameboy Emulator](https://github.com/gabrielrcouto/php-terminal-gameboy-emulator) A PHP Terminal GameBoy Emulator
 - [GitType](https://github.com/unhappychoice/gittype) A CLI code-typing game that turns your source code into typing challenges
 - [go-life](https://github.com/sachaos/go-life) Terminal based Conway's Game of Life
+- [gokemon](https://github.com/nathanieltooley/gokemon) A terminal based Pokemon battle simulator
 - [Greed](https://gitlab.com/esr/greed) A game of consumption. Eat as much as you can before munching yourself into a corner!
 - [Maze TUI](https://github.com/agl-alexglopez/maze-tui) Build mazes and solve them with various algorithms.
 - [Micro Snake](https://github.com/troglobit/snake) A small snake game, utilizing ANSI escape sequences to draw the board.
@@ -535,6 +539,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [intelli-shell](https://github.com/lasantosr/intelli-shell) - Manage command templates/snippets with dynamic completions and AI integration
 - [Judo](https://github.com/giacomopiccinini/judo) A multi-database TUI for ToDo lists, using Rust + Ratatui + SQLite
 - [kabmat](https://github.com/PlankCipher/kabmat) TUI program for managing kanban boards with vim-like keybindings
+- [kanban](https://github.com/fulsomenko/kanban) - TUI kanban board for projects management with sprint tracking and task prioritization.
 - [kanban-python](https://github.com/Zaloog/kanban-python) Kanban Terminal App written in Python
 - [khal](https://github.com/pimutils/khal) A standards based CLI calendar program, able to synchronize with CalDAV servers
 - [LazySSH](https://github.com/adembc/lazyssh) - TUI SSH manager to browse, connect, and manage servers from ssh config files.
@@ -595,6 +600,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [haxor-news](https://github.com/donnemartin/haxor-news) Browse Hacker News like a haxor: A Hacker News command line interface (CLI)
 - [Lagrange](https://gmi.skyjake.fi/lagrange) Lagrange is a cross-platform client for browsing Geminispace
 - [LYNX](https://lynx.invisible-island.net/) A text based Terminal browser
+- [podliner](https://github.com/timkicker/podliner) A cross-platform podcast client
 - [newsboat](https://github.com/newsboat/newsboat) An RSS/Atom feed reader for the text console
 - [nyaa](https://github.com/Beastwick18/nyaa) A nyaa.si TUI for browsing and downloading torrents
 - [omaro](https://github.com/Rolv-Apneseth/omaro) TUI to browse posts and comments on lobste.rs

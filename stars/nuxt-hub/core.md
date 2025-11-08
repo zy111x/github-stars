@@ -1,6 +1,6 @@
 ---
 project: core
-stars: 1171
+stars: 1174
 description: |-
     Build full-stack applications with Nuxt, with almost zero-config.
 url: https://github.com/nuxt-hub/core

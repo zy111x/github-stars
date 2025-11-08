@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 18004
+stars: 18086
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -113,6 +113,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | matsu-theme | Ghibli Studio inspired theme for shadcn/ui made by Matt Wierzbicki | [Link](https://matsu-theme.vercel.app/) | 2025-04-23 |
 | minimal-tiptap | Minimal WYSIWYG editor with shadcn/ui and tiptap. | [Link](https://github.com/Aslam97/shadcn-minimal-tiptap) | 2024-06-22 |
 | mixcnui | Collection of animated components for Nextjs. | [Link](https://github.com/taqui-786/mixcnui) | 2024-07-07 |
+| modal-control-query | A hook to control shadcn modal components using query params | [Link](https://shadcn.davidsling.in/hooks/use-modal-control-query) | 2025-11-02 |
 | moleculeui | A modern React component library focused on intuitive interactions and seamless user experiences. | [Link](https://www.moleculeui.design/) | 2025-09-06 |
 | multi-selection | Managing multi-selection functionality with highlighter. | [Link](https://github.com/sherifawad/multi-selection-with-add-remove) | 2025-01-21 |
 | mvpblocks | Copy-paste beautiful, responsive components without worrying about styling or animations. Build faster, launch sooner. | [Link](https://blocks.mvp-subha.me) | 2025-05-14 |
@@ -318,6 +319,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | shadcn-zod-form | CLI tool to generate shadcn/ui forms from Zod schemas. | [Link](https://github.com/ilyichv/shadcn-zod-form) | 2024-10-03 |
 | sharable-form-builder | A sharable form builder for creating forms and sharing your form link, based on shadcn/ui and Next.js. | [Link](https://github.com/ayoubben18/sharable-form-builder) | 2024-10-12 |
 | someday | Free to host and open-source Cal.com/Calendly alternative built on Google Apps Script for Gmail users. | [Link](https://github.com/rbbydotdev/someday) | 2024-12-26 |
+| tancn | Build powerful forms and tables with ease using TanStack technologies | [Link](https://tancn.dev/) | 2025-11-02 |
 | tinte | An opinionated VS Code Theme Generator 🎨. | [Link](https://tinte.railly.dev/) | 2024-10-03 |
 | translate-app | Translate App using TypeScript, Tailwind CSS, NextJS, Bun, shadcn/ui, AI SDK/OpenAI, and Zod. | [Link](https://github.com/developaul/translate-app) | 2024-07-08 |
 | typelabs | MonkeyType-inspired typing test app built with React, shadcn, and Zustand at its core. | [Link](https://github.com/imsandeshpandey/typelabs) | 2024-07-08 |

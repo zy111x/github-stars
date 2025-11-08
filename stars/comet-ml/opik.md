@@ -1,6 +1,6 @@
 ---
 project: opik
-stars: 15346
+stars: 15528
 description: |-
     Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.
 url: https://github.com/comet-ml/opik

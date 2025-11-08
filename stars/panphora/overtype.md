@@ -1,6 +1,6 @@
 ---
 project: overtype
-stars: 3221
+stars: 3234
 description: |-
     The markdown editor that's just a textarea https://overtype.dev
 url: https://github.com/panphora/overtype
@@ -8,7 +8,7 @@ url: https://github.com/panphora/overtype
 
 # OverType
 
-A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~85KB minified with all features.
+A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~92KB minified with all features.
 
 ## Live Examples
 
@@ -27,7 +27,7 @@ A lightweight markdown editor library with perfect WYSIWYG alignment using an in
 - ⌨️ **Keyboard shortcuts** - Common markdown shortcuts (Cmd/Ctrl+B for bold, etc.)
 - 📱 **Mobile optimized** - Responsive design with mobile-specific styles
 - 🔄 **DOM persistence aware** - Recovers from existing DOM (perfect for HyperClay and similar platforms)
-- 🚀 **Lightweight** - ~85KB minified
+- 🚀 **Lightweight** - ~92KB minified
 - 🎯 **Optional toolbar** - Clean, minimal toolbar with all essential formatting
 - ✨ **Smart shortcuts** - Keyboard shortcuts with selection preservation
 - 📝 **Smart list continuation** - GitHub-style automatic list continuation on Enter
@@ -43,7 +43,7 @@ We overlap an invisible textarea on top of styled output, giving the illusion of
 
 | Feature | OverType | HyperMD | Milkdown | TUI Editor | EasyMDE |
 |---------|----------|---------|----------|------------|---------|
-| **Size** | ~85KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
+| **Size** | ~92KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
 | **Dependencies** | Bundled | CodeMirror | ProseMirror + plugins | Multiple libs | CodeMirror |
 | **Setup** | Single file | Complex config | Build step required | Complex config | Moderate |
 | **Approach** | Invisible textarea | ContentEditable | ContentEditable | ContentEditable | CodeMirror |
@@ -93,7 +93,7 @@ const [editor] = new OverType('#editor', {
 editor.getValue();
 editor.setValue('# New Content');
 
-// Change theme
+// Change theme for this instance
 editor.setTheme('cave');
 ```
 
@@ -115,32 +115,87 @@ editor.setTheme('cave');
 </script>
 ```
 
-### Toolbar & View Modes
+### Toolbar
 
 ```javascript
-// Enable the toolbar with view mode switcher
+// Enable default toolbar with all formatting buttons
 const [editor] = new OverType('#editor', {
-  toolbar: true,  // Enables the toolbar
-  value: '# Document\n\nSelect text and use the toolbar buttons!'
+  toolbar: true,
+  value: '# Document\n\nSelect text and use the toolbar!'
 });
 
-// Toolbar provides:
-// - Bold, Italic formatting
-// - Heading levels (H1, H2, H3)
-// - Links, inline code, code blocks
-// - Bullet and numbered lists
-// - View mode switcher (eye icon dropdown)
-// - All with keyboard shortcuts!
-
-// Three view modes available via toolbar dropdown:
-// 1. Normal Edit - Default WYSIWYG markdown editing
-// 2. Plain Textarea - Shows raw markdown without preview overlay
-// 3. Preview Mode - Read-only rendered preview with clickable links
-
-// Programmatically switch modes:
-editor.showPlainTextarea(true);   // Switch to plain textarea mode
-editor.showPreviewMode(true);     // Switch to preview mode
+// Default toolbar: Bold, Italic, Code | Link | H1, H2, H3 | Lists, Tasks | Quote | View Mode
 ```
+
+**Custom Toolbar (v2.0):**
+
+```javascript
+import OverType, { toolbarButtons } from 'overtype';
+
+const [editor] = new OverType('#editor', {
+  toolbar: true,
+  toolbarButtons: [
+    toolbarButtons.bold,
+    toolbarButtons.italic,
+    toolbarButtons.separator,
+    {
+      name: 'save',
+      icon: '<svg>...</svg>',
+      title: 'Save',
+      action: ({ editor, getValue }) => {
+        localStorage.setItem('draft', getValue());
+      }
+    }
+  ]
+});
+
+// Available: bold, italic, code, link, h1, h2, h3, bulletList,
+// orderedList, taskList, quote, separator, viewMode
+```
+
+See [examples/custom-toolbar.html](examples/custom-toolbar.html) for complete examples.
+
+### View Modes
+
+Three modes available via toolbar dropdown or programmatically:
+
+```javascript
+editor.showNormalEditMode();   // Default WYSIWYG editing
+editor.showPlainTextarea();    // Raw markdown, no preview
+editor.showPreviewMode();      // Read-only preview with clickable links
+```
+
+### Task Lists
+
+GitHub-style checkboxes render in preview mode:
+
+```javascript
+const [editor] = new OverType('#editor', {
+  value: '- [ ] Todo\n- [x] Done',
+  toolbar: true  // Use view mode dropdown to see checkboxes
+});
+
+// Edit mode: Shows `- [ ]` and `- [x]` syntax (preserves alignment)
+// Preview mode: Renders actual checkbox inputs
+```
+
+### Syntax Highlighting
+
+```javascript
+import { codeToHtml } from 'shiki';
+
+// Global highlighter (all instances)
+OverType.setCodeHighlighter((code, lang) =>
+  codeToHtml(code, { lang, theme: 'nord' })
+);
+
+// Per-instance override
+const [editor] = new OverType('#editor', {
+  codeHighlighter: (code, lang) => myHighlighter(code, lang)
+});
+```
+
+See [docs/SYNTAX_HIGHLIGHTING.md](docs/SYNTAX_HIGHLIGHTING.md) for complete guide.
 
 ### Keyboard Shortcuts
 
@@ -308,6 +363,45 @@ function MarkdownEditor({ value, onChange }) {
 }
 ```
 
+### Standalone Parser
+
+Import and use the markdown parser without the full editor for server-side rendering, static site generation, or browser extensions:
+
+```javascript
+// Import just the parser
+import { MarkdownParser } from 'overtype/parser';
+
+// Parse markdown to HTML
+const html = MarkdownParser.parse('# Hello World\n\nThis is **bold** text.');
+
+// Use in Node.js for SSR
+app.get('/preview', (req, res) => {
+  const markdown = req.body.content;
+  const html = MarkdownParser.parse(markdown);
+  res.json({ html });
+});
+
+// Use in static site generator
+const posts = markdownFiles.map(file => ({
+  content: MarkdownParser.parse(file.content),
+  metadata: file.metadata
+}));
+
+// Use in browser extension
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.markdown) {
+    const html = MarkdownParser.parse(request.markdown);
+    sendResponse({ html });
+  }
+});
+```
+
+**Benefits:**
+- No DOM dependencies required
+- Smaller bundle when you only need parsing
+- Same markdown rendering as the editor
+- Perfect for headless/server-side use cases
+
 ## API
 
 ### Constructor
@@ -368,8 +462,14 @@ new OverType(target, options)
   },
   
   // Toolbar
-  toolbar: false,         // Enable/disable toolbar with formatting buttons
-  
+  toolbar: false,         // Enable/disable toolbar
+  toolbarButtons: [],     // Custom button array (v2.0)
+                          // Defaults to all built-in buttons when toolbar: true
+
+  // Syntax highlighting
+  codeHighlighter: null,  // Function: (code, lang) => html
+                          // Overrides global OverType.setCodeHighlighter()
+
   // Smart lists
   smartLists: true,       // Enable GitHub-style list continuation on Enter
   
@@ -402,15 +502,18 @@ editor.getCleanHTML()                       // Alias for getRenderedHTML({ clean
 // Get the current preview element's HTML
 editor.getPreviewHTML()            // Actual DOM content from preview layer
 
-// Change theme
+// Change theme (instance-specific, overrides global theme)
 editor.setTheme('cave')  // Built-in theme name
 editor.setTheme(customThemeObject)  // Custom theme
 
+// Set code highlighter (instance-specific)
+editor.setCodeHighlighter((code, lang) => highlightedHTML)
+editor.setCodeHighlighter(null)  // Disable for this instance
+
 // View modes
-editor.showPlainTextarea(true)    // Switch to plain textarea mode
-editor.showPlainTextarea(false)   // Switch back to normal mode
-editor.showPreviewMode(true)      // Switch to preview mode
-editor.showPreviewMode(false)     // Switch back to normal mode
+editor.showNormalEditMode()   // Switch to normal edit mode (default)
+editor.showPlainTextarea()    // Switch to plain textarea mode
+editor.showPreviewMode()      // Switch to preview mode
 
 // Focus/blur
 editor.focus()
@@ -433,10 +536,16 @@ editor.destroy()
 ### Static Methods
 
 ```javascript
-// Set global theme (affects all instances)
+// Set global theme (affects all instances without instance themes)
 OverType.setTheme('cave')  // Built-in theme
 OverType.setTheme(customTheme)  // Custom theme object
 OverType.setTheme('solar', { h1: '#custom' })  // Override specific colors
+
+// Set global code highlighter (affects all instances without instance highlighter)
+OverType.setCodeHighlighter((code, lang) => highlightedHTML)
+OverType.setCodeHighlighter(null)  // Disable global highlighting
+
+// Note: Instance methods override global settings
 
 // Initialize multiple editors (same as constructor)
 OverType.init(target, options)
@@ -468,13 +577,73 @@ OverType.themes.cave
 - **Headers** - `# H1`, `## H2`, `### H3`
 - **Bold** - `**text**` or `__text__`
 - **Italic** - `*text*` or `_text_`
+- **Strikethrough** - `~~text~~` or `~text~` (GFM)
 - **Code** - `` `inline code` ``
+- **Code blocks** - ` ```language `
 - **Links** - `[text](url)`
 - **Lists** - `- item`, `* item`, `1. item`
+- **Task lists** - `- [ ] todo`, `- [x] done` (GFM, renders in preview mode)
 - **Blockquotes** - `> quote`
 - **Horizontal rule** - `---`, `***`, or `___`
 
-Note: Markdown syntax remains visible but styled (e.g., `**bold**` shows with styled markers).
+**Note:** Syntax remains visible in edit mode (e.g., `**bold**` shows markers). Use preview mode for full rendering.
+
+## Web Component
+
+OverType provides a fully-featured native Web Component `<overtype-editor>` with Shadow DOM encapsulation and a declarative HTML API.
+
+**Quick example:**
+```html
+<overtype-editor
+  value="# Hello OverType!"
+  theme="solar"
+  height="300px"
+  toolbar>
+</overtype-editor>
+```
+
+📖 **[Complete Web Component Documentation](docs/WEB-COMPONENT.md)**
+
+Features include:
+- Complete style isolation with Shadow DOM
+- 15 reactive HTML attributes
+- Framework-agnostic (React, Vue, Angular)
+- Built-in themes (Solar, Cave)
+- Custom events API
+- Zero configuration required
+
+## Migration from v1.x
+
+### Breaking Change: Toolbar API (v2.0)
+
+**Old options removed:**
+```javascript
+// ❌ No longer supported
+{
+  customToolbarButtons: [...],
+  hideButtons: [...],
+  buttonOrder: [...]
+}
+```
+
+**New approach:**
+```javascript
+// ✅ v2.0: Single explicit array
+import { toolbarButtons } from 'overtype';
+
+{
+  toolbar: true,
+  toolbarButtons: [
+    toolbarButtons.bold,
+    toolbarButtons.italic,
+    { name: 'custom', icon: '...', action: ({ editor, getValue }) => {} }
+  ]
+}
+```
+
+**If using default toolbar** (`toolbar: true` with no customization), no changes needed.
+
+See [examples/custom-toolbar.html](examples/custom-toolbar.html) for migration examples.
 
 ## DOM Persistence & Re-initialization
 
@@ -498,6 +667,7 @@ Check the `examples` folder for complete examples:
 - `basic.html` - Simple single editor
 - `multiple.html` - Multiple independent editors
 - `custom-theme.html` - Theme customization
+- `custom-toolbar.html` - Custom toolbar buttons (v2.0)
 - `dynamic.html` - Dynamic creation/destruction
 
 ## Limitations
@@ -572,11 +742,30 @@ OverType uses a unique invisible textarea overlay approach:
 ## Contributors
 
 Special thanks to:
+
+### Core Features & Fixes
 - [Josh Doman](https://github.com/joshdoman) - Fixed inline code formatting preservation ([#6](https://github.com/panphora/overtype/pull/6)), improved code fence detection ([#19](https://github.com/panphora/overtype/pull/19))
 - [kbhomes](https://github.com/kbhomes) - Fixed text selection desynchronization during overscroll ([#17](https://github.com/panphora/overtype/pull/17))
+- [Kristián Kostecký](https://github.com/kristiankostecky) - Fixed toolbar option being ignored in reinit() ([#62](https://github.com/panphora/overtype/pull/62))
+- [Lyric Wai](https://github.com/lyricat) - Fixed double-escaping of links ([#64](https://github.com/panphora/overtype/pull/64)), reported code block alignment issues ([#65](https://github.com/panphora/overtype/issues/65))
+- [kozi](https://github.com/kozi) - Reported link tooltip issues in Firefox ([#68](https://github.com/panphora/overtype/issues/68)) and toolbar positioning ([#69](https://github.com/panphora/overtype/issues/69))
+
+### TypeScript & Framework Support
 - [merlinz01](https://github.com/merlinz01) - Initial TypeScript definitions implementation ([#20](https://github.com/panphora/overtype/pull/20))
-- [Max Bernstein](https://github.com/tekknolagi) - Fixed typo in website ([#11](https://github.com/panphora/overtype/pull/11))
+- [ChasLui](https://github.com/ChasLui) - Web component implementation (under review) ([#40](https://github.com/panphora/overtype/pull/40))
+
+### New Features & Enhancements
 - [davidlazar](https://github.com/davidlazar) - Suggested view mode feature for toggling overlay and preview modes ([#24](https://github.com/panphora/overtype/issues/24))
+- [Yukai Huang](https://github.com/Yukaii) - Syntax highlighting support (under review) ([#35](https://github.com/panphora/overtype/pull/35))
+- [Rognoni](https://github.com/rognoni) - Suggested custom toolbar button API ([#61](https://github.com/panphora/overtype/issues/61))
+- [Deyan Gigov](https://github.com/dido739) - Reported checkbox rendering issue in preview mode ([#60](https://github.com/panphora/overtype/issues/60))
+
+### Developer Experience
+- [Ned Twigg](https://github.com/nedtwigg) - Browser extension developer feedback, gitcasso extension ([#59](https://github.com/panphora/overtype/issues/59))
+- [Victor](https://github.com/ViggieM) - Suggested exporting MarkdownParser for standalone use ([#58](https://github.com/panphora/overtype/issues/58))
+- [Bernhard Weichel](https://github.com/bwl21) - Reported mode switching scroll sync bug ([#52](https://github.com/panphora/overtype/issues/52))
+- [Colin Devroe](https://github.com/cdevroe) - Reported theme API confusion ([#54](https://github.com/panphora/overtype/issues/54))
+- [Max Bernstein](https://github.com/tekknolagi) - Fixed typo in website ([#11](https://github.com/panphora/overtype/pull/11))
 
 ## License
 
@@ -586,11 +775,11 @@ MIT
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
+<p>&nbsp;</p>
+
 ---
 
 Built with the radical idea that sometimes dumb ideas work.
-
----
 
 **Ready for another radical idea?**  
 Let's remove every layer of the web application stack.

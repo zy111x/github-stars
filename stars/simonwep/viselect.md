@@ -1,6 +1,6 @@
 ---
 project: viselect
-stars: 2914
+stars: 2915
 description: |-
     ✨ Viselect - A high performance and lightweight library to add a visual way of selecting elements, just like on your Desktop. Zero dependencies, super small. Support for major frameworks!
 url: https://github.com/simonwep/viselect

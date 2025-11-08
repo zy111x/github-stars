@@ -1,6 +1,6 @@
 ---
 project: document
-stars: 1115
+stars: 1221
 description: |-
     Perform common file preview and editing via the web.
 url: https://github.com/ranuts/document
@@ -49,6 +49,23 @@ This project also provides foundational services for document preview components
 
 - **Auto Deployment**: The project is automatically deployed to GitHub Pages when changes are pushed to the main branch
 - **Manual Deployment**: You can also deploy the project to any static website hosting service
+
+### docker run
+
+``` bash
+docker run -d --name document -p 8080:8080 ghcr.io/ranui/document:latest
+```
+
+### docker compose
+
+```yaml
+services:
+  document:
+    image: ghcr.io/ranui/document:latest
+    container_name: document
+    ports:
+      - 8080:8080
+```
 
 ## 🔧 Local Development
 

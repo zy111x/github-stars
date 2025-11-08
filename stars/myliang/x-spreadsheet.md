@@ -1,6 +1,6 @@
 ---
 project: x-spreadsheet
-stars: 14599
+stars: 14600
 description: |-
     The project has been migrated to @wolf-table/table https://github.com/wolf-table/table
 url: https://github.com/myliang/x-spreadsheet

@@ -1,6 +1,6 @@
 ---
 project: unwasm
-stars: 229
+stars: 230
 description: |-
     🇼 WebAssembly tools for JavaScript
 url: https://github.com/unjs/unwasm
@@ -104,13 +104,13 @@ npm install unwasm
 yarn add unwasm
 
 # pnpm
-pnpm install unwasm
+pnpm add unwasm
 
 # bun
 bun install unwasm
 
 # deno
-deno install unwasm
+deno install npm:unwasm
 ```
 
 <!-- /automd -->
@@ -121,7 +121,7 @@ deno install unwasm
 
 ```js
 // rollup.config.js
-import { rollup as unwasm } from "unwasm/plugin";
+import { unwasm } from "unwasm/plugin";
 
 export default {
   plugins: [

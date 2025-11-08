@@ -1,6 +1,6 @@
 ---
 project: agents
-stars: 2756
+stars: 2785
 description: |-
     Build and deploy AI Agents on Cloudflare 
 url: https://github.com/cloudflare/agents

@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 857
+stars: 902
 description: |-
     JSX → Image. Alternative to satori + resvg plus variable fonts, RTL, inline layout, WOFF2, WebP output support.
 url: https://github.com/kane50613/takumi

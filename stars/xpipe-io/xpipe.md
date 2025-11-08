@@ -1,6 +1,6 @@
 ---
 project: xpipe
-stars: 11814
+stars: 11891
 description: |-
     Access your entire server infrastructure from your local desktop
 url: https://github.com/xpipe-io/xpipe
@@ -27,7 +27,7 @@ It currently supports:
 - [Proxmox PVE](https://docs.xpipe.io/guide/proxmox) virtual machines and containers
 - [Hyper-V](https://docs.xpipe.io/guide/hyperv), [KVM](https://docs.xpipe.io/guide/kvm), [VMware Player/Workstation/Fusion](https://docs.xpipe.io/guide/vmware) virtual machines
 - [Kubernetes](https://docs.xpipe.io/guide/kubernetes) clusters, pods, and containers
-- [Tailscale](https://docs.xpipe.io/guide/tailscale) and [Teleport](https://docs.xpipe.io/guide/teleport) connections
+- [Tailscale](https://docs.xpipe.io/guide/tailscale), [Netbird](https://docs.xpipe.io/guide/netbird), and [Teleport](https://docs.xpipe.io/guide/teleport) connections
 - Windows Subsystem for Linux, Cygwin, and MSYS2 environments
 - [Powershell Remote Sessions](https://docs.xpipe.io/guide/pssession)
 - [RDP](https://docs.xpipe.io/guide/rdp) and [VNC](https://docs.xpipe.io/guide/vnc) connections

@@ -1,8 +1,8 @@
 ---
 project: tau
-stars: 4541
+stars: 4547
 description: |-
-    Open source distributed Platform as a Service (PaaS). A self-hosted Vercel / Netlify / Cloudflare alternative.
+    Fullstack Workspace for Humans & Machines
 url: https://github.com/taubyte/tau
 ---
 
