@@ -1,6 +1,6 @@
 ---
 project: scalar
-stars: 12716
+stars: 12799
 description: |-
     Scalar is an open-source API platform:　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　🌐 Modern Rest API Client　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　📖 Beautiful API References　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　✨ 1st-Class OpenAPI/Swagger Support
 url: https://github.com/scalar/scalar
@@ -11,18 +11,10 @@ url: https://github.com/scalar/scalar
 [![GitHub License](https://img.shields.io/github/license/scalar/scalar)](https://github.com/scalar/scalar/blob/main/LICENSE)
 [![Twitter](https://img.shields.io/twitter/follow/scalar)](https://x.com/scalar)
 [![Discord](https://img.shields.io/discord/1135330207960678410?style=flat&color=5865F2)](https://discord.gg/scalar)
-[![Scalar App](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.todesktop.com%2Fv1%2FgetReleaseBuildIds%3FappId%3D240718bnjmcfyp4&query=%24.releases%5B%3A1%5D.version&label=Scalar%20App&labelColor=%231a1a1a&color=%23e7e7e7)](https://scalar.com/download)
 
 <h1>
 	<p>Scalar</p>
 	<p>
-		<a href="https://scalar.com/download" target="_blank">
-			<picture>
-				<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/b391b82f-d993-4e97-8a17-1c3c7ccbb19b">
-				<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/579d0853-b2a5-4ea8-b2bd-a98753faeaf3">
-				<img width="48.494%" height="250" src="https://github.com/user-attachments/assets/b391b82f-d993-4e97-8a17-1c3c7ccbb19b#gh-light-mode-only" alt="Scalar API client">
-			</picture>
-		</a>
 		<a href="https://docs.scalar.com/swagger-editor" target="_blank">
 			<picture>
 				<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/9b639f2d-0204-4b15-b918-158072a9afa5">
@@ -30,24 +22,29 @@ url: https://github.com/scalar/scalar
 				<img width="48.494%" height="250" src="https://github.com/user-attachments/assets/9b639f2d-0204-4b15-b918-158072a9afa5#gh-light-mode-only" alt="Scalar API Reference">
 			</picture>
 	 	</a>
+		<a href="https://scalar.com/download" target="_blank">
+			<picture>
+				<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/b391b82f-d993-4e97-8a17-1c3c7ccbb19b">
+				<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/579d0853-b2a5-4ea8-b2bd-a98753faeaf3">
+				<img width="48.494%" height="250" src="https://github.com/user-attachments/assets/b391b82f-d993-4e97-8a17-1c3c7ccbb19b#gh-light-mode-only" alt="Scalar API client">
+			</picture>
+		</a>
 	</p>
 </h1>
 
 <p>
-	<img width="830" height="auto" src="https://github.com/user-attachments/assets/d9f90c51-82d4-4948-9365-658ccc7d78c4#gh-light-mode-only">
-	<img width="830" height="auto" src="https://github.com/user-attachments/assets/e7c2023e-dfbc-428c-bc85-c06d8a6e4b67#gh-dark-mode-only">
+	<img width="830" height="auto" src="https://github.com/user-attachments/assets/3a24fc5c-5d3c-4be4-8b9e-399bd49e4fb7#gh-light-mode-only">
+	<img width="830" height="auto" src="https://github.com/user-attachments/assets/76f123ae-f458-409f-84d3-b9ad14fd3fb2#gh-dark-mode-only">
 </p>
 
-### An offline first API Client built for OpenAPI
+### Interactive API Reference from OpenAPI/Swagger
 
-└ Minimal, powerful & open-source <br>
-└ Integrates with dozens of API Frameworks (Elysia, Hono, FastAPI, etc)<br>
-└ Syncs directly with your server frameworks with our Watch Mode <br>
-└ First class OpenAPI (formerly Swagger) support <br>
-└ Environment variables and dynamic parameters <br>
-└ Save and organize requests into collections <br>
-└ <a href="https://scalar.com/download">Download (Windows, MacOS, Linux)</a> <br>
-└ <a href="https://client.scalar.com/">Try Online Demo</a>
+└ Renders OpenAPI/Swagger documents<br>
+└ Comes with an API testing tool<br>
+└ Doesn't look like 2011<br>
+└ Generates code examples for many languages & frameworks<br>
+└ Integrates with your favorite framework<br>
+└ <a href="https://docs.scalar.com/swagger-editor">Try Demo</a>
 
 <!-- minimal line break-->
 <p>
@@ -57,17 +54,19 @@ url: https://github.com/scalar/scalar
 <!-- end minimal line break-->
 
 <p>
-	<img width="830" height="auto" src="https://github.com/user-attachments/assets/3a24fc5c-5d3c-4be4-8b9e-399bd49e4fb7#gh-light-mode-only">
-	<img width="830" height="auto" src="https://github.com/user-attachments/assets/76f123ae-f458-409f-84d3-b9ad14fd3fb2#gh-dark-mode-only">
+	<img width="830" height="auto" src="https://github.com/user-attachments/assets/d9f90c51-82d4-4948-9365-658ccc7d78c4#gh-light-mode-only">
+	<img width="830" height="auto" src="https://github.com/user-attachments/assets/e7c2023e-dfbc-428c-bc85-c06d8a6e4b67#gh-dark-mode-only">
 </p>
 
-<h3>Interactive API Reference from OpenAPI/Swagger</h3>
-└ Uses OpenAPI/Swagger documents <br>
-└ Request examples for many favorite languages and frameworks <br>
-└ Comes with an integrated API playground <br>
-└ Integrates with your favorite framework <br>
-└ Doesn't look like 2011 <br>
-└ <a href="https://docs.scalar.com/swagger-editor">Try Demo</a>
+### An offline-first API Client built for OpenAPI
+
+└ Free and open-source<br>
+└ First-class OpenAPI/Swagger support<br>
+└ Integrates with dozens of API Frameworks (Elysia, Hono, FastAPI, etc)<br>
+└ Syncs with your favorite server framework (Watch Mode)<br>
+└ Has environment variables, dynamic parameters and everything<br>
+└ <a href="https://client.scalar.com/">Try It in the Browser</a>
+└ <a href="https://scalar.com/download">Download (Windows, MacOS, Linux)</a><br>
 
 <!-- minimal line break-->
 <p>
@@ -95,7 +94,7 @@ url: https://github.com/scalar/scalar
 
 ### Quickstart
 
-You're just one HTML file away from having an awesome API reference:
+All you need is a single HTML file to create an amazing API reference:
 
 ```html
 <!doctype html>
@@ -182,27 +181,14 @@ The following frameworks have chosen Scalar API Reference as their default OpenA
 
 We're offering a free and paid managed hosting on the edge, too:
 
-- Write your API documentation and publish your API references (free)
-- Get SSL and a super cool `*.apidocumentation.com` subdomain (free)
-- Write free text documentation (paid)
-- Collaborate with your whole team (paid)
-- Use any domain (paid)
+- Write your API documentation and publish API references (free)
+- `YOUR_NAME_HERE.apidocumentation.com` subdomain and SSL (free)
+- [GitHub Sync](https://guides.scalar.com/scalar/scalar-docs/github-sync)
+- Write free-form documentation
+- Collaborate with your team
+- Use any domain
 
-Ready? [Create your account on scalar.com](https://scalar.com).
-
-<br>
-
-### Projects
-
-| Project                                                     | Description            |
-| ----------------------------------------------------------- | ---------------------- |
-| [Scalar API Client](packages/api-client/README.md)          | API client             |
-| [Scalar CLI](https://www.npmjs.com/package/@scalar/cli)     | Command-line interface |
-| [Scalar Galaxy](packages/galaxy/README.md)                  | OpenAPI Example        |
-| [Scalar Mock Server](packages/mock-server/README.md)        | OpenAPI Mock Server    |
-| [Scalar Void Server](packages/void-server/README.md)        | HTTP Request Mirror    |
-| [Scalar Open API Parser](packages/openapi-parser/README.md) | OpenAPI SDK            |
-| [Scalar Sandbox](https://sandbox.scalar.com/)               | Online OpenAPI Editor  |
+Ready? [Create your Scalar Account](https://scalar.com)
 
 <br>
 
@@ -210,11 +196,31 @@ Ready? [Create your account on scalar.com](https://scalar.com).
 
 | Topic                                                                                 | Description                          |
 | ------------------------------------------------------------------------------------- | ------------------------------------ |
-| [Themes](https://guides.scalar.com/scalar/scalar-api-references/themes)               | Predefined themes, layouts & styling |
 | [Configuration](https://guides.scalar.com/scalar/scalar-api-references/configuration) | The universal configuration object   |
+| [Themes](https://guides.scalar.com/scalar/scalar-api-references/themes)               | Predefined themes, layouts & styling |
+| [OpenAPI](https://guides.scalar.com/scalar/scalar-api-references/openapi)             | OpenAPI specification extensions     |
+| [Markdown](https://guides.scalar.com/scalar/scalar-api-references/markdown)           | Supported Markdown syntax            |
 | [Plugins](https://guides.scalar.com/scalar/scalar-api-references/plugins)             | Extend the functionality             |
-| [OpenAPI](https://guides.scalar.com/scalar/scalar-api-references/openapi)             | OpenAPI and our extensions to it     |
-| [Markdown](https://guides.scalar.com/scalar/scalar-api-references/markdown)           | The supported Markdown syntax        |
+
+<br>
+
+### Projects
+
+| Project                                                                                        | Description                      |
+| ---------------------------------------------------------------------------------------------- | -------------------------------- |
+| [Scalar API Reference](https://guides.scalar.com/scalar/scalar-api-references/getting-started) | Self-hosted API Reference        |
+| [Scalar API Client](https://scalar.com/download)                                               | Postman alternative              |
+| [Scalar Registry](https://guides.scalar.com/scalar/scalar-registry/getting-started)            | Manage OpenAPI documents         |
+| [Scalar Docs](https://guides.scalar.com/scalar/scalar-docs/getting-started)                    | Hosted documentation             |
+| [Scalar Docs Starter](https://github.com/scalar/starter)                                       | Starter template for Scalar Docs |
+| [Scalar SDKs](https://guides.scalar.com/scalar/scalar-sdks/getting-started)                    | SDK generation                   |
+| [Scalar CLI](https://guides.scalar.com/scalar/scalar-cli/getting-started)                      | Command-line interface           |
+| [Scalar Mock Server](https://guides.scalar.com/scalar/scalar-mock-server/getting-started)      | Mock APIs from OpenAPI documents |
+| [Scalar Galaxy](packages/galaxy/README.md)                                                     | Our OpenAPI Example              |
+| [Scalar Editor](https://editor.scalar.com/)                                                    | OpenAPI Online Editor            |
+| [Scalar OpenAPI Parser](packages/openapi-parser/README.md)                                     | Parse OpenAPI documents          |
+| [Scalar OpenAPI Upgrader](packages/openapi-upgrader/README.md)                                 | Upgrade OpenAPI documents        |
+| [Scalar Void Server](packages/void-server/README.md)                                           | HTTP Request Mirror              |
 
 <br>
 
@@ -229,8 +235,6 @@ We are API nerds. You too? Let's chat on Discord: <https://discord.gg/scalar>
 Contributions are welcome! Read the [`CONTRIBUTING`](CONTRIBUTING.md) guide.
 
 **Top 10 Contributors (April 2025)**
-
-
 
 <p>
 	<img width="830" height="280" src="https://github.com/user-attachments/assets/8c10d2aa-9eb4-4818-9ca2-625cfed5ca08#gh-light-mode-only">

@@ -1,6 +1,6 @@
 ---
 project: homeassistant
-stars: 1447
+stars: 1449
 description: |-
     Example Home Assistant Configs
 url: https://github.com/geekofweek/homeassistant
@@ -12,6 +12,8 @@ url: https://github.com/geekofweek/homeassistant
 [![HA Version](https://img.shields.io/badge/Original%20Home%20Assistant-0.14%20-darkblue)](https://github.com/home-assistant/core/releases/0.14)
 [![HA Community](https://img.shields.io/badge/HA%20community-forum-orange)](https://community.home-assistant.io/u/geekoftheweek/summary)
 
+# Update
+I recently moved and started over from scratch with Home Assistant (sort of I re-used a lot of yaml snippets because lazy and why figure that all out again).  Basically, I took what I did here and turned it up to 11.  It's more devices, more useless complexity, and so on.  That said the stress of moving, setting up new, etc.  I'm not sure when, or if, I'll get around to updating things here.  As Home Assistant has moved fairly into the UI based automations people probably find my old school yaml way less useful.  Unless I get a lot of interest in updating things I may just preserve this as-is for a while.
 
 # Overview
 My personal [Home Assistant Container](https://home-assistant.io) configurations with 800+ automations.  These are my active automations and configurations that I use every day.  Updated frequently as I add more devices and come up with more and more complicated ways to do simple tasks.

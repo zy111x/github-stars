@@ -1,6 +1,6 @@
 ---
 project: icalendar
-stars: 1086
+stars: 1089
 description: |-
     icalendar parser library for Python
 url: https://github.com/collective/icalendar
@@ -199,7 +199,7 @@ You can find out more about this project:
 * `Changelog`_
 * `License`_
 
-.. _`Contributing`: https://icalendar.readthedocs.io/en/latest/contributing.html
-.. _`Changelog`: https://icalendar.readthedocs.io/en/latest/changelog.html
-.. _`License`: https://icalendar.readthedocs.io/en/latest/license.html
+.. _`Contributing`: https://icalendar.readthedocs.io/en/latest/contribute/index.html
+.. _`Changelog`: https://icalendar.readthedocs.io/en/latest/reference/changelog.html
+.. _`License`: https://icalendar.readthedocs.io/en/latest/index.html#license
 

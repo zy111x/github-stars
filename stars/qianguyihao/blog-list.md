@@ -1,6 +1,6 @@
 ---
 project: blog-list
-stars: 2390
+stars: 2406
 description: |-
     中文博客琅琊榜，只收录精品独立博客
 url: https://github.com/qianguyihao/blog-list

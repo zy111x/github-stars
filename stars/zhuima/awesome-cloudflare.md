@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare
-stars: 12153
+stars: 12203
 description: |-
     ⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.
 url: https://github.com/zhuima/awesome-cloudflare
@@ -255,6 +255,7 @@ url: https://github.com/zhuima/awesome-cloudflare
 | [Text2img-Cloudflare-Workers](https://github.com/huarzone/Text2img-Cloudflare-Workers) | 一个基于 Cloudflare AI & Workers 的在线文生图服务✨ | <https://text2img.huarzone.com/> | 有效中 |
 | [Edgebin](https://github.com/jiacai2050/edgebin) | 类似与 httpbin 的 HTTP 测试服务 | <https://edgebin.liujiacai.net> | 有效中 |
 | [CF-TOOLS](https://github.com/MainPoser/cf-tools) | 整合常用开发工具，AI 助手等。 | <https://cf-tools.tianyao.qzz.io/> | 有效中 |
+| [subpool-worker](https://github.com/illusionlie/subpool-worker) | 轻量级订阅池服务，用于管理和分发代理订阅链接 |  | 维护中 |
 
 
 

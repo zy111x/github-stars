@@ -1,6 +1,6 @@
 ---
 project: sidequest
-stars: 891
+stars: 897
 description: |-
     Sidequest is a modern, scalable background job processor for Node.js applications.
 url: https://github.com/sidequestjs/sidequest

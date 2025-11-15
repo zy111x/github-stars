@@ -1,6 +1,6 @@
 ---
 project: document
-stars: 1221
+stars: 1292
 description: |-
     Perform common file preview and editing via the web.
 url: https://github.com/ranuts/document
@@ -52,7 +52,7 @@ This project also provides foundational services for document preview components
 
 ### docker run
 
-``` bash
+```bash
 docker run -d --name document -p 8080:8080 ghcr.io/ranui/document:latest
 ```
 

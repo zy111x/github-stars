@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 453
+stars: 452
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -1833,6 +1833,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Minetest](https://img.shields.io/badge/Minetest-53AC56?style=for-the-badge&logo=Minetest&logoColor=FFFFFF)
 ![MinGW-w64](https://img.shields.io/badge/MinGW-w64-000000?style=for-the-badge&logo=MinGW-w64&logoColor=FFFFFF)
 ![Mini](https://img.shields.io/badge/Mini-000000?style=for-the-badge&logo=Mini&logoColor=FFFFFF)
+![MiniMax](https://img.shields.io/badge/MiniMax-E73562?style=for-the-badge&logo=MiniMax&logoColor=FFFFFF)
 ![MinIO](https://img.shields.io/badge/MinIO-C72E49?style=for-the-badge&logo=MinIO&logoColor=FFFFFF)
 ![Mintlify](https://img.shields.io/badge/Mintlify-222222?style=for-the-badge&logo=Mintlify&logoColor=18E299)
 ![Minutemailer](https://img.shields.io/badge/Minutemailer-30B980?style=for-the-badge&logo=Minutemailer&logoColor=FFFFFF)

@@ -1,8 +1,8 @@
 ---
 project: microsandbox
-stars: 3981
+stars: 4013
 description: |-
-    Microsandbox — Self-Hosted Plaform for Secure Execution of Untrusted User or AI-Generated Code
+    self-hosted plaform for secure execution of untrusted user or AI-generated code
 url: https://github.com/zerocore-ai/microsandbox
 ---
 
@@ -36,6 +36,9 @@ url: https://github.com/zerocore-ai/microsandbox
 Microsandbox makes it **easy** to run untrusted workloads within a **hardware-isolated** and **fast startup** execution environment.
 
 Running untrusted code securely is hard. Traditional solutions—containers, VMs, or cloud sandboxes—each trade off speed, isolation, or control. Microsandbox aims to give the best of all worlds.
+
+> [!WARNING]
+> This project is still **experimental**. Expect breaking changes, missing features, and rough edges.
 
 <br/>
 
@@ -260,7 +263,7 @@ msr app # or `msb run --sandbox app`
 
 ## <img height="18" src="https://octicons-col.vercel.app/light-bulb/A770EF">&nbsp;&nbsp;Uninstall
 
-To uninstall microsandbox, run: `msb self uninstall`. Use the `--force` flag. This removes the `$HOME/.microsandbox` directory and all its content, effectively cleaning up all cached microsandbox data such as images, layers, and databases. 
+To uninstall microsandbox, run: `msb self uninstall`. Use the `--force` flag. This removes the `$HOME/.microsandbox` directory and all its content, effectively cleaning up all cached microsandbox data such as images, layers, and databases.
 
 Refer to the [maintenance docs](./docs/references/cli.md#maintenance) for other types of cleanups.
 

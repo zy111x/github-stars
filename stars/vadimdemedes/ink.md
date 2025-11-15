@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 32665
+stars: 32785
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -132,6 +132,8 @@ Feel free to play around with the code and fork this Repl at [https://repl.it/@v
 - [Qodo Command](https://github.com/qodo-ai/command) - Build, run, and manage AI agents.
 - [Nanocoder](https://github.com/nano-collective/nanocoder) - A community-built, local-first AI coding agent with multi-provider support.
 - [Neovate Code](https://github.com/neovateai/neovate-code) - An agentic coding tool made by AntGroup.
+- [instagram-cli](https://github.com/supreme-gg-gg/instagram-cli) - Instagram client.
+- [ElevenLabs CLI](https://github.com/elevenlabs/cli) - ElevenLabs agents client.
 
 *(PRs welcome. Append new entries at the end. Repos must have 100+ stars and showcase Ink beyond a basic list picker.)*
 
@@ -2068,6 +2070,14 @@ This controls how frequently the UI can update to prevent excessive re-rendering
 Higher values allow more frequent updates but may impact performance.
 Setting it to a lower value may be useful for components that update very frequently, to reduce CPU usage.
 
+###### incrementalRendering
+
+Type: `boolean`\
+Default: `false`
+
+Enable incremental rendering mode which only updates changed lines instead of redrawing the entire output.
+This can reduce flickering and improve performance for frequently updating UIs.
+
 #### Instance
 
 This is the object that `render()` returns.
@@ -2215,7 +2225,7 @@ For example, for this code:
 
 ```jsx
 <Box aria-role="checkbox" aria-state={{checked: true}}>
-	Accept terms and conditions
+	<Text>Accept terms and conditions</Text>
 </Box>
 ```
 

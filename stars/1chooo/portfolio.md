@@ -1,6 +1,6 @@
 ---
 project: portfolio
-stars: 312
+stars: 313
 description: |-
     null
 url: https://github.com/1chooo/portfolio

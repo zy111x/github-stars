@@ -1,6 +1,6 @@
 ---
 project: toolhive
-stars: 1362
+stars: 1377
 description: |-
     ToolHive makes deploying MCP servers easy, secure and fun
 url: https://github.com/stacklok/toolhive

@@ -1,6 +1,6 @@
 ---
 project: chrome-ai
-stars: 332
+stars: 333
 description: |-
     Vercel AI provider for Chrome built-in model (Gemini Nano)
 url: https://github.com/jeasonstudio/chrome-ai

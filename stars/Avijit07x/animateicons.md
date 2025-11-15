@@ -1,6 +1,6 @@
 ---
 project: animateicons
-stars: 553
+stars: 575
 description: |-
     A sleek React library for animated SVG icons that move with purpose. Transform static designs into engaging user experiences with smooth, performant animations.
 url: https://github.com/Avijit07x/animateicons
@@ -44,7 +44,7 @@ After installing an icon, import it into your component:
 import { AtomIcon } from "./components/ui/AtomIcon";
 
 export default function Page() {
-	return <AtomIcon size={28} duration={1} />;
+	return <AtomIcon size={28} duration={1} isAnimated={true} />;
 }
 ```
 
@@ -66,7 +66,7 @@ export default function Page() {
 			{/* Programmatic control */}
 			<button onClick={() => bellRef.current?.startAnimation()}>Start</button>
 			<button onClick={() => bellRef.current?.stopAnimation()}>Stop</button>
-			<BellRingIcon ref={bellRef} size={28} duration={1} />
+			<BellRingIcon ref={bellRef} size={28} duration={1} isAnimated={true} />
 		</>
 	);
 }

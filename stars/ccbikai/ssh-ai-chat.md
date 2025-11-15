@@ -1,6 +1,6 @@
 ---
 project: ssh-ai-chat
-stars: 738
+stars: 751
 description: |-
     Chat with AI over SSH.
 url: https://github.com/ccbikai/ssh-ai-chat
@@ -20,7 +20,7 @@ English | [简体中文](./README.zh-CN.md)
 
 ```sh
 # Replace username with your GitHub username
-ssh username@chat.aigc.ing
+ssh username@chat.agi.li
 ```
 
 https://github.com/user-attachments/assets/e676ba1b-b2ea-4568-ab5c-f7ba6c79d790
@@ -66,7 +66,7 @@ services:
 
 ```env
 # Server name, optional, can be changed to your own domain
-SERVER_NAME=chat.aigc.ing
+SERVER_NAME=chat.agi.li
 
 # Whether it's a public server, required. If not configured, it defaults to private server and requires whitelist configuration
 PUBLIC_SERVER=false

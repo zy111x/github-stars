@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 30490
+stars: 30566
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
@@ -248,22 +248,10 @@ Gateway to other services 🌐
 
 Glances can export stats to:
 
-- ``CSV`` file
-- ``JSON`` file
-- ``InfluxDB`` server
-- ``Cassandra`` server
-- ``CouchDB`` server
-- ``OpenTSDB`` server
-- ``Prometheus`` server
-- ``StatsD`` server
-- ``ElasticSearch`` server
-- ``PostgreSQL/TimeScale`` server
-- ``RabbitMQ/ActiveMQ`` broker
-- ``ZeroMQ`` broker
-- ``Kafka`` broker
-- ``Riemann`` server
-- ``Graphite`` server
-- ``RESTful`` endpoint
+- files: ``CSV`` and ``JSON``
+- databases:  ``InfluxDB``, ``ElasticSearch``, ``PostgreSQL/TimeScale``, ``Cassandra``, ``CouchDB``, ``OpenTSDB``, ``Prometheus``, ``StatsD``, ``Riemann`` and ``Graphite``
+- brokers: ``RabbitMQ/ActiveMQ``, ``ZeroMQ`` and ``Kafka``
+- others: ``RESTful`` endpoint
 
 Installation 🚀
 ===============

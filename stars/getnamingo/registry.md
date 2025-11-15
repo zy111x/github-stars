@@ -1,6 +1,6 @@
 ---
 project: registry
-stars: 71
+stars: 72
 description: |-
     Open-source domain registry platform. Revolutionizing ccTLD and gTLD management with Namingo.
 url: https://github.com/getnamingo/registry
@@ -92,7 +92,7 @@ Our documentation provides comprehensive guidance on installation, configuration
 To get started, copy the command below and paste it into your server terminal (root access required):
 
 ```bash
-wget https://namingo.org/install.sh -O install.sh && chmod +x install.sh && ./install.sh
+bash <(curl -fsSL https://namingo.org/install.sh)
 ```
 
 After installation, be sure to review all the guides in the Documentation section to complete your setup and configuration. If anything remains unclear, you can refer to the [Legacy Installation Guide](docs/install.md).

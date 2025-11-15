@@ -1,6 +1,6 @@
 ---
 project: lima
-stars: 18576
+stars: 19089
 description: |-
     Linux virtual machines, with a focus on running containers
 url: https://github.com/lima-vm/lima
