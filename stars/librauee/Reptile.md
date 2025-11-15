@@ -1,6 +1,6 @@
 ---
 project: Reptile
-stars: 1705
+stars: 1706
 description: 🏀 Python3 网络爬虫实战（部分含详细教程）猫眼 腾讯视频 豆瓣 研招网 微博 笔趣阁小说 百度热点 B站 CSDN 网易云阅读 阿里文学 百度股票 今日头条 微信公众号 网易云音乐 拉勾 有道 unsplash 实习僧 汽车之家 英雄联盟盒子 大众点评 链家 LPL赛程 台风 梦幻西游、阴阳师藏宝阁 天气 牛客网 百度文库 睡前故事 知乎 Wish
 url: https://github.com/librauee/Reptile
 ---

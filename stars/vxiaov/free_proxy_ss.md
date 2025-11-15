@@ -1,6 +1,6 @@
 ---
 project: free_proxy_ss
-stars: 2427
+stars: 2426
 description: 分享免费梯子/科学上网/代理/shadowsocks(SS)/ShadowsocksR(SSR)/V2ray(vmess)代理，2小时更新一次，分享Clash代理订阅源和配置文件订阅链接。
 url: https://github.com/vxiaov/free_proxy_ss
 ---

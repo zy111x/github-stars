@@ -1,6 +1,6 @@
 ---
 project: glitch-art
-stars: 21
+stars: 22
 description: Enjoy the glitch art effect on your text
 url: https://github.com/Wxh16144/glitch-art
 ---
