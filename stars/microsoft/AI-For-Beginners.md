@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 43742
+stars: 43902
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---
@@ -358,6 +358,6 @@ Our team produces other curricula! Check out:
 Getting Help
 ------------
 
-If you get stuck or have any questions about building AI apps, join:
+If you get stuck or have any questions about building AI apps. Join fellow learners and experienced developers in discussions about MCP. It's a supportive community where questions are welcome and knowledge is shared freely.
 
 If you have product feedback or errors while building visit:
