@@ -1,6 +1,6 @@
 ---
 project: rss-parrot
-stars: 158
+stars: 159
 description: |-
     Notifies Mastodon accounts about new posts in the RSS feeds they follow
 url: https://github.com/gugray/rss-parrot

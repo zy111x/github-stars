@@ -1,6 +1,6 @@
 ---
 project: vCards
-stars: 6048
+stars: 6049
 description: |-
     📡️ vCards 中国黄页 - 优化 iOS/Android 来电、信息界面体验
 url: https://github.com/metowolf/vCards
@@ -9,6 +9,7 @@ url: https://github.com/metowolf/vCards
 # vCards CN
 
 导入常用联系人头像，优化 iOS 来电、信息界面体验。
+目前共计`280`个联系人。
 
 ![Screenshot](https://user-images.githubusercontent.com/2666735/59692672-0b6bdf00-9218-11e9-881e-5856e263f3aa.png)
 

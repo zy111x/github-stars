@@ -1,6 +1,6 @@
 ---
 project: fancy
-stars: 2575
+stars: 2590
 description: |-
     null
 url: https://github.com/danielpetho/fancy

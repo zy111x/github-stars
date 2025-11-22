@@ -1,6 +1,6 @@
 ---
 project: openalternative
-stars: 5127
+stars: 5133
 description: |-
     A community driven list of open source alternatives to proprietary software and applications.
 url: https://github.com/piotrkulpinski/openalternative

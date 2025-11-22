@@ -1,8 +1,8 @@
 ---
 project: umami
-stars: 33525
+stars: 33652
 description: |-
-    Umami is a modern, privacy-focused analytics platform. A better, open-source alternative to Google Analytics, Mixpanel and Amplitude.
+    Umami is a modern, privacy-focused analytics platform. An open-source alternative to Google Analytics, Mixpanel and Amplitude.
 url: https://github.com/umami-software/umami
 ---
 

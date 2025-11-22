@@ -1,6 +1,6 @@
 ---
 project: chinaddress
-stars: 244
+stars: 245
 description: |-
     china_address_json
 url: https://github.com/cnluzhang/chinaddress

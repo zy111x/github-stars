@@ -1,6 +1,6 @@
 ---
 project: hotkeys-js
-stars: 7050
+stars: 7059
 description: |-
     ➷ A robust Javascript library for capturing keyboard input. It has no dependencies. 
 url: https://github.com/jaywcjlove/hotkeys-js
@@ -80,12 +80,18 @@ hotkeys('f5', function(event, handler){
 });
 ```
 
-Or manually download and link **hotkeys.js** in your HTML, It can also be downloaded via [UNPKG](https://unpkg.com/hotkeys-js/dist/):
+### Browser Usage
 
-CDN: [UNPKG](https://unpkg.com/hotkeys-js/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/hotkeys-js@3.7.3/) | [Githack](https://raw.githack.com/jaywcjlove/hotkeys/master/dist/hotkeys-js.umd.cjs) | [Statically](https://cdn.statically.io/gh/jaywcjlove/hotkeys/master/dist/hotkeys-js.umd.cjs) | [bundle.run](https://bundle.run/hotkeys-js@3.7.3)
+Or manually download and link **hotkeys.js** in your HTML. The library provides different formats for different use cases:
+
+**CDN Links:** [UNPKG](https://unpkg.com/hotkeys-js/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/hotkeys-js/) | [Githack](https://raw.githack.com/jaywcjlove/hotkeys/master/dist/) | [Statically](https://cdn.statically.io/gh/jaywcjlove/hotkeys/master/dist/)
+
+**Available Formats:**
+
+**IIFE (Immediately Invoked Function Expression) - Recommended for direct browser usage:**
 
 ```html
-<script src="https://unpkg.com/hotkeys-js/dist/hotkeys-js.umd.cjs"></script>
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys-js.min.js"></script>
 <script type="text/javascript">
 hotkeys('ctrl+a,ctrl+b,r,f', function (event, handler){
   switch (handler.key) {
@@ -99,6 +105,23 @@ hotkeys('ctrl+a,ctrl+b,r,f', function (event, handler){
       break;
     default: alert(event);
   }
+});
+</script>
+```
+
+**UMD (Universal Module Definition) - For CommonJS/AMD environments:**
+
+```html
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys-js.umd.cjs"></script>
+```
+
+**ES Module - For modern browsers with module support:**
+
+```html
+<script type="module">
+import hotkeys from 'https://unpkg.com/hotkeys-js/dist/hotkeys-js.js';
+hotkeys('ctrl+a', function(event, handler){
+  alert('you pressed ctrl+a!');
 });
 </script>
 ```
@@ -126,20 +149,31 @@ HotKeys understands the following modifiers: `⇧`, `shift`, `option`, `⌥`, `a
 
 The following special keys can be used for shortcuts: backspace, tab, clear, enter, return, esc, escape, space, up, down, left, right, home, end, pageup, pagedown, del, delete, f1 through f19, num_0 through num_9, num_multiply, num_add, num_enter, num_subtract, num_decimal, num_divide.
 
-`⌘` Command()
-`⌃` Control
-`⌥` Option(alt)
-`⇧` Shift
-`⇪` Caps Lock(Capital)
-~~`fn` Does not support fn~~
-`↩︎` return/Enter space
+`⌘` Command()  
+`⌃` Control  
+`⌥` Option(alt)  
+`⇧` Shift  
+`⇪` Caps Lock(Capital)  
+~~`fn` Does not support fn~~  
+`↩︎` return/Enter space  
 
 ## Defining Shortcuts
 
 One global method is exposed, key which defines shortcuts when called directly.
 
 ```js
-hotkeys([keys:<String>], [option:[string|object|function]], [callback:<function>])
+declare interface HotkeysInterface extends HotkeysAPI {
+  (key: string, method: KeyHandler): void;
+  (key: string, scope: string, method: KeyHandler): void;
+  (key: string, option: HotkeysOptions, method: KeyHandler): void;
+  shift?: boolean;
+  ctrl?: boolean;
+  alt?: boolean;
+  option?: boolean;
+  control?: boolean;
+  cmd?: boolean;
+  command?: boolean;
+}
 ```
 
 
@@ -320,7 +354,8 @@ Similar to defining shortcuts, they can be unbound using `hotkeys.unbind`.
 hotkeys.unbind('a');
 
 // Unbind a hotkeys only for a single scope
-// If no scope is specified it defaults to the current scope (hotkeys.getScope())
+// If no scope is specified it defaults to the current 
+// scope (hotkeys.getScope())
 hotkeys.unbind('o, enter', 'issues');
 hotkeys.unbind('o, enter', 'files');
 ```
@@ -380,7 +415,8 @@ Returns an array of key codes currently pressed.
 
 ```js
 hotkeys('command+ctrl+shift+a,f', function() {
-  console.log(hotkeys.getPressedKeyString()); //=> ['⌘', '⌃', '⇧', 'A', 'F']
+  console.log(hotkeys.getPressedKeyString()); 
+  //=> ['⌘', '⌃', '⇧', 'A', 'F']
 })
 ```
 
@@ -392,7 +428,12 @@ Get a list of all registration codes.
 hotkeys('command+ctrl+shift+a,f', function() {
   console.log(hotkeys.getAllKeyCodes());
   // [
-  //   { scope: 'all', shortcut: 'command+ctrl+shift+a', mods: [91, 17, 16], keys: [91, 17, 16, 65] },
+  //   { 
+  //      scope: 'all', 
+  //      shortcut: 'command+ctrl+shift+a', 
+  //      mods: [91, 17, 16], 
+  //      keys: [91, 17, 16, 65] 
+  //    },
   //   { scope: 'all', shortcut: 'f', mods: [], keys: [42] }
   // ]
 })
@@ -406,17 +447,25 @@ By default hotkeys are not enabled for `INPUT` `SELECT` `TEXTAREA` elements. `Ho
 hotkeys.filter = function(event){
   return true;
 }
-//How to add the filter to edit labels. <div contentEditable="true"></div>
-//"contentEditable" Older browsers that do not support drops
+// How to add the filter to edit labels. 
+// <div contentEditable="true"></div>
+// "contentEditable" Older browsers that do not support drops
 hotkeys.filter = function(event) {
   var target = event.target || event.srcElement;
   var tagName = target.tagName;
-  return !(target.isContentEditable || tagName == 'INPUT' || tagName == 'SELECT' || tagName == 'TEXTAREA');
+  return !(
+    target.isContentEditable || 
+    tagName == 'INPUT' || 
+    tagName == 'SELECT' || 
+    tagName == 'TEXTAREA'
+  );
 }
 
 hotkeys.filter = function(event){
   var tagName = (event.target || event.srcElement).tagName;
-  hotkeys.setScope(/^(INPUT|TEXTAREA|SELECT)$/.test(tagName) ? 'input' : 'other');
+  hotkeys.setScope(
+    /^(INPUT|TEXTAREA|SELECT)$/.test(tagName) ? 'input' : 'other'
+  );
   return true;
 }
 ```
@@ -457,7 +506,10 @@ $ npm run watch
 Run Document Website Environment.
 
 ```shell
-$ npm run doc
+# Generate documentation website
+$ npm run doc 
+# Live-generate documentation website
+$ npm run start 
 ```
 
 To contribute, please fork Hotkeys.js, add your patch and tests for it (in the `test/` folder) and submit a pull request.

@@ -1,6 +1,6 @@
 ---
 project: zip.js
-stars: 3750
+stars: 3757
 description: |-
     JavaScript library to zip and unzip files supporting multi-core compression, web streams, zip64, split files, data encryption, and deflate64 decompression.
 url: https://github.com/gildas-lormeau/zip.js
@@ -27,14 +27,8 @@ See here for more info: https://gildas-lormeau.github.io/zip.js/
 ## Hello world
 
 ```js
-import {
-  BlobReader,
-  BlobWriter,
-  TextReader,
-  TextWriter,
-  ZipReader,
-  ZipWriter,
-} from "https://deno.land/x/zipjs/index.js";
+import { BlobReader, BlobWriter, TextReader, TextWriter, ZipReader, ZipWriter } from "jsr:@zip-js/zip-js";
+// for NPM: import { BlobReader, BlobWriter, TextReader, TextWriter, ZipReader, ZipWriter } from "@zip-js/zip-js";
 
 // ----
 // Write the zip file
@@ -79,16 +73,13 @@ await zipReader.close();
 console.log(helloWorldText);
 ```
 
-Run the code on JSFiddle: https://jsfiddle.net/dns7pkxt/
+Run the code on JSFiddle: https://jsfiddle.net/tdjxLcu9/
 
 ## Hello world with Streams
 
 ```js
-import {
-  BlobReader,
-  ZipReader,
-  ZipWriter,
-} from "https://deno.land/x/zipjs/index.js";
+import { BlobReader, ZipReader, ZipWriter } from "jsr:@zip-js/zip-js";
+// for NPM: import { BlobReader, ZipReader, ZipWriter } from "@zip-js/zip-js";
 
 // ----
 // Write the zip file
@@ -150,7 +141,7 @@ import {
   HttpReader,
   TextReader,
   ZipWriter,
-} from "https://unpkg.com/@zip.js/zip.js/index.js";
+} from "jsr:@zip-js/zip-js";
 
 const README_URL = "https://unpkg.com/@zip.js/zip.js/README.md";
 getZipFileBlob()

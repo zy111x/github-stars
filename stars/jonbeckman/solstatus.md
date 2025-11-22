@@ -3,7 +3,7 @@ project: solstatus
 stars: 757
 description: |-
     An uptime monitoring service that is easy and cheap to run at scale. Create endpoint checks for uptime, latency, and status code. Supports OpsGenie for alerts.
-url: https://github.com/unibeck/solstatus
+url: https://github.com/jonbeckman/solstatus
 ---
 
 > [!IMPORTANT]

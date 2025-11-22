@@ -1,6 +1,6 @@
 ---
 project: snake-eater-ui
-stars: 309
+stars: 310
 description: |-
     Snake Eater UI - a modern milsim component library
 url: https://github.com/asynchronous-x/snake-eater-ui

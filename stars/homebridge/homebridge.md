@@ -1,6 +1,6 @@
 ---
 project: homebridge
-stars: 25041
+stars: 25058
 description: |-
     HomeKit support for the impatient.
 url: https://github.com/homebridge/homebridge
@@ -14,10 +14,10 @@ url: https://github.com/homebridge/homebridge
 
 # Homebridge
 
-<a href="https://www.npmjs.com/package/homebridge"><img title="npm version" src="https://badgen.net/npm/v/homebridge?label=stable"></a>
-<a href="https://github.com/homebridge/homebridge/wiki/How-To-Change-Homebridge-Version#manage-beta-version"><img title="npm version" src="https://badgen.net/npm/v/homebridge/beta?label=beta"></a>
-<a href="https://github.com/homebridge/homebridge/wiki/How-To-Change-Homebridge-Version#manage-beta-version"><img title="npm version" src="https://badgen.net/npm/v/homebridge/alpha?label=alpha"></a><br>
-<a href="https://www.npmjs.com/package/homebridge"><img title="npm downloads" src="https://badgen.net/npm/dt/homebridge"></a>
+<a href="https://www.npmjs.com/package/homebridge"><img title="npm version" src="https://img.shields.io/npm/v/homebridge?label=stable"></a>
+<a href="https://github.com/homebridge/homebridge/wiki/How-To-Change-Homebridge-Version#manage-beta-version"><img title="npm version" src="https://img.shields.io/npm/v/homebridge/beta?label=beta"></a>
+<a href="https://github.com/homebridge/homebridge/wiki/How-To-Change-Homebridge-Version#manage-beta-version"><img title="npm version" src="https://img.shields.io/npm/v/homebridge/alpha?label=alpha"></a><br>
+<a href="https://www.npmjs.com/package/homebridge"><img title="npm downloads" src="https://img.shields.io/npm/dt/homebridge"></a>
 <a href="https://github.com/homebridge/homebridge/actions/workflows/build.yml"><img title="Node Build" src="https://github.com/homebridge/homebridge/actions/workflows/build.yml/badge.svg"></a>
 
 </span>

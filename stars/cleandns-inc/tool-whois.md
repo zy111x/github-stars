@@ -1,6 +1,6 @@
 ---
 project: tool-whois
-stars: 8
+stars: 9
 description: |-
     Just a WHOIS/RDAP lookup
 url: https://github.com/cleandns-inc/tool-whois

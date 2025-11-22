@@ -1,6 +1,6 @@
 ---
 project: opik
-stars: 15714
+stars: 15963
 description: |-
     Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.
 url: https://github.com/comet-ml/opik
@@ -107,7 +107,7 @@ Deploy Opik in your own environment. Choose between Docker for local setups or K
 
 This is the simplest way to get a local Opik instance running. Note the new `./opik.sh` installation script:
 
-On Linux or Mac Enviroment:
+On Linux or Mac Environment:
 
 ```bash
 # Clone the Opik repository
@@ -120,7 +120,7 @@ cd opik
 ./opik.sh
 ```
 
-On Windows Enviroment:
+On Windows Environment:
 
 ```powershell
 # Clone the Opik repository

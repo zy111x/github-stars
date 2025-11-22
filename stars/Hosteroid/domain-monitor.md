@@ -1,6 +1,6 @@
 ---
 project: domain-monitor
-stars: 78
+stars: 89
 description: |-
     A self-hosted PHP domain expiration monitoring tool that tracks domain expiry dates, RDAP/WHOIS data, and SSL certificate validity. Supports alerts, multi-user setup, and cron automation. Built for developers, hosting providers, and IT admins who want full control without third-party services.
 url: https://github.com/Hosteroid/domain-monitor
@@ -14,7 +14,7 @@ url: https://github.com/Hosteroid/domain-monitor
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-A modern PHP MVC application for monitoring domain expiration dates and sending notifications through multiple channels (Email, Telegram, Discord, Slack). Never lose a domain again with automated monitoring and timely alerts.
+A modern PHP MVC application for monitoring domain expiration dates and sending notifications through multiple channels (Email, Telegram, Discord, Slack, Mattermost, Pushover, Webhook). Never lose a domain again with automated monitoring and timely alerts.
 
 ## ✨ Features
 
@@ -22,7 +22,7 @@ A modern PHP MVC application for monitoring domain expiration dates and sending 
 - 📋 **Domain Management** - Add, edit, and monitor unlimited domains
 - 🔍 **Smart WHOIS/RDAP Lookup** - Automatically fetches expiration dates and registrar information
 - 🗂️ **TLD Registry System** - Built-in support for 1,400+ TLDs with IANA integration
-- 🔔 **Multi-Channel Notifications** - Email, Telegram, Discord, and Slack support
+- 🔔 **Multi-Channel Notifications** - Email, Telegram, Discord, Slack, Mattermost, Pushover, and Webhook support
 - 👥 **Notification Groups** - Organize channels and assign domains flexibly
 - ⚡ **Real-time Dashboard** - Overview of all domains and their status
 - 📊 **Notification Logs** - Complete history of all sent notifications

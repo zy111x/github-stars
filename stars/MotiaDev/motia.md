@@ -1,8 +1,8 @@
 ---
 project: motia
-stars: 10124
+stars: 10282
 description: |-
-    Multi-Language Backend Framework that unifies APIs, background jobs, workflows, and AI Agents into a single core primitive with built-in observability and state management.
+    Multi-Language Backend Framework that unifies APIs, background jobs, queues, workflows, streams, and AI agents with a single core primitive with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
 ---
 
@@ -61,7 +61,7 @@ APIs live in one framework, background jobs in another, queues and schedulers el
 
 **Motia unifies all of these concerns around one core primitive: the Step.**
 
-Just as React made frontend development simple by introducing components, Motia redefines backend development with Steps.
+Just as React made frontend development simple by introducing components, Motia redefines backend development with Steps - a single primitive that handles everything.
 
 Every backend pattern, API endpoints, background jobs, queues, workflows, AI agents, streaming, observability, and state, is expressed with the same primitive.
 
@@ -190,7 +190,7 @@ module.exports = { config, handler };
 
 👉 With just two files, you've built an **API endpoint**, a **queue**, and a **worker**. No extra frameworks required.
 
-**[Learn more about Steps →](https://motia.dev/docs/concepts/steps/steps)**
+**[Learn more about Steps →](https://motia.dev/docs/concepts/steps)**
 
 [![Motia combines APIs, background queues, and AI agents into one system](assets/github-readme-banner.gif)](https://motia.dev)
 

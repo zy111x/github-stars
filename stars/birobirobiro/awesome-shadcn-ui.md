@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 18173
+stars: 18240
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -39,6 +39,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | animated-header | Vercel-like animated header. | [Link](https://github.com/mehrdadrafiee/animated-header) | 2025-10-20 |
 | animated-tabs | Vercel-like animated tabs. | [Link](https://github.com/mehrdadrafiee/animated-tabs) | 2025-04-06 |
 | assistant-ui | React Components for AI Chat. | [Link](https://github.com/Yonom/assistant-ui) | 2024-09-23 |
+| audio/ui | A set of accessible and composable Audio UI components. Built on top of shadcn/ui, it's designed for you to copy, paste, and own. | [Link](https://github.com/ouestlabs/audio-ui) | 2025-11-20 |
 | autocomplete-select-shadcn-ui | Autocomplete component built with shadcn/ui and Fancy Multi Select by Maximilian Kaske. | [Link](https://www.armand-salle.fr/post/autocomplete-select-shadcn-ui) | 2024-04-07 |
 | auto-form | A React component that automatically creates a shadcn/ui form based on a zod schema. | [Link](https://github.com/vantezzen/auto-form) | 2024-04-29 |
 | async-select | Async Select component built with shadcn/ui with debounce search. | [Link](https://async.rdsx.dev) | 2024-07-22 |
@@ -127,7 +128,6 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | next-stepper | Dynamic multi-step form with Next.js and zustand. | [Link](https://github.com/ebulku/next-stepper) | 2024-11-25 |
 | novel | Notion-style WYSIWYG editor with AI-powered autocompletion. | [Link](https://github.com/steven-tey/novel) | 2024-06-11 |
 | number-flow | React component for number transitions and formatting. | [Link](https://number-flow.barvian.me/) | 2024-10-17 |
-| omi3/ui | UI components for the Omi3 audio project, distributed via a shadcn/ui registry. | [Link](https://omi3.ouestlabs.com/) | 2025-05-01 |
 | origin-ui | Beautiful UI components with Tailwind CSS and Next.js. | [Link](https://originui.com/) | 2024-10-28 |
 | password-input | shadcn/ui custom password input. | [Link](https://gist.github.com/mjbalcueva/b21f39a8787e558d4c536bf68e267398) | 2024-03-28 |
 | payment-gateways | Integration of payment gateways with Next.js 14. | [Link](https://github.com/PremPrakashCodes/payment-gateways) | 2024-08-05 |
@@ -412,7 +412,9 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | easy-ui | 50+ High Quality Open Source Website Templates built using NextJS + shadcn/ui + Tailwind CSS + Framer Motion and more. | [Link](https://github.com/DarkInventor/easy-ui) | 2024-08-06 |
 | ecommerce-kit | Next.js starter kit with the tools you need to quickly launch your e-commerce site. | [Link](https://ecommercekit.dev) | 2025-09-06 |
 | electron-shadcn | Electron app template with shadcn/ui and a bunch of other libs and tools ready to use. | [Link](https://github.com/LuanRoger/electron-shadcn) | 2024-06-17 |
+| forjnot | Modern Project Starter Kit | Launch your next project faster with Forjnot - A professional, customizable and clean starting point featuring modern tech stack and best practices | 2025-11-20 |
 | full-stack-monorepo-starter | Full stack monorepo template built using shadcn/ui + Fastify + graphql + vitejs + Docker and more. | [Link](https://github.com/mnove/monorepo-starter-graphql) | 2025-06-10 |
+| fumadocs-starter | A fully-fledged Fumadocs starter template with built-in plugins, AI features, and everything you need to build your next docs site. | [Link](https://github.com/techwithanirudh/fumadocs-starter) | 2025-11-20 |
 | horizon-ai-nextjs-shadcn-boilerplate | Premium AI NextJS & shadcn/ui Boilerplate + Stripe + Supabase + OAuth. | [Link](https://horizon-ui.com/boilerplate-shadcn) | 2024-05-24 |
 | kirimase | A template and boilerplate for quickly starting your next project with shadcn/ui, Tailwind CSS, and Next.js. | [Link](https://kirimase.dev/) | 2024-06-11 |
 | magicui-startup-templates | Magic UI Startup template built using shadcn/ui + TailwindCSS + Framer Motion. | [Link](https://magicui.design/docs/templates/startup) | 2024-04-25 |
@@ -432,7 +434,9 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | shadcn-landing-page (Vue) | Project conversion [shadcn-vue-landing-page](https://github.com/leoMirandaa/shadcn-vue-landing-page) to Next.js - Landing page template using Nestjs, shadcn/ui, TypeScript, and Tailwind CSS. | [Link](https://github.com/nobruf/shadcn-landing-page) | 2024-12-27 |
 | shadcn-nextjs-free-boilerplate | Free & Open-source NextJS Boilerplate + ChatGPT API Dashboard Template. | [Link](https://github.com/horizon-ui/shadcn-nextjs-boilerplate) | 2024-05-24 |
 | shadcn-nextjs-dashboard | Admin Dashboard UI built with Shadcn and NextJS. Free and Open-source. | [Link](https://github.com/NaveenDA/shadcn-nextjs-dashboard) | 2025-06-22 |
+| shadcn-portfolio | A portfolio template, which uses shadcn-ui and Next.JS. | [Link](https://github.com/techwithanirudh/shadcn-portfolio) | 2025-11-20 |
 | shadcn-registry-template | Template repository for building a custom component registry for shadcn/ui. | [Link](https://github.com/vantezzen/shadcn-registry-template) | 2024-09-05 |
+| shadcn-saas-landing | A full-fledged SaaS Landing template built using Next.JS, shadcn/ui, and fumadocs. | [Link](https://github.com/techwithanirudh/shadcn-saas-landing) | 2025-11-20 |
 | shadcn-ui-dashboard | Multipurpose and powerful admin dashboard template compatible with shadcn/ui. | [Link](https://shadcnuidashboard.com) | 2025-09-21 |
 | shadcn-vue-landing-page | Landing page template using Vue, shadcn-vue, TypeScript, and Tailwind CSS. | [Link](https://github.com/leoMirandaa/shadcn-vue-landing-page) | 2024-06-06 |
 | shadcn-next-workflows | Interactive workflow builder using React Flows, Next.js, and Shadcn/ui. Create, connect, and validate custom nodes easily. | [Link](https://github.com/nobruf/shadcn-next-workflows) | 2024-10-29 |

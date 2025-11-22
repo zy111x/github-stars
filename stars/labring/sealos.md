@@ -1,6 +1,6 @@
 ---
 project: sealos
-stars: 16577
+stars: 16591
 description: |-
     The Intelligent Cloud OS. Use AI to automate the full lifecycle of your development and production environments, from provisioning custom dev stacks and deploying self-optimizing databases (MySQL, PostgreSQL, Redis, MongoDB) to running any Dockerized service.
 url: https://github.com/labring/sealos

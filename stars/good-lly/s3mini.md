@@ -1,6 +1,6 @@
 ---
 project: s3mini
-stars: 1297
+stars: 1303
 description: |-
     👶 Tiny S3 client. Edge computing ready. No-dep. In Typescript. Works with @cloudflare @minio @backblaze @digitalocean @garagehq @oracle
 url: https://github.com/good-lly/s3mini
@@ -16,20 +16,24 @@ url: https://github.com/good-lly/s3mini
 
 ## Features
 
-- 🚀 Light and fast: averages ≈15 % more ops/s and only ~14 KB (minified, not gzipped).
-- 🔧 Zero dependencies; supports AWS SigV4 (no pre-signed requests).
+- 🚀 Light and fast: averages ≈15 % more ops/s and only ~18 KB (minified, not gzipped).
+- 🔧 Zero dependencies; supports AWS SigV4 (no pre-signed requests) and SSE-C headers (tested only on Cloudflare)
 - 🟠 Works on Cloudflare Workers; ideal for edge computing, Node, and Bun (no browser support).
 - 🔑 Only the essential S3 APIs—improved list, put, get, delete, and a few more.
-- 📦 **BYOS3** — _Bring your own S3-compatible bucket_ (tested on Cloudflare R2, Backblaze B2, DigitalOcean Spaces, MinIO, Garage, Micro/Ceph and Oracle Object Storage).
+- 🛠️ Supports multipart uploads.
+- 🎯 TypeScript support with type definitions.
+- 📚 Poorly-documented with examples and tests - But widely tested on various S3-compatible services! (Contributions welcome!)
+- 📦 **BYOS3** — _Bring your own S3-compatible bucket_ (tested on Cloudflare R2, Backblaze B2, DigitalOcean Spaces, MinIO, Garage, Micro/Ceph and Oracle Object Storage, Scaleway).
 
 #### Tested On
 
 ![Tested On](testedon.png)
+Contributions welcome!
 
 Dev:
 
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/good-lly/s3mini/dev?color=greeen)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/good-lly/s3mini)
+[![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/m/good-lly/s3mini/dev?color=green)](https://github.com/good-lly/s3mini/commits/dev)
+[![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/good-lly/s3mini)](https://github.com/good-lly/s3mini/issues)
 [![CodeQL Advanced](https://github.com/good-lly/s3mini/actions/workflows/codeql.yml/badge.svg?branch=dev)](https://github.com/good-lly/s3mini/actions/workflows/codeql.yml)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=good-lly_s3mini&metric=bugs)](https://sonarcloud.io/summary/new_code?id=good-lly_s3mini)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=good-lly_s3mini&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=good-lly_s3mini)
@@ -40,7 +44,7 @@ Dev:
 [![Test:e2e(all)](https://github.com/good-lly/s3mini/actions/workflows/test-e2e.yml/badge.svg?branch=dev)](https://github.com/good-lly/s3mini/actions/workflows/test-e2e.yml)
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/good-lly/s3mini?style=social)
-![NPM Downloads](https://img.shields.io/npm/dm/s3mini)
+[![NPM Downloads](https://img.shields.io/npm/dm/s3mini)](https://www.npmjs.com/package/s3mini)
 ![NPM Version](https://img.shields.io/npm/v/s3mini?color=green)
 ![npm package minimized gzipped size](https://img.shields.io/bundlejs/size/s3mini?color=green)
 ![GitHub License](https://img.shields.io/github/license/good-lly/s3mini)
@@ -125,8 +129,12 @@ import { S3mini, sanitizeETag } from 's3mini';
 const s3client = new S3mini({
   accessKeyId: config.accessKeyId,
   secretAccessKey: config.secretAccessKey,
-  endpoint: config.endpoint,
+  endpoint: config.endpoint, // e.g., 'https://<your-bucket>.<your-region>.digitaloceanspaces.com'
   region: config.region,
+  // ?requestSizeInBytes = default is 8 MB
+  // ?requestAbortTimeout = default is no timeout
+  // ?logger = default is undefined (no logging)
+  // ?fetch = default is globalThis.fetch (you can provide your own fetch implementation)
 });
 
 // Basic bucket ops

@@ -1,6 +1,6 @@
 ---
 project: reveal.js
-stars: 69836
+stars: 69863
 description: |-
     The HTML Presentation Framework
 url: https://github.com/hakimel/reveal.js

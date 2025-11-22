@@ -1,6 +1,6 @@
 ---
 project: wordplate
-stars: 2162
+stars: 2163
 description: |-
     A boilerplate for WordPress, built with Composer and designed with sensible defaults.
 url: https://github.com/vinkla/wordplate
@@ -12,9 +12,9 @@ url: https://github.com/vinkla/wordplate
 
 WordPlate is a boilerplate for WordPress, built with Composer and designed with sensible defaults.
 
-[![Build Status](https://badgen.net/github/checks/vinkla/wordplate?label=build&icon=github)](https://github.com/vinkla/wordplate/actions)
-[![Monthly Downloads](https://badgen.net/packagist/dm/vinkla/wordplate)](https://packagist.org/packages/vinkla/wordplate/stats)
-[![Latest Version](https://badgen.net/packagist/v/vinkla/wordplate)](https://packagist.org/packages/vinkla/wordplate)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/vinkla/wordplate/php-cs-fixer.yml?label=tests&logo)](https://github.com/vinkla/wordplate/actions)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/vinkla/wordplate)](https://packagist.org/packages/vinkla/wordplate/stats)
+[![Latest Version](https://img.shields.io/packagist/v/vinkla/wordplate)](https://packagist.org/packages/vinkla/wordplate)
 
 - [Features](#features)
 - [Installation](#installation)

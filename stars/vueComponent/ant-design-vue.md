@@ -1,6 +1,6 @@
 ---
 project: ant-design-vue
-stars: 21230
+stars: 21256
 description: |-
     🌈  An enterprise-class UI components based on Ant Design and Vue. 🐜
 url: https://github.com/vueComponent/ant-design-vue
@@ -25,6 +25,14 @@ An enterprise-class UI components based on Ant Design and Vue.
 </div>
 
 [![](https://cdn-images-1.medium.com/max/2000/1*NIlj0-TdLMbo_hzSBP8tmg.png)](https://www.antdv.com/)
+
+<div align="center">
+  <sup><strong>Sponsored by</strong></sup>
+  <br>
+  <a href="https://mentorbook.ai/" target="_blank">
+    <img src="/site/public/mentorbook_banner_en.svg" alt="Mentorbook.AI - Your AI Mentor, Your Learning Journey" />
+  </a>
+</div>
 
 English | [简体中文](./README-zh_CN.md)
 

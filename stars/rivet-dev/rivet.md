@@ -1,6 +1,6 @@
 ---
 project: rivet
-stars: 4678
+stars: 4705
 description: |-
     An open-source library for long-lived processes with realtime, persistence, and hibernation
 url: https://github.com/rivet-dev/rivet

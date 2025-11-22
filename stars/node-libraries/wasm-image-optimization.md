@@ -1,6 +1,6 @@
 ---
 project: wasm-image-optimization
-stars: 101
+stars: 102
 description: |-
     Optimize images with wasm on edge runtime
 url: https://github.com/node-libraries/wasm-image-optimization

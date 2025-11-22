@@ -1,6 +1,6 @@
 ---
 project: nhost
-stars: 8904
+stars: 8908
 description: |-
     The Open Source Firebase Alternative with GraphQL.
 url: https://github.com/nhost/nhost
@@ -115,6 +115,7 @@ Nhost is frontend agnostic, which means Nhost works with all frontend frameworks
 # Resources
 
 - Start developing locally with the [Nhost CLI](https://docs.nhost.io/platform/cli/local-development)
+
 ## Nhost Clients
 
 - [JavaScript/TypeScript](https://docs.nhost.io/reference/javascript/nhost-js/main)
@@ -145,7 +146,7 @@ Here are some ways of contributing to making Nhost better:
 
 - **[Try out Nhost](https://docs.nhost.io)**, and think of ways to make the service better. Let us know here on GitHub.
 - Join our [Discord](https://discord.com/invite/9V7Qb2U) and connect with other members to share and learn from.
-- Send a pull request to any of our [open source repositories](https://github.com/nhost) on Github. Check our [contribution guide](https://github.com/nhost/nhost/blob/main/CONTRIBUTING.md) and our [developers guide](https://github.com/nhost/nhost/blob/main/DEVELOPERS.md) for more details about how to contribute. We're looking forward to your contribution!
+- Send a pull request to any of our [open source repositories](https://github.com/nhost) on Github. Check out our [contribution guide](https://github.com/nhost/nhost/blob/main/CONTRIBUTING.md) for more details about how to contribute. We're looking forward to your contribution!
 
 ### Contributors
 

@@ -1,8 +1,8 @@
 ---
 project: mcphub
-stars: 1523
+stars: 1557
 description: |-
-    A unified hub for centralized management and dynamic organization of multiple MCP servers/APIs into streamable HTTP (SSE) endpoints, with support for flexible routing strategies
+    A unified hub for centrally managing and dynamically orchestrating multiple MCP servers/APIs into separate endpoints with flexible routing strategies
 url: https://github.com/samanhappy/mcphub
 ---
 
@@ -27,7 +27,9 @@ MCPHub makes it easy to manage and scale multiple MCP (Model Context Protocol) s
 - **Hot-Swappable Configuration**: Add, remove, or update MCP servers on the fly — no downtime required.
 - **Group-Based Access Control**: Organize servers into customizable groups for streamlined permissions management.
 - **Secure Authentication**: Built-in user management with role-based access powered by JWT and bcrypt.
-- **OAuth 2.0 Support**: Full OAuth support for upstream MCP servers with proxy authorization capabilities.
+- **OAuth 2.0 Support**: 
+  - Full OAuth support for upstream MCP servers with proxy authorization capabilities
+  - **NEW**: Act as OAuth 2.0 authorization server for external clients (ChatGPT Web, custom apps)
 - **Environment Variable Expansion**: Use environment variables anywhere in your configuration for secure credential management. See [Environment Variables Guide](docs/environment-variables.md).
 - **Docker-Ready**: Deploy instantly with our containerized setup.
 
@@ -105,6 +107,42 @@ Manual registration example:
 ```
 
 For manual providers, create the OAuth App in the upstream console, set the redirect URI to `http://localhost:3000/oauth/callback` (or your deployed domain), and then plug the credentials into the dashboard or config file.
+
+#### OAuth Authorization Server (NEW)
+
+MCPHub can now act as an OAuth 2.0 authorization server, allowing external applications to securely access your MCP servers using standard OAuth flows. This is particularly useful for integrating with ChatGPT Web and other services that require OAuth authentication.
+
+**Enable OAuth Server:**
+
+```json
+{
+  "systemConfig": {
+    "oauthServer": {
+      "enabled": true,
+      "accessTokenLifetime": 3600,
+      "refreshTokenLifetime": 1209600,
+      "allowedScopes": ["read", "write"]
+    }
+  },
+  "oauthClients": [
+    {
+      "clientId": "your-client-id",
+      "name": "ChatGPT Web",
+      "redirectUris": ["https://chatgpt.com/oauth/callback"],
+      "grants": ["authorization_code", "refresh_token"],
+      "scopes": ["read", "write"]
+    }
+  ]
+}
+```
+
+**Key Features:**
+- Standard OAuth 2.0 authorization code flow
+- PKCE support for enhanced security
+- Token refresh capabilities
+- Compatible with ChatGPT Web and other OAuth clients
+
+For detailed setup instructions, see the [OAuth Server Documentation](docs/oauth-server.md).
 
 ### Docker Deployment
 

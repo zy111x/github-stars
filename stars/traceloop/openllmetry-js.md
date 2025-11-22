@@ -1,6 +1,6 @@
 ---
 project: openllmetry-js
-stars: 362
+stars: 364
 description: |-
     Sister project to OpenLLMetry, but in Typescript. Open-source observability for your LLM application, based on OpenTelemetry
 url: https://github.com/traceloop/openllmetry-js

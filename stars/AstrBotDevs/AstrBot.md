@@ -1,8 +1,8 @@
 ---
 project: AstrBot
-stars: 13314
+stars: 13562
 description: |-
-    ✨ 一站式 LLM 聊天机器人平台及开发框架 ✨ 支持 QQ、QQ频道、Telegram、企微、飞书、钉钉 | 知识库、MCP 服务器、OpenAI、DeepSeek、Gemini、硅基流动、月之暗面、Ollama、OneAPI、Dify
+    ✨ Agentic IM ChatBot Infrastructure ✨ Integration with multiple IMs, easy-to-use plugin system, supports OpenAI, Gemini, Anthropic, Dify, Coze, built-in Knowledge Base, Agent. ✨ 一站式大模型聊天机器人平台及开发框架 ✨ 多消息平台（QQ, Telegram, 企微, 飞书, 钉钉等）集成，易用的插件系统，支持接入 OpenAI, Gemini, Anthropic, Dify, Coze, 阿里云百炼应用等平台，内置知识库、Agent 智能体
 url: https://github.com/AstrBotDevs/AstrBot
 ---
 
@@ -40,7 +40,7 @@ url: https://github.com/AstrBotDevs/AstrBot
 <a href="https://github.com/AstrBotDevs/AstrBot/issues">问题提交</a>
 </div>
 
-AstrBot 是一个开源的一站式 Agent 聊天机器人平台及开发框架。
+AstrBot 是一个开源的一站式 Agent 聊天机器人平台，可无缝接入主流即时通讯软件，为个人、开发者和团队打造可靠、可扩展的对话式智能基础设施。无论是个人 AI 伙伴、智能客服、自动化助手，还是企业知识库，AstrBot 都能在你的即时通讯软件平台的工作流中快速构建生产可用的 AI 应用。
 
 ## 主要功能
 
@@ -50,7 +50,7 @@ AstrBot 是一个开源的一站式 Agent 聊天机器人平台及开发框架�
 4. **插件扩展**。深度优化的插件机制，支持[开发插件](https://astrbot.app/dev/plugin.html)扩展功能，社区插件生态丰富。
 5. **WebUI**。可视化配置和管理机器人，功能齐全。
 
-## 部署方式
+## 部署方式 
 
 #### Docker 部署(推荐 🥳)
 
