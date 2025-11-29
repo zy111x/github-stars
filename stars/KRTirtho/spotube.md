@@ -1,6 +1,6 @@
 ---
 project: spotube
-stars: 42590
+stars: 42757
 description: |-
     🎧 Open source music client! Available for both desktop & mobile!
 url: https://github.com/KRTirtho/spotube

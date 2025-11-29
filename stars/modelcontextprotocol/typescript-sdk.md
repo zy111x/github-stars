@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 10816
+stars: 10882
 description: |-
     The official TypeScript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk
@@ -34,6 +34,7 @@ url: https://github.com/modelcontextprotocol/typescript-sdk
     - [Improving Network Efficiency with Notification Debouncing](#improving-network-efficiency-with-notification-debouncing)
     - [Low-Level Server](#low-level-server)
     - [Eliciting User Input](#eliciting-user-input)
+    - [Task-Based Execution](#task-based-execution)
     - [Writing MCP Clients](#writing-mcp-clients)
     - [Proxy Authorization Requests Upstream](#proxy-authorization-requests-upstream)
     - [Backwards Compatibility](#backwards-compatibility)
@@ -46,7 +47,7 @@ url: https://github.com/modelcontextprotocol/typescript-sdk
 ## Overview
 
 The Model Context Protocol allows applications to provide context for LLMs in a standardized way, separating the concerns of providing context from the actual LLM interaction. This TypeScript SDK implements
-[the full MCP specification](https://modelcontextprotocol.io/specification/latest), making it easy to:
+[the full MCP specification](https://modelcontextprotocol.io/specification/draft), making it easy to:
 
 - Create MCP servers that expose resources, prompts and tools
 - Build MCP clients that can connect to any MCP server
@@ -166,7 +167,7 @@ const server = new McpServer({
 
 ### Tools
 
-[Tools](https://modelcontextprotocol.io/specification/latest/server/tools) let LLMs take actions through your server. Tools can perform computation, fetch data and have side effects. Tools should be designed to be model-controlled - i.e. AI models will decide which tools to call,
+[Tools](https://modelcontextprotocol.io/specification/draft/server/tools) let LLMs take actions through your server. Tools can perform computation, fetch data and have side effects. Tools should be designed to be model-controlled - i.e. AI models will decide which tools to call,
 and the arguments.
 
 ```typescript
@@ -267,7 +268,7 @@ Tools can return `ResourceLink` objects to reference resources without embedding
 
 ### Resources
 
-[Resources](https://modelcontextprotocol.io/specification/latest/server/resources) can also expose data to LLMs, but unlike tools shouldn't perform significant computation or have side effects.
+[Resources](https://modelcontextprotocol.io/specification/draft/server/resources) can also expose data to LLMs, but unlike tools shouldn't perform significant computation or have side effects.
 
 Resources are designed to be used in an application-driven way, meaning MCP client applications can decide how to expose them. For example, a client could expose a resource picker to the human, or could expose them to the model directly.
 
@@ -341,7 +342,7 @@ server.registerResource(
 
 ### Prompts
 
-[Prompts](https://modelcontextprotocol.io/specification/latest/server/prompts) are reusable templates that help humans prompt models to interact with your server. They're designed to be user-driven, and might appear as slash commands in a chat interface.
+[Prompts](https://modelcontextprotocol.io/specification/draft/server/prompts) are reusable templates that help humans prompt models to interact with your server. They're designed to be user-driven, and might appear as slash commands in a chat interface.
 
 ```typescript
 import { completable } from '@modelcontextprotocol/sdk/server/completable.js';
@@ -633,6 +634,11 @@ app.post('/mcp', async (req, res) => {
     }
 });
 
+// Handle GET requests when session management is not supported - the server must return an HTTP 405 status code in this case
+app.get('/mcp', (req, res) => {
+    res.status(405).end();
+});
+
 const port = parseInt(process.env.PORT || '3000');
 app.listen(port, () => {
     console.log(`MCP Server running on http://localhost:${port}/mcp`);
@@ -797,6 +803,30 @@ await server.connect(transport);
 ### Testing and Debugging
 
 To test your server, you can use the [MCP Inspector](https://github.com/modelcontextprotocol/inspector). See its README for more information.
+
+### Node.js Web Crypto (globalThis.crypto) compatibility
+
+Some parts of the SDK (for example, JWT-based client authentication in `auth-extensions.ts` via `jose`) rely on the Web Crypto API exposed as `globalThis.crypto`.
+
+- **Node.js v19.0.0 and later**: `globalThis.crypto` is available by default.
+- **Node.js v18.x**: `globalThis.crypto` may not be defined by default; in this repository we polyfill it for tests (see `vitest.setup.ts`), and you should do the same in your app if it is missing - or alternatively, run Node with `--experimental-global-webcrypto` as per your
+  Node version documentation. (See https://nodejs.org/dist/latest-v18.x/docs/api/globals.html#crypto )
+
+If you run tests or applications on Node.js versions where `globalThis.crypto` is missing, you can polyfill it using the built-in `node:crypto` module, similar to the SDK's own `vitest.setup.ts`:
+
+```typescript
+import { webcrypto } from 'node:crypto';
+
+if (typeof globalThis.crypto === 'undefined') {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (globalThis as any).crypto = webcrypto as unknown as Crypto;
+}
+```
+
+For production use, you can either:
+
+- Run on a Node.js version where `globalThis.crypto` is available by default (recommended), or
+- Apply a similar polyfill early in your application's startup code when targeting older Node.js runtimes.
 
 ## Examples
 
@@ -1390,6 +1420,206 @@ const client = new Client(
 );
 ```
 
+### Task-Based Execution
+
+> **⚠️ Experimental API**: Task-based execution is an experimental feature and may change without notice. Access these APIs via the `.experimental.tasks` namespace.
+
+Task-based execution enables "call-now, fetch-later" patterns for long-running operations. This is useful for tools that take significant time to complete, where clients may want to disconnect and check on progress or retrieve results later.
+
+Common use cases include:
+
+- Long-running data processing or analysis
+- Code migration or refactoring operations
+- Complex computational tasks
+- Operations that require periodic status updates
+
+#### Server-Side: Implementing Task Support
+
+To enable task-based execution, configure your server with a `TaskStore` implementation. The SDK doesn't provide a built-in TaskStore—you'll need to implement one backed by your database of choice:
+
+```typescript
+import { Server } from '@modelcontextprotocol/sdk/server/index.js';
+import { TaskStore } from '@modelcontextprotocol/sdk/experimental';
+import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
+
+// Implement TaskStore backed by your database (e.g., PostgreSQL, Redis, etc.)
+class MyTaskStore implements TaskStore {
+    async createTask(taskParams, requestId, request, sessionId?): Promise<Task> {
+        // Generate unique taskId and lastUpdatedAt/createdAt timestamps
+        // Store task in your database, using the session ID as a proxy to restrict unauthorized access
+        // Return final Task object
+    }
+
+    async getTask(taskId): Promise<Task | null> {
+        // Retrieve task from your database
+    }
+
+    async updateTaskStatus(taskId, status, statusMessage?): Promise<void> {
+        // Update task status in your database
+    }
+
+    async storeTaskResult(taskId, result): Promise<void> {
+        // Store task result in your database
+    }
+
+    async getTaskResult(taskId): Promise<Result> {
+        // Retrieve task result from your database
+    }
+
+    async listTasks(cursor?, sessionId?): Promise<{ tasks: Task[]; nextCursor?: string }> {
+        // List tasks with pagination support
+    }
+}
+
+const taskStore = new MyTaskStore();
+
+const server = new Server(
+    {
+        name: 'task-enabled-server',
+        version: '1.0.0'
+    },
+    {
+        capabilities: {
+            tools: {},
+            // Declare capabilities
+            tasks: {
+                list: {},
+                cancel: {},
+                requests: {
+                    tools: {
+                        // Declares support for tasks on tools/call
+                        call: {}
+                    }
+                }
+            }
+        },
+        taskStore // Enable task support
+    }
+);
+
+// Register a tool that supports tasks using the experimental API
+server.experimental.tasks.registerToolTask(
+    'my-echo-tool',
+    {
+        title: 'My Echo Tool',
+        description: 'A simple task-based echo tool.',
+        inputSchema: {
+            message: z.string().describe('Message to send')
+        }
+    },
+    {
+        async createTask({ message }, { taskStore, taskRequestedTtl, requestId }) {
+            // Create the task
+            const task = await taskStore.createTask({
+                ttl: taskRequestedTtl
+            });
+
+            // Simulate out-of-band work
+            (async () => {
+                await new Promise(resolve => setTimeout(resolve, 5000));
+                await taskStore.storeTaskResult(task.taskId, 'completed', {
+                    content: [
+                        {
+                            type: 'text',
+                            text: message
+                        }
+                    ]
+                });
+            })();
+
+            // Return CreateTaskResult with the created task
+            return { task };
+        },
+        async getTask(_args, { taskId, taskStore }) {
+            // Retrieve the task
+            return await taskStore.getTask(taskId);
+        },
+        async getTaskResult(_args, { taskId, taskStore }) {
+            // Retrieve the result of the task
+            const result = await taskStore.getTaskResult(taskId);
+            return result as CallToolResult;
+        }
+    }
+);
+```
+
+**Note**: See `src/examples/shared/inMemoryTaskStore.ts` in the SDK source for a reference task store implementation suitable for development and testing.
+
+#### Client-Side: Using Task-Based Execution
+
+Clients use `experimental.tasks.callToolStream()` to initiate task-augmented tool calls. The returned `AsyncGenerator` abstracts automatic polling and status updates:
+
+```typescript
+import { Client } from '@modelcontextprotocol/sdk/client/index.js';
+import { CallToolResultSchema } from '@modelcontextprotocol/sdk/types.js';
+
+const client = new Client({
+    name: 'task-client',
+    version: '1.0.0'
+});
+
+// ... connect to server ...
+
+// Call the tool with task metadata using the experimental streaming API
+const stream = client.experimental.tasks.callToolStream(
+    {
+        name: 'my-echo-tool',
+        arguments: { message: 'Hello, world!' }
+    },
+    CallToolResultSchema
+);
+
+// Iterate the stream and handle stream events
+let taskId = '';
+for await (const message of stream) {
+    switch (message.type) {
+        case 'taskCreated':
+            console.log('Task created successfully with ID:', message.task.taskId);
+            taskId = message.task.taskId;
+            break;
+        case 'taskStatus':
+            console.log(`  ${message.task.status}${message.task.statusMessage ?? ''}`);
+            break;
+        case 'result':
+            console.log('Task completed! Tool result:');
+            message.result.content.forEach(item => {
+                if (item.type === 'text') {
+                    console.log(`  ${item.text}`);
+                }
+            });
+            break;
+        case 'error':
+            throw message.error;
+    }
+}
+
+// Optional: Fire and forget - disconnect and reconnect later
+// (useful when you don't want to wait for long-running tasks)
+// Later, after disconnecting and reconnecting to the server:
+const taskStatus = await client.getTask({ taskId });
+console.log('Task status:', taskStatus.status);
+
+if (taskStatus.status === 'completed') {
+    const taskResult = await client.getTaskResult({ taskId }, CallToolResultSchema);
+    console.log('Retrieved result after reconnect:', taskResult);
+}
+```
+
+The `experimental.tasks.callToolStream()` method also works with non-task tools, making it a drop-in replacement for `callTool()` in applications that support it. When used to invoke a tool that doesn't support tasks, the `taskCreated` and `taskStatus` events will not be emitted.
+
+#### Task Status Lifecycle
+
+Tasks transition through the following states:
+
+- **working**: Task is actively being processed
+- **input_required**: Task is waiting for additional input (e.g., from elicitation)
+- **completed**: Task finished successfully
+- **failed**: Task encountered an error
+- **cancelled**: Task was cancelled by the client
+
+The `ttl` parameter suggests how long the server will manage the task for. If the task duration exceeds this, the server may delete the task prematurely. The client's suggested value may be overridden by the server, and the final TTL will be provided in `Task.ttl` in
+`taskCreated` and `taskStatus` events.
+
 ### Writing MCP Clients
 
 The SDK provides a high-level client interface:
@@ -1437,6 +1667,64 @@ const result = await client.callTool({
     }
 });
 ```
+
+### OAuth client authentication helpers
+
+For OAuth-secured MCP servers, the client `auth` module exposes a generic `OAuthClientProvider` interface, and `src/client/auth-extensions.ts` provides ready-to-use implementations for common machine-to-machine authentication flows:
+
+- **ClientCredentialsProvider**: Uses the `client_credentials` grant with `client_secret_basic` authentication.
+- **PrivateKeyJwtProvider**: Uses the `client_credentials` grant with `private_key_jwt` client authentication, signing a JWT assertion on each token request.
+- **StaticPrivateKeyJwtProvider**: Similar to `PrivateKeyJwtProvider`, but accepts a pre-built JWT assertion string via `jwtBearerAssertion` and reuses it for token requests.
+
+You can use these providers with the `StreamableHTTPClientTransport` and the high-level `auth()` helper:
+
+```typescript
+import { Client } from '@modelcontextprotocol/sdk/client/index.js';
+import { StreamableHTTPClientTransport } from '@modelcontextprotocol/sdk/client/streamableHttp.js';
+import { ClientCredentialsProvider, PrivateKeyJwtProvider, StaticPrivateKeyJwtProvider } from '@modelcontextprotocol/sdk/client/auth-extensions.js';
+import { auth } from '@modelcontextprotocol/sdk/client/auth.js';
+
+const serverUrl = new URL('https://mcp.example.com/');
+
+// Example: client_credentials with client_secret_basic
+const basicProvider = new ClientCredentialsProvider({
+    clientId: process.env.CLIENT_ID!,
+    clientSecret: process.env.CLIENT_SECRET!,
+    clientName: 'example-basic-client'
+});
+
+// Example: client_credentials with private_key_jwt (JWT signed locally)
+const privateKeyJwtProvider = new PrivateKeyJwtProvider({
+    clientId: process.env.CLIENT_ID!,
+    privateKey: process.env.CLIENT_PRIVATE_KEY_PEM!,
+    algorithm: 'RS256',
+    clientName: 'example-private-key-jwt-client',
+    jwtLifetimeSeconds: 300
+});
+
+// Example: client_credentials with a pre-built JWT assertion
+const staticJwtProvider = new StaticPrivateKeyJwtProvider({
+    clientId: process.env.CLIENT_ID!,
+    jwtBearerAssertion: process.env.CLIENT_ASSERTION!,
+    clientName: 'example-static-private-key-jwt-client'
+});
+
+const transport = new StreamableHTTPClientTransport(serverUrl, {
+    authProvider: privateKeyJwtProvider
+});
+
+const client = new Client({
+    name: 'example-client',
+    version: '1.0.0'
+});
+
+// Perform the OAuth flow (including dynamic client registration if needed)
+await auth(privateKeyJwtProvider, { serverUrl, fetchFn: transport.fetch });
+
+await client.connect(transport);
+```
+
+If you need lower-level control, you can also use `createPrivateKeyJwtAuth()` directly to implement `addClientAuthentication` on a custom `OAuthClientProvider`.
 
 ### Proxy Authorization Requests Upstream
 
@@ -1507,7 +1795,7 @@ try {
         name: 'streamable-http-client',
         version: '1.0.0'
     });
-    const transport = new StreamableHTTPClientTransport(new URL(baseUrl));
+    const transport = new StreamableHTTPClientTransport(baseUrl);
     await client.connect(transport);
     console.log('Connected using Streamable HTTP transport');
 } catch (error) {

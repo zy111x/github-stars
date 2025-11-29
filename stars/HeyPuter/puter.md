@@ -1,6 +1,6 @@
 ---
 project: puter
-stars: 37401
+stars: 37507
 description: |-
     🌐 The Internet Computer! Free, Open-Source, and Self-Hostable.
 url: https://github.com/HeyPuter/puter
@@ -35,7 +35,7 @@ url: https://github.com/HeyPuter/puter
 
 ## Puter
 
-Puter is an advanced, open-source internet operating system designed to be feature-rich, exceptionally fast, and highly extensible. Puter can be used as:
+Puter is an advanced, open-source internet operating system designed to be feature-rich, fast, and highly extensible. Puter can be used as:
 
 - A privacy-first personal cloud to keep all your files, apps, and games in one secure place, accessible from anywhere at any time.
 - A platform for building and publishing websites, web apps, and games.
@@ -172,6 +172,7 @@ This repository, including all its contents, sub-projects, modules, and componen
 - [Malayalam / മലയാളം](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.ml.md)
 - [Polish / Polski](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.pl.md)
 - [Portuguese / Português](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.pt.md)
+- [Punjabi / ਪੰਜਾਬੀ](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.pa.md)
 - [Romanian / Română](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.ro.md)
 - [Russian / Русский](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.ru.md)
 - [Spanish / Español](https://github.com/HeyPuter/puter/blob/main/doc/i18n/README.es.md)

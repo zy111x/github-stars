@@ -1,6 +1,6 @@
 ---
 project: offen
-stars: 962
+stars: 961
 description: |-
     Offen Fair Web Analytics
 url: https://github.com/offen/offen
@@ -17,7 +17,6 @@ SPDX-License-Identifier: Apache-2.0
 
 # Offen Fair Web Analytics
 
-[![CircleCI](https://circleci.com/gh/offen/offen/tree/development.svg?style=svg)](https://circleci.com/gh/offen/offen/tree/development)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Docs](https://img.shields.io/badge/Documentation-docs.offen.dev-blue.svg)](https://docs.offen.dev)
 [![Awesome Humane Tech](https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true)](https://github.com/humanetech-community/awesome-humane-tech)

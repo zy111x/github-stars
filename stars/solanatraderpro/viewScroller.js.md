@@ -3,7 +3,7 @@ project: viewScroller.js
 stars: 299
 description: |-
     Improve your websites using fullpage scrolling
-url: https://github.com/Viewdesic/viewScroller.js
+url: https://github.com/solanatraderpro/viewScroller.js
 ---
 
 # viewScroller.js

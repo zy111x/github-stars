@@ -1,0 +1,823 @@
+---
+project: advanced-imessage-kit
+stars: 48
+description: |-
+    The Typescript SDK for Next Level iMessage Automation
+url: https://github.com/photon-hq/advanced-imessage-kit
+---
+
+<div align="center">
+
+![Banner](./.github/assets/banner.png)
+
+# Advanced iMessage Kit
+
+> A powerful TypeScript SDK for iMessage with real-time messaging support
+
+</div>
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-^5-blue.svg)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Discord](https://img.shields.io/badge/Discord-Join-5865F2.svg?logo=discord&logoColor=white)](https://discord.gg/RSJUUHTV)
+
+Advanced iMessage Kit is a full-featured iMessage SDK for **reading**, **sending**, and **automating** iMessage conversations on macOS. Perfect for building **AI agents**, **automation tools**, and **chat applications**.
+
+---
+
+## Features
+
+| Feature | Method | Example |
+|---------|--------|---------|
+| [Send Messages](#send-messages) | `messages.sendMessage()` | [message-send.ts](./examples/message-send.ts) |
+| [Reply to Messages](#send-messages) | `messages.sendMessage()` | [message-reply.ts](./examples/message-reply.ts) |
+| [Message Effects](#send-messages) | `messages.sendMessage()` | [message-effects.ts](./examples/message-effects.ts) |
+| [Unsend Messages](#unsend-messages) | `messages.unsendMessage()` | [message-unsend.ts](./examples/message-unsend.ts) |
+| [Send Tapbacks](#send-tapbacks) | `messages.sendReaction()` | [message-reaction.ts](./examples/message-reaction.ts) |
+| [Query Messages](#query-messages) | `messages.getMessages()` | [message-search.ts](./examples/message-search.ts) |
+| [Send Attachments](#send-attachments) | `attachments.sendAttachment()` | [message-attachment.ts](./examples/message-attachment.ts) |
+| [Send Audio Messages](#send-audio-messages) | `attachments.sendAttachment()` | [message-audio.ts](./examples/message-audio.ts) |
+| [Send Stickers](#send-stickers) | `attachments.sendSticker()` | [message-reply-sticker.ts](./examples/message-reply-sticker.ts) |
+| [Download Attachments](#download-attachments) | `attachments.downloadAttachment()` | [attachment-download.ts](./examples/attachment-download.ts) |
+| [Get Chats](#get-chats) | `chats.getChats()` | [chat-fetch.ts](./examples/chat-fetch.ts) |
+| [Manage Group Chats](#manage-group-chats) | `chats.addParticipant()` | [chat-group.ts](./examples/chat-group.ts) |
+| [Typing Indicators](#typing-indicators) | `chats.startTyping()` | [message-typing.ts](./examples/message-typing.ts) |
+| [Get Contacts](#get-contacts) | `contacts.getContacts()` | [contact-list.ts](./examples/contact-list.ts) |
+| [Check iMessage Availability](#check-service-availability) | `handles.getHandleAvailability()` | [service-check.ts](./examples/service-check.ts) |
+| [Server Info](#get-server-info) | `server.getServerInfo()` | [server-info.ts](./examples/server-info.ts) |
+| [Message Statistics](#message-statistics) | `server.getMessageStats()` | [message-stats.ts](./examples/message-stats.ts) |
+| [Find My Friends](#find-my-friends) *(WIP)* | `icloud.getFindMyFriends()` | [findmy-friends.ts](./examples/findmy-friends.ts) |
+| [Real-time Events](#real-time-events) | `sdk.on()` | [demo-basic.ts](./examples/demo-basic.ts) |
+| [Auto Reply](#real-time-events) | `sdk.on()` | [auto-reply-hey.ts](./examples/auto-reply-hey.ts) |
+
+---
+
+## Quick Start
+
+### Installation
+
+```bash
+npm install @photon-ai/advanced-imessage-kit
+# or
+bun add @photon-ai/advanced-imessage-kit
+```
+
+### Basic Usage
+
+```typescript
+import { SDK } from "@photon-ai/advanced-imessage-kit";
+
+const sdk = SDK({
+  serverUrl: "http://localhost:1234",
+});
+
+await sdk.connect();
+
+sdk.on("new-message", (message) => {
+  console.log("New message:", message.text);
+});
+
+await sdk.messages.sendMessage({
+  chatGuid: "iMessage;-;+1234567890",
+  message: "Hello World!",
+});
+
+await sdk.close();
+```
+
+### Configuration
+
+```typescript
+interface ClientConfig {
+  serverUrl?: string;  // Server URL, defaults to "http://localhost:1234"
+  apiKey?: string;     // API key (if server requires authentication)
+  logLevel?: "debug" | "info" | "warn" | "error";  // Log level, defaults to "info"
+}
+```
+
+---
+
+## Core Concepts
+
+### chatGuid Format
+
+`chatGuid` is the unique identifier for a conversation. The format is `service;-;address`:
+
+- **iMessage DM**: `iMessage;-;+1234567890` or `iMessage;-;email@example.com`
+- **SMS DM**: `SMS;-;+1234567890`
+- **Group chat**: `iMessage;+;chat123456789`
+- **Auto-detect**: `any;-;+1234567890` (SDK automatically detects the service type)
+
+### How to Get IDs
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  Phone / Email  │────▶│  Build chatGuid │────▶│  Send Message   │
+│  +1234567890    │     │ any;-;+123...   │     │  sendMessage()  │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   getChats()    │────▶│  Get chat.guid  │────▶│  Use for other  │
+│   List chats    │     │                 │     │  operations     │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  sendMessage()  │────▶│ Get message.guid│────▶│  edit/unsend    │
+│   Send message  │     │                 │     │  sendReaction   │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+```
+
+---
+
+## Messages
+
+> Examples: [message-send.ts](./examples/message-send.ts) | [message-unsend.ts](./examples/message-unsend.ts) | [message-reaction.ts](./examples/message-reaction.ts) | [message-search.ts](./examples/message-search.ts)
+
+### Send Messages
+
+```typescript
+// Send a text message
+const message = await sdk.messages.sendMessage({
+  chatGuid: "iMessage;-;+1234567890",
+  message: "Hello!",
+});
+
+// With subject and effect
+await sdk.messages.sendMessage({
+  chatGuid: "iMessage;-;+1234567890",
+  message: "Happy Birthday!",
+  subject: "Wishes",
+  effectId: "com.apple.messages.effect.CKConfettiEffect",
+});
+
+// Reply to a message
+await sdk.messages.sendMessage({
+  chatGuid: "iMessage;-;+1234567890",
+  message: "This is a reply",
+  selectedMessageGuid: "original-message-guid",
+});
+```
+
+**Message Effects**:
+
+| Effect | effectId |
+|--------|----------|
+| Confetti | `com.apple.messages.effect.CKConfettiEffect` |
+| Fireworks | `com.apple.messages.effect.CKFireworksEffect` |
+| Balloons | `com.apple.messages.effect.CKBalloonEffect` |
+| Hearts | `com.apple.messages.effect.CKHeartEffect` |
+| Lasers | `com.apple.messages.effect.CKHappyBirthdayEffect` |
+| Shooting Star | `com.apple.messages.effect.CKShootingStarEffect` |
+| Sparkles | `com.apple.messages.effect.CKSparklesEffect` |
+| Echo | `com.apple.messages.effect.CKEchoEffect` |
+| Spotlight | `com.apple.messages.effect.CKSpotlightEffect` |
+| Gentle | `com.apple.MobileSMS.expressivesend.gentle` |
+| Loud | `com.apple.MobileSMS.expressivesend.loud` |
+| Slam | `com.apple.MobileSMS.expressivesend.impact` |
+| Invisible Ink | `com.apple.MobileSMS.expressivesend.invisibleink` |
+
+> Example: [message-effects.ts](./examples/message-effects.ts)
+
+### Query Messages
+
+```typescript
+// Get a single message
+const message = await sdk.messages.getMessage("message-guid");
+
+// Query messages
+const messages = await sdk.messages.getMessages({
+  chatGuid: "iMessage;-;+1234567890",
+  limit: 50,
+  offset: 0,
+  sort: "DESC",  // DESC = newest first, ASC = oldest first
+  before: Date.now(),
+  after: Date.now() - 86400000,  // Last 24 hours
+});
+
+// Search messages
+const results = await sdk.messages.searchMessages({
+  query: "keyword",
+  chatGuid: "iMessage;-;+1234567890",  // Optional
+  limit: 20,
+});
+
+// Get counts
+const total = await sdk.messages.getMessageCount();
+const sent = await sdk.messages.getSentMessageCount();
+const updated = await sdk.messages.getUpdatedMessageCount();
+```
+
+### Unsend Messages
+
+```typescript
+await sdk.messages.unsendMessage({
+  messageGuid: "message-guid-to-unsend",
+  partIndex: 0,  // Optional
+});
+```
+
+> Example: [message-unsend.ts](./examples/message-unsend.ts)
+
+### Send Tapbacks
+
+```typescript
+await sdk.messages.sendReaction({
+  chatGuid: "iMessage;-;+1234567890",
+  messageGuid: "target-message-guid",
+  reaction: "love",  // love, like, dislike, laugh, emphasize, question
+  partIndex: 0,  // Optional
+});
+
+// Remove a Tapback (prefix with -)
+await sdk.messages.sendReaction({
+  chatGuid: "iMessage;-;+1234567890",
+  messageGuid: "target-message-guid",
+  reaction: "-love",  // -love, -like, -dislike, -laugh, -emphasize, -question
+});
+```
+
+> Example: [message-reaction.ts](./examples/message-reaction.ts)
+
+### Other Message Operations
+
+```typescript
+// Trigger message notification
+await sdk.messages.notifyMessage("message-guid");
+
+// Get embedded media
+const media = await sdk.messages.getEmbeddedMedia("message-guid");
+```
+
+---
+
+## Chats
+
+> Examples: [chat-fetch.ts](./examples/chat-fetch.ts) | [chat-group.ts](./examples/chat-group.ts) | [message-typing.ts](./examples/message-typing.ts)
+
+### Get Chats
+
+```typescript
+const chats = await sdk.chats.getChats({
+  withLastMessage: true,   // Include last message
+  withArchived: false,     // Include archived chats
+  offset: 0,
+  limit: 50,
+});
+
+// Get chat count
+const count = await sdk.chats.getChatCount();
+```
+
+### Get Single Chat
+
+```typescript
+const chat = await sdk.chats.getChat("chat-guid", {
+  with: ["participants", "lastMessage"],
+});
+```
+
+### Create Chat
+
+```typescript
+const newChat = await sdk.chats.createChat({
+  addresses: ["+1234567890", "+0987654321"],
+  message: "Hello everyone!",  // Optional initial message
+  service: "iMessage",  // "iMessage" or "SMS"
+  method: "private-api",  // "apple-script" or "private-api"
+});
+```
+
+### Chat Status
+
+```typescript
+// Mark as read/unread
+await sdk.chats.markChatRead("chat-guid");
+await sdk.chats.markChatUnread("chat-guid");
+
+// Delete chat
+await sdk.chats.deleteChat("chat-guid");
+```
+
+### Typing Indicators
+
+```typescript
+// Show "typing..."
+await sdk.chats.startTyping("chat-guid");
+
+// Stop showing
+await sdk.chats.stopTyping("chat-guid");
+```
+
+> Example: [message-typing.ts](./examples/message-typing.ts)
+
+### Get Chat Messages
+
+```typescript
+const messages = await sdk.chats.getChatMessages("chat-guid", {
+  limit: 100,
+  offset: 0,
+  sort: "DESC",
+  before: Date.now(),
+  after: Date.now() - 86400000,
+});
+```
+
+### Manage Group Chats
+
+```typescript
+// Rename group
+await sdk.chats.updateChat("chat-guid", {
+  displayName: "New Group Name",
+});
+
+// Add participant
+await sdk.chats.addParticipant("chat-guid", "+1234567890");
+
+// Remove participant
+await sdk.chats.removeParticipant("chat-guid", "+1234567890");
+
+// Leave group
+await sdk.chats.leaveChat("chat-guid");
+```
+
+### Group Icon
+
+```typescript
+// Set group icon
+await sdk.chats.setGroupIcon("chat-guid", "/path/to/image.jpg");
+
+// Get group icon
+const iconBuffer = await sdk.chats.getGroupIcon("chat-guid");
+
+// Remove group icon
+await sdk.chats.removeGroupIcon("chat-guid");
+```
+
+> Example: [chat-group.ts](./examples/chat-group.ts)
+
+---
+
+## Attachments
+
+> Examples: [message-attachment.ts](./examples/message-attachment.ts) | [message-audio.ts](./examples/message-audio.ts) | [message-reply-sticker.ts](./examples/message-reply-sticker.ts) | [attachment-download.ts](./examples/attachment-download.ts)
+
+### Send Attachments
+
+```typescript
+const message = await sdk.attachments.sendAttachment({
+  chatGuid: "iMessage;-;+1234567890",
+  filePath: "/path/to/file.jpg",
+  fileName: "custom-name.jpg",  // Optional
+});
+```
+
+### Send Audio Messages
+
+```typescript
+const message = await sdk.attachments.sendAttachment({
+  chatGuid: "iMessage;-;+1234567890",
+  filePath: "/path/to/audio.m4a",
+  isAudioMessage: true,
+});
+```
+
+> Example: [message-audio.ts](./examples/message-audio.ts)
+
+### Send Stickers
+
+```typescript
+await sdk.attachments.sendSticker({
+  chatGuid: "iMessage;-;+1234567890",
+  filePath: "/path/to/sticker.png",
+  selectedMessageGuid: "message-to-stick-on",  // Optional
+});
+```
+
+> Example: [message-reply-sticker.ts](./examples/message-reply-sticker.ts)
+
+### Get Attachment Info
+
+```typescript
+// Get attachment details
+const attachment = await sdk.attachments.getAttachment("attachment-guid");
+
+// Get total count
+const count = await sdk.attachments.getAttachmentCount();
+```
+
+### Download Attachments
+
+```typescript
+// Download attachment
+const buffer = await sdk.attachments.downloadAttachment("attachment-guid", {
+  original: true,   // Download original file
+  force: false,     // Force re-download
+  width: 800,       // Image width (for thumbnails)
+  height: 600,      // Image height
+  quality: 80,      // Image quality
+});
+
+// Download Live Photo video
+const liveBuffer = await sdk.attachments.downloadAttachmentLive("attachment-guid");
+
+// Get blurhash (for placeholders)
+const blurhash = await sdk.attachments.getAttachmentBlurhash("attachment-guid");
+```
+
+> Example: [attachment-download.ts](./examples/attachment-download.ts)
+
+---
+
+## Contacts
+
+> Example: [contact-list.ts](./examples/contact-list.ts)
+
+### Get Contacts
+
+```typescript
+const contacts = await sdk.contacts.getContacts();
+```
+
+### Get Contact Card
+
+```typescript
+// Get by phone or email
+const card = await sdk.contacts.getContactCard("+1234567890");
+```
+
+---
+
+## Handles
+
+> Examples: [service-check.ts](./examples/service-check.ts) | [handle-query.ts](./examples/handle-query.ts)
+
+A Handle represents a messaging address (phone number or email).
+
+### Query Handles
+
+```typescript
+// Query handles
+const result = await sdk.handles.queryHandles({
+  address: "+1234567890",  // Optional, filter by address
+  with: ["chats"],         // Optional, include related chats
+  offset: 0,
+  limit: 50,
+});
+
+// Get single handle
+const handle = await sdk.handles.getHandle("handle-guid");
+
+// Get total count
+const count = await sdk.handles.getHandleCount();
+```
+
+### Check Service Availability
+
+Check if a phone/email supports iMessage or FaceTime:
+
+```typescript
+// First parameter is the address (phone or email), not handle guid
+const hasIMessage = await sdk.handles.getHandleAvailability("+1234567890", "imessage");
+const hasFaceTime = await sdk.handles.getHandleAvailability("+1234567890", "facetime");
+
+// Choose service based on availability
+const chatGuid = hasIMessage 
+  ? `iMessage;-;+1234567890` 
+  : `SMS;-;+1234567890`;
+```
+
+> Example: [service-check.ts](./examples/service-check.ts)
+
+### Get Focus Status
+
+```typescript
+const focusStatus = await sdk.handles.getHandleFocusStatus("handle-guid");
+```
+
+---
+
+## Server
+
+> Examples: [message-stats.ts](./examples/message-stats.ts) | [server-info.ts](./examples/server-info.ts)
+
+### Get Server Info
+
+```typescript
+const info = await sdk.server.getServerInfo();
+// {
+//   os_version: "14.0",
+//   server_version: "1.0.0",
+//   private_api: true,
+//   helper_connected: true,
+//   detected_icloud: "user@icloud.com",
+//   ...
+// }
+```
+
+### Message Statistics
+
+```typescript
+const stats = await sdk.server.getMessageStats();
+// {
+//   total: 12345,
+//   sent: 5000,
+//   received: 7345,
+//   last24h: 50,
+//   last7d: 300,
+//   last30d: 1000,
+// }
+```
+
+### Media Statistics
+
+```typescript
+// All media stats
+const mediaStats = await sdk.server.getMediaStatistics();
+
+// Per-chat media stats
+const chatMediaStats = await sdk.server.getMediaStatisticsByChat();
+```
+
+### Server Logs
+
+```typescript
+const logs = await sdk.server.getServerLogs(100);  // Get last 100 logs
+```
+
+### Alert Management
+
+```typescript
+// Get alerts
+const alerts = await sdk.server.getAlerts();
+
+// Mark alerts as read
+await sdk.server.markAlertAsRead(["alert-id-1", "alert-id-2"]);
+```
+
+> Example: [server-info.ts](./examples/server-info.ts)
+
+---
+
+## iCloud *(Work in Progress)*
+
+> Example: [findmy-friends.ts](./examples/findmy-friends.ts)
+
+### Find My Friends
+
+```typescript
+// Get friends' locations
+const friends = await sdk.icloud.getFindMyFriends();
+
+// Refresh location data
+await sdk.icloud.refreshFindMyFriends();
+```
+
+> Example: [findmy-friends.ts](./examples/findmy-friends.ts)
+
+---
+
+## Real-time Events
+
+> Examples: [demo-basic.ts](./examples/demo-basic.ts) | [demo-advanced.ts](./examples/demo-advanced.ts) | [auto-reply-hey.ts](./examples/auto-reply-hey.ts)
+
+The SDK receives real-time events from the server via Socket.IO.
+
+### Connection Events
+
+```typescript
+sdk.on("ready", () => {
+  console.log("SDK connected and ready");
+});
+
+sdk.on("disconnect", () => {
+  console.log("Disconnected");
+});
+
+sdk.on("error", (error) => {
+  console.error("Error:", error);
+});
+```
+
+### Message Events
+
+```typescript
+// New message
+sdk.on("new-message", (message) => {
+  console.log("New message:", message.text);
+  console.log("From:", message.handle?.address);
+  console.log("From me:", message.isFromMe);
+});
+
+// Message status update (delivered, read, etc.)
+sdk.on("updated-message", (message) => {
+  if (message.dateRead) console.log("Message read");
+  else if (message.dateDelivered) console.log("Message delivered");
+});
+
+// Send failed
+sdk.on("message-send-error", (data) => {
+  console.error("Send failed:", data);
+});
+```
+
+### Chat Events
+
+```typescript
+// Chat read status changed
+sdk.on("chat-read-status-changed", ({ chatGuid, read }) => {
+  console.log(`Chat ${chatGuid} marked as ${read ? "read" : "unread"}`);
+});
+```
+
+### Typing Indicators
+
+```typescript
+sdk.on("typing-indicator", ({ display, guid }) => {
+  console.log(`${guid} ${display ? "is typing" : "stopped typing"}`);
+});
+```
+
+### Group Events
+
+```typescript
+sdk.on("group-name-change", (message) => {
+  console.log("Group renamed to:", message.groupTitle);
+});
+
+sdk.on("participant-added", (message) => {
+  console.log("Someone joined the group");
+});
+
+sdk.on("participant-removed", (message) => {
+  console.log("Someone was removed from the group");
+});
+
+sdk.on("participant-left", (message) => {
+  console.log("Someone left the group");
+});
+
+sdk.on("group-icon-changed", (message) => {
+  console.log("Group icon changed");
+});
+
+sdk.on("group-icon-removed", (message) => {
+  console.log("Group icon removed");
+});
+```
+
+### Find My Friends Events *(WIP)*
+
+```typescript
+sdk.on("new-findmy-location", (location) => {
+  console.log(`${location.handle} location updated:`, location.coordinates);
+});
+```
+
+### Remove Event Listeners
+
+```typescript
+const handler = (message) => console.log(message);
+sdk.on("new-message", handler);
+
+// Remove specific listener
+sdk.off("new-message", handler);
+
+// Remove all listeners
+sdk.removeAllListeners("new-message");
+```
+
+---
+
+## Best Practices
+
+### Resource Management
+
+```typescript
+// Graceful shutdown
+process.on("SIGINT", async () => {
+  await sdk.close();
+  process.exit(0);
+});
+```
+
+### Message Deduplication
+
+The SDK includes built-in message deduplication to prevent processing duplicates during network instability:
+
+```typescript
+// Clear processed messages (prevent memory leaks)
+sdk.clearProcessedMessages(1000);
+
+// Get processed message count
+const count = sdk.getProcessedMessageCount();
+```
+
+### Error Handling
+
+```typescript
+try {
+  await sdk.messages.sendMessage({
+    chatGuid: "invalid-guid",
+    message: "test",
+  });
+} catch (error) {
+  if (error.response?.status === 404) {
+    console.error("Chat not found");
+  } else {
+    console.error("Send failed:", error.message);
+  }
+}
+```
+
+### Auto-create Chats
+
+When sending to a contact you've never messaged before, the SDK automatically creates the chat:
+
+```typescript
+// Works even without existing chat history
+await sdk.messages.sendMessage({
+  chatGuid: "any;-;+1234567890",
+  message: "Hi, this is John",
+});
+// SDK detects the chat doesn't exist, creates it, then sends
+```
+
+---
+
+## Examples
+
+Run any example with Bun:
+
+```bash
+bun run examples/<filename>.ts
+```
+
+### Getting Started
+
+| File | Description |
+|------|-------------|
+| [demo-basic.ts](./examples/demo-basic.ts) | Listen for new messages |
+| [demo-advanced.ts](./examples/demo-advanced.ts) | Full feature demo |
+| [message-send.ts](./examples/message-send.ts) | Send text messages |
+| [message-attachment.ts](./examples/message-attachment.ts) | Send attachments |
+| [message-audio.ts](./examples/message-audio.ts) | Send audio messages |
+
+### Message Operations
+
+| File | Description |
+|------|-------------|
+| [message-reply.ts](./examples/message-reply.ts) | Reply to messages |
+| [message-unsend.ts](./examples/message-unsend.ts) | Unsend messages |
+| [message-reaction.ts](./examples/message-reaction.ts) | Send Tapbacks |
+| [message-effects.ts](./examples/message-effects.ts) | Message effects |
+| [message-search.ts](./examples/message-search.ts) | Search messages |
+
+### Chats & Groups
+
+| File | Description |
+|------|-------------|
+| [chat-fetch.ts](./examples/chat-fetch.ts) | Get chat list |
+| [chat-group.ts](./examples/chat-group.ts) | Manage groups |
+| [message-typing.ts](./examples/message-typing.ts) | Typing indicators |
+
+### Contacts & Services
+
+| File | Description |
+|------|-------------|
+| [contact-list.ts](./examples/contact-list.ts) | Get contacts |
+| [service-check.ts](./examples/service-check.ts) | Check iMessage availability |
+| [message-service-check.ts](./examples/message-service-check.ts) | Monitor message service types |
+
+### Attachments & Media
+
+| File | Description |
+|------|-------------|
+| [attachment-download.ts](./examples/attachment-download.ts) | Download attachments |
+| [message-reply-sticker.ts](./examples/message-reply-sticker.ts) | Send stickers |
+
+### Server & Advanced
+
+| File | Description |
+|------|-------------|
+| [server-info.ts](./examples/server-info.ts) | Server info and logs |
+| [message-stats.ts](./examples/message-stats.ts) | Message statistics |
+| [findmy-friends.ts](./examples/findmy-friends.ts) | Find My Friends *(WIP)* |
+| [auto-reply-hey.ts](./examples/auto-reply-hey.ts) | Auto reply bot |
+
+---
+
+## LLMs
+
+Download `llms.txt` for language model context:
+
+- [Download llms.txt](./llms.txt)
+
+---
+
+## License
+
+MIT License
+
+## Author
+
+[@Artist-MOBAI](https://github.com/Artist-MOBAI)
+

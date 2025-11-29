@@ -1,6 +1,6 @@
 ---
 project: kettu
-stars: 384
+stars: 383
 description: |-
     Rewrite of the Transmission Web Client with jQuery, Sammy and Mustache
 url: https://github.com/endor/kettu

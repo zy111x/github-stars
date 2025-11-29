@@ -1,6 +1,6 @@
 ---
 project: chalk
-stars: 22821
+stars: 22822
 description: |-
     🖍 Terminal string styling done right
 url: https://github.com/chalk/chalk

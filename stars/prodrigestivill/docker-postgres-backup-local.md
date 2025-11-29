@@ -1,6 +1,6 @@
 ---
 project: docker-postgres-backup-local
-stars: 1048
+stars: 1052
 description: |-
     Backup PostgresSQL to local filesystem with periodic backups and rotate backups.
 url: https://github.com/prodrigestivill/docker-postgres-backup-local

@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 12506
+stars: 12552
 description: |-
     Smooth scroll at it should be
 url: https://github.com/darkroomengineering/lenis
@@ -16,7 +16,7 @@ url: https://github.com/darkroomengineering/lenis
 
 ## Introduction
 
-Lenis ("smooth" in latin) is a lightweight, robust, and performant smooth scroll library. It's designed by [@darkroom.engineering](https://twitter.com/darkroomdevs) to be simple to use and easy to integrate into your projects. It's built with performance in mind and is optimized for modern browsers. It's perfect for creating smooth scrolling experiences on your website such as WebGL scroll syncing, parallax effects, and much more, see [ Demo](https://lenis.darkroom.engineering/) and [Showcase](#lenis-in-use).
+Lenis ("smooth" in latin) is a lightweight, robust, and performant smooth scroll library. It's designed by [@darkroom.engineering](https://twitter.com/darkroomdevs) to be simple to use and easy to integrate into your projects. It's built with performance in mind and is optimized for modern browsers. It's perfect for creating smooth scrolling experiences on your website such as WebGL scroll syncing, parallax effects, and much more, see [Demo](https://lenis.darkroom.engineering/) and [Showcase](#lenis-in-use).
 
 Read our [Manifesto](https://github.com/darkroomengineering/lenis/blob/main/MANIFESTO.md) to learn more about the inspiration behind Lenis.
 
@@ -47,27 +47,16 @@ If you’ve used Lenis and it made your site feel just a little more alive, cons
 Your support helps us smooth out the internet one library at a time—and lets us keep building tools that care about the details most folks overlook.
 
 <!-- sponsors -->
-<a href="https://syntax.fm"><img src="https://github.com/syntaxfm.png" width="60px" alt="User avatar: Syntax" /></a>
-<a href="https://github.com/glauber-sampaio"><img src="https://github.com/glauber-sampaio.png" width="60px" alt="User avatar: Glauber" /></a>
-<a href="https://itsoffbrand.com"><img src="https://github.com/itsoffbrand.png" width="60px" alt="User avatar: OFF+BRAND." /></a>
-<a href="https://bizar.ro"><img src="https://github.com/bizarro.png" width="60px" alt="User avatar: Luis Bizarro" /></a>
-<a href="https://github.com/OHO-Design"><img src="https://github.com/OHO-Design.png" width="60px" alt="User avatar: OHO Design" /></a>
-<a href="https://github.com/ae-com"><img src="https://github.com/ae-com.png" width="60px" alt="User avatar: Æ" /></a>
-<a href="https://ironvelvet.studio"><img src="https://github.com/ironvelvet.png" width="60px" alt="User avatar: Iron Velvet" /></a>
-<a href="https://federic.ooo/"><img src="https://github.com/vallafederico.png" width="60px" alt="User avatar: Federico Valla" /></a>
-<a href="https://www.non-linear.studio"><img src="https://github.com/mariosmaselli.png" width="60px" alt="User avatar: Mario Sanchez Maselli" /></a>
-<a href="https://github.com/thearkis"><img src="https://github.com/thearkis.png" width="60px" alt="User avatar: ΛRK®" /></a>
-<a href="https://github.com/smsunarto"><img src="https://github.com/smsunarto.png" width="60px" alt="User avatar: Scott" /></a>
-<a href="https://www.cachet.studio"><img src="https://github.com/cachet-studio.png" width="60px" alt="User avatar: cachet.studio" /></a>
+[![syntaxfm](https://github.com/syntaxfm.png?size=64)](https://github.com/syntaxfm) [![smsunarto](https://github.com/smsunarto.png?size=64)](https://github.com/smsunarto) [![ae-com](https://github.com/ae-com.png?size=64)](https://github.com/ae-com) [![thearkis](https://github.com/thearkis.png?size=64)](https://github.com/thearkis) [![cachet-studio](https://github.com/cachet-studio.png?size=64)](https://github.com/cachet-studio) [![ironvelvet](https://github.com/ironvelvet.png?size=64)](https://github.com/ironvelvet) [![mariosmaselli](https://github.com/mariosmaselli.png?size=64)](https://github.com/mariosmaselli) [![bizarro](https://github.com/bizarro.png?size=64)](https://github.com/bizarro) [![mielucristian](https://github.com/mielucristian.png?size=64)](https://github.com/mielucristian) [![vallafederico](https://github.com/vallafederico.png?size=64)](https://github.com/vallafederico) [![itsoffbrand](https://github.com/itsoffbrand.png?size=64)](https://github.com/itsoffbrand) [![velox-themes](https://github.com/velox-themes.png?size=64)](https://github.com/velox-themes) [![glauber-sampaio](https://github.com/glauber-sampaio.png?size=64)](https://github.com/glauber-sampaio)
 <!-- sponsors -->
 
-<br />
-<br />
+<br/>
+<br/>
 <a href="https://vercel.com/oss">
   <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
 </a>
 
-<br />
+<br/>
 
 ## Packages
 
@@ -78,7 +67,7 @@ Your support helps us smooth out the internet one library at a time—and lets u
 - [lenis/snap](https://github.com/darkroomengineering/lenis/tree/main/packages/snap/README.md)
 
 
-<br>
+<br/>
 
 ## Installation
 
@@ -86,7 +75,12 @@ Using a package manager:
 
 ```bash
 npm i lenis
+# or
+yarn add lenis
+# or
+pnpm add lenis
 ```
+
 ```js
 import Lenis from 'lenis'
 ```
@@ -100,7 +94,7 @@ Using scripts:
 ```
 
 
-<br>
+<br/>
 
 ## Setup
 
@@ -135,18 +129,18 @@ requestAnimationFrame(raf);
 
 ### Recommended CSS:
 
-import stylesheet
+**Import stylesheet:**
 ```js
 import 'lenis/dist/lenis.css'
 ```
 
-or link the CSS file:
+**Or link the CSS file:**
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css">
 ```
 
-or add it manually:
+**Or add it manually:**
 
 [See lenis.css stylesheet](./packages/core/lenis.css)
 
@@ -201,7 +195,7 @@ gsap.ticker.lagSmoothing(0);
 | `prevent`              | `function`                 | `undefined`                                        | Manually prevent scroll to be smoothed based on elements traversed by events. If `true` is returned, it will prevent the scroll to be smoothed. Example: `(node) =>  node.classList.contains('cookie-modal')`.                                                                       |
 | `virtualScroll`        | `function`                 | `undefined`                                        | Manually modify the events before they get consumed. If `false` is returned, the scroll will not be smoothed. Examples: `(e) => { e.deltaY /= 2 }` (to slow down vertical scroll) or `({ event }) => !event.shiftKey` (to prevent scroll to be smoothed if shift key is pressed).    |
 | `overscroll`           | `boolean`                  | `true`                                             | Similar to CSS overscroll-behavior (https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior).                                                                                                                                                                           |
-| `autoRaf`              | `boolean`                  | `false`                                            | Wether or not to automatically run `requestAnimationFrame` loop.                                                                                                                                                                                                                     |
+| `autoRaf`              | `boolean`                  | `false`                                            | Whether or not to automatically run `requestAnimationFrame` loop.                                                                                                                                                                                                                    |
 | `anchors`              | `boolean, ScrollToOptions` | `false`                                            | Scroll to anchor links when clicked. If `true` is passed, it will enable anchor links with default options. If `ScrollToOptions` is passed, it will enable anchor links with the given options.                                                                                      |
 | `autoToggle`           | `boolean`                  | `false`                                            | Automatically start or stop the lenis instance based on the wrapper's overflow property, ⚠️ this requires Lenis recommended CSS. Safari > 17.3, Chrome > 116 and Firefox > 128 ([https://caniuse.com/?search=transition-behavior](https://caniuse.com/?search=transition-behavior)). |
 | `allowNestedScroll`    | `boolean`                  | `false`                                            | Allow nested scrolls. If `true` is passed, it will allow nested scrolls. If `false` is passed, it will not allow nested scrolls. ⚠️ To be used with caution since this can lead to performance issues, prefer using `prevent` or `data-lenis-prevent` instead.                       |
@@ -298,13 +292,13 @@ const lenis = new Lenis({
 
 [See example](https://codepen.io/ClementRoche/pen/PoLdjpw)
 
-prevent wheel events only
+**Prevent wheel events only:**
 
 ```html
 <div data-lenis-prevent-wheel>scrollable content</div>
 ```
 
-prevent touch events only
+**Prevent touch events only:**
 
 ```html
 <div data-lenis-prevent-touch>scrollable content</div>
@@ -313,7 +307,7 @@ prevent touch events only
 
 
 ### Anchor links
-By default, Lenis will prevent anchor links, click while scrolling, to fix that you must set `anchors: true`.
+By default, Lenis will prevent anchor links from working while scrolling. To enable them, you must set `anchors: true`.
 
 ```js
 new Lenis({
@@ -321,7 +315,8 @@ new Lenis({
 })
 ```
 
-You can also use `scrollTo` options.
+You can also use `scrollTo` options:
+
 ```js
 new Lenis({
   anchors: {
@@ -333,7 +328,7 @@ new Lenis({
 })
 ```
 
-<br>
+<br/>
 
 ## Limitations
 
@@ -344,16 +339,16 @@ new Lenis({
 - touch events may behave unexpectedly when `syncTouch` is enabled on iOS < 16
 - nested scroll containers require proper configuration to work correctly
 
-<br>
+<br/>
 
 ## Troubleshooting
 - Make sure you use the latest version of [Lenis](https://www.npmjs.com/package/lenis?activeTab=versions)
-- Include recommended CSS.
-- Remove GSAP ScrollTrigger.
-- Remove Lenis and be sure that your element/page is scrollable anyway.
-- Be sure to use `autoRaf: true` or to manually call `lenis.raf(time)`.
+- Include the recommended CSS
+- If using GSAP ScrollTrigger, ensure proper integration (see [GSAP ScrollTrigger setup](#setup) section)
+- Test without Lenis to ensure your element/page is scrollable
+- Be sure to use `autoRaf: true` or manually call `lenis.raf(time)` in your animation loop
 
-<br>
+<br/>
 
 ## Tutorials
 
@@ -362,22 +357,23 @@ new Lenis({
 - [The BEST smooth scrolling library for your Webflow website! (Lenis)](https://www.youtube.com/watch?v=VtCqTLRRMII) by [Diego Toda de Oliveira](https://www.diegoliv.works/)
 - [Easy smooth scroll in @Webflow with Lenis + GSAP ScrollTrigger tutorial](https://www.youtube.com/watch?v=gRKuzQTXq74) by [También Studio](https://www.tambien.studio/)
 
-<br>
+<br/>
 
 ## Plugins
 
 - [r3f-scroll-rig](https://github.com/14islands/r3f-scroll-rig) by [14islands](https://14islands.com/)
 - [locomotive-scroll](https://github.com/locomotivemtl/locomotive-scroll) by [Locomotive](https://locomotive.ca/)
 
-<br>
+<br/>
 
 ## Lenis in use
 
-- [DeSo](https://deso.com) by [Studio Freight](https://www.studiofreight.com/)
-- [Sculpting Harmony](https://gehry.getty.edu/) by [Resn](https://resn.co.nz/)
-- [Superpower](https://superpower.com/)
-- [Daylight Computer](https://daylightcomputer.com/) by [Basement Studio](https://basement.studio/)
-- [Lifeworld by Olafur Eliasson](https://lifeworld.wetransfer.com/) by Nicolas Garnier, Simon Riisnæs Dagfinrud, Lumír Španihel, Everton Guilherme, Diana Alcausin, Cristiana Sousa
+- [Ibicash](https://ibi.cash/) by [darkroom.engineering](https://darkroom.engineering/)
+- [Grand Theft Auto VI](https://www.rockstargames.com/VI)
+- [Getty - Sculpting Harmony](https://gehry.getty.edu/) by [Resn](https://resn.co.nz/)
+- [Microsoft Design](https://microsoft.design/)
+- [Shopify Supply](https://shopify.supply/)
+- [Metamask](https://metamask.io/) by [Antinomy](https://www.antinomy.studio/)
 
 <br/>
 

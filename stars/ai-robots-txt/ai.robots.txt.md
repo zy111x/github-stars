@@ -1,6 +1,6 @@
 ---
 project: ai.robots.txt
-stars: 3296
+stars: 3311
 description: |-
     A list of AI agents and robots to block.
 url: https://github.com/ai-robots-txt/ai.robots.txt
@@ -12,7 +12,7 @@ url: https://github.com/ai-robots-txt/ai.robots.txt
 
 This list contains AI-related crawlers of all types, regardless of purpose. We encourage you to contribute to and implement this list on your own site. See [information about the listed crawlers](./table-of-bot-metrics.md) and the [FAQ](https://github.com/ai-robots-txt/ai.robots.txt/blob/main/FAQ.md).
 
-A number of these crawlers have been sourced from [Dark Visitors](https://darkvisitors.com) and we appreciate the ongoing effort they put in to track these crawlers. 
+A number of these crawlers have been sourced from [Dark Visitors](https://darkvisitors.com) and we appreciate the ongoing effort they put in to track these crawlers.
 
 If you'd like to add information about a crawler to the list, please make a pull request with the bot name added to `robots.txt`, `ai.txt`, and any relevant details in `table-of-bot-metrics.md` to help people understand what's crawling.
 
@@ -52,14 +52,33 @@ Note that, as stated in the [httpd documentation](https://httpd.apache.org/docs/
 middleware plugin for [Traefik](https://traefik.io/traefik/) to automatically add rules of [robots.txt](./robots.txt)
 file on-the-fly.
 
+- Alternatively you can [manually configure Traefik](./docs/traefik-manual-setup.md) to centrally serve a static `robots.txt`.
 ## Contributing
 
 A note about contributing: updates should be added/made to `robots.json`. A GitHub action will then generate the updated `robots.txt`, `table-of-bot-metrics.md`, `.htaccess` and `nginx-block-ai-bots.conf`.
 
-You can run the tests by [installing](https://www.python.org/about/gettingstarted/) Python 3 and issuing:
+You can run the tests by [installing](https://www.python.org/about/gettingstarted/) Python 3, installing the dependencies:
+```console
+pip install -r requirements.txt
+```
+and then issuing:
 ```console
 code/tests.py
 ```
+
+The `.editorconfig` file provides standard editor options for this project. See [EditorConfig](https://editorconfig.org/) for more information.
+
+## Releasing
+
+Admins may ship a new release `v1.n` (where `n` increments the minor version of the current release) as follows:
+
+* Navigate to the [new release page](https://github.com/ai-robots-txt/ai.robots.txt/releases/new) on GitHub.
+* Click `Select tag`, choose `Create new tag`, enter `v1.n` in the pop-up, and click `Create`.
+* Enter a suitable release title (e.g. `v1.n: adds user-agent1, user-agent2`).
+* Click `Generate release notes`.
+* Click `Publish release`.
+
+A GitHub action will then add the asset `robots.txt` to the release. That's it.
 
 ## Subscribe to updates
 
@@ -75,8 +94,8 @@ Alternatively, you can also subscribe to new releases with your GitHub account b
 
 ## License content with RSL
 
-It is also possible to license your content to AI companies in `robots.txt` using 
-the [Really Simple Licensing](https://rslstandard.org) standard, with an option of 
+It is also possible to license your content to AI companies in `robots.txt` using
+the [Really Simple Licensing](https://rslstandard.org) standard, with an option of
 collective bargaining. A [plugin](https://github.com/Jameswlepage/rsl-wp) currently
 implements RSL as well as payment processing for WordPress sites.
 

@@ -1,6 +1,6 @@
 ---
 project: galio
-stars: 3185
+stars: 3188
 description: |-
     Galio is a beautifully designed, Free and Open Source React Native Framework
 url: https://github.com/galio-org/galio

@@ -1,6 +1,6 @@
 ---
 project: happy-dom
-stars: 4137
+stars: 4150
 description: |-
     A JavaScript implementation of a web browser without its graphical user interface
 url: https://github.com/capricorn86/happy-dom
@@ -51,14 +51,6 @@ And much more..
  - [Angular](https://angular.dev/)
 
 ## Sponsors
-
-<p align="center"><b>Gold Sponsors</b></p>
-
-<p align="center">
-    <a href="https://rtvision.com"><img alt="RT Vision" width="100px" src="https://avatars.githubusercontent.com/u/8292810?s=200&v=4"></a>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <a href="https://opensource.microsoft.com"><img alt="Microsoft" width="100px" src="https://avatars.githubusercontent.com/u/6154722?s=200&v=4"></a>
-</p>
 
 <p align="center"><b>Sponsors</b></p>
 

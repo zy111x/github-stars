@@ -1,6 +1,6 @@
 ---
 project: flood
-stars: 1811
+stars: 1809
 description: |-
     A web UI for rTorrent, qBittorrent and Transmission with a Node.js backend and React frontend. Migrate to v4: https://github.com/jesec/flood/wiki/Migrate-from-older-versions-of-Flood. 
 url: https://github.com/Flood-UI/flood

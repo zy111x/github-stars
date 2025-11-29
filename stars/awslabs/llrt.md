@@ -1,6 +1,6 @@
 ---
 project: llrt
-stars: 8640
+stars: 8648
 description: |-
     LLRT (Low Latency Runtime) is an experimental, lightweight JavaScript runtime designed to address the growing demand for fast and efficient Serverless applications.
 url: https://github.com/awslabs/llrt
@@ -153,14 +153,18 @@ The test runner also has support for filters. Using filters is as simple as addi
 | node:tty                                         | ✔︎     | ✔︎⚠️  |
 | node:url                                         | ✔︎     | ✔︎⚠️  |
 | node:util                                        | ✔︎     | ✔︎⚠️  |
-| node:v8                                          | ✔︎     | ✘      |
+| node:v8                                          | ✔︎     | ✘\*\*  |
 | node:vm                                          | ✔︎     | ✘      |
 | node:wasi                                        | ✔︎     | ✘      |
 | node:worker_threads                              | ✔︎     | ✘      |
 | node:zlib                                        | ✔︎     | ✔︎⚠️  |
-| llrt:hex                                         | ✘       | ✔︎    |
-| llrt:util                                        | ✘       | ✔︎    |
-| llrt:xml                                         | ✘       | ✔︎    |
+
+| [LLRT API](https://github.com/awslabs/llrt/blob/main/API.md) | Node.js | LLRT |
+| ------------------------------------------------------------ | ------- | ---- |
+| llrt:hex                                                     | ✘       | ✔︎  |
+| llrt:qjs                                                     | ✘       | ✔︎  |
+| llrt:util                                                    | ✘       | ✔︎  |
+| llrt:xml                                                     | ✘       | ✔︎  |
 
 | [Web Platform API](https://min-common-api.proposal.wintertc.org/) | LLRT  |
 | ----------------------------------------------------------------- | ----- |
@@ -191,6 +195,7 @@ The test runner also has support for filters. Using filters is as simple as addi
 _⚠️ = partially supported in LLRT_<br />
 _⏱ = planned partial support_<br />
 _\* = Not native_<br />
+_\*\* = The `module.registerHooks()` API allows you to emulate some functionality. See also `example/register-hooks`._<br />
 
 ## Using node_modules (dependencies) with LLRT
 

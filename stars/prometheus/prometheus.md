@@ -1,6 +1,6 @@
 ---
 project: prometheus
-stars: 61418
+stars: 61507
 description: |-
     The Prometheus monitoring system and time series database.
 url: https://github.com/prometheus/prometheus
@@ -90,7 +90,7 @@ You can use the `go` tool to build and install the `prometheus`
 and `promtool` binaries into your `GOPATH`:
 
 ```bash
-GO111MODULE=on go install github.com/prometheus/prometheus/cmd/...
+go install github.com/prometheus/prometheus/cmd/...
 prometheus --config.file=your_config.yml
 ```
 

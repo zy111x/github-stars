@@ -1,6 +1,6 @@
 ---
 project: magentic-ui
-stars: 7945
+stars: 8079
 description: |-
     A research prototype of a human-centered web agent
 url: https://github.com/microsoft/magentic-ui
@@ -25,6 +25,9 @@ Magentic-UI is a **research prototype** human-centered AI agent that solves comp
 *Check out the [demo section](#demos) for inspiration on what tasks you can accomplish.*
 
 ## ✨ What's New
+
+Microsoft latest agentic model [Fara-7B](https://www.microsoft.com/en-us/research/blog/fara-7b-an-efficient-agentic-model-for-computer-use/) is now integrated in Magentic-UI, read how to launch in <a href="#fara-7b"> Fara-7B guide</a>
+
 
 - **"Tell me When"**: Automate monitoring tasks and repeatable workflows that require web or API access that span minutes to days. *Learn more [here](https://www.microsoft.com/en-us/research/blog/tell-me-when-building-agents-that-can-wait-monitor-and-act/).*
 - **File Upload Support**: Upload any file through the UI for analysis or modification
@@ -82,7 +85,7 @@ For further details on installation please read the   <a href="#️-installation
 <p align="center">
   <a href="#demos">🎬 Demos</a> &nbsp;|&nbsp;
   <a href="#how-it-works">🟪 How it Works</a> &nbsp;|&nbsp;
-  <a href="#️installation">🛠️ Installation</a> &nbsp;|&nbsp;
+  <a href="#installation">🛠️ Installation</a> &nbsp;|&nbsp;
   <a href="#troubleshooting">⚠️ Troubleshooting</a> &nbsp;|&nbsp; 
   <a href="#contributing">🤝 Contributing</a> &nbsp;|&nbsp;
   <a href="#license">📄 License</a>
@@ -160,7 +163,7 @@ To reproduce these experimental results, please see the following [instructions]
 If you're interested in reading more checkout our [technical report](https://www.microsoft.com/en-us/research/wp-content/uploads/2025/07/magentic-ui-report.pdf) and [blog post](https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/).
 
 
-## 🛠️ Installation
+## Installation
 ### Pre-Requisites
 
 **Note**: If you're using Windows, we highly recommend using [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install) (Windows Subsystem for Linux).
@@ -219,6 +222,58 @@ If you face issues with Docker, please refer to the [TROUBLESHOOTING.md](TROUBLE
 
 Once the server is running, you can access the UI at <http://localhost:8081>.
 
+
+
+### Fara-7B
+
+1) First install magentic-ui with the fara extras:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install magentic-ui[fara]
+```
+
+2) In a seperate process, serve the Fara-7B model using vLLM:
+
+```bash
+vllm serve "microsoft/Fara-7B" --port 5000 --dtype auto 
+```
+
+3) First create a `fara_config.yaml` file with the following content:
+
+```yaml
+model_config_local_surfer: &client_surfer
+  provider: OpenAIChatCompletionClient
+  config:
+    model: "microsoft/Fara-7B"
+    base_url: http://localhost:5000/v1
+    api_key: not-needed
+    model_info:
+      vision: true
+      function_calling: true
+      json_output: false
+      family: "unknown" 
+      structured_output: false
+      multiple_system_messages: false
+
+orchestrator_client: *client_surfer
+coder_client: *client_surfer
+web_surfer_client: *client_surfer
+file_surfer_client: *client_surfer
+action_guard_client: *client_surfer
+model_client: *client_surfer
+```
+Note: if you are hosting vLLM on a different port or host, change the `base_url` accordingly.
+
+
+Then launch Magentic-UI with the fara agent:
+
+```bash
+magentic-ui --fara --port 8081 --config fara_config.yaml 
+```
+
+Finally, navigate to <http://localhost:8081> to access the interface!
 
 ### Configuration
 

@@ -1,6 +1,6 @@
 ---
 project: bifrost
-stars: 1145
+stars: 1191
 description: |-
     Fastest LLM gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000+ models support & <100 µs overhead at 5k RPS.
 url: https://github.com/maximhq/bifrost
@@ -14,6 +14,7 @@ url: https://github.com/maximhq/bifrost
 [![codecov](https://codecov.io/gh/maximhq/bifrost/branch/main/graph/badge.svg)](https://codecov.io/gh/maximhq/bifrost)
 ![Docker Pulls](https://img.shields.io/docker/pulls/maximhq/bifrost)
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 95px; height: 21px;">](https://app.getpostman.com/run-collection/31642484-2ba0e658-4dcd-49f4-845a-0c7ed745b916?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D31642484-2ba0e658-4dcd-49f4-845a-0c7ed745b916%26entityType%3Dcollection%26workspaceId%3D63e853c8-9aec-477f-909c-7f02f543150e)
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/bifrost)](https://artifacthub.io/packages/search?repo=bifrost)
 [![License](https://img.shields.io/github/license/maximhq/bifrost)](LICENSE)
 
 ## The fastest way to build AI applications that never go down
@@ -226,6 +227,7 @@ Bifrost adds virtually zero overhead to your AI requests. In sustained 5,000 RPS
 
 - [OpenAI SDK](https://docs.getbifrost.ai/integrations/openai-sdk) - Drop-in OpenAI replacement
 - [Anthropic SDK](https://docs.getbifrost.ai/integrations/anthropic-sdk) - Drop-in Anthropic replacement
+- [AWS Bedrock SDK](https://docs.getbifrost.ai/integrations/bedrock-sdk) - AWS Bedrock integration
 - [Google GenAI SDK](https://docs.getbifrost.ai/integrations/genai-sdk) - Drop-in GenAI replacement
 - [LiteLLM SDK](https://docs.getbifrost.ai/integrations/litellm-sdk) - LiteLLM integration
 - [Langchain SDK](https://docs.getbifrost.ai/integrations/langchain-sdk) - Langchain integration

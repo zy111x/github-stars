@@ -1,8 +1,8 @@
 ---
 project: logseq
-stars: 39469
+stars: 39605
 description: |-
-    A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: http://trello.com/b/8txSM12G/roadmap
+    A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: https://discuss.logseq.com/t/logseq-product-roadmap/34267
 url: https://github.com/logseq/logseq
 ---
 
@@ -22,7 +22,7 @@ url: https://github.com/logseq/logseq
     <a href="https://logseq.com">Home Page</a> |
     <a href="https://blog.logseq.com/">Blog</a> |
     <a href="https://docs.logseq.com/">Documentation</a> |
-    <a href="https://trello.com/b/8txSM12G/roadmap">Roadmap</a>
+    <a href="https://discuss.logseq.com/t/logseq-product-roadmap/34267">Roadmap</a>
 </div>
 <br></br>
 
@@ -117,10 +117,10 @@ That's it! You can now enjoy the benefits of using Logseq to streamline your wor
    ```bash
    # Download and run the installer
    curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash
-   
+
    # Or install a specific version
    curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash -s -- 0.10.14
-   
+
    # For user-specific installation (no root required)
    curl -fsSL https://raw.githubusercontent.com/logseq/logseq/master/scripts/install-linux.sh | bash -s -- --user
    ```

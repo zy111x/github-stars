@@ -1,6 +1,6 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 96916
+stars: 98485
 description: |-
     FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus Agent Tools, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
@@ -31,14 +31,11 @@ url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
   <img src="https://img.shields.io/discord/1402660735833604126?label=LeaksLab%20Discord&logo=discord&style=for-the-badge" alt="LeaksLab Discord" />
 </a>
 
-> **Join the Conversation:** New system instructions are released on Discord **before** they appear in this repository. Get early access and discuss them in real time.
-
 
 <a href="https://trendshift.io/repositories/14084" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14084" alt="x1xhlol%2Fsystem-prompts-and-models-of-ai-tools | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 📜 Over **30,000+ lines** of insights into their structure and functionality.  
 
-⭐ **Star to follow updates**
 
 [![Build Status](https://app.cloudback.it/badge/x1xhlol/system-prompts-and-models-of-ai-tools)](https://cloudback.it)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/x1xhlol/system-prompts-and-models-of-ai-tools)
@@ -47,7 +44,7 @@ url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 
 ## ❤️ Support the Project
 
-If you find this collection valuable and appreciate the effort involved in obtaining and sharing these insights, please consider supporting the project. Your contribution helps keep this resource updated and allows for further exploration.
+If you find this collection valuable and appreciate the effort involved in obtaining and sharing these insights, please consider supporting the project.
 
 You can show your support via:
 
@@ -64,9 +61,7 @@ You can show your support via:
 
 # Sponsors
 
-## Support the Future of AI Development
-
-Sponsor the most comprehensive collection of AI system prompts and reach thousands of developers building the next generation of AI applications.
+Sponsor the most comprehensive repository of AI system prompts and reach thousands of developers.
 
 [Get Started](mailto:lucknitelol@proton.me)
 
@@ -76,7 +71,7 @@ Sponsor the most comprehensive collection of AI system prompts and reach thousan
 
 > Open an issue.
 
-> **Latest Update:** 19/11/2025
+> **Latest Update:** 29/11/2025
 
 ---
 
@@ -93,8 +88,6 @@ Sponsor the most comprehensive collection of AI system prompts and reach thousan
 
 > 🔐 **Important:** Interested in securing your AI systems?  
 > Check out **[ZeroLeaks](https://zeroleaks.io/)**, a service designed to help startups **identify and secure** leaks in system instructions, internal tools, and model configurations. **Get a free AI security audit** to ensure your AI is protected from vulnerabilities.
-
-*The company is mine, this is NOT a 3rd party AD.*
 
 ---
 

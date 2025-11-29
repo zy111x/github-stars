@@ -1,6 +1,6 @@
 ---
 project: unemail
-stars: 150
+stars: 151
 description: |-
     📫 Lightweight, zero-dependency TypeScript email library with pluggable providers and MailCrab support for local development.
 url: https://github.com/productdevbook/unemail

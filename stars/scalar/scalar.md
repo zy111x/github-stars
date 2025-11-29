@@ -1,6 +1,6 @@
 ---
 project: scalar
-stars: 12892
+stars: 12957
 description: |-
     Scalar is an open-source API platform:　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　🌐 Modern Rest API Client　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　📖 Beautiful API References　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　✨ 1st-Class OpenAPI/Swagger Support
 url: https://github.com/scalar/scalar
@@ -323,17 +323,17 @@ Contributions are welcome! Read the [`CONTRIBUTING`](CONTRIBUTING.md) guide.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/inyourtime">
-                    <img src="https://avatars.githubusercontent.com/u/66111030?v=4" width="100;" alt="inyourtime"/>
-                    <br />
-                    <sub><b>inyourtime</b></sub>
-                </a>
-            </td>
-            <td align="center">
                 <a href="https://github.com/marcalexiei">
                     <img src="https://avatars.githubusercontent.com/u/24919330?v=4" width="100;" alt="marcalexiei"/>
                     <br />
                     <sub><b>marcalexiei</b></sub>
+                </a>
+            </td>
+            <td align="center">
+                <a href="https://github.com/inyourtime">
+                    <img src="https://avatars.githubusercontent.com/u/66111030?v=4" width="100;" alt="inyourtime"/>
+                    <br />
+                    <sub><b>inyourtime</b></sub>
                 </a>
             </td>
 		</tr>

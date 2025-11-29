@@ -1,6 +1,6 @@
 ---
 project: selfhosted-music-overview
-stars: 1152
+stars: 1160
 description: |-
     A table listing software network services which can be hosted on your own servers
 url: https://github.com/basings/selfhosted-music-overview
@@ -169,6 +169,8 @@ selfhosted-music-overview intends to provide an overview of self-hostable music 
 ## Noteworthy
 
 [Music Assistant](https://github.com/music-assistant/server) is useful in order to connect streaming services with speakers.
+
+[Multi-Scrobbler](https://foxxmd.github.io/multi-scrobbler/) is a docker application that consolidates your listening activity across applications and can scrobble to multiple services.
 
 ## Selfhosted Photos
 

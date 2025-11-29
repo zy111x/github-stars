@@ -1,6 +1,6 @@
 ---
 project: podify
-stars: 37
+stars: 40
 description: |-
     Podify is a beautiful podcast template built with TanStack Start
 url: https://github.com/sun0225SUN/podify

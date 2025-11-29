@@ -1,8 +1,8 @@
 ---
 project: sdk
-stars: 1257
+stars: 1269
 description: |-
-    A React Framework for Cloudflare.
+    Simple, server-first React framework. Built on Vite, TypeScript, & Cloudflare.
 url: https://github.com/redwoodjs/sdk
 ---
 

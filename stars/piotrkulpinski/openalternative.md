@@ -1,6 +1,6 @@
 ---
 project: openalternative
-stars: 5133
+stars: 5154
 description: |-
     A community driven list of open source alternatives to proprietary software and applications.
 url: https://github.com/piotrkulpinski/openalternative
@@ -49,30 +49,15 @@ Join us in creating the biggest **directory of open source software**.
 
 We are also working on other projects you might be interested in:
 
+- [Dirstarter](https://dirstarter.com) - A Next.js boilerplate for creating directory websites.
 - [EuroAlternative](https://euroalternative.co) - A directory of European alternatives to Big Tech giants.
 - [DevSuite](https://devsuite.co) - A collection of tools for developers.
-- [Dirstarter](https://dirstarter.com) - A Next.js boilerplate for creating directory websites.
 
 ## Sponsoring
 
-OpenAlternative is an GPL-3.0-licensed open source project with its ongoing development made possible entirely by the support of these awesome backers. If you'd like to join them, please consider [sponsoring OpenAlternative's development](https://github.com/sponsors/piotrkulpinski).
+OpenAlternative is an GPL-3.0-licensed open source project with its ongoing development made possible entirely by the support of our awesome backers. If you'd like to join them, please consider [sponsoring OpenAlternative's development](https://openalternative.co/sponsor).
 
 If you'd like to support the project, you could also consider [buying our Next.js boilerplate](https://dirstarter.com) which is the foundation of creating directory websites, just like this one.
-
-## Services
-
-OpenAlternative uses the following third-party services:
-
-- Database: [Neon](https://neon.tech)
-- Analytics: [Plausible](https://plausible.io), [PostHog](https://posthog.com)
-- Newsletter: [Beehiiv](https://go.openalternative.co/beehiiv)
-- Scraping: [Firecrawl](https://go.openalternative.co/firecrawl)
-- Background Jobs: [Inngest](https://inngest.com)
-- File Storage: [AWS S3](https://aws.amazon.com/s3)
-- Payments: [Stripe](https://stripe.com)
-- Screenshots: [ScreenshotOne](https://go.openalternative.co/screenshotone)
-
-Make sure to set up accounts with these services and add the necessary environment variables to your `.env` file.
 
 ## Project Structure
 

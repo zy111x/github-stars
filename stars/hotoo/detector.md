@@ -1,6 +1,6 @@
 ---
 project: detector
-stars: 874
+stars: 875
 description: |-
     :dog: 客户端环境识别模块。(UserAgent detector)
 url: https://github.com/hotoo/detector

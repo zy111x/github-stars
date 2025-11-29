@@ -1,6 +1,6 @@
 ---
 project: favico.js
-stars: 8688
+stars: 8690
 description: |-
     Make use of your favicon with badges, images or videos
 url: https://github.com/ejci/favico.js

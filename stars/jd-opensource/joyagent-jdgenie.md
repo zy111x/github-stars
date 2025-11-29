@@ -1,6 +1,6 @@
 ---
 project: joyagent-jdgenie
-stars: 11051
+stars: 11161
 description: |-
     开源的端到端产品级通用智能体
 url: https://github.com/jd-opensource/joyagent-jdgenie
@@ -13,14 +13,18 @@ url: https://github.com/jd-opensource/joyagent-jdgenie
 **解决快速构建多智能体产品的最后一公里问题**
 
 ## new release
+多模态知识管理平台是一款面向多模态非结构化知识的RAG解决方案，集成解析、检索与生成能力，能够高效处理复杂文档，为智能问答与内容生成提供一站式支持。
+
+[**<font color=red>多模态知识管理：面向多模态文档的综合性RAG平台，为复杂文档的智能问答与内容生成提供一站式解决方案。</font>**](README_mrag.md)
+（注意使用mrag分支）
+![](./docs/img/mrag/mrag_struct.png)
+
 企业内部知识主要包括结构化表格知识和非结构化知识。因此对于结构化表格知识建设了开箱即用的DataAgent能力，主要包括数据治理DGP协议、智能问数和智能诊断分析。
-此外对于不同模态的非结构化知识提供多模态RAG能力。
 
 [**<font color=red>JoyDataAgent：首个开源的包含数据治理DGP协议、智能问数和智能诊断分析的智能体</font>**](README_DataAgent.md)
 （注意使用data_agent分支）
 <img width="1200" height="675" alt="image" src="https://github.com/user-attachments/assets/3a449185-4863-4171-8dda-72cb70b2fa91" />
 
-**多模态RAG：敬请期待**
 ## 简介
 
 当前相关开源agent主要是SDK或者框架，用户还需基于此做进一步的开发，无法直接做到开箱即用。我们开源的JoyAgent-JDGenie是端到端的多Agent产品，对于输入的query或者任务，可以直接回答或者解决。例如用户query"给我做一个最近美元和黄金的走势分析"，JoyAgent-Genie可以直接给出网页版或者PPT版的报告文档。
@@ -365,7 +369,7 @@ sh start_genie.sh
 
 
 ## 项目共建者
-贡献者：Liu Shangkun,Li Xiang,[Li Yang](https://scholar.google.com.hk/citations?hl=zh-CN&user=AeCTbv8AAAAJ&view_op=list_works&gmla=AH8HC4zYqeayQxrQFmScZ7XYxLah1enc8ynhQYMtBdPmjwfpMBvsTj_OoBkFTPCw1Xi2xk7gbTzHPH-QpJSw_sGkCKdYDVXSu8Ty2tNJMhs),Jia Shilin,Tian Shaohua,Wang Zhen,Yao Ting,Wang Hongtao,Zhou Xiaoqing,Liu min,Zhang Shuang,Liuwen,Yangdong,Xu Jialei,Zhou Meilei,Zhao Tingchong,Wu jiaxing, Wang Hanmin, Zhou Zhiyuan, Xu Shiyue,Liu Jiarun, Hou Kang, Jing Lingtuan, Guo Hongliang, Wang Zhijiang, Liu Yanchen, Chen Kun, Ke Huilin, Pan Zheyi, Duan Zhewen, Tu Shengkun, Zhang Haidong, Wang Heng,Li Bo,Zhang Konghongbo, [Wang Haofen](https://tjdi.tongji.edu.cn/TeacherDetail.do?id=4991&lang=), Zhang Junbo
+贡献者：Liu Shangkun,Li Xiang,[Li Yang](https://scholar.google.com.hk/citations?hl=zh-CN&user=AeCTbv8AAAAJ&view_op=list_works&gmla=AH8HC4zYqeayQxrQFmScZ7XYxLah1enc8ynhQYMtBdPmjwfpMBvsTj_OoBkFTPCw1Xi2xk7gbTzHPH-QpJSw_sGkCKdYDVXSu8Ty2tNJMhs),Jia Shilin,Tian Shaohua,Wang Zhen,Yao Ting,Wang Hongtao,Zhou Xiaoqing,Liu min,Zhang Shuang,Liuwen,Yangdong,Xu Jialei,Zhou Meilei,Zhao Tingchong,Wu jiaxing, Wang Hanmin, Zhou Zhiyuan, Xu Shiyue,Liu Jiarun, Hou Kang, Jing Lingtuan, Guo Hongliang, Wang Zhijiang, Liu Yanchen, Chen Kun, Ke Huilin, Pan Zheyi, Duan Zhewen, Tu Shengkun, Zhang Haidong, Wang Heng,Li Bo,Zhang Konghongbo,Guo fenghua, [Wang Haofen](https://tjdi.tongji.edu.cn/TeacherDetail.do?id=4991&lang=), Zhang Junbo, Yang Haoran, Qiao Jiayang
 
 所属机构:京东CHO企业信息化团队（EI）、京东科技协同办公团队、京东物流数据资产团队
 

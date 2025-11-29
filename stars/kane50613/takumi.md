@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 971
+stars: 1035
 description: |-
     JSX → Image. Faster aternative to satori + resvg plus variable fonts, RTL, inline layout, WOFF2, WebP output support.
 url: https://github.com/kane50613/takumi
@@ -21,6 +21,7 @@ You can try out Takumi in [Playground](https://takumi.kane.tw/playground) withou
 - RTL support.
 - Tailwind CSS support out of the box.
 - Variable fonts support.
+- COLR font support (e.g. twemoji-colr).
 - WOFF2 font format support.
 - PNG, JPEG, WebP, AVIF output support.
 - WebP, APNG animation rendering support.
@@ -38,7 +39,7 @@ You can try out Takumi in [Playground](https://takumi.kane.tw/playground) withou
 
   ![Takumi OG Image](./example/twitter-images/output/og-image.png)
 
-- X Post Image clone in embed [(source)](./example/twitter-images/components/x-post-image.tsx).
+- X post og image clone [(source)](./example/twitter-images/components/x-post-image.tsx).
 
   ![X OG Image](./example/twitter-images/output/x-post-image.png)
 

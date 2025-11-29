@@ -1,6 +1,6 @@
 ---
 project: oha
-stars: 9709
+stars: 9742
 description: |-
     Ohayou(おはよう), HTTP load generator, inspired by rakyll/hey with tui animation.
 url: https://github.com/hatoo/oha
@@ -216,8 +216,8 @@ Options:
       --connect-to <CONNECT_TO>
           Override DNS resolution and default port numbers with strings like 'example.org:443:localhost:8443'
           Note: if used several times for the same host:port:target_host:target_port, a random choice is made
-      --disable-color
-          Disable the color scheme.
+      --no-color
+          Disable the color scheme. [env: NO_COLOR=]
       --unix-socket <UNIX_SOCKET>
           Connect to a unix socket instead of the domain in the URL. Only for non-HTTPS URLs.
       --stats-success-breakdown
@@ -229,7 +229,7 @@ Options:
   -o, --output <OUTPUT>
           Output file to write the results to. If not specified, results are written to stdout.
       --output-format <OUTPUT_FORMAT>
-          Output format [default: text] [possible values: text, json, csv]
+          Output format [default: text] [possible values: text, json, csv, quiet]
   -u, --time-unit <TIME_UNIT>
           Time unit to be used. If not specified, the time unit is determined automatically. This option affects only text format. [possible values: ns, us, ms, s, m, h]
   -h, --help

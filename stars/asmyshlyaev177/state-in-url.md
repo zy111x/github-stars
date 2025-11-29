@@ -1,6 +1,6 @@
 ---
 project: state-in-url
-stars: 392
+stars: 393
 description: |-
     Store any user state in query parameters; imagine JSON in a browser URL, while keeping types and structure of data, e.g.numbers will be decoded as numbers not strings. With TS validation. Shared state and URL state sync without any hassle or boilerplate. Supports Next.js@14-15, react-router@6-7, and Remix@2.
 url: https://github.com/asmyshlyaev177/state-in-url
@@ -98,7 +98,7 @@ This library is a good alternative for NUQS.
 - **compatible**: Will keep 3rd party query params as is
 - **flexible**: Can use more than 1 state objects on the same page, just use different keys
 - **Fast**: Minimal rerenders, around [1ms](https://github.com/asmyshlyaev177/state-in-url/blob/87c8c7c995c5cd7d9e7aa039c30bfe64b24abe4b/packages/urlstate/encoder/encoder.test.ts#L185) to encode and decode big object
-- **Server Side Rendering**: Can use it in Server Components, Next.js 14 and 15 are supported
+- **Server Side Rendering**: Can use it in Server Components, Next.js 14, 15, and 16 are supported
 - **Lightweight**: Zero dependencies, library less than 2KB
 - **DX**: Good developer experience, documentation, JSDoc comments, and examples
 - **Framework Flexibility**: Hooks for `Next.js` and `react-router`, helpers to use it with other frameworks or pure JS
@@ -146,6 +146,7 @@ This library is a good alternative for NUQS.
   - [Changelog](#changelog)
   - [Mentions](#mentions)
   - [License](#license)
+  - [Personal website](#personal-website)
   - [Inspiration](#inspiration)
 
 ## installation
@@ -736,7 +737,7 @@ export const useUserState = () => {
 
 1. Can pass only serializable values, `Function`, `BigInt` or `Symbol` won't work, probably things like `ArrayBuffer` neither. Everything that can be serialized to JSON will work.
 2. Vercel servers limit size of headers (query string and other stuff) to **14KB**, so keep your URL state under ~5000 words. <https://vercel.com/docs/errors/URL_TOO_LONG>
-3. Tested with `next.js` 14/15  with app router, no plans to support pages.
+3. Tested with `next.js` 14/15/16  with app router, no plans to support pages.
 
 ## Other
 

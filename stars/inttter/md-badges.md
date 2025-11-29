@@ -1,6 +1,6 @@
 ---
 project: md-badges
-stars: 1407
+stars: 1425
 description: |-
     An extensive list of Shields.io badges.
 url: https://github.com/inttter/md-badges
@@ -137,7 +137,7 @@ An extensive list of static Shields.io badges, sorted by category.
 |---------|---------------|
 | [![Arc](https://img.shields.io/badge/Arc-FCBFBD?logo=arc&logoColor=000)](#) | `[![Arc](https://img.shields.io/badge/Arc-FCBFBD?logo=arc&logoColor=000)](#)` |
 | [![Brave](https://img.shields.io/badge/Brave-FB542B?logo=Brave&logoColor=white)](#) | `[![Brave](https://img.shields.io/badge/Brave-FB542B?logo=Brave&logoColor=white)](#)` |
-| [![Firefox](https://img.shields.io/badge/Firefox-FF7139?logo=Firefox&logoColor=white)](#) | `[![Firefox](https://img.shields.io/badge/Firefox-FF7139?logo=Firefox&logoColor=white)](#)` |
+| [![Firefox](https://img.shields.io/badge/Firefox-FF7139?logo=firefoxbrowser&logoColor=white)](#)  | `[![Firefox](https://img.shields.io/badge/Firefox-FF7139?logo=firefoxbrowser&logoColor=white)](#)` |
 | [![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?logo=GoogleChrome&logoColor=white)](#) | `[![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?logo=GoogleChrome&logoColor=white)](#)` |
 | [![GNU IceCat](https://img.shields.io/badge/GNU%20IceCat-006CFF?logo=gnu-icecat&logoColor=fff)](#) | `[![GNU IceCat](https://img.shields.io/badge/GNU%20IceCat-006CFF?logo=gnu-icecat&logoColor=fff)](#)` |
 | [![Microsoft Edge](https://custom-icon-badges.demolab.com/badge/Microsoft%20Edge-2771D8?logo=edge-white&logoColor=white)](#) | `[![Microsoft Edge](https://custom-icon-badges.demolab.com/badge/Microsoft%20Edge-2771D8?logo=edge-white&logoColor=white)](#)` |
@@ -391,6 +391,7 @@ An extensive list of static Shields.io badges, sorted by category.
 
 | Preview | Markdown Code |
 |---------|---------------|
+| [![Affinity Studio](https://custom-icon-badges.demolab.com/badge/Affinity-A7F175?logo=affinitystudio&logoColor=black)](#) | `[![Affinity Studio](https://custom-icon-badges.demolab.com/badge/Affinity-A7F175?logo=affinitystudio&logoColor=black)](#)` |
 | [![Behance](https://img.shields.io/badge/Behance-0054F7?logo=behance&logoColor=white)](#) | `[![Behance](https://img.shields.io/badge/Behance-0054F7?logo=behance&logoColor=white)](#)` |
 | [![Blender](https://img.shields.io/badge/Blender-%23F5792A.svg?logo=blender&logoColor=white)](#) | `[![Blender](https://img.shields.io/badge/Blender-%23F5792A.svg?logo=blender&logoColor=white)](#)` |
 | [![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?&logo=Canva&logoColor=white)](#) | `[![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?&logo=Canva&logoColor=white)](#)` |
@@ -665,9 +666,11 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![FreeBSD](https://img.shields.io/badge/FreeBSD-AB2B28?logo=freebsd&logoColor=fff)](#) | `[![FreeBSD](https://img.shields.io/badge/FreeBSD-AB2B28?logo=freebsd&logoColor=fff)](#)` |
 | [![Gentoo](https://img.shields.io/badge/Gentoo-54487A?logo=gentoo&logoColor=fff)](#) | `[![Gentoo](https://img.shields.io/badge/Gentoo-54487A?logo=gentoo&logoColor=fff)](#)` |
 | [![GNU](https://img.shields.io/badge/GNU-000000?logo=gnu&logoColor=white)](#)        | `[![GNU](https://img.shields.io/badge/GNU-000000?logo=gnu&logoColor=white)](#)`        |
+| [![GrapheneOS](https://img.shields.io/badge/GrapheneOS-131313?&logo=GrapheneOS&logoColor=white)](#) | `[![GrapheneOS](https://img.shields.io/badge/GrapheneOS-131313?&logo=GrapheneOS&logoColor=white)](#)` |
 | [![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#) | `[![iOS](https://img.shields.io/badge/iOS-000000?&logo=apple&logoColor=white)](#)` |
 | [![Kali Linux](https://img.shields.io/badge/Kali%20Linux-557C94?logo=kalilinux&logoColor=fff)](#) | `[![Kali Linux](https://img.shields.io/badge/Kali%20Linux-557C94?logo=kalilinux&logoColor=fff)](#)` |
 | [![KDE Plasma](https://img.shields.io/badge/KDE%20Plasma-1D99F3?logo=kdeplasma&logoColor=fff)](#) | `[![KDE Plasma](https://img.shields.io/badge/KDE%20Plasma-1D99F3?logo=kdeplasma&logoColor=fff)](#)` |
+| [![LineageOS](https://img.shields.io/badge/LineageOS-167C80?logo=lineageos&logoColor=fff)](#) | `[![LineageOS](https://img.shields.io/badge/LineageOS-167C80?logo=lineageos&logoColor=fff)](#)` |
 | [![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)](#) | `[![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)](#)` |
 | [![Linux Mint](https://img.shields.io/badge/Linux%20Mint-87CF3E?logo=linuxmint&logoColor=fff)](#) | `[![Linux Mint](https://img.shields.io/badge/Linux%20Mint-87CF3E?logo=linuxmint&logoColor=fff)](#)` |
 | [![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=F0F0F0)](#) | `[![macOS](https://img.shields.io/badge/macOS-000000?logo=apple&logoColor=F0F0F0)](#)` |
@@ -1038,4 +1041,5 @@ Here are some people who have contributed to md-badges so far:
 <a href="https://github.com/inttter/md-badges/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=inttter/md-badges" />
 </a>
+
 

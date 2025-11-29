@@ -1,6 +1,6 @@
 ---
 project: devalue
-stars: 2597
+stars: 2602
 description: |-
     Gets the job done when JSON.stringify can't
 url: https://github.com/sveltejs/devalue
