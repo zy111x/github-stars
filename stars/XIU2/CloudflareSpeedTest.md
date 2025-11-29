@@ -1,6 +1,6 @@
 ---
 project: CloudflareSpeedTest
-stars: 23422
+stars: 23525
 description: 🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~
 url: https://github.com/XIU2/CloudflareSpeedTest
 ---
@@ -198,6 +198,7 @@ https://github.com/XIU2/CloudflareSpeedTest
         指定IP段数据；直接通过参数指定要测速的 IP 段数据，英文逗号分隔；(默认 空)
     \-o result.csv
         写入结果文件；如路径含有空格请加上引号；值为空时不写入文件 \[\-o ""\]；(默认 result.csv)
+        注意：在一些环境下使用 \-o "" 可能会被忽略掉这个空参数导致报错，可加个空格 \-o " " 解决
 
     \-dd
         禁用下载测速；禁用后测速结果会按延迟排序 (默认按下载速度排序)；(默认 启用)
@@ -323,7 +324,8 @@ Tip
 
 > 当然你也可以随便打开一个 CMD 窗口，然后输入如 `cd /d "D:\Program Files\cfst"` 来进入程序目录
 
-> **提示**：如果用的是 **PowerShell** 只需把命令中的 `cfst.exe` 改为 `.\cfst.exe` 即可。
+> **提示**：如果用的是 **PowerShell** 只需把命令中的 `cfst.exe` 改为 `.\cfst.exe` 即可。  
+> **注意**：在 **PowerShell** 下使用 `-o ""` 会被忽略掉空参数导致报错，可加个空格 `-o " "` 解决
 
 * * *
 
@@ -337,7 +339,7 @@ Tip
 
 右键 `cfst.exe` 文件 - **\[创建快捷方式\]**，然后右键该快捷方式 - **\[属性\]**，修改其**目标**：
 
-# 如果要不输出结果文件，那么请加上 -o " "，引号里的是空格（没有空格会导致该参数被省略）。
+# 如果要不输出结果文件，那么请加上 -o " "，引号里的是空格（不加空格会导致该空参数被忽略从而报错）。
 D:\\ABC\\cfst\\cfst.exe -tl 200 -dn 20 -o " "
 
 # 如果文件路径包含引号，则需要把启动参数放在引号外面，记得引号和 - 之间有空格。
