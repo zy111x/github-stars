@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 24964
+stars: 25118
 description: edgetunnel 2.0 VLESS/Trojan 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -139,11 +139,19 @@ ADMIN
 
 KEY
 
-`token`
+`CMLiussss`
 
 ❌
 
-快速订阅密钥，访问`/token`即可快读订阅。
+快速订阅密钥，访问`/CMLiussss`即可快读订阅。
+
+HOST
+
+`edt-pages.github.io`
+
+❌
+
+强制固定伪装域名
 
 UUID
 
@@ -151,7 +159,7 @@ UUID
 
 ❌
 
-强制使用固定UUID
+强制固定UUID
 
 PROXYIP
 
