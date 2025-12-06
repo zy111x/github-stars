@@ -1,6 +1,6 @@
 ---
 project: mcpmark
-stars: 330
+stars: 342
 description: |-
     MCPMark is a comprehensive, stress-testing MCP benchmark designed to evaluate model and agent capabilities in real-world MCP use.
 url: https://github.com/eval-sys/mcpmark
@@ -23,6 +23,18 @@ An evaluation suite for agentic models in real MCP tool environments (Notion / G
 MCPMark provides a reproducible, extensible benchmark for researchers and engineers: one-command tasks, isolated sandboxes, auto-resume for failures, unified metrics, and aggregated reports.
 
 [![MCPMark](https://github.com/user-attachments/assets/dfc06a41-e387-45e3-bc98-db7097ffa3dc)](https://mcpmark.ai)
+
+## News
+
+- 🏅 **02 Dec** — Evaluated `gemini-3-pro-preview` (thinking: low): **Pass@1 50.6%** ± 2.3% — so close to `gpt-5-high` (51.6%)! Also `deepseek-v3.2-thinking` 36.8% and `deepseek-v3.2-chat` 29.7%
+- 🔥 **02 Dec** — Obfuscate GitHub @mentions to prevent notification spam during evaluation ([#229](https://github.com/eval-sys/mcpmark/pull/229))
+- 🏅 **01 Dec** — DeepSeek v3.2 uses MCPMark! Kudos on securing the best open-source model. [X Post](https://x.com/deepseek_ai/status/1995452650557763728) | [Technical Report](https://huggingface.co/deepseek-ai/DeepSeek-V3.2/resolve/main/assets/paper.pdf)
+- 🔥 **17 Nov** — Added 50 easy tasks (10 per MCP server) for smaller open-source models ([#225](https://github.com/eval-sys/mcpmark/pull/225))
+- 🤝 **31 Oct** — Community PR from insforge: better MCP servers achieve better results with fewer tokens! ([#214](https://github.com/eval-sys/mcpmark/pull/214))
+- 🔥 **13 Oct** — Added ReAct agent support. PRs for new agent scaffolds welcome! ([#209](https://github.com/eval-sys/mcpmark/pull/209))
+- 🏅 **10 Sep** — `qwen-3-coder-plus` is the best open-source model! Kudos to Qwen team. [X Post](https://x.com/Alibaba_Qwen/status/1965457023438651532)
+
+---
 
 ## What you can do with MCPMark
 
@@ -159,6 +171,22 @@ Tip: MCPMark supports **auto-resume**. When re-running, only unfinished tasks wi
 | Filesystem  | Zero-configuration, run directly.                                                                               | [Config](docs/mcp/filesystem.md)      |
 
 You can also follow [Quickstart](docs/quickstart.md) for the shortest end-to-end path.
+
+### Important Notice: GitHub Repository Privacy
+
+> **Please ensure your evaluation repositories are set to PRIVATE.**
+
+GitHub state templates are now automatically downloaded from our CDN during evaluation — no manual download is required. However, because these templates contain issues and pull requests from real open-source repositories, the recreation process includes `@username` mentions of the original authors.
+
+**We have received feedback from original GitHub authors who were inadvertently notified** when evaluation repositories were created as public. To be a responsible member of the open-source community, we urge all users to:
+
+1. **Always keep evaluation repositories private** during the evaluation process.
+2. **In the latest version**, we have added random suffixes to all `@username` mentions (e.g., `@user` becomes `@user_x7k2`) and implemented a safety check that prevents importing templates to public repositories.
+3. **If you are using an older version of MCPMark**, please either:
+   - Pull the latest code immediately, or
+   - Manually ensure all GitHub evaluation repositories are set to private.
+
+Thank you for helping us maintain a respectful relationship with the open-source community.
 
 ---
 

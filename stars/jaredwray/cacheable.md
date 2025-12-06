@@ -1,6 +1,6 @@
 ---
 project: cacheable
-stars: 1910
+stars: 1916
 description: |-
     a robust, scalable, and maintained set of caching packages
 url: https://github.com/jaredwray/cacheable

@@ -1,6 +1,6 @@
 ---
 project: winboat
-stars: 16245
+stars: 16547
 description: |-
     Run Windows apps on 🐧 Linux with ✨ seamless integration
 url: https://github.com/TibixDev/winboat
@@ -101,7 +101,7 @@ You can download the latest Linux builds under the [Releases](https://github.com
 - Additionally, for development you need to have NodeJS and Go installed on your system
 - Clone the repo (`git clone https://github.com/TibixDev/WinBoat`)
 - Install the dependencies (`npm i`)
-- Build the guest server (`npm run build-guest-server`)
+- Build the guest server (`npm run build:gs`)
 - Run the app (`npm run dev`)
 
 ## Contributing

@@ -1,6 +1,6 @@
 ---
 project: biome
-stars: 22435
+stars: 22572
 description: |-
     A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP.
 url: https://github.com/biomejs/biome
@@ -113,7 +113,7 @@ Biome offers [enterprise support](https://biomejs.dev/enterprise), where Core Co
 
 ## Sponsors
 
-### Gold Sponsors
+### Platinum Sponsors
 
 <table>
   <tbody>
@@ -123,7 +123,7 @@ Biome offers [enterprise support](https://biomejs.dev/enterprise), where Core Co
           <picture>
             <source media="(prefers-color-scheme: light)" srcset="https://depot.dev/assets/brand/1693758816/depot-logo-horizontal-on-light@3x.png" />
             <source media="(prefers-color-scheme: dark)" srcset="https://depot.dev/assets/brand/1693758816/depot-logo-horizontal-on-dark@3x.png" />
-            <img src="https://depot.dev/assets/brand/1693758816/depot-logo-horizontal-on-light@3x.png" width="400" alt="Depot logo" />
+            <img src="https://depot.dev/assets/brand/1693758816/depot-logo-horizontal-on-light@3x.png" width="600" alt="Depot logo" />
           </picture>
         </a>
       </td>

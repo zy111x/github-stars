@@ -1,6 +1,6 @@
 ---
 project: bash-style-guide
-stars: 912
+stars: 918
 description: |-
     A style guide for writing safe, predictable, and portable bash scripts (not sh!)
 url: https://github.com/bahamas10/bash-style-guide
@@ -130,6 +130,7 @@ test -d /etc
 [[ -d /etc ]]
 ```
 
+- [YSAP066](https://ysap.sh/v/66)
 See [BashFAQ031](http://mywiki.wooledge.org/BashFAQ/031) for more information
 about these.
 
@@ -330,6 +331,7 @@ Prefer using a command line tools builtin method of reading a file instead of
 passing in stdin.  This is where we make the inference that, if a program says
 it can read a file passed by name, it's probably more performant to do that.
 
+- [Your Using `cat` Wrong](https://www.youtube.com/watch?v=vAK55aiRLeY)
 - [UUOC](http://www.smallo.ruhr.de/award.html)
 
 ---
@@ -397,9 +399,10 @@ When in doubt; [quote all expansions](http://mywiki.wooledge.org/Quotes).
 
 ### Variable Declaration
 
-Avoid uppercase variable names unless there's a good reason to use them.
-Don't use `let` or `readonly` to create variables.  `declare` should *only*
-be used for associative arrays.  `local` should *always* be used in functions.
+Avoid uppercase variable names unless they 1. are constants or 2. are exported
+to the environment using `export`.  Don't use `let` or `readonly` to create
+variables.  `declare` should *only* be used for associative arrays.  `local`
+should *always* be used in functions.
 
 ``` bash
 # wrong
@@ -412,7 +415,7 @@ FOOBAR=baz
 i=5
 ((i++))
 bar='something'
-foobar=baz
+export FOOBAR=baz
 ```
 
 ### shebang
@@ -425,6 +428,8 @@ Bash is not always located at `/bin/bash`, so use this line:
 
 Unless you’re intentionally targeting a specific environment (e.g. `/bin/bash`
 on Linux servers with restricted PATHs).
+
+- [Shebangs are Weird](https://www.youtube.com/watch?v=aoHMiCzqCNw)
 
 ### Error Checking
 
@@ -451,6 +456,7 @@ This is a controversial opinion that I have on the surface, but the link below
 will show situations where `set -e` can do more harm than good because of its
 implications.
 
+- [The Problem with Bash "strict mode"](https://www.youtube.com/watch?v=4Jo3Ml53kvc)
 - [BashFAQ105](http://mywiki.wooledge.org/BashFAQ/105)
 
 ### Using `eval`

@@ -1,8 +1,8 @@
 ---
 project: icons
-stars: 630
+stars: 632
 description: |-
-    Collection of icons and logos maintained by the selfh.st team
+    Collection of icons and logos maintained by selfh.st
 url: https://github.com/selfhst/icons
 ---
 

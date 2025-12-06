@@ -1,6 +1,6 @@
 ---
 project: pulltorefresh.js
-stars: 4005
+stars: 4003
 description: |-
     A quick and powerful plugin for your pull-to-refresh needs in your webapp.
 url: https://github.com/BoxFactura/pulltorefresh.js

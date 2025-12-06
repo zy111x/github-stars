@@ -1,6 +1,6 @@
 ---
 project: hyperui
-stars: 11829
+stars: 11842
 description: |-
     Free Tailwind CSS v4 components for your next project, designed to enhance your web development with the latest features and styles 🚀
 url: https://github.com/markmead/hyperui
@@ -23,6 +23,7 @@ HyperUI is a collection of free Tailwind CSS components that can be used in your
 - [Components](#components)
   - [🤖 Application](#application)
   - [📣 Marketing](#marketing)
+  - [◼️ Neobrutalism](#neobrutalism)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -109,6 +110,20 @@ HyperUI has a wide range of freely available components. These components includ
 - [Product Collections](https://www.hyperui.dev/components/marketing/product-collections)
 - [Sections](https://www.hyperui.dev/components/marketing/sections)
 - [Team Sections](https://www.hyperui.dev/components/marketing/team-sections)
+
+### Neobrutalism
+
+- [Accordions](https://www.hyperui.dev/components/neobrutalism/accordions)
+- [Alerts](https://www.hyperui.dev/components/neobrutalism/alerts)
+- [Badges](https://www.hyperui.dev/components/neobrutalism/badges)
+- [Buttons](https://www.hyperui.dev/components/neobrutalism/buttons)
+- [Cards](https://www.hyperui.dev/components/neobrutalism/cards)
+- [Checkboxes](https://www.hyperui.dev/components/neobrutalism/checkboxes)
+- [Inputs](https://www.hyperui.dev/components/neobrutalism/inputs)
+- [Progress Bars](https://www.hyperui.dev/components/neobrutalism/progress-bars)
+- [Selects](https://www.hyperui.dev/components/neobrutalism/selects)
+- [Tabs](https://www.hyperui.dev/components/neobrutalism/tabs)
+- [Textareas](https://www.hyperui.dev/components/neobrutalism/textareas)
 
 ## Contributing
 

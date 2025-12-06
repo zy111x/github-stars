@@ -1,6 +1,6 @@
 ---
 project: motia
-stars: 11128
+stars: 11304
 description: |-
     Multi-Language Backend Framework that unifies APIs, background jobs, queues, workflows, streams, and AI agents with a single core primitive with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
@@ -252,16 +252,53 @@ The guides include patterns for API endpoints, background tasks, state managemen
 
 > 🤖 **[Learn more about AI development support →](https://motia.dev/docs/ai-development-guide)**
 
-## 🎯 Step Types
+## 🎯 Triggers
 
-| Type | Trigger | Use Case |
-|------|---------|----------|
+| Type | When it runs | Use Case |
+|------|--------------|----------|
 | **`api`** | HTTP Request | REST endpoints |
 | **`event`** | Topic subscription | Background processing |  
 | **`cron`** | Schedule | Recurring jobs |
-| **`noop`** | Manual | External processes |
 
 > 📖 **[Learn more about Steps →](https://motia.dev/docs/concepts/steps)**
+
+---
+
+## 🔌 Plugins & Adapters
+
+Extend Motia with plugins and customize infrastructure with adapters.
+
+### Official Plugins
+
+Pre-installed with every Motia project to enhance your workbench:
+
+| Plugin | Description | NPM |
+|--------|-------------|-----|
+| **[@motiadev/plugin-logs](https://github.com/motiadev/motia/tree/main/plugins/plugin-logs)** | Real-time log viewer with filtering and search | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-logs?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-logs) |
+| **[@motiadev/plugin-endpoint](https://github.com/motiadev/motia/tree/main/plugins/plugin-endpoint)** | Interactive API endpoint testing tool | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-endpoint?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-endpoint) |
+| **[@motiadev/plugin-observability](https://github.com/motiadev/motia/tree/main/plugins/plugin-observability)** | Performance tracing and distributed monitoring | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-observability?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-observability) |
+| **[@motiadev/plugin-states](https://github.com/motiadev/motia/tree/main/plugins/plugin-states)** | State management and inspection tool | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-states?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-states) |
+| **[@motiadev/plugin-bullmq](https://github.com/motiadev/motia/tree/main/plugins/plugin-bullmq)** | BullMQ queue and DLQ management | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-bullmq?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-bullmq) |
+
+**[View all community plugins →](https://github.com/MotiaDev/awesome-plugins)**
+
+### Official Adapters
+
+Customize your infrastructure with production-ready adapters:
+
+| Adapter | Purpose | NPM |
+|---------|---------|-----|
+| **[@motiadev/adapter-bullmq-events](https://github.com/motiadev/motia/tree/main/packages/adapter-bullmq-events)** | BullMQ-based event processing | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-bullmq-events?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-bullmq-events) |
+| **[@motiadev/adapter-rabbitmq-events](https://github.com/motiadev/motia/tree/main/packages/adapter-rabbitmq-events)** | RabbitMQ event adapter | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-rabbitmq-events?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-rabbitmq-events) |
+| **[@motiadev/adapter-redis-cron](https://github.com/motiadev/motia/tree/main/packages/adapter-redis-cron)** | Redis-based cron scheduling | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-redis-cron?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-redis-cron) |
+| **[@motiadev/adapter-redis-state](https://github.com/motiadev/motia/tree/main/packages/adapter-redis-state)** | Redis state management | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-redis-state?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-redis-state) |
+| **[@motiadev/adapter-redis-streams](https://github.com/motiadev/motia/tree/main/packages/adapter-redis-streams)** | Redis Streams for real-time data | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-redis-streams?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-redis-streams) |
+
+### Create Your Own
+
+- **[Create a Plugin](https://github.com/MotiaDev/awesome-plugins/blob/main/CONTRIBUTING.md)** - Build custom workbench features
+- **[Plugin Development Guide](https://motia.dev/docs/development-guide/plugins)** - Complete documentation
+- **[Contribute to awesome-plugins](https://github.com/MotiaDev/awesome-plugins)** - Share with the community
 
 ---
 
@@ -352,4 +389,3 @@ We welcome contributions! Check our **[Contributing Guide](https://github.com/Mo
 <sub>⭐ **Star us if you find Motia useful!**</sub>
 
 </div>
-

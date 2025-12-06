@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 11389
+stars: 11440
 description: |-
     Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
 url: https://github.com/trycua/cua
@@ -108,6 +108,10 @@ Core utilities for Cua
 - [Clone a starter template and run the code in <1 min](https://github.com/trycua/agent-template)
 - [Get started with the Cua SDKs](https://cua.ai/docs/quickstart-devs)
 - [Get started with the Cua CLI](https://cua.ai/docs/quickstart-cli)
+
+## Python Version Compatibility
+
+Cua packages require **Python 3.12 or 3.13**. Python 3.14 is not currently supported due to dependency compatibility issues (pydantic-core/PyO3 compatibility). If you encounter build errors on Python 3.14, please use Python 3.13 or earlier.
 
 # Agent SDK
 

@@ -1,8 +1,8 @@
 ---
 project: rivet
-stars: 4720
+stars: 4747
 description: |-
-    infrastructure for long-lived, in-memory processes called Actors. It's what you reach for when you hit the limitations of HTTP, databases, or queues.
+    Rivet Actors: long-lived, in-memory processes. It's what you reach for when you hit the limitations of HTTP, databases, or queues.
 url: https://github.com/rivet-dev/rivet
 ---
 

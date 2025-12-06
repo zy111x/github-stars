@@ -1,6 +1,6 @@
 ---
 project: edge-tts
-stars: 96
+stars: 97
 description: |-
     Edge TTS is a Node or Bun package that allows access to the online text-to-speech service used by Microsoft Edge without the need for Microsoft Edge, Windows, or an API key.
 url: https://github.com/andresayac/edge-tts
@@ -14,6 +14,8 @@ url: https://github.com/andresayac/edge-tts
 ## Features
 
 - **Text-to-Speech**: Convert text into natural-sounding speech using Microsoft Edge's TTS capabilities.
+- **TypeScript Support**: Full TypeScript support with comprehensive type definitions included.
+- **Multiple Audio Formats**: Support for 36+ audio formats (MP3, WebM, OGG, WAV, PCM, and more).
 - **Multiple Voices**: Access a variety of voices to suit your project's needs.
 - **Voice Filtering**: Filter voices by language and gender for better selection.
 - **Audio Information**: Get detailed information about generated audio (size, duration, format).
@@ -33,6 +35,69 @@ bun add @andresaya/edge-tts
 ```
 ```bash
 npm install @andresaya/edge-tts
+```
+
+## TypeScript Support
+
+Edge TTS is written in **TypeScript** and includes full type definitions. No additional `@types` packages are needed.
+
+### Available Types
+
+```typescript
+import { 
+    EdgeTTS, 
+    Constants,
+    Voice,
+    SynthesisOptions,
+    WordBoundary 
+} from '@andresaya/edge-tts';
+
+// Voice interface
+interface Voice {
+    Name: string;
+    ShortName: string;
+    Gender: 'Male' | 'Female';
+    Locale: string;
+    FriendlyName: string;
+    LocalName: string;
+}
+
+// Synthesis options
+interface SynthesisOptions {
+    pitch?: string | number;       // e.g., '+20Hz' or 20
+    rate?: string | number;        // e.g., '50%' or 50
+    volume?: string | number;      // e.g., '90%' or 90
+    inputType?: 'auto' | 'ssml' | 'text';  // Default: 'auto'
+    outputFormat?: string;         // e.g., Constants.OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3
+}
+
+// Word boundary metadata
+interface WordBoundary {
+    type: "WordBoundary";
+    offset: number;
+    duration: number;
+    text: string;
+}
+```
+
+### Type-Safe Usage Example
+
+```typescript
+import { EdgeTTS, SynthesisOptions, Constants } from '@andresaya/edge-tts';
+
+const tts = new EdgeTTS();
+
+const options: SynthesisOptions = {
+    pitch: '+10Hz',
+    rate: '100%',
+    volume: '90%',
+    outputFormat: Constants.OUTPUT_FORMAT.WEBM_24KHZ_16BIT_MONO_OPUS
+};
+
+await tts.synthesize("TypeScript example", 'en-US-AriaNeural', options);
+
+const info = tts.getAudioInfo(); // Returns: { size: number; format: string; estimatedDuration: number }
+const boundaries = tts.getWordBoundaries(); // Returns: WordBoundary[]
 ```
 
 ## Usage
@@ -154,11 +219,56 @@ await tts.synthesize("Hello, world!", 'en-US-AriaNeural');
 #### Advanced Synthesis with Options
 ```js
 await tts.synthesize("Hello, world!", 'en-US-AriaNeural', {
-    rate: '50%',      // Speech rate: -100% to +200% (or number)
-    volume: '90%',    // Speech volume: -100% to +100% (or number)
-    pitch: '+20Hz'    // Voice pitch: -100Hz to +100Hz (or number)
+    rate: '50%',           // Speech rate: -100% to +200% (or number)
+    volume: '90%',         // Speech volume: -100% to +100% (or number)
+    pitch: '+20Hz',        // Voice pitch: -100Hz to +100Hz (or number)
+    outputFormat: 'audio-24khz-96kbitrate-mono-mp3'  // Audio output format
 });
 ```
+
+#### Audio Output Formats
+
+Edge TTS supports multiple audio formats. You can specify the format using the `outputFormat` option:
+
+```js
+import { EdgeTTS, Constants } from '@andresaya/edge-tts';
+
+const tts = new EdgeTTS();
+
+// High quality MP3
+await tts.synthesize("Hello!", 'en-US-AriaNeural', {
+    outputFormat: Constants.OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3
+});
+await tts.toFile('./output/audio'); // Automatically saved as .mp3
+
+// WebM/Opus for web
+await tts.synthesize("Hello!", 'en-US-AriaNeural', {
+    outputFormat: Constants.OUTPUT_FORMAT.WEBM_24KHZ_16BIT_MONO_OPUS
+});
+await tts.toFile('./output/audio'); // Automatically saved as .webm
+
+// Lossless WAV
+await tts.synthesize("Hello!", 'en-US-AriaNeural', {
+    outputFormat: Constants.OUTPUT_FORMAT.RIFF_24KHZ_16BIT_MONO_PCM
+});
+await tts.toFile('./output/audio'); // Automatically saved as .wav
+```
+
+**Available formats (all 36 tested and compatible):**
+
+- **MP3 Formats** (Streaming): 16kHz, 24kHz, 48kHz with various bitrates (32-192 kbps)
+- **Opus Formats** (Streaming): Audio, WebM, and OGG containers
+- **WAV/PCM Formats** (Non-streaming): RIFF (8-48 kHz) and RAW variants
+- **Specialized Codecs**: AMR-WB, G.722, TrueSilk, A-law, μ-law
+
+See `Constants.OUTPUT_FORMAT` for the complete list. The file extension is automatically detected based on the format.
+
+**Format recommendations:**
+- 🌐 **Web streaming**: `WEBM_24KHZ_16BIT_MONO_OPUS` or `AUDIO_24KHZ_96KBITRATE_MONO_MP3`
+- 📱 **Mobile apps**: `AUDIO_24KHZ_48KBITRATE_MONO_MP3`
+- 💾 **High quality**: `AUDIO_48KHZ_192KBITRATE_MONO_MP3` or `RIFF_48KHZ_16BIT_MONO_PCM`
+- ⚡ **Low bandwidth**: `AUDIO_16KHZ_32KBITRATE_MONO_MP3`
+
 
 #### Streaming Synthesis
 ```js

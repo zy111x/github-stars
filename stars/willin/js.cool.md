@@ -1,6 +1,6 @@
 ---
 project: js.cool
-stars: 428
+stars: 429
 description: |-
     参考新项目： https://github.com/willin/domain  Public Archived, See new project.  
 url: https://github.com/willin/js.cool

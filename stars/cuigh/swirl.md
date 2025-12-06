@@ -1,6 +1,6 @@
 ---
 project: swirl
-stars: 660
+stars: 661
 description: |-
     A web UI for Docker, focused on swarm cluster.
 url: https://github.com/cuigh/swirl

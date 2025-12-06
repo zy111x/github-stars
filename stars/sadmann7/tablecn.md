@@ -1,6 +1,6 @@
 ---
 project: tablecn
-stars: 5676
+stars: 5722
 description: |-
     Shadcn table with server-side sorting, filtering, and pagination.
 url: https://github.com/sadmann7/tablecn
@@ -24,7 +24,7 @@ See the [documentation](https://diceui.com/docs/components/data-table) to get st
 - **Styling:** [Tailwind CSS](https://tailwindcss.com)
 - **UI Components:** [shadcn/ui](https://ui.shadcn.com)
 - **Table package:** [TanStack/react-table](https://tanstack.com/table/latest)
-- **Database:** [Neon](https://neon.tech)
+- **Database:** [PlanetScale](https://planetscale.com)
 - **ORM:** [Drizzle ORM](https://orm.drizzle.team)
 - **Validation:** [Zod](https://zod.dev)
 

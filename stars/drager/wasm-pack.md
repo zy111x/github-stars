@@ -1,6 +1,6 @@
 ---
 project: wasm-pack
-stars: 6957
+stars: 6978
 description: |-
     📦✨ your favorite rust -> wasm workflow tool!
 url: https://github.com/drager/wasm-pack
@@ -8,7 +8,7 @@ url: https://github.com/drager/wasm-pack
 
 <div align="center">
 
-  <h1>📦✨  wasm-pack</h1>
+  <h1>📦✨ wasm-pack</h1>
 
   <p>
     <strong>Your favorite Rust → Wasm workflow tool!</strong>
@@ -20,14 +20,13 @@ url: https://github.com/drager/wasm-pack
   </p>
 
   <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/">Docs</a>
+    <a href="https://drager.github.io/wasm-pack/book">Docs</a>
     <span> | </span>
     <a href="https://github.com/drager/wasm-pack/blob/master/CONTRIBUTING.md">Contributing</a>
     <span> | </span>
     <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
   </h3>
 
-<sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
 
 </div>
 
@@ -39,13 +38,7 @@ browser or with Node.js. `wasm-pack` helps you build rust-generated
 WebAssembly packages that you could publish to the npm registry, or otherwise use
 alongside any javascript packages in workflows that you already use, such as [webpack].
 
-[bundler-support]: https://github.com/rustwasm/team/blob/master/goals/bundler-integration.md#details
 [webpack]: https://webpack.js.org/
-
-This project is a part of the [rust-wasm] group. You can find more info by
-visiting that repo!
-
-[rust-wasm]: https://github.com/rustwasm/team
 
 ![demo](demo.gif)
 
@@ -91,11 +84,8 @@ check out our [contribution policy].
 
 ## 🤹‍♀️ Governance
 
-This project is part of the [rustwasm Working Group].
-
-This project was started by [ashleygwilliams] and is maintained by [drager] and the Rust Wasm Working Group Core Team.
+This project was started by [ashleygwilliams] and is maintained by [drager].
 
 [ashleygwilliams]: https://github.com/ashleygwilliams
 [drager]: https://github.com/drager
-[rustwasm working group]: https://github.com/rustwasm/team
 

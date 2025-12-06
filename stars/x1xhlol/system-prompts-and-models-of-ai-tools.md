@@ -1,8 +1,8 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 98485
+stars: 99666
 description: |-
-    FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus Agent Tools, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models
+    FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus Agent Tools, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 ---
 
@@ -71,7 +71,7 @@ Sponsor the most comprehensive repository of AI system prompts and reach thousan
 
 > Open an issue.
 
-> **Latest Update:** 29/11/2025
+> **Latest Update:** 02/12/2025
 
 ---
 
@@ -79,6 +79,7 @@ Sponsor the most comprehensive repository of AI system prompts and reach thousan
 
 - **X:** [NotLucknite](https://x.com/NotLucknite)
 - **Discord**: `x1xhlol`
+- **Email**: `lucknitelol@pm.me`
 
 ---
 

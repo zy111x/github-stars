@@ -1,6 +1,6 @@
 ---
 project: wtf
-stars: 16452
+stars: 16463
 description: |-
     The personal information dashboard for your terminal
 url: https://github.com/wtfutil/wtf

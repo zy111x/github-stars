@@ -1,6 +1,6 @@
 ---
 project: selfhosted-music-overview
-stars: 1160
+stars: 1161
 description: |-
     A table listing software network services which can be hosted on your own servers
 url: https://github.com/basings/selfhosted-music-overview

@@ -69,7 +69,7 @@ WordPlate is a boilerplate for WordPress, built with Composer and designed with 
 
 ## Installation
 
-Before using WordPlate, make sure you have PHP 8.2 and MySQL 8.0 installed on your computer. You'll also need to have Composer, a package manager for PHP, installed on your computer.
+Before using WordPlate, make sure you have PHP 8.4 and MySQL 8.0 installed on your computer. You'll also need to have Composer, a package manager for PHP, installed on your computer.
 
 To install WordPlate, open your terminal and enter the following command:
 
@@ -178,7 +178,12 @@ For more information on the must-use plugin autoloader, please refer to the [Bed
 
 #### [Headache](https://github.com/vinkla/headache)
 
-An easy-to-swallow painkiller plugin for WordPress. It removes a lot of default WordPress stuff you just can't wait to get rid of. It removes meta tags such as feeds, version numbers and emojis.
+An easy-to-swallow painkiller plugin for WordPress. The plugin removes a lot of default WordPress stuff you just can't wait to get rid of. It removes meta tags such as feeds, version numbers and emojis.
+
+- Disables XML-RPC and protects against user enumeration
+- Removes feeds, emoji scripts, oEmbed, and block styles
+- Disables attachment pages and randomizes media slugs
+- Prevents indexing on non-production environments
 
 #### [Clean Image Filenames](https://wordpress.org/plugins/clean-image-filenames/)
 
@@ -293,7 +298,7 @@ If you want to install language packs using Composer, we recommend looking at th
 <details>
 <summary><strong>Can I rename the public directory?</strong></summary>
 
-Update your `.gitignore`, `composer.json`, `.vite.config.js`, and `wp-cli.yml` files with the new path to the `public` directory. Then, run `composer update` in the root of your project.
+Update your `.gitignore`, `composer.json`, `vite.config.js`, and `wp-cli.yml` files with the new path to the `public` directory. Then, run `composer update` in the root of your project.
 </details>
 <details>
 <summary><strong>Can I rename the WordPress directory?</strong></summary>

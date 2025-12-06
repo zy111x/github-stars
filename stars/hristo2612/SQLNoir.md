@@ -8,7 +8,7 @@ url: https://github.com/hristo2612/SQLNoir
 
 # SQL Noir 🔍
 
-[➡️ Play the game online at sqlnoir.com](https://sqlnoir.com)
+[➡️ Play the game online at sqlnoir.com](https://www.sqlnoir.com)
 
 Step into the shoes of a real detective and solve crimes using SQL! SQL Noir is an interactive mystery-solving game where you crack cases by writing SQL queries.
 
@@ -24,6 +24,8 @@ Welcome to SQL Noir, where you're a data detective solving criminal cases throug
 
 ## Getting Started
 
+Prerequisite: Node.js 18.17+ (Next.js requirement).
+
 1. Clone this repository
 2. Install dependencies:
    ```bash
@@ -33,9 +35,10 @@ Welcome to SQL Noir, where you're a data detective solving criminal cases throug
 4. Copy the generated `anon public key` and `Project URL` from the project
 5. Create a `.env.local` file at the root of the project and set the following environment variables:
    ```bash
-   VITE_SUPABASE_ANON_KEY=your_anon_key
-   VITE_SUPABASE_URL=your_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
    ```
+   (Legacy `VITE_` variables are still read, but using `NEXT_PUBLIC_` is recommended.)
 6. Install Supabase CLI:
 
    - Follow the instructions at [Supabase CLI](https://supabase.com/docs/guides/local-development/cli/getting-started)
@@ -66,7 +69,7 @@ Welcome to SQL Noir, where you're a data detective solving criminal cases throug
     npm run dev
     ```
 
-11. Open your browser and navigate to `http://localhost:5173`
+11. Open your browser and navigate to `http://localhost:3000`
 
 ## Case Files
 

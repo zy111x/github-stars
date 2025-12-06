@@ -1,6 +1,6 @@
 ---
 project: waku
-stars: 5914
+stars: 5943
 description: |-
     ⛩️ The minimal React framework
 url: https://github.com/wakujs/waku
@@ -1459,7 +1459,6 @@ For adavanced users who want to avoid deploying functions, use the server entry 
 `./src/server-entry.ts`:
 
 ```ts
-/// <reference types="vite/client" />
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/vercel';
 
@@ -1485,7 +1484,6 @@ For adavanced users who want to avoid deploying functions, use the server entry 
 `./src/server-entry.ts`:
 
 ```ts
-/// <reference types="vite/client" />
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/netlify';
 
@@ -1500,7 +1498,6 @@ export default adapter(
 `./src/server-entry.ts`:
 
 ```ts
-/// <reference types="vite/client" />
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/cloudflare';
 
@@ -1519,7 +1516,6 @@ npx wrangler dev # or deploy
 `./src/server-entry.ts`:
 
 ```ts
-/// <reference types="vite/client" />
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/deno';
 
@@ -1538,7 +1534,6 @@ deployctl deploy --prod dist/serve-deno.js --exclude node_modules
 `./src/server-entry.ts`:
 
 ```ts
-/// <reference types="vite/client" />
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/aws-lambda';
 
@@ -1556,14 +1551,14 @@ The handler entrypoint is `dist/serve-asw-lambda.js`: see [Hono AWS Lambda Deplo
 
 ### Edge
 
-`waku/adapters/edge` adapter provides a minimal server output without deployment target specific code. For example, you can use it with [Nitro](https://nitro.build/) to handle packaging for various deployment platforms. See https://github.com/hi-ogawa/waku-nitro-example for the example.
+`waku/adapters/edge` adapter provides a minimal server output without deployment target specific code. For example, you can use it with [Nitro](https://nitro.build/) to handle packaging for various deployment platforms. See [waku-nitro-example](https://github.com/hi-ogawa/waku-nitro-example) for the example.
 
 ```ts
 // [waku.config.ts]
 import { defineConfig } from 'waku/config';
 
 export default defineConfig({
-  adapter: 'waku/adapters/edge',
+  unstable_adapter: 'waku/adapters/edge',
 });
 ```
 

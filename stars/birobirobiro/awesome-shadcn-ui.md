@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 18303
+stars: 18352
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -51,6 +51,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | bundui | A collection of reusable animated components built with Tailwind CSS and Framer Motion. | [Link](https://bundui.io) | 2024-09-23 |
 | calendar | React/shadcn full calendar like Google Calendar | [Link](https://github.com/charlietlamb/calendar) | 2024-05-03 |
 | capture-photo | Browser-based React component for camera functionalities in web applications. | [Link](https://github.com/UretzkyZvi/capture-photo) | 2024-05-06 |
+| cascader-shadcn | A cascading dropdown menu component for selecting hierarchical data like locations, categories, or organizational structures. | [Link](https://github.com/Ademking/cascader-shadcn) | 2025-12-04 |
 | clerk-elements | Composable components for building custom UIs on top of Clerk's APIs. | [Link](https://clerk.com/docs/elements/examples/shadcn-ui) | 2024-06-07 |
 | clerk-shadcn-theme | Synchronize Clerk SignIn/SignUp components with shadcn/ui styles. | [Link](https://github.com/stormynight9/clerk-shadcn-theme) | 2024-06-07 |
 | commerce-ui | Components, blocks and examples to build e-commerce storefronts and apps. | [Link](https://github.com/stackzero-labs/ui) | 2025-02-20 |
@@ -147,6 +148,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | recursive-dnd-kanban-board | Recursive drag and drop kanban board. | [Link](https://github.com/mehrdadrafiee/recursive-dnd-kanban-board) | 2024-10-03 |
 | retro-ui | An open source component library, inspred by neo brutalism design system | [Link](https://retroui.dev) | 2025-05-13 |
 | roadmap-ui | Components for interactive roadmaps. | [Link](https://github.com/haydenbleasel/roadmap-ui) | 2024-12-26 |
+| ruixen-ui | Ruixen UI: Lightweight & Customizable React Library | [Link](https://github.com/ruixenui/ruixen.com) | 2025-12-04 |
 | search-address | Interactive address search using OpenStreetMap. | [Link](https://github.com/UretzkyZvi/search-address) | 2024-05-07 |
 | shadboard | An admin dashboard template built with Next.js 15, React 19, Tailwind CSS v4, and Shadcn/UI components, featuring starter and full kits for scalable, user-friendly web apps. | [Link](https://github.com/Qualiora/shadboard) | 2025-04-22 |
 | shadcn-address-autocomplete | Address autocomplete with Google Places API. | [Link](https://github.com/NiazMorshed2007/shadcn-address-autocomplete) | 2024-07-10 |
@@ -218,13 +220,13 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | spectrum-ui | Collection using Aceternity UI Magic UI. | [Link](https://github.com/arihantcodes/spectrum-ui) | 2024-11-25 |
 | stateful-button | A shadcn/ui button component that provides clear visual feedback with full accessibility support for loading/progress, success, and error states during asynchronous operations. | [Link](https://github.com/nanyx95/Stateful-Button-React) | 2025-09-06 |
 | stocks | Stock Picker with Next.js charts. | [Link](https://github.com/aryanvichare/stocks) | 2024-07-07 |
-| stunning-ui | Interactive Tailwind components for Vue. | [Link](https://stunningui.design) | 2024-10-22 |
 | supabase-shadcn-database-example | supabase + shadcn/ui datatable | [Link](https://github.com/thisisfel1x/supabase-shadcn-database-example) | 2024-12-30 |
 | supercharged-shadcn-components | Type-safe form components collection. | [Link](https://github.com/slickwit/supercharged-shadcn-components) | 2024-11-25 |
 | svelte-image-uploader | Svelte image uploader with dnd, validation and previews. | [Link](https://svelte-image-uploader.vercel.app/) | 2025-06-10 |
 | tanstack-ui-table | Customizable table with @tanstack/table and shadcn/ui | [Link](https://github.com/drefahl/tanstack-ui-table) | 2025-02-27 |
 | time-picker | Simple TimePicker component. | [Link](https://github.com/openstatusHQ/time-picker) | 2024-04-29 |
 | tnks-data-table | Advanced data table component built with shadcn/ui and TanStack Table featuring server-side operations, row selection, filtering, column customization, and export functionality. Fully TypeScript compatible with comprehensive documentation. | [Link](https://github.com/jacksonkasi1/tnks-data-table) | 2025-04-19 |
+| tour | A component for building onboarding tours. Designed to integrate with shadcn/ui. | [Link](https://onboarding-tour.vercel.app) | 2025-12-04 |
 | tremor | Components for charts and dashboards. | [Link](https://github.com/tremorlabs/tremor) | 2024-06-15 |
 | twblocks | Website blocks based on shadcn & Radix. | [Link](https://github.com/tommyjepsen/twblocks) | 2024-11-25 |
 | tweet-to-code | Twitter design recreations as code. | [Link](https://tweet-to-code.vercel.app/) | 2024-12-26 |
@@ -240,7 +242,9 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 
 | Name | Description | Link | Date |
 | ------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------- | ---------- |
+| neobrutalism-vue | A vue-based registry of neobrutalism-styled Tailwind components. | [Link](https://github.com/michaelsieminski/neobrutalism-vue) | 2025-12-04 |
 | registry.directory | A curated directory to discover, preview, and copy shadcn/ui registries. | [Link](https://github.com/rbadillap/registry.directory) | 2025-09-20 |
+| undraw-cn | Beautiful, customizable React components for unDraw illustrations. | [Link](https://undraw-cn.vaatun.com) | 2025-12-04 |
 
 ## Plugins and Extensions
 

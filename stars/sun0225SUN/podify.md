@@ -1,6 +1,6 @@
 ---
 project: podify
-stars: 40
+stars: 47
 description: |-
     Podify is a beautiful podcast template built with TanStack Start
 url: https://github.com/sun0225SUN/podify
@@ -23,7 +23,7 @@ url: https://github.com/sun0225SUN/podify
   <img alt="Page views" src="https://komarev.com/ghpvc/?username=podify&label=Views&color=orange&style=flat" />
   <img alt="netlify" src="https://api.netlify.com/api/v1/badges/aadf48af-a5c9-431f-9c7f-19cd0b546d6d/deploy-status">
 
-  <img src="./readme/images/preview.png" alt="screenshot" />
+  <img src="./readme/images/preview.jpeg" alt="screenshot" />
 </div>
 
 ## ✨ Features

@@ -3,7 +3,7 @@ project: astro-aria
 stars: 329
 description: |-
     A personal blog, portfolio, or blog template
-url: https://github.com/ccbikai/astro-aria
+url: https://github.com/miantiao-me/astro-aria
 ---
 
 # Aria Template

@@ -1,6 +1,6 @@
 ---
 project: litlyx
-stars: 1616
+stars: 1641
 description: |-
     Powerful Analytics Solution. Setup in 30 seconds. Display all your data on a Simple, AI-powered dashboard. Fully self-hostable and GDPR compliant. Alternative to Google Analytics, MixPanel, Plausible, Umami & Matomo.
 url: https://github.com/Litlyx/litlyx
@@ -115,7 +115,13 @@ curl -X POST "https://broker.litlyx.com/event" \
 
 To self host the Litlyx dashboard, first clone this repository. Litlyx Docker images are hosted on DockerHub.
 
-Run the following command:
+Run the following commands in order:
+
+```bash
+npm run docker-prepare #use your favourite package manager like pnpm, bun, etc...
+```
+
+and than:
 
 ```bash
 docker-compose up

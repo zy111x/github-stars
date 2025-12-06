@@ -1,14 +1,14 @@
 ---
 project: diceui
-stars: 1440
+stars: 1513
 description: |-
     Accessible shadcn/ui components built with React, TypeScript, and Tailwind CSS. Copy-paste ready, and customizable.
 url: https://github.com/sadmann7/diceui
 ---
 
-# `Dice UI`
+# [Dice UI](https://diceui.com/docs)
 
-Unstyled ui component library.
+Accessible shadcn/ui components built with React, TypeScript, and Tailwind CSS. Copy-paste ready, and customizable.
 
 ## Documentation
 

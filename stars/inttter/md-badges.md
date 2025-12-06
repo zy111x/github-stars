@@ -1,6 +1,6 @@
 ---
 project: md-badges
-stars: 1425
+stars: 1450
 description: |-
     An extensive list of Shields.io badges.
 url: https://github.com/inttter/md-badges
@@ -48,6 +48,7 @@ An extensive list of static Shields.io badges, sorted by category.
 * [Static Site](#-static-site)
 * [Streaming](#-streaming)
 * [Terminal](#%EF%B8%8F-terminal)
+* [URL Shortener](#-url-shortener)
 * [Version Control](#-version-control)
 * [Virtual Reality](#%EF%B8%8F-virtual-reality)
 
@@ -62,6 +63,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Insomnia](https://img.shields.io/badge/Insomnia-4000BF?logo=insomnia&logoColor=white)](#) | `[![Insomnia](https://img.shields.io/badge/Insomnia-4000BF?logo=insomnia&logoColor=white)](#)` |
 | [![Kong](https://img.shields.io/badge/Kong-003459?logo=kong&logoColor=white)](#) | `[![Kong](https://img.shields.io/badge/Kong-003459?logo=kong&logoColor=white)](#)` |
 | [![OpenAPI](https://img.shields.io/badge/OpenAPI-6BA539?logo=openapiinitiative&logoColor=white)](#) | `[![OpenAPI](https://img.shields.io/badge/OpenAPI-6BA539?logo=openapiinitiative&logoColor=white)](#)` |
+| [![OpenRouter](https://custom-icon-badges.demolab.com/badge/OpenRouter-94A3B8?logo=openrouter&logoColor=fff)](#) | `[![OpenRouter](https://custom-icon-badges.demolab.com/badge/OpenRouter-94A3B8?logo=openrouter&logoColor=fff)](#)` |
 | [![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white)](#) | `[![Postman](https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white)](#)` |
 | [![Swagger](https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=173647)](#) | `[![Swagger](https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=173647)](#)`
 
@@ -103,6 +105,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Mistral AI](https://img.shields.io/badge/Mistral%20AI-FA520F?logo=mistral-ai&logoColor=fff)](#) | `[![Mistral AI](https://img.shields.io/badge/Mistral%20AI-FA520F?logo=mistral-ai&logoColor=fff)](#)` |
 | [![Ollama](https://img.shields.io/badge/Ollama-fff?logo=ollama&logoColor=000)](#) | `[![Ollama](https://img.shields.io/badge/Ollama-fff?logo=ollama&logoColor=000)](#)` |
 | [![Perplexity](https://img.shields.io/badge/Perplexity-1FB8CD?logo=perplexity&logoColor=fff)](#) | `[![Perplexity](https://img.shields.io/badge/Perplexity-1FB8CD?logo=perplexity&logoColor=fff)](#)` |
+| [![Qwen](https://custom-icon-badges.demolab.com/badge/Qwen-605CEC?logo=qwen&logoColor=fff)](#) | `[![Qwen](https://custom-icon-badges.demolab.com/badge/Qwen-605CEC?logo=qwen&logoColor=fff)](#)` |
 | [![v0](https://img.shields.io/badge/v0-000?logo=v0&logoColor=fff)](#) | `[![v0](https://img.shields.io/badge/v0-000?logo=v0&logoColor=fff)](#)` |
 
 <div align="right">
@@ -528,6 +531,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![LangChain](https://img.shields.io/badge/LangChain-1c3c3c.svg?logo=langchain&logoColor=white)](#) | `[![LangChain](https://img.shields.io/badge/LangChain-1c3c3c.svg?logo=langchain&logoColor=white)](#)` |
 | [![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?logo=laravel&logoColor=white)](#) | `[![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?logo=laravel&logoColor=white)](#)` |
 | [![Less](https://img.shields.io/badge/Less-1D365D?logo=less&logoColor=fff)](#) | `[![Less](https://img.shields.io/badge/Less-1D365D?logo=less&logoColor=fff)](#)` |
+| [![Lit](https://img.shields.io/badge/Lit-4C64FF?logo=Lit&logoColor=white)](#) | `[![Lit](https://img.shields.io/badge/Lit-4C64FF?logo=Lit&logoColor=white)](#)` |
 | [![Mocha](https://img.shields.io/badge/Mocha-8D6748?logo=mocha&logoColor=fff)](#) | `[![Mocha](https://img.shields.io/badge/Mocha-8D6748?logo=mocha&logoColor=fff)](#)` |
 | [![Meteor.js](https://img.shields.io/badge/Meteor.js-%23d74c4c.svg?logo=meteor&logoColor=white)](#) | `[![Meteor.js](https://img.shields.io/badge/Meteor.js-%23d74c4c.svg?logo=meteor&logoColor=white)](#)` |
 | [![Nest](https://img.shields.io/badge/Nest.js-%23E0234E.svg?logo=nestjs&logoColor=white)](#) | `[![Nest](https://img.shields.io/badge/Nest.js-%23E0234E.svg?logo=nestjs&logoColor=white)](#)` |
@@ -543,6 +547,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Pytest](https://img.shields.io/badge/Pytest-fff?logo=pytest&logoColor=000)](#) | `[![Pytest](https://img.shields.io/badge/Pytest-fff?logo=pytest&logoColor=000)](#)` |
 | [![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white)](#) | `[![PyTorch](https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white)](#)` |
 | [![Qt](https://img.shields.io/badge/Qt-2CDE85?logo=Qt&logoColor=fff)](#) | `[![Qt](https://img.shields.io/badge/Qt-2CDE85?logo=Qt&logoColor=fff)](#)` |
+| [![Qwik](https://img.shields.io/badge/Qwik-AC7EF4?logo=Qwik&logoColor=white)](#) | `[![Qwik](https://img.shields.io/badge/Qwik-AC7EF4?logo=Qwik&logoColor=white)](#)` |
 | [![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?logo=ruby-on-rails&logoColor=white)](#) | `[![Rails](https://img.shields.io/badge/Rails-%23CC0000.svg?logo=ruby-on-rails&logoColor=white)](#)` |
 | [![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](#) | `[![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)](#)` |
 | [![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-EC5990?logo=reacthookform&logoColor=fff)](#) | `[![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-EC5990?logo=reacthookform&logoColor=fff)](#)` |
@@ -997,6 +1002,17 @@ An extensive list of static Shields.io badges, sorted by category.
 [Back To Top ⬆️](#table-of-contents)
 </div>
 
+### 🔗 URL Shortener
+
+| Preview | Markdown Code |
+|---------|---------------|
+| [![Bitly](https://img.shields.io/badge/Bitly-EE6123?logo=bitly&logoColor=fff)](#) | `[![Bitly](https://img.shields.io/badge/Bitly-EE6123?logo=bitly&logoColor=fff)](#)` |
+
+<div align="right">
+
+[Back To Top ⬆️](#table-of-contents)
+</div>
+
 ### 🔖 Version Control
 
 | Preview | Markdown Code |
@@ -1041,5 +1057,4 @@ Here are some people who have contributed to md-badges so far:
 <a href="https://github.com/inttter/md-badges/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=inttter/md-badges" />
 </a>
-
 
