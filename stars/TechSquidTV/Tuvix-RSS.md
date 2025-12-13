@@ -1,6 +1,6 @@
 ---
 project: Tuvix-RSS
-stars: 26
+stars: 46
 description: |-
     A self-hostable RSS aggregator for the masses
 url: https://github.com/TechSquidTV/Tuvix-RSS
@@ -46,11 +46,13 @@ See the **[Deployment Guide](./docs/deployment.md)** for detailed instructions.
 git clone https://github.com/TechSquidTV/Tuvix-RSS.git
 cd Tuvix-RSS
 cp env.example .env
-# Edit .env and set BETTER_AUTH_SECRET (generate: openssl rand -base64 32)
+# Edit .env and configure:
+# 1. BETTER_AUTH_SECRET (generate: openssl rand -base64 32)
+# 2. ADMIN_USERNAME, ADMIN_EMAIL, ADMIN_PASSWORD (for your admin user)
 docker compose up -d
 ```
 
-Visit `http://localhost:5173` to access your instance.
+Visit `http://localhost:5173` and log in with your admin credentials.
 
 ### Development Setup
 
@@ -59,7 +61,7 @@ Visit `http://localhost:5173` to access your instance.
 ```bash
 pnpm install
 cp env.example .env
-# Edit .env and set BETTER_AUTH_SECRET
+# Edit .env and set BETTER_AUTH_SECRET, ADMIN_* credentials
 pnpm run db:migrate
 pnpm run dev
 ```
@@ -86,11 +88,14 @@ Tuvix uses a **trunk-based development** workflow:
 
 ### Configuration
 
-**Required:** `BETTER_AUTH_SECRET` (generate: `openssl rand -base64 32`)
+**Required:**
 
-**Optional:** `DATABASE_PATH`, `PORT`, `CORS_ORIGIN`
+- `BETTER_AUTH_SECRET` - Generate with: `openssl rand -base64 32`
+- `ADMIN_USERNAME`, `ADMIN_EMAIL`, `ADMIN_PASSWORD` - Your admin credentials
 
-See `env.example` for all options.
+**Optional:** `DATABASE_PATH`, `PORT`, `CORS_ORIGIN`, `ALLOW_FIRST_USER_ADMIN`
+
+See `env.example` for all options and [Deployment Guide](./docs/deployment.md) for details.
 
 ---
 
@@ -134,7 +139,7 @@ git clone https://github.com/YOUR_USERNAME/Tuvix-RSS.git
 cd Tuvix-RSS
 pnpm install
 cp env.example .env
-# Edit .env and set BETTER_AUTH_SECRET (generate: openssl rand -base64 32)
+# Edit .env and configure BETTER_AUTH_SECRET and ADMIN_* credentials
 pnpm run db:migrate
 pnpm run dev
 ```

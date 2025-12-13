@@ -1,6 +1,6 @@
 ---
 project: llmgateway
-stars: 709
+stars: 729
 description: |-
     Route, manage, and analyze your LLM requests across multiple providers with a unified API interface.
 url: https://github.com/theopenco/llmgateway

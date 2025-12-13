@@ -68,7 +68,7 @@ GEO 信息格式：
 
 ```bash
 # clone 此项目
-git clone https://github.com/ccbikai/ip-api.git
+git clone https://github.com/miantiao-me/ip-api.git
 
 # 进入项目目录
 cd ip-api
@@ -94,9 +94,4 @@ npm run deploy:netlify
 Cloudflare 支持 IPv4 和 IPv6 访问，如果想只支持单栈，可以只解析 A/AAAA 记录到 Cloudflare 的泛拨 IP。
 
 比如: <https://ipv4.agi.li> 和 <https://ipv6.agi.li>
-
-## 问题反馈
-
-1. 提 Issue / Pull Request
-2. 联系 <https://404.li/x>
 

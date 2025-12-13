@@ -1,6 +1,6 @@
 ---
 project: astro-aria
-stars: 329
+stars: 342
 description: |-
     A personal blog, portfolio, or blog template
 url: https://github.com/miantiao-me/astro-aria

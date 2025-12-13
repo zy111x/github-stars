@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 5493
+stars: 5496
 description: |-
     PraisonAI is a production-ready Multi AI Agents framework, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. It provides a low-code solution to streamline the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
 url: https://github.com/MervinPraison/PraisonAI
@@ -61,6 +61,8 @@ PraisonAI is a production-ready Multi-AI Agents framework with self-reflection, 
 - 🛠️ 100+ Custom Tools
 - 📄 YAML Configuration
 - 💯 100+ LLM Support
+- 🔬 **Deep Research Agents** (OpenAI & Gemini)
+- 🔄 **Query Rewriter Agent** (HyDE, Step-back, Multi-query)
 
 ## Using Python Code
 
@@ -104,6 +106,79 @@ Run:
 python app.py
 ```
 
+### 3. Deep Research Agent
+
+Automated research with real-time streaming, web search, and citations using OpenAI or Gemini Deep Research APIs.
+
+```python
+from praisonaiagents import DeepResearchAgent
+
+# OpenAI Deep Research
+agent = DeepResearchAgent(
+    model="o4-mini-deep-research",  # or "o3-deep-research"
+    verbose=True
+)
+
+result = agent.research("What are the latest AI trends in 2025?")
+print(result.report)
+print(f"Citations: {len(result.citations)}")
+```
+
+```python
+# Gemini Deep Research
+from praisonaiagents import DeepResearchAgent
+
+agent = DeepResearchAgent(
+    model="deep-research-pro",  # Auto-detected as Gemini
+    verbose=True
+)
+
+result = agent.research("Research quantum computing advances")
+print(result.report)
+```
+
+**Features:**
+- 🔍 Multi-provider support (OpenAI, Gemini, LiteLLM)
+- 📡 Real-time streaming with reasoning summaries
+- 📚 Structured citations with URLs
+- 🛠️ Built-in tools: web search, code interpreter, MCP, file search
+- 🔄 Automatic provider detection from model name
+
+### 4. Query Rewriter Agent
+
+Transform user queries to improve RAG retrieval quality using multiple strategies.
+
+```python
+from praisonaiagents import QueryRewriterAgent, RewriteStrategy
+
+agent = QueryRewriterAgent(model="gpt-4o-mini")
+
+# Basic - expands abbreviations, adds context
+result = agent.rewrite("AI trends")
+print(result.primary_query)  # "What are the current trends in Artificial Intelligence?"
+
+# HyDE - generates hypothetical document for semantic matching
+result = agent.rewrite("What is quantum computing?", strategy=RewriteStrategy.HYDE)
+
+# Step-back - generates broader context question
+result = agent.rewrite("GPT-4 vs Claude 3?", strategy=RewriteStrategy.STEP_BACK)
+
+# Sub-queries - decomposes complex questions
+result = agent.rewrite("RAG setup and best embedding models?", strategy=RewriteStrategy.SUB_QUERIES)
+
+# Contextual - resolves references using chat history
+result = agent.rewrite("What about cost?", chat_history=[...])
+```
+
+**Strategies:**
+- **BASIC**: Expand abbreviations, fix typos, add context
+- **HYDE**: Generate hypothetical document for semantic matching
+- **STEP_BACK**: Generate higher-level concept questions
+- **SUB_QUERIES**: Decompose multi-part questions
+- **MULTI_QUERY**: Generate multiple paraphrased versions
+- **CONTEXTUAL**: Resolve references using conversation history
+- **AUTO**: Automatically detect best strategy
+
 ## Using No Code
 
 ### Auto Mode:
@@ -111,6 +186,28 @@ python app.py
 pip install praisonai
 export OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxx
 praisonai --auto create a movie script about Robots in Mars
+```
+
+### Deep Research CLI:
+```bash
+# Default: OpenAI (o4-mini-deep-research)
+praisonai research "What are the latest AI trends in 2025?"
+
+# Use Gemini
+praisonai research --model deep-research-pro "Your research query"
+
+# Rewrite query for better results (uses QueryRewriterAgent)
+praisonai research --query-rewrite "AI trends"
+
+# Save output to file (output/research/{query}.md)
+praisonai research --save "Your research query"
+praisonai research -s "Your research query"
+
+# Combine options
+praisonai research --query-rewrite --save "Your research query"
+
+# Verbose mode (show debug logs)
+praisonai research -v "Your research query"
 ```
 
 ## Using JavaScript Code

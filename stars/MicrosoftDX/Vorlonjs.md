@@ -1,6 +1,6 @@
 ---
 project: Vorlonjs
-stars: 2912
+stars: 2911
 description: |-
     A new, open source, extensible, platform-agnostic tool for remotely debugging and testing your JavaScript. Powered by node.js and socket.io
 url: https://github.com/MicrosoftDX/Vorlonjs

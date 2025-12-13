@@ -1,6 +1,6 @@
 ---
 project: opennhp
-stars: 13732
+stars: 13730
 description: |-
     A lightweight, cryptography-powered, open-source toolkit built to enforce Zero Trust security for infrastructure, applications, and data in the AI-driven world.
 url: https://github.com/OpenNHP/opennhp

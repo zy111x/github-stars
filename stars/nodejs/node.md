@@ -1,6 +1,6 @@
 ---
 project: node
-stars: 114598
+stars: 114711
 description: |-
     Node.js JavaScript runtime ✨🐢🚀✨
 url: https://github.com/nodejs/node
@@ -387,8 +387,6 @@ For information about the governance of the Node.js project, see
   **Jordan Harband** <<ljharb@gmail.com>>
 * [lpinca](https://github.com/lpinca) -
   **Luigi Pinca** <<luigipinca@gmail.com>> (he/him)
-* [lukekarrys](https://github.com/lukekarrys) -
-  **Luke Karrys** <<luke@lukekarrys.com>> (he/him)
 * [Lxxyx](https://github.com/Lxxyx) -
   **Zijian Liu** <<lxxyxzj@gmail.com>> (he/him)
 * [marco-ippolito](https://github.com/marco-ippolito) -
@@ -601,6 +599,8 @@ For information about the governance of the Node.js project, see
   **Nitzan Uziely** <<linkgoron@gmail.com>>
 * [lucamaraschi](https://github.com/lucamaraschi) -
   **Luca Maraschi** <<luca.maraschi@gmail.com>> (he/him)
+* [lukekarrys](https://github.com/lukekarrys) -
+  **Luke Karrys** <<luke@lukekarrys.com>> (he/him)
 * [lundibundi](https://github.com/lundibundi) -
   **Denys Otrishko** <<shishugi@gmail.com>> (he/him)
 * [lxe](https://github.com/lxe) -

@@ -1,6 +1,6 @@
 ---
 project: md-badges
-stars: 1450
+stars: 1472
 description: |-
     An extensive list of Shields.io badges.
 url: https://github.com/inttter/md-badges
@@ -40,6 +40,7 @@ An extensive list of static Shields.io badges, sorted by category.
 * [ORM](#%EF%B8%8F-orm)
 * [Package Manager](#-package-manager)
 * [Payment](#-payment)
+* [Process Manager](#%EF%B8%8F-process-manager)
 * [Programming Language](#-programming-language)
 * [Review](#-review)
 * [Search Engine](#-search-engine)
@@ -332,6 +333,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Cassandra](https://img.shields.io/badge/Cassandra-%231287B1.svg?logo=apache-cassandra&logoColor=white)](#) | `[![Cassandra](https://img.shields.io/badge/Cassandra-%231287B1.svg?logo=apache-cassandra&logoColor=white)](#)` |
 | [![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?logo=couchbase&logoColor=white)](#) | `[![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?logo=couchbase&logoColor=white)](#)` |
 | [![CouchDB](https://img.shields.io/badge/CouchDB-E42528?logo=apachecouchdb&logoColor=fff)](#) | `[![CouchDB](https://img.shields.io/badge/CouchDB-E42528?logo=apachecouchdb&logoColor=fff)](#)` |
+| [![FaunaDB](https://img.shields.io/badge/FaunaDB-3A1AB6?logo=fauna&logoColor=white)](#) | `[![FaunaDB](https://img.shields.io/badge/FaunaDB-3A1AB6?logo=fauna&logoColor=white)](#)` |
 | [![Firebase](https://img.shields.io/badge/Firebase-039BE5?logo=Firebase&logoColor=white)](#) | `[![Firebase](https://img.shields.io/badge/Firebase-039BE5?logo=Firebase&logoColor=white)](#)` |
 | [![InfluxDB](https://img.shields.io/badge/InfluxDB-22ADF6?logo=influxdb&logoColor=fff)](#) | `[![InfluxDB](https://img.shields.io/badge/InfluxDB-22ADF6?logo=influxdb&logoColor=fff)](#)` |
 | [![MariaDB](https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white)](#) | `[![MariaDB](https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white)](#)` |
@@ -532,6 +534,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?logo=laravel&logoColor=white)](#) | `[![Laravel](https://img.shields.io/badge/Laravel-%23FF2D20.svg?logo=laravel&logoColor=white)](#)` |
 | [![Less](https://img.shields.io/badge/Less-1D365D?logo=less&logoColor=fff)](#) | `[![Less](https://img.shields.io/badge/Less-1D365D?logo=less&logoColor=fff)](#)` |
 | [![Lit](https://img.shields.io/badge/Lit-4C64FF?logo=Lit&logoColor=white)](#) | `[![Lit](https://img.shields.io/badge/Lit-4C64FF?logo=Lit&logoColor=white)](#)` |
+| [![Marko](https://img.shields.io/badge/Marko-202124?logo=Marko&logoColor=FF5467)](#) | `[![Marko](https://img.shields.io/badge/Marko-202124?logo=Marko&logoColor=FF5467)](#)` |
 | [![Mocha](https://img.shields.io/badge/Mocha-8D6748?logo=mocha&logoColor=fff)](#) | `[![Mocha](https://img.shields.io/badge/Mocha-8D6748?logo=mocha&logoColor=fff)](#)` |
 | [![Meteor.js](https://img.shields.io/badge/Meteor.js-%23d74c4c.svg?logo=meteor&logoColor=white)](#) | `[![Meteor.js](https://img.shields.io/badge/Meteor.js-%23d74c4c.svg?logo=meteor&logoColor=white)](#)` |
 | [![Nest](https://img.shields.io/badge/Nest.js-%23E0234E.svg?logo=nestjs&logoColor=white)](#) | `[![Nest](https://img.shields.io/badge/Nest.js-%23E0234E.svg?logo=nestjs&logoColor=white)](#)` |
@@ -648,6 +651,8 @@ An extensive list of static Shields.io badges, sorted by category.
 | Preview | Markdown Code |
 |---------|---------------|
 | [![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)](#) | `[![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)](#)` |
+| [![Kibana](https://img.shields.io/badge/Kibana-005571?logo=kibana&logoColor=fff)](#) | `[![Kibana](https://img.shields.io/badge/Kibana-005571?logo=kibana&logoColor=fff)](#)` |
+| [![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000?logo=opentelemetry&logoColor=fff)](#) | `[![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000?logo=opentelemetry&logoColor=fff)](#)` |
 | [![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?logo=prometheus&logoColor=white)](#) | `[![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?logo=prometheus&logoColor=white)](#)` |  
 
 <div align="right">
@@ -753,6 +758,18 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Stripe](https://img.shields.io/badge/Stripe-5851DD?logo=stripe&logoColor=fff)](#) | `[![Stripe](https://img.shields.io/badge/Stripe-5851DD?logo=stripe&logoColor=fff)](#)` |
 | [![Visa](https://img.shields.io/badge/Visa-1A1F71?logo=visa&logoColor=fff)](#) | `[![Visa](https://img.shields.io/badge/Visa-1A1F71?logo=visa&logoColor=fff)](#)` |
 | [![WooCommerce](https://img.shields.io/badge/WooCommerce-96588A?logo=woocommerce&logoColor=fff)](#) | `[![WooCommerce](https://img.shields.io/badge/WooCommerce-96588A?logo=woocommerce&logoColor=fff)](#)` |
+
+<div align="right">
+
+[Back To Top ⬆️](#table-of-contents)
+</div>
+
+### 🛠️ Process Manager
+
+| Preview | Markdown Code |
+|---------|---------------|
+| [![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?logo=nodemon&logoColor=fff)](#) | `[![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?logo=nodemon&logoColor=fff)](#)` |
+| [![PM2](https://img.shields.io/badge/PM2-2B037A?logo=pm2&logoColor=white)](#) | `[![PM2](https://img.shields.io/badge/PM2-2B037A?logo=pm2&logoColor=white)](#)` |
 
 <div align="right">
 
@@ -1057,4 +1074,5 @@ Here are some people who have contributed to md-badges so far:
 <a href="https://github.com/inttter/md-badges/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=inttter/md-badges" />
 </a>
+
 

@@ -1,6 +1,6 @@
 ---
 project: JsonTree.js
-stars: 295
+stars: 296
 description: |-
     🔗 A lightweight JavaScript library that generates customizable tree views to better visualize, and edit, JSON data.
 url: https://github.com/williamtroup/JsonTree.js

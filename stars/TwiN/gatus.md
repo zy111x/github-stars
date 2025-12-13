@@ -1,8 +1,8 @@
 ---
 project: gatus
-stars: 9240
+stars: 9306
 description: |-
-    ⛑ Automated developer-oriented status page
+    The most advanced status page in the world
 url: https://github.com/TwiN/gatus
 ---
 

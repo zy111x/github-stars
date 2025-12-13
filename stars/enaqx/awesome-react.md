@@ -1,6 +1,6 @@
 ---
 project: awesome-react
-stars: 71059
+stars: 71128
 description: |-
     A collection of awesome things regarding React ecosystem
 url: https://github.com/enaqx/awesome-react
@@ -83,6 +83,7 @@ A collection of awesome things regarding the React ecosystem.
 - [react-email](https://github.com/resend/react-email) - Unstyled components for creating beautiful emails
 - [8bitcn-ui](https://github.com/TheOrcDev/8bitcn-ui) - A retro 8-bit themed React component library built on top of shadcn
 - [headlessui](https://github.com/tailwindlabs/headlessui) - Completely unstyled, accessible UI components for React
+- [ruixen-ui](https://github.com/ruixenui/ruixen.com) - Modern, lightweight React component library with elegant design
 
 #### React State Management and Data Fetching
 
@@ -194,6 +195,7 @@ A collection of awesome things regarding the React ecosystem.
 - [remotion](https://github.com/remotion-dev/remotion) - Make videos programmatically with React
 - [react-pdf](https://github.com/diegomura/react-pdf) - Create PDF files using React
 - [react-figma](https://github.com/react-figma/react-figma) - A React renderer for Figma
+- [markdown-to-jsx](https://github.com/quantizor/markdown-to-jsx) - A very fast and versatile markdown toolchain
 
 #### React Internationalization
 

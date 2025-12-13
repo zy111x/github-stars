@@ -1,6 +1,6 @@
 ---
 project: aigc-weekly
-stars: 152
+stars: 190
 description: |-
     Agili 的 AIGC 周刊 - 一个由 Agentic AI Agent 驱动的 AIGC（人工智能生成内容）精选周刊。
 url: https://github.com/miantiao-me/aigc-weekly
@@ -16,7 +16,7 @@ url: https://github.com/miantiao-me/aigc-weekly
 
 **RSS订阅**: <https://aigc-weekly.agi.li/rss.xml>
 
-![aigc-weekly](https://socialify.git.ci/ccbikai/aigc-weekly/image?description=1&forks=1&name=1&owner=1&pattern=Circuit+Board&stargazers=1&theme=Auto)
+![aigc-weekly](https://socialify.git.ci/miantiao-me/aigc-weekly/image?description=1&forks=1&name=1&owner=1&pattern=Circuit+Board&stargazers=1&theme=Auto)
 
 ## 🚀 特性
 
@@ -56,7 +56,7 @@ url: https://github.com/miantiao-me/aigc-weekly
 1.  克隆仓库：
 
     ```bash
-    git clone https://github.com/ccbikai/aigc-weekly.git
+    git clone https://github.com/miantiao-me/aigc-weekly.git
     cd aigc-weekly
     ```
 

@@ -1,6 +1,6 @@
 ---
 project: workflows-ts
-stars: 241
+stars: 242
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/workflows-ts

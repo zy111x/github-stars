@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 53928
+stars: 54064
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -117,6 +117,7 @@ directories to and from different cloud storage providers.
 - Selectel Object Storage [:page_facing_up:](https://rclone.org/s3/#selectel)
 - Servercore Object Storage [:page_facing_up:](https://rclone.org/s3/#servercore)
 - SFTP [:page_facing_up:](https://rclone.org/sftp/)
+- Shade [:page_facing_up:](https://rclone.org/shade/)
 - SMB / CIFS [:page_facing_up:](https://rclone.org/smb/)
 - Spectra Logic [:page_facing_up:](https://rclone.org/s3/#spectralogic)
 - StackPath [:page_facing_up:](https://rclone.org/s3/#stackpath)

@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 14970
+stars: 15132
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -177,6 +177,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [dtop](https://github.com/amir20/dtop) Terminal dashboard for Docker monitoring across multiple hosts
 - [dive](https://github.com/wagoodman/dive) A tool for exploring each layer in a docker image
 - [dockly](https://github.com/lirantal/dockly) Immersive terminal interface for managing docker containers and services
+- [dprs](https://github.com/durableprogramming/dprs) A TUI for managing Docker containers with real-time monitoring and log streaming
 - [dry](https://github.com/moncho/dry) A Docker manager for the terminal
 - [ducker](https://github.com/robertpsoane/ducker) A slightly quackers Docker TUI based on k9s
 - [e1s](https://github.com/keidarcy/e1s) TUI for managing AWS ECS resources
@@ -227,6 +228,7 @@ url: https://github.com/rothgar/awesome-tuis
 
 - [adbtuifm](https://github.com/darkhz/adbtuifm) A TUI file manager for Android, based on the Android Debug Bridge(ADB).
 - [broot](https://github.com/Canop/broot) A new way to see and navigate directory trees
+- [deletor](https://github.com/pashkov256/deletor) Manage and delete files efficiently with an interactive TUI and scriptable CLI.
 - [far2l](https://github.com/elfmz/far2l) Linux port of Far v2 file manager
 - [fml](https://github.com/wick3dr0se/fml) :file_folder: A stupid simple, fast file manager written in BASH v4.2+.
 - [goful](https://github.com/anmitsu/goful) a powerful TUI file manager written in Go.
@@ -463,6 +465,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [mqttui](https://github.com/EdJoPaTo/mqttui) MQTT Client written in rust
 - [moc](https://moc.daper.net/download) console audio player
 - [moribito](https://github.com/ericschmar/moribito) Browse LDAP directory trees, viewing records, and executing custom queries.
+- [NanoCore](https://github.com/AfaanBilal/NanoCore) An 8-bit CPU emulator TUI written in Rust with an assembler and a custom ISA.
 - [neoss](https://github.com/PabloLec/neoss) Socket statistics visualization and explanation tool for Unix systems.
 - [nmtui](https://developer.gnome.org/NetworkManager/stable/nmtui.html) ncurses network manager
 - [oha](https://github.com/hatoo/oha) HTTP load generator

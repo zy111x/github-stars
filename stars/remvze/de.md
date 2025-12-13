@@ -1,6 +1,6 @@
 ---
 project: de
-stars: 27
+stars: 29
 description: |-
     🐲 Curated list of Design Engineers.
 url: https://github.com/remvze/de

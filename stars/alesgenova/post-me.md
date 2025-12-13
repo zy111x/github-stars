@@ -1,6 +1,6 @@
 ---
 project: post-me
-stars: 520
+stars: 521
 description: |-
     📩 Use web Workers and other Windows through a simple Promise API
 url: https://github.com/alesgenova/post-me

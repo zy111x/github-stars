@@ -1,6 +1,6 @@
 ---
 project: openDAW
-stars: 835
+stars: 849
 description: |-
     openDAW is a next-generation web-based Digital Audio Workstation (DAW)
 url: https://github.com/andremichelle/openDAW
@@ -23,7 +23,7 @@ a strong focus on **education** and data-privacy. Please consider supporting thi
 on [Patreon](https://www.patreon.com/join/openDAW) or [ko-fi](https://ko-fi.com/opendaw).
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/andremichelle/openDAW/refs/heads/main/assets/studio-teaser.png"/>
+<img src="https://raw.githubusercontent.com/andremichelle/openDAW/main/assets/studio-teaser.png"/>
 </p>
 
 ---
@@ -69,48 +69,11 @@ Huge thanks to our [ambassadors](https://opendaw.org/ambassadors), whose dedicat
 
 ### openDAW Visionary — $25.00
 
-- Polarity
-- kanaris
-- Stephen Tai
-- Thad Guidry
-- Pathfinder
-- One Sound Every Day (santino)
+Stephen Tai, Pathfinder, One Sound Every Day (santino), kanaris, Oli Larkin
 
 ### openDAW Supporter — $5.00
 
-- Cal Lycus
-- Jetdarc
-- Truls Enstad
-- p07a
-- Ynot Etluhcs
-- Mats Gisselson
-- Dado
-- centomila
-- Ola
-- SKYENCE
-- BeatMax_Prediction
-- Kim T
-- Nyenoidz
-- Bruce Hunter
-- Steve Meiers
-- 4ohm
-- Yito
-- Shawn Lukas
-- Tommes
-- David Thompson
-- Harry Gillich
-- OxVolt
-- Wojciech Miłkowski
-- Client
-- skyboundzoo
-- JHINZ
-- Mark Dammer
-- fork-kun
-- Martin Eigel
-
-### openDAW Custom Pledge
-
-- lokomotywa ($2.47)
+Cal Lycus, Jetdarc, Truls Enstad, Polarity, Ynot Etluhcs, Mats Gisselson, Ola, SKYENCE, BeatMax_Prediction, Kim T, Nyenoidz, Steve Meiers, 4ohm, Yito, Shawn Lukas, Tommes, David Thompson, Harry Gillich, OxVolt, Wojciech Miłkowski, skyboundzoo, JHINZ, Mark Dammer, fork-kun, Martin Eigel
 
 ---
 
@@ -118,24 +81,24 @@ Huge thanks to our [ambassadors](https://opendaw.org/ambassadors), whose dedicat
 
 #### Stock Plugins
 
-* Vaporisateur (simple synth with classical waveforms)
-* Playfield (sample player with individual effect chains)
-* Nano (simple sampler pitching a single audio file)
+* Vaporisateur (subtractive synth with classical waveforms)
+* Playfield (sample drum computer with individual effect chains)
+* Nano (nano sampler for a single audio file)
 * Tape (playback device for audio regions and clips)
-* Soundfont (simple soundfont player)
-* MIDI Output (to external devices)
-* Stereo Tool (volume, panning and/or invert the stereo signal)
+* Soundfont (soundfont player)
+* MIDI Output (sends MIDI messages to other devices)
+* Stereo Tool (volume, panning and invert the stereo signal)
 * Delay (stereo delay with cross and filter options)
 * Crusher (degenerates audio signal)
 * Cheap Reverb (FreeVerb variation)
-* Revamp (Graphical Equalizer)
-* Arpeggio (midi effect)
+* Revamp (graphical equalizer with spectrum analyser)
+* Arpeggio (plays the notes of a chord one after another)
 * Pitch (offsets midi note pitches)
 * Zeitgeist (transforms time)
-* Velocity (Manipulates velocities of incoming notes)
+* Velocity (manipulates velocities of incoming notes)
 * Fold (waveform folding algorithm with oversampling)
-* Tidal (Shapes rhythm and space through volume and pan)
-* Dattorro Reverb (Dense algorithmic reverb based on Dattorro's design)
+* Tidal (shapes rhythm and space through volume and pan)
+* Dattorro Reverb (dense algorithmic reverb based on Dattorro's design)
 
 #### Ported Plugins (Excluded in commercial license)
 
@@ -276,6 +239,7 @@ participate, visit our [Contribute](https://opendaw.org/contribute) page.
   from [Noun Project](https://thenounproject.com/browse/icons/term/compress/) (CC BY 3.0)
 * "Waveforms" by [Austin Andrews](https://github.com/Templarian/MaterialDesign)
 * "futurism" by Martin Königsmann from [Noun Project](https://thenounproject.com/icon/futurism-4565401/)
+* "tape reel" by Evgeny Filatov from [thenounproject](https://thenounproject.com/icon/tape-reel-2216293/)
 
 ## Dual-Licensing Model
 

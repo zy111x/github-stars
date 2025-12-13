@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 1608
+stars: 1630
 description: |-
     A unified hub for centrally managing and dynamically orchestrating multiple MCP servers/APIs into separate endpoints with flexible routing strategies
 url: https://github.com/samanhappy/mcphub

@@ -1,6 +1,6 @@
 ---
 project: axonhub
-stars: 700
+stars: 777
 description: |-
     AxonHub is a modern AI gateway system that provides a unified OpenAI, Anthropic, Gemini and AI SDK compatible API
 url: https://github.com/looplj/axonhub
@@ -161,6 +161,7 @@ Learn more about how tracing works and how to integrate it in the [Tracing Guide
 | Format                      | Status     | Compatibility       | Modalities      |
 | --------------------------- | ---------- | ------------------- | --------------- |
 | **OpenAI Chat Completions** | ✅ Done    | Fully compatible    | Text, Image     |
+| **OpenAI Responses**        | ⚠️ Partial | No `previous_response_id` | Text        |
 | **Anthropic Messages**      | ✅ Done    | Fully supported     | Text            |
 | **Gemini**                  | ✅ Done    | Fully supported     | Text, Image     |
 | **AI SDK**                  | ⚠️ Partial | Partially supported | Text            |

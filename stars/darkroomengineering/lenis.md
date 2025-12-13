@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 12593
+stars: 12652
 description: |-
     Smooth scroll at it should be
 url: https://github.com/darkroomengineering/lenis
@@ -47,7 +47,7 @@ If you’ve used Lenis and it made your site feel just a little more alive, cons
 Your support helps us smooth out the internet one library at a time—and lets us keep building tools that care about the details most folks overlook.
 
 <!-- sponsors -->
-[![syntaxfm](https://github.com/syntaxfm.png?size=64)](https://github.com/syntaxfm) [![smsunarto](https://github.com/smsunarto.png?size=64)](https://github.com/smsunarto) [![ae-com](https://github.com/ae-com.png?size=64)](https://github.com/ae-com) [![thearkis](https://github.com/thearkis.png?size=64)](https://github.com/thearkis) [![cachet-studio](https://github.com/cachet-studio.png?size=64)](https://github.com/cachet-studio) [![ironvelvet](https://github.com/ironvelvet.png?size=64)](https://github.com/ironvelvet) [![mariosmaselli](https://github.com/mariosmaselli.png?size=64)](https://github.com/mariosmaselli) [![bizarro](https://github.com/bizarro.png?size=64)](https://github.com/bizarro) [![mielucristian](https://github.com/mielucristian.png?size=64)](https://github.com/mielucristian) [![vallafederico](https://github.com/vallafederico.png?size=64)](https://github.com/vallafederico) [![itsoffbrand](https://github.com/itsoffbrand.png?size=64)](https://github.com/itsoffbrand) [![velox-themes](https://github.com/velox-themes.png?size=64)](https://github.com/velox-themes) [![glauber-sampaio](https://github.com/glauber-sampaio.png?size=64)](https://github.com/glauber-sampaio)
+[![syntaxfm](https://github.com/syntaxfm.png?size=64)](https://github.com/syntaxfm) [![ae-com](https://github.com/ae-com.png?size=64)](https://github.com/ae-com) [![smsunarto](https://github.com/smsunarto.png?size=64)](https://github.com/smsunarto) [![thearkis](https://github.com/thearkis.png?size=64)](https://github.com/thearkis) [![cachet-studio](https://github.com/cachet-studio.png?size=64)](https://github.com/cachet-studio) [![ironvelvet](https://github.com/ironvelvet.png?size=64)](https://github.com/ironvelvet) [![mariosmaselli](https://github.com/mariosmaselli.png?size=64)](https://github.com/mariosmaselli) [![vallafederico](https://github.com/vallafederico.png?size=64)](https://github.com/vallafederico) [![bizarro](https://github.com/bizarro.png?size=64)](https://github.com/bizarro) [![mielucristian](https://github.com/mielucristian.png?size=64)](https://github.com/mielucristian) [![itsoffbrand](https://github.com/itsoffbrand.png?size=64)](https://github.com/itsoffbrand) [![glauber-sampaio](https://github.com/glauber-sampaio.png?size=64)](https://github.com/glauber-sampaio) [![velox-themes](https://github.com/velox-themes.png?size=64)](https://github.com/velox-themes) [![blackpixelca](https://github.com/blackpixelca.png?size=64)](https://github.com/blackpixelca) [![Tarang74](https://github.com/Tarang74.png?size=64)](https://github.com/Tarang74) [![joevingracien](https://github.com/joevingracien.png?size=64)](https://github.com/joevingracien)
 <!-- sponsors -->
 
 <br/>
@@ -90,7 +90,7 @@ import Lenis from 'lenis'
 Using scripts:
 
 ```html
-<script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script> 
+<script src="https://unpkg.com/lenis@1.3.16/dist/lenis.min.js"></script> 
 ```
 
 
@@ -137,7 +137,7 @@ import 'lenis/dist/lenis.css'
 **Or link the CSS file:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.15/dist/lenis.css">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.16/dist/lenis.css">
 ```
 
 **Or add it manually:**

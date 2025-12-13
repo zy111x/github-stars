@@ -1,6 +1,6 @@
 ---
 project: rivet
-stars: 4747
+stars: 4780
 description: |-
     Rivet Actors: long-lived, in-memory processes. It's what you reach for when you hit the limitations of HTTP, databases, or queues.
 url: https://github.com/rivet-dev/rivet

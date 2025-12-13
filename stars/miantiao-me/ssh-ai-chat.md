@@ -1,6 +1,6 @@
 ---
 project: ssh-ai-chat
-stars: 762
+stars: 766
 description: |-
     Chat with AI over SSH.
 url: https://github.com/miantiao-me/ssh-ai-chat
@@ -49,7 +49,7 @@ https://github.com/user-attachments/assets/e676ba1b-b2ea-4568-ab5c-f7ba6c79d790
 ```docker
 services:
   ssh-ai-chat:
-    image: ghcr.io/ccbikai/ssh-ai-chat
+    image: ghcr.io/miantiao-me/ssh-ai-chat
     ports:
       - 22:2222
     volumes:
@@ -134,5 +134,5 @@ Special thanks to [V.PS](https://404.li/vps) for sponsoring our servers.
 
 1. [Follow me on Telegram](https://t.me/miantiao_me)
 2. [Follow me on 𝕏](https://404.li/kai)
-3. [Sponsor me on GitHub](https://github.com/sponsors/ccbikai)
+3. [Sponsor me on GitHub](https://github.com/sponsors/miantiao-me)
 

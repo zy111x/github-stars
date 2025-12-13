@@ -1,6 +1,6 @@
 ---
 project: s3mini
-stars: 1304
+stars: 1308
 description: |-
     👶 Tiny S3 client. Edge computing ready. No-dep. In Typescript. Works with @cloudflare @minio @backblaze @digitalocean @garagehq @oracle
 url: https://github.com/good-lly/s3mini
@@ -8,7 +8,7 @@ url: https://github.com/good-lly/s3mini
 
 # s3mini | Tiny & fast S3 client for node and edge platforms.
 
-`s3mini` is an ultra-lightweight Typescript client (~14 KB minified, ≈15 % more ops/s) for S3-compatible object storage. It runs on Node, Bun, Cloudflare Workers, and other edge platforms. It has been tested on Cloudflare R2, Backblaze B2, DigitalOcean Spaces, Ceph, Oracle, Garage and MinIO. (No Browser support!)
+`s3mini` is an ultra-lightweight Typescript client (~18 KB minified, ≈15 % more ops/s) for S3-compatible object storage. It runs on Node, Bun, Cloudflare Workers, and other edge platforms. It has been tested on Cloudflare R2, Backblaze B2, DigitalOcean Spaces, Ceph, Oracle, Garage and MinIO. (No Browser support!)
 
 [[github](https://github.com/good-lly/s3mini)]
 [[issues](https://github.com/good-lly/s3mini/issues)]
@@ -74,7 +74,7 @@ The library supports a subset of S3 operations, focusing on essential features, 
 
 #### Objects ops
 
-- ✅ ListObjectsV2 (listObjects)
+- ✅ ListObjectsV2 (listObjects, listObjectsPaged)
 - ✅ GetObject (getObject, getObjectResponse, getObjectWithETag, getObjectRaw, getObjectArrayBuffer, getObjectJSON)
 - ✅ PutObject (putObject)
 - ✅ DeleteObject (deleteObject)
@@ -199,6 +199,13 @@ if (list) {
   console.log('List of objects:', list);
 } else {
   console.log('No objects found in the bucket.');
+}
+
+// list objects in the bucket, 10 at a time using pagination token
+let results = await s3.listObjectsPaged('/', undefined, 10, undefined);
+while (results?.objects?.length) {
+  console.log('List of objects in this page:', results);
+  results = await s3.listObjectsPaged('/', undefined, 10, results.nextContinuationToken);
 }
 
 // delete the object

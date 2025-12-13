@@ -1,6 +1,6 @@
 ---
 project: sql-formatter
-stars: 2763
+stars: 2767
 description: |-
     A whitespace formatter for different query languages
 url: https://github.com/sql-formatter-org/sql-formatter
@@ -216,7 +216,6 @@ We provide **JSON Schema** for `.sql-formatter.json` configuration file, enablin
 - **Usage Guides:**
   - [Using the schema in VSCode](https://code.visualstudio.com/docs/languages/json#_mapping-in-the-user-settings)
   - [Using the schema in Zed](https://zed.dev/docs/languages/json#schema-specification-via-settings)
-
 
 ### Usage as ESLint plugin
 

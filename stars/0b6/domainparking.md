@@ -1,6 +1,6 @@
 ---
 project: domainparking
-stars: 15
+stars: 18
 description: |-
     null
 url: https://github.com/0b6/domainparking

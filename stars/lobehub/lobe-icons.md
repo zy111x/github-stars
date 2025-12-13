@@ -1,6 +1,6 @@
 ---
 project: lobe-icons
-stars: 1228
+stars: 1258
 description: |-
     🥨 Lobe Icons - Brings AI/LLM brand logos to your React & React Native apps — static SVG/PNG/WebP, no dependencies.
 url: https://github.com/lobehub/lobe-icons
@@ -20,6 +20,8 @@ Popular AI / LLM Model Brand SVG Logo and Icon Collection. See them all on one p
 Contributions, corrections & requests can be made on GitHub.
 
 [Documents](https://icons.lobehub.com) · [Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
+
+<a href="https://www.producthunt.com/products/lobe-icons?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-lobe&#0045;icons" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1047110&theme=light&t=1765199661410" alt="Lobe&#0032;Icons - A&#0032;Collection&#0032;of&#0032;AI&#0032;Company&#0032;&#0032;&#0047;&#0032;LLM&#0032;Model&#0032;Logo | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 <!-- SHIELD GROUP -->
 

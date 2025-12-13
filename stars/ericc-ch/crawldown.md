@@ -1,6 +1,6 @@
 ---
 project: crawldown
-stars: 7
+stars: 8
 description: |-
     Crawl websites and convert their pages into clean, readable Markdown content using Mozilla's Readability and Turndown.
 url: https://github.com/ericc-ch/crawldown

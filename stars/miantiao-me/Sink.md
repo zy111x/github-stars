@@ -1,6 +1,6 @@
 ---
 project: Sink
-stars: 5902
+stars: 5954
 description: |-
     ⚡ A Simple / Speedy / Secure Link Shortener with Analytics, 100% run on Cloudflare.
 url: https://github.com/miantiao-me/Sink
@@ -13,7 +13,7 @@ url: https://github.com/miantiao-me/Sink
 <a href="https://trendshift.io/repositories/10421" target="_blank">
   <img
     src="https://trendshift.io/api/badge/repositories/10421"
-    alt="ccbikai/Sink | Trendshift"
+    alt="miantiao-me/Sink | Trendshift"
     width="250"
     height="55"
   />
@@ -43,7 +43,7 @@ url: https://github.com/miantiao-me/Sink
   />
 </a>
 
-[<img src="https://devin.ai/assets/deepwiki-badge.png" alt="DeepWiki" height="20"/>](https://deepwiki.com/ccbikai/Sink)
+[<img src="https://devin.ai/assets/deepwiki-badge.png" alt="DeepWiki" height="20"/>](https://deepwiki.com/miantiao-me/Sink)
 ![Cloudflare](https://img.shields.io/badge/Cloudflare-F69652?style=flat&logo=cloudflare&logoColor=white)
 ![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=flat&logo=nuxtdotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
@@ -152,5 +152,5 @@ We currently do not support native MCP Server, but we have OpenAPI documentation
 ## ☕ Sponsor
 
 1. [Follow Me on X(Twitter)](https://404.li/kai).
-2. [Become a sponsor to on GitHub](https://github.com/sponsors/ccbikai).
+2. [Become a sponsor to on GitHub](https://github.com/sponsors/miantiao-me).
 

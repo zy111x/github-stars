@@ -1,13 +1,14 @@
 ---
 project: multithreading
-stars: 831
+stars: 1313
 description: |-
     The missing standard library for multithreading in JavaScript (Works in the browser, Node.js, Deno, Bun)
 url: https://github.com/W4G1/multithreading
 ---
 
 <div align="center">
-  <img width="140" height="119" alt="Logo" src="https://github.com/user-attachments/assets/e7750ae6-3acd-4c81-9417-3979f51535f3" />
+
+  ![Logo](https://github.com/user-attachments/assets/0981b64a-8c55-48b5-b369-0c765757a162)
 
   <h1>Multithreading.js</h1>
 
@@ -119,8 +120,8 @@ const sharedState = new Mutex(new SharedJsonBuffer({
   },
 }));
 
-await spawn(move(sharedState), async (lock) => {
-  using guard = await lock.acquire();
+await spawn(move(sharedState), async (sharedState) => {
+  using guard = await sharedState.lock();
 
   const state = guard.value;
 
@@ -134,7 +135,7 @@ await spawn(move(sharedState), async (lock) => {
 }).join();
 
 // Verify on main thread
-using guard = await sharedState.acquire();
+using guard = await sharedState.lock();
 
 console.log(guard.value); // { score: 100, players: ["Main Thread", "Worker1"], ... }
 ```
@@ -163,7 +164,7 @@ const counterMutex = new Mutex(new Int32Array(buffer));
 
 spawn(move(counterMutex), async (mutex) => {
   // 'using' automatically disposes the lock at the end of the scope
-  using guard = await mutex.acquire();
+  using guard = await mutex.lock();
   
   guard.value[0]++;
   
@@ -173,7 +174,7 @@ spawn(move(counterMutex), async (mutex) => {
 
 #### Option B: Manual Management (Bun / Standard JS)
 
-If you are using **Bun** or prefer standard JavaScript syntax, you must manually release the lock using `drop()`.
+If you are using **Bun** or prefer standard JavaScript syntax, you must manually release the lock using `.dispose()`.
 
 **Note on Bun:** While Bun is supported, it's runtime automatically polyfills the `using` keyword whenever a function is stringified. This transpiled code relies on specific internal globals made available in the context where the function is serialized. Because the worker runs in a different isolated context where these globals are not registered, code with `using` will fail to execute.
 
@@ -185,18 +186,15 @@ import { spawn, move, Mutex } from "multithreading";
 const counterMutex = new Mutex(new Int32Array(new SharedArrayBuffer(4)));
 
 spawn(move(counterMutex), async (mutex) => {
-  // Note that we have to import drop here, otherwise it wouldn't be available
-  const { drop } = await import("multithreading");
-
   // 1. Acquire the lock manually
-  const guard = await mutex.acquire();
+  const guard = await mutex.lock();
 
   try {
     // 2. Critical Section
     guard.value[0]++;
   } finally {
     // 3. Explicitly release the lock
-    drop(guard);
+    guard.dispose();
   }
 });
 ```
@@ -257,7 +255,6 @@ Like the Mutex, if you cannot use the `using` keyword, you can manually manage t
 
 ```typescript
 spawn(move(semaphore), async (sem) => {
-  const { drop } = await import("multithreading");
   // Acquire 2 permits at once
   const guard = await sem.acquire(2);
   
@@ -265,7 +262,7 @@ spawn(move(semaphore), async (sem) => {
     // Critical Section
   } finally {
     // Release the 2 permits
-    drop(guard);
+    guard.dispose();
   }
 });
 ```
@@ -280,17 +277,50 @@ import { spawn, move, Mutex, Condvar } from "multithreading";
 const mutex = new Mutex(new Int32Array(new SharedArrayBuffer(4)));
 const cv = new Condvar();
 
-spawn(move(mutex, cv), async (lock, cond) => {
-  using guard = await lock.acquire();
+spawn(move(mutex, cv), async (mutex, cv) => {
+  using guard = await mutex.lock();
   
   // Wait until value is not 0
   while (guard.value[0] === 0) {
     // wait() unlocks the mutex, waits for notification, then re-locks
-    await cond.wait(guard);
+    await cv.wait(guard);
   }
   
   console.log("Received signal, value is:", guard.value[0]);
 });
+```
+
+### 5\. Barrier
+
+A `Barrier` acts as a synchronization checkpoint. It blocks all participating threads until a specific number (`N`) of threads have reached the barrier. Once the last thread arrives, all threads are released simultaneously.
+
+Barriers are **cyclic**, meaning they automatically reset and can be reused immediately for subsequent phases of work (e.g., in iterative algorithms like simulations).
+
+**Leader Election:** The `wait()` method returns an object `{ isLeader: boolean }`. Exactly **one** thread is guaranteed to be the leader per cycle. This is useful for performing single-threaded setup or cleanup tasks between parallel phases.
+
+```typescript
+import { spawn, move, Barrier } from "multithreading";
+
+const N = 4;
+const barrier = new Barrier(N);
+
+for (let i = 0; i < N; i++) {
+  spawn(move(barrier), async (b) => {
+    // Phase 1
+    console.log("Working on Phase 1...");
+    
+    // Wait for all 4 threads to reach this point
+    const res = await b.wait();
+    
+    // Only one thread runs this code
+    if (res.isLeader) {
+      console.log("All threads finished Phase 1. preparing Phase 2...");
+    }
+    
+    // Phase 2 (All threads start this simultaneously)
+    console.log("Working on Phase 2...");
+  });
+}
 ```
 
 -----
@@ -415,7 +445,7 @@ Content-Security-Policy: default-src 'self'; worker-src 'self' blob:; script-src
 ### Memory Management
 
   * **`move(...args)`**: Marks arguments for transfer (ownership move) or clone, depending on the data type. Accepts a variable number of arguments which map to the arguments of the worker function.
-  * **`drop(resource)`**: Explicitly disposes of a resource (calls `[Symbol.dispose]`). This is required for manual lock management in environments like Bun.
+  * **`drop(resource)`**: Explicitly disposes of a resource (calls `[Symbol.dispose]`).
   * **`SharedJsonBuffer`**: A class for storing JSON objects in shared memory.
 
 ### Channels (MPMC)
@@ -423,34 +453,37 @@ Content-Security-Policy: default-src 'self'; worker-src 'self' blob:; script-src
   * **`channel<T>(capacity)`**: Creates a new channel. Returns `[Sender<T>, Receiver<T>]`.
   * **`Sender<T>`**:
       * `send(value)`: Async. Returns `Promise<Result<void, Error>>`.
-      * `sendSync(value)`: Blocking. Returns `Result<void, Error>`.
+      * `blockingSend(value)`: Blocking. Returns `Result<void, Error>`.
       * `clone()`: Creates a new handle to the same channel (increments ref count).
       * `close()`: Manually closes the channel for everyone.
   * **`Receiver<T>`**:
       * `recv()`: Async. Returns `Promise<Result<T, Error>>`.
-      * `recvSync()`: Blocking. Returns `Result<T, Error>`.
+      * `blockingRecv()`: Blocking. Returns `Result<T, Error>`.
       * `clone()`: Creates a new handle to the same channel.
       * `close()`: Manually drops this handle.
 
 ### Synchronization
 
   * **`Mutex<T>`**:
-      * `acquire()`: Async lock (Recommended). Returns `Promise<MutexGuard>`.
+      * `lock()`: Async lock (Recommended). Returns `Promise<MutexGuard>`.
       * `tryLock()`: Non-blocking attempt. Returns boolean.
-      * `acquireSync()`: Blocking lock (Halts Worker). Returns `MutexGuard`.
+      * `blockingLock()`: Blocking lock (Halts Worker). Returns `MutexGuard`.
   * **`RwLock<T>`**:
       * `read()`: Async shared read access (Recommended).
       * `write()`: Async exclusive write access (Recommended).
-      * `readSync()` / `writeSync()`: Synchronous/Blocking variants.
+      * `blockingRead()` / `blockingWrite()`: Synchronous/Blocking variants.
   * **`Semaphore`**:
-      * `acquire(amount?)`: Async wait for `n` permits. Returns `SemaphoreGuard`.
+      * `acquire(amount?)`: Async wait for `n` permits (Recommended). Returns `Promise<SemaphoreGuard>`.
       * `tryAcquire(amount?)`: Non-blocking. Returns `SemaphoreGuard` or `null`.
-      * `acquireSync(amount?)`: Blocking wait. Returns `SemaphoreGuard`.
+      * `blockingAcquire(amount?)`: Blocking wait. Returns `SemaphoreGuard`.
   * **`Condvar`**:
       * `wait(guard)`: Async wait (Recommended). Yields execution.
       * `notifyOne()`: Wake one waiting thread.
       * `notifyAll()`: Wake all waiting threads.
-      * `waitSync(guard)`: Blocking wait (Halts Worker).
+      * `blockingWait(guard)`: Blocking wait (Halts Worker).
+  * **`Barrier`**:
+      * `wait()`: Async wait (Recommended). Returns `Promise<{ isLeader: boolean }>`.
+      * `blockingWait()`: Blocking wait (Halts Worker). Returns `{ isLeader: boolean }`.
 
 -----
 

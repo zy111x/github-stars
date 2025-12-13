@@ -1,6 +1,6 @@
 ---
 project: gateway
-stars: 10052
+stars: 10096
 description: |-
     A blazing fast AI Gateway with integrated guardrails. Route to 200+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.
 url: https://github.com/Portkey-AI/gateway
@@ -291,6 +291,7 @@ Gateway seamlessly integrates with popular agent frameworks. [Read the documenta
 | [Llama Index](https://portkey.wiki/gh-97)             | ✅     | ✅          | ✅      | ✅   | ✅            | ✅                |
 | [Control Flow](https://portkey.wiki/gh-98) | ✅     | ✅          | ✅      | ✅   | ✅            | ✅                |
 | [Build Your Own Agents](https://portkey.wiki/gh-99) | ✅     | ✅          | ✅      | ✅   | ✅            | ✅                |
+| <img src="https://io.net/favicon.ico" width=35> | [IO Intelligence](https://io.net/intelligence) | ✅ | ✅ |
 
 <br>
 

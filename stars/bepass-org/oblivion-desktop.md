@@ -1,6 +1,6 @@
 ---
 project: oblivion-desktop
-stars: 8134
+stars: 8148
 description: |-
     Oblivion Desktop - Unofficial Warp Client for Windows/Mac/Linux
 url: https://github.com/bepass-org/oblivion-desktop

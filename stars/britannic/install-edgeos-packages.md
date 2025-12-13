@@ -1,6 +1,6 @@
 ---
 project: install-edgeos-packages
-stars: 34
+stars: 35
 description: |-
     Installs debian packages if they aren't already installed following an upgrade or reboot
 url: https://github.com/britannic/install-edgeos-packages
