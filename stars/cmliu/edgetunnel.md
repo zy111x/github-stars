@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 25118
+stars: 25269
 description: edgetunnel 2.0 VLESS/Trojan 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -151,7 +151,7 @@ HOST
 
 ❌
 
-强制固定伪装域名
+强制固定伪装域名(支持多元素，使用`换行符`或`,`做间隔)
 
 UUID
 
@@ -160,6 +160,14 @@ UUID
 ❌
 
 强制固定UUID
+
+PATH
+
+`/`
+
+❌
+
+强制固定路径
 
 PROXYIP
 
@@ -171,7 +179,7 @@ PROXYIP
 
 URL
 
-`https://blog.cmliussss.com`
+`https://cloudflare-error-page-3th.pages.dev`
 
 ❌
 
@@ -257,3 +265,4 @@ GO2SOCKS5
 -   Mingyu
 -   Alexandre Kojève：stallTCP v1.3
 -   eooce
+-   Sukka
