@@ -1,6 +1,6 @@
 ---
 project: leva
-stars: 5665
+stars: 5669
 description: |-
     🌋 React-first components GUI
 url: https://github.com/pmndrs/leva

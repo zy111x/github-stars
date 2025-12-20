@@ -1,6 +1,6 @@
 ---
 project: imessage-kit
-stars: 711
+stars: 789
 description: |-
     A type-safe, elegant iMessage SDK for macOS with zero dependencies
 url: https://github.com/photon-hq/imessage-kit
@@ -270,6 +270,7 @@ await sdk.startWatching({
 ```typescript
 await sdk.message(msg)
     .ifUnread()
+    .ifNotReaction()   // Skip tapback reactions
     .ifGroupChat()
     .when(m => m.sender.startsWith('+1'))
     .matchText(/photo/i)
@@ -524,6 +525,11 @@ interface Message {
     service: 'iMessage' | 'SMS' | 'RCS'
     attachments: Attachment[]
     date: Date
+    // Reaction fields
+    isReaction: boolean
+    reactionType: 'love' | 'like' | 'dislike' | 'laugh' | 'emphasize' | 'question' | null
+    isReactionRemoval: boolean
+    associatedMessageGuid: string | null
 }
 
 interface SendResult {

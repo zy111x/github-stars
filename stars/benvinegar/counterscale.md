@@ -1,6 +1,6 @@
 ---
 project: counterscale
-stars: 1930
+stars: 1931
 description: |-
     Scalable web analytics you run yourself on Cloudflare
 url: https://github.com/benvinegar/counterscale
@@ -26,7 +26,7 @@ Counterscale is free, open source software made available under the MIT license.
 
 ## Limitations
 
-Counterscale is powered primarily by Cloudflare Workers and [Workers Analytics Engine](https://developers.cloudflare.com/analytics/analytics-engine/). As of February 2025, Workers Analytics Engine has _maximum 90 days retention_, which means Counterscale can only show the last 90 days of recorded data.
+Counterscale is powered primarily by Cloudflare Workers and [Workers Analytics Engine](https://developers.cloudflare.com/analytics/analytics-engine/). As of February 2025, Workers Analytics Engine has _maximum 90 days retention_, which means Counterscale can only show the last 90 days of recorded data. We do, however, provide long term storage of your data in an R2 bucket using Apache Arrow files. This long term storage is enabled by default and can be disabled using the CLI.
 
 ## Installation
 
@@ -260,6 +260,33 @@ Update/roll the password:
 
 ```bash
 npx @counterscale/cli@latest auth roll
+```
+
+#### `storage`
+
+Manage long term storage settings for your Counterscale deployment.
+
+```bash
+npx @counterscale/cli@latest storage [subcommand]
+```
+
+Available subcommands:
+
+- `enable` - Enable storage for your Counterscale deployment
+- `disable` - Disable storage for your Counterscale deployment
+
+##### Examples:
+
+Enable storage:
+
+```bash
+npx @counterscale/cli@latest storage enable
+```
+
+Disable storage:
+
+```bash
+npx @counterscale/cli@latest storage disable
 ```
 
 ## Development

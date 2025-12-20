@@ -1,6 +1,6 @@
 ---
 project: cmdk
-stars: 12019
+stars: 12039
 description: |-
     Fast, unstyled command menu React component.
 url: https://github.com/dip/cmdk

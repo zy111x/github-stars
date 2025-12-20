@@ -1,6 +1,6 @@
 ---
 project: gatus
-stars: 9306
+stars: 9347
 description: |-
     The most advanced status page in the world
 url: https://github.com/TwiN/gatus
@@ -2201,7 +2201,7 @@ Here's an example of what the notifications look like:
 |:--------------------------------------|:-------------------------------------------------------------------------------------------|:---------------------------|
 | `alerting.telegram`                   | Configuration for alerts of type `telegram`                                                | `{}`                       |
 | `alerting.telegram.token`             | Telegram Bot Token                                                                         | Required `""`              |
-| `alerting.telegram.id`                | Telegram User ID                                                                           | Required `""`              |
+| `alerting.telegram.id`                | Telegram Chat ID                                                                           | Required `""`              |
 | `alerting.telegram.topic-id`          | Telegram Topic ID in a group corresponds to `message_thread_id` in the Telegram API        | `""`                       |
 | `alerting.telegram.api-url`           | Telegram API URL                                                                           | `https://api.telegram.org` |
 | `alerting.telegram.client`            | Client configuration. <br />See [Client configuration](#client-configuration).             | `{}`                       |

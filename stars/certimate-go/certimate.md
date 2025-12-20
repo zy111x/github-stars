@@ -1,6 +1,6 @@
 ---
 project: certimate
-stars: 7880
+stars: 7907
 description: |-
     An open-source and free self-hosted SSL certificates ACME tool, automates the full-cycle of issuance, deployment, and renewal visually. 完全开源免费的自托管 SSL 证书 ACME 工具，申请、部署、续期全流程自动化可视化，支持各大主流云厂商。
 url: https://github.com/certimate-go/certimate
@@ -48,7 +48,7 @@ Certimate 旨在为用户提供一个安全、简便的 SSL 证书管理解决�
 - 支持 DNS-01（即基于域名解析验证）、HTTP-01（即基于文件验证）两种质询方式；
 - 支持 PEM、PFX、JKS 等多种格式输出证书；
 - 支持 60+ 域名托管商（如阿里云、腾讯云、Cloudflare 等，[点此查看完整清单](https://docs.certimate.me/docs/reference/providers#supported-dns-providers)）；
-- 支持 100+ 部署目标（如 Kubernetes、CDN、WAF、负载均衡等，[点此查看完整清单](https://docs.certimate.me/docs/reference/providers#supported-hosting-providers)）；
+- 支持 110+ 部署目标（如 Kubernetes、CDN、WAF、负载均衡等，[点此查看完整清单](https://docs.certimate.me/docs/reference/providers#supported-hosting-providers)）；
 - 支持邮件、钉钉、飞书、企业微信、Webhook 等多种通知渠道；
 - 支持 Let's Encrypt、Actalis、Google Trust Services、SSL.com、ZeroSSL 等多种 ACME 证书颁发机构；
 - 更多特性等待探索。

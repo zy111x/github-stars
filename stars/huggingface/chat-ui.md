@@ -1,13 +1,13 @@
 ---
 project: chat-ui
-stars: 10337
+stars: 10354
 description: |-
     Open source codebase powering the HuggingChat app
 url: https://github.com/huggingface/chat-ui
 ---
 
-# Chat UI
-
+# Chat UI 
+ 
 ![Chat UI repository thumbnail](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/chat-ui/chat-ui-2026.png)
 
 A chat interface for LLMs. It is a SvelteKit app and it powers the [HuggingChat app on hf.co/chat](https://huggingface.co/chat).

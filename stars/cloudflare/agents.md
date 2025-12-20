@@ -1,12 +1,15 @@
 ---
 project: agents
-stars: 2925
+stars: 2940
 description: |-
     Build and deploy AI Agents on Cloudflare 
 url: https://github.com/cloudflare/agents
 ---
 
 # 🧠 Cloudflare Agents
+
+[![npm version](https://img.shields.io/npm/v/agents)](https://www.npmjs.com/package/agents)
+[![npm downloads](https://img.shields.io/npm/dw/agents)](https://www.npmjs.com/package/agents)
 
 ![npm install agents](assets/npm-install-agents.svg)
 

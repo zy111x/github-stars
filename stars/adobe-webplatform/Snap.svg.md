@@ -1,6 +1,6 @@
 ---
 project: Snap.svg
-stars: 14010
+stars: 14012
 description: |-
     The JavaScript library for modern SVG graphics.
 url: https://github.com/adobe-webplatform/Snap.svg

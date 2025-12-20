@@ -1,6 +1,6 @@
 ---
 project: openpanel
-stars: 4997
+stars: 5023
 description: |-
     Openpanel is an open-source web and product analytics platform that combines the power of Mixpanel with the ease of Plausible and one of the best Google Analytics replacements.
 url: https://github.com/Openpanel-dev/openpanel
@@ -106,6 +106,10 @@ You can find the how to [here](https://openpanel.dev/docs/self-hosting/self-host
 ### Start
 
 ```bash
+pnpm install
+cp .env.example .env
+echo "API_URL=http://localhost:3333" > apps/start/.env
+
 pnpm dock:up
 pnpm codegen
 pnpm migrate:deploy # once to setup the db
@@ -119,3 +123,4 @@ You can now access the following:
 - Bullboard (queue): http://localhost:9999
 - `pnpm dock:ch` to access clickhouse terminal
 - `pnpm dock:redis` to access redis terminal
+

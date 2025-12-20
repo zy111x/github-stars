@@ -1,6 +1,6 @@
 ---
 project: RSS.Beauty
-stars: 460
+stars: 461
 description: |-
     Make Your RSS Beautiful!
 url: https://github.com/miantiao-me/RSS.Beauty
@@ -61,4 +61,8 @@ docker run -d --name rss-beauty -p 4321:4321 ghcr.io/miantiao-me/rss.beauty:main
 
 1. [Follow me on 𝕏](https://404.li/kai)
 1. [Sponsor me on GitHub](https://github.com/sponsors/miantiao-me)
+
+## License
+
+Licensed under the [GNU Lesser General Public License v3.0](./LICENSE).
 

@@ -1,6 +1,6 @@
 ---
 project: ai-sdk-tools
-stars: 1895
+stars: 1908
 description: |-
     Essential utilities for building production-ready AI applications with Vercel AI SDK. State management, debugging, structured streaming, intelligent agents, and caching.
 url: https://github.com/midday-ai/ai-sdk-tools

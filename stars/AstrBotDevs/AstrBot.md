@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 14127
+stars: 14329
 description: |-
     ✨ Agentic IM ChatBot Infrastructure — 聊天智能体基础设施 ✨ 多消息平台集成（QQ / Telegram / 企微 / 飞书 / 钉钉等），强大易用的插件系统，支持 OpenAI / Gemini / Anthropic / Dify / Coze / 阿里云百炼 / 知识库 / Agent 智能体
 url: https://github.com/AstrBotDevs/AstrBot
@@ -251,5 +251,11 @@ pre-commit install
 
 </details>
 
+<div align="center">
+
 _私は、高性能ですから!_
+
+<img src="https://files.astrbot.app/watashiwa-koseino-desukara.gif" width="100"/>
+</div
+
 

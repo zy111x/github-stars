@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 30888
+stars: 30968
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
@@ -548,12 +548,12 @@ Following shells are supported: bash, zsh and tcsh.
 Requirements 🧩
 ===============
 
-Glances is developed in Python. A minimal Python version 3.9 or higher
+Glances is developed in Python. A minimal Python version 3.10 or higher
 should be installed on your system.
 
 *Note for Python 2 users*
 
-Glances version 4 or higher do not support Python 2 (and Python 3 < 3.9).
+Glances version 4 or higher do not support Python 2 (and Python 3 < 3.10).
 Please uses Glances version 3.4.x if you need Python 2 support.
 
 Dependencies:

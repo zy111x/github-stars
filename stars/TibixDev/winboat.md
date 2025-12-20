@@ -1,6 +1,6 @@
 ---
 project: winboat
-stars: 16804
+stars: 17065
 description: |-
     Run Windows apps on 🐧 Linux with ✨ seamless integration
 url: https://github.com/TibixDev/winboat

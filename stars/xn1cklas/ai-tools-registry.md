@@ -1,6 +1,6 @@
 ---
 project: ai-tools-registry
-stars: 196
+stars: 197
 description: |-
     Install AI tools and UI components for the AI SDK via the shadcn registry
 url: https://github.com/xn1cklas/ai-tools-registry

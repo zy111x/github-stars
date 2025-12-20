@@ -1,6 +1,6 @@
 ---
 project: onborda
-stars: 1315
+stars: 1319
 description: |-
     An onboarding wizard flow / product tour for Next.js animated by framer motion
 url: https://github.com/uixmat/onborda

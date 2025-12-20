@@ -1,6 +1,6 @@
 ---
 project: cloudflare-error-page
-stars: 2767
+stars: 4324
 description: |-
     Cloudflare error page generator
 url: https://github.com/donlon/cloudflare-error-page

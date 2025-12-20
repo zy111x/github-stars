@@ -1,6 +1,6 @@
 ---
 project: cf-fedi-timeline-rss-worker
-stars: 3
+stars: 4
 description: |-
     Turn your home timeline in fediverse into a RSS feed in real-time. Powered by Cloudflare Workers.
 url: https://github.com/cdn0x12/cf-fedi-timeline-rss-worker

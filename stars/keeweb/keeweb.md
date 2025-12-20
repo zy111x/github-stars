@@ -1,6 +1,6 @@
 ---
 project: keeweb
-stars: 12800
+stars: 12823
 description: |-
     Free cross-platform password manager compatible with KeePass
 url: https://github.com/keeweb/keeweb

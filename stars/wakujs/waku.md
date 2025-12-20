@@ -1,6 +1,6 @@
 ---
 project: waku
-stars: 5969
+stars: 5981
 description: |-
     ⛩️ The minimal React framework
 url: https://github.com/wakujs/waku
@@ -1456,7 +1456,7 @@ vercel
 
 For adavanced users who want to avoid deploying functions, use the server entry file with vercel adapter and specify `static` option.
 
-`./src/server-entry.ts`:
+`./src/waku.server.ts`:
 
 ```ts
 import { fsRouter } from 'waku';
@@ -1481,7 +1481,7 @@ netlify deploy
 
 For adavanced users who want to avoid deploying functions, use the server entry file with netlify adapter and specify `static` option.
 
-`./src/server-entry.ts`:
+`./src/waku.server.ts`:
 
 ```ts
 import { fsRouter } from 'waku';
@@ -1495,7 +1495,7 @@ export default adapter(
 
 ### Cloudflare (experimental)
 
-`./src/server-entry.ts`:
+`./src/waku.server.ts`:
 
 ```ts
 import { fsRouter } from 'waku';
@@ -1513,7 +1513,7 @@ npx wrangler dev # or deploy
 
 ### Deno Deploy (experimental)
 
-`./src/server-entry.ts`:
+`./src/waku.server.ts`:
 
 ```ts
 import { fsRouter } from 'waku';
@@ -1531,7 +1531,7 @@ deployctl deploy --prod dist/serve-deno.js --exclude node_modules
 
 ### AWS Lambda (experimental)
 
-`./src/server-entry.ts`:
+`./src/waku.server.ts`:
 
 ```ts
 import { fsRouter } from 'waku';

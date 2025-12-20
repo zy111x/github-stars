@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 15132
+stars: 15368
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -39,6 +39,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [cgdb](https://github.com/cgdb/cgdb) Console front-end to the GNU debugger
 - [chdig](https://github.com/azat/chdig) Dig into ClickHouse with TUI interface
 - [cheatshh](https://github.com/AnirudhG07/cheatshh) A fzf TUI for managing custom made command-line cheatsheet for Unix.
+- [claws](https://github.com/clawscli/claws) A terminal UI for AWS resource management with vim-style keybindings, command-mode navigation, and optional read-only mode.
 - [cointop](https://github.com/miguelmota/cointop) The fastest and most interactive terminal based UI application for tracking cryptocurrencies
 - [CoreFreq](https://github.com/cyring/CoreFreq) CPU monitoring software designed for the 64-bits Processors
 - [csysdig](https://github.com/draios/sysdig) root level Ncurses interface for sysdig, Linux system exploration and troubleshooting tool with first class support for containers
@@ -47,6 +48,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [dolphie](https://github.com/charles-001/dolphie) Your single pane of glass for real-time analytics into MySQL/MariaDB & ProxySQL
 - [framework-tool-tui](https://github.com/grouzen/framework-tool-tui) TUI for controlling and monitoring Framework Computers hardware built in Rust
 - [fubar](https://github.com/irishmaestro/fubar) Formidable Unix Binary Arsenal & Repository. TUI built for gtfobins power users.
+- [gh-dash](https://github.com/dlvhdr/gh-dash) A rich terminal UI for GitHub PRs and Issues
 - [Glances](https://github.com/nicolargo/glances) Glances an Eye on your system. A top/htop alternative.
 - [Goaccess](https://github.com/allinurl/goaccess) GoAccess is a real-time web log analyzer and interactive viewer that runs in a terminal in nix systems or through your browser.
 - [gobang](https://github.com/TaKO8Ki/gobang) A cross-platform TUI database management tool written in Rust
@@ -89,7 +91,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [tmd-top](https://github.com/CDWEN0526/tmd-top) Used to monitor the process tcp traffic of the linux system, detailed to each IP connection
 - [wander](https://github.com/robinovitch61/wander) HashiCorp Nomad terminal client
 - [WTF](https://github.com/senorprogrammer/wtf) The personal information dashboard for your terminal.
-- [Yozefu](https://github.com/MAIF/yozefu) An TUI for exploring data of a kafka cluster.
+- [Yozefu](https://github.com/MAIF/yozefu) A TUI for exploring data of a kafka cluster.
 - [zenith](https://github.com/bvaisvil/zenith) In terminal graphical metrics for your \*nix system written in Rust
 
 ---
@@ -159,6 +161,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [serie](https://github.com/lusingander/serie) A rich git commit graph
 - [soft-serve](https://github.com/charmbracelet/soft-serve) A tasty, self-hostable Git server for the command lineicecream
 - [sot](https://github.com/anistark/sot) A top like system observability tool written in python
+- [sqlit](https://github.com/Maxteabag/sqlit) A lightweight TUI for SQL databases inspired by lazygit
 - [tig](https://github.com/jonas/tig) Text-mode interface for git
 - [vctui](https://github.com/thebsdbox/vctui) Console interface for vCenter
 - [violet](https://github.com/braheezy/violet) Colorful TUI frontend to run Vagrant commands
@@ -172,7 +175,6 @@ url: https://github.com/rothgar/awesome-tuis
 <details open><summary><h2>Docker/LXC/K8s</h2></summary>
 
 - [Argonaut](https://github.com/darksworm/argonaut) ArgoCD TUI
-- [Cruise](https://nucleofusion.github.io/cruise/) A Docker TUI Client
 - [ctop](https://github.com/bcicen/ctop) Top-like interface for container metrics
 - [dtop](https://github.com/amir20/dtop) Terminal dashboard for Docker monitoring across multiple hosts
 - [dive](https://github.com/wagoodman/dive) A tool for exploring each layer in a docker image
@@ -182,6 +184,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [ducker](https://github.com/robertpsoane/ducker) A slightly quackers Docker TUI based on k9s
 - [e1s](https://github.com/keidarcy/e1s) TUI for managing AWS ECS resources
 - [eks-node-viewer](https://github.com/awslabs/eks-node-viewer/) visualizing dynamic node usage within a kubernetes cluster
+- [etcd-walker](https://github.com/nexusriot/etcd-walker/) Opensource TUI tool for managing etcd keys
 - [k9s](https://github.com/derailed/k9s) TUI for managing a Kubernetes cluster
 - [k8s-tui](https://github.com/otavioCosta2110/k8s-tui) TUI Kubernetes resource manager with multi-cluster support
 - [kdash](https://github.com/kdash-rs/kdash) A simple and fast dashboard for Kubernetes
@@ -332,7 +335,6 @@ url: https://github.com/rothgar/awesome-tuis
 <h3>C</h3>
 
 - [AnbUI](https://github.com/oerg866/anbui) A minimal Text UI Library in **C**
-- [CursedGL](https://github.com/saccharineboi/CursedGL) A **C** notcurses-based software rasterizer inspired by OpenGL 1.X that renders directly to the terminal.
 - [libuv](https://github.com/libuv/libuv) Cross-platform asynchronous I/O library - written in **C**
 - [ncurses](https://invisible-island.net/ncurses/announce.html) A classic **C** library with bindings for many languages
 - [tuibox](https://github.com/Cubified/tuibox) A single-header **C** terminal UI library, capable of creating mouse-driven, interactive applications on the command line.
@@ -577,6 +579,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [GeekCalendar](https://github.com/fearlessgeekmedia/GeekCalendar) TUI calendar with vim key bindings, which can import from calcure or calcurse.
 - [Glow](https://github.com/charmbracelet/glow) A markdown reader, designed from the ground up to showcase the elegance and capabilities of TUI.
 - [gocheat](https://github.com/Achno/gocheat) A beautiful TUI cheatsheet for keybindings,hotkeys,gestures and aliases
+- [helm](https://github.com/0xjuanma/helm) A minimalistic & customizable pomodoro-like timer for your terminal
 - [hledger-ui](https://github.com/simonmichael/hledger) A fast TUI for browsing double entry bookkeeping data
 - [h-m-m](https://github.com/nadrad/h-m-m) Hackers Mind Map
 - [hnjobs](https://github.com/mwinters0/hnjobs) Find your next job on Who's Hiring
@@ -665,6 +668,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [rfc_reader](https://github.com/ozan2003/rfc_reader) A tool to read RFCs (Request for Comments) with a TUI, allowing you to fetch, cache, and browse RFC documents.
 - [rtorrent](https://github.com/rakshasa/rtorrent) A text-based BitTorrent client written in C++
 - [rttt](https://gitlab.com/BlackEdder/rttt) A Hackernews, RSS and Reddit reader for the terminal written in C++.
+- [searxngr](https://github.com/scross01/searxngr) Web search TUI for SearXNG
 - [Slumber](https://github.com/LucasPickering/slumber) Terminal-based HTTP/REST client
 - [stegodon](https://github.com/deemkeen/stegodon) SSH-first federated microblog with ActivityPub, web UI, and RSS feeds
 - [tblogs](https://github.com/ezeoleaf/tblogs) Read and browse development blogs from your terminal

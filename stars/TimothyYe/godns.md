@@ -1,6 +1,6 @@
 ---
 project: godns
-stars: 1719
+stars: 1717
 description: |-
     A dynamic DNS client tool that supports AliDNS, Cloudflare, Google Domains, DNSPod, HE.net & DuckDNS & DreamHost, etc, written in Go.
 url: https://github.com/TimothyYe/godns
@@ -97,7 +97,6 @@ url: https://github.com/TimothyYe/godns
   - [Setup the frontend development environment](#setup-the-frontend-development-environment)
   - [Build the frontend](#build-the-frontend)
   - [Run the frontend](#run-the-frontend)
-- [Special Thanks](#special-thanks)
 
 ---
 
@@ -1384,12 +1383,4 @@ To run the frontend, run:
 cd web
 npm run start
 ```
-
-## Special Thanks
-
-<img src="https://i.imgur.com/xhe5RLZ.jpg" width="80px" align="right" />
-
-Thanks JetBrains for sponsoring this project with [free open source license](https://www.jetbrains.com/community/opensource/).
-
-> I like GoLand, it is an amazing and productive tool.
 

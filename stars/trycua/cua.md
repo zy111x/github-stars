@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 11498
+stars: 11565
 description: |-
     Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
 url: https://github.com/trycua/cua

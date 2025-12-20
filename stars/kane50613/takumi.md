@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 1111
+stars: 1119
 description: |-
     JSX → Image. Faster next/og aternative plus variable fonts, RTL, inline layout, WOFF2, WebP output support.
 url: https://github.com/kane50613/takumi

@@ -1,6 +1,6 @@
 ---
 project: sanity
-stars: 5904
+stars: 5913
 description: |-
     Sanity Studio – Rapidly configure content workspaces powered by structured content
 url: https://github.com/sanity-io/sanity
@@ -19,7 +19,10 @@ url: https://github.com/sanity-io/sanity
 </div>
 
 <div align="center">
-  <img alt="" src="https://img.shields.io/npm/v/sanity?style=flat">
+  <img alt="" src="https://img.shields.io/npm/v/sanity/latest?style=flat">
+  <img alt="" src="https://img.shields.io/npm/v/sanity/next?style=flat">
+  <img alt="" src="https://img.shields.io/npm/v/sanity/stable?style=flat">
+  <br />
   <img alt="" src="https://img.shields.io/npm/dm/@sanity/client?style=flat">
   <img alt="" src="https://img.shields.io/npm/l/sanity.svg?style=flat">
   <a aria-label="Join the Sanity community" href="https://www.sanity.io/community/join?utm_source=readme">

@@ -1,6 +1,6 @@
 ---
 project: font-spider
-stars: 5132
+stars: 5133
 description: |-
     Smart webfont compression and format conversion tool
 url: https://github.com/aui/font-spider

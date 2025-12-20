@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 5496
+stars: 5525
 description: |-
     PraisonAI is a production-ready Multi AI Agents framework, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. It provides a low-code solution to streamline the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
 url: https://github.com/MervinPraison/PraisonAI
@@ -14,10 +14,13 @@ url: https://github.com/MervinPraison/PraisonAI
   </picture>
 </p>
 
+<!-- mcp-name: io.github.MervinPraison/praisonai -->
+
 <p align="center">
 <a href="https://github.com/MervinPraison/PraisonAI"><img src="https://static.pepy.tech/badge/PraisonAI" alt="Total Downloads" /></a>
 <a href="https://github.com/MervinPraison/PraisonAI"><img src="https://img.shields.io/github/v/release/MervinPraison/PraisonAI" alt="Latest Stable Version" /></a>
 <a href="https://github.com/MervinPraison/PraisonAI"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License" /></a>
+<a href="https://registry.modelcontextprotocol.io/servers/io.github.MervinPraison/praisonai"><img src="https://img.shields.io/badge/MCP-Registry-blue" alt="MCP Registry" /></a>
 </p>
 
 <div align="center">
@@ -38,40 +41,283 @@ PraisonAI is a production-ready Multi-AI Agents framework with self-reflection, 
   </a>
 </div>
 
-## Key Features
+---
 
-- 🤖 Automated AI Agents Creation
-- 🔄 Self Reflection AI Agents
-- 🧠 Reasoning AI Agents
-- 👁️ Multi Modal AI Agents
-- 🤝 Multi Agent Collaboration
-- 🎭 AI Agent Workflow
-- 📚 Add Custom Knowledge
-- 🧠 Agents with Short and Long Term Memory
-- 📄 Chat with PDF Agents
-- 💻 Code Interpreter Agents
-- 📚 RAG Agents
-- 🤔 Async & Parallel Processing
-- 🔄 Auto Agents
-- 🔢 Math Agents
-- 🎯 Structured Output Agents
-- 🔗 LangChain Integrated Agents
-- 📞 Callback Agents
-- 🤏 Mini AI Agents
-- 🛠️ 100+ Custom Tools
-- 📄 YAML Configuration
-- 💯 100+ LLM Support
-- 🔬 **Deep Research Agents** (OpenAI & Gemini)
-- 🔄 **Query Rewriter Agent** (HyDE, Step-back, Multi-query)
+## 📑 Table of Contents
 
-## Using Python Code
+- [⚡ Performance](#-performance)
+- [🚀 Quick Start](#-quick-start)
+- [📦 Installation](#-installation)
+  - [Python SDK](#python-sdk)
+  - [JavaScript SDK](#javascript-sdk)
+- [💻 Usage](#-usage)
+  - [Python Code Examples](#python-code-examples)
+  - [CLI / No-Code Interface](#cli--no-code-interface)
+  - [JavaScript Code Examples](#javascript-code-examples)
+- [✨ Key Features](#-key-features)
+- [🌐 Supported Providers](#-supported-providers)
+- [🛠️ Custom Tools](#️-custom-tools)
+- [🔧 Configuration & Integration](#-configuration--integration)
+  - [Ollama Integration](#ollama-integration)
+  - [Groq Integration](#groq-integration)
+  - [100+ Models Support](#100-models-support)
+- [📋 Workflows](#-workflows)
+  - [Workflow Patterns](#workflow-patterns)
+  - [YAML Configuration](#yaml-configuration)
+  - [Agents Playbook](#agents-playbook)
+- [🧠 Memory & Context](#-memory--context)
+- [🔬 Advanced Features](#-advanced-features)
+  - [Research & Intelligence](#research--intelligence)
+  - [Planning & Workflows](#planning--workflows)
+  - [Specialised Agents](#specialised-agents)
+  - [MCP Protocol](#mcp-protocol)
+  - [A2A & A2UI Protocols](#a2a--a2ui-protocols)
+  - [Safety & Control](#safety--control)
+  - [Developer Tools](#developer-tools)
+- [📊 Process Types & Patterns](#-process-types--patterns)
+  - [Sequential Process](#sequential-process)
+  - [Hierarchical Process](#hierarchical-process)
+  - [Workflow Process](#workflow-process)
+  - [Agentic Patterns](#agentic-patterns)
+- [🎓 Video Tutorials](#-video-tutorials)
+- [⭐ Star History](#-star-history)
+- [👥 Contributing](#-contributing)
+- [🔧 Development](#-development)
 
-Light weight package dedicated for coding:
+---
+
+## ⚡ Performance
+
+PraisonAI Agents is the **fastest AI agent framework** for agent instantiation.
+
+| Framework | Avg Time (μs) | Relative |
+|-----------|---------------|----------|
+| **PraisonAI** | **3.77** | **1.00x (fastest)** |
+| OpenAI Agents SDK | 5.26 | 1.39x |
+| Agno | 5.64 | 1.49x |
+| PraisonAI (LiteLLM) | 7.56 | 2.00x |
+| PydanticAI | 226.94 | 60.16x |
+| LangGraph | 4,558.71 | 1,209x |
+| CrewAI | 15,607.92 | 4,138x |
+
+<details>
+<summary>Run benchmarks yourself</summary>
+
+```bash
+cd praisonai-agents
+python benchmarks/simple_benchmark.py
+```
+
+</details>
+
+---
+
+## 🚀 Quick Start
+
+Get started with PraisonAI in under 1 minute:
+
+```bash
+# Install
+pip install praisonaiagents
+
+# Set API key
+export OPENAI_API_KEY=your_key_here
+
+# Create a simple agent
+python -c "from praisonaiagents import Agent; Agent(instructions='You are a helpful AI assistant').start('Write a haiku about AI')"
+```
+
+---
+
+## 📦 Installation
+
+### Python SDK
+
+Lightweight package dedicated for coding:
+
 ```bash
 pip install praisonaiagents
 ```
 
+For the full framework with CLI support:
+
 ```bash
+pip install praisonai
+```
+
+### JavaScript SDK
+
+```bash
+npm install praisonai
+```
+
+---
+
+## 💻 Usage
+
+### Python Code Examples
+
+- [📘 Complete Python Examples](#using-python-code)
+- [🔧 Custom Tools](#️-custom-tools)
+- [🧠 Memory Configuration](#-memory--context)
+
+### CLI / No-Code Interface
+
+- [🎯 Auto Mode](#auto-mode)
+- [🔬 Deep Research](#deep-research-cli)
+- [📋 Planning Mode](#planning-mode-cli)
+- [💾 Memory Management](#memory-cli)
+- [🔄 Workflow Execution](#workflow-cli)
+
+### JavaScript Code Examples
+
+- [💻 JavaScript Usage](#using-javascript-code)
+
+---
+
+## ✨ Key Features
+
+| Feature | Code | Docs |
+|---------|:----:|:----:|
+| 🚀 Single Agent | [Example](examples/python/agents/single-agent.py) | [📖](https://docs.praison.ai/agents/single) |
+| 🤝 Multi Agents | [Example](examples/python/general/mini_agents_example.py) | [📖](https://docs.praison.ai/concepts/agents) |
+| 🤖 Auto Agents | [Example](examples/python/general/auto_agents_example.py) | [📖](https://docs.praison.ai/features/autoagents) |
+| 🔄 Self Reflection AI Agents | [Example](examples/python/concepts/self-reflection-details.py) | [📖](https://docs.praison.ai/features/selfreflection) |
+| 🧠 Reasoning AI Agents | [Example](examples/python/concepts/reasoning-extraction.py) | [📖](https://docs.praison.ai/features/reasoning) |
+| 👁️ Multi Modal AI Agents | [Example](examples/python/general/multimodal.py) | [📖](https://docs.praison.ai/features/multimodal) |
+| **🔄 Workflows** | | |
+| ↳ Simple Workflow | [Example](examples/python/workflows/simple_workflow.py) | [📖](https://docs.praison.ai/features/workflows) |
+| ↳ Workflow with Agents | [Example](examples/python/workflows/workflow_with_agents.py) | [📖](https://docs.praison.ai/features/workflows) |
+| ↳ Agentic Routing (`route()`) | [Example](examples/python/workflows/workflow_routing.py) | [📖](https://docs.praison.ai/features/routing) |
+| ↳ Parallel Execution (`parallel()`) | [Example](examples/python/workflows/workflow_parallel.py) | [📖](https://docs.praison.ai/features/parallelisation) |
+| ↳ Loop over List/CSV (`loop()`) | [Example](examples/python/workflows/workflow_loop_csv.py) | [📖](https://docs.praison.ai/features/repetitive) |
+| ↳ Evaluator-Optimizer (`repeat()`) | [Example](examples/python/workflows/workflow_repeat.py) | [📖](https://docs.praison.ai/features/evaluator-optimiser) |
+| ↳ Conditional Steps | [Example](examples/python/workflows/workflow_conditional.py) | [📖](https://docs.praison.ai/features/workflows) |
+| ↳ Workflow Branching | [Example](examples/python/workflows/workflow_branching.py) | [📖](https://docs.praison.ai/features/workflows) |
+| ↳ Workflow Early Stop | [Example](examples/python/workflows/workflow_early_stop.py) | [📖](https://docs.praison.ai/features/workflows) |
+| ↳ Workflow Checkpoints | [Example](examples/python/workflows/workflow_checkpoints.py) | [📖](https://docs.praison.ai/features/workflows) |
+| 📚 Add Custom Knowledge | [Example](examples/python/concepts/knowledge-agents.py) | [📖](https://docs.praison.ai/features/knowledge) |
+| 🧠 Memory (Short & Long Term) | [Example](examples/python/general/memory_example.py) | [📖](https://docs.praison.ai/concepts/memory) |
+| 📄 Chat with PDF Agents | [Example](examples/python/concepts/chat-with-pdf.py) | [📖](https://docs.praison.ai/features/chat-with-pdf) |
+| **💻 Code** | | |
+| ↳ Code Interpreter Agents | [Example](examples/python/agents/code-agent.py) | [📖](https://docs.praison.ai/features/codeagent) |
+| ↳ AI Code Editing Tools | [Example](examples/python/code/code_editing_example.py) | [📖](https://docs.praison.ai/code/editing) |
+| ↳ External Agents (All) | [Example](examples/python/code/external_agents_example.py) | [📖](https://docs.praison.ai/code/external-agents) |
+| ↳ Claude Code CLI | [Example](examples/python/code/claude_code_example.py) | [📖](https://docs.praison.ai/code/claude-code) |
+| ↳ Gemini CLI | [Example](examples/python/code/gemini_cli_example.py) | [📖](https://docs.praison.ai/code/gemini-cli) |
+| ↳ Codex CLI | [Example](examples/python/code/codex_cli_example.py) | [📖](https://docs.praison.ai/code/codex-cli) |
+| ↳ Cursor CLI | [Example](examples/python/code/cursor_cli_example.py) | [📖](https://docs.praison.ai/code/cursor-cli) |
+| 📚 RAG Agents | [Example](examples/python/concepts/rag-agents.py) | [📖](https://docs.praison.ai/features/rag) |
+| 🤔 Async & Parallel Processing | [Example](examples/python/general/async_example.py) | [📖](https://docs.praison.ai/features/async) |
+| 🔢 Math Agents | [Example](examples/python/agents/math-agent.py) | [📖](https://docs.praison.ai/features/mathagent) |
+| 🎯 Structured Output Agents | [Example](examples/python/general/structured_agents_example.py) | [📖](https://docs.praison.ai/features/structured) |
+| 🔗 LangChain Integrated Agents | [Example](examples/python/general/langchain_example.py) | [📖](https://docs.praison.ai/features/langchain) |
+| 📞 Callback Agents | [Example](examples/python/general/advanced-callback-systems.py) | [📖](https://docs.praison.ai/features/callbacks) |
+| 🛠️ 100+ Custom Tools | [Example](examples/python/general/tools_example.py) | [📖](https://docs.praison.ai/tools/tools) |
+| 📄 YAML Configuration | [Example](examples/cookbooks/yaml/secondary_market_research_agents.yaml) | [📖](https://docs.praison.ai/developers/agents-playbook) |
+| 💯 100+ LLM Support | [Example](examples/python/providers/openai/openai_gpt4_example.py) | [📖](https://docs.praison.ai/models) |
+| 🔬 Deep Research Agents | [Example](examples/python/agents/research-agent.py) | [📖](https://docs.praison.ai/agents/deep-research) |
+| 🔄 Query Rewriter Agent | [Example](#5-query-rewriter-agent) | [📖](https://docs.praison.ai/agents/query-rewriter) |
+| 🌐 Native Web Search | [Example](examples/python/agents/websearch-agent.py) | [📖](https://docs.praison.ai/agents/websearch) |
+| 📥 Web Fetch (Anthropic) | [Example](#web-search-web-fetch--prompt-caching) | [📖](https://docs.praison.ai/features/model-capabilities) |
+| 💾 Prompt Caching | [Example](#web-search-web-fetch--prompt-caching) | [📖](https://docs.praison.ai/features/model-capabilities) |
+| 🧠 Claude Memory Tool | [Example](#claude-memory-tool-cli) | [📖](https://docs.praison.ai/features/claude-memory-tool) |
+| 💾 File-Based Memory | [Example](examples/python/general/memory_example.py) | [📖](https://docs.praison.ai/concepts/memory) |
+| 🔍 Built-in Search Tools | [Example](examples/python/agents/websearch-agent.py) | [📖](https://docs.praison.ai/tools/tavily) |
+| 🔎 Unified Web Search | [Example](src/praisonai-agents/examples/web_search_example.py) | [📖](https://docs.praison.ai/tools/web-search) |
+| 📋 Planning Mode | [Example](examples/python/agents/planning-agent.py) | [📖](https://docs.praison.ai/features/planning-mode) |
+| 🔧 Planning Tools | [Example](#3-agent-with-planning-mode) | [📖](https://docs.praison.ai/features/planning-mode) |
+| 🧠 Planning Reasoning | [Example](#3-agent-with-planning-mode) | [📖](https://docs.praison.ai/features/planning-mode) |
+| 🔌 MCP Transports | [Example](examples/python/mcp/mcp-transports-overview.py) | [📖](https://docs.praison.ai/mcp/transports) |
+| 🌐 WebSocket MCP | [Example](examples/python/mcp/websocket-mcp.py) | [📖](https://docs.praison.ai/mcp/sse-transport) |
+| 🔐 MCP Security | [Example](examples/python/mcp/mcp-security.py) | [📖](https://docs.praison.ai/mcp/transports) |
+| 🔄 MCP Resumability | [Example](examples/python/mcp/mcp-resumability.py) | [📖](https://docs.praison.ai/mcp/sse-transport) |
+| ⚡ Fast Context | [Example](examples/context/00_agent_fast_context_basic.py) | [📖](https://docs.praison.ai/features/fast-context) |
+| 🖼️ Image Generation Agent | [Example](examples/python/image/image-agent.py) | [📖](https://docs.praison.ai/features/image-generation) |
+| 📷 Image to Text Agent | [Example](examples/python/agents/image-to-text-agent.py) | [📖](https://docs.praison.ai/agents/image-to-text) |
+| 🎬 Video Agent | [Example](examples/python/agents/video-agent.py) | [📖](https://docs.praison.ai/agents/video) |
+| 📊 Data Analyst Agent | [Example](examples/python/agents/data-analyst-agent.py) | [📖](https://docs.praison.ai/agents/data-analyst) |
+| 💰 Finance Agent | [Example](examples/python/agents/finance-agent.py) | [📖](https://docs.praison.ai/agents/finance) |
+| 🛒 Shopping Agent | [Example](examples/python/agents/shopping-agent.py) | [📖](https://docs.praison.ai/agents/shopping) |
+| ⭐ Recommendation Agent | [Example](examples/python/agents/recommendation-agent.py) | [📖](https://docs.praison.ai/agents/recommendation) |
+| 📖 Wikipedia Agent | [Example](examples/python/agents/wikipedia-agent.py) | [📖](https://docs.praison.ai/agents/wikipedia) |
+| 💻 Programming Agent | [Example](examples/python/agents/programming-agent.py) | [📖](https://docs.praison.ai/agents/programming) |
+| 📝 Markdown Agent | [Example](examples/python/agents/markdown-agent.py) | [📖](https://docs.praison.ai/agents/markdown) |
+| 📝 Prompt Expander Agent | [Example](#prompt-expansion) | [📖](https://docs.praison.ai/agents/prompt-expander) |
+| 🔀 Model Router | [Example](examples/python/agents/router-agent-cost-optimization.py) | [📖](https://docs.praison.ai/features/model-router) |
+| ⛓️ Prompt Chaining | [Example](examples/python/general/prompt_chaining.py) | [📖](https://docs.praison.ai/features/promptchaining) |
+| 🔍 Evaluator Optimiser | [Example](examples/python/general/evaluator-optimiser.py) | [📖](https://docs.praison.ai/features/evaluator-optimiser) |
+| 👷 Orchestrator Workers | [Example](examples/python/general/orchestrator-workers.py) | [📖](https://docs.praison.ai/features/orchestrator-worker) |
+| ⚡ Parallelisation | [Example](examples/python/general/parallelisation.py) | [📖](https://docs.praison.ai/features/parallelisation) |
+| 🔁 Repetitive Agents | [Example](examples/python/concepts/repetitive-agents.py) | [📖](https://docs.praison.ai/features/repetitive) |
+| 🤝 Agent Handoffs | [Example](examples/python/handoff/handoff_basic.py) | [📖](https://docs.praison.ai/features/handoffs) |
+| 🛡️ Guardrails | [Example](examples/python/guardrails/comprehensive-guardrails-example.py) | [📖](https://docs.praison.ai/features/guardrails) |
+| 💬 Sessions Management | [Example](examples/python/sessions/comprehensive-session-management.py) | [📖](https://docs.praison.ai/features/sessions) |
+| ✅ Human Approval | [Example](examples/python/general/human_approval_example.py) | [📖](https://docs.praison.ai/features/approval) |
+| 🔄 Stateful Agents | [Example](examples/python/stateful/workflow-state-example.py) | [📖](https://docs.praison.ai/features/stateful-agents) |
+| 🤖 Autonomous Workflow | [Example](examples/python/general/autonomous-agent.py) | [📖](https://docs.praison.ai/features/autonomous-workflow) |
+| 📜 Rules & Instructions | [Example](#6-rules--instructions) | [📖](https://docs.praison.ai/features/rules) |
+| 🪝 Hooks | [Example](#9-hooks) | [📖](https://docs.praison.ai/features/hooks) |
+| 📈 Telemetry | [Example](examples/python/telemetry/production-telemetry-example.py) | [📖](https://docs.praison.ai/features/telemetry) |
+| 📹 Camera Integration | [Example](examples/python/camera/) | [📖](https://docs.praison.ai/features/camera-integration) |
+| 📄 Project Docs (.praison/docs/) | [Example](#docs-cli) | [📖](https://docs.praison.ai/docs/cli/docs) |
+| 🔌 MCP Config Management | [Example](#mcp-config-cli) | [📖](https://docs.praison.ai/docs/cli/mcp) |
+| 💬 AI Commit Messages | [Example](#ai-commit-cli) | [📖](https://docs.praison.ai/docs/cli/commit) |
+| @ @Mentions in Prompts | [Example](#mentions-in-prompts) | [📖](https://docs.praison.ai/docs/cli/mentions) |
+| 💾 Auto-Save Sessions | [Example](#session-management-python) | [📖](https://docs.praison.ai/docs/cli/session) |
+| 📜 History in Context | [Example](#session-management-python) | [📖](https://docs.praison.ai/docs/cli/session) |
+| **🖥️ CLI Features** | | |
+| ↳ Slash Commands | [Example](examples/python/cli/slash_commands_example.py) | [📖](https://docs.praison.ai/docs/cli/slash-commands) |
+| ↳ Autonomy Modes | [Example](examples/python/cli/autonomy_modes_example.py) | [📖](https://docs.praison.ai/docs/cli/autonomy-modes) |
+| ↳ Cost Tracking | [Example](examples/python/cli/cost_tracking_example.py) | [📖](https://docs.praison.ai/docs/cli/cost-tracking) |
+| ↳ Repository Map | [Example](examples/python/cli/repo_map_example.py) | [📖](https://docs.praison.ai/docs/cli/repo-map) |
+| ↳ Interactive TUI | [Example](examples/python/cli/interactive_tui_example.py) | [📖](https://docs.praison.ai/docs/cli/interactive-tui) |
+| ↳ Git Integration | [Example](examples/python/cli/git_integration_example.py) | [📖](https://docs.praison.ai/docs/cli/git-integration) |
+| ↳ Sandbox Execution | [Example](examples/python/cli/sandbox_execution_example.py) | [📖](https://docs.praison.ai/docs/cli/sandbox-execution) |
+| **⏰ 24/7 Scheduling** | | |
+| ↳ Agent Scheduler | [Example](examples/python/scheduled_agents/news_checker_live.py) | [📖](https://docs.praison.ai/docs/cli/scheduler) |
+
+---
+
+## 🌐 Supported Providers
+
+PraisonAI supports 100+ LLM providers through seamless integration:
+
+| Provider | Example |
+|----------|:-------:|
+| OpenAI | [Example](examples/python/providers/openai/openai_gpt4_example.py) |
+| Anthropic | [Example](examples/python/providers/anthropic/anthropic_claude_example.py) |
+| Google Gemini | [Example](examples/python/providers/google/google_gemini_example.py) |
+| Ollama | [Example](examples/python/providers/ollama/ollama-agents.py) |
+| Groq | [Example](examples/python/providers/groq/kimi_with_groq_example.py) |
+| DeepSeek | [Example](examples/python/providers/deepseek/deepseek_example.py) |
+| xAI Grok | [Example](examples/python/providers/xai/xai_grok_example.py) |
+| Mistral | [Example](examples/python/providers/mistral/mistral_example.py) |
+| Cohere | [Example](examples/python/providers/cohere/cohere_example.py) |
+| Perplexity | [Example](examples/python/providers/perplexity/perplexity_example.py) |
+| Fireworks | [Example](examples/python/providers/fireworks/fireworks_example.py) |
+| Together AI | [Example](examples/python/providers/together/together_ai_example.py) |
+| OpenRouter | [Example](examples/python/providers/openrouter/openrouter_example.py) |
+| HuggingFace | [Example](examples/python/providers/huggingface/huggingface_example.py) |
+| Azure OpenAI | [Example](examples/python/providers/azure/azure_openai_example.py) |
+| AWS Bedrock | [Example](examples/python/providers/aws/aws_bedrock_example.py) |
+| Google Vertex | [Example](examples/python/providers/vertex/vertex_example.py) |
+| Databricks | [Example](examples/python/providers/databricks/databricks_example.py) |
+| Cloudflare | [Example](examples/python/providers/cloudflare/cloudflare_example.py) |
+| AI21 | [Example](examples/python/providers/ai21/ai21_example.py) |
+| Replicate | [Example](examples/python/providers/replicate/replicate_example.py) |
+| SageMaker | [Example](examples/python/providers/sagemaker/sagemaker_example.py) |
+| Moonshot | [Example](examples/python/providers/moonshot/moonshot_example.py) |
+| vLLM | [Example](examples/python/providers/vllm/vllm_example.py) |
+
+---
+
+## 📘 Using Python Code
+
+Light weight package dedicated for coding:
+
+```bash
+pip install praisonaiagents
 export OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxx
 ```
 
@@ -106,7 +352,34 @@ Run:
 python app.py
 ```
 
-### 3. Deep Research Agent
+### 3. Agent with Planning Mode
+
+Enable planning for any agent - the agent creates a plan, then executes step by step:
+
+```python
+from praisonaiagents import Agent
+
+def search_web(query: str) -> str:
+    return f"Search results for: {query}"
+
+agent = Agent(
+    name="AI Assistant",
+    instructions="Research and write about topics",
+    planning=True,              # Enable planning mode
+    planning_tools=[search_web], # Tools for planning research
+    planning_reasoning=True      # Chain-of-thought reasoning
+)
+
+result = agent.start("Research AI trends in 2025 and write a summary")
+```
+
+**What happens:**
+1. 📋 Agent creates a multi-step plan
+2. 🚀 Executes each step sequentially
+3. 📊 Shows progress with context passing
+4. ✅ Returns final result
+
+### 4. Deep Research Agent
 
 Automated research with real-time streaming, web search, and citations using OpenAI or Gemini Deep Research APIs.
 
@@ -144,7 +417,7 @@ print(result.report)
 - 🛠️ Built-in tools: web search, code interpreter, MCP, file search
 - 🔄 Automatic provider detection from model name
 
-### 4. Query Rewriter Agent
+### 5. Query Rewriter Agent
 
 Transform user queries to improve RAG retrieval quality using multiple strategies.
 
@@ -179,13 +452,572 @@ result = agent.rewrite("What about cost?", chat_history=[...])
 - **CONTEXTUAL**: Resolve references using conversation history
 - **AUTO**: Automatically detect best strategy
 
-## Using No Code
+### 6. Agent Memory (Zero Dependencies)
 
-### Auto Mode:
+Enable persistent memory for agents - works out of the box without any extra packages.
+
+```python
+from praisonaiagents import Agent
+from praisonaiagents.memory import FileMemory
+
+# Enable memory with a single parameter
+agent = Agent(
+    name="Personal Assistant",
+    instructions="You are a helpful assistant that remembers user preferences.",
+    memory=True,  # Enables file-based memory (no extra deps!)
+    user_id="user123"  # Isolate memory per user
+)
+
+# Memory is automatically injected into conversations
+result = agent.start("My name is John and I prefer Python")
+# Agent will remember this for future conversations
+```
+
+**Memory Types:**
+- **Short-term**: Rolling buffer of recent context (auto-expires)
+- **Long-term**: Persistent important facts (sorted by importance)
+- **Entity**: People, places, organizations with attributes
+- **Episodic**: Date-based interaction history
+
+**Advanced Features:**
+```python
+from praisonaiagents.memory import FileMemory
+
+memory = FileMemory(user_id="user123")
+
+# Session Save/Resume
+memory.save_session("project_session", conversation_history=[...])
+memory.resume_session("project_session")
+
+# Context Compression
+memory.compress(llm_func=lambda p: agent.chat(p), max_items=10)
+
+# Checkpointing
+memory.create_checkpoint("before_refactor", include_files=["main.py"])
+memory.restore_checkpoint("before_refactor", restore_files=True)
+
+# Slash Commands
+memory.handle_command("/memory show")
+memory.handle_command("/memory save my_session")
+```
+
+**Storage Options:**
+| Option | Dependencies | Description |
+|--------|-------------|-------------|
+| `memory=True` | None | File-based JSON storage (default) |
+| `memory="file"` | None | Explicit file-based storage |
+| `memory="sqlite"` | Built-in | SQLite with indexing |
+| `memory="chromadb"` | chromadb | Vector/semantic search |
+
+### 6. Rules & Instructions
+
+PraisonAI auto-discovers instruction files from your project root and git root:
+
+| File | Description | Priority |
+|------|-------------|----------|
+| `PRAISON.md` | PraisonAI native instructions | High |
+| `PRAISON.local.md` | Local overrides (gitignored) | Higher |
+| `CLAUDE.md` | Claude Code memory file | High |
+| `CLAUDE.local.md` | Local overrides (gitignored) | Higher |
+| `AGENTS.md` | OpenAI Codex CLI instructions | High |
+| `GEMINI.md` | Gemini CLI memory file | High |
+| `.cursorrules` | Cursor IDE rules | High |
+| `.windsurfrules` | Windsurf IDE rules | High |
+| `.claude/rules/*.md` | Claude Code modular rules | Medium |
+| `.windsurf/rules/*.md` | Windsurf modular rules | Medium |
+| `.cursor/rules/*.mdc` | Cursor modular rules | Medium |
+| `.praison/rules/*.md` | Workspace rules | Medium |
+| `~/.praison/rules/*.md` | Global rules | Low |
+
+```python
+from praisonaiagents import Agent
+
+# Agent auto-discovers CLAUDE.md, AGENTS.md, GEMINI.md, etc.
+agent = Agent(name="Assistant", instructions="You are helpful.")
+# Rules are injected into system prompt automatically
+```
+
+**@Import Syntax:**
+```markdown
+# CLAUDE.md
+See @README for project overview
+See @docs/architecture.md for system design
+@~/.praison/my-preferences.md
+```
+
+**Rule File Format (with YAML frontmatter):**
+```markdown
+---
+description: Python coding guidelines
+globs: ["**/*.py"]
+activation: always  # always, glob, manual, ai_decision
+---
+
+# Guidelines
+- Use type hints
+- Follow PEP 8
+```
+
+### 7. Auto-Generated Memories
+
+```python
+from praisonaiagents.memory import FileMemory, AutoMemory
+
+memory = FileMemory(user_id="user123")
+auto = AutoMemory(memory, enabled=True)
+
+# Automatically extracts and stores memories from conversations
+memories = auto.process_interaction(
+    "My name is John and I prefer Python for backend work"
+)
+# Extracts: name="John", preference="Python for backend"
+```
+
+### 8. Agentic Workflows
+
+Create powerful multi-agent workflows with the `Workflow` class:
+
+```python
+from praisonaiagents import Agent, Workflow
+
+# Create agents
+researcher = Agent(
+    name="Researcher",
+    role="Research Analyst",
+    goal="Research topics thoroughly",
+    instructions="Provide concise, factual information."
+)
+
+writer = Agent(
+    name="Writer",
+    role="Content Writer", 
+    goal="Write engaging content",
+    instructions="Write clear, engaging content based on research."
+)
+
+# Create workflow with agents as steps
+workflow = Workflow(steps=[researcher, writer])
+
+# Run workflow - agents process sequentially
+result = workflow.start("What are the benefits of AI agents?")
+print(result["output"])
+```
+
+**Key Features:**
+- **Agent-first** - Pass `Agent` objects directly as workflow steps
+- **Pattern helpers** - Use `route()`, `parallel()`, `loop()`, `repeat()`
+- **Planning mode** - Enable with `planning=True`
+- **Callbacks** - Monitor with `on_step_complete`, `on_workflow_complete`
+- **Async execution** - Use `workflow.astart()` for async
+
+### Workflow Patterns (route, parallel, loop, repeat)
+
+```python
+from praisonaiagents import Agent, Workflow
+from praisonaiagents.workflows import route, parallel, loop, repeat
+
+# 1. ROUTING - Classifier agent routes to specialized agents
+classifier = Agent(name="Classifier", instructions="Respond with 'technical' or 'creative'")
+tech_agent = Agent(name="TechExpert", role="Technical Expert")
+creative_agent = Agent(name="Creative", role="Creative Writer")
+
+workflow = Workflow(steps=[
+    classifier,
+    route({
+        "technical": [tech_agent],
+        "creative": [creative_agent]
+    })
+])
+
+# 2. PARALLEL - Multiple agents work concurrently
+market_agent = Agent(name="Market", role="Market Researcher")
+competitor_agent = Agent(name="Competitor", role="Competitor Analyst")
+aggregator = Agent(name="Aggregator", role="Synthesizer")
+
+workflow = Workflow(steps=[
+    parallel([market_agent, competitor_agent]),
+    aggregator
+])
+
+# 3. LOOP - Agent processes each item
+processor = Agent(name="Processor", role="Item Processor")
+summarizer = Agent(name="Summarizer", role="Summarizer")
+
+workflow = Workflow(
+    steps=[loop(processor, over="items"), summarizer],
+    variables={"items": ["AI", "ML", "NLP"]}
+)
+
+# 4. REPEAT - Evaluator-Optimizer pattern
+generator = Agent(name="Generator", role="Content Generator")
+evaluator = Agent(name="Evaluator", instructions="Say 'APPROVED' if good")
+
+workflow = Workflow(steps=[
+    generator,
+    repeat(evaluator, until=lambda ctx: "approved" in ctx.previous_result.lower(), max_iterations=3)
+])
+
+# 5. CALLBACKS
+workflow = Workflow(
+    steps=[researcher, writer],
+    on_step_complete=lambda name, r: print(f"✅ {name} done")
+)
+
+# 6. WITH PLANNING & REASONING
+workflow = Workflow(
+    steps=[researcher, writer],
+    planning=True,
+    reasoning=True
+)
+
+# 7. ASYNC EXECUTION
+result = asyncio.run(workflow.astart("input"))
+
+# 8. STATUS TRACKING
+workflow.status  # "not_started" | "running" | "completed"
+workflow.step_statuses  # {"step1": "completed", "step2": "skipped"}
+```
+
+### YAML Workflow Template
+
+```yaml
+# .praison/workflows/research.yaml
+name: Research Workflow
+description: Research and write content with all patterns
+
+agents:
+  researcher:
+    role: Research Expert
+    goal: Find accurate information
+    tools: [tavily_search, web_scraper]
+  writer:
+    role: Content Writer
+    goal: Write engaging content
+  editor:
+    role: Editor
+    goal: Polish content
+
+steps:
+  # Sequential
+  - agent: researcher
+    action: Research {{topic}}
+    output_variable: research_data
+
+  # Routing
+  - name: classifier
+    action: Classify content type
+    route:
+      technical: [tech_handler]
+      creative: [creative_handler]
+      default: [general_handler]
+
+  # Parallel
+  - name: parallel_research
+    parallel:
+      - agent: researcher
+        action: Research market
+      - agent: researcher
+        action: Research competitors
+
+  # Loop
+  - agent: writer
+    action: Write about {{item}}
+    loop_over: topics
+    loop_var: item
+
+  # Repeat (evaluator-optimizer)
+  - agent: editor
+    action: Review and improve
+    repeat:
+      until: "quality > 8"
+      max_iterations: 3
+
+  # Output to file
+  - agent: writer
+    action: Write final report
+    output_file: output/{{topic}}_report.md
+
+variables:
+  topic: AI trends
+  topics: [ML, NLP, Vision]
+
+workflow:
+  planning: true
+  planning_llm: gpt-4o
+  memory_config:
+    provider: chroma
+    persist: true
+```
+
+### Loading YAML Workflows
+
+```python
+from praisonaiagents.workflows import YAMLWorkflowParser, WorkflowManager
+
+# Option 1: Parse YAML string
+parser = YAMLWorkflowParser()
+workflow = parser.parse_string(yaml_content)
+result = workflow.start("Research AI trends")
+
+# Option 2: Load from file with WorkflowManager
+manager = WorkflowManager()
+workflow = manager.load_yaml("research_workflow.yaml")
+result = workflow.start("Research AI trends")
+
+# Option 3: Execute YAML directly
+result = manager.execute_yaml(
+    "research_workflow.yaml",
+    input_data="Research AI trends",
+    variables={"topic": "Machine Learning"}
+)
+```
+
+### Complete workflow.yaml Reference
+
+```yaml
+# workflow.yaml - Full feature reference
+name: Complete Workflow
+description: Demonstrates all workflow.yaml features
+framework: praisonai  # praisonai, crewai, autogen
+process: workflow     # sequential, hierarchical, workflow
+
+workflow:
+  planning: true
+  planning_llm: gpt-4o
+  reasoning: true
+  verbose: true
+  memory_config:
+    provider: chroma
+    persist: true
+
+variables:
+  topic: AI trends
+  items: [ML, NLP, Vision]
+
+agents:
+  researcher:
+    name: Researcher
+    role: Research Analyst
+    goal: Research topics thoroughly
+    instructions: "Provide detailed research findings"
+    backstory: "Expert researcher with 10 years experience"  # alias for instructions
+    llm: gpt-4o-mini
+    function_calling_llm: gpt-4o      # For tool calls
+    max_rpm: 10                        # Rate limiting
+    max_execution_time: 300            # Timeout in seconds
+    reflect_llm: gpt-4o               # For self-reflection
+    min_reflect: 1
+    max_reflect: 3
+    system_template: "You are a helpful assistant"
+    tools:
+      - tavily_search
+
+  writer:
+    name: Writer
+    role: Content Writer
+    goal: Write clear content
+    instructions: "Write engaging content"
+
+steps:
+  - name: research_step
+    agent: researcher
+    action: "Research {{topic}}"
+    expected_output: "Comprehensive research report"
+    output_file: "output/research.md"
+    create_directory: true
+    
+  - name: writing_step
+    agent: writer
+    action: "Write article based on research"
+    context:                          # Task dependencies
+      - research_step
+    output_json:                      # Structured output
+      type: object
+      properties:
+        title: { type: string }
+        content: { type: string }
+
+callbacks:
+  on_workflow_start: log_start
+  on_step_complete: log_step
+  on_workflow_complete: log_complete
+```
+
+### 9. Hooks
+
+Configure in `.praison/hooks.json`:
+
+```python
+from praisonaiagents.memory import HooksManager
+
+hooks = HooksManager()
+
+# Register Python hooks
+hooks.register("pre_write_code", lambda ctx: print(f"Writing {ctx['file']}"))
+
+# Execute hooks
+result = hooks.execute("pre_write_code", {"file": "main.py"})
+```
+
+### 10. Field Names Reference (A-I-G-S)
+
+PraisonAI accepts both old (agents.yaml) and new (workflow.yaml) field names. Use the **canonical names** for new projects:
+
+| Canonical (Recommended) | Alias (Also Works) | Purpose |
+|-------------------------|-------------------|---------|
+| `agents` | `roles` | Define agent personas |
+| `instructions` | `backstory` | Agent behavior/persona |
+| `action` | `description` | What the step does |
+| `steps` | `tasks` (nested) | Define work items |
+| `name` | `topic` | Workflow identifier |
+
+**A-I-G-S Mnemonic** - Easy to remember:
+- **A**gents - Who does the work
+- **I**nstructions - How they behave  
+- **G**oal - What they achieve
+- **S**teps - What they do
+
+```yaml
+# Quick Reference - Canonical Format
+name: My Workflow              # Workflow name (not 'topic')
+agents:                        # Define agents (not 'roles')
+  my_agent:
+    role: Job Title            # Agent's role
+    goal: What to achieve      # Agent's goal
+    instructions: How to act   # Agent's behavior (not 'backstory')
+    
+steps:                         # Define steps (not 'tasks')
+  - agent: my_agent
+    action: What to do         # Step action (not 'description')
+```
+
+> **Note:** The parser accepts both old and new names. Run `praisonai workflow validate <file.yaml>` to see suggestions for canonical names.
+
+### 11. Extended agents.yaml with Workflow Patterns
+
+**Feature Parity:** Both `agents.yaml` and `workflow.yaml` now support the same features:
+- All workflow patterns (route, parallel, loop, repeat)
+- All agent fields (function_calling_llm, max_rpm, max_execution_time, reflect_llm, templates)
+- All step fields (expected_output, context, output_json, create_directory, callback)
+- Framework support (praisonai, crewai, autogen)
+- Process types (sequential, hierarchical, workflow)
+
+You can use advanced workflow patterns directly in agents.yaml by setting `process: workflow`:
+
+```yaml
+# agents.yaml with workflow patterns
+framework: praisonai
+process: workflow  # Enables workflow mode
+topic: "Research AI trends"
+
+workflow:
+  planning: true
+  reasoning: true
+  verbose: true
+
+variables:
+  topic: AI trends
+
+agents:  # Canonical: use 'agents' instead of 'roles'
+  classifier:
+    role: Request Classifier
+    instructions: "Classify requests into categories"  # Canonical: use 'instructions' instead of 'backstory'
+    goal: Classify requests
+    
+  researcher:
+    role: Research Analyst
+    instructions: "Expert researcher"  # Canonical: use 'instructions' instead of 'backstory'
+    goal: Research topics
+    tools:
+      - tavily_search
+
+steps:
+  # Sequential step
+  - agent: classifier
+    action: "Classify: {{topic}}"
+    
+  # Route pattern - decision-based branching
+  - name: routing
+    route:
+      technical: [tech_expert]
+      default: [researcher]
+      
+  # Parallel pattern - concurrent execution
+  - name: parallel_research
+    parallel:
+      - agent: researcher
+        action: "Research market trends"
+      - agent: researcher
+        action: "Research competitors"
+        
+  # Loop pattern - iterate over items
+  - agent: researcher
+    action: "Analyze {{item}}"
+    loop:
+      over: topics
+      
+  # Repeat pattern - evaluator-optimizer
+  - agent: aggregator
+    action: "Synthesize findings"
+    repeat:
+      until: "comprehensive"
+      max_iterations: 3
+```
+
+Run with the same simple command:
+```bash
+praisonai agents.yaml
+```
+
+---
+
+## 🎯 CLI / No-Code Interface
+
+PraisonAI provides a powerful CLI for no-code automation and quick prototyping.
+
+### Auto Mode
 ```bash
 pip install praisonai
 export OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxx
 praisonai --auto create a movie script about Robots in Mars
+```
+
+### Interactive Mode CLI:
+```bash
+# Start interactive terminal mode (inspired by Gemini CLI, Codex CLI, Claude Code)
+praisonai --interactive
+praisonai -i
+
+# Features:
+# - Streaming responses (no boxes)
+# - Built-in tools: read_file, write_file, list_files, execute_command, internet_search
+# - Slash commands: /help, /exit, /tools, /clear
+
+# Chat mode - single prompt with interactive style (for testing/scripting)
+# Use --chat (or --chat-mode for backward compatibility)
+praisonai "list files in current folder" --chat
+praisonai "search the web for AI news" --chat
+praisonai "read README.md" --chat
+```
+
+### Chat UI (Web Interface):
+```bash
+# Start web-based Chainlit chat interface (requires praisonai[chat])
+pip install "praisonai[chat]"
+praisonai chat
+# Opens browser at http://localhost:8084
+```
+
+### Query Rewriting (works with any command):
+```bash
+# Rewrite query for better results (uses QueryRewriterAgent)
+praisonai "AI trends" --query-rewrite
+
+# Rewrite with search tools (agent decides when to search)
+praisonai "latest developments" --query-rewrite --rewrite-tools "internet_search"
+
+# Works with any prompt
+praisonai "explain quantum computing" --query-rewrite -v
 ```
 
 ### Deep Research CLI:
@@ -196,21 +1028,863 @@ praisonai research "What are the latest AI trends in 2025?"
 # Use Gemini
 praisonai research --model deep-research-pro "Your research query"
 
-# Rewrite query for better results (uses QueryRewriterAgent)
+# Rewrite query before research
 praisonai research --query-rewrite "AI trends"
+
+# Rewrite with search tools
+praisonai research --query-rewrite --rewrite-tools "internet_search" "AI trends"
+
+# Use custom tools from file (gathers context before deep research)
+praisonai research --tools tools.py "Your research query"
+praisonai research -t my_tools.py "Your research query"
+
+# Use built-in tools by name (comma-separated)
+praisonai research --tools "internet_search,wiki_search" "Your query"
+praisonai research -t "yfinance,calculator_tools" "Stock analysis query"
 
 # Save output to file (output/research/{query}.md)
 praisonai research --save "Your research query"
 praisonai research -s "Your research query"
 
 # Combine options
-praisonai research --query-rewrite --save "Your research query"
+praisonai research --query-rewrite --tools tools.py --save "Your research query"
 
 # Verbose mode (show debug logs)
 praisonai research -v "Your research query"
 ```
 
-## Using JavaScript Code
+### Planning Mode CLI:
+```bash
+# Enable planning mode - agent creates a plan before execution
+praisonai "Research AI trends and write a summary" --planning
+
+# Planning with tools for research
+praisonai "Analyze market trends" --planning --planning-tools tools.py
+
+# Planning with chain-of-thought reasoning
+praisonai "Complex analysis task" --planning --planning-reasoning
+
+# Auto-approve plans without confirmation
+praisonai "Task" --planning --auto-approve-plan
+```
+
+### Tool Approval CLI:
+```bash
+# Auto-approve ALL tool executions (use with caution!)
+praisonai "run ls command" --trust
+
+# Auto-approve tools up to a risk level (prompt for higher)
+# Levels: low, medium, high, critical
+praisonai "write to file" --approve-level high  # Prompts for critical tools only
+praisonai "task" --approve-level medium         # Prompts for high and critical
+
+# Default behavior (no flags): prompts for all dangerous tools
+praisonai "run shell command"  # Will prompt for approval
+```
+
+### Memory CLI:
+```bash
+# Enable memory for agent (persists across sessions)
+praisonai "My name is John" --memory
+
+# Memory with user isolation
+praisonai "Remember my preferences" --memory --user-id user123
+
+# Memory management commands
+praisonai memory show                      # Show memory statistics
+praisonai memory add "User prefers Python" # Add to long-term memory
+praisonai memory search "Python"           # Search memories
+praisonai memory clear                     # Clear short-term memory
+praisonai memory clear all                 # Clear all memory
+praisonai memory save my_session           # Save session
+praisonai memory resume my_session         # Resume session
+praisonai memory sessions                  # List saved sessions
+praisonai memory checkpoint                # Create checkpoint
+praisonai memory restore <checkpoint_id>   # Restore checkpoint
+praisonai memory checkpoints               # List checkpoints
+praisonai memory help                      # Show all commands
+```
+
+### Rules CLI:
+```bash
+# List all loaded rules (from PRAISON.md, CLAUDE.md, etc.)
+praisonai rules list
+
+# Show specific rule details
+praisonai rules show <rule_name>
+
+# Create a new rule
+praisonai rules create my_rule "Always use type hints"
+
+# Delete a rule
+praisonai rules delete my_rule
+
+# Show rules statistics
+praisonai rules stats
+
+# Include manual rules with prompts
+praisonai "Task" --include-rules security,testing
+```
+
+### Workflow CLI:
+```bash
+# List available workflows
+praisonai workflow list
+
+# Execute a workflow with tools and save output
+praisonai workflow run "Research Blog" --tools tavily --save
+
+# Execute with variables
+praisonai workflow run deploy --workflow-var environment=staging --workflow-var branch=main
+
+# Execute with planning mode (AI creates sub-steps for each workflow step)
+praisonai workflow run "Research Blog" --planning --verbose
+
+# Execute with reasoning mode (chain-of-thought)
+praisonai workflow run "Analysis" --reasoning --verbose
+
+# Execute with memory enabled
+praisonai workflow run "Research" --memory
+
+# Show workflow details
+praisonai workflow show deploy
+
+# Create a new workflow template
+praisonai workflow create my_workflow
+
+# Inline workflow (no template file needed)
+praisonai "What is AI?" --workflow "Research,Summarize" --save
+
+# Inline workflow with step actions
+praisonai "GPT-5" --workflow "Research:Search for info,Write:Write blog" --tools tavily
+
+# Workflow CLI help
+praisonai workflow help
+```
+
+#### YAML Workflow Files:
+```bash
+# Run a YAML workflow file
+praisonai workflow run research.yaml
+
+# Run with variables
+praisonai workflow run research.yaml --var topic="AI trends"
+
+# Validate a YAML workflow
+praisonai workflow validate research.yaml
+
+# Create from template (simple, routing, parallel, loop, evaluator-optimizer)
+praisonai workflow template routing --output my_workflow.yaml
+```
+
+#### Auto-Generate Workflows:
+```bash
+# Auto-generate a sequential workflow from topic
+praisonai workflow auto "Research AI trends"
+
+# Generate parallel workflow (multiple agents work concurrently)
+praisonai workflow auto "Research AI trends" --pattern parallel
+
+# Generate routing workflow (classifier routes to specialists)
+praisonai workflow auto "Build a chatbot" --pattern routing
+
+# Generate orchestrator-workers workflow (central orchestrator delegates)
+praisonai workflow auto "Comprehensive market analysis" --pattern orchestrator-workers
+
+# Generate evaluator-optimizer workflow (iterative refinement)
+praisonai workflow auto "Write and refine article" --pattern evaluator-optimizer
+
+# Specify output file
+praisonai workflow auto "Build a chatbot" --pattern routing
+
+# Specify output file
+praisonai workflow auto "Research AI" --pattern sequential --output my_workflow.yaml
+```
+
+**Workflow CLI Options:**
+| Flag | Description |
+|------|-------------|
+| `--workflow-var key=value` | Set workflow variable (can be repeated) |
+| `--var key=value` | Set variable for YAML workflows |
+| `--pattern <pattern>` | Pattern for auto-generation (sequential, parallel, routing, loop, orchestrator-workers, evaluator-optimizer) |
+| `--output <file>` | Output file for auto-generation |
+| `--llm <model>` | LLM model (e.g., openai/gpt-4o-mini) |
+| `--tools <tools>` | Tools (comma-separated, e.g., tavily) |
+| `--planning` | Enable planning mode |
+| `--reasoning` | Enable reasoning mode |
+| `--memory` | Enable memory |
+| `--verbose` | Enable verbose output |
+| `--save` | Save output to file |
+
+### Hooks CLI:
+```bash
+# List configured hooks
+praisonai hooks list
+
+# Show hooks statistics
+praisonai hooks stats
+
+# Create hooks.json template
+praisonai hooks init
+```
+
+### Claude Memory Tool CLI:
+```bash
+# Enable Claude Memory Tool (Anthropic models only)
+praisonai "Research and remember findings" --claude-memory --llm anthropic/claude-sonnet-4-20250514
+```
+
+### Guardrail CLI:
+```bash
+# Validate output with LLM guardrail
+praisonai "Write code" --guardrail "Ensure code is secure and follows best practices"
+
+# Combine with other flags
+praisonai "Generate SQL query" --guardrail "No DROP or DELETE statements" --save
+```
+
+### Metrics CLI:
+```bash
+# Display token usage and cost metrics
+praisonai "Analyze this data" --metrics
+
+# Combine with other features
+praisonai "Complex task" --metrics --planning
+```
+
+### Scheduler CLI:
+```bash
+# Schedule an agent using agents.yaml
+praisonai schedule agents.yaml
+
+# Override interval from CLI
+praisonai schedule agents.yaml --interval "*/30m"
+
+# With verbose logging
+praisonai schedule agents.yaml --verbose
+```
+
+**agents.yaml with schedule:**
+```yaml
+framework: praisonai
+
+agents:
+  - name: "AI News Monitor"
+    instructions: "Search and summarize AI news"
+    tools:
+      - search_tool
+
+task: "Search for latest AI news"
+
+schedule:
+  interval: "hourly"  # hourly, daily, */30m, */6h
+  max_retries: 3
+  run_immediately: true
+```
+
+### Image Processing CLI:
+```bash
+# Process images with vision-based tasks
+praisonai "Describe this image" --image path/to/image.png
+
+# Analyze image content
+praisonai "What objects are in this photo?" --image photo.jpg --llm openai/gpt-4o
+```
+
+### Telemetry CLI:
+```bash
+# Enable usage monitoring and analytics
+praisonai "Task" --telemetry
+
+# Combine with metrics for full observability
+praisonai "Complex analysis" --telemetry --metrics
+```
+
+### MCP (Model Context Protocol) CLI:
+```bash
+# Use MCP server tools
+praisonai "Search files" --mcp "npx -y @modelcontextprotocol/server-filesystem ."
+
+# MCP with environment variables
+praisonai "Search web" --mcp "npx -y @modelcontextprotocol/server-brave-search" --mcp-env "BRAVE_API_KEY=your_key"
+
+# Multiple MCP options
+praisonai "Task" --mcp "npx server" --mcp-env "KEY1=value1,KEY2=value2"
+```
+
+### Fast Context CLI:
+```bash
+# Search codebase for relevant context
+praisonai "Find authentication code" --fast-context ./src
+
+# Add code context to any task
+praisonai "Explain this function" --fast-context /path/to/project
+```
+
+### Knowledge CLI:
+```bash
+# Add documents to knowledge base
+praisonai knowledge add document.pdf
+praisonai knowledge add ./docs/
+
+# Search knowledge base
+praisonai knowledge search "API authentication"
+
+# List indexed documents
+praisonai knowledge list
+
+# Clear knowledge base
+praisonai knowledge clear
+
+# Show knowledge base info
+praisonai knowledge info
+
+# Show all commands
+praisonai knowledge help
+```
+
+### Session CLI:
+```bash
+# List all saved sessions
+praisonai session list
+
+# Show session details
+praisonai session show my-project
+
+# Resume a session (load into memory)
+praisonai session resume my-project
+
+# Delete a session
+praisonai session delete my-project
+
+# Auto-save session after each run
+praisonai "Analyze this code" --auto-save my-project
+
+# Load history from last N sessions into context
+praisonai "Continue our discussion" --history 5
+```
+
+### Session Management (Python):
+```python
+from praisonaiagents import Agent
+
+# Auto-save session after each run
+agent = Agent(
+    name="Assistant",
+    memory=True,
+    auto_save="my-project"
+)
+
+# Load history from last 5 sessions
+agent = Agent(
+    name="Assistant",
+    memory=True,
+    history_in_context=5
+)
+```
+
+### Workflow Checkpoints:
+```python
+from praisonaiagents.memory.workflows import WorkflowManager
+
+manager = WorkflowManager()
+
+# Save checkpoint after each step
+result = manager.execute("deploy", checkpoint="deploy-v1")
+
+# Resume from checkpoint
+result = manager.execute("deploy", resume="deploy-v1")
+
+# List/delete checkpoints
+manager.list_checkpoints()
+manager.delete_checkpoint("deploy-v1")
+```
+
+### Tools CLI:
+```bash
+# List all available tools
+praisonai tools list
+
+# Get info about a specific tool
+praisonai tools info internet_search
+
+# Search for tools
+praisonai tools search "web"
+
+# Show all commands
+praisonai tools help
+```
+
+### Handoff CLI:
+```bash
+# Enable agent-to-agent task delegation
+praisonai "Research and write article" --handoff "researcher,writer,editor"
+
+# Complex multi-agent workflow
+praisonai "Analyze data and create report" --handoff "analyst,visualizer,writer"
+```
+
+### Auto Memory CLI:
+```bash
+# Enable automatic memory extraction
+praisonai "Learn about user preferences" --auto-memory
+
+# Combine with user isolation
+praisonai "Remember my settings" --auto-memory --user-id user123
+```
+
+### Todo CLI:
+```bash
+# Generate todo list from task
+praisonai "Plan the project" --todo
+
+# Add a todo item
+praisonai todo add "Implement feature X"
+
+# List all todos
+praisonai todo list
+
+# Complete a todo
+praisonai todo complete 1
+
+# Delete a todo
+praisonai todo delete 1
+
+# Clear all todos
+praisonai todo clear
+
+# Show all commands
+praisonai todo help
+```
+
+### Router CLI:
+```bash
+# Auto-select best model based on task complexity
+praisonai "Simple question" --router
+
+# Specify preferred provider
+praisonai "Complex analysis" --router --router-provider anthropic
+
+# Router automatically selects:
+# - Simple tasks → gpt-4o-mini, claude-3-haiku
+# - Complex tasks → gpt-4-turbo, claude-3-opus
+
+# Create workflow with model routing template
+praisonai workflow create --template model-routing --output my_workflow.yaml
+```
+
+Custom models can be configured in `agents.yaml`. See [Model Router Docs](https://docs.praison.ai/features/model-router) for details.
+
+### Flow Display CLI:
+```bash
+# Enable visual workflow tracking
+praisonai agents.yaml --flow-display
+
+# Combine with other features
+praisonai "Multi-step task" --planning --flow-display
+```
+
+### Docs CLI:
+```bash
+# List all project docs
+praisonai docs list
+
+# Create a new doc
+praisonai docs create project-overview "This project is a Python web app..."
+
+# Show a specific doc
+praisonai docs show project-overview
+
+# Delete a doc
+praisonai docs delete old-doc
+
+# Show all commands
+praisonai docs help
+```
+
+### MCP Config CLI:
+```bash
+# List all MCP configurations
+praisonai mcp list
+
+# Create a new MCP config
+praisonai mcp create filesystem npx -y @modelcontextprotocol/server-filesystem .
+
+# Show a specific config
+praisonai mcp show filesystem
+
+# Enable/disable a config
+praisonai mcp enable filesystem
+praisonai mcp disable filesystem
+
+# Delete a config
+praisonai mcp delete filesystem
+
+# Show all commands
+praisonai mcp help
+```
+
+### AI Commit CLI:
+```bash
+# Full auto mode: stage all, security check, commit, and push
+praisonai commit -a
+
+# Interactive mode (requires git add first)
+praisonai commit
+
+# Interactive with auto-push
+praisonai commit --push
+
+# Skip security check (not recommended)
+praisonai commit -a --no-verify
+```
+
+**Features:**
+- 🤖 AI-generated conventional commit messages
+- 🔒 Built-in security scanning (API keys, passwords, secrets, sensitive files)
+- 📦 Auto-staging with `-a` flag
+- 🚀 Auto-push in full auto mode
+- ✏️ Edit message before commit in interactive mode
+
+**Security Detection:**
+- API keys, secrets, tokens (AWS, GitHub, GitLab, Slack)
+- Passwords and private keys
+- Sensitive files (`.env`, `id_rsa`, `.pem`, `.key`, etc.)
+
+### Serve CLI (API Server):
+```bash
+# Start API server for agents defined in YAML
+praisonai serve agents.yaml
+
+# With custom port and host
+praisonai serve agents.yaml --port 8005 --host 0.0.0.0
+
+# Alternative flag style
+praisonai agents.yaml --serve
+
+# The server provides:
+# POST /agents          - Run all agents sequentially
+# POST /agents/{name}   - Run specific agent (e.g., /agents/researcher)
+# GET  /agents/list     - List available agents
+```
+
+### n8n Integration CLI:
+```bash
+# Export workflow to n8n and open in browser
+praisonai agents.yaml --n8n
+
+# With custom n8n URL
+praisonai agents.yaml --n8n --n8n-url http://localhost:5678
+
+# Set N8N_API_KEY for auto-import
+export N8N_API_KEY="your-api-key"
+praisonai agents.yaml --n8n
+```
+
+### External Agents CLI:
+
+Use external AI coding CLI tools (Claude Code, Gemini CLI, Codex CLI, Cursor CLI) as agent tools:
+
+```bash
+# Use Claude Code for coding tasks
+praisonai "Refactor the auth module" --external-agent claude
+
+# Use Gemini CLI for code analysis
+praisonai "Analyze codebase architecture" --external-agent gemini
+
+# Use OpenAI Codex CLI
+praisonai "Fix all bugs in src/" --external-agent codex
+
+# Use Cursor CLI
+praisonai "Add comprehensive tests" --external-agent cursor
+```
+
+**Python API:**
+```python
+from praisonai.integrations import (
+    ClaudeCodeIntegration,
+    GeminiCLIIntegration,
+    CodexCLIIntegration,
+    CursorCLIIntegration
+)
+
+# Create integration
+claude = ClaudeCodeIntegration(workspace="/project")
+
+# Execute a coding task
+result = await claude.execute("Refactor the auth module")
+
+# Use as agent tool
+from praisonai import Agent
+tool = claude.as_tool()
+agent = Agent(tools=[tool])
+```
+
+**Environment Variables:**
+```bash
+export ANTHROPIC_API_KEY=your-key  # Claude Code
+export GEMINI_API_KEY=your-key     # Gemini CLI
+export OPENAI_API_KEY=your-key     # Codex CLI
+export CURSOR_API_KEY=your-key     # Cursor CLI
+```
+
+See [External Agents Documentation](https://docs.praison.ai/code/external-agents) for more details.
+
+### @Mentions in Prompts:
+```bash
+# Include file content in prompt
+praisonai "@file:src/main.py explain this code"
+
+# Include project doc
+praisonai "@doc:project-overview help me add a feature"
+
+# Search the web
+praisonai "@web:python best practices give me tips"
+
+# Fetch URL content
+praisonai "@url:https://docs.python.org summarize this"
+
+# Combine multiple mentions
+praisonai "@file:main.py @doc:coding-standards review this code"
+```
+
+## Prompt Expansion
+
+Expand short prompts into detailed, actionable prompts:
+
+### CLI Usage
+```bash
+# Expand a short prompt into detailed prompt
+praisonai "write a movie script in 3 lines" --expand-prompt
+
+# With verbose output
+praisonai "blog about AI" --expand-prompt -v
+
+# With tools for context gathering
+praisonai "latest AI trends" --expand-prompt --expand-tools tools.py
+
+# Combine with query rewrite
+praisonai "AI news" --query-rewrite --expand-prompt
+```
+
+### Programmatic Usage
+```python
+from praisonaiagents import PromptExpanderAgent, ExpandStrategy
+
+# Basic usage
+agent = PromptExpanderAgent()
+result = agent.expand("write a movie script in 3 lines")
+print(result.expanded_prompt)
+
+# With specific strategy
+result = agent.expand("blog about AI", strategy=ExpandStrategy.DETAILED)
+
+# Available strategies: BASIC, DETAILED, STRUCTURED, CREATIVE, AUTO
+```
+
+**Key Difference:**
+- `--query-rewrite`: Optimizes queries for search/retrieval (RAG)
+- `--expand-prompt`: Expands prompts for detailed task execution
+
+## Web Search, Web Fetch & Prompt Caching
+
+### CLI Usage
+```bash
+# Web Search - Get real-time information
+praisonai "What are the latest AI news today?" --web-search --llm openai/gpt-4o-search-preview
+
+# Web Fetch - Retrieve and analyze URL content (Anthropic only)
+praisonai "Summarize https://docs.praison.ai" --web-fetch --llm anthropic/claude-sonnet-4-20250514
+
+# Prompt Caching - Reduce costs for repeated prompts
+praisonai "Analyze this document..." --prompt-caching --llm anthropic/claude-sonnet-4-20250514
+```
+
+### Programmatic Usage
+```python
+from praisonaiagents import Agent
+
+# Web Search
+agent = Agent(
+    instructions="You are a research assistant",
+    llm="openai/gpt-4o-search-preview",
+    web_search=True
+)
+
+# Web Fetch (Anthropic only)
+agent = Agent(
+    instructions="You are a content analyzer",
+    llm="anthropic/claude-sonnet-4-20250514",
+    web_fetch=True
+)
+
+# Prompt Caching
+agent = Agent(
+    instructions="You are an AI assistant..." * 50,  # Long system prompt
+    llm="anthropic/claude-sonnet-4-20250514",
+    prompt_caching=True
+)
+```
+
+**Supported Providers:**
+| Feature | Providers |
+|---------|----------|
+| Web Search | OpenAI, Gemini, Anthropic, xAI, Perplexity |
+| Web Fetch | Anthropic |
+| Prompt Caching | OpenAI (auto), Anthropic, Bedrock, Deepseek |
+
+## MCP (Model Context Protocol)
+
+PraisonAI supports MCP Protocol Revision 2025-11-25 with multiple transports.
+
+### MCP Client (Consume MCP Servers)
+```python
+from praisonaiagents import Agent, MCP
+
+# stdio - Local NPX/Python servers
+agent = Agent(tools=MCP("npx @modelcontextprotocol/server-memory"))
+
+# Streamable HTTP - Production servers
+agent = Agent(tools=MCP("https://api.example.com/mcp"))
+
+# WebSocket - Real-time bidirectional
+agent = Agent(tools=MCP("wss://api.example.com/mcp", auth_token="token"))
+
+# SSE (Legacy) - Backward compatibility
+agent = Agent(tools=MCP("http://localhost:8080/sse"))
+
+# With environment variables
+agent = Agent(
+    tools=MCP(
+        command="npx",
+        args=["-y", "@modelcontextprotocol/server-brave-search"],
+        env={"BRAVE_API_KEY": "your-key"}
+    )
+)
+
+# Multiple MCP servers + regular functions
+def my_custom_tool(query: str) -> str:
+    """Custom tool function."""
+    return f"Result: {query}"
+
+agent = Agent(
+    name="MultiToolAgent",
+    instructions="Agent with multiple MCP servers",
+    tools=[
+        MCP("uvx mcp-server-time"),                    # Time tools
+        MCP("npx @modelcontextprotocol/server-memory"), # Memory tools
+        my_custom_tool                                  # Regular function
+    ]
+)
+```
+
+### MCP Server (Expose Tools as MCP Server)
+
+Expose your Python functions as MCP tools for Claude Desktop, Cursor, and other MCP clients:
+
+```python
+from praisonaiagents.mcp import ToolsMCPServer
+
+def search_web(query: str, max_results: int = 5) -> dict:
+    """Search the web for information."""
+    return {"results": [f"Result for {query}"]}
+
+def calculate(expression: str) -> dict:
+    """Evaluate a mathematical expression."""
+    return {"result": eval(expression)}
+
+# Create and run MCP server
+server = ToolsMCPServer(name="my-tools")
+server.register_tools([search_web, calculate])
+server.run()  # stdio for Claude Desktop
+# server.run_sse(host="0.0.0.0", port=8080)  # SSE for web clients
+```
+
+### MCP Features
+| Feature | Description |
+|---------|-------------|
+| Session Management | Automatic Mcp-Session-Id handling |
+| Protocol Versioning | Mcp-Protocol-Version header |
+| Resumability | SSE stream recovery via Last-Event-ID |
+| Security | Origin validation, DNS rebinding prevention |
+| WebSocket | Auto-reconnect with exponential backoff |
+
+## A2A (Agent2Agent Protocol)
+
+PraisonAI supports the [A2A Protocol](https://a2a-protocol.org) for agent-to-agent communication, enabling your agents to be discovered and collaborate with other AI agents.
+
+### A2A Server (Expose Agent as A2A Server)
+```python
+from praisonaiagents import Agent, A2A
+from fastapi import FastAPI
+
+# Create an agent with tools
+def search_web(query: str) -> str:
+    """Search the web for information."""
+    return f"Results for: {query}"
+
+agent = Agent(
+    name="Research Assistant",
+    role="Research Analyst",
+    goal="Help users research topics",
+    tools=[search_web]
+)
+
+# Expose as A2A Server
+a2a = A2A(agent=agent, url="http://localhost:8000/a2a")
+
+app = FastAPI()
+app.include_router(a2a.get_router())
+
+# Run: uvicorn app:app --reload
+# Agent Card: GET /.well-known/agent.json
+# Status: GET /status
+```
+
+### A2A Features
+| Feature | Description |
+|---------|-------------|
+| Agent Card | JSON metadata for agent discovery |
+| Skills Extraction | Auto-generate skills from tools |
+| Task Management | Stateful task lifecycle |
+| Streaming | SSE streaming for real-time updates |
+
+> **Documentation**: [docs.praison.ai/a2a](https://docs.praison.ai/a2a) | **Examples**: [examples/python/a2a](https://github.com/MervinPraison/PraisonAI/tree/main/examples/python/a2a)
+
+## CLI Features
+
+| Feature | Docs |
+|---------|:----:|
+| 🔄 Query Rewrite - RAG optimization | [📖](https://docs.praison.ai/docs/cli/query-rewrite) |
+| 🔬 Deep Research - Automated research | [📖](https://docs.praison.ai/docs/cli/deep-research) |
+| 📋 Planning - Step-by-step execution | [📖](https://docs.praison.ai/docs/cli/planning) |
+| 💾 Memory - Persistent agent memory | [📖](https://docs.praison.ai/docs/cli/memory) |
+| 📜 Rules - Auto-discovered instructions | [📖](https://docs.praison.ai/docs/cli/rules) |
+| 🔄 Workflow - Multi-step workflows | [📖](https://docs.praison.ai/docs/cli/workflow) |
+| 🪝 Hooks - Event-driven actions | [📖](https://docs.praison.ai/docs/cli/hooks) |
+| 🧠 Claude Memory - Anthropic memory tool | [📖](https://docs.praison.ai/docs/cli/claude-memory) |
+| 🛡️ Guardrail - Output validation | [📖](https://docs.praison.ai/docs/cli/guardrail) |
+| 📊 Metrics - Token usage tracking | [📖](https://docs.praison.ai/docs/cli/metrics) |
+| 🖼️ Image - Vision processing | [📖](https://docs.praison.ai/docs/cli/image) |
+| 📡 Telemetry - Usage monitoring | [📖](https://docs.praison.ai/docs/cli/telemetry) |
+| 🔌 MCP - Model Context Protocol | [📖](https://docs.praison.ai/docs/cli/mcp) |
+| ⚡ Fast Context - Codebase search | [📖](https://docs.praison.ai/docs/cli/fast-context) |
+| 📚 Knowledge - RAG management | [📖](https://docs.praison.ai/docs/cli/knowledge) |
+| 💬 Session - Conversation management | [📖](https://docs.praison.ai/docs/cli/session) |
+| 🔧 Tools - Tool discovery | [📖](https://docs.praison.ai/docs/cli/tools) |
+| 🤝 Handoff - Agent delegation | [📖](https://docs.praison.ai/docs/cli/handoff) |
+| 🧠 Auto Memory - Memory extraction | [📖](https://docs.praison.ai/docs/cli/auto-memory) |
+| 📋 Todo - Task management | [📖](https://docs.praison.ai/docs/cli/todo) |
+| 🎯 Router - Smart model selection | [📖](https://docs.praison.ai/docs/cli/router) |
+| 📈 Flow Display - Visual workflow | [📖](https://docs.praison.ai/docs/cli/flow-display) |
+| ✨ Prompt Expansion - Detailed prompts | [📖](https://docs.praison.ai/docs/cli/prompt-expansion) |
+| 🌐 Web Search - Real-time search | [📖](https://docs.praison.ai/docs/cli/web-search) |
+| 📥 Web Fetch - URL content retrieval | [📖](https://docs.praison.ai/docs/cli/web-fetch) |
+| 💾 Prompt Caching - Cost reduction | [📖](https://docs.praison.ai/docs/cli/prompt-caching) |
+
+---
+
+## 💻 Using JavaScript Code
 
 ```bash
 npm install praisonai
@@ -225,11 +1899,17 @@ agent.start('Write a movie script about a robot in Mars');
 
 ![PraisonAI CLI Demo](docs/demo/praisonai-cli-demo.gif)
 
-## Star History
+---
+
+## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=MervinPraison/PraisonAI&type=Date)](https://docs.praison.ai)
 
-## AI Agents Flow
+---
+
+## 📊 Process Types & Patterns
+
+### AI Agents Flow
 
 ```mermaid
 graph LR
@@ -568,31 +2248,40 @@ flowchart LR
     style Out fill:#8B0000,color:#fff
 ```
 
-## Adding Models
+---
 
-<div align="center">
-  <a href="https://docs.praison.ai/models">
-    <p align="center">
-      <img src="https://img.shields.io/badge/%F0%9F%93%9A_Models-Visit_docs.praison.ai-blue?style=for-the-badge&logo=bookstack&logoColor=white" alt="Models" />
-    </p>
-  </a>
-</div>
+## 🔧 Configuration & Integration
 
-## Ollama Integration
+### Ollama Integration
+
 ```bash
 export OPENAI_BASE_URL=http://localhost:11434/v1
 ```
 
-## Groq Integration
+### Groq Integration
+
 Replace xxxx with Groq API KEY:
+
 ```bash
 export OPENAI_API_KEY=xxxxxxxxxxx
 export OPENAI_BASE_URL=https://api.groq.com/openai/v1
 ```
 
-## No Code Options
+### 100+ Models Support
 
-## Agents Playbook
+PraisonAI supports 100+ LLM models from various providers. Visit our [models documentation](https://docs.praison.ai/models/) for the complete list.
+
+<div align="center">
+  <a href="https://docs.praison.ai/models">
+    <p align="center">
+      <img src="https://img.shields.io/badge/📚_Models_Documentation-Visit_docs.praison.ai-blue?style=for-the-badge&logo=bookstack&logoColor=white" alt="Models Documentation" />
+    </p>
+  </a>
+</div>
+
+---
+
+## 📋 Agents Playbook
 
 ### Simple Playbook Example
 
@@ -601,9 +2290,9 @@ Create `agents.yaml` file and add the code below:
 ```yaml
 framework: praisonai
 topic: Artificial Intelligence
-roles:
+agents:  # Canonical: use 'agents' instead of 'roles'
   screenwriter:
-    backstory: "Skilled in crafting scripts with engaging dialogue about {topic}."
+    instructions: "Skilled in crafting scripts with engaging dialogue about {topic}."  # Canonical: use 'instructions' instead of 'backstory'
     goal: Create scripts from concepts.
     role: Screenwriter
     tasks:
@@ -617,56 +2306,181 @@ roles:
 praisonai agents.yaml
 ```
 
-## Use 100+ Models
+---
 
-- https://docs.praison.ai/models/
-<div align="center">
-  <a href="https://docs.praison.ai">
-    <p align="center">
-      <img src="https://img.shields.io/badge/📚_Documentation-Visit_docs.praison.ai-blue?style=for-the-badge&logo=bookstack&logoColor=white" alt="Documentation" />
-    </p>
-  </a>
-</div>
+## 🛠️ Custom Tools / Create Plugins
 
-## Development:
+PraisonAI supports multiple ways to create and integrate custom tools (plugins) into your agents.
 
-Below is used for development only.
+### Using `@tool` Decorator
 
-### Using uv
-```bash
-# Install uv if you haven't already
-pip install uv
+```python
+from praisonaiagents import Agent, tool
 
-# Install from requirements
-uv pip install -r pyproject.toml
+@tool
+def search(query: str) -> str:
+    """Search the web for information."""
+    return f"Results for: {query}"
 
-# Install with extras
-uv pip install -r pyproject.toml --extra code
-uv pip install -r pyproject.toml --extra "crewai,autogen"
+@tool
+def calculate(expression: str) -> float:
+    """Evaluate a math expression."""
+    return eval(expression)
+
+agent = Agent(
+    instructions="You are a helpful assistant",
+    tools=[search, calculate]
+)
+agent.start("Search for AI news and calculate 15*4")
 ```
 
-## Contributing
+### Using `BaseTool` Class
 
-- Fork on GitHub: Use the "Fork" button on the repository page.
-- Clone your fork: `git clone https://github.com/yourusername/praisonAI.git`
-- Create a branch: `git checkout -b new-feature`
-- Make changes and commit: `git commit -am "Add some feature"`
-- Push to your fork: `git push origin new-feature`
-- Submit a pull request via GitHub's web interface.
-- Await feedback from project maintainers.
+```python
+from praisonaiagents import Agent, BaseTool
 
-## Other Features
+class WeatherTool(BaseTool):
+    name = "weather"
+    description = "Get current weather for a location"
+    
+    def run(self, location: str) -> str:
+        return f"Weather in {location}: 72°F, Sunny"
 
-- 🔄 Use CrewAI or AG2 (Formerly AutoGen) Framework
-- 💻 Chat with ENTIRE Codebase
-- 🎨 Interactive UIs
-- 📄 YAML-based Configuration
-- 🛠️ Custom Tool Integration
-- 🔍 Internet Search Capability (using Crawl4AI and Tavily)
-- 🖼️ Vision Language Model (VLM) Support
-- 🎙️ Real-time Voice Interaction
+agent = Agent(
+    instructions="You are a weather assistant",
+    tools=[WeatherTool()]
+)
+agent.start("What's the weather in Paris?")
+```
 
-## Video Tutorials
+### Creating a Tool Package (pip installable)
+
+```toml
+# pyproject.toml
+[project]
+name = "my-praisonai-tools"
+version = "1.0.0"
+dependencies = ["praisonaiagents"]
+
+[project.entry-points."praisonaiagents.tools"]
+my_tool = "my_package:MyTool"
+```
+
+```python
+# my_package/__init__.py
+from praisonaiagents import BaseTool
+
+class MyTool(BaseTool):
+    name = "my_tool"
+    description = "My custom tool"
+    
+    def run(self, param: str) -> str:
+        return f"Result: {param}"
+```
+
+After `pip install`, tools are auto-discovered:
+```python
+agent = Agent(tools=["my_tool"])  # Works automatically!
+```
+
+---
+
+## 🧠 Memory & Context
+
+PraisonAI provides zero-dependency persistent memory for agents. For detailed examples, see [section 6. Agent Memory](#6-agent-memory-zero-dependencies) in the Python Code Examples.
+
+---
+
+## 🔬 Advanced Features
+
+### Research & Intelligence
+
+- 🔬 **Deep Research Agents** - OpenAI & Gemini support for automated research
+- 🔄 **Query Rewriter Agent** - HyDE, Step-back, Multi-query strategies for RAG optimization
+- 🌐 **Native Web Search** - Real-time search via OpenAI, Gemini, Anthropic, xAI, Perplexity
+- 📥 **Web Fetch** - Retrieve full content from URLs (Anthropic)
+- 📝 **Prompt Expander Agent** - Expand short prompts into detailed instructions
+
+### Memory & Caching
+
+- 💾 **Prompt Caching** - Reduce costs & latency (OpenAI, Anthropic, Bedrock, Deepseek)
+- 🧠 **Claude Memory Tool** - Persistent cross-conversation memory (Anthropic Beta)
+- 💾 **File-Based Memory** - Zero-dependency persistent memory for all agents
+- 🔍 **Built-in Search Tools** - Tavily, You.com, Exa for web search, news, content extraction
+
+### Planning & Workflows
+
+- 📋 **Planning Mode** - Plan before execution for agents & multi-agent systems
+- 🔧 **Planning Tools** - Research with tools during planning phase
+- 🧠 **Planning Reasoning** - Chain-of-thought planning for complex tasks
+- ⛓️ **Prompt Chaining** - Sequential prompt workflows with conditional gates
+- 🔍 **Evaluator Optimiser** - Generate and optimize through iterative feedback
+- 👷 **Orchestrator Workers** - Distribute tasks among specialised workers
+- ⚡ **Parallelisation** - Execute tasks in parallel for improved performance
+- 🔁 **Repetitive Agents** - Handle repetitive tasks through automated loops
+- 🤖 **Autonomous Workflow** - Monitor, act, adapt based on environment feedback
+
+### Specialised Agents
+
+- 🖼️ **Image Generation Agent** - Create images from text descriptions
+- 📷 **Image to Text Agent** - Extract text and descriptions from images
+- 🎬 **Video Agent** - Analyse and process video content
+- 📊 **Data Analyst Agent** - Analyse data and generate insights
+- 💰 **Finance Agent** - Financial analysis and recommendations
+- 🛒 **Shopping Agent** - Price comparison and shopping assistance
+- ⭐ **Recommendation Agent** - Personalised recommendations
+- 📖 **Wikipedia Agent** - Search and extract Wikipedia information
+- 💻 **Programming Agent** - Code development and analysis
+- 📝 **Markdown Agent** - Generate and format Markdown content
+- 🔀 **Model Router** - Smart model selection based on task complexity
+
+### MCP Protocol
+
+- 🔌 **MCP Transports** - stdio, Streamable HTTP, WebSocket, SSE (Protocol 2025-11-25)
+- 🌐 **WebSocket MCP** - Real-time bidirectional connections with auto-reconnect
+- 🔐 **MCP Security** - Origin validation, DNS rebinding prevention, secure sessions
+- 🔄 **MCP Resumability** - SSE stream recovery via Last-Event-ID
+
+### A2A & A2UI Protocols
+
+- 🔗 **A2A Protocol** - Agent-to-Agent communication for inter-agent collaboration
+- 🖼️ **A2UI Protocol** - Agent-to-User Interface for generating rich UIs from agents
+- 📋 **UI Templates** - ChatTemplate, ListTemplate, FormTemplate, DashboardTemplate
+- 🔧 **Surface Builder** - Fluent API for building declarative UIs
+
+### Safety & Control
+
+- 🤝 **Agent Handoffs** - Transfer context between specialised agents
+- 🛡️ **Guardrails** - Input/output validation and safety checks
+- ✅ **Human Approval** - Require human confirmation for critical actions
+- 🔐 **Tool Approval CLI** - `--trust` (auto-approve all) and `--approve-level` (risk-based approval)
+- 💬 **Sessions Management** - Isolated conversation contexts
+- 🔄 **Stateful Agents** - Maintain state across interactions
+
+### Developer Tools
+
+- ⚡ **Fast Context** - Rapid parallel code search (10-20x faster)
+- 📜 **Rules & Instructions** - Auto-discover CLAUDE.md, AGENTS.md, GEMINI.md
+- 🪝 **Hooks** - Pre/post operation hooks for custom logic
+- 📈 **Telemetry** - Track agent performance and usage
+- 📹 **Camera Integration** - Capture and analyse camera input
+
+### Other Features
+
+- 🔄 **CrewAI & AG2 Integration** - Use CrewAI or AG2 (Formerly AutoGen) Framework
+- 💻 **Codebase Chat** - Chat with entire codebase
+- 🎨 **Interactive UIs** - Multiple interactive interfaces
+- 📄 **YAML Configuration** - YAML-based agent and workflow configuration
+- 🛠️ **Custom Tools** - Easy custom tool integration
+- 🔍 **Internet Search** - Multiple providers (Tavily, You.com, Exa, DuckDuckGo, Crawl4AI)
+- 🖼️ **VLM Support** - Vision Language Model support
+- 🎙️ **Voice Interaction** - Real-time voice interaction
+
+---
+
+## 🎓 Video Tutorials
+
+Learn PraisonAI through our comprehensive video series:
 
 | Topic | Video |
 |-------|--------|
@@ -693,4 +2507,59 @@ uv pip install -r pyproject.toml --extra "crewai,autogen"
 | Call Interface | [![Call](https://img.youtube.com/vi/m1cwrUG2iAk/0.jpg)](https://www.youtube.com/watch?v=m1cwrUG2iAk) |
 | Reasoning Extract Agents | [![Reasoning Extract](https://img.youtube.com/vi/2PPamsADjJA/0.jpg)](https://www.youtube.com/watch?v=2PPamsADjJA) |
 
+---
+
+## 👥 Contributing
+
+We welcome contributions from the community! Here's how you can contribute:
+
+1. **Fork on GitHub** - Use the "Fork" button on the [repository page](https://github.com/MervinPraison/PraisonAI)
+2. **Clone your fork** - `git clone https://github.com/yourusername/praisonAI.git`
+3. **Create a branch** - `git checkout -b new-feature`
+4. **Make changes and commit** - `git commit -am "Add some feature"`
+5. **Push to your fork** - `git push origin new-feature`
+6. **Submit a pull request** - Via GitHub's web interface
+7. **Await feedback** - From project maintainers
+
+---
+
+## 🔧 Development
+
+### Using uv
+
+```bash
+# Install uv if you haven't already
+pip install uv
+
+# Install from requirements
+uv pip install -r pyproject.toml
+
+# Install with extras
+uv pip install -r pyproject.toml --extra code
+uv pip install -r pyproject.toml --extra "crewai,autogen"
+```
+
+### Bump and Release
+
+```bash
+# From project root - bumps version and releases in one command
+python src/praisonai/scripts/bump_and_release.py 2.2.99
+
+# With praisonaiagents dependency
+python src/praisonai/scripts/bump_and_release.py 2.2.99 --agents 0.0.169
+
+# Then publish
+cd src/praisonai && uv publish
+```
+
+---
+
+<div align="center">
+  <p><strong>Made with ❤️ by the PraisonAI Team</strong></p>
+  <p>
+    <a href="https://docs.praison.ai">Documentation</a> •
+    <a href="https://github.com/MervinPraison/PraisonAI">GitHub</a> •
+    <a href="https://github.com/MervinPraison/PraisonAI/issues">Issues</a>
+  </p>
+</div>
 

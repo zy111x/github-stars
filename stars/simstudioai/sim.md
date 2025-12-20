@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 19447
+stars: 23799
 description: |-
     Open-source platform to build and deploy AI agent workflows.
 url: https://github.com/simstudioai/sim
@@ -138,6 +138,7 @@ When running with Docker, use `host.docker.internal` if vLLM is on your host mac
 
 **Requirements:**
 - [Bun](https://bun.sh/) runtime
+- [Node.js](https://nodejs.org/) v20+ (required for sandboxed code execution)
 - PostgreSQL 12+ with [pgvector extension](https://github.com/pgvector/pgvector) (required for AI embeddings)
 
 **Note:** Sim uses vector embeddings for AI features like knowledge bases and semantic search, which requires the `pgvector` PostgreSQL extension.
@@ -195,6 +196,7 @@ DATABASE_URL="postgresql://postgres:your_password@localhost:5432/simstudio"
 
 Then run the migrations:
 ```bash
+cd packages/db # Required so drizzle picks correct .env file
 bunx drizzle-kit migrate --config=./drizzle.config.ts
 ```
 

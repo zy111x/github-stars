@@ -1,6 +1,6 @@
 ---
 project: twitter
-stars: 1428
+stars: 1430
 description: |-
     AI Agent for Twitter Personality Analysis
 url: https://github.com/wordware-ai/twitter

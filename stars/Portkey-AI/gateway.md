@@ -1,6 +1,6 @@
 ---
 project: gateway
-stars: 10096
+stars: 10127
 description: |-
     A blazing fast AI Gateway with integrated guardrails. Route to 200+ LLMs, 50+ AI Guardrails with 1 fast & friendly API.
 url: https://github.com/Portkey-AI/gateway
@@ -171,7 +171,7 @@ You can do a lot more stuff with configs in your AI gateway. [Jump to examples  
 
 The LLM Gateway's [enterprise version](https://portkey.wiki/gh-86) offers advanced capabilities for **org management**, **governance**, **security** and [more](https://portkey.wiki/gh-87) out of the box. [View Feature Comparison →](https://portkey.wiki/gh-32)
 
-The enterprise deployment architecture for supported platforms is available here - [**Enterprise Private Cloud Deployments**](https://portkey.wiki/gh-33)
+The enterprise deployment architecture for supported platforms is available here - [**Enterprise Private Cloud Deployments**](https://portkey.ai/docs/self-hosting/hybrid-deployments/architecture)
 
 <a href="https://portkey.sh/demo-13"><img src="https://portkey.ai/blog/content/images/2024/08/Get-API-Key--5-.png" height=50 alt="Book an enterprise AI gateway demo" /></a><br/>
 

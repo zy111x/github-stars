@@ -1,6 +1,6 @@
 ---
 project: cap
-stars: 4552
+stars: 4581
 description: |-
     The privacy-first, self-hosted CAPTCHA for the modern web.
 url: https://github.com/tiagozip/cap

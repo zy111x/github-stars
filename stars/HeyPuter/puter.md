@@ -1,6 +1,6 @@
 ---
 project: puter
-stars: 37867
+stars: 38049
 description: |-
     🌐 The Internet Computer! Free, Open-Source, and Self-Hostable.
 url: https://github.com/HeyPuter/puter
@@ -122,7 +122,7 @@ Puter is available as a hosted service at [**puter.com**](https://puter.com).
 - **Operating Systems:** Linux, macOS, Windows
 - **RAM:** 2GB minimum (4GB recommended)
 - **Disk Space:** 1GB free space
-- **Node.js:** Version 20.19.5+ (Version 23+ recommended)
+- **Node.js:** Version 24+
 - **npm:** Latest stable version
 
 <br/>

@@ -1,6 +1,6 @@
 ---
 project: orama
-stars: 9991
+stars: 10016
 description: |-
     🌌  A complete search engine and RAG pipeline in your browser, server or edge network with support for full-text, vector, and hybrid search in less than 2kb.
 url: https://github.com/oramasearch/orama
@@ -294,3 +294,4 @@ Write your own plugin: [https://docs.orama.com/docs/orama-js/plugins/writing-you
 
 Orama is licensed under the [Apache 2.0](/LICENSE.md) license.
 
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=16782f89-15fb-4e03-8e9c-2a06106542f7" />

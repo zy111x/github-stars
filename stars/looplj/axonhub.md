@@ -1,8 +1,8 @@
 ---
 project: axonhub
-stars: 777
+stars: 897
 description: |-
-    AxonHub is a modern AI gateway system that provides a unified OpenAI, Anthropic, Gemini and AI SDK compatible API
+    AxonHub is a modern AI gateway system that provides a unified OpenAI ( Chat Completion, Responses), Anthropic, Gemini and AI SDK compatible API
 url: https://github.com/looplj/axonhub
 ---
 
@@ -526,7 +526,7 @@ const completion = await openai.chat.completions.create({
 
 ## 🛠️ Development Guide
 
-For detailed development instructions, architecture design, and contribution guidelines, please see [DEVELOPMENT.md](DEVELOPMENT.md).
+For detailed development instructions, architecture design, and contribution guidelines, please see [docs/en/guides/development.md](docs/en/guides/development.md).
 
 ---
 

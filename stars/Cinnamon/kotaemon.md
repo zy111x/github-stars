@@ -1,6 +1,6 @@
 ---
 project: kotaemon
-stars: 24753
+stars: 24775
 description: |-
     An open-source RAG-based tool for chatting with your documents.
 url: https://github.com/Cinnamon/kotaemon

@@ -1,6 +1,6 @@
 ---
 project: hyperformula
-stars: 2536
+stars: 2550
 description: |-
     HyperFormula is an open-source headless spreadsheet for business web apps. It comes with over 400 formulas, CRUD operations, undo-redo, clipboard support, and sorting.
 url: https://github.com/handsontable/hyperformula
@@ -33,8 +33,11 @@ url: https://github.com/handsontable/hyperformula
 HyperFormula is a headless spreadsheet built in TypeScript, serving as both a parser and evaluator of spreadsheet formulas. It can be integrated into your browser or utilized as a service with Node.js as your back-end technology.
 
 ## What HyperFormula can be used for?
+
 HyperFormula doesn't assume any existing user interface, making it a general-purpose library that can be used in various business applications. Here are some examples:
 
+- Deterministic compute layer for AI & LLMs
+- Calculated fields in CRM and ERP software
 - Custom spreadsheet-like app
 - Business logic builder
 - Forms and form builder

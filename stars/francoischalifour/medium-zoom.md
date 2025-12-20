@@ -1,6 +1,6 @@
 ---
 project: medium-zoom
-stars: 3880
+stars: 3885
 description: |-
     🔎🖼 A JavaScript library for zooming images like Medium
 url: https://github.com/francoischalifour/medium-zoom
@@ -111,6 +111,7 @@ yarn add medium-zoom
 - [jsDelivr](https://www.jsdelivr.com/package/npm/medium-zoom)
 - [unpkg](https://unpkg.com/medium-zoom/)
 - [esm.sh](https://esm.sh/medium-zoom)
+- [cdnjs](https://cdnjs.com/libraries/medium-zoom)
 
 ## Usage
 

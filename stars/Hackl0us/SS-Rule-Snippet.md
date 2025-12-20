@@ -1,6 +1,6 @@
 ---
 project: SS-Rule-Snippet
-stars: 11231
+stars: 11233
 description: |-
     搜集、整理、维护 Surge / Quantumult (X) / Shadowrocket / Surfboard / clash (Premium) 实用规则。
 url: https://github.com/Hackl0us/SS-Rule-Snippet

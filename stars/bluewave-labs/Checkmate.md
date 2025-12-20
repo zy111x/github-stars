@@ -1,6 +1,6 @@
 ---
 project: Checkmate
-stars: 8688
+stars: 8774
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Don't be shy, join here: https://discord.com/invite/NAb6H3UTjK :)
 url: https://github.com/bluewave-labs/Checkmate
@@ -99,6 +99,7 @@ Feel free to ask questions or share your ideas - we'd love to hear from you!
 - Website monitoring
 - Page speed monitoring
 - Infrastructure monitoring (memory, disk usage, CPU performance, network etc) - requires [Capture](https://github.com/bluewave-labs/capture) agent
+  - Selective disk monitoring with mountpoint selection
 - Docker monitoring
 - Ping monitoring
 - SSL monitoring

@@ -1,6 +1,6 @@
 ---
 project: Web-Dev-For-Beginners
-stars: 94623
+stars: 94694
 description: |-
     24 Lessons, 12 Weeks, Get Started as a Web Developer
 url: https://github.com/microsoft/Web-Dev-For-Beginners
@@ -53,7 +53,7 @@ New Challenge added, look for "GitHub Copilot Agent Challenge 🚀" in most chap
 
 ### 📣 Announcement - _New Project to build using Generative AI_ 
 
-New AI Assistant project just added, check it out [project](./09-chat-project/README.md)
+New AI Assistant project just added, check it out [project](./9-chat-project/README.md)
 
 ### 📣 Announcement - _New Curriculum_ on Generative AI for JavaScript was just released
 
