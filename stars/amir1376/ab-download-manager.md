@@ -1,6 +1,6 @@
 ---
 project: ab-download-manager
-stars: 12227
+stars: 12339
 description: A Download Manager that speeds up your downloads
 url: https://github.com/amir1376/ab-download-manager
 ---
@@ -19,7 +19,7 @@ Features
 -   ⚡️ Faster Download Speed
 -   ⏰ Queues and Schedulers
 -   🌐 Browser Extensions
--   💻 Multiplatform (Windows / Linux / Mac)
+-   💻 Multiplatform (Android / Windows / Linux / Mac)
 -   🌙 Multiple Themes (Dark/Light) with modern UI
 -   ❤️ Free and Open Source
 
