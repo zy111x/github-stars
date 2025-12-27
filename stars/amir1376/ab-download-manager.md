@@ -1,6 +1,6 @@
 ---
 project: ab-download-manager
-stars: 12339
+stars: 12529
 description: A Download Manager that speeds up your downloads
 url: https://github.com/amir1376/ab-download-manager
 ---
@@ -20,7 +20,7 @@ Features
 -   ⏰ Queues and Schedulers
 -   🌐 Browser Extensions
 -   💻 Multiplatform (Android / Windows / Linux / Mac)
--   🌙 Multiple Themes (Dark/Light) with modern UI
+-   🌙 Multiple Themes (Dark/Light/Black and more) with modern UI
 -   ❤️ Free and Open Source
 
 Please visit Project Website for more info.
@@ -44,9 +44,13 @@ winget install amir1376.ABDownloadManager
 
 scoop install extras/abdownloadmanager
 
-#### Homebrew (for macOS)
+#### Homebrew (for macOS & Linux)
 
 brew tap amir1376/tap && brew install --cask ab-download-manager
+
+> ⚠️ **Warning:** This software is NOT on Google Play or other app stores unless listed here. Any version **claiming to be or related to this project** outside of these links is a SCAM and UNSAFE.
+
+For alternative installation methods, uninstallation instructions, and more details, please refer to the wiki page.
 
 ### Browser Extensions
 
@@ -137,13 +141,7 @@ If you’d like to help translate AB Download Manager into another language, or 
 Contribution
 ------------
 
-> ❌ **Important Notice:** The entire codebase is being completely rewritten. Pull requests are **not accepted** at this time, as incoming changes may be lost or conflict heavily with ongoing refactoring. Please wait until the refactor is complete before submitting any PRs.
-
-Contributions to this project are very welcome!
-
 If you want to contribute to this project, please read Contributing Guide first.
-
-Let's make a better Download Manager together! ❤️
 
 Support the Project
 -------------------
