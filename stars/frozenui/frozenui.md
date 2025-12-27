@@ -1,6 +1,6 @@
 ---
 project: frozenui
-stars: 2994
+stars: 2993
 description: |-
     FrozenUI的CSS组件库，基于腾讯手Q样式规范，腾讯QXD出品
 url: https://github.com/frozenui/frozenui

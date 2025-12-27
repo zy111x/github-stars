@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 15368
+stars: 15521
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -128,6 +128,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [ggc](https://github.com/bmf-san/ggc) A terminal-based Git CLI tool written in Go
 - [gitui](https://github.com/extrawurst/gitui) blazing fast terminal-ui for git written in rust
 - [git-crecord](https://github.com/andrewshadura/git-crecord) interactive selective commit tool
+- [git-scope](https://github.com/Bharath-code/git-scope) Terminal UI dashboard for inspecting multiple local Git repositories.
 - [grv](https://github.com/rgburke/grv) Terminal interface for viewing git repositories
 - [harlequin](https://github.com/tconbeer/harlequin) The SQL IDE for Your Terminal
 - [jqp](https://github.com/noahgorstein/jqp) A TUI playground to experiment with jq
@@ -240,6 +241,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [nnn](https://github.com/jarun/nnn) n³ The unorthodox terminal file manager.
 - [ntc](https://codeberg.org/ItsZariep/ntc) Ncurses Tabbed file Chooser.
 - [ranger](https://github.com/ranger/ranger) A VIM-inspired file manager for the console.
+- [rovr](https://github.com/NSPC911/rovr) A post-modern terminal file manager.
 - [sfm](https://github.com/afify/sfm) Simple file manager.
 - [superfile](https://github.com/MHNightCat/superfile) Pretty fancy and modern terminal file manager.
 - [TUIFIManager](https://github.com/GiorgosXou/TUIFIManager) A cross-platform terminal-based file manager _(supports termux)_.
@@ -511,6 +513,7 @@ url: https://github.com/rothgar/awesome-tuis
 
 <details open><summary><h2>Multimedia</h2></summary>
 
+- [Gorae](https://github.com/Han8931/gorae) TUI librarian for PDFs and EPUBs with Vim-style navigation.
 - [asak](https://github.com/chaosprint/asak) A cross-platform audio recording/playback TUI.
 - [bookokrat](https://github.com/bugzmanov/bookokrat) Full-featured EPUB books reader with Vim keybindings.
 - [chafa](https://hpjansson.org/chafa/) A powerful utility that converts image data, including animated GIFs, into graphics formats or ANSI/Unicode character art suitable for display in a terminal.
@@ -574,6 +577,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [Desktop-TUI](https://github.com/Julien-cpsn/desktop-tui) A desktop environment without graphics
 - [drako](https://github.com/lucky7xz/drako) A grid-based, customizable and extendable command- and TUI-Deck launcher
 - [dvtm](https://github.com/martanne/dvtm) A terminal multiplexer with dwm like window management
+- [ekphos](https://github.com/hanebox/ekphos) A fast, lightweight, markdown research tool written in rust
 - [elia](https://github.com/darrenburns/elia) A terminal ChatGPT client build with Textual
 - [fjira](https://github.com/mk-5/fjira) TUI application for Atlassian Jira
 - [GeekCalendar](https://github.com/fearlessgeekmedia/GeekCalendar) TUI calendar with vim key bindings, which can import from calcure or calcurse.
@@ -644,6 +648,7 @@ url: https://github.com/rothgar/awesome-tuis
 - [rxpipes](https://github.com/inunix3/rxpipes) 2D recreation of the ancient Pipes screensaver for terminals.
 
 ---
+
 </details>
 
 <details open><summary><h2>Web</h2></summary>

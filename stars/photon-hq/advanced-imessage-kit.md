@@ -1,6 +1,6 @@
 ---
 project: advanced-imessage-kit
-stars: 60
+stars: 62
 description: |-
     The Typescript SDK for Next Level iMessage Automation
 url: https://github.com/photon-hq/advanced-imessage-kit
@@ -53,7 +53,7 @@ Advanced iMessage Kit is a full-featured iMessage SDK for **reading**, **sending
 | [Create Polls](#create-polls)                              | Create interactive polls in chat              | `polls.create()`                   | [poll-create.ts](./examples/poll-create.ts)                     |
 | [Vote on Polls](#vote-on-polls)                            | Vote or unvote on poll options                | `polls.vote()`                     | [poll-vote.ts](./examples/poll-vote.ts)                         |
 | [Add Poll Options](#add-poll-options)                      | Add options to existing polls                 | `polls.addOption()`                | [poll-add-option.ts](./examples/poll-add-option.ts)             |
-| [Find My Friends](#find-my-friends) _(WIP)_                | Get friends' locations                        | `icloud.getFindMyFriends()`        | [findmy-friends.ts](./examples/findmy-friends.ts)               |
+| [Find My Friends](#find-my-friends)                        | Get friends' locations                        | `icloud.refreshFindMyFriends()`    | [findmy-friends.ts](./examples/findmy-friends.ts)               |
 | [Real-time Events](#real-time-events)                      | Listen for new messages, typing, etc.         | `sdk.on()`                         | [listen-simple.ts](./examples/listen-simple.ts)                 |
 | [Auto Reply](#real-time-events)                            | Build automated reply bots                    | `sdk.on()`                         | [auto-reply-hey.ts](./examples/auto-reply-hey.ts)               |
 
@@ -748,18 +748,39 @@ sdk.on("new-message", (message) => {
 
 ---
 
-## iCloud _(Work in Progress)_
+## iCloud
 
 > Example: [findmy-friends.ts](./examples/findmy-friends.ts)
 
 ### Find My Friends
 
 ```typescript
-// Get friends' locations
-const friends = await sdk.icloud.getFindMyFriends();
+// Refresh and get friends' locations
+const locations = await sdk.icloud.refreshFindMyFriends();
 
-// Refresh location data
-await sdk.icloud.refreshFindMyFriends();
+// Each location contains:
+// - handle: phone number or email
+// - coordinates: [latitude, longitude]
+// - long_address: street address (optional)
+// - expiry: timestamp when location expires (optional)
+
+// Find specific friend
+const friend = locations.find((loc) => loc.handle === "+1234567890");
+if (friend) {
+  console.log(
+    `Coordinates: ${friend.coordinates[0]}, ${friend.coordinates[1]}`
+  );
+  console.log(
+    `Maps: https://maps.google.com/?q=${friend.coordinates[0]},${friend.coordinates[1]}`
+  );
+  if (friend.long_address) console.log(`Address: ${friend.long_address}`);
+}
+
+// List all friends
+console.log(`All Friends (${locations.length}):`);
+for (const loc of locations) {
+  console.log(`${loc.handle}: ${loc.coordinates[0]}, ${loc.coordinates[1]}`);
+}
 ```
 
 > Example: [findmy-friends.ts](./examples/findmy-friends.ts)
@@ -855,7 +876,7 @@ sdk.on("group-icon-removed", (message) => {
 });
 ```
 
-### Find My Friends Events _(WIP)_
+### Find My Friends Events
 
 ```typescript
 sdk.on("new-findmy-location", (location) => {
@@ -1001,12 +1022,12 @@ bun run examples/<filename>.ts
 
 ### Server & Advanced
 
-| File                                              | Description             |
-| ------------------------------------------------- | ----------------------- |
-| [server-info.ts](./examples/server-info.ts)       | Server info and logs    |
-| [message-stats.ts](./examples/message-stats.ts)   | Message statistics      |
-| [findmy-friends.ts](./examples/findmy-friends.ts) | Find My Friends _(WIP)_ |
-| [auto-reply-hey.ts](./examples/auto-reply-hey.ts) | Auto reply bot          |
+| File                                              | Description          |
+| ------------------------------------------------- | -------------------- |
+| [server-info.ts](./examples/server-info.ts)       | Server info and logs |
+| [message-stats.ts](./examples/message-stats.ts)   | Message statistics   |
+| [findmy-friends.ts](./examples/findmy-friends.ts) | Find My Friends      |
+| [auto-reply-hey.ts](./examples/auto-reply-hey.ts) | Auto reply bot       |
 
 ---
 

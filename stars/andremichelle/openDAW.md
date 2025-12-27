@@ -1,6 +1,6 @@
 ---
 project: openDAW
-stars: 868
+stars: 886
 description: |-
     openDAW is a next-generation web-based Digital Audio Workstation (DAW)
 url: https://github.com/andremichelle/openDAW
@@ -128,7 +128,7 @@ evolves.
 
 - [ ] Fade-in and out on audio-regions
 - [ ] Signature automation track
-- [ ] Tempo automation track
+- [X] Tempo automation track
 - [ ] Fine-tune recording including loops (takes)
 
 #### 2026/Q2

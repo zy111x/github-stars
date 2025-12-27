@@ -1,6 +1,6 @@
 ---
 project: bottom
-stars: 12466
+stars: 12523
 description: |-
     Yet another cross-platform graphical process/system monitor.
 url: https://github.com/ClementTsang/bottom
@@ -42,6 +42,9 @@ url: https://github.com/ClementTsang/bottom
   - [Debian / Ubuntu](#debian--ubuntu)
   - [Exherbo Linux](#exherbo-linux)
   - [Fedora / CentOS / AlmaLinux / Rocky Linux](#fedora--centos--almalinux--rocky-linux)
+    - [COPR](#copr)
+    - [Terra](#terra)
+    - [RPM](#rpm)
   - [Gentoo](#gentoo)
   - [Nix](#nix)
   - [openSUSE](#opensuse)
@@ -135,8 +138,9 @@ Note that some unsupported platforms may eventually be officially supported (e.g
 A non-comprehensive list of some currently unofficially-supported platforms that may compile/work include:
 
 - FreeBSD (`x86_64`)
-- Linux (`armv6`, `armv7`, `powerpc64le`, `riscv64gc`)
+- Linux (`armv6`, `armv7`, `powerpc64le`, `riscv64gc`, `loongarch64`)
 - Android (`arm64`)
+- Windows (`arm64`)
 
 For more details on unsupported platforms and known problems, check out [the documentation](https://bottom.pages.dev/nightly/support/unofficial/).
 
@@ -172,8 +176,8 @@ Alternatively, you can use `cargo install` using the repo as the source.
 rustup update stable
 
 # Option 1 - Download an archive from releases and install
-curl -LO https://github.com/ClementTsang/bottom/archive/0.11.4.tar.gz
-tar -xzvf 0.11.4.tar.gz
+curl -LO https://github.com/ClementTsang/bottom/archive/0.12.2.tar.gz
+tar -xzvf 0.12.2.tar.gz
 cargo install --path . --locked
 
 # Option 2 - Manually clone the repo and install
@@ -220,25 +224,25 @@ yay -S bottom-git
 ### Debian / Ubuntu
 
 A `.deb` file is provided on each [stable release](https://github.com/ClementTsang/bottom/releases/latest) and
-[nightly builds](https://github.com/ClementTsang/bottom/releases/tag/nightly) for x86, aarch64, and armv7.
+[nightly builds](https://bottom.pages.dev/nightly/nightly-release) for x86, aarch64, and armv7.
 Some examples of installing it this way:
 
 ```bash
 # x86-64
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.4/bottom_0.11.4-1_amd64.deb
-sudo dpkg -i bottom_0.11.4-1_amd64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.12.2/bottom_0.12.2-1_amd64.deb
+sudo dpkg -i bottom_0.12.2-1_amd64.deb
 
 # ARM64
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.4/bottom_0.11.4-1_arm64.deb
-sudo dpkg -i bottom_0.11.4-1_arm64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.12.2/bottom_0.12.2-1_arm64.deb
+sudo dpkg -i bottom_0.12.2-1_arm64.deb
 
 # ARM
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.4/bottom_0.11.4-1_armhf.deb
-sudo dpkg -i bottom_0.11.4-1_armhf.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.12.2/bottom_0.12.2-1_armhf.deb
+sudo dpkg -i bottom_0.12.2-1_armhf.deb
 
 # musl-based
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.4/bottom-musl_0.11.4-1_amd64.deb
-sudo dpkg -i bottom-musl_0.11.4-1_amd64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.12.2/bottom-musl_0.12.2-1_amd64.deb
+sudo dpkg -i bottom-musl_0.12.2-1_amd64.deb
 ```
 
 ### Exherbo Linux
@@ -252,12 +256,20 @@ cave resolve -x bottom
 
 ### Fedora / CentOS / AlmaLinux / Rocky Linux
 
+#### COPR
+
+> [!WARNING]
+>
+> `atim/bottom` seems to be unmaintained and may be outdated ([relevant issue](https://github.com/ClementTsang/bottom/issues/1904))
+
 bottom is available on [COPR](https://copr.fedorainfracloud.org/coprs/atim/bottom/):
 
 ```bash
 sudo dnf copr enable atim/bottom -y
 sudo dnf install bottom
 ```
+
+#### Terra
 
 bottom is also available via [Terra](https://terra.fyralabs.com/):
 
@@ -266,12 +278,14 @@ sudo dnf install --repofrompath 'terra,https://repos.fyralabs.com/terra$releasev
 sudo dnf install bottom
 ```
 
+#### RPM
+
 `.rpm` files are also generated for x86 in the [releases](https://github.com/ClementTsang/bottom/releases) page.
 For example:
 
 ```bash
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.11.4/bottom-0.11.4-1.x86_64.rpm
-sudo rpm -i bottom-0.11.4-1.x86_64.rpm
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.12.2/bottom-0.12.2-1.x86_64.rpm
+sudo rpm -i bottom-0.12.2-1.x86_64.rpm
 ```
 
 ### Gentoo
@@ -346,7 +360,7 @@ gah install bottom
 
 ### Homebrew
 
-Formula available [here](https://formulae.brew.sh/formula/bottom):
+The formula is available [here](https://formulae.brew.sh/formula/bottom):
 
 ```bash
 brew install bottom
@@ -392,8 +406,7 @@ You can uninstall via Control Panel, Options, or `winget --uninstall bottom`.
 
 ### Windows installer
 
-You can also manually install bottom as a Windows program by going to the [latest release](https://github.com/ClementTsang/bottom/releases/latest)
-and installing via the `.msi` file.
+You can manually install bottom as a Windows program by downloading and using the `.msi` file from the [latest release](https://github.com/ClementTsang/bottom/releases/latest).
 
 ### Conda
 
@@ -410,7 +423,7 @@ conda install bottom
 
 ### mise
 
-bottom is available in [mise](https://github.com/jdx/mise). You can install it with something like:
+bottom is available in [mise](https://github.com/jdx/mise). You can install it like so:
 
 ```
 mise use -g bottom@latest
@@ -420,8 +433,8 @@ mise use -g bottom@latest
 
 You can also use the pre-built release binaries:
 
-- [Latest stable release](https://github.com/ClementTsang/bottom/releases/latest), built using the release branch
-- [Latest nightly release](https://github.com/ClementTsang/bottom/releases/tag/nightly), built using the `main` branch at 00:00 UTC daily
+- [Latest stable release](https://github.com/ClementTsang/bottom/releases/latest)
+- [Latest nightly release](https://bottom.pages.dev/nightly/nightly-release)
 
 To use, download and extract the binary that matches your system. You can then run by doing:
 

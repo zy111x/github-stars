@@ -1,6 +1,6 @@
 ---
 project: emojibase
-stars: 559
+stars: 561
 description: |-
     🎮 A collection of lightweight, up-to-date, pre-generated, specification compliant, localized emoji JSON datasets, regex patterns, and more.
 url: https://github.com/milesj/emojibase

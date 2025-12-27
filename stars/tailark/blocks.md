@@ -1,6 +1,6 @@
 ---
 project: blocks
-stars: 2030
+stars: 2038
 description: |-
     Shadcn marketing blocks
 url: https://github.com/tailark/blocks

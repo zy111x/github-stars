@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 33397
+stars: 33499
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -1031,7 +1031,7 @@ Accepts the same values as [`color`](#color) in `<Text>` component.
 
 Type: `string`
 
-Change right border color.
+Change the right border color.
 Accepts the same values as [`color`](#color) in `<Text>` component.
 
 ```jsx
@@ -1044,7 +1044,7 @@ Accepts the same values as [`color`](#color) in `<Text>` component.
 
 Type: `string`
 
-Change bottom border color.
+Change the bottom border color.
 Accepts the same values as [`color`](#color) in `<Text>` component.
 
 ```jsx
@@ -1057,7 +1057,7 @@ Accepts the same values as [`color`](#color) in `<Text>` component.
 
 Type: `string`
 
-Change left border color.
+Change the left border color.
 Accepts the same values as [`color`](#color) in `<Text>` component.
 
 ```jsx
@@ -1137,28 +1137,28 @@ Dim the right border color.
 Type: `boolean`\
 Default: `true`
 
-Determines whether top border is visible.
+Determines whether the top border is visible.
 
 ##### borderRight
 
 Type: `boolean`\
 Default: `true`
 
-Determines whether right border is visible.
+Determines whether the right border is visible.
 
 ##### borderBottom
 
 Type: `boolean`\
 Default: `true`
 
-Determines whether bottom border is visible.
+Determines whether the bottom border is visible.
 
 ##### borderLeft
 
 Type: `boolean`\
 Default: `true`
 
-Determines whether left border is visible.
+Determines whether the left border is visible.
 
 #### Background
 
@@ -1859,7 +1859,7 @@ See example in [examples/use-focus](examples/use-focus/use-focus.tsx) and [examp
 
 ### useFocusManager()
 
-This hook exposes methods to enable or disable focus management for all components or manually switch focus to next or previous components.
+This hook exposes methods to enable or disable focus management for all components or manually switch focus to the next or previous components.
 
 #### enableFocus()
 
@@ -2011,7 +2011,7 @@ Type: `object`
 Type: `stream.Writable`\
 Default: `process.stdout`
 
-Output stream where app will be rendered.
+Output stream where the app will be rendered.
 
 ###### stdin
 
@@ -2084,7 +2084,7 @@ This is the object that `render()` returns.
 
 ##### rerender(tree)
 
-Replace the previous root node with a new one or update props of the current root node.
+Replace the previous root node with a new one or update the props of the current root node.
 
 ###### tree
 
@@ -2171,7 +2171,7 @@ render(<Example />);
 ## Testing
 
 Ink components are simple to test with [ink-testing-library](https://github.com/vadimdemedes/ink-testing-library).
-Here's a simple example that checks how component is rendered:
+Here's a simple example that checks how the component is rendered:
 
 ```jsx
 import React from 'react';
@@ -2331,6 +2331,8 @@ For a practical example of building an accessible component, see the [ARIA examp
 - [ink-spawn](https://github.com/kraenhansen/ink-spawn) - Spawn child processes.
 - [ink-titled-box](https://github.com/mishieck/ink-titled-box) - Box with a title.
 - [ink-chart](https://github.com/pppp606/ink-chart) - Sparkline and bar chart.
+- [ink-scroll-view](https://github.com/ByteLandTechnology/ink-scroll-view) - Scroll container.
+- [ink-scroll-list](https://github.com/ByteLandTechnology/ink-scroll-list) - Scrollable list.
 
 ## Useful Hooks
 

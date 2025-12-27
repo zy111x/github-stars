@@ -1,6 +1,6 @@
 ---
 project: icons
-stars: 6010
+stars: 6227
 description: |-
     beautifully crafted animated icons
 url: https://github.com/pqoqubbw/icons
@@ -12,7 +12,7 @@ url: https://github.com/pqoqubbw/icons
 <br />
 
 ## `lucide-animated` is beautifully crafted animated icons.
-![preview](./app/og.png)
+![preview](./public/og.png)
 
 **Demo** → [lucide-animated](https://lucide-animated.com)
 

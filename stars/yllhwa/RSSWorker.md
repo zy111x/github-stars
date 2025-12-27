@@ -1,6 +1,6 @@
 ---
 project: RSSWorker
-stars: 713
+stars: 718
 description: |-
     运行在Cloudflare Worker上的RSS订阅生成器
 url: https://github.com/yllhwa/RSSWorker

@@ -1,6 +1,6 @@
 ---
 project: upyo
-stars: 481
+stars: 497
 description: |-
     Upyo is a simple and cross-runtime library for sending email messages using SMTP and various email providers.  It works on Node.js, Deno, Bun, and edge functions.
 url: https://github.com/dahlia/upyo
@@ -76,6 +76,7 @@ sending messages.  The following is a list of the available packages:
 | ----------------------------------------------- | ------------------------------ | ------------------------------ | -------------------------------------------------- |
 | [@upyo/core](/packages/core/)                   | [JSR][jsr:@upyo/core]          | [npm][npm:@upyo/core]          | Shared types and interfaces for email messages     |
 | [@upyo/smtp](/packages/smtp/)                   | [JSR][jsr:@upyo/smtp]          | [npm][npm:@upyo/smtp]          | SMTP transport                                     |
+| [@upyo/jmap](/packages/jmap/)                   | [JSR][jsr:@upyo/jmap]          | [npm][npm:@upyo/jmap]          | [JMAP] transport (RFC 8620/8621)                   |
 | [@upyo/mailgun](/packages/mailgun/)             | [JSR][jsr:@upyo/mailgun]       | [npm][npm:@upyo/mailgun]       | [Mailgun] transport                                |
 | [@upyo/plunk](/packages/plunk/)                 | [JSR][jsr:@upyo/plunk]         | [npm][npm:@upyo/plunk]         | [Plunk] transport                                  |
 | [@upyo/resend](/packages/resend/)               | [JSR][jsr:@upyo/resend]        | [npm][npm:@upyo/resend]        | [Resend] transport                                 |
@@ -88,6 +89,8 @@ sending messages.  The following is a list of the available packages:
 [npm:@upyo/core]: https://www.npmjs.com/package/@upyo/core
 [jsr:@upyo/smtp]: https://jsr.io/@upyo/smtp
 [npm:@upyo/smtp]: https://www.npmjs.com/package/@upyo/smtp
+[jsr:@upyo/jmap]: https://jsr.io/@upyo/jmap
+[npm:@upyo/jmap]: https://www.npmjs.com/package/@upyo/jmap
 [jsr:@upyo/mailgun]: https://jsr.io/@upyo/mailgun
 [npm:@upyo/mailgun]: https://www.npmjs.com/package/@upyo/mailgun
 [jsr:@upyo/plunk]: https://jsr.io/@upyo/plunk
@@ -102,6 +105,7 @@ sending messages.  The following is a list of the available packages:
 [npm:@upyo/opentelemetry]: https://www.npmjs.com/package/@upyo/opentelemetry
 [jsr:@upyo/mock]: https://jsr.io/@upyo/mock
 [npm:@upyo/mock]: https://www.npmjs.com/package/@upyo/mock
+[JMAP]: https://jmap.io/
 [Mailgun]: https://www.mailgun.com/
 [Plunk]: https://www.useplunk.com/
 [Resend]: https://resend.com/

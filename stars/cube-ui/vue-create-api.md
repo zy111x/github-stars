@@ -1,6 +1,6 @@
 ---
 project: vue-create-api
-stars: 317
+stars: 318
 description: |-
     Make Vue component's invocation by API.
 url: https://github.com/cube-ui/vue-create-api

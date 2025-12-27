@@ -1,6 +1,6 @@
 ---
 project: qrcodejs
-stars: 14180
+stars: 14187
 description: |-
     Cross-browser QRCode generator for javascript
 url: https://github.com/davidshimjs/qrcodejs

@@ -1,6 +1,6 @@
 ---
 project: nocta-ui
-stars: 109
+stars: 110
 description: |-
     Modern, accessible React components built with TypeScript and Tailwind CSS.
 url: https://github.com/nocta-ui/nocta-ui

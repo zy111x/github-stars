@@ -1,6 +1,6 @@
 ---
 project: Smoji
-stars: 86
+stars: 87
 description: |-
     Social emoji for mastodon, pleroma, misskey...
 url: https://github.com/DejavuMoe/Smoji

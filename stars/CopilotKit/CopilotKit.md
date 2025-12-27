@@ -1,6 +1,6 @@
 ---
 project: CopilotKit
-stars: 27141
+stars: 27504
 description: |-
     React UI + elegant infrastructure for AI Copilots, AI chatbots, and in-app AI agents. The Agentic Frontend 🪁
 url: https://github.com/CopilotKit/CopilotKit

@@ -1,8 +1,8 @@
 ---
 project: sdk
-stars: 1321
+stars: 1332
 description: |-
-    The Keep it Simple Stack. Server-first, React, Vite, TypeScript, & Cloudflare
+    A simple framework for humans: Server-first React with zero magic. Built to stay understandable.
 url: https://github.com/redwoodjs/sdk
 ---
 

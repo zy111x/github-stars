@@ -1,6 +1,6 @@
 ---
 project: yournextstore
-stars: 5239
+stars: 5247
 description: |-
     Your Next Store: Modern Commerce with Next.js and Stripe.
 url: https://github.com/yournextstore/yournextstore

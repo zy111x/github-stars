@@ -1,6 +1,6 @@
 ---
 project: openwrt-6.x
-stars: 593
+stars: 598
 description: |-
     IPQ60XX系列、IPQ807X系列满血NSS支持！Full-featured NSS support for IPQ60XX series and IPQ807X series！
 url: https://github.com/LiBwrt/openwrt-6.x
@@ -129,7 +129,7 @@ make -j1 V=s
 cd libwrt
 
 # 拉取最新代码
-git fetch && git reset --hard origin/k6.12-nss
+git fetch && git reset --hard origin/main-nss
 
 # 更新 feeds
 ./scripts/feeds update -a && ./scripts/feeds install -a

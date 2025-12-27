@@ -1,6 +1,6 @@
 ---
 project: motia
-stars: 13546
+stars: 13776
 description: |-
     Multi-Language Backend Framework that unifies APIs, background jobs, queues, workflows, streams, and AI agents with a single core primitive with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
@@ -225,7 +225,7 @@ Follow the prompts to pick a template, project name, and language.
 Inside your new project folder, launch the dev server:
 
 ```bash
-npx motia dev # ➜ http://localhost:3000
+npm run dev # ➜ http://localhost:3000
 ```
 
 **That's it!** You have:

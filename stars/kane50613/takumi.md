@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 1119
+stars: 1133
 description: |-
     JSX → Image. Faster next/og aternative plus variable fonts, RTL, inline layout, WOFF2, WebP output support.
 url: https://github.com/kane50613/takumi
@@ -35,11 +35,11 @@ You can try out Takumi in [Playground](https://takumi.kane.tw/playground) withou
 
 ## Showcase
 
-- Takumi's Open Graph image is generated with Takumi [(source)](./example/twitter-images/components/og-image.tsx).
+- Takumi's Open Graph Image is generated with Takumi [(source)](./example/twitter-images/components/og-image.tsx).
 
   ![Takumi OG Image](./example/twitter-images/output/og-image.png)
 
-- X post og image clone [(source)](./example/twitter-images/components/x-post-image.tsx).
+- X Open Graph Image [(source)](./example/twitter-images/components/x-post-image.tsx).
 
   ![X OG Image](./example/twitter-images/output/x-post-image.png)
 
@@ -48,6 +48,29 @@ You can try out Takumi in [Playground](https://takumi.kane.tw/playground) withou
   ![Shiki Image Example](https://github.com/pi0/shiki-image/blob/main/test/.snapshot/image.webp)
 
 - [(Unofficial) Takumi Playground](https://takumi-playground.kapadiya.net/) In-browser playground for designing and rendering Open Graph style images.
+
+## Contributing
+
+Contributions are welcome! Please feel free to open an [issue](https://github.com/kane50613/takumi/issues) or submit a pull request.
+
+By participating in this project, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md).
+
+You need to have Rust 1.88+ & Bun installed.
+
+```bash
+bun install
+```
+
+## Credits
+
+Takumi wouldn't be possible without the following works:
+
+- [taffy](https://github.com/DioxusLabs/taffy) for the flex & grid layout.
+- [image](https://github.com/image-rs/image) for the image processing.
+- [parley](https://github.com/linebender/parley) for text layout.
+- [swash](https://github.com/linebender/swash) for font shaping.
+- [wuff](https://github.com/nicoburns/wuff) for woff/woff2 decompression.
+- [resvg](https://github.com/linebender/resvg) for SVG parsing & rasterization.
 
 ## License
 

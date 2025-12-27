@@ -1,6 +1,6 @@
 ---
 project: HuLa
-stars: 6251
+stars: 6307
 description: |-
     🍀 A cross-platform instant messaging desktop application with exceptional performance built on Rust + Vue3, compatible with Windows, macOS, Linux, Android, and iOS（一款基于Rust+Vue3极致性能的跨平台即时通讯桌面应用，兼容Windows、MacOS、Linux、Android、IOS）
 url: https://github.com/HuLaSpark/HuLa
@@ -52,6 +52,12 @@ url: https://github.com/HuLaSpark/HuLa
     </a>
     <a href="https://www.bestpractices.dev/zh-CN/projects/9692">
       <img src="https://bestpractices.coreinfrastructure.org/projects/9692/badge" alt="CII Best Practices">
+    </a>
+    <a href="https://hulaspark.com">
+      <img src="public/hulaspark-badge.svg" alt="HuLaSpark">
+    </a>
+    <a href="https://discord.gg/WhSkvhNEeE">
+      <img src="https://img.shields.io/badge/-Discord-5865F2?logo=discord&logoColor=white&labelColor=555555" alt="Discord">
     </a>
   </p>
 </div>
@@ -411,6 +417,7 @@ sudo xattr -r -d com.apple.quarantine /Applications/应用名称.app
 | 2025-04-20 | **姜兴(Simon)**   | `¥188`  | ![微信赞赏](https://img.shields.io/badge/微信赞赏-07C160?style=flat&logo=wechat&logoColor=white)     |
 | 2025-02-17 | **禾硕**          | `¥168`  | ![支付宝赞赏](https://img.shields.io/badge/支付宝赞赏-1677FF?style=flat&logo=alipay&logoColor=white) |
 | 2025-10-16 | **xx豪**          | `¥101`  | ![支付宝赞赏](https://img.shields.io/badge/支付宝赞赏-1677FF?style=flat&logo=alipay&logoColor=white) |
+| 2025-12-25 | **三愿**          | `¥100`  | ![微信赞赏](https://img.shields.io/badge/微信赞赏-07C160?style=flat&logo=wechat&logoColor=white)     |
 | 2025-10-15 | **兵**            | `¥100`  | ![微信赞赏](https://img.shields.io/badge/微信赞赏-07C160?style=flat&logo=wechat&logoColor=white)     |
 | 2025-08-13 | **zhongjing**     | `¥100`  | ![微信赞赏](https://img.shields.io/badge/微信赞赏-07C160?style=flat&logo=wechat&logoColor=white)     |
 | 2025-07-15 | **粉兔**          | `¥100`  | ![微信赞赏](https://img.shields.io/badge/微信赞赏-07C160?style=flat&logo=wechat&logoColor=white)     |

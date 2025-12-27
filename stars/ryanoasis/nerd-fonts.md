@@ -1,6 +1,6 @@
 ---
 project: nerd-fonts
-stars: 60917
+stars: 60985
 description: |-
     Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more
 url: https://github.com/ryanoasis/nerd-fonts
@@ -138,7 +138,7 @@ A preview of all fonts can be found [here](https://www.nerdfonts.com/font-downlo
 | [CaskaydiaCove Nerd Font][p-cascadia]             | [Cascadia Code][f-cascadia]            | 2407.24    | YES  |
 | [CaskaydiaMono Nerd Font][p-cascadia-mono]        | [Cascadia Mono][f-cascadia]            | 2407.24    | YES  |
 | [CodeNewRoman Nerd Font][p-code-nr]               | Code New Roman (Sam Radian)            | 2.0        | NO   |
-| [ComicShannsMono Nerd Font][p-comic]              | [Comic Shanns Mono][f-comic]           | 1.3.1      | NO   |
+| [ComicShannsMono Nerd Font][p-comic]              | [Comic Shanns Mono][f-comic]           | 1.3.2      | NO   |
 | [CommitMono Nerd Font][p-commit]                  | [Commit Mono][f-commit]                | 1.143      | NO   |
 | [Cousine Nerd Font][p-cousine]                    | [Cousine][f-cousine]                   | 1.211      | NO   |
 | [D2Coding Nerd Font][p-d2coding]                  | [D2Coding][f-d2coding]                 | 1.3.2      | NO   |

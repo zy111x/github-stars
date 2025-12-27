@@ -1,6 +1,6 @@
 ---
 project: hotkeys-js
-stars: 7103
+stars: 7110
 description: |-
     ➷ A robust Javascript library for capturing keyboard input. It has no dependencies. 
 url: https://github.com/jaywcjlove/hotkeys-js
@@ -92,7 +92,8 @@ Or manually download and link **hotkeys.js** in your HTML. The library provides 
 **IIFE (Immediately Invoked Function Expression) - Recommended for direct browser usage:**
 
 ```html
-<script src="https://unpkg.com/hotkeys-js/dist/hotkeys-js.min.js"></script>
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys-js.min.js">
+</script>
 <script type="text/javascript">
 hotkeys('ctrl+a,ctrl+b,r,f', function (event, handler){
   switch (handler.key) {
@@ -113,7 +114,8 @@ hotkeys('ctrl+a,ctrl+b,r,f', function (event, handler){
 **UMD (Universal Module Definition) - For CommonJS/AMD environments:**
 
 ```html
-<script src="https://unpkg.com/hotkeys-js/dist/hotkeys-js.umd.cjs"></script>
+<script src="https://unpkg.com/hotkeys-js/dist/hotkeys-js.umd.cjs">
+</script>
 ```
 
 **ES Module - For modern browsers with module support:**
@@ -162,7 +164,7 @@ The following special keys can be used for shortcuts: backspace, tab, clear, ent
 
 One global method is exposed, key which defines shortcuts when called directly.
 
-```js
+```ts
 declare interface HotkeysInterface extends HotkeysAPI {
   (key: string, method: KeyHandler): void;
   (key: string, scope: string, method: KeyHandler): void;
@@ -174,6 +176,22 @@ declare interface HotkeysInterface extends HotkeysAPI {
   control?: boolean;
   cmd?: boolean;
   command?: boolean;
+}
+declare interface HotkeysAPI {
+  setScope: SetScope;
+  getScope: GetScope;
+  deleteScope: DeleteScope;
+  getPressedKeyCodes: GetPressedKeyCodes;
+  getPressedKeyString: GetPressedKeyString;
+  getAllKeyCodes: GetAllKeyCodes;
+  isPressed: IsPressed;
+  filter: Filter;
+  trigger: Trigger;
+  unbind: Unbind;
+  noConflict: NoConflict;
+  keyMap: Record<string, number>;
+  modifier: Record<string, number>;
+  modifierMap: Record<string | number, number | string>;
 }
 ```
 

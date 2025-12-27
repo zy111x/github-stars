@@ -1,6 +1,6 @@
 ---
 project: icalendar
-stars: 1097
+stars: 1098
 description: |-
     icalendar parser library for Python
 url: https://github.com/collective/icalendar
@@ -10,8 +10,7 @@ url: https://github.com/collective/icalendar
 Internet Calendaring and Scheduling (iCalendar) for Python
 ==========================================================
 
-The `icalendar`_ package is a :rfc:`5545` compatible parser/generator for iCalendar
-files.
+The `icalendar`_ package is an :rfc:`5545` compatible parser and generator of iCalendar files.
 
 ----
 

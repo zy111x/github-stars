@@ -1,6 +1,6 @@
 ---
 project: cap
-stars: 4581
+stars: 4624
 description: |-
     The privacy-first, self-hosted CAPTCHA for the modern web.
 url: https://github.com/tiagozip/cap
@@ -11,7 +11,7 @@ url: https://github.com/tiagozip/cap
 Cap is a lightweight, modern open-source CAPTCHA alternative using <a href="https://capjs.js.org/guide/effectiveness.html">SHA-256 proof-of-work</a>. It's fast, private, and extremely simple to integrate.
 
 <a href="https://capjs.js.org/guide/demo.html"><img src="./assets/captcha.svg" alt="Cap widget" width="250"></a>
-
+ 
 ## Documentation
 
 **[Read the docs](https://capjs.js.org)**, try the [demo](https://capjs.js.org/guide/demo.html) or read the [feature comparison](https://capjs.js.org/guide/alternatives.html)
@@ -56,6 +56,7 @@ This project is licensed under the Apache-2.0 License, please see the [LICENSE](
 
 Copyright ©2025 - present [tiago](https://tiago.zip)
 
+<!--
 ---
 
 <a href="https://www.digitalocean.com/">
@@ -63,8 +64,8 @@ Copyright ©2025 - present [tiago](https://tiago.zip)
 </a>
 
 Cap's free instance is supported by DigitalOcean for open-source. <a href="https://www.digitalocean.com/?refcode=7e41cf645be3&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge">Try DigitalOcean</a> and get $250 worth of credits.
+-->
 
 ---
 
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9920/badge)](https://www.bestpractices.dev/projects/9920) [![Product Hunt: #1 of the month: User Experience](https://img.shields.io/badge/%231%20of%20the%20month-orange?logo=producthunt&logoColor=white)](https://www.producthunt.com/posts/cap-5?embed=true&utm_source=badge-top-post-topic-badge&utm_medium=badge&utm_souce=badge-cap-5)
-
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9920/badge)](https://www.bestpractices.dev/projects/9920) [![](https://data.jsdelivr.com/v1/package/npm/@cap.js/wasm/badge)](https://www.jsdelivr.com/package/npm/@cap.js/wasm)

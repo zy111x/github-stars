@@ -1,6 +1,6 @@
 ---
 project: materialize
-stars: 39155
+stars: 39159
 description: |-
     Materialize, a CSS Framework based on Material Design
 url: https://github.com/Dogfalo/materialize

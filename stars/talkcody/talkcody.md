@@ -1,6 +1,6 @@
 ---
 project: talkcody
-stars: 288
+stars: 293
 description: |-
     TalkCody - Code is cheap, show me your talk.  🚀 Free Open Source AI Coding Agent.
 url: https://github.com/talkcody/talkcody
@@ -123,5 +123,6 @@ TalkCody is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 - [libSQL](https://github.com/tursodatabase/libsql) - lightweight, embedded SQL database
 - [Shadcn UI](https://github.com/shadcn-ui/ui) - beautiful component library
 - [Fumadocs](https://github.com/fuma-nama/fumadocs) - beautiful documentation framework
+- [opencode-openai-codex-auth](https://github.com/numman-ali/opencode-openai-codex-auth) 
 
 

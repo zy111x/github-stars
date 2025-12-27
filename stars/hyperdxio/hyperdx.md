@@ -1,6 +1,6 @@
 ---
 project: hyperdx
-stars: 9175
+stars: 9191
 description: |-
     Resolve production issues, fast. An open source observability platform unifying session replays, logs, metrics, traces and errors powered by ClickHouse and OpenTelemetry.
 url: https://github.com/hyperdxio/hyperdx

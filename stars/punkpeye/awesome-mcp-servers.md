@@ -1,6 +1,6 @@
 ---
 project: awesome-mcp-servers
-stars: 77079
+stars: 77678
 description: |-
     A collection of MCP servers.
 url: https://github.com/punkpeye/awesome-mcp-servers
@@ -928,6 +928,7 @@ Persistent memory storage using knowledge graph structures. Enables AI models to
 - [JamesANZ/memory-mcp](https://github.com/JamesANZ/memory-mcp) 📇 🏠 - An MCP server that stores and retrieves memories from multiple LLMs using MongoDB. Provides tools for saving, retrieving, adding, and clearing conversation memories with timestamps and LLM identification.
 - [JamesANZ/cross-llm-mcp](https://github.com/JamesANZ/cross-llm-mcp) 📇 🏠 - An MCP server that enables cross-LLM communication and memory sharing, allowing different AI models to collaborate and share context across conversations.
 - [harrison/ai-counsel](https://github.com/harrison/ai-counsel) - 🐍 🏠 🍎 🪟 🐧 - Deliberative consensus engine enabling multi-round debate between AI models with structured voting, convergence detection, and persistent decision graph memory.
+- [agentic-mcp-tools/memora](https://github.com/agentic-mcp-tools/memora) 🐍 🏠 ☁️ - Persistent memory with knowledge graph visualization, semantic/hybrid search, cloud sync (S3/R2), and cross-session context management.
 
 ### ⚖️ <a name="legal"></a>Legal
 
@@ -1065,6 +1066,7 @@ Tools for conducting research, surveys, interviews, and data collection.
 - [just-every/mcp-screenshot-website-fast](https://github.com/just-every/mcp-screenshot-website-fast) 📇 🏠 - Fast screenshot capture tool optimized for Claude Vision API. Automatically tiles full pages into 1072x1072 chunks for optimal AI processing with configurable viewports and wait strategies for dynamic content.
 - [kagisearch/kagimcp](https://github.com/kagisearch/kagimcp) ☁️ 📇 – Official Kagi Search MCP Server
 - [kehvinbehvin/json-mcp-filter](https://github.com/kehvinbehvin/json-mcp-filter) ️🏠 📇 – Stop bloating your LLM context. Query & Extract only what you need from your JSON files.
+- [Crawleo/Crawleo-MCP](https://github.com/Crawleo/Crawleo-MCP) ☁️ 🐍 – Crawleo Search & Crawl API
 - [kshern/mcp-tavily](https://github.com/kshern/mcp-tavily.git) ☁️ 📇 – Tavily AI search API
 - [leehanchung/bing-search-mcp](https://github.com/leehanchung/bing-search-mcp) 📇 ☁️ - Web search capabilities using Microsoft Bing Search API
 - [lfnovo/content-core](https://github.com/lfnovo/content-core) 🐍 🏠 - Extract content from URLs, documents, videos, and audio files using intelligent auto-engine selection. Supports web pages, PDFs, Word docs, YouTube transcripts, and more with structured JSON responses.
@@ -1098,6 +1100,7 @@ Tools for conducting research, surveys, interviews, and data collection.
 - [the0807/GeekNews-MCP-Server](https://github.com/the0807/GeekNews-MCP-Server) 🐍 ☁️ - An MCP Server that retrieves and processes news data from the GeekNews site.
 - [tianqitang1/enrichr-mcp-server](https://github.com/tianqitang1/enrichr-mcp-server) 📇 ☁️ - A MCP server that provides gene set enrichment analysis using the Enrichr API
 - [tinyfish-io/agentql-mcp](https://github.com/tinyfish-io/agentql-mcp) 🎖️ 📇 ☁️ - MCP server that provides [AgentQL](https://agentql.com)'s data extraction capabilities.
+- [Crawleo/Crawleo-MCP](https://github.com/Crawleo/Crawleo-MCP) ☁️ 🐍 – Crawleo search & Crawling API
 - [Tomatio13/mcp-server-tavily](https://github.com/Tomatio13/mcp-server-tavily) ☁️ 🐍 – Tavily AI search API
 - [vectorize-io/vectorize-mcp-server](https://github.com/vectorize-io/vectorize-mcp-server/) ☁️ 📇 - [Vectorize](https://vectorize.io) MCP server for advanced retrieval, Private Deep Research, Anything-to-Markdown file extraction and text chunking.
 - [vitorpavinato/ncbi-mcp-server](https://github.com/vitorpavinato/ncbi-mcp-server) 🐍 ☁️ 🏠 - Comprehensive NCBI/PubMed literature search server with advanced analytics, caching, MeSH integration, related articles discovery, and batch processing for all life sciences and biomedical research.

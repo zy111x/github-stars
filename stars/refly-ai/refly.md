@@ -1,6 +1,6 @@
 ---
 project: refly
-stars: 5577
+stars: 5798
 description: |-
     Vibe Workflow Platform for Non-technical Creators.
 url: https://github.com/refly-ai/refly

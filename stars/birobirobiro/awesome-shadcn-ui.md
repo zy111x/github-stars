@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 18442
+stars: 18487
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -46,6 +46,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | berlix | Animated components library built using Tailwind CSS and Motion | [Link](https://berlix.vercel.app) | 2025-06-10 |
 | big-calendar | A modern, feature-rich calendar application with multiple viewing options built using Next.js, TypeScript, and Tailwind CSS. | [Link](https://github.com/lramos33/big-calendar) | 2025-03-08 |
 | billingsdk | Modern, type-safe billing and subscription management components for React, built with TypeScript and Tailwind CSS. Designed to work seamlessly alongside shadcn/ui by [Dodo Payments](https://dodopayments.com/). [GitHub](https://github.com/dodopayments/billingsdk) | [Link](https://billingsdk.com/) | 2025-09-06 |
+| billui | Open source billing components for React built with Shadcn. Pricing cards, payment methods, invoice history and more. | [Link](https://github.com/commet-labs/billui) | 2025-12-25 |
 | blocks.so | A set of clean, modern building blocks to copy and paste into your apps. Works with all React frameworks. | [Link](https://github.com/ephraimduncan/blocks) | 2025-09-06 |
 | buouui | A UI component library and template suite based on shadcn/ui with stunning landing pages, templates, and rich animations. | [Link](https://buouui.com) | 2025-04-06 |
 | bundui | A collection of reusable animated components built with Tailwind CSS and Framer Motion. | [Link](https://bundui.io) | 2024-09-23 |
@@ -109,9 +110,10 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | lingua-time | Smart datetime picker with natural language input. | [Link](https://github.com/nainglinnkhant/lingua-time) | 2024-10-22 |
 | linked-chart | Chart component linked with data-table. | [Link](https://github.com/ardasisbot/linked-chart) | 2025-02-03 |
 | lukacho-ui | Next Generation UI Components. | [Link](https://ui.lukacho.com/components) | 2024-07-02 |
-| manfromexistence-ui | Components to build beautiful designs. | [Link](https://github.com/manfromexistence/ui) | 2024-12-26 |
 | magicui | React components for landing pages with tailwindcss + framer motion. | [Link](https://magicui.design) | 2024-04-25 |
 | maily.to | Notion-like powerful email editor. | [Link](https://github.com/arikchakma/maily.to) | 2024-06-15 |
+| manfromexistence-ui | Components to build beautiful designs. | [Link](https://github.com/manfromexistence/ui) | 2024-12-26 |
+| manifest-ui | Components for ChatGPT Apps and MCP Apps. | [Link](https://ui.manifest.build) | 2025-12-23 |
 | matsu-theme | Ghibli Studio inspired theme for shadcn/ui made by Matt Wierzbicki | [Link](https://matsu-theme.vercel.app/) | 2025-04-23 |
 | minimal-tiptap | Minimal WYSIWYG editor with shadcn/ui and tiptap. | [Link](https://github.com/Aslam97/shadcn-minimal-tiptap) | 2024-06-22 |
 | mixcnui | Collection of animated components for Nextjs. | [Link](https://github.com/taqui-786/mixcnui) | 2024-07-07 |
@@ -301,10 +303,10 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | dev-quotes | A website that displays quotes from professional programmers. | [Link](https://dev-quotes-six.vercel.app/) | 2025-01-07 |
 | down-dev-detector | This app lists all the services currently down and uses Atlassian Status Page and others (soon). | [Link](https://github.com/birobirobiro/downdevdetector) | 2024-11-04 |
 | cv-forge | Resume builder built with @shadcn/ui, react-hook-form, and react-pdf. | [Link](https://cvforge.app) | 2024-11-04 |
-| excelkits | Create free downloadable Shadcn-themed chart images. Supports PNG, JPEG, WEBP, and even WEBM videos. Upload your own data for more realistic designs. | [Link](https://excelkits.com/charts) | 2024-12-26 |
 | focus-brew | A free productivity toolkit that combines essential tools to help you stay focused, organized, and efficient throughout your workday. | [Link](https://focusbrew.vercel.app) | 2025-05-14 |
 | form-builder | UI-based codegen tool to easily create beautiful and type-safe @shadcn/ui forms. | [Link](https://github.com/AlandSleman/FormBuilder) | 2024-06-07 |
 | form-builder-fast | Shadcn Form Builder - Build forms in minutes for free. | [Link](https://ui.indie-starter.dev/form-builder) | 2024-12-26 |
+| graphitup | Create free downloadable Shadcn-themed chart images. Supports PNG, JPEG, WEBP, and even WEBM videos. Upload your own data for more realistic designs. | [Link](https://graphitup.com/tools) | 2025-12-26 |
 | hook-again | A collection of shadcn/ui installable React Hooks. | [Link](https://github.com/ilyichv/hookagain) | 2024-11-04 |
 | imgsrc | Generate beautiful Open Graph images with zero effort. | [Link](https://imgsrc.io/) | 2024-05-31 |
 | invoify | An invoice generator app built using Next.js, TypeScript, and shadcn/ui. | [Link](https://github.com/aliabb01/invoify) | 2024-03-27 |
@@ -341,6 +343,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | ---------- |
 | andrewsam.xyz | A revamped version of the popular tailwind-nextjs-starter-blog using shadcn/ui, along with a resume section and experience timeline component. | [Link](https://www.andrewsam.xyz/) | 2024-09-18 |
 | birobirobiro.dev | A personal developer portfolio. | [Link](https://birobirobiro.dev/) | 2024-07-29 |
+| bucharitesh.in | A minimal portfolio with awesome craft's registry. | [Link](https://bucharitesh.in) | 2025-12-25 |
 | chanhdai.com | A minimal portfolio, component registry, and blog. | [Link](https://chanhdai.com) | 2025-09-11 |
 | devfolios | Find best portfolio inspiration from all over the internet | [Link](https://devfolios-one.vercel.app/) | 2025-10-25 |
 | godly | Astronomically good web design inspiration. Only the best of the best. | [Link](https://godly.website/) | 2024-07-29 |
@@ -435,6 +438,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | opendocs | Beautifully designed template that you can use for your projects for free. Accessible. Customizable. Open Source with i18n support. | [Link](https://opendocs.daltonmenezes.com/) | 2024-07-29 |
 | react-starter-kit | An opinionated, full-stack boilerplate for building modern web apps on the edge. Features Bun, React 19, tRPC, Drizzle ORM, and Cloudflare Workers. | [Link](https://github.com/kriasoft/react-starter-kit) | 2025-09-06 |
 | react-vite-starter | React starter powered with Vite + Redux Toolkit + RTKQuery + React Router + shadcn UI and many more. | [Link](https://github.com/tejachundru/react-vite-starter) | 2024-12-02 |
+| shadcn-admin | A admin dashboard template for Next.js, React, Vite and Vue.js, built with Tailwind CSS. | [Link](https://shadcnadmin.com) | 2025-12-12 |
 | shadcn-landing-page | Landing page template using shadcn/ui, React, TypeScript, and Tailwind CSS. | [Link](https://github.com/leoMirandaa/shadcn-landing-page) | 2024-06-06 |
 | shadcn-landing-page (Vue) | Project conversion [shadcn-vue-landing-page](https://github.com/leoMirandaa/shadcn-vue-landing-page) to Next.js - Landing page template using Nestjs, shadcn/ui, TypeScript, and Tailwind CSS. | [Link](https://github.com/nobruf/shadcn-landing-page) | 2024-12-27 |
 | shadcn-nextjs-free-boilerplate | Free & Open-source NextJS Boilerplate + ChatGPT API Dashboard Template. | [Link](https://github.com/horizon-ui/shadcn-nextjs-boilerplate) | 2024-05-24 |

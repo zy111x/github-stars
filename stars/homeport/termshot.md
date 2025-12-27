@@ -1,6 +1,6 @@
 ---
 project: termshot
-stars: 675
+stars: 682
 description: |-
     Creates screenshots based on terminal command output
 url: https://github.com/homeport/termshot
@@ -80,6 +80,14 @@ Do not draw window decorations (minimize, maximize, and close button).
 #### `--no-shadow`
 
 Do not draw window shadow.
+
+#### `--margin`/`-m`
+
+Add extra space (margin) around the window.
+
+#### `--padding`/`-p`
+
+Add extra space (padding) around the content inside the window.
 
 ### Flags for output related settings
 
