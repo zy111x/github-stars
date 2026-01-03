@@ -1,6 +1,6 @@
 ---
 project: free-api
-stars: 15861
+stars: 15866
 description: 收集免费的接口服务,做一个api的搬运工
 url: https://github.com/fangzesheng/free-api
 ---
@@ -10,6 +10,13 @@ url: https://github.com/fangzesheng/free-api
 ### **现已发布【免费API】公众号，关注公众号可以获取相关密钥，也可以接收到每月更新接口消息（每月一次，不打扰大家），希望大家多关注，随时来个三连加点击广告**——您的关注是我一直更新的动力 : )****
 
 ****
+
+2025-12-31
+==========
+
+### 本月更新的接口有：MBTI。
+
+-   **MBTI(可在线调用):** MBTI人格测试经过了长达50多年的研究... 接口地址
 
 2025-11-30
 ==========
