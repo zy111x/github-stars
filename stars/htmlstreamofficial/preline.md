@@ -1,6 +1,6 @@
 ---
 project: preline
-stars: 6186
+stars: 6191
 description: |-
     Preline UI is an open-source set of prebuilt UI components based on the utility-first Tailwind CSS framework.
 url: https://github.com/htmlstreamofficial/preline

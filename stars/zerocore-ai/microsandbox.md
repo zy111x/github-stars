@@ -1,8 +1,8 @@
 ---
 project: microsandbox
-stars: 4258
+stars: 4288
 description: |-
-    opensource self-hosted sandboxes for ai agent
+    opensource self-hosted sandboxes for ai agents
 url: https://github.com/zerocore-ai/microsandbox
 ---
 
@@ -38,7 +38,7 @@ Microsandbox makes it **easy** to run untrusted workloads within a **hardware-is
 Running untrusted code securely is hard. Traditional solutions—containers, VMs, or cloud sandboxes—each trade off speed, isolation, or control. Microsandbox aims to give the best of all worlds.
 
 > [!WARNING]
-> This project is still **experimental**. Expect breaking changes, missing features, and rough edges.
+> Microsandbox is still **experimental software**. Expect breaking changes, missing features, and rough edges.
 
 <br/>
 

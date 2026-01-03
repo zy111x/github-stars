@@ -1,6 +1,6 @@
 ---
 project: godns
-stars: 1721
+stars: 1723
 description: |-
     A dynamic DNS client tool that supports AliDNS, Cloudflare, Google Domains, DNSPod, HE.net & DuckDNS & DreamHost, etc, written in Go.
 url: https://github.com/TimothyYe/godns
@@ -1383,4 +1383,8 @@ To run the frontend, run:
 cd web
 npm run start
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=timothyye/godns&type=date&legend=top-left)](https://www.star-history.com/#timothyye/godns&type=date&legend=top-left)
 

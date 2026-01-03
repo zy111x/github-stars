@@ -1,6 +1,6 @@
 ---
 project: icons
-stars: 6227
+stars: 6455
 description: |-
     beautifully crafted animated icons
 url: https://github.com/pqoqubbw/icons
@@ -20,6 +20,7 @@ url: https://github.com/pqoqubbw/icons
 
 #### Svelte icons: [movingicons.dev](https://www.movingicons.dev/) by [@jis3r](https://github.com/jis3r)
 #### Vue icons: [imfenghuang.github.io/icons](https://imfenghuang.github.io/icons/) by [@imfenghuang](https://github.com/imfenghuang)
+#### Angular icons: [ajitzero/animated-icons](https://github.com/ajitzero/animated-icons) by [@ajitzero](https://github.com/ajitzero)
 
 
 ## Contributing

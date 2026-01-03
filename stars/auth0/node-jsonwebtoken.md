@@ -1,6 +1,6 @@
 ---
 project: node-jsonwebtoken
-stars: 18125
+stars: 18128
 description: |-
     JsonWebToken implementation for node.js http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html
 url: https://github.com/auth0/node-jsonwebtoken

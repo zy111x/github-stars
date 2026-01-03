@@ -1,6 +1,6 @@
 ---
 project: mind-elixir-core
-stars: 2877
+stars: 2883
 description: |-
     ⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.
 url: https://github.com/SSShooter/mind-elixir-core
@@ -105,16 +105,14 @@ Mind elixir is a open source JavaScript mind map core. You can use it with any f
 - [Who's using](#whos-using)
 - [Ecosystem](#ecosystem)
 - [Development](#development)
-- [Thanks](#thanks)
+- [Acknowledgments](#acknowledgments)
 - [Contributors](#contributors)
 
 </details>
 
 ## Try now
 
-![mindelixir](https://raw.githubusercontent.com/ssshooter/mind-elixir-core/master/images/screenshot5.jpg)
-
-https://mind-elixir.com/
+![mindelixir](https://raw.githubusercontent.com/ssshooter/mind-elixir-core/master/images/screenshot5_2.jpg)
 
 ### Playground
 
@@ -298,7 +296,7 @@ let mind = new MindElixir({
 
 // Use custom markdown parser
 let mind = new MindElixir({
-  markdown: (text) => {
+  markdown: text => {
     // Your custom markdown implementation
     return text
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
@@ -310,7 +308,7 @@ let mind = new MindElixir({
 // Use any markdown library (e.g., marked, markdown-it, etc.)
 import { marked } from 'marked'
 let mind = new MindElixir({
-  markdown: (text) => marked(text),
+  markdown: text => marked(text),
 })
 ```
 
@@ -436,7 +434,7 @@ pnpm doc:md
 
 Use [DeepWiki](https://deepwiki.com/SSShooter/mind-elixir-core) to learn more about Mind Elixir
 
-## Thanks
+## Acknowledgments
 
 - [@viselect/vanilla](https://github.com/simonwep/selection/tree/master/packages/vanilla)
 

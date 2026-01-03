@@ -1,6 +1,6 @@
 ---
 project: exo
-stars: 38548
+stars: 39315
 description: |-
     Run your own AI cluster at home with everyday devices 📱💻 🖥️⌚
 url: https://github.com/exo-explore/exo
@@ -173,6 +173,29 @@ The macOS app requires macOS Tahoe 26.2 or later.
 Download the latest build here: [EXO-latest.dmg](https://assets.exolabs.net/EXO-latest.dmg).
 
 The app will ask for permission to modify system settings and install a new Network profile. Improvements to this are being worked on.
+
+---
+
+### Enabling RDMA on macOS
+
+RDMA is a new capability added to macOS 26.2. It works on any Mac with Thunderbolt 5 (M4 Pro Mac Mini, M4 Max Mac Studio, M4 Max MacBook Pro, M3 Ultra Mac Studio).
+
+Note that on Mac Studio, you cannot use the Thunderbolt 5 port next to the Ethernet port.
+
+To enable RDMA on macOS, follow these steps:
+
+1. Shut down your Mac.
+2. Hold down the power button for 10 seconds until the boot menu appears.
+3. Select "Options" to enter Recovery mode.
+4. When the Recovery UI appears, open the Terminal from the Utilities menu.
+5. In the Terminal, type:
+   ```
+   rdma_ctl enable
+   ```
+   and press Enter.
+6. Reboot your Mac.
+
+After that, RDMA will be enabled in macOS and exo will take care of the rest.
 
 ---
 

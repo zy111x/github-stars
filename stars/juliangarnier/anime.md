@@ -1,6 +1,6 @@
 ---
 project: anime
-stars: 65674
+stars: 65744
 description: |-
     JavaScript animation engine
 url: https://github.com/juliangarnier/anime

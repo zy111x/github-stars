@@ -1,6 +1,6 @@
 ---
 project: zhuque
-stars: 3237
+stars: 3248
 description: |-
     朱雀仿宋/朱雀宋朝/Zhuque Fangsong: An open-source Fangsong typeface project
 url: https://github.com/TrionesType/zhuque
@@ -21,6 +21,8 @@ url: https://github.com/TrionesType/zhuque
 璇玑正在尝试一种全新中文字库设计模式。得益于我们开发的最新技术，璇玑的设计师可以直接将人工智能作为设计工具去使用，我们也因此能以迭代的方式开发「朱雀」。在测试阶段中，我们发布了一个调查问卷，有 335 人参与了填写，其中有 72 份有效专业意见。[问卷结论](docs/survey_result-zh.md)对我们改进朱雀的造型、以及合理规划后续工作方向作用良多。
 
 ## 下载
+
+AtomGit 镜像仓库：https://atomgit.com/TrionesType/zhuque
 
 版本与下载链接将会更新在 [Releases 发布页](https://github.com/TrionesType/zhuque/releases)。
 

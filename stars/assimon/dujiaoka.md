@@ -1,6 +1,6 @@
 ---
 project: dujiaoka
-stars: 11619
+stars: 11636
 description: |-
     🦄独角数卡(自动售货系统)-开源站长自动化售货解决方案、高效、稳定、快速！🚀🚀🎉🎉
 url: https://github.com/assimon/dujiaoka

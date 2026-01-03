@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 5530
+stars: 5537
 description: |-
     PraisonAI is a production-ready Multi AI Agents framework, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. It provides a low-code solution to streamline the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
 url: https://github.com/MervinPraison/PraisonAI
@@ -2002,18 +2002,22 @@ manager.delete_checkpoint("deploy-v1")
 
 ### Tools CLI:
 ```bash
-# List all available tools
 praisonai tools list
-
-# Get info about a specific tool
 praisonai tools info internet_search
-
-# Search for tools
 praisonai tools search "web"
-
-# Show all commands
-praisonai tools help
+praisonai tools doctor
+praisonai tools resolve shell_tool
+praisonai tools discover
+praisonai tools show-sources
+praisonai tools show-sources --template ai-video-editor
 ```
+
+| Command | Example | Docs |
+|---------|---------|------|
+| `tools list` | [example](examples/tools/) | [docs](https://docs.praison.ai/docs/cli/tools) |
+| `tools resolve` | [example](examples/tools/example_tools_resolve.py) | [docs](https://docs.praison.ai/docs/cli/tools-resolve) |
+| `tools discover` | [example](examples/tools/example_tools_discover.py) | [docs](https://docs.praison.ai/docs/cli/tools-discover) |
+| `tools show-sources` | [example](examples/tools/example_tools_sources.py) | [docs](https://docs.praison.ai/docs/cli/tools-show-sources) |
 
 ### Handoff CLI:
 ```bash
@@ -2363,6 +2367,24 @@ agent = Agent(
 | 🌐 Web Search - Real-time search | [📖](https://docs.praison.ai/docs/cli/web-search) |
 | 📥 Web Fetch - URL content retrieval | [📖](https://docs.praison.ai/docs/cli/web-fetch) |
 | 💾 Prompt Caching - Cost reduction | [📖](https://docs.praison.ai/docs/cli/prompt-caching) |
+| 📦 Template Catalog - Browse & discover templates | [📖](https://docs.praison.ai/docs/cli/template-catalog) |
+
+### Template Catalog CLI
+
+| Command | Description |
+|---------|-------------|
+| `praisonai templates browse` | Open template catalog in browser |
+| `praisonai templates browse --print` | Print catalog URL only |
+| `praisonai templates validate` | Validate template YAML files |
+| `praisonai templates validate --source <dir>` | Validate specific directory |
+| `praisonai templates validate --strict` | Strict validation mode |
+| `praisonai templates validate --json` | JSON output format |
+| `praisonai templates catalog build` | Build catalog locally |
+| `praisonai templates catalog build --out <dir>` | Build to specific directory |
+| `praisonai templates catalog sync` | Sync template sources |
+| `praisonai templates catalog sync --source <name>` | Sync specific source |
+
+**Examples:** [examples/catalog/](examples/catalog/) | **Docs:** [Code](https://docs.praison.ai/docs/cli/template-catalog-code) | [CLI](https://docs.praison.ai/docs/cli/template-catalog)
 
 ---
 

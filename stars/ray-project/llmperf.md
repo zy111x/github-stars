@@ -1,6 +1,6 @@
 ---
 project: llmperf
-stars: 1069
+stars: 1071
 description: |-
     LLMPerf is a library for validating and benchmarking LLMs
 url: https://github.com/ray-project/llmperf

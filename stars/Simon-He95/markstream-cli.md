@@ -1,6 +1,6 @@
 ---
 project: markstream-cli
-stars: 4
+stars: 7
 description: |-
     null
 url: https://github.com/Simon-He95/markstream-cli

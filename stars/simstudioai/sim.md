@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 24550
+stars: 24896
 description: |-
     Open-source platform to build and deploy AI agent workflows.
 url: https://github.com/simstudioai/sim

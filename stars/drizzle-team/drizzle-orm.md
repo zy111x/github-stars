@@ -1,6 +1,6 @@
 ---
 project: drizzle-orm
-stars: 32040
+stars: 32147
 description: |-
     ORM
 url: https://github.com/drizzle-team/drizzle-orm

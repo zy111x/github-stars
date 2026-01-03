@@ -1,6 +1,6 @@
 ---
 project: glider
-stars: 3572
+stars: 3575
 description: |-
     glider is a forward proxy with multiple protocols support, and also a dns/dhcp server with ipset management features(like dnsmasq).
 url: https://github.com/nadoo/glider

@@ -1,6 +1,6 @@
 ---
 project: homebridge
-stars: 25135
+stars: 25140
 description: |-
     HomeKit support for the impatient.
 url: https://github.com/homebridge/homebridge

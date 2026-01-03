@@ -1,6 +1,6 @@
 ---
 project: powerglitch
-stars: 1436
+stars: 1442
 description: |-
     Tiny JS library to glitch anything on the web
 url: https://github.com/7PH/powerglitch

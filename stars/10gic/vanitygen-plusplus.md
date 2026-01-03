@@ -1,6 +1,6 @@
 ---
 project: vanitygen-plusplus
-stars: 382
+stars: 383
 description: |-
     A vanity address generator supporting over 100 cryptocurrencies including BTC, ETH, LTC, TRX, and more.
 url: https://github.com/10gic/vanitygen-plusplus
@@ -172,10 +172,6 @@ Special thanks to the following projects:
 1. https://github.com/samr7/vanitygen, see https://bitcointalk.org/index.php?topic=25804.0
 2. https://github.com/exploitagency/vanitygen-plus (now returns 404)
 3. https://github.com/kjx98/vanitygen-eth
-
-# Known Issues
-1. oclvanitygen++ (GPU version) cannot find vanity ETH addresses starting with 0x00.
-2. ETH vanity address difficulty estimation is **always** based on case-insensitive searching.
 
 # License
 GNU Affero General Public License

@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 33499
+stars: 33657
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -2333,6 +2333,8 @@ For a practical example of building an accessible component, see the [ARIA examp
 - [ink-chart](https://github.com/pppp606/ink-chart) - Sparkline and bar chart.
 - [ink-scroll-view](https://github.com/ByteLandTechnology/ink-scroll-view) - Scroll container.
 - [ink-scroll-list](https://github.com/ByteLandTechnology/ink-scroll-list) - Scrollable list.
+- [ink-stepper](https://github.com/archcorsair/ink-stepper) - Step-by-step wizard.
+- [ink-virtual-list](https://github.com/archcorsair/ink-virtual-list) - Virtualized list that renders only visible items for performance.
 
 ## Useful Hooks
 

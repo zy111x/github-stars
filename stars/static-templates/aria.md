@@ -1,6 +1,6 @@
 ---
 project: aria
-stars: 33
+stars: 34
 description: |-
     A template for your personal blog, portfolio, or blog
 url: https://github.com/static-templates/aria

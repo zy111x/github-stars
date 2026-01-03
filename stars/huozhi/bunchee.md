@@ -1,6 +1,6 @@
 ---
 project: bunchee
-stars: 1329
+stars: 1360
 description: |-
     Zero config bundler for npm packages
 url: https://github.com/huozhi/bunchee
@@ -101,6 +101,21 @@ Here's a example of entry files and exports configuration:
   },
 }
 ```
+
+#### Wildcard Exports
+
+`bunchee` supports wildcard patterns in the `exports` field to automatically generate exports for multiple files:
+
+```json5
+{
+  "exports": {
+    ".": "./dist/index.js",
+    "./features/*": "./dist/features/*.js"
+  }
+}
+```
+
+This will automatically discover files in `src/features/` and generate exports like `./features/foo`, `./features/bar`, etc. The wildcard `*` is substituted in both the export path and output path.
 
 ### Output Formats
 
@@ -223,6 +238,15 @@ This will match the `bin` field in package.json as:
 
 > Note: For multiple `bin` files, the filename should match the key name in the `bin` field.
 
+### Native Addon (.node) Support
+
+`bunchee` supports bundling native Node.js addon files (`.node` binaries). When you import a `.node` file, it will be copied to the output directory and the import will be rewritten to load it at runtime.
+
+```js
+// src/index.js
+import addon from './native-addon.node'
+```
+
 ### Server Components
 
 **bunchee** supports building React Server Components and Server Actions with directives like `"use client"` or `"use server"`. It generates separate chunks for the server or client boundaries. When integrated to framework like Next.js, it can correctly handles the boundaries with the split chunks.
@@ -325,23 +349,6 @@ bunchee --no-external
 
 This will include all dependencies within your output bundle.
 
-#### TypeScript-Go Compiler
-
-TypeScript-Go (`@typescript/native-preview`) is a high-performance, Go-based implementation of the TypeScript compiler that can significantly speed up type declaration file generation.
-
-To use TypeScript-Go for type generation, use the `--tsgo` flag:
-
-```sh
-bunchee --tsgo
-```
-
-**Note**: This requires `@typescript/native-preview` to be installed as a dev dependency. If it's not installed, bunchee will exit with an error.
-
-```sh
-pnpm add -D bunchee @typescript/native-preview
-bunchee --tsgo
-```
-
 #### Build Successful Command
 
 A command to be executed after a build is successful can be specified using the `--success` option, which is useful for development watching mode:
@@ -389,14 +396,6 @@ Then use use the [exports field in package.json](https://nodejs.org/api/packages
   <summary>TypeScript</summary>
 
 If you're building a TypeScript library, separate the types from the main entry file and specify the types path in package.json. Types exports need to stay on the top of each export with `types` condition, and you can use `default` condition for the JS bundle file.
-
-**bunchee** supports using the TypeScript-Go compiler (`@typescript/native-preview`) for faster type generation. To enable it, use the `--tsgo` flag:
-
-```sh
-bunchee --tsgo
-```
-
-Note: This requires `@typescript/native-preview` to be installed as a dev dependency. If it's not installed, bunchee will fall back to the regular TypeScript compiler with a warning.
 
 ```json5
 {
@@ -578,7 +577,6 @@ await bundle(path.resolve('./src/index.ts'), {
   cwd: process.cwd(), // string
   clean: true, // boolean
   tsconfig: 'tsconfig.json', // string
-  tsgo: false, // Boolean - use TypeScript-Go compiler for type generation
 })
 ```
 

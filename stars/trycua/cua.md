@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 11595
+stars: 11633
 description: |-
     Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
 url: https://github.com/trycua/cua
@@ -40,7 +40,7 @@ Computer-Use Agents (CUAs) are AI systems that can autonomously interact with co
 
 With the [Computer SDK](#computer-sdk), you can:
 
-- automate Windows, Linux, and macOS VMs with a consistent, [pyautogui-like API](https://cua.ai/docs/computer-sdk/commands)
+- automate Windows, Linux, and macOS VMs with a consistent, [GUI automation API](https://cua.ai/docs/computer-sdk/commands)
 - create & manage VMs [locally](https://cua.ai/docs/quickstart-devs#using-computer) or using [Cua cloud](https://www.cua.ai/)
 
 With the [Agent SDK](#agent-sdk), you can:

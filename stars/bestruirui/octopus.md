@@ -1,6 +1,6 @@
 ---
 project: octopus
-stars: 672
+stars: 835
 description: |-
     One Hub All LLMs For You | 为个人打造的 LLM API 聚合服务
 url: https://github.com/bestruirui/octopus
@@ -177,7 +177,7 @@ All configuration options can be overridden via environment variables using the 
 | `OCTOPUS_DATABASE_TYPE` | `database.type` |
 | `OCTOPUS_DATABASE_PATH` | `database.path` |
 | `OCTOPUS_LOG_LEVEL` | `log.level` |
-
+| `OCTOPUS_GITHUB_PAT` | For rate limiting when getting the latest version (optional) |
 
 ## 📸 Screenshots
 
