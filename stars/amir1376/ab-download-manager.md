@@ -1,6 +1,6 @@
 ---
 project: ab-download-manager
-stars: 12644
+stars: 12783
 description: A Download Manager that speeds up your downloads
 url: https://github.com/amir1376/ab-download-manager
 ---
@@ -48,7 +48,7 @@ scoop install extras/abdownloadmanager
 
 brew tap amir1376/tap && brew install --cask ab-download-manager
 
-> ⚠️ **Warning:** This software is NOT on Google Play or other app stores unless listed here. Any version **claiming to be or related to this project** outside of these links is a SCAM and UNSAFE.
+> ⚠️ **Warning:** This software is NOT on Google Play or other app stores unless listed here. Any version **claiming to be or related to this project** should be considered SCAM and UNSAFE.
 
 For alternative installation methods, uninstallation instructions, and more details, please refer to the wiki page.
 

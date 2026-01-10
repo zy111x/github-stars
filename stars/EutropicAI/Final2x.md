@@ -1,6 +1,6 @@
 ---
 project: Final2x
-stars: 6866
+stars: 6868
 description: a cross-platform image super-resolution tool
 url: https://github.com/EutropicAI/Final2x
 ---
