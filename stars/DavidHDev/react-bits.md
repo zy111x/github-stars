@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 33073
+stars: 33729
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building memorable websites.
 url: https://github.com/DavidHDev/react-bits
@@ -79,6 +79,42 @@ Each component page includes copy-ready CLI commands. See the [installation guid
 
 You can also select your preferred technologies, and copy the code manually.
 
+## 🚀 Sponsors
+
+React Bits is proudly supported by these amazing sponsors:
+
+### Diamond
+
+<a href="https://www.shadcnblocks.com/?utm_source=reactbits&utm_medium=sponsor&utm_campaign=diamond&ref=reactbits" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/sponsors/shadcnblocks.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/sponsors/shadcnblocks-lightmode.svg">
+    <img src="public/assets/sponsors/shadcnblocks.svg" alt="shadcnblocks.com" style="height: 50px;">
+  </picture>
+</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://shadcnstudio.com/?utm_source=reactbits&utm_medium=sponsor&utm_campaign=diamond&ref=reactbits" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/sponsors/shadcnstudio.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/sponsors/shadcnstudio-lightmode.svg">
+    <img src="public/assets/sponsors/shadcnstudio.svg" alt="shadcn studio" style="height: 50px;">
+  </picture>
+</a>
+
+### Silver
+
+<a href="https://nextjsweekly.com/?utm_source=reactbits&utm_medium=sponsor&utm_campaign=silver&ref=reactbits" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/sponsors/nextjsweekly.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/sponsors/nextjsweekly-lightmode.svg">
+    <img src="public/assets/sponsors/nextjsweekly.svg" alt="Next.js Weekly" style="height: 40px;">
+  </picture>
+</a>
+
+<hr />
+
+**[Become a sponsor](https://reactbits.dev/sponsors)** — Get your brand in front of 500K+ developers monthly.
+
 ## 🤝 Contributing
 
 We'd love your help! Check the [open issues](https://github.com/DavidHDev/react-bits/issues) or submit ideas via the [feature request template](https://github.com/DavidHDev/react-bits/issues/new?template=2-feature-request.yml).
@@ -105,7 +141,7 @@ Please read the [contribution guide](https://github.com/DavidHDev/react-bits/blo
 
 ![Repobeats analytics](https://repobeats.axiom.co/api/embed/b1bf4dc0226458617adbdbf5586f2df953eb0922.svg 'Repobeats analytics image')
 
-## 📝 Credit
+## 🗳️ Credit
 
 React Bits occasionally draws inspiration from publicly available code examples. These are rewritten as full-fledged, customizable components for JS, TS, CSS, and Tailwind. If you recognize your work, [open an issue](https://github.com/DavidHDev/react-bits/issues) to request credit.
 

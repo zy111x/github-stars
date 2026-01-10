@@ -1,6 +1,6 @@
 ---
 project: multithreading
-stars: 1390
+stars: 1400
 description: |-
     The missing standard library for multithreading in JavaScript (Works in the browser, Node.js, Deno, Bun)
 url: https://github.com/W4G1/multithreading
@@ -24,7 +24,7 @@ url: https://github.com/W4G1/multithreading
 
 <br />
 
-**Multithreading** is a TypeScript library that brings robust, Rust-inspired concurrency primitives to the JavaScript ecosystem. It provides a thread-pool architecture, strict memory safety semantics, and synchronization primitives like Mutexes, Read-Write Locks, and Condition Variables.
+**Multithreading** is a TypeScript library that brings robust, Rust-inspired concurrency primitives to the JavaScript ecosystem. It provides a thread-pool architecture, strict memory safety semantics, and synchronization primitives like Mutexes, Semaphores, Read-Write Locks, and Condition Variables.
 
 This library is designed to abstract away the complexity of managing `WebWorkers`, serialization, and `SharedArrayBuffer` complexities, allowing developers to write multi-threaded code that looks and feels like standard asynchronous JavaScript.
 
@@ -106,7 +106,7 @@ await handle.join();
 
 `SharedJsonBuffer` enables Mutex-protected shared memory for JSON objects, eliminating the overhead of `postMessage` data copying. It supports partial updates by utilizing [Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) under the hood, reserializing only changed bytes rather than the entire object tree for high-performance state synchronization, especially with large JSON objects.
 
-**Note:** Initializing a `SharedJsonBuffer` has a performance cost. For single-use transfers, `SharedJsonBuffer` is slower than cloning. This data structure is optimized for large persistent shared state or objects that need to be passed around frequently between threads.
+**Note:** Initializing a `SharedJsonBuffer` has a performance cost. For single-use transfers, `SharedJsonBuffer` is slower than cloning. This data structure is optimized for incremental updates to a large persistent shared object or array that will be accessed frequently between multiple threads.
 
 ```typescript
 import { spawn, move, Mutex, SharedJsonBuffer } from "multithreading";
@@ -235,16 +235,16 @@ const semaphore = new Semaphore(3);
 
 for (let i = 0; i < 10; i++) {
   spawn(move(semaphore), async (sem) => {
-    console.log("Waiting for slot...");
+    console.log("Waiting for permit...");
     
     // Will wait (async) if 3 threads are already working
-    using _slot = await sem.acquire(); 
+    using _permit = await sem.acquire(); 
     
-    console.log("Acquired slot! Working...");
+    console.log("Acquired permit! Working...");
 
     await new Promise(r => setTimeout(r, 1000));
     
-    // Guard is disposed automatically, releasing the permit for the next thread
+    // Permit is released here automatically because of `using`
   });
 }
 ```
@@ -256,13 +256,13 @@ Like the Mutex, if you cannot use the `using` keyword, you can manually manage t
 ```typescript
 spawn(move(semaphore), async (sem) => {
   // Acquire 2 permits at once
-  const guard = await sem.acquire(2);
+  const permits = await sem.acquire(2);
   
   try {
     // Critical Section
   } finally {
     // Release the 2 permits
-    guard.dispose();
+    permits.dispose();
   }
 });
 ```
@@ -327,9 +327,9 @@ for (let i = 0; i < N; i++) {
 
 ## Channels (MPMC)
 
-For higher-level communication, this library provides a **Multi-Producer, Multi-Consumer (MPMC)** bounded channel. This primitive mimics Rust's `std::sync::mpsc` but allows for multiple consumers. It acts as a thread-safe queue that handles backpressure, blocking receivers when empty and blocking senders when full.
+For higher-level communication, this library provides a **Multi-Producer, Multi-Consumer (MPMC)** bounded channel. This primitive acts as a **work-stealing queue**: it handles backpressure (blocking senders when full) and load-balances messages across receivers (blocking receivers when empty).
 
-Channels are the preferred way to coordinate complex workflows (like job queues or pipelines) between workers without manually managing locks.
+Unlike an event emitter where all listeners hear every event, a Channel ensures that **each message is delivered to exactly one consumer**. This makes them the preferred way to coordinate complex workflows, such as distributing jobs across a pool of workers.
 
 ### Key Features
 
@@ -343,27 +343,26 @@ Channels are the preferred way to coordinate complex workflows (like job queues 
 ```typescript
 import { spawn, move, channel } from "multithreading";
 
-// Create a channel that holds objects
-const [tx, rx] = channel<{ hello: string }>();
+const [tx, rx] = channel();
 
-// Producer Thread
+// Producer
 spawn(move(tx), async (sender) => {
   await sender.send({ hello: "world" });
   await sender.send({ hello: "multithreading" });
   // Sender is destroyed here, automatically closing the channel
-  // because the last `tx` goes out of scope here.
+  // because the last tx goes out of scope here.
 });
 
-// Consumer Thread
-spawn(move(rx.clone()), async (receiver) => {
-  for await (const value of receiver) {
-    console.log(value); // { hello: "world" }
-  }
-});
+// Consumer
+await spawn(move(rx.clone()), async (receiver) => {
+  // Manually take the first item from the queue
+  const result = await receiver.recv();
+  console.log("Worker got:", result.value); // { hello: "world" }
+}).join();
 
-// Because we cloned rx, the main thread also still has a handle
+// Because we cloned rx, the main thread also still has a rx handle
 for await (const value of rx) {
-  console.log(value); // { hello: "world" }
+  console.log("Main thread got:", value); // { hello: "multithreading" }
 }
 ```
 

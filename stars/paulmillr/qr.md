@@ -8,13 +8,14 @@ url: https://github.com/paulmillr/qr
 
 # paulmillr-qr
 
-Minimal 0-dep QR code generator & reader.
+Minimal 0-dependency QR code generator & reader.
 
 - 🔒 Auditable, 0-dependency
 - 🏞️ Encoding (generating) supports ASCII, term, gif, svg and png codes
 - 📷 Decoding (reading) supports camera feed input, files and non-browser environments
+- 🏎 Fast: faster than all JS implementations
 - 🔍 Extensive tests ensure correctness: 100MB+ of vectors
-- 🪶 14KB (gzipped) for encoding + decoding, 7KB for encoding
+- 🪶 16KB (gzipped) for encoding + decoding, 9KB for encoding
 
 Check out:
 
@@ -241,27 +242,29 @@ Future plans:
 
 ## Speed
 
-Benchmarks measured with Apple M2 on MacOS 13 with node.js 19.
+Benchmarks measured with Apple M4 with node.js 25.
 
 ```
-======== encode/ascii ========
-encode/paulmillr x 2,995 ops/sec @ 333μs/op
-encode/qrcode-generator x 6,029 ops/sec @ 165μs/op ± 1.39% (min: 142μs, max: 2ms)
-encode/nuintun x 3,647 ops/sec @ 274μs/op
-======== encode/gif ========
-encode/paulmillr x 2,967 ops/sec @ 337μs/op
-encode/qrcode-generator x 3,486 ops/sec @ 286μs/op
-encode/nuintun x 3,643 ops/sec @ 274μs/op
-======== encode: big ========
-encode/paulmillr x 156 ops/sec @ 6ms/op
-encode/qrcode-generator x 200 ops/sec @ 4ms/op
-encode/nuintun x 223 ops/sec @ 4ms/op
-======== decode ========
-decode/paulmillr x 154 ops/sec @ 6ms/op ± 1.29% (min: 6ms, max: 18ms)
-decode/jsqr x 52 ops/sec @ 18ms/op
-decode/nuintun x 51 ops/sec @ 19ms/op
-decode/instascan x 158 ops/sec @ 6ms/op ± 9.06% (min: 3ms, max: 144ms)======== Decoding quality ========
-blurred(45):  paulmillr-qr=12 (26.66%) jsqr=13 (28.88%) nuintun=13 (28.88%) instascan=11 (24.44%)
+# encode format=ascii
+@paulmillr/qr x 9,050 ops/sec @ 110μs/op
+qrcode-generator x 4,543 ops/sec @ 220μs/op
+nuintun x 3,413 ops/sec @ 292μs/op
+
+# encode format=gif
+@paulmillr/qr x 8,439 ops/sec @ 118μs/op
+qrcode-generator x 2,909 ops/sec @ 343μs/op
+nuintun x 3,470 ops/sec @ 288μs/op
+
+# encode of large qr
+@paulmillr/qr x 318 ops/sec @ 3ms/op
+qrcode-generator x 174 ops/sec @ 5ms/op
+nuintun x 221 ops/sec @ 4ms/op
+
+# decode
+@paulmillr/qr x 162 ops/sec @ 6ms/op ± 3.78% (5ms..16ms)
+jsqr x 50 ops/sec @ 19ms/op ± 5.44% (18ms..35ms)
+nuintun x 49 ops/sec @ 20ms/op ± 5.08% (18ms..36ms)
+instascan x 128 ops/sec @ 7ms/op ± 31.44% (4ms..166ms)
 ```
 
 ## License

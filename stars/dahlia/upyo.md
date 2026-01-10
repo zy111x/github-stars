@@ -1,6 +1,6 @@
 ---
 project: upyo
-stars: 506
+stars: 509
 description: |-
     Upyo is a simple and cross-runtime library for sending email messages using SMTP and various email providers.  It works on Node.js, Deno, Bun, and edge functions.
 url: https://github.com/dahlia/upyo
@@ -91,27 +91,27 @@ sending messages.  The following is a list of the available packages:
 [npm:@upyo/smtp]: https://www.npmjs.com/package/@upyo/smtp
 [jsr:@upyo/jmap]: https://jsr.io/@upyo/jmap
 [npm:@upyo/jmap]: https://www.npmjs.com/package/@upyo/jmap
+[JMAP]: https://jmap.io/
 [jsr:@upyo/mailgun]: https://jsr.io/@upyo/mailgun
 [npm:@upyo/mailgun]: https://www.npmjs.com/package/@upyo/mailgun
+[Mailgun]: https://www.mailgun.com/
 [jsr:@upyo/plunk]: https://jsr.io/@upyo/plunk
 [npm:@upyo/plunk]: https://www.npmjs.com/package/@upyo
+[Plunk]: https://www.useplunk.com/
 [jsr:@upyo/resend]: https://jsr.io/@upyo/resend
 [npm:@upyo/resend]: https://www.npmjs.com/package/@upyo
+[Resend]: https://resend.com/
 [jsr:@upyo/sendgrid]: https://jsr.io/@upyo/sendgrid
 [npm:@upyo/sendgrid]: https://www.npmjs.com/package/@upyo/sendgrid
+[SendGrid]: https://sendgrid.com/
 [jsr:@upyo/ses]: https://jsr.io/@upyo/ses
 [npm:@upyo/ses]: https://www.npmjs.com/package/@upyo/ses
+[Amazon SES]: https://aws.amazon.com/ses/
 [jsr:@upyo/opentelemetry]: https://jsr.io/@upyo/opentelemetry
 [npm:@upyo/opentelemetry]: https://www.npmjs.com/package/@upyo/opentelemetry
+[OpenTelemetry]: https://opentelemetry.io/
 [jsr:@upyo/mock]: https://jsr.io/@upyo/mock
 [npm:@upyo/mock]: https://www.npmjs.com/package/@upyo/mock
-[JMAP]: https://jmap.io/
-[Mailgun]: https://www.mailgun.com/
-[Plunk]: https://www.useplunk.com/
-[Resend]: https://resend.com/
-[SendGrid]: https://sendgrid.com/
-[Amazon SES]: https://aws.amazon.com/ses/
-[OpenTelemetry]: https://opentelemetry.io/
 
 
 Etymology

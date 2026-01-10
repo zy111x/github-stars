@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 5537
+stars: 5544
 description: |-
     PraisonAI is a production-ready Multi AI Agents framework, designed to create AI Agents to automate and solve problems ranging from simple tasks to complex challenges. It provides a low-code solution to streamline the building and management of multi-agent LLM systems, emphasising simplicity, customisation, and effective human-agent collaboration.
 url: https://github.com/MervinPraison/PraisonAI
@@ -44,10 +44,10 @@ PraisonAI is a production-ready Multi-AI Agents framework with self-reflection, 
 ---
 
 > **Quick Paths:**
-> - 🚀 **New here?** → [Quick Start](#-quick-start)
+> - 🆕 **New here?** → [Quick Start](#-quick-start) *(1 minute to first agent)*
 > - 📦 **Installing?** → [Installation](#-installation)
-> - 💻 **Python SDK?** → [Python Examples](#-using-python-code)
-> - 🎯 **CLI user?** → [CLI Reference](#-cli--no-code-interface)
+> - 🐍 **Python SDK?** → [Python Examples](#-using-python-code)
+> - 🎯 **CLI user?** → [CLI Quick Reference](#cli-quick-reference)
 > - 🔧 **Need config?** → [Configuration](#-configuration--integration)
 > - 🤝 **Contributing?** → [Development](#-development)
 
@@ -55,96 +55,81 @@ PraisonAI is a production-ready Multi-AI Agents framework with self-reflection, 
 
 ## 📑 Table of Contents
 
-### Getting Started
-- [⚡ Performance](#-performance)
+<details open>
+<summary><strong>Getting Started</strong></summary>
+
 - [🚀 Quick Start](#-quick-start)
 - [📦 Installation](#-installation)
-  - [Python SDK](#python-sdk)
-  - [JavaScript SDK](#javascript-sdk)
-  - [Environment Variables](#environment-variables)
+- [⚡ Performance](#-performance)
 
-### Core Concepts
-- [✨ Key Features](#-key-features)
-- [🌐 Supported Providers](#-supported-providers)
+</details>
 
-### Python SDK
+<details>
+<summary><strong>Python SDK</strong></summary>
+
 - [📘 Python Examples](#-using-python-code)
-  - [1. Single Agent](#1-single-agent)
-  - [2. Multi Agents](#2-multi-agents)
-  - [3. Planning Mode](#3-agent-with-planning-mode)
-  - [4. Deep Research](#4-deep-research-agent)
-  - [5. Query Rewriter](#5-query-rewriter-agent)
-  - [6. Agent Memory](#6-agent-memory-zero-dependencies)
-  - [7. Rules & Instructions](#7-rules--instructions)
-  - [8. Auto-Generated Memories](#8-auto-generated-memories)
-  - [9. Agentic Workflows](#9-agentic-workflows)
-  - [10. Hooks](#10-hooks)
-  - [11. Shadow Git Checkpoints](#11-shadow-git-checkpoints)
-  - [12. Background Tasks](#12-background-tasks)
-  - [13. Policy Engine](#13-policy-engine)
-  - [14. Thinking Budgets](#14-thinking-budgets)
-  - [15. Output Styles](#15-output-styles)
-  - [16. Context Compaction](#16-context-compaction)
-  - [17. Field Names Reference](#17-field-names-reference-a-i-g-s)
-  - [18. Extended agents.yaml](#18-extended-agentsyaml-with-workflow-patterns)
-  - [19. MCP Protocol](#19-mcp-model-context-protocol)
-  - [20. A2A Protocol](#20-a2a-agent2agent-protocol)
+  - [1. Single Agent](#1-single-agent) | [2. Multi Agents](#2-multi-agents) | [3. Planning Mode](#3-agent-with-planning-mode)
+  - [4. Deep Research](#4-deep-research-agent) | [5. Query Rewriter](#5-query-rewriter-agent) | [6. Agent Memory](#6-agent-memory-zero-dependencies)
+  - [7. Rules & Instructions](#7-rules--instructions) | [8. Auto-Generated Memories](#8-auto-generated-memories) | [9. Agentic Workflows](#9-agentic-workflows)
+  - [10. Hooks](#10-hooks) | [11. Shadow Git Checkpoints](#11-shadow-git-checkpoints) | [12. Background Tasks](#12-background-tasks)
+  - [13. Policy Engine](#13-policy-engine) | [14. Thinking Budgets](#14-thinking-budgets) | [15. Output Styles](#15-output-styles)
+  - [16. Context Compaction](#16-context-compaction) | [17. Field Names Reference](#17-field-names-reference-a-i-g-s) | [18. Extended agents.yaml](#18-extended-agentsyaml-with-workflow-patterns)
+  - [19. MCP Protocol](#19-mcp-model-context-protocol) | [20. A2A Protocol](#20-a2a-agent2agent-protocol)
 - [🛠️ Custom Tools](#️-custom-tools)
 
-### JavaScript SDK
+</details>
+
+<details>
+<summary><strong>JavaScript SDK</strong></summary>
+
 - [💻 JavaScript Examples](#-using-javascript-code)
 
-### CLI Reference
-- [🎯 CLI Overview](#-cli--no-code-interface)
-  - [Auto Mode](#auto-mode)
-  - [Interactive Mode](#interactive-mode-cli)
-  - [Deep Research CLI](#deep-research-cli)
-  - [Planning Mode CLI](#planning-mode-cli)
-  - [Memory CLI](#memory-cli)
-  - [Workflow CLI](#workflow-cli)
-  - [Knowledge CLI](#knowledge-cli)
-  - [Session CLI](#session-cli)
-  - [Tools CLI](#tools-cli)
-  - [MCP Config CLI](#mcp-config-cli)
-  - [External Agents CLI](#external-agents-cli)
-- [CLI Features Summary](#cli-features)
+</details>
 
-### Configuration
-- [🔧 Configuration & Integration](#-configuration--integration)
-  - [Ollama Integration](#ollama-integration)
-  - [Groq Integration](#groq-integration)
-  - [100+ Models Support](#100-models-support)
+<details>
+<summary><strong>CLI Reference</strong></summary>
+
+- [🎯 CLI Overview](#-cli--no-code-interface) | [CLI Quick Reference](#cli-quick-reference)
+- [Auto Mode](#auto-mode) | [Interactive Mode](#interactive-mode-cli) | [Deep Research CLI](#deep-research-cli) | [Planning Mode CLI](#planning-mode-cli)
+- [Memory CLI](#memory-cli) | [Workflow CLI](#workflow-cli) | [Knowledge CLI](#knowledge-cli) | [Session CLI](#session-cli)
+- [Tools CLI](#tools-cli) | [MCP Config CLI](#mcp-config-cli) | [External Agents CLI](#external-agents-cli) | [CLI Features Summary](#cli-features)
+
+</details>
+
+<details>
+<summary><strong>Configuration & Features</strong></summary>
+
+- [✨ Key Features](#-key-features) | [🌐 Supported Providers](#-supported-providers)
+- [🔧 Configuration & Integration](#-configuration--integration) | [Ollama](#ollama-integration) | [Groq](#groq-integration) | [100+ Models](#100-models-support)
 - [📋 Agents Playbook](#-agents-playbook)
-
-### Advanced Features
 - [🔬 Advanced Features](#-advanced-features)
-  - [Research & Intelligence](#research--intelligence)
-  - [Memory & Caching](#memory--caching)
-  - [Planning & Workflows](#planning--workflows)
-  - [Specialised Agents](#specialised-agents)
-  - [MCP Protocol](#mcp-protocol)
-  - [A2A & A2UI Protocols](#a2a--a2ui-protocols)
-  - [Safety & Control](#safety--control)
-  - [Developer Tools](#developer-tools)
 
-### Architecture
+</details>
+
+<details>
+<summary><strong>Architecture & Patterns</strong></summary>
+
 - [📊 Process Types & Patterns](#-process-types--patterns)
-  - [Sequential Process](#sequential-process)
-  - [Hierarchical Process](#hierarchical-process)
-  - [Workflow Process](#workflow-process)
-  - [Agentic Patterns](#agentic-patterns)
+- [Sequential](#sequential-process) | [Hierarchical](#hierarchical-process) | [Workflow](#workflow-process) | [Agentic Patterns](#agentic-patterns)
 
-### Data & Persistence
+</details>
+
+<details>
+<summary><strong>Data & Persistence</strong></summary>
+
 - [💾 Persistence (Databases)](#-persistence-databases)
 - [📚 Knowledge & Retrieval (RAG)](#-knowledge--retrieval-rag)
 - [🔧 Tools Table](#-tools-table)
 
-### Learning & Community
-- [🎓 Video Tutorials](#-video-tutorials)
-- [⭐ Star History](#-star-history)
-- [👥 Contributing](#-contributing)
-- [🔧 Development](#-development)
-- [❓ FAQ & Troubleshooting](#-faq--troubleshooting)
+</details>
+
+<details>
+<summary><strong>Learning & Community</strong></summary>
+
+- [🎓 Video Tutorials](#-video-tutorials) | [⭐ Star History](#-star-history)
+- [👥 Contributing](#-contributing) | [🔧 Development](#-development) | [❓ FAQ & Troubleshooting](#-faq--troubleshooting)
+
+</details>
 
 ---
 
@@ -188,6 +173,8 @@ export OPENAI_API_KEY=your_key_here
 # Create a simple agent
 python -c "from praisonaiagents import Agent; Agent(instructions='You are a helpful AI assistant').start('Write a haiku about AI')"
 ```
+
+> **Next Steps:** [Single Agent Example](#1-single-agent) | [Multi Agents](#2-multi-agents) | [CLI Auto Mode](#auto-mode)
 
 ---
 
@@ -236,28 +223,6 @@ export OPENAI_BASE_URL=http://localhost:11434/v1
 export OPENAI_API_KEY=your_groq_key
 export OPENAI_BASE_URL=https://api.groq.com/openai/v1
 ```
-
----
-
-## 💻 Usage
-
-### Python Code Examples
-
-- [📘 Complete Python Examples](#using-python-code)
-- [🔧 Custom Tools](#️-custom-tools)
-- [🧠 Memory Configuration](#-memory--context)
-
-### CLI / No-Code Interface
-
-- [🎯 Auto Mode](#auto-mode)
-- [🔬 Deep Research](#deep-research-cli)
-- [📋 Planning Mode](#planning-mode-cli)
-- [💾 Memory Management](#memory-cli)
-- [🔄 Workflow Execution](#workflow-cli)
-
-### JavaScript Code Examples
-
-- [💻 JavaScript Usage](#using-javascript-code)
 
 ---
 
@@ -527,6 +492,9 @@ export OPENAI_BASE_URL=https://api.groq.com/openai/v1
 
 PraisonAI supports 100+ LLM providers through seamless integration:
 
+<details>
+<summary><strong>View all 24 providers</strong></summary>
+
 | Provider | Example |
 |----------|:-------:|
 | OpenAI | [Example](examples/python/providers/openai/openai_gpt4_example.py) |
@@ -554,16 +522,11 @@ PraisonAI supports 100+ LLM providers through seamless integration:
 | Moonshot | [Example](examples/python/providers/moonshot/moonshot_example.py) |
 | vLLM | [Example](examples/python/providers/vllm/vllm_example.py) |
 
+</details>
+
 ---
 
 ## 📘 Using Python Code
-
-Light weight package dedicated for coding:
-
-```bash
-pip install praisonaiagents
-export OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxx
-```
 
 ### 1. Single Agent
 
@@ -583,11 +546,11 @@ python app.py
 
 Create app.py file and add the code below:
 ```python
-from praisonaiagents import Agent, PraisonAIAgents
+from praisonaiagents import Agent, Agents
 
 research_agent = Agent(instructions="Research about AI")
 summarise_agent = Agent(instructions="Summarise research agent's findings")
-agents = PraisonAIAgents(agents=[research_agent, summarise_agent])
+agents = Agents(agents=[research_agent, summarise_agent])
 agents.start()
 ```
 
@@ -1975,11 +1938,11 @@ agent = Agent(
     auto_save="my-project"
 )
 
-# Load history from last 5 sessions
+# Load history from past sessions via context management
 agent = Agent(
     name="Assistant",
     memory=True,
-    history_in_context=5
+    context=True,  # Enable context management for history
 )
 ```
 
@@ -2413,6 +2376,9 @@ agent.start('Write a movie script about a robot in Mars');
 
 ## 📊 Process Types & Patterns
 
+<details>
+<summary><strong>View architecture diagrams and workflow patterns</strong></summary>
+
 ### AI Agents Flow
 
 ```mermaid
@@ -2752,6 +2718,8 @@ flowchart LR
     style Out fill:#8B0000,color:#fff
 ```
 
+</details>
+
 ---
 
 ## 🔧 Configuration & Integration
@@ -2899,77 +2867,179 @@ PraisonAI provides zero-dependency persistent memory for agents. For detailed ex
 
 PraisonAI provides a complete knowledge stack for building RAG applications with multiple vector stores, retrieval strategies, rerankers, and query modes.
 
+### RAG Quickstart (Agent-first)
+
+```python
+from praisonaiagents import Agent
+from praisonaiagents.rag.models import RetrievalStrategy
+
+# Agent with RAG - simplest approach
+agent = Agent(
+    name="Research Assistant",
+    knowledge=["docs/manual.pdf", "data/faq.txt"],
+    knowledge_config={"vector_store": {"provider": "chroma"}},
+    rag_config={
+        "include_citations": True,
+        "retrieval_strategy": RetrievalStrategy.HYBRID,  # Dense + BM25
+        "rerank": True,
+    }
+)
+
+# Query with citations
+result = agent.rag_query("How do I authenticate?")
+print(result.answer)
+for citation in result.citations:
+    print(f"  [{citation.id}] {citation.source}")
+```
+
+### RAG CLI Commands
+
+| Command | Description |
+|---------|-------------|
+| `praisonai rag query "<question>"` | One-shot question answering with citations |
+| `praisonai rag chat` | Interactive RAG chat session |
+| `praisonai rag serve` | Start RAG as a microservice API |
+| `praisonai rag eval <test_file>` | Evaluate RAG retrieval quality |
+
+### RAG CLI Examples
+
+```bash
+# Query with hybrid retrieval (dense + BM25 keyword search)
+praisonai rag query "What are the key findings?" --hybrid
+
+# Query with hybrid + reranking for best quality
+praisonai rag query "Summarize conclusions" --hybrid --rerank
+
+# Interactive chat with hybrid retrieval
+praisonai rag chat --collection research --hybrid --rerank
+
+# Start API server with OpenAI-compatible endpoint
+praisonai rag serve --hybrid --rerank --openai-compat --port 8080
+
+# Query with profiling
+praisonai rag query "Summary?" --profile --profile-out ./profile.json
+```
+
 ### Knowledge CLI Commands
 
 | Command | Description |
 |---------|-------------|
-| `praisonai knowledge add <file\|dir\|url>` | Add documents to knowledge base |
-| `praisonai knowledge query <question>` | Query knowledge base with RAG |
+| `praisonai knowledge index <sources>` | Index documents into knowledge base |
+| `praisonai knowledge search <query>` | Search knowledge base (no LLM generation) |
 | `praisonai knowledge list` | List indexed documents |
-| `praisonai knowledge clear` | Clear knowledge base |
-| `praisonai knowledge stats` | Show knowledge base statistics |
-
-### Knowledge CLI Options
-
-| Option | Values | Description |
-|--------|--------|-------------|
-| `--vector-store` | `memory`, `chroma`, `pinecone`, `qdrant`, `weaviate` | Vector store backend |
-| `--retrieval` | `basic`, `fusion`, `recursive`, `auto_merge` | Retrieval strategy |
-| `--reranker` | `simple`, `llm`, `cross_encoder`, `cohere` | Reranking method |
-| `--index-type` | `vector`, `keyword`, `hybrid` | Index type |
-| `--query-mode` | `default`, `sub_question`, `summarize` | Query mode |
 
 ### Knowledge CLI Examples
 
 ```bash
-# Add documents
-praisonai knowledge add ./docs/
-praisonai knowledge add https://example.com/page.html
-praisonai knowledge add "*.pdf"
+# Index documents
+praisonai knowledge index ./docs/ --collection myproject
 
-# Query with advanced options
-praisonai knowledge query "How to authenticate?" --retrieval fusion --reranker llm
+# Search with hybrid retrieval
+praisonai knowledge search "authentication" --hybrid --collection myproject
 
-# Full advanced query
-praisonai knowledge query "authentication flow" \
-  --vector-store chroma \
-  --retrieval fusion \
-  --reranker llm \
-  --index-type hybrid \
-  --query-mode sub_question
+# Index with profiling
+praisonai knowledge index ./data --profile --profile-out ./profile.json
 ```
 
-### Knowledge SDK Usage
+### Knowledge vs RAG vs AutoRagAgent
+
+- **Knowledge** is the indexing and retrieval substrate - use for indexing and raw search
+- **RAG** orchestrates on top - use for question answering with LLM-generated responses and citations
+- **AutoRagAgent** wraps an Agent with automatic retrieval decision - use when you want the agent to decide when to retrieve
+- All share the same underlying index
+
+### AutoRagAgent (Automatic RAG)
+
+AutoRagAgent automatically decides when to retrieve context from knowledge bases vs direct chat, based on query heuristics.
 
 ```python
-from praisonaiagents import Agent, Knowledge
+from praisonaiagents import Agent, AutoRagAgent
 
-# Simple usage with Agent
+# Create agent with knowledge
 agent = Agent(
     name="Research Assistant",
-    knowledge=["docs/manual.pdf", "data/faq.txt"],
-    knowledge_config={
-        "vector_store": {"provider": "chroma"}
-    }
+    knowledge=["docs/manual.pdf"],
+    user_id="user123",  # Required for RAG retrieval
 )
-response = agent.chat("How do I authenticate?")
 
-# Direct Knowledge usage
-knowledge = Knowledge()
-knowledge.add("document.pdf")
-results = knowledge.search("authentication", limit=5)
+# Wrap with AutoRagAgent
+auto_rag = AutoRagAgent(
+    agent=agent,
+    retrieval_policy="auto",  # auto, always, never
+    top_k=5,
+    hybrid=True,
+    rerank=True,
+)
+
+# Auto-decides: retrieves for questions, skips for greetings
+result = auto_rag.chat("What are the key findings?")  # Retrieves
+result = auto_rag.chat("Hello!")  # Skips retrieval
+
+# Force retrieval or skip per-call
+result = auto_rag.chat("Hi", force_retrieval=True)
+result = auto_rag.chat("Summary?", skip_retrieval=True)
+```
+
+**CLI Usage:**
+```bash
+# Enable auto-rag with default policy (auto)
+praisonai --auto-rag "What are the key findings?"
+
+# Always retrieve
+praisonai --auto-rag --rag-policy always "Tell me about X"
+
+# With hybrid retrieval and reranking
+praisonai --auto-rag --rag-hybrid --rag-rerank "Summarize the document"
+```
+
+### Configuration Precedence
+
+Settings are applied in this order (highest priority first):
+1. **CLI flags** - `--hybrid`, `--rerank`, `--top-k`
+2. **Environment variables** - `PRAISONAI_HYBRID=true`
+3. **Config file** - YAML configuration (`--config`)
+4. **Defaults**
+
+```bash
+# Environment variables
+export PRAISONAI_HYBRID=true
+export PRAISONAI_RERANK=true
+export PRAISONAI_TOP_K=10
+```
+
+### Lightweight Installs
+
+```bash
+# Base install (minimal, fast imports)
+pip install praisonaiagents
+
+# With RAG API server support
+pip install "praisonai[rag-api]"
+```
+
+### Live Tests (Real API Keys)
+
+Run integration tests with real API keys:
+
+```bash
+# Enable live tests
+export PRAISONAI_LIVE_TESTS=1
+export OPENAI_API_KEY="your-key"
+
+# Run live tests
+pytest -m live tests/integration/
 ```
 
 ### Knowledge Stack Features Table
 
 | Feature | Description | SDK Docs | CLI Docs |
 |---------|-------------|----------|----------|
-| **Data Readers** | Load PDF, Markdown, Text, HTML, URLs | [SDK](/docs/sdk/praisonaiagents/knowledge/protocols) | [CLI](/docs/cli/knowledge) |
+| **Hybrid Retrieval** | Dense vectors + BM25 keyword search with RRF fusion | [SDK](/docs/rag/module) | [CLI](/docs/cli/rag) |
+| **Reranking** | LLM, Cross-Encoder, Cohere rerankers | [SDK](/docs/rag/module) | [CLI](/docs/cli/rag) |
+| **RAG Serve** | Microservice API with OpenAI-compatible mode | [SDK](/docs/rag/module) | [CLI](/docs/cli/rag) |
 | **Vector Stores** | ChromaDB, Pinecone, Qdrant, Weaviate, In-Memory | [SDK](/docs/sdk/praisonaiagents/knowledge/protocols) | [CLI](/docs/cli/knowledge) |
-| **Retrieval Strategies** | Basic, Fusion (RRF), Recursive, Auto-Merge | [SDK](/docs/sdk/praisonaiagents/knowledge/protocols) | [CLI](/docs/cli/knowledge) |
-| **Rerankers** | Simple, LLM, Cross-Encoder, Cohere | [SDK](/docs/sdk/praisonaiagents/knowledge/protocols) | [CLI](/docs/cli/knowledge) |
-| **Index Types** | Vector, Keyword (BM25), Hybrid | [SDK](/docs/sdk/praisonaiagents/knowledge/protocols) | [CLI](/docs/cli/knowledge) |
-| **Query Engines** | Default, Sub-Question, Summarize | [SDK](/docs/sdk/praisonaiagents/knowledge/protocols) | [CLI](/docs/cli/knowledge) |
+| **Data Readers** | Load PDF, Markdown, Text, HTML, URLs | [SDK](/docs/sdk/praisonaiagents/knowledge/protocols) | [CLI](/docs/cli/knowledge) |
+| **Profiling** | Performance profiling with `--profile` flag | [SDK](/docs/features/profiling) | [CLI](/docs/cli/rag) |
 
 ---
 
@@ -3087,43 +3157,7 @@ agent.chat("Hello!")  # Auto-persists messages, runs, traces
 | `praisonai persistence migrate` | Apply schema migrations |
 | `praisonai persistence status` | Show schema status |
 
-### Knowledge CLI Commands {#knowledge-cli}
-
-| Command | Description |
-|---------|-------------|
-| `praisonai knowledge add <source>` | Add file, directory, URL, or glob pattern |
-| `praisonai knowledge query "<question>"` | Query knowledge base with RAG |
-| `praisonai knowledge list` | List indexed documents |
-| `praisonai knowledge clear` | Clear knowledge base |
-| `praisonai knowledge stats` | Show knowledge base statistics |
-
-**Knowledge Query Flags:**
-
-| Flag | Values | Default |
-|------|--------|---------|
-| `--vector-store` | `memory`, `chroma`, `pinecone`, `qdrant`, `weaviate` | `chroma` |
-| `--retrieval-strategy` | `basic`, `fusion`, `recursive`, `auto_merge` | `basic` |
-| `--reranker` | `none`, `simple`, `llm`, `cross_encoder`, `cohere` | `none` |
-| `--index-type` | `vector`, `keyword`, `hybrid` | `vector` |
-| `--query-mode` | `default`, `sub_question`, `summarize` | `default` |
-| `--workspace` | Path to workspace directory | Current dir |
-| `--session` | Session ID for persistence | - |
-
-**Examples:**
-
-```bash
-# Add documents
-praisonai knowledge add document.pdf
-praisonai knowledge add ./docs/
-praisonai knowledge add "*.md"
-
-# Query with options
-praisonai knowledge query "How to authenticate?" \
-  --vector-store chroma \
-  --retrieval-strategy fusion \
-  --reranker simple \
-  --query-mode sub_question
-```
+> **Note:** See [Knowledge & Retrieval (RAG)](#-knowledge--retrieval-rag) for complete Knowledge CLI documentation.
 
 ### Databases Table
 
@@ -3199,6 +3233,9 @@ Install all tools with: `pip install "praisonai[tools]"`
 
 Learn PraisonAI through our comprehensive video series:
 
+<details>
+<summary><strong>View all 22 video tutorials</strong></summary>
+
 | Topic | Video |
 |-------|--------|
 | AI Agents with Self Reflection | [![Self Reflection](https://img.youtube.com/vi/vLXobEN2Vc8/0.jpg)](https://www.youtube.com/watch?v=vLXobEN2Vc8) |
@@ -3223,6 +3260,8 @@ Learn PraisonAI through our comprehensive video series:
 | Realtime Voice Interface | [![Realtime](https://img.youtube.com/vi/frRHfevTCSw/0.jpg)](https://www.youtube.com/watch?v=frRHfevTCSw) |
 | Call Interface | [![Call](https://img.youtube.com/vi/m1cwrUG2iAk/0.jpg)](https://www.youtube.com/watch?v=m1cwrUG2iAk) |
 | Reasoning Extract Agents | [![Reasoning Extract](https://img.youtube.com/vi/2PPamsADjJA/0.jpg)](https://www.youtube.com/watch?v=2PPamsADjJA) |
+
+</details>
 
 ---
 
@@ -3349,11 +3388,11 @@ See [Agent Memory](#6-agent-memory-zero-dependencies) for more options.
 <summary><strong>How do I run multiple agents together?</strong></summary>
 
 ```python
-from praisonaiagents import Agent, PraisonAIAgents
+from praisonaiagents import Agent, Agents
 
 agent1 = Agent(instructions="Research topics")
 agent2 = Agent(instructions="Summarize findings")
-agents = PraisonAIAgents(agents=[agent1, agent2])
+agents = Agents(agents=[agent1, agent2])
 agents.start()
 ```
 

@@ -1,6 +1,6 @@
 ---
 project: styled-components
-stars: 41011
+stars: 41020
 description: |-
     Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅
 url: https://github.com/styled-components/styled-components
@@ -54,7 +54,7 @@ const Button = styled.button`
 `;
 ```
 
-`styled-components` is compatible with both React (for web) and React Native – meaning it's the perfect choice even for truly universal apps! See the [documentation about React Native](https://www.styled-components.com/docs/basics#react-native) for more information.
+`styled-components` is compatible with both React (for web) and React Native – meaning it's the perfect choice even for truly universal apps! It also supports React Server Components (RSC) through automatic runtime detection. See the [documentation about React Native](https://www.styled-components.com/docs/basics#react-native) for more information.
 
 _Supported by [Front End Center](https://frontend.center). Thank you for making this possible!_
 
@@ -70,6 +70,7 @@ Quicklinks to some of the most-visited pages:
 - [API Reference](https://styled-components.com/docs/api)
 - [Theming](https://www.styled-components.com/docs/advanced#theming)
 - [Server-side rendering](https://www.styled-components.com/docs/advanced#server-side-rendering)
+- [React Server Components](https://www.styled-components.com/docs/advanced#react-server-components) (RSC support)
 - [Tagged Template Literals explained](https://www.styled-components.com/docs/advanced#tagged-template-literals)
 
 ---

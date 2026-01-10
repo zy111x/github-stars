@@ -1,6 +1,6 @@
 ---
 project: validator.js
-stars: 23716
+stars: 23726
 description: |-
     String validation
 url: https://github.com/validatorjs/validator.js

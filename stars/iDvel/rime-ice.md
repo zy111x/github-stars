@@ -1,6 +1,6 @@
 ---
 project: rime-ice
-stars: 14927
+stars: 15068
 description: |-
     Rime 配置：雾凇拼音 | 长期维护的简体词库
 url: https://github.com/iDvel/rime-ice
@@ -29,6 +29,8 @@ url: https://github.com/iDvel/rime-ice
 雾凇拼音提供了一套开箱即用的完整配置，包含输入方案（全拼、常见双拼）、长期维护的开源词库及各项扩展功能。
 
 [详细介绍](https://dvel.me/posts/rime-ice/)  |  [常见问题](https://github.com/iDvel/rime-ice/issues/133)  |  [更新日志](./others/CHANGELOG.md)
+
+[在线体验](https://www.mintimate.cc/zh/demo/fcitx5Online.html)（由 [fcitx5-rime.js](https://github.com/rimeinn/fcitx5-rime.js) 支持，感谢 [@Mintimate](https://github.com/Mintimate) 友情构建）
 
 <br>
 

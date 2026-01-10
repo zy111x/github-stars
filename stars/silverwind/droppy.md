@@ -1,6 +1,6 @@
 ---
 project: droppy
-stars: 1632
+stars: 1633
 description: |-
     **ARCHIVED** Self-hosted file storage
 url: https://github.com/silverwind/droppy

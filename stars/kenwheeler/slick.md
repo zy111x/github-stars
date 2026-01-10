@@ -1,6 +1,6 @@
 ---
 project: slick
-stars: 28625
+stars: 28624
 description: |-
     the last carousel you'll ever need
 url: https://github.com/kenwheeler/slick

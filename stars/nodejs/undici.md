@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 7343
+stars: 7362
 description: |-
     An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici
@@ -540,6 +540,12 @@ const { headers } = await request(url);
 * https://github.com/wintercg/fetch/issues/6
 
 The [Fetch Standard](https://fetch.spec.whatwg.org) requires implementations to exclude certain headers from requests and responses. In browser environments, some headers are forbidden so the user agent remains in full control over them. In Undici, these constraints are removed to give more control to the user.
+
+#### Content-Encoding
+
+* https://www.rfc-editor.org/rfc/rfc9110#field.content-encoding
+
+Undici limits the number of `Content-Encoding` layers in a response to **5** to prevent resource exhaustion attacks. If a server responds with more than 5 content-encodings (e.g., `Content-Encoding: gzip, gzip, gzip, gzip, gzip, gzip`), the fetch will be rejected with an error. This limit matches the approach taken by [curl](https://curl.se/docs/CVE-2022-32206.html) and [urllib3](https://github.com/advisories/GHSA-gm62-xv2j-4rw9).
 
 #### `undici.upgrade([url, options]): Promise`
 

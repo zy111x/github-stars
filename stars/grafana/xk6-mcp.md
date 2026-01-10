@@ -1,6 +1,6 @@
 ---
 project: xk6-mcp
-stars: 15
+stars: 18
 description: |-
     Test MCP servers with k6
 url: https://github.com/grafana/xk6-mcp

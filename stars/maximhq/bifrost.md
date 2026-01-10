@@ -1,6 +1,6 @@
 ---
 project: bifrost
-stars: 1518
+stars: 1637
 description: |-
     Fastest LLM gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000+ models support & <100 µs overhead at 5k RPS.
 url: https://github.com/maximhq/bifrost
@@ -263,7 +263,7 @@ We welcome contributions of all kinds! See our [Contributing Guide](https://docs
 - How to submit pull requests
 - Building and testing locally
 
-For development requirements and build instructions, see our [Development Setup Guide](https://docs.getbifrost.ai/contributing/building-a-plugins).
+For development requirements and build instructions, see our [Development Setup Guide](https://docs.getbifrost.ai/contributing/setting-up-repo#development-environment-setup).
 
 ---
 

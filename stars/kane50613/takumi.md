@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 1152
+stars: 1177
 description: |-
     JSX → Image. Faster next/og & satori alternative plus variable fonts, RTL, inline layout, WOFF2, WebP output support.
 url: https://github.com/kane50613/takumi
@@ -14,6 +14,9 @@ Takumi is an **image rendering engine** written in Rust. The design is mainly in
 
 You can try out Takumi in [Playground](https://takumi.kane.tw/playground) without installation. Or [Quick Start](https://takumi.kane.tw/docs/) page for usage.
 
+> [!NOTE]
+> The Showcase section is now open! Share your Takumi-powered projects by opening a pull request to [showcase.ts](./docs/app/data/showcase.ts)!
+
 ## Why build a satori alternative?
 
 - All in one. No need to output SVG then have [resvg-js](https://github.com/thx/resvg-js) rendering it again to output PNG.
@@ -25,6 +28,7 @@ You can try out Takumi in [Playground](https://takumi.kane.tw/playground) withou
 - WOFF2 font format support.
 - PNG, JPEG, WebP output support.
 - WebP, APNG animation rendering support.
+- Low latency video rendering with [FFmpeg](https://ffmpeg.org/) ([example](./example/ffplay)).
 
 ## Goals
 

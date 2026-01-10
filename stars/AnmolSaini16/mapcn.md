@@ -1,6 +1,6 @@
 ---
 project: mapcn
-stars: 2945
+stars: 4140
 description: |-
     Beautiful map components. 100% Free, Zero config, one command setup.
 url: https://github.com/AnmolSaini16/mapcn
@@ -18,9 +18,9 @@ url: https://github.com/AnmolSaini16/mapcn
   </p>
   
   <p>
-    <a href="https://mapcn.vercel.app">Get Started</a> •
-    <a href="https://mapcn.vercel.app/docs/installation">Installation</a> •
-    <a href="https://mapcn.vercel.app/docs/basic-map">Examples</a>
+    <a href="https://mapcn.dev/docs">Get Started</a> •
+    <a href="https://mapcn.dev/docs/installation">Installation</a> •
+    <a href="https://mapcn.dev/docs/basic-map">Examples</a>
   </p>
 </div>
 

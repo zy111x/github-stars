@@ -1,6 +1,6 @@
 ---
 project: restful.js
-stars: 963
+stars: 964
 description: |-
     A pure JS client for interacting with server-side RESTful resources. Think Restangular without Angular.
 url: https://github.com/marmelab/restful.js

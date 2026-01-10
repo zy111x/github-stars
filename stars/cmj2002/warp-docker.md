@@ -1,6 +1,6 @@
 ---
 project: warp-docker
-stars: 764
+stars: 766
 description: |-
     Run Cloudflare WARP in Docker.
 url: https://github.com/cmj2002/warp-docker

@@ -1,6 +1,6 @@
 ---
 project: simple-ai
-stars: 709
+stars: 713
 description: |-
     A collection of beautifully designed AI interface components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
 url: https://github.com/Alwurts/simple-ai

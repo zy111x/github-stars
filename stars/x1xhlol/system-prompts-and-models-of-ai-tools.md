@@ -1,29 +1,47 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 105114
+stars: 107196
 description: |-
     FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 ---
 
 # **System Prompts and Models of AI Tools**  
+
 ---
 <p align="center">
   <sub>Special thanks to</sub>  
-</p> 
-
-<p align="center">
-  <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">
-    <img src="assets/Latitude_logo.png" alt="Latitude Logo" width="700"/>
-  </a>
 </p>
 
-<div align="center" markdown="1">
-
-### <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Make your LLM predictable in production</a>  
-<a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Open Source AI Engineering Platform</a><br>
-
-</div>
+<table width="100%">
+  <tr>
+    <td align="center" valign="top">
+      <a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship#gh-light-mode-only" target="_blank">
+        <img src="assets/tembo-dark.png#gh-light-mode-only" alt="Tembo Logo" width="750" height="210"/>
+      </a>
+      <a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship#gh-dark-mode-only" target="_blank">
+        <img src="assets/tembo-light.png#gh-dark-mode-only" alt="Tembo Logo" width="750" height="210"/>
+      </a>
+      <br><br>
+      <strong><a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Put any coding agent to work while you sleep</a></strong>
+      <br>
+      <a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Tembo – The Background Coding Agents Company</a>
+      <br><br>
+      <a href="https://www.tembo.io/?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">[Get started for free]</a>
+    </td>
+    <td align="center" valign="top">
+      <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">
+        <img src="assets/Latitude_logo.png" alt="Latitude Logo" width="750" height="210"/>
+      </a>
+      <br><br>
+      <strong><a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Make your LLM predictable in production</a></strong>
+      <br>
+      <a href="https://latitude.so/developers?utm_source=github&utm_medium=readme&utm_campaign=prompt_repo_sponsorship" target="_blank">Open Source AI Engineering Platform</a>
+      <br><br>
+      &nbsp;
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -71,7 +89,7 @@ Sponsor the most comprehensive repository of AI system prompts and reach thousan
 
 > Open an issue.
 
-> **Latest Update:** 30/12/2025
+> **Latest Update:** 08/01/2026
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 project: logtape
-stars: 1474
+stars: 1501
 description: |-
     Simple logging library with zero dependencies for Deno, Node.js, Bun, browsers, and edge functions
 url: https://github.com/dahlia/logtape
@@ -44,7 +44,8 @@ The highlights of LogTape are:
     values.
 
  -  *[Built-in data redaction]*: LogTape provides robust capabilities to redact
-    sensitive information from logs using pattern-based or field-based approaches.
+    sensitive information from logs using pattern-based or field-based
+    approaches.
 
  -  *[Dead simple sinks]*: You can easily add your own sinks to LogTape.
 
@@ -52,19 +53,19 @@ The highlights of LogTape are:
     like [Express], [Fastify], [Hono], [Koa], and [Drizzle ORM] with automatic
     HTTP request logging and database query logging.
 
-![](https://raw.githubusercontent.com/dahlia/logtape/refs/heads/main/screenshots/web-console.png)
-![](https://raw.githubusercontent.com/dahlia/logtape/refs/heads/main/screenshots/terminal.png)
+![LogTape web console output](https://raw.githubusercontent.com/dahlia/logtape/refs/heads/main/screenshots/web-console.png)
+![LogTape terminal output](https://raw.githubusercontent.com/dahlia/logtape/refs/heads/main/screenshots/terminal.png)
 
-[JSR]: https://jsr.io/@logtape/logtape
 [JSR badge]: https://jsr.io/badges/@logtape/logtape
-[npm]: https://www.npmjs.com/package/@logtape/logtape
+[JSR]: https://jsr.io/@logtape/logtape
 [npm badge]: https://img.shields.io/npm/v/@logtape/logtape?logo=npm
-[Bundlephobia]: https://bundlephobia.com/package/@logtape/logtape
+[npm]: https://www.npmjs.com/package/@logtape/logtape
 [Bundlephobia badge]: https://badgen.net/bundlephobia/dependency-count/@logtape/logtape
-[GitHub Actions]: https://github.com/dahlia/logtape/actions/workflows/main.yaml
+[Bundlephobia]: https://bundlephobia.com/package/@logtape/logtape
 [GitHub Actions badge]: https://github.com/dahlia/logtape/actions/workflows/main.yaml/badge.svg
-[Codecov]: https://codecov.io/gh/dahlia/logtape
+[GitHub Actions]: https://github.com/dahlia/logtape/actions/workflows/main.yaml
 [Codecov badge]: https://codecov.io/gh/dahlia/logtape/graph/badge.svg?token=yOejfcuX7r
+[Codecov]: https://codecov.io/gh/dahlia/logtape
 [Library support]: https://logtape.org/manual/library
 [Runtime diversity]: https://logtape.org/manual/install
 [Structured logging]: https://logtape.org/manual/struct
@@ -73,6 +74,11 @@ The highlights of LogTape are:
 [Built-in data redaction]: https://logtape.org/manual/redaction
 [Dead simple sinks]: https://logtape.org/manual/sinks
 [Framework integrations]: https://logtape.org/manual/integrations
+[Express]: https://expressjs.com/
+[Fastify]: https://fastify.dev/
+[Hono]: https://hono.dev/
+[Koa]: https://koajs.com/
+[Drizzle ORM]: https://orm.drizzle.team/
 
 
 Installation
@@ -101,7 +107,7 @@ packages provide additional features and integrations.  The following is a
 list of the packages in the LogTape monorepo:
 
 | Package                                                    | JSR                                  | npm                                  | Description                |
-|------------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|
+| ---------------------------------------------------------- | ------------------------------------ | ------------------------------------ | -------------------------- |
 | [*@logtape/logtape*](/packages/logtape/)                   | [JSR][jsr:@logtape/logtape]          | [npm][npm:@logtape/logtape]          | Core logging functionality |
 | [*@logtape/adaptor-pino*](/packages/adaptor-pino/)         | [JSR][jsr:@logtape/adaptor-pino]     | [npm][npm:@logtape/adaptor-pino]     | [Pino] adapter             |
 | [*@logtape/adaptor-winston*](/packages/adaptor-winston/)   | [JSR][jsr:@logtape/adaptor-winston]  | [npm][npm:@logtape/adaptor-winston]  | [winston] adapter          |
@@ -121,31 +127,24 @@ list of the packages in the LogTape monorepo:
 | [*@logtape/syslog*](/packages/syslog/)                     | [JSR][jsr:@logtape/syslog]           | [npm][npm:@logtape/syslog]           | Syslog sink                |
 | [*@logtape/windows-eventlog*](/packages/windows-eventlog/) | [JSR][jsr:@logtape/windows-eventlog] | [npm][npm:@logtape/windows-eventlog] | Windows Event Log sink     |
 
-[AWS CloudWatch Logs]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/
-[Drizzle ORM]: https://orm.drizzle.team/
-[Elysia]: https://elysiajs.com/
-[Express]: https://expressjs.com/
-[Fastify]: https://fastify.dev/
-[Hono]: https://hono.dev/
-[Koa]: https://koajs.com/
-[OpenTelemetry]: https://opentelemetry.io/
-[Pino]: https://github.com/pinojs/pino
-[Sentry]: https://sentry.io/
-[winston]: https://github.com/winstonjs/winston
 [jsr:@logtape/logtape]: https://jsr.io/@logtape/logtape
 [npm:@logtape/logtape]: https://www.npmjs.com/package/@logtape/logtape
 [jsr:@logtape/adaptor-pino]: https://jsr.io/@logtape/adaptor-pino
 [npm:@logtape/adaptor-pino]: https://www.npmjs.com/package/@logtape/adaptor-pino
+[Pino]: https://github.com/pinojs/pino
 [jsr:@logtape/adaptor-winston]: https://jsr.io/@logtape/adaptor-winston
 [npm:@logtape/adaptor-winston]: https://www.npmjs.com/package/@logtape/adaptor-winston
+[winston]: https://github.com/winstonjs/winston
 [jsr:@logtape/cloudwatch-logs]: https://jsr.io/@logtape/cloudwatch-logs
 [npm:@logtape/cloudwatch-logs]: https://www.npmjs.com/package/@logtape/cloudwatch-logs
+[AWS CloudWatch Logs]: https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/
 [jsr:@logtape/config]: https://jsr.io/@logtape/config
 [npm:@logtape/config]: https://www.npmjs.com/package/@logtape/config
 [jsr:@logtape/drizzle-orm]: https://jsr.io/@logtape/drizzle-orm
 [npm:@logtape/drizzle-orm]: https://www.npmjs.com/package/@logtape/drizzle-orm
 [jsr:@logtape/elysia]: https://jsr.io/@logtape/elysia
 [npm:@logtape/elysia]: https://www.npmjs.com/package/@logtape/elysia
+[Elysia]: https://elysiajs.com/
 [jsr:@logtape/express]: https://jsr.io/@logtape/express
 [npm:@logtape/express]: https://www.npmjs.com/package/@logtape/express
 [jsr:@logtape/fastify]: https://jsr.io/@logtape/fastify
@@ -158,12 +157,14 @@ list of the packages in the LogTape monorepo:
 [npm:@logtape/file]: https://www.npmjs.com/package/@logtape/file
 [jsr:@logtape/otel]: https://jsr.io/@logtape/otel
 [npm:@logtape/otel]: https://www.npmjs.com/package/@logtape/otel
+[OpenTelemetry]: https://opentelemetry.io/
 [jsr:@logtape/pretty]: https://jsr.io/@logtape/pretty
 [npm:@logtape/pretty]: https://www.npmjs.com/package/@logtape/pretty
 [jsr:@logtape/redaction]: https://jsr.io/@logtape/redaction
 [npm:@logtape/redaction]: https://www.npmjs.com/package/@logtape/redaction
 [jsr:@logtape/sentry]: https://jsr.io/@logtape/sentry
 [npm:@logtape/sentry]: https://www.npmjs.com/package/@logtape/sentry
+[Sentry]: https://sentry.io/
 [jsr:@logtape/syslog]: https://jsr.io/@logtape/syslog
 [npm:@logtape/syslog]: https://www.npmjs.com/package/@logtape/syslog
 [jsr:@logtape/windows-eventlog]: https://jsr.io/@logtape/windows-eventlog

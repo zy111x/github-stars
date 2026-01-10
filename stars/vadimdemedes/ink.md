@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 33657
+stars: 33878
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -83,7 +83,7 @@ Feel free to play around with the code and fork this Repl at [https://repl.it/@v
 
 - [Claude Code](https://github.com/anthropics/claude-code) - An agentic coding tool made by Anthropic.
 - [Gemini CLI](https://github.com/google-gemini/gemini-cli) - An agentic coding tool made by Google.
-- [GitHub Copilot for CLI](https://githubnext.com/projects/copilot-cli) - Just say what you want the shell to do.
+- [GitHub Copilot CLI](https://github.com/features/copilot/cli) - Just say what you want the shell to do.
 - [Canva CLI](https://www.canva.dev/docs/apps/canva-cli/) - CLI for creating and managing Canva Apps.
 - [Cloudflare's Wrangler](https://github.com/cloudflare/wrangler2) - The CLI for Cloudflare Workers.
 - [Linear](https://linear.app) - Linear built an internal CLI for managing deployments, configs, and other housekeeping tasks.

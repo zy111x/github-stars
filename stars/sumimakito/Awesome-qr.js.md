@@ -1,6 +1,6 @@
 ---
 project: Awesome-qr.js
-stars: 1700
+stars: 1701
 description: |-
     An awesome QR code generator written in JavaScript.
 url: https://github.com/sumimakito/Awesome-qr.js

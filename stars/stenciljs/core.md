@@ -1,8 +1,8 @@
 ---
 project: core
-stars: 12993
+stars: 13001
 description: |-
-    A toolchain for building scalable, enterprise-ready component systems on top of TypeScript and Web Component standards. Stencil components can be distributed natively to React, Angular, Vue, and traditional web developers from a single, framework-agnostic codebase.
+    A toolchain for building scalable, enterprise-ready component systems on top of TypeScript and Web Component standards. Stencil components can be distributed natively to React, Angular, Vue, and traditional web applications from a single, framework-agnostic codebase.
 url: https://github.com/stenciljs/core
 ---
 

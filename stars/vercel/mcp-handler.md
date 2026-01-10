@@ -1,6 +1,6 @@
 ---
 project: mcp-handler
-stars: 525
+stars: 531
 description: |-
     Easily spin up an MCP Server on Next.js, Nuxt, Svelte, and more
 url: https://github.com/vercel/mcp-handler
@@ -13,10 +13,10 @@ A Vercel adapter for the Model Context Protocol (MCP), enabling real-time commun
 ## Installation
 
 ```bash
-npm install mcp-handler @modelcontextprotocol/sdk@1.25.0 zod@^3
+npm install mcp-handler @modelcontextprotocol/sdk@1.25.2 zod@^3
 ```
 
-> **Note**: The recommended version for `@modelcontextprotocol/sdk` is 1.25.0
+> **Note**: Versions of `@modelcontextprotocol/sdk` prior to 1.25.1 have a security vulnerability. Use version 1.25.2 or later.
 
 ## Quick Start (Next.js)
 

@@ -1,6 +1,6 @@
 ---
 project: sanitize-html
-stars: 4112
+stars: 4116
 description: |-
     Clean up user-submitted HTML, preserving whitelisted elements and whitelisted attributes on a per-element basis. Built on htmlparser2 for speed and tolerance
 url: https://github.com/apostrophecms/sanitize-html

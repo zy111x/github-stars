@@ -1,6 +1,6 @@
 ---
 project: opennhp
-stars: 13736
+stars: 13738
 description: |-
     A lightweight, cryptography-powered, open-source toolkit built to enforce Zero Trust security for infrastructure, applications, and data in the AI-driven world.
 url: https://github.com/OpenNHP/opennhp
@@ -25,6 +25,7 @@ url: https://github.com/OpenNHP/opennhp
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![License](https://img.shields.io/badge/license-Apache%202.0-green)
+[![codecov](https://codecov.io/gh/OpenNHP/opennhp/branch/main/graph/badge.svg)](https://codecov.io/gh/OpenNHP/opennhp)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/OpenNHP/opennhp)
 ---
 

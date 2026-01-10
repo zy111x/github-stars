@@ -1,6 +1,6 @@
 ---
 project: edit
-stars: 7464
+stars: 7536
 description: |-
     Make changes to FMHY
 url: https://github.com/fmhy/edit
@@ -16,7 +16,7 @@ url: https://github.com/fmhy/edit
 
 - Website: [fmhy.net](https://fmhy.net)
 - News & Monthly Updates: [fmhy.net/posts](https://fmhy.net/posts)
-- Backups: [github.com/fmhy/FMHY/wiki/Backups](https://github.com/fmhy/FMHY/wiki/Backups)
+- Backups, Markdown, JSON API: [github.com/fmhy/FMHY/wiki/Backups](https://github.com/fmhy/FMHY/wiki/Backups)
 - Neither the site nor GitHub host any files
 
 ## 🗺️ Emoji Legend
@@ -42,4 +42,3 @@ Here are a few ways you can get involved:
 <p>
   <a href="https://github.com/fmhy/FMHY/wiki/FMHY-Discord"><img width="30px" src="./assets/discord.svg" alt="Discord"></a>&nbsp;&nbsp;<a href="https://github.com/fmhy"><img width="30px" src="./assets/github.svg" alt="GitHub"></a>
 </p>
-

@@ -1,6 +1,6 @@
 ---
 project: document
-stars: 1601
+stars: 1627
 description: |-
     Perform common file preview and editing via the web.
 url: https://github.com/ranuts/document
@@ -74,12 +74,12 @@ This project provides foundational services for document preview components in t
 
 ```bash
 # docker run
-docker run -d --name document -p 8080:80 ghcr.io/ranui/document:latest
+docker run -d --name document -p 8080:80 ghcr.io/ranuts/document:latest
 
 # docker compose
 services:
   document:
-    image: ghcr.io/ranui/document:latest
+    image: ghcr.io/ranuts/document:latest
     container_name: document
     ports:
       - 8080:80
@@ -88,10 +88,10 @@ services:
 #### Advanced Configuration
 
 ```yaml
-nanme: document
+name: document
 services:
   document:
-    image: ghcr.io/ranui/document:latest
+    image: ghcr.io/ranuts/document:latest
     container_name: document
     ports:
       - 8080:80
@@ -103,7 +103,7 @@ services:
       # Set account
       # Format username:password, password must be encoded using BCrypt hash function.
       # To get BCrypt encryption result, replace $ in the encrypted result with $$ for escaping.
-      SERVER_BASIC_AUTH: "username:BCrypt_encrypted_password"
+      SERVER_BASIC_AUTH: 'username:BCrypt_encrypted_password'
       # Use certificate
       SERVER_HTTP2_TLS: true
       SERVER_HTTP2_TLS_CERT: certificate_path

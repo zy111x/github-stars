@@ -1,6 +1,6 @@
 ---
 project: twemoji
-stars: 17311
+stars: 17379
 description: |-
     Emoji for everyone. https://twemoji.twitter.com/
 url: https://github.com/twitter/twemoji
@@ -32,7 +32,7 @@ This guarantees that you will always use the latest version of the library.
 
 If, instead, you'd like to include the latest version explicitly, you can add the following tag:
 ```html
-<script src="https://unpkg.com/twemoji@14.0.2/dist/twemoji.min.js" integrity="sha384-ICOlZarapRIX6UjKPcWKEpubjg7lGADN7Y9fYP4DU9zm0aPFhgnP5ef+XFaPyKv+" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/twemoji@14.0.3/dist/twemoji.min.js" integrity="sha384-eoGiwFCoIsUzdZGbvJ/7h/ICofqh5LolgoDnsgdbLptvnpK4+/swGDdkv3sb6bq+" crossorigin="anonymous"></script>
 ```
 
 ### Download

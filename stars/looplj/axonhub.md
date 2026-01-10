@@ -1,6 +1,6 @@
 ---
 project: axonhub
-stars: 1205
+stars: 1307
 description: |-
     AxonHub is a modern AI gateway system that provides a unified OpenAI ( Chat Completion, Responses), Anthropic, Gemini and AI SDK compatible API
 url: https://github.com/looplj/axonhub
@@ -17,7 +17,6 @@ url: https://github.com/looplj/axonhub
 [![Test Status](https://github.com/looplj/axonhub/actions/workflows/test.yml/badge.svg)](https://github.com/looplj/axonhub/actions/workflows/test.yml)
 [![Lint Status](https://github.com/looplj/axonhub/actions/workflows/lint.yml/badge.svg)](https://github.com/looplj/axonhub/actions/workflows/lint.yml)
 [![Go Version](https://img.shields.io/github/go-mod/go-version/looplj/axonhub?logo=go&logoColor=white)](https://golang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker Ready](https://img.shields.io/badge/docker-ready-2496ED?logo=docker&logoColor=white)](https://docker.com)
 
 [English](README.md) | [中文](README.zh-CN.md)
@@ -160,7 +159,7 @@ Learn more about how tracing works and how to integrate it in the [Tracing Guide
 | Format                      | Status     | Compatibility       | Modalities      |
 | --------------------------- | ---------- | ------------------- | --------------- |
 | **OpenAI Chat Completions** | ✅ Done    | Fully compatible    | Text, Image     |
-| **OpenAI Responses**        | ⚠️ Partial | No `previous_response_id` | Text        |
+| **OpenAI Responses**        | ⚠️ Partial | No `previous_response_id` | Text, Image     |
 | **Anthropic Messages**      | ✅ Done    | Fully supported     | Text            |
 | **Gemini**                  | ✅ Done    | Fully supported     | Text, Image     |
 | **AI SDK**                  | ⚠️ Partial | Partially supported | Text            |
@@ -390,7 +389,9 @@ For detailed information on API key profiles, including configuration examples, 
 
 ### 5. Claude Code/Codex Integration
 
-See the dedicated [Claude Code & Codex Integration Guide](docs/en/guides/claude-code-integration.md) for detailed setup steps, troubleshooting, and tips on combining these tools with AxonHub model profiles.
+See the dedicated guides for detailed setup steps, troubleshooting, and tips on combining these tools with AxonHub model profiles:
+- [Claude Code Integration Guide](docs/en/guides/claude-code-integration.md)
+- [Codex Integration Guide](docs/en/guides/codex-integration.md)
 
 ---
 
@@ -419,7 +420,7 @@ For detailed development instructions, architecture design, and contribution gui
 
 ## 📄 License
 
-This project is open source under the MIT License. See [LICENSE](LICENSE) file for details.
+This project is licensed under multiple licenses (Apache-2.0 and LGPL-3.0). See [LICENSE](LICENSE) file for the detailed licensing overview and terms.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 project: bluemonday
-stars: 3591
+stars: 3601
 description: |-
     bluemonday: a fast golang HTML sanitizer (inspired by the OWASP Java HTML Sanitizer) to scrub user generated content of XSS
 url: https://github.com/microcosm-cc/bluemonday

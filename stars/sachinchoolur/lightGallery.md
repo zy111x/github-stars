@@ -1,6 +1,6 @@
 ---
 project: lightGallery
-stars: 6944
+stars: 6954
 description: |-
     A customizable, modular, responsive, lightbox gallery plugin. 
 url: https://github.com/sachinchoolur/lightGallery

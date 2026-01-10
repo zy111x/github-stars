@@ -1,6 +1,6 @@
 ---
 project: flexoki
-stars: 2883
+stars: 2905
 description: |-
     An inky color scheme for prose and code.
 url: https://github.com/kepano/flexoki
@@ -49,6 +49,7 @@ Flexoki is available for the following apps and tools.
 - [Tealdeer](https://github.com/kepano/flexoki/tree/main/tealdeer) by @Orest58008
 - [Telegram](https://github.com/kepano/flexoki/tree/main/telegram) by @Orest58008
 - [tmux](https://github.com/kepano/flexoki/tree/main/tmux) by @tklai
+- [Typora](https://github.com/guidovicino/flexoki-typora) by @guidovicino
 - [Ulysses](https://github.com/kepano/flexoki/tree/main/ulysses) by @jasonekratz
 - [Visual Studio Code](https://github.com/kepano/flexoki/tree/main/vscode) by @Railly
 - [Warp](https://github.com/kepano/flexoki/tree/main/warp-terminal) by @tplesnar
@@ -74,6 +75,7 @@ Flexoki is available for the following apps and tools.
 - [theme.sh](https://github.com/kepano/flexoki/tree/main/theme.sh) by @TheLastZombie
 - [pywal](https://github.com/kepano/flexoki/tree/main/pywal) by @hydroakri
 - [Starlight](https://delucis.github.io/starlight-theme-flexoki/) by @delucis
+- [VitePress](https://github.com/mancuoj/vitepress-theme-flexoki) by @mancuoj
 
 ### Other
 

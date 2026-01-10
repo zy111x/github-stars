@@ -1,6 +1,6 @@
 ---
 project: blind_watermark
-stars: 11825
+stars: 11885
 description: |-
     Blind&Invisible Watermark ，图片盲水印，提取水印无须原图！
 url: https://github.com/guofei9987/blind_watermark

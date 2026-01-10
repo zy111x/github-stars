@@ -1,6 +1,6 @@
 ---
 project: typesense
-stars: 24921
+stars: 24991
 description: |-
     Open Source alternative to Algolia + Pinecone and an Easier-to-Use alternative to ElasticSearch ⚡ 🔍 ✨ Fast, typo tolerant, in-memory fuzzy Search Engine for building delightful search experiences
 url: https://github.com/typesense/typesense

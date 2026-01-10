@@ -1,6 +1,6 @@
 ---
 project: square-ui
-stars: 3316
+stars: 3905
 description: |-
     Collection of beautifully crafted open-source layouts UI built with shadcn/ui.
 url: https://github.com/ln-dev7/square-ui
@@ -10,10 +10,22 @@ url: https://github.com/ln-dev7/square-ui
 
 Collection of beautifully crafted open-source layouts UI built with Next.js and shadcn/ui.
 
+## Sponsors
+
+This project is sponsored by:
+
+- <a href="https://ui.lndev.me/" target="_blank">lndev/ui</a> : Fine components coded by lndev.
+
+[Become a sponsor](https://ecaefmew.mychariow.shop/prd_3cu1s0)
+
+## Templates
+
 > **Note:** Templates using Radix UI are located in `templates/`, while templates using Base UI are in `templates-baseui/`.
 
 | Template              | Description                                                                                                      | Live Demo                                                   | GitHub (Radix UI)                                                                      | GitHub (Base UI)                                                                        | Design                                   |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------- |
+| **Bookmarks**         | Modern bookmarks manager with collections, tags, favorites, archive, and trash.                                  | [View Demo](https://square-ui-bookmarks.vercel.app)         | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/bookmarks)         | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/bookmarks)   | [LN](https://x.com/ln_dev7)              |
+| **Maps**              | Modern maps dashboard with location search, favorites, recents, and interactive map controls.                    | [View Demo](https://square-ui-maps.vercel.app)              | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/maps)              | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/maps)        | [LN](https://x.com/ln_dev7)              |
 | **Files**             | Modern file manager with folders, storage overview, file grid/list view, and navigation.                         | [View Demo](https://square-ui-files.vercel.app)             | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/files)             | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/files)       | [LN](https://x.com/ln_dev7)              |
 | **Dashboard 4**       | Modern dashboard with workgroups, multi-line leads chart, top performers, and lead management table.             | [View Demo](https://square-ui-dashboard-4.vercel.app)       | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/dashboard-4)       | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/dashboard-4) | [Augustas](https://x.com/AugustasDesign) |
 | **Leads**             | Modern leads management dashboard with statistics, charts, and data table with filters.                          | [View Demo](https://square-ui-leads.vercel.app)             | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/leads)             | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/leads)       | [Rico](https://x.com/_heyrico)           |

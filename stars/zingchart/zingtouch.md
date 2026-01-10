@@ -1,6 +1,6 @@
 ---
 project: zingtouch
-stars: 2146
+stars: 2147
 description: |-
     A JavaScript touch gesture detection library for the modern web
 url: https://github.com/zingchart/zingtouch

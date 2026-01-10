@@ -1,6 +1,6 @@
 ---
 project: domainstack.io
-stars: 197
+stars: 206
 description: |-
     🧰 All-in-one domain name intelligence
 url: https://github.com/jakejarvis/domainstack.io
@@ -21,9 +21,10 @@ url: https://github.com/jakejarvis/domainstack.io
 - **Domain tracking dashboard**: Sign in to track domains you own, verify ownership, and receive expiration alerts.
 - **Pro tier subscriptions**: Upgrade via [Polar](https://polar.sh) for expanded domain tracking limits (100 vs 5 domains).
 - **Multi-channel notifications**: Configurable alerts via Email and In-App notifications for domain expiry, certificate expiry, and critical record changes.
+- **Calendar integration**: Subscribe to domain expiration dates via iCalendar feed (Google Calendar, Apple Calendar, Outlook, etc.).
 - **Reliable data pipeline**: Postgres persistence with per-table TTLs (Drizzle) and event-driven background revalidation (Inngest).
 - **Advanced dashboard**: Domain filtering by status/health/TLD, URL-persisted filters, bulk archive/delete actions, and sortable table/grid views.
-- **Dynamic configuration**: Vercel Edge Config for runtime-adjustable domain suggestions and tier limits without redeployment.
+- **Dynamic configuration**: Vercel Edge Config for runtime-adjustable data and flags without redeployment.
 
 ## 🛠️ Tech Stack
 
@@ -36,8 +37,9 @@ url: https://github.com/jakejarvis/domainstack.io
 - **Better Auth** for authentication via OAuth
 - **Polar** for subscription payments
 - **Inngest** for scheduled and event-driven background jobs
+- [**Workflow DevKit**](https://useworkflow.dev/) for durable resource-intensive operations
 - **Resend** + **React Email** for transactional email notifications
-- **Vercel Edge Config** for runtime configuration (domain suggestions, tier limits, and other safeguards)
+- **Vercel Edge Config** for runtime configuration (domain suggestions, provider detection, and other safeguards)
 - **Vercel Blob** for media storage
 - **PostHog** for analytics and error tracking
 - [**mapcn**](https://mapcn.vercel.app/) with [**CARTO Basemaps**](https://docs.carto.com/faqs/carto-basemaps) for beautiful IP geolocation maps
@@ -63,7 +65,11 @@ Create `.env.local` and populate [required variables](.env.example):
 cp .env.example .env.local
 ```
 
-### 3. Apply Drizzle database migrations to local Postgres database
+At minimum, you'll need `DATABASE_URL` pointing to a PostgreSQL database.
+
+### 3. Set up the database
+
+Apply Drizzle migrations to initialize the database schema:
 
 ```bash
 pnpm db:migrate
@@ -71,36 +77,16 @@ pnpm db:migrate
 
 ### 4. Start development
 
-The `dev` script uses `concurrently` to automatically start all local services and the Next.js dev server together:
-
 ```bash
 pnpm dev
 ```
 
-This single command boots:
-- **Next.js dev server** on `http://localhost:3000`
-- **Inngest dev server** on `http://localhost:8288`
-- **Postgres** on `localhost:5432`
-- **ngrok tunnel** with public HTTPS URL (for webhook testing) and web UI on `http://localhost:4040`
-
-Open [http://localhost:3000](http://localhost:3000). Press `Ctrl+C` to stop all services at once.
-
-> [!NOTE]
-> The ngrok URL can be used for testing public endpoints (like [sandboxed Polar webhooks](https://polar.sh/docs/integrate/webhooks/endpoints#get-started)) during local development.
->
-> **For persistent ngrok URLs:** Set both `NGROK_AUTHTOKEN` and `NGROK_URL` in `.env.local`. Get your auth token and create a free static domain at https://dashboard.ngrok.com/domains. This ensures the same URL every time you restart services.
-
-> [!NOTE]
-> On Linux, if `host.docker.internal` isn't available, add `extra_hosts` to the services in [`docker-compose.yml`](docker-compose.yml):
->
-> ```yaml
-> extra_hosts: ["host.docker.internal:host-gateway"]
-> ```
+Open [http://localhost:3000](http://localhost:3000).
 
 ## 🧰 Useful Commands
 
 ```bash
-pnpm dev           # start all local services (Docker) + Next.js dev server
+pnpm dev           # start Next.js dev server
 pnpm build         # compile production bundle
 pnpm start         # serve compiled output for smoke tests
 pnpm lint          # Biome lint/format checks
