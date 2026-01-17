@@ -1,6 +1,6 @@
 ---
 project: tablecn
-stars: 5884
+stars: 5904
 description: |-
     Shadcn table with server-side sorting, filtering, and pagination.
 url: https://github.com/sadmann7/tablecn

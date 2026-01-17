@@ -1,6 +1,6 @@
 ---
 project: IPQuality
-stars: 6256
+stars: 6364
 description: |-
     IP质量检测脚本 - IP Quality Check Script
 url: https://github.com/xykt/IPQuality
@@ -103,7 +103,7 @@ bash <(curl -Ls https://IP.Check.Place) -y
 bash <(curl -Ls https://IP.Check.Place) -f
 ````
 
-##### 输出JSON结果：
+##### 输出JSON结果（[输出示例](https://github.com/xykt/IPQuality/blob/main/res/output.json)）：
 ````bash
 bash <(curl -Ls https://IP.Check.Place) -j
 ````
@@ -137,6 +137,8 @@ docker run --rm --net=host -it xykt/ipquality & docker rmi xykt/ipquality > NUL 
 ````
 
 ## 脚本更新
+
+2026/01/15 17:23 修正不规范的JSON
 
 2025/08/03 00:00 增加Docker运行方式
 

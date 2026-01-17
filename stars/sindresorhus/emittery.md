@@ -1,6 +1,6 @@
 ---
 project: emittery
-stars: 2006
+stars: 2007
 description: |-
     Simple and modern async event emitter
 url: https://github.com/sindresorhus/emittery

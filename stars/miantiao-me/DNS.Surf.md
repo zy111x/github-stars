@@ -1,6 +1,6 @@
 ---
 project: DNS.Surf
-stars: 395
+stars: 397
 description: |-
     Querying DNS Resolution Results in Different Regions Worldwide.
 url: https://github.com/miantiao-me/DNS.Surf

@@ -1,6 +1,6 @@
 ---
 project: cc-wf-studio
-stars: 2420
+stars: 2685
 description: |-
     ClaudeCode Workflow Studio
 url: https://github.com/breaking-brake/cc-wf-studio
@@ -96,6 +96,8 @@ All operations run locally within VSCode. **Note:** MCP Tool nodes may require n
 📤 **One-Click Export** - Generate `.claude/agents/*.md` and `.claude/commands/*.md` files ready for immediate use with Claude Code
 
 💬 **Slack Workflow Sharing (β)** - Share workflows directly to Slack channels with preview cards and one-click import links for seamless team collaboration
+
+🤖 **GitHub Copilot Export (β)** - Export workflows to GitHub Copilot format with two execution modes: **VSCode Copilot** (`.github/prompts/*.prompt.md` for Copilot Chat) and **Copilot CLI** (`.github/skills/{name}/SKILL.md` for terminal execution). Select your preferred mode from the dropdown menu. **Note:** This is an experimental feature with limited support. Some features (e.g., Skill nodes) are not yet supported in Copilot export
 
 🧩 **Rich Node Types** - Build complex workflows with diverse node types: Prompt (templates), Sub-Agent (AI tasks), Skill (Claude Code Skills), MCP (external tools), IfElse/Switch (conditional branching), and AskUserQuestion (user decisions)
 

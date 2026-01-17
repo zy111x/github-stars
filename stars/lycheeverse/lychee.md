@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 3238
+stars: 3266
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -364,8 +364,7 @@ Options:
           Use "lychee --accept '200..=204, 429, 500' <inputs>..." to provide a comma-
           separated list of accepted status codes. This example will accept 200, 201,
           202, 203, 204, 429, and 500 as valid status codes.
-
-          [default: 100..=103,200..=299]
+          Defaults to '100..=103,200..=299' if the user provides no value.
 
       --archive <ARCHIVE>
           Specify the use of a specific web archive. Can be used in combination with `--suggest`

@@ -1,6 +1,6 @@
 ---
 project: coze-studio
-stars: 19394
+stars: 19495
 description: |-
     An AI agent development platform with all-in-one visual tools, simplifying agent creation, debugging, and deployment like never before. Coze your way to AI Agent creation.
 url: https://github.com/coze-dev/coze-studio
@@ -66,7 +66,7 @@ Deployment steps:
    # for macOS or Linux
    make web  
    # for windows
-   cp .env.example .env
+   cp ./docker/.env.example ./docker/.env
    docker compose -f ./docker/docker-compose.yml up
    ```
 
@@ -138,3 +138,4 @@ Thank you to all the developers and community members who have contributed to th
 * The [FlowGram](https://github.com/bytedance/flowgram.ai) team - providing a high-quality workflow building engine for Coze Studio's frontend workflow canvas editor
 * The [Hertz](https://github.com/cloudwego/hertz) team - Go HTTP framework with high-performance and strong-extensibility for building micro-services
 * All users who participated in testing and feedback
+

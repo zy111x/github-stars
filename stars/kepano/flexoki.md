@@ -1,6 +1,6 @@
 ---
 project: flexoki
-stars: 2905
+stars: 2928
 description: |-
     An inky color scheme for prose and code.
 url: https://github.com/kepano/flexoki
@@ -45,6 +45,7 @@ Flexoki is available for the following apps and tools.
 - [Slack](https://github.com/kepano/flexoki/tree/main/slack) by @maxobat
 - [Standard Notes](https://github.com/myreli/sn-flexoki) by @myreli
 - [Sublime Text](https://github.com/kepano/flexoki-sublime) by @kepano
+- [Substack](https://github.com/kepano/flexoki/tree/main/substack) by @jackydangelo
 - [Tape](https://github.com/kepano/flexoki/tree/main/tape) by @TheLastZombie
 - [Tealdeer](https://github.com/kepano/flexoki/tree/main/tealdeer) by @Orest58008
 - [Telegram](https://github.com/kepano/flexoki/tree/main/telegram) by @Orest58008

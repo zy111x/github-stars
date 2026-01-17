@@ -1,6 +1,6 @@
 ---
 project: bifrost
-stars: 1637
+stars: 1738
 description: |-
     Fastest LLM gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000+ models support & <100 µs overhead at 5k RPS.
 url: https://github.com/maximhq/bifrost
@@ -61,6 +61,26 @@ curl -X POST http://localhost:8080/v1/chat/completions \
 
 - [Gateway Setup](https://docs.getbifrost.ai/quickstart/gateway/setting-up) - HTTP API deployment
 - [Go SDK Setup](https://docs.getbifrost.ai/quickstart/go-sdk/setting-up) - Direct integration
+
+---
+
+## Enterprise Deployments
+
+Bifrost supports enterprise-grade, private deployments for teams running production AI systems at scale.
+In addition to private networking, custom security controls, and governance, enterprise deployments unlock advanced capabilities including adaptive load balancing, clustering, guardrails, MCP gateway and and other features designed for enterprise-grade scale and reliability.
+
+👉 <a href="https://www.getmaxim.ai/bifrost/enterprise" target="_blank">Explore enterprise capabilities</a>
+
+<div align="left">
+  <a href="https://calendly.com/maximai/bifrost-demo">
+    <img src=".github/assets/book-demo-button.png" alt="Book a Demo" width="170" style="margin-top:5px;"/>
+  </a>
+</div>
+
+
+
+
+
 
 ---
 

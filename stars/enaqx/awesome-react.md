@@ -1,6 +1,6 @@
 ---
 project: awesome-react
-stars: 71523
+stars: 71635
 description: |-
     A collection of awesome things regarding React ecosystem
 url: https://github.com/enaqx/awesome-react
@@ -9,6 +9,7 @@ url: https://github.com/enaqx/awesome-react
 # Awesome React [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 A collection of awesome things regarding the React ecosystem.
+
 
 - [React](#react)
   - [React General Resources](#react-general-resources)
@@ -63,7 +64,7 @@ A collection of awesome things regarding the React ecosystem.
 
 - [next](https://github.com/vercel/next.js) - The React Framework
 - [gatsby](https://github.com/gatsbyjs/gatsby) - Build modern websites with React
-- [remix](https://github.com/remix-run/remix) - Full stack web Framework that lets you focus on the user interface
+- [remix](https://github.com/remix-run/remix) - Full-stack web Framework that lets you focus on the user interface
 - [react-admin](https://github.com/marmelab/react-admin) - A frontend Framework for building B2B applications
 - [refine](https://github.com/refinedev/refine) - Build your React-based CRUD applications, without constraints
 - [vike](https://github.com/vikejs/vike) - The Modular Framework - Next.js & Nuxt alternative
@@ -98,7 +99,7 @@ A collection of awesome things regarding the React ecosystem.
 - [xstate](https://github.com/statelyai/xstate) - State machines and statecharts for the modern web
 - [effector](https://github.com/zerobias/effector) - Business logic with ease
 - [immer](https://github.com/immerjs/immer) - Create the next immutable state by mutating the current one
-- [immutable-js](https://github.com/immutable-js/immutable-js) - Immutable persistent data collections for Javascript
+- [immutable-js](https://github.com/immutable-js/immutable-js) - Immutable persistent data collections for JavaScript
 - [rxdb](https://github.com/pubkey/rxdb) - A fast, offline-first, reactive database for JavaScript Applications
 
 #### React Styling
@@ -201,7 +202,7 @@ A collection of awesome things regarding the React ecosystem.
 
 - [formatjs](https://github.com/formatjs/formatjs) - Internationalize your web apps
 - [react-i18next](https://github.com/i18next/react-i18next) - Internationalization for React done right
-- [react-inltayer](https://github.com/aymericzip/intlayer) - Internationalization focused on maintenability for React
+- [react-intlayer](https://github.com/aymericzip/intlayer) - Internationalization focused on maintainability for React
 
 #### React Graphics and Animations
 

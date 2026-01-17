@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 11691
+stars: 11758
 description: |-
     Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
 url: https://github.com/trycua/cua
@@ -93,7 +93,7 @@ Create and manage macOS/Linux VMs with near-native performance on Apple Silicon 
 lume run macos-sequoia-vanilla:latest
 ```
 
-**[Get Started](https://cua.ai/docs/lume/guide/getting-started/installation)** | **[Prebuilt Images](https://cua.ai/docs/lume/guide/fundamentals/prebuilt-images)** | **[CLI Reference](https://cua.ai/docs/lume/reference/cli-reference)**
+**[Get Started](https://cua.ai/docs/lume)** | **[FAQ](https://cua.ai/docs/lume/guide/getting-started/faq)** | **[CLI Reference](https://cua.ai/docs/lume/reference/cli-reference)**
 
 ---
 

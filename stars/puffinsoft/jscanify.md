@@ -1,6 +1,6 @@
 ---
 project: jscanify
-stars: 1697
+stars: 1699
 description: |-
     The Javascript document scanning library.
 url: https://github.com/puffinsoft/jscanify
@@ -20,7 +20,7 @@ url: https://github.com/puffinsoft/jscanify
 </p>
 
 <p align="center">
-  <a href="https://nodei.co/npm/jscanify/"><img src="https://nodei.co/npm/jscanify.png"></a>
+  <a href="https://npmjs.com/package/jscanify"><img src="https://nodei.co/npm/jscanify.png"></a>
 </p>
 
 <p align="center">
@@ -71,7 +71,7 @@ cdn:
 <script src="https://cdn.jsdelivr.net/gh/ColonelParrot/jscanify@master/src/jscanify.min.js"></script>
 ```
 
-> **Note**: jscanify on NodeJS is slightly different. See [wiki: use on NodeJS](https://github.com/ColonelParrot/jscanify/wiki#use-on-nodejs).
+> **Note**: jscanify on NodeJS is slightly different. See [wiki: use on NodeJS](https://github.com/puffinsoft/jscanify/wiki/Getting-started#use-on-nodejs).
 
 ### Highlight Paper in Image
 
@@ -135,4 +135,6 @@ To export the paper to a PDF, see [here](https://stackoverflow.com/questions/236
 - for optimal paper detection, the paper should be placed on a flat surface with a solid background color
 - we recommend wrapping your code using `jscanify` in a window `load` event listener to ensure OpenCV is loaded
 
+
 <h3 align="center" margin="0"><a href="https://github.com/puffinsoft/jscanify/wiki">➡️ view documentation</a></h3>
+

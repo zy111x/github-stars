@@ -1,6 +1,6 @@
 ---
 project: eslintrc-generator
-stars: 81
+stars: 80
 description: |-
     null
 url: https://github.com/shangxiao/eslintrc-generator

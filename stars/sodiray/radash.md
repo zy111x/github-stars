@@ -1,6 +1,6 @@
 ---
 project: radash
-stars: 4825
+stars: 4831
 description: |-
     Functional utility library - modern, simple, typed, powerful
 url: https://github.com/sodiray/radash

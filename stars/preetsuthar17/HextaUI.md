@@ -1,6 +1,6 @@
 ---
 project: HextaUI
-stars: 560
+stars: 563
 description: |-
     Ready-to-use foundation components/blocks built on top of shadcn/ui.
 url: https://github.com/preetsuthar17/HextaUI

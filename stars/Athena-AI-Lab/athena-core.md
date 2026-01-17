@@ -1,6 +1,6 @@
 ---
 project: athena-core
-stars: 403
+stars: 404
 description: |-
     A General-Purpose AI Agent ✨
 url: https://github.com/Athena-AI-Lab/athena-core

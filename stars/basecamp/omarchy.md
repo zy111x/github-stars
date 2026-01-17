@@ -1,6 +1,6 @@
 ---
 project: omarchy
-stars: 19111
+stars: 19317
 description: |-
     Beautiful, Modern & Opinionated Linux
 url: https://github.com/basecamp/omarchy

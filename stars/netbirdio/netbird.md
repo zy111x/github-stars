@@ -1,6 +1,6 @@
 ---
 project: netbird
-stars: 20928
+stars: 21102
 description: |-
     Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.
 url: https://github.com/netbirdio/netbird
@@ -45,6 +45,11 @@ url: https://github.com/netbirdio/netbird
   <br/>
  
 </strong>
+<br>
+<strong>
+  🚀 <a href="https://careers.netbird.io">We are hiring! Join us at careers.netbird.io</a>
+</strong>
+<br>
 <br>
 <a href="https://registry.terraform.io/providers/netbirdio/netbird/latest">
     New: NetBird terraform provider

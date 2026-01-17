@@ -1,6 +1,6 @@
 ---
 project: llmgateway
-stars: 791
+stars: 806
 description: |-
     Route, manage, and analyze your LLM requests across multiple providers with a unified API interface.
 url: https://github.com/theopenco/llmgateway
@@ -68,7 +68,9 @@ curl -X POST https://api.llmgateway.io/v1/chat/completions \
 
 ## Folder Structure
 
-- `apps/ui`: Vite + React frontend
+- `apps/ui`: Next.js dashboard frontend
+- `apps/playground`: Next.js LLM playground
+- `apps/code`: Next.js Dev Plans + coding tools landing & dashboard
 - `apps/api`: Hono backend
 - `apps/gateway`: API gateway for routing LLM requests
 - `apps/docs`: Documentation site

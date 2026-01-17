@@ -1,6 +1,6 @@
 ---
 project: flowgram.ai
-stars: 7530
+stars: 7583
 description: |-
     FlowGram is an extensible workflow development framework with built-in canvas, form, variable, and materials that helps developers build AI workflow platforms faster and simpler.
 url: https://github.com/bytedance/flowgram.ai

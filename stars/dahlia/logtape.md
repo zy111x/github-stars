@@ -1,8 +1,8 @@
 ---
 project: logtape
-stars: 1501
+stars: 1530
 description: |-
-    Simple logging library with zero dependencies for Deno, Node.js, Bun, browsers, and edge functions
+    Unobtrusive logging library with zero dependencies for Deno, Node.js, Bun, browsers, and edge functions
 url: https://github.com/dahlia/logtape
 ---
 
@@ -17,8 +17,13 @@ LogTape
 [![GitHub Actions][GitHub Actions badge]][GitHub Actions]
 [![Codecov][Codecov badge]][Codecov]
 
-LogTape is a logging library for JavaScript and TypeScript.  It provides a
-simple and flexible logging system that is easy to use and easy to extend.
+LogTape is a logging library for JavaScript and TypeScript designed with
+a library-first philosophy.  Unlike traditional loggers, LogTape is
+unobtrusive—libraries can safely log without any configuration, while
+applications retain full control.  With zero dependencies and universal runtime
+support, it works seamlessly across Deno, Node.js, Bun, browsers, and edge
+functions.
+
 The highlights of LogTape are:
 
  -  *Zero dependencies*: LogTape has zero dependencies.  You can use LogTape
@@ -109,6 +114,7 @@ list of the packages in the LogTape monorepo:
 | Package                                                    | JSR                                  | npm                                  | Description                |
 | ---------------------------------------------------------- | ------------------------------------ | ------------------------------------ | -------------------------- |
 | [*@logtape/logtape*](/packages/logtape/)                   | [JSR][jsr:@logtape/logtape]          | [npm][npm:@logtape/logtape]          | Core logging functionality |
+| [*@logtape/adaptor-log4js*](/packages/adaptor-log4js/)     | [JSR][jsr:@logtape/adaptor-log4js]   | [npm][npm:@logtape/adaptor-log4js]   | [log4js] adapter           |
 | [*@logtape/adaptor-pino*](/packages/adaptor-pino/)         | [JSR][jsr:@logtape/adaptor-pino]     | [npm][npm:@logtape/adaptor-pino]     | [Pino] adapter             |
 | [*@logtape/adaptor-winston*](/packages/adaptor-winston/)   | [JSR][jsr:@logtape/adaptor-winston]  | [npm][npm:@logtape/adaptor-winston]  | [winston] adapter          |
 | [*@logtape/cloudwatch-logs*](/packages/cloudwatch-logs/)   | [JSR][jsr:@logtape/cloudwatch-logs]  | [npm][npm:@logtape/cloudwatch-logs]  | [AWS CloudWatch Logs] sink |
@@ -129,6 +135,9 @@ list of the packages in the LogTape monorepo:
 
 [jsr:@logtape/logtape]: https://jsr.io/@logtape/logtape
 [npm:@logtape/logtape]: https://www.npmjs.com/package/@logtape/logtape
+[jsr:@logtape/adaptor-log4js]: https://jsr.io/@logtape/adaptor-log4js
+[npm:@logtape/adaptor-log4js]: https://www.npmjs.com/package/@logtape/adaptor-log4js
+[log4js]: https://log4js-node.github.io/log4js-node/
 [jsr:@logtape/adaptor-pino]: https://jsr.io/@logtape/adaptor-pino
 [npm:@logtape/adaptor-pino]: https://www.npmjs.com/package/@logtape/adaptor-pino
 [Pino]: https://github.com/pinojs/pino

@@ -1,6 +1,6 @@
 ---
 project: Natter
-stars: 2088
+stars: 2096
 description: |-
     Expose your TCP/UDP port behind full-cone NAT to the Internet.
 url: https://github.com/MikeWang000000/Natter

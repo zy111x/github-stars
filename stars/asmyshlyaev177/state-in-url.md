@@ -1,6 +1,6 @@
 ---
 project: state-in-url
-stars: 406
+stars: 407
 description: |-
     Store any user state in query parameters; imagine JSON in a browser URL, while keeping types and structure of data, e.g.numbers will be decoded as numbers not strings. With TS validation. Shared state and URL state sync without any hassle or boilerplate. Supports Next.js@14-16, react-router@6-7, and Remix@2.
 url: https://github.com/asmyshlyaev177/state-in-url
@@ -629,7 +629,7 @@ const tags = [
 ];
 ```
 
-[Demo page example code](https://github.com/asmyshlyaev177/state-in-url/blob/master/packages/example-nextjs14/src/app/Form.tsx)
+[Demo page example code](https://github.com/asmyshlyaev177/state-in-url/blob/master/packages/example-nextjs15/src/app/Form.tsx)
 </details>
 
 ##### Update state only and sync to URL manually

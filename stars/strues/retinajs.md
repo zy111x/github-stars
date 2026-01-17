@@ -1,6 +1,6 @@
 ---
 project: retinajs
-stars: 4389
+stars: 4390
 description: |-
     JavaScript, SCSS, Sass, Less, and Stylus helpers for rendering high-resolution image variants
 url: https://github.com/strues/retinajs

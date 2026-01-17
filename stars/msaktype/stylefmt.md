@@ -1,9 +1,9 @@
 ---
 project: stylefmt
-stars: 2090
+stars: 2091
 description: |-
     stylefmt is a tool that automatically formats stylesheets.
-url: https://github.com/morishxt/stylefmt
+url: https://github.com/msaktype/stylefmt
 ---
 
 > Modern CSS Formatter

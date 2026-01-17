@@ -1,6 +1,6 @@
 ---
 project: awesome-ui-agents
-stars: 261
+stars: 264
 description: |-
     A curated list of of awesome UI agents resources, encompassing Web, App, OS, and beyond (continually updated)
 url: https://github.com/opendilab/awesome-ui-agents

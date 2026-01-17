@@ -1,6 +1,6 @@
 ---
 project: dapr-agents
-stars: 598
+stars: 600
 description: |-
     Build autonomous, resilient and observable AI agents with built-in workflow orchestration, security, statefulness and telemetry.
 url: https://github.com/dapr/dapr-agents
@@ -88,7 +88,7 @@ For a complete list of issue (including bug fixes) please check out our [GitHub 
 
 ## Documentation
 
-- Documentation: [https://docs.dapr.io/developing-applications/dapr-agents/](https://docs.dapr.io/developing-applications/dapr-agents/)
+- [Documentation](https://docs.dapr.io/developing-ai/dapr-agents/)
 
 ## Community
 
@@ -103,13 +103,15 @@ For development setup and guidelines, see our [Development Guide](docs/developme
 Prerequisites:
 
 - [Dapr CLI](https://docs.dapr.io/getting-started/install-dapr-cli/)
-- [Python 3.10](https://www.python.org/downloads/release/python-3100/)
+- [Python >=3.11](https://www.python.org/downloads/latest/python3.11/)
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 ### Install Dapr Agents
 
 ```bash
 dapr init
-pip install dapr-agents
+uv init
+uv add dapr-agents
 ```
 
 ### Run The Quickstarts

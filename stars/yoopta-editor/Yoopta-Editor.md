@@ -1,6 +1,6 @@
 ---
 project: Yoopta-Editor
-stars: 2667
+stars: 2680
 description: |-
     Build Notion-like, Craft-like, Coda-like, Medium-like editors with Yoopta
 url: https://github.com/yoopta-editor/Yoopta-Editor

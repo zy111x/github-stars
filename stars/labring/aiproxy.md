@@ -1,6 +1,6 @@
 ---
 project: aiproxy
-stars: 329
+stars: 335
 description: |-
     AI Proxy is a high performance AI gateway using OpenAI / Claude / Gemini protocol as the entry point. It features intelligent error handling, multi-channel management, and comprehensive monitoring. With support for multiple models, rate limiting, and multi-tenant isolation.
 url: https://github.com/labring/aiproxy
@@ -87,7 +87,7 @@ graph TB
     Gateway --> Router[Intelligent Router]
     Gateway --> Monitor[Monitoring & Analytics]
     Gateway --> Plugins[Plugin System]
-    
+
     Plugins --> CachePlugin[Cache Plugin]
     Plugins --> SearchPlugin[Web Search Plugin]
     Plugins --> ThinkSplitPlugin[Think Split Plugin]
@@ -97,12 +97,12 @@ graph TB
     Router --> Provider2[Anthropic]
     Router --> Provider3[Azure OpenAI]
     Router --> ProviderN[Other Providers]
-    
+
     Gateway --> MCP[MCP Servers]
     MCP --> PublicMCP[Public MCP]
     MCP --> GroupMCP[Organization MCP]
     MCP --> EmbedMCP[Embedded MCP]
-    
+
     Monitor --> Alerts[Alert System]
     Monitor --> Analytics[Analytics Dashboard]
     Monitor --> Logs[Audit Logs]
@@ -291,7 +291,7 @@ Deploy instantly on Sealos with built-in model capabilities:
 ### FastGPT Integration
 
 Seamlessly integrate with FastGPT for enhanced AI workflows:
-[FastGPT Documentation](https://doc.tryfastgpt.ai/docs/development/modelconfig/ai-proxy/)
+[FastGPT Documentation](https://doc.fastgpt.cn/docs/introduction/development/modelConfig/ai-proxy)
 
 ### Claude Code Integration
 
@@ -339,6 +339,7 @@ wire_api = "chat"
 ```
 
 **Protocol Conversion Support**:
+
 - **Responses-only models**: AI Proxy automatically converts Chat/Claude/Gemini requests to Responses API format for models that only support the Responses API
 - **Multi-protocol access**: Use any protocol (Chat Completions, Claude Messages, or Gemini) to access responses-only models
 - **Transparent conversion**: No client-side changes needed - AI Proxy handles protocol translation automatically

@@ -1,6 +1,6 @@
 ---
 project: bolt.diy
-stars: 18833
+stars: 18879
 description: |-
     Prompt, run, edit, and deploy full-stack web applications using any LLM you want!
 url: https://github.com/stackblitz-labs/bolt.diy

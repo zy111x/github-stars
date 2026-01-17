@@ -1,6 +1,6 @@
 ---
 project: MobileAgent
-stars: 6932
+stars: 6986
 description: |-
      Mobile-Agent: The Powerful GUI Agent Family
 url: https://github.com/X-PLUG/MobileAgent

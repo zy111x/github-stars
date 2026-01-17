@@ -1,6 +1,6 @@
 ---
 project: frimousse
-stars: 1636
+stars: 1642
 description: |-
     A lightweight, unstyled, and composable emoji picker for React.
 url: https://github.com/liveblocks/frimousse

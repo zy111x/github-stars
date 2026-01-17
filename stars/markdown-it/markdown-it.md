@@ -1,6 +1,6 @@
 ---
 project: markdown-it
-stars: 20911
+stars: 20947
 description: |-
     Markdown parser, done right. 100% CommonMark support, extensions, syntax plugins & high speed
 url: https://github.com/markdown-it/markdown-it

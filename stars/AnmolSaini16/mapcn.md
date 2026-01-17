@@ -1,6 +1,6 @@
 ---
 project: mapcn
-stars: 4140
+stars: 4730
 description: |-
     Beautiful map components. 100% Free, Zero config, one command setup.
 url: https://github.com/AnmolSaini16/mapcn
@@ -8,10 +8,8 @@ url: https://github.com/AnmolSaini16/mapcn
 
 <div align="center">
   <img src="public/banner.png" alt="mapcn banner" />
-  
-  <h1>mapcn</h1>
-  <p><strong>Beautiful maps, made simple.</strong></p>
-  
+  <br>
+  <br>
   <p>
     Free & open source map components. Zero config, one command setup.<br/>
     Built on <a href="https://maplibre.org/">MapLibre GL</a>, styled with <a href="https://tailwindcss.com/">Tailwind</a>, works seamlessly with <a href="https://ui.shadcn.com/">shadcn/ui</a>.

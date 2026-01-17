@@ -1,6 +1,6 @@
 ---
 project: virtua
-stars: 3339
+stars: 3358
 description: |-
     A zero-config, fast and small (~3kB) virtual list (and grid) component for React, Vue, Solid and Svelte.
 url: https://github.com/inokawa/virtua
@@ -74,7 +74,7 @@ export const App = () => {
 // or render prop
 export const App = () => {
   const items = Array.from({ length: 1000 }).map(
-    () => Math.floor(Math.random() * 10) * 10 + 10
+    () => Math.floor(Math.random() * 10) * 10 + 10,
   );
   return (
     <VList data={items} style={{ height: 800 }}>
@@ -202,30 +202,6 @@ export const App = () => {
 };
 ```
 
-#### React Server Components (RSC) support
-
-This library is marked as a Client Component. You can render RSC as children of `VList`, `Virtualizer` or `WindowVirtualizer`.
-
-```tsx
-// page.tsx in App Router of Next.js
-
-export default async () => {
-  const articles = await fetchArticles();
-  return (
-    <div>
-      <div>This is Server Component</div>
-      <VList style={{ height: 300 }}>
-        {articles.map((a) => (
-          <div key={a.id} style={{ border: "solid 1px gray", height: 80 }}>
-            {a.content}
-          </div>
-        ))}
-      </VList>
-    </div>
-  );
-};
-```
-
 ### Vue
 
 `vue >= 3.2` is required.
@@ -332,7 +308,7 @@ One solution is memoization with [`useMemo`](https://react.dev/reference/react/u
 ```tsx
 const elements = useMemo(
   () => tooLongArray.map((d) => <Component key={d.id} {...d} />),
-  [tooLongArray]
+  [tooLongArray],
 );
 const [position, setPosition] = useState(0);
 return (

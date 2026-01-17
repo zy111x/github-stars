@@ -1,6 +1,6 @@
 ---
 project: pear-desktop
-stars: 30403
+stars: 30484
 description: |-
     Pear 🍐 is extension for music player
 url: https://github.com/pear-devs/pear-desktop
@@ -77,7 +77,7 @@ url: https://github.com/pear-devs/pear-desktop
 
 You can help with translation on [Hosted Weblate](https://bit.ly/48n5YF7).
 
-<a href="https://bit.ly/48n5YF7/">
+<a href="https://bit.ly/48n5YF7">
   <img src="https://bit.ly/4q83L6S" alt="translation status" />
   <img src="https://bit.ly/4h3zBxo" alt="translation status 2" />
 </a>
