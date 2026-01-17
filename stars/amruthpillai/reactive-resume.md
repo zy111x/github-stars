@@ -1,8 +1,8 @@
 ---
-project: Reactive-Resume
-stars: 34377
+project: reactive-resume
+stars: 34468
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
-url: https://github.com/AmruthPillai/Reactive-Resume
+url: https://github.com/amruthpillai/reactive-resume
 ---
 
 ### Warp, built for coding with multiple AI agents.

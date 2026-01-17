@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 44848
+stars: 44940
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---
@@ -17,6 +17,16 @@ Explore the world of **Artificial Intelligence** (AI) with our 12-week, 24-lesso
 #### Supported via GitHub Action (Automated & Always Up-to-Date)
 
 Arabic | Bengali | Bulgarian | Burmese (Myanmar) | Chinese (Simplified) | Chinese (Traditional, Hong Kong) | Chinese (Traditional, Macau) | Chinese (Traditional, Taiwan) | Croatian | Czech | Danish | Dutch | Estonian | Finnish | French | German | Greek | Hebrew | Hindi | Hungarian | Indonesian | Italian | Japanese | Kannada | Korean | Lithuanian | Malay | Malayalam | Marathi | Nepali | Nigerian Pidgin | Norwegian | Persian (Farsi) | Polish | Portuguese (Brazil) | Portuguese (Portugal) | Punjabi (Gurmukhi) | Romanian | Russian | Serbian (Cyrillic) | Slovak | Slovenian | Spanish | Swahili | Swedish | Tagalog (Filipino) | Tamil | Telugu | Thai | Turkish | Ukrainian | Urdu | Vietnamese
+
+> **Prefer to Clone Locally?**
+
+> This repository includes 50+ language translations which significantly increases the download size. To clone without translations, use sparse checkout:
+> 
+> git clone --filter=blob:none --sparse https://github.com/microsoft/AI-For-Beginners.git
+> cd AI-For-Beginners
+> git sparse-checkout set --no-cone '/\*' '!translations' '!translated\_images'
+> 
+> This gives you everything you need to complete the course with a much faster download.
 
 **If you wish to have additional translations languages supported are listed here**
 
@@ -300,7 +310,7 @@ These examples are designed to help you understand AI concepts before diving int
 ### 📚 Full Curriculum Setup
 
 -   We have created a setup lesson to help you with setting up your development environment. - For Educators, we have created a curricula setup lesson for you too!
--   How to Run the code in a VSCode or a Codepace
+-   How to Run the code in a VSCode or a Codespace
 
 Follow these steps:
 
