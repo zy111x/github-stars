@@ -23,9 +23,10 @@ url: https://github.com/jakejarvis/domainstack.io
 - **Fast & private**: No sign-up required for reports.
 - **Notifications & calendar sync**: Email/In-app alerts plus iCal feeds for expirations.
 - **Advanced dashboard**: Filtering, sorting, bulk actions, and multiple view modes.
+- **AI chat assistant**: Ask questions about any domain in natural language; powered by durable streaming with automatic reconnection.
 - **MCP server**: AI-assisted domain lookups via [Model Context Protocol](https://modelcontextprotocol.io/).
 - **Pro subscription**: Paid plan via Polar for higher tracking limits.
-- **Reliable backend**: Event-driven revalidation and TTL-based persistence.
+- **Reliable backend**: SWR caching with cron-based cache warming.
 
 <p align="center">
 <a href="https://domainstack.io/github.com"><img width="600" height="315" alt="og" src="https://github.com/user-attachments/assets/4f327128-df7c-4b19-8648-cb7c85ac95b1" /></a>
@@ -39,15 +40,16 @@ url: https://github.com/jakejarvis/domainstack.io
 - **Postgres** (PlanetScale) + **Drizzle ORM** + **Upstash Redis** (rate limiting)
 - **Better Auth** (OAuth)
 - **Polar** (subscriptions)
-- **Inngest** + [**Workflow DevKit**](https://useworkflow.dev/) (background jobs)
+- [**Workflow DevKit**](https://useworkflow.dev/) (background jobs)
+- [**AI SDK**](https://ai-sdk.dev/) + [**AI Gateway**](https://vercel.com/ai-gateway)
 - **Resend** + **React Email**
 - **Vercel** (Edge Config, Blob Storage)
 - [**mapcn**](https://mapcn.vercel.app/) + [**CARTO Basemaps**](https://docs.carto.com/faqs/carto-basemaps)
 - [**Logo.dev**](https://www.logo.dev)
 - [**IPLocate.io**](https://www.iplocate.io/)
 - **PostHog** (analytics)
-- **Puppeteer** (screenshots)
-- **Vitest** + **Playwright**, **Biome**
+- **Turborepo** (monorepo)
+- **Vitest** + **Playwright** (testing), **Biome** (linting)
 
 ## Development
 
@@ -61,10 +63,10 @@ pnpm install
 
 ### 2. Configure environment variables
 
-Create `.env.local` and populate [required variables](.env.example):
+Create `.env.local` in the `apps/web` directory and populate [required variables](apps/web/.env.example):
 
 ```bash
-cp .env.example .env.local
+cp apps/web/.env.example apps/web/.env.local
 ```
 
 At minimum, you'll need `DATABASE_URL` pointing to a Postgres database.

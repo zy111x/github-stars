@@ -1,9 +1,9 @@
 ---
 project: oxbow
-stars: 173
+stars: 177
 description: |-
     null
-url: https://github.com/UnwrappedDesign/oxbow
+url: https://github.com/michael-andreuzza/oxbow
 ---
 
 ![Oxbow banner](/public/images/OpenGraph/readme.png)

@@ -1,6 +1,6 @@
 ---
 project: regulex
-stars: 5830
+stars: 5832
 description: |-
     :construction: Regular Expression Excited!
 url: https://github.com/CJex/regulex

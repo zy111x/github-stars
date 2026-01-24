@@ -1,6 +1,6 @@
 ---
 project: RSS.Beauty
-stars: 463
+stars: 466
 description: |-
     Make Your RSS Beautiful!
 url: https://github.com/miantiao-me/RSS.Beauty

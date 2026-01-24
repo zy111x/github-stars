@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 1721
+stars: 1742
 description: |-
     A unified hub for centrally managing and dynamically orchestrating multiple MCP servers/APIs into separate endpoints with flexible routing strategies
 url: https://github.com/samanhappy/mcphub
@@ -26,6 +26,7 @@ MCPHub makes it easy to manage and scale multiple MCP (Model Context Protocol) s
 - **Smart Routing** - AI-powered tool discovery using vector semantic search ([Learn more](https://docs.mcphubx.com/features/smart-routing))
 - **Hot-Swappable Config** - Add, remove, or update servers without downtime
 - **OAuth 2.0 Support** - Both client and server modes for secure authentication ([Learn more](https://docs.mcphubx.com/features/oauth))
+- **Social Login** - Seamless GitHub and Google login support with Better Auth integration (requires Database Mode)
 - **Database Mode** - Store configuration in PostgreSQL for production environments ([Learn more](https://docs.mcphubx.com/configuration/database-configuration))
 - **Docker-Ready** - Deploy instantly with containerized setup
 

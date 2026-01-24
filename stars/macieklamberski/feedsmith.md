@@ -1,6 +1,6 @@
 ---
 project: feedsmith
-stars: 562
+stars: 563
 description: |-
     Fast, all‑in‑one JavaScript feed parser and generator for RSS, Atom, RDF, and JSON Feed, with support for popular namespaces and OPML.
 url: https://github.com/macieklamberski/feedsmith
@@ -23,6 +23,13 @@ Feedsmith offers universal and format‑specific parsers that maintain the origi
 [Why Feedsmith?](#why-feedsmith)
 &nbsp;&nbsp;·&nbsp;&nbsp;
 [Benchmarks →](benchmarks/README.md)
+
+---
+
+> [!IMPORTANT]
+> **Feedsmith 3.x is in final stages of development.** Check out the [v3.x guide](https://next.feedsmith.dev/migration/v2-to-v3) to explore new features and learn how to upgrade. Install it with:
+>
+> `npm install feedsmith@next`
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 project: Sink
-stars: 6119
+stars: 6156
 description: |-
     ⚡ A Simple / Speedy / Secure Link Shortener with Analytics, 100% run on Cloudflare.
 url: https://github.com/miantiao-me/Sink
@@ -149,9 +149,10 @@ We currently do not support native MCP Server, but we have OpenAPI documentation
 1. [**Cloudflare**](https://www.cloudflare.com/)
 2. [**NuxtHub**](https://hub.nuxt.com/)
 3. [**Astroship**](https://astroship.web3templates.com/)
+4. [**Tailark**](https://tailark.com/)
 
 ## ☕ Sponsor
 
-1. [Follow Me on X(Twitter)](https://404.li/kai).
+1. [Follow Me on X(Twitter)](https://404.li/x).
 2. [Become a sponsor to on GitHub](https://github.com/sponsors/miantiao-me).
 

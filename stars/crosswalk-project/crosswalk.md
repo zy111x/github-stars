@@ -1,6 +1,6 @@
 ---
 project: crosswalk
-stars: 2329
+stars: 2328
 description: |-
     A web runtime built on Chrome. This project is currently unmaintained. 
 url: https://github.com/crosswalk-project/crosswalk

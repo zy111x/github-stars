@@ -1,6 +1,6 @@
 ---
 project: mcp-server-chart
-stars: 3521
+stars: 3565
 description: |-
     🤖 A visualization mcp & skills contains 25+ visual charts using @antvis. Using for chart generation and data analysis.
 url: https://github.com/antvis/mcp-server-chart
@@ -33,7 +33,7 @@ This is a TypeScript-based MCP server that provides chart generation capabilitie
 
 ## ✨ Features
 
-Now 25+ charts supported.
+Now 26+ charts supported.
 
 <img width="768" alt="mcp-server-chart preview" src="https://mdn.alipayobjects.com/huamei_qa8qxu/afts/img/A*IyIRQIQHyKYAAAAAgCAAAAgAemJ7AQ/fmt.avif" />
 
@@ -62,6 +62,7 @@ Now 25+ charts supported.
 1. `generate_venn_chart`: Generate a `venn` diagram, used to display relationships between sets, including intersections, unions, and differences.
 1. `generate_violin_chart`: Generate a `violin` plot, used to display the distribution of data, combining features of boxplots and density plots to provide a more detailed view of the data distribution.
 1. `generate_word_cloud_chart`: Generate a `word-cloud`, used to display the frequency of words in textual data, with font sizes indicating the frequency of each word.
+1. `generate_spreadsheet`: Generate a `spreadsheet` or pivot table for displaying tabular data. When 'rows' or 'values' fields are provided, it renders as a pivot table (cross-tabulation); otherwise, it renders as a regular table.
 
 > [!NOTE]
 > The above geographic visualization chart generation tool uses [AMap service](https://lbs.amap.com/) and currently only supports map generation within China.
@@ -100,9 +101,13 @@ Also, you can use it on [aliyun](https://bailian.console.aliyun.com/?tab=mcp#/mc
 
 If you are using an AI IDE with skill support (like **Claude Code**), you can use the `chart-visualization` skill to automatically select the best chart type and generate visualizations.
 
-1. Import `.skills/chart-visualization` and enable the skill in your editor.
-2. Provide your data or describe the visualization you want.
-3. The skill will intelligently choose from 25+ chart types and generate the chart for you.
+You can add the skill from [https://github.com/antvis/chart-visualization-skills](https://github.com/antvis/chart-visualization-skills) using:
+
+```bash
+npx skills add antvis/chart-visualization-skills
+```
+
+Then provide your data or describe the visualization you want. The skill will intelligently choose from 25+ chart types and generate the chart for you.
 
 ## 🚰 Run with SSE or Streamable transport
 

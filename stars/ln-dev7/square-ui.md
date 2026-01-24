@@ -1,6 +1,6 @@
 ---
 project: square-ui
-stars: 4149
+stars: 4225
 description: |-
     Collection of beautifully crafted open-source layouts UI built with shadcn/ui.
 url: https://github.com/ln-dev7/square-ui
@@ -14,6 +14,8 @@ Collection of beautifully crafted open-source layouts UI built with Next.js and 
 
 This project is sponsored by:
 
+- <a href="https://pro.lndev.me/" target="_blank">Square UI Pro</a> : Premium UI templates that accelerate your development.
+
 - <a href="https://ui.lndev.me/" target="_blank">lndev/ui</a> : Fine components coded by lndev.
 
 [Become a sponsor](https://ecaefmew.mychariow.shop/prd_3cu1s0)
@@ -24,7 +26,7 @@ This project is sponsored by:
 
 | Template              | Description                                                                                                      | Live Demo                                                   | GitHub (Radix UI)                                                                      | GitHub (Base UI)                                                                        | Design                                   |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------- |
-| **Rentals**           | Modern rental property platform with interactive map, property listings, filters, and search.                    | [View Demo](https://square-ui-rentals.vercel.app)          | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/rentals)           |                                                                                         | [LN](https://x.com/ln_dev7)              |
+| **Rentals**           | Modern rental property platform with interactive map, property listings, filters, and search.                    | [View Demo](https://square-ui-rentals.vercel.app)          | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/rentals)           | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/rentals)     | [LN](https://x.com/ln_dev7)              |
 | **Bookmarks**         | Modern bookmarks manager with collections, tags, favorites, archive, and trash.                                  | [View Demo](https://square-ui-bookmarks.vercel.app)         | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/bookmarks)         | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/bookmarks)   | [LN](https://x.com/ln_dev7)              |
 | **Maps**              | Modern maps dashboard with location search, favorites, recents, and interactive map controls.                    | [View Demo](https://square-ui-maps.vercel.app)              | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/maps)              | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/maps)        | [LN](https://x.com/ln_dev7)              |
 | **Files**             | Modern file manager with folders, storage overview, file grid/list view, and navigation.                         | [View Demo](https://square-ui-files.vercel.app)             | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/files)             | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/files)       | [LN](https://x.com/ln_dev7)              |

@@ -1,6 +1,6 @@
 ---
 project: DOMPurify
-stars: 16509
+stars: 16543
 description: |-
     DOMPurify - a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. DOMPurify works with a secure default, but offers a lot of configurability and hooks. Demo:
 url: https://github.com/cure53/DOMPurify
@@ -448,7 +448,7 @@ We support `npm` officially. GitHub Actions workflow is configured to install de
 
 #### Scripts
 
-We rely on npm run-scripts for integrating with our tooling infrastructure. We use ESLint as a pre-commit hook to ensure code consistency. Moreover, to ease formatting we use [prettier](https://github.com/prettier/prettier) while building the `/dist` assets happens through `rollup`.
+We use ESLint as a pre-commit hook to ensure code consistency. Moreover, to ease formatting we use [prettier](https://github.com/prettier/prettier) while building the `/dist` assets happens through `rollup`.
 
 These are our npm scripts:
 

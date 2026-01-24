@@ -1,6 +1,6 @@
 ---
 project: stylelint-config-sass-guidelines
-stars: 450
+stars: 449
 description: |-
     ⚙ A stylelint config inspired by https://sass-guidelin.es/
 url: https://github.com/bjankord/stylelint-config-sass-guidelines

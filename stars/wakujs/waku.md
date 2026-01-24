@@ -1,6 +1,6 @@
 ---
 project: waku
-stars: 6066
+stars: 6080
 description: |-
     ⛩️ The minimal React framework
 url: https://github.com/wakujs/waku
@@ -1500,6 +1500,23 @@ export default adapter(
 ```sh
 npm run build
 deployctl deploy --prod dist/serve-deno.js --exclude node_modules
+```
+
+### Bun (experimental)
+
+`./src/waku.server.ts`:
+
+```ts
+import { fsRouter } from 'waku';
+import adapter from 'waku/adapters/bun';
+
+export default adapter(
+  fsRouter(import.meta.glob('./**/*.{tsx,ts}', { base: './pages' })),
+);
+```
+
+```sh
+npm run build
 ```
 
 ### AWS Lambda (experimental)

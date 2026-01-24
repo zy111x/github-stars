@@ -1,6 +1,6 @@
 ---
 project: preline
-stars: 6208
+stars: 6215
 description: |-
     Preline UI is an open-source set of prebuilt UI components based on the utility-first Tailwind CSS framework.
 url: https://github.com/htmlstreamofficial/preline
@@ -54,7 +54,7 @@ For help, discussion about best practices, or any other conversation that would 
 
 ## License
 
-Preline UI is free for both personal and commercial projects, released under dual license terms [MIT](https://preline.co/docs/license.html) and [Preline UI Fair Use License](https://preline.co/docs/license.html) , and copyrighted 2024 by Preline Labs Ltd.
+Preline UI is free for both personal and commercial projects, released under dual license terms [MIT](https://preline.co/docs/license.html) and [Preline UI Fair Use License](https://preline.co/docs/license.html), and copyrighted 2024 by Preline Labs Ltd.
 
 Preline UI Figma is free for both commercial and personal projects, learn more [here](https://preline.co/license.html).
   
@@ -62,7 +62,7 @@ All brand icons are trademarks of their respective owners. The use of these trad
 
 ## A product of Htmlstream
 
-Preline UI is built and maintend by [Htmlstream](https://htmlstream.com) team. Over the last decade at Htmlstream, our journey has involved crafting UI Components and Templates. This process has allowed us to understand and explore a range of strategies for developing versatile UI designs that can adapt to a variety of needs.
+Preline UI is built and maintained by [Htmlstream](https://htmlstream.com) team. Over the last decade at Htmlstream, our journey has involved crafting UI Components and Templates. This process has allowed us to understand and explore a range of strategies for developing versatile UI designs that can adapt to a variety of needs.
 
 Share your thoughts about Preline on [Twitter](https://x.com/prelineUI) or leave supportive review on [ProductHunt](https://www.producthunt.com/products/preline-ui/reviews).
 

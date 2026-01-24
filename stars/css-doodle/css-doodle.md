@@ -1,6 +1,6 @@
 ---
 project: css-doodle
-stars: 5878
+stars: 5883
 description: |-
     A web component for visual art and creative coding
 url: https://github.com/css-doodle/css-doodle
@@ -8,7 +8,6 @@ url: https://github.com/css-doodle/css-doodle
 
 # css-doodle
 
-![Build Status](https://github.com/css-doodle/css-doodle/actions/workflows/ci.yml/badge.svg)
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg)
 
 

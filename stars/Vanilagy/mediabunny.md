@@ -1,6 +1,6 @@
 ---
 project: mediabunny
-stars: 4998
+stars: 5070
 description: |-
     Pure TypeScript media toolkit for reading, writing, and converting video and audio files, directly in the browser.
 url: https://github.com/Vanilagy/mediabunny
@@ -78,7 +78,7 @@ Mediabunny is a JavaScript library for reading, writing, and converting media fi
 
 Core features include:
 
-- **Wide format support**: Read and write MP4, MOV, WebM, MKV, WAVE, MP3, Ogg, ADTS, FLAC
+- **Wide format support**: Read and write MP4, MOV, WebM, MKV, WAVE, MP3, Ogg, ADTS, FLAC, MPEG-TS
 - **Built-in encoding & decoding**: Supports 25+ video, audio, and subtitle codecs, hardware-accelerated using the WebCodecs API
 - **High precision**: Fine-grained, microsecond-accurate reading and writing operations
 - **Conversion API**: Easy-to-use API with features such as transmuxing, transcoding, resizing, rotation, cropping, resampling, trimming, and more

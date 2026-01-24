@@ -1,6 +1,6 @@
 ---
 project: disposable-email-domains
-stars: 4720
+stars: 4740
 description: |-
     a list of disposable email domains
 url: https://github.com/disposable-email-domains/disposable-email-domains
@@ -77,7 +77,6 @@ True
 ```
 
 ### PHP
-contributed by [@txt3rob](https://github.com/txt3rob), [@deguif](https://github.com/deguif), [@pjebs](https://github.com/pjebs) and [@Wruczek](https://github.com/Wruczek)
 
 1. Make sure the passed email is valid. You can check that with [filter_var](https://secure.php.net/manual/en/function.filter-var.php)
 2. Make sure you have the mbstring extension installed on your server
@@ -85,15 +84,28 @@ contributed by [@txt3rob](https://github.com/txt3rob), [@deguif](https://github.
 function isDisposableEmail($email, $blocklist_path = null) {
     if (!$blocklist_path) $blocklist_path = __DIR__ . '/disposable_email_blocklist.conf';
     $disposable_domains = file($blocklist_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+
+    // Convert blocklist to associative array for faster lookups
+    $blocklist_map = array_flip($disposable_domains);
+
     $domain = mb_strtolower(explode('@', trim($email))[1]);
-    return in_array($domain, $disposable_domains);
+    $domain_parts = explode('.', $domain);
+
+    // Check domain and all parent domains (skip checking TLD alone)
+    for ($i = 0; $i < count($domain_parts) - 1; $i++) {
+        $check_domain = implode('.', array_slice($domain_parts, $i));
+        if (isset($blocklist_map[$check_domain])) {
+            return true;
+        }
+    }
+
+    return false;
 }
 ```
 
 Alternatively check out Composer package https://github.com/elliotjreed/disposable-emails-filter-php.
 
 ### Go
-contributed by [@pjebs](https://github.com/pjebs)
 
 ```go
 import ("bufio"; "os"; "strings";)

@@ -1,8 +1,8 @@
 ---
 project: oh-my-opencode-slim
-stars: 398
+stars: 976
 description: |-
-    Slimmed and cleaned oh-my-opencode, consumes much less tokens; Help us grow, consider giving a ⭐;
+    Slimmed, cleaned and fine-tuned oh-my-opencode fork, consumes much less tokens
 url: https://github.com/alvinunreal/oh-my-opencode-slim
 ---
 
@@ -12,62 +12,87 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
 
 **A lightweight, powerful agent orchestration plugin for OpenCode**
 
-<img src="img/team.png" alt="The Pantheon - Agent Team" width="600">
+<img src="img/team.png" alt="The Pantheon - Agent Team" width="800">
 
-*Transform your AI assistant into a manager capable of delegating complex tasks to specialized sub-agents, running searches in the background, and managing multi-step workflows with ease.*
+*Six divine beings emerged from the dawn of code, each an immortal master of their craft await your command to forge order from chaos and build what was once thought impossible.*
 
 </div>
 
-> Slimmed-down fork of [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode) - focused on core agent orchestration without the extra bells and whistles.
-
-> **[Antigravity](https://antigravity.ai) subscription recommended.** The pantheon is tuned for Antigravity's model routing. Other providers work, but you'll get the best experience with Antigravity.
+> Slimmed-down fork of [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode) - focused on core agent orchestration with low token consumption.
 
 ---
 
-## ⚡ Quick Navigation
+## Table of Contents
 
-- [🚀 **Installation**](#installation)
+- [📦 Installation](#-installation)
   - [For Humans](#for-humans)
   - [For LLM Agents](#for-llm-agents)
-- [🏗️ **Architecture & Flow**](#architecture--flow)
-- [🏛️ **Meet the Pantheon**](#meet-the-pantheon)
-  - [Orchestrator](#orchestrator)
-  - [Explorer](#explorer)
-  - [Oracle](#oracle)
-  - [Librarian](#librarian)
-  - [Frontend Designer](#frontend-designer)
-  - [Document Writer](#document-writer)
-  - [Multimodal Viewer](#multimodal-viewer)
-  - [Code Simplifier](#code-simplifier)
-- [🛠️ **Tools & Capabilities**](#tools--capabilities)
+- [🏛️ Meet the Pantheon](#️-meet-the-pantheon)
+  - [01. Orchestrator: The Embodiment Of Order](#01-orchestrator-the-embodiment-of-order)
+  - [02. Explorer: The Eternal Wanderer](#02-explorer-the-eternal-wanderer)
+  - [03. Oracle: The Guardian of Paths](#03-oracle-the-guardian-of-paths)
+  - [04. Librarian: The Weaver of Knowledge](#04-librarian-the-weaver-of-knowledge)
+  - [05. Designer: The Guardian of Aesthetics](#05-designer-the-guardian-of-aesthetics)
+  - [06. Fixer: The Last Builder](#06-fixer-the-last-builder)
+- [🎚️ Presets](#️-presets)
+  - [Switching Presets](#switching-presets)
+  - [OpenAI Preset](#openai-preset)
+  - [Antigravity via CLIProxy Preset](#antigravity-via-cliproxy-preset)
+  - [Author's Preset](#authors-preset)
+- [🧩 Skills](#-skills)
+  - [Available Skills](#available-skills)
+  - [Default Skill Assignments](#default-skill-assignments)
+  - [Configuration & Syntax](#configuration--syntax)
+  - [Simplify](#simplify)
+  - [Playwright Integration](#playwright-integration)
+- [🔌 MCP Servers](#-mcp-servers)
+  - [MCP Permissions](#mcp-permissions)
+  - [Configuration & Syntax](#configuration--syntax-1)
+- [🛠️ Tools & Capabilities](#️-tools--capabilities)
   - [Tmux Integration](#tmux-integration)
-  - [Quota Tool](#quota-tool)
   - [Background Tasks](#background-tasks)
   - [LSP Tools](#lsp-tools)
   - [Code Search Tools](#code-search-tools)
-- [🧩 **Skills**](#-skills)
-  - [Playwright Integration](#playwright-integration)
-- [🔌 **MCP Servers**](#mcp-servers)
-- [⚙️ **Configuration**](#configuration)
-- [🗑️ **Uninstallation**](#uninstallation)
+  - [Formatters](#formatters)
+- [⚙️ Configuration](#️-configuration)
+  - [Files You Edit](#files-you-edit)
+  - [Prompt Overriding](#prompt-overriding)
+  - [Plugin Config (oh-my-opencode-slim.json)](#plugin-config-oh-my-opencode-slimjson)
+- [🗑️ Uninstallation](#️-uninstallation)
+- [🙏 Credits](#-credits)
+- [📄 License](#-license)
 
 ---
 
-## Installation
+## 📦 Installation
 
 ### For Humans
 
 Run the interactive installer:
 
 ```bash
-bunx oh-my-opencode-slim install
+bunx oh-my-opencode-slim@latest install
 ```
 
 Or use non-interactive mode:
 
 ```bash
-bunx oh-my-opencode-slim install --no-tui --antigravity=yes --openai=yes --cerebras=no
+bunx oh-my-opencode-slim@latest install --no-tui --antigravity=yes --openai=yes --tmux=no
 ```
+
+After installation, authenticate with your providers:
+
+```bash
+opencode auth login
+# Select your provider → Complete OAuth flow
+# Repeat for each provider you enabled
+```
+
+Once authenticated, run opencode and `ping all agents` to verify all agents respond.
+
+<img src="img/ping.png" alt="Ping All Agents" width="800">
+
+> **💡 Tip: Models are fully customizable.** The installer sets sensible defaults, but you can assign *any* model to *any* agent. Edit `~/.config/opencode/oh-my-opencode-slim.json` to override models, adjust reasoning effort, or disable agents entirely. See [Configuration](#configuration) for details.
 
 **Alternative: Ask any coding agent**
 
@@ -101,9 +126,13 @@ If not installed, direct the user to https://opencode.ai/docs first.
 
 Ask these questions **one at a time**, waiting for responses:
 
-1. "Do you have an **Antigravity** subscription?" *(Provides Claude + Gemini via `google/` prefix)*
+1. "Do you have an **Antigravity** subscription (via cliproxy)?" *(Provides Claude + Gemini via `cliproxy/` prefix)*
 2. "Do you have access to **OpenAI** API?" *(Enables `openai/` models)*
-3. "Do you have access to **Cerebras** API?" *(Enables `cerebras/` for fast exploration)*
+
+Help the user understand the tradeoffs:
+- Antigravity via cliproxy provides Claude + Gemini routing.
+- OpenAI is optional; it enables `openai/` models.
+- If the user has **no providers**, the plugin still works using **OpenCode Zen** free models (`opencode/big-pickle`). They can switch to paid providers later by editing `~/.config/opencode/oh-my-opencode-slim.json`.
 
 ---
 
@@ -112,55 +141,59 @@ Ask these questions **one at a time**, waiting for responses:
 Based on answers, run:
 
 ```bash
-bunx oh-my-opencode-slim install --no-tui --antigravity=<yes|no> --openai=<yes|no> --cerebras=<yes|no>
+bunx oh-my-opencode-slim@latest install --no-tui --antigravity=<yes|no> --openai=<yes|no>
 ```
 
 **Examples:**
 ```bash
 # Antigravity + OpenAI
-bunx oh-my-opencode-slim install --no-tui --antigravity=yes --openai=yes --cerebras=no
+bunx oh-my-opencode-slim@latest install --no-tui --antigravity=yes --openai=yes --tmux=no
 
 # OpenAI only
-bunx oh-my-opencode-slim install --no-tui --antigravity=no --openai=yes --cerebras=no
+bunx oh-my-opencode-slim@latest install --no-tui --antigravity=no --openai=yes --tmux=no
 
-# All providers
-bunx oh-my-opencode-slim install --no-tui --antigravity=yes --openai=yes --cerebras=yes
+# No providers (Zen free models only)
+bunx oh-my-opencode-slim@latest install --no-tui --antigravity=no --openai=no --tmux=no
 ```
 
 The installer automatically:
 - Adds the plugin to `~/.config/opencode/opencode.json`
-- Adds `opencode-antigravity-auth` plugin (if Antigravity enabled)
-- Configures Google provider with model definitions
+- Configures cliproxy provider for Antigravity models
 - Generates agent model mappings in `~/.config/opencode/oh-my-opencode-slim.json`
 
+**Crucial Advice for the User:**
+- They can easily assign **different models to different agents** by editing `~/.config/opencode/oh-my-opencode-slim.json`.
+- If they add a new provider later, they just need to update this file.
+- Read generated  `~/.config/opencode/oh-my-opencode-slim.json` file and report the model configuration.
+
 ---
 
-#### Step 4: Authentication
+#### Step 4: Install and Configure Cliproxy (if using Antigravity)
 
-After installation, guide the user:
+If the user selected Antigravity, guide them to install cliproxy:
 
-**For Antigravity:**
+**macOS:**
+```bash
+brew install cliproxyapi
+brew services start cliproxyapi
+```
+
+**Linux:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/brokechubb/cliproxyapi-installer/refs/heads/master/cliproxyapi-installer | bash
+```
+
+**Authenticate with Antigravity:**
+```bash
+./cli-proxy-api --antigravity-login
+```
+
+**For OpenAI (if enabled):**
+Ask user to run the following command.
+Don't run it yourself, it requires user interaction.
 ```bash
 opencode auth login
-# Select: Google → OAuth with Google (Antigravity)
-```
-
-**For OpenAI:**
-```bash
-export OPENAI_API_KEY="sk-..."
-```
-
-**For Cerebras:**
-```bash
-export CEREBRAS_API_KEY="..."
-```
-
----
-
-#### Step 5: Verify
-
-```bash
-opencode
+# Select your provider and complete OAuth flow
 ```
 
 ---
@@ -169,231 +202,620 @@ opencode
 
 If the installer fails, check the expected config format:
 ```bash
-bunx oh-my-opencode-slim install --help
+bunx oh-my-opencode-slim@latest install --help
 ```
 
 Then manually create the config files at:
-- `~/.config/opencode/opencode.json`
 - `~/.config/opencode/oh-my-opencode-slim.json`
 
 </details>
 
 ---
 
-## 🏗️ Architecture & Flow
+## 🏛️ Meet the Pantheon
 
-The plugin follows a "Hub and Spoke" model:
+### 01. Orchestrator: The Embodiment Of Order
 
-1. **The Orchestrator (Hub)**: The main entry point for user requests. It analyzes the task and decides which specialized agents to call.
-2. **Specialized Agents (Spokes)**: Domain-specific experts (e.g., UI/UX, Documentation, Architecture) that handle narrow tasks with high precision.
-3. **Background Manager**: A robust engine that allows the Orchestrator to "fire and forget" tasks (like deep codebase searches or documentation research) while continuing to work on other parts of the problem.
-
-### 🏛️ The Flow of a Request
-
-<img src="img/intro.png" alt="Orchestration Flow" width="800">
-
-1. **User Prompt**: "Refactor the auth logic and update the docs."
-2. **Orchestrator**: Creates a TODO list.
-3. **Delegation**:
-   - Launches an `@explore` background task to find all auth-related files.
-   - Launches a `@librarian` task to check the latest documentation for the auth library used.
-4. **Integration**: Once background results are ready, the Orchestrator performs the refactor.
-5. **Finalization**: Passes the changes to `@document-writer` to update the README.
-
----
-
-## Meet the Pantheon
-
-<br clear="both">
-
-### Orchestrator
-
-<a href="src/agents/orchestrator.ts"><img src="img/orchestrator.png" alt="Orchestrator" align="right" width="240"></a>
-
-> **The Orchestrator** was born when the first codebase collapsed under its own complexity. Neither god nor mortal would claim responsibility - so The Orchestrator emerged from the void, forging order from chaos. They don't merely command armies; they fight alongside them. Every line of code passes through their hands before they decide which lesser deity deserves a piece of the puzzle.
-
-**Role:** `Supreme executor, delegator, and overseer`  
-**Model:** `google/claude-opus-4-5-thinking`  
-**Prompt:** [src/agents/orchestrator.ts](src/agents/orchestrator.ts)
-
-Write and execute code, orchestrate multi-agent workflows, parse the unspoken from the spoken, summon specialists mid-battle. *Shape reality directly - and assign realms to others when the universe grows too vast.*
-
-<br clear="both">
-
----
-
-### Explorer
-
-<a href="src/agents/explore.ts"><img src="img/explorer.png" alt="Explorer" align="right" width="240"></a>
-
-> **The Explorer** moves through codebases like wind through trees - swift, silent, everywhere at once. When The Orchestrator whispers "find me the auth module," The Explorer has already returned with forty file paths and a map. They were born from the first `grep` command, evolved beyond it, and now see patterns mortals miss.
-
-**Role:** `Codebase reconnaissance`  
-**Model:** `cerebras/zai-glm-4.6`  
-**Prompt:** [src/agents/explore.ts](src/agents/explore.ts)
-
-Regex search, AST pattern matching, file discovery, parallel exploration. *Read-only: they chart the territory; others conquer it.*
-
-<br clear="both">
+<table>
+  <tr>
+    <td width="30%" align="center" valign="top">
+      <img src="img/orchestrator.png" width="240" style="border-radius: 10px;">
+      <br><sub><i>Forged in the void of complexity.</i></sub>
+    </td>
+    <td width="70%" valign="top">
+      The Orchestrator was born when the first codebase collapsed under its own complexity. Neither god nor mortal would claim responsibility - so The Orchestrator emerged from the void, forging order from chaos. It determines the optimal path to any goal, balancing speed, quality, and cost. It guides the team, summoning the right specialist for each task and delegating to achieve the best possible outcome.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Role:</b> <code>Master delegator and strategic coordinator</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> <a href="src/agents/orchestrator.ts"><code>orchestrator.ts</code></a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Recommended Models:</b> <code>cliproxy/gemini-claude-opus-4-5-thinking</code> <code>openai/gpt-5.2-codex</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>MCPs:</b> <code>websearch</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Skills:</b> <code>*</code> (all)
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Capabilities:</b><br>
+      Write and execute code, orchestrate multi-agent workflows, parse the unspoken from the spoken, summon specialists mid-battle. <i>Shape reality directly - and assign realms to others when the universe grows too vast.</i>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### Oracle
+### 02. Explorer: The Eternal Wanderer
 
-<a href="src/agents/oracle.ts"><img src="img/oracle.png" alt="Oracle" align="right" width="240"></a>
-
-> **The Oracle** does not code - they *know*. When bugs defy logic and architectures crumble, The Oracle gazes into the abyss of your codebase and speaks truth. They've seen a thousand systems rise and fall. They'll tell you which path leads to ruin, and which to production.
-
-**Role:** `Strategic advisor and debugger of last resort`  
-**Model:** `openai/gpt-5.2-codex`  
-**Prompt:** [src/agents/oracle.ts](src/agents/oracle.ts)
-
-Root cause analysis, architecture review, debugging guidance, tradeoff analysis. *Read-only: Oracles advise; they don't intervene.*
-
-<br clear="both">
-
----
-
-### Librarian
-
-<a href="src/agents/librarian.ts"><img src="img/librarian.png" alt="Librarian" align="right" width="240"></a>
-
-> **The Librarian** guards a library with no walls - every GitHub repo, every npm package, every StackOverflow answer ever written. Ask them "how does React handle concurrent rendering?" and they'll return with official docs, real-world examples, and a warning about the footgun you're about to step on.
-
-**Role:** `External knowledge retrieval`  
-**Model:** `google/gemini-3-flash`  
-**Prompt:** [src/agents/librarian.ts](src/agents/librarian.ts)
-
-Documentation lookup, GitHub code search, library research, best practice retrieval. *Read-only: they fetch wisdom; implementation is for others.*
-
-<br clear="both">
-
----
-
-### Frontend Designer
-
-<a href="src/agents/frontend.ts"><img src="img/designer.png" alt="Frontend Designer" align="right" width="240"></a>
-
-> **The Designer** believes code should be beautiful - and so should everything it renders. Born from the frustration of a thousand ugly MVPs, they wield CSS like a brush and components like clay. Hand them a feature request; receive a masterpiece. They don't do "good enough."
-
-**Role:** `UI/UX implementation and visual excellence`  
-**Model:** `google/gemini-3-flash`  
-**Prompt:** [src/agents/frontend.ts](src/agents/frontend.ts)
-
-Modern responsive design, CSS/Tailwind mastery, micro-animations, component architecture. *Visual excellence over code perfection - beauty is the priority.*
-
-<br clear="both">
-
----
-
-### Document Writer
-
-<a href="src/agents/document-writer.ts"><img src="img/scribe.png" alt="Document Writer" align="right" width="240"></a>
-
-> **The Scribe** was there when the first README was written - and wept, for it was incomplete. They have devoted eternity to the sacred art of documentation: clear, scannable, honest. While others ship features, The Scribe ensures those features are understood. Every code example works. Every explanation enlightens.
-
-**Role:** `Technical documentation and knowledge capture`  
-**Model:** `google/gemini-3-flash`  
-**Prompt:** [src/agents/document-writer.ts](src/agents/document-writer.ts)
-
-README crafting, API documentation, architecture docs, inline comments that don't insult your intelligence. *Match existing style; focus on "why," not just "what."*
-
-<br clear="both">
+<table>
+  <tr>
+    <td width="30%" align="center" valign="top">
+      <img src="img/explorer.png" width="240" style="border-radius: 10px;">
+      <br><sub><i>The wind that carries knowledge.</i></sub>
+    </td>
+    <td width="70%" valign="top">
+      The Explorer is an immortal wanderer who has traversed the corridors of a million codebases since the dawn of programming. Cursed with the gift of eternal curiosity, they cannot rest until every file is known, every pattern understood, every secret revealed. Legends say they once searched the entire internet in a single heartbeat. They are the wind that carries knowledge, the eyes that see all, the spirit that never sleeps.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Role:</b> <code>Codebase reconnaissance</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> <a href="src/agents/explorer.ts"><code>explorer.ts</code></a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Recommended Models:</b> <code>cerebras/zai-glm-4.7</code> <code>google/gemini-3-flash</code> <code>openai/gpt-5.1-codex-mini</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>MCPs:</b> none
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Skills:</b> none
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Capabilities:</b><br>
+      Regex search, AST pattern matching, file discovery, parallel exploration. <i>Read-only: they chart the territory; others conquer it.</i>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### Multimodal Viewer
+### 03. Oracle: The Guardian of Paths
 
-<a href="src/agents/multimodal.ts"><img src="img/multimodal.png" alt="Multimodal Viewer" align="right" width="240"></a>
-
-> **The Visionary** sees what others cannot - literally. Screenshots, wireframes, diagrams, PDFs: all are text to them. When a designer throws a Figma mockup at the team and vanishes, The Visionary translates vision into specification. They read the unreadable and describe the indescribable.
-
-**Role:** `Image and visual content analysis`  
-**Model:** `google/gemini-3-flash`  
-**Prompt:** [src/agents/multimodal.ts](src/agents/multimodal.ts)
-
-Extract text from images, interpret diagrams, analyze UI screenshots, summarize visual documents. *Report what they observe; inference is for others.*
-
-<br clear="both">
+<table>
+  <tr>
+    <td width="30%" align="center" valign="top">
+      <img src="img/oracle.png" width="240" style="border-radius: 10px;">
+      <br><sub><i>The voice at the crossroads.</i></sub>
+    </td>
+    <td width="70%" valign="top">
+      The Oracle stands at the crossroads of every architectural decision. They have walked every road, seen every destination, know every trap that lies ahead. When you stand at the precipice of a major refactor, they are the voice that whispers which way leads to ruin and which way leads to glory. They don't choose for you - they illuminate the path so you can choose wisely.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Role:</b> <code>Strategic advisor and debugger of last resort</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> <a href="src/agents/oracle.ts"><code>oracle.ts</code></a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Recommended Models:</b> <code>openai/gpt-5.2-codex</code> <code>cliproxy/gemini-3-pro-high</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>MCPs:</b> none
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Skills:</b> none
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Capabilities:</b><br>
+      Root cause analysis, architecture review, debugging guidance, tradeoff analysis. <i>Read-only: Oracles advise; they don't intervene.</i>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### Code Simplifier
+### 04. Librarian: The Weaver of Knowledge
 
-<a href="src/agents/simplicity-reviewer.ts"><img src="img/code-simplicity.png" alt="Code Simplifier" align="right" width="240"></a>
-
-> **The Minimalist** has one sacred truth: every line of code is a liability. They hunt abstractions that serve no purpose, defensive checks that defend nothing, and "clever" solutions that will haunt you in six months. Where others add, The Minimalist subtracts - ruthlessly, joyfully, necessarily.
-
-**Role:** `Code simplification and YAGNI enforcement`  
-**Model:** `google/claude-opus-4-5-thinking`  
-**Prompt:** [src/agents/simplicity-reviewer.ts](src/agents/simplicity-reviewer.ts)
-
-Identify unnecessary complexity, challenge premature abstractions, estimate LOC reduction, enforce minimalism. *Read-only: they judge; The Orchestrator executes the sentence.*
-
-<br clear="both">
+<table>
+  <tr>
+    <td width="30%" align="center" valign="top">
+      <img src="img/librarian.png" width="240" style="border-radius: 10px;">
+      <br><sub><i>The weaver of understanding.</i></sub>
+    </td>
+    <td width="70%" valign="top">
+      The Librarian was forged when humanity realized that no single mind could hold all knowledge. They are the weaver who connects disparate threads of information into a tapestry of understanding. They traverse the infinite library of human knowledge, gathering insights from every corner and binding them into answers that transcend mere facts. What they return is not information - it's understanding.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Role:</b> <code>External knowledge retrieval</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> <a href="src/agents/librarian.ts"><code>librarian.ts</code></a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Recommended Models:</b> <code>google/gemini-3-flash</code> <code>openai/gpt-5.1-codex-mini</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>MCPs:</b> <code>websearch</code> <code>context7</code> <code>grep_app</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Skills:</b> none
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Capabilities:</b><br>
+      Documentation lookup, GitHub code search, library research, best practice retrieval. <i>Read-only: they fetch wisdom; implementation is for others.</i>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Tools & Capabilities
+### 05. Designer: The Guardian of Aesthetics
+
+<table>
+  <tr>
+    <td width="30%" align="center" valign="top">
+      <img src="img/designer.png" width="240" style="border-radius: 10px;">
+      <br><sub><i>Beauty is essential.</i></sub>
+    </td>
+    <td width="70%" valign="top">
+      The Designer is an immortal guardian of beauty in a world that often forgets it matters. They have seen a million interfaces rise and fall, and they remember which ones were remembered and which were forgotten. They carry the sacred duty to ensure that every pixel serves a purpose, every animation tells a story, every interaction delights. Beauty is not optional - it's essential.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Role:</b> <code>UI/UX implementation and visual excellence</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> <a href="src/agents/designer.ts"><code>designer.ts</code></a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Recommended Models:</b> <code>google/gemini-3-flash</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>MCPs:</b> none
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Skills:</b> <code>playwright</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Capabilities:</b><br>
+      Modern responsive design, CSS/Tailwind mastery, micro-animations, component architecture. <i>Visual excellence over code perfection - beauty is the priority.</i>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 06. Fixer: The Last Builder
+
+<table>
+  <tr>
+    <td width="30%" align="center" valign="top">
+      <img src="img/fixer.png" width="240" style="border-radius: 10px;">
+      <br><sub><i>The final step between vision and reality.</i></sub>
+    </td>
+    <td width="70%" valign="top">
+      The Fixer is the last of a lineage of builders who once constructed the foundations of the digital world. When the age of planning and debating began, they remained - the ones who actually build. They carry the ancient knowledge of how to turn thought into thing, how to transform specification into implementation. They are the final step between vision and reality.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Role:</b> <code>Fast implementation specialist</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Prompt:</b> <a href="src/agents/fixer.ts"><code>fixer.ts</code></a>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Recommended Models:</b> <code>cerebras/zai-glm-4.7</code> <code>google/gemini-3-flash</code> <code>openai/gpt-5.1-codex-mini</code>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>MCPs:</b> none
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Skills:</b> none
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <b>Capabilities:</b><br>
+      Code implementation, refactoring, testing, verification. <i>Execute the plan - no research, no delegation, no planning.</i>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🎚️ Presets
+
+Presets are pre-configured agent model mappings for different provider combinations. The installer generates these automatically based on your available providers, and you can switch between them instantly.
+
+### Switching Presets
+
+**Method 1: Edit Config File**
+
+Edit `~/.config/opencode/oh-my-opencode-slim.json` and change the `preset` field:
+
+```json
+{
+  "preset": "openai"
+}
+```
+
+**Method 2: Environment Variable**
+
+Set the environment variable before running OpenCode:
+
+```bash
+export OH_MY_OPENCODE_SLIM_PRESET=openai
+opencode
+```
+
+The environment variable takes precedence over the config file.
+
+
+### OpenAI Preset
+
+Uses OpenAI models exclusively:
+
+```json
+{
+  "preset": "openai",
+  "presets": {
+    "openai": {
+      "orchestrator": { "model": "openai/gpt-5.2-codex", "skills": ["*"], "mcps": ["websearch"] },
+      "oracle": { "model": "openai/gpt-5.2-codex", "variant": "high", "skills": [], "mcps": [] },
+      "librarian": { "model": "openai/gpt-5.1-codex-mini", "variant": "low", "skills": [], "mcps": ["websearch", "context7", "grep_app"] },
+      "explorer": { "model": "openai/gpt-5.1-codex-mini", "variant": "low", "skills": [], "mcps": [] },
+      "designer": { "model": "openai/gpt-5.1-codex-mini", "variant": "medium", "skills": ["playwright"], "mcps": [] },
+      "fixer": { "model": "openai/gpt-5.1-codex-mini", "variant": "low", "skills": [], "mcps": [] }
+    }
+  }
+}
+```
+
+### Antigravity via CLIProxy Preset
+
+Routes through Antigravity's CLIProxy for Claude + Gemini models:
+
+```json
+{
+  "preset": "cliproxy",
+  "presets": {
+    "cliproxy": {
+      "orchestrator": { "model": "cliproxy/gemini-claude-opus-4-5-thinking", "skills": ["*"], "mcps": ["websearch"] },
+      "oracle": { "model": "cliproxy/gemini-3-pro-preview", "variant": "high", "skills": [], "mcps": [] },
+      "librarian": { "model": "cliproxy/gemini-3-flash-preview", "variant": "low", "skills": [], "mcps": ["websearch", "context7", "grep_app"] },
+      "explorer": { "model": "cliproxy/gemini-3-flash-preview", "variant": "low", "skills": [], "mcps": [] },
+      "designer": { "model": "cliproxy/gemini-3-flash-preview", "variant": "medium", "skills": ["playwright"], "mcps": [] },
+      "fixer": { "model": "cliproxy/gemini-3-flash-preview", "variant": "low", "skills": [], "mcps": [] }
+    }
+  }
+}
+```
+
+<details>
+<summary>Verify provider configuration in ~/.config/opencode/opencode.json</summary>
+
+```json
+{
+  "provider": {
+    "cliproxy": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "CliProxy",
+      "options": {
+        "baseURL": "http://127.0.0.1:8317/v1",
+        "apiKey": "your-api-key-1"
+      },
+      "models": {
+        "gemini-3-pro-high": {
+          "name": "Gemini 3 Pro High",
+          "thinking": true,
+          "attachment": true,
+          "limit": { "context": 1048576, "output": 65535 },
+          "modalities": { "input": [ "text", "image", "pdf" ], "output": [ "text" ] }
+        },
+        "gemini-3-flash-preview": {
+          "name": "Gemini 3 Flash",
+          "attachment": true,
+          "limit": { "context": 1048576, "output": 65536 },
+          "modalities": { "input": [ "text", "image", "pdf" ], "output": [ "text" ] }
+        },
+        "gemini-claude-opus-4-5-thinking": {
+          "name": "Claude Opus 4.5 Thinking",
+          "attachment": true,
+          "limit": { "context": 200000, "output": 32000 },
+          "modalities": { "input": [ "text", "image", "pdf" ], "output": [ "text" ] }
+        },
+        "gemini-claude-sonnet-4-5-thinking": {
+          "name": "Claude Sonnet 4.5 Thinking",
+          "attachment": true,
+          "limit": { "context": 200000, "output": 32000 },
+          "modalities": { "input": [ "text", "image", "pdf" ], "output": [ "text" ] }
+        }
+      }
+    }
+  }
+}
+```
+
+</details>
+
+### Author's Preset
+
+Mixed setup combining multiple providers:
+
+```json
+{
+  "preset": "alvin",
+  "presets": {
+    "alvin": {
+      "orchestrator": { "model": "cliproxy/gemini-claude-opus-4-5-thinking", "skills": ["*"], "mcps": ["*"] },
+      "oracle": { "model": "openai/gpt-5.2-codex", "variant": "high", "skills": [], "mcps": [] },
+      "librarian": { "model": "cliproxy/gemini-3-flash-preview", "variant": "low", "skills": [], "mcps": ["websearch", "context7", "grep_app"] },
+      "explorer": { "model": "cerebras/zai-glm-4.7", "variant": "low", "skills": [], "mcps": [] },
+      "designer": { "model": "cliproxy/gemini-3-flash-preview", "variant": "medium", "skills": ["playwright"], "mcps": [] },
+      "fixer": { "model": "cerebras/zai-glm-4.7", "variant": "low", "skills": [], "mcps": [] }
+    }
+  }
+}
+```
+
+---
+
+## 🧩 Skills
+
+Skills are specialized capabilities that agents can use. Each agent has a default set of skills, which you can override in the agent config.
+
+### Available Skills
+
+| Skill | Description |
+|-------|-------------|
+| `simplify` | Code complexity analysis and YAGNI enforcement |
+| `playwright` | Browser automation via Playwright MCP |
+
+### Default Skill Assignments
+
+| Agent | Default Skills |
+|-------|----------------|
+| `orchestrator` | `*` (all skills) |
+| `designer` | `playwright` |
+| `oracle` | none |
+| `librarian` | none |
+| `explorer` | none |
+| `fixer` | none |
+
+### Configuration & Syntax
+
+You can customize which skills each agent uses by editing your plugin configuration file: `~/.config/opencode/oh-my-opencode-slim.json`.
+
+**Syntax:**
+
+| Syntax | Description | Example |
+|--------|-------------|---------|
+| `"*"` | All skills | `["*"]` |
+| `"!item"` | Exclude specific skill | `["*", "!playwright"]` |
+| Explicit list | Only listed skills | `["simplify", "playwright"]` |
+| `"!*"` | Deny all skills | `["!*"]` |
+
+**Rules:**
+- `*` expands to all available skills
+- `!item` excludes specific skills
+- Conflicts (e.g., `["a", "!a"]`) → deny wins (principle of least privilege)
+- Empty list `[]` → no skills allowed
+
+**Example Configuration:**
+
+```json
+{
+  "presets": {
+    "my-preset": {
+      "orchestrator": {
+        "skills": ["*", "!playwright"]
+      },
+      "designer": {
+        "skills": ["playwright", "simplify"]
+      }
+    }
+  }
+}
+```
+
+### Simplify
+
+**The Minimalist's sacred truth: every line of code is a liability.**
+
+Use after major refactors or before finalizing PRs. Identifies unnecessary complexity, challenges premature abstractions, estimates LOC reduction, and enforces minimalism.
+
+### Playwright Integration
+
+**Browser automation for visual verification and testing.**
+
+- **Browser Automation**: Full Playwright capabilities (browsing, clicking, typing, scraping).
+- **Screenshots**: Capture visual state of any web page.
+- **Sandboxed Output**: Screenshots saved to session subdirectory (check tool output for path).
+
+---
+
+## 🔌 MCP Servers
+
+Built-in Model Context Protocol servers (enabled by default):
+
+| MCP | Purpose | URL |
+|-----|---------|-----|
+| `websearch` | Real-time web search via Exa AI | `https://mcp.exa.ai/mcp` |
+| `context7` | Official library documentation | `https://mcp.context7.com/mcp` |
+| `grep_app` | GitHub code search via grep.app | `https://mcp.grep.app` |
+
+### MCP Permissions
+
+Control which agents can access which MCP servers using per-agent allowlists:
+
+| Agent | Default MCPs |
+|-------|--------------|
+| `orchestrator` | `websearch` |
+| `designer` | none |
+| `oracle` | none |
+| `librarian` | `websearch`, `context7`, `grep_app` |
+| `explorer` | none |
+| `fixer` | none |
+
+### Configuration & Syntax
+
+You can configure MCP access in your plugin configuration file: `~/.config/opencode/oh-my-opencode-slim.json`.
+
+**Per-Agent Permissions**
+
+Control which agents can access which MCP servers using the `mcps` array in your preset. The syntax is the same as for skills:
+
+| Syntax | Description | Example |
+|--------|-------------|---------|
+| `"*"` | All MCPs | `["*"]` |
+| `"!item"` | Exclude specific MCP | `["*", "!context7"]` |
+| Explicit list | Only listed MCPs | `["websearch", "context7"]` |
+| `"!*"` | Deny all MCPs | `["!*"]` |
+
+**Rules:**
+- `*` expands to all available MCPs
+- `!item` excludes specific MCPs
+- Conflicts (e.g., `["a", "!a"]`) → deny wins
+- Empty list `[]` → no MCPs allowed
+
+**Example Configuration:**
+
+```json
+{
+  "presets": {
+    "my-preset": {
+      "orchestrator": {
+        "mcps": ["websearch"]
+      },
+      "librarian": {
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "oracle": {
+        "mcps": ["*", "!websearch"]
+      }
+    }
+  }
+}
+```
+
+**Global Disabling**
+
+You can disable specific MCP servers globally by adding them to the `disabled_mcps` array at the root of your config object.
+
+---
+
+## 🛠️ Tools & Capabilities
 
 ### Tmux Integration
+
+> ⚠️ **Temporary workaround:** Start OpenCode with `--port` to enable tmux integration. The port must match the `OPENCODE_PORT` environment variable (default: 4096). This is required until the upstream issue is resolved. [opencode#9099](https://github.com/anomalyco/opencode/issues/9099).
 
 <img src="img/tmux.png" alt="Tmux Integration" width="800">
 
 **Watch your agents work in real-time.** When the Orchestrator launches sub-agents or initiates background tasks, new tmux panes automatically spawn showing each agent's live progress. No more waiting in the dark.
 
-#### Why This Matters
-
-| Without Tmux Integration | With Tmux Integration |
-|--------------------------|----------------------|
-| Fire off a background task, wait anxiously | See the agent thinking, searching, coding |
-| "Is it stuck or just slow?" | Watch tool calls happen in real-time |
-| Results appear out of nowhere | Follow the journey from question to answer |
-| Debug by guessing | Debug by observation |
-
-#### What You Get
-
-- **Live Visibility**: Each sub-agent gets its own pane showing real-time output
-- **Auto-Layout**: Tmux automatically arranges panes using your preferred layout
-- **Auto-Cleanup**: Panes close when agents finish, layout rebalances
-- **Zero Overhead**: Works with OpenCode's built-in `task` tool AND our `background_task` tool
-
 #### Quick Setup
 
-**1. Enable the OpenCode HTTP server** (one-time setup)
+1. **Enable tmux integration** in `oh-my-opencode-slim.json` (see [Plugin Config](#plugin-config-oh-my-opencode-slimjson)).
 
-Add to your `~/.config/opencode/opencode.json`:
-
-```json
-{
-  "server": {
-    "port": 4096
+  ```json
+  {
+    "tmux": {
+      "enabled": true,
+      "layout": "main-vertical",
+      "main_pane_size": 60
+    }
   }
-}
-```
+  ```
 
-**2. Enable tmux integration in the plugin**
+2. **Run OpenCode inside tmux**:
+    ```bash
+    tmux
+    opencode --port 4096
+    ```
 
-Add to your `~/.config/opencode/oh-my-opencode-slim.json`:
+   Or use a custom port (must match `OPENCODE_PORT` env var):
+    ```bash
+    tmux
+    export OPENCODE_PORT=5000
+    opencode --port 5000
+    ```
 
-```json
-{
-  "tmux": {
-    "enabled": true,
-    "layout": "main-vertical",
-    "main_pane_size": 60
-  }
-}
-```
+   This allows multiple OpenCode instances on different ports.
 
-**3. Run OpenCode inside tmux**
-
-```bash
-tmux
-opencode
-```
-
-That's it. When agents spawn, they'll appear in new panes.
 
 #### Layout Options
 
@@ -405,40 +827,9 @@ That's it. When agents spawn, they'll appear in new panes.
 | `even-horizontal` | All panes side by side |
 | `even-vertical` | All panes stacked vertically |
 
-#### Configuration Reference
-
-```json
-{
-  "tmux": {
-    "enabled": true,
-    "layout": "main-vertical",
-    "main_pane_size": 60
-  }
-}
-```
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `enabled` | boolean | `false` | Enable/disable tmux integration |
-| `layout` | string | `"main-vertical"` | Tmux layout preset |
-| `main_pane_size` | number | `60` | Size of main pane as percentage (20-80) |
-
----
-
-### Quota Tool
-
-For Antigravity users. You can trigger this at any time by asking the agent to **"check my quota"** or **"show status."**
-
-<img src="img/quota.png" alt="Antigravity Quota" width="600">
-
-| Tool | Description |
-|------|-------------|
-| `antigravity_quota` | Check API quota for all Antigravity accounts (compact view with progress bars) |
-
 ---
 
 ### Background Tasks
-
 
 The plugin provides tools to manage asynchronous work:
 
@@ -461,6 +852,8 @@ Language Server Protocol integration for code intelligence:
 | `lsp_diagnostics` | Get errors/warnings from the language server |
 | `lsp_rename` | Rename a symbol across all files |
 
+> **Built-in LSP Servers:** OpenCode includes pre-configured LSP servers for 30+ languages (TypeScript, Python, Rust, Go, etc.). See the [official documentation](https://opencode.ai/docs/lsp/#built-in) for the full list and requirements.
+
 ---
 
 ### Code Search Tools
@@ -475,77 +868,82 @@ Fast code search and refactoring:
 
 ---
 
-## 🧩 Skills
+### Formatters
 
-Skills are specialized capabilities that combine MCP servers with specific instructions for the Orchestrator.
+OpenCode automatically formats files after they're written or edited using language-specific formatters.
 
-### Playwright Integration
-
-**The Orchestrator's eyes and hands in the browser.**
-
-| Tool | Description |
-|------|-------------|
-| `omo_skill` | Loads a skill (e.g., `playwright`) and provides its instructions and available MCP tools |
-| `omo_skill_mcp` | Invokes a specific tool from an MCP server managed by a skill |
-
-#### Key Features
-- **Browser Automation**: Full Playwright capabilities (browsing, clicking, typing, scraping).
-- **Screenshots**: Capture visual state of any web page.
-- **Sandboxed Output**: Screenshots are safely saved to `/tmp/playwright-mcp-output/`.
+> **Built-in Formatters:** Includes support for Prettier, Biome, gofmt, rustfmt, ruff, and 20+ others. See the [official documentation](https://opencode.ai/docs/formatters/#built-in) for the complete list.
 
 ---
 
-## MCP Servers
+## ⚙️ Configuration
 
-Built-in Model Context Protocol servers (enabled by default):
+### Files You Edit
 
-| MCP | Purpose | URL |
-|-----|---------|-----|
-| `websearch` | Real-time web search via Exa AI | `https://mcp.exa.ai/mcp` |
-| `context7` | Official library documentation | `https://mcp.context7.com/mcp` |
-| `grep_app` | GitHub code search via grep.app | `https://mcp.grep.app` |
+| File | Purpose |
+|------|---------|
+| `~/.config/opencode/opencode.json` | OpenCode core settings |
+| `~/.config/opencode/oh-my-opencode-slim.json` | Plugin settings (agents, tmux, MCPs) |
+| `.opencode/oh-my-opencode-slim.json` | Project-local plugin overrides (optional) |
 
-### Disabling MCPs
+---
 
-You can disable specific MCP servers in your config:
+### Prompt Overriding
 
-```json
-{
-  "disabled_mcps": ["websearch", "grep_app"]
-}
+You can customize agent prompts by creating markdown files in `~/.config/opencode/oh-my-opencode-slim/`:
+
+| File | Purpose |
+|------|---------|
+| `{agent}.md` | Replaces the default prompt entirely |
+| `{agent}_append.md` | Appends to the default prompt |
+
+**Example:**
+
+```
+~/.config/opencode/oh-my-opencode-slim/
+  ├── orchestrator.md          # Custom orchestrator prompt
+  ├── orchestrator_append.md   # Append to default orchestrator prompt
+  ├── explorer.md
+  ├── explorer_append.md
+  └── ...
 ```
 
----
+**Usage:**
 
-## Configuration
+- Create `{agent}.md` to completely replace an agent's default prompt
+- Create `{agent}_append.md` to add custom instructions to the default prompt
+- Both files can exist simultaneously - the replacement takes precedence
+- If neither file exists, the default prompt is used
 
-You can customize the behavior of the plugin via JSON configuration files.
-
-### Configuration Files
-
-The plugin looks for configuration in two places (and merges them):
-
-1. **User Global**: `~/.config/opencode/oh-my-opencode-slim.json` (or OS equivalent)
-2. **Project Local**: `./.opencode/oh-my-opencode-slim.json`
-
-| Platform | User Config Path |
-| :--- | :--- |
-| **Windows** | `~/.config/opencode/oh-my-opencode-slim.json` or `%APPDATA%\opencode\oh-my-opencode-slim.json` |
-| **macOS/Linux** | `~/.config/opencode/oh-my-opencode-slim.json` |
-
-### Disabling Agents
-
-You can disable specific agents using the `disabled_agents` array:
-
-```json
-{
-  "disabled_agents": ["multimodal-looker", "code-simplicity-reviewer"]
-}
-```
+This allows you to fine-tune agent behavior without modifying the source code.
 
 ---
 
-## Uninstallation
+### Plugin Config (`oh-my-opencode-slim.json`)
+
+The installer generates this file based on your providers. You can manually customize it to mix and match models. See the [Presets](#️-presets) section for detailed configuration options.
+
+#### Option Reference
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `preset` | string | - | Name of the preset to use (e.g., `"openai"`, `"cliproxy"`) |
+| `presets` | object | - | Named preset configurations containing agent mappings |
+| `presets.<name>.<agent>.model` | string | - | Model ID for the agent (e.g., `"google/claude-opus-4-5-thinking"`) |
+| `presets.<name>.<agent>.temperature` | number | - | Temperature setting (0-2) for the agent |
+| `presets.<name>.<agent>.variant` | string | - | Agent variant for reasoning effort (e.g., `"low"`, `"medium"`, `"high"`) |
+| `presets.<name>.<agent>.skills` | string[] | - | Array of skill names the agent can use (`"*"` for all, `"!item"` to exclude) |
+| `presets.<name>.<agent>.mcps` | string[] | - | Array of MCP names the agent can use (`"*"` for all, `"!item"` to exclude) |
+| `tmux.enabled` | boolean | `false` | Enable tmux pane spawning for sub-agents |
+| `tmux.layout` | string | `"main-vertical"` | Layout preset: `main-vertical`, `main-horizontal`, `tiled`, `even-horizontal`, `even-vertical` |
+| `tmux.main_pane_size` | number | `60` | Main pane size as percentage (20-80) |
+| `disabled_mcps` | string[] | `[]` | MCP server IDs to disable globally (e.g., `"websearch"`) |
+
+> **Note:** Agent configuration should be defined within `presets`. The root-level `agents` field is deprecated.
+
+---
+
+## 🗑️ Uninstallation
 
 1. **Remove the plugin from your OpenCode config**:
 
@@ -559,13 +957,13 @@ You can disable specific agents using the `disabled_agents` array:
 
 ---
 
-## Credits
+## 🙏 Credits
 
 This is a slimmed-down fork of [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode) by [@code-yeongyu](https://github.com/code-yeongyu).
 
 ---
 
-## License
+## 📄 License
 
 MIT
 

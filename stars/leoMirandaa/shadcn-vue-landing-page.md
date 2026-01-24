@@ -1,6 +1,6 @@
 ---
 project: shadcn-vue-landing-page
-stars: 466
+stars: 469
 description: |-
     New design 🎉  Vue + Shadcn-vue + TypeScript + Tailwind. Landing page template ease-to-use
 url: https://github.com/leoMirandaa/shadcn-vue-landing-page

@@ -1,6 +1,6 @@
 ---
 project: wasm-image-optimization
-stars: 105
+stars: 106
 description: |-
     Optimize images with wasm on edge runtime
 url: https://github.com/node-libraries/wasm-image-optimization
@@ -21,6 +21,7 @@ WebAssembly is used to provide image transformation functionality.
 
 - Convert
   - source format
+    - gif
     - svg
     - jpeg (EXIF orientation is supported)
     - png

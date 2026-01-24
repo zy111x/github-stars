@@ -1,6 +1,6 @@
 ---
 project: jumly
-stars: 313
+stars: 312
 description: |-
     Rendering engine for UML diagrams in JavaScript
 url: https://github.com/tmtk75/jumly

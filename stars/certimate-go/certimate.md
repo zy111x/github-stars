@@ -1,6 +1,6 @@
 ---
 project: certimate
-stars: 8084
+stars: 8097
 description: |-
     An open-source and free self-hosted SSL certificates ACME tool, automates the full-cycle of issuance, deployment, and renewal visually. 完全开源免费的自托管 SSL 证书 ACME 工具，申请、部署、续期全流程自动化可视化，支持各大主流云厂商。
 url: https://github.com/certimate-go/certimate
@@ -15,6 +15,7 @@ url: https://github.com/certimate-go/certimate
 [![Docker Pulls](https://img.shields.io/docker/pulls/certimate/certimate?style=flat)](https://hub.docker.com/r/certimate/certimate)
 [![Release](https://img.shields.io/github/v/release/certimate-go/certimate?style=flat&sort=semver)](https://github.com/certimate-go/certimate/releases)
 [![License](https://img.shields.io/github/license/certimate-go/certimate?style=flat)](https://mit-license.org/)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg?label=DeepWiki)](https://deepwiki.com/certimate-go/certimate)
 
 </div>
 
@@ -124,9 +125,9 @@ This repository is available under the [MIT License](https://opensource.org/lice
 ## 🌐 Join the Community
 
 - [Telegram](https://t.me/+ZXphsppxUg41YmVl)
-- Wechat Group
+- Wechat Group (contact to the author [@usual2970](https://github.com/usual2970) to getting invitation)
 
-  <img src="https://i.imgur.com/zSHEoIm.png" width="200"/>
+  <img src="https://i.imgur.com/8xwsLTA.png" width="200"/>
 
 ## ⭐ Star History
 

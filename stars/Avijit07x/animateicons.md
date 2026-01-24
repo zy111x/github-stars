@@ -1,16 +1,16 @@
 ---
 project: animateicons
-stars: 683
+stars: 710
 description: |-
-    A sleek React library for animated SVG icons that move with purpose. Transform static designs into engaging user experiences with smooth, performant animations.
+    Free and open-source animated SVG icons for React, built for smooth micro-interactions, easy customization, and lightweight performance.
 url: https://github.com/Avijit07x/animateicons
 ---
 
 # AnimateIcons
 
-![Animate Icons Preview](./src/app/og.png)
+![AnimateIcons Preview](./src/app/og.png)
 
-A sleek React library for animated SVG icons that move with purpose. Transform static designs into engaging user experiences with smooth, performant animations.
+Free and open-source animated SVG icons for React, built for smooth micro-interactions, easy customization, and lightweight performance.
 
 ---
 
@@ -31,7 +31,7 @@ bunx shadcn@latest add "https://animateicons.in/icons/bell.json"
 ```
 
 Replace `bell.json` with any icon name from our gallery.
-View all icons → **[animateicons.vercel.app](https://animateicons.in)**
+View all icons → **[animateicons.in](https://animateicons.in)**
 
 ---
 
@@ -41,7 +41,7 @@ After installing an icon, import it into your component:
 
 ```tsx
 "use client";
-import { AtomIcon } from "./components/ui/AtomIcon";
+import { AtomIcon } from "./components/AtomIcon";
 
 export default function Page() {
 	return <AtomIcon size={28} duration={1} isAnimated={true} />;
@@ -53,7 +53,7 @@ export default function Page() {
 ```tsx
 "use client";
 import { useRef } from "react";
-import { BellRingIcon, BellRingIconHandle } from "./components/ui/BellRingIcon";
+import { BellRingIcon, BellRingIconHandle } from "./components/BellRingIcon";
 
 export default function Page() {
 	const bellRef = useRef<BellRingIconHandle>(null);
@@ -78,7 +78,7 @@ export default function Page() {
 
 - Smooth, purposeful animations out-of-the-box
 - Lightweight & built with `motion/react`
-- 100+ customizable SVG icons
+- 200+ customizable SVG icons
 - Works with React & Next.js
 - Optimized for performance
 

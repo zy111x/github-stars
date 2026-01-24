@@ -1,6 +1,6 @@
 ---
 project: exo
-stars: 40136
+stars: 40449
 description: |-
     Run your own AI cluster at home with everyday devices 📱💻 🖥️⌚
 url: https://github.com/exo-explore/exo
@@ -35,13 +35,22 @@ exo connects all your devices into an AI cluster. Not only does exo enable runni
 - **Tensor Parallelism**: exo supports sharding models, for up to 1.8x speedup on 2 devices and 3.2x speedup on 4 devices.
 - **MLX Support**: exo uses [MLX](https://github.com/ml-explore/mlx) as an inference backend and [MLX distributed](https://ml-explore.github.io/mlx/build/html/usage/distributed.html) for distributed communication.
 
+## Dashboard
+
+exo includes a built-in dashboard for managing your cluster and chatting with models.
+
+<p align="center">
+  <img src="docs/imgs/dashboard-cluster-view.png" alt="exo dashboard - cluster view showing 4 x M3 Ultra Mac Studio with DeepSeek v3.1 and Kimi-K2-Thinking loaded" width="80%" />
+</p>
+<p align="center"><em>4 × 512GB M3 Ultra Mac Studio running DeepSeek v3.1 (8-bit) and Kimi-K2-Thinking (4-bit)</em></p>
+
 ## Benchmarks
 
 <details>
   <summary>Qwen3-235B (8-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA</summary>
   <img src="docs/benchmarks/jeffgeerling/mac-studio-cluster-ai-full-1-qwen3-235b.jpeg" alt="Benchmark - Qwen3-235B (8-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA" width="80%" />
   <p>
-    <strong>Source:</strong> <a href="https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5">Jeff Geerling: 15 TB VRAM on Mac Studio – RDMA over Thunderbolt 5</a>
+    <strong>Source:</strong> <a href="https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5">Jeff Geerling: 15 TB VRAM on Mac Studio – RDMA over Thunderbolt 5</a>
   </p>
 </details>
 
@@ -49,7 +58,7 @@ exo connects all your devices into an AI cluster. Not only does exo enable runni
   <summary>DeepSeek v3.1 671B (8-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA</summary>
   <img src="docs/benchmarks/jeffgeerling/mac-studio-cluster-ai-full-2-deepseek-3.1-671b.jpeg" alt="Benchmark - DeepSeek v3.1 671B (8-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA" width="80%" />
   <p>
-    <strong>Source:</strong> <a href="https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5">Jeff Geerling: 15 TB VRAM on Mac Studio – RDMA over Thunderbolt 5</a>
+    <strong>Source:</strong> <a href="https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5">Jeff Geerling: 15 TB VRAM on Mac Studio – RDMA over Thunderbolt 5</a>
   </p>
 </details>
 
@@ -57,7 +66,7 @@ exo connects all your devices into an AI cluster. Not only does exo enable runni
   <summary>Kimi K2 Thinking (native 4-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA</summary>
   <img src="docs/benchmarks/jeffgeerling/mac-studio-cluster-ai-full-3-kimi-k2-thinking.jpeg" alt="Benchmark - Kimi K2 Thinking (native 4-bit) on 4 × M3 Ultra Mac Studio with Tensor Parallel RDMA" width="80%" />
   <p>
-    <strong>Source:</strong> <a href="https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5">Jeff Geerling: 15 TB VRAM on Mac Studio – RDMA over Thunderbolt 5</a>
+    <strong>Source:</strong> <a href="https://www.jeffgeerling.com/blog/2025/15-tb-vram-on-mac-studio-rdma-over-thunderbolt-5">Jeff Geerling: 15 TB VRAM on Mac Studio – RDMA over Thunderbolt 5</a>
   </p>
 </details>
 
@@ -162,6 +171,24 @@ This starts the exo dashboard and API at http://localhost:52415/
 
 **Important note for Linux users:** Currently, exo runs on CPU on Linux. GPU support for Linux platforms is under development. If you'd like to see support for your specific Linux hardware, please [search for existing feature requests](https://github.com/exo-explore/exo/issues) or create a new one.
 
+**Configuration Options:**
+
+- `--no-worker`: Run exo without the worker component. Useful for coordinator-only nodes that handle networking and orchestration but don't execute inference tasks. This is helpful for machines without sufficient GPU resources but with good network connectivity.
+
+  ```bash
+  uv run exo --no-worker
+  ```
+
+**File Locations (Linux):**
+
+exo follows the [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html) on Linux:
+
+- **Configuration files**: `~/.config/exo/` (or `$XDG_CONFIG_HOME/exo/`)
+- **Data files**: `~/.local/share/exo/` (or `$XDG_DATA_HOME/exo/`)
+- **Cache files**: `~/.cache/exo/` (or `$XDG_CACHE_HOME/exo/`)
+
+You can override these locations by setting the corresponding XDG environment variables.
+
 ### macOS App
 
 exo ships a macOS app that runs in the background on your Mac.
@@ -173,6 +200,19 @@ The macOS app requires macOS Tahoe 26.2 or later.
 Download the latest build here: [EXO-latest.dmg](https://assets.exolabs.net/EXO-latest.dmg).
 
 The app will ask for permission to modify system settings and install a new Network profile. Improvements to this are being worked on.
+
+**Custom Namespace for Cluster Isolation:**
+
+The macOS app includes a custom namespace feature that allows you to isolate your exo cluster from others on the same network. This is configured through the `EXO_LIBP2P_NAMESPACE` setting:
+
+- **Use cases**:
+  - Running multiple separate exo clusters on the same network
+  - Isolating development/testing clusters from production clusters
+  - Preventing accidental cluster joining
+
+- **Configuration**: Access this setting in the app's Advanced settings (or set the `EXO_LIBP2P_NAMESPACE` environment variable when running from source)
+
+The namespace is logged on startup for debugging purposes.
 
 #### Uninstalling the macOS App
 
@@ -320,6 +360,52 @@ For further details, see:
 
 ---
 
+## Benchmarking
+
+The `exo-bench` tool measures model prefill and token generation speed across different placement configurations. This helps you optimize model performance and validate improvements.
+
+**Prerequisites:**
+- Nodes should be running with `uv run exo` before benchmarking
+- The tool uses the `/bench/chat/completions` endpoint
+
+**Basic usage:**
+
+```bash
+uv run bench/exo_bench.py \
+  --model Llama-3.2-1B-Instruct-4bit \
+  --pp 128,256,512 \
+  --tg 128,256
+```
+
+**Key parameters:**
+
+- `--model`: Model to benchmark (short ID or HuggingFace ID)
+- `--pp`: Prompt size hints (comma-separated integers)
+- `--tg`: Generation lengths (comma-separated integers)
+- `--max-nodes`: Limit placements to N nodes (default: 4)
+- `--instance-meta`: Filter by `ring`, `jaccl`, or `both` (default: both)
+- `--sharding`: Filter by `pipeline`, `tensor`, or `both` (default: both)
+- `--repeat`: Number of repetitions per configuration (default: 1)
+- `--warmup`: Warmup runs per placement (default: 0)
+- `--json-out`: Output file for results (default: bench/results.json)
+
+**Example with filters:**
+
+```bash
+uv run bench/exo_bench.py \
+  --model Llama-3.2-1B-Instruct-4bit \
+  --pp 128,512 \
+  --tg 128 \
+  --max-nodes 2 \
+  --sharding tensor \
+  --repeat 3 \
+  --json-out my-results.json
+```
+
+The tool outputs performance metrics including prompt tokens per second (prompt_tps), generation tokens per second (generation_tps), and peak memory usage for each configuration.
+
+---
+
 ## Hardware Accelerator Support
 
 On macOS, exo uses the GPU. On Linux, exo currently runs on CPU. We are working on extending hardware accelerator support. If you'd like support for a new hardware platform, please [search for an existing feature request](https://github.com/exo-explore/exo/issues) and add a thumbs up so we know what hardware is important to the community.
@@ -329,4 +415,3 @@ On macOS, exo uses the GPU. On Linux, exo currently runs on CPU. We are working 
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to exo.
-

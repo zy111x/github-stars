@@ -1,14 +1,11 @@
 ---
 project: CopilotKit
-stars: 28001
+stars: 28148
 description: |-
     React UI + elegant infrastructure for AI Copilots, AI chatbots, and in-app AI agents. The Agentic Frontend 🪁
 url: https://github.com/CopilotKit/CopilotKit
 ---
 
-<a href="https://go.copilotkit.ai/v150-whats-new" target="_blank">
-<img width="1595" height="284" alt="Introducing CopilotKit  v1 50!" src="https://github.com/user-attachments/assets/5d852a9b-290a-44b7-8c6a-9f75e51f1713" />
-<a /> 
 
 <br>
 
@@ -66,7 +63,6 @@ url: https://github.com/CopilotKit/CopilotKit
 <br />
 <br />
 
-<img width="4096" height="2341" alt="Best in class support across the ecosystem" src="https://github.com/user-attachments/assets/bf399131-2a92-49f8-8748-38ed72353f9c" />
 
 ## ⭐️ useAgent
 

@@ -1,6 +1,6 @@
 ---
 project: json-render
-stars: 5816
+stars: 8888
 description: |-
     AI → JSON → UI
 url: https://github.com/vercel-labs/json-render

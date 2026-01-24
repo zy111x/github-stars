@@ -1,6 +1,6 @@
 ---
 project: icons
-stars: 685
+stars: 698
 description: |-
     Collection of icons and logos maintained by selfh.st
 url: https://github.com/selfhst/icons
@@ -43,6 +43,8 @@ When available, SVG icons are used as the starting point for all icon formats. O
 
 By default, the directory provides SVG icons (when available) in standard, dark, and light colors. Users looking to display the icons using colors of their choice can become a [paid member of selfh.st](https://selfh.st/perks) or [deploy the collection themselves](https://github.com/selfhst/icons/wiki).
 
-## Requests
+## Requests and Contributions
 
-Requests for new or updated icons can be made via the repository's [discussions](https://github.com/selfhst/icons/discussions). To ensure quality and consistency, pull requests will not be accepted from the public.
+Requests for new or updated icons can be made via the repository's [discussions](https://github.com/selfhst/icons/discussions).
+
+To ensure quality and consistency, contributions and pull requests will not be accepted from the non-organizational members.

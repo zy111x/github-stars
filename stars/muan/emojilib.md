@@ -1,6 +1,6 @@
 ---
 project: emojilib
-stars: 1758
+stars: 1762
 description: |-
     Emoji keyword library.
 url: https://github.com/muan/emojilib

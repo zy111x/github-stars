@@ -1,6 +1,6 @@
 ---
 project: extension.js
-stars: 4510
+stars: 4574
 description: |-
     🧩 The cross-browser extension framework
 url: https://github.com/extension-js/extension.js
@@ -27,7 +27,7 @@ url: https://github.com/extension-js/extension.js
 
 - [Create a new extension](#create-a-new-extension) — How to create a new extension.
 - [Watch demo](#watch-demo) — See how creating a new extension works.
-- [Start from an example](https://github.com/extension-js/extension.js/tree/main/examples) — Start from a working baseline.
+- [Start from an example](https://github.com/extension-js/examples) — Start from a working baseline.
 - [I have an extension](#i-have-an-extension) — Use only specific parts of Extension.js.
 
 Create cross-browser extensions without manual build configuration.<br />Use Extension.js to develop, build, and preview across browsers with a unified workflow.

@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 15040
+stars: 15164
 description: |-
     Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI features. ✨
 url: https://github.com/AstrBotDevs/AstrBot

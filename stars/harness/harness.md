@@ -1,6 +1,6 @@
 ---
 project: harness
-stars: 33814
+stars: 33839
 description: |-
     Harness Open Source is an end-to-end developer platform with Source Control Management, CI/CD Pipelines, Hosted Developer Environments, and Artifact Registries.
 url: https://github.com/harness/harness

@@ -1,6 +1,6 @@
 ---
 project: mind-elixir-core
-stars: 2900
+stars: 2909
 description: |-
     ⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.
 url: https://github.com/SSShooter/mind-elixir-core
@@ -29,6 +29,9 @@ url: https://github.com/SSShooter/mind-elixir-core
   </a>
   <a href="https://bundlephobia.com/result?p=mind-elixir">
     <img src="https://badgen.net/bundlephobia/dependency-count/mind-elixir" alt="dependency-count">
+  </a>
+  <a href="https://dependents.info/SSShooter/mind-elixir-core">
+    <img src="https://dependents.info/SSShooter/mind-elixir-core/badge" alt="dependents count badge" />
   </a>
   <a href="https://packagephobia.com/result?p=mind-elixir">
     <img src="https://packagephobia.com/badge?p=mind-elixir" alt="package size">
@@ -80,6 +83,7 @@ Mind elixir is a open source JavaScript mind map core. You can use it with any f
 <details>
 <summary>Table of Contents</summary>
 
+- [Used by](#used-by)
 - [Features](#features)
   - [🎨 **User Experience**](#-user-experience)
   - [⚡ **Performance \& Architecture**](#-performance--architecture)
@@ -109,6 +113,12 @@ Mind elixir is a open source JavaScript mind map core. You can use it with any f
 - [Contributors](#contributors)
 
 </details>
+
+## Used by
+
+<a href="https://dependents.info/SSShooter/mind-elixir-core">
+  <img src="https://dependents.info/SSShooter/mind-elixir-core/image" alt="network dependents image" />
+</a>
 
 ## Try now
 

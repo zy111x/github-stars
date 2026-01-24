@@ -1,6 +1,6 @@
 ---
 project: octopus
-stars: 1098
+stars: 1201
 description: |-
     One Hub All LLMs For You | 为个人打造的 LLM API 聚合服务
 url: https://github.com/bestruirui/octopus
