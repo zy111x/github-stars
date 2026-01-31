@@ -1,6 +1,6 @@
 ---
 project: Checkmate
-stars: 8992
+stars: 9009
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Don't be shy, join here: https://discord.com/invite/NAb6H3UTjK :)
 url: https://github.com/bluewave-labs/Checkmate
@@ -87,9 +87,8 @@ You can see the memory footprint of MongoDB and Redis on the same server (398Mb 
 
 If you have any questions, suggestions or comments, you have several options: 
 
-- [Discord channel](https://discord.gg/NAb6H3UTjK)
-- [GitHub Discussions](https://github.com/bluewave-labs/bluewave-uptime/discussions)
-- [Reddit group](https://www.reddit.com/r/CheckmateMonitoring/)
+- [Discord channel](https://discord.gg/NAb6H3UTjK) (preferred)
+- [GitHub Discussions](https://github.com/bluewave-labs/bluewave-uptime/discussions) (we check here from time to time)
 
 Feel free to ask questions or share your ideas - we'd love to hear from you!
 

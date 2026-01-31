@@ -1,9 +1,9 @@
 ---
 project: mcp-proxy
-stars: 623
+stars: 625
 description: |-
     An MCP proxy server that aggregates and serves multiple MCP resource servers through a single HTTP server.
-url: https://github.com/TBXark/mcp-proxy
+url: https://github.com/tbxark/mcp-proxy
 ---
 
 # MCP Proxy Server
@@ -28,7 +28,7 @@ An MCP proxy that aggregates multiple MCP servers behind a single HTTP entrypoin
 ### Build from source
 
 ```bash
-git clone https://github.com/TBXark/mcp-proxy.git
+git clone https://github.com/tbxark/mcp-proxy.git
 cd mcp-proxy
 make build
 ./build/mcp-proxy --config path/to/config.json
@@ -37,7 +37,7 @@ make build
 ### Install via Go
 
 ```bash
-go install github.com/TBXark/mcp-proxy@latest
+go install github.com/tbxark/mcp-proxy@latest
 ```
 
 ### Docker

@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 454
+stars: 455
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -627,6 +627,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-5E0D73?style=for-the-badge&logo=Contributor+Covenant&logoColor=FFFFFF)
 ![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-FE5196?style=for-the-badge&logo=Conventional+Commits&logoColor=FFFFFF)
 ![Convertio](https://img.shields.io/badge/Convertio-FF3333?style=for-the-badge&logo=Convertio&logoColor=FFFFFF)
+![Convex](https://img.shields.io/badge/Convex-EE342F?style=for-the-badge&logo=Convex&logoColor=FFFFFF)
 ![Cookiecutter](https://img.shields.io/badge/Cookiecutter-222222?style=for-the-badge&logo=Cookiecutter&logoColor=D4AA00)
 ![Cooler Master](https://img.shields.io/badge/Cooler%20Master-1E1E28?style=for-the-badge&logo=Cooler+Master&logoColor=FFFFFF)
 ![Coolify](https://img.shields.io/badge/Coolify-6B16ED?style=for-the-badge&logo=Coolify&logoColor=FFFFFF)
@@ -751,6 +752,7 @@ url: https://github.com/progfay/shields-with-icon
 ![DeviantArt](https://img.shields.io/badge/DeviantArt-222222?style=for-the-badge&logo=DeviantArt&logoColor=05CC47)
 ![Devpost](https://img.shields.io/badge/Devpost-003E54?style=for-the-badge&logo=Devpost&logoColor=FFFFFF)
 ![devRant](https://img.shields.io/badge/devRant-222222?style=for-the-badge&logo=devRant&logoColor=F99A66)
+![Devuan](https://img.shields.io/badge/Devuan-004489?style=for-the-badge&logo=Devuan&logoColor=FFFFFF)
 ![Dgraph](https://img.shields.io/badge/Dgraph-E50695?style=for-the-badge&logo=Dgraph&logoColor=FFFFFF)
 ![DHL](https://img.shields.io/badge/DHL-222222?style=for-the-badge&logo=DHL&logoColor=FFCC00)
 ![diagrams.net](https://img.shields.io/badge/diagrams.net-F08705?style=for-the-badge&logo=diagrams.net&logoColor=FFFFFF)
@@ -1405,6 +1407,7 @@ url: https://github.com/progfay/shields-with-icon
 ![InfoQ](https://img.shields.io/badge/InfoQ-2C6CAF?style=for-the-badge&logo=InfoQ&logoColor=FFFFFF)
 ![Infosys](https://img.shields.io/badge/Infosys-007CC3?style=for-the-badge&logo=Infosys&logoColor=FFFFFF)
 ![Infracost](https://img.shields.io/badge/Infracost-DB44B8?style=for-the-badge&logo=Infracost&logoColor=FFFFFF)
+![Infuse](https://img.shields.io/badge/Infuse-FF8000?style=for-the-badge&logo=Infuse&logoColor=FFFFFF)
 ![Ingress](https://img.shields.io/badge/Ingress-783CBD?style=for-the-badge&logo=Ingress&logoColor=FFFFFF)
 ![Inkdrop](https://img.shields.io/badge/Inkdrop-7A78D7?style=for-the-badge&logo=Inkdrop&logoColor=FFFFFF)
 ![Inkscape](https://img.shields.io/badge/Inkscape-000000?style=for-the-badge&logo=Inkscape&logoColor=FFFFFF)
@@ -1569,6 +1572,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Koc](https://img.shields.io/badge/Koc-F9423A?style=for-the-badge&logo=Koc&logoColor=FFFFFF)
 ![Kodak](https://img.shields.io/badge/Kodak-ED0000?style=for-the-badge&logo=Kodak&logoColor=FFFFFF)
 ![Kodi](https://img.shields.io/badge/Kodi-222222?style=for-the-badge&logo=Kodi&logoColor=17B2E7)
+![Kodular](https://img.shields.io/badge/Kodular-4527A0?style=for-the-badge&logo=Kodular&logoColor=FFFFFF)
 ![Koenigsegg](https://img.shields.io/badge/Koenigsegg-000000?style=for-the-badge&logo=Koenigsegg&logoColor=FFFFFF)
 ![Kofax](https://img.shields.io/badge/Kofax-00558C?style=for-the-badge&logo=Kofax&logoColor=FFFFFF)
 ![Komoot](https://img.shields.io/badge/Komoot-6AA127?style=for-the-badge&logo=Komoot&logoColor=FFFFFF)
@@ -2109,6 +2113,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Org](https://img.shields.io/badge/Org-77AA99?style=for-the-badge&logo=Org&logoColor=FFFFFF)
 ![Organic Maps](https://img.shields.io/badge/Organic%20Maps-006C35?style=for-the-badge&logo=Organic+Maps&logoColor=FFFFFF)
 ![Origin](https://img.shields.io/badge/Origin-F56C2D?style=for-the-badge&logo=Origin&logoColor=FFFFFF)
+![Ory](https://img.shields.io/badge/Ory-4F46E5?style=for-the-badge&logo=Ory&logoColor=FFFFFF)
 ![Osano](https://img.shields.io/badge/Osano-7764FA?style=for-the-badge&logo=Osano&logoColor=FFFFFF)
 ![OSF](https://img.shields.io/badge/OSF-222222?style=for-the-badge&logo=OSF&logoColor=2CB9F1)
 ![OSGeo](https://img.shields.io/badge/OSGeo-4CB05B?style=for-the-badge&logo=OSGeo&logoColor=FFFFFF)

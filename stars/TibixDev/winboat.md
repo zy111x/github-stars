@@ -1,6 +1,6 @@
 ---
 project: winboat
-stars: 18279
+stars: 18495
 description: |-
     Run Windows apps on 🐧 Linux with ✨ seamless integration
 url: https://github.com/TibixDev/winboat
@@ -81,7 +81,14 @@ You can download the latest Linux builds under the [Releases](https://github.com
 - **Unpacked:** The raw unpacked files, simply run the executable (`linux-unpacked/winboat`)
 - **.deb:** The intended format for Debian based distributions
 - **.rpm:** The intended format for Fedora based distributions
-
+- **Nix (Nixpkgs)**
+    1. Add the winboat package to your config (ensure using nixpkgs-unstable)
+    using `environment.systemPackages = [pkgs.winboat];` or `home.packages = [pkgs.winboat];` if using home manager.
+    2. Add the following lines to your nix configuration
+    ```nix
+    virtualisation.docker.enable = true;
+    users.users.{yourUser}.extraGroups = ["docker"];
+    ```
 ## Known Issues About Container Runtimes
 
 - Docker Desktop is **unsupported** for now

@@ -1,6 +1,6 @@
 ---
 project: dujiaoka
-stars: 11743
+stars: 11770
 description: |-
     🦄独角数卡(自动售货系统)-开源站长自动化售货解决方案、高效、稳定、快速！🚀🚀🎉🎉
 url: https://github.com/assimon/dujiaoka
@@ -58,6 +58,9 @@ url: https://github.com/assimon/dujiaoka
 ## 使用交流      
 Telegram: [https://t.me/dujiaoka](https://t.me/dujiaoka)    
 关注Telegram官方频道：[https://t.me/dujiaoshuka](https://t.me/dujiaoshuka) (系统更新通知，bug更新，重大事件推送)
+
+## 🪧《官方自营旗舰店》
+D&J Studio：[https://dujiaoka.com/](https://dujiaoka.com/)
 
 ## 🔥推荐服务器 
 - （🇺🇸美国免备案vps，配置2核2G仅需`20.98$`≈`145RMB`一年/支持支付宝付款）[👉🏻点我直达](https://my.racknerd.com/aff.php?aff=2745&pid=681)

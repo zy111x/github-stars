@@ -1,6 +1,6 @@
 ---
 project: yournextstore
-stars: 5273
+stars: 5278
 description: |-
     Open-Source Next.js commerce. Stripe-native, ultra fast page loads, typed APIs. Built for AI development (Claude, Codex,   Cursor).
 url: https://github.com/yournextstore/yournextstore
@@ -86,7 +86,6 @@ Open [localhost:3000](http://localhost:3000) — your store is running.
 Copy `.env.example` to `.env.local` and set:
 
 - `YNS_API_KEY` – Your API token from the admin panel
-- `NEXT_PUBLIC_ROOT_URL` – Your store URL (e.g., `http://localhost:3000`)
 
 ## Next steps
 

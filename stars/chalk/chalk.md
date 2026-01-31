@@ -1,6 +1,6 @@
 ---
 project: chalk
-stars: 22916
+stars: 22929
 description: |-
     🖍 Terminal string styling done right
 url: https://github.com/chalk/chalk
@@ -186,10 +186,10 @@ console.log(foregroundColorNames.includes('pink'));
 - `italic` - Make the text italic. *(Not widely supported)*
 - `underline` - Put a horizontal line below the text. *(Not widely supported)*
 - `overline` - Put a horizontal line above the text. *(Not widely supported)*
-- `inverse`- Invert background and foreground colors.
+- `inverse` - Invert background and foreground colors.
 - `hidden` - Print the text but make it invisible.
 - `strikethrough` - Puts a horizontal line through the center of the text. *(Not widely supported)*
-- `visible`- Print the text only when Chalk has a color level above zero. Can be useful for things that are purely cosmetic.
+- `visible` - Print the text only when Chalk has a color level above zero. Can be useful for things that are purely cosmetic.
 
 ### Colors
 

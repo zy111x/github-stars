@@ -1,6 +1,6 @@
 ---
 project: checkcle
-stars: 2282
+stars: 2320
 description: |-
     CheckCle is a self-hosted, open-source monitoring platform for seamless, real-time full-stack systems, applications, and infrastructure. It provides real-time uptime monitoring, distributed checks, incident tracking, and alerts. All deployable anywhere.
 url: https://github.com/operacle/checkcle
@@ -193,7 +193,7 @@ Here are some ways you can help improve CheckCle:
 - Website: [checkcle.io](https://checkcle.io)
 - Documentation: [docs.checkcle.io](https://docs.checkcle.io) | Big thanks to [GitBook](https://github.com/gitbookio) for sponsoring the OSS site plan for CheckCle!
 - Chat on Discord: Join our community [@discord](https://discord.gg/xs9gbubGwX)
-- Follow us on X: [@checkcle_oss](https://x.com/checkcle_oss)
+- Follow us on X: [@asqrm_io](https://x.com/asqrm_io)
 
 ## 📜 License
 

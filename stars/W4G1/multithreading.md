@@ -1,6 +1,6 @@
 ---
 project: multithreading
-stars: 1408
+stars: 1494
 description: |-
     The missing standard library for multithreading in JavaScript (Works in the browser, Node.js, Deno, Bun)
 url: https://github.com/W4G1/multithreading
@@ -55,18 +55,11 @@ import { spawn } from "multithreading";
 // Spawn a task on a background thread
 const handle = spawn(() => {
   // This code runs in a separate worker
-  const result = Math.random();
-  return result;
+  return Math.random();
 });
 
 // Wait for the result
-const result = await handle.join();
-
-if (result.ok) {
-  console.log("Result:", result.value); // 0.6378467071314606
-} else {
-  console.error("Worker error:", result.error);
-}
+const result = await handle.join(); // { ok: true, value: 0.6378467071314606 }
 ```
 
 -----
@@ -154,7 +147,7 @@ A `Mutex` ensures that only one thread can access a specific piece of data at a 
 
 #### Option A: Automatic Management (Recommended)
 
-This library has support for the [Explicit Resource Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/using) proposal (`using` keyword). When you acquire a lock, it returns a guard. When that guard goes out of scope, the lock is automatically released.
+This library implements the [Explicit Resource Management](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/using) proposal (`using` keyword). When you acquire a lock, it returns a guard. When that guard goes out of scope, the lock is automatically released.
 
 ```typescript
 import { spawn, move, Mutex } from "multithreading";

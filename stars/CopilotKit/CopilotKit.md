@@ -1,13 +1,15 @@
 ---
 project: CopilotKit
-stars: 28148
+stars: 28364
 description: |-
-    React UI + elegant infrastructure for AI Copilots, AI chatbots, and in-app AI agents. The Agentic Frontend 🪁
+    Framework for building agent-native applications with Generative UI, shared state, and human-in-the-loop workflows. 
 url: https://github.com/CopilotKit/CopilotKit
 ---
 
+<div align="center" >
+  <h1>Copilotkit 🪁</h1>
+</div>
 
-<br>
 
 <a href="https://go.copilotkit.ai/copilotkit-docs" target="_blank">
 <img width="996" height="293" alt="image" src="https://github.com/user-attachments/assets/aeb56c28-c766-44a5-810c-5d999bb6a32a" />
@@ -79,12 +81,6 @@ https://github.com/user-attachments/assets/46b7d161-a988-4453-9ca9-c0eca4c33da6
 - Production-ready UI - Use customizable components or build with headless UI
 - Built-in security - Prompt injection protection
 - Open source - Full transparency and community-driven
-
-## 🧑‍💻 Real life use cases
-
-<span>Deploy deeply-integrated AI assistants & agents that work alongside your users inside your applications.</span>
-
-<img width="4096" height="2725" alt="Headless UI" src="https://github.com/user-attachments/assets/4dbe1e74-8b46-4798-a658-f79ee5a66189" />
 
 
 ## 🖥️ Code Samples

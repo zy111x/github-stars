@@ -1,6 +1,6 @@
 ---
 project: certimate
-stars: 8097
+stars: 8126
 description: |-
     An open-source and free self-hosted SSL certificates ACME tool, automates the full-cycle of issuance, deployment, and renewal visually. 完全开源免费的自托管 SSL 证书 ACME 工具，申请、部署、续期全流程自动化可视化，支持各大主流云厂商。
 url: https://github.com/certimate-go/certimate
@@ -38,14 +38,14 @@ An open-source and free self-hosted SSL certificates ACME tool, automates the fu
 
 ## 💡 Features
 
-- Flexible workflow orchestration, fully automation from certificate application to deployment;
-- Supports single-domain, multi-domain, wildcard certificates, with options for RSA or ECC.
+- Flexible workflow orchestration, fully automation from certificate application to deployment.
+- Supports requesting single/multiple/wildcard domain certificates, IP address certificates, with options for RSA or ECC key.
 - Supports DNS-01 challenge and HTTP-01 challenge both.
 - Supports various certificate formats such as PEM, PFX, JKS.
-- Supports more than 60+ domain registrars (e.g., AWS, Cloudflare, GoDaddy, Alibaba Cloud, Tencent Cloud, etc. [Check out full providers](https://docs.certimate.me/en-US/docs/reference/providers#supported-dns-providers));
-- Supports more than 110+ deployment targets (e.g., Kubernetes, CDN, WAF, load balancers, etc. [Check out full providers](https://docs.certimate.me/en-US/docs/reference/providers#supported-hosting-providers));
-- Supports multiple notification channels including email, Discord, Slack, Telegram, DingTalk, Feishu, WeCom, and more;
-- Supports multiple ACME CAs including Let's Encrypt, Actalis, Google Trust Services，SSL.com, ZeroSSL, and more;
+- Supports more than 60+ domain registrars (e.g., AWS, Cloudflare, GoDaddy, Alibaba Cloud, Tencent Cloud, etc. [Check out full providers](https://docs.certimate.me/en-US/docs/reference/providers#supported-dns-providers)).
+- Supports more than 110+ deployment targets (e.g., Kubernetes, CDN, WAF, load balancers, etc. [Check out full providers](https://docs.certimate.me/en-US/docs/reference/providers#supported-hosting-providers)).
+- Supports multiple notification channels including email, Discord, Slack, Telegram, DingTalk, Feishu, WeCom, and more.
+- Supports multiple ACME CAs including Let's Encrypt, Actalis, Google Trust Services，SSL.com, ZeroSSL, and more.
 - More features waiting to be discovered.
 
 ## 🚀 Quick Start

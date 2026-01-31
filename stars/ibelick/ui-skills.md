@@ -1,6 +1,6 @@
 ---
 project: ui-skills
-stars: 575
+stars: 667
 description: |-
     A growing set of skills to polish interfaces built by agents.
 url: https://github.com/ibelick/ui-skills
@@ -36,12 +36,14 @@ npx ui-skills add --all
 
 ## Available skills
 
-| Skill | Purpose |
-|------|---------|
-| [baseline-ui](./skills/baseline-ui/SKILL.md) | opinionated UI baseline |
-| [fixing-accessibility](./skills/fixing-accessibility/SKILL.md) | keyboard, labels, focus, semantics |
-| [fixing-metadata](./skills/fixing-metadata/SKILL.md) | correct titles, meta, social cards |
-| [fixing-motion-performance](./skills/fixing-motion-performance/SKILL.md) | safe, performance-first UI motion |
+| Skill                                                                    | Purpose                            |
+| ------------------------------------------------------------------------ | ---------------------------------- |
+| [baseline-ui](./skills/baseline-ui/SKILL.md)                             | opinionated UI baseline            |
+| [fixing-accessibility](./skills/fixing-accessibility/SKILL.md)           | keyboard, labels, focus, semantics |
+| [fixing-metadata](./skills/fixing-metadata/SKILL.md)                     | correct titles, meta, social cards |
+| [fixing-motion-performance](./skills/fixing-motion-performance/SKILL.md) | safe, performance-first UI motion  |
+
+More on [ui-skills.com](http://ui-skills.com/)
 
 ## License
 

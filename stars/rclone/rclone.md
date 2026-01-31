@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 55108
+stars: 55237
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -71,6 +71,7 @@ directories to and from different cloud storage providers.
 - iCloud Drive [:page_facing_up:](https://rclone.org/iclouddrive/)
 - ImageKit [:page_facing_up:](https://rclone.org/imagekit/)
 - Internet Archive [:page_facing_up:](https://rclone.org/internetarchive/)
+- Internxt [:page_facing_up:](https://rclone.org/internxt/)
 - Jottacloud [:page_facing_up:](https://rclone.org/jottacloud/)
 - IBM COS S3 [:page_facing_up:](https://rclone.org/s3/#ibm-cos-s3)
 - Intercolo Object Storage [:page_facing_up:](https://rclone.org/s3/#intercolo)

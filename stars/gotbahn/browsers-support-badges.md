@@ -1,6 +1,6 @@
 ---
 project: browsers-support-badges
-stars: 131
+stars: 130
 description: |-
     Browsers support badges for GitHub
 url: https://github.com/gotbahn/browsers-support-badges

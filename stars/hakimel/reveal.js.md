@@ -1,6 +1,6 @@
 ---
 project: reveal.js
-stars: 70457
+stars: 70501
 description: |-
     The HTML Presentation Framework
 url: https://github.com/hakimel/reveal.js
@@ -34,6 +34,6 @@ Want to create reveal.js presentation in a graphical editor? Try <https://slides
 
 --- 
 <div align="center">
-  MIT licensed | Copyright © 2011-2024 Hakim El Hattab, https://hakim.se
+  MIT licensed | Copyright © 2011-2026 Hakim El Hattab, https://hakim.se
 </div>
 

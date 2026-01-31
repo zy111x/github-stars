@@ -1,6 +1,6 @@
 ---
 project: hydrogen
-stars: 1868
+stars: 1869
 description: |-
     Hydrogen lets you build faster headless storefronts in less time, on Shopify.
 url: https://github.com/Shopify/hydrogen
@@ -20,6 +20,10 @@ url: https://github.com/Shopify/hydrogen
 Hydrogen is Shopify's stack for headless commerce. It provides a set of tools, utilities, and best-in-class examples for building dynamic and performant commerce applications. Hydrogen is designed to dovetail with [React Router](https://reactrouter.com/), the modern multi-strategy router for React, but it also provides a React library portable to other supporting frameworks.
 
  </div>
+
+## Contributing to Hydrogen
+
+[Read our contributing guide](CONTRIBUTING.md)
 
 ## Hydrogen Legacy v1
 
@@ -71,10 +75,6 @@ For example, if you're using Storefront API or Customer Account API version `202
 If the Storefront API or Customer Account API version updates include breaking changes, then Hydrogen and hydrogen-react may also include breaking changes. Because the API versions are updated every three months, breaking changes could occur every three months.
 
 Learn more about API [release schedules](https://shopify.dev/api/usage/versioning#release-schedule) at Shopify.
-
-## Contributing to Hydrogen
-
-[Read our contributing guide](CONTRIBUTING.md)
 
 ## Other handy links
 

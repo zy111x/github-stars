@@ -1,6 +1,6 @@
 ---
 project: postcss-html
-stars: 60
+stars: 59
 description: |-
     PostCSS syntax for parsing HTML (and HTML-like)
 url: https://github.com/gucong3000/postcss-html

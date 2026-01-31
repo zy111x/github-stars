@@ -1,6 +1,6 @@
 ---
 project: trailbase
-stars: 4433
+stars: 4518
 description: |-
     An open, sub-millisecond, single-executable Firebase alternative with type-safe APIs, built-in WebAssembly runtime, realtime subscriptions, auth, and admin UI built on Rust, SQLite & Wasmtime.
 url: https://github.com/trailbaseio/trailbase
@@ -195,8 +195,10 @@ established by much larger, successful projects such as Grafana or Element.
 
 TrailBase is free software under the terms of the [Open Software License 3.0
 (OSL-3.0)](https://opensource.org/licenses/OSL-3.0).
+Its client libraries are dual licensed under the permissive
+[Apache-2.0](https://opensource.org/license/apache-2-0).
 
-We chose the OSL-3.0 over other, better known copyleft licenses due to its
+We chose OSL-3.0 over other, better known copyleft licenses due to its
 narrower definition of "derivative work" that **only** covers modifications to
 TrailBase itself.
 This means that your application's original code is **not** subject to the

@@ -1,6 +1,6 @@
 ---
 project: P2PXHR
-stars: 109
+stars: 110
 description: |-
     An API that seamlessly empowers your xhr request through an on-the-fly peer-to-peer network created from your site's visitors
 url: https://github.com/Peer5/P2PXHR

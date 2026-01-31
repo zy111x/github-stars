@@ -1,6 +1,6 @@
 ---
 project: hacker-podcast
-stars: 2394
+stars: 2401
 description: |-
     一个基于 AI 的 Hacker News 中文播客项目，每天自动抓取 Hacker News 热门文章，通过 AI 生成中文总结并转换为播客内容。
 url: https://github.com/miantiao-me/hacker-podcast
@@ -131,7 +131,9 @@ pnpm deploy
 
 ## 赞助
 
-- **[Minimax Audio](https://hailuoai.com/audio)**：让文字栩栩如“声”
+> [!TIP]
+> ![MiniMax](https://static.miantiao.me/share/2026/eFwhMy/7360.png)
+> MiniMax-M2.1 是开源的业界顶尖编程模型，在多语言代码编写、界面设计理解与美学表达、长文本处理及多步骤复杂开发任务上表现卓越。让我们向通用生产力的长期愿景迈出了坚实一步，让人人都能轻松用上前沿的 AI 能力。[**点击领取 MiniMax CodingPlan 专属 88 折优惠**](http://404.li/mm)。
 
 1. [在 Telegram 关注我](https://t.me/miantiao_me)
 2. [在 𝕏 上关注我](https://404.li/x)

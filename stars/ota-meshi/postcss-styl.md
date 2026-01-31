@@ -1,6 +1,6 @@
 ---
 project: postcss-styl
-stars: 15
+stars: 14
 description: |-
     PostCSS parser plugin for converting Stylus syntax to PostCSS AST.
 url: https://github.com/ota-meshi/postcss-styl

@@ -1,8 +1,8 @@
 ---
 project: AstrBot
-stars: 15164
+stars: 15417
 description: |-
-    Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI features. ✨
+    Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI features. Your clawdbot alternative. ✨
 url: https://github.com/AstrBotDevs/AstrBot
 ---
 
@@ -49,7 +49,7 @@ AstrBot 是一个开源的一站式 Agent 聊天机器人平台，可接入主�
 ## 主要功能
 
 1. 💯 免费 & 开源。
-1. ✨ AI 大模型对话，多模态，Agent，MCP，知识库，人格设定，自动压缩对话。
+1. ✨ AI 大模型对话，多模态，Agent，MCP，Skills，知识库，人格设定，自动压缩对话。
 2. 🤖 支持接入 Dify、阿里云百炼、Coze 等智能体平台。
 2. 🌐 多平台，支持 QQ、企业微信、飞书、钉钉、微信公众号、Telegram、Slack 以及[更多](#支持的消息平台)。
 3. 📦 插件扩展，已有近 800 个插件可一键安装。

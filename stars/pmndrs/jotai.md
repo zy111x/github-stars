@@ -1,6 +1,6 @@
 ---
 project: jotai
-stars: 20929
+stars: 20953
 description: |-
     👻 Primitive and flexible state management for React
 url: https://github.com/pmndrs/jotai

@@ -1,6 +1,6 @@
 ---
 project: ui
-stars: 643
+stars: 667
 description: |-
     A beautiful collection of copy-and-paste widgets for your next project.
 url: https://github.com/wigggle-ui/ui
@@ -21,6 +21,32 @@ Licensed under the [MIT license](https://github.com/wigggle-ui/ui/blob/main/LICE
 ## Community
 
 Have questions, comments or feedback? [File an Issue](https://github.com/wigggle-ui/ui/issues/new).
+
+## Sponsors
+
+This project is proudly supported by:
+
+<table>
+  <tbody>
+    <tr>
+    <tr>
+      <td>
+        <a href="https://openpanel.dev?utm_source=react-wheel-picker#gh-light-mode-only">
+          <img
+            src="https://assets.chanhdai.com/images/sponsors/openpanel.svg?v=1#gh-light-mode-only"
+            alt="OpenPanel"
+          />
+        </a>
+        <a href="https://openpanel.dev?utm_source=react-wheel-picker#gh-dark-mode-only">
+          <img
+            src="https://assets.chanhdai.com/images/sponsors/openpanel-dark.svg?v=1#gh-dark-mode-only"
+            alt="OpenPanel"
+          />
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Star History
 

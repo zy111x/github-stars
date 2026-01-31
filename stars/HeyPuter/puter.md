@@ -1,6 +1,6 @@
 ---
 project: puter
-stars: 38930
+stars: 39147
 description: |-
     🌐 The Internet Computer! Free, Open-Source, and Self-Hostable.
 url: https://github.com/HeyPuter/puter

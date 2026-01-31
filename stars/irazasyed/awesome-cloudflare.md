@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare
-stars: 1020
+stars: 1022
 description: |-
     ⛅️ Curated list of awesome Cloudflare worker recipes, open-source projects, guides, blogs and other resources.
 url: https://github.com/irazasyed/awesome-cloudflare
@@ -24,6 +24,7 @@ Cloudflare provides content delivery network (CDN) services, DDoS mitigation, In
   - [Reference](#reference)
   - [Tools](#tools)
   - [Recipes](#recipes)
+  - [AI](#ai)
 - [Other](#other)
 
 ## Community
@@ -154,6 +155,10 @@ Cloudflare provides content delivery network (CDN) services, DDoS mitigation, In
 - [Performance Optimized Workers](https://github.com/pmeenan/cf-workers) - Collection of worker scripts, generally focused on performance optimizations.
 - [Google reCAPTCHA verification](https://github.com/HR/recaptcha-worker) - Handle the server-side verification of your reCAPTCHA form.
 - [Cloudflare Workers Starter Kit](https://github.com/kriasoft/cloudflare-starter-kit) -  - TypeScript template \w multiple CF Workers, `*.env` files, and local testing.
+
+### AI
+
+- [Moltworker](https://github.com/cloudflare/moltworker) - Run Moltbot (formely Clawdbot) on Cloudflare Workers.
 
 ## Other
 

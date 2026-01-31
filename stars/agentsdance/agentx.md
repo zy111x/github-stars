@@ -1,6 +1,6 @@
 ---
 project: agentx
-stars: 46
+stars: 47
 description: |-
     AgentX - Agent Extension: MCP Servers, Agent Skills and Plugins Manager
 url: https://github.com/agentsdance/agentx

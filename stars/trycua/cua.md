@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 11907
+stars: 12201
 description: |-
     Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
 url: https://github.com/trycua/cua
@@ -9,9 +9,9 @@ url: https://github.com/trycua/cua
 <div align="center">
   <a href="https://cua.ai" target="_blank" rel="noopener noreferrer">
     <picture>
-      <source media="(prefers-color-scheme: dark)" alt="Cua logo" width="150" srcset="img/logo_white.png">
-      <source media="(prefers-color-scheme: light)" alt="Cua logo" width="150" srcset="img/logo_black.png">
-      <img alt="Cua logo" width="500" src="img/logo_black.png">
+      <source media="(prefers-color-scheme: dark)" alt="Cua logo" width="150" srcset="img/logo_white.svg">
+      <source media="(prefers-color-scheme: light)" alt="Cua logo" width="150" srcset="img/logo_black.svg">
+      <img alt="Cua logo" width="150" src="img/logo_black.svg">
     </picture>
   </a>
 
@@ -28,7 +28,7 @@ url: https://github.com/trycua/cua
 
 </div>
 
-**Cua** is an open-source platform for building, benchmarking, and deploying agents that can use any computer, with isolated, self-hostable sandboxes (Docker, QEMU, Apple Vz).
+**Cua** is an open-source platform for building, benchmarking, and deploying agents that can use any computer, with isolated, self-hostable sandboxes (Docker, QEMU, Apple Virtualization).
 
 <div align="center">
   <video src="https://github.com/user-attachments/assets/c619b4ea-bb8e-4382-860e-f3757e36af20" width="600" controls></video>
@@ -36,28 +36,39 @@ url: https://github.com/trycua/cua
 
 ## Choose Your Path
 
-<table width="100%">
-  <tr>
-    <th width="180"></th>
-    <th align="left">If you want to...</th>
-    <th width="120">Check out</th>
-  </tr>
-  <tr>
-    <td><a href="#cua---agentic-ui-automation--code-execution"><img src="img/cua-architecture.png" width="180"></a></td>
-    <td>Build AI agents that interact with any desktop, or run isolated code execution environments for AI coding assistants</td>
-    <td><a href="#cua---agentic-ui-automation--code-execution"><strong>Cua</strong></a></td>
-  </tr>
-  <tr>
-    <td><a href="#cua-bench---benchmarks--rl-environments"><img src="img/cua-bench-architecture.png" width="180"></a></td>
-    <td>Benchmark computer-use models on standardized tasks, or train agents with reinforcement learning</td>
-    <td><a href="#cua-bench---benchmarks--rl-environments"><strong>Cua-Bench</strong></a></td>
-  </tr>
-  <tr>
-    <td><a href="#lume---macos-virtualization"><img src="img/lume-architecture.png" width="180"></a></td>
-    <td>Run macOS and Linux VMs at near-native speed on Apple Silicon for CI/CD, testing, or agent workloads</td>
-    <td><a href="#lume---macos-virtualization"><strong>Lume</strong></a></td>
-  </tr>
-</table>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="#cua---agentic-ui-automation--code-execution">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="img/card-cua-dark.png">
+            <source media="(prefers-color-scheme: light)" srcset="img/card-cua-light.png">
+            <img src="img/card-cua-light.png" alt="Cua" width="280">
+          </picture>
+        </a>
+      </td>
+      <td align="center">
+        <a href="#cua-bench---benchmarks--rl-environments">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="img/card-cua-bench-dark.png">
+            <source media="(prefers-color-scheme: light)" srcset="img/card-cua-bench-light.png">
+            <img src="img/card-cua-bench-light.png" alt="Cua-Bench" width="280">
+          </picture>
+        </a>
+      </td>
+      <td align="center">
+        <a href="#lume---macos-virtualization">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="img/card-lume-dark.png">
+            <source media="(prefers-color-scheme: light)" srcset="img/card-lume-light.png">
+            <img src="img/card-lume-light.png" alt="Lume" width="280">
+          </picture>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
@@ -98,7 +109,7 @@ uv tool install -e . && cb image create linux-docker
 cb run dataset datasets/cua-bench-basic --agent cua-agent --max-parallel 4
 ```
 
-**[Get Started](https://cua.ai/docs/cuabench/guide/getting-started/first-steps)** | **[Registry](https://cuabench.ai/registry)** | **[CLI Reference](https://cua.ai/docs/cuabench/reference/cli-reference)**
+**[Get Started](https://cua.ai/docs/cuabench/guide/getting-started/first-steps)** | **[Partner With Us](https://cuabench.ai/)** | **[Registry](https://cuabench.ai/registry)** | **[CLI Reference](https://cua.ai/docs/cuabench/reference/cli-reference)**
 
 ---
 

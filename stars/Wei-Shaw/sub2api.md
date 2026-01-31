@@ -1,6 +1,6 @@
 ---
 project: sub2api
-stars: 978
+stars: 1226
 description: |-
     Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。
 url: https://github.com/Wei-Shaw/sub2api
@@ -26,7 +26,7 @@ English | [中文](README_CN.md)
 
 ## Demo
 
-Try Sub2API online: **https://v2.pincc.ai/**
+Try Sub2API online: **https://demo.sub2api.org/**
 
 Demo credentials (shared demo environment; **not** created automatically for self-hosted installs):
 

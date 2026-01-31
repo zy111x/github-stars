@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 16355
+stars: 16535
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -154,7 +154,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [LogLens](https://github.com/Caelrith/loglens-core) - A structured log viewer and query engine for the terminal.
 - [logshark](https://github.com/ugosan/logshark) A debugger CLI for JSON logs written in Go
 - [mitmproxy](https://www.mitmproxy.org) A free and open source interactive HTTPS proxy
-- [models](https://github.com/arimxyer/models) TUI for browsing AI models from models.dev
+- [models](https://github.com/arimxyer/models) TUI for browsing AI models and coding agents
 - [nap](https://github.com/maaslalani/nap) Code snippets in your terminal
 - [nodebro](https://github.com/jonaburg/nodebro) Easily view most recent Github releases/tags and release notes from the terminal
 - [opencode](https://github.com/sst/opencode) AI coding agent, built for the terminal
@@ -269,6 +269,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [ntc](https://codeberg.org/ItsZariep/ntc) Ncurses Tabbed file Chooser.
 - [ranger](https://github.com/ranger/ranger) A VIM-inspired file manager for the console.
 - [rovr](https://github.com/NSPC911/rovr) A post-modern terminal file manager.
+- [s3duck-tui](https://github.com/nexusriot/s3duck-tui) A TUI S3 client.
 - [sfm](https://github.com/afify/sfm) Simple file manager.
 - [superfile](https://github.com/MHNightCat/superfile) Pretty fancy and modern terminal file manager.
 - [TUIFIManager](https://github.com/GiorgosXou/TUIFIManager) A cross-platform terminal-based file manager _(supports termux)_.
