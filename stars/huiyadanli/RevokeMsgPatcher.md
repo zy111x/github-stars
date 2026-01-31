@@ -1,6 +1,6 @@
 ---
 project: RevokeMsgPatcher
-stars: 36359
+stars: 36511
 description: :trollface: A hex editor for WeChat/QQ/TIM - PC版微信/QQ/TIM防撤回补丁（我已经看到了，撤回也没用了）
 url: https://github.com/huiyadanli/RevokeMsgPatcher
 ---
@@ -8,7 +8,7 @@ url: https://github.com/huiyadanli/RevokeMsgPatcher
 👀微信/QQ/TIM防撤回补丁
 ================
 
-适用于 Windows 下 PC 版微信/QQ/TIM的防撤回补丁。**支持最新版微信/QQ/TIM**，其中微信能够选择安装多开功能。
+适用于 Windows 下 PC 版微信/QQ/TIM的防撤回补丁。**支持微信/QQ/TIM**，其中微信能够选择安装多开功能。
 
 下载地址： **⚡️点我下载最新版本** | ☁备用下载-蓝奏云 密码:coco| ☁备用下载-百度云
 

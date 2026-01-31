@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 26272
+stars: 26420
 description: edgetunnel 2.0 VLESS/Trojan 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -140,21 +140,21 @@ Warning
 
 强制固定UUID，只支持**UUIDv4**标准格式
 
-**HOST**
+HOST
 
 ❌
 
 `edt.pages.dev`
 
-强制固定伪装域名
+强制固定伪装域名可通过面板直接设置
 
-**PATH**
+PATH
 
 ❌
 
 `/`
 
-强制固定伪装路径
+强制固定伪装路径可通过面板直接设置
 
 **PROXYIP**
 
@@ -179,14 +179,6 @@ Warning
 `blog.cmliussss.com`,`*.ip111.cn`,`*google.com`
 
 强制走 SOCKS5 的名单 (`*` 为全局，域名用逗号分隔)
-
-**DOH**
-
-❌
-
-`https://doh.cmliussss.com/CMLiussss`
-
-用于解析ECH的DoH服务器
 
 * * *
 

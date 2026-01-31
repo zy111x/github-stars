@@ -1,6 +1,6 @@
 ---
 project: Modern-CPP-Programming
-stars: 14631
+stars: 14667
 description: Modern C++ Programming Course (C++03/11/14/17/20/23/26)
 url: https://github.com/federico-busato/Modern-CPP-Programming
 ---
@@ -70,25 +70,25 @@ Type System, Fundamental types, and Operators
 
 **Basic Concepts II** (html)
 
-Integral and Floating-point types and their arithmetic
+Integral types and arithmetic
 
 **5**
 
 **Basic Concepts III** (html)
 
-Entities, Enumerators, Structures, Control flow statements
+Floating-point types and arithmetic
 
 **6**
 
 **Basic Concepts IV** (html)
 
-Heap, Stack, Pointers, References, Const properties, Conversion operators
+Entities, Enumerators, Structures, Control flow statements
 
 **7**
 
 **Basic Concepts V** (html)
 
-Functions, Lambda expressions, Preprocessing directives
+Heap, Stack, Pointers, References, Const properties, Conversion operators
 
 **8**
 

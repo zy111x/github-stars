@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 34593
+stars: 34884
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/amruthpillai/reactive-resume
 ---

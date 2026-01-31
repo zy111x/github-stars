@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 12986
+stars: 13043
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -131,7 +131,7 @@ demo()
 
 ⭐ 自动构建可执行文件教程请查阅本文档的 `构建可执行文件指南` 部分；如果需要更加详细的图文教程，请 查阅文章！
 
-**注意：由于 Mac OS 平台的可执行文件 `main` 未经过代码签名，首次运行时会受到系统安全限制。请先在终端执行 `xattr -cr main.app` 命令移除安全标记，执行一次后即可正常运行。**
+**注意：由于 Mac OS 平台的可执行文件 `main` 未经过代码签名，首次运行时会受到系统安全限制。请先在终端执行 `xattr -cr 项目文件夹路径` 命令移除安全标记，执行一次后即可正常运行。**
 
 * * *
 
@@ -142,10 +142,16 @@ demo()
     
     **配置环境运行**2.  安装 `3.12` 版本的 Python 解释器
     3.  下载最新的源码或 Releases 发布的源码至本地
-    4.  运行 `python -m venv venv` 命令创建虚拟环境（可选）
-    5.  运行 `.\venv\Scripts\activate.ps1` 或者 `venv\Scripts\activate` 命令激活虚拟环境（可选）
-    6.  运行 `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt` 命令安装程序所需模块
-    7.  运行 `python .\main.py` 或者 `python main.py` 命令启动 DouK-Downloader
+    
+    **使用 pip 安装项目依赖**2.  运行 `python -m venv venv` 命令创建虚拟环境（可选）
+    3.  运行 `.\venv\Scripts\activate.ps1` 或者 `venv\Scripts\activate` 命令激活虚拟环境（可选）
+    4.  运行 `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt` 命令安装程序所需模块
+    5.  运行 `python .\main.py` 或者 `python main.py` 命令启动 DouK-Downloader
+    
+    **使用 uv 安装项目依赖（推荐）**2.  运行 `uv venv` 命令创建虚拟环境
+    3.  运行 `uv sync` 命令同步环境依赖
+    4.  运行 `uv run main.py` 命令启动 DouK-Downloader
+    
 2.  阅读 DouK-Downloader 的免责声明，根据提示输入内容
 3.  将 Cookie 信息写入配置文件
     
@@ -369,6 +375,13 @@ ZMTO：一家专业的云基础设施提供商，以可靠的尖端技术与专�
 
 * * *
 
+Thordata
+--------
+
+Thordata：可靠且价格实惠的住宅代理，一键助您收集全球数据；注册即可免费获得 1GB 住宅代理和 2000 次 SERP API；凭折扣码 **THOR66** 可获 30% 折扣。
+
+* * *
+
 TikHub
 ------
 
@@ -400,13 +413,11 @@ TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台�
 -   https://github.com/Johnserf-Seed/TikTokDownload
 -   https://github.com/Evil0ctal/Douyin\_TikTok\_Download\_API
 -   https://github.com/justbeluga/tiktok-web-reverse-engineering
--   https://github.com/NearHuiwen/TiktokDouyinCrawler
 -   https://github.com/ihmily/DouyinLiveRecorder
 -   https://github.com/encode/httpx/
 -   https://github.com/Textualize/rich
 -   https://github.com/omnilib/aiosqlite
 -   https://github.com/Tinche/aiofiles
--   https://github.com/thewh1teagle/rookie
 -   https://github.com/pyinstaller/pyinstaller
 -   https://foss.heptapod.net/openpyxl/openpyxl
 -   https://github.com/carpedm20/emoji/

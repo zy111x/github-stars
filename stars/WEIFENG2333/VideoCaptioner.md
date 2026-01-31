@@ -1,6 +1,6 @@
 ---
 project: VideoCaptioner
-stars: 12909
+stars: 13006
 description: 🎬 卡卡字幕助手 | VideoCaptioner - 基于 LLM 的智能字幕助手 - 视频字幕生成、断句、校正、字幕翻译全流程处理！- A powered tool for easy and efficient video subtitling.
 url: https://github.com/WEIFENG2333/VideoCaptioner
 ---
@@ -54,26 +54,22 @@ VideoCaptioner
     
 3.  LLM API 配置，（用于字幕断句、校正），可使用本项目的中转站
     
-4.  翻译配置，选择是否启用翻译，翻译服务（默认使用微软翻译，质量一般，推荐使用大模型翻译）
+4.  翻译配置，选择是否启用翻译，翻译服务（默认使用微软翻译，质量一般，推荐配置自己的 API KEY 使用大模型翻译）
     
 5.  语音识别配置（默认使用B接口网络调用语音识别服务，中英以外的语言请使用本地转录）
     
-6.  拖拽视频文件到软件窗口，即可全自动处理
-    
 
-提示：每一个步骤均支持单独处理，均支持文件拖拽。软件具体模型选择和参数配置说明，请查看下文。
-
-### macOS / Linux 用户
+### macOS 用户
 
 #### 一键安装运行（推荐）
 
-# 方式一：直接运行（自动安装 uv、克隆项目、安装依赖）
-curl -fsSL https://raw.githubusercontent.com/WEIFENG2333/VideoCaptioner/main/run.sh | bash
+# 方式一：直接运行（自动安装 uv、克隆项目、安装相关依赖）
+curl -fsSL https://raw.githubusercontent.com/WEIFENG2333/VideoCaptioner/main/scripts/run.sh | bash
 
 # 方式二：先克隆再运行
 git clone https://github.com/WEIFENG2333/VideoCaptioner.git
 cd VideoCaptioner
-./run.sh
+./scripts/run.sh
 
 脚本会自动：
 
@@ -90,7 +86,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 #### 2\. 安装系统依赖（macOS）
 
-brew install ffmpeg aria2
+brew install ffmpeg
 
 #### 3\. 克隆并运行
 
@@ -156,16 +152,16 @@ API-key: `个人中心-API 令牌页面自行获取。`
 
 💡 模型选择建议 (本人在各质量层级中精选出的高性价比模型)：
 
--   高质量之选： `gemini-2.5-pro`、`claude-sonnet-4-5-20250929` (耗费比例：3)
+-   高质量之选： `gemini-3-pro`、`claude-sonnet-4-5-20250929` (耗费比例：3)
     
 -   较高质量之选： `gpt-5-2025-08-07`、 `claude-haiku-4-5-20251001` (耗费比例：1.2)
     
--   中质量之选： `gpt-5-mini`、`gemini-2.5-flash` (耗费比例：0.3)
+-   中质量之选： `gpt-5-mini`、`gemini-3-flash` (耗费比例：0.3)
     
 
 本站支持超高并发，软件中线程数直接拉满即可~ 处理速度非常快~
 
-更详细的API配置教程：中转站配置配置
+更详细的API配置教程：中转站配置
 
 * * *
 
@@ -232,10 +228,10 @@ fasterWhisper 👍
 
 本地
 
-（🌟极力推荐🌟）需要下载程序和转录模型  
+（🌟推荐🌟）需要下载程序和转录模型  
 支持CUDA,速度更快，转录准确。  
 超级准确的时间戳字幕。  
-建议优先使用
+仅支持 window
 
 ### 4\. 本地 Whisper 语音识别模型
 
@@ -290,8 +286,6 @@ Large-v3
 社区反馈可能会出现幻觉/字幕重复问题
 
 推荐模型: `Large-v2` 稳定且质量较好。
-
-注：以上模型国内网络可直接在软件内下载。
 
 ### 5\. 文稿匹配
 
@@ -413,16 +407,27 @@ Large-v3
 
 ```
 VideoCaptioner/
-├── runtime/                    # 运行环境目录
-├── resources/                  # 软件资源文件目录（二进制程序、图标等,以及下载的faster-whisper程序）
-├── work-dir/                   # 工作目录，处理完成的视频和字幕文件保存在这里
+├── app/                        # 应用源代码目录
+│   ├── common/                 # 公共模块（配置、信号总线）
+│   ├── components/             # UI 组件
+│   ├── core/                   # 核心业务逻辑（ASR、翻译、优化等）
+│   ├── thread/                 # 异步线程
+│   └── view/                   # 界面视图
+├── resource/                   # 资源文件目录
+│   ├── assets/                 # 图标、Logo 等
+│   ├── bin/                    # 二进制程序（FFmpeg、Whisper 等）
+│   ├── fonts/                  # 字体文件
+│   ├── subtitle_style/         # 字幕样式模板
+│   └── translations/           # 多语言翻译文件
+├── work-dir/                   # 工作目录（处理完成的视频和字幕）
 ├── AppData/                    # 应用数据目录
-    ├── cache/                  # 缓存目录，缓存转录、大模型请求的数据。
-    ├── models/                 # 存放 Whisper 模型文件
-    ├── logs/                   # 日志目录，记录软件运行状态
-    ├── settings.json           # 存储用户设置
-    └──  cookies.txt            # 视频平台的 cookie 信息（下载高清视频时需要）
-└── VideoCaptioner.exe          # 主程序执行文件
+│   ├── cache/                  # 缓存目录（转录、LLM 请求）
+│   ├── models/                 # Whisper 模型文件
+│   ├── logs/                   # 日志文件
+│   └── settings.json           # 用户设置
+├── scripts/                    # 安装和运行脚本
+├── main.py                     # 程序入口
+└── pyproject.toml              # 项目配置和依赖
 ```
 
 📝 说明
