@@ -1,6 +1,6 @@
 ---
 project: comfyui-portrait-master
-stars: 1178
+stars: 1179
 description: This node was designed to help AI image creators to generate prompts for human portraits.
 url: https://github.com/florestefano1975/comfyui-portrait-master
 ---

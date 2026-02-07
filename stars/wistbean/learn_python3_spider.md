@@ -1,6 +1,6 @@
 ---
 project: learn_python3_spider
-stars: 21235
+stars: 21263
 description: python爬虫教程系列、从0到1学习python爬虫，包括浏览器抓包，手机APP抓包，如 fiddler、mitmproxy，各种爬虫涉及的模块的使用，如：requests、beautifulSoup、selenium、appium、scrapy等，以及IP代理，验证码识别，Mysql，MongoDB数据库的python使用，多线程多进程爬虫的使用，css 爬虫加密逆向破解，JS爬虫逆向，分布式爬虫，爬虫项目实战实例等
 url: https://github.com/wistbean/learn_python3_spider
 ---
@@ -14,10 +14,10 @@ learn\_python3\_spider
 
 peace.
 
-如果你也想要会 Python
-==============
+我开发的小程序「要克制」
+============
 
-可以加入我的 Python 会员网站!!
+帮你戒色：
 
 python爬虫教程从0到1
 ==============
@@ -173,14 +173,9 @@ python相关
 公众号获取 Python 相关帅书
 -----------------
 
-微信搜索id：fxxkpython 名称：学习 Python 的正确姿势
+微信搜索id：fxxkpython 名称：帅彬老仙 _进去发送「帅书」即可领取。_
 
-_进去发送「帅书」即可领取。_
+Python 技巧视频教程
+-------------
 
-Python 视频号
-----------
-
-通往Python高手之路
-------------
-
-小帅b手把手带你：通往Python高手之路
+那些被低估了的 Python 技巧

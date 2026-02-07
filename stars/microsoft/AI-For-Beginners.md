@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 45140
+stars: 45223
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---
@@ -352,8 +352,6 @@ Other Curricula
 Our team produces other curricula! Check out:
 
 ### LangChain
-
-* * *
 
 ### Azure / Edge / MCP / Agents
 
