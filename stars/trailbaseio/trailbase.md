@@ -1,6 +1,6 @@
 ---
 project: trailbase
-stars: 4518
+stars: 4550
 description: |-
     An open, sub-millisecond, single-executable Firebase alternative with type-safe APIs, built-in WebAssembly runtime, realtime subscriptions, auth, and admin UI built on Rust, SQLite & Wasmtime.
 url: https://github.com/trailbaseio/trailbase
@@ -48,7 +48,7 @@ url: https://github.com/trailbaseio/trailbase
     target="_blank"
   >
     <picture>
-      <img alt="Admin UI" width="600" src="docs/src/assets/shelve.webp" />
+      <img alt="Admin UI" width="600" src="docs/src/assets/screenshots.webp" />
     </picture>
   </a>
 </p>

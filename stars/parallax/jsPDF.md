@@ -1,6 +1,6 @@
 ---
 project: jsPDF
-stars: 31076
+stars: 31101
 description: |-
     Client-side JavaScript PDF generation for everyone.
 url: https://github.com/parallax/jsPDF
@@ -37,7 +37,7 @@ yarn add jspdf
 Alternatively, load it from a CDN:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.0.0/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.1.0/jspdf.umd.min.js"></script>
 ```
 
 Or always get latest version via [unpkg](https://unpkg.com/browse/jspdf/)
@@ -216,7 +216,7 @@ Alternatively, you can load the prebundled polyfill file. This is not recommende
 loading polyfills multiple times. Might still be nifty for small applications or quick POCs.
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.0.0/polyfills.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/4.1.0/polyfills.umd.js"></script>
 ```
 
 ## Use of Unicode Characters / UTF-8:

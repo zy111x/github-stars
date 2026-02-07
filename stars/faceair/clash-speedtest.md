@@ -1,6 +1,6 @@
 ---
 project: clash-speedtest
-stars: 809
+stars: 813
 description: |-
     clash speedtest
 url: https://github.com/faceair/clash-speedtest
@@ -16,12 +16,16 @@ Features:
 3. 不依赖额外的 Clash/Mihomo 进程实例，单一工具即可完成测试
 4. 代码简单而且开源，不发布构建好的二进制文件，保证你的节点安全
 
-<img width="1332" alt="image" src="https://github.com/user-attachments/assets/fdc47ec5-b626-45a3-a38a-6d88c326c588">
+<img width="1346" height="682" alt="Image" src="https://github.com/user-attachments/assets/9fea1d47-251f-4c49-b059-05b5962d4e72" />
 
 ## Prerequisites/注意事项
 
 ### OpenWRT 环境
-在 OpenWRT 环境下使用本工具时，建议临时关闭 OpenClash/Clash 等代理服务，以避免路由冲突影响测速结果的准确性。
+在 OpenWRT 环境下使用本工具时，建议临时关闭 OpenClash/Clash/Mihomo 等代理服务，以避免路由冲突影响测速结果的准确性。或者给 OpenClash/Clash/Mihomo 配置进程规则绕过代理：
+```
+rules:
+  - PROCESS-NAME,clash-speedtest,DIRECT
+```
 
 ### Windows CMD 用户
 在 Windows CMD 中使用时，如果订阅地址包含 `&` 字符，必须使用双引号而非单引号：
@@ -52,11 +56,13 @@ Usage of clash-speedtest:
   -b string
         block proxies by keywords, use | to separate multiple keywords (example: -b 'rate|x1|1x')
   -server-url string
-        server url for testing proxies (default "https://speed.cloudflare.com")
+        server url or direct download url (default "https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg")
+  -speed-mode string
+        speed test mode: fast, download, full (default "download")
   -download-size int
         download size for testing proxies (default 50MB)
   -upload-size int
-        upload size for testing proxies (default 20MB)
+        upload size for testing proxies (full mode only) (default 20MB)
   -timeout duration
         timeout for testing proxies (default 5s)
   -concurrent int
@@ -65,14 +71,22 @@ Usage of clash-speedtest:
         output config file path (default "")
   -max-latency duration
         filter latency greater than this value (default 800ms)
+  -max-packet-loss float
+        filter packet loss greater than this value(unit: %) (default 100)
   -min-download-speed float
         filter speed less than this value(unit: MB/s) (default 5)
   -min-upload-speed float
-        filter upload speed less than this value(unit: MB/s) (default 2)
+        filter upload speed less than this value(unit: MB/s, full mode only) (default 2)
   -rename
         rename nodes with IP location and speed
   -fast
-        enable fast mode, only test latency
+        fast mode (alias for --speed-mode fast)
+  -gist-token string
+        GitHub personal access token for gist upload
+  -gist-address string
+        gist URL or ID for uploading output file (filename uses output basename)
+  -gist-https-proxy string
+        HTTPS proxy for gist upload requests (example: http://127.0.0.1:7890)
 
 # 演示：
 
@@ -98,7 +112,7 @@ Premium|广港|IEPL|05                        	3.87MB/s    	249.00ms
 
 # 5. 使用 -rename 选项按照 IP 地区和下载速度重命名节点
 > clash-speedtest -c config.yaml -output result.yaml -rename
-# 重命名后的节点名称格式：🇺🇸 US | ⬇️ 15.67 MB/s
+# 重命名后的节点名称格式：🇺🇸 US 001 | ⬇️ 15.67MB/s
 # 包含国旗 emoji、国家代码和下载速度
 
 # 6. 快速测试模式
@@ -115,9 +129,39 @@ Premium|广港|IEPL|05                        	3.87MB/s    	249.00ms
 4.      🇭🇰 香港 HK-19           Trojan          649ms
 5.      🇭🇰 香港 HK-12           Trojan          667ms
 
+# 7. 上传到 GitHub Gist
+> clash-speedtest -c config.yaml -output result.yaml -gist-token "ghp_xxx" -gist-address "https://gist.github.com/username/abc123"
+# 测试完成后，会将 result.yaml 上传到指定的 Gist，文件名与 -output 保持一致（去除目录前缀）
+# gist-address 可以是完整的 Gist URL，也可以是 Gist ID（如 abc123）
+# 8. 通过 HTTPS 代理上传到 GitHub Gist
+> clash-speedtest -c config.yaml -output result.yaml -gist-token "ghp_xxx" -gist-address "abc123" -gist-https-proxy "http://127.0.0.1:7890"
+
+# 9. 使用带鉴权信息的代理 URL 上传到 GitHub Gist
+> clash-speedtest -c config.yaml -output result.yaml -gist-token "ghp_xxx" -gist-address "abc123" -gist-https-proxy "http://alice:secret@127.0.0.1:7890"
+```
+
 ## 测速原理
 
-通过 HTTP GET 请求下载指定大小的文件，默认使用 https://speed.cloudflare.com (50MB) 进行测试，计算下载时间得到下载速度。
+通过 HTTP GET 请求下载指定大小的文件，默认使用 https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg 进行测试，计算下载时间得到下载速度。因为 speed.cloudflare.com 容易返回 403，所以默认不再使用它作为测速入口。
+
+当 server-url 不带 path 时 (使用 https://speed.cloudflare.com 或自建测速服务)，使用 /__down 和 /__up 完成下载与上传测试。
+当 server-url 带 path 时，会被识别为直接下载地址，只进行下载测速。
+
+如果你确认 https://speed.cloudflare.com 可以访问并希望测试上传，请显式设置为 full 模式，例如：
+```shell
+clash-speedtest --server-url "https://speed.cloudflare.com" --speed-mode full
+```
+或者你也可以自己搭建一个测速服务器，用来测试下载和上传速度：
+
+```shell
+# 在您需要进行测速的服务器上安装和启动测速服务器
+> go install github.com/faceair/clash-speedtest/download-server@latest
+> download-server
+
+# 此时在本地使用 http://your-server-ip:8080 作为 server-url 即可
+> clash-speedtest --server-url "http://your-server-ip:8080" --speed-mode full
+```
+
 
 测试结果：
 1. 带宽 是指下载指定大小文件的速度，即一般理解中的下载速度。当这个数值越高时表明节点的出口带宽越大。
@@ -126,19 +170,6 @@ Premium|广港|IEPL|05                        	3.87MB/s    	249.00ms
 请注意带宽跟延迟是两个独立的指标，两者并不关联：
 1. 可能带宽很高但是延迟也很高，这种情况下你下载速度很快但是打开网页的时候却很慢，可能是是中转节点没有 BGP 加速，但出海线路带宽很充足。
 2. 可能带宽很低但是延迟也很低，这种情况下你打开网页的时候很快但是下载速度很慢，可能是中转节点有 BGP 加速，但出海线路的 IEPL、IPLC 带宽很小。
-
-Cloudflare 是全球知名的 CDN 服务商，其提供的测速服务器到海外绝大部分的节点速度都很快，一般情况下都没有必要自建测速服务器。
-
-如果你不想使用 Cloudflare 的测速服务器，可以自己搭建一个测速服务器。
-
-```shell
-# 在您需要进行测速的服务器上安装和启动测速服务器
-> go install github.com/faceair/clash-speedtest/download-server@latest
-> download-server
-
-# 此时在本地使用 http://your-server-ip:8080 作为 server-url 即可
-> clash-speedtest --server-url "http://your-server-ip:8080"
-```
 
 ## License
 

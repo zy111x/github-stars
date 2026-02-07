@@ -1,6 +1,6 @@
 ---
 project: gatus
-stars: 9971
+stars: 10053
 description: |-
     Automated developer-oriented status page with alerting and incident support
 url: https://github.com/TwiN/gatus
@@ -3264,7 +3264,7 @@ endpoints:
 
 
 ### Concurrency
-By default, Gatus allows up to 5 endpoints/suites to be monitored concurrently. This provides a balance between performance and resource usage while maintaining accurate response time measurements.
+By default, Gatus allows up to 3 endpoints/suites to be monitored concurrently. This provides a balance between performance and resource usage while maintaining accurate response time measurements.
 
 You can configure the concurrency level using the `concurrency` parameter:
 

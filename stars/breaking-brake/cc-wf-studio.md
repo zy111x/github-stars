@@ -1,6 +1,6 @@
 ---
 project: cc-wf-studio
-stars: 3249
+stars: 3419
 description: |-
     CC Workflow Studio
 url: https://github.com/breaking-brake/cc-wf-studio
@@ -17,6 +17,7 @@ url: https://github.com/breaking-brake/cc-wf-studio
   <a href="https://snyk.io/test/github/breaking-brake/cc-wf-studio"><img src="https://snyk.io/test/github/breaking-brake/cc-wf-studio/badge.svg" alt="Known Vulnerabilities" /></a>
   <a href="https://marketplace.visualstudio.com/items?itemName=breaking-brake.cc-wf-studio"><img src="https://img.shields.io/visual-studio-marketplace/v/breaking-brake.cc-wf-studio?label=VS%20Marketplace" alt="VS Code Marketplace" /></a>
   <a href="https://open-vsx.org/extension/breaking-brake/cc-wf-studio"><img src="https://img.shields.io/open-vsx/v/breaking-brake/cc-wf-studio?label=OpenVSX" alt="OpenVSX" /></a>
+  <a href="https://deepwiki.com/breaking-brake/cc-wf-studio"><img src="https://img.shields.io/badge/Ask-DeepWiki-009485" alt="Ask DeepWiki" /></a>
 </p>
 
 <p align="center">
@@ -24,7 +25,7 @@ url: https://github.com/breaking-brake/cc-wf-studio
 </p>
 
 <p align="center">
-  <strong>Accelerate Claude Code/GitHub Copilot<a href="#github-copilot-support">(※1)</a>/OpenAI Codex<a href="#openai-codex-support">(※2)</a> automation with a visual workflow editor</strong>
+  <strong>Accelerate Claude Code/GitHub Copilot<a href="#github-copilot-support">(※1)</a>/OpenAI Codex<a href="#openai-codex-support">(※2)</a>/Roo Code<a href="#roo-code-support">(※3)</a> automation with a visual workflow editor</strong>
 </p>
 
 <p align="center">
@@ -69,6 +70,7 @@ url: https://github.com/breaking-brake/cc-wf-studio
   - **GitHub Copilot Chat**<a href="#github-copilot-support">(※1)</a>: `.github/prompts/`
   - **GitHub Copilot CLI**<a href="#github-copilot-support">(※1)</a>: `.github/skills/`
   - **OpenAI Codex CLI**<a href="#openai-codex-support">(※2)</a>: `.codex/skills/`
+  - **Roo Code**<a href="#roo-code-support">(※3)</a>: `.roo/skills/`
 
 <span id="github-copilot-support">🤖</span> **GitHub Copilot Support (※1 β)** - Export & Run workflows to Copilot Chat or Copilot CLI, and use Copilot as AI provider for Edit with AI.
 
@@ -84,10 +86,37 @@ url: https://github.com/breaking-brake/cc-wf-studio
   - Requires [Codex CLI](https://github.com/openai/codex) to be installed
   - Experimental feature; some workflows may not work as expected
 
-## Getting Started
+<span id="roo-code-support">🤖</span> **Roo Code Support (※3 β)** - Export & Run workflows to Roo Code (Skills format). Run launches Roo Code directly via Extension API.
+
+  **Note:**
+  - Enable **Roo Code** option in Toolbar's **More** menu to activate
+  - Requires [Roo Code](https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline) extension to be installed
+  - Experimental feature; some workflows may not work as expected
+
+## How to Use
+
+### Launch the Extension
 
 - Click the <img src="./resources/icon.png" alt="icon" height="16" style="vertical-align: middle"> icon in the top-right corner of the editor
-- Or open Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) → **"CC Workflow Studio: Open Editor"**
+- Or: Command Palette (`Cmd+Shift+P`) → **"CC Workflow Studio: Open Editor"**
+
+### Create a Workflow
+
+- Add nodes from the palette and configure their settings, or use [Edit with AI](#edit-with-ai).
+
+### Save & Load
+
+- Click Save <img src="./resources/icon-save.png" alt="save" height="16" style="vertical-align: middle"> button in the toolbar to store your workflow as `.vscode/workflows/*.json`
+- Click Load <img src="./resources/icon-file-down.png" alt="load" height="16" style="vertical-align: middle"> button in the toolbar to open a saved `.json` workflow
+
+### Export & Run
+
+- Click Export <img src="./resources/icon-export.png" alt="export" height="16" style="vertical-align: middle"> button in the toolbar to create a `.md` slash command or agent skill (use `/workflow-name` in AI coding agents)
+- Click Run <img src="./resources/icon-play.png" alt="run" height="16" style="vertical-align: middle"> button in the toolbar to run your workflow directly in AI coding agents
+
+### Edit with AI
+
+- Click Edit with AI <img src="./resources/icon-sparkles.png" alt="sparkles" height="16" style="vertical-align: middle"> button in the toolbar to generate or refine workflows with natural language
 
 ## Usage Examples
 

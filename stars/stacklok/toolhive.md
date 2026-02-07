@@ -1,6 +1,6 @@
 ---
 project: toolhive
-stars: 1556
+stars: 1584
 description: |-
     ToolHive makes deploying MCP servers easy, secure and fun
 url: https://github.com/stacklok/toolhive
@@ -42,7 +42,7 @@ ToolHive keeps you in control of your MCP estate. Integrate with popular clients
 - **Instant deployment:** Start any MCP server with one click or command, using Docker or Kubernetes.
 - **Secure by default:** Every server runs in an isolated container with only the permissions it needs. Secrets are managed securely, never in plaintext.
 - **Works everywhere:** Use the UI and CLI for local development, or the Kubernetes Operator for production and scale.
-- **Seamless integration:** ToolHive auto-configures popular clients like GitHub Copilot, Cursor, and more.
+- **Seamless integration:** ToolHive auto-configures popular clients like GitHub Copilot, Cursor, VS Code Server, and more.
 
 <br>
 </td>
@@ -83,7 +83,7 @@ Define dedicated endpoints from which your teams can securely and efficiently ac
 - Centralize control of security policy, authentication, authorization, auditing, etc.
 - Integrate with your IdP for SSO (OIDC/OAuth compatible)
 - Customize and filter tools and descriptions to improve performance and reduce token usage
-- Connect with local clients like Claude Desktop, Cursor, and VS Code
+- Connect with local clients like Claude Desktop, Cursor, VS Code, and VS Code Server
 
 ### 📦 [Registry Server](https://github.com/stacklok/toolhive-registry-server)
 

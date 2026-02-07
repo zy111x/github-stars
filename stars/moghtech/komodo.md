@@ -1,6 +1,6 @@
 ---
 project: komodo
-stars: 9983
+stars: 10103
 description: |-
     🦎 a tool to build and deploy software on many servers 🦎
 url: https://github.com/moghtech/komodo

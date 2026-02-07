@@ -34,6 +34,10 @@ Authentication towards the Cloudflare API can be done in two ways:
 The preferred way of authenticating is with an API token, for which the scope can be configured at the Cloudflare
 dashboard.
 
+**Important**: Cloudflare supports two types of API tokens:
+- **User-level tokens**: Can access all accounts the user has permissions for. These tokens auto-discover all accessible accounts.
+- **Account-scoped tokens**: Scoped to a specific account. When using account-scoped tokens, you **must** set the `CF_ACCOUNTS` environment variable with your account ID(s).
+
 Required authentication scopes:
 
 - `Zone/Analytics:Read` is required for zone-level metrics
@@ -45,9 +49,15 @@ Required authentication scopes:
 - `Account:Load Balancing: Monitors and Pools:Read` is required to fetch pools origin health status `cloudflare_pool_origin_health_status` metric
 - `Cloudflare Tunnel Read` is required to fetch Cloudflare Tunnel (Cloudflare Zero Trust) metrics
 
-To authenticate this way, only set `CF_API_TOKEN` (omit `CF_API_EMAIL` and `CF_API_KEY`)
+**To authenticate with a user-level token**:
+- Set `CF_API_TOKEN` (omit `CF_API_EMAIL` and `CF_API_KEY`)
+- The exporter will auto-discover all accounts you have access to
+- [Shortcut to create the API token](https://dash.cloudflare.com/profile/api-tokens?permissionGroupKeys=%5B%7B%22key%22%3A%22account_analytics%22%2C%22type%22%3A%22read%22%7D%2C%7B%22key%22%3A%22account_settings%22%2C%22type%22%3A%22read%22%7D%2C%7B%22key%22%3A%22analytics%22%2C%22type%22%3A%22read%22%7D%2C%7B%22key%22%3A%22firewall_services%22%2C%22type%22%3A%22read%22%7D%5D&name=Cloudflare+Exporter&accountId=*&zoneId=all)
 
-[Shortcut to create the API token](https://dash.cloudflare.com/profile/api-tokens?permissionGroupKeys=%5B%7B%22key%22%3A%22account_analytics%22%2C%22type%22%3A%22read%22%7D%2C%7B%22key%22%3A%22account_settings%22%2C%22type%22%3A%22read%22%7D%2C%7B%22key%22%3A%22analytics%22%2C%22type%22%3A%22read%22%7D%2C%7B%22key%22%3A%22firewall_services%22%2C%22type%22%3A%22read%22%7D%5D&name=Cloudflare+Exporter&accountId=*&zoneId=all)
+**To authenticate with an account-scoped token**:
+- Set `CF_API_TOKEN` with your account-scoped token
+- Set `CF_ACCOUNTS` with your account ID (find it in the Cloudflare dashboard URL: `https://dash.cloudflare.com/<ACCOUNT_ID>/...`)
+- Example: `CF_ACCOUNTS=abc123def456` or for multiple accounts: `CF_ACCOUNTS=abc123,def456`
 
 ### User email + API key
 
@@ -65,6 +75,7 @@ The exporter can be configured using env variables or command flags.
 | `CF_API_EMAIL` |  user email (see <https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys>) |
 | `CF_API_KEY` |  API key associated with email (`CF_API_EMAIL` is required if this is set)|
 | `CF_API_TOKEN` |  API authentication token (recommended before API key + email. Version 0.0.5+. see <https://developers.cloudflare.com/analytics/graphql-api/getting-started/authentication/api-token-auth>) |
+| `CF_ACCOUNTS` |  (Required for account-scoped tokens) Cloudflare account IDs to monitor, comma delimited list. When using account-scoped API tokens, this must be set. User-level tokens can omit this to auto-discover all accessible accounts. |
 | `CF_ZONES` |  (Optional) cloudflare zones to export, comma delimited list of zone ids. If not set, all zones from account are exported |
 | `CF_EXCLUDE_ZONES` |  (Optional) cloudflare zones to exclude, comma delimited list of zone ids. If not set, no zones from account are excluded |
 | `CF_TIMEOUT` | Set cloudflare request timeout. Default 10 seconds |
@@ -75,6 +86,7 @@ The exporter can be configured using env variables or command flags.
 | `SCRAPE_INTERVAL` | scrape interval in seconds (will query cloudflare every SCRAPE_INTERVAL seconds), default `60` |
 | `METRICS_DENYLIST` | (Optional) cloudflare-exporter metrics to not export, comma delimited list of cloudflare-exporter metrics. If not set, all metrics are exported |
 | `ENABLE_PPROF` | (Optional) enable pprof profiling endpoints at `/debug/pprof/`. Accepts `true` or `false`, default `false`. **Warning**: Only enable in development/debugging environments |
+| `ENABLE_EDGE_ERRORS_BY_PATH` | (Optional) enable edge errors by path metric. Accepts `true` or `false`, default `false`. See [Edge Errors by Path Metric](#edge-errors-by-path-metric-opt-in) |
 | `ZONE_<NAME>` |  `DEPRECATED since 0.0.5` (optional) Zone ID. Add zones you want to scrape by adding env vars in this format. You can find the zone ids in Cloudflare dashboards. |
 | `LOG_LEVEL` | Set loglevel. Options are error, warn, info, debug. default `error` |
 
@@ -84,6 +96,7 @@ Corresponding flags:
   -cf_api_email="": cloudflare api email, works with api_key flag
   -cf_api_key="": cloudflare api key, works with api_email flag
   -cf_api_token="": cloudflare api token (version 0.0.5+, preferred)
+  -cf_accounts="": cloudflare accounts to monitor, comma delimited list (required for account-scoped API tokens)
   -cf_zones="": cloudflare zones to export, comma delimited list
   -cf_exclude_zones="": cloudflare zones to exclude, comma delimited list
   -cf_timeout="10s": cloudflare request timeout, default 10 seconds
@@ -94,6 +107,7 @@ Corresponding flags:
   -scrape_interval=60: scrape interval in seconds, defaults to 60
   -metrics_denylist="": cloudflare-exporter metrics to not export, comma delimited list
   -enable_pprof=false: enable pprof profiling endpoints at /debug/pprof/
+  -enable_edge_errors_by_path=false: enable edge errors by path metric (high cardinality, opt-in)
   -log_level="error": log level(error,warn,info,debug)
 ```
 
@@ -127,6 +141,7 @@ Note: `ZONE_<name>` configuration is not supported as flag.
 # HELP cloudflare_zone_requests_status_country_host Count of requests for zone per edge HTTP status per country per host
 # HELP cloudflare_zone_requests_browser_map_page_views_count Number of successful requests for HTML pages per zone
 # HELP cloudflare_zone_requests_total Number of requests for zone
+# HELP cloudflare_zone_edge_errors_by_path Number of edge errors (4xx and 5xx) by request path
 # HELP cloudflare_zone_threats_country Threats per zone per country
 # HELP cloudflare_zone_threats_total Threats per zone
 # HELP cloudflare_zone_uniques_total Uniques per zone
@@ -138,6 +153,14 @@ Note: `ZONE_<name>` configuration is not supported as flag.
 # HELP cloudflare_r2_storage_bytes Storage used by R2
 # HELP cloudflare_r2_storage_total_bytes Total storage used by R2
 ```
+
+### Edge Errors by Path Metric (Opt-in)
+
+The `cloudflare_zone_edge_errors_by_path` metric tracks edge errors (4xx/5xx) by request path. This enables path-based filtering in alerts to exclude known-noisy endpoints while catching real issues.
+
+**Disabled by default** due to high cardinality. Enable with `ENABLE_EDGE_ERRORS_BY_PATH=true`.
+
+Paths are normalized to reduce cardinality (e.g., `/users/123` → `/users/:id`, UUIDs → `:uuid`).
 
 ## Helm chart repository
 

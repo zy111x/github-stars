@@ -1,6 +1,6 @@
 ---
 project: edge
-stars: 737
+stars: 742
 description: |-
     Node.js template engine with a breath of fresh air
 url: https://github.com/edge-js/edge

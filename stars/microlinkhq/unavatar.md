@@ -1,6 +1,6 @@
 ---
 project: unavatar
-stars: 1379
+stars: 1380
 description: |-
     Get unified user avatar from social networks, including Instagram, SoundCloud, Telegram, Twitter, YouTube & more.
 url: https://github.com/microlinkhq/unavatar
@@ -19,6 +19,8 @@ Welcome to **unavatar.io**, the ultimate avatar service that offers everything y
 - **Integration**: The service seamlessly incorporates into your current applications or websites with ease. We offer straightforward documentation and comprehensive support to ensure a quick and effortless onboarding experience.
 
 In summary, **unavatar.io** provides versatility, speed, optimization, and effortless integration, making it the ultimate avatar retrieval service.
+
+It's proudly powered by [microlink.io](https://microlink.io), the headless browser API that handles all the heavy lifting behind the scenes to ensure your avatars are always ready.
 
 ## Quick start
 

@@ -1,6 +1,6 @@
 ---
 project: llmgateway
-stars: 838
+stars: 855
 description: |-
     Route, manage, and analyze your LLM requests across multiple providers with a unified API interface.
 url: https://github.com/theopenco/llmgateway
@@ -89,8 +89,8 @@ LLMGateway is available under a dual license:
 ### Enterprise features include:
 
 - Advanced billing and subscription management
-- Extended data retention (90 days vs 3 days)
-- Provider API key management (Pro plan)
+- Extended data retention (unlimited vs 30 days)
+- Custom provider key configurations
 - Team and organization management
 - Priority support
 - And more to be defined

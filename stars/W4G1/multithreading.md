@@ -1,6 +1,6 @@
 ---
 project: multithreading
-stars: 1494
+stars: 1533
 description: |-
     The missing standard library for multithreading in JavaScript (Works in the browser, Node.js, Deno, Bun)
 url: https://github.com/W4G1/multithreading

@@ -1,6 +1,6 @@
 ---
 project: PageLoadingEffects
-stars: 645
+stars: 644
 description: |-
     Modern ways of revealing new content using SVG animations.
 url: https://github.com/codrops/PageLoadingEffects

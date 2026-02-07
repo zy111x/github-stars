@@ -1,6 +1,6 @@
 ---
 project: zombie
-stars: 5642
+stars: 5640
 description: |-
     Insanely fast, full-stack, headless browser testing using node.js
 url: https://github.com/assaf/zombie

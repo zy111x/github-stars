@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 1208
+stars: 1328
 description: |-
     Slimmed, cleaned and fine-tuned oh-my-opencode fork, consumes much less tokens
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -9,7 +9,7 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
 <div align="center">
   <img src="img/team.png" alt="Pantheon agents" width="420">
   <p><i>Six divine beings emerged from the dawn of code, each an immortal master of their craft await your command to forge order from chaos and build what was once thought impossible.</i></p>
-  <p><b>Multi Agent Suite</b> · Mix any models · Auto delegate tasks</p>
+  <p><b>Multi Agent Suite</b> · Mix any models · Auto delegate tasks · Antigravity + Chutes ready</p>
 </div>
 
 ---
@@ -22,6 +22,12 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
 bunx oh-my-opencode-slim@latest install
 ```
 
+The installer can refresh and use OpenCode free models directly:
+
+```bash
+bunx oh-my-opencode-slim@latest install --no-tui --kimi=yes --openai=yes --antigravity=yes --chutes=yes --opencode-free=yes --opencode-free-model=auto --tmux=no --skills=yes
+```
+
 Then authenticate:
 
 ```bash
@@ -30,7 +36,13 @@ opencode auth login
 
 Run `ping all agents` to verify everything works.
 
-> **💡 Models are fully customizable.** Edit `~/.config/opencode/oh-my-opencode-slim.json` to assign any model to any agent.
+OpenCode free-model mode uses `opencode models --refresh --verbose`, filters to free `opencode/*` models, and applies coding-first selection:
+- OpenCode-only mode can use multiple OpenCode free models across agents.
+- Hybrid mode can combine OpenCode free models with OpenAI, Kimi, and/or Antigravity.
+- In hybrid mode, `designer` stays on the external provider mapping.
+- Chutes mode auto-selects primary/support models with daily-cap awareness (300/2000/5000).
+
+> **💡 Models are fully customizable.** Edit `~/.config/opencode/oh-my-opencode-slim.json` (or `.jsonc` for comments support) to assign any model to any agent.
 
 ### For LLM Agents
 

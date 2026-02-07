@@ -1,6 +1,6 @@
 ---
 project: mapcn
-stars: 5350
+stars: 5613
 description: |-
     Beautiful map components. 100% Free, Zero config, one command setup.
 url: https://github.com/AnmolSaini16/mapcn

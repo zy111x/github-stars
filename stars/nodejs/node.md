@@ -1,6 +1,6 @@
 ---
 project: node
-stars: 115484
+stars: 115597
 description: |-
     Node.js JavaScript runtime ✨🐢🚀✨
 url: https://github.com/nodejs/node
@@ -113,7 +113,7 @@ curl -fsLo "/path/to/nodejs-keyring.kbx" "https://github.com/nodejs/release-keys
 ```
 
 Alternatively, you can import the releaser keys in your default keyring, see
-[Release keys](#release-keys) for commands to how to do that.
+[Release keys](#release-keys) for commands on how to do that.
 
 Then, you can verify the files you've downloaded locally
 (if you're using your default keyring, pass `--keyring="${GNUPGHOME:-~/.gnupg}/pubring.kbx"`):
@@ -908,10 +908,10 @@ releases on a rotation basis as outlined in the
   * [mcollina](https://github.com/mcollina) - OpenJSF handle: `mcollina`
     **Matteo Collina** <<matteo.collina@gmail.com>> (he/him)
 * [Red Hat](https://redhat.com) / [IBM](https://ibm.com)
-  * [joesepi](https://github.com/joesepi) -
-    **Joe Sepi** <<joesepi@ibm.com>> (he/him)
-  * [mhdawson](https://github.com/mhdawson) -
-    **Michael Dawson** <<midawson@redhat.com>> (he/him)
+  * [BethGriggs](https://github.com/BethGriggs) -
+    **Beth Griggs** <<bethanyngriggs@gmail.com>> (she/her)
+  * [sxa](https://github.com/sxa) -
+    **Stewart X Addison** <<sxa@redhat.com>> (he/him)
 
 ## License
 

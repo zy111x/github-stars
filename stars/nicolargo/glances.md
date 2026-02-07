@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 31486
+stars: 31571
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
@@ -414,7 +414,7 @@ GNU/Linux package
 `Glances` is available on many Linux distributions, so you should be
 able to install it using your favorite package manager. Nevetheless,
 i do not recommend it. Be aware that when you use this method the operating
-system `package`_ for `Glances`may not be the latest version and only basics
+system `package`_ for `Glances` may not be the latest version and only basics
 plugins are enabled.
 
 Note: The Debian package (and all other Debian-based distributions) do

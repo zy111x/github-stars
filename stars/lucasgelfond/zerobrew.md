@@ -1,6 +1,6 @@
 ---
 project: zerobrew
-stars: 4637
+stars: 5302
 description: |-
     A drop-in, 5-20x faster, experimental Homebrew alternative
 url: https://github.com/lucasgelfond/zerobrew
@@ -46,13 +46,28 @@ This leads to dramatic speedups, up to 5x cold and 20x warm. Full benchmarks [he
 ##  Using `zb`
 
 ```bash
-zb install jq        # install jq
-zb install wget git  # install multiple
-zb uninstall jq      # uninstall
-zb reset             # uninstall everything
-zb gc                # garbage collect unused store entries
-zbx jq --version     # run without linking
+zb install jq                   # install jq
+zb install wget git             # install multiple
+zb install --file Brewfile      # install from a manifest
+zb bundle                       # shorthand for Brewfile in current dir
+zb uninstall jq                 # uninstall
+zb reset                        # uninstall everything
+zb gc                           # garbage collect unused store entries
+zbx jq --version                # run without linking
 ```
+
+### Brewfile manifests
+
+Create a plain text manifest (compatible with Homebrew's Brewfile) listing one formula per line:
+
+```text
+# Brewfile
+jq
+wget
+git
+```
+
+Blank lines and comments (lines starting with `#`) are ignored. Install everything in the manifest with `zb install --file Brewfile` or use `zb bundle` to read the default `./Brewfile`.
 
 ## Why is it faster?
 
@@ -102,11 +117,9 @@ cargo install --path zb_cli
 ## Benchmarking
 
 ```bash
-./benchmark.sh                                # 100-package benchmark
-./benchmark.sh --format html -o results.html  # html report
-./benchmark.sh --format json -o results.json  # json output
-./benchmark.sh -c 20 --quick                  # quick test (22 packages)
-./benchmark.sh -h                             # show help
+just bench --quick          # quick test (22 packages)
+just bench --full results/  # 100-package benchmark
+just bench --help           # show help
 ```
 
 ## Status

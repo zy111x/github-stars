@@ -1,6 +1,6 @@
 ---
 project: shutiao-life
-stars: 70
+stars: 72
 description: |-
     shutiao-life is a beautiful podcast template built with TanStack Start
 url: https://github.com/shutiao-org/shutiao-life

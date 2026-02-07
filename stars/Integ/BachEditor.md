@@ -6,24 +6,21 @@ description: |-
 url: https://github.com/Integ/BachEditor
 ---
 
-[BachEditor](http://integ.github.io/BachEditor)
+[BachEditor](https://editor.integ.cf)
 ==========
 
-v0.1.0
+v2.0.0
 
-[Demo](http://integ.github.io/BachEditor)
+[Demo](https://editor.integ.cf)
 
 inspire by [Lepture's Editor](http://lab.lepture.com/editor/)
 
 一个有情怀的编辑器。Bach's Editor.
 
-## 开发者使用方法 ##
-- 安装 component
+##开发者使用方法##
+
 ```
-npm install -g component
-```
-- 安装依赖
-```
-component install
+npm install 
+npm start dev
 ```
 

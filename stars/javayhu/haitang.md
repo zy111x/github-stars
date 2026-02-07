@@ -1,6 +1,6 @@
 ---
 project: haitang
-stars: 932
+stars: 934
 description: |-
     海棠诗社，古诗词的数字桃源
 url: https://github.com/javayhu/haitang

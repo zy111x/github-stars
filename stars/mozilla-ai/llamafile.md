@@ -1,6 +1,6 @@
 ---
 project: llamafile
-stars: 23673
+stars: 23693
 description: |-
     Distribute and run LLMs with a single file.
 url: https://github.com/mozilla-ai/llamafile

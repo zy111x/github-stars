@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 16535
+stars: 16737
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -134,6 +134,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [dbee](https://github.com/murat-cileli/dbee) Fast & Minimalistic Database Browser
 - [dblab](https://github.com/danvergara/dblab) The database client every command line junkie deserves
 - [ddqa](https://github.com/DataDog/ddqa) Jira TUI to help with software releases
+- [ddv](https://github.com/lusingander/ddv) Terminal DynamoDB viewer
 - [delta](https://github.com/dandavison/delta) A syntax-highlighting pager for git, diff, and grep output
 - [Feluda](https://github.com/anistark/feluda) Detect restrictive and incompatible licesenses in all dependencies of your project.
 - [Froggit](https://github.com/thewizardshell/froggit) Minimalist Git TUI with GitHub CLI integration
@@ -235,6 +236,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [C-Edit](https://github.com/velorek1/c-edit) A text editor with drop down menus in the style of MS-DOS Editor
 - [Durdraw](https://github.com/cmang/durdraw) An ASCII, Unicode and ANSI art editor
 - [Edit](https://github.com/microsoft/edit) A simple text editor. Pays homage to the classic MS-DOS Editor.
+- [Fresh](https://github.com/sinelaw/fresh) An easy-to-use, powerful and fast terminal-based text editor.
 - [helix](https://helix-editor.com/) A post-modern text editor.
 - [frogmouth](https://github.com/Textualize/frogmouth) A Markdown browser for your terminal
 - [kakoune](http://kakoune.org/) A modern, modal text editor with focus on interactivity and efficiency
@@ -358,7 +360,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 
 <h3>GO</h3>
 
-- [bubbletea](https://github.com/charmbracelet/bubbletea) A **Go** framework based on Elm to build functional and
+- [bubbletea](https://github.com/charmbracelet/bubbletea) A **Go** framework based on Elm to build functional and fun terminal apps
 - [gocui](https://github.com/jroimartin/gocui) Minimalist **Go** package aimed at creating Console User Interfaces
 - [pterm](https://github.com/pterm/pterm/) A modern **Go** module to beautify console output. Featuring charts, progressbars, tables, trees, and much more! It's completely configurable and 100% cross-platform compatible.
 - [stickers](https://github.com/76creates/stickers) Building blocks for charmbracelet/lipgloss in **Go**
@@ -604,6 +606,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [timg](https://github.com/hzeller/timg) A terminal image viewer
 - [tizonia-openmax-il](https://github.com/tizonia/tizonia-openmax-il) Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, Dirble, Plex servers and Chromecast devices
 - [Toutui](https://github.com/AlbanDAVID/Toutui) A TUI Audiobookshelf Client for Linux
+- [Trophy](https://github.com/taigrr/trophy) A TUI 3D Model Viewer for OBJ and GLB files
 - [upiano](https://github.com/eliasdorneles/upiano) A Piano in your terminal
 - [vlc](https://github.com/videolan/vlc) VLC includes an ncurses interface, `vlc --intf ncurses`
 - [waves](https://github.com/llehouerou/waves) Terminal music player with vim-style navigation and radio mode that plays similar artists from your library
@@ -628,6 +631,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [clipse](https://github.com/savedra1/clipse) TUI-based clipboard manager application
 - [Chronos](https://github.com/samuelstranges/chronos) A Vimlike Calendar TUI
 - [Desktop-TUI](https://github.com/Julien-cpsn/desktop-tui) A desktop environment without graphics
+- [doxx](https://github.com/bgreenwell/doxx) A TUI document viewer for Microsoft Word files
 - [drako](https://github.com/lucky7xz/drako) A grid-based, customizable and extendable command- and TUI-Deck launcher
 - [dvtm](https://github.com/martanne/dvtm) A terminal multiplexer with dwm like window management
 - [ekphos](https://github.com/hanebox/ekphos) A fast, lightweight, markdown research tool written in rust
@@ -660,6 +664,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [patat](https://github.com/jaspervdj/patat) Terminal-based presentations using Pandoc
 - [pdiary](https://github.com/manipuladordedados/pdiary) A simple terminal diary journal application written in Python with encryption support
 - [pkm](https://github.com/wick3dr0se/pkm) A super minimal TUI package manager wrapper written in BASH v4.2+
+- [pomo](https://github.com/Bahaaio/pomo) A minimal, customizable TUI Pomodoro timer with ASCII art, progress bar, desktop notifications, and productivity statistics. 
 - [portfolio_rs](https://github.com/MarkusZoppelt/portfolio_rs) A command line tool for managing financial investment portfolios.
 - [pream-team](https://github.com/nikoladucak/pream-team/) a TUI utility that helps you keep track of your teams GitHub PRs across multiple repositories
 - [presenterm](https://github.com/mfontanini/presenterm) A markdown terminal slideshow tool
@@ -744,14 +749,4 @@ There's a lot of cool projects here that I have no association with. Run them at
 ---
 
 </details>
-
-There's a crazy amount of TUI projects out there, and we can't list them all (though we try!)
-
-For more, see awesome-opensource's [TUI Projects](https://awesomeopensource.com/projects/tui) page.
-
-Looking for lightweight but not necessarily TUI? check out mayfrost's [alternatives list](https://github.com/mayfrost/guides/blob/master/ALTERNATIVES.md)!
-
-Enjoy Vim keybinds and don't want to learn new ones? check out the [Big Pile of Vim-like](https://vim.reversed.top)
-
-First-hand reviews for a lot of these tools and many, many more at k.mandla's [Inconsolation blog](https://inconsolation.wordpress.com/index/). The site also has a "surprise me with a random tool" link!
 

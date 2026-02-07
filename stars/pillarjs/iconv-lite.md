@@ -1,6 +1,6 @@
 ---
 project: iconv-lite
-stars: 3162
+stars: 3163
 description: |-
     Convert character encodings in pure javascript.
 url: https://github.com/pillarjs/iconv-lite

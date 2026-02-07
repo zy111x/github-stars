@@ -1,6 +1,6 @@
 ---
 project: awesome-react
-stars: 71815
+stars: 71894
 description: |-
     A collection of awesome things regarding React ecosystem
 url: https://github.com/enaqx/awesome-react

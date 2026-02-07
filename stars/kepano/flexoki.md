@@ -1,6 +1,6 @@
 ---
 project: flexoki
-stars: 2983
+stars: 3002
 description: |-
     An inky color scheme for prose and code.
 url: https://github.com/kepano/flexoki

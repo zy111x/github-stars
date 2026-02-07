@@ -1,6 +1,6 @@
 ---
 project: WebMCP
-stars: 958
+stars: 961
 description: |-
     Bringing the power of MCP to the web
 url: https://github.com/MiguelsPizza/WebMCP

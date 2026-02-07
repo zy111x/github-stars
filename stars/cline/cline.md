@@ -1,6 +1,6 @@
 ---
 project: cline
-stars: 57361
+stars: 57675
 description: |-
     Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
 url: https://github.com/cline/cline
@@ -156,5 +156,5 @@ Get the same Cline experience with enterprise-grade controls: SSO (SAML/OIDC), g
 
 ## License
 
-[Apache 2.0 © 2025 Cline Bot Inc.](./LICENSE)
+[Apache 2.0 © 2026 Cline Bot Inc.](./LICENSE)
 

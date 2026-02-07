@@ -1,6 +1,6 @@
 ---
 project: perf_analyzer
-stars: 133
+stars: 134
 description: |-
     null
 url: https://github.com/triton-inference-server/perf_analyzer
@@ -80,8 +80,7 @@ changes in performance as you experiment with different optimization strategies.
 - [Input Data](docs/input_data.md) to model inferences can be auto-generated or
   specified as well as verifying output
 
-- [TensorFlow Serving](docs/benchmarking.md#benchmarking-tensorflow-serving) and
-  [TorchServe](docs/benchmarking.md#benchmarking-torchserve) can be used as the
+- [TorchServe](docs/benchmarking.md#benchmarking-torchserve) can be used as the
   inference server in addition to the default Triton server
 
 <br>

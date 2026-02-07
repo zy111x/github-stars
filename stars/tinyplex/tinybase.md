@@ -1,6 +1,6 @@
 ---
 project: tinybase
-stars: 4883
+stars: 4889
 description: |-
     A reactive data store & sync engine.
 url: https://github.com/tinyplex/tinybase

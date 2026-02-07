@@ -1,6 +1,6 @@
 ---
 project: animateicons
-stars: 725
+stars: 735
 description: |-
     Free and open-source animated SVG icons for React, built for smooth micro-interactions, easy customization, and lightweight performance.
 url: https://github.com/Avijit07x/animateicons

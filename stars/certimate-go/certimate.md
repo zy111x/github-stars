@@ -1,6 +1,6 @@
 ---
 project: certimate
-stars: 8126
+stars: 8148
 description: |-
     An open-source and free self-hosted SSL certificates ACME tool, automates the full-cycle of issuance, deployment, and renewal visually. 完全开源免费的自托管 SSL 证书 ACME 工具，申请、部署、续期全流程自动化可视化，支持各大主流云厂商。
 url: https://github.com/certimate-go/certimate

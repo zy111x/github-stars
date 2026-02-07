@@ -1,6 +1,6 @@
 ---
 project: most-frequent-technology-english-words
-stars: 6063
+stars: 6065
 description: |-
     程序员工作中常见的英语词汇
 url: https://github.com/Wei-Xia/most-frequent-technology-english-words

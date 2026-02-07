@@ -1,10 +1,17 @@
 ---
 project: motia
-stars: 14516
+stars: 14938
 description: |-
     Multi-Language Backend Framework that unifies APIs, background jobs, queues, workflows, streams, and AI agents with a single core primitive with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
 ---
+
+> [!IMPORTANT]
+> 🚀 **A brand new engine is coming to Motia that will supercharge its speed & scalability.**
+> 
+> **[📬 Signup to be the first to get notified when it's released](https://forms.gle/24iCHL9yAk1i6LDc6) → https://forms.gle/24iCHL9yAk1i6LDc6**
+>
+> **It's almost ready!**
 
 <a href="https://motia.dev">
   <img src="assets/github-readme-banner.png" alt="Motia Banner" width="100%">
@@ -399,3 +406,4 @@ We welcome contributions! Check our **[Contributing Guide](https://github.com/Mo
 <sub>⭐ **Star us if you find Motia useful!**</sub>
 
 </div>
+

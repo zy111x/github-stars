@@ -1,6 +1,6 @@
 ---
 project: preline
-stars: 6225
+stars: 6233
 description: |-
     Preline UI is an open-source set of prebuilt UI components based on the utility-first Tailwind CSS framework.
 url: https://github.com/htmlstreamofficial/preline
@@ -62,7 +62,7 @@ npm i preline
 Preline UI includes Agent Skills for agentic coding tools (Cursor, Claude Code, Gemini CLI, etc.) that enable automated theme generation. Install via CLI:
 
 ```bash
-npx skills add https://github.com/htmlstreamofficial/preline --skill theme-generator
+npx skills add htmlstreamofficial/preline
 ```
 
 Learn more in the [Agent Skills documentation](https://preline.co/docs/agent-skills.html).

@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 1322
+stars: 1341
 description: |-
     JSX → Image. Faster next/og & satori alternative plus variable fonts, RTL, inline layout, WOFF2, WebP output support.
 url: https://github.com/kane50613/takumi
@@ -59,7 +59,7 @@ Contributions are welcome! Please feel free to open an [issue](https://github.co
 
 By participating in this project, you agree to abide by our [Code of Conduct](CODE_OF_CONDUCT.md).
 
-You need to have Rust 1.88+ & Bun installed.
+You need to have Rust 1.89+ & Bun installed.
 
 ```bash
 bun install

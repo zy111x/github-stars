@@ -1,6 +1,6 @@
 ---
 project: snapdrop
-stars: 19678
+stars: 19683
 description: |-
     A Progressive Web App for local file sharing 
 url: https://github.com/SnapDrop/snapdrop

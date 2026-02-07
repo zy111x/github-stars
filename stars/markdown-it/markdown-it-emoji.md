@@ -1,6 +1,6 @@
 ---
 project: markdown-it-emoji
-stars: 761
+stars: 762
 description: |-
     Emoji syntax plugin for markdown-it markdown parser
 url: https://github.com/markdown-it/markdown-it-emoji
