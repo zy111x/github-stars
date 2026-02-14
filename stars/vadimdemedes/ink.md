@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 34783
+stars: 34931
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -77,8 +77,6 @@ render(<Counter />);
 
 <img src="media/demo.svg" width="600">
 
-Feel free to play around with the code and fork this Repl at [https://repl.it/@vadimdemedes/ink-counter-demo](https://repl.it/@vadimdemedes/ink-counter-demo).
-
 ## Who's Using Ink?
 
 - [Claude Code](https://github.com/anthropics/claude-code) - An agentic coding tool made by Anthropic.
@@ -131,15 +129,18 @@ Feel free to play around with the code and fork this Repl at [https://repl.it/@v
 - [argonaut](https://github.com/darksworm/argonaut) - Manage Argo CD resources.
 - [Qodo Command](https://github.com/qodo-ai/command) - Build, run, and manage AI agents.
 - [Nanocoder](https://github.com/nano-collective/nanocoder) - A community-built, local-first AI coding agent with multi-provider support.
+- [dev3000](https://github.com/vercel-labs/dev3000) - An AI agent MCP orchestrator and developer browser.
 - [Neovate Code](https://github.com/neovateai/neovate-code) - An agentic coding tool made by AntGroup.
 - [instagram-cli](https://github.com/supreme-gg-gg/instagram-cli) - Instagram client.
 - [ElevenLabs CLI](https://github.com/elevenlabs/cli) - ElevenLabs agents client.
+- [SSH AI Chat](https://github.com/miantiao-me/ssh-ai-chat) - Chat with AI over SSH.
 
 *(PRs welcome. Append new entries at the end. Repos must have 100+ stars and showcase Ink beyond a basic list picker.)*
 
 ## Contents
 
 - [Getting Started](#getting-started)
+- [App Lifecycle](#app-lifecycle)
 - [Components](#components)
   - [`<Text>`](#text)
   - [`<Box>`](#box)
@@ -155,6 +156,7 @@ Feel free to play around with the code and fork this Repl at [https://repl.it/@v
   - [`useStderr`](#usestderr)
   - [`useFocus`](#usefocusoptions)
   - [`useFocusManager`](#usefocusmanager)
+  - [`useCursor`](#usecursor)
 - [API](#api)
 - [Testing](#testing)
 - [Using React Devtools](#using-react-devtools)
@@ -162,6 +164,7 @@ Feel free to play around with the code and fork this Repl at [https://repl.it/@v
 - [Useful Components](#useful-components)
 - [Useful Hooks](#useful-hooks)
 - [Examples](#examples)
+- [Continuous Integration](#continuous-integration)
 
 ## Getting Started
 
@@ -227,6 +230,22 @@ It's important to remember that each element is a Flexbox container.
 Think of it as if every `<div>` in the browser had `display: flex`.
 See [`<Box>`](#box) built-in component below for documentation on how to use Flexbox layouts in Ink.
 Note that all text must be wrapped in a [`<Text>`](#text) component.
+
+## App Lifecycle
+
+An Ink app is a Node.js process, so it stays alive only while there is active work in the event loop (timers, pending promises, [`useInput`](#useinputinputhandler-options) listening on `stdin`, etc.). If your component tree has no async work, the app will render once and exit immediately.
+
+To exit the app, press **Ctrl+C** (enabled by default via [`exitOnCtrlC`](#exitonctrlc)), call [`exit()`](#exiterrororresult) from [`useApp`](#useapp) inside a component, or call [`unmount()`](#unmount) on the object returned by [`render()`](#rendertree-options).
+
+Use [`waitUntilExit()`](#waituntilexit) to run code after the app is unmounted:
+
+```jsx
+const {waitUntilExit} = render(<MyApp />);
+
+await waitUntilExit();
+
+console.log('App exited');
+```
 
 ## Components
 
@@ -1425,12 +1444,11 @@ For example, to implement a hanging indent component, you can indent all the lin
 ```jsx
 import {render, Transform} from 'ink';
 
-const HangingIndent = ({content, indent = 4, children, ...props}) => (
+const HangingIndent = ({indent = 4, children}) => (
 	<Transform
 		transform={(line, index) =>
 			index === 0 ? line : ' '.repeat(indent) + line
 		}
-		{...props}
 	>
 		{children}
 	</Transform>
@@ -1444,9 +1462,8 @@ const text =
 	'of my hands only. I lived there two years and two months. At ' +
 	'present I am a sojourner in civilized life again.';
 
-// Other text properties are allowed as well
 render(
-	<HangingIndent bold dimColor indent={4}>
+	<HangingIndent indent={4}>
 		{text}
 	</HangingIndent>
 );
@@ -1590,12 +1607,57 @@ Default: `false`
 If the Page Up or Page Down key was pressed, the corresponding property will be `true`.
 For example, if the user presses Page Down, `key.pageDown` equals `true`.
 
+###### key.home
+
+###### key.end
+
+Type: `boolean`\
+Default: `false`
+
+If the Home or End key was pressed, the corresponding property will be `true`.
+For example, if the user presses End, `key.end` equals `true`.
+
 ###### key.meta
 
 Type: `boolean`\
 Default: `false`
 
 [Meta key](https://en.wikipedia.org/wiki/Meta_key) was pressed.
+
+###### key.super
+
+Type: `boolean`\
+Default: `false`
+
+Super key (Cmd on macOS, Win on Windows) was pressed. Requires [kitty keyboard protocol](#kittykeyboard).
+
+###### key.hyper
+
+Type: `boolean`\
+Default: `false`
+
+Hyper key was pressed. Requires [kitty keyboard protocol](#kittykeyboard).
+
+###### key.capsLock
+
+Type: `boolean`\
+Default: `false`
+
+Caps Lock was active. Requires [kitty keyboard protocol](#kittykeyboard).
+
+###### key.numLock
+
+Type: `boolean`\
+Default: `false`
+
+Num Lock was active. Requires [kitty keyboard protocol](#kittykeyboard).
+
+###### key.eventType
+
+Type: `'press' | 'repeat' | 'release'`\
+Default: `undefined`
+
+The type of key event. Only available with [kitty keyboard protocol](#kittykeyboard). Without the protocol, this property is `undefined`.
 
 #### options
 
@@ -1613,17 +1675,20 @@ Useful when there are multiple `useInput` hooks used at once to avoid handling t
 
 `useApp` is a React hook that exposes a method to manually exit the app (unmount).
 
-#### exit(error?)
+#### exit(errorOrResult?)
 
 Type: `Function`
 
 Exit (unmount) the whole Ink app.
 
-##### error
+##### errorOrResult
 
-Type: `Error`
+Type: `Error | unknown`
 
-Optional error. If passed, [`waitUntilExit`](waituntilexit) will reject with that error.
+Optional value that controls how [`waitUntilExit`](waituntilexit) settles:
+- `exit()` resolves with `undefined`.
+- `exit(error)` rejects when `error` is an `Error`.
+- `exit(value)` resolves with `value`.
 
 ```js
 import {useApp} from 'ink';
@@ -1970,6 +2035,55 @@ const Example = () => {
 };
 ```
 
+### useCursor()
+
+`useCursor` lets you control the terminal cursor position after each render. This is essential for IME (Input Method Editor) support, where the composing character is displayed at the cursor location.
+
+```jsx
+import {useState} from 'react';
+import {Box, Text, useCursor} from 'ink';
+import stringWidth from 'string-width';
+
+const TextInput = () => {
+	const [text, setText] = useState('');
+	const {setCursorPosition} = useCursor();
+
+	const prompt = '> ';
+	setCursorPosition({x: stringWidth(prompt + text), y: 1});
+
+	return (
+		<Box flexDirection="column">
+			<Text>Type here:</Text>
+			<Text>{prompt}{text}</Text>
+		</Box>
+	);
+};
+```
+
+#### setCursorPosition(position)
+
+Set the cursor position relative to the Ink output. Pass `undefined` to hide the cursor.
+
+##### position
+
+Type: `object | undefined`
+
+Use [`string-width`](https://github.com/sindresorhus/string-width) to calculate `x` for strings containing wide characters (CJK, emoji).
+
+See a full example at [examples/cursor-ime](examples/cursor-ime/cursor-ime.tsx).
+
+###### x
+
+Type: `number`
+
+Column position (0-based).
+
+###### y
+
+Type: `number`
+
+Row position from the top of the Ink output (0 = first line).
+
 ### useIsScreenReaderEnabled()
 
 Returns whether a screen reader is enabled. This is useful when you want to render different output for screen readers.
@@ -2000,7 +2114,7 @@ Mount a component and render the output.
 
 ##### tree
 
-Type: `ReactElement`
+Type: `ReactNode`
 
 ##### options
 
@@ -2053,6 +2167,13 @@ Default: `undefined`
 
 Runs the given callback after each render and re-render with a metrics object.
 
+###### isScreenReaderEnabled
+
+Type: `boolean`\
+Default: `process.env['INK_SCREEN_READER'] === 'true'`
+
+Enable screen reader support. See [Screen Reader Support](#screen-reader-support).
+
 ###### debug
 
 Type: `boolean`\
@@ -2096,6 +2217,115 @@ render(<MyApp />, {concurrent: true});
 
 **Note:** Concurrent mode changes the timing of renders. Some tests may need to use `act()` to properly await updates. The `concurrent` option only takes effect on the first render for a given stdout. If you need to change the rendering mode, call `unmount()` first.
 
+###### kittyKeyboard
+
+Type: `object`\
+Default: `undefined`
+
+Enable the [kitty keyboard protocol](https://sw.kovidgoyal.net/kitty/keyboard-protocol/) for enhanced keyboard input handling. When enabled, terminals that support the protocol will report additional key information including `super`, `hyper`, `capsLock`, `numLock` modifiers and `eventType` (press/repeat/release).
+
+```jsx
+import {render} from 'ink';
+
+render(<MyApp />, {kittyKeyboard: {mode: 'auto'}});
+```
+
+```jsx
+import {render} from 'ink';
+
+render(<MyApp />, {
+	kittyKeyboard: {
+		mode: 'enabled',
+		flags: ['disambiguateEscapeCodes', 'reportEventTypes'],
+	},
+});
+```
+
+**kittyKeyboard.mode**
+
+Type: `'auto' | 'enabled' | 'disabled'`\
+Default: `'auto'`
+
+- `'auto'`: Detect terminal support using a heuristic precheck (known terminals like kitty, WezTerm, Ghostty) followed by a protocol query confirmation (`CSI ? u`). The protocol is only enabled if the terminal responds to the query within a short timeout.
+- `'enabled'`: Force enable the protocol. Both stdin and stdout must be TTYs.
+- `'disabled'`: Never enable the protocol.
+
+**kittyKeyboard.flags**
+
+Type: `string[]`\
+Default: `['disambiguateEscapeCodes']`
+
+Protocol flags to request from the terminal. Pass an array of flag name strings.
+
+Available flags:
+- `'disambiguateEscapeCodes'` - Disambiguate escape codes
+- `'reportEventTypes'` - Report key press, repeat, and release events
+- `'reportAlternateKeys'` - Report alternate key encodings
+- `'reportAllKeysAsEscapeCodes'` - Report all keys as escape codes
+- `'reportAssociatedText'` - Report associated text with key events
+
+**Behavior notes**
+
+When the kitty keyboard protocol is enabled, input handling changes in several ways:
+
+- **Non-printable keys produce empty input.** Keys like function keys (F1-F35), modifier-only keys (Shift, Control, Super), media keys, Caps Lock, Print Screen, and similar keys will not produce any text in the `input` parameter of `useInput`. They can still be detected via the `key` object properties.
+- **Ctrl+letter shortcuts work as expected.** When the terminal sends `Ctrl+letter` as codepoint 1-26 (the kitty CSI-u alternate form), `input` is set to the letter name (e.g. `'c'` for `Ctrl+C`) and `key.ctrl` is `true`. This ensures `exitOnCtrlC` and custom `Ctrl+letter` handlers continue to work regardless of which codepoint form the terminal uses.
+- **Key disambiguation.** The protocol allows the terminal to distinguish between keys that normally produce the same escape sequence. For example:
+  - `Ctrl+I` vs `Tab` - without the protocol, both produce the same byte (`\x09`). With the protocol, they are reported as distinct keys.
+  - `Shift+Enter` vs `Enter` - the shift modifier is correctly reported.
+  - `Escape` key vs `Ctrl+[` - these are disambiguated.
+- **Event types.** With the `reportEventTypes` flag, key press, repeat, and release events are distinguished via `key.eventType`.
+
+#### renderToString(tree, options?)
+
+Returns: `string`
+
+Render a React element to a string synchronously. Unlike `render()`, this function does not write to stdout, does not set up any terminal event listeners, and returns the rendered output as a string.
+
+Useful for generating documentation, writing output to files, testing, or any scenario where you need the rendered output as a string without starting a persistent terminal application.
+
+```jsx
+import {renderToString, Text, Box} from 'ink';
+
+const output = renderToString(
+	<Box padding={1}>
+		<Text color="green">Hello World</Text>
+	</Box>,
+);
+
+console.log(output);
+```
+
+**Notes:**
+
+- Terminal-specific hooks (`useInput`, `useStdin`, `useStdout`, `useStderr`, `useApp`, `useFocus`, `useFocusManager`) return default no-op values since there is no terminal session. They will not throw, but they will not function as in a live terminal.
+- `useEffect` callbacks will execute during rendering (due to synchronous rendering mode), but state updates they trigger will not affect the returned output, which reflects the initial render.
+- `useLayoutEffect` callbacks fire synchronously during commit, so state updates they trigger **will** be reflected in the output.
+- The `<Static>` component is supported — its output is prepended to the dynamic output.
+- If a component throws during rendering, the error is propagated to the caller after cleanup.
+
+##### tree
+
+Type: `ReactNode`
+
+##### options
+
+Type: `object`
+
+###### columns
+
+Type: `number`\
+Default: `80`
+
+Width of the virtual terminal in columns. Controls where text wrapping occurs.
+
+```jsx
+const output = renderToString(<Text>{'A'.repeat(100)}</Text>, {
+	columns: 40,
+});
+// Text wraps at 40 columns
+```
+
 #### Instance
 
 This is the object that `render()` returns.
@@ -2106,7 +2336,7 @@ Replace the previous root node with a new one or update the props of the current
 
 ###### tree
 
-Type: `ReactElement`
+Type: `ReactNode`
 
 ```jsx
 // Update props of the root node
@@ -2129,7 +2359,9 @@ unmount();
 
 ##### waitUntilExit()
 
-Returns a promise that resolves when the app is unmounted.
+Returns a promise that settles when the app is unmounted.
+
+It resolves with the value passed to `exit(value)` and rejects with the error passed to `exit(error)`.
 
 ```jsx
 const {unmount, waitUntilExit} = render(<MyApp />);
@@ -2138,6 +2370,12 @@ setTimeout(unmount, 1000);
 
 await waitUntilExit(); // resolves after `unmount()` is called
 ```
+
+##### cleanup()
+
+Delete the internal Ink instance associated with the current `stdout`.
+This is mostly useful for advanced cases (for example, tests) where you need `render()` to create a fresh instance for the same stream.
+This does not unmount the current app.
 
 ##### clear()
 
@@ -2353,6 +2591,7 @@ For a practical example of building an accessible component, see the [ARIA examp
 - [ink-scroll-list](https://github.com/ByteLandTechnology/ink-scroll-list) - Scrollable list.
 - [ink-stepper](https://github.com/archcorsair/ink-stepper) - Step-by-step wizard.
 - [ink-virtual-list](https://github.com/archcorsair/ink-virtual-list) - Virtualized list that renders only visible items for performance.
+- [ink-color-picker](https://github.com/sina-byn/ink-color-picker) - Color picker.
 
 ## Useful Hooks
 
@@ -2379,6 +2618,19 @@ npm run example examples/[example name]
 - [Write to stderr](examples/use-stderr/use-stderr.tsx) - Write to stderr, bypassing main Ink output.
 - [Static](examples/static/static.tsx) - Use the `<Static>` component to render permanent output.
 - [Child process](examples/subprocess-output) - Renders output from a child process.
+
+## Continuous Integration
+
+When running on CI (detected via the `CI` environment variable), Ink adapts its rendering:
+
+- Only the last frame is rendered on exit, instead of continuously updating the terminal. This is because most CI environments don't support the ANSI escape sequences used to overwrite previous output.
+- Terminal resize events are not listened to.
+
+If your CI environment supports full terminal rendering and you want to opt out of this behavior, set `CI=false`:
+
+```sh
+CI=false node my-cli.js
+```
 
 ## Maintainers
 

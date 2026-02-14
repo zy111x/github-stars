@@ -1,8 +1,8 @@
 ---
 project: openpanel
-stars: 5273
+stars: 5323
 description: |-
-    Openpanel is an open-source web and product analytics platform that combines the power of Mixpanel with the ease of Plausible and one of the best Google Analytics replacements.
+    OpenPanel is an open-source web and product analytics platform, an open-source alternative to Mixpanel with optional self-hosting.
 url: https://github.com/Openpanel-dev/openpanel
 ---
 

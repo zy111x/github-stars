@@ -1,6 +1,6 @@
 ---
 project: oha
-stars: 9996
+stars: 10027
 description: |-
     Ohayou(おはよう), HTTP load generator, inspired by rakyll/hey with tui animation.
 url: https://github.com/hatoo/oha

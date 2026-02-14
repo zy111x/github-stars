@@ -1,6 +1,6 @@
 ---
 project: square-ui
-stars: 4723
+stars: 4741
 description: |-
     Collection of beautifully crafted open-source layouts UI built with shadcn/ui.
 url: https://github.com/ln-dev7/square-ui
@@ -26,6 +26,7 @@ This project is sponsored by:
 
 | Template              | Description                                                                                                      | Live Demo                                                   | GitHub (Radix UI)                                                                      | GitHub (Base UI)                                                                        | Design                                   |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------- |
+| **Dashboard 5**       | Modern dashboard with stats, today's tasks, performance chart, and projects table.                                                       | [View Demo](https://square-ui-dashboard-5.vercel.app)       | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/dashboard-5)       | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/dashboard-5) | [LN](https://x.com/ln_dev7)              |
 | **Rentals**           | Modern rental property platform with interactive map, property listings, filters, and search.                    | [View Demo](https://square-ui-rentals.vercel.app)          | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/rentals)           | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/rentals)     | [LN](https://x.com/ln_dev7)              |
 | **Bookmarks**         | Modern bookmarks manager with collections, tags, favorites, archive, and trash.                                  | [View Demo](https://square-ui-bookmarks.vercel.app)         | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/bookmarks)         | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/bookmarks)   | [LN](https://x.com/ln_dev7)              |
 | **Maps**              | Modern maps dashboard with location search, favorites, recents, and interactive map controls.                    | [View Demo](https://square-ui-maps.vercel.app)              | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates/maps)              | [Source](https://github.com/ln-dev7/square-ui/tree/master/templates-baseui/maps)        | [LN](https://x.com/ln_dev7)              |

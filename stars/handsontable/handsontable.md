@@ -1,6 +1,6 @@
 ---
 project: handsontable
-stars: 21775
+stars: 21787
 description: |-
     JavaScript Data Grid / Data Table with a Spreadsheet Look & Feel. Works with React, Angular, and Vue. Supported by the Handsontable team ⚡
 url: https://github.com/handsontable/handsontable
@@ -97,17 +97,10 @@ You can also use [Yarn](https://yarnpkg.com/package/handsontable), [NuGet](https
 
   ```js
   import Handsontable from 'handsontable';
-  // Base CSS rules
-  import 'handsontable/styles/handsontable.min.css';
-  // Main theme variables
-  import 'handsontable/styles/ht-theme-main.min.css';
   
   const element = document.getElementById('handsontable-grid');
   
   new Handsontable(element, {
-    // theme name with obligatory ht-theme-* prefix
-    themeName: 'ht-theme-main-dark-auto',
-    // other options
     data: [
       { company: 'Tagcat', country: 'United Kingdom', rating: 4.4 },
       { company: 'Zoomzone', country: 'Japan', rating: 4.5 },
@@ -145,14 +138,6 @@ You can also use [Yarn](https://yarnpkg.com/package/handsontable), [NuGet](https
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Handsontable - JavaScript Data Grid Example</title>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/handsontable/styles/handsontable.min.css"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/handsontable/styles/ht-theme-main.min.css"
-      />
     </head>
     <body>
       <div id="handsontable-grid"></div>
@@ -161,9 +146,6 @@ You can also use [Yarn](https://yarnpkg.com/package/handsontable), [NuGet](https
         const element = document.getElementById("handsontable-grid");
   
         new Handsontable(element, {
-          // theme name with obligatory ht-theme-* prefix
-          themeName: 'ht-theme-main-dark-auto',
-          // other options
           data: [
             { company: "Tagcat", country: "United Kingdom", rating: 4.4 },
             { company: "Zoomzone", country: "Japan", rating: 4.5 },

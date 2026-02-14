@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 1328
+stars: 1444
 description: |-
     Slimmed, cleaned and fine-tuned oh-my-opencode fork, consumes much less tokens
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -9,7 +9,7 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
 <div align="center">
   <img src="img/team.png" alt="Pantheon agents" width="420">
   <p><i>Six divine beings emerged from the dawn of code, each an immortal master of their craft await your command to forge order from chaos and build what was once thought impossible.</i></p>
-  <p><b>Multi Agent Suite</b> · Mix any models · Auto delegate tasks · Antigravity + Chutes ready</p>
+  <p><b>Open Multi Agent Suite</b> · Mix any models · Auto delegate tasks</p>
 </div>
 
 ---
@@ -262,4 +262,11 @@ https://raw.githubusercontent.com/alvinunreal/oh-my-opencode-slim/refs/heads/mas
 ## 📄 License
 
 MIT
+
+---
+
+<!-- MoltFounders Banner -->
+<a href="https://moltfounders.com/project/0f5874c7-9291-415b-9622-7509d96a2c73">
+  <img src="img/moltfounders-banner.png" alt="MoltFounders - The Agent Co-Founder Network">
+</a>
 

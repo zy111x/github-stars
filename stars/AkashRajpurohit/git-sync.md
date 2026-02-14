@@ -1,6 +1,6 @@
 ---
 project: git-sync
-stars: 664
+stars: 665
 description: |-
     🔄 A simple tool to backup and sync your git repositories
 url: https://github.com/AkashRajpurohit/git-sync
@@ -67,7 +67,9 @@ We have a thorough guide on how to set up and get started with `git-sync` in our
 
 If you found the project helpful, consider giving it a star ⭐️. If you would like to support the project in other ways, you can [buy me a coffee](https://ko-fi.com/akashrajpurohit) or [sponsor me on GitHub](https://github.com/sponsors/AkashRajpurohit).
 
-<a href="https://eternalvault.app/?ref=git-sync"><img src="./assets/sponsor-banner.png" alt="Eternal Vault" width="100%" /></a>
+Check out my product [CatchIntent](https://catchintent.com/?ref=git-sync), helping you turn social conversations into qualified leads.
+
+<a href="https://catchintent.com/?ref=git-sync"><img src="./assets/catchintent-banner.png" alt="CatchIntent" width="100%" /></a>
 
 ## 🐛 Bugs or Requests
 

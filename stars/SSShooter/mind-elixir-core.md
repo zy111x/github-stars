@@ -1,6 +1,6 @@
 ---
 project: mind-elixir-core
-stars: 2938
+stars: 2939
 description: |-
     ⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.
 url: https://github.com/SSShooter/mind-elixir-core
@@ -80,6 +80,22 @@ Mind elixir is a open source JavaScript mind map core. You can use it with any f
 
 [v5 Breaking Changes](https://github.com/SSShooter/mind-elixir-core/wiki/Breaking-Change#500)
 
+## Build with AI
+
+Use `npx skills add` to install guides to your project:
+
+**Integration Guide**:
+
+```bash
+npx skills add https://github.com/ssshooter/mind-elixir-core/blob/master/skills/integrate-mind-elixir
+```
+
+**Other Skills**:
+
+- [Customize Markdown](skills/customize-markdown/SKILL.md): `npx skills add https://github.com/ssshooter/mind-elixir-core/blob/master/skills/customize-markdown`
+- [Export as Image](skills/export-mindmap-image/SKILL.md): `npx skills add https://github.com/ssshooter/mind-elixir-core/blob/master/skills/export-mindmap-image`
+- [Streaming Mindmap](skills/streaming-mindmap/SKILL.md): `npx skills add https://github.com/ssshooter/mind-elixir-core/blob/master/skills/streaming-mindmap`
+
 <details>
 <summary>Table of Contents</summary>
 
@@ -89,6 +105,7 @@ Mind elixir is a open source JavaScript mind map core. You can use it with any f
   - [⚡ **Performance \& Architecture**](#-performance--architecture)
   - [🛠️ **Core Features**](#️-core-features)
   - [📤 **Export \& Customization**](#-export--customization)
+- [Build with AI](#%EF%B8%8F-build-with-ai)
 - [Try now](#try-now)
   - [Playground](#playground)
 - [Documentation](#documentation)
@@ -182,7 +199,6 @@ let options = {
   el: '#map', // or HTMLDivElement
   direction: MindElixir.LEFT,
   toolBar: true, // default true
-  nodeMenu: true, // default true
   keypress: true, // default true
   locale: 'en', // [zh_CN,zh_TW,en,ja,pt,ru,ro] waiting for PRs
   overflowHidden: false, // default false
@@ -328,8 +344,12 @@ let mind = new MindElixir({
   // ...
   before: {
     async addChild(el, obj) {
-      await saveDataToDb()
-      return true
+      try {
+        await saveDataToDb()
+        return true
+      } catch (err) {
+        return false
+      }
     },
   },
 })

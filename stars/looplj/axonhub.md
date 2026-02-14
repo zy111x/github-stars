@@ -1,6 +1,6 @@
 ---
 project: axonhub
-stars: 1766
+stars: 1880
 description: |-
     ⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.
 url: https://github.com/looplj/axonhub
@@ -173,6 +173,7 @@ Here are some screenshots of AxonHub in action:
 | **ZAI**                | ✅ Done    | -                            | Image Generation |
 | **AWS Bedrock**        | 🔄 Testing | Claude on AWS                | OpenAI, Anthropic, Gemini |
 | **Google Cloud**       | 🔄 Testing | Claude on GCP                | OpenAI, Anthropic, Gemini |
+| **NanoGPT**            | ✅ Done    | Various models, Image Gen    | OpenAI, Anthropic, Gemini, Image Generation |
 
 ---
 
@@ -189,7 +190,7 @@ cd axonhub_*
 ./axonhub
 
 # Open http://localhost:8090
-# Default login: admin@axonhub.com / admin
+# First run: Follow the setup wizard to initialize the system (create admin account, password must be at least 6 characters)
 ```
 
 That's it! Now configure your first AI channel and start calling models through AxonHub.
@@ -337,6 +338,36 @@ docker-compose up -d
 docker-compose ps
 ```
 
+#### Helm Kubernetes Deployment
+
+Deploy AxonHub on Kubernetes using the official Helm chart:
+
+```bash
+# Quick installation
+git clone https://github.com/looplj/axonhub.git
+cd axonhub
+helm install axonhub ./deploy/helm
+
+# Production deployment
+helm install axonhub ./deploy/helm -f ./deploy/helm/values-production.yaml
+
+# Access AxonHub
+kubectl port-forward svc/axonhub 8090:8090
+# Visit http://localhost:8090
+```
+
+**Key Configuration Options:**
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `axonhub.replicaCount` | Replicas | `1` |
+| `axonhub.dbPassword` | DB password | `axonhub_password` |
+| `postgresql.enabled` | Embedded PostgreSQL | `true` |
+| `ingress.enabled` | Enable ingress | `false` |
+| `persistence.enabled` | Data persistence | `false` |
+
+For detailed configuration and troubleshooting, see [Helm Chart Documentation](deploy/helm/README.md).
+
 #### Virtual Machine Deployment
 
 Download the latest release from [GitHub Releases](https://github.com/looplj/axonhub/releases)
@@ -440,7 +471,7 @@ For detailed SDK usage examples and code samples, please refer to the API docume
 
 ## 🛠️ Development Guide
 
-For detailed development instructions, architecture design, and contribution guidelines, please see [docs/en/guides/development.md](docs/en/guides/development.md).
+For detailed development instructions, architecture design, and contribution guidelines, please see [docs/en/development/development.md](docs/en/development/development.md).
 
 ---
 

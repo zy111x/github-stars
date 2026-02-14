@@ -1,17 +1,15 @@
 ---
 project: motia
-stars: 14938
+stars: 15057
 description: |-
     Multi-Language Backend Framework that unifies APIs, background jobs, queues, workflows, streams, and AI agents with a single core primitive with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
 ---
 
 > [!IMPORTANT]
-> 🚀 **A brand new engine is coming to Motia that will supercharge its speed & scalability.**
-> 
-> **[📬 Signup to be the first to get notified when it's released](https://forms.gle/24iCHL9yAk1i6LDc6) → https://forms.gle/24iCHL9yAk1i6LDc6**
+> 🚀 **A brand new engine is now powering Motia and supercharged its speed & scalability. It's currently in alpha.**
 >
-> **It's almost ready!**
+> **[📬 Signup to be the first to get notified about future releases](https://forms.gle/24iCHL9yAk1i6LDc6) → https://forms.gle/24iCHL9yAk1i6LDc6**
 
 <a href="https://motia.dev">
   <img src="assets/github-readme-banner.png" alt="Motia Banner" width="100%">
@@ -38,7 +36,7 @@ url: https://github.com/MotiaDev/motia
     <img src="https://img.shields.io/npm/v/motia?style=flat&logo=npm&logoColor=white&color=CB3837&labelColor=000000" alt="npm version">
   </a>
   <a href="https://github.com/MotiaDev/motia/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-ELv2-blue?style=flat&logo=opensourceinitiative&logoColor=white&labelColor=000000" alt="license">
+    <img src="https://img.shields.io/badge/license-Apache%202.0-blue?style=flat&logo=apache&logoColor=white&labelColor=000000" alt="Apache 2.0 License">
   </a>
   <a href="https://github.com/MotiaDev/motia">
     <img src="https://img.shields.io/github/stars/MotiaDev/motia?style=flat&logo=github&logoColor=white&color=yellow&labelColor=000000" alt="GitHub stars">
@@ -90,23 +88,27 @@ To read more about this, check out our **[manifesto](https://motia.dev/manifesto
 
 A Step is just a file with a `config` and a `handler`. Motia auto-discovers these files and connects them automatically.
 
-Here's a simple example of two Steps working together: an API Step that emits an event, and an Event Step that processes it.
+Here's a simple example of two Steps working together: an API Step that enqueues an event, and an Event Step that processes it.
 
 <details open>
 <summary><b>TypeScript</b></summary>
 
 ```ts
-// src/send-message.step.ts
+// steps/send-message.step.ts
 export const config = {
   name: 'SendMessage',
-  type: 'api',
-  path: '/messages',
-  method: 'POST',
-  emits: ['message.sent']
+  triggers: [
+    {
+      type: 'api',
+      method: 'POST',
+      path: '/messages',
+    }
+  ],
+  enqueues: ['message.sent']
 };
 
-export const handler = async (req, { emit }) => {
-  await emit({
+export const handler = async (req, { enqueue }) => {
+  await enqueue({
     topic: 'message.sent',
     data: { text: req.body.text }
   });
@@ -115,11 +117,15 @@ export const handler = async (req, { emit }) => {
 ```
 
 ```ts
-// src/process-message.step.ts
+// steps/process-message.step.ts
 export const config = {
   name: 'ProcessMessage',
-  type: 'event',
-  subscribes: ['message.sent']
+  triggers: [
+    {
+      type: 'queue',
+      topic: 'message.sent',
+    }
+  ],
 };
 
 export const handler = async (input, { logger }) => {
@@ -129,56 +135,25 @@ export const handler = async (input, { logger }) => {
 
 </details>
 
-<details close>
-<summary><b>Python</b></summary>
-
-```python
-# send_message_step.py
-config = {
-    "name": "SendMessage",
-    "type": "api",
-    "path": "/messages",
-    "method": "POST",
-    "emits": ["message.sent"]
-}
-
-async def handler(req, context):
-    await context.emit({
-        "topic": "message.sent",
-        "data": {"text": req.body["text"]}
-    })
-    return {"status": 200, "body": {"ok": True}}
-```
-
-```python
-# process_message_step.py
-config = {
-    "name": "ProcessMessage",
-    "type": "event",
-    "subscribes": ["message.sent"]
-}
-
-async def handler(input, context):
-    context.logger.info("Processing message", input)
-```
-
-</details close>
-
 <details>
 <summary><b>JavaScript</b></summary>
 
 ```js
-// src/send-message.step.js
+// steps/send-message.step.js
 const config = {
   name: 'SendMessage',
-  type: 'api',
-  path: '/messages',
-  method: 'POST',
-  emits: ['message.sent']
+  triggers: [
+    {
+      type: 'api',
+      method: 'POST',
+      path: '/messages',
+    }
+  ],
+  enqueues: ['message.sent']
 };
 
-const handler = async (req, { emit }) => {
-  await emit({
+const handler = async (req, { enqueue }) => {
+  await enqueue({
     topic: 'message.sent',
     data: { text: req.body.text }
   });
@@ -189,11 +164,15 @@ module.exports = { config, handler };
 ```
 
 ```js
-// src/process-message.step.js
+// steps/process-message.step.js
 const config = {
   name: 'ProcessMessage',
-  type: 'event',
-  subscribes: ['message.sent']
+  triggers: [
+    {
+      type: 'queue',
+      topic: 'message.sent',
+    }
+  ],
 };
 
 const handler = async (input, { logger }) => {
@@ -264,52 +243,12 @@ The guides include patterns for API endpoints, background tasks, state managemen
 | Type | When it runs | Use Case |
 |------|--------------|----------|
 | **`api`** | HTTP Request | REST endpoints |
-| **`event`** | Topic subscription | Background processing |  
+| **`queue`** | Queue subscription | Background processing |  
 | **`cron`** | Schedule | Recurring jobs |
+| **`state`** | State change | State management |
+| **`stream`** | Stream subscription | Real-time streaming |
 
 > 📖 **[Learn more about Steps →](https://motia.dev/docs/concepts/steps)**
-
----
-
-## 🔌 Plugins & Adapters
-
-Extend Motia with plugins and customize infrastructure with adapters.
-
-### Official Plugins
-
-Pre-installed with every Motia project to enhance your workbench:
-
-| Plugin | Description | NPM |
-|--------|-------------|-----|
-| **[@motiadev/plugin-logs](https://github.com/motiadev/motia/tree/main/plugins/plugin-logs)** | Real-time log viewer with filtering and search | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-logs?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-logs) |
-| **[@motiadev/plugin-endpoint](https://github.com/motiadev/motia/tree/main/plugins/plugin-endpoint)** | Interactive API endpoint testing tool | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-endpoint?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-endpoint) |
-| **[@motiadev/plugin-observability](https://github.com/motiadev/motia/tree/main/plugins/plugin-observability)** | Performance tracing and distributed monitoring | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-observability?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-observability) |
-| **[@motiadev/plugin-states](https://github.com/motiadev/motia/tree/main/plugins/plugin-states)** | State management and inspection tool | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-states?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-states) |
-| **[@motiadev/plugin-bullmq](https://github.com/motiadev/motia/tree/main/plugins/plugin-bullmq)** | BullMQ queue and DLQ management | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-bullmq?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-bullmq) |
-| **[@motiadev/plugin-ws](https://github.com/motiadev/motia/tree/main/plugins/plugin-ws)** | WebSocket monitoring and debugging<sup>*</sup> | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-ws?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-ws) |
-| **[@motiadev/plugin-cron](https://github.com/motiadev/motia/tree/main/plugins/plugin-cron)** | Cron job monitoring and management | [![npm](https://img.shields.io/npm/v/@motiadev/plugin-cron?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/plugin-cron) |
-
-<sup>*</sup> Originally created by [@Rohithgilla12](https://github.com/Rohithgilla12) as [@potatocoder/ws-plugin](https://github.com/Rohithgilla12/motia-ws-plugin)
-
-**[View all community plugins →](https://github.com/MotiaDev/awesome-plugins)**
-
-### Official Adapters
-
-Customize your infrastructure with production-ready adapters:
-
-| Adapter | Purpose | NPM |
-|---------|---------|-----|
-| **[@motiadev/adapter-bullmq-events](https://github.com/motiadev/motia/tree/main/packages/adapter-bullmq-events)** | BullMQ-based event processing | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-bullmq-events?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-bullmq-events) |
-| **[@motiadev/adapter-rabbitmq-events](https://github.com/motiadev/motia/tree/main/packages/adapter-rabbitmq-events)** | RabbitMQ event adapter | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-rabbitmq-events?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-rabbitmq-events) |
-| **[@motiadev/adapter-redis-cron](https://github.com/motiadev/motia/tree/main/packages/adapter-redis-cron)** | Redis-based cron scheduling | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-redis-cron?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-redis-cron) |
-| **[@motiadev/adapter-redis-state](https://github.com/motiadev/motia/tree/main/packages/adapter-redis-state)** | Redis state management | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-redis-state?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-redis-state) |
-| **[@motiadev/adapter-redis-streams](https://github.com/motiadev/motia/tree/main/packages/adapter-redis-streams)** | Redis Streams for real-time data | [![npm](https://img.shields.io/npm/v/@motiadev/adapter-redis-streams?style=flat&color=CB3837)](https://www.npmjs.com/package/@motiadev/adapter-redis-streams) |
-
-### Create Your Own
-
-- **[Create a Plugin](https://github.com/MotiaDev/awesome-plugins/blob/main/CONTRIBUTING.md)** - Build custom workbench features
-- **[Plugin Development Guide](https://motia.dev/docs/development-guide/plugins)** - Complete documentation
-- **[Contribute to awesome-plugins](https://github.com/MotiaDev/awesome-plugins)** - Share with the community
 
 ---
 
@@ -374,15 +313,14 @@ Feel free to add comments to the issues, or create a new issue if you have a fea
 
 | Feature | Status | Link | Description |
 | ------- | ------ | ---- | ----------- |
-| Python Types | 🚧 In Progress | [#485](https://github.com/MotiaDev/motia/issues/485) | Add support for Python types |
 | Streams: RBAC | ✅ Shipped | [#495](https://github.com/MotiaDev/motia/issues/495) | Add support for RBAC |
-| Streams: Workbench UI | 🎨 Design Phase | [#497](https://github.com/MotiaDev/motia/issues/497) | Add support for Workbench UI |
+| Streams: Workbench UI | ✅ Shipped | [#497](https://github.com/MotiaDev/motia/issues/497) | Add support for Workbench UI |
 | Queue Strategies | ✅ Shipped | [#476](https://github.com/MotiaDev/motia/issues/476) | Add support for Queue Strategies |
-| Reactive Steps | 📅 Planned | [#477](https://github.com/MotiaDev/motia/issues/477) | Add support for Reactive Steps |
+| Reactive Steps | ✅ Shipped | [#477](https://github.com/MotiaDev/motia/issues/477) | Add support for Reactive Steps |
 | Point in time triggers | 📅 Planned | [#480](https://github.com/MotiaDev/motia/issues/480) | Add support for Point in time triggers |
 | Workbench plugins | ✅ Shipped | [#481](https://github.com/MotiaDev/motia/issues/481) | Add support for Workbench plugins |
-| Rewrite core in Rust | 🚧 In Progress | [#482](https://github.com/MotiaDev/motia/issues/482) | Rewrite our Core in Rust |
-| Decrease deployment time | 🚧 In Progress | [#483](https://github.com/MotiaDev/motia/issues/483) | Decrease deployment time |
+| Rewrite core in Rust | ✅ Shipped | [#482](https://github.com/MotiaDev/motia/issues/482) | Rewrite our Core in Rust |
+| Decrease deployment time | ✅ Shipped | [#483](https://github.com/MotiaDev/motia/issues/483) | Decrease deployment time |
 | Built-in database support | 📅 Planned | [#484](https://github.com/MotiaDev/motia/issues/484) | Add support for built-in database |
 
 ## 🤝 Contributing

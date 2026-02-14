@@ -1,6 +1,6 @@
 ---
 project: shadowsocks-manager
-stars: 4115
+stars: 4111
 description: |-
     A shadowsocks manager tool for multi user and traffic control.
 url: https://github.com/shadowsocks/shadowsocks-manager

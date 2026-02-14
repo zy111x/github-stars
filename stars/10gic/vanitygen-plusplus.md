@@ -1,6 +1,6 @@
 ---
 project: vanitygen-plusplus
-stars: 387
+stars: 389
 description: |-
     A vanity address generator supporting over 100 cryptocurrencies including BTC, ETH, LTC, TRX, and more.
 url: https://github.com/10gic/vanitygen-plusplus

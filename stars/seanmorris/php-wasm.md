@@ -1,6 +1,6 @@
 ---
 project: php-wasm
-stars: 1289
+stars: 1294
 description: |-
     PHP in Browser, powered by WebAssembly.
 url: https://github.com/seanmorris/php-wasm

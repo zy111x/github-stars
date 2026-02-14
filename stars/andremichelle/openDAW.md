@@ -1,6 +1,6 @@
 ---
 project: openDAW
-stars: 1058
+stars: 1196
 description: |-
     openDAW is a next-generation web-based Digital Audio Workstation (DAW)
 url: https://github.com/andremichelle/openDAW
@@ -132,7 +132,7 @@ evolves.
 
 - [ ] Fine-tune timeline clips (recording, switch times)
 - [ ] Fine-tune MIDI effects
-- [ ] Implement missing region actions like flatten
+- [X] Implement missing region actions like flatten
 - [ ] Polish UI
 
 #### 2026/Q3

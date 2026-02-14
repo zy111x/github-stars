@@ -1,30 +1,33 @@
 ---
 project: json-render
-stars: 10093
+stars: 10723
 description: |-
-    AI → JSON → UI
+    The Generative UI framework
 url: https://github.com/vercel-labs/json-render
 ---
 
 # json-render
 
-**Predictable. Guardrailed. Fast.**
+**The Generative UI framework.**
 
-Let end users generate dashboards, widgets, apps, and videos from prompts — safely constrained to components you define.
+Generate dynamic, personalized UIs from prompts without sacrificing reliability. Predefined components and actions for safe, predictable output.
 
 ```bash
 npm install @json-render/core @json-render/react
+# or for mobile
+npm install @json-render/core @json-render/react-native
 # or for video
 npm install @json-render/core @json-render/remotion
 ```
 
 ## Why json-render?
 
-When users prompt for UI, you need guarantees. json-render gives AI a **constrained vocabulary** so output is always predictable:
+json-render is a **Generative UI** framework: AI generates interfaces from natural language prompts, constrained to components you define. You set the guardrails, AI generates within them:
 
-- **Guardrailed** — AI can only use components in your catalog
-- **Predictable** — JSON output matches your schema, every time
-- **Fast** — Stream and render progressively as the model responds
+- **Guardrailed** - AI can only use components in your catalog
+- **Predictable** - JSON output matches your schema, every time
+- **Fast** - Stream and render progressively as the model responds
+- **Cross-Platform** - React (web) and React Native (mobile) from the same catalog
 
 ## Quick Start
 
@@ -83,8 +86,8 @@ const { registry } = defineRegistry(catalog, {
         <span>{format(props.value, props.format)}</span>
       </div>
     ),
-    Button: ({ props, onAction }) => (
-      <button onClick={() => onAction?.({ name: props.action })}>
+    Button: ({ props, emit }) => (
+      <button onClick={() => emit("press")}>
         {props.label}
       </button>
     ),
@@ -108,8 +111,9 @@ function Dashboard({ spec }) {
 
 | Package | Description |
 |---------|-------------|
-| `@json-render/core` | Schemas, catalogs, AI prompts, SpecStream utilities |
+| `@json-render/core` | Schemas, catalogs, AI prompts, dynamic props, SpecStream utilities |
 | `@json-render/react` | React renderer, contexts, hooks |
+| `@json-render/react-native` | React Native renderer with standard mobile components |
 | `@json-render/remotion` | Remotion video renderer, timeline schema |
 
 ## Renderers
@@ -120,19 +124,46 @@ function Dashboard({ spec }) {
 import { defineRegistry, Renderer } from "@json-render/react";
 import { schema } from "@json-render/react";
 
-// Element tree spec format
+// Flat spec format (root key + elements map)
 const spec = {
-  root: {
-    type: "Card",
-    props: { title: "Hello" },
-    children: [
-      { type: "Button", props: { label: "Click me" } }
-    ]
-  }
+  root: "card-1",
+  elements: {
+    "card-1": {
+      type: "Card",
+      props: { title: "Hello" },
+      children: ["button-1"],
+    },
+    "button-1": {
+      type: "Button",
+      props: { label: "Click me" },
+      children: [],
+    },
+  },
 };
 
 // defineRegistry creates a type-safe component registry
 const { registry } = defineRegistry(catalog, { components });
+<Renderer spec={spec} registry={registry} />
+```
+
+### React Native (Mobile)
+
+```tsx
+import { defineCatalog } from "@json-render/core";
+import { schema } from "@json-render/react-native/schema";
+import {
+  standardComponentDefinitions,
+  standardActionDefinitions,
+} from "@json-render/react-native/catalog";
+import { defineRegistry, Renderer } from "@json-render/react-native";
+
+// 25+ standard components included
+const catalog = defineCatalog(schema, {
+  components: { ...standardComponentDefinitions },
+  actions: standardActionDefinitions,
+});
+
+const { registry } = defineRegistry(catalog, { components: {} });
 <Renderer spec={spec} registry={registry} />
 ```
 
@@ -196,26 +227,45 @@ const systemPrompt = catalog.prompt();
 {
   "type": "Alert",
   "props": { "message": "Error occurred" },
-  "visible": {
-    "and": [
-      { "path": "/form/hasError" },
-      { "not": { "path": "/form/errorDismissed" } }
-    ]
-  }
+  "visible": [
+    { "$state": "/form/hasError" },
+    { "$state": "/form/errorDismissed", "not": true }
+  ]
 }
 ```
 
-### Data Binding
+### Dynamic Props
+
+Any prop value can be data-driven using expressions:
 
 ```json
 {
-  "type": "Metric",
+  "type": "Icon",
   "props": {
-    "label": "Revenue",
-    "value": "{{data.revenue}}"
+    "name": { "$cond": { "$state": "/activeTab", "eq": "home" }, "$then": "home", "$else": "home-outline" },
+    "color": { "$cond": { "$state": "/activeTab", "eq": "home" }, "$then": "#007AFF", "$else": "#8E8E93" }
   }
 }
 ```
+
+Two expression forms:
+
+- **`{ "$state": "/state/key" }`** - reads a value from the state model
+- **`{ "$cond": <condition>, "$then": <value>, "$else": <value> }`** - evaluates a condition (same syntax as visibility conditions) and picks a branch
+
+### Actions
+
+Components can trigger actions, including the built-in `setState` action:
+
+```json
+{
+  "type": "Pressable",
+  "props": { "action": "setState", "actionParams": { "statePath": "/activeTab", "value": "home" } },
+  "children": ["home-icon"]
+}
+```
+
+The `setState` action updates the state model directly, which re-evaluates visibility conditions and dynamic prop expressions.
 
 ---
 
@@ -228,9 +278,11 @@ pnpm install
 pnpm dev
 ```
 
-- http://localhost:3000 — Docs & Playground
-- http://localhost:3001 — Example Dashboard
-- http://localhost:3002 — Remotion Video Example
+- http://localhost:3000 - Docs & Playground
+- http://localhost:3001 - Example Dashboard
+- http://localhost:3002 - Remotion Video Example
+- Chat Example: run `pnpm dev` in `examples/chat`
+- React Native example: run `npx expo start` in `examples/react-native`
 
 ## How It Works
 
@@ -245,10 +297,10 @@ flowchart LR
     D -.- G([streamed])
 ```
 
-1. **Define the guardrails** — what components, actions, and data bindings AI can use
-2. **Users prompt** — end users describe what they want in natural language
-3. **AI generates JSON** — output is always predictable, constrained to your catalog
-4. **Render fast** — stream and render progressively as the model responds
+1. **Define the guardrails** - what components, actions, and data bindings AI can use
+2. **Prompt** - describe what you want in natural language
+3. **AI generates JSON** - output is always predictable, constrained to your catalog
+4. **Render fast** - stream and render progressively as the model responds
 
 ## License
 

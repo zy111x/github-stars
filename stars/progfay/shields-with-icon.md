@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 456
+stars: 454
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -1399,6 +1399,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Indeed](https://img.shields.io/badge/Indeed-003A9B?style=for-the-badge&logo=Indeed&logoColor=FFFFFF)
 ![Indian Super League](https://img.shields.io/badge/Indian%20Super%20League-ED2F21?style=for-the-badge&logo=Indian+Super+League&logoColor=FFFFFF)
 ![Indie Hackers](https://img.shields.io/badge/Indie%20Hackers-0E2439?style=for-the-badge&logo=Indie+Hackers&logoColor=FFFFFF)
+![IndieWeb](https://img.shields.io/badge/IndieWeb-FF0000?style=for-the-badge&logo=IndieWeb&logoColor=FFFFFF)
 ![IndiGo](https://img.shields.io/badge/IndiGo-09009B?style=for-the-badge&logo=IndiGo&logoColor=FFFFFF)
 ![Inductive Automation](https://img.shields.io/badge/Inductive%20Automation-445C6D?style=for-the-badge&logo=Inductive+Automation&logoColor=FFFFFF)
 ![Inertia](https://img.shields.io/badge/Inertia-9553E9?style=for-the-badge&logo=Inertia&logoColor=FFFFFF)
@@ -2112,6 +2113,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Optimism](https://img.shields.io/badge/Optimism-FF0420?style=for-the-badge&logo=Optimism&logoColor=FFFFFF)
 ![Optuna](https://img.shields.io/badge/Optuna-002C76?style=for-the-badge&logo=Optuna&logoColor=FFFFFF)
 ![Orange](https://img.shields.io/badge/Orange-FF7900?style=for-the-badge&logo=Orange&logoColor=FFFFFF)
+![Orchard Core](https://img.shields.io/badge/Orchard%20Core-41B670?style=for-the-badge&logo=Orchard+Core&logoColor=FFFFFF)
 ![ORCID](https://img.shields.io/badge/ORCID-222222?style=for-the-badge&logo=ORCID&logoColor=A6CE39)
 ![Org](https://img.shields.io/badge/Org-77AA99?style=for-the-badge&logo=Org&logoColor=FFFFFF)
 ![Organic Maps](https://img.shields.io/badge/Organic%20Maps-006C35?style=for-the-badge&logo=Organic+Maps&logoColor=FFFFFF)
@@ -2853,6 +2855,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Sunrise](https://img.shields.io/badge/Sunrise-DA291C?style=for-the-badge&logo=Sunrise&logoColor=FFFFFF)
 ![Supabase](https://img.shields.io/badge/Supabase-222222?style=for-the-badge&logo=Supabase&logoColor=3FCF8E)
 ![Super User](https://img.shields.io/badge/Super%20User-38A1CE?style=for-the-badge&logo=Super+User&logoColor=FFFFFF)
+![Supercell](https://img.shields.io/badge/Supercell-222222?style=for-the-badge&logo=Supercell&logoColor=FFFFFF)
 ![Supercrease](https://img.shields.io/badge/Supercrease-000000?style=for-the-badge&logo=Supercrease&logoColor=FFFFFF)
 ![Supermicro](https://img.shields.io/badge/Supermicro-151F6D?style=for-the-badge&logo=Supermicro&logoColor=FFFFFF)
 ![Surfshark](https://img.shields.io/badge/Surfshark-222222?style=for-the-badge&logo=Surfshark&logoColor=1EBFBF)
@@ -2903,6 +2906,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Tapas](https://img.shields.io/badge/Tapas-222222?style=for-the-badge&logo=Tapas&logoColor=FFCE00)
 ![Target](https://img.shields.io/badge/Target-CC0000?style=for-the-badge&logo=Target&logoColor=FFFFFF)
 ![TAROM](https://img.shields.io/badge/TAROM-003366?style=for-the-badge&logo=TAROM&logoColor=FFFFFF)
+![Tarteaucitron](https://img.shields.io/badge/Tarteaucitron-222222?style=for-the-badge&logo=Tarteaucitron&logoColor=F7D917)
 ![Task](https://img.shields.io/badge/Task-222222?style=for-the-badge&logo=Task&logoColor=29BEB0)
 ![Tasmota](https://img.shields.io/badge/Tasmota-1FA3EC?style=for-the-badge&logo=Tasmota&logoColor=FFFFFF)
 ![Tata](https://img.shields.io/badge/Tata-486AAE?style=for-the-badge&logo=Tata&logoColor=FFFFFF)

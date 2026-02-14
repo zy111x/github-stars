@@ -1,6 +1,6 @@
 ---
 project: enquirer
-stars: 7929
+stars: 7931
 description: |-
     Stylish, intuitive and user-friendly prompts. Used by eslint, webpack, yarn, pm2, pnpm, RedwoodJS, FactorJS, salesforce, Cypress, Google Lighthouse, Generate, tencent cloudbase, lint-staged, gluegun, hygen, hardhat, AWS Amplify, GitHub Actions Toolkit, @airbnb/nimbus, and more! Please follow Enquirer's author: https://github.com/jonschlinkert
 url: https://github.com/enquirer/enquirer

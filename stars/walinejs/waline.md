@@ -1,6 +1,6 @@
 ---
 project: waline
-stars: 2882
+stars: 2898
 description: |-
     💬 A Simple, Safe Comment System
 url: https://github.com/walinejs/waline
@@ -37,18 +37,18 @@ A simple comment system with backend support.
 - Deploy free!
 - Multiple deployment and storage service support, at least 243 deployment choice!
 
-|                                                 | Waline                                                              |                                    |
-| ----------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------- |
-| **Client**                                      | **Server**                                                          | **Storage**                        |
-| [@waline/client](https://waline.js.org)         | [Vercel](https://vercel.com)                                        | [LeanCloud](https://leancloud.app) |
-| [MiniValine](https://minivaline.js.org/)        | [CloudBase](https://cloudbase.net/)                                 | [CloudBase](https://clodbase.net)  |
-| [sodesu](https://github.com/BeiyanYunyi/sodesu) | [Railway](https://railway.app)                                      | [MongoDB](https://mongodb.com)     |
-|                                                 | [Render](https://render.com)                                        | MySQL                              |
-|                                                 | [Zeabur](https://zeabur.com)                                        | SQLite                             |
-|                                                 | [Netlify](https://netlify.com)                                      | [GitHub](https://github.com)       |
-|                                                 | [Alibaba Cloud ComputeNest](https://computenest.console.aliyun.com) | SQLite                             |
-|                                                 | Docker                                                              | PostgreSQL                         |
-|                                                 | self host                                                           | [TiDB](https://tidbcloud.com/)     |
+- |                                                 | Waline                                                              |                                   |
+  | ----------------------------------------------- | ------------------------------------------------------------------- | --------------------------------- |
+  | **Client**                                      | **Server**                                                          | **Storage**                       |
+  | [@waline/client](https://waline.js.org)         | [Vercel](https://vercel.com)                                        | PostgreSQL                        |
+  | [MiniValine](https://minivaline.js.org/)        | [CloudBase](https://cloudbase.net/)                                 | MySQL                             |
+  | [sodesu](https://github.com/BeiyanYunyi/sodesu) | [Railway](https://railway.app)                                      | SQLite                            |
+  |                                                 | [Render](https://render.com)                                        | [TiDB](https://tidbcloud.com/)    |
+  |                                                 | [Zeabur](https://zeabur.com)                                        | [MongoDB](https://mongodb.com)    |
+  |                                                 | [Netlify](https://netlify.com)                                      | [CloudBase](https://clodbase.net) |
+  |                                                 | [Alibaba Cloud ComputeNest](https://computenest.console.aliyun.com) | [GitHub](https://github.com)      |
+  |                                                 | Docker                                                              |                                   |
+  |                                                 | self host                                                           |                                   |
 
 ## Todo
 

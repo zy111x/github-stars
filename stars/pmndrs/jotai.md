@@ -1,6 +1,6 @@
 ---
 project: jotai
-stars: 20970
+stars: 20990
 description: |-
     👻 Primitive and flexible state management for React
 url: https://github.com/pmndrs/jotai
@@ -15,7 +15,7 @@ url: https://github.com/pmndrs/jotai
 
 visit [jotai.org](https://jotai.org) or `npm i jotai`
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/pmndrs/jotai/test.yml?branch=main&style=flat&colorA=000000&colorB=000000)](https://github.com/pmndrs/jotai/actions?query=workflow%3ALint)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/pmndrs/jotai/test.yml?branch=main&style=flat&colorA=000000&colorB=000000)](https://github.com/pmndrs/jotai/actions/workflows/test.yml?query=branch%3Amain)
 [![Build Size](https://img.shields.io/bundlephobia/minzip/jotai?label=bundle%20size&style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/result?p=jotai)
 [![Version](https://img.shields.io/npm/v/jotai?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/jotai)
 [![Downloads](https://img.shields.io/npm/dt/jotai.svg?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/jotai)

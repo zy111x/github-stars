@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 18719
+stars: 18774
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -20,7 +20,11 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 
 <p align="center">
   <i>Created by <a href="https://birobirobiro.dev/" target="_blank">birobirobiro.dev</a></i><br>
-  <i>Site by <a href="https://bankkroll.xyz/" target="_blank">bankkroll.xyz</a></i>
+  <i>Site by <a href="https://bankkroll.xyz/" target="_blank">bankkroll.xyz</a></i><br>
+  <i>Sponsored by</i><br>
+  <a href="https://shadcnstudio.com/?utm_source=awesome-shadcn-ui&utm_medium=banner&utm_campaign=github" target="_blank">
+    <img src="public/sponsors/shadcnstudio.svg" alt="shadcnstudio.com" width="32">
+  </a>
 </p>
 
 <p align="center">
@@ -220,6 +224,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | shadcn-event-calendar | A beautiful and flexible event calendar component inspired by Google Calendar and Notion, built with Shadcn UI, TailwindCSS, and Framer Motion. | [Link](https://shadcn-event-calendar.vercel.app) | 2025-07-16 |
 | shsfui | Motion-first React components built with Tailwind CSS + Framer Motion. | [Link](https://www.shsfui.com) | 2025-03-12 |
 | shuip | Provides ready-to-use, business-focused components that help you ship faster. | [Link](https://shuip.plvo.dev/docs) | 2025-10-09 |
+| siddz-ui | A curated collection of modern, reusable React components. Built with performance and accessibility in mind. Copy, paste, and customize. | [Link](https://siddz.com/components) | 2026-02-13 |
 | simple-ai | Components and blocks to easily build AI apps | [Link](https://simple-ai.dev) | 2025-01-21 |
 | simple-image-uploader | Image uploader with dnd, validation and previews | [Link](https://simple-image-uploader-bice.vercel.app/) | 2025-03-25 |
 | simplekit | Wallet and account component for Wagmi. | [Link](https://github.com/vaunblu/SimpleKit) | 2024-09-18 |
@@ -243,6 +248,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | tweet-to-code | Twitter design recreations as code. | [Link](https://tweet-to-code.vercel.app/) | 2024-12-26 |
 | ui-beats | Animated React Components collection. | [Link](https://uibeats.com) | 2024-09-23 |
 | ui-layouts | UI Layouts isn’t just a library. It’s a complete toolkit with components, effects, design tools, and ready-to-use blocks, everything you need to build modern interfaces, faster. | [Link](https://www.ui-layouts.com/) | 2025-10-15 |
+| ui-nference-sh | a shadcn registry of react ui components for building ai-powered applications, chatbots, and ai agent interfaces. | [Link](https://ui.inference.sh/) | 2026-02-13 |
 | uixmat-onborda | Product tour for Next.js applications. | [Link](https://github.com/uixmat/onborda) | 2024-06-07 |
 | uselayouts | Free premium animated React components and micro-interactions built with Framer Motion and Tailwind CSS. Modern, ready-to-use motion components for high-converting websites. | [Link](https://uselayouts.com) | 2026-01-23 |
 | vaul | Drawer component for React. | [Link](https://vaul.emilkowal.ski/) | 2024-06-07 |
@@ -254,7 +260,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 ## Registries
 
 | Name | Description | Link | Date |
-| ------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------- | ---------- |
+| ------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ---------- |
 | more-shadcn | A collection of high-quality, copy-paste components for Svelte 5, built on top of shadcn-svelte. | [Link](https://more-shadcn.noair.fun/) | 2026-01-23 |
 | neobrutalism-vue | A vue-based registry of neobrutalism-styled Tailwind components. | [Link](https://github.com/michaelsieminski/neobrutalism-vue) | 2025-12-04 |
 | registry.directory | A curated directory to discover, preview, and copy shadcn/ui registries. | [Link](https://github.com/rbadillap/registry.directory) | 2025-09-20 |
@@ -295,7 +301,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 ## Animations
 
 | Name | Description | Link | Date |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------- | ---------- |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ---------- |
 | animata | Hand-crafted ✍️ interaction animations and effects from around the internet 🛜 to copy and paste into your project. | [Link](https://animata.design) | 2024-08-26 |
 | animate-ui | A fully animated, open-source React component distribution. Browse a list of animated primitives, components and icons you can install and use in your projects. | [Link](https://animate-ui.com/) | 2025-10-15 |
 | magicui.design | Largest collection of open-source react components to build beautiful landing pages. | [Link](https://magicui.design) | 2024-04-25 |
@@ -306,7 +312,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 ## Tools
 
 | Name | Description | Link | Date |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ---------- |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ---------- |
 | 5devs | A website to get fake Brazilian data for testing purposes. | [Link](https://www.5devs.com.br/) | 2024-05-31 |
 | bento-hub | BentoHub is an application where you can create a bento grid for your GitHub profile readme. | [Link](https://github.com/amittam104/BentoHub) | 2024-09-09 |
 | cheatsheet | A comprehensive, interactive reference for shadcn/ui components with live previews, code examples, and instant copy functionality. | [Link](https://shadcnstore.com/cheatsheet/) | 2025-09-22 |
@@ -334,10 +340,12 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | shadcn-easy-install | Install all shadcn components easily. One-click to install all selected components. | [Link](https://shadcn-easy-install.vercel.app/) | 2025-06-10 |
 | shadcn-form-builder | Create forms with Shadcn, react-hook-form, and Zod within minutes. | [Link](https://shadcn-form-build.vercel.app/) | 2024-10-03 |
 | shadcn-hooks | A comprehensive React Hooks Collection built with Shadcn. | [Link](https://shadcn-hooks.vercel.app/) | 2025-10-13 |
+| shadcn-play | A playground for building and previewing shadcn/ui components with a live editor. | [Link](https://github.com/ephraimduncan/shadcn-play) | 2026-02-13 |
 | shadcn-pricing-page-generator | The easiest way to get a React pricing page with shadcn/ui, Radix UI, and/or Tailwind CSS. | [Link](https://shipixen.com/shadcn-pricing-page) | 2024-03-08 |
 | shadcn-theme-editor | Shadcn Theme Editor is a user-friendly component designed to simplify the process of managing and customizing theme colors in Shadcn-based projects. | [Link](https://shadcnthemeeditor.vercel.app) | 2024-08-19 |
 | shadcn-zod-form | CLI tool to generate shadcn/ui forms from Zod schemas. | [Link](https://github.com/ilyichv/shadcn-zod-form) | 2024-10-03 |
 | sharable-form-builder | A sharable form builder for creating forms and sharing your form link, based on shadcn/ui and Next.js. | [Link](https://github.com/ayoubben18/sharable-form-builder) | 2024-10-12 |
+| shoogle | A shadcn search engine | [Link](https://shoogle.dev/) | 2026-02-13 |
 | slidytabs | A tool that adds a sliding indicator animation to shadcn `<Tabs />` without changing how you use or customize the component | [Link](https://slidytabs.dev) | 2026-01-23 |
 | someday | Free to host and open-source Cal.com/Calendly alternative built on Google Apps Script for Gmail users. | [Link](https://github.com/rbbydotdev/someday) | 2024-12-26 |
 | sweep | Sweep is a modern, open-source gradient generator built for designers and developers. Create beautiful linear and radial gradients with real-time preview, noise/blur effects, and export to CSS, Tailwind, SVG, or JPG. Free forever. No sign-up required. | [Link](https://github.com/Johuniq/sweep) | 2025-11-11 |
@@ -374,7 +382,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 ## Platforms
 
 | Name | Description | Link | Date |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------- |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------- |
 | anonypost | Share your thoughts and experiences anonymously by posting on the platform. Crafted using t3-stack. | [Link](https://github.com/avalynndev/anonypost) | 2024-07-17 |
 | bolhadev | The quickest path to learn English is speaking it regularly. Just find someone to chat with. | [Link](https://bolhadev.chat/) | 2024-06-04 |
 | enjoytown | A free anime, manga, movie, and TV-shows streaming platform. Built with Next.js, shadcn/ui. | [Link](https://github.com/avalynndev/enjoytown) | 2024-06-04 |
@@ -424,7 +432,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 ## Boilerplates / Templates
 
 | Name | Description | Link | Date |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ---------- |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | astro-erudite | An opinionated, unstyled static blogging template—built with Astro, Tailwind, and shadcn/ui. | [Link](https://github.com/jktrn/astro-erudite) | 2025-10-25 |
 | atomic-crm | Open-source React CRM built on top of Supabase [Demo site](https://marmelab.com/atomic-crm-demo) | [Link](https://github.com/marmelab/atomic-crm) | 2025-09-16 |
 | autoflow | An open source GraphRAG (Knowledge Graph) built on top of TiDB Vector, LlamaIndex, and DSPy. [Demo site](https://tidb.ai). | [Link](https://github.com/pingcap/autoflow) | 2024-12-06 |
@@ -501,10 +509,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Development & Contributing
 
 ### For the Website
+
 - **Development Guide**: See [DEVELOPMENT.md](DEVELOPMENT.md) for setup, architecture, and configuration
 - **Contributing**: Fork the repository, create a feature branch, and submit a PR
 
 ### For the Awesome List
+
 - **Via Website**: Use the built-in submission form at [awesome-shadcn-ui.vercel.app](https://awesome-shadcn-ui.vercel.app/)
 - **Via GitHub**: Follow the [PR template](.github/pull_request_template.md) when creating pull requests
 - **Guidelines**: Ensure resources are shadcn/ui related, well-documented, and actively maintained

@@ -1,6 +1,6 @@
 ---
 project: yournextstore
-stars: 5284
+stars: 5289
 description: |-
     Open-Source Next.js commerce. Stripe-native, ultra fast page loads, typed APIs. Built for AI development (Claude, Codex,   Cursor).
 url: https://github.com/yournextstore/yournextstore

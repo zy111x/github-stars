@@ -1,6 +1,6 @@
 ---
 project: BachEditor
-stars: 354
+stars: 356
 description: |-
     一个有情怀的编辑器。Bach's Editor.
 url: https://github.com/Integ/BachEditor

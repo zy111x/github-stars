@@ -1,6 +1,6 @@
 ---
 project: puter
-stars: 39304
+stars: 39421
 description: |-
     🌐 The Internet Computer! Free, Open-Source, and Self-Hostable.
 url: https://github.com/HeyPuter/puter
@@ -46,6 +46,10 @@ Puter is an advanced, open-source internet operating system designed to be featu
 <br/>
 
 ## Getting Started
+
+### to install npm and node 
+
+[install](install.md)
 
 ### 💻 Local Development
 

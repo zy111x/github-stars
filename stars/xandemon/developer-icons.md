@@ -1,6 +1,6 @@
 ---
 project: developer-icons
-stars: 401
+stars: 404
 description: |-
     A collection of well-optimized SVG tech logos for developers and designers—customizable, scalable, and free.
 url: https://github.com/xandemon/developer-icons

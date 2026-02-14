@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare
-stars: 1025
+stars: 1031
 description: |-
     ⛅️ Curated list of awesome Cloudflare worker recipes, open-source projects, guides, blogs and other resources.
 url: https://github.com/irazasyed/awesome-cloudflare

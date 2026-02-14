@@ -1,6 +1,6 @@
 ---
 project: dujiaoka
-stars: 11802
+stars: 11845
 description: |-
     🦄独角数卡(自动售货系统)-开源站长自动化售货解决方案、高效、稳定、快速！🚀🚀🎉🎉
 url: https://github.com/assimon/dujiaoka
@@ -14,6 +14,10 @@ url: https://github.com/assimon/dujiaoka
 <a href="https://www.php.net/releases/7_4_0.php"><img src="https://img.shields.io/badge/PHP-7.4-lightgrey" alt="php74"></a>
 <a href="https://shang.qq.com/wpa/qunwpa?idkey=37b6b06f7c941dae20dcd5784088905d6461064d7f33478692f0c4215546cee0"><img src="https://img.shields.io/badge/QQ%E7%BE%A4-568679748-green" alt="QQ群：568679748"></a>
 </p>
+
+## 📢停更通知2026/02/12
+
+### 项目已经停止更新和维护，请前往新版[Dujiao-Next](https://github.com/dujiao-next).
 
 ## 独角数卡
 
@@ -44,8 +48,6 @@ url: https://github.com/assimon/dujiaoka
 近期有高仿作者telegram实施诈骗的行为，        
 请各位用户擦亮双眼，作者从不私聊任何人提供任何收费形式的技术支持服务！    
 项目是完全开源免费的，完全遵守`MIT开源协议`    
-没有所谓的`技术支持`，`终身技术支持`，`二次开发`等业务，也不参与任何用户的`业务运营`。    
-凡是作者私聊你的全是高仿号诈骗，请仔细核对作者唯一Telegram用户名：`linux0101`     
 
 ## 写在前面
 本程序有一定的上手难度（对于小白而言），需要您对linux服务器有基本的认识和操作度   
@@ -58,9 +60,6 @@ url: https://github.com/assimon/dujiaoka
 ## 使用交流      
 Telegram: [https://t.me/dujiaoka](https://t.me/dujiaoka)    
 关注Telegram官方频道：[https://t.me/dujiaoshuka](https://t.me/dujiaoshuka) (系统更新通知，bug更新，重大事件推送)
-
-## 🪧《官方自营旗舰店》
-D&J Studio：[https://dujiaoka.com/](https://dujiaoka.com/)
 
 ## 🔥推荐服务器 
 - （🇺🇸美国免备案vps，配置2核2G仅需`20.98$`≈`145RMB`一年/支持支付宝付款）[👉🏻点我直达](https://my.racknerd.com/aff.php?aff=2745&pid=681)

@@ -1,9 +1,17 @@
 ---
 project: pi-mono
-stars: 7892
+stars: 12038
 description: |-
     AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods
 url: https://github.com/badlogic/pi-mono
+---
+
+# 🏖️ OSS Vacation
+
+**Issue tracker and PRs reopen February 16, 2026.**
+
+All PRs will be auto-closed until then. Approved contributors can submit PRs after vacation without reapproval. For support, join [Discord](https://discord.com/invite/3cU7Bz4UPx).
+
 ---
 
 <p align="center">

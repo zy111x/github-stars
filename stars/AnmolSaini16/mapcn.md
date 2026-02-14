@@ -1,6 +1,6 @@
 ---
 project: mapcn
-stars: 5613
+stars: 5850
 description: |-
     Beautiful map components. 100% Free, Zero config, one command setup.
 url: https://github.com/AnmolSaini16/mapcn
@@ -56,4 +56,14 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Star History
+
+<a href="https://www.star-history.com/#AnmolSaini16/mapcn&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=AnmolSaini16/mapcn&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=AnmolSaini16/mapcn&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=AnmolSaini16/mapcn&type=date&legend=top-left" />
+ </picture>
+</a>
 

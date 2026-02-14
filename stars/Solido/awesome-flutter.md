@@ -1,6 +1,6 @@
 ---
 project: awesome-flutter
-stars: 58879
+stars: 58957
 description: |-
     An awesome list that curates the best Flutter libraries, tools, tutorials, articles and more.
 url: https://github.com/Solido/awesome-flutter
@@ -37,15 +37,6 @@ If you appreciate the content 📖, support projects visibility, give 👍| ⭐|
 </p>
 
 <br>
-
-<p align="center">
-  <a href="https://requestly.com?utm_source=github&utm_medium=awesomeflutter&utm_campaign=awesomeflutter">
-    <img alt="Requestly sponsorship" width="350" src="https://github.com/user-attachments/assets/24670320-997d-4d62-9bca-955c59fe883d">
-      <br><b>Requestly - Free & Open-Source alternative to Postman</b>
-      <br><sup>All-in-one platform to Test, Mock and Intercept APIs</sup>
-  </a>
-</p>
-
 
 #### Demonstrations
 <div style="text-align: center"><table><tr>

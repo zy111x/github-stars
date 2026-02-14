@@ -1,6 +1,6 @@
 ---
 project: wasm-pack
-stars: 7072
+stars: 7088
 description: |-
     📦✨ your favorite rust -> wasm workflow tool!
 url: https://github.com/drager/wasm-pack

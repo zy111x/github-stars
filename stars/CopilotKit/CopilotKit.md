@@ -1,8 +1,8 @@
 ---
 project: CopilotKit
-stars: 28583
+stars: 28759
 description: |-
-    Framework for building agent-native applications with Generative UI, shared state, and human-in-the-loop workflows. 
+    The Frontend for Agents. Connect any agent framework to Chat, Generative UI, Frontend Tools, Human-in-the-Loop and Shared State. React & Angular supported.
 url: https://github.com/CopilotKit/CopilotKit
 ---
 
@@ -10,11 +10,9 @@ url: https://github.com/CopilotKit/CopilotKit
 
 <img width="120" height="120" alt="FavIcon" src="https://github.com/user-attachments/assets/779de607-2b8d-4751-872b-1243e97c7d18" />
 
-  
 # CopilotKit
 
 <div align=center>
-
 
 [Docs](https://docs.copilotkit.ai/?ref=github_readme) ·
 [Examples](https://www.copilotkit.ai/examples) ·
@@ -24,11 +22,10 @@ url: https://github.com/CopilotKit/CopilotKit
 </div>
 
 Build **agent-native applications** with generative UI, shared state, and human-in-the-loop workflows.
- 
+
 </div>
 
 [![CopilotKit](https://github.com/user-attachments/assets/aeb56c28-c766-44a5-810c-5d999bb6a32a)](https://go.copilotkit.ai/copilotkit-docs)
-
 
 <div align="center" style="display:flex;justify-content:start;gap:16px;height:20px;margin: 0;">
   <a href="https://www.npmjs.com/package/@copilotkit/react-core" target="_blank">
@@ -62,13 +59,11 @@ Build **agent-native applications** with generative UI, shared state, and human-
 
 ## What is CopilotKit
 
-CopilotKit is a best-in-class SDK for building full-stack agentic applications, Generative UI, and chat applications. 
+CopilotKit is a best-in-class SDK for building full-stack agentic applications, Generative UI, and chat applications.
 
 We are the company behind the **AG-UI Protocol**, adopted by Google, LangChain, AWS, Microsoft, Mastra, PydanticAI, and more!
 
-
 https://github.com/user-attachments/assets/de5bcc17-1b51-4092-9a85-42971ecc1f4c
-
 
 **Features:**
 
@@ -78,9 +73,7 @@ https://github.com/user-attachments/assets/de5bcc17-1b51-4092-9a85-42971ecc1f4c
 - **Shared State** – A synchronized state layer that both agents and UI components can read from and write to in real time.
 - **Human-in-the-Loop** – Lets agents pause execution to request user input, confirmation, or edits before continuing.
 
-
 https://github.com/user-attachments/assets/55bf6714-62a7-4d5d-9232-07747cc0763b
-
 
 ## Quick Start
 
@@ -91,12 +84,12 @@ npx copilotkit@latest create -f <framework>
 ```
 
 ### Existing projects:
+
 ```bash
 npx copilotkit@latest init
 ```
 
 https://github.com/user-attachments/assets/7372b27b-8def-40fb-a11d-1f6585f556ad
-
 
 What this gives you:
 
@@ -113,15 +106,14 @@ CopilotKit connects your UI, agents, and tools into a single interaction loop.
 
 ![CopilotKit Diagram — Motion x2 6 sec version](https://github.com/user-attachments/assets/6f175d86-bd22-4c26-a13a-6013654ed542)
 
-
 This enables:
 
 - Agents that ask users for input
 - Tools that render UI
 - Stateful workflows across steps and sessions
 
-
 ## ⭐️ useAgent Hook
+
 The `useAgent` hook is a proper superset of `useCoAgent` and sits directly on AG-UI, giving more control over the agent connection.
 
 ```ts
@@ -130,7 +122,7 @@ const { agent } = useAgent({ agentId: "my_agent" });
 
 // Render and update your agent's state
 return <div>
-  <h1>{agent.state.city}</h1> 
+  <h1>{agent.state.city}</h1>
   <button onClick={() => agent.setState({ city: "NYC" })}>
     Set City
   </button>
@@ -152,18 +144,18 @@ https://github.com/user-attachments/assets/3cfacac0-4ffd-457a-96f9-d7951e4ab7b6
 <img width="708" height="311" alt="image" src="https://github.com/user-attachments/assets/962f49c2-31ea-43c5-b2a3-7cdde114705a" />
 
 #### Explore:
+
 - [Static (AG-UI Protocol)](https://docs.copilotkit.ai/ag-ui-protocol)
 - [Delclaritive (A2UI)](https://docs.copilotkit.ai/generative-ui/specs/a2ui#using-a2ui-with-copilotkit)
 - [Open-Ended (MCP Apps & Open JSON)](https://docs.copilotkit.ai/generative-ui/specs/mcp-apps)
 
 [Generative UI educational repo →](https://github.com/CopilotKit/generative-ui)
 
-
 ## 🖥️ AG-UI: The Agent–User Interaction Protocol
+
 Connect agent workflow to user-facing apps, with deep partnerships and 1st-party integrations across the agentic stack—including LangGraph, CrewAI, and more.
 
 [![AG-UI](https://github.com/user-attachments/assets/a625237a-cfc1-45fc-8d0c-637316b81291)](https://go.copilotkit.ai/ag-ui)
-
 
 ---
 
@@ -176,6 +168,7 @@ npx create-ag-ui-app my-agent-app
   </a>
 
 ## 🤝 Community
+
 - [What's New](https://docs.copilotkit.ai/whats-new)
 <h3>Have questions or need help?</h3>
   <a href="https://discord.gg/6dffbvGU3D?ref=github_readme" target="_blank">
@@ -193,8 +186,8 @@ npx create-ag-ui-app my-agent-app
   </a> </br>
     <a href="https://x.com/copilotkit" target="_blank">
    Follow us on X →
-  </a> 
-  
+  </a>
+
 ## 🙋🏽‍♂️ Contributing
 
 Thanks for your interest in contributing to CopilotKit! 💜

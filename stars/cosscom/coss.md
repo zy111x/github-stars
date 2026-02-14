@@ -1,6 +1,6 @@
 ---
 project: coss
-stars: 9327
+stars: 9343
 description: |-
     coss.com is the new holding company of cal.com, the pioneers of open source scheduling infrastructure and cal.com continues to be the 'google search' of our alphabet.
 url: https://github.com/cosscom/coss

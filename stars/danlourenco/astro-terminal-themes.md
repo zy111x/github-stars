@@ -1,6 +1,6 @@
 ---
 project: astro-terminal-themes
-stars: 5
+stars: 6
 description: |-
     Astro integration to convert terminal themes (Ghostty, Warp, etc.) to Tailwind CSS themes
 url: https://github.com/danlourenco/astro-terminal-themes

@@ -1,6 +1,6 @@
 ---
 project: ghfollowers
-stars: 373
+stars: 374
 description: |-
     :octocat: Get GitHub followers.
 url: https://github.com/macalinao/ghfollowers

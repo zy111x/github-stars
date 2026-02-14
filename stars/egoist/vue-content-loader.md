@@ -1,6 +1,6 @@
 ---
 project: vue-content-loader
-stars: 3048
+stars: 3046
 description: |-
     SVG component to create placeholder loading, like Facebook cards loading.
 url: https://github.com/egoist/vue-content-loader

@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 12396
+stars: 12529
 description: |-
     Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
 url: https://github.com/trycua/cua
@@ -27,44 +27,6 @@ url: https://github.com/trycua/cua
   </p>
 
 </div>
-
-## CuaBot - Co-op computer-use for any agent
-
-`cuabot` gives any coding agent a seamless sandbox for computer-use. Individual windows appear natively on your desktop with H.265, shared clipboard, and audio.
-
-```bash
-npx cuabot                 # Setup onboarding
-```
-
-```bash
-# Run any agent in a sandbox
-cuabot claude              # Claude Code
-cuabot openclaw            # OpenClaw in the sandbox
-
-# Run any GUI workflow in a sandbox
-cuabot chromium
-cuabot --screenshot
-cuabot --type "hello"
-cuabot --click <x> <y> [button]
-```
-
-Built-in support for `agent-browser` and `agent-device` (iOS, Android) out of the box.
-
-<div align="center">
-
-**[Get Started](https://cua.ai/docs/cuabot/cuabot)** | **[Installation](https://cua.ai/docs/cuabot/install)** | *First spotted at [ClawCon](https://www.claw-con.com/)*
-
-<div align="center">
-  <img src="img/cuabot-screenshot.png" alt="cuabot screenshot" style="max-height: 32em;">
-</div>
-
-<img width="120" alt="cuaXclawdbot_nbg" src="https://github.com/user-attachments/assets/8b92237d-6e9b-4b3a-ae9a-b3560622ec1d" />
-
-</div>
-
----
-
-**Beyond cuabot** — explore our SDKs, benchmarks, and sandboxes for your own computer-use agents.
 
 ## Choose Your Path
 
@@ -99,10 +61,55 @@ Built-in support for `agent-browser` and `agent-device` (iOS, Android) out of th
         </a>
       </td>
     </tr>
+    <tr>
+      <td colspan="3" align="center">
+        <a href="https://cua.ai/docs/cuabot/guide/getting-started/introduction">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="img/card-cua-bot-dark.png">
+            <source media="(prefers-color-scheme: light)" srcset="img/card-cua-bot-light.png">
+            <img src="img/card-cua-bot-light.png" alt="Cua Bot" width="888">
+          </picture>
+        </a>
+      </td>
+    </tr>
   </table>
 </div>
 
 ---
+
+## CuaBot - Co-op computer-use for any agent
+
+<div align="center">
+  <img src="img/cuabot-screenshot.png" alt="cuabot screenshot" width="720">
+</div>
+
+`cuabot` gives any coding agent a seamless sandbox for computer-use. Individual windows appear natively on your desktop with H.265, shared clipboard, and audio.
+
+```bash
+npx cuabot                 # Setup onboarding
+```
+
+```bash
+# Run any agent in a sandbox
+cuabot claude              # Claude Code
+cuabot openclaw            # OpenClaw in the sandbox
+
+# Run any GUI workflow in a sandbox
+cuabot chromium
+cuabot --screenshot
+cuabot --type "hello"
+cuabot --click <x> <y> [button]
+```
+
+Built-in support for `agent-browser` and `agent-device` (iOS, Android) out of the box.
+
+<div align="center">
+
+**[Get Started](https://cua.ai/docs/cuabot/guide/getting-started/introduction)** | **[Installation](https://cua.ai/docs/cuabot/guide/getting-started/installation)** | First spotted at [ClawCon](https://www.claw-con.com/)
+
+<img height="64" alt="cuaXclawdbot_nbg" src="https://github.com/user-attachments/assets/8b92237d-6e9b-4b3a-ae9a-b3560622ec1d" />
+
+</div>
 
 ## Cua - Agentic UI Automation & Code Execution
 

@@ -1,6 +1,6 @@
 ---
 project: canvas
-stars: 2157
+stars: 2164
 description: |-
     High performance Skia canvas implementation. Zero system dependencies.
 url: https://github.com/Brooooooklyn/canvas
@@ -9,7 +9,7 @@ url: https://github.com/Brooooooklyn/canvas
 # `skr canvas`
 
 [![CI](https://github.com/Brooooooklyn/canvas/actions/workflows/CI.yaml/badge.svg)](https://github.com/Brooooooklyn/canvas/actions/workflows/CI.yaml)
-![Skia Version](https://img.shields.io/badge/Skia-chrome%2Fm144-hotpink)
+![Skia Version](https://img.shields.io/badge/Skia-chrome%2Fm146-hotpink)
 [![install size](https://packagephobia.com/badge?p=@napi-rs/canvas)](https://packagephobia.com/result?p=@napi-rs/canvas)
 [![Downloads](https://img.shields.io/npm/dm/@napi-rs/canvas.svg?sanitize=true)](https://npmcharts.com/compare/@napi-rs/canvas?minimal=true)
 

@@ -1,6 +1,6 @@
 ---
 project: craft-agents-oss
-stars: 2526
+stars: 2776
 description: |-
     null
 url: https://github.com/lukilabs/craft-agents-oss
@@ -22,7 +22,7 @@ To understand what Craft Agents does and how it works watch this video.
 ## Why Craft Agents was built
 Craft Agents is a tool we built so that we (at craft.do) can work effectively with agents. It enables intuitive multitasking, no-fluff connection to any API or Service, sharing sessions, and a more document (vs code) centric workflow - in a beautiful and fluid UI.
 
-It leans on Claude Code through the Claude Agent SDK - follows what we found great, and improves areas where we've desired improvements.
+It uses the Claude Agent SDK and the Codex app-server side by side—building on what we found great and improving areas where we’ve desired improvements.
 
 It's built with Agent Native software principles in mind, and is highly customisable out of the box. One of the first of its kind.
 
@@ -93,6 +93,8 @@ bun run electron:start
 
 - **Multi-Session Inbox**: Desktop app with session management, status workflow, and flagging
 - **Claude Code Experience**: Streaming responses, tool visualization, real-time updates
+- **Multiple LLM Connections**: Add multiple AI providers and set per-workspace defaults
+- **Codex / OpenAI Support**: Run Codex-backed sessions alongside Anthropic
 - **Craft MCP Integration**: Access to 32+ Craft document tools (blocks, collections, search, tasks)
 - **Sources**: Connect to MCP servers, REST APIs (Google, Slack, Microsoft), and local filesystems
 - **Permission Modes**: Three-level system (Explore, Ask to Edit, Auto) with customizable rules
@@ -102,11 +104,12 @@ bun run electron:start
 - **Multi-File Diff**: VS Code-style window for viewing all file changes in a turn
 - **Skills**: Specialized agent instructions stored per-workspace
 - **File Attachments**: Drag-drop images, PDFs, Office documents with auto-conversion
+- **Hooks**: Event-driven automation — run commands or create sessions on label changes, schedules, tool use, and more
 
 ## Quick Start
 
 1. **Launch the app** after installation
-2. **Choose API Connection**: Use your own Anthropic API key or Claude Max subscription
+2. **Choose API Connection**: Use Anthropic (API key or Claude Max) or Codex (OpenAI OAuth)
 3. **Create a workspace**: Set up a workspace to organize your sessions
 4. **Connect sources** (optional): Add MCP servers, REST APIs, or local filesystems
 5. **Start chatting**: Create sessions and interact with Claude
@@ -187,7 +190,7 @@ bun run electron:start
 # Type checking
 bun run typecheck:all
 
-# Debug logging — see "Troubleshooting > Debug Logging" below
+# Debug logging (writes to ~/Library/Logs/Craft Agents/)
 # Logs are automatically enabled in development
 ```
 
@@ -263,69 +266,25 @@ Or simply tell the agent you want to connect Gmail/Calendar/Drive - it will guid
 - Never commit credentials to version control
 - For production use, consider getting your OAuth consent screen verified by Google
 
-## Troubleshooting
+## Configure Third-Party Providers (OpenRouter, Vercel AI Gateway, Ollama, etc.)
 
-### Debug Logging
+Third-party and self-hosted LLM providers are supported **only through the Claude / Anthropic API Key** connection. When you select **Anthropic API Key** during setup, you can choose from:
 
-In development (`bun run electron:start` or `bun run electron:dev`),
-debug logging is enabled automatically.
-Logs are written to both the console and a log file.
+| Provider | Endpoint | Notes |
+|----------|----------|-------|
+| **OpenRouter** | `https://openrouter.ai/api` | Access Claude, GPT, Llama, Gemini, and hundreds of other models through a single API key. Use `provider/model-name` format (e.g. `anthropic/claude-opus-4.6`). |
+| **Vercel AI Gateway** | `https://ai-gateway.vercel.sh` | Route requests through Vercel's AI Gateway with built-in observability and caching. |
+| **Ollama** | `http://localhost:11434` | Run open-source models locally. No API key required. |
+| **Custom** | Any URL | Any OpenAI-compatible or Anthropic-compatible endpoint. |
 
-In packaged builds, logs are disabled by default.
-To enable them, launch the app with the `--debug` flag:
+### Why only under Claude?
 
-```bash
-# macOS
-/Applications/Craft\ Agents.app/Contents/MacOS/Craft\ Agents --debug
+Craft Agents uses two different agent backends:
 
-# Linux
-craft-agents --debug
-```
+- **Claude** — powered by the [Claude Agent SDK](https://www.npmjs.com/package/@anthropic-ai/claude-agent-sdk), which natively supports custom base URLs and provider routing. This makes it straightforward to point requests at any compatible endpoint.
+- **Codex** — powered by the [Codex app-server](https://github.com/lukilabs/craft-agents-codex), which communicates via JSON-RPC over stdio. Codex connections are limited to **direct OpenAI API** (via API key or ChatGPT subscription OAuth).
 
-```powershell
-# Windows (PowerShell) - from the install directory
-& ".\Craft Agents.exe" --debug
-```
-
-You can also set the `CRAFT_DEBUG=1` environment variable
-to enable debug output from the shared/SDK layer.
-(Note: in the desktop app, `--debug` also enables `CRAFT_DEBUG`.)
-
-Logs are written by `electron-log` to a platform-specific app logs directory.
-The most reliable way to find the exact path is to launch with `--debug`
-and look for the startup line:
-
-```text
-Debug mode enabled - logs at: /path/to/log/file.log
-```
-
-You can also search for a `Craft Agents` folder within your app-data directory.
-
-### WSL2 Notes
-
-On WSL2, OAuth login (Claude Max / Claude Pro) may fail because Electron's `shell.openExternal`
-cannot open a browser on the Windows host by default.
-
-**Fix: install `wslu`** to bridge `xdg-open` to the Windows side:
-
-```bash
-sudo apt install wslu
-```
-
-Also ensure WSL interop is enabled (it is by default on most distros).
-You can verify with:
-
-```bash
-cat /proc/sys/fs/binfmt_misc/WSLInterop
-```
-
-If you see output (not "No such file"), interop is working.
-
-**Alternative:** If you are running WSLg
-(GUI support built into recent Windows 11 builds),
-a Linux browser can handle the OAuth redirect directly.
-In that case `wslu` is not required,
-but you need a browser installed inside WSL.
+If you want to use models from OpenRouter, Vercel AI Gateway, Ollama, or any other third-party provider, set up a **Claude / Anthropic API Key** connection and select the desired endpoint.
 
 ## Configuration
 
@@ -333,7 +292,7 @@ Configuration is stored at `~/.craft-agent/`:
 
 ```
 ~/.craft-agent/
-├── config.json              # Main config (workspaces, auth type)
+├── config.json              # Main config (workspaces, LLM connections)
 ├── credentials.enc          # Encrypted credentials (AES-256-GCM)
 ├── preferences.json         # User preferences
 ├── theme.json               # App-level theme
@@ -341,11 +300,59 @@ Configuration is stored at `~/.craft-agent/`:
     └── {id}/
         ├── config.json      # Workspace settings
         ├── theme.json       # Workspace theme override
+        ├── hooks.json       # Event-driven automation hooks
         ├── sessions/        # Session data (JSONL)
         ├── sources/         # Connected sources
         ├── skills/          # Custom skills
         └── statuses/        # Status configuration
 ```
+
+### Hooks (Automation)
+
+Hooks let you automate workflows by triggering actions when events happen — labels change, sessions start, tools run, or on a cron schedule.
+
+**Just ask the agent:**
+- "Set up a daily standup briefing every weekday at 9am"
+- "Notify me when a session is labelled urgent"
+- "Log all permission mode changes to a file"
+- "Every Friday at 5pm, summarise this week's completed tasks"
+
+Or configure manually in `~/.craft-agent/workspaces/{id}/hooks.json`:
+
+```json
+{
+  "version": 1,
+  "hooks": {
+    "SchedulerTick": [
+      {
+        "cron": "0 9 * * 1-5",
+        "timezone": "America/New_York",
+        "labels": ["Scheduled"],
+        "hooks": [
+          { "type": "prompt", "prompt": "Check @github for new issues assigned to me" }
+        ]
+      }
+    ],
+    "LabelAdd": [
+      {
+        "matcher": "^urgent$",
+        "permissionMode": "allow-all",
+        "hooks": [
+          { "type": "command", "command": "osascript -e 'display notification \"Urgent session\" with title \"Craft Agent\"'" }
+        ]
+      }
+    ]
+  }
+}
+```
+
+**Two hook types:**
+- **Command hooks** — run shell commands with event data as environment variables (`$CRAFT_LABEL`, `$CRAFT_SESSION_ID`, etc.)
+- **Prompt hooks** — create a new agent session with a prompt (supports `@mentions` for sources and skills)
+
+**Supported events:** `LabelAdd`, `LabelRemove`, `PermissionModeChange`, `FlagChange`, `TodoStateChange`, `SchedulerTick`, `PreToolUse`, `PostToolUse`, `SessionStart`, `SessionEnd`, and more.
+
+See the [Hooks documentation](https://agents.craft.do/docs/hooks/overview) for the full reference.
 
 ## Advanced Features
 
@@ -358,11 +365,11 @@ Tool responses exceeding ~60KB are automatically summarized using Claude Haiku w
 External apps can navigate using `craftagents://` URLs:
 
 ```
-craftagents://allChats                    # All chats view
-craftagents://allChats/chat/session123    # Specific chat
-craftagents://settings                    # Settings
-craftagents://sources/source/github       # Source info
-craftagents://action/new-chat             # Create new chat
+craftagents://allSessions                      # All sessions view
+craftagents://allSessions/session/session123   # Specific session
+craftagents://settings                         # Settings
+craftagents://sources/source/github            # Source info
+craftagents://action/new-chat                  # Create new session
 ```
 
 ## Tech Stack
@@ -371,10 +378,37 @@ craftagents://action/new-chat             # Create new chat
 |-------|------------|
 | Runtime | [Bun](https://bun.sh/) |
 | AI | [@anthropic-ai/claude-agent-sdk](https://www.npmjs.com/package/@anthropic-ai/claude-agent-sdk) |
+| AI (OpenAI) | Craft Agents Codex fork (app-server) |
 | Desktop | [Electron](https://www.electronjs.org/) + React |
 | UI | [shadcn/ui](https://ui.shadcn.com/) + Tailwind CSS v4 |
 | Build | esbuild (main) + Vite (renderer) |
 | Credentials | AES-256-GCM encrypted file storage |
+
+## Troubleshooting
+
+### Debug Mode
+
+To launch the packaged app with verbose logging enabled, use `-- --debug` (note the double dash separator):
+
+**macOS:**
+```bash
+/Applications/Craft\ Agents.app/Contents/MacOS/Craft\ Agents -- --debug
+```
+
+**Windows (PowerShell):**
+```powershell
+& "$env:LOCALAPPDATA\Programs\@craft-agentelectron\Craft Agents.exe" -- --debug
+```
+
+**Linux:**
+```bash
+./craft-agents -- --debug
+```
+
+Logs are written to:
+- **macOS:** `~/Library/Logs/@craft-agent/electron/main.log`
+- **Windows:** `%APPDATA%\@craft-agent\electron\logs\main.log`
+- **Linux:** `~/.config/@craft-agent/electron/logs/main.log`
 
 ## License
 
@@ -383,6 +417,10 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 ### Third-Party Licenses
 
 This project uses the [Claude Agent SDK](https://www.npmjs.com/package/@anthropic-ai/claude-agent-sdk), which is subject to [Anthropic's Commercial Terms of Service](https://www.anthropic.com/legal/commercial-terms).
+
+Craft Agents also bundles a custom Codex app-server fork to support OpenAI/Codex connections:
+
+- https://github.com/lukilabs/craft-agents-codex
 
 ### Trademark
 
