@@ -1,6 +1,6 @@
 ---
 project: Python-100-Days
-stars: 178660
+stars: 178770
 description: Python - 100天从新手到大师
 url: https://github.com/jackfrued/Python-100-Days
 ---

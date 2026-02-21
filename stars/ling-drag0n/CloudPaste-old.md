@@ -1,6 +1,6 @@
 ---
 project: CloudPaste-old
-stars: 541
+stars: 540
 description: 新版已重构！详细查看README。基于 Cloudflare Workers 的在线剪贴板和文件分享服务，支持 Markdown、阅后即焚、文本/文件分享、密码保护等功能
 url: https://github.com/ling-drag0n/CloudPaste-old
 ---
