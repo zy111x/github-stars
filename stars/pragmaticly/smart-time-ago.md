@@ -1,6 +1,6 @@
 ---
 project: smart-time-ago
-stars: 577
+stars: 578
 description: |-
     Smart Time Ago is a little jQuery library to update the relative timestamps in your document. 
 url: https://github.com/pragmaticly/smart-time-ago

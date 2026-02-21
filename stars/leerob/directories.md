@@ -1,6 +1,6 @@
 ---
 project: directories
-stars: 3903
+stars: 3907
 description: |-
     The Cursor & Windsurf community, find rules and MCPs
 url: https://github.com/leerob/directories

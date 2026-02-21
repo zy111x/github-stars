@@ -1,6 +1,6 @@
 ---
 project: toolhive
-stars: 1594
+stars: 1610
 description: |-
     ToolHive makes deploying MCP servers easy, secure and fun
 url: https://github.com/stacklok/toolhive
@@ -194,7 +194,7 @@ Contribute to the UI, registry, and docs:
 - 💻 [Desktop UI repository](https://github.com/stacklok/toolhive-studio)
 - ☁️ [Cloud UI repository](https://github.com/stacklok/toolhive-cloud-ui)
 - 📦 [ToolHive registry server repository](https://github.com/stacklok/toolhive-registry-server)
-- 🛠️ [ToolHive's built-in registry](https://github.com/stacklok/toolhive-registry)
+- 🛠️ [ToolHive's built-in registry](https://github.com/stacklok/toolhive-catalog)
 - 📚 [Documentation repository](https://github.com/stacklok/docs-website)
 
 </td>

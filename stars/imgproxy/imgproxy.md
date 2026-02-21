@@ -1,6 +1,6 @@
 ---
 project: imgproxy
-stars: 10434
+stars: 10452
 description: |-
     Fast and secure standalone server for resizing, processing, and converting images on the fly
 url: https://github.com/imgproxy/imgproxy
@@ -38,6 +38,13 @@ url: https://github.com/imgproxy/imgproxy
 </p>
 
 ---
+
+> [!NOTE]
+> **imgproxy v4 is getting close!**
+>
+> We’re opening early access for the Pro version and looking for testers. If you want to try v4 before everyone else and help shape the release — sign up here: https://imgproxy.net/v4-early-access/.
+>
+> Access will roll out once the builds are ready.
 
 [imgproxy](https://imgproxy.net) is a fast and secure standalone server for resizing, processing, and converting images. The guiding principles behind imgproxy are speed, security, and simplicity.
 

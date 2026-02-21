@@ -1,8 +1,8 @@
 ---
 project: CopilotKit
-stars: 28759
+stars: 28901
 description: |-
-    The Frontend for Agents. Connect any agent framework to Chat, Generative UI, Frontend Tools, Human-in-the-Loop and Shared State. React & Angular supported.
+    The Frontend for Agents & Generative UI. React + Angular
 url: https://github.com/CopilotKit/CopilotKit
 ---
 

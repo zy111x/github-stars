@@ -1,6 +1,6 @@
 ---
 project: claude-agent-server
-stars: 513
+stars: 519
 description: |-
     Run Claude Agent (Claude Code) in a sandbox, control it via websocket
 url: https://github.com/dzhng/claude-agent-server

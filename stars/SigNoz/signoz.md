@@ -1,6 +1,6 @@
 ---
 project: signoz
-stars: 25733
+stars: 25827
 description: |-
     SigNoz is an open-source observability platform native to OpenTelemetry with logs, traces and metrics in a single application. An open-source alternative to DataDog, NewRelic, etc. 🔥 🖥.   👉  Open source Application Performance Monitoring (APM) & Observability tool
 url: https://github.com/SigNoz/signoz
@@ -228,34 +228,6 @@ We have published benchmarks comparing Loki with SigNoz. Check it out [here](htt
 We ❤️ contributions big or small. Please read [CONTRIBUTING.md](CONTRIBUTING.md) to get started with making contributions to SigNoz.
 
 Not sure how to get started? Just ping us on `#contributing` in our [slack community](https://signoz.io/slack)
-
-### Project maintainers
-
-#### Backend
-
-- [Ankit Nayan](https://github.com/ankitnayan)
-- [Nityananda Gohain](https://github.com/nityanandagohain)
-- [Srikanth Chekuri](https://github.com/srikanthccv)
-- [Vishal Sharma](https://github.com/makeavish)
-- [Shivanshu Raj Shrivastava](https://github.com/shivanshuraj1333)
-- [Ekansh Gupta](https://github.com/eKuG)
-- [Aniket Agarwal](https://github.com/aniketio-ctrl)
-
-#### Frontend
-
-- [Yunus M](https://github.com/YounixM)
-- [Vikrant Gupta](https://github.com/vikrantgupta25)
-- [Sagar Rajput](https://github.com/SagarRajput-7)
-- [Shaheer Kochai](https://github.com/ahmadshaheer)
-- [Amlan Kumar Nandy](https://github.com/amlannandy)
-- [Sahil Khan](https://github.com/sawhil)
-- [Aditya Singh](https://github.com/aks07)
-- [Abhi Kumar](https://github.com/ahrefabhi)
-
-#### DevOps
-
-- [Prashant Shahi](https://github.com/prashant-shahi)
-- [Vibhu Pandey](https://github.com/therealpandey)
 
 <br /><br />
 

@@ -1,6 +1,6 @@
 ---
 project: bootstrap-sass
-stars: 12528
+stars: 12526
 description: |-
     Official Sass port of Bootstrap 2 and 3.
 url: https://github.com/twbs/bootstrap-sass

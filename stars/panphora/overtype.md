@@ -1,6 +1,6 @@
 ---
 project: overtype
-stars: 3426
+stars: 3438
 description: |-
     The markdown editor that's just a textarea https://overtype.dev
 url: https://github.com/panphora/overtype
@@ -8,7 +8,7 @@ url: https://github.com/panphora/overtype
 
 # OverType
 
-A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~95KB minified with all features.
+A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~117KB minified with all features.
 
 ## Live Examples
 
@@ -27,7 +27,7 @@ A lightweight markdown editor library with perfect WYSIWYG alignment using an in
 - ⌨️ **Keyboard shortcuts** - Common markdown shortcuts (Cmd/Ctrl+B for bold, etc.)
 - 📱 **Mobile optimized** - Responsive design with mobile-specific styles
 - 🔄 **DOM persistence aware** - Recovers from existing DOM (perfect for HyperClay and similar platforms)
-- 🚀 **Lightweight** - ~95KB minified
+- 🚀 **Lightweight** - ~117KB minified
 - 🎯 **Optional toolbar** - Clean, minimal toolbar with all essential formatting
 - ✨ **Smart shortcuts** - Keyboard shortcuts with selection preservation
 - 📝 **Smart list continuation** - GitHub-style automatic list continuation on Enter
@@ -43,7 +43,7 @@ We overlap an invisible textarea on top of styled output, giving the illusion of
 
 | Feature | OverType | HyperMD | Milkdown | TUI Editor | EasyMDE |
 |---------|----------|---------|----------|------------|---------|
-| **Size** | ~95KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
+| **Size** | ~117KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
 | **Dependencies** | Bundled | CodeMirror | ProseMirror + plugins | Multiple libs | CodeMirror |
 | **Setup** | Single file | Complex config | Build step required | Complex config | Moderate |
 | **Approach** | Invisible textarea | ContentEditable | ContentEditable | ContentEditable | CodeMirror |
@@ -55,7 +55,7 @@ We overlap an invisible textarea on top of styled output, giving the illusion of
 **Choose OverType when you need:**
 - Tiny bundle size (10x smaller than alternatives)
 - Zero dependencies - single file that works immediately
-- Perfect native browser features (undo/redo, mobile keyboards, spellcheck)
+- Perfect native browser features (undo/redo, mobile keyboards, optional spellcheck)
 - Dead-simple integration without build tools
 - Easy to understand, modify, and extend
 - Excellent mobile support with visible markdown syntax
@@ -77,7 +77,7 @@ npm install overtype
 
 ### CDN
 ```html
-<script src="https://unpkg.com/overtype/dist/overtype.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/overtype@latest/dist/overtype.min.js"></script>
 ```
 
 ## Quick Start
@@ -472,7 +472,10 @@ new OverType(target, options)
 
   // Smart lists
   smartLists: true,       // Enable GitHub-style list continuation on Enter
-  
+
+  // Spellcheck
+  spellcheck: false,      // Enable browser spellcheck (disabled by default)
+
   // Stats bar
   showStats: false,       // Enable/disable stats bar
   statsFormatter: (stats) => {  // Custom stats format
@@ -781,20 +784,30 @@ Special thanks to:
 - [Lyric Wai](https://github.com/lyricat) - Fixed double-escaping of links ([#64](https://github.com/panphora/overtype/pull/64)), shared code block alignment fix ([#65](https://github.com/panphora/overtype/issues/65))
 - [kozi](https://github.com/kozi) - Reported Firefox link tooltip bug ([#68](https://github.com/panphora/overtype/issues/68)), toolbar positioning ([#69](https://github.com/panphora/overtype/issues/69)), theme CSS variable issues ([#70](https://github.com/panphora/overtype/issues/70), [#71](https://github.com/panphora/overtype/issues/71))
 - [1951FDG](https://github.com/1951FDG) - Reported unordered list rendering bug ([#74](https://github.com/panphora/overtype/issues/74)), suggested showStats() API improvement ([#77](https://github.com/panphora/overtype/issues/77))
-- [nodesocket](https://github.com/nodesocket) - Reported toolbarButtons export issues ([#73](https://github.com/panphora/overtype/issues/73), [#78](https://github.com/panphora/overtype/issues/78))
+- [nodesocket](https://github.com/nodesocket) - Reported toolbarButtons export issues ([#73](https://github.com/panphora/overtype/issues/73), [#78](https://github.com/panphora/overtype/issues/78)), suggested image toolbar button ([#89](https://github.com/panphora/overtype/issues/89))
 - [Travis Bell](https://github.com/travisbell) - Reported keyboard shortcuts bug in ESM build ([#80](https://github.com/panphora/overtype/issues/80))
+- [fab2713](https://github.com/fab2713) - Reported italic rendering in lists ([#81](https://github.com/panphora/overtype/issues/81)), reinit maxHeight ([#82](https://github.com/panphora/overtype/issues/82)), placeholder visibility ([#83](https://github.com/panphora/overtype/issues/83)), suggested auto theme ([#84](https://github.com/panphora/overtype/issues/84)), relative URL prefix ([#85](https://github.com/panphora/overtype/issues/85)), minification improvements ([#94](https://github.com/panphora/overtype/issues/94))
+- [oooo-ps](https://github.com/oooo-ps) - Reported remote script loading issue ([#86](https://github.com/panphora/overtype/issues/86))
+- [ddarfantasy](https://github.com/ddarfantasy) - Reported text misalignment on longer lines ([#91](https://github.com/panphora/overtype/issues/91))
+- [milen-yordanov](https://github.com/milen-yordanov) - Reported code block colors ignoring theme in preview mode ([#97](https://github.com/panphora/overtype/issues/97))
+- [asalimian](https://github.com/asalimian) - Reported spellcheck being disabled ([#98](https://github.com/panphora/overtype/issues/98))
 
 ### TypeScript & Framework Support
 - [merlinz01](https://github.com/merlinz01) - Contributed TypeScript declaration file ([#20](https://github.com/panphora/overtype/pull/20))
 - [ChasLui](https://github.com/ChasLui) - Web component implementation ([#40](https://github.com/panphora/overtype/pull/40))
+- [pscanf](https://github.com/pscanf) - Added performAction type definition ([#99](https://github.com/panphora/overtype/pull/99))
 
 ### New Features & Enhancements
 - [davidlazar](https://github.com/davidlazar) - Suggested view mode feature ([#24](https://github.com/panphora/overtype/issues/24))
 - [Yukai Huang](https://github.com/Yukaii) - Contributed syntax highlighting implementation ([#35](https://github.com/panphora/overtype/pull/35))
 - [Rognoni](https://github.com/rognoni) - Suggested custom toolbar button API ([#61](https://github.com/panphora/overtype/issues/61))
-- [Deyan Gigov](https://github.com/dido739) - Reported checkbox rendering bug in preview mode ([#60](https://github.com/panphora/overtype/issues/60))
-- [GregJohnStewart](https://github.com/GregJohnStewart) - Suggested data attribute configuration ([#76](https://github.com/panphora/overtype/issues/76))
+- [Deyan Gigov](https://github.com/dido739) - Reported checkbox rendering bug in preview mode ([#60](https://github.com/panphora/overtype/issues/60)), contributed auto theme implementation ([#100](https://github.com/panphora/overtype/pull/100))
+- [GregJohnStewart](https://github.com/GregJohnStewart) - Suggested data attribute configuration ([#76](https://github.com/panphora/overtype/issues/76)), reported initFromData array nesting bug ([#93](https://github.com/panphora/overtype/issues/93)), suggested DOM element init ([#92](https://github.com/panphora/overtype/issues/92))
 - [boris-glumpler](https://github.com/boris-glumpler) - Suggested custom syntax highlighting API ([#79](https://github.com/panphora/overtype/issues/79))
+- [sorokya](https://github.com/sorokya) - Contributed file upload support ([#87](https://github.com/panphora/overtype/pull/87))
+- [aaronmyatt](https://github.com/aaronmyatt) - Contributed show/hide toolbar methods ([#95](https://github.com/panphora/overtype/pull/95))
+- [rouilj](https://github.com/rouilj) - Suggested progressive textarea enhancement ([#90](https://github.com/panphora/overtype/issues/90))
+- [inklesspen](https://github.com/inklesspen) - Suggested autocompletion popups ([#96](https://github.com/panphora/overtype/issues/96))
 
 ### Developer Experience
 - [Ned Twigg](https://github.com/nedtwigg) - Built gitcasso browser extension using OverType ([#59](https://github.com/panphora/overtype/issues/59))

@@ -1,6 +1,6 @@
 ---
 project: jquery-fracs
-stars: 543
+stars: 541
 description: |-
     jQuery plugin to determine the visible fractions of HTML elements.
 url: https://github.com/lrsjng/jquery-fracs

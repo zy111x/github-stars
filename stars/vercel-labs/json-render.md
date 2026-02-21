@@ -1,6 +1,6 @@
 ---
 project: json-render
-stars: 10723
+stars: 11132
 description: |-
     The Generative UI framework
 url: https://github.com/vercel-labs/json-render
@@ -14,10 +14,14 @@ Generate dynamic, personalized UIs from prompts without sacrificing reliability.
 
 ```bash
 npm install @json-render/core @json-render/react
+# pre-built shadcn/ui components
+npm install @json-render/shadcn
 # or for mobile
 npm install @json-render/core @json-render/react-native
 # or for video
 npm install @json-render/core @json-render/remotion
+# or for PDF documents
+npm install @json-render/core @json-render/react-pdf
 ```
 
 ## Why json-render?
@@ -28,6 +32,7 @@ json-render is a **Generative UI** framework: AI generates interfaces from natur
 - **Predictable** - JSON output matches your schema, every time
 - **Fast** - Stream and render progressively as the model responds
 - **Cross-Platform** - React (web) and React Native (mobile) from the same catalog
+- **Batteries Included** - 36 pre-built shadcn/ui components ready to use
 
 ## Quick Start
 
@@ -113,8 +118,10 @@ function Dashboard({ spec }) {
 |---------|-------------|
 | `@json-render/core` | Schemas, catalogs, AI prompts, dynamic props, SpecStream utilities |
 | `@json-render/react` | React renderer, contexts, hooks |
+| `@json-render/shadcn` | 36 pre-built shadcn/ui components (Radix UI + Tailwind CSS) |
 | `@json-render/react-native` | React Native renderer with standard mobile components |
 | `@json-render/remotion` | Remotion video renderer, timeline schema |
+| `@json-render/react-pdf` | React PDF renderer for generating PDF documents from specs |
 
 ## Renderers
 
@@ -143,6 +150,38 @@ const spec = {
 
 // defineRegistry creates a type-safe component registry
 const { registry } = defineRegistry(catalog, { components });
+<Renderer spec={spec} registry={registry} />
+```
+
+### shadcn/ui (Web)
+
+```tsx
+import { defineCatalog } from "@json-render/core";
+import { schema, defineRegistry, Renderer } from "@json-render/react";
+import { shadcnComponentDefinitions } from "@json-render/shadcn/catalog";
+import { shadcnComponents } from "@json-render/shadcn";
+
+// Pick components from the 36 standard definitions
+const catalog = defineCatalog(schema, {
+  components: {
+    Card: shadcnComponentDefinitions.Card,
+    Stack: shadcnComponentDefinitions.Stack,
+    Heading: shadcnComponentDefinitions.Heading,
+    Button: shadcnComponentDefinitions.Button,
+  },
+  actions: {},
+});
+
+// Use matching implementations
+const { registry } = defineRegistry(catalog, {
+  components: {
+    Card: shadcnComponents.Card,
+    Stack: shadcnComponents.Stack,
+    Heading: shadcnComponents.Heading,
+    Button: shadcnComponents.Button,
+  },
+});
+
 <Renderer spec={spec} registry={registry} />
 ```
 
@@ -191,6 +230,40 @@ const spec = {
   compositionWidth={spec.composition.width}
   compositionHeight={spec.composition.height}
 />
+```
+
+### React PDF (Documents)
+
+```typescript
+import { renderToBuffer } from "@json-render/react-pdf";
+
+const spec = {
+  root: "doc",
+  elements: {
+    doc: { type: "Document", props: { title: "Invoice" }, children: ["page-1"] },
+    "page-1": {
+      type: "Page",
+      props: { size: "A4" },
+      children: ["heading-1", "table-1"],
+    },
+    "heading-1": {
+      type: "Heading",
+      props: { text: "Invoice #1234", level: "h1" },
+      children: [],
+    },
+    "table-1": {
+      type: "Table",
+      props: {
+        columns: [{ header: "Item", width: "60%" }, { header: "Price", width: "40%", align: "right" }],
+        rows: [["Widget A", "$10.00"], ["Widget B", "$25.00"]],
+      },
+      children: [],
+    },
+  },
+};
+
+// Render to buffer, stream, or file
+const buffer = await renderToBuffer(spec);
 ```
 
 ## Features

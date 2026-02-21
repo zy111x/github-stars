@@ -1,6 +1,6 @@
 ---
 project: ai.robots.txt
-stars: 3637
+stars: 3665
 description: |-
     A list of AI agents and robots to block.
 url: https://github.com/ai-robots-txt/ai.robots.txt
@@ -24,6 +24,7 @@ This repository provides the following files:
 - `nginx-block-ai-bots.conf`
 - `Caddyfile`
 - `haproxy-block-ai-bots.txt`
+- `lighttpd-block-ai-bots.conf`
 
 `robots.txt` implements the Robots Exclusion Protocol ([RFC 9309](https://www.rfc-editor.org/rfc/rfc9309.html)).
 
@@ -43,6 +44,7 @@ Note that, as stated in the [httpd documentation](https://httpd.apache.org/docs/
    ```
    (Note that the path of the `haproxy-block-ai-bots.txt` may be different in your environment.)
 
+`lighttpd-block-ai-bots.conf` can be included with `include "fragments/lighttpd-block-ai-bots.conf"` in your lighttpd configuration either globally or in any conditional section.
 
 [Bing uses the data it crawls for AI and training, you may opt out by adding a `meta` tag to the `head` of your site.](./docs/additional-steps/bing.md)
 

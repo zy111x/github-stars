@@ -1,6 +1,6 @@
 ---
 project: bifrost
-stars: 2339
+stars: 2470
 description: |-
     Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000+ models support & <100 µs overhead at 5k RPS.
 url: https://github.com/maximhq/bifrost

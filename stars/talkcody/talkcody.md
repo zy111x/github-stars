@@ -1,6 +1,6 @@
 ---
 project: talkcody
-stars: 401
+stars: 403
 description: |-
     TalkCody - Code is cheap, show me your talk.  🚀 Free Open Source AI Coding Agent.
 url: https://github.com/talkcody/talkcody

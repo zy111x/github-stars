@@ -1,6 +1,6 @@
 ---
 project: trailbase
-stars: 4572
+stars: 4608
 description: |-
     An open, sub-millisecond, single-executable Firebase alternative with type-safe APIs, built-in WebAssembly runtime, realtime subscriptions, auth, and admin UI built on Rust, SQLite & Wasmtime.
 url: https://github.com/trailbaseio/trailbase
@@ -15,7 +15,10 @@ url: https://github.com/trailbaseio/trailbase
 </p>
 
 <p align="center">
-  An open, <a href="https://trailbase.io/reference/benchmarks/">sub-millisecond</a>, single-executable Firebase alternative with type-safe REST APIs, realtime subscriptions, built-in WebAssembly runtime, SSR, auth and admin UI built on Rust, SQLite & Wasmtime.
+  An open, <a href="https://trailbase.io/reference/benchmarks/">sub-millisecond</a>,
+  single-executable Firebase alternative with type-safe REST & realtime APIs,
+  multi-DB, WebAssembly runtime, geospatial support, SSR, auth and admin
+  UI built on Rust, SQLite & Wasmtime.
 <p>
 
 <p align="center">
@@ -148,8 +151,8 @@ endpoints, e.g.
 
 ## Building
 
-If you have all the necessary build dependencies (Rust, protobuf, node.js,
-pnpm) installed, you can build TrailBase by running:
+If you have all the necessary build dependencies (Rust, node.js, geos,
+protobuf, pnpm) installed, you can build TrailBase by running:
 
 ```sh
 # Windows only: make sure to enable symlinks (w/o `mklink` permissions for your

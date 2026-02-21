@@ -38,8 +38,8 @@ url: https://github.com/WilliamWang1721/Payments-Maps
 
 ### 👥 用户系统
 - **多平台登录**：支持LinuxDo、GitHub、Google等第三方登录
-- **权限分级**：普通用户、认证用户、管理员不同权限
-- **Beta激活系统**：邀请码激活高级功能
+- **权限分级**：普通用户、管理员、超级管理员不同权限
+- **角色管理**：管理员可在管理中心调整用户角色与默认地点
 - **用户历史**：记录用户的搜索和访问历史
 
 ### 🎯 外国用户优化
@@ -89,7 +89,6 @@ brands             # 品牌信息表
 user_favorites     # 用户收藏表
 user_history       # 用户历史表
 comments           # 评论表
-activation_codes   # 激活码表
 ```
 
 ## 🚀 快速开始
@@ -128,6 +127,8 @@ cp .env.example .env
 # Supabase 配置
 VITE_SUPABASE_URL=your_supabase_project_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 
 # 高德地图配置
 VITE_AMAP_KEY=your_amap_api_key
@@ -136,7 +137,20 @@ VITE_AMAP_SECURITY_JS_CODE=your_amap_security_js_code
 # 第三方登录配置 (可选)
 VITE_GITHUB_CLIENT_ID=your_github_client_id
 VITE_GOOGLE_CLIENT_ID=your_google_client_id
+VITE_MICROSOFT_CLIENT_ID=your_microsoft_client_id
+VITE_LINUXDO_CLIENT_ID=your_linuxdo_client_id
+
+# LinuxDO 仅服务端密钥（禁止放到 VITE_ 前缀）
+LINUXDO_CLIENT_ID=your_linuxdo_client_id
+LINUXDO_CLIENT_SECRET=your_linuxdo_client_secret
+LINUXDO_REDIRECT_URI=https://your-domain.com/auth/linuxdo/callback
+
+# API 安全配置
+APP_ORIGIN=https://your-domain.com
+ALLOWED_ORIGINS=https://your-domain.com
+PASSKEY_ORIGIN=https://your-domain.com
 ```
+⚠️ `VITE_*` 变量会被打包到浏览器端，任何密钥（如 OAuth client secret / Supabase service role key）都必须使用非 `VITE_` 变量并只在服务端配置。
 
 ### 4. 启动开发服务器
 ```bash
@@ -308,7 +322,7 @@ CMD ["npm", "run", "preview"]
 - [x] 多语言支持（中英俄德）
 - [x] 品牌管理和筛选
 - [x] 用户收藏和历史记录
-- [x] Beta用户激活系统
+- [x] 用户角色与默认地点管理
 - [x] 响应式设计
 - [x] 第三方登录集成
 

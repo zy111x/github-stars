@@ -85,6 +85,7 @@ const TestApp = () => {
   return (
     <Markdown
       showSharp
+      theme="one-dark-pro"
       renderers={{
         h1: (text) => (
           <Box padding={1} borderStyle="round" borderDimColor>
@@ -104,7 +105,7 @@ render(<TestApp />);
 
 ```
 
-<img width="1904" height="964" alt="image" src="https://github.com/user-attachments/assets/bed0c942-6d08-4f24-a42a-4999bdf1fc85" />
+<img width="1727" height="982" alt="image" src="https://github.com/user-attachments/assets/83da09b2-c533-4098-9938-227595bc015e" />
 
 ## Props
 
@@ -113,6 +114,7 @@ render(<TestApp />);
 - `styles` (BlockStyles, optional): Custom styles for markdown blocks.
 - `renderers` (BlockRenderers, optional): Custom renderers for markdown blocks.
 - `showSharp` (boolean, optional): Whether to show sharp signs for headings. Default is `false`.
+- `theme` (string, optional): The theme for syntax highlighting. Default is `github-dark`. Check out [shiki](https://shiki.style/themes) for more themes.
 
 ## Contributing
 

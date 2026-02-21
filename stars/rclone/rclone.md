@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 55553
+stars: 55666
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -134,6 +134,7 @@ directories to and from different cloud storage providers.
 - Wasabi [:page_facing_up:](https://rclone.org/s3/#wasabi)
 - WebDAV [:page_facing_up:](https://rclone.org/webdav/)
 - Yandex Disk [:page_facing_up:](https://rclone.org/yandex/)
+- Zadara Object Storage [:page_facing_up:](https://rclone.org/s3/#zadara)
 - Zoho WorkDrive [:page_facing_up:](https://rclone.org/zoho/)
 - Zata.ai [:page_facing_up:](https://rclone.org/s3/#Zata)
 - The local filesystem [:page_facing_up:](https://rclone.org/local/)

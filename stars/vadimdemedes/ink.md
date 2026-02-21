@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 34931
+stars: 35099
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -163,6 +163,7 @@ render(<Counter />);
 - [Screen Reader Support](#screen-reader-support)
 - [Useful Components](#useful-components)
 - [Useful Hooks](#useful-hooks)
+- [Recipes](#recipes)
 - [Examples](#examples)
 - [Continuous Integration](#continuous-integration)
 
@@ -2016,7 +2017,7 @@ const Example = () => {
 Type: `string`
 
 Switch focus to the component with the given [`id`](#id).
-If there's no component with that ID, focus will be given to the next focusable component.
+If there's no component with that ID, focus is not changed.
 
 ```js
 import {useFocusManager, useInput} from 'ink';
@@ -2032,6 +2033,22 @@ const Example = () => {
 	});
 
 	return …
+};
+```
+
+#### activeId
+
+Type: `string | undefined`
+
+The ID of the currently focused component, or `undefined` if no component is focused.
+
+```js
+import {Text, useFocusManager} from 'ink';
+
+const Example = () => {
+	const {activeId} = useFocusManager();
+
+	return <Text>Focused: {activeId ?? 'none'}</Text>;
 };
 ```
 
@@ -2392,7 +2409,7 @@ Measure the dimensions of a particular `<Box>` element.
 Returns an object with `width` and `height` properties.
 This function is useful when your component needs to know the amount of available space it has. You can use it when you need to change the layout based on the length of its content.
 
-**Note:** `measureElement()` returns correct results only after the initial render, when the layout has been calculated. Until then, `width` and `height` equal zero. It's recommended to call `measureElement()` in a `useEffect` hook, which fires after the component has rendered.
+**Note:** `measureElement()` returns `{width: 0, height: 0}` when called during render (before layout is calculated). Call it from post-render code, such as `useEffect`, `useLayoutEffect`, input handlers, or timer callbacks. When content changes, pass the relevant dependency to your effect so it re-measures after each update.
 
 ##### ref
 
@@ -2597,6 +2614,10 @@ For a practical example of building an accessible component, see the [ARIA examp
 
 - [ink-use-stdout-dimensions](https://github.com/cameronhunter/ink-monorepo/tree/master/packages/ink-use-stdout-dimensions) - Subscribe to stdout dimensions.
 
+## Recipes
+
+- [Routing with React Router](recipes/routing.md) - Navigate between routes using `MemoryRouter`.
+
 ## Examples
 
 The [`examples`](/examples) directory contains a set of real examples. You can run them with:
@@ -2618,6 +2639,7 @@ npm run example examples/[example name]
 - [Write to stderr](examples/use-stderr/use-stderr.tsx) - Write to stderr, bypassing main Ink output.
 - [Static](examples/static/static.tsx) - Use the `<Static>` component to render permanent output.
 - [Child process](examples/subprocess-output) - Renders output from a child process.
+- [Router](examples/router/router.tsx) - Navigate between routes using React Router's `MemoryRouter`.
 
 ## Continuous Integration
 

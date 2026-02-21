@@ -1,6 +1,6 @@
 ---
 project: waku
-stars: 6141
+stars: 6159
 description: |-
     ⛩️ The minimal React framework
 url: https://github.com/wakujs/waku

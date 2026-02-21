@@ -1,6 +1,6 @@
 ---
 project: Checkmate
-stars: 9212
+stars: 9241
 description: |-
     Checkmate is an open-source, self-hosted tool designed to track and monitor server hardware, uptime, response times, and incidents in real-time with beautiful visualizations. Don't be shy, join here: https://discord.com/invite/NAb6H3UTjK :)
 url: https://github.com/bluewave-labs/Checkmate
@@ -155,7 +155,7 @@ If you would like to sponsor an additional feature, [see this page](https://chec
 
 ## Contributing
 
-We are [Alex](http://github.com/ajhollid) (team lead), [Gorkem](http://github.com/gorkem-bwl/), [Owaise](http://github.com/Owaiseimdad), [Aryaman](https://github.com/Br0wnHammer), [Mert](https://github.com/mertssmnoglu) and [Karen](https://github.com/karenvicent) helping individuals and businesses monitor their infra and servers.
+We are [Alex](http://github.com/ajhollid) (team lead), [Gorkem](http://github.com/gorkem-bwl/), [Aryaman](https://github.com/Br0wnHammer), [Mert](https://github.com/mertssmnoglu) and [Karen](https://github.com/karenvicent) helping individuals and businesses monitor their infra and servers.
 
 We pride ourselves on building strong connections with contributors at every level. Despite being a young project, Checkmate has already earned 7000+ stars and attracted 90+ contributors from around the globe.
 

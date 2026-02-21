@@ -1,6 +1,6 @@
 ---
 project: eldoraui
-stars: 1883
+stars: 1886
 description: |-
     Eldora UI is a collection of re-usable components that you can copy and paste into your web apps. It primarily features components, blocks, and templates.
 url: https://github.com/karthikmudunuri/eldoraui
@@ -39,6 +39,12 @@ Have questions, comments or feedback? [Join our discord](http://eldoraui.site/di
 
 <a href="https://github.com/karthikmudunuri/eldoraui/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=karthikmudunuri/eldoraui" />
+</a>
+
+## Supported by Vercel
+
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
 </a>
 
 ## Stats

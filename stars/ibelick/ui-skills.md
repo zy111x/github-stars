@@ -1,6 +1,6 @@
 ---
 project: ui-skills
-stars: 785
+stars: 847
 description: |-
     A growing set of skills to polish interfaces built by agents.
 url: https://github.com/ibelick/ui-skills

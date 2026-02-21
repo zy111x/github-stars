@@ -1,6 +1,6 @@
 ---
 project: fancyss
-stars: 13320
+stars: 13325
 description: |-
     fancyss is a project providing tools to across the GFW on asuswrt/merlin based router.
 url: https://github.com/hq450/fancyss

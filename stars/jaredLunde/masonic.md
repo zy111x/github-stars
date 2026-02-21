@@ -1,6 +1,6 @@
 ---
 project: masonic
-stars: 1369
+stars: 1371
 description: |-
     🧱 High-performance masonry layouts for React
 url: https://github.com/jaredLunde/masonic

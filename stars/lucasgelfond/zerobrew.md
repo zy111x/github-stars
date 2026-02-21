@@ -1,16 +1,14 @@
 ---
 project: zerobrew
-stars: 6249
+stars: 6452
 description: |-
-    A drop-in, 5-20x faster, experimental Homebrew alternative
+    A 5-20x faster experimental Homebrew alternative
 url: https://github.com/lucasgelfond/zerobrew
 ---
 
 <div align="center">
 
-<img alt="zerobrew banner" src="./assets/banner.svg" width="100%" />
-
-<p><strong>Zerobrew brings uv-style architecture to Homebrew packages on macOS and Linux.</strong></p>
+<h2>zerobrew</h2>
 
 [![Lint](https://github.com/lucasgelfond/zerobrew/actions/workflows/ci.yml/badge.svg)](https://github.com/lucasgelfond/zerobrew/actions/workflows/ci.yml)
 [![Test](https://github.com/lucasgelfond/zerobrew/actions/workflows/test.yml/badge.svg)](https://github.com/lucasgelfond/zerobrew/actions/workflows/test.yml)
@@ -18,6 +16,10 @@ url: https://github.com/lucasgelfond/zerobrew
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?logo=discord&logoColor=white)](https://discord.gg/ZaPYwm9zaw)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE-MIT.md)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE-APACHE.md)
+
+<img alt="zerobrew demo" src="./assets/zb-demo.gif" />
+
+<p><strong>zerobrew brings uv-style architecture to Homebrew packages on macOS and Linux.</strong></p>
 
 </div>
 
@@ -28,12 +30,6 @@ curl -fsSL https://zerobrew.rs/install | bash
 ```
 
 After install, run the `export` command it prints (or restart your terminal).
-
-## Demo
-
-<div align="center">
-  <img alt="zerobrew demo" src="./assets/zb-demo.gif" />
-</div>
 
 ## Quick start
 

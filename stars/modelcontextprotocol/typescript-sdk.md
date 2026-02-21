@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 11594
+stars: 11648
 description: |-
     The official TypeScript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk
@@ -38,7 +38,7 @@ This repository contains the TypeScript SDK implementation of the MCP specificat
 - MCP **server** libraries (tools/resources/prompts, Streamable HTTP, stdio, auth helpers)
 - MCP **client** libraries (transports, high-level helpers, OAuth helpers)
 - Optional **middleware packages** for specific runtimes/frameworks (Express, Hono, Node.js HTTP)
-- Runnable **examples** (under [`examples/`](examples/))
+- Runnable **examples** (under [`examples/`](https://github.com/modelcontextprotocol/typescript-sdk/tree/main/examples))
 
 ## Packages
 
@@ -51,7 +51,7 @@ Both packages have a **required peer dependency** on `zod` for schema validation
 
 ### Middleware packages (optional)
 
-The SDK also publishes small “middleware” packages under [`packages/middleware/`](packages/middleware/) that help you **wire MCP into a specific runtime or web framework**.
+The SDK also publishes small "middleware" packages under [`packages/middleware/`](https://github.com/modelcontextprotocol/typescript-sdk/tree/main/packages/middleware) that help you **wire MCP into a specific runtime or web framework**.
 
 They are intentionally thin adapters: they should not introduce new MCP functionality or business logic. See [`packages/middleware/README.md`](packages/middleware/README.md) for details.
 
@@ -135,10 +135,9 @@ Next steps:
 ## Documentation
 
 - Local SDK docs:
-    - [docs/server.md](docs/server.md) – building MCP servers, transports, tools/resources/prompts, CORS, DNS rebinding, and deployment patterns.
-    - [docs/client.md](docs/client.md) – using the high-level client, transports, backwards compatibility, and OAuth helpers.
-    - [docs/capabilities.md](docs/capabilities.md) – sampling, elicitation (form and URL), and experimental task-based execution.
-    - [docs/faq.md](docs/faq.md) – environment and troubleshooting FAQs (including Node.js Web Crypto support).
+    - [docs/server.md](docs/server.md) – building MCP servers, transports, tools/resources/prompts, sampling, elicitation, tasks, and deployment patterns.
+    - [docs/client.md](docs/client.md) – building MCP clients: connecting, tools, resources, prompts, server-initiated requests, and error handling
+    - [docs/faq.md](docs/faq.md) – frequently asked questions and troubleshooting
 - External references:
     - [SDK API documentation](https://modelcontextprotocol.github.io/typescript-sdk/)
     - [Model Context Protocol documentation](https://modelcontextprotocol.io)

@@ -1,6 +1,6 @@
 ---
 project: dns-over-http-resolver
-stars: 14
+stars: 15
 description: |-
     DNS over HTTP resolver 
 url: https://github.com/vasco-santos/dns-over-http-resolver

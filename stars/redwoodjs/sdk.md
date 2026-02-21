@@ -1,6 +1,6 @@
 ---
 project: sdk
-stars: 1396
+stars: 1402
 description: |-
     A simple framework for humans: Server-first React with zero magic. Built to stay understandable.
 url: https://github.com/redwoodjs/sdk

@@ -1,6 +1,6 @@
 ---
 project: bitcoinjs-lib
-stars: 5968
+stars: 5969
 description: |-
     A javascript Bitcoin library for node.js and browsers.
 url: https://github.com/bitcoinjs/bitcoinjs-lib

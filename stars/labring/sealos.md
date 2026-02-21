@@ -1,6 +1,6 @@
 ---
 project: sealos
-stars: 16953
+stars: 16960
 description: |-
     Sealos is an AI-native Cloud Operating System built on Kubernetes that unifies the entire application lifecycle, from development in cloud IDEs to production deployment and management. It is perfect for building and scaling modern AI applications, managed databases (MySQL, PostgreSQL, Redis, MongoDB) and complex microservice architectures.
 url: https://github.com/labring/sealos
