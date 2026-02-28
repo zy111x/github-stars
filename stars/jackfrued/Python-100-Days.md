@@ -1,6 +1,6 @@
 ---
 project: Python-100-Days
-stars: 178770
+stars: 179101
 description: Python - 100天从新手到大师
 url: https://github.com/jackfrued/Python-100-Days
 ---
@@ -51,7 +51,7 @@ Python在以下领域都有用武之地。
 -   **Practice makes perfect.** （熟能生巧）
 -   **All experience comes from the mistakes you've made.** （所有的经验都源于犯过的错误）
 -   **Don't be a freeloader.** （学会分享，不要只当伸手党）
--   （拥抱AI，提升效率）
+-   **Embrace AI to boost your productivity.**（拥抱AI，提升效率）
 
 ### Day01~20 - Python语言基础
 

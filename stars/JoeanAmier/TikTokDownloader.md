@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 13218
+stars: 13278
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -30,11 +30,11 @@ DouK-Downloader
 
 功能列表（点击展开）
 
--   ✅ 下载抖音无水印视频/图集
--   ✅ 下载抖音无水印实况/动图
+-   ✅ 下载抖音视频/图集
+-   ✅ 下载抖音实况/动图
 -   ✅ 下载最高画质视频文件
 -   ✅ 下载 TikTok 视频原画
--   ✅ 下载 TikTok 无水印视频/图集
+-   ✅ 下载 TikTok 视频/图集
 -   ✅ 下载抖音账号发布/喜欢/收藏/收藏夹作品
 -   ✅ 下载 TikTok 账号发布/喜欢作品
 -   ✅ 采集抖音 / TikTok 详细数据
@@ -148,9 +148,8 @@ demo()
     4.  运行 `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt` 命令安装程序所需模块
     5.  运行 `python .\main.py` 或者 `python main.py` 命令启动 DouK-Downloader
     
-    **使用 uv 安装项目依赖（推荐）**2.  运行 `uv venv` 命令创建虚拟环境
-    3.  运行 `uv sync` 命令同步环境依赖
-    4.  运行 `uv run main.py` 命令启动 DouK-Downloader
+    **使用 uv 安装项目依赖（推荐）**2.  运行 `uv sync --no-dev` 命令同步环境依赖
+    3.  运行 `uv run main.py` 命令启动 DouK-Downloader
     
 2.  阅读 DouK-Downloader 的免责声明，根据提示输入内容
 3.  将 Cookie 信息写入配置文件
@@ -375,13 +374,6 @@ ZMTO：一家专业的云基础设施提供商，以可靠的尖端技术与专�
 
 * * *
 
-Thordata
---------
-
-Thordata：可靠且价格实惠的住宅代理，一键助您收集全球数据；注册即可免费获得 1GB 住宅代理和 2000 次 SERP API；凭折扣码 **THOR66** 可获 30% 折扣。
-
-* * *
-
 TikHub
 ------
 
@@ -410,7 +402,6 @@ TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台�
 =======
 
 -   https://github.com/Johnserf-Seed/f2
--   https://github.com/Johnserf-Seed/TikTokDownload
 -   https://github.com/Evil0ctal/Douyin\_TikTok\_Download\_API
 -   https://github.com/justbeluga/tiktok-web-reverse-engineering
 -   https://github.com/ihmily/DouyinLiveRecorder
@@ -423,4 +414,3 @@ TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台�
 -   https://github.com/carpedm20/emoji/
 -   https://github.com/lxml/lxml
 -   https://ffmpeg.org/ffmpeg-all.html
--   https://www.tikwm.com/
