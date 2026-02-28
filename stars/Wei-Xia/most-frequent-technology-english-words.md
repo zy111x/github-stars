@@ -43,9 +43,6 @@ open http://localhost:4000
 5. Launch the project from local server: `bundle exec jekyll serve`
 6. Visit `http://127.0.0.1:4000`
 
-## Anki 记忆卡片
-
-- [程序员英语词汇宝典记忆卡片](most-frequent-technology-english-words.apkg)
 
 ## Star History
 

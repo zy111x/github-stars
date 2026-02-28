@@ -1,6 +1,6 @@
 ---
 project: cc-wf-studio
-stars: 3991
+stars: 4066
 description: |-
     CC Workflow Studio
 url: https://github.com/breaking-brake/cc-wf-studio
@@ -28,8 +28,6 @@ url: https://github.com/breaking-brake/cc-wf-studio
   <strong>Visual Workflow Editor for AI Agents</strong>
 </p>
 
-<span id="github-copilot-support"></span><span id="openai-codex-support"></span><span id="roo-code-support"></span><span id="gemini-cli-support"></span><span id="antigravity-support"></span>
-
 | Agent | Export Format | Requires |
 |-------|--------------|----------|
 | Claude Code | `.claude/agents/` `.claude/commands/` | [Claude Code](https://github.com/anthropics/claude-code) |
@@ -39,6 +37,7 @@ url: https://github.com/breaking-brake/cc-wf-studio
 | Roo Code | `.roo/skills/` | [Roo Code](https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline) |
 | Gemini CLI | `.gemini/skills/` | [Gemini CLI](https://github.com/google-gemini/gemini-cli) |
 | Antigravity | `.agent/skills/` | [Antigravity](https://antigravity.google/) |
+| Cursor | `.cursor/agents/` `.cursor/skills/` | [Cursor](https://github.com/cursor/cursor) |
 
 > **Note:** Agents other than Claude Code require activation from Toolbar's **More** menu.
 
@@ -47,13 +46,13 @@ url: https://github.com/breaking-brake/cc-wf-studio
 
 ---
 
-<!-- AI Edit Demo GIF: PR Code Review Workflow -->
+<!-- AI Edit Demo GIF: MCP Server-based Workflow Editing -->
 <p align="center">
-  <img src="./resources/demo_edit_with_ai.gif" alt="AI-Assisted Workflow Creation Demo - PR Code Review" width="800">
+  <img src="./resources/demo_edit_with_ai.gif" alt="AI-Assisted Workflow Creation Demo - MCP Server-based Editing" width="800">
 </p>
 
 <p align="center">
-  <em>✨ Edit with AI: Create a PR code review workflow with MCP, Skills, and conditional branching – All with natural language</em>
+  <em>✨ Edit with AI: AI agents (Claude Code, GitHub Copilot, etc.) create workflows through natural language via MCP Server</em>
 </p>
 
 ---
@@ -108,19 +107,21 @@ url: https://github.com/breaking-brake/cc-wf-studio
 ```mermaid
 sequenceDiagram
     actor User
-    participant VSCode as CC Workflow Studio
-    participant MCP as MCP Server
+    box VS Code (CC Workflow Studio)
+        participant UI as Editor UI
+        participant MCP as MCP Server
+    end
     participant Agent as AI Agent
 
-    User->>VSCode: Click agent button
-    VSCode->>MCP: Auto start server
-    VSCode->>Agent: Launch with editing skill
+    User->>UI: Click agent button
+    UI->>MCP: Auto start server
+    UI->>Agent: Launch with editing skill
 
     loop AI edits workflow
         Agent->>MCP: get_workflow
         MCP-->>Agent: workflow JSON
         Agent->>MCP: apply_workflow
-        MCP->>VSCode: Update canvas
+        MCP->>UI: Update canvas
     end
 ```
 

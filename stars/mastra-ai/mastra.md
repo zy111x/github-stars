@@ -1,6 +1,6 @@
 ---
 project: mastra
-stars: 21270
+stars: 21539
 description: |-
     From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.
 url: https://github.com/mastra-ai/mastra

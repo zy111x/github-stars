@@ -1,6 +1,6 @@
 ---
 project: simple-git-hooks
-stars: 1640
+stars: 1641
 description: |-
     A simple git hooks manager for small projects
 url: https://github.com/toplenboren/simple-git-hooks

@@ -1,6 +1,6 @@
 ---
 project: emoji-regex-xs
-stars: 77
+stars: 78
 description: |-
     A regular expression to match all emoji-only symbols
 url: https://github.com/slevithan/emoji-regex-xs

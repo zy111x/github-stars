@@ -1,6 +1,6 @@
 ---
 project: hacker-podcast
-stars: 2445
+stars: 2450
 description: |-
     一个基于 AI 的 Hacker News 中文播客项目，每天自动抓取 Hacker News 热门文章，通过 AI 生成中文总结并转换为播客内容。
 url: https://github.com/miantiao-me/hacker-podcast
@@ -31,7 +31,7 @@ url: https://github.com/miantiao-me/hacker-podcast
 
 ## 技术栈
 
-- Next.js 应用框架
+- [vinext](https://github.com/cloudflare/vinext) (Vite + React Server Components) 应用框架
 - Cloudflare Workers 部署和运行环境
 - TTS 语音合成
 - OpenAI API 内容生成
@@ -49,7 +49,7 @@ url: https://github.com/miantiao-me/hacker-podcast
 ## 本地开发
 
 > 项目由一个 Worker 和 Web 程序组成，Worker 负责抓取数据，处理音频。使用了 Cloudflare 的 R2 存储、 KV 存储、工作流和浏览器呈现。
-> Web 程序负责展示数据和提供 RSS 订阅。 Web 程序使用 Next.js 开发，可以看下 OpenNext 的 Cloudflare 适配器。
+> Web 程序负责展示数据和提供 RSS 订阅。Web 程序使用 vinext 开发，通过 Cloudflare Vite 插件部署到 Workers。
 
 1. 安装依赖:
 
@@ -88,7 +88,7 @@ pnpm dev
 > 注意：
 >
 > - 本地运行工作流时，Edge TTS 转换音频可能会卡住。建议直接注释该部分代码进行调试。
-> - 由于合并音频需要使用 CloudFlare 的浏览器端呈现，不支持本地开发，需要远程调试。 可以使用 `npm run test` 进行测试。
+> - 由于合并音频需要使用 Cloudflare 的浏览器端呈现，不支持本地开发，需要远程调试。可以使用 `pnpm tests` 进行测试。
 
 ## 部署
 
@@ -96,7 +96,7 @@ pnpm dev
 
 1. 创建 R2 文件存储桶, 绑定域名后，修改 `NEXT_STATIC_HOST` 和 `HACKER_PODCAST_R2_BUCKET_URL` 变量。
 2. 创建 KV 存储空间
-3. 修改 `wrangler.json` 中 KV 和 R2 的值
+3. 修改 `wrangler.jsonc` 中 KV 和 R2 的值
 4. 使用 `wrangler` 脚手架配置线上环境的环境变量:
 
 ```bash
@@ -108,15 +108,15 @@ pnpx wrangler secret put --cwd worker OPENAI_BASE_URL
 pnpx wrangler secret put --cwd worker OPENAI_MODEL
 
 # 更新 Web 程序的私有变量
-pnpx wrangler secret put NODE_ENV # Next.JS 环境，建议 production
+pnpx wrangler secret put NODE_ENV # 建议 production
 pnpx wrangler secret put NEXT_PUBLIC_BASE_URL # Web 服务地址
 pnpx wrangler secret put NEXT_STATIC_HOST # 绑定域名后，修改为绑定域名
 ```
 
 ```bash
-# 记得恢复注释：wrangler.json 中的 workflows 相关配置
+# 记得恢复注释：wrangler.jsonc 中的 workflows 相关配置
 pnpm deploy:worker
-pnpm deploy
+pnpm run deploy
 ```
 
 ## 致谢

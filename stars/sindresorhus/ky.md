@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 16364
+stars: 16389
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -99,7 +99,7 @@ import ky from 'https://esm.sh/ky';
 
 The `input` and `options` are the same as [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch), with additional `options` available (see below).
 
-Returns a [`Response` object](https://developer.mozilla.org/en-US/docs/Web/API/Response) with [`Body` methods](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#body) added for convenience. So you can, for example, call `ky.get(input).json()` directly without having to await the `Response` first. When called like that, an appropriate `Accept` header will be set depending on the body method used. Unlike the `Body` methods of `window.Fetch`, these will throw an `HTTPError` if the response status is not in the range of `200...299`. Also, `.json()` will return an empty string if body is empty or the response status is `204` instead of throwing a parse error due to an empty body.
+Returns a [`Response` object](https://developer.mozilla.org/en-US/docs/Web/API/Response) with [`Body` methods](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#body) added for convenience. So you can, for example, call `ky.get(input).json()` directly without having to await the `Response` first. When called like that, an appropriate `Accept` header will be set depending on the body method used. Unlike the `Body` methods of `window.Fetch`, these will throw an `HTTPError` if the response status is not in the range of `200...299`. Also, `.json()` will return `undefined` if body is empty or the response status is `204` instead of throwing a parse error due to an empty body.
 
 Available body shortcuts: `.json()`, `.text()`, `.formData()`, `.arrayBuffer()`, `.blob()`, and `.bytes()`. The `.bytes()` shortcut is only present when the runtime supports `Response.prototype.bytes()`.
 
@@ -333,6 +333,9 @@ const json = await ky('https://example.com', {
 ```
 
 > [!NOTE]
+> When retries are enabled, Ky clones the request body before each attempt using [`tee()`](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/tee), which buffers the entire `ReadableStream` in memory. Set `retry: {limit: 0}` if you're uploading large streaming bodies and don't need retries.
+
+> [!NOTE]
 > Chromium-based browsers automatically retry `408 Request Timeout` responses at the network layer for keep-alive connections. This means requests may be retried by both the browser and ky. If you want to avoid duplicate retries, you can either set `keepalive: false` in your request options (though this may impact performance for multiple requests) or remove `408` from the retry status codes.
 
 ##### timeout
@@ -359,7 +362,7 @@ This hook enables you to modify the request right before it is sent. Ky will mak
 
 The `retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between initial requests and retries, which is useful when you need different behavior for retries (e.g., avoiding overwriting headers set in `beforeRetry`).
 
-The hook can return a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) to replace the outgoing request, or return a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) to completely avoid making an HTTP request. This can be used to mock a request, check an internal cache, etc. An **important** consideration when returning a request or response from this hook is that any remaining `beforeRequest` hooks will be skipped, so you may want to only return them from the last hook.
+The hook can return a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) to replace the outgoing request (remaining hooks will still run with the updated request). It can also return a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) to completely avoid making an HTTP request, in which case remaining `beforeRequest` hooks are skipped. This can be used to mock a request, check an internal cache, etc.
 
 ```js
 import ky from 'ky';
@@ -463,33 +466,32 @@ const response = await ky('https://example.com/api', {
 Type: `Function[]`\
 Default: `[]`
 
-This hook enables you to modify the `HTTPError` right before it is thrown. The hook function receives a state object with an `HTTPError` and retry count, and should return an instance of `HTTPError`.
+This hook enables you to modify any error right before it is thrown. The hook function receives a state object with an error and retry count, and should return an `Error` instance.
+
+This hook is called for all error types, including `HTTPError`, `TimeoutError`, `ForceRetryError` (when retry limit is exceeded via `ky.retry()`), and network errors. Use type guards like `isHTTPError()` or `isTimeoutError()` to handle specific error types.
 
 The `retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between the initial request and retries, which is useful when you need different error handling based on retry attempts (e.g., showing different error messages on the final attempt).
 
 ```js
-import ky from 'ky';
+import ky, {isHTTPError, isTimeoutError} from 'ky';
 
 await ky('https://example.com', {
 	hooks: {
 		beforeError: [
 			({error}) => {
-				if (
-					typeof error.data === 'object'
-					&& error.data !== null
-					&& 'message' in error.data
-				) {
-					error.name = 'GitHubError';
-					error.message = `${String(error.data.message)} (${error.response.status})`;
+				if (isHTTPError(error)) {
+					if (
+						typeof error.data === 'object'
+						&& error.data !== null
+						&& 'message' in error.data
+					) {
+						error.name = 'GitHubError';
+						error.message = `${String(error.data.message)} (${error.response.status})`;
+					}
 				}
 
-				return error;
-			},
-
-			// Or show different message based on retry count
-			({error, retryCount}) => {
-				if (retryCount === error.options.retry.limit) {
-					error.message = `${error.message} (failed after ${retryCount} retries)`;
+				if (isTimeoutError(error)) {
+					error.message = `Request to ${error.request.url} timed out`;
 				}
 
 				return error;
@@ -1014,6 +1016,24 @@ const api = ky.extend({
 const response = await api.get('https://example.com/api');
 ```
 
+### KyError
+
+Base class for all Ky-specific errors. `HTTPError`, `TimeoutError`, and `ForceRetryError` extend this class.
+
+You can use `instanceof KyError` to check if an error originated from Ky, or use the `isKyError()` type guard for cross-realm compatibility and TypeScript type narrowing.
+
+```js
+import ky, {isKyError} from 'ky';
+
+try {
+	await ky('https://example.com').json();
+} catch (error) {
+	if (isKyError(error)) {
+		console.log('Ky error:', error.message);
+	}
+}
+```
+
 ### HTTPError
 
 Exposed for `instanceof` checks. The error has a `response` property with the [`Response` object](https://developer.mozilla.org/en-US/docs/Web/API/Response), `request` property with the [`Request` object](https://developer.mozilla.org/en-US/docs/Web/API/Request), and `options` property with normalized options (either passed to `ky` when creating an instance with `ky.create()` or directly when performing the request).
@@ -1040,11 +1060,13 @@ try {
 You can also use the `beforeError` hook:
 
 ```js
+import ky, {isHTTPError} from 'ky';
+
 await ky('https://example.com', {
 	hooks: {
 		beforeError: [
 			({error}) => {
-				if (error.data !== undefined) {
+				if (isHTTPError(error) && error.data !== undefined) {
 					error.message = `${error.message}: ${JSON.stringify(error.data)}`;
 				}
 
@@ -1260,6 +1282,29 @@ const response = await ky('https://example.com', {
 }).json();
 ```
 
+### Streaming request bodies
+
+To send a [`ReadableStream`](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream) as the request body, you must pass `duplex: 'half'` per the [Fetch spec](https://fetch.spec.whatwg.org/#dom-requestinit-duplex). Ky can't set this automatically as it changes request semantics for all requests, not just streaming ones.
+
+```js
+import ky from 'ky';
+
+const stream = new ReadableStream({
+	start(controller) {
+		controller.enqueue(new TextEncoder().encode('hello'));
+		controller.close();
+	},
+});
+
+const response = await ky.post('https://example.com/upload', {
+	body: stream,
+	duplex: 'half',
+});
+```
+
+> [!NOTE]
+> When retries are enabled (the default), Ky buffers the entire streaming body in memory to support replaying it. Set `retry: {limit: 0}` to skip this if retries aren't needed.
+
 ### Consuming Server-Sent Events (SSE)
 
 Use [`parse-sse`](https://github.com/sindresorhus/parse-sse):
@@ -1280,7 +1325,7 @@ for await (const event of parseServerSentEvents(response)) {
 Ky's TypeScript types are intentionally defined as type aliases rather than interfaces to prevent global module augmentation, which can lead to type conflicts and unexpected behavior across your codebase. If you need to add custom properties to Ky's types like `KyResponse` or `HTTPError`, create local wrapper types instead:
 
 ```ts
-import ky, {HTTPError} from 'ky';
+import ky, {HTTPError, isHTTPError} from 'ky';
 
 interface CustomError extends HTTPError {
 	customProperty: unknown;
@@ -1290,7 +1335,10 @@ const api = ky.extend({
 	hooks: {
 		beforeError: [
 			async ({error}) => {
-				(error as CustomError).customProperty = 'value';
+				if (isHTTPError(error)) {
+					(error as CustomError).customProperty = 'value';
+				}
+
 				return error;
 			}
 		]

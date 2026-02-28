@@ -1,6 +1,6 @@
 ---
 project: CopilotKit
-stars: 28901
+stars: 29093
 description: |-
     The Frontend for Agents & Generative UI. React + Angular
 url: https://github.com/CopilotKit/CopilotKit

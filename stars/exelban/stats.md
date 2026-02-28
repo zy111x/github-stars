@@ -1,21 +1,9 @@
 ---
 project: stats
-stars: 36555
+stars: 36693
 description: |-
     macOS system monitor in your menu bar
 url: https://github.com/exelban/stats
----
-
-<div align="center" markdown="1">
- <sup>Special thanks to:</sup>
- <br><br>
- <a href="https://go.warp.dev/stats">
-  <img width="400" alt="Warp sponsorship" src="https://github.com/user-attachments/assets/67ff3655-983d-43cf-9e99-51ce76afa3e7"/>
- </a>
- <br><br>
- <a href="https://go.warp.dev/stats">Warp is built for coding with multiple AI agents</a>
-</div>
-
 ---
 
 # Stats
@@ -42,7 +30,7 @@ brew install stats
 Legacy version for older systems could be found [here](https://mac-stats.com/downloads).
 
 ## Requirements
-Stats is supported on the released macOS version starting from macOS 10.15 (Catalina).
+Stats is supported on the released macOS version starting from macOS 11.15 (Big Sur).
 
 ## Features
 Stats is an application that allows you to monitor your macOS system.

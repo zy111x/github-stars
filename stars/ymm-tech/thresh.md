@@ -1,6 +1,6 @@
 ---
 project: thresh
-stars: 584
+stars: 583
 description: |-
     Flutter-based mobile cross-platform dynamic UI framework
 url: https://github.com/ymm-tech/thresh

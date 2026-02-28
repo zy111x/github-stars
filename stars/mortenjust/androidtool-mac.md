@@ -1,6 +1,6 @@
 ---
 project: androidtool-mac
-stars: 5432
+stars: 5429
 description: |-
     One-click screenshots, video recordings, app installation for iOS and Android
 url: https://github.com/mortenjust/androidtool-mac

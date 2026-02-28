@@ -1,6 +1,6 @@
 ---
 project: ui
-stars: 685
+stars: 691
 description: |-
     A beautiful collection of copy-and-paste widgets for your next project.
 url: https://github.com/wigggle-ui/ui
@@ -29,7 +29,6 @@ This project is proudly supported by:
 <table>
   <tbody>
     <tr>
-    <tr>
       <td>
         <a href="https://openpanel.dev?utm_source=react-wheel-picker#gh-light-mode-only">
           <img
@@ -44,11 +43,19 @@ This project is proudly supported by:
           />
         </a>
       </td>
+      <td>
+        <a href="https://vercel.com/oss">
+          <img
+            src="https://vercel.com/oss/program-badge.svg"
+            alt="Vercel OSS Program"
+          />
+        </a>
+      </td>
     </tr>
   </tbody>
 </table>
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=wigggle-ui/ui&type=date&legend=top-left)](https://www.star-history.com/#wigggle-ui/ui&type=date&legend=top-left)
+[![RepoStars](https://repostars.dev/api/embed?repo=wigggle-ui%2Fui&theme=terminal)](https://repostars.dev/?repos=wigggle-ui%2Fui&theme=terminal)
 

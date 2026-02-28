@@ -1,6 +1,6 @@
 ---
 project: chsrc
-stars: 6635
+stars: 6649
 description: |-
     chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
@@ -16,7 +16,7 @@ url: https://github.com/RubyMetric/chsrc
  !               | BingChunMoLi <bingchunmoli@bingchunmoli.com>
  !               |
  ! Created On    : <2023-12-28>
- ! Last Modified : <2025-08-22>
+ ! Last Modified : <2026-02-24>
  ! ---------------------------------------------------------- -->
 
 <div align="center">
@@ -420,7 +420,7 @@ git clone https://gitee.com/RubyMetric/chsrc.git; cd chsrc; make
 
 选项:
    -dry                       Dry Run，模拟换源过程，命令仅打印并不运行
-   -local                     仅对本项目而非全局换源 (通过ls <target>查看支持情况)
+   -scope=project|user|system 仅对本项目换源 / 用户级换源 / 系统级换源 (通过ls <target>查看)
    -ipv6                      使用IPv6测速
    -en(glish)                 使用英文输出
    -no-color                  无颜色输出
@@ -448,8 +448,8 @@ git clone https://gitee.com/RubyMetric/chsrc.git; cd chsrc; make
 
 对支持 *项目级* 换源的目标，可以避免全局（*系统级* 或 *用户级*）换源
 
-    $ chsrc set -local bundler
-    $ chsrc set -local pdm
+    $ chsrc set -scope=project bundler
+    $ chsrc set -scope project pdm
 ```
 
 <br>

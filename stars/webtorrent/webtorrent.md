@@ -1,6 +1,6 @@
 ---
 project: webtorrent
-stars: 30789
+stars: 30807
 description: |-
     ⚡️ Streaming torrent client for the web
 url: https://github.com/webtorrent/webtorrent

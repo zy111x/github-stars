@@ -1,6 +1,6 @@
 ---
 project: hotkeys-js
-stars: 7156
+stars: 7147
 description: |-
     ➷ A robust Javascript library for capturing keyboard input. It has no dependencies. 
 url: https://github.com/jaywcjlove/hotkeys-js
@@ -47,15 +47,15 @@ url: https://github.com/jaywcjlove/hotkeys-js
 # Hotkeys
 
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor)
-[![](https://img.shields.io/npm/dm/hotkeys-js?logo=npm)](https://www.npmjs.com/package/hotkeys-js)
+[![](https://img.shields.io/npm/dm/hotkeys-js?logo=npm&label=)](https://www.npmjs.com/package/hotkeys-js)
 [![](https://img.shields.io/github/stars/jaywcjlove/hotkeys-js.svg)](https://github.com/jaywcjlove/hotkeys/stargazers)
 ![no dependencies](http://jaywcjlove.github.io/sb/status/no-dependencies.svg)
 [![GitHub Actions CI](https://github.com/jaywcjlove/hotkeys-js/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/hotkeys-js/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/github/jaywcjlove/hotkeys/badge.svg?branch=master)](https://coveralls.io/github/jaywcjlove/hotkeys?branch=master)
+[![Coverage Status](https://jaywcjlove.github.io/hotkeys-js/coverage.svg)](https://jaywcjlove.github.io/hotkeys-js/lcov-report/index.html)
 [![Chinese](https://jaywcjlove.github.io/sb/lang/chinese.svg)](https://wangchujiang.com/hotkeys-js/?lang=zh)
 [![jaywcjlove/hotkeys-js](https://jaywcjlove.github.io/sb/ico/gitee.svg)](https://gitee.com/jaywcjlove/hotkeys)
 
-HotKeys.js is an input capture library with some very special features, it is easy to pick up and use, has a reasonable footprint ([~6kB](https://bundlephobia.com/result?p=hotkeys-js)) (gzipped: **`2.8kB`**), and has no dependencies. It should not interfere with any JavaScript libraries or frameworks. Official document [demo preview](https://jaywcjlove.github.io/hotkeys-js). [More examples](https://github.com/jaywcjlove/hotkeys-js/issues?q=label%3ADemo+).
+HotKeys.js is an input capture library with some very special features, it is easy to pick up and use, has a reasonable footprint ([~8kB](https://bundlephobia.com/result?p=hotkeys-js)) (gzipped: **`3.8kB`**), and has no dependencies. It should not interfere with any JavaScript libraries or frameworks. Official document [demo preview](https://jaywcjlove.github.io/hotkeys-js), [compatibility test](https://jaywcjlove.github.io/hotkeys-js/dist/compatibility-test.html). [More examples](https://github.com/jaywcjlove/hotkeys-js/issues?q=label%3ADemo+).
 
 ```bash
 ╭┈┈╮          ╭┈┈╮  ╭┈┈╮

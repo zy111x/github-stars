@@ -1,6 +1,6 @@
 ---
 project: apexcharts.js
-stars: 15073
+stars: 15079
 description: |-
     📊 Interactive JavaScript Charts built on SVG
 url: https://github.com/apexcharts/apexcharts.js
@@ -243,10 +243,6 @@ Email: <a href="info@apexcharts.com">info@apexcharts.com</a>
 Twitter: <a href="https://twitter.com/apexcharts">@apexcharts</a>
 
 Facebook: <a href="https://facebook.com/apexcharts">fb.com/apexcharts</a>
-
-## Dependency
-
-ApexCharts uses <a href="https://svgdotjs.github.io/" target="_blank">SVG.js</a> for drawing shapes, animations, applying svg filters, and a lot more under the hood. The library is bundled in the final build file, so you don't need to include it.
 
 ## License
 

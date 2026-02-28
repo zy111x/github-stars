@@ -1,6 +1,6 @@
 ---
 project: solidtime
-stars: 8156
+stars: 8175
 description: |-
     Modern open-source time-tracking app
 url: https://github.com/solidtime-io/solidtime
@@ -44,6 +44,8 @@ If you have a **feature request**, please [**create a discussion**](https://gith
 ## Contributing
 
 Please open an issue or start a discussion and wait for approval before submitting a pull request. This does not apply to tiny fixes or changes however, please keep in mind that we might not merge PRs for various reasons. 
+
+**If you submit an AI slop pull request (especially without following the proper procedure), you will be banned from future contributions to solidtime.**
 
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) before sumbitting a Pull Request.
 

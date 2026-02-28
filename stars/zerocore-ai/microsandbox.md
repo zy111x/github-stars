@@ -1,6 +1,6 @@
 ---
 project: microsandbox
-stars: 4820
+stars: 4869
 description: |-
     opensource self-hosted sandboxes for ai agents
 url: https://github.com/zerocore-ai/microsandbox

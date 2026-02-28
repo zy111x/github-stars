@@ -1,6 +1,6 @@
 ---
 project: pezzo
-stars: 3187
+stars: 3191
 description: |-
     🕹️ Open-source, developer-first LLMOps platform designed to streamline prompt design, version management, instant delivery, collaboration, troubleshooting, observability and more.
 url: https://github.com/pezzolabs/pezzo

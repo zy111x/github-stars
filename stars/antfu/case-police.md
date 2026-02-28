@@ -1,6 +1,6 @@
 ---
 project: case-police
-stars: 1418
+stars: 1421
 description: |-
     🚨 Make the case correct, PLEASE!
 url: https://github.com/antfu/case-police
@@ -134,7 +134,7 @@ console.log(something.Uri.path)
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
+    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg' alt='Sponsors' />
   </a>
 </p>
 

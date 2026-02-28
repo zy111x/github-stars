@@ -1,6 +1,6 @@
 ---
 project: tools
-stars: 1423
+stars: 1449
 description: |-
     Assorted useful tools, almost entirely generated using LLMs
 url: https://github.com/simonw/tools

@@ -1,6 +1,6 @@
 ---
 project: python.js
-stars: 190
+stars: 189
 description: |-
     Call python code from node.js
 url: https://github.com/monkeycz/python.js

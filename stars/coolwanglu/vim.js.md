@@ -1,6 +1,6 @@
 ---
 project: vim.js
-stars: 4453
+stars: 4451
 description: |-
     JavaScript port of Vim
 url: https://github.com/coolwanglu/vim.js

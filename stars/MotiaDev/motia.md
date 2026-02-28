@@ -1,15 +1,15 @@
 ---
 project: motia
-stars: 15100
+stars: 15129
 description: |-
     Multi-Language Backend Framework that unifies APIs, background jobs, queues, workflows, streams, and AI agents with a single core primitive with built-in observability and state management.
 url: https://github.com/MotiaDev/motia
 ---
 
 > [!IMPORTANT]
-> 🚀 **A brand new engine is now powering Motia and supercharged its speed & scalability. It's currently in alpha.**
+> 🚀 **Motia 1.0-RC is here — now powered by the [iii engine](https://iii.dev), a Rust-based runtime that manages queues, state, streams, cron, and observability through a single `iii-config.yaml`.**
 >
-> **[📬 Signup to be the first to get notified about future releases](https://forms.gle/24iCHL9yAk1i6LDc6) → https://forms.gle/24iCHL9yAk1i6LDc6**
+> **[📖 Migration Guide (v0.17 → v1.0)](https://motia.dev/docs/getting-started/migration-guide)** · **[🚀 Quick Start](https://motia.dev/docs/getting-started/quick-start)**
 
 <a href="https://motia.dev">
   <img src="assets/github-readme-banner.png" alt="Motia Banner" width="100%">
@@ -25,10 +25,10 @@ url: https://github.com/MotiaDev/motia
 </p>
 
 <p align="center">
-  <strong>🔥 The Unified Backend Framework That Eliminates Runtime Fragmentation 🔥</strong>
+  <strong>Build production-grade backends with a single primitive</strong>
 </p>
 <p align="center">
-  <em>APIs, background jobs, queueing, streaming, states, workflows, AI agents, observability, scaling, and deployment all in one system. JavaScript, TypeScript, Python, and more in a single core primitive</em>
+  <em>APIs, background jobs, workflows, AI agents, streaming, state management, and observability — unified in one framework. TypeScript, JavaScript, and Python.</em>
 </p>
 
 <p align="center">
@@ -60,11 +60,26 @@ url: https://github.com/MotiaDev/motia
 
 ## 🚀 Create your first Motia App
 
-Get started in seconds:
+Install the CLI:
 
 ```bash
-npx motia@latest create
+brew tap MotiaDev/tap
+brew install motia-cli
 ```
+
+Or via shell script:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/MotiaDev/motia-cli/main/install.sh | sh
+```
+
+Then create a project:
+
+```bash
+motia-cli create my-app
+```
+
+> 📖 **[Full quickstart guide →](https://www.motia.dev/docs/getting-started/quick-start)**
 
 ---
 
@@ -88,7 +103,7 @@ To read more about this, check out our **[manifesto](https://motia.dev/manifesto
 
 A Step is just a file with a `config` and a `handler`. Motia auto-discovers these files and connects them automatically.
 
-Here's a simple example of two Steps working together: an API Step that enqueues an event, and an Event Step that processes it.
+Here's a simple example of two Steps working together: an HTTP Step that enqueues a message, and a Queue Step that processes it.
 
 <details open>
 <summary><b>TypeScript</b></summary>
@@ -184,45 +199,106 @@ module.exports = { config, handler };
 
 </details>
 
+<details>
+<summary><b>Python</b></summary>
+
+```python
+# steps/send_message_step.py
+config = {
+    "name": "SendMessage",
+    "triggers": [
+        {
+            "type": "http",
+            "method": "POST",
+            "path": "/messages",
+        }
+    ],
+    "enqueues": ["message.sent"],
+}
+
+
+async def handler(req, ctx):
+    await ctx.enqueue({
+        "topic": "message.sent",
+        "data": {"text": req.body.get("text")},
+    })
+    return {"status": 200, "body": {"ok": True}}
+```
+
+```python
+# steps/process_message_step.py
+config = {
+    "name": "ProcessMessage",
+    "triggers": [
+        {
+            "type": "queue",
+            "topic": "message.sent",
+        }
+    ],
+}
+
+
+async def handler(input, ctx):
+    ctx.logger.info("Processing message", input)
+```
+
+</details>
+
 👉 With just two files, you've built an **API endpoint**, a **queue**, and a **worker**. No extra frameworks required.
 
 **[Learn more about Steps →](https://motia.dev/docs/concepts/steps)**
 
 [![Motia combines APIs, background queues, and AI agents into one system](assets/github-readme-banner.gif)](https://motia.dev)
 
-## 💻 Remix your own Motia App in Replit
-[![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit&style=for-the-badge)](https://replit.com/@motiadev/motia)
-
 ## 🚀 Quickstart
 
 Get Motia project up and running in **under 60 seconds**:
 
-### 1. Bootstrap a New Motia Project
+### 0. Prerequisites
+
+- **Node.js 18+** — for TypeScript/JavaScript Steps
+- **Python 3** — optional, for Python Steps
+
+### 1. Install the Motia CLI
 
 ```bash
-npx motia@latest create   # runs the interactive terminal
+brew tap MotiaDev/tap
+brew install motia-cli
 ```
 
-Follow the prompts to pick a template, project name, and language.
-![motia-terminal](assets/motia-terminal.gif)
-
-### 2. Start the Workbench
-
-Inside your new project folder, launch the dev server:
+Or via shell script:
 
 ```bash
-npm run dev # ➜ http://localhost:3000
+curl -fsSL https://raw.githubusercontent.com/MotiaDev/motia-cli/main/install.sh | sh
+```
+
+### 2. Bootstrap a New Motia Project
+
+```bash
+motia-cli create my-app
+```
+
+The CLI auto-detects and installs the **iii engine** if it's not already on your system.
+
+Follow the prompts to pick a language and template.
+![motia-terminal](assets/motia-terminal.gif)
+
+### 3. Start the iii Engine
+
+Inside your new project folder (the `iii-config.yaml` was generated by the `create` command above), start the iii engine:
+
+```bash
+iii -c iii-config.yaml
 ```
 
 **That's it!** You have:
 - ✅ REST APIs with validation
-- ✅ Visual debugger & tracing  
 - ✅ Multi-language support
 - ✅ Event-driven architecture
 - ✅ Zero configuration
 - ✅ AI development guides included (Cursor, OpenCode, Codex, and more)
 
-![new-workbench](assets/new-workbench.png)
+![iii Console Dashboard](https://raw.githubusercontent.com/MotiaDev/motia-docs/main/public/console/dashboard.png)
 
 > 📖 **[Full tutorial in our docs →](https://motia.dev/docs/getting-started/quick-start)**
 
@@ -314,11 +390,11 @@ Feel free to add comments to the issues, or create a new issue if you have a fea
 | Feature | Status | Link | Description |
 | ------- | ------ | ---- | ----------- |
 | Streams: RBAC | ✅ Shipped | [#495](https://github.com/MotiaDev/motia/issues/495) | Add support for RBAC |
-| Streams: Workbench UI | ✅ Shipped | [#497](https://github.com/MotiaDev/motia/issues/497) | Add support for Workbench UI |
+| Streams: iii Console UI | ✅ Shipped | [#497](https://github.com/MotiaDev/motia/issues/497) | Stream visualization in iii Console |
 | Queue Strategies | ✅ Shipped | [#476](https://github.com/MotiaDev/motia/issues/476) | Add support for Queue Strategies |
 | Reactive Steps | ✅ Shipped | [#477](https://github.com/MotiaDev/motia/issues/477) | Add support for Reactive Steps |
 | Point in time triggers | 📅 Planned | [#480](https://github.com/MotiaDev/motia/issues/480) | Add support for Point in time triggers |
-| Workbench plugins | ✅ Shipped | [#481](https://github.com/MotiaDev/motia/issues/481) | Add support for Workbench plugins |
+| Workbench plugins | ⏹️ Sunset | [#481](https://github.com/MotiaDev/motia/issues/481) | Replaced by iii Console |
 | Rewrite core in Rust | ✅ Shipped | [#482](https://github.com/MotiaDev/motia/issues/482) | Rewrite our Core in Rust |
 | Decrease deployment time | ✅ Shipped | [#483](https://github.com/MotiaDev/motia/issues/483) | Decrease deployment time |
 | Built-in database support | 📅 Planned | [#484](https://github.com/MotiaDev/motia/issues/484) | Add support for built-in database |

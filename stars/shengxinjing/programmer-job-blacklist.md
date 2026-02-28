@@ -1,6 +1,6 @@
 ---
 project: programmer-job-blacklist
-stars: 28444
+stars: 28443
 description: |-
     :see_no_evil:程序员找工作黑名单，换工作和当技术合伙人需谨慎啊 更新有赞
 url: https://github.com/shengxinjing/programmer-job-blacklist
@@ -135,6 +135,5 @@ url: https://github.com/shengxinjing/programmer-job-blacklist
 * 我只是记录一下自己看到过的事件，我自己下次换工作的时候防止踩坑，仅此而已
 * 我也没有那么愤世嫉俗，比如我以后换工作，还是会考虑百度阿里的，但是会避免上面出现的坑，比如百度无人车我就不去啦，阿里的其他很多部门还是很棒的，希望到时候不会因为这个名单把我 pass 吧:joy:
 
-> 求star，支持我继续把这个名单维护下去,谢谢支持
 
 

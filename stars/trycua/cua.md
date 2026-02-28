@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 12627
+stars: 12767
 description: |-
     Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).
 url: https://github.com/trycua/cua
@@ -174,7 +174,7 @@ lume run macos-sequoia-vanilla:latest
 
 | Package                                                               | Description                                                |
 | --------------------------------------------------------------------- | ---------------------------------------------------------- |
-| [cuabot](https://cua.ai/docs/cuabot/cuabot)                           | Multi-agent computer-use sandbox CLI                       |
+| [cuabot](https://docs.trycua.com/cuabot/guide/getting-started/introduction) | Multi-agent computer-use sandbox CLI                  |
 | [cua-agent](https://cua.ai/docs/cua/reference/agent-sdk)              | AI agent framework for computer-use tasks                  |
 | [cua-computer](https://cua.ai/docs/cua/reference/computer-sdk)        | SDK for controlling desktop environments                   |
 | [cua-computer-server](https://cua.ai/docs/cua/reference/computer-sdk) | Driver for UI interactions and code execution in sandboxes |

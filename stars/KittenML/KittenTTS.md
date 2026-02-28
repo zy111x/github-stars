@@ -1,6 +1,6 @@
 ---
 project: KittenTTS
-stars: 10430
+stars: 11092
 description: |-
      State-of-the-art TTS model under 25MB 😻 
 url: https://github.com/KittenML/KittenTTS
@@ -13,6 +13,9 @@ url: https://github.com/KittenML/KittenTTS
 
 
 > **🎉 ANNOUNCEMENT:** New version of KittenTTS  is now available to download!
+
+###  [Wanna hear samples? Try the model for free on Hugging Face Spaces by clicking this link](https://huggingface.co/spaces/KittenML/KittenTTS-Demo)
+
 
 
 Kitten TTS is an open-source realistic text-to-speech model with just 15 million parameters, designed for lightweight deployment and high-quality voice synthesis.
@@ -59,7 +62,7 @@ https://github.com/user-attachments/assets/d80120f2-c751-407e-a166-068dd1dd9e8d
 ### Installation
 
 ```
-pip install https://github.com/KittenML/KittenTTS/releases/download/0.8/kittentts-0.8.0-py3-none-any.whl
+pip install https://github.com/KittenML/KittenTTS/releases/download/0.8.1/kittentts-0.8.1-py3-none-any.whl
 ```
 
 
@@ -70,7 +73,7 @@ pip install https://github.com/KittenML/KittenTTS/releases/download/0.8/kittentt
 from kittentts import KittenTTS
 m = KittenTTS("KittenML/kitten-tts-mini-0.8")
 
-audio = m.generate("This high quality TTS model works without a GPU", voice='Jasper' )
+audio = m.generate("This high quality TTS model works without a GPU.", voice='Jasper' )
 
 # available_voices : ['Bella', 'Jasper', 'Luna', 'Bruno', 'Rosie', 'Hugo', 'Kiki', 'Leo']
 

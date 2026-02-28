@@ -1,6 +1,6 @@
 ---
 project: nanobar
-stars: 2826
+stars: 2825
 description: |-
     Very lightweight progress bars. No jQuery
 url: https://github.com/jacoborus/nanobar

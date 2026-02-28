@@ -1,6 +1,6 @@
 ---
 project: beautiful-mermaid
-stars: 7246
+stars: 7925
 description: |-
     null
 url: https://github.com/lukilabs/beautiful-mermaid
@@ -41,12 +41,13 @@ Diagrams are essential for AI-assisted programming. When you're working with an 
 We built `beautiful-mermaid` at [Craft](https://craft.do) to power diagrams in [Craft Agents](https://agents.craft.do). It's fast, beautiful, and works everywhere—from rich UIs to plain terminals.
 
 
-The ASCII rendering engine is based on [mermaid-ascii](https://github.com/AlexanderGrooff/mermaid-ascii) by Alexander Grooff. We ported it from Go to TypeScript and extended it Thank you Alexander for the excellent foundation! (And inspiration that this was possible.)
+The ASCII rendering engine is based on [mermaid-ascii](https://github.com/AlexanderGrooff/mermaid-ascii) by Alexander Grooff. We ported it from Go to TypeScript and extended it. Thank you Alexander for the excellent foundation! (And inspiration that this was possible.)
 
 ## Features
 
-- **5 diagram types** — Flowcharts, State, Sequence, Class, and ER diagrams
+- **6 diagram types** — Flowcharts, State, Sequence, Class, ER, and XY Charts (bar, line, combined)
 - **Dual output** — SVG for rich UIs, ASCII/Unicode for terminals
+- **Synchronous rendering** — No async, no flash. Works with React `useMemo()`
 - **15 built-in themes** — And dead simple to add your own
 - **Full Shiki compatibility** — Use any VS Code theme directly
 - **Live theme switching** — CSS custom properties, no re-render needed
@@ -69,9 +70,9 @@ pnpm add beautiful-mermaid
 ### SVG Output
 
 ```typescript
-import { renderMermaid } from 'beautiful-mermaid'
+import { renderMermaidSVG } from 'beautiful-mermaid'
 
-const svg = await renderMermaid(`
+const svg = renderMermaidSVG(`
   graph TD
     A[Start] --> B{Decision}
     B -->|Yes| C[Action]
@@ -79,12 +80,16 @@ const svg = await renderMermaid(`
 `)
 ```
 
+Rendering is **fully synchronous** — no `await`, no promises. The ELK.js layout engine runs synchronously via a FakeWorker bypass, so you get your SVG string instantly.
+
+Need async? Use `renderMermaidSVGAsync()` — same output, returns a `Promise<string>`.
+
 ### ASCII Output
 
 ```typescript
-import { renderMermaidAscii } from 'beautiful-mermaid'
+import { renderMermaidASCII } from 'beautiful-mermaid'
 
-const ascii = renderMermaidAscii(`graph LR; A --> B --> C`)
+const ascii = renderMermaidASCII(`graph LR; A --> B --> C`)
 ```
 
 ```
@@ -95,19 +100,40 @@ const ascii = renderMermaidAscii(`graph LR; A --> B --> C`)
 └───┘     └───┘     └───┘
 ```
 
-### Browser (Script Tag)
+---
 
-For non-bundled environments, include via CDN:
+## React Integration
 
-```html
-<script src="https://unpkg.com/beautiful-mermaid/dist/beautiful-mermaid.browser.global.js"></script>
-<script>
-  const { renderMermaid, THEMES } = beautifulMermaid;
-  renderMermaid('graph TD; A-->B').then(svg => { ... });
-</script>
+Because rendering is synchronous, you can use `useMemo()` for zero-flash diagram rendering:
+
+```tsx
+import { renderMermaidSVG } from 'beautiful-mermaid'
+
+function MermaidDiagram({ code }: { code: string }) {
+  const { svg, error } = React.useMemo(() => {
+    try {
+      return {
+        svg: renderMermaidSVG(code, {
+          bg: 'var(--background)',
+          fg: 'var(--foreground)',
+          transparent: true,
+        }),
+        error: null,
+      }
+    } catch (err) {
+      return { svg: null, error: err instanceof Error ? err : new Error(String(err)) }
+    }
+  }, [code])
+
+  if (error) return <pre>{error.message}</pre>
+  return <div dangerouslySetInnerHTML={{ __html: svg! }} />
+}
 ```
 
-Also available via [jsDelivr](https://cdn.jsdelivr.net/npm/beautiful-mermaid/dist/beautiful-mermaid.browser.global.js). The bundle exposes `renderMermaid`, `renderMermaidAscii`, `THEMES`, `DEFAULTS`, and `fromShikiTheme` on the global `beautifulMermaid` object.
+**Why this works well:**
+- **No flash** — SVG is computed synchronously during render, not in a useEffect
+- **CSS variables** — Pass `var(--background)` etc. instead of hex colors. The SVG inherits from your app's CSS, so theme switches apply instantly without re-rendering
+- **Memoized** — Only re-renders when `code` changes
 
 ---
 
@@ -120,7 +146,7 @@ The theming system is the heart of `beautiful-mermaid`. It's designed to be both
 Every diagram needs just two colors: **background** (`bg`) and **foreground** (`fg`). That's it. From these two colors, the entire diagram is derived using `color-mix()`:
 
 ```typescript
-const svg = await renderMermaid(diagram, {
+const svg = renderMermaidSVG(diagram, {
   bg: '#1a1b26',  // Background
   fg: '#a9b1d6',  // Foreground
 })
@@ -133,9 +159,12 @@ This is **Mono Mode**—a coherent, beautiful diagram from just two colors. The 
 | Text | `--fg` at 100% |
 | Secondary text | `--fg` at 60% into `--bg` |
 | Edge labels | `--fg` at 40% into `--bg` |
-| Connectors | `--fg` at 30% into `--bg` |
-| Arrow heads | `--fg` at 50% into `--bg` |
+| Faint text | `--fg` at 25% into `--bg` |
+| Connectors | `--fg` at 50% into `--bg` |
+| Arrow heads | `--fg` at 85% into `--bg` |
 | Node fill | `--fg` at 3% into `--bg` |
+| Group header | `--fg` at 5% into `--bg` |
+| Inner strokes | `--fg` at 12% into `--bg` |
 | Node stroke | `--fg` at 20% into `--bg` |
 
 ### Enriched Mode
@@ -143,7 +172,7 @@ This is **Mono Mode**—a coherent, beautiful diagram from just two colors. The 
 For richer themes, you can provide optional "enrichment" colors that override specific derivations:
 
 ```typescript
-const svg = await renderMermaid(diagram, {
+const svg = renderMermaidSVG(diagram, {
   bg: '#1a1b26',
   fg: '#a9b1d6',
   // Optional enrichment:
@@ -166,6 +195,18 @@ All colors are CSS custom properties on the `<svg>` element. This means you can 
 svg.style.setProperty('--bg', '#282a36')
 svg.style.setProperty('--fg', '#f8f8f2')
 // The entire diagram updates immediately
+```
+
+For React apps, pass CSS variable references instead of hex values:
+
+```typescript
+const svg = renderMermaidSVG(diagram, {
+  bg: 'var(--background)',
+  fg: 'var(--foreground)',
+  accent: 'var(--accent)',
+  transparent: true,
+})
+// Theme switches apply automatically via CSS cascade — no re-render needed
 ```
 
 ### Built-in Themes
@@ -191,9 +232,9 @@ svg.style.setProperty('--fg', '#f8f8f2')
 | `one-dark` | Dark | `#282c34` | `#c678dd` |
 
 ```typescript
-import { renderMermaid, THEMES } from 'beautiful-mermaid'
+import { renderMermaidSVG, THEMES } from 'beautiful-mermaid'
 
-const svg = await renderMermaid(diagram, THEMES['tokyo-night'])
+const svg = renderMermaidSVG(diagram, THEMES['tokyo-night'])
 ```
 
 ### Adding Your Own Theme
@@ -206,7 +247,7 @@ const myTheme = {
   fg: '#e0e0e0',
 }
 
-const svg = await renderMermaid(diagram, myTheme)
+const svg = renderMermaidSVG(diagram, myTheme)
 ```
 
 Want richer colors? Add any of the optional enrichments:
@@ -226,7 +267,7 @@ Use **any VS Code theme** directly via Shiki integration. This gives you access 
 
 ```typescript
 import { getSingletonHighlighter } from 'shiki'
-import { renderMermaid, fromShikiTheme } from 'beautiful-mermaid'
+import { renderMermaidSVG, fromShikiTheme } from 'beautiful-mermaid'
 
 // Load any theme from Shiki's registry
 const highlighter = await getSingletonHighlighter({
@@ -236,7 +277,7 @@ const highlighter = await getSingletonHighlighter({
 // Extract diagram colors from the theme
 const colors = fromShikiTheme(highlighter.getTheme('vitesse-dark'))
 
-const svg = await renderMermaid(diagram, colors)
+const svg = renderMermaidSVG(diagram, colors)
 ```
 
 The `fromShikiTheme()` function intelligently maps VS Code editor colors to diagram roles:
@@ -310,6 +351,93 @@ erDiagram
   PRODUCT ||--o{ LINE_ITEM : "is in"
 ```
 
+### Inline Edge Styling
+
+Use `linkStyle` to override edge colors and stroke widths — just like [Mermaid's linkStyle](https://mermaid.js.org/syntax/flowchart.html#styling-links):
+
+```
+graph TD
+  A --> B --> C
+  linkStyle 0 stroke:#ff0000,stroke-width:2px
+  linkStyle default stroke:#888888
+```
+
+|             Syntax              |                 Effect                 |
+| ------------------------------- | -------------------------------------- |
+| `linkStyle 0 stroke:#f00`       | Style a single edge by index (0-based) |
+| `linkStyle 0,2 stroke:#f00`     | Style multiple edges at once           |
+| `linkStyle default stroke:#888` | Default style applied to all edges     |
+
+Index-specific styles override the default. Supported properties: `stroke`, `stroke-width`.
+
+Works in both flowcharts and state diagrams.
+
+### XY Charts
+
+Bar charts, line charts, and combinations — using Mermaid's `xychart-beta` syntax.
+
+**Bar chart:**
+
+```
+xychart-beta
+    title "Monthly Revenue"
+    x-axis [Jan, Feb, Mar, Apr, May, Jun]
+    y-axis "Revenue ($K)" 0 --> 500
+    bar [180, 250, 310, 280, 350, 420]
+```
+
+**Line chart:**
+
+```
+xychart-beta
+    title "User Growth"
+    x-axis [Jan, Feb, Mar, Apr, May, Jun]
+    line [1200, 1800, 2500, 3100, 3800, 4500]
+```
+
+**Combined bar + line:**
+
+```
+xychart-beta
+    title "Sales with Trend"
+    x-axis [Jan, Feb, Mar, Apr, May, Jun]
+    bar [300, 380, 280, 450, 350, 520]
+    line [300, 330, 320, 353, 352, 395]
+```
+
+**Horizontal orientation:**
+
+```
+xychart-beta horizontal
+    title "Language Popularity"
+    x-axis [Python, JavaScript, Java, Go, Rust]
+    bar [30, 25, 20, 12, 8]
+```
+
+**Axis configuration:**
+
+- Categorical x-axis: `x-axis [A, B, C]`
+- Numeric x-axis range: `x-axis 0 --> 100`
+- Axis titles: `x-axis "Category" [A, B, C]`
+- Y-axis range: `y-axis "Score" 0 --> 100`
+
+**Multi-series:** Add multiple `bar` and/or `line` declarations. Each series gets a distinct color from a monochromatic palette derived from the theme's accent color.
+
+### XY Chart Styling
+
+The chart renderer follows a clean, minimal design philosophy inspired by Apple and Craft:
+
+- **Dot grid** — A subtle dot pattern fills the plot area instead of traditional solid grid lines
+- **Rounded bars** — All bar corners are rounded for a modern, polished look
+- **Smooth curves** — Line series use natural cubic spline interpolation, producing mathematically smooth curves through all data points (not straight segments or staircase steps)
+- **Floating labels** — No visible axis lines or tick marks; labels float freely for a clutter-free aesthetic
+- **Drop-shadow lines** — Each line series has a subtle shadow beneath it for depth
+- **Monochromatic palette** — Series 0 uses the theme's accent color; additional series get darker/lighter shades of the same hue with subtle hue drift, adapting automatically to light or dark backgrounds
+- **Interactive tooltips** — When rendered with `interactive: true`, hovering over bars or data points shows value tooltips. Multi-line tooltips appear when multiple series share an x-position
+- **Sparse line dots** — Lines with 12 or fewer data points show data point dots by default for readability
+- **Full theme support** — All 15 built-in themes (and custom themes) apply to charts. The accent color drives the entire series color palette
+- **Live theme switching** — Chart series colors are CSS custom properties (`--xychart-color-N`), so theme changes apply instantly without re-rendering
+
 ---
 
 ## ASCII Output
@@ -317,13 +445,13 @@ erDiagram
 For terminal environments, CLI tools, or anywhere you need plain text, render to ASCII or Unicode box-drawing characters:
 
 ```typescript
-import { renderMermaidAscii } from 'beautiful-mermaid'
+import { renderMermaidASCII } from 'beautiful-mermaid'
 
 // Unicode mode (default) — prettier box drawing
-const unicode = renderMermaidAscii(`graph LR; A --> B`)
+const unicode = renderMermaidASCII(`graph LR; A --> B`)
 
 // Pure ASCII mode — maximum compatibility
-const ascii = renderMermaidAscii(`graph LR; A --> B`, { useAscii: true })
+const ascii = renderMermaidASCII(`graph LR; A --> B`, { useAscii: true })
 ```
 
 **Unicode output:**
@@ -347,21 +475,33 @@ const ascii = renderMermaidAscii(`graph LR; A --> B`, { useAscii: true })
 ### ASCII Options
 
 ```typescript
-renderMermaidAscii(diagram, {
+renderMermaidASCII(diagram, {
   useAscii: false,      // true = ASCII, false = Unicode (default)
   paddingX: 5,          // Horizontal spacing between nodes
   paddingY: 5,          // Vertical spacing between nodes
   boxBorderPadding: 1,  // Padding inside node boxes
+  colorMode: 'auto',    // 'none' | 'auto' | 'ansi16' | 'ansi256' | 'truecolor' | 'html'
+  theme: { ... },       // Partial<AsciiTheme> — override default colors
 })
 ```
+
+### ASCII XY Charts
+
+XY charts render to ASCII with dedicated chart-drawing characters:
+
+- **Bar charts** — `█` blocks (Unicode) or `#` (ASCII mode)
+- **Line charts** — Staircase routing with rounded corners: `╭╮╰╯│─` (Unicode) or `+|-` (ASCII)
+- **Multi-series** — Each series gets a distinct ANSI color from the theme's accent palette
+- **Legends** — Automatically shown when multiple series are present
+- **Horizontal charts** — Fully supported with categories on the y-axis
 
 ---
 
 ## API Reference
 
-### `renderMermaid(text, options?): Promise<string>`
+### `renderMermaidSVG(text, options?): string`
 
-Render a Mermaid diagram to SVG. Auto-detects diagram type.
+Render a Mermaid diagram to SVG. Synchronous. Auto-detects diagram type.
 
 **Parameters:**
 - `text` — Mermaid source code
@@ -371,8 +511,8 @@ Render a Mermaid diagram to SVG. Auto-detects diagram type.
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `bg` | `string` | `#FFFFFF` | Background color |
-| `fg` | `string` | `#27272A` | Foreground color |
+| `bg` | `string` | `#FFFFFF` | Background color (or CSS variable) |
+| `fg` | `string` | `#27272A` | Foreground color (or CSS variable) |
 | `line` | `string?` | — | Edge/connector color |
 | `accent` | `string?` | — | Arrow heads, highlights |
 | `muted` | `string?` | — | Secondary text, labels |
@@ -380,8 +520,20 @@ Render a Mermaid diagram to SVG. Auto-detects diagram type.
 | `border` | `string?` | — | Node stroke color |
 | `font` | `string` | `Inter` | Font family |
 | `transparent` | `boolean` | `false` | Render with transparent background |
+| `padding` | `number` | `40` | Canvas padding in px |
+| `nodeSpacing` | `number` | `24` | Horizontal spacing between sibling nodes |
+| `layerSpacing` | `number` | `40` | Vertical spacing between layers |
+| `componentSpacing` | `number` | `24` | Spacing between disconnected components |
+| `thoroughness` | `number` | `3` | Crossing minimization trials (1-7, higher = better but slower) |
+| `interactive` | `boolean` | `false` | Enable hover tooltips on XY chart bars and data points |
 
-### `renderMermaidAscii(text, options?): string`
+**XY Charts:** Diagrams starting with `xychart-beta` are auto-detected — no separate function needed. The `accent` color option drives the chart series color palette.
+
+### `renderMermaidSVGAsync(text, options?): Promise<string>`
+
+Async version of `renderMermaidSVG()`. Same output, returns a `Promise<string>`. Useful in async server handlers or data loaders.
+
+### `renderMermaidASCII(text, options?): string`
 
 Render a Mermaid diagram to ASCII/Unicode text. Synchronous.
 
@@ -393,6 +545,12 @@ Render a Mermaid diagram to ASCII/Unicode text. Synchronous.
 | `paddingX` | `number` | `5` | Horizontal node spacing |
 | `paddingY` | `number` | `5` | Vertical node spacing |
 | `boxBorderPadding` | `number` | `1` | Inner box padding |
+| `colorMode` | `string` | `'auto'` | `'none'`, `'auto'`, `'ansi16'`, `'ansi256'`, `'truecolor'`, or `'html'` |
+| `theme` | `Partial<AsciiTheme>` | — | Override default colors for ASCII output |
+
+### `parseMermaid(text): MermaidGraph`
+
+Parse Mermaid source into a structured graph object (for custom processing).
 
 ### `fromShikiTheme(theme): DiagramColors`
 

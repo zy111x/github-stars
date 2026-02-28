@@ -1,6 +1,6 @@
 ---
 project: agents-kit
-stars: 9
+stars: 10
 description: |-
     shadcn CLI compatible React components for LLM Apps. Works perfectly with Vercel AI SDK.
 url: https://github.com/morph-data/agents-kit

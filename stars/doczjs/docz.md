@@ -1,6 +1,6 @@
 ---
 project: docz
-stars: 23647
+stars: 23650
 description: |-
     ✍ It has never been so easy to document your things!
 url: https://github.com/doczjs/docz

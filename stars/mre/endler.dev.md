@@ -1,6 +1,6 @@
 ---
 project: endler.dev
-stars: 110
+stars: 109
 description: |-
     null
 url: https://github.com/mre/endler.dev

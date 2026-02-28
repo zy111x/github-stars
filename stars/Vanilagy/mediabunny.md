@@ -1,6 +1,6 @@
 ---
 project: mediabunny
-stars: 5262
+stars: 5319
 description: |-
     Pure TypeScript media toolkit for reading, writing, and converting video and audio files, directly in the browser.
 url: https://github.com/Vanilagy/mediabunny
@@ -45,6 +45,10 @@ Mediabunny is a JavaScript library for reading, writing, and converting media fi
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://screen.studio/" target="_blank" rel="sponsored">
     <img src="./docs/public/sponsors/screen-studio.webp" width="60" height="60" alt="Screen Studio">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.tella.com/" target="_blank" rel="sponsored">
+    <img src="./docs/public/sponsors/tella.svg" width="60" height="60" alt="Tella">
   </a>
 </div>
 

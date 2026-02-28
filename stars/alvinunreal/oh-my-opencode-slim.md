@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 1553
+stars: 1728
 description: |-
     Slimmed, cleaned and fine-tuned oh-my-opencode fork, consumes much less tokens
 url: https://github.com/alvinunreal/oh-my-opencode-slim

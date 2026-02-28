@@ -1,6 +1,6 @@
 ---
 project: sub2api
-stars: 1896
+stars: 2379
 description: |-
     Sub2API-CRS2 一站式开源中转服务，让 Claude、Openai 、Gemini、Antigravity订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。
 url: https://github.com/Wei-Shaw/sub2api
@@ -370,6 +370,12 @@ default:
   api_key_prefix: "sk-"
   rate_multiplier: 1.0
 ```
+
+### Sora Status (Temporarily Unavailable)
+
+> ⚠️ Sora-related features are temporarily unavailable due to technical issues in upstream integration and media delivery.
+> Please do not rely on Sora in production at this time.
+> Existing `gateway.sora_*` configuration keys are reserved and may not take effect until these issues are resolved.
 
 Additional security-related options are available in `config.yaml`:
 
