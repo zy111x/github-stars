@@ -1,6 +1,6 @@
 ---
 project: Modern-CPP-Programming
-stars: 14778
+stars: 14804
 description: Modern C++ Programming Course (C++03/11/14/17/20/23/26)
 url: https://github.com/federico-busato/Modern-CPP-Programming
 ---
@@ -37,6 +37,7 @@ Table of Contents
 -   Topics in Details
 -   Reporting Bugs 🐛 and Contributing
 -   Where the Course has been used
+-   License
 -   Author
 
 CHAPTERS
@@ -513,6 +514,14 @@ Where the Course has been used
 The **Modern C++ Programming** course was created in 2018 and adopted by the University of Verona, Italy. It is taught as part of the Bachelor's and Master's degree programmes in Computer Science, for three and two years respectively. The course has also been used to train interns at NVIDIA.
 
 _Have you adopted the course, or are you interested in using it in certain contexts?_ If so, please get in touch so that I can keep track of usage. I'm also willing to share the LaTeX source code (the Tyst version will be open-sourced on GitHub soon).
+
+License
+-------
+
+This repository is dual-licensed:
+
+-   **Course Content:** All written materials, slides, and images are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+-   **Source Code:** All code examples and scripts are licensed under the MIT License.
 
 Author
 ------
