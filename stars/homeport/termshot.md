@@ -1,6 +1,6 @@
 ---
 project: termshot
-stars: 727
+stars: 731
 description: |-
     Creates screenshots based on terminal command output
 url: https://github.com/homeport/termshot

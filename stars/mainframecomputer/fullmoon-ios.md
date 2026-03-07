@@ -1,6 +1,6 @@
 ---
 project: fullmoon-ios
-stars: 2220
+stars: 2222
 description: |-
     chat with private and local large language models
 url: https://github.com/mainframecomputer/fullmoon-ios

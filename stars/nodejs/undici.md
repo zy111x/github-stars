@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 7441
+stars: 7449
 description: |-
     An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici
@@ -111,7 +111,7 @@ const response = await fetch('https://api.example.com/data');
 - Superior performance, especially with `undici.request`
 - HTTP/1.1 pipelining support
 - Custom interceptors and middleware
-- Advanced features like `ProxyAgent`, `MockAgent`
+- Advanced features like `ProxyAgent`, `Socks5Agent`, `MockAgent`
 
 **Cons:**
 - Additional dependency to manage
@@ -130,7 +130,7 @@ const response = await fetch('https://api.example.com/data');
 #### Use Undici Module When:
 - You need the latest undici features and performance improvements
 - You require advanced connection pooling configuration
-- You need APIs not available in the built-in fetch (`ProxyAgent`, `MockAgent`, etc.)
+- You need APIs not available in the built-in fetch (`ProxyAgent`, `Socks5Agent`, `MockAgent`, etc.)
 - Performance is critical (use `undici.request` for maximum speed)
 - You want better error handling and debugging capabilities
 - You need HTTP/1.1 pipelining or advanced interceptors

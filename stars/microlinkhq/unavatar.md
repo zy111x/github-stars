@@ -1,6 +1,6 @@
 ---
 project: unavatar
-stars: 1389
+stars: 1398
 description: |-
     Get unified user avatar from social networks, including Instagram, SoundCloud, Telegram, Twitter, YouTube & more.
 url: https://github.com/microlinkhq/unavatar
@@ -15,6 +15,7 @@ url: https://github.com/microlinkhq/unavatar
   - [JSON](#json)
 - [Pricing](#pricing)
 - [Providers](#providers)
+  - [Apple Music](#apple-music)
   - [Bluesky](#bluesky)
   - [DeviantArt](#deviantart)
   - [Dribbble](#dribbble)
@@ -27,6 +28,7 @@ url: https://github.com/microlinkhq/unavatar
   - [Microlink](#microlink)
   - [OnlyFans](#onlyfans)
   - [OpenStreetMap](#openstreetmap)
+  - [Patreon](#patreon)
   - [Reddit](#reddit)
   - [SoundCloud](#soundcloud)
   - [Spotify](#spotify)
@@ -61,7 +63,7 @@ It's proudly powered by [microlink.io](https://microlink.io), the headless brows
 
 The service is exposed in **unavatar.io** via provider endpoints:
 
-- an **email**: [unavatar.io/gravatar/sindresorhus@gmail.com](https://unavatar.io/gravatar/sindresorhus@gmail.com)
+- an **email**: [unavatar.io/gravatar/hello@microlink.io](https://unavatar.io/gravatar/hello@microlink.io)
 - an **username**: [unavatar.io/github/kikobeats](https://unavatar.io/github/kikobeats)
 - a **domain**: [unavatar.io/google/reddit.com](https://unavatar.io/google/reddit.com)
 
@@ -77,7 +79,7 @@ Range: from `'1h'` to `'28d'`
 
 It determines the maximum quantity of time an avatar is considered fresh.
 
-e.g., https://unavatar.io/kikobeats?ttl=1h
+e.g., [unavatar.io/github/kikobeats?ttl=1h](https://unavatar.io/github/kikobeats?ttl=1h)
 
 When you look up for a user avatar for the very first time, the service will determine it and cache it respecting TTL value.
 
@@ -91,19 +93,19 @@ When it can't be possible to get a user avatar, a fallback image is returned ins
 
 You can get one from **boringavatars.com**:
 
-e.g., https://unavatar.io/github/37t?fallback=https://source.boringavatars.com/marble/120/1337_user?colors=264653r,2a9d8f,e9c46a,f4a261,e76f51
+e.g., [unavatar.io/github/37t?fallback=https://source.boringavatars.com/marble/120/1337_user?colors=264653r,2a9d8f,e9c46a,f4a261,e76f51](https://unavatar.io/github/37t?fallback=https://source.boringavatars.com/marble/120/1337_user?colors=264653r,2a9d8f,e9c46a,f4a261,e76f51)
 
 or **avatar.vercel.sh**:
 
-e.g., https://unavatar.io/github/37t?fallback=https://avatar.vercel.sh/37t?size=400
+e.g., [unavatar.io/github/37t?fallback=https://avatar.vercel.sh/37t?size=400](https://unavatar.io/github/37t?fallback=https://avatar.vercel.sh/37t?size=400)
 
 or a static image:
 
-e.g., https://unavatar.io/github/37t?fallback=https://avatars.githubusercontent.com/u/66378906?v=4
+e.g., [unavatar.io/github/37t?fallback=https://avatars.githubusercontent.com/u/66378906?v=4](https://unavatar.io/github/37t?fallback=https://avatars.githubusercontent.com/u/66378906?v=4)
 
 or even a base64 encoded image. This allows you to return a transparent, base64 encoded 1x1 pixel GIF, which can be useful when you want to use your own background colour or image as a fallback.
 
-e.g., https://unavatar.io/github/37t?fallback=data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+e.g., [unavatar.io/github/37t?fallback=data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==](https://unavatar.io/github/37t?fallback=data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)
 
 You can pass `fallback=false` to explicitly disable this behavior. In this case, a *404 Not Found* HTTP status code will returned when is not possible to get the user avatar.
 
@@ -115,7 +117,7 @@ This is in this way to make easier consume the service from HTML markup.
 
 In case you want to get a JSON payload as response, just pass `json=true`:
 
-e.g., https://unavatar.io/kikobeats?json
+e.g., [unavatar.io/github/kikobeats?json](https://unavatar.io/github/kikobeats?json)
 
 ## Pricing
 
@@ -153,43 +155,7 @@ To upgrade, visit [unavatar.io/checkout](https://unavatar.io/checkout). After co
 
 ## Providers
 
-The providers are grouped based on which kind of input they can resolve.
-
-Based on that, a subset of providers will be used for resolving the user query, being the avatar resolved the fastest provider that resolve the query successfully.
-
-Alternatively, you can query for an individual provider.
-
-| Provider                        | email | username | domain | phone |
-| ------------------------------- | :---: | :------: | :----: | :---: |
-| [Apple Music](#apple-music)     |       |    ✓     |        |       |
-| [Bluesky](#bluesky)             |       |    ✓     |        |       |
-| [DeviantArt](#deviantart)       |       |    ✓     |        |       |
-| [Dribbble](#dribbble)           |       |    ✓     |        |       |
-| [DuckDuckGo](#duckduckgo)       |       |          |   ✓    |       |
-| [GitHub](#github)               |       |    ✓     |        |       |
-| [GitLab](#gitlab)               |       |    ✓     |        |       |
-| [Google](#google)               |       |          |   ✓    |       |
-| [Gravatar](#gravatar)           |   ✓   |          |        |       |
-| [Instagram](#instagram)         |       |    ✓     |        |       |
-| [Microlink](#microlink)         |       |          |   ✓    |       |
-| [OnlyFans](#onlyfans)           |       |    ✓     |        |       |
-| [OpenStreetMap](#openstreetmap) |       |    ✓     |        |       |
-| [Patreon](#patreon)             |       |    ✓     |        |       |
-| [Reddit](#reddit)               |       |    ✓     |        |       |
-| [SoundCloud](#soundcloud)       |       |    ✓     |        |       |
-| [Spotify](#spotify)             |       |    ✓     |        |       |
-| [Substack](#substack)           |       |    ✓     |        |       |
-| [Telegram](#telegram)           |       |    ✓     |        |       |
-| [TikTok](#tiktok)               |       |    ✓     |        |       |
-| [Twitch](#twitch)               |       |    ✓     |        |       |
-| [Vimeo](#vimeo)                 |       |    ✓     |        |       |
-| [WhatsApp](#whatsapp)           |       |          |        |   ✓   |
-| [X/Twitter](#xtwitter)          |       |    ✓     |        |       |
-| [YouTube](#youtube)             |       |    ✓     |        |       |
-
 ### Apple Music
-
-**supported**: `username`
 
 It resolves user avatar against **music.apple.com**.
 
@@ -199,7 +165,7 @@ The endpoint supports explictiy type as part of the input.
 
 If explicit type is not provided, it searches `artist` and `song` (in that order).
 
-The types supported are:
+Available types:
 
 - artist
   -  by artist name: [unavatar.io/apple-music/artist:daft%20punk](https://unavatar.io/apple-music/artist:daft%20punk)
@@ -213,15 +179,11 @@ The types supported are:
 
 ### Bluesky
 
-**supported**: `username`
-
 It resolves user avatar against **bsky.app**.
 
 e.g., [unavatar.io/bluesky/pfrazee.com](https://unavatar.io/bluesky/pfrazee.com)
 
 ### DeviantArt
-
-**supported**: `username`
 
 It resolves user avatar against **deviantart.com**.
 
@@ -229,15 +191,11 @@ e.g., [unavatar.io/deviantart/spyed](https://unavatar.io/deviantart/spyed)
 
 ### Dribbble
 
-**supported**: `username`
-
 It resolves user avatar against **dribbble.com**.
 
 e.g., [unavatar.io/dribbble/omidnikrah](https://unavatar.io/dribbble/omidnikrah)
 
 ### DuckDuckGo
-
-**supported**: `domain`
 
 It resolves user avatar using **duckduckgo.com**.
 
@@ -245,15 +203,11 @@ e.g., [unavatar.io/duckduckgo/gummibeer.dev](https://unavatar.io/duckduckgo/gumm
 
 ### GitHub
 
-**supported**: `username`
-
 It resolves user avatar against **github.com**.
 
 e.g., [unavatar.io/github/mdo](https://unavatar.io/github/mdo)
 
 ### GitLab
-
-**supported**: `username`
 
 It resolves user avatar against **gitlab.com**.
 
@@ -261,23 +215,17 @@ e.g., [unavatar.io/gitlab/inkscape](https://unavatar.io/gitlab/inkscape)
 
 ### Google
 
-**supported**: `domain`
-
 It resolves user avatar using **google.com**.
 
 e.g., [unavatar.io/google/netflix.com](https://unavatar.io/google/netflix.com)
 
 ### Gravatar
 
-**supported**: `email`
-
 It resolves user avatar against **gravatar.com**.
 
-e.g., [unavatar.io/gravatar/sindresorhus@gmail.com](https://unavatar.io/gravatar/sindresorhus@gmail.com)
+e.g., [unavatar.io/gravatar/hello@microlink.io](https://unavatar.io/gravatar/hello@microlink.io)
 
 ### Instagram
-
-**supported**: `username`
 
 It resolves user avatar against **instagram.com**.
 
@@ -285,23 +233,17 @@ e.g., [unavatar.io/instagram/willsmith](https://unavatar.io/instagram/willsmith)
 
 ### Microlink
 
-**supported**: `domain`
-
 It resolves user avatar using **microlink.io**.
 
 e.g., [unavatar.io/microlink/microlink.io](https://unavatar.io/microlink/microlink.io)
 
 ### OnlyFans
 
-**supported**: `username`
-
 It resolves user avatar using **onlyfans.com**.
 
 e.g., [unavatar.io/onlyfans/amandaribas](https://unavatar.io/onlyfans/amandaribas)
 
 ### OpenStreetMap
-
-**supported**: `username`
 
 It resolves user avatar using **openstreetmap.org**.
 
@@ -312,15 +254,11 @@ The input accepts:
 
 ### Patreon
 
-**supported**: `username`
-
 It resolves user avatar against **patreon.com**.
 
 e.g., [unavatar.io/patreon/kikobeats](https://unavatar.io/patreon/kikobeats)
 
 ### Reddit
-
-**supported**: `username`
 
 It resolves user avatar against **reddit.com**.
 
@@ -328,15 +266,11 @@ e.g., [unavatar.io/reddit/kikobeats](https://unavatar.io/reddit/kikobeats)
 
 ### SoundCloud
 
-**supported**: `username`
-
 It resolves user avatar against **soundcloud.com**.
 
 e.g., [unavatar.io/soundcloud/gorillaz](https://unavatar.io/soundcloud/gorillaz)
 
 ### Spotify
-
-**supported**: `username`
 
 It resolves user avatar against **open.spotify.com**.
 
@@ -346,7 +280,7 @@ The endpoint supports explictiy type as part of the input.
 
 If explicit type is not provided, it defaults to `user`.
 
-The types supported are:
+Available types:
 
 - `user`: [unavatar.io/spotify/kikobeats](https://unavatar.io/spotify/kikobeats)
 - `artist`: [unavatar.io/spotify/artist:6sFIWsNpZYqbRiDnNOkZCA](https://unavatar.io/spotify/artist:6sFIWsNpZYqbRiDnNOkZCA)
@@ -358,15 +292,11 @@ The types supported are:
 
 ### Substack
 
-**supported**: `username`
-
 It resolves user avatar against **substack.com**.
 
 e.g., [unavatar.io/substack/bankless](https://unavatar.io/substack/bankless)
 
 ### Telegram
-
-**supported**: `username`
 
 It resolves user avatar against **telegram.com**.
 
@@ -374,15 +304,11 @@ e.g., [unavatar.io/telegram/drsdavidsoft](https://unavatar.io/telegram/drsdavids
 
 ### TikTok
 
-**supported**: `username`
-
 It resolves user avatar against **tiktok.com**.
 
 e.g., [unavatar.io/tiktok/carlosazaustre](https://unavatar.io/tiktok/carlosazaustre)
 
 ### Twitch
-
-**supported**: `username`
 
 It resolves user avatar against **twitch.tv**.
 
@@ -390,15 +316,11 @@ e.g., [unavatar.io/twitch/midudev](https://unavatar.io/twitch/midudev)
 
 ### Vimeo
 
-**supported**: `username`
-
 It resolves user avatar against **vimeo.com**.
 
 e.g., [unavatar.io/vimeo/staff](https://unavatar.io/vimeo/staff)
 
 ### WhatsApp
-
-**supported**: `phone`
 
 It resolves user avatar against **whatsapp.com**.
 
@@ -411,19 +333,24 @@ The input supports a URI format `type:id`. When no type is provided, it defaults
 
 ### X/Twitter
 
-**supported**: `username`
-
 It resolves user avatar against **x.com**.
 
 e.g., [unavatar.io/x/kikobeats](https://unavatar.io/x/kikobeats)
 
 ### YouTube
 
-**supported**: `username`
-
 It resolves user avatar against **youtube.com**.
 
 e.g., [unavatar.io/youtube/casey](https://unavatar.io/youtube/casey)
+
+The endpoint supports specific input formats.
+
+If the input starts with `UC` and has 24 characters, it is treated as a channel ID. Otherwise, it is treated as a handle.
+
+Available inputs:
+
+- `username`: [unavatar.io/youtube/casey](https://unavatar.io/youtube/casey) or [unavatar.io/youtube/@casey](https://unavatar.io/youtube/@casey)
+- `channel`: [unavatar.io/youtube/UC_x5XG1OV2P6uZZ5FSM9Ttw](https://unavatar.io/youtube/UC_x5XG1OV2P6uZZ5FSM9Ttw)
 
 ## Response Format
 

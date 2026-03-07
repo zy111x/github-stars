@@ -1,6 +1,6 @@
 ---
 project: countries
-stars: 6181
+stars: 6179
 description: |-
     World countries in JSON, YAML, CSV and XML. Any help is welcome!
 url: https://github.com/mledoze/countries
@@ -260,7 +260,7 @@ Thanks to:
  - @frederik-jacques for the capital cities
  - @fayer for the population, geolocation, demonym and area data
  - @ancosen for his help with the borders data
- - @herrjemand for country names and various fixes
+ - @yackermann for country names and various fixes
  - all the contributors: https://github.com/mledoze/countries/graphs/contributors
 
 ## License

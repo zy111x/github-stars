@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 16389
+stars: 16412
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -33,7 +33,7 @@ It's just a tiny package with no dependencies.
 - Retries failed requests
 - JSON option
 - Timeout support
-- URL prefix option
+- Base URL option
 - Instances with custom defaults
 - Hooks
 - TypeScript niceties (e.g. `.json()` supports generics and defaults to `unknown`, not `any`)
@@ -124,7 +124,27 @@ const user2 = await ky<User>('/api/users/2').json();
 const user3 = await ky('/api/users/3').json<User>();
 
 console.log([user1, user2, user3]);
+```
 
+You can also get the response body as JSON and validate it with a Standard Schema compatible validator (for example, Zod 3.24+). This throws a `SchemaValidationError` when validation fails.
+
+```ts
+import ky, {SchemaValidationError} from 'ky';
+import {z} from 'zod';
+
+const userSchema = z.object({name: z.string()});
+
+try {
+	const user = await ky('/api/user').json(userSchema);
+	console.log(user.name);
+} catch (error) {
+	if (error instanceof SchemaValidationError) {
+		console.error(error.issues);
+	}
+}
+```
+
+```ts
 // Get raw bytes (when supported by the runtime)
 const bytes = await ky('/api/file').bytes();
 console.log(bytes instanceof Uint8Array);
@@ -147,7 +167,7 @@ Type: `string` | `URL` | `Request`
 
 Same as [`fetch` input](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#input).
 
-When using a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) instance as `input`, any URL altering options (such as `prefixUrl`) will be ignored.
+When using a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) instance as `input`, any URL altering options (such as `baseUrl`) will be ignored.
 
 #### options
 
@@ -181,29 +201,55 @@ Accepts any value supported by [`URLSearchParams()`](https://developer.mozilla.o
 
 When passing an object, `undefined` values are automatically filtered out, while `null` values are preserved and converted to the string `'null'`.
 
-##### prefixUrl
+##### baseUrl
 
 Type: `string | URL`
 
-A prefix to prepend to the `input` URL when making the request. It can be any valid URL, either relative or absolute. A trailing slash `/` is optional and will be added automatically, if needed, when it is joined with `input`. Only takes effect when `input` is a string. The `input` argument cannot start with a slash `/` when using this option.
+A base URL to [resolve](https://developer.mozilla.org/en-US/docs/Web/API/URL_API/Resolving_relative_references) the `input` against. When the `input` (after applying the `prefix` option) is only a relative URL, such as `'users'`, `'/users'`,  or `'//my-site.com'`, it will be resolved against the `baseUrl` to determine the destination of the request. Otherwise, the `input` is absolute, such as `'https://my-site.com'`, and it will bypass the `baseUrl`.
 
 Useful when used with [`ky.extend()`](#kyextenddefaultoptions) to create niche-specific Ky-instances.
+
+If the `baseUrl` itself is relative, it will be resolved against the environment's base URL, such as [`document.baseURI`](https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI) in browsers or `location.href` in Deno (see the `--location` flag).
+
+**Tip:** When setting a `baseUrl` that has a path, we recommend that it include a trailing slash `/`, as in `'/api/'` rather than `/api`. This ensures more intuitive behavior for page-relative `input` URLs, such as `'users'` or `'./users'`, where they will _extend_ from the full path of the `baseUrl` rather than _replacing_ its last path segment.
 
 ```js
 import ky from 'ky';
 
 // On https://example.com
 
-const response = await ky('unicorn', {prefixUrl: '/api'});
-//=> 'https://example.com/api/unicorn'
+const response = await ky('users', {baseUrl: '/api/'});
+//=> 'https://example.com/api/users'
 
-const response2 = await ky('unicorn', {prefixUrl: 'https://cats.com'});
-//=> 'https://cats.com/unicorn'
+const response = await ky('/users', {baseUrl: '/api/'});
+//=> 'https://example.com/users'
+```
+
+##### prefix
+
+Type: `string | URL`
+
+A prefix to prepend to the `input` before making the request (and before it is resolved against the `baseUrl`). It can be any valid path or URL, either relative or absolute. A trailing slash `/` is optional and will be added automatically, if needed, when it is joined with `input`. Only takes effect when `input` is a string.
+
+Useful when used with [`ky.extend()`](#kyextenddefaultoptions) to create niche-specific Ky-instances.
+
+*In most cases, you should use the `baseUrl` option instead, as it is more consistent with web standards. However, `prefix` is useful if you want origin-relative `input` URLs, such as `/users`, to be treated as if they were page-relative. In other words, the leading slash of the `input` will essentially be ignored, because the `prefix` will become part of the `input` before URL resolution happens.*
+
+```js
+import ky from 'ky';
+
+// On https://example.com
+
+const response = await ky('users', {prefix: '/api/'});
+//=> 'https://example.com/api/users'
+
+const response = await ky('/users', {prefix: '/api/'});
+//=> 'https://example.com/api/users'
 ```
 
 Notes:
- - After `prefixUrl` and `input` are joined, the result is resolved against the [base URL](https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI) of the page (if any).
- - Leading slashes in `input` are disallowed when using this option to enforce consistency and avoid confusion about how the `input` URL is handled, given that `input` will not follow the normal URL resolution rules when `prefixUrl` is being used, which changes the meaning of a leading slash.
+ - The `prefix` and `input` are joined with a slash `/`, and slashes are normalized at the join boundary by trimming trailing slashes from `prefix` and leading slashes from `input`.
+ - After `prefix` and `input` are joined, the result is resolved against the `baseUrl` option, if present.
 
 ##### retry
 
@@ -240,14 +286,14 @@ The `jitter` option adds random jitter to retry delays to prevent thundering her
 
 The `retryOnTimeout` option determines whether to retry when a request times out. By default, retries are not triggered following a [timeout](#timeout).
 
-The `shouldRetry` option provides custom retry logic that **takes precedence over all other retry checks**. This function is called first, before any other retry validation.
+The `shouldRetry` option provides custom retry logic that **takes precedence over the default retry checks** (`retryOnTimeout`, status code checks, etc.) for retriable methods. It is only called after the retry limit and method checks pass.
 
 **Note:** This is different from the `beforeRetry` hook:
 - `shouldRetry`: Controls WHETHER to retry (called before the retry decision is made)
 - `beforeRetry`: Called AFTER retry is confirmed, allowing you to modify the request
 
 The function receives a state object with the error and retry count (starts at 1 for the first retry), and should return:
-- `true` to force a retry (bypasses `retryOnTimeout`, status code checks, and other validations)
+- `true` to force a retry (bypasses `retryOnTimeout`, status code checks, and other default validations)
 - `false` to prevent a retry (no retry will occur)
 - `undefined` to use the default retry logic (`retryOnTimeout`, status codes, etc.)
 
@@ -349,7 +395,7 @@ If set to `false`, there will be no timeout.
 ##### hooks
 
 Type: `object<string, Function[]>`\
-Default: `{beforeRequest: [], beforeRetry: [], afterResponse: []}`
+Default: `{beforeRequest: [], beforeRetry: [], beforeError: [], afterResponse: []}`
 
 Hooks allow modifications during the request lifecycle. Hook functions may be async and are run serially.
 
@@ -358,11 +404,13 @@ Hooks allow modifications during the request lifecycle. Hook functions may be as
 Type: `Function[]`\
 Default: `[]`
 
-This hook enables you to modify the request right before it is sent. Ky will make no further changes to the request after this. The hook function receives a state object with the normalized request, options, and retry count. You could, for example, modify the `request.headers` here.
+This hook enables you to modify the request right before it is sent. Ky will make no further changes to the request after this. The hook function receives a state object with the normalized request, options, and retry count. You could, for example, modify `request.headers` here.
 
-The `retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between initial requests and retries, which is useful when you need different behavior for retries (e.g., avoiding overwriting headers set in `beforeRetry`).
+The `retryCount` is always `0`, since `beforeRequest` hooks run once before retry handling begins.
 
 The hook can return a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) to replace the outgoing request (remaining hooks will still run with the updated request). It can also return a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) to completely avoid making an HTTP request, in which case remaining `beforeRequest` hooks are skipped. This can be used to mock a request, check an internal cache, etc.
+
+Any error thrown by `beforeRequest` hooks is treated as fatal and will not trigger Ky's retry logic.
 
 ```js
 import ky from 'ky';
@@ -370,12 +418,28 @@ import ky from 'ky';
 const api = ky.extend({
 	hooks: {
 		beforeRequest: [
-			({request, retryCount}) => {
-				// Only set default auth header on initial request, not on retries
-				// (retries may have refreshed token set by beforeRetry)
-				if (retryCount === 0) {
-					request.headers.set('Authorization', 'token initial-token');
-				}
+			({request}) => {
+				request.headers.set('Authorization', 'token initial-token');
+			}
+		]
+	}
+});
+
+const response = await api.get('https://example.com/api/users');
+```
+
+**Modifying the request URL:**
+
+```js
+import ky from 'ky';
+
+const api = ky.extend({
+	hooks: {
+		beforeRequest: [
+			({request}) => {
+				const url = new URL(request.url);
+				url.searchParams.set('token', 'secret-token');
+				return new Request(url, request);
 			}
 		]
 	}
@@ -389,11 +453,11 @@ const response = await api.get('https://example.com/api/users');
 Type: `Function[]`\
 Default: `[]`
 
-This hook enables you to modify the request right before retry. Ky will make no further changes to the request after this. The hook function receives a state object with the normalized request, options, an error instance, and the retry count. You could, for example, modify `request.headers` here.
+This hook enables you to modify the request right before retry. Ky will make no further changes to the request after this. The hook function receives a state object with the normalized request, options, an error instance, and retry count. You could, for example, modify `request.headers` here.
 
 The hook can return a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) to replace the outgoing retry request, or return a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) to skip the retry and use that response instead. **Note:** Returning a request or response skips remaining `beforeRetry` hooks.
 
-The `retryCount` is always `>= 1` since this hook is only called during retries, not on the initial request.
+The `retryCount` is always `>= 1`, since this hook is only called during retries, not on the initial request.
 
 If the request received a response, the error will be of type `HTTPError`. The `Response` object will be available at `error.response`, and the pre-parsed response body will be available at `error.data`. Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will not be an instance of `HTTPError`.
 
@@ -466,19 +530,19 @@ const response = await ky('https://example.com/api', {
 Type: `Function[]`\
 Default: `[]`
 
-This hook enables you to modify any error right before it is thrown. The hook function receives a state object with an error and retry count, and should return an `Error` instance.
+This hook enables you to modify any error right before it is thrown. The hook function receives a state object with the normalized request, options, error, and retry count, and should return an `Error` instance.
 
 This hook is called for all error types, including `HTTPError`, `TimeoutError`, `ForceRetryError` (when retry limit is exceeded via `ky.retry()`), and network errors. Use type guards like `isHTTPError()` or `isTimeoutError()` to handle specific error types.
 
 The `retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between the initial request and retries, which is useful when you need different error handling based on retry attempts (e.g., showing different error messages on the final attempt).
 
 ```js
-import ky, {isHTTPError, isTimeoutError} from 'ky';
+import ky, {isHTTPError} from 'ky';
 
 await ky('https://example.com', {
 	hooks: {
 		beforeError: [
-			({error}) => {
+			({request, options, error}) => {
 				if (isHTTPError(error)) {
 					if (
 						typeof error.data === 'object'
@@ -490,9 +554,8 @@ await ky('https://example.com', {
 					}
 				}
 
-				if (isTimeoutError(error)) {
-					error.message = `Request to ${error.request.url} timed out`;
-				}
+				// `request` and `options` are always available
+				console.log(`Request to ${request.url} failed`, options.context);
 
 				return error;
 			}
@@ -510,7 +573,9 @@ This hook enables you to read and optionally modify the response. The hook funct
 
 You can also force a retry by returning [`ky.retry(options)`](#kyretryoptions). This is useful when you need to retry based on the response body content, even if the response has a successful status code. The retry will respect the `retry.limit` option and be observable in `beforeRetry` hooks.
 
-The `retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between initial requests and retries, which is useful when you need different behavior for retries (e.g., showing a notification only on the final retry).
+Any non-`ky.retry()` error thrown by `afterResponse` hooks is treated as fatal and will not trigger Ky's retry logic.
+
+The `retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between the initial request and retries, which is useful when you need different behavior for retries (e.g., showing a notification only on the final retry).
 
 ```js
 import ky from 'ky';
@@ -689,14 +754,23 @@ User-defined `fetch` function.
 Has to be fully compatible with the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) standard.
 
 Use-cases:
-1. Use custom `fetch` implementations like [`isomorphic-unfetch`](https://www.npmjs.com/package/isomorphic-unfetch).
-2. Use the `fetch` wrapper function provided by some frameworks that use server-side rendering (SSR).
+1. Use the `fetch` wrapper function provided by some frameworks that use server-side rendering (SSR).
+2. Add custom instrumentation or logging to all requests.
 
 ```js
 import ky from 'ky';
-import fetch from 'isomorphic-unfetch';
 
-const json = await ky('https://example.com', {fetch}).json();
+const api = ky.create({
+	fetch: async (request, init) => {
+		const start = performance.now();
+		const response = await fetch(request, init);
+		const duration = performance.now() - start;
+		console.log(`${request.method} ${request.url} - ${response.status} (${Math.round(duration)}ms)`);
+		return response;
+	}
+});
+
+const json = await api('https://example.com').json();
 ```
 
 ##### context
@@ -816,9 +890,9 @@ You can also refer to parent defaults by providing a function to `.extend()`.
 ```js
 import ky from 'ky';
 
-const api = ky.create({prefixUrl: 'https://example.com/api'});
+const api = ky.create({prefix: 'https://example.com/api'});
 
-const usersApi = api.extend((options) => ({prefixUrl: `${options.prefixUrl}/users`}));
+const usersApi = api.extend((options) => ({prefix: `${options.prefix}/users`}));
 
 const response = await usersApi.get('123');
 //=> 'https://example.com/api/users/123'
@@ -836,12 +910,12 @@ import ky from 'ky';
 
 // On https://my-site.com
 
-const api = ky.create({prefixUrl: 'https://example.com/api'});
+const api = ky.create({baseUrl: 'https://example.com/api/'});
 
 const response = await api.get('users/123');
 //=> 'https://example.com/api/users/123'
 
-const response = await api.get('/status', {prefixUrl: ''});
+const response = await api.get('status', {baseUrl: ''});
 //=> 'https://my-site.com/status'
 ```
 
@@ -884,7 +958,7 @@ const text = await ky('https://example.com', options).text();
 
 Force a retry from an `afterResponse` hook.
 
-This allows you to retry a request based on the response content, even if the response has a successful status code. The retry will respect the `retry.limit` option and skip the `shouldRetry` check. The forced retry is observable in `beforeRetry` hooks, where the error will be a `ForceRetryError` with the error name `'ForceRetryError'`.
+This allows you to retry a request based on the response content, even if the response has a successful status code. The retry will respect the `retry.limit` option and skip the `shouldRetry` check. The forced retry is observable in `beforeRetry` hooks, where the error will be a `ForceRetryError`.
 
 #### options
 
@@ -1022,6 +1096,9 @@ Base class for all Ky-specific errors. `HTTPError`, `TimeoutError`, and `ForceRe
 
 You can use `instanceof KyError` to check if an error originated from Ky, or use the `isKyError()` type guard for cross-realm compatibility and TypeScript type narrowing.
 
+> [!NOTE]
+> `SchemaValidationError` is intentionally not considered a Ky error. `KyError` covers failures in Ky's HTTP lifecycle (bad status, timeout, retry), while schema validation errors originate from the user-provided schema, not from Ky itself.
+
 ```js
 import ky, {isKyError} from 'ky';
 
@@ -1078,6 +1155,28 @@ await ky('https://example.com', {
 ```
 
 ⌨️ **TypeScript:** Accepts an optional [type parameter](https://www.typescriptlang.org/docs/handbook/2/generics.html), which defaults to [`unknown`](https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown), and is passed through to the type of `error.data`.
+
+### SchemaValidationError
+
+The error thrown when [Standard Schema](https://github.com/standard-schema/standard-schema) validation fails in `.json(schema)`. It has an `issues` property with the validation issues from the schema.
+
+This error intentionally does not extend `KyError` because it does not represent a failure in Ky's HTTP lifecycle. The request succeeded; the user's schema rejected the data. As such, it is not matched by `isKyError()`.
+
+```js
+import ky, {SchemaValidationError} from 'ky';
+import {z} from 'zod';
+
+const userSchema = z.object({name: z.string()});
+
+try {
+	const user = await ky('/api/user').json(userSchema);
+	console.log(user.name);
+} catch (error) {
+	if (error instanceof SchemaValidationError) {
+		console.error(error.issues);
+	}
+}
+```
 
 ### TimeoutError
 
@@ -1221,7 +1320,6 @@ import {ProxyAgent} from 'undici';
 const proxyAgent = new ProxyAgent('http://proxy.example.com:8080');
 
 const response = await ky('https://example.com', {
-	// @ts-expect-error - dispatcher is not in the type definition, but it's passed through to fetch.
 	dispatcher: proxyAgent
 }).json();
 ```
@@ -1235,7 +1333,6 @@ import {EnvHttpProxyAgent} from 'undici';
 const proxyAgent = new EnvHttpProxyAgent();
 
 const api = ky.extend({
-	// @ts-expect-error - dispatcher is not in the type definition, but it's passed through to fetch.
 	dispatcher: proxyAgent
 });
 
@@ -1260,7 +1357,6 @@ const agent = new Agent({
 });
 
 const response = await ky('https://example.com', {
-	// @ts-expect-error - dispatcher is not in the type definition, but it's passed through to fetch.
 	dispatcher: agent
 }).json();
 ```
@@ -1277,7 +1373,6 @@ const proxyAgent = new ProxyAgent({
 });
 
 const response = await ky('https://example.com', {
-	// @ts-expect-error - dispatcher is not in the type definition, but it's passed through to fetch.
 	dispatcher: proxyAgent
 }).json();
 ```
@@ -1355,7 +1450,7 @@ This approach keeps your types scoped to where they're needed without polluting 
 
 #### How do I use this in Node.js?
 
-Node.js 18 and later supports `fetch` natively, so you can just use this package directly.
+Node.js supports `fetch` natively, so you can just use this package directly.
 
 #### How do I use this with a web app (React, Vue.js, etc.) that uses server-side rendering (SSR)?
 
@@ -1363,7 +1458,7 @@ Same as above.
 
 #### How do I test a browser library that uses this?
 
-Either use a test runner that can run in the browser, like Mocha, or use [AVA](https://avajs.dev) with `ky-universal`. [Read more.](https://github.com/sindresorhus/ky-universal#faq)
+Use a test runner that can run in the browser, like [Vitest](https://vitest.dev/guide/browser/) or [Playwright](https://playwright.dev).
 
 #### How do I use this without a bundler like Webpack?
 
@@ -1380,17 +1475,13 @@ console.log(json.title);
 </script>
 ```
 
-#### How is it different from [`got`](https://github.com/sindresorhus/got)
+#### How is it different from [`got`](https://github.com/sindresorhus/got)?
 
 Got is maintained by the same people as Ky, so you probably want Ky instead. It's smaller, works in the browser too, and is more stable since it's built on Fetch.
 
 #### How is it different from [`axios`](https://github.com/axios/axios)?
 
-See my answer [here](https://twitter.com/sindresorhus/status/1037763588826398720).
-
-#### How is it different from [`r2`](https://github.com/mikeal/r2)?
-
-See my answer in [#10](https://github.com/sindresorhus/ky/issues/10).
+Axios predates the Fetch API and has a lot of legacy baggage. Ky is built on Fetch, which means it's smaller, more standards-compliant, and works everywhere Fetch does (browsers, Node.js, Bun, Deno). Ky also has a more modern API with better TypeScript support.
 
 #### What does `ky` mean?
 
@@ -1404,7 +1495,7 @@ The latest version of Chrome, Firefox, and Safari.
 
 ## Node.js support
 
-Node.js 18 and later.
+Node.js 22 and later.
 
 ## Related
 

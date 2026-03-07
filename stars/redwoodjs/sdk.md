@@ -1,8 +1,8 @@
 ---
 project: sdk
-stars: 1408
+stars: 1457
 description: |-
-    A simple framework for humans: Server-first React with zero magic. Built to stay understandable.
+    A simple framework for humans Server-first React, running on the Cloudflare platform. Simple to build. Easy to maintain.
 url: https://github.com/redwoodjs/sdk
 ---
 

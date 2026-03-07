@@ -1,6 +1,6 @@
 ---
 project: unspeech
-stars: 76
+stars: 82
 description: |-
     🗣️🔊 Your Text-to-Speech Services, All-in-One.
 url: https://github.com/moeru-ai/unspeech

@@ -1,6 +1,6 @@
 ---
 project: dicebear
-stars: 8102
+stars: 8136
 description: |-
     DiceBear is an avatar library for designers and developers. 🌍
 url: https://github.com/dicebear/dicebear
@@ -32,6 +32,12 @@ Playground, your next avatar is always just a stone's throw away!
 
 [Playground](https://www.dicebear.com/playground) |
 [Documentation](https://www.dicebear.com/introduction)
+
+## License
+
+The source code of DiceBear is released under the **MIT License**.
+
+The avatar styles are based on designs by various artists and may be licensed differently. Please check the `LICENSE` file in each individual package for details.
 
 ## Sponsors
 

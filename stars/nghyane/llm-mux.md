@@ -1,6 +1,6 @@
 ---
 project: llm-mux
-stars: 320
+stars: 326
 description: |-
     AI Gateway: Claude Pro, Copilot, Gemini subscriptions → OpenAI/Anthropic/Gemini APIs. No API keys needed.
 url: https://github.com/nghyane/llm-mux

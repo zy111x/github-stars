@@ -1,6 +1,6 @@
 ---
 project: pear-desktop
-stars: 30917
+stars: 30976
 description: |-
     Pear 🍐 is extension for music player
 url: https://github.com/pear-devs/pear-desktop
@@ -59,6 +59,7 @@ url: https://github.com/pear-devs/pear-desktop
 - [Translation](#translation)
 - [Download](#download)
   - [Arch Linux](#arch-linux)
+  - [Solus](#solus)
   - [MacOS](#macos)
   - [Windows](#windows)
     - [How to install without a network connection? (in Windows)](#how-to-install-without-a-network-connection-in-windows)
@@ -91,6 +92,12 @@ latest version.
 
 Install the [`pear-desktop`](https://aur.archlinux.org/packages/pear-desktop) package from the AUR. For AUR installation instructions, take a look at
 this [wiki page](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages).
+
+### [Solus](https://getsol.us/)
+
+```bash
+sudo eopkg install pear-desktop
+```
 
 ### macOS
 

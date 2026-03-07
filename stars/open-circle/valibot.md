@@ -1,6 +1,6 @@
 ---
 project: valibot
-stars: 8461
+stars: 8478
 description: |-
     The modular and type safe schema library for validating structural data 🤖
 url: https://github.com/open-circle/valibot

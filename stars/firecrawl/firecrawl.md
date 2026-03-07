@@ -1,6 +1,6 @@
 ---
 project: firecrawl
-stars: 86737
+stars: 89182
 description: |-
     🔥 The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data
 url: https://github.com/firecrawl/firecrawl
@@ -31,13 +31,13 @@ url: https://github.com/firecrawl/firecrawl
 
 <div>
   <p align="center">
-    <a href="https://twitter.com/firecrawl_dev">
+    <a href="https://twitter.com/firecrawl">
       <img src="https://img.shields.io/badge/Follow%20on%20X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Follow on X" />
     </a>
     <a href="https://www.linkedin.com/company/104100957">
       <img src="https://img.shields.io/badge/Follow%20on%20LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Follow on LinkedIn" />
     </a>
-    <a href="https://discord.com/invite/gSmWdAkdwd">
+    <a href="https://discord.gg/firecrawl">
       <img src="https://img.shields.io/badge/Join%20our%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join our Discord" />
     </a>
   </p>
@@ -110,10 +110,9 @@ Response:
 |---------|-------------|
 | [**Scrape**](#scraping) | Convert any URL to markdown, HTML, screenshots, or structured JSON |
 | [**Search**](#search) | Search the web and get full page content from results |
-| [**Agent**](#agent) | Automated data gathering, just describe what you need |
-| [**Crawl**](#crawling) | Scrape all URLs of a website with a single request |
 | [**Map**](#map) | Discover all URLs on a website instantly |
-
+| [**Crawl**](#crawling) | Scrape all URLs of a website with a single request |
+| [**Agent**](#agent) | Automated data gathering, just describe what you need |
 ---
 
 ## Scrape

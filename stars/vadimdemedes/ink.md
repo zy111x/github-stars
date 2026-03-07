@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 35278
+stars: 35420
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -49,6 +49,9 @@ Only Ink's methods are documented in this readme.
 ```sh
 npm install ink react
 ```
+
+> [!NOTE]
+> This readme documents the upcoming version of Ink. For the latest stable release, see [Ink on npm](https://www.npmjs.com/package/ink).
 
 ## Usage
 
@@ -150,6 +153,7 @@ render(<Counter />);
   - [`<Transform>`](#transform)
 - [Hooks](#hooks)
   - [`useInput`](#useinputinputhandler-options)
+  - [`usePaste`](#usepastehandler-options)
   - [`useApp`](#useapp)
   - [`useStdin`](#usestdin)
   - [`useStdout`](#usestdout)
@@ -1501,6 +1505,9 @@ That's what the `<Transform>` component does: it gives you an output string of i
 > [!NOTE]
 > `<Transform>` must be applied only to `<Text>` children components and shouldn't change the dimensions of the output; otherwise, the layout will be incorrect.
 
+> [!IMPORTANT]
+> When children use `<Text>` styling props (e.g. `color`, `bold`), the string passed to `transform` will contain [ANSI escape codes](https://en.wikipedia.org/wiki/ANSI_escape_code). If your transform manipulates whitespace or does string operations like `.trim()`, you may need to use ANSI-aware methods (e.g. from [`slice-ansi`](https://github.com/chalk/slice-ansi) or [`strip-ansi`](https://github.com/chalk/strip-ansi)).
+
 ```jsx
 import {render, Transform} from 'ink';
 
@@ -1748,6 +1755,55 @@ Default: `true`
 
 Enable or disable capturing of user input.
 Useful when there are multiple `useInput` hooks used at once to avoid handling the same input several times.
+
+### usePaste(handler, options?)
+
+A React hook that calls `handler` whenever the user pastes text. Bracketed paste mode (`\x1b[?2004h`) is automatically enabled while the hook is active, so pasted text arrives as a single string rather than being misinterpreted as individual key presses.
+
+`usePaste` and `useInput` can be used together in the same component. They operate on separate event channels, so paste content is never forwarded to `useInput` handlers when `usePaste` is active.
+
+```jsx
+import {useInput, usePaste} from 'ink';
+
+const MyInput = () => {
+	useInput((input, key) => {
+		// Only receives typed characters and key events, not pasted text.
+		if (key.return) {
+			// Submit
+		}
+	});
+
+	usePaste((text) => {
+		// Receives the full pasted string, including newlines.
+		console.log('Pasted:', text);
+	});
+
+	return …
+};
+```
+
+#### handler(text)
+
+Type: `Function`
+
+Called with the full pasted string whenever the user pastes text. The string is delivered verbatim — newlines, escape sequences, and other special characters are preserved exactly as pasted.
+
+##### text
+
+Type: `string`
+
+The pasted text.
+
+#### options
+
+Type: `object`
+
+##### isActive
+
+Type: `boolean`\
+Default: `true`
+
+Enable or disable the paste handler. Useful when multiple components use `usePaste` and only one should be active at a time.
 
 ### useApp()
 
@@ -2434,6 +2490,23 @@ render(<MyApp />, {concurrent: true});
 
 > [!NOTE]
 > Concurrent mode changes the timing of renders. Some tests may need to use `act()` to properly await updates. The `concurrent` option only takes effect on the first render for a given stdout. If you need to change the rendering mode, call `unmount()` first.
+
+###### interactive
+
+Type: `boolean`\
+Default: `true` (`false` if in CI (detected via [`is-in-ci`](https://github.com/sindresorhus/is-in-ci)) or `stdout.isTTY` is falsy)
+
+Override automatic interactive mode detection.
+
+By default, Ink detects whether the environment is interactive based on CI detection and `stdout.isTTY`. When non-interactive, Ink skips terminal-specific features like ANSI erase sequences, cursor manipulation, synchronized output, resize handling, and kitty keyboard auto-detection. Only the final frame of non-static output is written at unmount.
+
+Most users should not need to set this option. Use it when you have your own "interactive" detection logic that differs from the built-in behavior.
+
+```jsx
+// Use your own detection logic
+const isInteractive = myCustomDetection();
+render(<MyApp />, {interactive: isInteractive});
+```
 
 ###### kittyKeyboard
 

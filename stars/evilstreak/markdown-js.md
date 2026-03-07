@@ -1,6 +1,6 @@
 ---
 project: markdown-js
-stars: 7695
+stars: 7694
 description: |-
     A Markdown parser for javascript
 url: https://github.com/evilstreak/markdown-js

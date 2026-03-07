@@ -1,6 +1,6 @@
 ---
 project: bm.md
-stars: 511
+stars: 519
 description: |-
     更好用的 Markdown 排版助手｜一键适配微信公众号、网页与图片。
 url: https://github.com/miantiao-me/bm.md

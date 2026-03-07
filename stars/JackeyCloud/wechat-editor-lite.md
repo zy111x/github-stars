@@ -1,6 +1,6 @@
 ---
 project: wechat-editor-lite
-stars: 12
+stars: 13
 description: |-
     null
 url: https://github.com/JackeyCloud/wechat-editor-lite

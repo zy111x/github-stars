@@ -1,6 +1,6 @@
 ---
 project: ark-pixel-font
-stars: 4206
+stars: 4218
 description: |-
     开源的泛中日韩像素字体，黑体风格
 url: https://github.com/TakWolf/ark-pixel-font
@@ -103,7 +103,7 @@ url: https://github.com/TakWolf/ark-pixel-font
 
 ### 字体
 
-使用 [「SIL 开放字体许可证第 1.1 版」](LICENSE-OFL) 授权，保留字体名称「方舟像素 / Ark Pixel」。
+使用 [「SIL 开放字体许可证第 1.1 版」](LICENSE-OFL) 授权。
 
 ### 构建程序
 

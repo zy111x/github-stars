@@ -1,6 +1,6 @@
 ---
 project: Step-Audio
-stars: 4613
+stars: 4619
 description: |-
     null
 url: https://github.com/stepfun-ai/Step-Audio

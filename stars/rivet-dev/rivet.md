@@ -1,6 +1,6 @@
 ---
 project: rivet
-stars: 5083
+stars: 5200
 description: |-
     Rivet Actors are a serverless primitive for stateful workloads. Each actor has built-in state, storage, workflows, scheduling, and WebSockets — everything needed to build the next generation of software.
 url: https://github.com/rivet-dev/rivet

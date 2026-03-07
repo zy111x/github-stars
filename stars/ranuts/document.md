@@ -1,6 +1,6 @@
 ---
 project: document
-stars: 1700
+stars: 1703
 description: |-
     Perform common file preview and editing via the web.
 url: https://github.com/ranuts/document
@@ -8,9 +8,24 @@ url: https://github.com/ranuts/document
 
 # OnlyOffice Web
 
-🌐 **Live Demo**: https://ranuts.github.io/document/
+<p align="center">
+  <a href="https://github.com/ranuts/document/actions/workflows/ci.yml">
+    <img src="https://github.com/ranuts/document/actions/workflows/ci.yml/badge.svg" alt="CI Status">
+  </a>
+  <a href="https://github.com/ranuts/document/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/ranuts/document" alt="License">
+  </a>
+  <a href="https://github.com/ranuts/document/releases">
+    <img src="https://img.shields.io/github/v/release/ranuts/document" alt="Version">
+  </a>
+  <a href="https://ranuts.github.io/document/">
+    <img src="https://img.shields.io/badge/Live-Demo-brightgreen" alt="Live Demo">
+  </a>
+</p>
 
-[English](readme.md) | [中文](readme.zh.md)
+<p align="center">
+  <b>English</b> | <a href="readme.zh.md">中文</a>
+</p>
 
 A local web-based document editor based on OnlyOffice, allowing you to edit documents directly in your browser without server-side processing, ensuring your privacy and security.
 
@@ -32,6 +47,16 @@ A local web-based document editor based on OnlyOffice, allowing you to edit docu
 2. Upload your document files or open from URL
 3. Edit directly in your browser
 4. Download the edited documents
+
+### Offline Usage (PWA)
+
+This application supports offline usage via PWA (Progressive Web App) technology.
+
+1. Visit the editor using a supported browser (Chrome, Edge, etc.) over **HTTPS** (or localhost).
+2. Click the **Install** icon in the address bar to install the app.
+3. Once installed, the editor can be launched from your application menu and will work without an internet connection.
+
+**Note**: Due to browser security restrictions, Service Workers (required for offline support) do not work when opening `index.html` directly from the filesystem (`file://` protocol). You must use a local server or the installed PWA.
 
 ### URL Parameters
 

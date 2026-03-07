@@ -1,6 +1,6 @@
 ---
 project: piku
-stars: 6558
+stars: 6560
 description: |-
     The tiniest PaaS you've ever seen. Piku allows you to do git push deployments to your own servers.
 url: https://github.com/piku/piku

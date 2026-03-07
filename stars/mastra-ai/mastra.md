@@ -1,6 +1,6 @@
 ---
 project: mastra
-stars: 21539
+stars: 21784
 description: |-
     From the team behind Gatsby, Mastra is a framework for building AI-powered applications and agents with a modern TypeScript stack.
 url: https://github.com/mastra-ai/mastra
@@ -75,6 +75,15 @@ Information about the project setup can be found in the [development documentati
 We have an [open community Discord](https://discord.gg/BTYqqHKUrf). Come and say hello and let us know if you have any questions or need any help getting things running.
 
 It's also super helpful if you leave the project a star here at the [top of the page](https://github.com/mastra-ai/mastra)
+
+## Licensing
+
+This repository uses a dual-license model:
+
+- **Apache License 2.0** — The core framework and the vast majority of this codebase is open source under Apache-2.0.
+- **Mastra Enterprise License** — Code in any directory named `ee/` (e.g., `packages/core/src/auth/ee/`) is source-available under the Mastra Enterprise License. These features require a valid enterprise license for production use but can be freely used for development and testing.
+
+See [LICENSE.md](./LICENSE.md) for the full license mapping and [ee/LICENSE](./ee/LICENSE) for the enterprise license terms.
 
 ## Security
 

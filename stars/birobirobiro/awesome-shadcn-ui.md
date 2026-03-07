@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 18879
+stars: 18923
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -25,6 +25,9 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
   <a href="https://shadcnstudio.com/?utm_source=awesome-shadcn-ui&utm_medium=banner&utm_campaign=github" target="_blank">
     <img src="public/sponsors/shadcnstudio.svg" alt="shadcnstudio.com" width="32">
   </a>
+  <a href="https://www.shadcnblocks.com" target="_blank">
+    <img src="public/sponsors/shadcnblocks.svg" alt="shadcnblocks.com" width="32">
+  </a>
 </p>
 
 <p align="center">
@@ -40,6 +43,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | 21st.dev | Open source npm for shadcn/ui components. Also: Dribble for design engineers. Install UI components via shadcn CLI, or publish your own. | [Link](https://21st.dev/) | 2024-12-06 |
 | 8bitcn.com | A set of retro-designed, accessible components and a code distribution platform. Open Source. Open Code. | [Link](https://www.8bitcn.com/) | 2025-04-12 |
 | aceternity-ui | Copy paste the most trending react components without having to worry about styling and animations. | [Link](https://ui.aceternity.com/) | 2024-12-06 |
+| agents-ui | Agents UI is LiveKit’s open source component library built with React and shadcn for designing voice agent interfaces. Start with production-ready defaults, then customize every detail to match your brand. | [Link](https://livekit.io/ui) | 2026-03-04 |
 | animated-header | Vercel-like animated header. | [Link](https://github.com/mehrdadrafiee/animated-header) | 2025-10-20 |
 | animated-tabs | Vercel-like animated tabs. | [Link](https://github.com/mehrdadrafiee/animated-tabs) | 2025-04-06 |
 | assistant-ui | React Components for AI Chat. | [Link](https://github.com/Yonom/assistant-ui) | 2024-09-23 |
@@ -55,9 +59,11 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | buouui | A UI component library and template suite based on shadcn/ui with stunning landing pages, templates, and rich animations. | [Link](https://buouui.com) | 2025-04-06 |
 | bundui | A collection of reusable animated components built with Tailwind CSS and Framer Motion. | [Link](https://bundui.io) | 2024-09-23 |
 | calendar | React/shadcn full calendar like Google Calendar | [Link](https://github.com/charlietlamb/calendar) | 2024-05-03 |
+| calendar-cn | A beautifully crafted calendar component built with shadcn/ui and Tailwind CSS, inspired by Notion Calendar. Week view, dark mode, and more. | [Link](https://github.com/vmnog/calendarcn) | 2026-03-05 |
 | capture-photo | Browser-based React component for camera functionalities in web applications. | [Link](https://github.com/UretzkyZvi/capture-photo) | 2024-05-06 |
 | carouselcn | Copy-paste carousel components and examples for your react apps | [Link](https://github.com/mnove/carouselcn) | 2026-01-27 |
 | cascader-shadcn | A cascading dropdown menu component for selecting hierarchical data like locations, categories, or organizational structures. | [Link](https://github.com/Ademking/cascader-shadcn) | 2025-12-04 |
+| chanhdai-components | A collection of reusable components. Trusted registry for shadcn/ui. | [Link](https://chanhdai.com/components) | 2026-03-01 |
 | clerk-elements | Composable components for building custom UIs on top of Clerk's APIs. | [Link](https://clerk.com/docs/elements/examples/shadcn-ui) | 2024-06-07 |
 | clerk-shadcn-theme | Synchronize Clerk SignIn/SignUp components with shadcn/ui styles. | [Link](https://github.com/stormynight9/clerk-shadcn-theme) | 2024-06-07 |
 | commerce-ui | Components, blocks and examples to build e-commerce storefronts and apps. | [Link](https://github.com/stackzero-labs/ui) | 2025-02-20 |
@@ -266,6 +272,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 
 | Name | Description | Link | Date |
 | ------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ---------- |
+| efferd | ready-to-use shadcn blocks that just work — modern, responsive, and built for speed. | [Link](http://efferd.com/) | 2026-03-05 |
 | more-shadcn | A collection of high-quality, copy-paste components for Svelte 5, built on top of shadcn-svelte. | [Link](https://more-shadcn.noair.fun/) | 2026-01-23 |
 | neobrutalism-vue | A vue-based registry of neobrutalism-styled Tailwind components. | [Link](https://github.com/michaelsieminski/neobrutalism-vue) | 2025-12-04 |
 | registry.directory | A curated directory to discover, preview, and copy shadcn/ui registries. | [Link](https://github.com/rbadillap/registry.directory) | 2025-09-20 |
@@ -392,6 +399,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------- |
 | anonypost | Share your thoughts and experiences anonymously by posting on the platform. Crafted using t3-stack. | [Link](https://github.com/avalynndev/anonypost) | 2024-07-17 |
 | bolhadev | The quickest path to learn English is speaking it regularly. Just find someone to chat with. | [Link](https://bolhadev.chat/) | 2024-06-04 |
+| citeme | AI-powered academic citation generator. Searches 11+ databases and formats in 40+ styles (APA, ABNT, MLA, etc.). Web app, Chrome extension, Google Docs add-on, and Word add-in. | [Link](https://citeme.app) | 2026-03-03 |
 | enjoytown | A free anime, manga, movie, and TV-shows streaming platform. Built with Next.js, shadcn/ui. | [Link](https://github.com/avalynndev/enjoytown) | 2024-06-04 |
 | grade-calculator | A grade calculator/dashboard for students, aiming to provide a better overview of academic performance. | [Link](https://grades.nstr.dev/) | 2024-12-27 |
 | infinitunes | A simple music player web app built using Next.js, shadcn/ui, Tailwind CSS, Drizzle ORM, and more. | [Link](https://github.com/rajput-hemant/infinitunes) | 2024-06-04 |
@@ -440,6 +448,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 
 | Name | Description | Link | Date |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| agentic-react-nextjs-shadcn | Agent-testable SaaS starter built with Next.js 16, shadcn/ui, and Tailwind CSS. Includes accessibility-first components, semantic HTML for AI agent testing, and production-ready patterns. | [Link](https://github.com/iscale-llc/agentic-react-nextjs-shadcn) | 2026-03-03 |
 | astro-erudite | An opinionated, unstyled static blogging template—built with Astro, Tailwind, and shadcn/ui. | [Link](https://github.com/jktrn/astro-erudite) | 2025-10-25 |
 | atomic-crm | Open-source React CRM built on top of Supabase [Demo site](https://marmelab.com/atomic-crm-demo) | [Link](https://github.com/marmelab/atomic-crm) | 2025-09-16 |
 | autoflow | An open source GraphRAG (Knowledge Graph) built on top of TiDB Vector, LlamaIndex, and DSPy. [Demo site](https://tidb.ai). | [Link](https://github.com/pingcap/autoflow) | 2024-12-06 |

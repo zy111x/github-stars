@@ -1,6 +1,6 @@
 ---
 project: etcher
-stars: 33200
+stars: 33248
 description: |-
     Flash OS images to SD cards & USB drives, safely and easily.
 url: https://github.com/balena-io/etcher

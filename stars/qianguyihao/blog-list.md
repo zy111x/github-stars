@@ -1,6 +1,6 @@
 ---
 project: blog-list
-stars: 2662
+stars: 2677
 description: |-
     中文博客琅琊榜，只收录精品独立博客
 url: https://github.com/qianguyihao/blog-list
@@ -28,7 +28,7 @@ url: https://github.com/qianguyihao/blog-list
 
 如果你也在写博客，欢迎进群交流，以文会友：
 
-<img src="https://img.smyhvae.com/202601301933319.JPG" style="zoom:50%;" />
+<img src="https://img.smyhvae.com/202603041156942.JPG" style="zoom:50%;" />
 
 ## 一、中流砥柱
 

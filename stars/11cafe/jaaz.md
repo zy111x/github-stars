@@ -1,6 +1,6 @@
 ---
 project: jaaz
-stars: 5915
+stars: 5943
 description: |-
     The world's first open-source multimodal creative assistant  This is a substitute for Canva and Manus that prioritizes privacy and is usable locally.
 url: https://github.com/11cafe/jaaz
@@ -61,10 +61,6 @@ https://github.com/user-attachments/assets/b7abf987-c65d-49b1-8178-82770873c583
 
 Create Viral Shorts with a Single Sentence
 <video src="https://github.com/user-attachments/assets/1c15e792-098a-4557-b310-d9c223f73442" controls width="100%" />
-
-
-
-
 
 
 ## ✨ Getting started & staying tuned with us.
@@ -195,6 +191,7 @@ VSCode/Cursor Install Extensions：
 `pip install -r requirements.txt`
 
 `python main.py`
+
 
 
 

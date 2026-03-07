@@ -1,6 +1,6 @@
 ---
 project: marktext
-stars: 54091
+stars: 54268
 description: |-
     📝A simple and elegant markdown editor, available for Linux, macOS and Windows.
 url: https://github.com/marktext/marktext
@@ -75,6 +75,9 @@ url: https://github.com/marktext/marktext
 
 <div align="center">
   <sub>Translations:</sub>
+  <a href="docs/i18n/ar.md#readme">
+    <span>:saudi_arabia:</span>
+  </a>
   <a href="docs/i18n/zh_cn.md#readme">
     <span>:cn:</span>
   </a>
@@ -129,7 +132,7 @@ Patreon: Funds will be directly sponsored to Luo Ran (@jocs) who created MarkTex
 Open Collective: All expenses are transparent. The funds will be used for the development and maintenance of MarkText, funding online and offline activities, and acquiring other necessary resources.
 Names and company logos of all sponsors (from both Patreon and Open Collective) will appear on the official website for MarkText and in its README.md file.
 
-**Looking for MarkText-like editing with cloud storage? try Inkio**
+**Looking for MarkText-like editing with cloud storage? try [Inkio](https://inkio.me)**
 
 <a href="https://inkio.me/" target="_blank">
  <img src="https://inkio.me/static/media/logo.35f605dc31b1a0615087.png" width="100">

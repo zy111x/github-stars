@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 3382
+stars: 3399
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -354,6 +354,9 @@ Options:
 
           [default: 100..=103,200..=299]
 
+      --accept-timeouts
+          Accept timed out requests and return exit code 0 when encountering timeouts but not any other errors
+
       --archive <ARCHIVE>
           Web archive to use to provide suggestions for `--suggest`.
 
@@ -476,7 +479,7 @@ Options:
 
           [default: compact]
 
-          [possible values: compact, detailed, json, markdown, raw]
+          [possible values: compact, detailed, json, junit, markdown, raw]
 
       --fallback-extensions <FALLBACK_EXTENSIONS>
           When checking locally, attempts to locate missing files by trying the given
@@ -878,6 +881,7 @@ We collect a list of common workarounds for various websites in our [troubleshoo
 - https://github.com/FreeBSD-Ask/FreeBSD-Ask
 - https://github.com/prosekit/prosekit
 - https://github.com/tldr-pages/tldr
+- https://gitlab.torproject.org/tpo/web/marble/support
 - https://github.com/lycheeverse/lychee (yes, lychee is checked with lychee 🤯)
 
 If you are using lychee for your project, **please add it here**.
