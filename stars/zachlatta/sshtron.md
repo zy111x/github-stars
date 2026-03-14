@@ -1,6 +1,6 @@
 ---
 project: sshtron
-stars: 2467
+stars: 2470
 description: |-
     $ ssh sshtron.zachlatta.com
 url: https://github.com/zachlatta/sshtron

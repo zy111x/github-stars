@@ -1,6 +1,6 @@
 ---
 project: iii
-stars: 15169
+stars: 15199
 description: |-
     iii (pronounced “three eye”) unifies your existing backend stack with a single engine and three primitives: Function, Worker, and Trigger.
 url: https://github.com/iii-hq/iii
@@ -8,7 +8,8 @@ url: https://github.com/iii-hq/iii
 
 ![iii - One Engine, Three Primitives](engine/assets/banner.jpg)
 
-[![License](https://img.shields.io/badge/license-ELv2-blue.svg)](LICENSE)
+[![Engine License](https://img.shields.io/badge/engine-ELv2-blue.svg)](engine/LICENSE)
+[![SDK License](https://img.shields.io/badge/sdk-Apache--2.0-green.svg)](sdk/LICENSE)
 [![Docker](https://img.shields.io/docker/v/iiidev/iii?label=docker)](https://hub.docker.com/r/iiidev/iii)
 [![npm](https://img.shields.io/npm/v/iii-sdk?label=npm)](https://www.npmjs.com/package/iii-sdk)
 [![PyPI](https://img.shields.io/pypi/v/iii-sdk?label=pypi)](https://pypi.org/project/iii-sdk/)
@@ -36,10 +37,12 @@ One config file. One process. Everything discoverable. Think of it the way React
 
 ```bash
 curl -fsSL https://install.iii.dev/iii/main/install.sh | sh
-iii-cli start
+iii-cli start --use-default-config
 ```
 
 Your engine is running at `ws://localhost:49134` with HTTP API at `http://localhost:3111`.
+
+For a project-backed setup, create `config.yaml` in your working directory or pass `iii-cli start --config /path/to/config.yaml`.
 
 ### Connect a worker
 
@@ -63,7 +66,7 @@ iii.registerTrigger({
   config: { api_path: 'add', http_method: 'POST' },
 });
 
-const result = await iii.trigger('math.add', { a: 1, b: 2 });
+const result = await iii.trigger({ function_id: 'math.add', payload: { a: 1, b: 2 } });
 logger.info('result', result); // { sum: 3 }
 ```
 
@@ -95,7 +98,7 @@ async def main():
         config={"api_path": "add", "http_method": "POST"}
     )
 
-    result = await iii.trigger("math.add", {"a": 1, "b": 2})
+    result = await iii.trigger({"function_id": "math.add", "payload": {"a": 1, "b": 2}})
     logger.info("result", result)  # {"sum": 3}
 
 asyncio.run(main())
@@ -107,7 +110,7 @@ asyncio.run(main())
 <summary>Rust</summary>
 
 ```rust
-use iii_sdk::{init, InitOptions, get_context};
+use iii_sdk::{init, InitOptions, get_context, TriggerRequest};
 use serde_json::json;
 
 #[tokio::main]
@@ -125,7 +128,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         "http_method": "POST"
     }))?;
 
-    let result = iii.trigger("math.add", json!({ "a": 1, "b": 2 })).await?;
+    let result = iii.trigger(TriggerRequest::new("math.add", json!({ "a": 1, "b": 2 }))).await?;
     let logger = get_context().logger;
     logger.info("result", &result); // {"sum":3}
 
@@ -180,5 +183,19 @@ See the [Quickstart guide](https://iii.dev/docs/quickstart) for step-by-step tut
 
 ## License
 
-[Elastic License 2.0 (ELv2)](LICENSE)
+The iii project uses a dual licensing model:
+
+| Directory        | License              |
+| ---------------- | -------------------- |
+| `engine/`        | [Elastic License 2.0](engine/LICENSE) |
+| `sdk/`           | [Apache License 2.0](sdk/LICENSE) |
+| `cli/`           | [Apache License 2.0](cli/LICENSE) |
+| `console/`       | [Apache License 2.0](console/LICENSE) |
+| `frameworks/`    | [Apache License 2.0](frameworks/motia/LICENSE) |
+| `docs/`          | [Apache License 2.0](docs/LICENSE) |
+| `website/`       | [Apache License 2.0](website/LICENSE) |
+
+The engine runtime is licensed under the Elastic License 2.0 (ELv2). All SDKs, frameworks, CLI, console, documentation, and the website are licensed under the Apache License 2.0.
+
+See [NOTICE.md](NOTICE.md) for details.
 

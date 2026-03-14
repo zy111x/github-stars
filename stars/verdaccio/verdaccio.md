@@ -1,6 +1,6 @@
 ---
 project: verdaccio
-stars: 17508
+stars: 17524
 description: |-
     A lightweight Node.js private proxy registry
 url: https://github.com/verdaccio/verdaccio
@@ -49,24 +49,24 @@ You can find more details about the different versions of Verdaccio, minimum req
 
 ## Install
 
-> Node.js v18 as minimum version required
+> Node.js v24 as minimum version required
 
 Install with npm:
 
 ```bash
-npm install -g verdaccio@next-8
+npm install -g verdaccio@next-9
 ```
 
 With `yarn`
 
 ```bash
-yarn global add verdaccio@next-8
+yarn global add verdaccio@next-9
 ```
 
 With `pnpm`
 
 ```bash
-pnpm i -g verdaccio@next-8
+pnpm i -g verdaccio@next-9
 ```
 
 or
@@ -126,9 +126,9 @@ Our goal is to give you the confidence to use your preferred package manager wit
 > - yarn search cmd exist in _modern_ but, it do not uses the search registry endpoint.
 > - yarn _modern_ has two info commands, the one used here is `yarn npm info`
 
-❌ = no tested
+❌ = not tested
 ✅ = tested
-⛔ = no supported
+⛔ = not supported
 
 ## Donations
 

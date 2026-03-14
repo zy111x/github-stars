@@ -1,6 +1,6 @@
 ---
 project: exo
-stars: 42186
+stars: 42599
 description: |-
     Run frontier AI locally.
 url: https://github.com/exo-explore/exo

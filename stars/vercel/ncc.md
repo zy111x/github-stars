@@ -1,6 +1,6 @@
 ---
 project: ncc
-stars: 9786
+stars: 9793
 description: |-
     Compile a Node.js project into a single file. Supports TypeScript, binary addons, dynamic requires.
 url: https://github.com/vercel/ncc

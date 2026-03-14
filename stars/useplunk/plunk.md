@@ -1,6 +1,6 @@
 ---
 project: plunk
-stars: 4906
+stars: 4910
 description: |-
     The Open-Source Email Platform
 url: https://github.com/useplunk/plunk
@@ -52,7 +52,7 @@ The easiest way to self-host Plunk is by using the `plunk` Docker image.
 You can pull the latest image from [Github](https://github.com/useplunk/plunk/pkgs/container/plunk).
 
 A complete guide on how to deploy Plunk can be found in
-the [documentation](https://next-wiki.useplunk.com/self-hosting/introduction).
+the [documentation](https://docs.useplunk.com/self-hosting/introduction).
 
 ## Contributing
 

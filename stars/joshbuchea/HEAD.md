@@ -1,6 +1,6 @@
 ---
 project: HEAD
-stars: 30237
+stars: 30247
 description: |-
     A simple guide to HTML <head> elements
 url: https://github.com/joshbuchea/HEAD
@@ -72,8 +72,6 @@ Below are the essential elements for any web document (websites/apps):
 
 `initial-scale=1` - the initial zoom, 1 means no zoom
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Elements
 
 Valid `<head>` elements include `meta`, `link`, `title`, `style`, `script`, `noscript`, and `base`.
@@ -111,8 +109,6 @@ These elements provide information for how a document should be perceived, and r
   <!-- No JS alternative -->
 </noscript>
 ```
-
-**[⬆ back to top](#table-of-contents)**
 
 ## Meta
 
@@ -196,8 +192,6 @@ These elements provide information for how a document should be perceived, and r
 - 📖 [ICBM on Wikipedia](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
 - 📖 [Geotagging on Wikipedia](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Link
 
 ```html
@@ -272,8 +266,6 @@ These elements provide information for how a document should be perceived, and r
 
 - 📖 [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml)
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Icons
 
 ```html
@@ -295,12 +287,11 @@ These elements provide information for how a document should be perceived, and r
 - 📖 [Favicon Cheat Sheet](https://github.com/audreyr/favicon-cheat-sheet)
 - 📖 [Icons & Browser Colors](https://developers.google.com/web/fundamentals/design-and-ux/browser-customization/)
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Social
 
 ### Facebook Open Graph
-> Most content is shared to Facebook as a URL, so it's important that you mark up your website with Open Graph tags to take control over how your content appears on Facebook. [More about Facebook Open Graph Markup](https://developers.facebook.com/docs/sharing/webmasters#markup) 
+
+> Most content is shared to Facebook as a URL, so it's important that you mark up your website with Open Graph tags to take control over how your content appears on Facebook. [More about Facebook Open Graph Markup](https://developers.facebook.com/docs/sharing/webmasters#markup)
 
 ```html
 <meta property="fb:app_id" content="123456789">
@@ -319,6 +310,7 @@ These elements provide information for how a document should be perceived, and r
 - 🛠 Test your page with the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
 
 ### Twitter Card
+
 > With Twitter Cards, you can attach rich photos, videos and media experiences to Tweets, helping to drive traffic to your website. [More about Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards)
 
 ```html
@@ -336,7 +328,9 @@ These elements provide information for how a document should be perceived, and r
 - 🛠 Test your page with the [Twitter Card Validator](https://cards-dev.twitter.com/validator)
 
 ### Twitter Privacy
+
 If you embed tweets in your website, Twitter can use information from your site to tailor content and suggestions to Twitter users. [More about Twitter privacy options](https://dev.twitter.com/web/overview/privacy#what-privacy-options-do-website-publishers-have).
+
 ```html
 <!-- disallow Twitter from using your site's info for personalization purposes -->
 <meta name="twitter:dnt" content="on">
@@ -405,9 +399,8 @@ Users share web pages to qq wechat will have a formatted message
 <meta itemprop="image" content="http://imgcache.qq.com/qqshow/ac/v4/global/logo.png">
 <meta name="description" itemprop="description" content="share content">
 ```
-- 📖 [Code Format Docs](http://open.mobile.qq.com/api/mqq/index#api:setShareInfo)
 
-**[⬆ back to top](#table-of-contents)**
+- 📖 [Code Format Docs](http://open.mobile.qq.com/api/mqq/index#api:setShareInfo)
 
 ### Fediverse
 
@@ -416,8 +409,6 @@ Some Fediverse software such as Mastodon allow you to put your Fediverse handle 
 ```html
 <meta name="fediverse:creator" content="@handle@example.org">
 ```
-
-**[⬆ back to top](#table-of-contents)**
 
 ## Browsers / Platforms
 
@@ -506,8 +497,6 @@ Minimum required xml markup for `browserconfig.xml`:
 
 - 📖 [Browser configuration schema reference](https://msdn.microsoft.com/en-us/library/dn320426.aspx)
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Browsers (Chinese)
 
 ### 360 Browser
@@ -557,8 +546,6 @@ Minimum required xml markup for `browserconfig.xml`:
 
 - 📖 [UC Browser Docs](https://www.uc.cn/download/UCBrowser_U3_API.doc)
 
-**[⬆ back to top](#table-of-contents)**
-
 ## App Links
 
 ```html
@@ -578,14 +565,10 @@ Minimum required xml markup for `browserconfig.xml`:
 
 - 📖 [App Links](https://developers.facebook.com/docs/applinks)
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Other Resources
 
 - 📖 [HTML5 Boilerplate Docs: The HTML](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md)
 - 📖 [HTML5 Boilerplate Docs: Extend and customize](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md)
-
-**[⬆ back to top](#table-of-contents)**
 
 ## Related Projects
 
@@ -594,13 +577,9 @@ Minimum required xml markup for `browserconfig.xml`:
 - [head-it](https://github.com/hemanth/head-it) - CLI interface for `HEAD` snippets
 - [vue-head](https://github.com/ktquez/vue-head) - Manipulating the meta information of the `HEAD` tag for Vue.js
 
-**[⬆ back to top](#table-of-contents)**
-
 ## Other Formats
 
 - 📄 [PDF](https://gitprint.com/joshbuchea/HEAD/blob/master/README.md)
-
-**[⬆ back to top](#table-of-contents)**
 
 ## 🌐 Translations
 
@@ -615,8 +594,7 @@ Minimum required xml markup for `browserconfig.xml`:
 - 🇷🇺 [Russian/Русский](https://github.com/Konfuze/HEAD)
 - 🇪🇸 [Spanish](https://github.com/alvaroadlf/HEAD)
 - 🇹🇷 [Turkish/Türkçe](https://github.com/mkg0/HEAD)
-
-**[⬆ back to top](#table-of-contents)**
+- 🇺🇦 [Ukrainian](https://github.com/Shramkoweb/HEAD)
 
 ## 🤝 Contributing
 
@@ -633,6 +611,7 @@ This branch consists of the `README.md` file that is reflected on the [htmlhead.
 Please follow these steps for pull requests:
 
 {:.list-style-default}
+
 - Modify only one tag, or one related set of tags at a time
 - Use double quotes on attributes
 - Don't include a trailing slash in self-closing elements — the HTML5 spec says they're optional
@@ -671,6 +650,4 @@ Everything helps, thanks! 🙏
 ## 📝 License
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
-
-**[⬆ back to top](#table-of-contents)**
 

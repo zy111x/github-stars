@@ -1,6 +1,6 @@
 ---
 project: best-prompts
-stars: 870
+stars: 926
 description: |-
     通用高质量 Prompt 合集🔥
 url: https://github.com/xstongxue/best-prompts
@@ -37,7 +37,7 @@ best-prompts 希望做两件事：
 
 | 用途         | Prompt                                                                                                                           |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| **正文内容撰写** | [paper-write-prompt.md](prompts/paper-write-prompt.md) — 大纲审核、绪论/摘要/实验章节仿写、润色/扩写/缩写、参考文献、防 AIGC、中英互译、结构化信息提取                     |
+| **正文内容撰写** | [paper-write-prompt.md](prompts/paper-write-prompt.md) — 大纲审核、绪论/摘要/章节仿写、润色/扩写/缩写、参考文献、防 AIGC、中英互译、结构化信息提取                     |
 | **系统章节生成** | [codegen-paper-chapter-generator-prompt.md](prompts/codegen-paper-chapter-generator-prompt.md) — 根据大纲与项目代码生成系统设计章节正文             |
 | **通用图表**   | [drawio-diagram-generator-prompt.md](prompts/drawio-diagram-generator-prompt.md) — 模型架构图、算法流程图、概念示意图                             |
 | **技术栈图**   | [codegen-tech-stack-diagram-prompt.md](prompts/codegen-tech-stack-diagram-prompt.md) — 前端/后端/模型服务技术栈结构图                          |

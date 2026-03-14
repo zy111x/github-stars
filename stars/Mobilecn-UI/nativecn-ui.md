@@ -1,6 +1,6 @@
 ---
 project: nativecn-ui
-stars: 1159
+stars: 1160
 description: |-
     Beautiful and customizable React Native components
 url: https://github.com/Mobilecn-UI/nativecn-ui

@@ -1,8 +1,8 @@
 ---
 project: takumi
-stars: 1444
+stars: 1464
 description: |-
-    JSX → Image. Faster next/og & satori alternative plus variable fonts, RTL, inline layout, WOFF2, WebP output support.
+    JSX → Image, GIFs or Video.
 url: https://github.com/kane50613/takumi
 ---
 
@@ -22,16 +22,16 @@ Takumi is inspired by [satori](https://github.com/vercel/satori), with a stronge
 
 ## Why teams pick Takumi
 
-- **One-pass rendering** with no SVG-to-image two-step pipeline.
-- **JSX in, pixels out** with cross-runtime delivery.
-- **Node native speed** with WASM fallback for edge and browser workers.
-- **Production text stack**: variable fonts, COLR, WOFF2, and RTL.
-- **Rich output formats**: WebP/PNG/JPEG/APNG or FFmpeg pipelines.
+- **Direct image rendering** with no SVG-to-image conversion step.
+- **One JSX pipeline across runtimes** for Node.js, browsers, and edge workers.
+- **Native performance on Node.js** with WebAssembly fallback when portability matters.
+- **Production-grade text and font support** including variable fonts, COLR, WOFF2, and RTL.
+- **Flexible output targets** from WebP, PNG, JPEG, and GIF to raw frames for FFmpeg pipelines.
 
 ## Performance
 
-In [Image Bench](https://image-bench.kane.tw/), Takumi is typically **2-10x faster** than `next/og`.
-See benchmark runs and templates on [Image Bench](https://image-bench.kane.tw/).
+Takumi is built for fast image rendering across Node.js and WebAssembly runtimes.
+See current benchmark runs and templates on [Image Bench](https://image-bench.kane.tw/), including comparisons with `next/og`.
 
 ## First render in 30 seconds
 
@@ -67,21 +67,13 @@ For runtime-specific setup (Next.js, Vite SSR, Nitro, Cloudflare, Turbopack), se
 
 ## Showcase
 
-- Takumi OG image [(source)](./example/twitter-images/components/og-image.tsx)
-
-  ![Takumi OG Image](./example/twitter-images/output/og-image.png)
-
-- Prisma-style API card [(source)](./example/twitter-images/components/prisma-og-image.tsx)
-
-  ![Prisma OG Image](./example/twitter-images/output/prisma-og-image.png)
-
-- X-style social post [(source)](./example/twitter-images/components/x-post-image.tsx)
-
-  ![X-style Post Image](./example/twitter-images/output/x-post-image.png)
-
-- [shiki-image](https://github.com/pi0/shiki-image): code snippet images
-
-  ![Shiki Image Example](https://github.com/pi0/shiki-image/blob/main/test/.snapshot/image.webp?raw=true)
+|                                 Takumi OG image [(source)](./example/twitter-images/components/og-image.tsx)                                 |                Package OG card [(ssource)](./example/twitter-images/components/package-og-image.tsx)                |
+| :------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+|                                       ![Takumi OG Image](./example/twitter-images/output/og-image.png)                                       |                      ![Package OG Image](./example/twitter-images/output/package-og-image.png)                      |
+|                        **Prisma-style API card** [(source)](./example/twitter-images/components/prisma-og-image.tsx)                         |              **X-style social post** [(source)](./example/twitter-images/components/x-post-image.tsx)               |
+|                                   ![Prisma OG Image](./example/twitter-images/output/prisma-og-image.png)                                    |                       ![X-style Post Image](./example/twitter-images/output/x-post-image.png)                       |
+|                             **Keyframe Animation** [(source)](./example/ffmpeg-keyframe-animation/src/index.tsx)                             |                                **[shiki-image](https://github.com/pi0/shiki-image)**                                |
+| [![Keyframe Animation](./example/ffmpeg-keyframe-animation/output/thumbnail.webp)](./example/ffmpeg-keyframe-animation/output/animation.mp4) | ![Shiki Image Example](https://raw.githubusercontent.com/pi0/shiki-image/refs/heads/main/test/.snapshot/image.webp) |
 
 - [(Unofficial) Takumi Playground](https://takumi-playground.kapadiya.net/)
 

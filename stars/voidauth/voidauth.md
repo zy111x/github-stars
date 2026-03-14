@@ -1,14 +1,14 @@
 ---
 project: voidauth
-stars: 1880
+stars: 1895
 description: |-
     Single Sign-On for Your Self-Hosted Universe
 url: https://github.com/voidauth/voidauth
 ---
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/voidauth/voidauth/release.yml)
-![GitHub License](https://img.shields.io/github/license/voidauth/voidauth)
 ![GitHub Release](https://img.shields.io/github/v/release/voidauth/voidauth?logo=github)
+![GitHub License](https://img.shields.io/github/license/voidauth/voidauth)
 ![GitHub Repo stars](https://img.shields.io/github/stars/voidauth/voidauth?style=flat&logo=github)
 
 
@@ -127,19 +127,16 @@ VoidAuth has not been audited and uses 3rd party packages for much of its functi
 
 ## Credits
 
-This project would not be possible without the incredible work of others including but not limited to:
-
-[node-oidc-provider](https://github.com/panva/node-oidc-provider) Handles OIDC Provider functionality
-
-[SimpleWebAuthn](https://github.com/MasterKale/SimpleWebAuthn) Used for webauthn/passkey support
-
-[Angular](https://angular.dev) Frontend web framework
-
-[Knex](https://knexjs.org/) Database connection and query builder
-
-[zxcvbn-ts](https://zxcvbn-ts.github.io/zxcvbn/) Password strength calculator
+This project would not be possible without the incredible work of others. For a full list of dependencies, see the `package.json` and `frontend/package.json` files.
 
 ## Sponsors
 
-[![](https://github.com/GitTimeraider.png?size=50)](https://github.com/GitTimeraider)
+<span>
+<a href="https://github.com/GitTimeraider">
+<img src="https://github.com/GitTimeraider.png?size=50" alt="GitTimeraider">
+</a>
+<a href="https://github.com/dl09r">
+<img src="https://github.com/dl09r.png?size=50" alt="dl09r">
+</a>
+</span>
 

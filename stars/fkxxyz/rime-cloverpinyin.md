@@ -1,6 +1,6 @@
 ---
 project: rime-cloverpinyin
-stars: 1978
+stars: 1980
 description: |-
     🍀️四叶草拼音输入方案，做最好用的基于rime开源的简体拼音输入方案！
 url: https://github.com/fkxxyz/rime-cloverpinyin

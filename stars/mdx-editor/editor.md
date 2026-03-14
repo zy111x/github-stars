@@ -1,6 +1,6 @@
 ---
 project: editor
-stars: 3270
+stars: 3286
 description: |-
     A rich text editor React component for markdown
 url: https://github.com/mdx-editor/editor

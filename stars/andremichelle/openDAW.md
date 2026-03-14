@@ -1,6 +1,6 @@
 ---
 project: openDAW
-stars: 1286
+stars: 1317
 description: |-
     openDAW is a next-generation web-based Digital Audio Workstation (DAW)
 url: https://github.com/andremichelle/openDAW
@@ -58,9 +58,10 @@ operations of the app.
 
 If you are interested in helping, here are areas where we need support:
 
-1. **Offline App** — e.g. wrapping openDAW with [Tauri](https://tauri.app/) for a native desktop experience
-2. **PWA** — turning openDAW into a fully installable Progressive Web App with offline support
-3. **Timeline Track Management** — design and UX help for track layout, ordering, grouping, and interaction
+1. **Y.JS Server + WebRTC File Sharing** - for live collaboration
+2. **Offline App** — e.g. wrapping openDAW with [Tauri](https://tauri.app/) for a native desktop experience
+3. **PWA** — turning openDAW into a fully installable Progressive Web App with offline support
+4. **Timeline Track Management** — design and UX help for track layout, ordering, grouping, and interaction
 
 We always appreciate help on open issues: https://github.com/andremichelle/openDAW/issues
 

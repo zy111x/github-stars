@@ -1,6 +1,6 @@
 ---
 project: fedify
-stars: 950
+stars: 951
 description: |-
     ActivityPub server framework in TypeScript
 url: https://github.com/fedify-dev/fedify

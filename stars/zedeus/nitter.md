@@ -1,6 +1,6 @@
 ---
 project: nitter
-stars: 12529
+stars: 12571
 description: |-
     Alternative Twitter front-end
 url: https://github.com/zedeus/nitter

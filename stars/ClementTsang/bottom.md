@@ -1,6 +1,6 @@
 ---
 project: bottom
-stars: 12990
+stars: 13027
 description: |-
     Yet another cross-platform graphical process/system monitor.
 url: https://github.com/ClementTsang/bottom
@@ -600,6 +600,9 @@ Thanks to all contributors:
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/thunze"><img src="https://avatars.githubusercontent.com/u/22795263?v=4?s=100" width="100px;" alt="Tom"/><br /><sub><b>Tom</b></sub></a><br /><a href="#maintenance-thunze" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ggaddy"><img src="https://avatars.githubusercontent.com/u/13815367?v=4?s=100" width="100px;" alt="G"/><br /><sub><b>G</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=ggaddy" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lpnh"><img src="https://avatars.githubusercontent.com/u/90577992?v=4?s=100" width="100px;" alt="Filipe Paniguel"/><br /><sub><b>Filipe Paniguel</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=lpnh" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.jianshu.com/u/f5754cd2e83d"><img src="https://avatars.githubusercontent.com/u/15232241?v=4?s=100" width="100px;" alt="Qiying Wang"/><br /><sub><b>Qiying Wang</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=WqyJh" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

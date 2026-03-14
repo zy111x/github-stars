@@ -1,6 +1,6 @@
 ---
 project: skills
-stars: 3900
+stars: 4073
 description: |-
     Anthony Fu's curated collection of agent skills.
 url: https://github.com/antfu/skills
@@ -108,7 +108,7 @@ See [AGENTS.md](AGENTS.md) for detailed generation guidelines.
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
+    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg' alt='Sponsors' />
   </a>
 </p>
 

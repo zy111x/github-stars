@@ -1,6 +1,6 @@
 ---
 project: mixpost
-stars: 3032
+stars: 3040
 description: |-
     📅 Schedule, 📢 publish, and ⚡ manage your social media content on your server. No subscriptions, no limits. (Buffer alternative)
 url: https://github.com/inovector/mixpost

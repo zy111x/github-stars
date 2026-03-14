@@ -1,6 +1,6 @@
 ---
 project: overtype
-stars: 3453
+stars: 3598
 description: |-
     The markdown editor that's just a textarea https://overtype.dev
 url: https://github.com/panphora/overtype
@@ -8,7 +8,7 @@ url: https://github.com/panphora/overtype
 
 # OverType
 
-A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~117KB minified with all features.
+A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~118KB minified with all features.
 
 ## Live Examples
 
@@ -27,7 +27,7 @@ A lightweight markdown editor library with perfect WYSIWYG alignment using an in
 - ⌨️ **Keyboard shortcuts** - Common markdown shortcuts (Cmd/Ctrl+B for bold, etc.)
 - 📱 **Mobile optimized** - Responsive design with mobile-specific styles
 - 🔄 **DOM persistence aware** - Recovers from existing DOM (perfect for HyperClay and similar platforms)
-- 🚀 **Lightweight** - ~117KB minified
+- 🚀 **Lightweight** - ~118KB minified
 - 🎯 **Optional toolbar** - Clean, minimal toolbar with all essential formatting
 - ✨ **Smart shortcuts** - Keyboard shortcuts with selection preservation
 - 📝 **Smart list continuation** - GitHub-style automatic list continuation on Enter
@@ -43,7 +43,7 @@ We overlap an invisible textarea on top of styled output, giving the illusion of
 
 | Feature | OverType | HyperMD | Milkdown | TUI Editor | EasyMDE |
 |---------|----------|---------|----------|------------|---------|
-| **Size** | ~117KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
+| **Size** | ~118KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
 | **Dependencies** | Bundled | CodeMirror | ProseMirror + plugins | Multiple libs | CodeMirror |
 | **Setup** | Single file | Complex config | Build step required | Complex config | Moderate |
 | **Approach** | Invisible textarea | ContentEditable | ContentEditable | ContentEditable | CodeMirror |
@@ -788,7 +788,7 @@ Special thanks to:
 - [Travis Bell](https://github.com/travisbell) - Reported keyboard shortcuts bug in ESM build ([#80](https://github.com/panphora/overtype/issues/80))
 - [fab2713](https://github.com/fab2713) - Reported italic rendering in lists ([#81](https://github.com/panphora/overtype/issues/81)), reinit maxHeight ([#82](https://github.com/panphora/overtype/issues/82)), placeholder visibility ([#83](https://github.com/panphora/overtype/issues/83)), suggested auto theme ([#84](https://github.com/panphora/overtype/issues/84)), relative URL prefix ([#85](https://github.com/panphora/overtype/issues/85)), minification improvements ([#94](https://github.com/panphora/overtype/issues/94))
 - [oooo-ps](https://github.com/oooo-ps) - Reported remote script loading issue ([#86](https://github.com/panphora/overtype/issues/86))
-- [ddarfantasy](https://github.com/ddarfantasy) - Reported text misalignment on longer lines ([#91](https://github.com/panphora/overtype/issues/91))
+- [ddarfantasy](https://github.com/ddarfantasy), [ThaUnknown](https://github.com/ThaUnknown) - Reported and debugged text misalignment caused by CSS framework font resets ([#91](https://github.com/panphora/overtype/issues/91))
 - [milen-yordanov](https://github.com/milen-yordanov) - Reported code block colors ignoring theme in preview mode ([#97](https://github.com/panphora/overtype/issues/97))
 - [asalimian](https://github.com/asalimian) - Reported spellcheck being disabled ([#98](https://github.com/panphora/overtype/issues/98))
 

@@ -1,6 +1,6 @@
 ---
 project: defuddle
-stars: 3918
+stars: 4718
 description: |-
     Get the main content of any page as Markdown.
 url: https://github.com/kepano/defuddle
@@ -13,11 +13,9 @@ url: https://github.com/kepano/defuddle
 
 Defuddle extracts the main content from web pages. It cleans up web pages by removing clutter like comments, sidebars, headers, footers, and other non-essential elements, leaving only the primary content.
 
-[Try the Defuddle Playground →](https://defuddle.md/playground)
+## Overview
 
-## Features
-
-Defuddle aims to output clean and consistent HTML documents. It was written for [Obsidian Web Clipper](https://github.com/obsidianmd/obsidian-clipper) with the goal of creating a more useful input for HTML-to-Markdown converters like [Turndown](https://github.com/mixmark-io/turndown).
+Defuddle takes a URL or HTML, finds the main content, and returns cleaned HTML or Markdown. Defuddle was created for the browser extension [Obsidian Web Clipper](https://github.com/obsidianmd/obsidian-clipper), but it is designed to run in any environment.
 
 Defuddle can be used as a replacement for [Mozilla Readability](https://github.com/mozilla/readability) with a few differences:
 
@@ -45,58 +43,59 @@ console.log(result.author);
 
 ### Node.js
 
+`defuddle/node` accepts a DOM `Document` from any implementation (JSDOM, linkedom, happy-dom, etc.).
+
+```javascript
+import { parseHTML } from 'linkedom';
+import { Defuddle } from 'defuddle/node';
+
+const { document } = parseHTML(html);
+const result = await Defuddle(document, 'https://example.com/article', {
+  markdown: true
+});
+
+console.log(result.content);
+console.log(result.title);
+console.log(result.author);
+```
+
+Or with JSDOM:
+
 ```javascript
 import { JSDOM } from 'jsdom';
 import { Defuddle } from 'defuddle/node';
 
-// Parse HTML from a string
-const html = '<html><body><article>...</article></body></html>';
-const result = await Defuddle(html);
-
-// Parse HTML from a URL
-const dom = await JSDOM.fromURL('https://example.com/article');
-const result = await Defuddle(dom);
-
-// With options
-const url = 'https://example.com/article'; // Original URL of the page
-const result = await Defuddle(dom, url, {
-  debug: true, // Enable debug mode for verbose logging
-  markdown: true // Convert content to markdown
-});
-
-// Access the content and metadata
-console.log(result.content);
-console.log(result.title);
-console.log(result.author);
+const dom = new JSDOM(html, { url: 'https://example.com/article' });
+const result = await Defuddle(dom.window.document, 'https://example.com/article');
 ```
 
 _Note: for `defuddle/node` to import properly, the module format in your `package.json` has to be set to `{ "type": "module" }`_
 
 ### CLI
 
-Defuddle includes a command-line interface for parsing web pages directly from the terminal.
+Defuddle includes a command-line interface for parsing web pages directly from the terminal. You can run it with `npx` or [install it globally](#cli-installation).
 
 ```bash
 # Parse a local HTML file
-defuddle parse page.html
+npx defuddle parse page.html
 
 # Parse a URL
-defuddle parse https://example.com/article
+npx defuddle parse https://example.com/article
 
 # Output as markdown
-defuddle parse page.html --markdown
+npx defuddle parse page.html --markdown
 
 # Output as JSON with metadata
-defuddle parse page.html --json
+npx defuddle parse page.html --json
 
 # Extract a specific property
-defuddle parse page.html --property title
+npx defuddle parse page.html --property title
 
 # Save output to a file
-defuddle parse page.html --output result.html
+npx defuddle parse page.html --output result.html
 
 # Enable debug mode
-defuddle parse page.html --debug
+npx defuddle parse page.html --debug
 ```
 
 #### CLI Options
@@ -116,10 +115,30 @@ defuddle parse page.html --debug
 npm install defuddle
 ```
 
-For Node.js usage, you'll also need to install JSDOM:
+For Node.js usage, install a DOM implementation:
+
+```bash
+npm install linkedom
+```
+
+Or use JSDOM:
 
 ```bash
 npm install jsdom
+```
+
+### CLI installation
+
+To use the `defuddle` command globally, install it with the `-g` flag:
+
+```bash
+npm install -g defuddle
+```
+
+Or use `npx` to run the CLI without installing globally:
+
+```bash
+npx defuddle parse https://example.com/article
 ```
 
 ## Response
@@ -134,6 +153,7 @@ Defuddle returns an object with the following properties:
 | `domain` | string | Domain name of the website |
 | `favicon` | string | URL of the website's favicon |
 | `image` | string | URL of the article's main image |
+| `language` | string | Language of the page in [BCP 47](https://www.rfc-editor.org/info/bcp47) format (e.g. `en`, `en-US`) |
 | `metaTags` | object | Meta tags |
 | `parseTime` | number | Time taken to parse the page in milliseconds |
 | `published` | string | Publication date of the article |
@@ -149,7 +169,7 @@ Defuddle is available in three different bundles:
 
 1. Core bundle (`defuddle`): The main bundle for browser usage. No dependencies.
 2. Full bundle (`defuddle/full`): Includes additional features for math equation parsing and Markdown conversion.
-3. Node.js bundle (`defuddle/node`): Optimized for Node.js environments using JSDOM. Includes full capabilities for math and Markdown conversion.
+3. Node.js bundle (`defuddle/node`): For Node.js environments. Accepts any DOM `Document` (e.g. from linkedom, JSDOM, or happy-dom). Includes full capabilities for math and Markdown conversion.
 
 The core bundle is recommended for most use cases. It still handles math content, but doesn't include fallbacks for converting between MathML and LaTeX formats. The full bundle adds the ability to create reliable `<math>` elements using `mathml-to-latex` and `temml` libraries.
 

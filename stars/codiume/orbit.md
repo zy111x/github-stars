@@ -1,6 +1,6 @@
 ---
 project: orbit
-stars: 552
+stars: 559
 description: |-
     Collection of useful integrations & components for the Astro ecosystem. ⭐️ Star to support our work!
 url: https://github.com/codiume/orbit
@@ -32,6 +32,15 @@ url: https://github.com/codiume/orbit
 | [astro-svg-loaders](packages/astro-svg-loaders) | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md) | Astro loading icons and small animations built with pure SVG. | [![downloads][downloads-badge-svg-loaders]][npm-svg-loaders] |
 | [astro-ui-avatars](packages/astro-ui-avatars)   | [![version](https://img.shields.io/npm/v/astro-ui-avatars.svg)](packages/astro-ui-avatars/CHANGELOG.md)   | Generate customizable user avatars with initials from names.  | [![downloads][downloads-badge-ui-avatars]][npm-ui-avatars]   |
 | [astro-gtm](packages/astro-gtm)                 | [![version](https://img.shields.io/npm/v/astro-gtm.svg)](packages/astro-gtm/CHANGELOG.md)                 | Integrate Google Tag Manager into your Astro project.         | [![downloads][downloads-badge-gtm]][npm-gtm]                 |
+
+## Versioning
+
+Orbit follows a customized versioning scheme:
+
+- **Major version**: Matches the Astro major version (e.g., `6.x.x` = Astro v6)
+- **Minor/Patch versions**: Independent package updates
+
+Major/Breaking changes are only introduced when Astro releases a new major version.
 
 ## Support
 

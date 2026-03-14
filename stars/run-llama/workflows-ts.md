@@ -1,12 +1,14 @@
 ---
 project: workflows-ts
-stars: 256
+stars: 255
 description: |-
     🌊 Simple, event-driven and stream oriented workflow for TypeScript
 url: https://github.com/run-llama/workflows-ts
 ---
 
 # LlamaIndex Workflows TS
+
+> **⚠️ DEPRECATED**: This package is no longer maintained. Please use [LlamaAgents (Python Workflows)](https://developers.llamaindex.ai/python/llamaagents/overview/) instead.
 
 🌊 is a simple, lightweight workflow engine, in TypeScript.
 

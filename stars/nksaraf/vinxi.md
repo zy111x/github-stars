@@ -1,6 +1,6 @@
 ---
 project: vinxi
-stars: 2777
+stars: 2780
 description: |-
     The Full Stack JavaScript SDK
 url: https://github.com/nksaraf/vinxi

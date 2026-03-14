@@ -1,6 +1,6 @@
 ---
 project: clewdr
-stars: 975
+stars: 1003
 description: |-
     High Performance LLM Reverse Proxy
 url: https://github.com/Xerxes-2/clewdr

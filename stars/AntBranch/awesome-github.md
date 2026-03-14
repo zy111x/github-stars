@@ -1,6 +1,6 @@
 ---
 project: awesome-github
-stars: 2165
+stars: 2166
 description: |-
     A curated list of awesome GitHub guides, articles, sites, tools, projects and resources.  收集这个列表，只是为了更好地使用GitHub,欢迎提交pr和issue。
 url: https://github.com/AntBranch/awesome-github
@@ -294,6 +294,7 @@ url: https://github.com/AntBranch/awesome-github
  * [git-fire](https://github.com/qw3rtman/git-fire) - 紧急情况下保存代码
  * [gitsome](https://github.com/donnemartin/gitsome) - Git/GitHub命令行工具
  * [maintainer](https://github.com/gaocegege/maintainer) - 让你的 GitHub repo 对开发者更加友好的命令行工具
+ * [github-discover-cli](https://github.com/coderyi/github-discover-cli) - 帮助你发现 GitHub 上热门开源仓库和话题的命令行工具
 
 #### Git平台与工具
  * [git](https://github.com/git/git) - git源码

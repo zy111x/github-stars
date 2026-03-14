@@ -1,6 +1,6 @@
 ---
 project: netbird
-stars: 23323
+stars: 23538
 description: |-
     Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.
 url: https://github.com/netbirdio/netbird
