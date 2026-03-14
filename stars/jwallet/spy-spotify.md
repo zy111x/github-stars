@@ -1,6 +1,6 @@
 ---
 project: spy-spotify
-stars: 2317
+stars: 2323
 description: 🎤 Records Spotify to mp3 without ads and adds media tags to the files 🎵
 url: https://github.com/jwallet/spy-spotify
 ---

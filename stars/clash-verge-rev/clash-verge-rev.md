@@ -1,6 +1,6 @@
 ---
 project: clash-verge-rev
-stars: 101039
+stars: 102775
 description: A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience
 url: https://github.com/clash-verge-rev/clash-verge-rev
 ---
@@ -26,7 +26,7 @@ Install
 
 请到发布页面下载对应的安装包：Release page  
 Go to the Release page to download the corresponding installation package  
-Supports Windows (x64/x86), Linux (x64/arm64) and macOS 10.15+ (intel/apple).
+Supports Windows (x64/x86), Linux (x64/arm64) and macOS 11+ (intel/apple).
 
 #### 我应当怎样选择发行版
 

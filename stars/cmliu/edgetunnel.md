@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 27033
+stars: 27162
 description: edgetunnel 2.0 VLESS/Trojan 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -146,7 +146,7 @@ HOST
 
 `edt.pages.dev`
 
-强制固定伪装域名可通过面板直接设置
+强制固定伪装域名 可通过面板直接设置
 
 PATH
 
@@ -154,7 +154,7 @@ PATH
 
 `/`
 
-强制固定伪装路径可通过面板直接设置
+强制固定伪装路径 可通过面板直接设置
 
 **PROXYIP**
 
@@ -179,6 +179,14 @@ PATH
 `blog.cmliussss.com`,`*.ip111.cn`,`*google.com`
 
 强制走 SOCKS5 的名单 (`*` 为全局，域名用逗号分隔)
+
+**OFF\_LOG**
+
+❌
+
+`1`或`true`
+
+默认开启日志记录功能，设置`1`或`true`则关闭日志记录功能
 
 * * *
 

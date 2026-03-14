@@ -1,6 +1,6 @@
 ---
 project: CloudPaste-old
-stars: 541
+stars: 540
 description: An online clipboard and file sharing service based on Cloudflare Workers, supporting Markdown, burn-after-reading, text/file sharing, password protection, and more.
 url: https://github.com/ling-drag0n/CloudPaste-old
 ---
