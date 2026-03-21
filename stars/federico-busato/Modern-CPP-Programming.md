@@ -1,6 +1,6 @@
 ---
 project: Modern-CPP-Programming
-stars: 14817
+stars: 14844
 description: Modern C++ Programming Course (C++03/11/14/17/20/23/26)
 url: https://github.com/federico-busato/Modern-CPP-Programming
 ---
@@ -506,7 +506,7 @@ TOPICS IN DETAILS
 Reporting Bugs 🐛 and Contributing
 ----------------------------------
 
-If you find any typo, conceptual error, or section to improve, please report it using the `Issues` panel.
+Please see the CONTRIBUTING.md file for more information.
 
 Where the Course has been used
 ------------------------------

@@ -1,6 +1,6 @@
 ---
 project: free-programming-books
-stars: 383994
+stars: 384379
 description: :books: Freely available programming books
 url: https://github.com/EbookFoundation/free-programming-books
 ---

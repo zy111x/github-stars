@@ -1,230 +1,554 @@
 ---
 project: hackingtool
-stars: 55232
+stars: 55276
 description: ALL IN ONE Hacking Tool For Hackers
 url: https://github.com/Z4nzu/hackingtool
 ---
 
-### All in One Hacking tool For Hackers🥇
+**All-in-One Hacking Tool for Security Researchers & Pentesters**
 
-#### Install Kali Linux in WIndows10 Without VirtualBox YOUTUBE or use Docker
+           
 
-Update Available V1.2.0 🚀
---------------------------
+   
 
--   \[✔\] Installation Bug Fixed
--   Added New Tools
-    -   Reverse Engineering
-    -   RAT Tools
-    -   Web Crawling
-    -   Payload Injector
--   Multitor Tools update
--   Added Tool in wifijamming
--   Added Tool in steganography
+* * *
 
-Hackingtool Menu 🧰
-===================
+What's New in v2.0.0
+--------------------
 
--   Anonymously Hiding Tools
--   Information gathering tools
--   Wordlist Generator
--   Wireless attack tools
--   SQL Injection Tools
--   Phishing attack tools
--   Web Attack tools
--   Post exploitation tools
--   Forensic tools
--   Payload creation tools
--   Exploit framework
--   Reverse engineering tools
--   DDOS Attack Tools
--   Remote Administrator Tools (RAT)
--   XSS Attack Tools
--   Steganograhy tools
--   Other tools
-    -   SocialMedia Bruteforce
-    -   Android Hacking tools
-    -   IDN Homograph Attack
-    -   Email Verify tools
-    -   Hash cracking tools
-    -   Wifi Deauthenticate
-    -   SocialMedia Finder
-    -   Payload Injector
-    -   Web crawling
-    -   Mix tools
+Feature
 
-### Anonymously Hiding Tools
+Description
 
--   Anonmously Surf
+**🐍**
+
+**Python 3.10+**
+
+All Python 2 code removed, modern syntax throughout
+
+**🖥**
+
+**OS-aware menus**
+
+Linux-only tools hidden automatically on macOS
+
+**📦**
+
+**185+ tools**
+
+35 new modern tools added across 6 categories
+
+**🔍**
+
+**Search**
+
+Type `/` to search all tools by name, description, or keyword
+
+**🏷**
+
+**Tag filter**
+
+Type `t` to filter by 19 tags — osint, web, c2, cloud, mobile...
+
+**💡**
+
+**Recommend**
+
+Type `r` — "I want to scan a network" → shows relevant tools
+
+**✅**
+
+**Install status**
+
+✔/✘ shown next to every tool — know what's ready
+
+**⚡**
+
+**Install all**
+
+Option `97` in any category — batch install at once
+
+**🔄**
+
+**Smart update**
+
+Each tool has Update — auto-detects git pull / pip upgrade / go install
+
+**📂**
+
+**Open folder**
+
+Jump into any tool's directory for manual inspection
+
+**🐳**
+
+**Docker**
+
+Builds locally — no unverified external images
+
+**🚀**
+
+**One-liner install**
+
+`curl -sSL .../install.sh | sudo bash` — zero manual steps
+
+**🏢**
+
+**3 new categories**
+
+Active Directory, Cloud Security, Mobile Security
+
+* * *
+
+Quick Commands
+--------------
+
+Command
+
+Action
+
+Works in
+
+`/query`
+
+**Search** — find tools instantly by keyword
+
+Main menu
+
+`t`
+
+**Tags** — filter by osint, scanner, c2, cloud, mobile...
+
+Main menu
+
+`r`
+
+**Recommend** — "I want to do X" → matching tools
+
+Main menu
+
+`?`
+
+**Help** — quick reference card
+
+Everywhere
+
+`q`
+
+**Quit** — exit from any depth
+
+Everywhere
+
+`97`
+
+**Install All** — batch install all tools in category
+
+Category
+
+`99`
+
+**Back** — return to previous menu
+
+Everywhere
+
+* * *
+
+Tool Categories
+---------------
+
+#
+
+Category
+
+Tools
+
+#
+
+Category
+
+Tools
+
+1
+
+🛡 Anonymously Hiding
+
+2
+
+11
+
+🧰 Exploit Framework
+
+4
+
+2
+
+🔍 Information Gathering
+
+26
+
+12
+
+🔁 Reverse Engineering
+
+5
+
+3
+
+📚 Wordlist Generator
+
+7
+
+13
+
+⚡ DDOS Attack
+
+5
+
+4
+
+📶 Wireless Attack
+
+13
+
+14
+
+🖥 RAT
+
+1
+
+5
+
+🧩 SQL Injection
+
+7
+
+15
+
+💥 XSS Attack
+
+9
+
+6
+
+🎣 Phishing Attack
+
+17
+
+16
+
+🖼 Steganography
+
+4
+
+7
+
+🌐 Web Attack
+
+20
+
+17
+
+🏢 Active Directory
+
+6
+
+8
+
+🔧 Post Exploitation
+
+10
+
+18
+
+☁ Cloud Security
+
+4
+
+9
+
+🕵 Forensics
+
+8
+
+19
+
+📱 Mobile Security
+
+3
+
+10
+
+📦 Payload Creation
+
+8
+
+20
+
+✨ Other Tools
+
+24
+
+* * *
+
+🛡 Anonymously Hiding Tools
+---------------------------
+
+-   Anonymously Surf
 -   Multitor
 
-### Information gathering tools
+🔍 Information Gathering Tools
+------------------------------
 
 -   Network Map (nmap)
 -   Dracnmap
 -   Port scanning
 -   Host to IP
 -   Xerosploit
--   RED HAWK (All In One Scanning)
--   ReconSpider(For All Scanning)
--   IsItDown (Check Website Down/Up)
--   Infoga - Email OSINT
+-   RED HAWK
+-   ReconSpider
+-   IsItDown
+-   Infoga
 -   ReconDog
 -   Striker
--   SecretFinder (like API & etc)
--   Find Info Using Shodan
--   Port Scanner - rang3r (Python 2.7)
--   Port Scanner - Ranger Reloaded (Python 3+)
+-   SecretFinder
+-   Shodanfy
+-   rang3r
 -   Breacher
+-   theHarvester ★
+-   Amass ★
+-   Masscan ★
+-   RustScan ★
+-   Holehe ★
+-   Maigret ★
+-   httpx ★
+-   SpiderFoot ★
+-   Subfinder ★
+-   TruffleHog ★
+-   Gitleaks ★
 
-### Wordlist Generator
+📚 Wordlist Generator
+---------------------
 
 -   Cupp
 -   WordlistCreator
 -   Goblin WordGenerator
--   Password list (1.4 Billion Clear Text Password)
+-   Password list (1.4B)
+-   Hashcat ★
+-   John the Ripper ★
+-   haiti ★
 
-### Wireless attack tools
+📶 Wireless Attack Tools
+------------------------
 
 -   WiFi-Pumpkin
 -   pixiewps
--   Bluetooth Honeypot GUI Framework
+-   Bluetooth Honeypot (bluepot)
 -   Fluxion
 -   Wifiphisher
 -   Wifite
 -   EvilTwin
 -   Fastssh
 -   Howmanypeople
+-   Airgeddon ★
+-   hcxdumptool ★
+-   hcxtools ★
+-   Bettercap ★
 
-### SQL Injection Tools
+🧩 SQL Injection Tools
+----------------------
 
--   Sqlmap tool
+-   Sqlmap
 -   NoSqlMap
--   Damn Small SQLi Scanner
+-   DSSS
 -   Explo
--   Blisqy - Exploit Time-based blind-SQL injection
--   Leviathan - Wide Range Mass Audit Toolkit
+-   Blisqy
+-   Leviathan
 -   SQLScan
 
-### Phishing attack tools
+🎣 Phishing Attack Tools
+------------------------
 
+-   Autophisher
+-   PyPhisher
+-   AdvPhishing
 -   Setoolkit
 -   SocialFish
 -   HiddenEye
--   Evilginx2
--   I-See\_You(Get Location using phishing attack)
--   SayCheese (Grab target's Webcam Shots)
+-   Evilginx3
+-   I-See-You
+-   SayCheese
 -   QR Code Jacking
+-   BlackEye
 -   ShellPhish
+-   Thanos
+-   QRLJacking
+-   Maskphish
 -   BlackPhish
+-   dnstwist
 
-### Web Attack tools
+🌐 Web Attack Tools
+-------------------
 
 -   Web2Attack
 -   Skipfish
--   SubDomain Finder
+-   Sublist3r
 -   CheckURL
--   Blazy(Also Find ClickJacking)
 -   Sub-Domain TakeOver
 -   Dirb
+-   Nuclei ★
+-   ffuf ★
+-   Feroxbuster ★
+-   Nikto ★
+-   wafw00f ★
+-   Katana ★
+-   Gobuster ★
+-   Dirsearch ★
+-   OWASP ZAP ★
+-   testssl.sh ★
+-   Arjun ★
+-   Caido ★
+-   mitmproxy ★
 
-### Post exploitation tools
+🔧 Post Exploitation Tools
+--------------------------
 
--   Vegile - Ghost In The Shell
+-   Vegile
 -   Chrome Keylogger
+-   pwncat-cs ★
+-   Sliver ★
+-   Havoc ★
+-   PEASS-ng (LinPEAS/WinPEAS) ★
+-   Ligolo-ng ★
+-   Chisel ★
+-   Evil-WinRM ★
+-   Mythic ★
 
-### Forensic tools
+🕵 Forensic Tools
+-----------------
 
 -   Autopsy
 -   Wireshark
 -   Bulk extractor
--   Disk Clone and ISO Image Acquire
+-   Guymager
 -   Toolsley
--   Volatility3
+-   Volatility 3 ★
+-   Binwalk ★
+-   pspy ★
 
-### Payload creation tools
+📦 Payload Creation Tools
+-------------------------
 
 -   The FatRat
 -   Brutal
 -   Stitch
 -   MSFvenom Payload Creator
--   Venom Shellcode Generator
+-   Venom
 -   Spycam
 -   Mob-Droid
 -   Enigma
 
-### Exploit framework
+🧰 Exploit Framework
+--------------------
 
 -   RouterSploit
 -   WebSploit
 -   Commix
 -   Web2Attack
 
-### Reverse engineering tools
+🔁 Reverse Engineering Tools
+----------------------------
 
 -   Androguard
 -   Apk2Gold
 -   JadX
+-   Ghidra ★
+-   Radare2 ★
 
-### DDOS Attack Tools
+⚡ DDOS Attack Tools
+-------------------
 
+-   DDoS Script
 -   SlowLoris
--   Asyncrone | Multifunction SYN Flood DDoS Weapon
+-   Asyncrone
 -   UFOnet
 -   GoldenEye
 
-### Remote Administrator Tools (RAT)
+🖥 Remote Administrator Tools (RAT)
+-----------------------------------
 
--   Stitch
 -   Pyshell
 
-### XSS Attack Tools
+💥 XSS Attack Tools
+-------------------
 
--   DalFox(Finder of XSS)
+-   DalFox
 -   XSS Payload Generator
--   Extended XSS Searcher and Finder
+-   Extended XSS Searcher
 -   XSS-Freak
 -   XSpear
 -   XSSCon
 -   XanXSS
--   Advanced XSS Detection Suite
+-   XSStrike
 -   RVuln
--   Cyclops
 
-### Steganograhy tools
+🖼 Steganography Tools
+----------------------
 
 -   SteganoHide
--   StegnoCracker
 -   StegoCracker
 -   Whitespace
 
-### Other tools
+🏢 Active Directory Tools
+-------------------------
+
+-   BloodHound ★
+-   NetExec (nxc) ★
+-   Impacket ★
+-   Responder ★
+-   Certipy ★
+-   Kerbrute ★
+
+☁ Cloud Security Tools
+----------------------
+
+-   Prowler ★
+-   ScoutSuite ★
+-   Pacu ★
+-   Trivy ★
+
+📱 Mobile Security Tools
+------------------------
+
+-   MobSF ★
+-   Frida ★
+-   Objection ★
+
+✨ Other Tools
+-------------
 
 #### SocialMedia Bruteforce
 
--   Instagram Attack
 -   AllinOne SocialMedia Attack
 -   Facebook Attack
 -   Application Checker
 
-#### Android Hacking tools
+#### Android Hacking Tools
 
 -   Keydroid
 -   MySMS
--   Lockphish (Grab target LOCK PIN)
--   DroidCam (Capture Image)
--   EvilApp (Hijack Session)
--   HatCloud(Bypass CloudFlare for IP)
+-   Lockphish
+-   DroidCam / WishFish
+-   EvilApp
 
 #### IDN Homograph Attack
 
 -   EvilURL
 
-#### Email Verify tools
+#### Email Verify Tools
 
 -   Knockmail
 
-#### Hash cracking tools
+#### Hash Cracking Tools
 
 -   Hash Buster
 
@@ -235,119 +559,136 @@ Hackingtool Menu 🧰
 
 #### SocialMedia Finder
 
--   Find SocialMedia By Facial Recognation System
+-   Find SocialMedia By Facial Recognition
 -   Find SocialMedia By UserName
 -   Sherlock
--   SocialScan | Username or Email
+-   SocialScan
 
 #### Payload Injector
 
 -   Debinject
 -   Pixload
 
-#### Web crawling
+#### Web Crawling
 
 -   Gospider
 
-#### Mix tools
+#### Mix Tools
 
--   Terminal Multiplexer
+-   Terminal Multiplexer (tilix)
 -   Crivo
 
-Installation For Linux
+* * *
 
-
-------------------------
-
-### !! RUN HACKINGTOOL AS ROOT !!
-
-Steps are given below :
------------------------
-
-Step : 1 Download hackingtool
+Contributing — Add a New Tool
 -----------------------------
 
-```
+### Open an Issue
+
+> **Title:** `[Tool Request] ToolName — Category`
+
+Use the Tool Request template.
+
+Required: tool name, GitHub URL, category, OS, install command, reason.
+
+### Open a Pull Request
+
+> **Title:** `[New Tool] ToolName — Category`
+
+Use the PR template checklist.
+
+Required: class in `tools/*.py`, TITLE, DESCRIPTION, INSTALL/RUN commands, SUPPORTED\_OS, test locally.
+
+> Issues or PRs that don't follow the title format will be closed without review.
+
+* * *
+
+Installation
+------------
+
+### One-liner (recommended)
+
+curl -sSL https://raw.githubusercontent.com/Z4nzu/hackingtool/master/install.sh | sudo bash
+
+Handles everything — prerequisites, clone, venv, launcher.
+
+### Manual
+
 git clone https://github.com/Z4nzu/hackingtool.git
-```
-
-Step : 2 Give Permission to hackingtool
----------------------------------------
-
-```
-chmod -R 755 hackingtool  
-```
-
-Step : 3 Move to hackingtool directory
---------------------------------------
-
-```
 cd hackingtool
-```
+sudo python3 install.py
 
-Step : 4 Run hackingtool
-------------------------
+Then run: `hackingtool`
 
-```
-sudo python install.py
-```
+### Docker
 
-Step : 5 For installing tools in directory
-------------------------------------------
+# Build
+docker build -t hackingtool .
 
-```
-sudo hackingtool
-```
+# Run (direct)
+docker run -it --rm hackingtool
 
-Use image with Docker
----------------------
-
-### Create Docker Image
-
--   Create the docker image
-
-docker buitl -t vgpastor/hackingtool .
-
-### Run as container
-
-docker-compose up -d
-
-### Interact with terminal
-
--   Get into the container
-
+# Run (Compose — recommended)
+docker compose up -d
 docker exec -it hackingtool bash
 
-**OUTPUT:**
+# Dev mode (live source mount)
+docker compose --profile dev up
+docker exec -it hackingtool-dev bash
 
-Select Best Option : 
+# Stop
+docker compose down        # stop container
+docker compose down -v     # also remove data volume
 
-              \[1\] Kali Linux / Parrot-Os (apt)
-              \[2\] Arch Linux (pacman)
-              \[0\] Exit 
+### Requirements
 
-Enter the options and continue.
+Dependency
 
--   If need open other ports you can edit the docker-compose.yml file
--   Volumes are mounted in the container to persist data and can share files between the host and the container
+Version
 
-#### Thanks to original Author of the tools used in hackingtool
+Needed for
 
-#### Please Don't Use for illegal Activity
+Python
 
-### To do
+3.10+
 
--   Release Tool
--   Add Tools for CTF
--   Want to do automatic
+Core
 
-Social Media 📭
----------------
+Go
 
-##### Your Favourite Tool is not in hackingtool or Suggestions Please CLICK HERE
+1.21+
 
-#### Don't Forgot to share with Your Friends
+nuclei, ffuf, amass, httpx, katana, dalfox, gobuster, subfinder
 
-### The new Update get will soon stay updated
+Ruby
 
-#### Thank you..!!
+any
+
+haiti, evil-winrm
+
+Docker
+
+any
+
+Mythic, MobSF (optional)
+
+pip install -r requirements.txt
+
+* * *
+
+Star History
+------------
+
+* * *
+
+Support
+-------
+
+If this project helps you, consider buying me a coffee:
+
+Social
+------
+
+> **For authorized security testing only.** Thanks to all original authors of the tools included in hackingtool.
+
+Your favourite tool is not listed? Suggest it here

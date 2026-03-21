@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 27162
+stars: 27388
 description: edgetunnel 2.0 VLESS/Trojan 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -187,6 +187,14 @@ PATH
 `1`或`true`
 
 默认开启日志记录功能，设置`1`或`true`则关闭日志记录功能
+
+**BEST\_SUB**
+
+❌
+
+`1`或`true`
+
+默认关闭作为**优选订阅生成器**的功能，设置`1`或`true`则开启该功能
 
 * * *
 

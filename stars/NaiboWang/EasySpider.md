@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 44078
+stars: 44123
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -29,6 +29,8 @@ Bright Data is a leading proxy network with 150M+ IPs worldwide, offering real r
 CapSolver是CAPTCHA solving领域的Top 3供应商，提供AI驱动的CAPTCHA solving服务，支持reCAPTCHA, Image CAPTCHA, Cloudflare, AWS WAF and more。专为大批量网页爬取、自动化工作流而生，赋能你的AI、BI项目，解码速度最快可<3s，成功率>99%,宕机时间为0，快速的客服支持，全网性价比最高，还可叠加EasySpider的6%专属折扣码：**ESN**。
 
 CapSolver is one of the top 3 providers in the CAPTCHA-solving industry, offering AI-powered solutions that support reCAPTCHA, Image CAPTCHA, Cloudflare, AWS WAF, and more. Designed for high-volume web scraping and automated workflows, it boasts decoding speeds of < 3 seconds, a success rate > 99%, and 0 downtime, empowering your AI and BI projects. Backed by fast customer support, it offers the best value-for-money solution on the market. Get your extra 6% extra credit using EasySpider’s bonus code: **ESN**.
+
+Click here to see how to solve captcha in EasySpider with CapSolver integration.
 
 官方网站/Official Website
 ---------------------
