@@ -1,6 +1,6 @@
 ---
 project: instantclick
-stars: 5505
+stars: 5503
 description: |-
     InstantClick makes following links in your website instant.
 url: https://github.com/dieulot/instantclick

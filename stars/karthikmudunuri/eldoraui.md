@@ -1,6 +1,6 @@
 ---
 project: eldoraui
-stars: 1906
+stars: 1916
 description: |-
     Eldora UI is a collection of re-usable components that you can copy and paste into your web apps. It primarily features components, blocks, and templates.
 url: https://github.com/karthikmudunuri/eldoraui
@@ -17,11 +17,18 @@ url: https://github.com/karthikmudunuri/eldoraui
 <p align="center">
     UI Library for Design Engineers
 </p>
+
 <div align="center">
   <a href="https://github.com/karthikmudunuri/eldoraui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/karthikmudunuri/eldoraui"></a>
   <a href="https://github.com/karthikmudunuri/eldoraui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
   
 </div>
+
+## Supported by Vercel oss
+
+<a href="https://vercel.com/oss">
+  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge-2026.svg" />
+</a>
 
 ## Documentation
 
@@ -35,17 +42,6 @@ Visit our [contributing guide](https://github.com/karthikmudunuri/eldoraui/blob/
 
 Have questions, comments or feedback? [Join our discord](http://eldoraui.site/discord).
 
-## Authors
-
-<a href="https://github.com/karthikmudunuri/eldoraui/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=karthikmudunuri/eldoraui" />
-</a>
-
-## Supported by Vercel
-
-<a href="https://vercel.com/oss">
-  <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge-2026.svg" />
-</a>
 
 ## Stats
 

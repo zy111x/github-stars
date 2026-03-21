@@ -1,6 +1,6 @@
 ---
 project: metrics
-stars: 16346
+stars: 16381
 description: |-
     📊 An infographics generator with 30+ plugins and 300+ options to display stats about your GitHub account and render them as SVG, Markdown, PDF or JSON!
 url: https://github.com/lowlighter/metrics

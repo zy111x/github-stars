@@ -1,6 +1,6 @@
 ---
 project: image-webp
-stars: 70
+stars: 71
 description: |-
     null
 url: https://github.com/image-rs/image-webp

@@ -1,6 +1,6 @@
 ---
 project: react-flip-children
-stars: 75
+stars: 76
 description: |-
     null
 url: https://github.com/alfonsusac/react-flip-children

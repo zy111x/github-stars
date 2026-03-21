@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 35575
+stars: 35699
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -138,7 +138,7 @@ render(<Counter />);
 - [ElevenLabs CLI](https://github.com/elevenlabs/cli) - ElevenLabs agents client.
 - [SSH AI Chat](https://github.com/miantiao-me/ssh-ai-chat) - Chat with AI over SSH.
 
-*(PRs welcome. Append new entries at the end. Repos must have 100+ stars and showcase Ink beyond a basic list picker.)*
+_(PRs welcome. Append new entries at the end. Repos must have 100+ stars and showcase Ink beyond a basic list picker.)_
 
 ## Contents
 
@@ -1089,7 +1089,7 @@ Alternatively, pass a custom border style like so:
 		bottomLeft: '↗',
 		bottom: '↑',
 		bottomRight: '↖',
-		right: '←'
+		right: '←',
 	}}
 >
 	<Text>Custom</Text>
@@ -1275,11 +1275,23 @@ Accepts the same values as [`color`](#color) in the `<Text>` component.
 		<Text>Red background</Text>
 	</Box>
 
-	<Box backgroundColor="#FF8800" width={20} height={3} marginTop={1} alignSelf="flex-start">
+	<Box
+		backgroundColor="#FF8800"
+		width={20}
+		height={3}
+		marginTop={1}
+		alignSelf="flex-start"
+	>
 		<Text>Orange background</Text>
 	</Box>
 
-	<Box backgroundColor="rgb(0, 255, 0)" width={20} height={3} marginTop={1} alignSelf="flex-start">
+	<Box
+		backgroundColor="rgb(0, 255, 0)"
+		width={20}
+		height={3}
+		marginTop={1}
+		alignSelf="flex-start"
+	>
 		<Text>Green background</Text>
 	</Box>
 </Box>
@@ -1298,7 +1310,12 @@ The background color fills the entire `<Box>` area and is inherited by child `<T
 Background colors work with borders and padding:
 
 ```jsx
-<Box backgroundColor="cyan" borderStyle="round" padding={1} alignSelf="flex-start">
+<Box
+	backgroundColor="cyan"
+	borderStyle="round"
+	padding={1}
+	alignSelf="flex-start"
+>
 	<Text>Background with border and padding</Text>
 </Box>
 ```
@@ -1407,8 +1424,8 @@ const Example = () => {
 					...previousTests,
 					{
 						id: previousTests.length,
-						title: `Test #${previousTests.length + 1}`
-					}
+						title: `Test #${previousTests.length + 1}`,
+					},
 				]);
 
 				timer = setTimeout(run, 100);
@@ -1445,9 +1462,7 @@ render(<Example />);
 ```
 
 > [!NOTE]
-> `<Static>` only renders new items in the `items` prop and ignores items
-that were previously rendered. This means that when you add new items to the `items`
-array, changes you make to previous items will not trigger a rerender.
+> `<Static>` only renders new items in the `items` prop and ignores items that were previously rendered. This means that when you add new items to the `items` array, changes you make to previous items will not trigger a rerender.
 
 See [examples/static](examples/static/static.tsx) for an example usage of `<Static>` component.
 
@@ -1547,11 +1562,7 @@ const text =
 	'of my hands only. I lived there two years and two months. At ' +
 	'present I am a sojourner in civilized life again.';
 
-render(
-	<HangingIndent indent={4}>
-		{text}
-	</HangingIndent>
-);
+render(<HangingIndent indent={4}>{text}</HangingIndent>);
 ```
 
 #### transform(outputLine, index)
@@ -1820,6 +1831,7 @@ Exit (unmount) the whole Ink app.
 Type: `Error | unknown`
 
 Optional value that controls how [`waitUntilExit`](#waituntilexit) settles:
+
 - `exit()` resolves with `undefined`.
 - `exit(error)` rejects when `error` is an `Error`.
 - `exit(value)` resolves with `value`.
@@ -2111,7 +2123,11 @@ import {Text, useWindowSize} from 'ink';
 const Example = () => {
 	const {columns, rows} = useWindowSize();
 
-	return <Text>{columns}x{rows}</Text>;
+	return (
+		<Text>
+			{columns}x{rows}
+		</Text>
+	);
 };
 ```
 
@@ -2324,7 +2340,10 @@ const TextInput = () => {
 	return (
 		<Box flexDirection="column">
 			<Text>Type here:</Text>
-			<Text>{prompt}{text}</Text>
+			<Text>
+				{prompt}
+				{text}
+			</Text>
 		</Box>
 	);
 };
@@ -2482,6 +2501,7 @@ Default: `false`
 Enable React Concurrent Rendering mode.
 
 When enabled:
+
 - Suspense boundaries work correctly with async data fetching
 - `useTransition` and `useDeferredValue` hooks are fully functional
 - Updates can be interrupted for higher priority work
@@ -2574,6 +2594,7 @@ Default: `['disambiguateEscapeCodes']`
 Protocol flags to request from the terminal. Pass an array of flag name strings.
 
 Available flags:
+
 - `'disambiguateEscapeCodes'` - Disambiguate escape codes
 - `'reportEventTypes'` - Report key press, repeat, and release events
 - `'reportAlternateKeys'` - Report alternate key encodings
@@ -2858,6 +2879,7 @@ Type: `string`
 The role of the element.
 
 Supported values:
+
 - `button`
 - `checkbox`
 - `radio`
@@ -2880,6 +2902,7 @@ Type: `object`
 The state of the element.
 
 Supported values:
+
 - `checked` (boolean)
 - `disabled` (boolean)
 - `expanded` (boolean)

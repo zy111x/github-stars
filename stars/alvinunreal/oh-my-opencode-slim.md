@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 2086
+stars: 2252
 description: |-
     Slimmed, cleaned and fine-tuned oh-my-opencode fork, consumes much less tokens
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -23,12 +23,17 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
 bunx oh-my-opencode-slim@latest install
 ```
 
-The installer generates an OpenAI configuration by default (using `gpt-5.4` and `gpt-5-codex`). No provider questions asked.
+The installer generates an OpenAI configuration by default (using `gpt-5.4` and `gpt-5.4-mini`). No provider questions asked.
 
 For non-interactive mode:
 
 ```bash
 bunx oh-my-opencode-slim@latest install --no-tui --tmux=no --skills=yes
+```
+
+To force overwrite of an existing configuration:
+```bash
+bunx oh-my-opencode-slim@latest install --reset
 ```
 
 ### For Alternative Providers
@@ -62,6 +67,27 @@ https://raw.githubusercontent.com/alvinunreal/oh-my-opencode-slim/refs/heads/mas
 **Additional guides:**
 - **[Provider Configurations](docs/provider-configurations.md)** - Config examples for all supported providers
 - **[Tmux Integration](docs/tmux-integration.md)** - Real-time agent monitoring with tmux
+
+### ✅ Verify Your Setup
+
+After installation and authentication, verify all agents are configured and responding:
+
+```bash
+opencode
+```
+
+Then run:
+
+```
+ping all agents
+```
+
+<div align="center">
+  <img src="img/ping.png" alt="Ping all agents" width="600">
+  <p><i>Confirmation that all six agents are online and ready.</i></p>
+</div>
+
+If any agent fails to respond, check your provider authentication and config file.
 
 ---
 
@@ -127,12 +153,12 @@ https://raw.githubusercontent.com/alvinunreal/oh-my-opencode-slim/refs/heads/mas
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5-codex</code>
+      <b>Default Model:</b> <code>openai/gpt-5.4-mini</code>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Recommended Models:</b> <code>cerebras/zai-glm-4.7</code> <code>google/gemini-3.1-pro-preview</code> <code>openai/gpt-5-codex</code>
+      <b>Recommended Models:</b> <code>cerebras/zai-glm-4.7</code> <code>google/gemini-3.1-pro-preview</code> <code>openai/gpt-5.4-mini</code>
     </td>
   </tr>
 </table>
@@ -199,12 +225,12 @@ https://raw.githubusercontent.com/alvinunreal/oh-my-opencode-slim/refs/heads/mas
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5-codex</code>
+      <b>Default Model:</b> <code>openai/gpt-5.4-mini</code>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Recommended Models:</b> <code>google/gemini-3.1-pro-preview</code> <code>openai/gpt-5-codex</code>
+      <b>Recommended Models:</b> <code>google/gemini-3.1-pro-preview</code> <code>openai/gpt-5.4-mini</code>
     </td>
   </tr>
 </table>
@@ -271,12 +297,12 @@ https://raw.githubusercontent.com/alvinunreal/oh-my-opencode-slim/refs/heads/mas
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5-codex</code>
+      <b>Default Model:</b> <code>openai/gpt-5.4-mini</code>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Recommended Models:</b> <code>cerebras/zai-glm-4.7</code> <code>google/gemini-3.1-pro-preview</code> <code>openai/gpt-5-codex</code>
+      <b>Recommended Models:</b> <code>cerebras/zai-glm-4.7</code> <code>google/gemini-3.1-pro-preview</code> <code>openai/gpt-5.4-mini</code>
     </td>
   </tr>
 </table>

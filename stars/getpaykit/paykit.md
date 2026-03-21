@@ -1,6 +1,6 @@
 ---
 project: paykit
-stars: 140
+stars: 142
 description: |-
     Open-source TypeScript toolkit that unifies multiple payment providers behind a single, extensible API.
 url: https://github.com/getpaykit/paykit

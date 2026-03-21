@@ -1,8 +1,8 @@
 ---
 project: takumi
-stars: 1464
+stars: 1503
 description: |-
-    JSX → Image, GIFs or Video.
+    Render image, GIF or video from JSX-like syntax.
 url: https://github.com/kane50613/takumi
 ---
 
@@ -45,12 +45,13 @@ import { ImageResponse } from "@takumi-rs/image-response";
 export function GET() {
   return new ImageResponse(
     <div tw="w-full h-full flex items-center justify-center bg-white">
-      <h1 tw="text-6xl font-bold">Hello from Takumi</h1>
+      <h1 tw="text-6xl font-bold">Hello from Takumi 👋😁</h1>
     </div>,
     {
       width: 1200,
       height: 630,
       format: "webp",
+      emoji: "twemoji",
     },
   );
 }

@@ -1,6 +1,6 @@
 ---
 project: zerobrew
-stars: 6748
+stars: 6834
 description: |-
     A 5-20x faster experimental Homebrew alternative
 url: https://github.com/lucasgelfond/zerobrew
@@ -9,6 +9,11 @@ url: https://github.com/lucasgelfond/zerobrew
 <div align="center">
 
 <h2>zerobrew</h2>
+
+<p align="center">
+  <strong>English</strong> ·
+  <a href="README.zh.md">中文</a>
+</p>
 
 [![Lint](https://github.com/lucasgelfond/zerobrew/actions/workflows/ci.yml/badge.svg)](https://github.com/lucasgelfond/zerobrew/actions/workflows/ci.yml)
 [![Test](https://github.com/lucasgelfond/zerobrew/actions/workflows/test.yml/badge.svg)](https://github.com/lucasgelfond/zerobrew/actions/workflows/test.yml)

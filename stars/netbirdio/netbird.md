@@ -1,6 +1,6 @@
 ---
 project: netbird
-stars: 23538
+stars: 23706
 description: |-
     Connect your devices into a secure WireGuard®-based overlay network with SSO, MFA and granular access controls.
 url: https://github.com/netbirdio/netbird
@@ -134,6 +134,7 @@ See a complete [architecture overview](https://docs.netbird.io/about-netbird/how
 ### Community projects
 -  [NetBird installer script](https://github.com/physk/netbird-installer)
 -  [NetBird ansible collection by Dominion Solutions](https://galaxy.ansible.com/ui/repo/published/dominion_solutions/netbird/)
+-  [netbird-tui](https://github.com/n0pashkov/netbird-tui) — terminal UI for managing NetBird peers, routes, and settings
 
 **Note**: The `main` branch may be in an *unstable or even broken state* during development.
 For stable versions, see [releases](https://github.com/netbirdio/netbird/releases).

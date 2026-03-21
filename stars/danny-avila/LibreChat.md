@@ -1,6 +1,6 @@
 ---
 project: LibreChat
-stars: 34640
+stars: 34833
 description: |-
     Enhanced ChatGPT Clone: Features Agents, MCP, DeepSeek, Anthropic, AWS, OpenAI, Responses API, Azure, Groq, o1, GPT-5, Mistral, OpenRouter, Vertex AI, Gemini, Artifacts, AI model switching, message search, Code Interpreter, langchain, DALL-E-3, OpenAPI Actions, Functions, Secure Multi-User Auth, Presets, open-source for self-hosting. Active.
 url: https://github.com/danny-avila/LibreChat
@@ -13,6 +13,11 @@ url: https://github.com/danny-avila/LibreChat
   <h1 align="center">
     <a href="https://librechat.ai">LibreChat</a>
   </h1>
+</p>
+
+<p align="center">
+  <strong>English</strong> ·
+  <a href="README.zh.md">中文</a>
 </p>
 
 <p align="center">

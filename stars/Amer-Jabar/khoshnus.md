@@ -1,6 +1,6 @@
 ---
 project: khoshnus
-stars: 249
+stars: 250
 description: |-
     A library to bring life to your web writings!
 url: https://github.com/Amer-Jabar/khoshnus

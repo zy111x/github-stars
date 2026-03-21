@@ -1,6 +1,6 @@
 ---
 project: mcp-proxy
-stars: 660
+stars: 663
 description: |-
     An MCP proxy server that aggregates and serves multiple MCP resource servers through a single HTTP server.
 url: https://github.com/tbxark/mcp-proxy

@@ -1,6 +1,6 @@
 ---
 project: animateicons
-stars: 782
+stars: 790
 description: |-
     Free and open-source animated SVG icons for React, built for smooth micro-interactions, easy customization, and lightweight performance.
 url: https://github.com/Avijit07x/animateicons
@@ -41,7 +41,7 @@ After installing an icon, import it into your component:
 
 ```tsx
 "use client";
-import { AtomIcon } from "@/components/atom-icon";
+import { AtomIcon } from "@/components/atom";
 
 export default function Page() {
 	return <AtomIcon size={28} duration={1} isAnimated={true} />;
@@ -53,7 +53,7 @@ export default function Page() {
 ```tsx
 "use client";
 import { useRef } from "react";
-import { BellRingIcon, BellRingIconHandle } from "@/components/bell-ring-icon";
+import { BellRingIcon, BellRingIconHandle } from "@/components/bell-ring";
 
 export default function Page() {
 	const bellRef = useRef<BellRingIconHandle>(null);
@@ -88,4 +88,5 @@ export default function Page() {
 
 > **Note:** This project is a work in progress — new animated icons are added regularly.
 > We’d love your feedback and contributions as the project evolves!
+> **Want to add a new icon?** Check out our [Contribution Guide](./CONTRIBUTING.md) for step-by-step instructions.
 

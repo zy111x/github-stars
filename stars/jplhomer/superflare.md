@@ -1,6 +1,6 @@
 ---
 project: superflare
-stars: 809
+stars: 810
 description: |-
     A full-stack toolkit for Cloudflare Workers.
 url: https://github.com/jplhomer/superflare

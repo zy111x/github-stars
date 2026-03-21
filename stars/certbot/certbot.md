@@ -1,6 +1,6 @@
 ---
 project: certbot
-stars: 32897
+stars: 32916
 description: |-
     Certbot is EFF's tool to obtain certs from Let's Encrypt and (optionally) auto-enable HTTPS on your server.  It can also act as a client for any other CA that uses the ACME protocol.
 url: https://github.com/certbot/certbot
@@ -97,7 +97,10 @@ Current Features
 Thanks
 ------
 
-We appreciate `Digital Ocean`_ for donating credits to help us test and develop Certbot.
+We appreciate the donation of credits to help us test and develop Certbot from:
 
-.. _Digital Ocean: https://www.digitalocean.com/
+.. image:: https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_blue.svg
+  :width: 201
+  :alt: DigitalOcean Logo
+  :target: https://www.digitalocean.com/
 

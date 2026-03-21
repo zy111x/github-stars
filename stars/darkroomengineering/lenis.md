@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 13349
+stars: 13401
 description: |-
     Smooth scroll at it should be
 url: https://github.com/darkroomengineering/lenis
@@ -92,7 +92,7 @@ import Lenis from 'lenis'
 Using scripts:
 
 ```html
-<script src="https://unpkg.com/lenis@1.3.18/dist/lenis.min.js"></script> 
+<script src="https://unpkg.com/lenis@1.3.19/dist/lenis.min.js"></script> 
 ```
 
 
@@ -139,7 +139,7 @@ import 'lenis/dist/lenis.css'
 **Or link the CSS file:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.18/dist/lenis.css">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.19/dist/lenis.css">
 ```
 
 **Or add it manually:**

@@ -1,6 +1,6 @@
 ---
 project: wordplate
-stars: 2172
+stars: 2173
 description: |-
     A boilerplate for WordPress, built with Composer and designed with sensible defaults.
 url: https://github.com/vinkla/wordplate
@@ -23,7 +23,7 @@ WordPlate is a boilerplate for WordPress, built with Composer and designed with 
     - [Environment Configuration](#environment-configuration)
     - [Salt Keys](#salt-keys)
 - [Plugins](#plugins)
-    - [WordPress Packagist](#wordpress-packagist)
+    - [WP Packages](#wp-packages)
     - [Must Use Plugins](#must-use-plugins)
     - [Included Plugins](#included-plugins)
 - [Vite.js](#vitejs)
@@ -43,9 +43,9 @@ WordPlate is a boilerplate for WordPress, built with Composer and designed with 
     
     Similar to Laravel, WordPlate stores environment variables, such as database credentials, in an `.env` file.
 
-- **WordPress Packagist**
+- **WP Packages**
     
-    WordPress Packagist enables the management of WordPress plugins and themes through Composer.
+    WP Packages enables the management of WordPress plugins and themes through Composer.
 
 - **Must-use plugins**
     
@@ -116,8 +116,8 @@ It's important to note that your `.env` file should not be committed to your app
 
 To learn more about managing environment variables in WordPlate, you can refer to Laravel's documentation on the topic:
 
-- [Environment Variable Types](https://laravel.com/docs/12.x/configuration#environment-variable-types)
-- [Retrieving Environment Configuration](https://laravel.com/docs/12.x/configuration#retrieving-environment-configuration)
+- [Environment Variable Types](https://laravel.com/docs/13.x/configuration#environment-variable-types)
+- [Retrieving Environment Configuration](https://laravel.com/docs/13.x/configuration#retrieving-environment-configuration)
 
 ### Salt Keys
 
@@ -127,14 +127,14 @@ If you don't set the salt keys, your user sessions and other encrypted data may 
 
 ## Plugins
 
-### WordPress Packagist
+### WP Packages
 
-WordPlate includes integration with [WordPress Packagist](https://wpackagist.org), a Composer repository that mirrors the WordPress plugin and theme directories. With this integration, you can install and manage plugins using Composer.
+WordPlate includes integration with [WP Packages](https://wp-packages.org), a Composer repository that mirrors the WordPress plugin and theme directories. With this integration, you can install and manage plugins using Composer.
 
-To install a plugin, use `wpackagist-plugin` as the vendor name and the plugin slug as the package name. For example, to install the `clean-image-filenames` plugin, you would use the following command:
+To install a plugin, use `wp-plugin` as the vendor name and the plugin slug as the package name. For example, to install the `clean-image-filenames` plugin, you would use the following command:
 
 ```bash
-composer require wpackagist-plugin/clean-image-filenames
+composer require wp-plugin/clean-image-filenames
 ```
 
 The installed packages will be located in the `public/plugins` directory.
@@ -143,11 +143,11 @@ Here's an example of what your `composer.json` file might look like:
 
 ```json
 "require": {
-    "wpackagist-plugin/clean-image-filenames": "^1.5"
+    "wp-plugin/clean-image-filenames": "^1.5"
 }
 ```
 
-For more information and examples, please visit the [WordPress Packagist website](https://wpackagist.org).
+For more information and examples, please visit the [WP Packages website](https://wp-packages.org).
 
 ### Must Use Plugins
 
@@ -159,15 +159,15 @@ To install plugins into the `mu-plugins` directory, add the plugin name to the `
 "installer-paths": {
     "public/mu-plugins/{$name}": [
         "type:wordpress-muplugin",
-        "wpackagist-plugin/clean-image-filenames",
+        "wp-plugin/clean-image-filenames",
     ]
 }
 ```
 
-To install the plugin, use `wpackagist-plugin` as the vendor name and the plugin slug as the package name:
+To install the plugin, use `wp-plugin` as the vendor name and the plugin slug as the package name:
 
 ```sh
-composer require wpackagist-plugin/clean-image-filenames
+composer require wp-plugin/clean-image-filenames
 ```
 
 The plugin will be installed in the `public/mu-plugins` directory.
@@ -435,7 +435,7 @@ final class WordPlateTinkerwellDriver extends WordpressTinkerwellDriver
         symfony/http-foundation \
         vinkla/headache \
         vlucas/phpdotenv \
-        wpackagist-plugin/clean-image-filenames
+        wp-plugin/clean-image-filenames
     ``` 
 
 1. Install the following development package dependencies:
@@ -598,9 +598,9 @@ WordPlate wouldn't be possible without these amazing open-source projects.
 
 - [`composer/installers`](https://github.com/composer/installers)
 - [`motdotla/dotenv`](https://github.com/motdotla/dotenv)
-- [`outlandish/wpackagist`](https://github.com/outlandishideas/wpackagist)
 - [`roots/bedrock-autoloader`](https://github.com/roots/bedrock-autoloader)
 - [`roots/wordpress`](https://github.com/roots/wordpress)
+- [`roots/wp-packages`](https://github.com/roots/wp-packages)
 - [`symfony/http-foundation`](https://github.com/symfony/http-foundation)
 - [`symfony/var-dumper`](https://github.com/symfony/var-dumper)
 - [`tailwindlabs/tailwindcss`](https://github.com/tailwindlabs/tailwindcss)

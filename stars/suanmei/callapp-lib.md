@@ -1,6 +1,6 @@
 ---
 project: callapp-lib
-stars: 2550
+stars: 2549
 description: |-
     🔥call app from h5（H5唤起客户端 ）
 url: https://github.com/suanmei/callapp-lib

@@ -1,6 +1,6 @@
 ---
 project: bestofjs
-stars: 3080
+stars: 3084
 description: |-
     :star: A place to find the best components to build amazing web applications. The best of JavaScript!
 url: https://github.com/bestofjs/bestofjs

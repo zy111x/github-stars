@@ -1,6 +1,6 @@
 ---
 project: lobe-tts
-stars: 778
+stars: 779
 description: |-
     🎤 Lobe TTS - A high-quality & reliable TTS/STT library for Server and Browser
 url: https://github.com/lobehub/lobe-tts

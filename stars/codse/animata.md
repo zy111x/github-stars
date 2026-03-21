@@ -1,6 +1,6 @@
 ---
 project: animata
-stars: 2384
+stars: 2388
 description: |-
     Bring your site to life with easy to use animation & interaction code. Copy. Paste. Animate. 
 url: https://github.com/codse/animata

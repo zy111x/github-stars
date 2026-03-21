@@ -1,8 +1,8 @@
 ---
 project: toolhive
-stars: 1652
+stars: 1665
 description: |-
-    ToolHive makes deploying MCP servers easy, secure and fun
+    ToolHive is an enterprise-grade platform for running and managing Model Context Protocol (MCP) servers.
 url: https://github.com/stacklok/toolhive
 ---
 
@@ -65,6 +65,7 @@ ToolHive keeps you in control of your MCP estate. Integrate with popular clients
   - [Kubernetes Operator](https://docs.stacklok.com/toolhive/tutorials/quickstart-k8s)
 - 💬 [Discord](https://discord.gg/stacklok)
 - 🤝 [Contributing](#contributing)
+- <img src="docs/images/stacklok-favicon.svg" width="20" height="20" style="vertical-align: middle" /> [Stacklok Enterprise](https://docs.stacklok.com/toolhive/enterprise)
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 project: hotkeys-js
-stars: 7149
+stars: 7151
 description: |-
     ➷ A robust Javascript library for capturing keyboard input. It has no dependencies. 
 url: https://github.com/jaywcjlove/hotkeys-js
@@ -26,7 +26,7 @@ url: https://github.com/jaywcjlove/hotkeys-js
   <a target="_blank" href="https://apps.apple.com/app/6740425504" title="KeyClicker for macOS"><img alt="KeyClicker" height="52" width="52" src="https://wangchujiang.com/appicon/key-clicker.png"></a>
   <a target="_blank" href="https://apps.apple.com/app/6739052447" title="DayBar for macOS"><img alt="DayBar" height="52" width="52" src="https://wangchujiang.com/appicon/daybar.png"></a>
   <a target="_blank" href="https://apps.apple.com/app/6739444407" title="Iconed for macOS"><img alt="Iconed" height="52" width="52" src="https://wangchujiang.com/appicon/iconed.png"></a>
-  <a target="_blank" href="https://apps.apple.com/app/6737160756" title="Mousio for macOS"><img alt="Mousio" height="52" width="52" src="https://wangchujiang.com/appicon/rightmenu-master.png"></a>
+  <a target="_blank" href="https://apps.apple.com/app/6737160756" title="Menuist for macOS"><img alt="Menuist" height="52" width="52" src="https://wangchujiang.com/appicon/rightmenu-master.png"></a>
   <a target="_blank" href="https://apps.apple.com/app/6723903021" title="Paste Quick for macOS"><img alt="Quick RSS" height="52" width="52" src="https://wangchujiang.com/appicon/paste-quick.png"></a>
   <a target="_blank" href="https://apps.apple.com/app/6670696072" title="Quick RSS for macOS/iOS"><img alt="Quick RSS" height="52" width="52" src="https://wangchujiang.com/appicon/quick-rss.png"></a>
   <a target="_blank" href="https://apps.apple.com/app/6670167443" title="Web Serve for macOS"><img alt="Web Serve" height="52" width="52" src="https://wangchujiang.com/appicon/web-serve.png"></a>
@@ -46,10 +46,10 @@ url: https://github.com/jaywcjlove/hotkeys-js
 
 # Hotkeys
 
-[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor)
+[![Buy me a coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://jaywcjlove.github.io/#/sponsor)
+[![Follow On X](https://img.shields.io/badge/Follow%20on%20X-333333?logo=x&logoColor=white)](https://x.com/jaywcjlove)
 [![](https://img.shields.io/npm/dm/hotkeys-js?logo=npm&label=)](https://www.npmjs.com/package/hotkeys-js)
 [![](https://img.shields.io/github/stars/jaywcjlove/hotkeys-js.svg)](https://github.com/jaywcjlove/hotkeys/stargazers)
-![no dependencies](http://jaywcjlove.github.io/sb/status/no-dependencies.svg)
 [![GitHub Actions CI](https://github.com/jaywcjlove/hotkeys-js/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/hotkeys-js/actions/workflows/ci.yml)
 [![Coverage Status](https://jaywcjlove.github.io/hotkeys-js/coverage.svg)](https://jaywcjlove.github.io/hotkeys-js/lcov-report/index.html)
 [![Chinese](https://jaywcjlove.github.io/sb/lang/chinese.svg)](https://wangchujiang.com/hotkeys-js/?lang=zh)

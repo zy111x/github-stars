@@ -1,6 +1,6 @@
 ---
 project: daytona
-stars: 65103
+stars: 68892
 description: |-
     Daytona is a Secure and Elastic Infrastructure for Running AI-Generated Code
 url: https://github.com/daytonaio/daytona
@@ -151,12 +151,13 @@ import (
  "time"
 
  "github.com/daytonaio/daytona/libs/sdk-go/pkg/daytona"
+ "github.com/daytonaio/daytona/libs/sdk-go/pkg/options"
  "github.com/daytonaio/daytona/libs/sdk-go/pkg/types"
 )
 
 func main() {
  // Initialize the Daytona client with DAYTONA_API_KEY in env
-  // Alternative is to use daytona.NewClientWithConfig(...) for more specific config
+ // Alternative is to use daytona.NewClientWithConfig(...) for more specific config
  client, err := daytona.NewClient()
  if err != nil {
   log.Fatalf("Failed to create client: %v", err)
@@ -171,7 +172,7 @@ func main() {
   },
  }
 
- sandbox, err := client.Create(ctx, params, daytona.WithTimeout(90*time.Second))
+ sandbox, err := client.Create(ctx, params, options.WithTimeout(90*time.Second))
  if err != nil {
   log.Fatalf("Failed to create sandbox: %v", err)
  }

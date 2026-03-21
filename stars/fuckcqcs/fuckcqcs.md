@@ -1,6 +1,6 @@
 ---
 project: fuckcqcs
-stars: 4317
+stars: 4311
 description: |-
     14小时
 url: https://github.com/fuckcqcs/fuckcqcs

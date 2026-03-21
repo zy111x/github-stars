@@ -1,6 +1,6 @@
 ---
 project: mise
-stars: 25634
+stars: 25904
 description: |-
     dev tools, env vars, task runner
 url: https://github.com/jdx/mise
@@ -10,7 +10,10 @@ url: https://github.com/jdx/mise
 
 <h1 align="center">
   <a href="https://mise.jdx.dev">
-    <img src="docs/public/logo.svg" alt="mise" width="256" height="256" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/public/logo-dark.svg" />
+      <img src="docs/public/logo-light.svg" alt="mise" width="256" height="256" />
+    </picture>
     <br>
     mise-en-place
   </a>
@@ -69,7 +72,7 @@ $ ~/.local/bin/mise --version
  / / / / / / (__  )  __/_____/  __/ / / /_____/ /_/ / / /_/ / /__/  __/
 /_/ /_/ /_/_/____/\___/      \___/_/ /_/     / .___/_/\__,_/\___/\___/
                                             /_/                 by @jdx
-2026.3.9 macos-arm64 (2026-03-13)
+2026.3.10 macos-arm64 (2026-03-21)
 ```
 
 Hook mise into your shell (pick the right one for your shell):

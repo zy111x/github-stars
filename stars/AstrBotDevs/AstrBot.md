@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 24487
+stars: 26328
 description: |-
     Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨
 url: https://github.com/AstrBotDevs/AstrBot
@@ -40,7 +40,7 @@ url: https://github.com/AstrBotDevs/AstrBot
 <a href="https://astrbot.app/">Documentation</a> ｜
 <a href="https://blog.astrbot.app/">Blog</a> ｜
 <a href="https://astrbot.featurebase.app/roadmap">Roadmap</a> ｜
-<a href="https://github.com/AstrBotDevs/AstrBot/issues">Issue Tracker</a>
+<a href="https://github.com/AstrBotDevs/AstrBot/issues">Issue Tracker</a> ｜
 <a href="mailto:community@astrbot.app">Email Support</a>
 </div>
 

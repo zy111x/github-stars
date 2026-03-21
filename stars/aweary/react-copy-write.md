@@ -1,6 +1,6 @@
 ---
 project: react-copy-write
-stars: 1779
+stars: 1778
 description: |-
     ✍️ Immutable state with a mutable API 
 url: https://github.com/aweary/react-copy-write

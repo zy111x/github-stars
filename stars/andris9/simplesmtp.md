@@ -1,6 +1,6 @@
 ---
 project: simplesmtp
-stars: 391
+stars: 390
 description: |-
     Simple SMTP server/client module
 url: https://github.com/andris9/simplesmtp

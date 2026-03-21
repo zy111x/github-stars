@@ -1,6 +1,6 @@
 ---
 project: litellm
-stars: 39059
+stars: 39858
 description: |-
     Python SDK, Proxy Server (AI Gateway) to call 100+ LLM APIs in OpenAI (or native) format, with cost tracking, guardrails, loadbalancing and logging. [Bedrock, Azure, OpenAI, VertexAI, Cohere, Anthropic, Sagemaker, HuggingFace, VLLM, NVIDIA NIM]
 url: https://github.com/BerriAI/litellm
@@ -35,6 +35,9 @@ url: https://github.com/BerriAI/litellm
     </a>
     <a href="https://www.litellm.ai/support">
         <img src="https://img.shields.io/static/v1?label=Chat%20on&message=Slack&color=black&logo=Slack&style=flat-square" alt="Slack">
+    </a>
+    <a href="https://codspeed.io/BerriAI/litellm?utm_source=badge">
+        <img src="https://img.shields.io/endpoint?url=https://codspeed.io/badge.json" alt="CodSpeed"/>
     </a>
 </h4>
 

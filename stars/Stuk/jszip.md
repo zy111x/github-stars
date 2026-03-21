@@ -1,6 +1,6 @@
 ---
 project: jszip
-stars: 10319
+stars: 10328
 description: |-
     Create, read and edit .zip files with Javascript
 url: https://github.com/Stuk/jszip

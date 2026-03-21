@@ -1,6 +1,6 @@
 ---
 project: cloud-code
-stars: 513
+stars: 515
 description: |-
     Cloud Code (Cloudflare + OpenCode), running OpenCode on Cloudflare to build a dedicated cloud Agent for you.
 url: https://github.com/miantiao-me/cloud-code

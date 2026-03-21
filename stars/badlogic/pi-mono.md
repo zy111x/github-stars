@@ -1,6 +1,6 @@
 ---
 project: pi-mono
-stars: 23736
+stars: 26629
 description: |-
     AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods
 url: https://github.com/badlogic/pi-mono
@@ -9,9 +9,9 @@ url: https://github.com/badlogic/pi-mono
 <!-- OSS_WEEKEND_START -->
 # 🏖️ OSS Weekend
 
-**Issue tracker reopens Monday, March 16, 2026.**
+**Issue tracker reopens Monday, March 23, 2026.**
 
-OSS weekend runs Saturday, March 14, 2026 through Monday, March 16, 2026. New issues are auto-closed during this time. For support, join [Discord](https://discord.com/invite/3cU7Bz4UPx).
+OSS weekend runs Friday, March 20, 2026 through Monday, March 23, 2026. New issues are auto-closed during this time. For support, join [Discord](https://discord.com/invite/3cU7Bz4UPx).
 <!-- OSS_WEEKEND_END -->
 
 ---

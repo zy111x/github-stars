@@ -1,6 +1,6 @@
 ---
 project: mantrae
-stars: 445
+stars: 449
 description: |-
     Web UI for managing Traefik
 url: https://github.com/MizuchiLabs/mantrae

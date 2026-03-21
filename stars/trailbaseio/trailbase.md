@@ -1,6 +1,6 @@
 ---
 project: trailbase
-stars: 4676
+stars: 4694
 description: |-
     An open, sub-millisecond, single-executable Firebase alternative with type-safe APIs, built-in WebAssembly runtime, realtime subscriptions, auth, and admin UI built on Rust, SQLite & Wasmtime.
 url: https://github.com/trailbaseio/trailbase
@@ -224,4 +224,21 @@ If you have any concerns, please reach out.
 If you require an
 [exception](https://www.gnu.org/philosophy/selling-exceptions.html), reach out
 to contact@trailbase.io.
+
+## Funding
+
+This project receives funding through [NGI Zero Core](https://nlnet.nl/core), a
+fund established by [NLnet](https://nlnet.nl) with financial support from the
+European Commission's [Next Generation Internet](https://ngi.eu) program.
+Learn more on our [NLnet project page](https://nlnet.nl/project/Trailbase/).
+
+<p align="left">
+  <a href="https://nlnet.nl">
+    <img src="https://nlnet.nl/logo/banner.png" alt="NLnet foundation logo" width="20%" />
+  </a>
+
+  <a href="https://nlnet.nl/core">
+    <img src="https://nlnet.nl/image/logos/NGI0_tag.svg" alt="NGI Zero Logo" width="20%" />
+  </a>
+</p>
 

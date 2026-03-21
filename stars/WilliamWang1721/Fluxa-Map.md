@@ -1,9 +1,9 @@
 ---
-project: Payments-Maps
+project: Fluxa-Map
 stars: 58
 description: |-
     Payments-Maps is a payment method browsing map created for credit card enthusiasts. Anyone can add a marked location on the map, and all users can view it.
-url: https://github.com/WilliamWang1721/Payments-Maps
+url: https://github.com/WilliamWang1721/Fluxa-Map
 ---
 
 # 🗺️ Payments Maps - 智能支付地图平台

@@ -1,6 +1,6 @@
 ---
 project: react-blessed
-stars: 4503
+stars: 4502
 description: |-
     A react renderer for blessed.
 url: https://github.com/Yomguithereal/react-blessed

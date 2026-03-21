@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 18988
+stars: 19104
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -27,6 +27,9 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
   </a>
   <a href="https://www.shadcnblocks.com" target="_blank">
     <img src="public/sponsors/shadcnblocks.svg" alt="shadcnblocks.com" width="32">
+  </a>
+  <a href="https://shadcnuikit.com/?utm_source=awesome-shadcn-ui&utm_medium=banner&utm_campaign=github" target="_blank">
+    <img src="public/sponsors/shadcnuikit.svg" alt="shadcnuikit.com" width="32">
   </a>
 </p>
 
@@ -345,6 +348,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | jobsync | JobSync is a job seekers' assistant to manage job search efficiently. | [Link](https://github.com/Gsync/jobsync) | 2024-07-17 |
 | memfree | Open-source hybrid AI search engine, instantly get accurate answers from the internet, bookmarks, notes, and docs. Built using Next.js and shadcn/ui. | [Link](https://github.com/memfreeme/memfree) | 2024-07-22 |
 | opensearch-ai | SearchGPT/Perplexity clone but personalized for you. | [Link](https://github.com/supermemoryai/opensearch-ai) | 2024-12-26 |
+| open-ui | The Open Standard for Generative UI | [Link](https://www.openui.com/) | 2026-03-20 |
 | pagegen.ai | An AI Page Generator with Claude AI, React, and shadcn/ui. Generate web pages from text, screenshots, and templates with one click. | [Link](https://pagegen.ai) | 2024-12-26 |
 | pastecode | Pastebin alternative built with TypeScript, Next.js, Drizzle, shadcn/ui, and RSC. | [Link](https://github.com/Quorin/PasteCode.app) | 2024-06-07 |
 | pictera | Generate Open Graph images without design skills. | [Link](https://pictera.co) | 2025-10-08 |
@@ -407,7 +411,9 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | memergez | Quickly generate memes by entering text or an avatar URL, with support for many meme commands. | [Link](https://github.com/avalynndev/memergez) | 2024-08-26 |
 | midday-components | A collection of open-source components based on Midday features. | [Link](https://midday.ai/components) | 2024-11-21 |
 | multiboard | Minimal Kanban platform. Built with Better-Auth, Next.js, ZenStack, Prisma, and shadcn/ui. | [Link](https://github.com/olliethedev/multiboard) | 2025-07-15 |
+| openhive | Open-source, self-hosted Slack alternative with channels, DMs, threads, reactions, file uploads, and video/audio calls. Built with Next.js, Supabase, Zustand, and shadcn/ui. | [Link](https://github.com/arseneHuot/openhive) | 2026-03-14 |
 | plotwist | Easy management and reviews of your movies, series, and animes using Next.js, Tailwind CSS, Supabase, and shadcn/ui. | [Link](https://plotwist.app/en-US) | 2024-05-31 |
+| snapimg | Fast, privacy-focused image compression tool supporting PNG, JPEG, WebP, AVIF. Built with React 19, Vite, Tailwind CSS, and shadcn/ui. | [Link](https://github.com/Moresl/snapimg) | 2025-12-15 |
 | veritas-kanban | Self-hosted Kanban board with AI agent integration, time tracking, and 1,255 tests. Built with React 19, Vite 6, TanStack Query, dnd-kit, and shadcn/ui. | [Link](https://github.com/BradGroux/veritas-kanban) | 2026-01-29 |
 | xeramail | Temporary email address service built with Next.js and shadcn/ui, offering fast inbox access, modern UI, and better control over disposable emails. | [Link](https://xeramail.com) | 2026-01-01 |
 | youropinion.is | Free survey platform which supports importing your exisitng shadcn/ui theme | [Link](https://youropinion.is/news/202505-match-my-style) | 2025-06-16 |
@@ -466,6 +472,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | fumadocs-starter | A fully-fledged Fumadocs starter template with built-in plugins, AI features, and everything you need to build your next docs site. | [Link](https://github.com/techwithanirudh/fumadocs-starter) | 2025-11-20 |
 | horizon-ai-nextjs-shadcn-boilerplate | Premium AI NextJS & shadcn/ui Boilerplate + Stripe + Supabase + OAuth. | [Link](https://horizon-ui.com/boilerplate-shadcn) | 2024-05-24 |
 | kirimase | A template and boilerplate for quickly starting your next project with shadcn/ui, Tailwind CSS, and Next.js. | [Link](https://kirimase.dev/) | 2024-06-11 |
+| login-auth | A login authentication web app built with Vite + React, Tailwind CSS, and Shadcn UI. It uses Firebase for Google sign-in, email sign-up, and password reset. | [Link](https://shadcn-login-auth.vercel.app/) | 2026-03-15 |
 | magicui-startup-templates | Magic UI Startup template built using shadcn/ui + TailwindCSS + Framer Motion. | [Link](https://magicui.design/docs/templates/startup) | 2024-04-25 |
 | next-shadcn-admin-dashboard | Modern Admin Dashboard Template built with Shadcn UI and Next.js 15 | [Link](https://github.com/arhamkhnz/next-shadcn-admin-dashboard) | 2025-10-25 |
 | nextMotion | Webdev portfolio template with Nodemailer integrated for easy contact form setup. Uses shadcn/ui + TailwindCSS + Framer Motion. | [Link](https://github.com/yoyocharlie/nextMotion) | 2024-09-23 |

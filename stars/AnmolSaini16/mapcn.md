@@ -1,6 +1,6 @@
 ---
 project: mapcn
-stars: 6373
+stars: 6824
 description: |-
     Beautiful map components. 100% Free, Zero config, one command setup.
 url: https://github.com/AnmolSaini16/mapcn
@@ -31,7 +31,6 @@ url: https://github.com/AnmolSaini16/mapcn
   <img src="public/banner.png" alt="mapcn banner" />
 </p>
 
-
 ## Features
 
 - 🎨 **Theme-aware** — Automatically adapts to light/dark mode
@@ -49,7 +48,7 @@ This project uses [CARTO Basemaps](https://docs.carto.com/faqs/carto-basemaps) w
 
 - **Commercial use**: Requires a CARTO Enterprise license. [Request a demo](https://carto.com/request-live-demo) for pricing details.
 - **Non-commercial use**: Free for CARTO grantees under their [basemap terms](https://carto.com/legal/bmap).
-- **Alternative**: You can switch to [OpenStreetMap](https://www.openstreetmap.org/) tiles or any other MapLibre-compatible tile provider.
+- **Alternative**: You can switch to [OpenStreetMap](https://www.openstreetmap.org/) tiles or any other MapLibre-compatible tile provider (MapTiler, Stadia Maps, etc).
 
 ## Contributing
 
