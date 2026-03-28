@@ -1,6 +1,6 @@
 ---
 project: Rayon
-stars: 2431
+stars: 2430
 description: |-
     yet another SSH machine manager
 url: https://github.com/Lakr233/Rayon

@@ -1,6 +1,6 @@
 ---
 project: onyx
-stars: 17968
+stars: 19705
 description: |-
     Open Source AI Platform - AI Chat with advanced features that works with every LLM
 url: https://github.com/onyx-dot-app/onyx
@@ -43,7 +43,7 @@ Onyx comes loaded with advanced features like Agents, Web Search, RAG, MCP, Deep
 > [!TIP]
 > Run Onyx with one command (or see deployment section below):
 > ```
-> curl -fsSL https://raw.githubusercontent.com/onyx-dot-app/onyx/main/deployment/docker_compose/install.sh > install.sh && chmod +x install.sh && ./install.sh
+> curl -fsSL https://onyx.app/install_onyx.sh | bash
 > ```
 
 ****

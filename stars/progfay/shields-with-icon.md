@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 454
+stars: 456
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -2389,6 +2389,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Qase](https://img.shields.io/badge/Qase-4F46DC?style=for-the-badge&logo=Qase&logoColor=FFFFFF)
 ![Qatar Airways](https://img.shields.io/badge/Qatar%20Airways-5C0D34?style=for-the-badge&logo=Qatar+Airways&logoColor=FFFFFF)
 ![qbittorrent](https://img.shields.io/badge/qbittorrent-2F67BA?style=for-the-badge&logo=qbittorrent&logoColor=FFFFFF)
+![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=for-the-badge&logo=Qdrant&logoColor=FFFFFF)
 ![QEMU](https://img.shields.io/badge/QEMU-FF6600?style=for-the-badge&logo=QEMU&logoColor=FFFFFF)
 ![QGIS](https://img.shields.io/badge/QGIS-589632?style=for-the-badge&logo=QGIS&logoColor=FFFFFF)
 ![Qi](https://img.shields.io/badge/Qi-000000?style=for-the-badge&logo=Qi&logoColor=FFFFFF)

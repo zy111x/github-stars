@@ -1,6 +1,6 @@
 ---
 project: sandbox
-stars: 3124
+stars: 3643
 description: |-
     All-in-One Sandbox for AI Agents that combines Browser, Shell, File, MCP and VSCode Server in a single Docker container.
 url: https://github.com/agent-infra/sandbox

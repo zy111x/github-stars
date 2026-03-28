@@ -1,6 +1,6 @@
 ---
 project: htmx
-stars: 47675
+stars: 47721
 description: |-
     </> htmx - high power tools for HTML
 url: https://github.com/bigskysoftware/htmx

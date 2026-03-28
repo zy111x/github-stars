@@ -1,6 +1,6 @@
 ---
 project: webtui
-stars: 2297
+stars: 2298
 description: |-
     null
 url: https://github.com/webtui/webtui
@@ -12,7 +12,7 @@ Modular CSS Library that brings the beauty of Terminal UIs to the browser
 
 - Docs: https://webtui.ironclad.sh
 - Examples: https://webtui.ironclad.sh/showcase
-- Chat/Support/Community: https://webtui.ironclad.sh/chat
+- Chat/Support/Community (Signal): https://webtui.ironclad.sh/chat
 
 ## Quickstart
 

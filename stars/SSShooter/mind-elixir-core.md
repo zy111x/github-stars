@@ -1,6 +1,6 @@
 ---
 project: mind-elixir-core
-stars: 2981
+stars: 2988
 description: |-
     ⚗ Mind Elixir is a JavaScript, framework-agnostic mind map core.
 url: https://github.com/SSShooter/mind-elixir-core
@@ -188,6 +188,7 @@ And in your CSS file:
 
 ```javascript
 import MindElixir from 'mind-elixir'
+import { en } from 'mind-elixir/i18n'
 import 'mind-elixir/style.css'
 import example from 'mind-elixir/dist/example1'
 
@@ -196,11 +197,10 @@ let options = {
   direction: MindElixir.LEFT,
   toolBar: true, // default true
   keypress: true, // default true
-  locale: 'en', // [zh_CN,zh_TW,en,ja,pt,ru,ro] waiting for PRs
   overflowHidden: false, // default false
-  mainLinkStyle: 2, // [1,2] default 1
   mouseSelectionButton: 0, // 0 for left button, 2 for right button, default 0
   contextMenu: {
+    locale: en, // [cn,zh_CN,zh_TW,en,ru,ja,pt,it,es,fr,ko,ro,da,fi,de,nl,nb,sv]
     focus: true,
     link: true,
     extend: [

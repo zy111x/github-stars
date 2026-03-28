@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 16466
+stars: 16495
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -195,11 +195,11 @@ Shortcut for sending JSON. Use this instead of the `body` option. Accepts any pl
 Type: `string | object<string, string | number | boolean | undefined> | Array<Array<string | number | boolean>> | URLSearchParams`\
 Default: `''`
 
-Search parameters to include in the request URL. Setting this will override all existing search parameters in the input URL.
+Search parameters to include in the request URL. Setting this will merge with any existing search parameters in the input URL.
 
 Accepts any value supported by [`URLSearchParams()`](https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/URLSearchParams).
 
-When passing an object, `undefined` values are automatically filtered out, while `null` values are preserved and converted to the string `'null'`.
+When passing an object, setting a value to `undefined` deletes the parameter, while `null` values are preserved and converted to the string `'null'`.
 
 ##### baseUrl
 
@@ -270,6 +270,8 @@ An object representing `limit`, `methods`, `statusCodes`, `afterStatusCodes`, `m
 
 If `retry` is a number, it will be used as `limit` and other defaults will remain in place.
 
+Network errors (e.g., DNS failures, connection refused, offline) are automatically retried for retriable methods. Only errors recognized as network errors are retried; other errors (e.g., programming bugs) are thrown immediately. Use `shouldRetry` to customize this behavior.
+
 If the response provides an HTTP status contained in `afterStatusCodes`, Ky will wait until the date, timeout, or timestamp given in the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) header has passed to retry the request. If `Retry-After` is missing, the non-standard [`RateLimit-Reset`](https://www.ietf.org/archive/id/draft-polli-ratelimit-headers-05.html#section-3.3) header is used in its place as a fallback. If the provided status code is not in the list, the [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) header will be ignored.
 
 If `maxRetryAfter` is set to `undefined`, it will use `options.timeout`. If [`Retry-After`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Retry-After) header is greater than `maxRetryAfter`, it will use `maxRetryAfter`.
@@ -295,7 +297,7 @@ The `shouldRetry` option provides custom retry logic that **takes precedence ove
 The function receives a state object with the error and retry count (starts at 1 for the first retry), and should return:
 - `true` to force a retry (bypasses `retryOnTimeout`, status code checks, and other default validations)
 - `false` to prevent a retry (no retry will occur)
-- `undefined` to use the default retry logic (`retryOnTimeout`, status codes, etc.)
+- `undefined` to use the default retry logic (`retryOnTimeout`, status codes, network errors). Unrecognized error types are not retried.
 
 **General example**
 
@@ -389,15 +391,67 @@ const json = await ky('https://example.com', {
 Type: `number | false`\
 Default: `10000`
 
-Timeout in milliseconds for getting a response, including any retries. Can not be greater than 2147483647.
-If set to `false`, there will be no timeout.
+Per-attempt timeout in milliseconds for getting a response, applied independently to each retry. Cannot be greater than 2147483647. See also [`totalTimeout`](#totaltimeout).
+
+If set to `false`, there will be no per-attempt timeout.
+
+##### totalTimeout
+
+Type: `number | false`\
+Default: `false`
+
+Overall timeout in milliseconds for the entire operation, including retries and delays. Throws a `TimeoutError` if exceeded. Cannot be greater than 2147483647.
+
+If set to `false` or not specified, there is no overall timeout.
+
+```js
+import ky from 'ky';
+
+// Each attempt gets 5s, but the whole operation must complete within 30s
+const json = await ky('https://example.com', {
+	timeout: 5000,
+	totalTimeout: 30_000,
+	retry: {
+		limit: 3,
+		retryOnTimeout: true,
+	}
+}).json();
+```
 
 ##### hooks
 
 Type: `object<string, Function[]>`\
-Default: `{beforeRequest: [], beforeRetry: [], beforeError: [], afterResponse: []}`
+Default: `{init: [], beforeRequest: [], beforeRetry: [], beforeError: [], afterResponse: []}`
 
-Hooks allow modifications during the request lifecycle. Hook functions may be async and are run serially.
+Hooks allow modifications during the request lifecycle. Hook functions may be async and are run serially, unless otherwise noted.
+
+###### hooks.init
+
+Type: `Function[]`\
+Default: `[]`
+
+This hook enables you to modify the options before they are used to construct the request. The hook function receives the mutable options object and can modify it in place. You could, for example, modify `searchParams`, `headers`, or `json` here.
+
+Unlike other hooks, `init` hooks are synchronous. Any error thrown will propagate synchronously and will not be caught by `beforeError` hooks.
+
+A common use case is to add a search parameter to every request:
+
+```js
+import ky from 'ky';
+
+const api = ky.extend({
+	hooks: {
+		init: [
+			options => {
+				options.searchParams = {apiKey: getApiKey()};
+			},
+		],
+	},
+});
+
+const response = await api.get('https://example.com/api/users');
+// URL: https://example.com/api/users?apiKey=123
+```
 
 ###### hooks.beforeRequest
 
@@ -459,7 +513,7 @@ The hook can return a [`Request`](https://developer.mozilla.org/en-US/docs/Web/A
 
 The `retryCount` is always `>= 1`, since this hook is only called during retries, not on the initial request.
 
-If the request received a response, the error will be of type `HTTPError`. The `Response` object will be available at `error.response`, and the pre-parsed response body will be available at `error.data`. Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will not be an instance of `HTTPError`.
+If the request received a response, the error will be of type `HTTPError`. The `Response` object will be available at `error.response`, and the pre-parsed response body will be available at `error.data`. Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will be an instance of `NetworkError` instead of `HTTPError`.
 
 You can prevent Ky from retrying the request by throwing an error. Ky will not handle it in any way and the error will be propagated to the request initiator. The rest of the `beforeRetry` hooks will not be called in this case. Alternatively, you can return the [`ky.stop`](#kystop) symbol to do the same thing but without propagating an error (this has some limitations, see `ky.stop` docs for details).
 
@@ -530,11 +584,13 @@ const response = await ky('https://example.com/api', {
 Type: `Function[]`\
 Default: `[]`
 
-This hook enables you to modify any error right before it is thrown. The hook function receives a state object with the normalized request, options, error, and retry count, and should return an `Error` instance.
+This hook enables you to modify any error right before it is thrown. The hook function receives a state object with the current request, the normalized Ky options, error, and retry count, and should return an `Error` instance.
 
-This hook is called for all error types, including `HTTPError`, `TimeoutError`, `ForceRetryError` (when retry limit is exceeded via `ky.retry()`), and network errors. Use type guards like `isHTTPError()` or `isTimeoutError()` to handle specific error types.
+This hook is called for all error types, including `HTTPError`, `NetworkError`, `TimeoutError`, and `ForceRetryError` (when retry limit is exceeded via `ky.retry()`). Use type guards like `isHTTPError()`, `isNetworkError()`, or `isTimeoutError()` to handle specific error types.
 
 The `retryCount` is `0` for the initial request and increments with each retry. This allows you to distinguish between the initial request and retries, which is useful when you need different error handling based on retry attempts (e.g., showing different error messages on the final attempt).
+
+If a `beforeRequest` or `beforeRetry` hook returns a new `Request`, inspect `request` for the final request state. `options` remains Ky's normalized options and may not mirror every property of a replacement `Request`.
 
 ```js
 import ky, {isHTTPError} from 'ky';
@@ -647,6 +703,8 @@ You can also pass a function that accepts the HTTP status code and returns a boo
 
 Note: If `false`, error responses are considered successful and the request will not be retried.
 
+Note: [Opaque responses](https://developer.mozilla.org/en-US/docs/Web/API/Response/type) from `no-cors` requests are returned as-is (without throwing `HTTPError`), since the actual status is hidden by the browser.
+
 ##### onDownloadProgress
 
 Type: `Function`
@@ -654,7 +712,7 @@ Type: `Function`
 Download progress event handler.
 
 The function receives these arguments:
-- `progress` is an object with the these properties:
+- `progress` is an object with these properties:
 - - `percent` is a number between 0 and 1 representing the progress percentage.
 - - `transferredBytes` is the number of bytes transferred so far.
 - - `totalBytes` is the total number of bytes to be transferred. This is an estimate and may be 0 if the total size cannot be determined.
@@ -679,8 +737,11 @@ Type: `Function`
 
 Upload progress event handler.
 
+> [!NOTE]
+> Requires [request stream support](https://caniuse.com/wf-fetch-request-streams) and HTTP/2 for HTTPS connections (in Chromium-based browsers). In unsupported environments, this handler is silently ignored.
+
 The function receives these arguments:
-- `progress` is an object with the these properties:
+- `progress` is an object with these properties:
 - - `percent` is a number between 0 and 1 representing the progress percentage.
 - - `transferredBytes` is the number of bytes transferred so far.
 - - `totalBytes` is the total number of bytes to be transferred. This is an estimate and may be 0 if the total size cannot be determined.
@@ -707,9 +768,12 @@ Default: `JSON.parse()`
 
 User-defined JSON-parsing function.
 
+The function receives the response text as the first argument and a context object as the second argument containing the `request` ([`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request)) and `response` ([`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response)).
+
 Use-cases:
 1. Parse JSON via the [`bourne` package](https://github.com/hapijs/bourne) to protect from prototype pollution.
 2. Parse JSON with [`reviver` option of `JSON.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse).
+3. Log or handle JSON parse errors with request context.
 
 ```js
 import ky from 'ky';
@@ -717,6 +781,17 @@ import bourne from '@hapijs/bourne';
 
 const json = await ky('https://example.com', {
 	parseJson: text => bourne(text)
+}).json();
+```
+
+```js
+import ky from 'ky';
+
+const json = await ky('https://example.com', {
+	parseJson: (text, {request, response}) => {
+		console.log(`Parsing JSON from ${request.url} (status: ${response.status})`);
+		return JSON.parse(text);
+	}
 }).json();
 ```
 
@@ -899,6 +974,26 @@ const response = await usersApi.get('123');
 
 const response = await api.get('version');
 //=> 'https://example.com/api/version'
+```
+
+By default, `.extend()` deep-merges options: hooks are appended, headers are merged, and search parameters are accumulated. Use [`replaceOption`](#replaceoption) when you want to fully replace a merged property instead.
+
+```js
+import ky, {replaceOption} from 'ky';
+
+const api = ky.create({
+	hooks: {
+		beforeRequest: [addAuth, addTracking],
+	},
+});
+
+// Appends as expected
+const extended = api.extend({hooks: {beforeRequest: [logRequest]}});
+// extended hooks.beforeRequest is [addAuth, addTracking, logRequest]
+
+// Replaces instead of appending
+const replaced = api.extend({hooks: replaceOption({beforeRequest: [onlyThis]})});
+// replaced hooks.beforeRequest is [onlyThis]
 ```
 
 ### ky.create(defaultOptions)
@@ -1092,7 +1187,7 @@ const response = await api.get('https://example.com/api');
 
 ### KyError
 
-Base class for all Ky-specific errors. `HTTPError`, `TimeoutError`, and `ForceRetryError` extend this class.
+Base class for all Ky-specific errors. `HTTPError`, `NetworkError`, `TimeoutError`, and `ForceRetryError` extend this class.
 
 You can use `instanceof KyError` to check if an error originated from Ky, or use the `isKyError()` type guard for cross-realm compatibility and TypeScript type narrowing.
 
@@ -1117,7 +1212,7 @@ Exposed for `instanceof` checks. The error has a `response` property with the [`
 
 It also has a `data` property with the pre-parsed response body. For JSON responses (based on `Content-Type`), the body is parsed using the [`parseJson` option](#parsejson) if set, or `JSON.parse` by default. For other content types, it is set as plain text. If the body is empty or parsing fails, `data` will be `undefined`. To avoid hanging or excessive buffering, `error.data` population is bounded by the request timeout and a 10 MiB response body size limit. The `data` property is populated before [`beforeError`](#hooks) hooks run, so hooks can access it.
 
-Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will not be an instance of HTTPError and will not contain a `response` property.
+Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will be an instance of [`NetworkError`](#networkerror) instead of `HTTPError` and will not contain a `response` property.
 
 > [!NOTE]
 > The response body is automatically consumed when populating `error.data`, so you do not need to manually consume or cancel `error.response.body`.
@@ -1181,6 +1276,46 @@ try {
 ### TimeoutError
 
 The error thrown when the request times out. It has a `request` property with the [`Request` object](https://developer.mozilla.org/en-US/docs/Web/API/Request).
+
+### NetworkError
+
+The error thrown when a network error occurs during the request (e.g., DNS failure, connection refused, offline). It has a `request` property with the [`Request` object](https://developer.mozilla.org/en-US/docs/Web/API/Request). The original error is available via the standard `cause` property.
+
+Network errors are automatically retried (for [retriable methods](#retry)).
+
+> [!NOTE]
+> Network errors are detected using runtime-specific heuristics. Unrecognized runtimes may produce errors that are not wrapped in `NetworkError`. Use the [`shouldRetry`](#retry) option to handle such cases.
+
+```js
+import ky, {isNetworkError} from 'ky';
+
+try {
+	await ky('https://example.com').json();
+} catch (error) {
+	if (isNetworkError(error)) {
+		console.log('Network error:', error.message);
+		console.log('Original error:', error.cause);
+	}
+}
+```
+
+### replaceOption
+
+Wraps a value so that [`ky.extend()`](#kyextenddefaultoptions) will replace the parent value instead of merging with it. Works with hooks, headers, search parameters, context, and any other deep-merged option.
+
+```js
+import ky, {replaceOption} from 'ky';
+
+const api = ky.create({
+	headers: {authorization: 'Bearer token', 'x-custom': 'value'},
+});
+
+// Replace all headers instead of merging
+const publicApi = api.extend({
+	headers: replaceOption({accept: 'application/json'}),
+});
+// Headers are now just {accept: 'application/json'}
+```
 
 ## Tips
 
@@ -1412,6 +1547,21 @@ const response = await ky('https://api.example.com/events');
 
 for await (const event of parseServerSentEvents(response)) {
 	console.log(event.data);
+}
+```
+
+### Pagination
+
+Use [`fetch-extras`](https://github.com/sindresorhus/fetch-extras) with Ky for paginating API responses:
+
+```js
+import ky from 'ky';
+import {paginate} from 'fetch-extras';
+
+const url = 'https://api.github.com/repos/sindresorhus/ky/commits';
+
+for await (const commit of paginate(url, {fetchFunction: ky})) {
+	console.log(commit.sha);
 }
 ```
 

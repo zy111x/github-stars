@@ -1,6 +1,6 @@
 ---
 project: copilot-api
-stars: 3120
+stars: 3283
 description: |-
     Turn GitHub Copilot into OpenAI/Anthropic API compatible server. Usable with Claude Code!
 url: https://github.com/ericc-ch/copilot-api

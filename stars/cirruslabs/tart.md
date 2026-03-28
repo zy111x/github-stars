@@ -1,6 +1,6 @@
 ---
 project: tart
-stars: 5182
+stars: 5228
 description: |-
     macOS and Linux VMs on Apple Silicon to use in CI and other automations
 url: https://github.com/cirruslabs/tart

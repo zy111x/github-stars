@@ -1,6 +1,6 @@
 ---
 project: vee-validate
-stars: 11246
+stars: 11252
 description: |-
     ✅  Painless Vue forms
 url: https://github.com/logaretm/vee-validate

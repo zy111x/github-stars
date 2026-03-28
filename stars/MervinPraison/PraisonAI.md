@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 5710
+stars: 5743
 description: |-
     PraisonAI 🦞 - Your 24/7 AI employee team. Automate and solve complex challenges with low-code multi-agent AI that plans, researches, codes, and delivers to Telegram, Discord, and WhatsApp. Handoffs, guardrails, memory, RAG, 100+ LLMs.
 url: https://github.com/MervinPraison/PraisonAI
@@ -51,8 +51,9 @@ PraisonAI 🦞 — Automate and solve complex challenges with AI agent teams tha
 > - 🆕 **New here?** → [Quick Start](#-quick-start) *(1 minute to first agent)*
 > - 📦 **Installing?** → [Installation](#-installation)
 > - 🐍 **Python SDK?** → [Python Examples](#-using-python-code)
-> - 🎯 **CLI user?** → [CLI Quick Reference](#cli-quick-reference)
-> - 🤝 **Contributing?** → [Development](#-development)
+> - 📄 **YAML/No-Code?** → [YAML Examples](#-using-yaml-no-code)
+> - 🎯 **CLI user?** → [CLI Quick Reference](#-cli-quick-reference)
+> - 🤝 **Contributing?** → [Contributing](#-contributing)
 
 ---
 
@@ -333,6 +334,81 @@ praisonai claw
 Open **http://localhost:8082** — the dashboard comes with 13 built-in pages: Chat, Agents, Memory, Knowledge, Channels, Guardrails, Cron, and more. Add messaging channels directly from the UI.
 
 > 📖 [Full Claw docs](https://docs.praison.ai/docs/concepts/claw) — platform tokens, CLI options, Docker, and YAML agent mode
+
+---
+
+## 📄 Using YAML (No Code)
+
+### Example 1: Two Agents Working Together
+
+Create `agents.yaml`:
+
+```yaml
+framework: praisonai
+topic: "Write a blog post about AI"
+
+agents:
+  researcher:
+    role: Research Analyst
+    goal: Research AI trends and gather information
+    instructions: "Find accurate information about AI trends"
+    
+  writer:
+    role: Content Writer
+    goal: Write engaging blog posts
+    instructions: "Write clear, engaging content based on research"
+```
+
+Run with:
+```bash
+praisonai agents.yaml
+```
+
+> The agents automatically work together sequentially
+
+### Example 2: Agent with Custom Tool
+
+Create two files in the same folder:
+
+**agents.yaml:**
+```yaml
+framework: praisonai
+topic: "Calculate the sum of 25 and 15"
+
+agents:
+  calculator_agent:
+    role: Calculator
+    goal: Perform calculations
+    instructions: "Use the add_numbers tool to help with calculations"
+    tools:
+      - add_numbers
+```
+
+**tools.py:**
+```python
+def add_numbers(a: float, b: float) -> float:
+    """
+    Add two numbers together.
+    
+    Args:
+        a: First number
+        b: Second number
+    
+    Returns:
+        The sum of a and b
+    """
+    return a + b
+```
+
+Run with:
+```bash
+praisonai agents.yaml
+```
+
+> 💡 **Tips:** 
+> - Use the function name (e.g., `add_numbers`) in the tools list, not the file name
+> - Tools in `tools.py` are automatically discovered
+> - The function's docstring helps the AI understand how to use it
 
 ---
 

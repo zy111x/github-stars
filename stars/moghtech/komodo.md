@@ -1,6 +1,6 @@
 ---
 project: komodo
-stars: 10606
+stars: 10725
 description: |-
     🦎 a tool to build and deploy software on many servers 🦎
 url: https://github.com/moghtech/komodo
@@ -14,7 +14,7 @@ A tool to build and deploy software across many servers.
 
 🦎 [Try the Demo](https://demo.komo.do) - Login: `demo` : `demo`
 
-🦎 [See the Build Server](https://build.komo.do)  - Login: `komodo` : `komodo`
+🦎 [See the Build Server](https://build.mogh.tech)  - Login: `komodo` : `komodo`
 
 🦎 [Join the Discord](https://discord.gg/DRqE8Fvg5c)
 

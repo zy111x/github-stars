@@ -1,6 +1,6 @@
 ---
 project: glances
-stars: 32125
+stars: 32212
 description: |-
     Glances an Eye on your system. A top/htop alternative for GNU/Linux, BSD, Mac OS and Windows operating systems.
 url: https://github.com/nicolargo/glances
@@ -261,7 +261,7 @@ Gateway to other services 🌐
 Glances can export stats to:
 
 - files: ``CSV`` and ``JSON``
-- databases:  ``InfluxDB``, ``ElasticSearch``, ``PostgreSQL/TimeScale``, ``Cassandra``, ``CouchDB``, ``OpenTSDB``, ``Prometheus``, ``StatsD``, ``Riemann`` and ``Graphite``
+- databases:  ``InfluxDB``, ``ElasticSearch``, ``PostgreSQL/TimeScale``, ``Cassandra``, ``ClickHouse``, ``CouchDB``, ``OpenTSDB``, ``Prometheus``, ``StatsD``, ``Riemann`` and ``Graphite``
 - brokers: ``RabbitMQ/ActiveMQ``, ``NATS``, ``ZeroMQ`` and ``Kafka``
 - others: ``RESTful`` endpoint
 
@@ -597,6 +597,7 @@ Extra dependencies:
 - ``batinfo`` (for battery monitoring)
 - ``bernhard`` (for the Riemann export module)
 - ``cassandra-driver`` (for the Cassandra export module)
+- ``clickhouse-connect`` (for the ClickHouse export module)
 - ``chevron`` (for the action script feature)
 - ``docker`` (for the Containers Docker monitoring support)
 - ``elasticsearch`` (for the Elastic Search export module)

@@ -1,6 +1,6 @@
 ---
 project: joyagent-jdgenie
-stars: 11446
+stars: 11602
 description: |-
     开源的端到端产品级通用智能体
 url: https://github.com/jd-opensource/joyagent-jdgenie

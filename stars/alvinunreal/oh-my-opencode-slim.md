@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 2252
+stars: 2464
 description: |-
     Slimmed, cleaned and fine-tuned oh-my-opencode fork, consumes much less tokens
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -67,6 +67,7 @@ https://raw.githubusercontent.com/alvinunreal/oh-my-opencode-slim/refs/heads/mas
 **Additional guides:**
 - **[Provider Configurations](docs/provider-configurations.md)** - Config examples for all supported providers
 - **[Tmux Integration](docs/tmux-integration.md)** - Real-time agent monitoring with tmux
+**[Quick Reference](docs/quick-reference.md)** - Config, fallback behavior, skills, MCPs
 
 ### ✅ Verify Your Setup
 
@@ -316,6 +317,7 @@ If any agent fails to respond, check your provider authentication and config fil
 - **[Installation Guide](docs/installation.md)** - Detailed installation and troubleshooting
 - **[Cartography Skill](docs/cartography.md)** - Custom skill for repository mapping + codemap generation
 - **[Tmux Integration](docs/tmux-integration.md)** - Real-time agent monitoring with tmux
+**[Quick Reference](docs/quick-reference.md)** - Config, fallback behavior, skills, MCPs
 
 ---
 

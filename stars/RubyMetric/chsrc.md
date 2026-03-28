@@ -1,6 +1,6 @@
 ---
 project: chsrc
-stars: 6678
+stars: 6676
 description: |-
     chsrc 全平台通用换源工具与框架. Change Source everywhere for every software
 url: https://github.com/RubyMetric/chsrc
@@ -11,9 +11,9 @@ url: https://github.com/RubyMetric/chsrc
  ! -------------------------------------------------------------
  ! Doc Type      : Markdown
  ! Doc Name      : README.md
- ! Doc Authors   : 曾奥然 <ccmywish@qq.com>
- ! Contributors  : Mikachu2333 <mikachu.23333@zohomail.com>
- !               | BingChunMoLi <bingchunmoli@bingchunmoli.com>
+ ! Doc Authors   : @ccmywish
+ ! Contributors  : @Mikachu2333
+ !               | @BingChunMoLi
  !               |
  ! Created On    : <2023-12-28>
  ! Last Modified : <2026-02-24>

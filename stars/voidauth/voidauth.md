@@ -1,6 +1,6 @@
 ---
 project: voidauth
-stars: 1909
+stars: 1919
 description: |-
     Single Sign-On for Your Self-Hosted Universe
 url: https://github.com/voidauth/voidauth

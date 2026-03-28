@@ -1,12 +1,12 @@
 ---
 project: iii
-stars: 15232
+stars: 15244
 description: |-
     iii (pronounced “three eye”) unifies your existing backend stack with a single engine and three primitives: Function, Trigger, and Worker.
 url: https://github.com/iii-hq/iii
 ---
 
-![iii - One Engine, Three Primitives](engine/assets/banner.jpg)
+![iii banner image](website/public/og-image.png)
 
 [![Engine License](https://img.shields.io/badge/engine-ELv2-blue.svg)](engine/LICENSE)
 [![SDK License](https://img.shields.io/badge/sdk-Apache--2.0-green.svg)](sdk/LICENSE)
@@ -70,7 +70,7 @@ See the [Quickstart guide](https://iii.dev/docs/quickstart) for step-by-step tut
 ## Resources
 
 - [Documentation](https://iii.dev/docs)
-- [CLI](https://github.com/iii-hq/iii-cli)
+- [CLI & Engine](https://github.com/iii-hq/iii)
 - [Console](console/)
 - [Examples](https://github.com/iii-hq/iii-examples)
 - [Contributing](CONTRIBUTING.md)

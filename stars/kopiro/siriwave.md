@@ -1,6 +1,6 @@
 ---
 project: siriwave
-stars: 1710
+stars: 1712
 description: |-
     The Apple® Siri wave-form replicated in a JS library.
 url: https://github.com/kopiro/siriwave

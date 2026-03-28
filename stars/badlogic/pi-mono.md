@@ -1,6 +1,6 @@
 ---
 project: pi-mono
-stars: 26629
+stars: 28708
 description: |-
     AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods
 url: https://github.com/badlogic/pi-mono
@@ -9,9 +9,9 @@ url: https://github.com/badlogic/pi-mono
 <!-- OSS_WEEKEND_START -->
 # 🏖️ OSS Weekend
 
-**Issue tracker reopens Monday, March 23, 2026.**
+**Issue tracker reopens Monday, April 6, 2026.**
 
-OSS weekend runs Friday, March 20, 2026 through Monday, March 23, 2026. New issues are auto-closed during this time. For support, join [Discord](https://discord.com/invite/3cU7Bz4UPx).
+OSS weekend runs Friday, March 27, 2026 through Monday, April 6, 2026. New issues are auto-closed during this time. For support, join [Discord](https://discord.com/invite/3cU7Bz4UPx).
 <!-- OSS_WEEKEND_END -->
 
 ---
@@ -60,7 +60,7 @@ npm install          # Install all dependencies
 npm run build        # Build all packages
 npm run check        # Lint, format, and type check
 ./test.sh            # Run tests (skips LLM-dependent tests without API keys)
-./pi-test.sh         # Run pi from sources (must be run from repo root)
+./pi-test.sh         # Run pi from sources (can be run from any directory)
 ```
 
 > **Note:** `npm run check` requires `npm run build` to be run first. The web-ui package uses `tsc` which needs compiled `.d.ts` files from dependencies.

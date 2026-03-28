@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 35699
+stars: 35821
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -2142,6 +2142,9 @@ Number of columns (horizontal character cells).
 Type: `number`
 
 Number of rows (vertical character cells).
+
+> [!NOTE]
+> When the terminal is resized narrower, ghost lines may briefly appear depending on the terminal emulator's reflow behavior.
 
 ### useFocus(options?)
 

@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 26328
+stars: 27972
 description: |-
     Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨
 url: https://github.com/AstrBotDevs/AstrBot
@@ -233,14 +233,17 @@ pre-commit install
 
 ### QQ Groups
 
-- Group 9: 1076659624 (New)
-- Group 10: 1078079676 (New)
-- Group 1: 322154837
-- Group 3: 630166526
-- Group 5: 822130018
-- Group 6: 753075035
-- Group 7: 743746109
-- Group 8: 1030353265
+- Group 12: 916228568 (New)
+- Group 9: 1076659624 (Full)
+- Group 10: 1078079676 (Full)
+- Group 11: 704659519 (Full)
+- Group 1: 322154837 (Full)
+- Group 3: 630166526 (Full)
+- Group 4: 1077826412 (Full)
+- Group 5: 822130018 (Full)
+- Group 6: 753075035 (Full)
+- Group 7: 743746109 (Full)
+- Group 8: 1030353265 (Full)
 
 - Developer Group(Chit-chat): 975206796
 - Developer Group(Formal): 1039761811

@@ -1,6 +1,6 @@
 ---
 project: wenk
-stars: 687
+stars: 686
 description: |-
     :wink: Lightweight pure CSS tooltip for the greater good
 url: https://github.com/tiaanduplessis/wenk

@@ -1,6 +1,6 @@
 ---
 project: badgen.net
-stars: 1533
+stars: 1538
 description: |-
     Fast badge service
 url: https://github.com/badgen/badgen.net
@@ -12,7 +12,6 @@ url: https://github.com/badgen/badgen.net
 </p>
 
 <p align="center">
-    <a href="https://status.badgen.net/"><img src="https://badgen.net/uptime-robot/week/m780862024-50db2c44c703e5c68d6b1ebb?label=past%20week%20uptime" /></a>
     <a href="https://stats.uptimerobot.com/z6nqBfYGB/780862024"><img src="https://badgen.net/uptime-robot/response/m780862024-50db2c44c703e5c68d6b1ebb" /></a>
     <a href="LICENSE.md"><img src="https://badgen.net/github/license/badgen/badgen.net" /></a>
     <a href="https://x.com/badgen_net"><img src="https://badgen.net/badge/twitter/@badgen_net/1DA1F2?icon&label" /></a>
@@ -33,7 +32,7 @@ The [badgen](https://github.com/badgen/badgen) library was born as an exploratio
 
 Then, logically, [Badgen Service](https://badgen.net) was born. I had a good time with [shields.io](https://shields.io), but as time goes by Shields gets slower, leaves more and more broken badges in READMEs. Badgen is trying to be a fast alternative with simplicity and flexibility. Its codebase is simple (<b title="cloc . --exclude-dir node_modules --match-f '.js$'">2K LoCs</b> vs Shields' 22K LoCs), well structured and fun to develop - it is pretty easy to add badge(s) for new service(s).
 
-In the beginning, I was considering both [Vercel](https://vercel.com/) and [Google Cloud Functions](https://cloud.google.com/functions/). Then Vercel announced [Edge Network](https://vercel.com/edge-network) on the same day as badgen.now.sh (the PoC of Badgen Service)'s reveal, what a fate! Cloudflare powered Vercel Edge Network is a perfect choice for such service, caching and scalability in simplicity. Badgen is the fastest possible badge generating service out there. It's fast, it's reliable, it's globally distributed and cached, thanks to Vercel.
+In the beginning, I was considering both Vercel and Google Cloud Functions. Then Vercel announced Edge Network on the same day as badgen.now.sh (the PoC of Badgen Service)'s reveal, what a fate! Cloudflare powered Vercel Edge Network is a perfect choice for such service, caching and scalability in simplicity. Badgen is the fastest possible badge generating service out there. It's fast, it's reliable, it's globally distributed and cached, thanks to Vercel.
 
 At the time of badgen.now.sh's reveal, it had only four live badges as demonstrations. Since then, thanks to [awesome people](https://github.com/badgen/badgen.net/graphs/contributors)'s help, Badgen keeps getting better at a fast pace. Welcome to join us, let's build the best badge service in the universe 🔥
 
@@ -48,7 +47,8 @@ At the time of badgen.now.sh's reveal, it had only four live badges as demonstra
     - static badge - URL defined badge (label, status, color)
     - live badge - Show live status from 3rd party services
 - Builtin Icons & External Icon Support
-    - see [badgen-icons](https://github.com/badgen/badgen-icons)
+    - Builtin icons: [badgen-icons](https://github.com/badgen/badgen-icons)
+    - Brand icons: [simple-icons](https://simpleicons.org)
 - Docker image [amio/badgen](https://hub.docker.com/r/amio/badgen)
 
 ## Developing
@@ -70,7 +70,7 @@ At the time of badgen.now.sh's reveal, it had only four live badges as demonstra
 
 ### Add Live Badge
 
-If a service you wish to have is still missing here, we welcome new contributions. Basically, you need to add a file in `api/[name-of-service].ts` and that's it. Take [/crates](https://badgen.net/crates) as an example:
+If a service you wish to have is still missing here, we welcome new contributions. Basically, you need to add a file in `pages/api/[name-of-service].ts` and that's it. Take [/crates](https://badgen.net/crates) as an example:
 
 - [pages/api/crates.ts](pages/api/crates.ts) - main function for [crates](https://badgen.net/docs/crates) badges
 - [libs/badge-list2.ts](libs/badge-list2.ts) - contains index of all live badges

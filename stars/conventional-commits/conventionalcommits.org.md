@@ -1,6 +1,6 @@
 ---
 project: conventionalcommits.org
-stars: 8661
+stars: 8694
 description: |-
     The conventional commits specification
 url: https://github.com/conventional-commits/conventionalcommits.org

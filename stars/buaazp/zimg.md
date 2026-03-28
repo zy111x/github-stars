@@ -1,6 +1,6 @@
 ---
 project: zimg
-stars: 2686
+stars: 2683
 description: |-
     A lightweight and high performance image storage and processing system.
 url: https://github.com/buaazp/zimg

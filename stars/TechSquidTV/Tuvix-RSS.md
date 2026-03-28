@@ -1,6 +1,6 @@
 ---
 project: Tuvix-RSS
-stars: 69
+stars: 70
 description: |-
     A self-hostable RSS aggregator for the masses
 url: https://github.com/TechSquidTV/Tuvix-RSS

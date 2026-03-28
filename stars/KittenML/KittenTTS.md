@@ -1,6 +1,6 @@
 ---
 project: KittenTTS
-stars: 12814
+stars: 13333
 description: |-
      State-of-the-art TTS model under 25MB 😻 
 url: https://github.com/KittenML/KittenTTS
@@ -106,6 +106,18 @@ model.generate_to_file("Hello, world.", "output.wav", voice="Bruno", speed=0.9)
 print(model.available_voices)
 # ['Bella', 'Jasper', 'Luna', 'Bruno', 'Rosie', 'Hugo', 'Kiki', 'Leo']
 ```
+
+### Using with GPU
+
+```
+pip install -r requirements_gpu.txt
+```
+
+```python
+m = KittenTTS("KittenML/kitten-tts-mini-0.8", backend="cuda")
+```
+
+Check out `example_cuda.py` 
 
 ## API Reference
 
