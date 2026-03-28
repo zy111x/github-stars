@@ -1,6 +1,6 @@
 ---
 project: CloudflareSpeedTest
-stars: 25165
+stars: 25307
 description: 🌩「自选优选 IP」测试 Cloudflare CDN 延迟和速度，获取最快 IP ！当然也支持其他 CDN / 多个解析 IP 的网站 ~
 url: https://github.com/XIU2/CloudflareSpeedTest
 ---
@@ -83,7 +83,7 @@ chmod +x cfst
 
 * * *
 
-> _在**手机**上独立运行 CFST 测速的简单教程：**Android、Android APP、IOS**_
+> _在**手机**上独立运行 CFST 测速的简单教程：**Android、Android APP、Android APP、IOS**_
 
 Note
 
@@ -756,6 +756,9 @@ Note
 衍生项目
 ----
 
+-   _https://github.com/Hsia97/CFSTAPP_  
+    _**CFST 安卓版 APP #638**_
+    
 -   _https://github.com/xianshenglu/cloudflare-ip-tester-app_  
     _**CFST 安卓版 APP #202**_
     

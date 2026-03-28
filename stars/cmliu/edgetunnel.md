@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 27388
+stars: 27564
 description: edgetunnel 2.0 VLESS/Trojan 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -207,7 +207,6 @@ PATH
     
     /proxyip\=proxyip.cmliussss.net
     /?proxyip\=proxyip.cmliussss.net
-    /proxyip.cmliussss.net (仅限于域名开头为'proxyip.'的域名)
     
 -   指定 `SOCKS5` 案例
     
@@ -289,6 +288,7 @@ M1/M2 完美兼容
 -   eooce
 -   Sukka
 -   zhangtaile
+-   1345695
 
 * * *
 
