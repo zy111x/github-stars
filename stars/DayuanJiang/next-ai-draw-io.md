@@ -1,0 +1,229 @@
+---
+project: next-ai-draw-io
+stars: 25961
+description: A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.
+url: https://github.com/DayuanJiang/next-ai-draw-io
+---
+
+Next AI Draw.io
+===============
+
+**AI-Powered Diagram Creation Tool - Chat, Draw, Visualize**
+
+English | 中文 | 日本語
+
+A Next.js web application that integrates AI capabilities with draw.io diagrams. Create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.
+
+> Note: Thanks to ByteDance Doubao sponsorship, the demo site now uses the powerful glm-4.7 model!
+
+20251211\_drawio.mp4
+
+Table of Contents
+-----------------
+
+-   Next AI Draw.io
+    -   Table of Contents
+    -   Examples
+    -   Features
+    -   MCP Server (Preview)
+        -   Claude Code CLI
+    -   Getting Started
+        -   Try it Online
+        -   Desktop Application
+        -   Run with Docker
+        -   Installation
+    -   Deployment
+        -   Deploy to EdgeOne Pages
+        -   Deploy on Vercel
+        -   Deploy on Cloudflare Workers
+    -   Multi-Provider Support
+    -   How It Works
+    -   Support & Contact
+    -   FAQ
+    -   Star History
+
+Examples
+--------
+
+Here are some example prompts and their generated diagrams:
+
+**Animated transformer connectors**  
+
+**Prompt:** Give me a \*\*animated connector\*\* diagram of transformer's architecture.
+
+**GCP architecture diagram**  
+
+**Prompt:** Generate a GCP architecture diagram with \*\*GCP icons\*\*. In this diagram, users connect to a frontend hosted on an instance.
+
+**AWS architecture diagram**  
+
+**Prompt:** Generate a AWS architecture diagram with \*\*AWS icons\*\*. In this diagram, users connect to a frontend hosted on an instance.
+
+**Azure architecture diagram**  
+
+**Prompt:** Generate a Azure architecture diagram with \*\*Azure icons\*\*. In this diagram, users connect to a frontend hosted on an instance.
+
+**Cat sketch prompt**  
+
+**Prompt:** Draw a cute cat for me.
+
+Features
+--------
+
+-   **LLM-Powered Diagram Creation**: Leverage Large Language Models to create and manipulate draw.io diagrams directly through natural language commands
+-   **Image-Based Diagram Replication**: Upload existing diagrams or images and have the AI replicate and enhance them automatically
+-   **PDF & Text File Upload**: Upload PDF documents and text files to extract content and generate diagrams from existing documents
+-   **AI Reasoning Display**: View the AI's thinking process for supported models (OpenAI o1/o3, Gemini, Claude, etc.)
+-   **Diagram History**: Comprehensive version control that tracks all changes, allowing you to view and restore previous versions of your diagrams before the AI editing.
+-   **Interactive Chat Interface**: Communicate with AI to refine your diagrams in real-time
+-   **Cloud Architecture Diagram Support**: Specialized support for generating cloud architecture diagrams (AWS, GCP, Azure)
+-   **Animated Connectors**: Create dynamic and animated connectors between diagram elements for better visualization
+
+MCP Server (Preview)
+--------------------
+
+> **Preview Feature**: This feature is experimental and may not be stable.
+
+Use Next AI Draw.io with AI agents like Claude Desktop, Cursor, and VS Code via MCP (Model Context Protocol).
+
+{
+  "mcpServers": {
+    "drawio": {
+      "command": "npx",
+      "args": \["@next-ai-drawio/mcp-server@latest"\]
+    }
+  }
+}
+
+### Claude Code CLI
+
+claude mcp add drawio -- npx @next-ai-drawio/mcp-server@latest
+
+Then ask Claude to create diagrams:
+
+> "Create a flowchart showing user authentication with login, MFA, and session management"
+
+The diagram appears in your browser in real-time!
+
+See the MCP Server README for VS Code, Cursor, and other client configurations.
+
+Getting Started
+---------------
+
+### Try it Online
+
+No installation needed! Try the app directly on our demo site:
+
+> **Bring Your Own API Key**: You can use your own API key to bypass usage limits on the demo site. Click the Settings icon in the chat panel to configure your provider and API key. Your key is stored locally in your browser and is never stored on the server.
+
+### Desktop Application
+
+Download the native desktop app for your platform from the Releases page:
+
+Supported platforms: Windows, macOS, Linux.
+
+### Run with Docker
+
+Go to Docker Guide
+
+### Installation
+
+1.  Clone the repository:
+
+git clone https://github.com/DayuanJiang/next-ai-draw-io
+cd next-ai-draw-io
+npm install
+cp env.example .env.local
+
+See the Provider Configuration Guide for detailed setup instructions for each provider.
+
+1.  Run the development server:
+
+npm run dev
+
+1.  Open http://localhost:6002 in your browser to see the application.
+
+Deployment
+----------
+
+### Deploy to EdgeOne Pages
+
+You can deploy with one click using Tencent EdgeOne Pages.
+
+Deploy by this button:
+
+Check out the Tencent EdgeOne Pages documentation for more details.
+
+Additionally, deploying through Tencent EdgeOne Pages will also grant you a daily free quota for DeepSeek models.
+
+### Deploy on Vercel
+
+The easiest way to deploy is using Vercel, the creators of Next.js. Be sure to **set the environment variables** in the Vercel dashboard as you did in your local `.env.local` file.
+
+See the Next.js deployment documentation for more details.
+
+### Deploy on Cloudflare Workers
+
+Go to Cloudflare Deploy Guide
+
+Multi-Provider Support
+----------------------
+
+-   ByteDance Doubao
+-   AWS Bedrock (default)
+-   OpenAI
+-   Anthropic
+-   Google AI
+-   Google Vertex AI
+-   Azure OpenAI
+-   Ollama
+-   OpenRouter
+-   DeepSeek
+-   SiliconFlow
+-   ModelScope
+-   SGLang
+-   Vercel AI Gateway
+
+All providers except AWS Bedrock and OpenRouter support custom endpoints.
+
+📖 **Detailed Provider Configuration Guide** - See setup instructions for each provider.
+
+### Server-Side Multi-Model Configuration
+
+Administrators can configure multiple server-side models that are available to all users without requiring personal API keys. Configure via `AI_MODELS_CONFIG` environment variable (JSON string) or `ai-models.json` file.
+
+**Model Requirements**: This task requires strong model capabilities for generating long-form text with strict formatting constraints (draw.io XML). Recommended models include Claude Sonnet 4.5, GPT-5.1, Gemini 3 Pro, and DeepSeek V3.2/R1.
+
+Note that the `claude` series has been trained on draw.io diagrams with cloud architecture logos like AWS, Azure, GCP. So if you want to create cloud architecture diagrams, this is the best choice.
+
+How It Works
+------------
+
+The application uses the following technologies:
+
+-   **Next.js**: For the frontend framework and routing
+-   **Vercel AI SDK** (`ai` + `@ai-sdk/*`): For streaming AI responses and multi-provider support
+-   **react-drawio**: For diagram representation and manipulation
+
+Diagrams are represented as XML that can be rendered in draw.io. The AI processes your commands and generates or modifies this XML accordingly.
+
+Support & Contact
+-----------------
+
+**Special thanks to ByteDance Doubao for sponsoring the API token usage of the demo site!** Register on the ARK platform to get 500K free tokens for all models!
+
+If you find this project useful, please consider sponsoring to help me host the live demo site!
+
+For support or inquiries, please open an issue on the GitHub repository or contact the maintainer at:
+
+-   Email: me\[at\]jiang.jp
+
+FAQ
+---
+
+See FAQ for common issues and solutions.
+
+Star History
+------------
+
+* * *

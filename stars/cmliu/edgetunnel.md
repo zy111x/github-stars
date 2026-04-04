@@ -1,11 +1,11 @@
 ---
 project: edgetunnel
-stars: 27564
-description: edgetunnel 2.0 VLESS/Trojan 多功能面板
+stars: 28309
+description: edgetunnel2 VLESS/Trojan 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
 
-🚀 edgetunnel 2.0
+🚀 edgetunnel 2.1
 =================
 
 📖 项目简介
@@ -17,7 +17,7 @@ url: https://github.com/cmliu/edgetunnel
 
 ### ✨ 核心特性
 
--   🛡️ **协议支持**：支持 VLESS、Trojan 等主流协议，深度集成加密传输。
+-   🛡️ **协议支持**：支持 VLESS、Trojan、Shadowsocks 等主流协议，深度集成加密传输。
 -   📊 **管理面板**：内置可视化后台，支持实时配置修改、日志查看及流量统计。
 -   🛠️ **部署灵活**：完整适配 CF Workers 及 CF Pages (GitHub / 上传)。
 -   🔄 **订阅系统**：内置自动订阅生成及混淆转换，适配主流客户端（Clash, Sing-box, Surge 等）。
@@ -140,22 +140,6 @@ Warning
 
 强制固定UUID，只支持**UUIDv4**标准格式
 
-HOST
-
-❌
-
-`edt.pages.dev`
-
-强制固定伪装域名 可通过面板直接设置
-
-PATH
-
-❌
-
-`/`
-
-强制固定伪装路径 可通过面板直接设置
-
 **PROXYIP**
 
 ❌
@@ -180,6 +164,14 @@ PATH
 
 强制走 SOCKS5 的名单 (`*` 为全局，域名用逗号分隔)
 
+**DEBUG**
+
+❌
+
+`1`或`true`
+
+**开发者模式**，默认关闭调试日志功能（console.log），设置`1`或`true`则开启调试日志功能
+
 **OFF\_LOG**
 
 ❌
@@ -200,6 +192,11 @@ PATH
 
 🔧 高级实用技巧
 ---------
+
+如需修改 **订阅地址里的TOKEN** 和 **用于节点验证的UUID** ，可通过修改变量
+
+1.  修改`ADMIN`或`KEY`变量的值，可以随机修改 **订阅地址里的TOKEN** 和 **用于节点验证的UUID**
+2.  设置`UUID`变量可以强制固定 **订阅地址里的TOKEN** 和 **用于节点验证的UUID**，注意必须是**UUIDv4**标准格式，否则会导致节点无法使用。
 
 本工具支持通过 **PATH路径** 动态切换底层代理方案：
 
