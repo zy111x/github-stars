@@ -1,6 +1,6 @@
 ---
 project: trench
-stars: 1620
+stars: 1618
 description: |-
     Trench — Open-Source Analytics Infrastructure. A single production-ready Docker image built on ClickHouse, Kafka, and Node.js for tracking events. Easily build product analytics dashboards, LLM RAGs, observability platforms, or any other analytics product.
 url: https://github.com/FrigadeHQ/trench

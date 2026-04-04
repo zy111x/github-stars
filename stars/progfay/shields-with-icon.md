@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 456
+stars: 457
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -641,7 +641,7 @@ url: https://github.com/progfay/shields-with-icon
 ![CorelDRAW](https://img.shields.io/badge/CorelDRAW-000000?style=for-the-badge&logo=CorelDRAW&logoColor=FFFFFF)
 ![Corona Engine](https://img.shields.io/badge/Corona%20Engine-F96F29?style=for-the-badge&logo=Corona+Engine&logoColor=FFFFFF)
 ![Corona Renderer](https://img.shields.io/badge/Corona%20Renderer-E6502A?style=for-the-badge&logo=Corona+Renderer&logoColor=FFFFFF)
-![Corsair](https://img.shields.io/badge/Corsair-000000?style=for-the-badge&logo=Corsair&logoColor=FFFFFF)
+![Corsair](https://img.shields.io/badge/Corsair-231F20?style=for-the-badge&logo=Corsair&logoColor=FFFFFF)
 ![Couchbase](https://img.shields.io/badge/Couchbase-EA2328?style=for-the-badge&logo=Couchbase&logoColor=FFFFFF)
 ![Counter-Strike](https://img.shields.io/badge/Counter-Strike-000000?style=for-the-badge&logo=Counter-Strike&logoColor=FFFFFF)
 ![CountingWorks PRO](https://img.shields.io/badge/CountingWorks%20PRO-2E3084?style=for-the-badge&logo=CountingWorks+PRO&logoColor=FFFFFF)
@@ -939,6 +939,7 @@ url: https://github.com/progfay/shields-with-icon
 ![FACEIT](https://img.shields.io/badge/FACEIT-FF5500?style=for-the-badge&logo=FACEIT&logoColor=FFFFFF)
 ![Facepunch](https://img.shields.io/badge/Facepunch-EC1C24?style=for-the-badge&logo=Facepunch&logoColor=FFFFFF)
 ![Fairphone](https://img.shields.io/badge/Fairphone-4495D1?style=for-the-badge&logo=Fairphone&logoColor=FFFFFF)
+![Faker](https://img.shields.io/badge/Faker-779B2E?style=for-the-badge&logo=Faker&logoColor=FFFFFF)
 ![Falco](https://img.shields.io/badge/Falco-00AEC7?style=for-the-badge&logo=Falco&logoColor=FFFFFF)
 ![Falcon](https://img.shields.io/badge/Falcon-222222?style=for-the-badge&logo=Falcon&logoColor=F0AD4E)
 ![FamPay](https://img.shields.io/badge/FamPay-222222?style=for-the-badge&logo=FamPay&logoColor=FFAD00)
@@ -2345,6 +2346,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Progress](https://img.shields.io/badge/Progress-222222?style=for-the-badge&logo=Progress&logoColor=5CE500)
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=Prometheus&logoColor=FFFFFF)
 ![Pronouns.page](https://img.shields.io/badge/Pronouns.page-C71585?style=for-the-badge&logo=Pronouns.page&logoColor=FFFFFF)
+![ProseMirror](https://img.shields.io/badge/ProseMirror-000000?style=for-the-badge&logo=ProseMirror&logoColor=FFFFFF)
 ![ProSieben](https://img.shields.io/badge/ProSieben-E6000F?style=for-the-badge&logo=ProSieben&logoColor=FFFFFF)
 ![Proteus](https://img.shields.io/badge/Proteus-1C79B3?style=for-the-badge&logo=Proteus&logoColor=FFFFFF)
 ![Proto.io](https://img.shields.io/badge/Proto.io-34A7C1?style=for-the-badge&logo=Proto.io&logoColor=FFFFFF)
@@ -2585,6 +2587,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Runrun.it](https://img.shields.io/badge/Runrun.it-DB3729?style=for-the-badge&logo=Runrun.it&logoColor=FFFFFF)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=Rust&logoColor=FFFFFF)
 ![RustDesk](https://img.shields.io/badge/RustDesk-024EFF?style=for-the-badge&logo=RustDesk&logoColor=FFFFFF)
+![RustFS](https://img.shields.io/badge/RustFS-0196D0?style=for-the-badge&logo=RustFS&logoColor=FFFFFF)
 ![RxDB](https://img.shields.io/badge/RxDB-8D1F89?style=for-the-badge&logo=RxDB&logoColor=FFFFFF)
 ![Ryanair](https://img.shields.io/badge/Ryanair-073590?style=for-the-badge&logo=Ryanair&logoColor=FFFFFF)
 ![Rye](https://img.shields.io/badge/Rye-000000?style=for-the-badge&logo=Rye&logoColor=FFFFFF)
@@ -2779,6 +2782,7 @@ url: https://github.com/progfay/shields-with-icon
 ![SpeedyPage](https://img.shields.io/badge/SpeedyPage-1C71F9?style=for-the-badge&logo=SpeedyPage&logoColor=FFFFFF)
 ![Sphere Online Judge](https://img.shields.io/badge/Sphere%20Online%20Judge-337AB7?style=for-the-badge&logo=Sphere+Online+Judge&logoColor=FFFFFF)
 ![Sphinx](https://img.shields.io/badge/Sphinx-000000?style=for-the-badge&logo=Sphinx&logoColor=FFFFFF)
+![SpiderMonkey](https://img.shields.io/badge/SpiderMonkey-222222?style=for-the-badge&logo=SpiderMonkey&logoColor=FFD681)
 ![SpigotMC](https://img.shields.io/badge/SpigotMC-ED8106?style=for-the-badge&logo=SpigotMC&logoColor=FFFFFF)
 ![Spine](https://img.shields.io/badge/Spine-FF4000?style=for-the-badge&logo=Spine&logoColor=FFFFFF)
 ![Spinnaker](https://img.shields.io/badge/Spinnaker-139BB4?style=for-the-badge&logo=Spinnaker&logoColor=FFFFFF)
@@ -3090,6 +3094,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Twinkly](https://img.shields.io/badge/Twinkly-222222?style=for-the-badge&logo=Twinkly&logoColor=FCC15E)
 ![Twinmotion](https://img.shields.io/badge/Twinmotion-000000?style=for-the-badge&logo=Twinmotion&logoColor=FFFFFF)
 ![Twitch](https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=Twitch&logoColor=FFFFFF)
+![ty](https://img.shields.io/badge/ty-222222?style=for-the-badge&logo=ty&logoColor=46EBE1)
 ![Typeform](https://img.shields.io/badge/Typeform-262627?style=for-the-badge&logo=Typeform&logoColor=FFFFFF)
 ![TypeORM](https://img.shields.io/badge/TypeORM-FE0803?style=for-the-badge&logo=TypeORM&logoColor=FFFFFF)
 ![Typer](https://img.shields.io/badge/Typer-000000?style=for-the-badge&logo=Typer&logoColor=FFFFFF)

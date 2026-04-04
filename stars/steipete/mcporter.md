@@ -1,6 +1,6 @@
 ---
 project: mcporter
-stars: 3259
+stars: 3747
 description: |-
     Call MCPs via TypeScript, masquerading as simple TypeScript API. Or package them as cli.
 url: https://github.com/steipete/mcporter

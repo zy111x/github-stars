@@ -1,6 +1,6 @@
 ---
 project: md-badges
-stars: 1764
+stars: 1779
 description: |-
     An extensive list of Shields.io badges.
 url: https://github.com/inttter/md-badges
@@ -106,6 +106,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Google Assistant](https://img.shields.io/badge/Google%20Assistant-4285F4?logo=googleassistant&logoColor=fff)](#) | `[![Google Assistant](https://img.shields.io/badge/Google%20Assistant-4285F4?logo=googleassistant&logoColor=fff)](#)` |
 | [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](#) | `[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000)](#)` |
 | [![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#) | `[![Google Gemini](https://img.shields.io/badge/Google%20Gemini-886FBF?logo=googlegemini&logoColor=fff)](#)` |
+| [![Microsoft Foundry](https://custom-icon-badges.demolab.com/badge/Microsoft%20Foundry-2822AD?logo=microsoft-foundry&logoColor=fff)](#) | `[![Microsoft Foundry](https://custom-icon-badges.demolab.com/badge/Microsoft%20Foundry-2822AD?logo=microsoft-foundry&logoColor=fff)](#)` |
 | [![Mistral AI](https://img.shields.io/badge/Mistral%20AI-FA520F?logo=mistral-ai&logoColor=fff)](#) | `[![Mistral AI](https://img.shields.io/badge/Mistral%20AI-FA520F?logo=mistral-ai&logoColor=fff)](#)` |
 | [![No AI](https://custom-icon-badges.demolab.com/badge/No%20AI-2f2f2f?logo=non-ai&logoColor=white)](#) | `[![No AI](https://custom-icon-badges.demolab.com/badge/No%20AI-2f2f2f?logo=non-ai&logoColor=white)](#)` |
 | [![Ollama](https://img.shields.io/badge/Ollama-fff?logo=ollama&logoColor=000)](#) | `[![Ollama](https://img.shields.io/badge/Ollama-fff?logo=ollama&logoColor=000)](#)` |
@@ -225,6 +226,8 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#) | `[![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)` |
 | [![Odoo](https://img.shields.io/badge/Odoo-714B67?logo=Odoo&logoColor=fff)](#) | `[![Odoo](https://img.shields.io/badge/Odoo-714B67?logo=Odoo&logoColor=fff)](#)` |
 | [![Oracle Cloud](https://custom-icon-badges.demolab.com/badge/Oracle%20Cloud-F80000?logo=oracle&logoColor=white)](#) | `[![Oracle Cloud](https://custom-icon-badges.demolab.com/badge/Oracle%20Cloud-F80000?logo=oracle&logoColor=white)](#)` |
+| [![Railway](https://img.shields.io/badge/Railway-0B0D0E?logo=railway&logoColor=white)](#) | `[![Railway](https://img.shields.io/badge/Railway-0B0D0E?logo=railway&logoColor=white)](#)` |
+| [![Render](https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=000)](#) | `[![Render](https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=000)](#)` |
 | [![SAP](https://img.shields.io/badge/SAP-0FAAFF?logo=sap&logoColor=fff)](#) | `[![SAP](https://img.shields.io/badge/SAP-0FAAFF?logo=sap&logoColor=fff)](#)` |
 | [![Scaleway](https://img.shields.io/badge/Scaleway-8D40EE?logo=Scaleway&logoColor=white)](#) | `[![Scaleway](https://img.shields.io/badge/Scaleway-8D40EE?logo=Scaleway&logoColor=white)](#)` |
 | [![Terraform](https://img.shields.io/badge/Terraform-844FBA?logo=terraform&logoColor=fff)](#) | `[![Terraform](https://img.shields.io/badge/Terraform-844FBA?logo=terraform&logoColor=fff)](#)` |
@@ -584,7 +587,7 @@ An extensive list of static Shields.io badges, sorted by category.
 | [![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#) | `[![Node.js](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)](#)` |
 | [![Nuxt](https://img.shields.io/badge/Nuxt-002E3B?logo=nuxt&logoColor=#00DC82)](#) | `[![Nuxt](https://img.shields.io/badge/Nuxt-002E3B?logo=nuxt&logoColor=#00DC82)](#)` |
 | [![ONNX](https://img.shields.io/badge/ONNX-005CED?logo=ONNX&logoColor=white)](#) | `[![ONNX](https://img.shields.io/badge/ONNX-005CED?logo=ONNX&logoColor=white)](#)` |
-| [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff)](#)  | [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff)](#) ` |
+| [![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff)](#)  | `[![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?logo=opencv&logoColor=fff)](#)` |
 | [![OpenGL](https://img.shields.io/badge/OpenGl-5487A6?logo=OpenGl&logoColor=fff)](#) | `[![OpenGl](https://img.shields.io/badge/OpenGl-5487A6?logo=OpenGl&logoColor=fff)](#)` |
 | [![Portainer](https://img.shields.io/badge/Portainer-C080FF?logo=Portainer&logoColor=fff)](#) | `[![Portainer](https://img.shields.io/badge/Portainer-C080FF?logo=Portainer&logoColor=fff)](#)` |
 | [![Preact](https://img.shields.io/badge/Preact-673AB8?logo=preact&logoColor=fff)](#) | `[![Preact](https://img.shields.io/badge/Preact-673AB8?logo=preact&logoColor=fff)](#)` |
@@ -693,10 +696,12 @@ An extensive list of static Shields.io badges, sorted by category.
 ### 🔍 Monitoring
 | Preview | Markdown Code |
 |---------|---------------|
+| [![Datadog](https://img.shields.io/badge/Datadog-632CA6?logo=datadog&logoColor=fff)](#) | `[![Datadog](https://img.shields.io/badge/Datadog-632CA6?logo=datadog&logoColor=fff)](#)` |
 | [![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)](#) | `[![Grafana](https://img.shields.io/badge/Grafana-F46800?logo=grafana&logoColor=white)](#)` |
 | [![Kibana](https://img.shields.io/badge/Kibana-005571?logo=kibana&logoColor=fff)](#) | `[![Kibana](https://img.shields.io/badge/Kibana-005571?logo=kibana&logoColor=fff)](#)` |
 | [![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000?logo=opentelemetry&logoColor=fff)](#) | `[![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000?logo=opentelemetry&logoColor=fff)](#)` |
 | [![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?logo=prometheus&logoColor=white)](#) | `[![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?logo=prometheus&logoColor=white)](#)` |
+| [![Sentry](https://img.shields.io/badge/Sentry-362D59?logo=sentry&logoColor=fff)](#) | `[![Sentry](https://img.shields.io/badge/Sentry-362D59?logo=sentry&logoColor=fff)](#)` |
 
 <div align="right">
 

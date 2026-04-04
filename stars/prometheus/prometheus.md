@@ -1,6 +1,6 @@
 ---
 project: prometheus
-stars: 63294
+stars: 63386
 description: |-
     The Prometheus monitoring system and time series database.
 url: https://github.com/prometheus/prometheus
@@ -48,14 +48,14 @@ The features that distinguish Prometheus from other metrics and monitoring syste
 
 ## Install
 
-There are various ways of installing Prometheus.
+There are various ways to install Prometheus.
 
 ### Precompiled binaries
 
 Precompiled binaries for released versions are available in the
 [*download* section](https://prometheus.io/download/)
 on [prometheus.io](https://prometheus.io). Using the latest production release binary
-is the recommended way of installing Prometheus.
+is the recommended way to install Prometheus.
 See the [Installing](https://prometheus.io/docs/introduction/install/)
 chapter in the documentation for all the details.
 
@@ -73,7 +73,7 @@ Prometheus will now be reachable at <http://localhost:9090/>.
 
 ### Building from source
 
-To build Prometheus from source code, You need:
+To build Prometheus from source code, you need:
 
 * Go: Version specified in [go.mod](./go.mod) or greater.
 * NodeJS: Version specified in [.nvmrc](./web/ui/.nvmrc) or greater.

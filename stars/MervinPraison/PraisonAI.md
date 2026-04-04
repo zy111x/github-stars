@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 5743
+stars: 6585
 description: |-
     PraisonAI 🦞 - Your 24/7 AI employee team. Automate and solve complex challenges with low-code multi-agent AI that plans, researches, codes, and delivers to Telegram, Discord, and WhatsApp. Handoffs, guardrails, memory, RAG, 100+ LLMs.
 url: https://github.com/MervinPraison/PraisonAI
@@ -8,9 +8,9 @@ url: https://github.com/MervinPraison/PraisonAI
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="src/praisonai/praisonai/public/logo_dark.png" />
-    <source media="(prefers-color-scheme: light)" srcset="src/praisonai/praisonai/public/logo_light.png" />
-    <img alt="PraisonAI Logo" src="src/praisonai/praisonai/public/logo_light.png" width="250" />
+    <source media="(prefers-color-scheme: dark)" srcset=".github/images/logo_dark.png" />
+    <source media="(prefers-color-scheme: light)" srcset=".github/images/logo_light.png" />
+    <img alt="PraisonAI Logo" src=".github/images/logo_light.png" width="250" />
   </picture>
 </p>
 
@@ -33,9 +33,39 @@ url: https://github.com/MervinPraison/PraisonAI
 
 PraisonAI 🦞 — Automate and solve complex challenges with AI agent teams that plan, research, code, and deliver results to Telegram, Discord, and WhatsApp — running 24/7. A low-code, production-ready multi-agent framework with handoffs, guardrails, memory, RAG, and 100+ LLM providers, built around simplicity, customisation, and effective human-agent collaboration.
 
+<div align="center">
+  <br>
+  <a href="https://x.com/elonmusk/status/1893870468249141688" target="_blank">
+    <img src="https://img.shields.io/badge/Highlighted_by_Elon_Musk-000000?style=for-the-badge&logo=x&logoColor=white" alt="Highlighted by Elon Musk" />
+  </a>
+  <p><em>"Grok 3 customer support" — <a href="https://x.com/elonmusk/status/1893870468249141688">Elon Musk quoting PraisonAI's tutorial</a></em></p>
+  <br>
+</div>
+
 <p align="center">
-  <img src="src/praisonai/praisonai/public/dashboard.png" alt="PraisonAI Dashboard" width="800" />
+  <img src=".github/images/dashboard.png" alt="PraisonAI Dashboard" width="800" />
 </p>
+
+<p align="center">
+  <img src=".github/images/agentflow.gif" alt="PraisonAI AgentFlow" width="800" />
+</p>
+
+```
+ ██████╗ ██████╗  █████╗ ██╗███████╗ ██████╗ ███╗   ██╗     █████╗ ██╗
+ ██╔══██╗██╔══██╗██╔══██╗██║██╔════╝██╔═══██╗████╗  ██║    ██╔══██╗██║
+ ██████╔╝██████╔╝███████║██║███████╗██║   ██║██╔██╗ ██║    ███████║██║
+ ██╔═══╝ ██╔══██╗██╔══██║██║╚════██║██║   ██║██║╚██╗██║    ██╔══██║██║
+ ██║     ██║  ██║██║  ██║██║███████║╚██████╔╝██║ ╚████║    ██║  ██║██║
+ ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═╝  ╚═╝╚═╝
+
+ pip install praisonai
+```
+
+<p align="center">
+  <img src=".github/images/latest_ai_news_and_crawl_each_url_to_find_info.gif" alt="PraisonAI command execution" width="800" />
+</p>
+
+\* `export TAVILY_API_KEY=xxxxx`
 
 <div align="center">
   <a href="https://docs.praison.ai">
@@ -182,6 +212,15 @@ PraisonAI supports 100+ LLM providers through seamless integration:
 
 </details>
 
+
+<div align="center">
+  <a href="https://x.com/elonmusk/status/1893870468249141688" target="_blank">
+    <img src=".github/images/elon_musk_praisonai.png" alt="Highlighted by Elon Musk" width="600" />
+  </a>
+  <p><em>"Grok 3 customer support" — <a href="https://x.com/elonmusk/status/1893870468249141688">Elon Musk quoting PraisonAI's tutorial</a></em></p>
+</div>
+<br>
+
 ---
 
 ## 🚀 Quick Start
@@ -219,11 +258,25 @@ For the full framework with CLI support:
 pip install praisonai
 ```
 
-🦞 **AgentClaw** — full UI with bots, memory, knowledge, and gateway:
+🦞 **PraisonAI Claw** — full UI with bots, memory, knowledge, and gateway:
 
 ```bash
 pip install "praisonai[claw]"
 praisonai claw
+```
+
+🔗 **PraisonAI Flow** — Langflow Visual Flow Builder:
+
+```bash
+pip install "praisonai[flow]"
+praisonai flow
+```
+
+🤖 **PraisonAI UI** — Clean chat interface:
+
+```bash
+pip install "praisonai[ui]"
+praisonai ui
 ```
 
 ### JavaScript SDK
@@ -322,7 +375,7 @@ agent.chat("Hello!")  # Auto-persists messages, runs, traces
 
 > 📖 [Full persistence docs](https://docs.praison.ai/docs/databases/overview) — PostgreSQL, MySQL, SQLite, MongoDB, Redis, and 20+ more
 
-### 6. AgentClaw 🦞 (Dashboard UI)
+### 6. PraisonAI Claw 🦞 (Dashboard UI)
 
 Connect your AI agents to **Telegram, Discord, Slack, WhatsApp** and more — all from a single command.
 
@@ -334,6 +387,28 @@ praisonai claw
 Open **http://localhost:8082** — the dashboard comes with 13 built-in pages: Chat, Agents, Memory, Knowledge, Channels, Guardrails, Cron, and more. Add messaging channels directly from the UI.
 
 > 📖 [Full Claw docs](https://docs.praison.ai/docs/concepts/claw) — platform tokens, CLI options, Docker, and YAML agent mode
+
+### 7. Langflow Integration 🔗 (Visual Flow Builder)
+
+Build multi-agent workflows visually with **drag-and-drop** components in Langflow.
+
+```bash
+pip install "praisonai[flow]"
+praisonai flow
+```
+
+Open **http://localhost:7861** — use the **Agent** and **Agent Team** components to create sequential or parallel workflows. Connect Chat Input → Agent Team → Chat Output for instant multi-agent pipelines.
+
+> 📖 [Full Flow docs](https://docs.praison.ai/docs/concepts/flow) — visual agent building, component reference, and deployment
+
+### 8. PraisonAI UI 🤖 (Clean Chat)
+
+Lightweight chat interface for your AI agents.
+
+```bash
+pip install "praisonai[ui]"
+praisonai ui
+```
 
 ---
 

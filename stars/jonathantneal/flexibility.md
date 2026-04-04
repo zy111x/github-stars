@@ -1,6 +1,6 @@
 ---
 project: flexibility
-stars: 4298
+stars: 4294
 description: |-
     A JavaScript polyfill for Flexbox
 url: https://github.com/jonathantneal/flexibility

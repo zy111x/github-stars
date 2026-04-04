@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 19176
+stars: 19252
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -184,6 +184,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | retro-ui | An open source component library, inspred by neo brutalism design system | [Link](https://retroui.dev) | 2025-05-13 |
 | roadmap-ui | Components for interactive roadmaps. | [Link](https://github.com/haydenbleasel/roadmap-ui) | 2024-12-26 |
 | ruixen-ui | Ruixen UI: Lightweight & Customizable React Library | [Link](https://github.com/ruixenui/ruixen.com) | 2025-12-04 |
+| scificn-ui | A retro sci-fi UI design system inspired by classic starship consoles and alien computer terminals, featuring modular HUD components, neon data grids, tactical panels, and cinematic interface elements that blend 70s–80s futurism with modern usability. | [Link](https://github.com/baxy5/scificn-ui) | 2026-03-31 |
 | search-address | Interactive address search using OpenStreetMap. | [Link](https://github.com/UretzkyZvi/search-address) | 2024-05-07 |
 | shadboard | An admin dashboard template built with Next.js 15, React 19, Tailwind CSS v4, and Shadcn/UI components, featuring starter and full kits for scalable, user-friendly web apps. | [Link](https://github.com/Qualiora/shadboard) | 2025-04-22 |
 | shadcn-address-autocomplete | Address autocomplete with Google Places API. | [Link](https://github.com/NiazMorshed2007/shadcn-address-autocomplete) | 2024-07-10 |
@@ -474,6 +475,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | chadnext | Quick Starter Template includes Next.js 14 App Router, shadcn/ui, LuciaAuth, Prisma, Server Actions, Stripe, Internationalization, and more. | [Link](https://github.com/moinulmoin/chadnext) | 2024-04-25 |
 | cloudflare-saas-stack | An opinionated, batteries-included starter kit for quickly building and deploying SaaS products on Cloudflare. | [Link](https://github.com/Dhravya/cloudflare-saas-stack) | 2024-07-24 |
 | create-tauri-core | A project template for creating a Tauri app with Vite, React, and Tailwind CSS. | [Link](https://github.com/mrlightful/create-tauri-core) | 2024-09-23 |
+| create-tauri-ui | Create modern Tauri desktop apps with shadcn/ui, desktop-first defaults, and optional batteries. | [Link](https://github.com/agmmnn/tauri-ui) | 2026-03-31 |
 | design-system-template | Turborepo + TailwindCSS + Storybook + shadcn/ui. | [Link](https://github.com/arevalolance/design-system-template) | 2024-06-06 |
 | devstarter | Devstarter is a bold, one-page developer portfolio template with a distinctive cyberpunk aesthetic. Built with Next.js, shadcn/ui, and Tailwind CSS, it's designed to help developers showcase their work, skills, and personality in a way that stands out. | [Link](https://github.com/zippystarter/template-devstarter) | 2026-01-27 |
 | easy-ui | 50+ High Quality Open Source Website Templates built using NextJS + shadcn/ui + Tailwind CSS + Framer Motion and more. | [Link](https://github.com/DarkInventor/easy-ui) | 2024-08-06 |
@@ -496,6 +498,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | next-wp | Headless Wordpress Starter built with the NextJS App Router and React Server Components. | [Link](https://github.com/9d8dev/next-wp) | 2024-11-21 |
 | onyx | Full stack, batteries-included MVP Template with NextJS 14, Supabase SSR Auth & Postgres DB with CRUD operations, RBAC, Tanstack React Query, Zod Validation, MDX components, Resend, and more. | [Link](https://github.com/rmourey26/onyx) | 2024-08-13 |
 | opendocs | Beautifully designed template that you can use for your projects for free. Accessible. Customizable. Open Source with i18n support. | [Link](https://opendocs.daltonmenezes.com/) | 2024-07-29 |
+| openui-shadcn-chat | Full-stack generative UI chatbot template using OpenUI Lang with shadcn/ui component library, SSE streaming, and tool calling. | [Link](https://github.com/thesysdev/openui/tree/main/examples/shadcn-chat) | 2026-03-19 |
 | react-starter-kit | An opinionated, full-stack boilerplate for building modern web apps on the edge. Features Bun, React 19, tRPC, Drizzle ORM, and Cloudflare Workers. | [Link](https://github.com/kriasoft/react-starter-kit) | 2025-09-06 |
 | react-vite-starter | React starter powered with Vite + Redux Toolkit + RTKQuery + React Router + shadcn UI and many more. | [Link](https://github.com/tejachundru/react-vite-starter) | 2024-12-02 |
 | shadcn-admin | A admin dashboard template for Next.js, React, Vite and Vue.js, built with Tailwind CSS. | [Link](https://shadcnadmin.com) | 2025-12-12 |
@@ -506,6 +509,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | shadcn-portfolio | A portfolio template, which uses shadcn-ui and Next.JS. | [Link](https://github.com/techwithanirudh/shadcn-portfolio) | 2025-11-20 |
 | shadcn-registry-template | Template repository for building a custom component registry for shadcn/ui. | [Link](https://github.com/vantezzen/shadcn-registry-template) | 2024-09-05 |
 | shadcn-saas-landing | A full-fledged SaaS Landing template built using Next.JS, shadcn/ui, and fumadocs. | [Link](https://github.com/techwithanirudh/shadcn-saas-landing) | 2025-11-20 |
+| saas-blocks-kit | 10 production-ready SaaS landing page sections built with Next.js 15, shadcn/ui, Tailwind CSS v4 and TypeScript. Dark mode by default. | [Link](https://github.com/SekmenAhmet/saas-blocks-kit) | 2026-03-31 |
 | shadcn-ui-dashboard | Multipurpose and powerful admin dashboard template compatible with shadcn/ui. | [Link](https://shadcnuidashboard.com) | 2025-09-21 |
 | shadcn-vue-landing-page | Landing page template using Vue, shadcn-vue, TypeScript, and Tailwind CSS. | [Link](https://github.com/leoMirandaa/shadcn-vue-landing-page) | 2024-06-06 |
 | shadcn-next-workflows | Interactive workflow builder using React Flows, Next.js, and Shadcn/ui. Create, connect, and validate custom nodes easily. | [Link](https://github.com/nobruf/shadcn-next-workflows) | 2024-10-29 |

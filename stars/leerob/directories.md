@@ -1,6 +1,6 @@
 ---
 project: directories
-stars: 3919
+stars: 3917
 description: |-
     Find rules and MCP servers
 url: https://github.com/leerob/directories

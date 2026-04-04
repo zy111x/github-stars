@@ -1,6 +1,6 @@
 ---
 project: zip.js
-stars: 3816
+stars: 3819
 description: |-
     JavaScript library to zip and unzip files supporting multi-core compression, web streams, zip64, split files, data encryption, and deflate64 decompression.
 url: https://github.com/gildas-lormeau/zip.js
@@ -34,8 +34,8 @@ import {
   TextWriter,
   ZipReader,
   ZipWriter
-} from "@zip-js/zip-js";
-// Prefix "@zip-js/zip-js" with "jsr:" for Deno
+} from "@zip.js/zip.js";
+// "jsr:@zip-js/zip-js" for Deno
 
 // ----
 // Write the zip file

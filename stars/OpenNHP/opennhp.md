@@ -1,6 +1,6 @@
 ---
 project: opennhp
-stars: 13771
+stars: 13777
 description: |-
     A lightweight, cryptography-powered, open-source toolkit built to enforce Zero Trust security for infrastructure, applications, and data in the AI-driven world.
 url: https://github.com/OpenNHP/opennhp
@@ -36,7 +36,7 @@ url: https://github.com/OpenNHP/opennhp
 
 OpenNHP follows a modular design with three core components, inspired by the [NIST Zero Trust Architecture](https://www.nist.gov/publications/zero-trust-architecture):
 
-![OpenNHP architecture](docs/images/OpenNHP_Arch.png)
+![OpenNHP architecture](docs/images/OpenNHP_Arch.gif)
 
 | Component | Role |
 |-----------|------|

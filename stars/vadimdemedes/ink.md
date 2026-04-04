@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 35821
+stars: 37158
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -31,6 +31,8 @@ If you are already familiar with React, you already know Ink.
 Since Ink is a React renderer, all features of React are supported.
 Head over to the [React](https://reactjs.org) website for documentation on how to use it.
 Only Ink's methods are documented in this readme.
+
+**Fully AI-generated pull requests are not accepted. You can use AI, but should be verified and cleaned up by a human. Only Opus 4.6+ (high-effort) and Codex 5.4+ (extra high) are accepted models. Preferably created with Opus and verified by Codex.**
 
 ---
 

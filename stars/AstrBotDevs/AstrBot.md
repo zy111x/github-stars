@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 27972
+stars: 28946
 description: |-
     Agentic IM Chatbot infrastructure that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨
 url: https://github.com/AstrBotDevs/AstrBot
@@ -100,6 +100,9 @@ Update `astrbot`:
 uv tool upgrade astrbot
 ```
 
+> [!WARNING]
+> AstrBot deployed via `uv` **does not support upgrading through the WebUI**. To update, please run the command above from the command line.
+
 ### Docker Deployment
 
 For users familiar with containers and looking for a more stable, production-ready deployment method, we recommend deploying AstrBot with Docker / Docker Compose.
@@ -192,6 +195,7 @@ Connect AstrBot to your favorite chat platform.
 | Coze | LLMOps Platforms |
 | OpenAI Whisper | Speech-to-Text Services |
 | SenseVoice | Speech-to-Text Services |
+| Xiaomi MiMo Omni | Speech-to-Text Services |
 | OpenAI TTS | Text-to-Speech Services |
 | Gemini TTS | Text-to-Speech Services |
 | GPT-Sovits-Inference | Text-to-Speech Services |
@@ -201,6 +205,7 @@ Connect AstrBot to your favorite chat platform.
 | Alibaba Cloud Bailian TTS | Text-to-Speech Services |
 | Azure TTS | Text-to-Speech Services |
 | Minimax TTS | Text-to-Speech Services |
+| Xiaomi MiMo TTS | Text-to-Speech Services |
 | Volcano Engine TTS | Text-to-Speech Services |
 
 ## ❤️ Sponsors

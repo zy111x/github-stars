@@ -1,6 +1,6 @@
 ---
 project: iii
-stars: 15244
+stars: 15245
 description: |-
     iii (pronounced “three eye”) unifies your existing backend stack with a single engine and three primitives: Function, Trigger, and Worker.
 url: https://github.com/iii-hq/iii

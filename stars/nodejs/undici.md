@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 7473
+stars: 7489
 description: |-
     An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici
@@ -626,6 +626,12 @@ See [Dispatcher.upgrade](./docs/docs/api/Dispatcher.md#dispatcherupgradeoptions-
 
 Sets the global dispatcher used by Common API Methods. Global dispatcher is shared among compatible undici modules,
 including undici that is bundled internally with node.js.
+
+Undici stores this dispatcher under `Symbol.for('undici.globalDispatcher.2')`.
+
+`setGlobalDispatcher()` also mirrors the configured dispatcher to
+`Symbol.for('undici.globalDispatcher.1')` using `Dispatcher1Wrapper`, so Node.js built-in `fetch`
+can keep using the legacy handler contract while Undici uses the new handler API.
 
 ### `undici.getGlobalDispatcher()`
 

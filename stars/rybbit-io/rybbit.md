@@ -1,6 +1,6 @@
 ---
 project: rybbit
-stars: 11907
+stars: 11944
 description: |-
     🐸 Rybbit - open-source and privacy-friendly alternative to Google Analytics that is 10x more intuitive.
 url: https://github.com/rybbit-io/rybbit
@@ -16,7 +16,7 @@ url: https://github.com/rybbit-io/rybbit
 
 <p align="center">
     <a href="https://rybbit.com" target="_blank">Website</a> |
-    <a href="https://demo.rybbit.com/1" target="_blank">Demo</a> |
+    <a href="https://demo.rybbit.com/81" target="_blank">Demo</a> |
     <a href="https://rybbit.com/docs" target="_blank">Documentation</a> |
     <a href="https://discord.gg/DEhGb4hYBj" target="_blank">Discord</a> |
     <a href="https://github.com/rybbit-io/rybbit?tab=AGPL-3.0-1-ov-file" target="_blank">License (AGPL-3)</a> |

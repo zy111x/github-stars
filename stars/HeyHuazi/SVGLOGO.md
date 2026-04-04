@@ -1,6 +1,6 @@
 ---
 project: SVGLOGO
-stars: 91
+stars: 92
 description: |-
     免费在线下载矢量LOGO素材，专注收录国内矢量LOGO
 url: https://github.com/HeyHuazi/SVGLOGO

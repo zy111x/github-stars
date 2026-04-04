@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 13444
+stars: 13525
 description: |-
     Smooth scroll at it should be
 url: https://github.com/darkroomengineering/lenis
@@ -168,7 +168,8 @@ gsap.ticker.lagSmoothing(0);
 ### React:
 [See documentation for lenis/react](https://github.com/darkroomengineering/lenis/blob/main/packages/react/README.md).
 
-
+### Vue:
+[See documentation for lenis/vue](https://github.com/darkroomengineering/lenis/blob/main/packages/vue/README.md).
 
 
 <br/>

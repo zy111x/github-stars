@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 16495
+stars: 16612
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky
@@ -11,6 +11,29 @@ url: https://github.com/sindresorhus/ky
 	<div>
 		<img width="600" height="600" src="media/logo.svg" alt="ky">
 	</div>
+	<br>
+	<br>
+	<p>
+		<p>
+			<sup>
+				Sindre's open source work is supported by the community.<br>Special thanks to:
+			</sup>
+		</p>
+		<br>
+		<a href="https://circleback.ai?utm_source=sindresorhus&utm_medium=sponsorship&utm_campaign=awesome-list&utm_id=ky">
+			<div>
+				<img width="280" src="https://sindresorhus.com/assets/thanks/circleback-logo.png?x" alt="Circleback logo">
+			</div>
+			<b>Get the most out of every conversation.</b>
+			<div>
+				<sup>AI-powered meeting notes, automations, and search. Give AI agents the context they need to get things done.</sup>
+			</div>
+		</a>
+	</p>
+	<br>
+	<br>
+	<br>
+	<br>
 	<br>
 	<br>
 	<br>
@@ -36,7 +59,7 @@ It's just a tiny package with no dependencies.
 - Base URL option
 - Instances with custom defaults
 - Hooks
-- TypeScript niceties (e.g. `.json()` supports generics and defaults to `unknown`, not `any`)
+- TypeScript niceties (e.g., `.json()` supports generics and defaults to `unknown`, not `any`)
 
 ## Install
 
@@ -99,7 +122,7 @@ import ky from 'https://esm.sh/ky';
 
 The `input` and `options` are the same as [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch), with additional `options` available (see below).
 
-Returns a [`Response` object](https://developer.mozilla.org/en-US/docs/Web/API/Response) with [`Body` methods](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#body) added for convenience. So you can, for example, call `ky.get(input).json()` directly without having to await the `Response` first. When called like that, an appropriate `Accept` header will be set depending on the body method used. Unlike the `Body` methods of `window.Fetch`, these will throw an `HTTPError` if the response status is not in the range of `200...299`. Also, `.json()` will return `undefined` if body is empty or the response status is `204` instead of throwing a parse error due to an empty body.
+Returns a [`Response` object](https://developer.mozilla.org/en-US/docs/Web/API/Response) with [`Body` methods](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#body) added for convenience. So you can, for example, call `ky.get(input).json()` directly without having to await the `Response` first. When called like that, an appropriate `Accept` header will be set depending on the body method used. Unlike the `Body` methods of `window.fetch`, these will throw an `HTTPError` if the response status is not in the range of `200...299`. Also, `.json()` throws if the body is empty or the response status is `204`.
 
 Available body shortcuts: `.json()`, `.text()`, `.formData()`, `.arrayBuffer()`, `.blob()`, and `.bytes()`. The `.bytes()` shortcut is only present when the runtime supports `Response.prototype.bytes()`.
 
@@ -188,7 +211,7 @@ Internally, the standard methods (`GET`, `POST`, `PUT`, `PATCH`, `HEAD` and `DEL
 
 Type: `object` and any other value accepted by [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
 
-Shortcut for sending JSON. Use this instead of the `body` option. Accepts any plain object or value, which will be `JSON.stringify()`'d and sent in the body with the correct header set.
+Shortcut for sending JSON. Use this instead of the `body` option. Accepts any plain object or value, which will be stringified using `JSON.stringify()` and sent in the body with the correct header set.
 
 ##### searchParams
 
@@ -205,9 +228,9 @@ When passing an object, setting a value to `undefined` deletes the parameter, wh
 
 Type: `string | URL`
 
-A base URL to [resolve](https://developer.mozilla.org/en-US/docs/Web/API/URL_API/Resolving_relative_references) the `input` against. When the `input` (after applying the `prefix` option) is only a relative URL, such as `'users'`, `'/users'`,  or `'//my-site.com'`, it will be resolved against the `baseUrl` to determine the destination of the request. Otherwise, the `input` is absolute, such as `'https://my-site.com'`, and it will bypass the `baseUrl`.
+A base URL to [resolve](https://developer.mozilla.org/en-US/docs/Web/API/URL_API/Resolving_relative_references) the `input` against. When the `input` (after applying the `prefix` option) is only a relative URL, such as `'users'`, `'/users'`, or `'//my-site.com'`, it will be resolved against the `baseUrl` to determine the destination of the request. Otherwise, the `input` is absolute, such as `'https://my-site.com'`, and it will bypass the `baseUrl`.
 
-Useful when used with [`ky.extend()`](#kyextenddefaultoptions) to create niche-specific Ky-instances.
+Useful when used with [`ky.extend()`](#kyextenddefaultoptions) to create niche-specific Ky instances.
 
 If the `baseUrl` itself is relative, it will be resolved against the environment's base URL, such as [`document.baseURI`](https://developer.mozilla.org/en-US/docs/Web/API/Node/baseURI) in browsers or `location.href` in Deno (see the `--location` flag).
 
@@ -231,7 +254,7 @@ Type: `string | URL`
 
 A prefix to prepend to the `input` before making the request (and before it is resolved against the `baseUrl`). It can be any valid path or URL, either relative or absolute. A trailing slash `/` is optional and will be added automatically, if needed, when it is joined with `input`. Only takes effect when `input` is a string.
 
-Useful when used with [`ky.extend()`](#kyextenddefaultoptions) to create niche-specific Ky-instances.
+Useful when used with [`ky.extend()`](#kyextenddefaultoptions) to create niche-specific Ky instances.
 
 *In most cases, you should use the `baseUrl` option instead, as it is more consistent with web standards. However, `prefix` is useful if you want origin-relative `input` URLs, such as `/users`, to be treated as if they were page-relative. In other words, the leading slash of the `input` will essentially be ignored, because the `prefix` will become part of the `input` before URL resolution happens.*
 
@@ -584,7 +607,7 @@ const response = await ky('https://example.com/api', {
 Type: `Function[]`\
 Default: `[]`
 
-This hook enables you to modify any error right before it is thrown. The hook function receives a state object with the current request, the normalized Ky options, error, and retry count, and should return an `Error` instance.
+This hook enables you to modify any error right before it is thrown. The hook function receives a state object with the current request, the normalized Ky options, the error, and retry count, and should return an `Error` instance.
 
 This hook is called for all error types, including `HTTPError`, `NetworkError`, `TimeoutError`, and `ForceRetryError` (when retry limit is exceeded via `ky.retry()`). Use type guards like `isHTTPError()`, `isNetworkError()`, or `isTimeoutError()` to handle specific error types.
 
@@ -1042,7 +1065,7 @@ const options = {
 	}
 };
 
-// Note that response will be `undefined` in case `ky.stop` is returned.
+// Note that `response` will be `undefined` in case `ky.stop` is returned.
 const response = await ky.post('https://example.com', options);
 
 // Using `.text()` or other body methods is not supported.
@@ -1215,7 +1238,7 @@ It also has a `data` property with the pre-parsed response body. For JSON respon
 Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will be an instance of [`NetworkError`](#networkerror) instead of `HTTPError` and will not contain a `response` property.
 
 > [!NOTE]
-> The response body is automatically consumed when populating `error.data`, so you do not need to manually consume or cancel `error.response.body`.
+> The response body is automatically consumed when populating `error.data`, so `error.response.json()` and other body methods will not work. Use `error.data` instead. The `error.response` object is still available for headers, status, etc.
 
 ```js
 import ky, {isHTTPError} from 'ky';

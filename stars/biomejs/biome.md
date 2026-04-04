@@ -1,6 +1,6 @@
 ---
 project: biome
-stars: 24148
+stars: 24215
 description: |-
     A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP.
 url: https://github.com/biomejs/biome
@@ -136,9 +136,6 @@ Biome offers [enterprise support](https://biomejs.dev/enterprise), where Core Co
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="middle">
-        <a href="https://l2beat.com/?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://images.opencollective.com/l2beat/c2b2a27/logo/256.png" height="100" alt="L2BEAT logo"></a>
-      </td>
       <td align="center" valign="middle">
         <a href="https://lokalise.com/?utm_source=biome&utm_medium=readme" target="_blank"><img src="https://avatars.githubusercontent.com/u/14294501?s=200&v=4" height="100" alt="Lokalise logo"></a>
       </td>

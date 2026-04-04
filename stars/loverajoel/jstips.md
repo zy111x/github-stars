@@ -1,6 +1,6 @@
 ---
 project: jstips
-stars: 12469
+stars: 12465
 description: |-
     This is about useful JS tips!
 url: https://github.com/loverajoel/jstips

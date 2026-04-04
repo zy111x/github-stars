@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 17960
+stars: 18087
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -70,6 +70,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [htop](https://github.com/htop-dev/htop) Interactive text-mode process viewer for Unix systems. It aims to be a better 'top'
 - [htui](https://github.com/PierreKieffer/htui) Heroku Terminal User Interface
 - [hwinfo-tui](https://github.com/JuanjoFuchs/hwinfo-tui) A gping-inspired terminal visualization tool for monitoring real-time hardware sensor data from HWInfo
+- [ID-Spoofer](https://github.com/NubleX/ID-Spoofer) A cross-platform cybersecurity toolkit for fingerprint and traffic obfuscation.
 - [kaskade](https://github.com/sauljabin/kaskade) TUI for kafka, which allows you to interact and consume topics from your terminal in style!
 - [kmon](https://github.com/orhun/kmon) Linux Kernel Manager and Activity Monitor
 - [Kyanos](https://github.com/hengyoush/kyanos) Linux network analysis tool based on eBPF
@@ -213,6 +214,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 <details open><summary><h2>Docker/LXC/K8s</h2></summary>
 
 - [Argonaut](https://github.com/darksworm/argonaut) ArgoCD TUI
+- [cruise](https://github.com/cruise-org/cruise) A container management TUI
 - [ctop](https://github.com/bcicen/ctop) Top-like interface for container metrics
 - [d4s](https://github.com/jr-k/d4s) A fast, keyboard-driven terminal UI to manage Docker containers, Compose stacks, and Swarm services with the ergonomics of K9s
 - [dtop](https://github.com/amir20/dtop) Terminal dashboard for Docker monitoring across multiple hosts
@@ -343,7 +345,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [sweeper](https://github.com/igor47/sweeper) Minesweeper game using curtsies
 - [terminal-phase](https://gitlab.com/dustyweb/terminal-phase) Space shooter game that runs in your terminal!
 - [terminal-pong](https://github.com/IshmamR/terminal.pong) A simple, fun ping pong game playable entirely in your terminal.
-- [termrex](github.com/SATYADAHAL/termrex) A terminal-based endless runner game inspired by the Chrome Dino offline game.
+- [termrex](https://github.com/SATYADAHAL/termrex) A terminal-based endless runner game inspired by the Chrome Dino offline game.
 - [tinytetris](https://github.com/taylorconor/tinytetris) 80x23 terminal tetris!
 - [tty-solitaire](https://github.com/mpereira/tty-solitaire) Solitaire runs in your terminal!
 - [typeinc](https://github.com/AnirudhG07/Typeinc) ncurses based typing speed test with various difficulty levels.
@@ -696,6 +698,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [mcfly](https://github.com/cantino/mcfly) Intelligent context-aware search engine for your shell history
 - [mynav](https://github.com/GianlucaP106/mynav) Workspace and session management for terminal environments
 - [multranslate](https://github.com/Lifailon/multranslate) A TUI for translating text in multiple translators simultaneously, with support for translation history and language detection
+- [nless](https://github.com/mpryor/nothing-less) Terminal pager for exploring tabular data with vi keybindings and automatic delimiter inference
 - [numr](https://github.com/nasedkinpv/numr) A natural language calculator with unit/currency conversions and vim-style keybindings
 - [openmux](https://github.com/monotykamary/openmux) A terminal multiplexer with master-stack layout (Zellij-style)
 - [pagerduty-tui](https://github.com/Mk555/pagerduty-tui) Minimalistic terminal UI to manage triggered incidents

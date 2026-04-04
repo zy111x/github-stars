@@ -1,6 +1,6 @@
 ---
 project: es-toolkit
-stars: 10879
+stars: 10908
 description: |-
     A modern JavaScript utility library that's 2-3 times faster and up to 97% smaller—a major upgrade to lodash.
 url: https://github.com/toss/es-toolkit
@@ -41,6 +41,23 @@ const chunkedArray = chunk(array, 2);
 console.log(chunkedArray);
 // Output: [[1, 2], [3, 4], [5, 6]]
 ```
+
+## AI Integration
+
+es-toolkit provides [Agent Skills](https://skills.sh) for AI coding tools like Claude Code, Cursor, and Copilot.
+
+```bash
+npx skills add toss/es-toolkit
+```
+
+For Claude Code, you can also install via the plugin marketplace:
+
+```
+/plugin marketplace add toss/es-toolkit
+/plugin install es-toolkit@es-toolkit-plugin
+```
+
+For more details, see the [AI Integration guide](https://es-toolkit.dev/ai-integration.html).
 
 ## Contributing
 

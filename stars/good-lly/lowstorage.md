@@ -1,6 +1,6 @@
 ---
 project: lowstorage
-stars: 235
+stars: 236
 description: |-
     💾 Simple, fast, object pseudo-database for S3-compatible storages using JSON or Msgpack 
 url: https://github.com/good-lly/lowstorage
