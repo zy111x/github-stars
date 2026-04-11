@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 44099
+stars: 43764
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -31,6 +31,10 @@ CapSolver是CAPTCHA solving领域的Top 3供应商，提供AI驱动的CAPTCHA so
 CapSolver is one of the top 3 providers in the CAPTCHA-solving industry, offering AI-powered solutions that support reCAPTCHA, Image CAPTCHA, Cloudflare, AWS WAF, and more. Designed for high-volume web scraping and automated workflows, it boasts decoding speeds of < 3 seconds, a success rate > 99%, and 0 downtime, empowering your AI and BI projects. Backed by fast customer support, it offers the best value-for-money solution on the market. Get your extra 6% extra credit using EasySpider’s bonus code: **ESN**.
 
 Click here to see how to solve captcha in EasySpider with CapSolver integration.
+
+IPWO爬虫住宅代理提供全球范围内稳定/高质量/安全的IP代理服务，195+国家活跃住宅IP资源，支持HTTP/HTTPS/SOCKS5多种协议和平台，确保用户的灵活性。非常支持EasySpider批量采集任务，效率拉满，抢占业务先机！
+
+也适用于社交媒体营销、广告验证、品牌保护、SEO等业务，确保您的网络连接速度和稳定性，欢迎加入。戳图片和本条信息链接注册可得充裕流量免费测试，联系即响应，售后更放心。
 
 官方网站/Official Website
 ---------------------

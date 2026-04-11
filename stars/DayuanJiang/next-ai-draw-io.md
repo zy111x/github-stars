@@ -1,6 +1,6 @@
 ---
 project: next-ai-draw-io
-stars: 25961
+stars: 26835
 description: A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.
 url: https://github.com/DayuanJiang/next-ai-draw-io
 ---
@@ -25,7 +25,7 @@ Table of Contents
     -   Table of Contents
     -   Examples
     -   Features
-    -   MCP Server (Preview)
+    -   MCP Server
         -   Claude Code CLI
     -   Getting Started
         -   Try it Online
@@ -51,19 +51,19 @@ Here are some example prompts and their generated diagrams:
 
 **Prompt:** Give me a \*\*animated connector\*\* diagram of transformer's architecture.
 
-**GCP architecture diagram**  
+**RAG Technique Diagram**  
 
-**Prompt:** Generate a GCP architecture diagram with \*\*GCP icons\*\*. In this diagram, users connect to a frontend hosted on an instance.
+**Prompt:** Generate a RAG architecture diagram for \*\*chat application\*\*. Use connected diagram for data ingestion
 
-**AWS architecture diagram**  
+**Authentication using React and AWS**  
 
-**Prompt:** Generate a AWS architecture diagram with \*\*AWS icons\*\*. In this diagram, users connect to a frontend hosted on an instance.
+**Prompt:** Generate authentication process using React with \*\*AWS\*\*. Use Serverless architecture.
 
-**Azure architecture diagram**  
+**Open Innovation**  
 
-**Prompt:** Generate a Azure architecture diagram with \*\*Azure icons\*\*. In this diagram, users connect to a frontend hosted on an instance.
+**Prompt:** Create visualization of Henry Chesbrough's Open Innovation model.
 
-**Cat sketch prompt**  
+**Cat sketch**  
 
 **Prompt:** Draw a cute cat for me.
 
@@ -79,10 +79,8 @@ Features
 -   **Cloud Architecture Diagram Support**: Specialized support for generating cloud architecture diagrams (AWS, GCP, Azure)
 -   **Animated Connectors**: Create dynamic and animated connectors between diagram elements for better visualization
 
-MCP Server (Preview)
---------------------
-
-> **Preview Feature**: This feature is experimental and may not be stable.
+MCP Server
+----------
 
 Use Next AI Draw.io with AI agents like Claude Desktop, Cursor, and VS Code via MCP (Model Context Protocol).
 
