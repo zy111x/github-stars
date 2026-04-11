@@ -1,6 +1,6 @@
 ---
 project: MicroWARP
-stars: 947
+stars: 1018
 description: |-
     🚀 An 800KB RAM ultra-lightweight Cloudflare WARP SOCKS5 proxy in Docker. 仅需 800KB 内存的纯内核态 Cloudflare WARP 代理 - Docker
 url: https://github.com/ccbkkb/MicroWARP
@@ -184,7 +184,7 @@ MicroWARP 支持通过环境变量进行参数定制：
 
 基于 Unix 哲学，底层镜像未内置 HTTP 解析引擎以维持极限轻量化。如需 HTTP 代理，推荐使用 `gost` 进行本地转换：
 ```bash
-nohup gost -F=socks5://admin:123456@127.0.0.1:1080 -L=http://:8081 > /dev/null 2>&1 &
+nohup gost -F=socks5://admin:123456@127.0.0.1:1080 -L=http://127.0.0.1:8081 > /dev/null 2>&1 &
 ```
 *注：请务必使用 `socks5://`（而非 `socks5h://`）以由宿主机处理 DNS 解析，避免启动时的解析超时问题。*
 

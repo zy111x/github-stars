@@ -1,6 +1,6 @@
 ---
 project: llamafile
-stars: 23997
+stars: 24116
 description: |-
     Distribute and run LLMs with a single file.
 url: https://github.com/mozilla-ai/llamafile
@@ -29,7 +29,7 @@ framework that collapses all the complexity of LLMs down to
 a single-file executable (called a "llamafile") that runs
 locally on most operating systems and CPU archiectures, with no installation.
 
-llamafile also includes **[whisperfile](whisperfile/index.md)**, a single-file speech-to-text tool built on [whisper.cpp](https://github.com/ggerganov/whisper.cpp) and the same Cosmopolitan packaging. It supports transcription and translation of audio files across all the same platforms, with no installation required.
+llamafile also includes **[whisperfile](docs/whisperfile/index.md)**, a single-file speech-to-text tool built on [whisper.cpp](https://github.com/ggerganov/whisper.cpp) and the same Cosmopolitan packaging. It supports transcription and translation of audio files across all the same platforms, with no installation required.
 
 
 ## v0.10.0

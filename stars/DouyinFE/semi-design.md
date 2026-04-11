@@ -1,6 +1,6 @@
 ---
 project: semi-design
-stars: 9805
+stars: 9816
 description: |-
     🚀A modern, comprehensive, flexible design system and React UI library, AI-friendly built-in.🎨Provide 3000+ Design Tokens, easy to build your design system. Make Semi Design to Any Design.🧑🏻‍💻 Design to Code in one click
 url: https://github.com/DouyinFE/semi-design

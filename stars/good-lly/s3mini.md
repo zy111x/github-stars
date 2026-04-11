@@ -1,14 +1,29 @@
 ---
 project: s3mini
-stars: 1345
+stars: 1346
 description: |-
-    👶 Tiny S3 client. Edge computing ready. No-dep. In Typescript. Works with @cloudflare @minio @backblaze @digitalocean @garagehq @oracle
+    ⚠️  Moved to Codeberg: https://codeberg.org/thinking_tools/s3mini - Tiny S3 client. Edge computing ready. No-dep. In Typescript.
 url: https://github.com/good-lly/s3mini
 ---
 
-# s3mini | Tiny & fast S3 client for node and edge platforms.
+# Migrating to Codeberg
+
+This repository has moved to Codeberg.
+
+GitHub will no longer receive updates. Please update your remotes:
+
+`git remote set-url origin https://codeberg.org/thinking_tools/s3mini.git`
+
+Issues and PRs should be opened on Codeberg going forward.
+
+
+# s3mini | Tiny & fast S3 client for node, bun and edge platforms.
 
 `s3mini` is an ultra-lightweight Typescript client (~20 KB minified, ≈15 % more ops/s) for S3-compatible object storage. It runs on Node, Bun, Cloudflare Workers, and other edge platforms. It has been tested on Cloudflare R2, Backblaze B2, DigitalOcean Spaces, Ceph, Oracle, Garage and MinIO. (No Browser support!)
+
+![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)
 
 [[github](https://github.com/good-lly/s3mini)]
 [[issues](https://github.com/good-lly/s3mini/issues)]
@@ -16,7 +31,7 @@ url: https://github.com/good-lly/s3mini
 
 ## Features
 
-- 🚀 Light and fast: averages ≈15 % more ops/s and only ~20 KB (minified, not gzipped).
+- 🚀 Light and fast: ~20 KB (minified, not gzipped), up to 1.37x faster on Bun vs Node.
 - 🔧 Zero dependencies; supports AWS SigV4, pre-signed URLs, and SSE-C headers (tested on Cloudflare)
 - 🟠 Works on Cloudflare Workers; ideal for edge computing, Node, and Bun (no browser support).
 - 🔑 Only the essential S3 APIs—improved list, put, get, delete, and a few more.
@@ -51,6 +66,10 @@ Dev:
 ![GitHub License](https://img.shields.io/github/license/good-lly/s3mini)
 
 <a href="https://github.com/good-lly/s3mini/issues/"> <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg" alt="Contributions welcome" /></a>
+
+### Bun vs Node
+
+s3mini is tested on both Node and Bun. In our benchmarks against MinIO, Bun is roughly **~1.4x faster** on most operations (median across ~40 tests). Blob multipart uploads see the largest gain (~20x) thanks to Bun's native `Blob.slice()`. Results are approximate and will vary by environment.
 
 ## Table of Contents
 

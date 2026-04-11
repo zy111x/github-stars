@@ -1,6 +1,6 @@
 ---
 project: page-ui
-stars: 1649
+stars: 1650
 description: |-
     📃 Landing page UI components for React & Next.js, built on top of TailwindCSS
 url: https://github.com/PageAI-Pro/page-ui

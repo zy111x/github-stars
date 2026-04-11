@@ -1,6 +1,6 @@
 ---
 project: YOURLS
-stars: 11958
+stars: 11965
 description: |-
     🔗 The 𝘥𝘦 𝘧𝘢𝘤𝘵𝘰 standard, self hosted, powerful and customizable, URL shortener in PHP
 url: https://github.com/YOURLS/YOURLS
@@ -101,12 +101,13 @@ Does your company use YOURLS? Ask your manager or marketing team if your company
 [![](https://opencollective.com/yourls/sponsor/21/avatar.svg)](https://opencollective.com/yourls/sponsor/21/website)
 [![](https://opencollective.com/yourls/sponsor/22/avatar.svg)](https://opencollective.com/yourls/sponsor/22/website)
 
+
+<!--
 #### Angel Sponsors
 
 For their outstanding support to the project, we are very thankful to:
-
-<a href="https://www.bairesdev.com/sponsoring-open-source-projects/"><img width="350px" alt="bd-logo-orange" src="https://github.com/user-attachments/assets/caa67711-33df-4974-9bbe-cd2b7356712e" /></a>
-
+<a href="URL"><img width="350px" src="github url of dragged and dropped image" /></a>
+-->
 
 ## License
 

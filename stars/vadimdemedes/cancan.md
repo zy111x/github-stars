@@ -1,6 +1,6 @@
 ---
 project: cancan
-stars: 628
+stars: 626
 description: |-
     🔑 Pleasant authorization library for Node.js
 url: https://github.com/vadimdemedes/cancan

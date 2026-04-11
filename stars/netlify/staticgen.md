@@ -1,6 +1,6 @@
 ---
 project: staticgen
-stars: 2439
+stars: 2437
 description: |-
     StaticGen.com, A leaderboard of top open-source static site generators
 url: https://github.com/netlify/staticgen

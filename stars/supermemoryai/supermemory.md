@@ -1,6 +1,6 @@
 ---
 project: supermemory
-stars: 21134
+stars: 21675
 description: |-
     Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.
 url: https://github.com/supermemoryai/supermemory
@@ -103,7 +103,7 @@ It also comes with an agent embedded inside, which we call Nova.
 
 ### Supermemory Plugins
 
-Supermemory comes built with Plugins for Claude Code, OpenCode and OpenClaw.
+Supermemory comes built with Plugins for Claude Code, OpenCode, OpenClaw, and Hermes.
 
 <img width="844" height="484" alt="image" src="https://github.com/user-attachments/assets/ecb879a2-8652-495d-9228-f305a97ba603" />
 
@@ -114,6 +114,7 @@ You can find them here:
 - Openclaw plugin: https://github.com/supermemoryai/openclaw-supermemory
 - Claude code plugin: https://github.com/supermemoryai/claude-supermemory
 - OpenCode plugin: https://github.com/supermemoryai/opencode-supermemory
+- Hermes agent (Supermemory memory provider): https://github.com/NousResearch/hermes-agent
 
 ### MCP - Quick install
 
@@ -145,7 +146,7 @@ Memory is scoped with **projects** (container tags) so you can separate work and
 
 ### Supported clients
 
-**Claude Desktop** · **Cursor** · **Windsurf** · **VS Code** · **Claude Code** · **OpenCode** · **OpenClaw**
+**Claude Desktop** · **Cursor** · **Windsurf** · **VS Code** · **Claude Code** · **OpenCode** · **OpenClaw** · **Hermes**
 
 The MCP server is open source — [view the source](https://supermemory.ai/docs/supermemory-mcp/mcp).
 

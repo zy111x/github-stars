@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 1974
+stars: 1996
 description: |-
     A unified hub for centrally managing and dynamically orchestrating multiple MCP servers/APIs into separate endpoints with flexible routing strategies
 url: https://github.com/samanhappy/mcphub
@@ -23,6 +23,7 @@ MCPHub makes it easy to manage and scale multiple MCP (Model Context Protocol) s
 
 - **Centralized Management** - Monitor and control all MCP servers from a unified dashboard
 - **Flexible Routing** - Access all servers, specific groups, or individual servers via HTTP/SSE
+- **Granular Group Visibility** - Control Tool, Prompt, and Resource visibility independently for each server inside a group
 - **Smart Routing** - AI-powered tool discovery using vector semantic search ([Learn more](https://docs.mcphub.app/features/smart-routing))
 - **Hot-Swappable Config** - Add, remove, or update servers without downtime
 - **OAuth 2.0 Support** - Both client and server modes for secure authentication ([Learn more](https://docs.mcphub.app/features/oauth))
@@ -86,7 +87,7 @@ http://localhost:3000/mcp/$smart    # Smart routing
 http://localhost:3000/mcp/$smart/{group}  # Smart routing within group
 ```
 
-> **Security note**: MCP endpoints require authentication by default to prevent accidental exposure. To allow unauthenticated MCP access, disable **Enable Bearer Authentication** in the Keys section. **Skip Authentication** only affects dashboard login. If an upstream MCP/OpenAPI server needs to passthrough `Authorization`, change **Bearer Auth Header Name** (default: `Authorization`) to something like `X-MCP-Authorization` to avoid header collisions. Large inline OpenAPI schemas use the configurable **JSON Body Size Limit** (default: `1mb`). Use these only in trusted environments.
+> **Security note**: MCP endpoints require authentication by default to prevent accidental exposure. To allow unauthenticated MCP access, disable **Enable Bearer Authentication** in the Keys section. **Skip Authentication** only affects dashboard login. Use only in trusted environments.
 
 📖 See [API Reference](https://docs.mcphub.app/api-reference) for detailed endpoint documentation.
 

@@ -1,6 +1,6 @@
 ---
 project: beautiful-mermaid
-stars: 8582
+stars: 8690
 description: |-
     null
 url: https://github.com/lukilabs/beautiful-mermaid

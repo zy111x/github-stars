@@ -1,6 +1,6 @@
 ---
 project: flexcss
-stars: 85
+stars: 84
 description: |-
     A simple css pattern-library using flexbox, build for hellofellow
 url: https://github.com/BowlingX/flexcss

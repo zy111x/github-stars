@@ -1,6 +1,6 @@
 ---
 project: dokploy
-stars: 32702
+stars: 32925
 description: |-
     Open Source Alternative to Vercel, Netlify and Heroku.
 url: https://github.com/Dokploy/dokploy
@@ -47,7 +47,7 @@ To get started, run the following command on a VPS:
 Want to skip the installation process? [Try the Dokploy Cloud](https://app.dokploy.com).
 
 ```bash
-curl -sSL https://dokploy.com/install.sh | sh
+curl -sSL https://dokploy.com/install.sh | bash
 ```
 
 For detailed documentation, visit [docs.dokploy.com](https://docs.dokploy.com).

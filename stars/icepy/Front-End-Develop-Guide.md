@@ -1,6 +1,6 @@
 ---
 project: Front-End-Develop-Guide
-stars: 2926
+stars: 2923
 description: |-
     💰 Awesome The Front End Develop Guide：这份指南汇集了前端开发所使用语言的主流学习资源，并以开发者的视角进行整理编排而成。
 url: https://github.com/icepy/Front-End-Develop-Guide

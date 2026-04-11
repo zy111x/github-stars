@@ -1,6 +1,6 @@
 ---
 project: page-monitor
-stars: 2096
+stars: 2095
 description: |-
     capture webpage and diff the dom change with phantomjs  ♨
 url: https://github.com/fouber/page-monitor

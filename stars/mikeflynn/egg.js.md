@@ -1,6 +1,6 @@
 ---
 project: egg.js
-stars: 1567
+stars: 1568
 description: |-
     A simple javascript library to add easter eggs to web pages.
 url: https://github.com/mikeflynn/egg.js

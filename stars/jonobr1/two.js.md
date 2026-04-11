@@ -1,6 +1,6 @@
 ---
 project: two.js
-stars: 8626
+stars: 8623
 description: |-
     A renderer agnostic two-dimensional drawing api for the web
 url: https://github.com/jonobr1/two.js
@@ -8,6 +8,7 @@ url: https://github.com/jonobr1/two.js
 
 # Two.js
 
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/jonobr1/two.js/badge)](https://scorecard.dev/viewer/?uri=github.com/jonobr1/two.js)
 [![NPM Package][npm]][npm-url]
 [![Build Size][build-size]][build-size-url]
 [![NPM Downloads][npm-downloads]][npmtrends-url]

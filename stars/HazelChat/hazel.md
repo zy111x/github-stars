@@ -1,6 +1,6 @@
 ---
 project: hazel
-stars: 627
+stars: 629
 description: |-
     null
 url: https://github.com/HazelChat/hazel

@@ -1,6 +1,6 @@
 ---
 project: extension.js
-stars: 4968
+stars: 4971
 description: |-
     The cross-browser extension framework.
 url: https://github.com/extension-js/extension.js
@@ -162,5 +162,5 @@ npx extension@latest dev --gecko-binary "/Applications/Firefox.app/Contents/MacO
 
 ## License
 
-MIT (c) Cezar Augusto and the Extension.js Authors.
+MIT (c) Cezar Augusto and the Extension.js authors.
 

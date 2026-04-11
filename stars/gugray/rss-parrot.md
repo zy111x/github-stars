@@ -1,6 +1,6 @@
 ---
 project: rss-parrot
-stars: 162
+stars: 163
 description: |-
     Notifies Mastodon accounts about new posts in the RSS feeds they follow
 url: https://github.com/gugray/rss-parrot
@@ -8,7 +8,7 @@ url: https://github.com/gugray/rss-parrot
 
 # Repository has moved
 
-RSS Parrot's source code has moved to Codeberg: https://codeberg.org/Codeberg/Community/issues/1323  
+RSS Parrot's source code has moved to Codeberg: [codeberg.org/gugray/rss-parrot](https://codeberg.org/gugray/rss-parrot)
 This repository is now archived and left here only as a signpost.
 
 Head over to Codeberg to report issues, submit pull requests, create your own fork etc.
