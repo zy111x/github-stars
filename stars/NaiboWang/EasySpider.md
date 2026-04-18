@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 43764
+stars: 43819
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -18,30 +18,6 @@ A **completely free (including for commercial use and secondary development)** v
 进入 Releases Page 下载最新版本。如果下载速度慢，可以考虑中国境内下载地址：中国境内下载地址。
 
 Refer to the Releases Page to download the latest version of EasySpider.
-
-赞助者/Sponsors
-------------
-
-Bright Data（亮数据）作为全球领先的代理网络，覆盖全球1.5亿+IP，提供真实住宅IP及采集API，支持大规模稳定采集互联网公开数据，成功率经过实战验证。如需高性价比代理服务，可点击上方图片注册并联系中文客服；目前有“首充多少送多少”、动态IP 5折的优惠活动。Bright Data 也可配合EasySpider等工具进行数据采集。
-
-Bright Data is a leading proxy network with 150M+ IPs worldwide, offering real residential Ips and web unlocker to help you collect public web data at scale with proven, high success rates. For cost-effective proxy access, click the banner above to sign up and reach our Chinese support team—there’s currently a promo that matches your first deposit.
-
-CapSolver是CAPTCHA solving领域的Top 3供应商，提供AI驱动的CAPTCHA solving服务，支持reCAPTCHA, Image CAPTCHA, Cloudflare, AWS WAF and more。专为大批量网页爬取、自动化工作流而生，赋能你的AI、BI项目，解码速度最快可<3s，成功率>99%,宕机时间为0，快速的客服支持，全网性价比最高，还可叠加EasySpider的6%专属折扣码：**ESN**。
-
-CapSolver is one of the top 3 providers in the CAPTCHA-solving industry, offering AI-powered solutions that support reCAPTCHA, Image CAPTCHA, Cloudflare, AWS WAF, and more. Designed for high-volume web scraping and automated workflows, it boasts decoding speeds of < 3 seconds, a success rate > 99%, and 0 downtime, empowering your AI and BI projects. Backed by fast customer support, it offers the best value-for-money solution on the market. Get your extra 6% extra credit using EasySpider’s bonus code: **ESN**.
-
-Click here to see how to solve captcha in EasySpider with CapSolver integration.
-
-IPWO爬虫住宅代理提供全球范围内稳定/高质量/安全的IP代理服务，195+国家活跃住宅IP资源，支持HTTP/HTTPS/SOCKS5多种协议和平台，确保用户的灵活性。非常支持EasySpider批量采集任务，效率拉满，抢占业务先机！
-
-也适用于社交媒体营销、广告验证、品牌保护、SEO等业务，确保您的网络连接速度和稳定性，欢迎加入。戳图片和本条信息链接注册可得充裕流量免费测试，联系即响应，售后更放心。
-
-官方网站/Official Website
----------------------
-
-访问易采集官网：www.easyspider.cn
-
-Visit the official website of EasySpider: www.easyspider.net
 
 软件使用示例/Software Usage Example
 -----------------------------
@@ -61,6 +37,34 @@ Visit the official website of EasySpider: www.easyspider.net
 (Right Click) Select a product title, the same type of title will be automatically matched, click the 'Select All' option -> Click the 'Collect Data' option, you can collect the title information of all products.
 
 At the same time, if you select the 'Loop-click every element' option after selecting all, you can automatically open the details page of each product, and then can set to collect the information of the details page.
+
+赞助者/Sponsors
+------------
+
+Bright Data（亮数据）作为全球领先的代理网络，覆盖全球1.5亿+IP，提供真实住宅IP及采集API，支持大规模稳定采集互联网公开数据，成功率经过实战验证。如需高性价比代理服务，可点击上方图片注册并联系中文客服；目前有“首充多少送多少”、动态IP 5折的优惠活动。Bright Data 也可配合EasySpider等工具进行数据采集。
+
+Bright Data is a leading proxy network with 150M+ IPs worldwide, offering real residential Ips and web unlocker to help you collect public web data at scale with proven, high success rates. For cost-effective proxy access, click the banner above to sign up and reach our Chinese support team—there’s currently a promo that matches your first deposit.
+
+CapSolver是CAPTCHA solving领域的Top 3供应商，提供AI驱动的CAPTCHA solving服务，支持reCAPTCHA, Image CAPTCHA, Cloudflare, AWS WAF and more。专为大批量网页爬取、自动化工作流而生，赋能你的AI、BI项目，解码速度最快可<3s，成功率>99%,宕机时间为0，快速的客服支持，全网性价比最高，还可叠加EasySpider的6%专属折扣码：**ESN**。
+
+CapSolver is one of the top 3 providers in the CAPTCHA-solving industry, offering AI-powered solutions that support reCAPTCHA, Image CAPTCHA, Cloudflare, AWS WAF, and more. Designed for high-volume web scraping and automated workflows, it boasts decoding speeds of < 3 seconds, a success rate > 99%, and 0 downtime, empowering your AI and BI projects. Backed by fast customer support, it offers the best value-for-money solution on the market. Get your extra 6% extra credit using EasySpider’s bonus code: **ESN**.
+
+Click here to see how to solve captcha in EasySpider with CapSolver integration.
+
+IPWO爬虫住宅代理提供全球范围内稳定/高质量/安全的IP代理服务，195+国家活跃住宅IP资源，支持HTTP/HTTPS/SOCKS5多种协议和平台，确保用户的灵活性。非常支持EasySpider批量采集任务，效率拉满，抢占业务先机！
+
+也适用于社交媒体营销、广告验证、品牌保护、SEO等业务，确保您的网络连接速度和稳定性，欢迎加入。戳图片和本条信息链接注册可得充裕流量免费测试，联系即响应，售后更放心。
+
+LegionProxy作为快速发展的代理网络，覆盖全球195+国家和地区，拥有7400万+真实住宅 IP，提供真实 residential proxies及HTTP/3支持，助力大规模web scraping和自动化任务，有效规避IP封锁。住宅套餐低至$0.60/GB起，支持即时开通，中文客服快速响应。
+
+LegionProxy is a fast-growing proxy network with 74M+ residential IPs across 195+ countries, offering real residential proxies and HTTP/3 support to help you run scraping and automation at scale without IP blocks. Residential plans start at just $0.60/GB, with instant activation and responsive support when you need it.
+
+官方网站/Official Website
+---------------------
+
+访问易采集官网：www.easyspider.cn
+
+Visit the official website of EasySpider: www.easyspider.net
 
 ### 更多特性/More Features
 

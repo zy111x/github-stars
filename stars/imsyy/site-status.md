@@ -1,6 +1,6 @@
 ---
 project: site-status
-stars: 873
+stars: 878
 description: 📺 一个基于 UptimeRobot API 的在线状态面板 | 站点监测 | 状态检测 | An online status panel based on the UptimeRobot API | UptimeRobot, status, site
 url: https://github.com/imsyy/site-status
 ---
