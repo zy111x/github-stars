@@ -1,6 +1,6 @@
 ---
 project: Numeral-js
-stars: 9717
+stars: 9715
 description: |-
     A javascript library for formatting and manipulating numbers.
 url: https://github.com/adamwdraper/Numeral-js

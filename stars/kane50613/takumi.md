@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 1653
+stars: 1684
 description: |-
     A Rust rendering engine for turning templates into images, with next/og-compatible APIs.
 url: https://github.com/kane50613/takumi

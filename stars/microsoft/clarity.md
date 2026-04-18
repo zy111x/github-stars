@@ -1,6 +1,6 @@
 ---
 project: clarity
-stars: 2610
+stars: 2616
 description: |-
     A behavioral analytics library that uses dom mutations and user interactions to generate aggregated insights.
 url: https://github.com/microsoft/clarity

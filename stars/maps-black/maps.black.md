@@ -1,6 +1,6 @@
 ---
 project: maps.black
-stars: 159
+stars: 160
 description: |-
     null
 url: https://github.com/maps-black/maps.black

@@ -1,6 +1,6 @@
 ---
 project: acme.sh
-stars: 46255
+stars: 46329
 description: |-
     A pure Unix shell script ACME client for SSL / TLS certificate automation
 url: https://github.com/acmesh-official/acme.sh

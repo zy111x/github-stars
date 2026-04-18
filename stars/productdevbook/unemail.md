@@ -1,478 +1,493 @@
 ---
 project: unemail
-stars: 172
+stars: 176
 description: |-
-    📫 Lightweight, zero-dependency TypeScript email library with pluggable providers and MailCrab support for local development.
+    One unified email API across 18 providers (SMTP, Resend, SES, Postmark, SendGrid, Mailgun, …). Zero deps, RFC 8058 + DKIM ready, edge-first, strict TypeScript.
 url: https://github.com/productdevbook/unemail
 ---
 
-# unemail
+<p align="center">
+  <br>
+  <img src="https://raw.githubusercontent.com/productdevbook/unemail/main/.github/assets/cover.png" alt="unemail — One API for every email provider" width="100%">
+  <br><br>
+  <b style="font-size: 2em;">unemail</b>
+  <br><br>
+  Driver-based, zero-dependency TypeScript email library.
+  <br>
+  Send, batch, schedule, dedupe, render, parse, verify, and sign — one unified API across every runtime.
+  <br><br>
+  <a href="https://npmjs.com/package/unemail"><img src="https://img.shields.io/npm/v/unemail?style=flat&colorA=18181B&colorB=F0DB4F" alt="npm version"></a>
+  <a href="https://npmjs.com/package/unemail"><img src="https://img.shields.io/npm/dm/unemail?style=flat&colorA=18181B&colorB=F0DB4F" alt="npm downloads"></a>
+  <a href="https://bundlephobia.com/result?p=unemail"><img src="https://img.shields.io/bundlephobia/minzip/unemail?style=flat&colorA=18181B&colorB=F0DB4F" alt="bundle size"></a>
+  <a href="https://github.com/productdevbook/unemail/blob/main/LICENSE"><img src="https://img.shields.io/github/license/productdevbook/unemail?style=flat&colorA=18181B&colorB=F0DB4F" alt="license"></a>
+  <a href="https://github.com/sponsors/productdevbook"><img src="https://img.shields.io/github/sponsors/productdevbook?style=flat&colorA=18181B&colorB=F0DB4F&label=sponsors" alt="sponsors"></a>
+</p>
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![bundle][bundle-src]][bundle-href]
-[![JSDocs][jsdocs-src]][jsdocs-href]
-[![License][license-src]][license-href]
+## Design goals
 
-A modern, TypeScript-first email sending library with support for multiple providers and ESM-only architecture.
+| Goal                         | How `unemail` delivers                                                                                                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **One API, many transports** | `createEmail({ driver })` — 15+ built-in drivers (SMTP, Resend, SES, Postmark, SendGrid, Mailgun, Brevo, MailerSend, Loops, Zeptomail, MailChannels, Cloudflare Email, …) |
+| **Cross-runtime**            | Node, Bun, Deno, Cloudflare Workers, browser — core is zero-dep and Web-API only. No `axios`, ever.                                                                       |
+| **Compliance-ready**         | RFC 8058 one-click List-Unsubscribe, DKIM + ARC signing, suppression/preference stores, DMARC + TLS-RPT + ARF parsers                                                     |
+| **Resilient by default**     | Idempotency, retry w/ jitter, per-provider rate-limit, circuit breaker, dedupe, dead-letter, provider fallback                                                            |
+| **Unified observability**    | Structured logging, OpenTelemetry, Prometheus metrics, normalized `EmailEvent` stream across send + webhook paths                                                         |
+| **Modern DX**                | `{ data, error }` Result discriminated union, typed `Address` primitive, `react:`/`mjml:`/`handlebars:`/`liquid:` props                                                   |
+| **Testing-first**            | `createTestEmail()` with inbox + `waitFor` + 5 Vitest matchers + snapshot helper                                                                                          |
 
-## Supported Email Services
-
-- **SMTP** - Any standard SMTP server including Gmail, Outlook, Office 365, etc.
-- **AWS SES** - Amazon Simple Email Service
-- **Resend** - Modern email API for developers
-- **HTTP API** - Custom HTTP API endpoints for email delivery
-- **MailCrab** - Local development email testing (via SMTP provider)
-
-> 📢 **Want to add a provider?** We welcome pull requests for new providers! See the [Creating Custom Email Providers](#creating-custom-email-providers) section for guidance.
-
-## Features
-
-- 📦 **Multiple Providers** - Support for various email services including AWS SES, MailCrab, HTTP APIs, and more
-- 🔌 **Provider Pattern** - Easily extend with custom providers
-- 🔄 **Type-safe** - Full TypeScript support with generics and strict typing
-- 📤 **ESM Only** - Modern ES modules architecture
-- 🧪 **Well-tested** - Comprehensive test suite for all components
-- 📄 **Zero External Dependencies** - Core functionality has no runtime dependencies
-- 🔒 **Error Handling** - Consistent error handling across all providers
-
-## Installation
+## Install
 
 ```bash
-# Using pnpm
 pnpm add unemail
-
-# Using npm
-npm install unemail
-
-# Using yarn
-yarn add unemail
 ```
 
-## Quick Start
+Rendering, queue, and parser entries pull in optional peer deps only
+when you import them:
 
-```typescript
-import { createEmailService } from 'unemail'
-import httpProvider from 'unemail/providers/http'
-
-// Create a service with your preferred provider
-const emailService = createEmailService({
-  provider: httpProvider({
-    endpoint: 'https://api.example.com/email',
-    apiKey: 'your-api-key'
-  })
-})
-
-// Send an email
-const result = await emailService.sendEmail({
-  from: { email: 'sender@example.com', name: 'Sender Name' },
-  to: { email: 'recipient@example.com', name: 'Recipient Name' },
-  subject: 'Hello from unemail',
-  text: 'This is a test email sent using unemail library',
-  html: '<p>This is a test email sent using <strong>unemail</strong> library</p>'
-})
-
-if (result.success) {
-  console.log('Email sent successfully!', result.data.messageId)
-}
-else {
-  console.error('Failed to send email:', result.error)
-}
+```bash
+pnpm add @react-email/render   # unemail/render/react
+pnpm add mjml                  # unemail/render/mjml
+pnpm add handlebars            # unemail/render/handlebars
+pnpm add liquidjs              # unemail/render/liquid
+pnpm add juice                 # htmlPipeline(inlineCss())
+pnpm add postal-mime           # unemail/parse
+pnpm add @opentelemetry/api    # withTelemetry
+pnpm add unstorage             # unstorageQueue / unstorageSuppressionStore
+pnpm add bullmq                # unemail/queue/bullmq
+pnpm add pg-boss               # unemail/queue/pg-boss
 ```
 
-## Available Providers
+## Hello world
 
-### AWS SES Provider
+```ts
+import { createEmail } from "unemail"
+import resend from "unemail/driver/resend"
 
-```typescript
-import { createEmailService } from 'unemail'
-import awsSesProvider from 'unemail/providers/aws-ses'
+const email = createEmail({ driver: resend({ apiKey: process.env.RESEND_KEY! }) })
 
-const emailService = createEmailService({
-  provider: awsSesProvider({
-    accessKeyId: 'AWS_ACCESS_KEY',
-    secretAccessKey: 'AWS_SECRET_KEY',
-    region: 'us-east-1'
-  })
+const { data, error } = await email.send({
+  from: "Acme <hi@acme.com>",
+  to: "user@example.com",
+  subject: "Welcome",
+  text: "Thanks for signing up.",
 })
+
+if (error) throw error // error: EmailError — typed { code, status, retryable, ... }
+console.log(data.id) // data: EmailResult — TS narrows after the error check
 ```
 
-### HTTP Provider
+Every driver implements the same contract, so swapping providers is a
+one-line change.
 
-```typescript
-import { createEmailService } from 'unemail'
-import httpProvider from 'unemail/providers/http'
+## Message streams (Postmark-style)
 
-const emailService = createEmailService({
-  provider: httpProvider({
-    endpoint: 'https://api.yourservice.com/send',
-    apiKey: 'your-api-key',
-    method: 'POST', // optional, defaults to POST
-    headers: { // optional, additional headers
-      'X-Custom-Header': 'custom-value'
-    }
-  })
-})
+```ts
+import postmark from "unemail/driver/postmark"
+import ses from "unemail/driver/ses"
+
+const email = createEmail({ driver: postmark({ token }) })
+email.mount("marketing", ses({ region: "us-east-1" }))
+
+await email.send({ stream: "transactional", to, subject, text })
+await email.send({ stream: "marketing", to, subject, html })
 ```
 
-### MailCrab Provider (for development)
+## Deliverability & compliance
 
-```typescript
-import { createEmailService } from 'unemail'
-import smtpProvider from 'unemail/providers/smtp'
+**Gmail + Yahoo 2024 bulk-sender compliance is one line:**
 
-const emailService = createEmailService({
-  provider: smtpProvider({
-    host: 'localhost',
-    port: 1025, // default MailCrab port
-    secure: false // typically false for development
-  })
-})
-```
-
-### SMTP Provider
-
-```typescript
-import { createEmailService } from 'unemail'
-import smtpProvider from 'unemail/providers/smtp'
-
-// Basic configuration
-const emailService = createEmailService({
-  provider: smtpProvider({
-    host: 'smtp.example.com',
-    port: 587,
-    secure: false, // use TLS
-    user: 'username',
-    password: 'password'
-  })
-})
-
-// Advanced configuration with enhanced security and features
-const advancedEmailService = createEmailService({
-  provider: smtpProvider({
-    host: 'smtp.example.com',
-    port: 587,
-    secure: false,
-    user: 'username',
-    password: 'password',
-
-    // TLS options
-    rejectUnauthorized: true, // Verify SSL certificates (set to false to ignore certificate errors)
-
-    // Connection pooling for sending multiple emails efficiently
-    pool: true,
-    maxConnections: 5,
-
-    // Enhanced authentication
-    authMethod: 'CRAM-MD5', // 'LOGIN', 'PLAIN', 'CRAM-MD5', or 'OAUTH2'
-
-    // OAuth2 authentication (if using OAUTH2 authMethod)
-    oauth2: {
-      user: 'user@example.com',
-      clientId: 'client-id',
-      clientSecret: 'client-secret',
-      refreshToken: 'refresh-token',
-      accessToken: 'access-token',
-      expires: 1714939200000
-    },
-
-    // DKIM signing to improve deliverability
-    dkim: {
-      domainName: 'example.com',
-      keySelector: 'mail',
-      privateKey: '-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----'
-    }
-  })
-})
-
-// Basic email sending
-await emailService.sendEmail({
-  from: { email: 'sender@example.com', name: 'Sender' },
-  to: { email: 'recipient@example.com' },
-  subject: 'Test email',
-  text: 'Plain text content',
-  html: '<p>HTML content</p>'
-})
-
-// Advanced email sending with SMTP-specific options
-await advancedEmailService.sendEmail({
-  from: { email: 'sender@example.com', name: 'Sender' },
-  to: { email: 'recipient@example.com' },
-  subject: 'Test email',
-  text: 'Plain text content',
-  html: '<p>HTML content</p>',
-
-  // Basic SMTP-specific options
-  priority: 'high', // 'high', 'normal', or 'low'
-  dsn: {
-    success: true, // Request successful delivery notification
-    failure: true, // Request failure notification
-    delay: true // Request delay notification
+```ts
+await email.send({
+  from,
+  to,
+  subject,
+  html,
+  unsubscribe: {
+    url: `https://app.com/u?t=${token}`, // RFC 8058 one-click
+    mailto: "unsubscribe@acme.com",
   },
+})
+// → auto-injects List-Unsubscribe + List-Unsubscribe-Post headers.
+```
 
-  // Threading and references
-  inReplyTo: '<previous-message-id@example.com>',
-  references: ['<ref1@example.com>', '<ref2@example.com>'],
+**DKIM sign outbound SMTP** (RSA or Ed25519, pure Web-Crypto):
 
-  // Email management
-  listUnsubscribe: 'mailto:unsubscribe@example.com',
-
-  // Gmail-specific features
-  googleMailHeaders: {
-    promotionalContent: true, // Mark as promotional content
-    feedbackId: 'campaign:12345:user:123', // For engagement tracking
-    category: 'promotions' // 'primary', 'social', 'promotions', 'updates', or 'forums'
-  },
-
-  // Control DKIM signing per email
-  useDkim: true
+```ts
+import smtp from "unemail/driver/smtp"
+const driver = smtp({
+  host: "smtp.acme.com",
+  dkim: { selector: "s1", domain: "acme.com", privateKey: pem },
 })
 ```
 
-### Resend Provider
+**Suppression + preferences** stop sends before they hit the provider:
 
-```typescript
-import { createEmailService } from 'unemail'
-import resendProvider from 'unemail/providers/resend'
+```ts
+import { withSuppression } from "unemail/middleware"
+import { memorySuppressionStore } from "unemail/suppression"
 
-const emailService = createEmailService({
-  provider: resendProvider({
-    apiKey: 'your-resend-api-key'
-  })
-})
+const store = memorySuppressionStore()
+// webhook handler → store.add(recipient, "bounce")
+const email = createEmail({ driver: withSuppression(resend({ apiKey }), { store }) })
 ```
 
-## Email Options
+**Other deliverability utilities:**
 
-Send emails with a variety of options:
+- `unemail/verify/arc` — ARC-Set signer (RFC 8617) for forwarders
+- `unemail/dmarc` — aggregate (RUA) XML + gzip parser
+- `unemail/mta-sts` — policy file generator + TLS-RPT JSON parser
+- `unemail/parse/arf` — RFC 5965 feedback-loop (FBL) reports
 
-```typescript
-import { Buffer } from 'node:buffer'
-import fs from 'node:fs'
+## Provider-side templates
 
-const result = await emailService.sendEmail({
-  // Required fields
-  from: { email: 'sender@example.com', name: 'Sender Name' },
-  to: [
-    { email: 'recipient1@example.com', name: 'Recipient One' },
-    { email: 'recipient2@example.com', name: 'Recipient Two' }
+Eight drivers map `msg.template` into native template APIs:
+
+```ts
+await email.send({
+  from,
+  to,
+  subject,
+  template: { id: "tpl_welcome", variables: { name: "Ada" } },
+})
+// → SendGrid dynamic_template_data, Postmark TemplateModel,
+//   Mailgun h:X-Mailgun-Variables, Brevo params, MailerSend
+//   personalization.data, Loops dataVariables, Zeptomail merge_info.
+```
+
+## Personalizations & batch
+
+SendGrid-style per-recipient fan-out — one batched API call when the
+driver supports it, or an automatic loop when it doesn't:
+
+```ts
+await email.send({
+  from,
+  subject: "Welcome",
+  personalizations: [
+    { to: "ada@x.com", variables: { name: "Ada" } },
+    { to: "bob@x.com", variables: { name: "Bob" }, subject: "Just for Bob" },
   ],
-  subject: 'Test Email with Attachments',
+  template: { id: "tpl_welcome" },
+})
 
-  // Content - at least one of text or html is required
-  text: 'Plain text version of the email',
-  html: '<p>HTML version of the email</p>',
+// Or stream results for huge fan-outs:
+for await (const result of email.sendBatchStream(messages)) {
+  if (result.error) report(result.error)
+}
+```
 
-  // Optional fields
-  cc: { email: 'cc@example.com', name: 'CC Recipient' },
-  bcc: { email: 'bcc@example.com', name: 'BCC Recipient' },
+## Rendering
 
-  // Custom headers
-  headers: {
-    'X-Custom-Header': 'custom-value'
-  },
+**React Email / jsx-email / MJML / Handlebars / Liquid** all plug in
+as renderers:
 
-  // Attachments
+```ts
+import { createEmail, withRender } from "unemail"
+import reactRender from "unemail/render/react"
+import { handlebarsRenderer } from "unemail/render/handlebars"
+
+const email = createEmail({ driver }).use(withRender(reactRender(), handlebarsRenderer()))
+```
+
+**HTML post-processing pipeline** — preheader, dark-mode, CID
+auto-rewrite, juice inlining:
+
+```ts
+import {
+  htmlPipeline,
+  withPreheader,
+  cidRewrite,
+  darkModeHook,
+  inlineCss,
+} from "unemail/render/pipeline"
+
+email.use(
+  htmlPipeline(
+    withPreheader(), // reads msg.preheader
+    cidRewrite(), // <img src="logo.png"> → cid:logo
+    darkModeHook({ darkCss: "body{background:#000}" }),
+    inlineCss(), // peer: juice
+  ),
+)
+```
+
+**i18n** dispatches per-locale renderers:
+
+```ts
+import { i18nRenderer } from "unemail/render/i18n"
+
+email.use(
+  withRender(
+    i18nRenderer({
+      fallback: handlebarsRenderer({
+        /* defaults */
+      }),
+      byLocale: {
+        tr: handlebarsRenderer({
+          /* tr */
+        }),
+        en: handlebarsRenderer({
+          /* en */
+        }),
+      },
+    }),
+  ),
+)
+```
+
+**Calendar invites** (ICS) attach to any message:
+
+```ts
+import { icalEvent } from "unemail/ics"
+
+await email.send({
+  from,
+  to,
+  subject: "Design sync",
+  text: "...",
   attachments: [
-    {
-      filename: 'document.pdf',
-      content: Buffer.from('...'), // Can be Buffer or Base64 string
-      contentType: 'application/pdf'
-    },
-    {
-      filename: 'image.png',
-      content: fs.readFileSync('path/to/image.png'),
-      contentType: 'image/png'
-    }
+    icalEvent({
+      uid: "evt-1@acme.com",
+      start: new Date("2026-05-01T10:00:00Z"),
+      end: new Date("2026-05-01T11:00:00Z"),
+      summary: "Design sync",
+      organizer: { email: "host@acme.com" },
+      attendees: [{ email: "ada@acme.com", rsvp: true }],
+    }),
   ],
-
-  // Reply-to address
-  replyTo: { email: 'reply@example.com', name: 'Reply Handler' }
 })
 ```
 
-## Creating Custom Email Providers
+## Resilience middleware
 
-You can easily create custom providers for any email service:
+```ts
+import {
+  withRetry,
+  withCircuitBreaker,
+  withRateLimit,
+  rateLimitPresets,
+  withDedupe,
+  withLogger,
+  withTelemetry,
+  withMetrics,
+  createMetricsRegistry,
+} from "unemail/middleware"
+import { trace } from "@opentelemetry/api"
 
-```typescript
-import type { EmailOptions, EmailResult, Result } from 'unemail/types'
-import { createEmailService, defineProvider } from 'unemail'
+const metrics = createMetricsRegistry()
 
-// Define your provider
-const myCustomProvider = defineProvider((options = {}) => {
-  // Provider initialization
-  const apiKey = options.apiKey
-  const apiUrl = options.apiUrl || 'https://api.default-service.com'
+email
+  .use(withDedupe({ strategy: "contentHash", ttlSeconds: 60 }))
+  .use(withRetry({ retries: 3, backoff: "full-jitter", deadLetter: dlqDriver }))
+  .use(withRateLimit(rateLimitPresets.sendgrid()))
+  .use(withCircuitBreaker({ threshold: 5, cooldownMs: 30_000 }))
+  .use(withLogger({ redactLocalPart: true }))
+  .use(withTelemetry({ tracer: trace.getTracer("unemail") }))
+  .use(withMetrics({ registry: metrics }))
 
-  // Method implementations
-  return {
-    name: 'my-custom-provider',
+// Prometheus exposition:
+app.get("/metrics", () => new Response(metrics.expose()))
+```
 
-    features: {
-      attachments: true,
-      html: true,
-      templates: false,
-      tracking: false
-    },
+### OAuth2 (Gmail / Microsoft 365)
 
-    options,
+```ts
+import { oauth2Gmail } from "unemail/middleware"
 
-    async initialize() {
-      // Initialize your provider if needed
-      // e.g. validate credentials, set up connections, etc.
-    },
+email.use(
+  oauth2Gmail({
+    clientId: process.env.GOOGLE_CLIENT_ID!,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+    refreshToken: process.env.GOOGLE_REFRESH_TOKEN!,
+  }),
+)
+```
 
-    async isAvailable() {
-      // Check if the provider is available
-      // e.g. test connection, validate credentials, etc.
-      return true
-    },
+## Provider fallback + composition
 
-    async sendEmail(options: EmailOptions): Promise<Result<EmailResult>> {
-      try {
-        // Implementation of email sending logic
+```ts
+import fallback from "unemail/driver/fallback"
+import roundRobin from "unemail/driver/round-robin"
+import resend from "unemail/driver/resend"
+import ses from "unemail/driver/ses"
 
-        // On success
-        return {
-          success: true,
-          data: {
-            messageId: 'generated-or-returned-message-id',
-            sent: true,
-            timestamp: new Date(),
-            provider: 'my-custom-provider'
-          }
-        }
-      }
-      catch (error) {
-        // On error
-        return {
-          success: false,
-          error: error as Error
-        }
-      }
-    }
-  }
-})
-
-const emailService = createEmailService({
-  provider: myCustomProvider({
-    apiKey: 'your-api-key',
-    apiUrl: 'https://api.your-service.com'
-  })
+const email = createEmail({
+  driver: fallback({
+    drivers: [resend({ apiKey: process.env.RESEND_KEY! }), ses({ region: "us-east-1" })],
+  }),
 })
 ```
 
-## Error Handling
+## Queues
 
-All provider methods return a standardized `Result` type:
+In-memory / unstorage / BullMQ / pg-boss / AWS SQS all implement the
+same `EmailQueue` contract. `msg.scheduledAt` defers the send through
+every backend:
 
-```typescript
-interface Result<T = any> {
-  success: boolean
-  data?: T
-  error?: Error
-}
-```
+```ts
+import memoryQueue from "unemail/queue/memory"
+import { startWorker } from "unemail/queue/worker"
 
-This allows for consistent error handling:
+const queue = memoryQueue()
+startWorker(email, queue, { concurrency: 5, maxAttempts: 5 }).start()
 
-```typescript
-const result = await emailService.sendEmail({
-  // email options...
+await queue.enqueue({
+  from,
+  to,
+  subject,
+  scheduledAt: new Date(Date.now() + 60 * 60 * 1000), // send in 1h
 })
-
-if (result.success) {
-  // Handle success
-  console.log(`Email sent with ID: ${result.data.messageId}`)
-}
-else {
-  // Handle error
-  console.error(`Failed to send email: ${result.error.message}`)
-}
 ```
 
-## Development Setup
+Swap for `bullmqQueue({ bull })`, `pgBossQueue({ boss })`, or
+`sqsQueue({ sqs, queueUrl })` for durable multi-process sending.
 
-### Prerequisites
+## Inbound + webhooks
 
-- Node.js 20.11.1 or higher
-- pnpm
+Pre-normalized handlers for Cloudflare Email, Postmark, SendGrid,
+Mailgun, and SES (via SNS):
 
-### Local Development
+```ts
+import { defineInboundHandler } from "unemail/inbound"
+import sendgridInbound from "unemail/inbound/sendgrid"
+import { defineSesInboundHandler } from "unemail/inbound/ses"
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/unemail.git
-cd unemail
-
-# Install dependencies
-pnpm install
-
-# Build the package
-pnpm build
-
-# Run tests
-pnpm test
+export default defineInboundHandler({
+  providers: [sendgridInbound()],
+  onEmail(mail) {
+    /* ParsedEmail */
+  },
+})
 ```
 
-### Testing with MailCrab
+**Reply-only text extraction** (EN/TR/DE/FR/ES):
 
-For local development, you can use MailCrab, a local SMTP server:
+```ts
+import { stripReply } from "unemail/inbound/reply"
+import { threadKey } from "unemail/inbound/thread"
 
-```bash
-# Run the MailCrab setup script
-pnpm mailcrab
-
-# Test with the example script
-pnpm example
+const { text, quoted } = stripReply(parsed.text ?? "")
+const thread = threadKey(parsed) // canonical root Message-ID
 ```
 
-#### unemail-mailcrab CLI
+**Webhook signature verification** — Resend, Postmark, Mailgun,
+SendGrid, SES, plus a zero-dep **Standard Webhooks**
+(`standardwebhooks.com`) verifier that's <5 kB (vs Svix's ~1 MB):
 
-The package includes a CLI tool called `unemail-mailcrab` that helps you set up and manage a MailCrab container for local email testing:
+```ts
+import { verifyStandardWebhook } from "unemail/webhook/standard"
 
-```bash
-# Install globally to use the CLI from anywhere
-npm install -g unemail
-
-# Run the CLI
-unemail-mailcrab
+const body = await verifyStandardWebhook(request, {
+  secret: process.env.WHSEC!,
+})
 ```
 
-The CLI tool:
+## Unified event stream
 
-- Checks if Docker is installed
-- Verifies if ports 1025 (SMTP) and 1080 (Web UI) are available
-- Pulls the MailCrab Docker image if not already available
-- Manages existing MailCrab containers (start/stop/create new)
-- Sets up a Docker container running MailCrab
-- Provides detailed instructions for using MailCrab with unemail
+Send events + webhook events converge on one `EmailEvent` shape:
 
-After running the CLI, you can:
-- Send emails to localhost:1025 using the MailCrab provider
-- View all sent emails in the MailCrab web UI at http://localhost:1080
-- Stop/start the container with `docker stop unemail-mailcrab` and `docker start unemail-mailcrab`
+```ts
+import { EventBus, withEvents, memoryEventStore } from "unemail/events"
 
-## Credits
+const bus = new EventBus()
+const store = memoryEventStore()
+bus.on((e) => store.append(e))
 
-This project's architecture and provider pattern was inspired by [unjs/unstorage](https://github.com/unjs/unstorage), which uses a similar approach for storage drivers.
+const email = createEmail({ driver: withEvents(resend({ apiKey }), bus) })
+
+// later:
+const timeline = await store.list!(messageId)
+// [send.queued, send.attempt, send.success, delivered, opened, ...]
+```
+
+## Typed addresses
+
+Validate at system boundaries — rejects malformed input before it
+reaches a driver:
+
+```ts
+import { parseAddress } from "unemail/address"
+
+const { data, error } = parseAddress("Ada <ada@acme.com>")
+if (error) throw error
+data.local // "ada"
+data.domain // "acme.com"
+```
+
+## Testing
+
+```ts
+import { createTestEmail, emailMatchers, toEmailSnapshot } from "unemail/test"
+import { expect } from "vitest"
+
+expect.extend(emailMatchers)
+
+const email = createTestEmail()
+await onboardingFlow(email, user)
+
+expect(email).toHaveSentTo("ada@acme.com")
+expect(email).toHaveSentWithSubject(/welcome/i)
+expect(email).toHaveSentWithAttachment("invite.ics")
+expect(email).toHaveSentMatching((m) => m.metadata?.userId === user.id)
+expect(toEmailSnapshot(email.last!)).toMatchSnapshot()
+```
+
+## Authoring a driver
+
+```ts
+import { defineDriver } from "unemail"
+
+export default defineDriver<{ apiKey: string }>((opts) => ({
+  name: "my-driver",
+  options: opts,
+  flags: { html: true, attachments: true, batch: true, cancelable: true },
+  async send(msg) {
+    const res = await fetch("https://api.example.com/send", {
+      method: "POST",
+      headers: { authorization: `Bearer ${opts!.apiKey}` },
+      body: JSON.stringify(msg),
+    })
+    if (!res.ok) return { data: null, error: new Error("send failed") as never }
+    const body = (await res.json()) as { id: string }
+    return { data: { id: body.id, driver: "my-driver", at: new Date() }, error: null }
+  },
+  async cancel(id) {
+    /* optional */
+  },
+  async retrieve(id) {
+    /* optional */
+  },
+}))
+```
+
+## Result helpers
+
+```ts
+import { isOk, isErr, unwrap, unwrapOr, mapOk, tryAsync } from "unemail/result"
+
+const res = await email.send({ ... })
+if (isOk(res)) console.log(res.data.id)
+const id = unwrapOr(res, { id: "offline", driver: "mock", at: new Date() }).id
+```
+
+## Docs
+
+- [docs/drivers.md](./docs/drivers.md) — driver matrix + authoring guide + error taxonomy
+- [docs/rendering.md](./docs/rendering.md) — React Email / jsx-email / MJML / Handlebars / Liquid / i18n / HTML pipeline
+- [docs/inbound.md](./docs/inbound.md) — `unemail/parse` + unified inbound handler + reply stripper + thread stitcher
+- [docs/webhooks.md](./docs/webhooks.md) — signature verification for 6 providers + Standard Webhooks
+- [docs/deliverability.md](./docs/deliverability.md) — DKIM + ARC + List-Unsubscribe + DMARC + MTA-STS + suppression + preferences
+- [docs/testing.md](./docs/testing.md) — `createTestEmail`, `waitFor`, 5 Vitest matchers + snapshots
+- [docs/observability.md](./docs/observability.md) — logging + OTel + Prometheus metrics + unified event stream
+- [docs/queue.md](./docs/queue.md) — memory / unstorage / BullMQ / pg-boss / SQS
+- [docs/rfcs/001-packaging.md](./docs/rfcs/001-packaging.md) — why single package with sub-paths
+- [MIGRATION.md](./MIGRATION.md) — upgrading from v0.x
 
 ## License
 
-Published under the [MIT](https://github.com/productdevbook/unemail/blob/main/LICENSE) license.
-Made by [@productdevbook](https://github.com/productdevbook) and [community](https://github.com/productdevbook/unemail/graphs/contributors) 💛
+Published under the [MIT](./LICENSE) license. Made by
+[@productdevbook](https://github.com/productdevbook) and
+[community](https://github.com/productdevbook/unemail/graphs/contributors).
 
-<!-- Badges -->
-
-[npm-version-src]: https://img.shields.io/npm/v/unemail?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/unemail
-[npm-downloads-src]: https://img.shields.io/npm/dm/unemail?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/unemail
-[bundle-src]: https://deno.bundlejs.com/badge?q=unemail@0.0.4
-[bundle-href]: https://deno.bundlejs.com/badge?q=unemail@0.0.4
-[license-src]: https://img.shields.io/github/license/productdevbook/unemail.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/productdevbook/unemail/blob/main/LICENSE
-[jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/unemail
+Architecture inspired by [`unjs/unstorage`](https://github.com/unjs/unstorage).
 

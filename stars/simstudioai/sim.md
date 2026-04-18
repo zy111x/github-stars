@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 27718
+stars: 27824
 description: |-
     Build, deploy, and orchestrate AI agents. Sim is the central intelligence layer for your AI workforce.
 url: https://github.com/simstudioai/sim
@@ -82,10 +82,6 @@ docker compose -f docker-compose.prod.yml up -d
 
 Open [http://localhost:3000](http://localhost:3000)
 
-#### Background worker note
-
-The Docker Compose stack starts a dedicated worker container by default. If `REDIS_URL` is not configured, the worker will start, log that it is idle, and do no queue processing. This is expected. Queue-backed API, webhook, and schedule execution requires Redis; installs without Redis continue to use the inline execution path.
-
 Sim also supports local models via [Ollama](https://ollama.ai) and [vLLM](https://docs.vllm.ai/) — see the [Docker self-hosting docs](https://docs.sim.ai/self-hosting/docker) for setup details.
 
 ### Self-hosted: Manual Setup
@@ -131,12 +127,10 @@ cd packages/db && bun run db:migrate
 5. Start development servers:
 
 ```bash
-bun run dev:full  # Starts Next.js app, realtime socket server, and the BullMQ worker
+bun run dev:full  # Starts Next.js app and realtime socket server
 ```
 
-If `REDIS_URL` is not configured, the worker will remain idle and execution continues inline.
-
-Or run separately: `bun run dev` (Next.js), `cd apps/sim && bun run dev:sockets` (realtime), and `cd apps/sim && bun run worker` (BullMQ worker).
+Or run separately: `bun run dev` (Next.js) and `cd apps/sim && bun run dev:sockets` (realtime).
 
 ## Copilot API Keys
 

@@ -1,6 +1,6 @@
 ---
 project: unavatar
-stars: 1417
+stars: 1419
 description: |-
     Get unified user avatar from social networks, including Instagram, SoundCloud, Telegram, Twitter, YouTube & more.
 url: https://github.com/microlinkhq/unavatar
@@ -27,10 +27,12 @@ url: https://github.com/microlinkhq/unavatar
   - [Discord](#discord)
   - [Dribbble](#dribbble)
   - [DuckDuckGo](#duckduckgo)
+  - [Facebook](#facebook)
   - [GitHub](#github)
   - [GitLab](#gitlab)
   - [LinkedIn](#linkedin)
   - [Google](#google)
+  - [Gravatar](#gravatar)
   - [Instagram](#instagram)
   - [Ko-fi](#ko-fi)
   - [Medium](#medium)
@@ -41,20 +43,26 @@ url: https://github.com/microlinkhq/unavatar
   - [Patreon](#patreon)
   - [Pinterest](#pinterest)
   - [Printables](#printables)
+  - [PSN Profiles](#psn-profiles)
   - [Reddit](#reddit)
   - [Snapchat](#snapchat)
   - [SoundCloud](#soundcloud)
   - [Spotify](#spotify)
+  - [Steam](#steam)
   - [Substack](#substack)
   - [Telegram](#telegram)
   - [Threads](#threads)
   - [TikTok](#tiktok)
+  - [Tumblr](#tumblr)
   - [Twitch](#twitch)
   - [Vimeo](#vimeo)
   - [WhatsApp](#whatsapp)
+  - [X/Twitter](#xtwitter)
+  - [Xbox Gamertag](#xbox-gamertag)
   - [YouTube](#youtube)
 - [Response Format](#response-format)
 - [Response Headers](#response-headers)
+- [Response Errors](#response-errors)
 
 ---
 
@@ -62,65 +70,55 @@ url: https://github.com/microlinkhq/unavatar
 
 Welcome to **unavatar.io**, the ultimate avatar service that offers everything you need to easily retrieve user avatars:
 
-- **Versatile**: A wide range of platforms and services including [TikTok](https://unavatar.io/docs#tiktok), [Instagram](https://unavatar.io/docs#instagram), [YouTube](https://unavatar.io/docs#youtube), [X/Twitter](https://unavatar.io/docs#xtwitter), [Gravatar](https://unavatar.io/docs#gravatar), etc., meaning you can rule all of them just querying against unavatar.
-
-- **Speed**: Designed to be fast and efficient with a 93% cache hit rate, serving 21.7 TB of data across 728M requests.
-
-- **Optimize**: All the images are not only compressed on-the-fly to reduce their size and save bandwith, but also optimized to maintain a high-quality ratio. They are ready for immediate use, enhancing the overall optimization of your website or application.
-
-- **Integration**: The service seamlessly incorporates into your current applications or websites with ease. We offer straightforward documentation and comprehensive support to ensure a quick and effortless onboarding experience.
-
 It's proudly powered by [microlink.io](https://microlink.io/), the headless browser API that handles all the heavy lifting behind the scenes to ensure your avatars are always ready.
 
 ## Quick start
 
 The service is exposed in **unavatar.io** via provider endpoints:
 
-- an **email**: [unavatar.io/gravatar/hello@microlink.io](https://unavatar.io/gravatar/hello@microlink.io)
+- an **email (auto-detect)**: [unavatar.io/hello@microlink.io](https://unavatar.io/hello@microlink.io) — tries Gravatar, then GitHub
+- an **email** via Gravatar: [unavatar.io/gravatar/hello@microlink.io](https://unavatar.io/gravatar/hello@microlink.io)
+- an **email** via GitHub: [unavatar.io/github/sindresorhus@gmail.com](https://unavatar.io/github/sindresorhus@gmail.com)
 - an **username**: [unavatar.io/github/kikobeats](https://unavatar.io/github/kikobeats)
 - a **domain**: [unavatar.io/google/reddit.com](https://unavatar.io/google/reddit.com)
 
-Use the `/:provider/:key` format for all lookups. You can read more about available providers in [providers](https://unavatar.io/docs#providers).
+Use `/:provider/:key` for provider-specific lookups, or pass an email as the only path segment for automatic resolution. You can read more in [Email avatars](https://unavatar.io/email) and [providers](https://unavatar.io/docs#providers).
 
 ## Authentication
 
-The anonymous requests works without authentication. They are limited to 25 requests/day per IP address.
+Anonymous requests work without authentication. They are limited to 25 requests/day per IP address.
 
 For [PRO](https://unavatar.io/checkout) users, the requests must include the API key as the `x-api-key` request header:
 
 ```bash
-curl -H "x-api-key: YOUR_API_KEY" "https://[unavatar.io/github/kikobeats"](https://unavatar.io/github/kikobeats")
+curl "https://unavatar.io/github/kikobeats" -H "x-api-key: YOUR_API_KEY"
 ```
 
 ```javascript
-await fetch('https://[unavatar.io/github/kikobeats',](https://unavatar.io/github/kikobeats',) {
+await fetch('https://unavatar.io/github/kikobeats', {
   headers: {
-    'x-api-key': process.env.UNAVATAR_API_KEY
+    'x-api-key': 'YOUR_API_KEY'
   }
 })
 ```
 
 ```python
-import os
 import requests
 
 response = requests.get(
-  'https://[unavatar.io/github/kikobeats',](https://unavatar.io/github/kikobeats',)
-  headers={'x-api-key': os.environ['UNAVATAR_API_KEY']}
+  'https://unavatar.io/github/kikobeats',
+  headers={'x-api-key': 'YOUR_API_KEY'}
 )
 ```
 
 ```golang
 package main
 
-import (
-  "net/http"
-  "os"
-)
+import "net/http"
 
 func main() {
-  req, _ := http.NewRequest("GET", "https://[unavatar.io/github/kikobeats",](https://unavatar.io/github/kikobeats",) nil)
-  req.Header.Set("x-api-key", os.Getenv("UNAVATAR_API_KEY"))
+  req, _ := http.NewRequest("GET", "https://unavatar.io/github/kikobeats", nil)
+  req.Header.Set("x-api-key", "YOUR_API_KEY")
 
   resp, _ := http.DefaultClient.Do(req)
   defer resp.Body.Close()
@@ -131,9 +129,9 @@ func main() {
 require 'net/http'
 require 'uri'
 
-uri = URI('https://[unavatar.io/github/kikobeats')](https://unavatar.io/github/kikobeats'))
+uri = URI('https://unavatar.io/github/kikobeats')
 request = Net::HTTP::Get.new(uri)
-request['x-api-key'] = ENV['UNAVATAR_API_KEY']
+request['x-api-key'] = 'YOUR_API_KEY'
 
 response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
   http.request(request)
@@ -141,10 +139,10 @@ end
 ```
 
 ```php
-$ch = curl_init('https://[unavatar.io/github/kikobeats');](https://unavatar.io/github/kikobeats');)
+$ch = curl_init('https://unavatar.io/github/kikobeats');
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
-  'x-api-key: ' . getenv('UNAVATAR_API_KEY'),
+  'x-api-key: YOUR_API_KEY',
 ]);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -163,7 +161,7 @@ Rate limit status can be verified using these response headers:
 | `x-rate-limit-reset`     | UTC epoch seconds when the current window resets               |
 
 ```bash
-$ curl -I https://[unavatar.io/github/kikobeats](https://unavatar.io/github/kikobeats)
+$ curl -I https://unavatar.io/github/kikobeats
 
 x-rate-limit-limit: 25
 x-rate-limit-remaining: 24
@@ -193,7 +191,7 @@ Every request has a cost in tokens (**\$0.005 per token**) based on the proxy ti
 The proxy tier used is returned in the `x-proxy-tier` response header, and the total cost in the `x-unavatar-cost` header.
 
 ```bash
-$ curl -I -H "x-api-key: YOUR_API_KEY" https://[unavatar.io/instagram/kikobeats](https://unavatar.io/instagram/kikobeats)
+$ curl -I -H "x-api-key: YOUR_API_KEY" https://unavatar.io/instagram/kikobeats
 
 x-pricing-tier: pro
 x-proxy-tier: origin
@@ -227,7 +225,7 @@ To check the cache status in real requests, inspect these response headers:
 | `cache-control`  | Shows cache policy and effective TTL (for example `public, max-age=3600` for `ttl=1h`). |
 
 ```bash
-$ curl -I -H "x-api-key: YOUR_API_KEY" "https://[unavatar.io/github/kikobeats?ttl=1h"](https://unavatar.io/github/kikobeats?ttl=1h")
+$ curl -I -H "x-api-key: YOUR_API_KEY" "https://unavatar.io/github/kikobeats?ttl=1h"
 
 cache-control: public, max-age=3600
 x-cache-status: HIT
@@ -281,7 +279,7 @@ You can pass `fallback=false` to explicitly disable this behavior. In this case,
 
 The service returns media content by default.
 
-This is in this way to make easier consume the service from HTML markup.
+This makes the service easier to consume directly from HTML markup.
 
 In case you want to get a JSON payload as response, just pass `json=true`:
 
@@ -361,14 +359,25 @@ Available inputs:
 
 - Domain, e.g., [unavatar.io/duckduckgo/microsoft.com](https://unavatar.io/duckduckgo/microsoft.com)
 
+### Facebook
+
+Get any Facebook user, page, or group profile picture by their username or ID.
+
+Available inputs:
+
+- Username, e.g., [unavatar.io/facebook/zuck](https://unavatar.io/facebook/zuck)
+- Page, e.g., [unavatar.io/facebook/windtodayco](https://unavatar.io/facebook/windtodayco)
+- Group ID, e.g., [unavatar.io/facebook/1426378481098002](https://unavatar.io/facebook/1426378481098002)
+
 ### GitHub
 
-Get any GitHub user or organization's profile picture by their username.
+Get any GitHub user or organization's profile picture by username, or resolve an avatar from a public email via GitHub search when the address matches a profile or commit history.
 
 Available inputs:
 
 - User, e.g., [unavatar.io/github/mdo](https://unavatar.io/github/mdo)
 - Organization, e.g., [unavatar.io/github/vercel](https://unavatar.io/github/vercel)
+- Email address, e.g., [unavatar.io/github/sindresorhus@gmail.com](https://unavatar.io/github/sindresorhus@gmail.com)
 
 ### GitLab
 
@@ -401,6 +410,8 @@ Get the favicon or logo for any domain using Google's favicon service.
 Available inputs:
 
 - Domain, e.g., [unavatar.io/google/stremio.com](https://unavatar.io/google/stremio.com)
+
+### Gravatar
 
 Get any user's avatar by their email address via Gravatar. The most widely used global avatar service — if your users have a Gravatar set up, this is the fastest way to retrieve it.
 
@@ -489,13 +500,22 @@ Available inputs:
 
 - Username, e.g., [unavatar.io/printables/DukeDoks](https://unavatar.io/printables/DukeDoks)
 
+### PSN Profiles
+
+Get any PlayStation Network user's profile picture by their PSN username.
+
+Available inputs:
+
+- Username, e.g., [unavatar.io/psnprofiles/Duff85](https://unavatar.io/psnprofiles/Duff85)
+
 ### Reddit
 
 Get any Reddit user's avatar by their username.
 
 Available inputs:
 
-- Username, e.g., [unavatar.io/reddit/kikobeats](https://unavatar.io/reddit/kikobeats)
+- Username, e.g., [unavatar.io/reddit/thisisbillgates](https://unavatar.io/reddit/thisisbillgates)
+- Organization, e.g., [unavatar.io/reddit/nasa](https://unavatar.io/reddit/nasa)
 
 ### Snapchat
 
@@ -533,6 +553,22 @@ Available URI format inputs:
 - `track`: [unavatar.io/spotify/track:4OROzZUy6gOWN4UGQVaZMF](https://unavatar.io/spotify/track:4OROzZUy6gOWN4UGQVaZMF)
 - `user` (default): [unavatar.io/spotify/user:kikobeats](https://unavatar.io/spotify/user:kikobeats)
 
+### Steam
+
+Get any Steam player or community group profile picture by public profile name, numeric account ID, or group name.
+
+e.g., [unavatar.io/steam/id:gabelogannewell](https://unavatar.io/steam/id:gabelogannewell)
+
+The input supports a URI format `type:value`.
+
+When no type is provided, it defaults to `id` (player profile name).
+
+Available URI format inputs:
+
+- `id` (default): [unavatar.io/steam/id:gabelogannewell](https://unavatar.io/steam/id:gabelogannewell)
+- `profile`: [unavatar.io/steam/profile:76561198044605749](https://unavatar.io/steam/profile:76561198044605749)
+- `group`: [unavatar.io/steam/group:murcia-gaming](https://unavatar.io/steam/group:murcia-gaming)
+
 ### Substack
 
 Get any Substack author's profile picture by their publication username.
@@ -565,6 +601,14 @@ Available inputs:
 
 - Username, e.g., [unavatar.io/tiktok/carlosazaustre](https://unavatar.io/tiktok/carlosazaustre)
 
+### Tumblr
+
+Get any Tumblr blog's profile picture by their username.
+
+Available inputs:
+
+- Username, e.g., [unavatar.io/tumblr/nasa](https://unavatar.io/tumblr/nasa)
+
 ### Twitch
 
 Get any Twitch streamer's profile picture by their username.
@@ -585,20 +629,33 @@ Available inputs:
 
 Get the profile picture for a WhatsApp channel or chat by ID.
 
-e.g., [unavatar.io/whatsapp/channel:0029VaARuQ7KwqSXh9fiMc0m](https://unavatar.io/whatsapp/channel:0029VaARuQ7KwqSXh9fiMc0m)
+e.g., [unavatar.io/whatsapp/phone:34660021551](https://unavatar.io/whatsapp/phone:34660021551)
 
 The input supports a URI format `type:id`.
 
+If no type is provided, the input is treated as a phone number.
+
 Available URI format inputs:
 
+- `phone`: [unavatar.io/whatsapp/phone:34660021551](https://unavatar.io/whatsapp/phone:34660021551)
 - `channel`: [unavatar.io/whatsapp/channel:0029VaARuQ7KwqSXh9fiMc0m](https://unavatar.io/whatsapp/channel:0029VaARuQ7KwqSXh9fiMc0m)
 - `chat`: [unavatar.io/whatsapp/chat:D2FFycjQXrEIKG8qQjbwZz](https://unavatar.io/whatsapp/chat:D2FFycjQXrEIKG8qQjbwZz)
+
+### X/Twitter
 
 Get any X (formerly Twitter) user's profile picture by their username.
 
 Available inputs:
 
-- Username, e.g., [unavatar.io/x/kikobeats](https://unavatar.io/x/kikobeats)
+- Username, e.g., [unavatar.io/x/elonmusk](https://unavatar.io/x/elonmusk)
+
+### Xbox Gamertag
+
+Get any Xbox player's profile picture by their gamertag.
+
+Available inputs:
+
+- Gamertag, e.g., [unavatar.io/xboxgamertag/GD-BerserkerTTD](https://unavatar.io/xboxgamertag/GD-BerserkerTTD)
 
 ### YouTube
 
@@ -648,7 +705,7 @@ These headers help you understand pricing, limits, and request diagnostics.
 | `retry-after`            | Seconds until rate limit resets (only on 429 responses)   |
 
 ```bash
-$ curl -I -H "x-api-key: YOUR_API_KEY" https://[unavatar.io/github/kikobeats](https://unavatar.io/github/kikobeats)
+$ curl -I -H "x-api-key: YOUR_API_KEY" https://unavatar.io/github/kikobeats
 
 x-pricing-tier: pro
 x-timestamp: 1744209600
@@ -658,6 +715,8 @@ x-rate-limit-limit: 50
 x-rate-limit-remaining: 49
 x-rate-limit-reset: 1744243200
 ```
+
+## Response Errors
 
 Expected errors are known operational cases returned with stable codes.
 

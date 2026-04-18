@@ -1,6 +1,6 @@
 ---
 project: tau
-stars: 5003
+stars: 5004
 description: |-
     Fullstack Workspace for Humans & Machines
 url: https://github.com/taubyte/tau

@@ -1,6 +1,6 @@
 ---
 project: react-pdf
-stars: 16524
+stars: 16533
 description: |-
     📄  Create PDF files using React
 url: https://github.com/diegomura/react-pdf

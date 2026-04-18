@@ -1,8 +1,8 @@
 ---
 project: mande
-stars: 1323
+stars: 1325
 description: |-
-    <700 bytes convenient and modern wrapper around fetch with smart extensible defaults
+    800 bytes modern wrapper around fetch with smart defaults
 url: https://github.com/posva/mande
 ---
 
@@ -145,11 +145,9 @@ All methods defined on a `mande` instance accept a type generic to type their re
 ```ts
 const todos = mande('/api/todos', globalOptions)
 
-todos
-  .get<{ text: string; id: number; isFinished: boolean }[]>()
-  .then((todos) => {
-    // todos is correctly typed
-  })
+todos.get<{ text: string; id: number; isFinished: boolean }[]>().then((todos) => {
+  // todos is correctly typed
+})
 ```
 
 ## SSR (and Nuxt in Universal mode)

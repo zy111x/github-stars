@@ -1,13 +1,13 @@
 ---
 project: styled-components
-stars: 41003
+stars: 41009
 description: |-
     Fast, expressive styling for React. Server components, client components, streaming SSR, React Native—one API.
 url: https://github.com/styled-components/styled-components
 ---
 
 <div align="center">
-  <a href="https://www.styled-components.com">
+  <a href="https://styled-components.com">
     <img alt="styled-components" src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" height="150px" />
   </a>
 </div>

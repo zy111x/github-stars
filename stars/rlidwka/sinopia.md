@@ -1,6 +1,6 @@
 ---
 project: sinopia
-stars: 5489
+stars: 5487
 description: |-
     Private npm repository server
 url: https://github.com/rlidwka/sinopia

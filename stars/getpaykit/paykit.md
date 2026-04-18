@@ -1,6 +1,6 @@
 ---
 project: paykit
-stars: 770
+stars: 831
 description: |-
     The billing framework for TypeScript. Code-first products, handles Stripe, webhooks, and usage state, runs in your app.
 url: https://github.com/getpaykit/paykit

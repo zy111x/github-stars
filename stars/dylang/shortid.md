@@ -1,6 +1,6 @@
 ---
 project: shortid
-stars: 5719
+stars: 5718
 description: |-
     Short id generator. Url-friendly. Non-predictable. Cluster-compatible.
 url: https://github.com/dylang/shortid

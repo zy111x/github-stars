@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 37844
+stars: 38459
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building memorable websites.
 url: https://github.com/DavidHDev/react-bits
@@ -98,6 +98,16 @@ React Bits is proudly supported by these amazing sponsors:
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/sponsors/shadcnstudio.svg">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/sponsors/shadcnstudio-lightmode.svg">
     <img src="public/assets/sponsors/shadcnstudio.svg" alt="shadcn studio" style="height: 50px;">
+  </picture>
+</a>
+
+### Platinum
+
+<a href="https://pro.tailark.com/?utm_source=reactbits&utm_medium=sponsor&utm_campaign=platinum&ref=reactbits" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/sponsors/tailark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/sponsors/tailark-lightmode.svg">
+    <img src="public/assets/sponsors/tailark.svg" alt="Tailark" style="height: 50px;">
   </picture>
 </a>
 

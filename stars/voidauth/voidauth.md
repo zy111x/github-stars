@@ -1,6 +1,6 @@
 ---
 project: voidauth
-stars: 1940
+stars: 1948
 description: |-
     Single Sign-On for Your Self-Hosted Universe
 url: https://github.com/voidauth/voidauth
@@ -106,7 +106,7 @@ volumes:
 After creating/updating the compose.yml file and filling in the required environment variables, run `docker compose up -d` and visit your `APP_URL` to get started.
 
 > [!IMPORTANT]
-> After VoidAuth starts for the first time, find the initial administrator username and password in the logs: `docker compose logs voidauth`. Use these credentials to log in and change the default username and password or create a separate user for yourself.
+> After VoidAuth starts for the first time, find a password reset link for the initial admin account in the logs: `docker compose logs voidauth`. Use this account and change the default username or create a separate user for yourself.
 
 > [!TIP]
 > Users are created by administrators on the Invitations page by creating a new Invitation, then sending the invitation link.
@@ -119,7 +119,13 @@ Issues, Suggestions, and Feature Requests should be added as [Issues](https://gi
 
 ## Contributing
 
-Please read the CONTRIBUTING.md
+### Documentation
+
+Documentation, especially app setup guides, are largely community driven and so contribution is highly encouraged. If you have VoidAuth OIDC setup with an app that is not already listed in the [OIDC App Guides](https://voidauth.app/#/OIDC-Guides) then please consider contributing a guide. When writing documentation follow the existing style of the page and when finished open a PR for review.
+
+### Features and Fixes
+
+Please read the CONTRIBUTING.md to see setup guide. Collaboration in an issue or discussion before opening a PR will improve changes of merging, but is not required.
 
 ## Disclaimer
 

@@ -1,12 +1,13 @@
 ---
 project: mcporter
-stars: 3915
+stars: 4041
 description: |-
     Call MCPs via TypeScript, masquerading as simple TypeScript API. Or package them as cli.
 url: https://github.com/steipete/mcporter
 ---
 
 # MCPorter 🧳 - Call MCPs from TypeScript or as CLI
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/steipete/mcporter/main/mcporter.png" alt="MCPorter header banner" width="1100">
 </p>
@@ -29,11 +30,12 @@ MCPorter helps you lean into the "code execution" workflows highlighted in Anthr
 - **Typed tool clients.** `mcporter emit-ts` emits `.d.ts` interfaces or ready-to-run client wrappers so agents/tests can call MCP servers with strong TypeScript types without hand-writing plumbing.
 - **Friendly composable API.** `createServerProxy()` exposes tools as ergonomic camelCase methods, automatically applies JSON-schema defaults, validates required arguments, and hands back a `CallResult` with `.text()`, `.markdown()`, `.json()`, `.images()`, and `.content()` helpers.
 - **OAuth and stdio ergonomics.** Built-in OAuth caching, log tailing, and stdio wrappers let you work with HTTP, SSE, and stdio transports from the same interface.
-- **Ad-hoc connections.** Point the CLI at *any* MCP endpoint (HTTP or stdio) without touching config, then persist it later if you want. Hosted MCPs that expect a browser login (Supabase, Vercel, etc.) are auto-detected—just run `mcporter auth <url>` and the CLI promotes the definition to OAuth on the fly. See [docs/adhoc.md](docs/adhoc.md).
+- **Ad-hoc connections.** Point the CLI at _any_ MCP endpoint (HTTP or stdio) without touching config, then persist it later if you want. Hosted MCPs that expect a browser login (Supabase, Vercel, etc.) are auto-detected—just run `mcporter auth <url>` and the CLI promotes the definition to OAuth on the fly. See [docs/adhoc.md](docs/adhoc.md).
 
 ## Quick Start
 
 MCPorter auto-discovers the MCP servers you already configured in Cursor, Claude Code/Desktop, Codex, or local overrides. You can try it immediately with `npx`--no installation required. Need a full command reference (flags, modes, return types)? Check out [docs/cli-reference.md](docs/cli-reference.md).
+
 ### Call syntax options
 
 ```bash
@@ -46,7 +48,6 @@ npx mcporter call 'linear.create_comment(issueId: "ENG-123", body: "Looks good!"
 # Literal positional values that start with `--`
 npx mcporter call server.tool -- --raw-value
 ```
-
 
 ### List your MCP servers
 
@@ -196,7 +197,6 @@ npx mcporter call --stdio "bun run ./local-server.ts" --name local-tools
 - The daemon only manages named servers that come from your config/imports. Ad-hoc STDIO/HTTP targets invoked via `--stdio …`, `--http-url …`, or inline function-call syntax remain per-process today; persist them into `config/mcporter.json` (or use `--persist`) if you need them to participate in the shared daemon.
 - Troubleshooting? Run `mcporter daemon start --log` (or `--log-file /tmp/daemon.log`) to tee stdout/stderr into a file, and add `--log-servers chrome-devtools` when you only want call traces for a specific MCP. Per-server configs can also set `"logging": { "daemon": { "enabled": true } }` to force detailed logging for that entry.
 
-
 ## Friendlier Tool Calls
 
 - **Function-call syntax.** Instead of juggling `--flag value`, you can call tools as `mcporter call 'linear.create_issue(title: "Bug", team: "ENG")'`. The parser supports nested objects/arrays, lets you omit labels when you want to rely on schema order (e.g. `mcporter 'context7.resolve-library-id("react")'`), and surfaces schema validation errors clearly. Deep dive in [docs/call-syntax.md](docs/call-syntax.md).
@@ -205,7 +205,6 @@ npx mcporter call --stdio "bun run ./local-server.ts" --name local-tools
 - **Cheatsheet.** See [docs/tool-calling.md](docs/tool-calling.md) for a quick comparison of every supported call style (auto-inferred verbs, flags, function-calls, and ad-hoc URLs).
 - **Auto-correct.** If you typo a tool name, MCPorter inspects the server’s tool catalog, retries when the edit distance is tiny, and otherwise prints a `Did you mean …?` hint. The heuristic (and how to tune it) is captured in [docs/call-heuristic.md](docs/call-heuristic.md).
 - **Richer single-server output.** `mcporter list <server>` now prints TypeScript-style signatures, inline comments, return-shape hints, and command examples that mirror the new call syntax. Optional parameters stay hidden by default—add `--all-parameters` or `--schema` whenever you need the full JSON schema.
-
 
 ## Installation
 
@@ -233,12 +232,12 @@ brew install steipete/tap/mcporter
 ## One-shot calls from code
 
 ```ts
-import { callOnce } from "mcporter";
+import { callOnce } from 'mcporter';
 
 const result = await callOnce({
-	server: "firecrawl",
-	toolName: "crawl",
-	args: { url: "https://anthropic.com" },
+  server: 'firecrawl',
+  toolName: 'crawl',
+  args: { url: 'https://anthropic.com' },
 });
 
 console.log(result); // raw MCP envelope
@@ -249,13 +248,13 @@ console.log(result); // raw MCP envelope
 ## Compose Automations with the Runtime
 
 ```ts
-import { createRuntime } from "mcporter";
+import { createRuntime } from 'mcporter';
 
 const runtime = await createRuntime();
 
-const tools = await runtime.listTools("context7");
-const result = await runtime.callTool("context7", "resolve-library-id", {
-	args: { libraryName: "react" },
+const tools = await runtime.listTools('context7');
+const result = await runtime.callTool('context7', 'resolve-library-id', {
+  args: { libraryName: 'react' },
 });
 
 console.log(result); // prints JSON/text automatically because the CLI pretty-prints by default
@@ -269,18 +268,18 @@ Reach for `createRuntime()` when you need connection pooling, repeated calls, or
 The runtime API is built for agents and scripts, not just humans at a terminal.
 
 ```ts
-import { createRuntime, createServerProxy } from "mcporter";
+import { createRuntime, createServerProxy } from 'mcporter';
 
 const runtime = await createRuntime();
-const chrome = createServerProxy(runtime, "chrome-devtools");
-const linear = createServerProxy(runtime, "linear");
+const chrome = createServerProxy(runtime, 'chrome-devtools');
+const linear = createServerProxy(runtime, 'linear');
 
 const snapshot = await chrome.takeSnapshot();
 console.log(snapshot.text());
 
 const docs = await linear.searchDocumentation({
-	query: "automations",
-	page: 0,
+  query: 'automations',
+  page: 0,
 });
 console.log(docs.json());
 ```
@@ -292,7 +291,6 @@ Friendly ergonomics baked into the proxy and result helpers:
 - Results are wrapped in a `CallResult`, so you can choose `.text()`, `.markdown()`, `.json()`, `.images()`, `.content()`, or access `.raw` when you need the full envelope.
 
 Drop down to `runtime.callTool()` whenever you need explicit control over arguments, metadata, or streaming options.
-
 
 Call `mcporter list <server>` any time you need the TypeScript-style signature, optional parameter hints, and sample invocations that match the CLI's function-call syntax.
 
@@ -373,21 +371,21 @@ Run `mcporter config …` via your package manager (pnpm, npm, npx, etc.) when y
 
 ```jsonc
 {
-	"mcpServers": {
-		"context7": {
-			"description": "Context7 docs MCP",
-			"baseUrl": "https://mcp.context7.com/mcp",
-			"headers": {
-				"Authorization": "$env:CONTEXT7_API_KEY"
-			}
-		},
-		"chrome-devtools": {
-			"command": "npx",
-			"args": ["-y", "chrome-devtools-mcp@latest"],
-			"env": { "npm_config_loglevel": "error" }
-		}
-	},
-	"imports": ["cursor", "claude-code", "claude-desktop", "codex", "windsurf", "opencode", "vscode"]
+  "mcpServers": {
+    "context7": {
+      "description": "Context7 docs MCP",
+      "baseUrl": "https://mcp.context7.com/mcp",
+      "headers": {
+        "Authorization": "$env:CONTEXT7_API_KEY",
+      },
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": ["-y", "chrome-devtools-mcp@latest"],
+      "env": { "npm_config_loglevel": "error" },
+    },
+  },
+  "imports": ["cursor", "claude-code", "claude-desktop", "codex", "windsurf", "opencode", "vscode"],
 }
 ```
 
@@ -397,6 +395,15 @@ What MCPorter handles for you:
 - Automatic OAuth token caching under `~/.mcporter/<server>/` unless you override `tokenCacheDir`.
 - Stdio commands inherit the directory of the file that defined them (imports or local config).
 - Import precedence matches the array order; omit `imports` to use the default `["cursor", "claude-code", "claude-desktop", "codex", "windsurf", "opencode", "vscode"]`.
+
+#### OAuth-protected servers
+
+If an HTTP MCP requires browser login (OAuth), persist it with `--auth oauth` (or set `"auth": "oauth"` in JSON), then run `mcporter auth` once:
+
+```bash
+npx mcporter config add notion https://mcp.notion.com/mcp --auth oauth
+npx mcporter auth notion
+```
 
 Provide `configPath` or `rootDir` to CLI/runtime calls when you juggle multiple config files side by side.
 
@@ -417,17 +424,39 @@ mcporter config --config ~/.mcporter/mcporter.json add global-server https://api
 
 Set `MCPORTER_CONFIG=~/.mcporter/mcporter.json` in your shell profile when you want that file to be the default everywhere (handy for `npx mcporter …` runs).
 
+### Tool Filtering
+
+Server definitions can hide or block exact tool names with either `allowedTools` or `blockedTools`:
+
+```jsonc
+{
+  "mcpServers": {
+    "slack-readonly": {
+      "baseUrl": "https://example.com/slack/mcp",
+      "allowedTools": ["channels_list", "conversations_history"],
+    },
+    "filesystem-safe": {
+      "command": "npx -y @modelcontextprotocol/server-filesystem ~/Downloads",
+      "blockedTools": ["write_file", "delete_file", "move_file"],
+    },
+  },
+}
+```
+
+`allowedTools` is an allowlist: only listed tools appear in `mcporter list` and can be called. An empty array blocks every tool. `blockedTools` is a blocklist: listed tools are hidden and rejected by `mcporter call`. Use exact tool names only, and choose one mode per server.
+
 ## Testing and CI
 
-| Command | Purpose |
-| --- | --- |
-| `pnpm check` | Biome formatting plus Oxlint/tsgolint gate. |
-| `pnpm build` | TypeScript compilation (emits `dist/`). |
-| `pnpm test` | Vitest unit and integration suites (streamable HTTP fixtures included). |
+| Command      | Purpose                                                                 |
+| ------------ | ----------------------------------------------------------------------- |
+| `pnpm check` | Oxfmt formatting plus Oxlint/tsgolint gate.                             |
+| `pnpm build` | TypeScript compilation (emits `dist/`).                                 |
+| `pnpm test`  | Vitest unit and integration suites (streamable HTTP fixtures included). |
 
 CI runs the same trio via GitHub Actions.
 
 ## Related
+
 - CodexBar 🟦🟩 Keep Codex token windows visible in your macOS menu bar. <https://codexbar.app>.
 - Trimmy ✂️ “Paste once, run once.” Flatten multi-line shell snippets so they paste and run. <https://trimmy.app>.
 - Oracle 🧿 Prompt bundler/CLI for multi-model runs (GPT-5.1, Claude, Gemini). <https://github.com/steipete/oracle>.

@@ -1,6 +1,6 @@
 ---
 project: autoprefixer
-stars: 22369
+stars: 22371
 description: |-
      Parse CSS and add vendor prefixes to rules by Can I Use
 url: https://github.com/postcss/autoprefixer
@@ -54,54 +54,53 @@ Twitter account for news and releases: [@autoprefixer].
 </a>
 
 [interactive demo]: https://autoprefixer.github.io/
-[@autoprefixer]:    https://twitter.com/autoprefixer
-[Can I Use]:        https://caniuse.com/
-[cult-img]:         https://cultofmartians.com/assets/badges/badge.svg
-[PostCSS]:          https://github.com/postcss/postcss
-[cult]:             https://cultofmartians.com/tasks/autoprefixer-grid.html
-
+[@autoprefixer]: https://twitter.com/autoprefixer
+[Can I Use]: https://caniuse.com/
+[cult-img]: https://cultofmartians.com/assets/badges/badge.svg
+[PostCSS]: https://github.com/postcss/postcss
+[cult]: https://cultofmartians.com/tasks/autoprefixer-grid.html
 
 ## Contents
 
-* [Contents](#contents)
-* [Browsers](#browsers)
-* [FAQ](#faq)
-  * [Does Autoprefixer polyfill Grid Layout for IE?](#does-autoprefixer-polyfill-grid-layout-for-ie)
-  * [Does it add polyfills?](#does-it-add-polyfills)
-  * [Why doesn’t Autoprefixer add prefixes to `border-radius`?](#why-doesnt-autoprefixer-add-prefixes-to-border-radius)
-  * [Why does Autoprefixer use unprefixed properties in `@-webkit-keyframes`?](#why-does-autoprefixer-use-unprefixed-properties-in--webkit-keyframes)
-  * [How to work with legacy `-webkit-` only code?](#how-to-work-with-legacy--webkit--only-code)
-  * [Does Autoprefixer add `-epub-` prefix?](#does-autoprefixer-add--epub--prefix)
-  * [Why doesn’t Autoprefixer transform generic font-family `system-ui`?](#why-doesnt-autoprefixer-transform-generic-font-family-system-ui)
-* [Usage](#usage)
-  * [Gulp](#gulp)
-  * [Webpack](#webpack)
-  * [CSS-in-JS](#css-in-js)
-  * [CLI](#cli)
-  * [Other Build Tools](#other-build-tools)
-    * [Preprocessors](#preprocessors)
-    * [GUI Tools](#gui-tools)
-  * [JavaScript](#javascript)
-  * [Text Editors and IDE](#text-editors-and-ide)
-* [Warnings](#warnings)
-* [Disabling](#disabling)
-  * [Prefixes](#prefixes)
-  * [Features](#features)
-  * [Control Comments](#control-comments)
-* [Options](#options)
-* [Environment Variables](#environment-variables)
-  * [Using environment variables to support CSS Grid prefixes in Create React App](#using-environment-variables-to-support-css-grid-prefixes-in-create-react-app)
-* [Grid Autoplacement support in IE](#grid-autoplacement-support-in-ie)
-  * [Beware of enabling autoplacement in old projects](#beware-of-enabling-autoplacement-in-old-projects)
-  * [Autoplacement limitations](#autoplacement-limitations)
-    * [Both columns and rows must be defined](#both-columns-and-rows-must-be-defined)
-    * [Repeat auto-fit and auto-fill are not supported](#repeat-auto-fit-and-auto-fill-are-not-supported)
-    * [No manual cell placement or column/row spans allowed inside an autoplacement grid](#no-manual-cell-placement-or-columnrow-spans-allowed-inside-an-autoplacement-grid)
-    * [Do not create `::before` and `::after` pseudo elements](#do-not-create-before-and-after-pseudo-elements)
-    * [When changing the `grid gap` value, columns and rows must be re-declared](#when-changing-the-grid-gap-value-columns-and-rows-must-be-re-declared)
-* [Debug](#debug)
-* [Security Contact](#security-contact)
-* [For Enterprise](#for-enterprise)
+- [Contents](#contents)
+- [Browsers](#browsers)
+- [FAQ](#faq)
+  - [Does Autoprefixer polyfill Grid Layout for IE?](#does-autoprefixer-polyfill-grid-layout-for-ie)
+  - [Does it add polyfills?](#does-it-add-polyfills)
+  - [Why doesn’t Autoprefixer add prefixes to `border-radius`?](#why-doesnt-autoprefixer-add-prefixes-to-border-radius)
+  - [Why does Autoprefixer use unprefixed properties in `@-webkit-keyframes`?](#why-does-autoprefixer-use-unprefixed-properties-in--webkit-keyframes)
+  - [How to work with legacy `-webkit-` only code?](#how-to-work-with-legacy--webkit--only-code)
+  - [Does Autoprefixer add `-epub-` prefix?](#does-autoprefixer-add--epub--prefix)
+  - [Why doesn’t Autoprefixer transform generic font-family `system-ui`?](#why-doesnt-autoprefixer-transform-generic-font-family-system-ui)
+- [Usage](#usage)
+  - [Gulp](#gulp)
+  - [Webpack](#webpack)
+  - [CSS-in-JS](#css-in-js)
+  - [CLI](#cli)
+  - [Other Build Tools](#other-build-tools)
+    - [Preprocessors](#preprocessors)
+    - [GUI Tools](#gui-tools)
+  - [JavaScript](#javascript)
+  - [Text Editors and IDE](#text-editors-and-ide)
+- [Warnings](#warnings)
+- [Disabling](#disabling)
+  - [Prefixes](#prefixes)
+  - [Features](#features)
+  - [Control Comments](#control-comments)
+- [Options](#options)
+- [Environment Variables](#environment-variables)
+  - [Using environment variables to support CSS Grid prefixes in Create React App](#using-environment-variables-to-support-css-grid-prefixes-in-create-react-app)
+- [Grid Autoplacement support in IE](#grid-autoplacement-support-in-ie)
+  - [Beware of enabling autoplacement in old projects](#beware-of-enabling-autoplacement-in-old-projects)
+  - [Autoplacement limitations](#autoplacement-limitations)
+    - [Both columns and rows must be defined](#both-columns-and-rows-must-be-defined)
+    - [Repeat auto-fit and auto-fill are not supported](#repeat-auto-fit-and-auto-fill-are-not-supported)
+    - [No manual cell placement or column/row spans allowed inside an autoplacement grid](#no-manual-cell-placement-or-columnrow-spans-allowed-inside-an-autoplacement-grid)
+    - [Do not create `::before` and `::after` pseudo elements](#do-not-create-before-and-after-pseudo-elements)
+    - [When changing the `grid gap` value, columns and rows must be re-declared](#when-changing-the-grid-gap-value-columns-and-rows-must-be-re-declared)
+- [Debug](#debug)
+- [Security Contact](#security-contact)
+- [For Enterprise](#for-enterprise)
 
 ## Browsers
 
@@ -119,11 +118,10 @@ that the config can be shared with other tools such as [babel-preset-env] and
 See [Browserslist docs] for queries, browser names, config format, and defaults.
 
 [Browserslist docs]: https://github.com/browserslist/browserslist#queries
-[babel-preset-env]:  https://github.com/babel/babel/tree/master/packages/babel-preset-env
-[Best Practices]:    https://github.com/browserslist/browserslist#best-practices
-[Browserslist]:      https://github.com/browserslist/browserslist
-[Stylelint]:         https://stylelint.io/
-
+[babel-preset-env]: https://github.com/babel/babel/tree/master/packages/babel-preset-env
+[Best Practices]: https://github.com/browserslist/browserslist#best-practices
+[Browserslist]: https://github.com/browserslist/browserslist
+[Stylelint]: https://stylelint.io/
 
 ## FAQ
 
@@ -147,17 +145,17 @@ Third, there is only very limited auto placement support. Read the
 for more details.
 
 Fourth, if you are not using the autoplacement feature, the best way
-to use Autoprefixer is by using  `grid-template` or `grid-template-areas`.
+to use Autoprefixer is by using `grid-template` or `grid-template-areas`.
 
 ```css
 .page {
   display: grid;
   grid-gap: 33px;
   grid-template:
-    "head head  head" 1fr
-    "nav  main  main" minmax(100px, 1fr)
-    "nav  foot  foot" 2fr /
-    1fr   100px 1fr;
+    'head head  head' 1fr
+    'nav  main  main' minmax(100px, 1fr)
+    'nav  foot  foot' 2fr /
+    1fr 100px 1fr;
 }
 .page__head {
   grid-area: head;
@@ -175,16 +173,15 @@ to use Autoprefixer is by using  `grid-template` or `grid-template-areas`.
 
 See also:
 
-* [The guide about Grids in IE and Autoprefixer].
-* [`postcss-gap-properties`] to use new `gap` property
+- [The guide about Grids in IE and Autoprefixer].
+- [`postcss-gap-properties`] to use new `gap` property
   instead of old `grid-gap`.
-* [`postcss-grid-kiss`] has alternate “everything in one property” syntax,
+- [`postcss-grid-kiss`] has alternate “everything in one property” syntax,
   which makes using Autoprefixer’s Grid translations safer.
 
 [The guide about Grids in IE and Autoprefixer]: https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/
-[`postcss-gap-properties`]:                     https://github.com/jonathantneal/postcss-gap-properties
-[`postcss-grid-kiss`]:                          https://github.com/sylvainpolletvillard/postcss-grid-kiss
-
+[`postcss-gap-properties`]: https://github.com/jonathantneal/postcss-gap-properties
+[`postcss-grid-kiss`]: https://github.com/sylvainpolletvillard/postcss-grid-kiss
 
 ### Does it add polyfills?
 
@@ -203,9 +200,8 @@ you might take a look at:
 - [postcss-flexbugs-fixes], a PostCSS plugin to fix flexbox issues.
 
 [postcss-flexbugs-fixes]: https://github.com/luisrudge/postcss-flexbugs-fixes
-[postcss-preset-env]:     https://github.com/jonathantneal/postcss-preset-env
-[Oldie]:                  https://github.com/jonathantneal/oldie
-
+[postcss-preset-env]: https://github.com/jonathantneal/postcss-preset-env
+[Oldie]: https://github.com/jonathantneal/oldie
 
 ### Why doesn’t Autoprefixer add prefixes to `border-radius`?
 
@@ -215,12 +211,10 @@ required on [Can I Use].
 
 [Can I Use]: https://caniuse.com/
 
-
 ### Why does Autoprefixer use unprefixed properties in `@-webkit-keyframes`?
 
 Browser teams can remove some prefixes before others, so we try to use all
 combinations of prefixed/unprefixed values.
-
 
 ### How to work with legacy `-webkit-` only code?
 
@@ -233,14 +227,12 @@ Use [postcss-unprefix] before Autoprefixer.
 
 [postcss-unprefix]: https://github.com/gucong3000/postcss-unprefix
 
-
 ### Does Autoprefixer add `-epub-` prefix?
 
 No, Autoprefixer works only with browsers prefixes from Can I Use.
 But you can use [postcss-epub] for prefixing ePub3 properties.
 
 [postcss-epub]: https://github.com/Rycochet/postcss-epub
-
 
 ### Why doesn’t Autoprefixer transform generic font-family `system-ui`?
 
@@ -249,7 +241,6 @@ future-proof. You can use [postcss-font-family-system-ui] to transform
 `system-ui` to a practical font-family list.
 
 [postcss-font-family-system-ui]: https://github.com/JLHwung/postcss-font-family-system-ui
-
 
 ## Usage
 
@@ -263,9 +254,10 @@ gulp.task('autoprefixer', () => {
   const sourcemaps = require('gulp-sourcemaps')
   const postcss = require('gulp-postcss')
 
-  return gulp.src('./src/*.css')
+  return gulp
+    .src('./src/*.css')
     .pipe(sourcemaps.init())
-    .pipe(postcss([ autoprefixer() ]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./dest'))
 })
@@ -274,9 +266,8 @@ gulp.task('autoprefixer', () => {
 With `gulp-postcss` you also can combine Autoprefixer
 with [other PostCSS plugins].
 
-[gulp-postcss]:          https://github.com/postcss/gulp-postcss
+[gulp-postcss]: https://github.com/postcss/gulp-postcss
 [other PostCSS plugins]: https://github.com/postcss/postcss#plugins
-
 
 ### Webpack
 
@@ -289,7 +280,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader", "postcss-loader"]
+        use: ['style-loader', 'css-loader', 'postcss-loader']
       }
     ]
   }
@@ -300,16 +291,13 @@ And create a `postcss.config.js` with:
 
 ```js
 module.exports = {
-  plugins: [
-    require('autoprefixer')
-  ]
+  plugins: [require('autoprefixer')]
 }
 ```
 
 [other PostCSS plugins]: https://github.com/postcss/postcss#plugins
-[postcss-loader]:        https://github.com/postcss/postcss-loader
-[webpack]:               https://webpack.js.org/
-
+[postcss-loader]: https://github.com/postcss/postcss-loader
+[webpack]: https://webpack.js.org/
 
 ### CSS-in-JS
 
@@ -322,11 +310,11 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'postcss-loader'],
+        use: ['style-loader', 'postcss-loader']
       },
       {
         test: /\.jsx?$/,
-        use: ['babel-loader', 'astroturf/loader'],
+        use: ['babel-loader', 'astroturf/loader']
       }
     ]
   }
@@ -337,14 +325,11 @@ Then create `postcss.config.js`:
 
 ```js
 module.exports = {
-  plugins: [
-    require('autoprefixer')
-  ]
+  plugins: [require('autoprefixer')]
 }
 ```
 
 [`astroturf`]: https://github.com/4Catalyzer/astroturf
-
 
 ### CLI
 
@@ -359,43 +344,39 @@ See `postcss -h` for help.
 
 [postcss-cli]: https://github.com/postcss/postcss-cli
 
-
 ### Other Build Tools
 
-* **Grunt:** [grunt-postcss]
-* **Ruby on Rails**: [autoprefixer-rails]
-* **Neutrino**: [neutrino-middleware-postcss]
-* **Jekyll**: add `autoprefixer-rails` and `jekyll-assets` to `Gemfile`
-* **Brunch**: [postcss-brunch]
-* **Broccoli**: [broccoli-postcss]
-* **Middleman**: [middleman-autoprefixer]
-* **Mincer**: add `autoprefixer` npm package and enable it:
+- **Grunt:** [grunt-postcss]
+- **Ruby on Rails**: [autoprefixer-rails]
+- **Neutrino**: [neutrino-middleware-postcss]
+- **Jekyll**: add `autoprefixer-rails` and `jekyll-assets` to `Gemfile`
+- **Brunch**: [postcss-brunch]
+- **Broccoli**: [broccoli-postcss]
+- **Middleman**: [middleman-autoprefixer]
+- **Mincer**: add `autoprefixer` npm package and enable it:
   `environment.enable('autoprefixer')`
 
 [neutrino-middleware-postcss]: https://www.npmjs.com/package/neutrino-middleware-postcss
-[middleman-autoprefixer]:      https://github.com/middleman/middleman-autoprefixer
-[autoprefixer-rails]:          https://github.com/ai/autoprefixer-rails
-[broccoli-postcss]:            https://github.com/jeffjewiss/broccoli-postcss
-[postcss-brunch]:              https://github.com/iamvdo/postcss-brunch
-[grunt-postcss]:               https://github.com/C-Lodder/grunt-postcss
-
+[middleman-autoprefixer]: https://github.com/middleman/middleman-autoprefixer
+[autoprefixer-rails]: https://github.com/ai/autoprefixer-rails
+[broccoli-postcss]: https://github.com/jeffjewiss/broccoli-postcss
+[postcss-brunch]: https://github.com/iamvdo/postcss-brunch
+[grunt-postcss]: https://github.com/C-Lodder/grunt-postcss
 
 #### Preprocessors
 
-* **Less**: [less-plugin-autoprefix]
-* **Stylus**: [autoprefixer-stylus]
-* **Compass**: [autoprefixer-rails#compass]
+- **Less**: [less-plugin-autoprefix]
+- **Stylus**: [autoprefixer-stylus]
+- **Compass**: [autoprefixer-rails#compass]
 
 [less-plugin-autoprefix]: https://github.com/less/less-plugin-autoprefix
-[autoprefixer-stylus]:    https://github.com/jenius/autoprefixer-stylus
-[autoprefixer-rails#compass]:     https://github.com/ai/autoprefixer-rails#compass
-
+[autoprefixer-stylus]: https://github.com/jenius/autoprefixer-stylus
+[autoprefixer-rails#compass]: https://github.com/ai/autoprefixer-rails#compass
 
 #### GUI Tools
 
-* [CodeKit](https://codekitapp.com/help/autoprefixer/)
-* [Prepros](https://prepros.io)
-
+- [CodeKit](https://codekitapp.com/help/autoprefixer/)
+- [Prepros](https://prepros.io)
 
 ### JavaScript
 
@@ -406,12 +387,14 @@ or if you want to develop an Autoprefixer plugin for a new environment.
 const autoprefixer = require('autoprefixer')
 const postcss = require('postcss')
 
-postcss([ autoprefixer ]).process(css).then(result => {
-  result.warnings().forEach(warn => {
-    console.warn(warn.toString())
+postcss([autoprefixer])
+  .process(css)
+  .then(result => {
+    result.warnings().forEach(warn => {
+      console.warn(warn.toString())
+    })
+    console.log(result.css)
   })
-  console.log(result.css)
-})
 ```
 
 There is also a [standalone build] for the browser or for a non-Node.js runtime.
@@ -419,9 +402,8 @@ There is also a [standalone build] for the browser or for a non-Node.js runtime.
 You can use [html-autoprefixer] to process HTML with inlined CSS.
 
 [html-autoprefixer]: https://github.com/RebelMail/html-autoprefixer
-[standalone build]:  https://raw.github.com/ai/autoprefixer-rails/master/vendor/autoprefixer.js
-[PostCSS]:           https://github.com/postcss/postcss
-
+[standalone build]: https://raw.github.com/ai/autoprefixer-rails/master/vendor/autoprefixer.js
+[PostCSS]: https://github.com/postcss/postcss
 
 ### Text Editors and IDE
 
@@ -435,19 +417,18 @@ and automation.
 
 If you can’t move to a build tool, you can use text editor plugins:
 
-* [Visual Studio Code](https://github.com/mrmlnc/vscode-autoprefixer)
-* [Sublime Text](https://github.com/sindresorhus/sublime-autoprefixer)
+- [Visual Studio Code](https://github.com/mrmlnc/vscode-autoprefixer)
+- [Sublime Text](https://github.com/sindresorhus/sublime-autoprefixer)
 
 [Parcel]: https://parceljs.org/
-
 
 ## Warnings
 
 Autoprefixer uses the [PostCSS warning API] to warn about really important
 problems in your CSS:
 
-* Old direction syntax in gradients.
-* Old unprefixed `display: box` instead of `display: flex`
+- Old direction syntax in gradients.
+- Old unprefixed `display: box` instead of `display: flex`
   by latest specification version.
 
 You can get warnings from `result.warnings()`:
@@ -461,7 +442,6 @@ result.warnings().forEach(warn => {
 Every Autoprefixer runner should display these warnings.
 
 [PostCSS warning API]: https://postcss.org/api/#warning
-
 
 ## Disabling
 
@@ -482,25 +462,23 @@ If some prefixes were generated incorrectly, please create an [issue on GitHub].
 
 [issue on GitHub]: https://github.com/postcss/autoprefixer/issues
 
-
 ### Features
 
 You can use these plugin options to control some of Autoprefixer’s features.
 
-* `grid: "autoplace"` will enable `-ms-` prefixes for Grid Layout including some
+- `grid: "autoplace"` will enable `-ms-` prefixes for Grid Layout including some
   [limited autoplacement support](#grid-autoplacement-support-in-ie).
-* `supports: false` will disable `@supports` parameters prefixing.
-* `flexbox: false` will disable flexbox properties prefixing.
+- `supports: false` will disable `@supports` parameters prefixing.
+- `flexbox: false` will disable flexbox properties prefixing.
   Or `flexbox: "no-2009"` will add prefixes only for final and IE
   versions of specification.
-* `remove: false` will disable cleaning outdated prefixes.
+- `remove: false` will disable cleaning outdated prefixes.
 
 You should set them inside the plugin like so:
 
 ```js
 autoprefixer({ grid: 'autoplace' })
 ```
-
 
 ### Control Comments
 
@@ -526,16 +504,16 @@ you can use control comments to disable Autoprefixer.
 
 There are three types of control comments:
 
-* `/* autoprefixer: (on|off) */`: enable/disable all Autoprefixer translations for the
-  whole block both *before* and *after* the comment.
-* `/* autoprefixer: ignore next */`: disable Autoprefixer only for the next property
+- `/* autoprefixer: (on|off) */`: enable/disable all Autoprefixer translations for the
+  whole block both _before_ and _after_ the comment.
+- `/* autoprefixer: ignore next */`: disable Autoprefixer only for the next property
   or next rule selector or at-rule parameters (but not rule/at‑rule body).
-* `/* autoprefixer grid: (autoplace|no-autoplace|off) */`: control how Autoprefixer handles
+- `/* autoprefixer grid: (autoplace|no-autoplace|off) */`: control how Autoprefixer handles
   grid translations for the whole block:
-  * `autoplace`: enable grid translations with autoplacement support.
-  * `no-autoplace`: enable grid translations with autoplacement
-    support *disabled* (alias for deprecated value `on`).
-  * `off`: disable all grid translations.
+  - `autoplace`: enable grid translations with autoplacement support.
+  - `no-autoplace`: enable grid translations with autoplacement
+    support _disabled_ (alias for deprecated value `on`).
+  - `off`: disable all grid translations.
 
 You can also use comments recursively:
 
@@ -563,7 +541,6 @@ block twice:
 }
 ```
 
-
 ## Options
 
 Function `autoprefixer(options)` returns a new PostCSS plugin.
@@ -575,36 +552,36 @@ autoprefixer({ cascade: false })
 
 Available options are:
 
-* `env` (string): environment for Browserslist.
-* `cascade` (boolean): should Autoprefixer use Visual Cascade,
+- `env` (string): environment for Browserslist.
+- `cascade` (boolean): should Autoprefixer use Visual Cascade,
   if CSS is uncompressed. Default: `true`
-* `add` (boolean): should Autoprefixer add prefixes. Default is `true`.
-* `remove` (boolean): should Autoprefixer [remove outdated] prefixes.
+- `add` (boolean): should Autoprefixer add prefixes. Default is `true`.
+- `remove` (boolean): should Autoprefixer [remove outdated] prefixes.
   Default is `true`.
-* `supports` (boolean): should Autoprefixer add prefixes for `@supports`
+- `supports` (boolean): should Autoprefixer add prefixes for `@supports`
   parameters. Default is `true`.
-* `flexbox` (boolean|string): should Autoprefixer add prefixes for flexbox
+- `flexbox` (boolean|string): should Autoprefixer add prefixes for flexbox
   properties. With `"no-2009"` value Autoprefixer will add prefixes only
   for final and IE 10 versions of specification. Default is `true`.
-* `grid` (false|`"autoplace"`|`"no-autoplace"`): should Autoprefixer
+- `grid` (false|`"autoplace"`|`"no-autoplace"`): should Autoprefixer
   add IE 10-11 prefixes for Grid Layout properties?
-    * `false` (default): prevent Autoprefixer from outputting
-       CSS Grid translations.
-    * `"autoplace"`: enable Autoprefixer grid translations
-      and *include* autoplacement support. You can also use
-      `/* autoprefixer grid: autoplace */` in your CSS.
-    * `"no-autoplace"`: enable Autoprefixer grid translations
-      but *exclude* autoplacement support. You can also use
-      `/* autoprefixer grid: no-autoplace */` in your CSS.
-      (alias for the deprecated `true` value)
-* `stats` (object): custom [usage statistics] for `> 10% in my stats`
+  - `false` (default): prevent Autoprefixer from outputting
+    CSS Grid translations.
+  - `"autoplace"`: enable Autoprefixer grid translations
+    and _include_ autoplacement support. You can also use
+    `/* autoprefixer grid: autoplace */` in your CSS.
+  - `"no-autoplace"`: enable Autoprefixer grid translations
+    but _exclude_ autoplacement support. You can also use
+    `/* autoprefixer grid: no-autoplace */` in your CSS.
+    (alias for the deprecated `true` value)
+- `stats` (object): custom [usage statistics] for `> 10% in my stats`
   browsers query.
-* `overrideBrowserslist` (array): list of queries for target browsers.
+- `overrideBrowserslist` (array): list of queries for target browsers.
   Try to not use it. The best practice is to use `.browserslistrc` config
   or `browserslist` key in `package.json` to share target browsers
   with Babel, ESLint and Stylelint. See [Browserslist docs]
   for available queries and default value.
-* `ignoreUnknownVersions` (boolean): do not raise error on unknown browser
+- `ignoreUnknownVersions` (boolean): do not raise error on unknown browser
   version in Browserslist config. Default is `false`.
 
 Plugin object has `info()` method for debugging purpose.
@@ -613,16 +590,16 @@ You can use PostCSS processor to process several CSS files
 to increase performance.
 
 [usage statistics]: https://github.com/browserslist/browserslist#custom-usage-data
-[PostCSS API]:      https://postcss.org/api/
+[PostCSS API]: https://postcss.org/api/
 
 ## Environment Variables
 
-* `AUTOPREFIXER_GRID`: (`autoplace`|`no-autoplace`) should Autoprefixer
+- `AUTOPREFIXER_GRID`: (`autoplace`|`no-autoplace`) should Autoprefixer
   add IE 10-11 prefixes for Grid Layout properties?
-    * `autoplace`: enable Autoprefixer grid translations
-      and *include* autoplacement support.
-    * `no-autoplace`: enable Autoprefixer grid translations
-      but *exclude* autoplacement support.
+  - `autoplace`: enable Autoprefixer grid translations
+    and _include_ autoplacement support.
+  - `no-autoplace`: enable Autoprefixer grid translations
+    but _exclude_ autoplacement support.
 
 Environment variables are useful, when you want to change Autoprefixer options but don't have access to config files.
 [Create React App] is a good example of this.
@@ -869,7 +846,7 @@ so unfortunately this little snippet will _never_ be IE friendly.
 ```css
 .grid {
   /* This will never be IE friendly */
-  grid-template-columns: repeat(auto-fit, min-max(200px, 1fr))
+  grid-template-columns: repeat(auto-fit, min-max(200px, 1fr));
 }
 ```
 
@@ -911,10 +888,10 @@ If manual cell placement is required, we recommend using `grid-template` or
   display: grid;
   grid-gap: 30px;
   grid-template:
-      "head head"
-      "nav  main" minmax(100px, 1fr)
-      "foot foot" /
-      200px 1fr;
+    'head head'
+    'nav  main' minmax(100px, 1fr)
+    'foot foot' /
+    200px 1fr;
 }
 .page__head {
   grid-area: head;
@@ -974,7 +951,6 @@ This will be the output:
   -ms-grid-row: 1;
   -ms-grid-column: 1;
 }
-
 
 .grid > *:nth-child(2) {
   -ms-grid-row: 1;

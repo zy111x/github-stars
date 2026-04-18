@@ -1,6 +1,6 @@
 ---
 project: vue-migration-helper
-stars: 594
+stars: 595
 description: |-
     CLI tool to aid in migration from Vue 1.x to 2.0
 url: https://github.com/vuejs/vue-migration-helper

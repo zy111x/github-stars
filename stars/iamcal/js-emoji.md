@@ -1,6 +1,6 @@
 ---
 project: js-emoji
-stars: 1439
+stars: 1440
 description: |-
     A JS Emoji conversion library
 url: https://github.com/iamcal/js-emoji

@@ -1,6 +1,6 @@
 ---
 project: aiproxy
-stars: 413
+stars: 420
 description: |-
     AI Proxy is a high performance AI gateway using OpenAI / Claude / Gemini protocol as the entry point. It features intelligent error handling, multi-channel management, and comprehensive monitoring. With support for multiple models, rate limiting, and multi-tenant isolation.
 url: https://github.com/labring/aiproxy
@@ -149,6 +149,7 @@ docker-compose up -d
 ```bash
 LISTEN=:3000                    # Server listen address
 ADMIN_KEY=your-admin-key        # Admin API key
+DISABLE_WEB_ROOT=true           # Redirect only `/` to GitHub, keep other web routes available
 ```
 
 #### **Database Configuration**

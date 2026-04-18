@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 13589
+stars: 13653
 description: |-
     Smooth scroll at it should be
 url: https://github.com/darkroomengineering/lenis
@@ -92,7 +92,7 @@ import Lenis from 'lenis'
 Using scripts:
 
 ```html
-<script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script> 
+<script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
 ```
 
 
@@ -139,7 +139,7 @@ import 'lenis/dist/lenis.css'
 **Or link the CSS file:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
 ```
 
 **Or add it manually:**
@@ -172,8 +172,8 @@ gsap.ticker.lagSmoothing(0);
 One line, no build step — just drop this into your HTML:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.21/dist/lenis.css">
-<script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script> 
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
 <script>new Lenis({ autoRaf: true, autoToggle: true, anchors: true, allowNestedScroll: true, naiveDimensions: true, stopInertiaOnNavigate: true })</script>
 ```
 
