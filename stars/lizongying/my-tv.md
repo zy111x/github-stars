@@ -1,6 +1,6 @@
 ---
 project: my-tv
-stars: 32159
+stars: 32156
 description: 我的电视 电视直播软件，安装即可使用
 url: https://github.com/lizongying/my-tv
 ---

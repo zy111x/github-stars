@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 1469
+stars: 1580
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
