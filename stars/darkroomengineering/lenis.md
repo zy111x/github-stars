@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 13653
+stars: 13712
 description: |-
     Smooth scroll at it should be
 url: https://github.com/darkroomengineering/lenis

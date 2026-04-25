@@ -1,6 +1,6 @@
 ---
 project: tui.editor
-stars: 17924
+stars: 17931
 description: |-
     🍞📝 Markdown WYSIWYG Editor. GFM Standard + Chart & UML Extensible.
 url: https://github.com/nhn/tui.editor

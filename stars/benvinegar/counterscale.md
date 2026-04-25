@@ -1,6 +1,6 @@
 ---
 project: counterscale
-stars: 2020
+stars: 2027
 description: |-
     Scalable web analytics you run yourself on Cloudflare
 url: https://github.com/benvinegar/counterscale

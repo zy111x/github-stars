@@ -1,6 +1,6 @@
 ---
 project: mdb-ui-kit
-stars: 24273
+stars: 24266
 description: |-
     Bootstrap 5 & Material Design UI KIT
 url: https://github.com/mdbootstrap/mdb-ui-kit

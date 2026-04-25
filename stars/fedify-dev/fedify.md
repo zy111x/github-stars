@@ -1,6 +1,6 @@
 ---
 project: fedify
-stars: 962
+stars: 963
 description: |-
     ActivityPub server framework in TypeScript
 url: https://github.com/fedify-dev/fedify
@@ -47,6 +47,7 @@ resources:
  -  Tutorials:
     [Learning the basics] &
     [Creating a microblog]
+ -  [Migrating from other libraries]
  -  [API reference][JSR]
  -  [Examples]
 
@@ -80,6 +81,7 @@ in the fediverse!
 [Installation]: https://fedify.dev/install
 [Learning the basics]: https://fedify.dev/tutorial/basics
 [Creating a microblog]: https://fedify.dev/tutorial/microblog
+[Migrating from other libraries]: https://fedify.dev/manual/migrate
 [Examples]: https://github.com/fedify-dev/fedify/tree/main/examples
 [GitHub Discussions]: https://github.com/fedify-dev/fedify/discussions
 [#Fedify]: https://mastodon.social/tags/fedify

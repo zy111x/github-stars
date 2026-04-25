@@ -1,6 +1,6 @@
 ---
 project: oxbow
-stars: 204
+stars: 212
 description: |-
     Open Source Tailwind CSS & Alpine JS UI Blocks
 url: https://github.com/michael-andreuzza/oxbow

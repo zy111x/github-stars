@@ -1,6 +1,6 @@
 ---
 project: lebab
-stars: 5640
+stars: 5639
 description: |-
     Turn your ES5 code into readable ES6. Lebab does the opposite of what Babel does.
 url: https://github.com/lebab/lebab

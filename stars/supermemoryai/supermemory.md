@@ -1,6 +1,6 @@
 ---
 project: supermemory
-stars: 21936
+stars: 22207
 description: |-
     Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.
 url: https://github.com/supermemoryai/supermemory
@@ -240,7 +240,7 @@ Drop-in wrappers for every major AI framework:
 ```typescript
 // Vercel AI SDK
 import { withSupermemory } from "@supermemory/tools/ai-sdk";
-const model = withSupermemory(openai("gpt-4o"), "user_123");
+const model = withSupermemory(openai("gpt-4o"), { containerTag: "user_123", customId: "conv-1" });
 
 // Mastra
 import { withSupermemory } from "@supermemory/tools/mastra";

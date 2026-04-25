@@ -1,6 +1,6 @@
 ---
 project: firecrawl
-stars: 110603
+stars: 112220
 description: |-
     🔥 The API to search, scrape, and interact with the web for AI
 url: https://github.com/firecrawl/firecrawl
@@ -404,6 +404,7 @@ result = app.agent(
     model="spark-1-pro"
 )
 ```
+
 
 **When to use Pro:**
 - Comparing data across multiple websites

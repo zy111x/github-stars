@@ -1,6 +1,6 @@
 ---
 project: domain-watchdog
-stars: 363
+stars: 364
 description: |-
     🔍 An app that monitors domain names using RDAP, tracks their history, and helps you acquire them when they expire
 url: https://github.com/maelgangloff/domain-watchdog

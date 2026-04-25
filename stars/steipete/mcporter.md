@@ -1,6 +1,6 @@
 ---
 project: mcporter
-stars: 4041
+stars: 4178
 description: |-
     Call MCPs via TypeScript, masquerading as simple TypeScript API. Or package them as cli.
 url: https://github.com/steipete/mcporter
@@ -31,6 +31,14 @@ MCPorter helps you lean into the "code execution" workflows highlighted in Anthr
 - **Friendly composable API.** `createServerProxy()` exposes tools as ergonomic camelCase methods, automatically applies JSON-schema defaults, validates required arguments, and hands back a `CallResult` with `.text()`, `.markdown()`, `.json()`, `.images()`, and `.content()` helpers.
 - **OAuth and stdio ergonomics.** Built-in OAuth caching, log tailing, and stdio wrappers let you work with HTTP, SSE, and stdio transports from the same interface.
 - **Ad-hoc connections.** Point the CLI at _any_ MCP endpoint (HTTP or stdio) without touching config, then persist it later if you want. Hosted MCPs that expect a browser login (Supabase, Vercel, etc.) are auto-detected—just run `mcporter auth <url>` and the CLI promotes the definition to OAuth on the fly. See [docs/adhoc.md](docs/adhoc.md).
+
+## What's New in 0.9.0
+
+- **Per-server tool filtering.** Limit exposed tools with `allowedTools`, or block risky exact-name tools with `blockedTools`; filtered tools disappear from `mcporter list` and are rejected by `mcporter call`.
+- **Sturdier stdio shutdown.** Stuck local MCP processes now escalate cleanly instead of hanging after a call finishes.
+- **OAuth polish.** Windows OAuth URLs are quoted correctly, OAuth config examples are documented, and `mcporter auth --json` returns structured connection envelopes.
+- **Safer call coercion.** Tool arguments declared as strings stay strings, even when the value looks numeric.
+- **Release confidence.** `0.9.0` is published on npm and Homebrew, and the live DeepWiki MCP suite is green.
 
 ## Quick Start
 
@@ -220,6 +228,12 @@ npx mcporter list
 pnpm add mcporter
 ```
 
+### Install globally with npm
+
+```bash
+npm install -g mcporter
+```
+
 ### Homebrew (steipete/tap)
 
 ```bash
@@ -227,7 +241,7 @@ brew tap steipete/tap
 brew install steipete/tap/mcporter
 ```
 
-> The tap publishes alongside MCPorter 0.3.2. If you run into issues with an older tap install, run `brew update` before reinstalling.
+> The tap publishes alongside npm. If you run into issues with an older tap install, run `brew update` before reinstalling.
 
 ## One-shot calls from code
 

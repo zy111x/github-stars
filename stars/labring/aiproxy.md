@@ -1,6 +1,6 @@
 ---
 project: aiproxy
-stars: 420
+stars: 429
 description: |-
     AI Proxy is a high performance AI gateway using OpenAI / Claude / Gemini protocol as the entry point. It features intelligent error handling, multi-channel management, and comprehensive monitoring. With support for multiple models, rate limiting, and multi-tenant isolation.
 url: https://github.com/labring/aiproxy
@@ -345,6 +345,10 @@ wire_api = "chat"
 - **Multi-protocol access**: Use any protocol (Chat Completions, Claude Messages, or Gemini) to access responses-only models
 - **Transparent conversion**: No client-side changes needed - AI Proxy handles protocol translation automatically
 
+**Reasoning / Thinking Compatibility Docs**:
+
+- [Thinking / Reasoning Compatibility](./docs/REASONING_COMPATIBILITY.md)
+
 ### MCP (Model Context Protocol)
 
 AI Proxy provides comprehensive MCP support for extending AI capabilities:
@@ -379,18 +383,6 @@ cd core && go build -o aiproxy .
 # Run
 ./aiproxy
 ```
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Ways to Contribute
-
-- 🐛 Report bugs and issues
-- 💡 Suggest new features
-- 📝 Improve documentation
-- 🔧 Submit pull requests
-- ⭐ Star the repository
 
 ## 📄 License
 

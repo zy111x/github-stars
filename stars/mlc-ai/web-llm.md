@@ -1,6 +1,6 @@
 ---
 project: web-llm
-stars: 17792
+stars: 17832
 description: |-
     High-performance In-browser LLM Inference Engine 
 url: https://github.com/mlc-ai/web-llm
@@ -462,7 +462,7 @@ npm install
 npm run build
 ```
 
-Then, to test the effects of your code change in an example, inside `examples/get-started/package.json`, change from `"@mlc-ai/web-llm": "^0.2.82"` to `"@mlc-ai/web-llm": ../..`.
+Then, to test the effects of your code change in an example, inside `examples/get-started/package.json`, change from `"@mlc-ai/web-llm": "^0.2.83"` to `"@mlc-ai/web-llm": ../..`.
 
 Then run:
 

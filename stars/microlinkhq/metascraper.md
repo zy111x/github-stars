@@ -1,6 +1,6 @@
 ---
 project: metascraper
-stars: 2661
+stars: 2664
 description: |-
     Get unified metadata from websites using Open Graph, Microdata, RDFa, Twitter Cards, JSON-LD, HTML, and more.
 url: https://github.com/microlinkhq/metascraper
@@ -271,6 +271,7 @@ const metascraper = require('metascraper')([
 - [metascraper-bluesky](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-bluesky) – Metascraper integration for Bluesky.
 - [metascraper-dribbble](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-dribbble) – Metascraper integration for Dribble.
 - [metascraper-instagram](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-instagram) – Metascraper integration for Instagram.
+- [metascraper-reddit](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-reddit) – Metascraper integration for Reddit.
 - [metascraper-soundcloud](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-soundcloud) – Metascraper integration for SoundCloud.
 - [metascraper-spotify](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-spotify) – Metascraper integration for Spotify.
 - [metascraper-telegram](https://github.com/microlinkhq/metascraper/tree/master/packages/metascraper-telegram) – Metascraper integration for Telegram.

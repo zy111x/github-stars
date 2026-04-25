@@ -1,6 +1,6 @@
 ---
 project: request
-stars: 25573
+stars: 25568
 description: |-
     🏊🏾 Simplified HTTP request client.
 url: https://github.com/request/request

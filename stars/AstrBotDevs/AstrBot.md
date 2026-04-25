@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 30197
+stars: 30650
 description: |-
     AI Agent Assistant that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨
 url: https://github.com/AstrBotDevs/AstrBot

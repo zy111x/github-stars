@@ -1,6 +1,6 @@
 ---
 project: shave
-stars: 2093
+stars: 2092
 description: |-
     💈 Shave is a 0 dep JS plugin that truncates text to fit within an element based on a set max-height  ✁
 url: https://github.com/dollarshaveclub/shave

@@ -1,6 +1,6 @@
 ---
 project: KnowledgeBaseDNS
-stars: 116
+stars: 117
 description: |-
     AdGuard DNS knowledge base
 url: https://github.com/AdguardTeam/KnowledgeBaseDNS

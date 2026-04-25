@@ -1,6 +1,6 @@
 ---
 project: shadcn-svelte
-stars: 8642
+stars: 8660
 description: |-
     shadcn/ui, but for Svelte. ✨
 url: https://github.com/huntabyte/shadcn-svelte
@@ -54,7 +54,7 @@ Built by [@huntabyte](https://github.com/huntabyte), [CokaKoala](https://github.
 
 Join the Discord server to ask questions, find collaborators, or just say hi!
 
-<a href="https://discord.gg/fdXy3Sk8Gq" alt="Svecosystem Discord community">
+<a href="https://shadcn-svelte.com/discord" alt="Svecosystem Discord community">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://invidget.switchblade.xyz/fdXy3Sk8Gq">
   <img alt="Svecosystem Discord community" src="https://invidget.switchblade.xyz/fdXy3Sk8Gq?theme=light">

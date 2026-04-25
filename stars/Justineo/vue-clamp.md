@@ -1,8 +1,8 @@
 ---
 project: vue-clamp
-stars: 794
+stars: 799
 description: |-
-    Clamping multiline text with ease.
+    Clamping primitives for Vue.
 url: https://github.com/Justineo/vue-clamp
 ---
 

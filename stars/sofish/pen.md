@@ -1,6 +1,6 @@
 ---
 project: pen
-stars: 4805
+stars: 4804
 description: |-
     enjoy live editing (+markdown)
 url: https://github.com/sofish/pen

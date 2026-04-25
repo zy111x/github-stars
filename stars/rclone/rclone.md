@@ -1,6 +1,6 @@
 ---
 project: rclone
-stars: 56714
+stars: 56845
 description: |-
     "rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Azure Blob, Azure Files, Yandex Files
 url: https://github.com/rclone/rclone
@@ -67,6 +67,7 @@ directories to and from different cloud storage providers.
 - Hetzner Object Storage [:page_facing_up:](https://rclone.org/s3/#hetzner)
 - Hetzner Storage Box [:page_facing_up:](https://rclone.org/sftp/#hetzner-storage-box)
 - HiDrive [:page_facing_up:](https://rclone.org/hidrive/)
+- Hitachi Content Platform (HCP) [:page_facing_up:](https://rclone.org/s3/#hcp)
 - HTTP [:page_facing_up:](https://rclone.org/http/)
 - Huawei Cloud Object Storage Service(OBS) [:page_facing_up:](https://rclone.org/s3/#huawei-obs)
 - iCloud Drive [:page_facing_up:](https://rclone.org/iclouddrive/)

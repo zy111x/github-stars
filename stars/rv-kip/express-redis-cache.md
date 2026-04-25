@@ -1,6 +1,6 @@
 ---
 project: express-redis-cache
-stars: 287
+stars: 286
 description: |-
     A light cache system with Redis for Express
 url: https://github.com/rv-kip/express-redis-cache

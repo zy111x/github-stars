@@ -1,6 +1,6 @@
 ---
 project: SandboxFusion
-stars: 992
+stars: 995
 description: |-
     null
 url: https://github.com/bytedance/SandboxFusion

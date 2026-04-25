@@ -1,6 +1,6 @@
 ---
 project: craft-agents-oss
-stars: 4372
+stars: 4512
 description: |-
     null
 url: https://github.com/lukilabs/craft-agents-oss

@@ -1,6 +1,6 @@
 ---
 project: web-push
-stars: 3502
+stars: 3503
 description: |-
     Web Push library for Node.js
 url: https://github.com/web-push-libs/web-push

@@ -1,6 +1,6 @@
 ---
 project: semi-design
-stars: 9829
+stars: 9837
 description: |-
     🚀A modern, comprehensive, flexible design system and React UI library, AI-friendly built-in.🎨Provide 3000+ Design Tokens, easy to build your design system. Make Semi Design to Any Design.🧑🏻‍💻 Design to Code in one click
 url: https://github.com/DouyinFE/semi-design
@@ -200,4 +200,14 @@ See [CONTRIBUTING](CONTRIBUTING-en-US.md) documentation.
 # 🎈 License
 
 Semi UI is [MIT Licensed](LICENSE)
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=DouyinFE%2Fsemi-design&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=DouyinFE/semi-design&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=DouyinFE/semi-design&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=DouyinFE/semi-design&type=date&legend=top-left" />
+ </picture>
+</a>
 

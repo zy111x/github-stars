@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 3183
+stars: 3455
 description: |-
     Slimmed, cleaned and fine-tuned oh-my-opencode fork, consumes much less tokens
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -15,7 +15,7 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
   <p>
     <a href="https://boringdystopia.ai/"><img src="https://img.shields.io/badge/boringdystopia.ai-111111?style=for-the-badge&logo=vercel&logoColor=white" alt="boringdystopia.ai"></a>&nbsp;
     <a href="https://x.com/alvinunreal"><img src="https://img.shields.io/badge/X-@alvinunreal-000000?style=for-the-badge&logo=x&logoColor=white" alt="X @alvinunreal"></a>&nbsp;
-    <a href="https://t.me/boringdystopiadevelopment"><img src="https://img.shields.io/badge/Telegram-Join%20channel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Join channel"></a>
+    <a href="https://t.me/boringdystopiadevelopment"><img src="https://img.shields.io/badge/Telegram-Join%20channel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Join channel"></a>&nbsp;
   </p>
 </div>
 
@@ -31,13 +31,23 @@ To explore the agents themselves, see **[Meet the Pantheon](#meet-the-pantheon)*
 
 ### Quick Start
 
+Copy and paste this prompt to your LLM agent (Claude Code, AmpCode, Cursor, etc.):
+
+
+```
+Install and configure oh-my-opencode-slim: https://raw.githubusercontent.com/alvinunreal/oh-my-opencode-slim/refs/heads/master/README.md
+```
+
+
+### Manual Installation
+
 ```bash
 bunx oh-my-opencode-slim@latest install
 ```
 
 ### Getting Started
 
-The installer generates an OpenAI preset by default, using `openai/gpt-5.4` for the higher-judgment agents and `openai/gpt-5.4-mini` for the faster scoped agents.
+The installer generates an OpenAI preset by default, using `openai/gpt-5.5` for the higher-judgment agents and `openai/gpt-5.4-mini` for the faster scoped agents.
 
 Then:
 
@@ -66,10 +76,10 @@ The default generated configuration looks like this:
   "preset": "openai",
   "presets": {
     "openai": {
-      "orchestrator": { "model": "openai/gpt-5.4", "variant": "high", "skills": ["*"], "mcps": ["*", "!context7"] },
-      "oracle": { "model": "openai/gpt-5.4", "variant": "high", "skills": ["simplify"], "mcps": [] },
+      "orchestrator": { "model": "openai/gpt-5.5", "skills": ["*"], "mcps": ["*", "!context7"] },
+      "oracle": { "model": "openai/gpt-5.5", "variant": "high", "skills": ["simplify"], "mcps": [] },
       "librarian": { "model": "openai/gpt-5.4-mini", "variant": "low", "skills": [], "mcps": ["websearch", "context7", "grep_app"] },
-      "explorer": { "model": "openai/gpt-5.4-mini", "variant": "low", "skills": ["cartography"], "mcps": [] },
+      "explorer": { "model": "openai/gpt-5.4-mini", "variant": "low", "skills": [], "mcps": [] },
       "designer": { "model": "openai/gpt-5.4-mini", "variant": "medium", "skills": ["agent-browser"], "mcps": [] },
       "fixer": { "model": "openai/gpt-5.4-mini", "variant": "low", "skills": [], "mcps": [] }
     }
@@ -77,9 +87,17 @@ The default generated configuration looks like this:
 }
 ```
 
+Session management is enabled by default even though it is not shown in the
+starter config. See **[Session Management](docs/session-management.md)** if you
+want to customize how many resumable child-agent sessions are remembered.
+
 ### For Alternative Providers
 
-To use Kimi, GitHub Copilot, ZAI Coding Plan, or a mixed-provider setup, see **[Provider Configurations](docs/provider-configurations.md)** for step-by-step config examples. If you want a ready-made starting point, check the **[Author's Preset](docs/authors-preset.md)** and **[$30 Preset](docs/thirty-dollars-preset.md)** - the `$30` preset is the best cheap setup.
+To use Kimi, GitHub Copilot, ZAI Coding Plan, or a mixed-provider setup, use **[Configuration](docs/configuration.md)** for the full reference. If you want a ready-made starting point, check the **[Author's Preset](docs/authors-preset.md)** and **[$30 Preset](docs/thirty-dollars-preset.md)** - the `$30` preset is the best cheap setup.
+
+The configuration guide also covers custom subagents via `agents.<name>`, where
+you can define both a normal `prompt` and an `orchestratorPrompt` block for
+delegation.
 
 You can also mix and match any models per agent. For model suggestions, see the **Recommended Models** listed under each agent below.
 
@@ -99,7 +117,7 @@ ping all agents
 
 <div align="center">
   <img src="img/ping.png" alt="Ping all agents" width="600">
-  <p><i>Confirmation that all six agents are online and ready.</i></p>
+  <p><i>Confirmation that all configured agents are online and ready.</i></p>
 </div>
 
 If any agent fails to respond, check your provider authentication and config file.
@@ -134,12 +152,12 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5.4</code>
+      <b>Default Model:</b> <code>openai/gpt-5.5</code>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Recommended Models:</b> <code>openai/gpt-5.4</code> <code>anthropic/claude-opus-4.6</code>
+      <b>Recommended Models:</b> <code>openai/gpt-5.5</code> <code>anthropic/claude-opus-4.6</code>
     </td>
   </tr>
   <tr>
@@ -216,12 +234,12 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5.4 (high)</code>
+      <b>Default Model:</b> <code>openai/gpt-5.5 (high)</code>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Recommended Models:</b> <code>openai/gpt-5.4 (high)</code> <code>google/gemini-3.1-pro-preview (high)</code>
+      <b>Recommended Models:</b> <code>openai/gpt-5.5 (high)</code> <code>google/gemini-3.1-pro-preview (high)</code>
     </td>
   </tr>
   <tr>
@@ -233,7 +251,7 @@ If any agent fails to respond, check your provider authentication and config fil
 
 ---
 
-### Council: The Chorus of Minds
+### 04. Council: The Chorus of Minds
 
 > [!NOTE]
 > **Why doesn't Orchestrator auto-call Council more often?** This is intentional. Council runs multiple models at once, so automatic delegation is kept strict because it is usually the highest-cost path in the system. In practice, Council is meant to be used manually when you want it, for example: <code>@council compare these two architectures</code>.
@@ -245,7 +263,7 @@ If any agent fails to respond, check your provider authentication and config fil
       <br><sub><i>Many minds, one verdict.</i></sub>
     </td>
     <td width="70%" valign="top">
-      The Council is not a lone being but a chamber of minds summoned when one answer is not enough. It sends your question to multiple models in parallel, gathers their competing judgments, and places them before a master who distills the strongest ideas into a single verdict. Where a solitary agent may miss a path, the Council cross-examines possibility itself.
+      The Council is not a lone being but a chamber of minds summoned when one answer is not enough. It sends your question to multiple models in parallel, gathers their competing judgments, and then the Council agent itself distills the strongest ideas into a single verdict. Where a solitary agent may miss a path, the Council cross-examines possibility itself.
     </td>
   </tr>
   <tr>
@@ -265,24 +283,24 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Setup:</b> <code>Config-driven</code> — council master + councillors are chosen from your configured preset
+      <b>Default Setup:</b> <code>Config-driven</code> — councillors come from <code>council.presets</code> and the Council agent model comes from your normal <code>council</code> agent config
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Recommended Setup:</b> <code>Strong master</code> + <code>diverse councillors</code> across providers
+      <b>Recommended Setup:</b> <code>Strong Council model</code> + <code>diverse councillors</code> across providers
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Model Guidance:</b> Use a strong synthesis model as the master and diverse models as councillors. The value of Council comes from comparing different model perspectives, not just picking the single strongest model everywhere.
+      <b>Model Guidance:</b> Use a strong synthesis model for the Council agent and diverse models as councillors. The value of Council comes from comparing different model perspectives, not just picking the single strongest model everywhere.
     </td>
   </tr>
 </table>
 
 ---
 
-### 04. Librarian: The Weaver of Knowledge
+### 05. Librarian: The Weaver of Knowledge
 
 <table>
   <tr>
@@ -323,7 +341,7 @@ If any agent fails to respond, check your provider authentication and config fil
 
 ---
 
-### 05. Designer: The Guardian of Aesthetics
+### 06. Designer: The Guardian of Aesthetics
 
 <table>
   <tr>
@@ -364,7 +382,7 @@ If any agent fails to respond, check your provider authentication and config fil
 
 ---
 
-### 06. Fixer: The Last Builder
+### 07. Fixer: The Last Builder
 
 <table>
   <tr>
@@ -403,18 +421,22 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
 </table>
 
-### 07. Observer: The Silent Witness
+---
+
+## Optional Agents
+
+### Observer: The Silent Witness
 
 > [!NOTE]
 > **Why a separate agent?** If your Orchestrator model is not multimodal, enable Observer to handle images, screenshots, PDFs, and other visual files. Observer is disabled by default and gives the Orchestrator a dedicated multimodal reader without forcing you to change your main reasoning model. Set `disabled_agents: []` and an `observer` model in your configuration.
 
 <table>
   <tr>
-    <td width="240" valign="top">
-      <b>Observer</b><br>
-      <i>Visual & binary analysis</i>
+    <td width="30%" align="center" valign="top">
+      <img src="img/observer.jpg" width="240" style="border-radius: 10px;">
+      <br><sub><i>The eye that reads what others cannot.</i></sub>
     </td>
-    <td>
+    <td width="70%" valign="top">
 
 **Read-only visual analysis** — interprets images, screenshots, PDFs, and diagrams. Returns structured observations to the orchestrator without loading raw file bytes into the main context window.
 
@@ -452,7 +474,6 @@ Use this section as a map: start with installation, then jump to features, confi
 | Doc | What it covers |
 |-----|----------------|
 | **[Installation Guide](docs/installation.md)** | Install the plugin, use CLI flags, reset config, and troubleshoot setup |
-| **[Provider Configurations](docs/provider-configurations.md)** | Configure OpenAI, Kimi, GitHub Copilot, ZAI, Fireworks AI, or mixed-provider presets |
 
 <a id="features-and-workflows"></a>
 
@@ -463,17 +484,20 @@ Use this section as a map: start with installation, then jump to features, confi
 | **[Council](docs/council.md)** | Run multiple models in parallel and synthesize a single answer with `@council` |
 | **[Interview](docs/interview.md)** | Turn rough ideas into a structured markdown spec through a browser-based Q&A flow |
 | **[Multiplexer Integration](docs/multiplexer-integration.md)** | Watch agents work live in Tmux or Zellij panes |
+| **[Session Management](docs/session-management.md)** | Reuse recent child-agent sessions with short aliases instead of starting over |
 | **[Todo Continuation](docs/todo-continuation.md)** | Auto-continue orchestrator sessions with cooldowns and safety checks |
-| **[Cartography](docs/cartography.md)** | Generate hierarchical codemaps to understand large codebases faster |
+| **[Preset Switching](docs/preset-switching.md)** | Switch agent model presets at runtime with `/preset` |
+| **[Codemap](docs/codemap.md)** | Generate hierarchical codemaps to understand large codebases faster |
 
 ### ⚙️ Config & Reference
 
 | Doc | What it covers |
 |-----|----------------|
 | **[Configuration](docs/configuration.md)** | Config file locations, JSONC support, prompt overrides, and full option reference |
-| **[Skills](docs/skills.md)** | Built-in and recommended skills such as `simplify`, `agent-browser`, and `cartography` |
+| **[Maintainer Guide](docs/maintainers.md)** | Issue triage rules, label meanings, support routing, and repo maintenance workflow |
+| **[Skills](docs/skills.md)** | Built-in and recommended skills such as `simplify`, `agent-browser`, and `codemap` |
 | **[MCPs](docs/mcps.md)** | `websearch`, `context7`, `grep_app`, and how MCP permissions work per agent |
-| **[Tools](docs/tools.md)** | Built-in tool capabilities like background tasks, `webfetch`, LSP tools, code search, and formatters |
+| **[Tools](docs/tools.md)** | Built-in tool capabilities like `webfetch`, LSP tools, code search, and formatters |
 
 ### 💡 Example Presets
 
@@ -491,7 +515,7 @@ Use this section as a map: start with installation, then jump to features, confi
   <p><sub>Every merged contribution leaves a mark on the realm.</sub></p>
 
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-40-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-44-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -555,6 +579,12 @@ Use this section as a map: start with installation, then jump to features, confi
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/jwcrystal"><img src="https://avatars.githubusercontent.com/u/121911854?v=4?s=100" width="100px;" alt="jwcrystal"/><br /><sub><b>jwcrystal</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=jwcrystal" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://zenstudio.cv/"><img src="https://avatars.githubusercontent.com/u/10528635?v=4?s=100" width="100px;" alt="Nguyen Canh Toan"/><br /><sub><b>Nguyen Canh Toan</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=ZenStudioLab" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/tom-dyar"><img src="https://avatars.githubusercontent.com/u/8899513?v=4?s=100" width="100px;" alt="Thomas Dyar"/><br /><sub><b>Thomas Dyar</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=tom-dyar" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/zuuky"><img src="https://avatars.githubusercontent.com/u/6713415?v=4?s=100" width="100px;" alt="zero"/><br /><sub><b>zero</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=zuuky" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/DenisBalan"><img src="https://avatars.githubusercontent.com/u/33955091?v=4?s=100" width="100px;" alt="Denis Balan"/><br /><sub><b>Denis Balan</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=DenisBalan" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/gustavocaiano"><img src="https://avatars.githubusercontent.com/u/104129313?v=4?s=100" width="100px;" alt="Gustavo Caiano"/><br /><sub><b>Gustavo Caiano</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=gustavocaiano" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/ThomasMldr"><img src="https://avatars.githubusercontent.com/u/6631765?v=4?s=100" width="100px;" alt="Thomas Mulder"/><br /><sub><b>Thomas Mulder</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=ThomasMldr" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

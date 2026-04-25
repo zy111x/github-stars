@@ -1,6 +1,6 @@
 ---
 project: onyx
-stars: 27525
+stars: 28495
 description: |-
     Open Source AI Platform - AI Chat with advanced features that works with every LLM
 url: https://github.com/onyx-dot-app/onyx
@@ -31,6 +31,10 @@ url: https://github.com/onyx-dot-app/onyx
   <a href="https://trendshift.io/repositories/12516" target="_blank">
     <img src="https://trendshift.io/api/badge/repositories/12516" alt="onyx-dot-app/onyx | Trendshift" style="width: 250px; height: 55px;" />
   </a>
+</p>
+
+<p align="center">
+  <b>English</b> | <a href="./README.zh-CN.md">简体中文</a>
 </p>
 
 # Onyx - The Open Source AI Platform

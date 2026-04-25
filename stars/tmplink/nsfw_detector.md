@@ -1,6 +1,6 @@
 ---
 project: nsfw_detector
-stars: 604
+stars: 605
 description: |-
     Solution for checking file if  contain NSFW content.
 url: https://github.com/tmplink/nsfw_detector
