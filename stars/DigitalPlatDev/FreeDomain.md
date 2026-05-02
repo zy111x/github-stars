@@ -1,6 +1,6 @@
 ---
 project: FreeDomain
-stars: 158730
+stars: 159803
 description: DigitalPlat FreeDomain: Free Domain For Everyone
 url: https://github.com/DigitalPlatDev/FreeDomain
 ---

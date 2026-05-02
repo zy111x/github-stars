@@ -1,6 +1,6 @@
 ---
 project: CNN-using-MNIST
-stars: 1
+stars: 2
 description: Implementation of a Convolutional Neural Network (CNN) using TensorFlow/Keras to accurately classify handwritten digits from the MNIST dataset, including preprocessing, training, and evaluation.
 url: https://github.com/M-Nagaraj02/CNN-using-MNIST
 ---

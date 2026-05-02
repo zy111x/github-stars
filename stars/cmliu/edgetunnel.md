@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 32537
+stars: 33168
 description: edgetunnel2 VLESS/Trojan 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -267,7 +267,6 @@ M1/M2 完美兼容
 
 ### 💖 赞助支持 - 提供云服务器维持订阅转换服务
 
--   NodeLoc
 -   Alice
 -   EasyLinks
 -   ZMTO(VTEXS)
@@ -283,7 +282,7 @@ M1/M2 完美兼容
 -   Workers/Pages Metrics
 -   白嫖哥
 -   Mingyu
--   Alexandre Kojève
+-   ToiCF/CF-Workers-HTTPS
 -   eooce
 -   Sukka
 -   zhangtaile
