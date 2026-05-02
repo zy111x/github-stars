@@ -1,6 +1,6 @@
 ---
 project: unified
-stars: 4977
+stars: 4976
 description: |-
     Parse, inspect, transform, and serialize content with syntax trees
 url: https://github.com/unifiedjs/unified
@@ -295,6 +295,8 @@ There are also a few plugins that work in any ecosystem:
   — ignore unrelated messages in GitHub Actions and Travis
 * [`unified-infer-git-meta`](https://github.com/unifiedjs/unified-infer-git-meta)
   — infer metadata of a document from Git
+* [`unified-log-tree`](https://github.com/ipikuka/unified-log-tree)
+  — log abstract syntax trees (ASTs) without mutating for debugging
 * [`unified-message-control`](https://github.com/unifiedjs/unified-message-control)
   — enable, disable, and ignore messages from content
 

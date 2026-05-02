@@ -1,6 +1,6 @@
 ---
 project: libvips
-stars: 11263
+stars: 11273
 description: |-
     A fast image processing library with low memory needs.
 url: https://github.com/libvips/libvips
@@ -70,7 +70,7 @@ libvips is used as an image processing engine by:
 | [MediaWiki](https://www.mediawiki.org/wiki/Extension:Thumbro) |
 
 and others. The official libvips GUI is
-[nip2](https://github.com/libvips/nip2), a strange combination of a
+[nip4](https://github.com/libvips/nip4), a strange combination of a
 spreadsheet and a photo editor.
 
 # Install

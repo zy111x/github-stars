@@ -1,6 +1,6 @@
 ---
 project: logtape
-stars: 1759
+stars: 1765
 description: |-
     Unobtrusive logging library with zero dependencies for Deno, Node.js, Bun, browsers, and edge functions
 url: https://github.com/dahlia/logtape
@@ -114,6 +114,7 @@ list of the packages in the LogTape monorepo:
 | Package                                                    | JSR                                  | npm                                  | Description                |
 | ---------------------------------------------------------- | ------------------------------------ | ------------------------------------ | -------------------------- |
 | [*@logtape/logtape*](/packages/logtape/)                   | [JSR][jsr:@logtape/logtape]          | [npm][npm:@logtape/logtape]          | Core logging functionality |
+| [*@logtape/adaptor-bunyan*](/packages/adaptor-bunyan/)     | [JSR][jsr:@logtape/adaptor-bunyan]   | [npm][npm:@logtape/adaptor-bunyan]   | [Bunyan] adapter           |
 | [*@logtape/adaptor-log4js*](/packages/adaptor-log4js/)     | [JSR][jsr:@logtape/adaptor-log4js]   | [npm][npm:@logtape/adaptor-log4js]   | [log4js] adapter           |
 | [*@logtape/adaptor-pino*](/packages/adaptor-pino/)         | [JSR][jsr:@logtape/adaptor-pino]     | [npm][npm:@logtape/adaptor-pino]     | [Pino] adapter             |
 | [*@logtape/adaptor-winston*](/packages/adaptor-winston/)   | [JSR][jsr:@logtape/adaptor-winston]  | [npm][npm:@logtape/adaptor-winston]  | [winston] adapter          |
@@ -135,6 +136,9 @@ list of the packages in the LogTape monorepo:
 
 [jsr:@logtape/logtape]: https://jsr.io/@logtape/logtape
 [npm:@logtape/logtape]: https://www.npmjs.com/package/@logtape/logtape
+[jsr:@logtape/adaptor-bunyan]: https://jsr.io/@logtape/adaptor-bunyan
+[npm:@logtape/adaptor-bunyan]: https://www.npmjs.com/package/@logtape/adaptor-bunyan
+[Bunyan]: https://github.com/trentm/node-bunyan
 [jsr:@logtape/adaptor-log4js]: https://jsr.io/@logtape/adaptor-log4js
 [npm:@logtape/adaptor-log4js]: https://www.npmjs.com/package/@logtape/adaptor-log4js
 [log4js]: https://log4js-node.github.io/log4js-node/

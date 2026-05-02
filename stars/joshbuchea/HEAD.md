@@ -1,6 +1,6 @@
 ---
 project: HEAD
-stars: 30269
+stars: 30270
 description: |-
     A simple guide to HTML <head> elements
 url: https://github.com/joshbuchea/HEAD
@@ -18,35 +18,38 @@ url: https://github.com/joshbuchea/HEAD
 
 - [Recommended Minimum](#recommended-minimum)
 - [Elements](#elements)
+- [Recommended Order](#recommended-order)
 - [Meta](#meta)
 - [Link](#link)
+- [Scripts](#scripts)
 - [Icons](#icons)
 - [Social](#social)
-  - [Facebook Open Graph](#facebook-open-graph)
-  - [Twitter Card](#twitter-card)
-  - [Twitter Privacy](#twitter-privacy)
+  - [Open Graph](#open-graph)
   - [Schema.org](#schemaorg)
+  - [Google JSON-LD Schema](#google-json-ld-schema)
   - [Pinterest](#pinterest)
-  - [Facebook Instant Articles](#facebook-instant-articles)
   - [OEmbed](#oembed)
   - [QQ/Wechat](#qqwechat)
+  - [Dublin Core](#dublin-core)
+  - [Fediverse](#fediverse)
 - [Browsers / Platforms](#browsers--platforms)
   - [Apple iOS](#apple-ios)
   - [Google Android](#google-android)
   - [Google Chrome](#google-chrome)
-  - [Microsoft Internet Explorer](#microsoft-internet-explorer)
 - [Browsers (Chinese)](#browsers-chinese)
   - [360 Browser](#360-browser)
   - [QQ Mobile Browser](#qq-mobile-browser)
   - [UC Mobile Browser](#uc-mobile-browser)
 - [App Links](#app-links)
+- [Deprecated](#deprecated)
 - [Other Resources](#other-resources)
 - [Related Projects](#related-projects)
-- [Other Formats](#other-formats)
 - [Translations](#-translations)
 - [Contributing](#-contributing)
-  - [Contributors](#contributors)
+  - [Guide](#guide)
+- [Contributors](#-contributors)
 - [Author](#-author)
+- [Support](#-support)
 - [License](#-license)
 
 ## Recommended Minimum
@@ -57,10 +60,10 @@ Below are the essential elements for any web document (websites/apps):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
-  The above 2 meta tags *must* come first in the <head>
+  The above 2 meta tags should come as early as possible in the <head>
   to consistently ensure proper document rendering.
   Any other head element should come *after* these tags.
- -->
+-->
 <title>Page Title</title>
 ```
 
@@ -110,11 +113,54 @@ These elements provide information for how a document should be perceived, and r
 </noscript>
 ```
 
+## Recommended Order
+
+The following is the recommended order of elements in the `<head>` for best performance and correct document rendering:
+
+1. `<meta charset>` — Character encoding declaration; **must** appear within the first 1024 bytes of the document
+2. `<meta name="viewport">` — Viewport settings; declare early to ensure correct responsive rendering
+3. `<title>` — Document title; placed after encoding/viewport to prevent potential re-rendering
+4. Other `<meta>` tags (description, robots, etc.)
+5. Open Graph / Social meta tags
+6. `<link rel="canonical">` and other `<link>` tags (excluding stylesheets and resource hints)
+7. `<link rel="preconnect">` / `<link rel="dns-prefetch">` — Resource hints; early to maximize their value
+8. `<link rel="stylesheet">` — External CSS; stylesheets should come before scripts
+9. `<link rel="icon">` — Favicons
+10. `<script>` — Scripts; use `defer` or `async` where possible to avoid blocking rendering
+
+```html
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Page Title</title>
+
+  <meta name="description" content="Page description">
+  <!-- other meta tags -->
+
+  <!-- Open Graph / Social meta tags -->
+  <meta property="og:title" content="Page Title">
+  <!-- other social meta tags -->
+
+  <link rel="canonical" href="https://example.com/page.html">
+  <!-- other link tags (excluding stylesheets and resource hints) -->
+
+  <link rel="preconnect" href="https://example.com">
+  <link rel="dns-prefetch" href="https://example.com">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" href="favicon.ico">
+
+  <script defer src="script.js"></script>
+</head>
+```
+
 ## Meta
 
 ```html
 <!--
-  The following 2 meta tags *must* come first in the <head>
+  The following 2 meta tags should come as early as possible in the <head>
   to consistently ensure proper document rendering.
   Any other head element should come *after* these tags.
 -->
@@ -123,7 +169,7 @@ These elements provide information for how a document should be perceived, and r
 
 <!--
   Allows control over where resources are loaded from.
-  Place as early in the <head> as possible, as the tag  
+  Place as early in the <head> as possible, as the tag
   only applies to resources that are declared after it.
 -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
@@ -133,6 +179,9 @@ These elements provide information for how a document should be perceived, and r
 
 <!-- Theme Color for Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="#4285f4">
+
+<!-- Indicates the supported color schemes for the page (light, dark, or both) -->
+<meta name="color-scheme" content="light dark">
 
 <!-- Short description of the document (limit to 150 characters) -->
 <!-- This content *may* be used as a part of search engine results. -->
@@ -152,7 +201,6 @@ These elements provide information for how a document should be perceived, and r
 <meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
 <meta name="yandex-verification" content="verification_token"><!-- Yandex Webmasters -->
 <meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
-<meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console -->
 <meta name="p:domain_verify" content="code_from_pinterest"><!-- Pinterest Console-->
 <meta name="norton-safeweb-site-verification" content="norton_code"><!-- Norton Safe Web -->
 
@@ -171,15 +219,9 @@ These elements provide information for how a document should be perceived, and r
 <!-- Disable automatic detection and formatting of possible phone numbers -->
 <meta name="format-detection" content="telephone=no">
 
-<!-- Completely opt out of DNS prefetching by setting to "off" -->
-<meta http-equiv="x-dns-prefetch-control" content="off">
-
-<!-- Specifies the document to appear in a specific frame -->
-<meta http-equiv="Window-Target" content="_value">
-
 <!-- Geo tags -->
-<meta name="ICBM" content="latitude, longitude">
-<meta name="geo.position" content="latitude;longitude">
+<meta name="ICBM" content="latitude, longitude"><!-- Geographic coordinates (latitude, longitude) in decimal degrees; eg. content="48.8566, 2.3522" -->
+<meta name="geo.position" content="latitude;longitude"><!-- Geographic coordinates; latitude and longitude are separated by a semicolon -->
 <meta name="geo.region" content="country[-state]"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY" -->
 <meta name="geo.placename" content="city/town"><!-- eg. content="New York City" -->
 
@@ -187,7 +229,9 @@ These elements provide information for how a document should be perceived, and r
 <meta name="monetization" content="$paymentpointer.example">
 ```
 
-- 📖 [Meta tags that Google understands](https://support.google.com/webmasters/answer/79812?hl=en)
+**Note:** Geo tags are **not** used by browsers directly — they are intended for search engines, web crawlers, and location-based services to understand the geographic relevance of a page's content. `ICBM` (named after the military ICBM address convention) and `geo.position` both express coordinates in decimal degrees; `ICBM` uses a comma separator while `geo.position` uses a semicolon. `geo.region` identifies the country (and optionally the state/region) using ISO codes, and `geo.placename` provides a human-readable place name.
+
+- 📖 [Meta tags that Google understands](https://developers.google.com/search/docs/crawling-indexing/special-tags?hl=en)
 - 📖 [WHATWG Wiki: MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions)
 - 📖 [ICBM on Wikipedia](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
 - 📖 [Geotagging on Wikipedia](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
@@ -201,10 +245,7 @@ These elements provide information for how a document should be perceived, and r
 <!-- Helps prevent duplicate content issues -->
 <link rel="canonical" href="https://example.com/article/?page=2">
 
-<!-- Links to an AMP HTML version of the current document -->
-<link rel="amphtml" href="https://example.com/path/to/amp-version.html">
-
-<!-- Links to a JSON file that specifies "installation" credentials for the web applications -->
+<!-- Links to a Web App Manifest — the recommended way to define PWA metadata such as app name, icons, theme_color, and display mode -->
 <link rel="manifest" href="manifest.json">
 
 <!-- Links to information about the author(s) of the document -->
@@ -223,24 +264,12 @@ These elements provide information for how a document should be perceived, and r
 <link rel="me" href="mailto:name@example.com">
 <link rel="me" href="sms:+15035550125">
 
-<!-- Links to a document that describes a collection of records, documents, or other materials of historical interest -->
-<link rel="archives" href="https://example.com/archives/">
-
-<!-- Links to top level resource in an hierarchical structure -->
-<link rel="index" href="https://example.com/article/">
-
 <!-- Provides a self reference - useful when the document has multiple possible references -->
 <link rel="self" type="application/atom+xml" href="https://example.com/atom.xml">
 
 <!-- The previous, and next documents in a series of documents, respectively -->
 <link rel="prev" href="https://example.com/article/?page=1">
 <link rel="next" href="https://example.com/article/?page=3">
-
-<!-- Used when a 3rd party service is utilized to maintain a blog -->
-<link rel="EditURI" href="https://example.com/xmlrpc.php?rsd" type="application/rsd+xml" title="RSD">
-
-<!-- Forms an automated comment when another WordPress blog links to your WordPress blog or post -->
-<link rel="pingback" href="https://example.com/xmlrpc.php">
 
 <!-- Notifies a URL when you link to it on your document
      More information at https://webmention.net -->
@@ -268,11 +297,46 @@ These elements provide information for how a document should be perceived, and r
 <link rel="dns-prefetch" href="//example.com/">
 <link rel="preconnect" href="https://www.example.com/">
 <link rel="prefetch" href="https://www.example.com/">
-<link rel="prerender" href="https://example.com/">
+
 <link rel="preload" href="image.png" as="image">
 ```
 
+**Note:** The [Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest) (`manifest.json`) is the recommended, cross-platform way to declare installable web app properties — including `name`, `icons`, `theme_color`, and `display` mode — in a single file, instead of relying on multiple platform-specific `<meta>` tags.
+
 - 📖 [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml)
+- 📖 [Web App Manifest (MDN)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest)
+
+## Scripts
+
+```html
+<!--
+  Scripts: place <script> tags at the end of <body> when possible.
+  The following attributes control loading behavior when placed in <head>:
+-->
+
+<!-- Blocks HTML parsing and content rendering until the script is fetched and executed -->
+<script src="script.js"></script>
+
+<!-- The script will be fetched in parallel with parsing and executed as soon as it is available (before parsing completes) -->
+<script async src="script.js"></script>
+
+<!-- The script will be fetched in parallel with parsing and executed when the page has finished parsing -->
+<script defer src="script.js"></script>
+
+<!-- async takes precedence in modern browsers; defer acts as a fallback for older browsers that don't support async -->
+<script async defer src="script.js"></script>
+
+<!-- Inline script -->
+<script>
+  // function(s) go here
+</script>
+
+<!-- Subresource Integrity (SRI): use the integrity attribute to verify that the fetched resource has been delivered without unexpected manipulation -->
+<script src="https://example.com/script.js" integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"></script>
+```
+
+- 📖 [async vs defer attributes](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
+- 📖 [Subresource Integrity](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Subresource_Integrity)
 
 ## Icons
 
@@ -285,24 +349,19 @@ These elements provide information for how a document should be perceived, and r
 
 <!-- Apple Touch Icon (reuse 192px icon.png) -->
 <link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
-
-<!-- Safari Pinned Tab Icon -->
-<link rel="mask-icon" href="/path/to/icon.svg" color="blue">
 ```
 
 - 📖 [All About Favicons (And Touch Icons)](https://bitsofco.de/all-about-favicons-and-touch-icons/)
-- 📖 [Creating Pinned Tab Icons](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/pinnedTabs/pinnedTabs.html)
-- 📖 [Favicon Cheat Sheet](https://github.com/audreyr/favicon-cheat-sheet)
-- 📖 [Icons & Browser Colors](https://developers.google.com/web/fundamentals/design-and-ux/browser-customization/)
+- 📖 [Favicon Cheat Sheet](https://github.com/audreyfeldroy/favicon-cheat-sheet)
+- 📖 [Icons & Browser Colors](https://web.dev/articles/icons-and-browser-colors)
 
 ## Social
 
-### Facebook Open Graph
+### Open Graph
 
-> Most content is shared to Facebook as a URL, so it's important that you mark up your website with Open Graph tags to take control over how your content appears on Facebook. [More about Facebook Open Graph Markup](https://developers.facebook.com/docs/sharing/webmasters#markup)
+> The [Open Graph protocol](https://ogp.me/) is the de facto standard for controlling how your content appears when shared on social platforms. Originally created by Facebook, it's now consumed by most major platforms — including LinkedIn, X (as a fallback when Twitter Card tags are absent), Discord, Slack, iMessage, Mastodon, Bluesky, and WhatsApp.
 
 ```html
-<meta property="fb:app_id" content="123456789">
 <meta property="og:url" content="https://example.com/page.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Content Title">
@@ -314,35 +373,8 @@ These elements provide information for how a document should be perceived, and r
 <meta property="article:author" content="">
 ```
 
-- 📖 [Open Graph protocol](http://ogp.me/)
-- 🛠 Test your page with the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
-
-### Twitter Card
-
-> With Twitter Cards, you can attach rich photos, videos and media experiences to Tweets, helping to drive traffic to your website. [More about Twitter Cards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards)
-
-```html
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@site_account">
-<meta name="twitter:creator" content="@individual_account">
-<meta name="twitter:url" content="https://example.com/page.html">
-<meta name="twitter:title" content="Content Title">
-<meta name="twitter:description" content="Content description less than 200 characters">
-<meta name="twitter:image" content="https://example.com/image.jpg">
-<meta name="twitter:image:alt" content="A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters.">
-```
-
-- 📖 [Getting started with cards — Twitter Developers](https://dev.twitter.com/cards/getting-started)
-- 🛠 Test your page with the [Twitter Card Validator](https://cards-dev.twitter.com/validator)
-
-### Twitter Privacy
-
-If you embed tweets in your website, Twitter can use information from your site to tailor content and suggestions to Twitter users. [More about Twitter privacy options](https://dev.twitter.com/web/overview/privacy#what-privacy-options-do-website-publishers-have).
-
-```html
-<!-- disallow Twitter from using your site's info for personalization purposes -->
-<meta name="twitter:dnt" content="on">
-```
+- 📖 [Open Graph protocol](https://ogp.me/)
+- 🛠 Test your page with the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) or the [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/)
 
 ### Schema.org
 
@@ -361,6 +393,29 @@ If you embed tweets in your website, Twitter can use information from your site 
 - 📖 [Getting Started - schema.org](https://schema.org/docs/gs.html)
 - 🛠 Test your page with the [Rich Results Test](https://search.google.com/test/rich-results)
 
+### Google JSON-LD Schema
+
+The following is used by Google to help provide your site with a knowledge graph result when someone Googles you (this is the pane to the right of the search results that typically appears for larger brands):
+
+```html
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "yourbrand.com",
+    "url": "https://www.yourbrand.com/",
+    "logo": "https://www.yourbrand.com/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/yourbrand",
+      "https://twitter.com/yourbrand",
+      "https://uk.pinterest.com/yourbrand/",
+      "https://www.instagram.com/yourbrand/",
+      "https://www.linkedin.com/company/yourbrand-com"
+    ]
+  }
+</script>
+```
+
 ### Pinterest
 
 Pinterest lets you prevent people from saving things from your website, according [to their help center](https://help.pinterest.com/en/business/article/prevent-saves-to-pinterest-from-your-site). The `description` is optional.
@@ -368,22 +423,6 @@ Pinterest lets you prevent people from saving things from your website, accordin
 ```html
 <meta name="pinterest" content="nopin" description="Sorry, you can't save from my website!">
 ```
-
-### Facebook Instant Articles
-
-```html
-<meta charset="utf-8">
-<meta property="op:markup_version" content="v1.0">
-
-<!-- The URL of the web version of your article -->
-<link rel="canonical" href="https://example.com/article.html">
-
-<!-- The style to be used for this article -->
-<meta property="fb:article_style" content="myarticlestyle">
-```
-
-- 📖 [Creating Articles - Instant Articles](https://developers.facebook.com/docs/instant-articles/guides/articlecreate)
-- 📖 [Code Samples - Instant Articles](https://developers.facebook.com/docs/instant-articles/reference)
 
 ### OEmbed
 
@@ -408,7 +447,35 @@ Users share web pages to qq wechat will have a formatted message
 <meta name="description" itemprop="description" content="share content">
 ```
 
-- 📖 [Code Format Docs](http://open.mobile.qq.com/api/mqq/index#api:setShareInfo)
+- 📖 [Code Format Docs](https://open.mobile.qq.com/api/mqq/index#api:setShareInfo)
+
+### Dublin Core
+
+[Dublin Core](https://www.dublincore.org/) is a metadata vocabulary standardized as [ISO 15836](https://www.iso.org/standard/71339.html) and maintained by the Dublin Core Metadata Initiative (DCMI). It defines fifteen core elements for describing resources and is widely used in digital libraries, institutional repositories, academic publishing, and government portals. To use Dublin Core in HTML, declare the DC namespace and then add the desired elements as `<meta>` tags with a `DC.` prefix.
+
+```html
+<!-- Declare the Dublin Core namespace -->
+<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/">
+
+<meta name="DC.title" content="Page Title">
+<meta name="DC.creator" content="Author Name">
+<meta name="DC.subject" content="Keywords; Topics">
+<meta name="DC.description" content="A brief description of the page content">
+<meta name="DC.publisher" content="Publisher Name">
+<meta name="DC.contributor" content="Contributor Name">
+<meta name="DC.date" content="YYYY-MM-DD">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+<meta name="DC.identifier" content="https://example.com/page.html">
+<meta name="DC.source" content="https://example.com/original-source">
+<meta name="DC.language" content="en">
+<meta name="DC.relation" content="https://example.com/related">
+<meta name="DC.coverage" content="Spatial or temporal coverage">
+<meta name="DC.rights" content="Copyright Owner Name">
+```
+
+- 📖 [Dublin Core Metadata Element Set](https://www.dublincore.org/specifications/dublin-core/dces/)
+- 📖 [Using Dublin Core in HTML](https://www.dublincore.org/specifications/dublin-core/dcq-html/)
 
 ### Fediverse
 
@@ -439,17 +506,22 @@ Some Fediverse software such as Mastodon allow you to put your Fediverse handle 
 <meta name="apple-mobile-web-app-title" content="App Title">
 
 <!-- Enable standalone (full-screen) mode -->
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 
 <!-- Status bar appearance (has no effect unless standalone mode is enabled) -->
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Viewport fit for notched phones (iPhone X and later); add viewport-fit=cover to your existing viewport meta tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <!-- iOS app deep linking -->
 <meta name="apple-itunes-app" content="app-id=APP-ID, app-argument=http/url-sample.com">
 <link rel="alternate" href="ios-app://APP-ID/http/url-sample.com">
 ```
 
-- 📖 [Configuring Web Applications](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
+- 📖 [Configuring Web Applications](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)
+
+**Note:** Properties such as app title (`apple-mobile-web-app-title`), standalone/display mode, and app icons (`apple-touch-icon`) are more reliably and portably configured using the [Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest) (`<link rel="manifest">`), which is the recommended approach for Progressive Web Apps (PWAs). The Apple-specific meta tags remain useful as a fallback for older iOS versions.
 
 ### Google Android
 
@@ -465,6 +537,8 @@ Some Fediverse software such as Mastodon allow you to put your Fediverse handle 
 <link rel="alternate" href="android-app://package-name/http/url-sample.com">
 ```
 
+**Note:** `theme-color` and the "add to home screen" / standalone behavior are better defined using the [Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest) (`<link rel="manifest">`). The `theme-color` meta tag can still serve as a fallback for browsers that do not yet support the manifest `theme_color` property.
+
 ### Google Chrome
 
 ```html
@@ -473,37 +547,6 @@ Some Fediverse software such as Mastodon allow you to put your Fediverse handle 
 <!-- Disable translation prompt -->
 <meta name="google" content="notranslate">
 ```
-
-### Microsoft Internet Explorer
-
-```html
-<!-- Force IE 8/9/10 to use its latest rendering engine -->
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-<!-- Disable automatic detection and formatting of possible phone numbers by Skype Toolbar browser extension -->
-<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
-
-<!-- Windows Tiles -->
-<meta name="msapplication-config" content="/browserconfig.xml">
-```
-
-Minimum required xml markup for `browserconfig.xml`:
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<browserconfig>
-   <msapplication>
-     <tile>
-        <square70x70logo src="small.png"/>
-        <square150x150logo src="medium.png"/>
-        <wide310x150logo src="wide.png"/>
-        <square310x310logo src="large.png"/>
-     </tile>
-   </msapplication>
-</browserconfig>
-```
-
-- 📖 [Browser configuration schema reference](https://msdn.microsoft.com/en-us/library/dn320426.aspx)
 
 ## Browsers (Chinese)
 
@@ -573,10 +616,14 @@ Minimum required xml markup for `browserconfig.xml`:
 
 - 📖 [App Links](https://developers.facebook.com/docs/applinks)
 
+## Deprecated
+
+For tags and elements that were once part of this guide but are no longer supported (Internet Explorer compatibility, Safari Pinned Tabs, Alexa verification, etc.), see [DEPRECATED.md](https://github.com/joshbuchea/HEAD/blob/master/DEPRECATED.md).
+
 ## Other Resources
 
-- 📖 [HTML5 Boilerplate Docs: The HTML](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md)
-- 📖 [HTML5 Boilerplate Docs: Extend and customize](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md)
+- 📖 [HTML5 Boilerplate Docs: The HTML](https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md)
+- 📖 [HTML5 Boilerplate Docs: Extend and customize](https://github.com/h5bp/html5-boilerplate/blob/main/docs/extend.md)
 
 ## Related Projects
 
@@ -585,24 +632,21 @@ Minimum required xml markup for `browserconfig.xml`:
 - [head-it](https://github.com/hemanth/head-it) - CLI interface for `HEAD` snippets
 - [vue-head](https://github.com/ktquez/vue-head) - Manipulating the meta information of the `HEAD` tag for Vue.js
 
-## Other Formats
-
-- 📄 [PDF](https://gitprint.com/joshbuchea/HEAD/blob/master/README.md)
-
 ## 🌐 Translations
 
-- 🇮🇩 [Bahasa](https://github.com/rijdz/HEAD)
-- 🇧🇩 [Bengali](https://github.com/AveyBD/HEAD)
-- 🇧🇷 [Brazilian Portuguese](https://github.com/Webschool-io/HEAD)
-- 🇨🇳 [Chinese (Simplified)](https://github.com/Amery2010/HEAD)
-- 🇩🇪 [German](https://github.com/Shidigital/HEAD)
-- 🇮🇹 [Italian](https://github.com/Fakkio/HEAD)
-- 🇯🇵 [Japanese](https://coliss.com/articles/build-websites/operation/work/collection-of-html-head-elements.html)
-- 🇰🇷 [Korean](https://github.com/Lutece/HEAD)
-- 🇷🇺 [Russian/Русский](https://github.com/Konfuze/HEAD)
-- 🇪🇸 [Spanish](https://github.com/alvaroadlf/HEAD)
-- 🇹🇷 [Turkish/Türkçe](https://github.com/mkg0/HEAD)
-- 🇺🇦 [Ukrainian](https://github.com/Shramkoweb/HEAD)
+- [Bahasa](https://github.com/rijdz/HEAD)
+- [Bengali](https://github.com/AveyBD/HEAD)
+- [Brazilian Portuguese](https://github.com/Webschool-io/HEAD)
+- [Chinese (Simplified)](https://github.com/Amery2010/HEAD)
+- [German](https://github.com/Shidigital/HEAD)
+- [Italian](https://github.com/Fakkio/HEAD)
+- [Japanese](https://coliss.com/articles/build-websites/operation/work/collection-of-html-head-elements.html)
+- [Korean](https://github.com/Lutece/HEAD)
+- [Malay](https://github.com/shoen1x/HEAD)
+- [Russian/Русский](https://github.com/Konfuze/HEAD)
+- [Spanish](https://github.com/alvaroadlf/HEAD)
+- [Turkish/Türkçe](https://github.com/mkg0/HEAD)
+- [Ukrainian](https://github.com/Shramkoweb/HEAD)
 
 ## 🤝 Contributing
 
@@ -657,5 +701,5 @@ Everything helps, thanks! 🙏
 
 ## 📝 License
 
-[![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 

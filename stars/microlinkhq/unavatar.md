@@ -1,6 +1,6 @@
 ---
 project: unavatar
-stars: 1424
+stars: 1426
 description: |-
     Get unified user avatar from social networks, including Instagram, SoundCloud, Telegram, Twitter, YouTube & more.
 url: https://github.com/microlinkhq/unavatar
@@ -73,12 +73,23 @@ url: https://github.com/microlinkhq/unavatar
 - [Response Format](#response-format)
 - [Response Headers](#response-headers)
 - [Response Errors](#response-errors)
+- [Contact](#contact)
 
 ---
+
+Last updated on April 29, 2026
 
 ## Introduction
 
 Welcome to **unavatar.io**, the ultimate avatar service that offers everything you need to easily retrieve user avatars:
+
+- **Versatile**: A wide range of platforms and services including [TikTok](https://unavatar.io/docs#tiktok), [Instagram](https://unavatar.io/docs#instagram), [YouTube](https://unavatar.io/docs#youtube), [X/Twitter](https://unavatar.io/docs#xtwitter), [Gravatar](https://unavatar.io/docs#gravatar), etc., meaning you can rule all of them just querying against unavatar.
+
+- **Speed**: Designed to be fast and efficient with a 91% cache hit rate, serving 12.5 TB of data across 382M requests.
+
+- **Optimize**: All the images are not only compressed on-the-fly to reduce their size and save bandwidth, but also optimized to maintain a high-quality ratio. They are ready for immediate use, enhancing the overall optimization of your website or application.
+
+- **Integration**: The service seamlessly incorporates into your current applications or websites with ease. We offer straightforward documentation and comprehensive support to ensure a quick and effortless onboarding experience.
 
 It's proudly powered by [microlink.io](https://microlink.io/), the headless browser API that handles all the heavy lifting behind the scenes to ensure your avatars are always ready.
 
@@ -120,11 +131,14 @@ Add this link on any page or surface displaying unavatar.io avatars:
 
 ```html
 
-  <img src="https://unavatar.io/github/kikobeats" alt="Kiko" />
-  <img src="https://unavatar.io/x/josebaseba" alt="Joseba" />
+  ![Kiko](https://unavatar.io/github/kikobeats)
+
+  ![Joseba](https://unavatar.io/x/josebaseba)
 
 <p class="attribution">
+
   [Avatars provided by Unavatar](https://unavatar.io)
+
 </p>
 ```
 
@@ -161,9 +175,13 @@ curl "https://unavatar.io/github/kikobeats" -H "x-api-key: YOUR_API_KEY"
 
 ```javascript
 await fetch('https://unavatar.io/github/kikobeats', {
+
   headers: {
+
     'x-api-key': 'YOUR_API_KEY'
+
   }
+
 })
 ```
 
@@ -171,8 +189,11 @@ await fetch('https://unavatar.io/github/kikobeats', {
 import requests
 
 response = requests.get(
+
   'https://unavatar.io/github/kikobeats',
+
   headers={'x-api-key': 'YOUR_API_KEY'}
+
 )
 ```
 
@@ -182,24 +203,33 @@ package main
 import "net/http"
 
 func main() {
+
   req, _ := http.NewRequest("GET", "https://unavatar.io/github/kikobeats", nil)
+
   req.Header.Set("x-api-key", "YOUR_API_KEY")
 
   resp, _ := http.DefaultClient.Do(req)
+
   defer resp.Body.Close()
+
 }
 ```
 
 ```ruby
 require 'net/http'
+
 require 'uri'
 
 uri = URI('https://unavatar.io/github/kikobeats')
+
 request = Net::HTTP::Get.new(uri)
+
 request['x-api-key'] = 'YOUR_API_KEY'
 
 response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
+
   http.request(request)
+
 end
 ```
 
@@ -207,11 +237,15 @@ end
 $ch = curl_init('https://unavatar.io/github/kikobeats');
 
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
+
   'x-api-key: YOUR_API_KEY',
+
 ]);
+
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 $response = curl_exec($ch);
+
 curl_close($ch);
 ```
 
@@ -229,7 +263,9 @@ Rate limit status can be verified using these response headers:
 $ curl -I https://unavatar.io/github/kikobeats
 
 x-rate-limit-limit: 25
+
 x-rate-limit-remaining: 24
+
 x-rate-limit-reset: 1744243200
 ```
 
@@ -259,7 +295,9 @@ The proxy tier used is returned in the `x-proxy-tier` response header, and the t
 $ curl -I -H "x-api-key: YOUR_API_KEY" https://unavatar.io/instagram/kikobeats
 
 x-pricing-tier: pro
+
 x-proxy-tier: origin
+
 x-unavatar-cost: 1
 ```
 
@@ -293,6 +331,7 @@ To check the cache status in real requests, inspect these response headers:
 $ curl -I -H "x-api-key: YOUR_API_KEY" "https://unavatar.io/github/kikobeats?ttl=1h"
 
 cache-control: public, max-age=3600
+
 x-cache-status: HIT
 ```
 
@@ -531,6 +570,10 @@ Available inputs:
 - Email address, e.g., [unavatar.io/gravatar/hello@microlink.io](https://unavatar.io/gravatar/hello@microlink.io)
 - SHA-256 hash, e.g., [unavatar.io/gravatar/b1f507c7a29adfa84eaa521036774b0577c58f23f2f3f42e068d6ac256cffae2](https://unavatar.io/gravatar/b1f507c7a29adfa84eaa521036774b0577c58f23f2f3f42e068d6ac256cffae2)
 - MD5 hash, e.g., [unavatar.io/gravatar/3f293df98a473eae038deabe430a1e30](https://unavatar.io/gravatar/3f293df98a473eae038deabe430a1e30)
+
+When you pass an email address directly in the URL, it is visible in plain text — both in server logs and to any intermediary that inspects the request.
+
+To avoid this, pass a pre-computed `MD5` or `SHA256` hash of the email instead. Unavatar detects the hash automatically and routes it to Gravatar, which natively supports both hash formats.
 
 ### Instagram
 
@@ -788,11 +831,17 @@ These headers help you understand pricing, limits, and request diagnostics.
 $ curl -I -H "x-api-key: YOUR_API_KEY" https://unavatar.io/github/kikobeats
 
 x-pricing-tier: pro
+
 x-timestamp: 1744209600
+
 x-unavatar-cost: 1
+
 x-proxy-tier: origin
+
 x-rate-limit-limit: 50
+
 x-rate-limit-remaining: 49
+
 x-rate-limit-reset: 1744243200
 ```
 
@@ -833,4 +882,4 @@ Expected errors are known operational cases returned with stable codes.
 
 ## Contact
 
-If you have any suggestion or bug to report, please contact to ust mailing to [hello@unavatar.io](mailto:hello@unavatar.io).
+If you have a suggestion or need to report a bug, contact us at <hello@unavatar.io>.

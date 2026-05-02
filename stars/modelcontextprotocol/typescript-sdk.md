@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 12281
+stars: 12331
 description: |-
     The official TypeScript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk
@@ -103,7 +103,8 @@ npm install @modelcontextprotocol/hono hono
 Here is what an MCP server looks like. This minimal example exposes a single `greet` tool over stdio:
 
 ```typescript
-import { McpServer, StdioServerTransport } from '@modelcontextprotocol/server';
+import { McpServer } from '@modelcontextprotocol/server';
+import { StdioServerTransport } from '@modelcontextprotocol/server/stdio';
 import * as z from 'zod/v4';
 
 const server = new McpServer({ name: 'greeting-server', version: '1.0.0' });

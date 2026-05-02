@@ -1,6 +1,6 @@
 ---
 project: arrow-js
-stars: 3473
+stars: 3478
 description: |-
     The first UI framework for the agentic era — tiny, performant, with WASM sandboxes for safe code execution.
 url: https://github.com/standardagents/arrow-js

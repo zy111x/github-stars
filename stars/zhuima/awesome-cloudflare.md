@@ -1,10 +1,12 @@
 ---
 project: awesome-cloudflare
-stars: 13657
+stars: 13718
 description: |-
     ⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.
 url: https://github.com/zhuima/awesome-cloudflare
 ---
+
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/zhuima-awesome-cloudflare-badge.png)](https://mseep.ai/app/zhuima-awesome-cloudflare)
 
 <div align="center">
 

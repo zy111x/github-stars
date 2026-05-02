@@ -1,6 +1,6 @@
 ---
 project: qr
-stars: 330
+stars: 331
 description: |-
     Minimal 0-dep QR code generator & reader
 url: https://github.com/paulmillr/qr
@@ -11,7 +11,7 @@ url: https://github.com/paulmillr/qr
 Minimal 0-dependency QR code generator & reader.
 
 - 🔒 Auditable, 0-dependency
-- 🏎 Fast: [faster](#speed) than all JS implementations
+- 🏎 [Fast](#speed): aims to be faster than all JS implementations
 - 🔍 Reliable: 100MB+ of extensive test vectors ensure correctness
 - 🏞️ Encoding (generating) supports ASCII, term, gif, svg and png codes
 - 📷 Decoding (reading) supports camera feed input, files and non-browser environments

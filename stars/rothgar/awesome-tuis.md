@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 18449
+stars: 18562
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis

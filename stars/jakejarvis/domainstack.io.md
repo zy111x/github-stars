@@ -1,6 +1,6 @@
 ---
 project: domainstack.io
-stars: 250
+stars: 254
 description: |-
     🧰 All-in-one domain name intelligence as a service
 url: https://github.com/jakejarvis/domainstack.io
@@ -55,7 +55,7 @@ url: https://github.com/jakejarvis/domainstack.io
 - [**IPLocate.io**](https://www.iplocate.io/)
 - **PostHog** (analytics)
 - **Turborepo** (monorepo)
-- **Vitest** + **Playwright** (testing), **Biome** (linting)
+- **Vitest** + **Playwright** (testing), **oxlint/oxfmt** (linting)
 
 ## Project Structure
 
@@ -70,9 +70,7 @@ domainstack.io/
 │   ├── types/               # Shared TypeScript types
 │   ├── typescript-config/   # Shared TypeScript configs
 │   └── ui/                  # Shared UI primitives
-├── turbo.json               # Turborepo task configuration
-├── pnpm-workspace.yaml      # pnpm workspace definition
-└── biome.json               # Linting/formatting config
+└── turbo.json               # Turborepo task configuration
 ```
 
 ## Development

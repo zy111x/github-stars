@@ -1,6 +1,6 @@
 ---
 project: nord
-stars: 6803
+stars: 6805
 description: |-
     An arctic, north-bluish color palette.
 url: https://github.com/nordtheme/nord

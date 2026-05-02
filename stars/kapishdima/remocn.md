@@ -1,6 +1,6 @@
 ---
 project: remocn
-stars: 346
+stars: 360
 description: |-
     Production-ready animations, transitions, backgrounds, and scenes for Remotion. A shadcn registry that lets you `npx shadcn add` polished video components into any Remotion project. Built for solo builders shipping demo videos fast
 url: https://github.com/kapishdima/remocn

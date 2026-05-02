@@ -1,8 +1,8 @@
 ---
 project: chinese-poetry
-stars: 51315
+stars: 51373
 description: |-
-    The most comprehensive database of Chinese poetry 🧶最全中华古诗词数据库,  唐宋两朝近一万四千古诗人,  接近5.5万首唐诗加26万宋诗.  两宋时期1564位词人，21050首词。
+    The most comprehensive database of Chinese poetry 🧶最全中华古诗词数据库,  唐宋两朝近一万四千古诗人,  接近5.5万首唐诗加26万宋诗.  两宋时期1564位词人，21050首词。 欢迎参加飞书AI先锋诗活动  https://bytedance.aiforce.cloud/app/app_4jvnd48x7khm1
 url: https://github.com/chinese-poetry/chinese-poetry
 ---
 
@@ -11,6 +11,12 @@ url: https://github.com/chinese-poetry/chinese-poetry
       <img src="https://avatars3.githubusercontent.com/u/30764933?s=200&v=4" alt="chinese-poetry">
   </a>
 </p>
+
+# 欢迎参加飞书「写给AI先锋的诗」活动
+让最懂你的工作伙伴，讲述你的故事
+
+[参与入口](https://bytedance.aiforce.cloud/app/app_4jvnd48x7khm1): https://bytedance.aiforce.cloud/app/app_4jvnd48x7khm1
+
 
 <h2 align="center">chinese-poetry: 最全中文诗歌古典文集数据库</h2>
 

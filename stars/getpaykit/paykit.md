@@ -1,6 +1,6 @@
 ---
 project: paykit
-stars: 868
+stars: 889
 description: |-
     The billing framework for TypeScript. Code-first products, handles Stripe, webhooks, and usage state, runs in your app.
 url: https://github.com/getpaykit/paykit
@@ -12,9 +12,9 @@ url: https://github.com/getpaykit/paykit
   <a name="readme-top"></a>
   <a href="https://paykit.sh">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="landing/public/brand/logo-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="landing/public/brand/logo-light.svg">
-      <img alt="PayKit" src="landing/public/brand/logo-light.svg" height="120">
+      <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/brand/logo-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="apps/web/public/brand/logo-light.svg">
+      <img alt="PayKit" src="apps/web/public/brand/logo-light.svg" height="120">
     </picture>
   </a>
 </p>
@@ -42,7 +42,7 @@ url: https://github.com/getpaykit/paykit
 
 ## What is PayKit?
 
-PayKit is an embedded billing framework for TypeScript apps. It sits inside your app, uses your database, and gives you a single API to manage plans, subscriptions, entitlements, and usage billing without touching provider dashboards.
+PayKit is an embedded billing framework for TypeScript apps. It sits inside your app, uses your database, and gives you a single API to manage products, subscriptions, entitlements, and usage billing without touching provider dashboards.
 
 ```ts
 import { stripe } from "@paykitjs/stripe";
@@ -70,7 +70,7 @@ export const paykit = createPayKit({
     webhookSecret: process.env.STRIPE_WEBHOOK_SECRET!,
   }),
   database: process.env.DATABASE_URL!,
-  plans: [free, pro],
+  products: [free, pro],
 });
 ```
 

@@ -1,6 +1,6 @@
 ---
 project: opn
-stars: 93
+stars: 92
 description: |-
     🦄 Your open-source bio page.
 url: https://github.com/remvze/opn

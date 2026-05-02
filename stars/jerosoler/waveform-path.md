@@ -1,6 +1,6 @@
 ---
 project: waveform-path
-stars: 129
+stars: 130
 description: |-
     🎙 Generator waveform paths for SVG 🎶
 url: https://github.com/jerosoler/waveform-path

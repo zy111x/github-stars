@@ -1,6 +1,6 @@
 ---
 project: between.js
-stars: 708
+stars: 707
 description: |-
     Lightweight JavaScript (ES6) tweening engine
 url: https://github.com/sasha240100/between.js

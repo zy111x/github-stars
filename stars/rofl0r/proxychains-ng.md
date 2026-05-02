@@ -1,6 +1,6 @@
 ---
 project: proxychains-ng
-stars: 10569
+stars: 10580
 description: |-
     proxychains ng (new generation) - a preloader which hooks calls to sockets in dynamically linked programs and redirects it through one or more socks/http proxies. continuation of the unmaintained proxychains project. the sf.net page is currently not updated, use releases from github release page instead.
 url: https://github.com/rofl0r/proxychains-ng
@@ -271,6 +271,15 @@ Known Problems:
   there are unconfirmed reports that it works as root though.
   musl libc is unaffected from the bug.
 
+Useful links
+------------
+the following sites may prove useful to check for leaks:
+https://ipfighter.com/
+https://browserleaks.com/webrtc
+https://dnsleaktest.com
+http://check.torproject.org - tor specific
+http://ifconfig.me - can be used via curl
+http://ifconfig.io/
 
 Community:
 ----------

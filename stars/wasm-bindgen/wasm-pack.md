@@ -1,6 +1,6 @@
 ---
 project: wasm-pack
-stars: 7155
+stars: 7158
 description: |-
     📦✨ your favorite rust -> wasm workflow tool!
 url: https://github.com/wasm-bindgen/wasm-pack
@@ -15,14 +15,14 @@ url: https://github.com/wasm-bindgen/wasm-pack
   </p>
 
   <p>
-    <a href="https://github.com/drager/wasm-pack/actions/workflows/test.yml"><img alt="Build Status" src="https://github.com/drager/wasm-pack/actions/workflows/test.yml/badge.svg?branch=master"/></a>
+    <a href="https://github.com/wasm-bindgen/wasm-pack/actions/workflows/test.yml"><img alt="Build Status" src="https://github.com/wasm-bindgen/wasm-pack/actions/workflows/test.yml/badge.svg?branch=master"/></a>
     <a href="https://crates.io/crates/wasm-pack"><img alt="crates.io" src="https://img.shields.io/crates/v/wasm-pack"/></a>
   </p>
 
   <h3>
-    <a href="https://drager.github.io/wasm-pack/book">Docs</a>
+    <a href="https://wasm-bindgen.github.io/wasm-pack/book">Docs</a>
     <span> | </span>
-    <a href="https://github.com/drager/wasm-pack/blob/master/CONTRIBUTING.md">Contributing</a>
+    <a href="https://github.com/wasm-bindgen/wasm-pack/blob/master/CONTRIBUTING.md">Contributing</a>
     <span> | </span>
     <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
   </h3>
@@ -46,21 +46,21 @@ alongside any javascript packages in workflows that you already use, such as [we
 
 This project requires Rust 1.30.0 or later.
 
-- [Development Environment](https://drager.github.io/wasm-pack/book/prerequisites/index.html)
-- [Installation](https://drager.github.io/wasm-pack/installer)
+- [Development Environment](https://wasm-bindgen.github.io/wasm-pack/book/prerequisites/index.html)
+- [Installation](https://wasm-bindgen.github.io/wasm-pack/installer)
 
 ## ⚡ Quickstart Guide
 
 Visit the [quickstart guide] in our documentation.
 
-[quickstart guide]: https://drager.github.io/wasm-pack/book/quickstart.html
+[quickstart guide]: https://wasm-bindgen.github.io/wasm-pack/book/quickstart.html
 
 ## 🎙️ Commands
 
-- [`new`](https://drager.github.io/wasm-pack/book/commands/new.html): Generate a new RustWasm project using a template
-- [`build`](https://drager.github.io/wasm-pack/book/commands/build.html): Generate an npm wasm pkg from a rustwasm crate
-- [`test`](https://drager.github.io/wasm-pack/book/commands/test.html): Run browser tests
-- [`pack` and `publish`](https://drager.github.io/wasm-pack/book/commands/pack-and-publish.html): Create a tarball of your rustwasm pkg and/or publish to a registry
+- [`new`](https://wasm-bindgen.github.io/wasm-pack/book/commands/new.html): Generate a new RustWasm project using a template
+- [`build`](https://wasm-bindgen.github.io/wasm-pack/book/commands/build.html): Generate an npm wasm pkg from a rustwasm crate
+- [`test`](https://wasm-bindgen.github.io/wasm-pack/book/commands/test.html): Run browser tests
+- [`pack` and `publish`](https://wasm-bindgen.github.io/wasm-pack/book/commands/pack-and-publish.html): Create a tarball of your rustwasm pkg and/or publish to a registry
 
 ## 📝 Logging
 
@@ -79,7 +79,7 @@ RUST_LOG=info wasm-pack build
 Read our [guide] on getting up and running for developing `wasm-pack`, and
 check out our [contribution policy].
 
-[guide]: https://drager.github.io/wasm-pack/book/contributing.html
+[guide]: https://wasm-bindgen.github.io/wasm-pack/book/contributing.html
 [contribution policy]: CONTRIBUTING.md
 
 ## 🤹‍♀️ Governance

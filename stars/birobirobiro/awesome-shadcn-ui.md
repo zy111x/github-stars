@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 19404
+stars: 19451
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -139,6 +139,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | launch-ui | Landing page components with React, Shadcn/ui and Tailwind. | [Link](https://www.launchuicomponents.com/) | 2024-12-27T12:56:05.000Z |
 | lingua-time | Smart datetime picker with natural language input. | [Link](https://github.com/nainglinnkhant/lingua-time) | 2024-12-27T12:56:05.000Z |
 | linked-chart | Chart component linked with data-table. | [Link](https://github.com/ardasisbot/linked-chart) | 2025-02-03T19:05:16.000Z |
+| loading-ui | Curated, copy-friendly spinners, loaders, and loading-state animations for the web—free and open source. | [Link](https://loading-ui.com/) | 2026-04-25T12:00:00.000Z |
 | lukacho-ui | Next Generation UI Components. | [Link](https://ui.lukacho.com/components) | 2024-12-27T12:56:05.000Z |
 | magicui | React components for landing pages with tailwindcss + framer motion. | [Link](https://magicui.design) | 2024-12-27T12:56:05.000Z |
 | maily.to | Notion-like powerful email editor. | [Link](https://github.com/arikchakma/maily.to) | 2024-12-27T12:56:05.000Z |
@@ -246,6 +247,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | shadcn-ui-templates | Free & Premium templates collection. | [Link](https://shadcnui-templates.com) | 2024-12-27T12:56:05.000Z |
 | shadcnship | Production-ready shadcn/ui component registry for building modern SaaS applications with Next.js, TypeScript, and Tailwind CSS. | [Link](https://github.com/arnaudvolp/shadcnship) | 2026-01-31T22:05:02.000Z |
 | shadcn-event-calendar | A beautiful and flexible event calendar component inspired by Google Calendar and Notion, built with Shadcn UI, TailwindCSS, and Framer Motion. | [Link](https://shadcn-event-calendar.vercel.app) | 2025-07-16T12:35:38.000Z |
+| shieldcn | Shields.io alternative that renders GitHub badges as shadcn/ui Button components via Satori. Supports npm, GitHub, Discord, Reddit badges with dark/light mode, 6 variants, and 40k+ icons. | [Link](https://shieldcn.dev) | 2026-04-25T00:00:00.000Z |
 | shsfui | Motion-first React components built with Tailwind CSS + Framer Motion. | [Link](https://www.shsfui.com) | 2025-04-03T20:04:21.000Z |
 | shuip | Provides ready-to-use, business-focused components that help you ship faster. | [Link](https://shuip.plvo.dev/docs) | 2025-06-10T16:48:32.000Z |
 | siddz-ui | A curated collection of modern, reusable React components. Built with performance and accessibility in mind. Copy, paste, and customize. | [Link](https://siddz.com/components) | 2026-02-13T02:00:37.000Z |
@@ -363,6 +365,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | jobsync | JobSync is a job seekers' assistant to manage job search efficiently. | [Link](https://github.com/Gsync/jobsync) | 2024-12-27T12:56:05.000Z |
 | keyzen | KeyZen is a small side project: a clean, browser-based typing speed test built for practice and fun. It is open source and free to use or fork. | [Link](https://keyzen.theshiva.xyz/) | 2026-04-24T20:24:48.000Z |
 | memfree | Open-source hybrid AI search engine, instantly get accurate answers from the internet, bookmarks, notes, and docs. Built using Next.js and shadcn/ui. | [Link](https://github.com/memfreeme/memfree) | 2024-12-27T12:56:05.000Z |
+| memoire | MCP server and CLI for shadcn-native Design CI: diagnose UI debt, extract Tailwind tokens, export shadcn registries, and plan safe UI fixes. | [Link](https://github.com/sarveshsea/m-moire) | 2026-04-26T17:55:21.000Z |
 | opensearch-ai | SearchGPT/Perplexity clone but personalized for you. | [Link](https://github.com/supermemoryai/opensearch-ai) | 2024-12-27T12:56:05.000Z |
 | open-ui | The Open Standard for Generative UI | [Link](https://www.openui.com/) | 2026-03-20T17:06:27.000Z |
 | pagegen.ai | An AI Page Generator with Claude AI, React, and shadcn/ui. Generate web pages from text, screenshots, and templates with one click. | [Link](https://pagegen.ai) | 2024-12-27T12:56:05.000Z |

@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 3527
+stars: 3550
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -186,7 +186,7 @@ By default, `email-check` is enabled.
 Note that in the past lychee could be configured to use either OpenSSL or Rustls.
 [It was decided](https://github.com/lycheeverse/lychee/pull/1928)
 to fully switch to Rustls and drop OpenSSL support.
-Please tell us if this this negatively affects you in any way.
+Please tell us if this negatively affects you in any way.
 
 ## Features
 

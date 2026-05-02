@@ -1,6 +1,6 @@
 ---
 project: coolify
-stars: 54193
+stars: 54511
 description: |-
     An open-source, self-hostable PaaS alternative to Vercel, Heroku & Netlify that lets you easily deploy static sites, databases, full-stack applications and 280+ one-click services on your own servers.
 url: https://github.com/coollabsio/coolify
@@ -68,7 +68,7 @@ Thank you so much!
 * [MVPS](https://www.mvps.net?ref=coolify.io) - Cheap VPS servers at the highest possible quality
 * [SerpAPI](https://serpapi.com?ref=coolify.io) - Google Search API — Scrape Google and other search engines from our fast, easy, and complete API
 * [ScreenshotOne](https://screenshotone.com?ref=coolify.io) - Screenshot API for devs
-*
+* [PrivateAlps](https://privatealps.net?ref=coolify.io) - Cloud Services Provider, VPS, servers Infrastructure for people who care about privacy and control
 
 ### Big Sponsors
 
@@ -159,6 +159,10 @@ Thank you so much!
 <a href="https://capgo.app/?utm_source=coolify.io"><img width="60px" alt="Cap-go" src="https://github.com/cap-go.png"/></a>
 <a href="https://interviewpal.com/?utm_source=coolify.io"><img width="60px" alt="InterviewPal" src="/public/svgs/interviewpal.svg"/></a>
 <a href="https://transcript.lol/?utm_source=coolify.io"><img width="60px" alt="Transcript LOL" src="https://transcript.lol/logo.png"/></a>
+<a href="https://youstable.com/?utm_source=coolify.io"><img width="60px" alt="YouStable" src="https://github.com/youstable.png"/></a>
+<a href="https://github.com/mindedtech?utm_source=coolify.io"><img width="60px" alt="MindedTech" src="https://github.com/mindedtech.png"/></a>
+<a href="https://netrouting.com/?utm_source=coolify.io"><img width="60px" alt="NetRouting" src="https://github.com/netroutingcom.png"/></a>
+<a href="https://github.com/parsecph?utm_source=coolify.io"><img width="60px" alt="ParsecPH" src="https://github.com/parsecph.png"/></a>
 
 
 ...and many more at [GitHub Sponsors](https://github.com/sponsors/coollabsio)

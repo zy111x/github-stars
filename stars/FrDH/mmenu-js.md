@@ -1,6 +1,6 @@
 ---
 project: mmenu-js
-stars: 2577
+stars: 2576
 description: |-
     The best javascript plugin for app look-alike on- and off-canvas menus with sliding submenus for your website and webapp.
 url: https://github.com/FrDH/mmenu-js

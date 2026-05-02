@@ -1,6 +1,6 @@
 ---
 project: stacks-cli
-stars: 2005
+stars: 2003
 description: |-
     📊 Analyze website stack from the terminal  💻 
 url: https://github.com/WeiChiaChang/stacks-cli

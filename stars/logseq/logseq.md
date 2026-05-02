@@ -1,6 +1,6 @@
 ---
 project: logseq
-stars: 42406
+stars: 42587
 description: |-
     A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: https://logseq.io/p/NX4mc_ggEV
 url: https://github.com/logseq/logseq
@@ -176,6 +176,10 @@ us improve Logseq. We look forward to your contributions 🚀
 If you want to set up a development environment for the Logseq web or desktop app, please refer to the [Develop Logseq](docs/develop-logseq.md) guide for macOS/Linux users and the [Develop Logseq on Windows](docs/develop-logseq-on-windows.md) guide for Windows users.
 
 In addition to these guides, you can also find other helpful resources in the [docs/](docs/) folder, such as the [Guide for Contributing to Translations](docs/contributing-to-translations.md), the [Docker Web App Guide](docs/docker-web-app-guide.md) and the [mobile development guide](docs/develop-logseq-on-mobile.md)
+
+### 🧰 Logseq CLI (Node)
+
+Logseq CLI documentation is maintained in `docs/cli/logseq-cli.md`.
 
 ## ✨ Inspiration
 

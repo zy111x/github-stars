@@ -1,6 +1,6 @@
 ---
 project: vinext
-stars: 7912
+stars: 7944
 description: |-
     Vite plugin that reimplements the Next.js API surface — deploy anywhere
 url: https://github.com/cloudflare/vinext

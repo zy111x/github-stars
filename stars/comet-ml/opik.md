@@ -1,6 +1,6 @@
 ---
 project: opik
-stars: 19046
+stars: 19161
 description: |-
     Debug, evaluate, and monitor your LLM applications, RAG systems, and agentic workflows with comprehensive tracing, automated evaluations, and production-ready dashboards.
 url: https://github.com/comet-ml/opik
@@ -22,7 +22,7 @@ url: https://github.com/comet-ml/opik
 </h1>
 <h2 align="center" style="border-bottom: none">Open-source AI Observability, Evaluation, and Optimization</h2>
 <p align="center">
-Opik helps you build, test, and optimize generative AI application that run better, from prototype to production.  From RAG chatbots to code assistants to complex agentic systems, Opik provides comprehensive tracing, evaluation, and automatic prompt and tool optimization to take the guesswork out of AI development.
+Opik helps you build, test, and optimize generative AI applications that run better, from prototype to production.  From RAG chatbots to code assistants to complex agentic systems, Opik provides comprehensive tracing, evaluation, and automatic prompt and tool optimization to take the guesswork out of AI development.
 </p>
 
 <div align="center">

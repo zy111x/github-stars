@@ -1,6 +1,6 @@
 ---
 project: advanced-imessage-kit
-stars: 175
+stars: 176
 description: |-
     The Typescript SDK for Next Level iMessage Automation
 url: https://github.com/photon-hq/advanced-imessage-kit

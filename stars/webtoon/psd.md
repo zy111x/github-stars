@@ -1,6 +1,6 @@
 ---
 project: psd
-stars: 1330
+stars: 1331
 description: |-
     Fast zero-dependency PSD parser for the web and Node.js
 url: https://github.com/webtoon/psd

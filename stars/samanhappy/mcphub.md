@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 2033
+stars: 2047
 description: |-
     A unified hub for centrally managing and dynamically orchestrating multiple MCP servers/APIs into separate endpoints with flexible routing strategies
 url: https://github.com/samanhappy/mcphub
@@ -74,6 +74,8 @@ docker run -p 3000:3000 -e ADMIN_PASSWORD=your-secure-password samanhappy/mcphub
 ```
 
 > **Tip:** Change the admin password after first login for security.
+
+> **Headless mode:** Set `DISABLE_WEB=true` to skip serving the bundled dashboard UI and run MCPHub with only the backend/API and MCP endpoints. This is useful when you want to manage servers directly from `mcp_settings.json`.
 
 ### Connect AI Clients
 

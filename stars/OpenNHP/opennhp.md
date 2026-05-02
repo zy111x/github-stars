@@ -1,6 +1,6 @@
 ---
 project: opennhp
-stars: 13779
+stars: 13784
 description: |-
     A lightweight, cryptography-powered, open-source toolkit built to enforce Zero Trust security for infrastructure, applications, and data in the AI-driven world.
 url: https://github.com/OpenNHP/opennhp
@@ -29,7 +29,7 @@ url: https://github.com/OpenNHP/opennhp
 - **Network-infrastructure Hiding Protocol (NHP):** Conceals server ports, IP addresses, and domain names to protect applications and infrastructure from unauthorized access.
 - **Data-content Hiding Protocol (DHP):** Ensures data security and privacy via encryption and confidential computing, making data *"usable but not visible."*
 
-**[Website](https://opennhp.org) · [Documentation](https://docs.opennhp.org) · [Live Demo](https://opennhp.org/demo/) · [Discord](https://discord.gg/CpyVmspx5x)**
+**[Website](https://opennhp.org) · [Vision](https://opennhp.org/vision/) · [Live Demo](https://opennhp.org/demo/) · [Documentation](https://docs.opennhp.org) · [Discord](https://discord.gg/CpyVmspx5x)**
 
 ---
 
@@ -61,11 +61,16 @@ OpenNHP follows a modular design with three core components, inspired by the [NI
 
 ![OpenNHP architecture](docs/images/OpenNHP_Arch.gif)
 
-| Component | Role |
+| Core Component | Role |
 |-----------|------|
 | **NHP-Agent** | Client that sends encrypted knock requests to gain access |
 | **NHP-Server** | Authenticates and authorizes requests; runs separately and is architecturally decoupled from the protected host |
 | **NHP-AC** | Access controller that manages firewall rules on the protected server |
+
+| Addon Component | Role |
+|-----------|------|
+| **NHP-Relay** | HTTP-to-UDP bridge enabling browser-based agents to send NHP knocks via HTTPS |
+| **NHP-KGC** | Key Generation Center for Identity-Based Cryptography (IBC) |
 
 ### Protocol flow
 
@@ -104,8 +109,8 @@ opennhp/
     ├── server/       # NHP-Server daemon
     ├── ac/           # NHP-AC (access controller) daemon
     ├── db/           # NHP-DB (Data Broker for DHP)
-    ├── kgc/          # Key Generation Center (IBC)
-    └── relay/        # TCP relay
+    ├── kgc/          # NHP-KGC (Key Generation Center)
+    └── relay/        # NHP-Relay daemon
 ```
 
 ---
@@ -129,7 +134,9 @@ make agentd    # NHP-Agent
 make serverd   # NHP-Server
 make acd       # NHP-AC
 make db        # NHP-DB
-make kgc       # Key Generation Center
+make relayd    # NHP-Relay
+make kgc       # NHP-KGC
+
 ```
 
 ### Test

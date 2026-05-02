@@ -1,6 +1,6 @@
 ---
 project: scalar
-stars: 14849
+stars: 14901
 description: |-
     Scalar is an open-source API platform:　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　🌐 Modern REST API Client　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　📖 Beautiful API References　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　✨ 1st-Class OpenAPI/Swagger Support
 url: https://github.com/scalar/scalar
@@ -394,6 +394,13 @@ Contributions are welcome! Read the [`CONTRIBUTING`](CONTRIBUTING.md) guide.
                 </a>
             </td>
             <td align="center">
+                <a href="https://github.com/alonfaraj">
+                    <img src="https://avatars.githubusercontent.com/u/15960497?v=4" width="100;" alt="alonfaraj"/>
+                    <br />
+                    <sub><b>alonfaraj</b></sub>
+                </a>
+            </td>
+            <td align="center">
                 <a href="https://github.com/Amorim33">
                     <img src="https://avatars.githubusercontent.com/u/42624869?v=4" width="100;" alt="Amorim33"/>
                     <br />
@@ -408,17 +415,10 @@ Contributions are welcome! Read the [`CONTRIBUTING`](CONTRIBUTING.md) guide.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/ivanagas">
-                    <img src="https://avatars.githubusercontent.com/u/34755028?v=4" width="100;" alt="ivanagas"/>
+                <a href="https://github.com/YagUber">
+                    <img src="https://avatars.githubusercontent.com/u/20715993?v=4" width="100;" alt="YagUber"/>
                     <br />
-                    <sub><b>ivanagas</b></sub>
-                </a>
-            </td>
-            <td align="center">
-                <a href="https://github.com/wilhelmer">
-                    <img src="https://avatars.githubusercontent.com/u/2234833?v=4" width="100;" alt="wilhelmer"/>
-                    <br />
-                    <sub><b>wilhelmer</b></sub>
+                    <sub><b>YagUber</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -431,17 +431,17 @@ Contributions are welcome! Read the [`CONTRIBUTING`](CONTRIBUTING.md) guide.
 		</tr>
 		<tr>
             <td align="center">
-                <a href="https://github.com/YagUber">
-                    <img src="https://avatars.githubusercontent.com/u/20715993?v=4" width="100;" alt="YagUber"/>
+                <a href="https://github.com/wilhelmer">
+                    <img src="https://avatars.githubusercontent.com/u/2234833?v=4" width="100;" alt="wilhelmer"/>
                     <br />
-                    <sub><b>YagUber</b></sub>
+                    <sub><b>wilhelmer</b></sub>
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/RemcoGoy">
-                    <img src="https://avatars.githubusercontent.com/u/34539109?v=4" width="100;" alt="RemcoGoy"/>
+                <a href="https://github.com/ivanagas">
+                    <img src="https://avatars.githubusercontent.com/u/34755028?v=4" width="100;" alt="ivanagas"/>
                     <br />
-                    <sub><b>RemcoGoy</b></sub>
+                    <sub><b>ivanagas</b></sub>
                 </a>
             </td>
             <td align="center">
@@ -452,10 +452,10 @@ Contributions are welcome! Read the [`CONTRIBUTING`](CONTRIBUTING.md) guide.
                 </a>
             </td>
             <td align="center">
-                <a href="https://github.com/alonfaraj">
-                    <img src="https://avatars.githubusercontent.com/u/15960497?v=4" width="100;" alt="alonfaraj"/>
+                <a href="https://github.com/RemcoGoy">
+                    <img src="https://avatars.githubusercontent.com/u/34539109?v=4" width="100;" alt="RemcoGoy"/>
                     <br />
-                    <sub><b>alonfaraj</b></sub>
+                    <sub><b>RemcoGoy</b></sub>
                 </a>
             </td>
             <td align="center">
