@@ -1,6 +1,6 @@
 ---
 project: acme.sh
-stars: 46455
+stars: 46515
 description: |-
     A pure Unix shell script ACME client for SSL / TLS certificate automation
 url: https://github.com/acmesh-official/acme.sh
@@ -154,7 +154,7 @@ url: https://github.com/acmesh-official/acme.sh
 | 🌐 DNS mode | Use DNS TXT records |
 | 🔗 [DNS alias mode](https://github.com/acmesh-official/acme.sh/wiki/DNS-alias-mode) | Use DNS alias for verification |
 | 📡 [Stateless mode](https://github.com/acmesh-official/acme.sh/wiki/Stateless-Mode) | Stateless verification |
-| 📌 DNS persist mode | Persistent DNS TXT record ([draft-ietf-acme-dns-persist-01](https://datatracker.ietf.org/doc/draft-ietf-acme-dns-persist/)) |
+| 📌 [DNS persist mode](https://github.com/acmesh-official/acme.sh/wiki/DNS-persist-mode) | Persistent DNS TXT record ([draft-ietf-acme-dns-persist-01](https://datatracker.ietf.org/doc/draft-ietf-acme-dns-persist/)) |
 
 ---
 
@@ -407,6 +407,8 @@ acme.sh --renew -d example.com
 
 ### 🔟 Use DNS Persist Mode
 
+📖 Wiki: https://github.com/acmesh-official/acme.sh/wiki/DNS-persist-mode
+
 📚 Spec: [draft-ietf-acme-dns-persist-01](https://datatracker.ietf.org/doc/draft-ietf-acme-dns-persist/)
 
 DNS persist mode lets you place a **single, long‑lived `_validation-persist` TXT record** in your zone and reuse it for every subsequent issuance and renewal. There is no per-issuance challenge token, so renewals require **no DNS edits** — useful when DNS API access is not available but you still want unattended renewals.
@@ -509,6 +511,8 @@ acme.sh --renew -d example.com --force --ecc
 ```
 
 #### 📡 ACME Renewal Information (ARI) — RFC 9773
+
+📖 Wiki: https://github.com/acmesh-official/acme.sh/wiki/ARI
 
 If the CA exposes a `renewalInfo` endpoint in its ACME directory (Let's Encrypt, ZeroSSL, etc.), `acme.sh` follows [RFC 9773](https://www.rfc-editor.org/rfc/rfc9773.html) automatically — **no flag needed, no opt-in**:
 

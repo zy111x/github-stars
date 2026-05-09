@@ -1,6 +1,6 @@
 ---
 project: json-render
-stars: 14566
+stars: 14697
 description: |-
     The Generative UI framework
 url: https://github.com/vercel-labs/json-render
@@ -144,6 +144,7 @@ function Dashboard({ spec }) {
 | `@json-render/react-email`  | React Email renderer for HTML/plain-text emails from specs             |
 | `@json-render/ink`          | Ink terminal renderer with built-in components for interactive TUIs.   |
 | `@json-render/image`        | Image renderer for SVG/PNG output (OG images, social cards) via Satori |
+| `@json-render/directives`   | Pre-built custom directives — $format, $math, $concat, $count, $truncate, $pluralize, $join, $t (i18n) |
 | `@json-render/codegen`      | Utilities for generating code from json-render UI trees                |
 | `@json-render/devtools`     | Framework-agnostic devtools core — panel UI, event store, picker, stream taps |
 | `@json-render/devtools-react`   | React adapter for `@json-render/devtools` (drop-in `<JsonRenderDevtools />`)     |

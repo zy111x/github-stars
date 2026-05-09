@@ -1,6 +1,6 @@
 ---
 project: impeccable
-stars: 24309
+stars: 26552
 description: |-
     The design language that makes your AI harness better at design.
 url: https://github.com/pbakaus/impeccable
@@ -14,30 +14,30 @@ The vocabulary you didn't know you needed. 1 skill, 23 commands, and curated ant
 
 ## Why Impeccable?
 
-Anthropic created [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design), a skill that guides Claude toward better UI design. Impeccable builds on that foundation with deeper expertise and more control.
+Anthropic's [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design) was the first widely-used design skill for Claude. Impeccable started from there.
 
-Every LLM learned from the same generic templates. Without guidance, you get the same predictable mistakes: Inter font, purple gradients, cards nested in cards, gray text on colored backgrounds.
+Every model trained on the same SaaS templates. Skip the guidance and you get the same handful of tells on every project: Inter for everything, purple-to-blue gradients, cards nested in cards, gray text on colored backgrounds, the rounded-square icon tile above every heading.
 
-Impeccable fights that bias with:
-- **An expanded skill** with 7 domain-specific reference files ([view source](source/skills/impeccable/))
-- **23 commands** to audit, review, polish, distill, animate, and more
-- **Curated anti-patterns** that explicitly tell the AI what NOT to do
+Impeccable adds:
+- **7 domain reference files** ([view source](skill/)). Typography, color, motion, spatial, interaction, responsive, UX writing. Load on every command, alongside a brand-vs-product register that adjusts the defaults.
+- **23 commands.** A shared design vocabulary with your AI: `polish`, `audit`, `critique`, `distill`, `animate`, `bolder`, `quieter`, and more.
+- **27 deterministic anti-pattern rules** plus a 12-rule LLM critique pass. CLI and browser extension run the deterministic ones with no LLM and no API key. Each is tied to specific design guidance the skill teaches against.
 
 ## What's Included
 
 ### The Skill: impeccable
 
-A comprehensive design skill with 7 domain-specific references ([view skill](source/skills/impeccable/SKILL.md)):
+A comprehensive design skill with 7 domain-specific references ([view skill](skill/SKILL.md)):
 
 | Reference | Covers |
 |-----------|--------|
-| [typography](source/skills/impeccable/reference/typography.md) | Type systems, font pairing, modular scales, OpenType |
-| [color-and-contrast](source/skills/impeccable/reference/color-and-contrast.md) | OKLCH, tinted neutrals, dark mode, accessibility |
-| [spatial-design](source/skills/impeccable/reference/spatial-design.md) | Spacing systems, grids, visual hierarchy |
-| [motion-design](source/skills/impeccable/reference/motion-design.md) | Easing curves, staggering, reduced motion |
-| [interaction-design](source/skills/impeccable/reference/interaction-design.md) | Forms, focus states, loading patterns |
-| [responsive-design](source/skills/impeccable/reference/responsive-design.md) | Mobile-first, fluid design, container queries |
-| [ux-writing](source/skills/impeccable/reference/ux-writing.md) | Button labels, error messages, empty states |
+| [typography](skill/reference/typography.md) | Type systems, font pairing, modular scales, OpenType |
+| [color-and-contrast](skill/reference/color-and-contrast.md) | OKLCH, tinted neutrals, dark mode, accessibility |
+| [spatial-design](skill/reference/spatial-design.md) | Spacing systems, grids, visual hierarchy |
+| [motion-design](skill/reference/motion-design.md) | Easing curves, staggering, reduced motion |
+| [interaction-design](skill/reference/interaction-design.md) | Forms, focus states, loading patterns |
+| [responsive-design](skill/reference/responsive-design.md) | Mobile-first, fluid design, container queries |
+| [ux-writing](skill/reference/ux-writing.md) | Button labels, error messages, empty states |
 
 ### 23 Commands
 
@@ -46,8 +46,8 @@ All commands are accessed through `/impeccable`:
 | Command | What it does |
 |---------|--------------|
 | `/impeccable craft` | Full shape-then-build flow with visual iteration |
-| `/impeccable teach` | One-time setup: gather design context, write PRODUCT.md and DESIGN.md |
-| `/impeccable document` | Generate DESIGN.md from existing project code |
+| `/impeccable teach` | One-time setup: gather design context, write root PRODUCT.md and DESIGN.md |
+| `/impeccable document` | Generate root DESIGN.md from existing project code |
 | `/impeccable extract` | Pull reusable components and tokens into the design system |
 | `/impeccable shape` | Plan UX/UI before writing code |
 | `/impeccable critique` | UX design review: hierarchy, clarity, emotional resonance |

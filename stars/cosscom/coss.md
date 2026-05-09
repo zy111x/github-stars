@@ -1,21 +1,18 @@
 ---
 project: coss
-stars: 9643
+stars: 9663
 description: |-
-    coss.com is the new holding company of cal.com, the pioneers of open source scheduling infrastructure and cal.com continues to be the 'google search' of our alphabet.
+    coss.com/ui is the official design system of Cal.com
 url: https://github.com/cosscom/coss
 ---
 
 ![coss.com](https://github.com/user-attachments/assets/56dfe7f7-85b7-44ee-b89a-1c30c5c4a156)
 
-<h3 align="center">coss.com (formerly Origin UI)</h3>
-<p align="center">The <strong>everything but AI</strong> company.</p>
+<h3 align="center">coss.com/ui (formerly Origin UI)</h3>
 
 ## About the Project
 
-coss.com is the new holding company of [cal.com](https://cal.com), the pioneers of open source scheduling infrastructure. Our mission is to build a home for amazing open source projects, giving them the support they need to grow and succeed.
-
-We're building the coss stack, a one line `npm install @coss` package that includes everything you need to build your application, from email, SMS, calendar APIs, scheduling, video conferencing, notifications and more.
+coss.com/ui is the official Cal.com Design System.
 
 ## Repository Overview
 

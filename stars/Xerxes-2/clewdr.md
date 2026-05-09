@@ -1,6 +1,6 @@
 ---
 project: clewdr
-stars: 1136
+stars: 1146
 description: |-
     High Performance LLM Reverse Proxy
 url: https://github.com/Xerxes-2/clewdr
@@ -13,7 +13,7 @@ url: https://github.com/Xerxes-2/clewdr
 </p>
 
 ClewdR is a Rust proxy for Claude (Claude.ai, Claude Code).  
-It keeps resource usage low, serves OpenAI-style endpoints, and ships with a small React admin UI for managing cookies and settings.
+It keeps resource usage low, serves OpenAI-style endpoints, and ships with a Leptos/WASM admin UI for managing cookies and settings.
 
 ---
 

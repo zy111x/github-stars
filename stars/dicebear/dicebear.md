@@ -1,6 +1,6 @@
 ---
 project: dicebear
-stars: 8567
+stars: 8607
 description: |-
     DiceBear is an avatar library for designers and developers. 🌍
 url: https://github.com/dicebear/dicebear

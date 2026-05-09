@@ -1,6 +1,6 @@
 ---
 project: logseq
-stars: 42587
+stars: 42734
 description: |-
     A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: https://logseq.io/p/NX4mc_ggEV
 url: https://github.com/logseq/logseq
@@ -82,7 +82,7 @@ The DB version is in beta status while the new mobile app and RTC is in alpha. T
 
 To get started with the DB version:
 * To try the latest web version, go to https://test.logseq.com/.
-* To try the latest desktop version, login to GitHub and go to https://github.com/logseq/logseq/actions/workflows/build-desktop-release.yml and click on the latest release. Scroll to the bottom and under the `Artifacts` section download the artifact for your operating system.
+* To try the latest desktop version, go to https://github.com/logseq/logseq/releases/tag/nightly and download the artifact for your operating system.
 * To try the latest by building from the source code
     * Use `test/db` for stable releases. Fewer bugs and slower updates. Update frequency: days or weeks.
     * Use `master` for the latest updates as they are developed. Expect more bugs and faster changes. Update frequency: hours or days.

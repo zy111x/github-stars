@@ -1,6 +1,6 @@
 ---
 project: data-table-filters
-stars: 2019
+stars: 2029
 description: |-
     Faceted filters, sorting & infinite scroll for React data tables - shadcn/ui + TanStack Table
 url: https://github.com/openstatusHQ/data-table-filters

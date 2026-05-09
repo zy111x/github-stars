@@ -1,6 +1,6 @@
 ---
 project: notify.js
-stars: 1326
+stars: 1325
 description: |-
     A handy wrapper for the Web Notifications API
 url: https://github.com/alexgibson/notify.js

@@ -1,6 +1,6 @@
 ---
 project: hashmd
-stars: 4347
+stars: 4344
 description: |-
     Hackable Markdown Editor and Viewer (WIP)
 url: https://github.com/pd4d10/hashmd

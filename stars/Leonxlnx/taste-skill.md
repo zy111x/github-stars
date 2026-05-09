@@ -1,6 +1,6 @@
 ---
 project: taste-skill
-stars: 14547
+stars: 16441
 description: |-
     Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop 
 url: https://github.com/Leonxlnx/taste-skill
@@ -59,10 +59,10 @@ The [`npx skills add`](https://github.com/vercel-labs/agent-skills) CLI scans th
 npx skills add https://github.com/Leonxlnx/taste-skill
 ```
 
-Install a single skill by name (example):
+Install a single skill by its **install name** (the `name:` field inside the SKILL frontmatter, not the folder name):
 
 ```bash
-npx skills add https://github.com/Leonxlnx/taste-skill --skill "imagegen-frontend-mobile"
+npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"
 ```
 
 You can also copy any `SKILL.md` into your project or paste it into ChatGPT / Codex conversations.
@@ -71,27 +71,29 @@ You can also copy any `SKILL.md` into your project or paste it into ChatGPT / Co
 
 Each skill does one job; you do not need all of them at once. **Implementation skills** output code. **Image-generation skills** output reference images only.
 
-| Skill | Description |
-| --- | --- |
-| **taste-skill** | Default all-rounder for premium frontend output without locking one narrow visual style. |
-| **gpt-taste** | Stricter variant for GPT/Codex: higher layout variance, stronger GSAP direction, aggressive anti-slop. |
-| **image-to-code-skill** | Image-first pipeline: generate site references, analyze them, then implement the frontend to match. |
-| **redesign-skill** | Existing projects: audit the UI first, then fix layout, spacing, hierarchy, styling. |
-| **soft-skill** | Polished, calm, expensive UI with softer contrast, whitespace, premium fonts, spring motion. |
-| **output-skill** | When the model ships half-finished work: full output, no placeholder comments. |
-| **minimalist-skill** | Editorial product UI (Notion/Linear vibes), restrained palette, crisp structure. |
-| **brutalist-skill** | ⚠️ `BETA` Hard mechanical language: Swiss type, sharp contrast, experimental layout. |
-| **stitch-skill** | Google Stitch-compatible rules, including optional `DESIGN.md` export format. |
+The `Install name` column is the exact value you pass to `--skill`.
+
+| Skill (folder) | Install name | Description |
+| --- | --- | --- |
+| **taste-skill** | `design-taste-frontend` | Default all-rounder for premium frontend output without locking one narrow visual style. |
+| **gpt-tasteskill** | `gpt-taste` | Stricter variant for GPT/Codex: higher layout variance, stronger GSAP direction, aggressive anti-slop. |
+| **image-to-code-skill** | `image-to-code` | Image-first pipeline: generate site references, analyze them, then implement the frontend to match. |
+| **redesign-skill** | `redesign-existing-projects` | Existing projects: audit the UI first, then fix layout, spacing, hierarchy, styling. |
+| **soft-skill** | `high-end-visual-design` | Polished, calm, expensive UI with softer contrast, whitespace, premium fonts, spring motion. |
+| **output-skill** | `full-output-enforcement` | When the model ships half-finished work: full output, no placeholder comments. |
+| **minimalist-skill** | `minimalist-ui` | Editorial product UI (Notion/Linear vibes), restrained palette, crisp structure. |
+| **brutalist-skill** | `industrial-brutalist-ui` | ⚠️ `BETA` Hard mechanical language: Swiss type, sharp contrast, experimental layout. |
+| **stitch-skill** | `stitch-design-taste` | Google Stitch-compatible rules, including optional `DESIGN.md` export format. |
 
 ### Image generation skills
 
 These produce design images only (no code). Use with ChatGPT Images, Codex image mode, or any agent that generates images.
 
-| Skill | Description |
-| --- | --- |
-| **imagegen-frontend-web** | Website comps: hero, landing, multi-section with strong typography, spacing, anti-slop art direction. |
-| **imagegen-frontend-mobile** | Mobile screens and flows: iOS/Android/cross-platform, mockups, readable type, coherent sets. |
-| **brandkit** | Brand-kit boards: logo directions, palettes, type, identity applications across categories. |
+| Skill (folder) | Install name | Description |
+| --- | --- | --- |
+| **imagegen-frontend-web** | `imagegen-frontend-web` | Website comps: hero, landing, multi-section with strong typography, spacing, anti-slop art direction. |
+| **imagegen-frontend-mobile** | `imagegen-frontend-mobile` | Mobile screens and flows: iOS/Android/cross-platform, mockups, readable type, coherent sets. |
+| **brandkit** | `brandkit` | Brand-kit boards: logo directions, palettes, type, identity applications across categories. |
 
 ### Which one should I use?
 

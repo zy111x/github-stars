@@ -1,6 +1,6 @@
 ---
 project: layzr.js
-stars: 5512
+stars: 5509
 description: |-
     A modern lazy loading library for images.
 url: https://github.com/callmecavs/layzr.js

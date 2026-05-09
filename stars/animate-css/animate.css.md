@@ -1,6 +1,6 @@
 ---
 project: animate.css
-stars: 82534
+stars: 82517
 description: |-
     🍿 A cross-browser library of CSS animations. As easy to use as an easy thing.
 url: https://github.com/animate-css/animate.css

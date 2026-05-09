@@ -1,6 +1,6 @@
 ---
 project: rybbit
-stars: 12037
+stars: 12056
 description: |-
     🐸 Rybbit - open-source and privacy-friendly alternative to Google Analytics that is 10x more intuitive.
 url: https://github.com/rybbit-io/rybbit

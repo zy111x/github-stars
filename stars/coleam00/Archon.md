@@ -1,6 +1,6 @@
 ---
 project: Archon
-stars: 20540
+stars: 21158
 description: |-
     The first open-source harness builder for AI coding. Make AI coding deterministic and repeatable.
 url: https://github.com/coleam00/Archon

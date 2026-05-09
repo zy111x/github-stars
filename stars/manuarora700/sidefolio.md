@@ -1,6 +1,6 @@
 ---
 project: sidefolio
-stars: 181
+stars: 182
 description: |-
     🧑‍💻 Source code for Sidefolio
 url: https://github.com/manuarora700/sidefolio

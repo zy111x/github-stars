@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 38793
+stars: 39006
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building memorable websites.
 url: https://github.com/DavidHDev/react-bits
@@ -151,9 +151,10 @@ Please read the [contribution guide](https://github.com/DavidHDev/react-bits/blo
 
 ## 🌐 Official Ports
 
-| Framework | Link                                  |
-| --------- | ------------------------------------- |
-| Vue.js    | [vue-bits.dev](https://vue-bits.dev/) |
+| Framework | Link                                      |
+| --------- | ----------------------------------------- |
+| Vue.js    | [vue-bits.dev](https://vue-bits.dev/)     |
+| Svelte    | [sveltebits.xyz](https://sveltebits.xyz/) |
 
 ## 📊 Stats
 

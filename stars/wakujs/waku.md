@@ -1,6 +1,6 @@
 ---
 project: waku
-stars: 6257
+stars: 6265
 description: |-
     ⛩️ The minimal React framework
 url: https://github.com/wakujs/waku
@@ -39,7 +39,7 @@ npm create waku@latest
 - `waku build` to generate a production build
 - `waku start` to serve the production build locally
 
-**Node.js version requirement:** `^24.0.0` or `^22.12.0` or `^20.19.0`
+**Node.js version requirement:** `^26.0.0` or `^24.0.0` or `^22.12.0`
 
 ## Rendering
 
@@ -769,7 +769,7 @@ This allows you to have a `dynamic` slice component while keeping the rest of th
 
 ### Link
 
-The `<Link />` component should be used for internal links. It accepts a `to` prop for the destination, which is automatically prefetched ahead of the navigation.
+The `<Link />` component should be used for internal links. It accepts a `to` prop for the destination and handles client-side navigation through Waku's router.
 
 ```tsx
 // ./src/pages/index.tsx
@@ -1034,6 +1034,26 @@ export const getConfig = async () => {
   } as const;
 };
 ```
+
+## Middleware
+
+In the default Waku setup, files in `./src/middleware` are automatically loaded as [Hono middleware](https://hono.dev/docs/guides/middleware). Each file should default export a function that returns a `MiddlewareHandler`.
+
+```ts
+// ./src/middleware/logger.ts
+import type { MiddlewareHandler } from 'hono';
+
+const logger = (): MiddlewareHandler => {
+  return async (c, next) => {
+    console.log(c.req.method, c.req.path);
+    await next();
+  };
+};
+
+export default logger;
+```
+
+If you provide a custom `./src/waku.server.tsx`, pass middleware through the adapter options with `middlewareModules` or `middlewareFns`.
 
 ## Data fetching
 
@@ -1462,10 +1482,9 @@ For advanced users who want to avoid deploying functions, use the server entry f
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/vercel';
 
-export default adapter(
-  fsRouter(import.meta.glob('./**/*.{tsx,ts}', { base: './pages' })),
-  { static: true },
-);
+export default adapter(fsRouter(import.meta.glob('./pages/**/*.{tsx,ts}')), {
+  static: true,
+});
 ```
 
 ### Netlify
@@ -1487,10 +1506,9 @@ For advanced users who want to avoid deploying functions, use the server entry f
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/netlify';
 
-export default adapter(
-  fsRouter(import.meta.glob('./**/*.{tsx,ts}', { base: './pages' })),
-  { static: true },
-);
+export default adapter(fsRouter(import.meta.glob('./pages/**/*.{tsx,ts}')), {
+  static: true,
+});
 ```
 
 ### Cloudflare Workers
@@ -1510,10 +1528,9 @@ wrangler deploy
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/cloudflare';
 
-export default adapter(
-  fsRouter(import.meta.glob('./**/*.{tsx,ts}', { base: './pages' })),
-  { static: true },
-);
+export default adapter(fsRouter(import.meta.glob('./pages/**/*.{tsx,ts}')), {
+  static: true,
+});
 ```
 
 ### Deno Deploy (experimental)
@@ -1524,9 +1541,7 @@ export default adapter(
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/deno';
 
-export default adapter(
-  fsRouter(import.meta.glob('./**/*.{tsx,ts}', { base: './pages' })),
-);
+export default adapter(fsRouter(import.meta.glob('./pages/**/*.{tsx,ts}')));
 ```
 
 ```sh
@@ -1542,9 +1557,7 @@ deployctl deploy --prod dist/serve-deno.js --exclude node_modules
 import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/bun';
 
-export default adapter(
-  fsRouter(import.meta.glob('./**/*.{tsx,ts}', { base: './pages' })),
-);
+export default adapter(fsRouter(import.meta.glob('./pages/**/*.{tsx,ts}')));
 ```
 
 ```sh
@@ -1560,8 +1573,8 @@ import { fsRouter } from 'waku';
 import adapter from 'waku/adapters/aws-lambda';
 
 export default adapter(
-  fsRouter(import.meta.glob('./**/*.{tsx,ts}', { base: './pages' })),
-  streaming: false, // optional, default is false
+  fsRouter(import.meta.glob('./pages/**/*.{tsx,ts}')),
+  { streaming: false }, // optional, default is false
 );
 ```
 

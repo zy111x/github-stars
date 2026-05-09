@@ -1,6 +1,6 @@
 ---
 project: baffle
-stars: 1756
+stars: 1755
 description: |-
     A tiny javascript library for obfuscating and revealing text in DOM elements. :astonished:
 url: https://github.com/camwiegert/baffle

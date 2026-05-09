@@ -1,6 +1,6 @@
 ---
 project: One-Handed-Keyboard
-stars: 1267
+stars: 1276
 description: |-
     null
 url: https://github.com/htx-studio/One-Handed-Keyboard

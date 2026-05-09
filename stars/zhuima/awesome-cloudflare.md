@@ -1,6 +1,6 @@
 ---
 project: awesome-cloudflare
-stars: 13718
+stars: 13781
 description: |-
     ⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.
 url: https://github.com/zhuima/awesome-cloudflare
@@ -35,6 +35,9 @@ url: https://github.com/zhuima/awesome-cloudflare
 欢迎提 pr 和 issues 更新。 部署或操作过程中有任何问题可以提issue或者私信咨询～
 
 ## 在线版本
+
+- [OpenClaw Monitor](https://github.com/flik2002/openclaw-monitor) - Real-time AI agent monitoring dashboard for OpenClaw. Tracks Gateway status, sessions, token usage & trends with Vue 3 + ECharts.
+
 
 [Awesome Cloudflare 在线导航](https://cloudflare.chuhai.tools)
 

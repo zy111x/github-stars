@@ -1,8 +1,8 @@
 ---
 project: paykit
-stars: 889
+stars: 916
 description: |-
-    The billing framework for TypeScript. Code-first products, handles Stripe, webhooks, and usage state, runs in your app.
+    The billing framework for TypeScript. Products in code, handles Stripe, webhooks, and usage state, runs in your app.
 url: https://github.com/getpaykit/paykit
 ---
 
@@ -14,7 +14,7 @@ url: https://github.com/getpaykit/paykit
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/brand/logo-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="apps/web/public/brand/logo-light.svg">
-      <img alt="PayKit" src="apps/web/public/brand/logo-light.svg" height="120">
+      <img alt="PayKit" src="apps/web/public/brand/logo-light.svg" height="100">
     </picture>
   </a>
 </p>
@@ -29,7 +29,7 @@ url: https://github.com/getpaykit/paykit
   <a href="https://paykit.sh"><strong>Website</strong></a> ·
   <a href="https://paykit.sh/docs"><strong>Docs</strong></a> ·
   <a href="https://discord.gg/nzy9NPpFNU"><strong>Discord</strong></a> ·
-  <a href="https://x.com/getpaykit"><strong>Twitter</strong></a>
+  <a href="https://x.com/paykit_sh"><strong>Twitter</strong></a>
 </p>
 
 <p align="center">

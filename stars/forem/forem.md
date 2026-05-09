@@ -1,6 +1,6 @@
 ---
 project: forem
-stars: 22687
+stars: 22696
 description: |-
     For empowering community 🌱
 url: https://github.com/forem/forem

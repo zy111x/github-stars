@@ -1,6 +1,6 @@
 ---
 project: canvas
-stars: 2230
+stars: 2234
 description: |-
     High performance Skia canvas implementation. Zero system dependencies.
 url: https://github.com/Brooooooklyn/canvas
@@ -16,9 +16,6 @@ url: https://github.com/Brooooooklyn/canvas
 > 🚀 Help me to become a full-time open-source developer by [sponsoring me on Github](https://github.com/sponsors/Brooooooklyn)
 
 Google Skia binding to Node.js via [Node-API](https://napi.rs), **0 System dependencies!**
-
-⚠️ This project is in pre-release stage. And there may be some bugs.<br/>
-For details on planned features and future direction please refer to the [Roadmap](https://github.com/Brooooooklyn/canvas/issues/113).
 
 [中文文档](./README-zh.md)
 

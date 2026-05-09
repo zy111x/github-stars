@@ -1,6 +1,6 @@
 ---
 project: iii
-stars: 15487
+stars: 15525
 description: |-
     Effortlessly compose, extend, and observe every service in real-time for the first time ever.
 url: https://github.com/iii-hq/iii
@@ -60,7 +60,14 @@ that is both effortlessly composable, and completely observable.
 
 ## Quick Start
 
-Get started with iii by following the [Quickstart guide](https://iii.dev/docs/quickstart).
+```bash
+iii project init myapp    # scaffold a project
+cd myapp
+iii                       # start the engine
+```
+
+Need to install `iii` first? Full walkthrough at the
+[Quickstart guide](https://iii.dev/docs/quickstart).
 
 ## SDKs
 

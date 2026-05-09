@@ -1,6 +1,6 @@
 ---
 project: wtfjs
-stars: 37626
+stars: 37599
 description: |-
     🤪 A list of funny and tricky JavaScript examples
 url: https://github.com/denysdovhan/wtfjs

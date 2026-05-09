@@ -1,6 +1,6 @@
 ---
 project: domain-digger
-stars: 1107
+stars: 1108
 description: |-
     Full Toolkit for Next-Level Domain Analysis
 url: https://github.com/wotschofsky/domain-digger
@@ -21,7 +21,7 @@ Discover in-depth details of any domain with just a few clicks.
 ## ✨ Features
 
 - **🌍 Comprehensive DNS Lookup:** Access detailed DNS information.
-- **📍 IP Details & Geolocation:** Get precise IP information including location data.
+- **📍 IP Details & Geolocation:** Get precise IP information, including location data.
 - **💡 Smart Suggestions:** Intelligent recommendations for efficient searches.
 - **🔗 Global DNS Lookup:** Perform DNS lookups across different global servers.
 - **🔄 Multiple DNS Resolvers:** Utilize various DNS resolvers for diverse insights.
@@ -70,7 +70,7 @@ Discover in-depth details of any domain with just a few clicks.
 
 ---
 
-> **🤝 Contributing:** Any pull requests and contributions are very welcome. Your ideas and suggestions are greatly appreciated!
+> **🤝 Contributing:** Any pull requests and contributions are welcome. Your ideas and suggestions are greatly appreciated!
 >
 > **[How to run the app](./SETUP.md)**
 >

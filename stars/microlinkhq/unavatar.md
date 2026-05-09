@@ -1,6 +1,6 @@
 ---
 project: unavatar
-stars: 1426
+stars: 1431
 description: |-
     Get unified user avatar from social networks, including Instagram, SoundCloud, Telegram, Twitter, YouTube & more.
 url: https://github.com/microlinkhq/unavatar
@@ -28,8 +28,11 @@ url: https://github.com/microlinkhq/unavatar
   - [Behance](#behance)
   - [Bluesky](#bluesky)
   - [Buy Me a Coffee](#buy-me-a-coffee)
+  - [CodePen](#codepen)
+  - [Cults3D](#cults3d)
   - [DeviantArt](#deviantart)
   - [Discord](#discord)
+  - [Docker Hub](#docker-hub)
   - [Domain](#domain)
   - [Dribbble](#dribbble)
   - [DuckDuckGo](#duckduckgo)
@@ -41,17 +44,20 @@ url: https://github.com/microlinkhq/unavatar
   - [Google](#google)
   - [Google Play](#google-play)
   - [Gravatar](#gravatar)
+  - [Hugging Face](#hugging-face)
   - [Instagram](#instagram)
   - [Ko-fi](#ko-fi)
   - [LinkedIn](#linkedin)
   - [Mastodon](#mastodon)
   - [Medium](#medium)
   - [Microlink](#microlink)
+  - [npm](#npm)
   - [OnlyFans](#onlyfans)
   - [OpenStreetMap](#openstreetmap)
   - [Patreon](#patreon)
   - [Pinterest](#pinterest)
   - [Printables](#printables)
+  - [Product Hunt](#product-hunt)
   - [PSN Profiles](#psn-profiles)
   - [Reddit](#reddit)
   - [Snapchat](#snapchat)
@@ -61,6 +67,7 @@ url: https://github.com/microlinkhq/unavatar
   - [Steam](#steam)
   - [Substack](#substack)
   - [Telegram](#telegram)
+  - [Thingiverse](#thingiverse)
   - [Threads](#threads)
   - [TikTok](#tiktok)
   - [Tumblr](#tumblr)
@@ -77,7 +84,7 @@ url: https://github.com/microlinkhq/unavatar
 
 ---
 
-Last updated on April 29, 2026
+Last updated on May 3, 2026
 
 ## Introduction
 
@@ -445,6 +452,18 @@ Get any Buy Me a Coffee creator's profile picture by their username.
 
 e.g., [unavatar.io/buymeacoffee/mikebarnesdrums](https://unavatar.io/buymeacoffee/mikebarnesdrums)
 
+### CodePen
+
+Get any CodePen user's profile picture by their username.
+
+e.g., [unavatar.io/codepen/chriscoyier](https://unavatar.io/codepen/chriscoyier)
+
+### Cults3D
+
+Get any Cults3D creator's profile picture by username.
+
+e.g., [unavatar.io/cults3d/RaBros](https://unavatar.io/cults3d/RaBros)
+
 ### DeviantArt
 
 Get any DeviantArt user's profile picture by their username.
@@ -459,6 +478,12 @@ Available inputs:
 
 - Server name, e.g., [unavatar.io/discord/lilnasx](https://unavatar.io/discord/lilnasx)
 - Server ID, e.g., [unavatar.io/discord/uW6Hyf3E9r](https://unavatar.io/discord/uW6Hyf3E9r)
+
+### Docker Hub
+
+Get any Docker Hub user's profile picture by username or organization.
+
+e.g., [unavatar.io/dockerhub/tensorflow](https://unavatar.io/dockerhub/tensorflow)
 
 ### Domain
 
@@ -575,6 +600,15 @@ When you pass an email address directly in the URL, it is visible in plain text 
 
 To avoid this, pass a pre-computed `MD5` or `SHA256` hash of the email instead. Unavatar detects the hash automatically and routes it to Gravatar, which natively supports both hash formats.
 
+### Hugging Face
+
+Get profile pictures for Hugging Face users or organizations by their handle.
+
+Available inputs:
+
+- User, e.g., [unavatar.io/huggingface/jonatasgrosman](https://unavatar.io/huggingface/jonatasgrosman)
+- Organization, e.g., [unavatar.io/huggingface/nvidia](https://unavatar.io/huggingface/nvidia)
+
 ### Instagram
 
 Get any Instagram user's profile picture by their username. No authentication or API tokens needed — just pass the username.
@@ -616,6 +650,12 @@ Extract the logo or representative image from any URL. The page is rendered and 
 
 e.g., [unavatar.io/microlink/microlink.io](https://unavatar.io/microlink/microlink.io)
 
+### npm
+
+Get any npm user's profile picture by their username, including scoped handles.
+
+e.g., [unavatar.io/npm/mafintosh](https://unavatar.io/npm/mafintosh)
+
 ### OnlyFans
 
 Get any OnlyFans creator's profile picture by their username.
@@ -648,6 +688,19 @@ e.g., [unavatar.io/pinterest/ohjoy](https://unavatar.io/pinterest/ohjoy)
 Get any Printables user's profile picture by their username.
 
 e.g., [unavatar.io/printables/DukeDoks](https://unavatar.io/printables/DukeDoks)
+
+### Product Hunt
+
+Get profile pictures for Product Hunt users or logos for Product Hunt products.
+
+The endpoint supports explicit type as part of the input.
+
+If explicit type is not provided, it defaults to `user`.
+
+Available inputs:
+
+- `user` (default): [unavatar.io/producthunt/rajiv_ayyangar](https://unavatar.io/producthunt/rajiv_ayyangar)
+- `product`: [unavatar.io/producthunt/product:optimo](https://unavatar.io/producthunt/product:optimo)
 
 ### PSN Profiles
 
@@ -725,6 +778,12 @@ e.g., [unavatar.io/substack/bankless](https://unavatar.io/substack/bankless)
 Get any Telegram user's profile picture by their username.
 
 e.g., [unavatar.io/telegram/drsdavidsoft](https://unavatar.io/telegram/drsdavidsoft)
+
+### Thingiverse
+
+Get any Thingiverse maker's profile picture by their username.
+
+e.g., [unavatar.io/thingiverse/vitaminrad](https://unavatar.io/thingiverse/vitaminrad)
 
 ### Threads
 

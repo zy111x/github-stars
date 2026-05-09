@@ -1,6 +1,6 @@
 ---
 project: zerobrew
-stars: 7202
+stars: 7237
 description: |-
     A 5-20x faster experimental Homebrew alternative
 url: https://github.com/lucasgelfond/zerobrew
@@ -34,13 +34,13 @@ url: https://github.com/lucasgelfond/zerobrew
 curl -fsSL https://zerobrew.rs/install | bash
 ```
 
+After install, run the `export` command it prints (or restart your terminal).
+
 Or via Homebrew:
 
 ```bash
-brew tap lucasgelfond/zerobrew && brew install zerobrew
+brew install lucasgelfond/zerobrew/zerobrew
 ```
-
-After install, run the `export` command it prints (or restart your terminal).
 
 ## Quick start
 

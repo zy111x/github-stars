@@ -1,6 +1,6 @@
 ---
 project: shields-with-icon
-stars: 458
+stars: 459
 description: |-
     Enjoy https://shields.io
 url: https://github.com/progfay/shields-with-icon
@@ -517,6 +517,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Cilium](https://img.shields.io/badge/Cilium-222222?style=for-the-badge&logo=Cilium&logoColor=F8C517)
 ![Cinema 4D](https://img.shields.io/badge/Cinema%204D-011A6A?style=for-the-badge&logo=Cinema+4D&logoColor=FFFFFF)
 ![Cinnamon](https://img.shields.io/badge/Cinnamon-DC682E?style=for-the-badge&logo=Cinnamon&logoColor=FFFFFF)
+![Cinny](https://img.shields.io/badge/Cinny-000000?style=for-the-badge&logo=Cinny&logoColor=FFFFFF)
 ![Circle](https://img.shields.io/badge/Circle-8669AE?style=for-the-badge&logo=Circle&logoColor=FFFFFF)
 ![CircleCI](https://img.shields.io/badge/CircleCI-343434?style=for-the-badge&logo=CircleCI&logoColor=FFFFFF)
 ![CircuitVerse](https://img.shields.io/badge/CircuitVerse-222222?style=for-the-badge&logo=CircuitVerse&logoColor=42B883)
@@ -1300,6 +1301,7 @@ url: https://github.com/progfay/shields-with-icon
 ![Hedera](https://img.shields.io/badge/Hedera-222222?style=for-the-badge&logo=Hedera&logoColor=FFFFFF)
 ![HedgeDoc](https://img.shields.io/badge/HedgeDoc-B51F08?style=for-the-badge&logo=HedgeDoc&logoColor=FFFFFF)
 ![Helium](https://img.shields.io/badge/Helium-222222?style=for-the-badge&logo=Helium&logoColor=0ACF83)
+![Helium Browser](https://img.shields.io/badge/Helium%20Browser-3450D1?style=for-the-badge&logo=Helium+Browser&logoColor=FFFFFF)
 ![Helix](https://img.shields.io/badge/Helix-281733?style=for-the-badge&logo=Helix&logoColor=FFFFFF)
 ![HelloFresh](https://img.shields.io/badge/HelloFresh-222222?style=for-the-badge&logo=HelloFresh&logoColor=99CC33)
 ![Helly Hansen](https://img.shields.io/badge/Helly%20Hansen-DA2128?style=for-the-badge&logo=Helly+Hansen&logoColor=FFFFFF)
@@ -1619,8 +1621,9 @@ url: https://github.com/progfay/shields-with-icon
 ![LADA](https://img.shields.io/badge/LADA-ED6B21?style=for-the-badge&logo=LADA&logoColor=FFFFFF)
 ![Lamborghini](https://img.shields.io/badge/Lamborghini-222222?style=for-the-badge&logo=Lamborghini&logoColor=B6A272)
 ![LangChain](https://img.shields.io/badge/LangChain-222222?style=for-the-badge&logo=LangChain&logoColor=7FC8FF)
+![LangChain Corporate](https://img.shields.io/badge/LangChain%20Corporate-222222?style=for-the-badge&logo=LangChain+Corporate&logoColor=7FC8FF)
 ![Langflow](https://img.shields.io/badge/Langflow-000000?style=for-the-badge&logo=Langflow&logoColor=FFFFFF)
-![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=LangGraph&logoColor=FFFFFF)
+![LangGraph](https://img.shields.io/badge/LangGraph-222222?style=for-the-badge&logo=LangGraph&logoColor=7FC8FF)
 ![LanguageTool](https://img.shields.io/badge/LanguageTool-45A1FC?style=for-the-badge&logo=LanguageTool&logoColor=FFFFFF)
 ![Lapce](https://img.shields.io/badge/Lapce-3B82F6?style=for-the-badge&logo=Lapce&logoColor=FFFFFF)
 ![Laragon](https://img.shields.io/badge/Laragon-0E83CD?style=for-the-badge&logo=Laragon&logoColor=FFFFFF)

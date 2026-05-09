@@ -1,0 +1,62 @@
+---
+project: termcn
+stars: 428
+description: |-
+    Beautiful terminal UI components, built on Ink. 100% Free, Zero config, one command setup.
+url: https://github.com/shadcn-labs/termcn
+---
+
+<h1 align="center">termcn</h1>
+
+<p align="center">
+  Free & open-source, ready-to-use, customizable terminal UI components for React.<br/>
+  Zero config. One command setup. Built on <a href="https://github.com/vadimdemedes/ink">Ink</a>, works seamlessly with <a href="https://ui.shadcn.com/">shadcn/ui</a>.
+</p>
+
+<p align="center">
+  <a href="https://termcn.dev/docs">Get Started</a> ·
+  <a href="https://termcn.dev/docs/installation">Installation</a> ·
+  <a href="https://termcn.dev/docs/components">Components</a>
+</p>
+
+<br />
+
+<p align="center">
+  <img src="public/og.png" alt="termcn banner" />
+</p>
+
+## Features
+
+- 🎨 **Theme-aware** — Automatically adapts to your chosen terminal theme
+- 🎯 **Zero config** — Works out of the box with sensible defaults
+- 📦 **shadcn/ui compatible** — Uses the same registry format and CLI
+- ⌨️ **Ink powered** — Full access to Ink's powerful terminal rendering
+- 🧩 **Composable** — Build complex terminal UIs with simple, declarative components
+- 📊 **Charts & Data** — Bar charts, line charts, gauges, heat maps, and more
+- 🤖 **AI Components** — Chat messages, tool approvals, streaming text, and thinking blocks
+- 🎮 **Navigation** — Command palettes, tabs, menus, sidebars, and pagination
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+[MIT](LICENSE)
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=Aniket-508%2Ftermcn&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Aniket-508/termcn&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Aniket-508/termcn&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Aniket-508/termcn&type=date&legend=top-left" />
+ </picture>
+</a>
+

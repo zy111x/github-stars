@@ -1,6 +1,6 @@
 ---
 project: vue-clamp
-stars: 801
+stars: 803
 description: |-
     Clamping primitives for Vue.
 url: https://github.com/Justineo/vue-clamp

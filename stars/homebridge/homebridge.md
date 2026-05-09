@@ -1,6 +1,6 @@
 ---
 project: homebridge
-stars: 25270
+stars: 25322
 description: |-
     HomeKit support for the impatient.
 url: https://github.com/homebridge/homebridge
@@ -24,19 +24,21 @@ url: https://github.com/homebridge/homebridge
 
 <img src="https://media.giphy.com/media/10l79ICohTu4iQ/giphy.gif" align="right" alt="Unlocking Door">
 
-**Homebridge** is a lightweight Node.js server you can run on your home network that emulates the iOS HomeKit API. It supports Plugins, which are community-contributed modules that provide a basic bridge from HomeKit to various 3rd-party APIs provided by manufacturers of "smart home" devices. 
+**Homebridge** is a lightweight Node.js server you can run on your home network to emulate the HomeKit Accessory Protocol (HAP). It supports plugins, which are community-contributed modules that provide a basic bridge from HomeKit to various 3rd-party APIs provided by manufacturers of "smart home" devices. From v2, plugins can also expose accessories over [Matter](#matter-support) for use with Apple Home, Google Home, Amazon Alexa, SmartThings and other Matter-capable controllers.
+
+Homebridge is a free, non-commercial, community-driven open-source project. It is not affiliated with Apple, Google, Amazon, or the Connectivity Standards Alliance, and no part of it is offered as a paid or certified product.
 
 Since Siri supports devices added through HomeKit, this means that with Homebridge you can ask Siri to control devices that don't have any support for HomeKit at all. For instance, using just some of the available plugins, you can say:
 
- * _Siri, unlock the back door._ [pictured to the right]
- * _Siri, open the garage door._
- * _Siri, turn on the coffee maker._ 
- * _Siri, turn on the living room lights._
- * _Siri, good morning!_
+- _Siri, unlock the back door._ [pictured to the right]
+- _Siri, open the garage door._
+- _Siri, turn on the coffee maker._
+- _Siri, turn on the living room lights._
+- _Siri, good morning!_
 
 You can explore all available plugins at the NPM website by [searching for the keyword `homebridge-plugin`](https://www.npmjs.com/search?q=homebridge-plugin).
 
-##  Community
+## Community
 
 The official Homebridge Discord server and Reddit community are where users can discuss Homebridge and ask for help.
 
@@ -87,7 +89,7 @@ HomeKit communities can also be found on both [Discord](https://discord.gg/RcV7f
 
 ### Docker
 
-[Install Homebridge on Docker](https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Docker)  <br> [Synology](https://github.com/homebridge/docker-homebridge/wiki/Homebridge-on-Synology) | [Unraid](https://github.com/homebridge/docker-homebridge/wiki/Homebridge-on-Unraid) | [QNAP](https://github.com/homebridge/docker-homebridge/wiki/Homebridge-on-QNAP) | [TrueNAS Scale](https://github.com/homebridge/docker-homebridge/wiki/Homebridge-on-TrueNAS-Scale)
+[Install Homebridge on Docker](https://github.com/homebridge/homebridge/wiki/Install-Homebridge-on-Docker) <br> [Synology](https://github.com/homebridge/docker-homebridge/wiki/Homebridge-on-Synology) | [Unraid](https://github.com/homebridge/docker-homebridge/wiki/Homebridge-on-Unraid) | [QNAP](https://github.com/homebridge/docker-homebridge/wiki/Homebridge-on-QNAP) | [TrueNAS Scale](https://github.com/homebridge/docker-homebridge/wiki/Homebridge-on-TrueNAS-Scale)
 
 ---
 
@@ -105,9 +107,9 @@ HomeKit communities can also be found on both [Discord](https://discord.gg/RcV7f
 
 1. Open the Home <img src="https://user-images.githubusercontent.com/3979615/78010622-4ea1d380-738e-11ea-8a17-e6a465eeec35.png" height="16.42px"> app on your device.
 2. Tap the Home tab, then tap <img src="https://user-images.githubusercontent.com/3979615/78010869-9aed1380-738e-11ea-9644-9f46b3633026.png" height="16.42px">.
-3. Tap *Add Accessory*, then scan the QR code shown in the Homebridge UI or your Homebridge logs.
+3. Tap _Add Accessory_, then scan the QR code shown in the Homebridge UI or your Homebridge logs.
 
-If the bridge does not have any accessories yet, you may receive a message saying *Additional Set-up Required*, this is ok, as you add plugins they will show up in the Home app without the need to pair again (except for Cameras and TVs).
+If the bridge does not have any accessories yet, you may receive a message saying _Additional Set-up Required_, this is ok, as you add plugins they will show up in the Home app without the need to pair again (except for Cameras and TVs).
 
 Cameras and most TV devices are exposed as separate accessories and each needs to be paired separately. See [this wiki article](https://github.com/homebridge/homebridge/wiki/Connecting-Homebridge-To-HomeKit#how-to-add-homebridge-cameras--tvs) for instructions.
 
@@ -117,22 +119,44 @@ Once your device has been added to HomeKit, you should be able to tell Siri to c
 
 One final thing to remember is that Siri will almost always prefer its default phrase handling over HomeKit devices. For instance, if you name your Sonos device "Radio" and try saying "Siri, turn on the Radio" then Siri will probably start playing an iTunes Radio station on your phone. Even if you name it "Sonos" and say "Siri, turn on the Sonos", Siri will probably just launch the Sonos app instead. This is why, for instance, the suggested `name` for the Sonos accessory is "Speakers".
 
+## Matter Support
+
+Homebridge v2 introduces optional support for the [Matter](https://csa-iot.org/all-solutions/matter/) smart home standard, allowing plugins to expose their devices to any Matter-capable controller — Apple Home, Google Home, Amazon Alexa, Samsung SmartThings and others — alongside (or instead of) HomeKit.
+
+> [!IMPORTANT]
+> Homebridge's Matter support is **not certified by the Connectivity Standards Alliance (CSA)** and Homebridge is **not a "Matter product"** in any commercial sense. It is a community, non-profit implementation that re-uses the open-source [matter.js](https://github.com/project-chip/matter.js) library to speak the protocol. Matter-certified controllers may treat uncertified bridges as "uncertified accessories" and display a warning during pairing — this is expected.
+
+### How it works
+
+- The Matter stack runs in-process inside Homebridge using the open-source [matter.js](https://github.com/project-chip/matter.js) library (the [`@matter/main`](https://www.npmjs.com/package/@matter/main) npm package) as its protocol engine.
+- Matter is **opt-in per bridge**. Add a `matter` block to `bridge` (the main bridge) and/or to a plugin's `_bridge` (a child bridge) in your config, and Homebridge will start a separate Matter server on its own port and advertise it on your LAN. Bridges without a `matter` block keep working exactly as before.
+- Each Matter-enabled bridge appears as its own pairing — you scan a Matter QR code in the controller of your choice (Apple Home, Google Home, etc.). Multiple controllers can commission the same bridge ("multi-admin"), so it can sit alongside HomeKit rather than replacing it.
+- Plugins decide whether to publish accessories to Matter by calling the `api.matter` API — analogous to the existing `api.hap` API. Plugins that don't opt in are unaffected.
+- Currently supported device types include lights (on/off, dimmable, colour-temperature, full-colour), switches and outlets, a wide range of sensors (motion, contact, temperature, humidity, light, leak, smoke/CO, air quality), door locks, thermostats, fans, window coverings, robotic vacuum cleaners, water valves and generic switches. See the [developer docs](https://github.com/homebridge-plugins/homebridge-matter/wiki) for the full list.
+
+### Limitations
+
+- Matter pairing requires the controller and Homebridge to be on the same IP subnet with mDNS/IPv6 working — the same network constraints as HomeKit.
+- A Matter-enabled bridge cannot be moved between controllers without re-commissioning.
+- Because the implementation is uncertified, some controllers may surface warnings during pairing or restrict access to features that require certification.
+
+For setup instructions and the latest list of supported device types, see the developer docs at https://github.com/homebridge-plugins/homebridge-matter/wiki.
+
 ## Plugin Development
 
 The https://developers.homebridge.io website contains the Homebridge API reference, available service and characteristic types, and plugin examples.
 
-The [Homebridge Plugin Template](https://github.com/homebridge/homebridge-plugin-template) project provides a base you can use to create your own *platform* plugin.
+The [Homebridge Plugin Template](https://github.com/homebridge/homebridge-plugin-template) project provides a base you can use to create your own _platform_ plugin.
 
 There are many existing plugins you can study; you might start with the [Homebridge Example Plugins](https://github.com/homebridge/homebridge-examples) or a plugin that already implements the device type you need.
 
 When writing your plugin, you'll want Homebridge to load it from your development directory instead of publishing it to `npm` each time. Run this command inside your plugin project folder so your global installation of Homebridge can discover it:
 
-
 ```shell
 npm link
 ```
 
-*You can undo this using the `npm unlink` command.*
+_You can undo this using the `npm unlink` command._
 
 Then start Homebridge in debug mode:
 
@@ -158,21 +182,23 @@ To fix this, [Reset Homebridge](https://github.com/homebridge/homebridge/wiki/Co
 
 Try the following:
 
-  1. Swap between the `Bonjour HAP` and `Ciao` mDNS Advertiser options. See [the wiki](https://github.com/homebridge/homebridge/wiki/mDNS-Options) for more details.
-  2. iOS DNS cache has gone stale or gotten misconfigured. To fix this, turn airplane mode on and back off to flush the DNS cache. 
+1. Swap between the `Bonjour HAP` and `Ciao` mDNS Advertiser options. See [the wiki](https://github.com/homebridge/homebridge/wiki/mDNS-Options) for more details.
+2. iOS DNS cache has gone stale or gotten misconfigured. To fix this, turn airplane mode on and back off to flush the DNS cache.
 
 ### Limitations
 
- * One bridge can only expose 150 accessories due to a HomeKit limit. You can however run your plugins as a [Child Bridge](https://github.com/homebridge/homebridge/wiki/Child-Bridges) or run [Multiple Homebridge Instances](https://github.com/homebridge/homebridge-config-ui-x/wiki/Homebridge-Service-Command#multiple-instances) to get around this limitation.
- * Once an accessory has been added to the Home app, changing its name via Homebridge won't be automatically reflected in iOS. You must change it via the Home app as well.
+- One bridge can only expose 150 accessories due to a HomeKit limit. You can however run your plugins as a [Child Bridge](https://github.com/homebridge/homebridge/wiki/Child-Bridges) or run [Multiple Homebridge Instances](https://github.com/homebridge/homebridge-config-ui-x/wiki/Homebridge-Service-Command#multiple-instances) to get around this limitation.
+- Once an accessory has been added to the Home app, changing its name via Homebridge won't be automatically reflected in iOS. You must change it via the Home app as well.
 
 ## Why Homebridge?
 
 Technically, the device manufacturers should be the ones implementing the HomeKit API. And I'm sure they will - eventually. When they do, this project will be obsolete, and I hope that happens soon. In the meantime, Homebridge is a fun way to get a taste of the future, for those who just can't bear to wait until "real" HomeKit devices are on the market.
 
+Homebridge is maintained on a volunteer basis by a community of contributors. There is no company behind it, nothing is sold, and no part of the project is certified or endorsed by Apple, Google, Amazon, the Connectivity Standards Alliance, or any device manufacturer. If a plugin or page asks you to pay for "Homebridge" itself, it isn't us.
+
 ## Credit
 
-Homebridge was originally created by [Nick Farina](https://twitter.com/nfarina).
-
-The original HomeKit API work was done by [Khaos Tian](https://twitter.com/khaost) in his [HAP-NodeJS](https://github.com/homebridge/HAP-NodeJS) project.
+- Homebridge was originally created by [Nick Farina](https://twitter.com/nfarina).
+- The original HomeKit API work was done by [Khaos Tian](https://twitter.com/khaost) in his [HAP-NodeJS](https://github.com/homebridge/HAP-NodeJS) project.
+- Matter support is built on top of [matter.js](https://github.com/project-chip/matter.js), the open-source TypeScript implementation of Matter — without it, Homebridge's Matter bridge would not exist. Thanks to the matter.js maintainers and contributors.
 
