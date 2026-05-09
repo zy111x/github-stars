@@ -1,6 +1,6 @@
 ---
 project: Rope
-stars: 5324
+stars: 5328
 description: GUI-focused roop
 url: https://github.com/Hillobar/Rope
 ---

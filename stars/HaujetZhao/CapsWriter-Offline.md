@@ -1,6 +1,6 @@
 ---
 project: CapsWriter-Offline
-stars: 5295
+stars: 5354
 description: 一个好用的 PC 端的语音输入工具，支持热词、LLM处理。按下CapsLock或鼠标侧键X2，说话，松开自动上屏。
 url: https://github.com/HaujetZhao/CapsWriter-Offline
 ---
@@ -11,8 +11,6 @@ CapsWriter-Offline (v2.5)
 > **按住 CapsLock 说话，松开就上屏。就这么简单。**
 
 **CapsWriter-Offline** 是一个专为 Windows 打造的**完全离线**语音输入工具。
-
-**全新 V2.5 已打包，处于内测阶段，可到 #361 下载体验，待反馈与改进完善后，才会发布正式 Release。**
 
 ✨ 核心特性
 ------
@@ -50,7 +48,7 @@ Paraformer
 
 ONNX
 
-不支持
+❌
 
 SenseVoice-Small
 
@@ -60,7 +58,7 @@ SenseVoice-Small
 
 ONNX
 
-可加速
+✅
 
 Fun-ASR-Nano
 
@@ -70,7 +68,7 @@ Fun-ASR-Nano
 
 ONNX + GGUF
 
-可加速
+✅
 
 Qwen3-ASR
 
@@ -80,13 +78,46 @@ Qwen3-ASR
 
 ONNX + GGUF
 
-可加速
+✅
+
+性能参考（20s 音频转录延迟）：
+
+模型
+
+CPU U9-285H
+
+GPU RTX5050
+
+Paraformer
+
+0.6s
+
+\-
+
+SenseVoice-Small
+
+0.6s
+
+0.15s
+
+Fun-ASR-Nano
+
+2.0s
+
+0.5s
+
+Qwen3-ASR-1.7B
+
+4.0s
+
+1.0s
 
 详细功能说明请参考 `docs/` 目录：
 
 -   环境依赖安装说明 — VC++ 运行库、FFmpeg 安装
 -   热词功能如何使用 — 热词替换、规则替换、自定义短语
 -   角色功能如何使用 — LLM 角色配置、输出模式、创建新角色
+-   识别语言如何配置 — 各引擎语言支持范围与配置方法
 -   文件转录功能如何使用 — 拖拽转字幕、时间戳对齐
 -   显卡加速的若干问题 — DirectML、Vulkan 加速配置
 -   模型下载的若干问题 — 引擎选择、模型下载、目录结构

@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 36576
+stars: 36724
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/amruthpillai/reactive-resume
 ---
@@ -192,8 +192,9 @@ Self-Hosting
 Reactive Resume can be self-hosted using Docker. The stack includes:
 
 -   **PostgreSQL** — Database for storing user data and resumes
--   **Printer** — Headless Chromium service for PDF and screenshot generation
 -   **SeaweedFS** (optional) — S3-compatible storage for file uploads
+
+> **From v5.1.0 onwards** — PDF generation now runs entirely client-side via `@react-pdf/renderer`. New deployments no longer require Browserless, Chromium, or any external print service as a dependency. The `PRINTER_*` and `BROWSERLESS_*` environment variables are no longer read and can be removed from your `.env`.
 
 Pull the latest image from Docker Hub or GitHub Container Registry:
 
