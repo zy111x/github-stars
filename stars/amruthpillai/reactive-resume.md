@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 36724
+stars: 37144
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/amruthpillai/reactive-resume
 ---
@@ -24,7 +24,7 @@ Features
 **Resume Building**
 
 -   Real-time preview as you type
--   Multiple export formats (PDF, JSON)
+-   Multiple export formats (PDF, JSON, DOCX)
 -   Drag-and-drop section ordering
 -   Custom sections for any content type
 -   Rich text editor with formatting support
@@ -96,6 +96,9 @@ Templates
 
   
 **Meowth**
+
+  
+**Scizor**
 
 Quick Start
 -----------

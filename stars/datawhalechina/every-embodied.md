@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 1737
+stars: 1850
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -75,6 +75,10 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 **ETPNav-VLN导航复现**  
 连续环境视觉语言导航 (VLN-CE) 领域强力 Baseline
 
+  
+**LingBot-Map 视频建图**  
+从连续校园视频流式估计轨迹、深度与点云
+
 ### ⭐ 欢迎点点 Star 共同构建具身智能开源生态 ❤️
 
 具身智能（Embodied AI）是通往通用人工智能（AGI）的关键钥匙。
@@ -127,6 +131,9 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-05-14\]** 新增 LingBot-Map 视频流式三维重建教程，覆盖官方连续校园场景 smoke test、点云渲染预览、环境配置、代码与论文数据流讲解，以及轻量本地 Web demo。
+-   **\[2026-05-12\]** 新增 Build123d 代码建模 与 Text-to-CAD 6DOF 教学机械臂 教程，补充 CAD-as-code、Codex CAD skill、STEP/STL/GLB 生成与预览。
+-   **\[2026-05-11\]** 新增 DiT4DiT-LIBERO 训练与评估复现教程，覆盖官方方法图解、LIBERO 评估 smoke test、`libero_spatial` 训练 smoke test、数据元信息修复、日志与多视角视频结果展示。
 -   **\[2026-04-29\]** 新增 SIM1 柔体仿真与数据生成、InternVerse / InternDataEngine 小空间体验教程、EBench / GenManip 最小复现记录，补充仿真数据生成、合成数据引擎与评测基准介绍。
 -   **\[2026-04-11\]** 新增了无人机相关教程：系统的讲解无人机从控制到轨迹生成再到轨迹优化的完整流程，包括比较难以理解的微分平坦性，SE3控制器，minimumsnap轨迹优化等内容，包含12个可运行的简单易懂案例，不用复杂的环境，不用复杂的代码，助你从零入门无人机。
 -   **\[2026-04-07\]** 新增LeWorldModel世界模型教程和复现指导！用最通俗的话、最清晰的结构，把LeWM从头到尾讲明白，一步到位带你吃透最新的LeWM世界模型算法，不管是入门世界模型还是深入科研都能用
@@ -220,7 +227,7 @@ ROS/ROS2 通信机制、AutoCAD/Solidworks 基础
 
 **5\. 计算机视觉 (CV)**
 
-目标检测 (YOLO)、图像分割 (SAM)、6D 位姿估计
+目标检测 (YOLO)、图像分割 (SAM)、视频流式三维重建 (LingBot-Map)、6D 位姿估计
 
 ✅
 
@@ -258,7 +265,7 @@ LIBERO、SimplerENV
 
 **10\. VLA 大模型**
 
-SmolVLA 训练和部署、OpenVLA部署、RT-1 / RT-2 / RT-X 论文解读与代码分析
+SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析
 
 ✅
 
