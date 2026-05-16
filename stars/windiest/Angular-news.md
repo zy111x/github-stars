@@ -1,6 +1,6 @@
 ---
 project: Angular-news
-stars: 1026
+stars: 1025
 description: |-
     :panda_face:基于angular.js,weui和node.js重写的新闻客户端 Based on angular.js, weui and node.js rewrite news client
 url: https://github.com/windiest/Angular-news

@@ -1,6 +1,6 @@
 ---
 project: impeccable
-stars: 26552
+stars: 28235
 description: |-
     The design language that makes your AI harness better at design.
 url: https://github.com/pbakaus/impeccable
@@ -153,10 +153,14 @@ cp -r dist/gemini/.gemini your-project/
 ```bash
 # Project-local
 cp -r dist/agents/.agents your-project/
+mkdir -p your-project/.codex
+cp -r dist/codex/.codex/agents your-project/.codex/
 
 # Or user-wide
 mkdir -p ~/.agents/skills
 cp -r dist/agents/.agents/skills/* ~/.agents/skills/
+mkdir -p ~/.codex
+cp -r dist/codex/.codex/agents ~/.codex/
 ```
 
 **GitHub Copilot:**

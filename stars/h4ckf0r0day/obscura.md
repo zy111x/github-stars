@@ -1,6 +1,6 @@
 ---
 project: obscura
-stars: 11288
+stars: 12740
 description: |-
     The headless browser for AI agents and web scraping
 url: https://github.com/h4ckf0r0day/obscura
@@ -55,6 +55,13 @@ curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura
 tar xzf obscura-x86_64-linux.tar.gz
 ./obscura fetch https://example.com --eval "document.title"
 
+# Linux ARM64 (aarch64)
+curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-aarch64-linux.tar.gz
+tar xzf obscura-aarch64-linux.tar.gz
+
+# Arch Linux (AUR)
+yay -S obscura-browser
+
 # macOS Apple Silicon
 curl -LO https://github.com/h4ckf0r0day/obscura/releases/latest/download/obscura-aarch64-macos.tar.gz
 tar xzf obscura-aarch64-macos.tar.gz
@@ -73,6 +80,14 @@ parallel `scrape` command.
 
 Linux release builds target Ubuntu 22.04 so the downloaded binary remains
 usable on common LTS servers with glibc 2.35+.
+
+### Docker
+
+```bash
+docker run -d --name obscura -p 127.0.0.1:9222:9222 h4ckf0r0day/obscura
+```
+
+Image on [Docker Hub](https://hub.docker.com/r/h4ckf0r0day/obscura). Multi-stage build on `distroless/cc`, no shell, no package manager, ~57 MB compressed.
 
 ### Build from source
 
@@ -104,6 +119,13 @@ obscura fetch https://news.ycombinator.com --dump html
 # Write dump or eval output to a file
 obscura fetch https://example.com --dump text --output page.txt
 
+# Stream the raw response body verbatim (binary-safe; bypasses the JS/DOM layer).
+# Use this for images, JSON, JS, CSS, or any non-HTML resource.
+obscura fetch https://picsum.photos/200/300 --dump original > photo.jpg
+
+# Fetch through an HTTP or SOCKS proxy
+obscura --proxy socks5://127.0.0.1:1080 fetch https://example.com --dump text
+
 # Wait for dynamic content
 obscura fetch https://example.com --wait-until networkidle0
 
@@ -130,6 +152,9 @@ obscura scrape url1 url2 url3 ... \
 
 # Suppress scrape progress on stderr for script-friendly output
 obscura scrape https://example.com --quiet --format json
+
+# Scrape workers inherit the global proxy
+obscura --proxy http://127.0.0.1:8080 scrape https://example.com https://news.ycombinator.com
 ```
 
 ## Puppeteer / Playwright
@@ -236,6 +261,14 @@ Obscura implements the Chrome DevTools Protocol for Puppeteer/Playwright compati
 | **LP** | getMarkdown (DOM-to-Markdown conversion) |
 ## CLI Reference
 
+### Tuning V8
+
+Obscura embeds V8 directly. Use `--v8-flags` to pass raw flags through to V8, same syntax as Chromium's `--js-flags` and Node's command-line flags. Most common use is raising the heap cap to fix `JavaScript heap out of memory` on JS-heavy pages:
+
+```bash
+obscura --v8-flags "--max-old-space-size=4096" fetch <url>
+```
+
 ### `obscura serve`
 
 Start a CDP WebSocket server.
@@ -254,7 +287,7 @@ Fetch and render a single page.
 
 | Flag | Default | Description |
 |------|---------|-------------|
-| `--dump` | `html` | Output: `html`, `text`, or `links` |
+| `--dump` | `html` | Output: `html`, `text`, `links`, `markdown`, or `original` (raw response body) |
 | `--eval` | — | JavaScript expression to evaluate |
 | `--wait-until` | `load` | Wait: `load`, `domcontentloaded`, `networkidle0` |
 | `--timeout` | `30` | Maximum navigation time in seconds |
@@ -262,6 +295,7 @@ Fetch and render a single page.
 | `--stealth` | off | Anti-detection mode |
 | `--output` | — | Write dump or eval output to a file |
 | `--quiet` | off | Suppress banner |
+| `--proxy` | — | Inherited global HTTP/SOCKS5 proxy URL |
 
 ### `obscura scrape <URL...>`
 
@@ -273,6 +307,64 @@ Scrape multiple URLs in parallel with worker processes.
 | `--eval` | — | JS expression per page |
 | `--format` | `json` | Output: `json` or `text` |
 | `--quiet` | off | Suppress scrape progress on stderr |
+| `--proxy` | — | Inherited global HTTP/SOCKS5 proxy URL for all workers |
+
+## MCP (Model Context Protocol)
+
+Obscura ships an MCP server that exposes browser automation tools to AI agents (Claude Desktop, Cursor, etc.).
+
+### Start
+
+**stdio** (default) — for Claude Desktop and MCP clients that launch a subprocess:
+
+```bash
+obscura mcp
+```
+
+**HTTP** — for clients that connect over the network:
+
+```bash
+obscura mcp --http --port 8080
+# endpoint: http://127.0.0.1:8080/mcp
+```
+
+Optional flags (both transports):
+
+| Flag | Description |
+|------|-------------|
+| `--proxy <URL>` | HTTP/SOCKS5 proxy |
+| `--user-agent <UA>` | Custom User-Agent string |
+| `--stealth` | Enable anti-detection mode |
+
+### Claude Desktop config
+
+```json
+{
+  "mcpServers": {
+    "obscura": {
+      "command": "obscura",
+      "args": ["mcp"]
+    }
+  }
+}
+```
+
+### Tools
+
+| Tool | Description |
+|------|-------------|
+| `browser_navigate` | Navigate to a URL (`url`, optional `waitUntil`: `load` / `domcontentloaded` / `networkidle0`) |
+| `browser_snapshot` | Return the current page URL, title, and body text |
+| `browser_click` | Click an element by CSS selector |
+| `browser_fill` | Set an input value (triggers `input` + `change` events) |
+| `browser_type` | Append text to an input |
+| `browser_press_key` | Dispatch a keyboard event (`key`, optional `selector`) |
+| `browser_select_option` | Select an `<option>` by value or text |
+| `browser_evaluate` | Evaluate a JavaScript expression and return the result |
+| `browser_wait_for` | Wait for a CSS selector to appear (`selector`, optional `timeout` in seconds) |
+| `browser_network_requests` | List network requests made by the current page |
+| `browser_console_messages` | Return console messages logged by the page |
+| `browser_close` | Close the page and reset browser state |
 
 ## License
 

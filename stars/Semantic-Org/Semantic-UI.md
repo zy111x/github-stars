@@ -1,6 +1,6 @@
 ---
 project: Semantic-UI
-stars: 51097
+stars: 51096
 description: |-
     Semantic is a UI component framework based around useful principles from natural language.
 url: https://github.com/Semantic-Org/Semantic-UI

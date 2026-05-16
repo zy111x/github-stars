@@ -1,10 +1,14 @@
 ---
 project: craft-agents-oss
-stars: 5888
+stars: 5985
 description: |-
     null
 url: https://github.com/craft-ai-agents/craft-agents-oss
 ---
+
+<div align="center">
+  <a href="https://trendshift.io/repositories/20714" target="_blank"><img src="https://trendshift.io/api/badge/repositories/20714" alt="craft-ai-agents%2Fcraft-agents-oss | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+</div>
 
 # Craft Agents
 

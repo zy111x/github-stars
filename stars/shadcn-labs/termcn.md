@@ -1,6 +1,6 @@
 ---
 project: termcn
-stars: 428
+stars: 470
 description: |-
     Beautiful terminal UI components, built on Ink. 100% Free, Zero config, one command setup.
 url: https://github.com/shadcn-labs/termcn

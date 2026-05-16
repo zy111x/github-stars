@@ -1,6 +1,6 @@
 ---
 project: edit
-stars: 9416
+stars: 9497
 description: |-
     Make changes to FMHY
 url: https://github.com/fmhy/edit
@@ -22,7 +22,7 @@ url: https://github.com/fmhy/edit
 ## 🗺️ Emoji Legend
  
 * 🌐 - **3rd Party Indexes**
-* ↪️ - **Storage Page Links**
+* ↪️ - **Section Links**
 * ⭐ - **Community Recommendations**
 
 ## 📝 Contribute

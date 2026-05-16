@@ -1,6 +1,6 @@
 ---
 project: llamafile
-stars: 24410
+stars: 24450
 description: |-
     Distribute and run LLMs with a single file.
 url: https://github.com/mozilla-ai/llamafile
@@ -71,6 +71,8 @@ larger and more expressive models which should provide more accurate
 responses.
 
 **Windows users:** Rename the file to add `.exe` extension before running.
+
+**Note - Only executables under 4GB can run on Windows, so any llamafile above 4GB won't work. Download the [llamafile](https://github.com/mozilla-ai/llamafile/releases) binary and run it with any [external weights/models(GGUF)](https://docs.mozilla.ai/llamafile/getting-started/quickstart#using-llamafile-with-external-weights).**
 
 ## Documentation
 

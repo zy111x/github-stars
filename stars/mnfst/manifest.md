@@ -1,6 +1,6 @@
 ---
 project: manifest
-stars: 6312
+stars: 6510
 description: |-
     Smart Model Routing for Agents. Cut Costs up to 70% 🦚
 url: https://github.com/mnfst/manifest

@@ -1,6 +1,6 @@
 ---
 project: puter
-stars: 40986
+stars: 41332
 description: |-
     🌐 The Internet Computer! Free, Open-Source, and Self-Hostable.
 url: https://github.com/HeyPuter/puter
@@ -94,7 +94,7 @@ Connect with the maintainers and community through these channels:
 - X (Twitter): [x.com/HeyPuter](https://x.com/HeyPuter)
 - Reddit: [reddit.com/r/puter/](https://www.reddit.com/r/puter/)
 - Mastodon: [mastodon.social/@puter](https://mastodon.social/@puter)
-- Security issues? [security@puter.com](mailto:security@puter.com)
+- Security issues or abuse reports? [security@puter.com](mailto:security@puter.com)
 - Email maintainers at [hi@puter.com](mailto:hi@puter.com)
 
 We are always happy to help you with any questions you may have. Don't hesitate to ask!

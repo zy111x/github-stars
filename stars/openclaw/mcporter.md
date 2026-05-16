@@ -1,6 +1,6 @@
 ---
 project: mcporter
-stars: 4349
+stars: 4428
 description: |-
     Call MCPs via TypeScript, masquerading as simple TypeScript API. Or package them as cli.
 url: https://github.com/openclaw/mcporter
@@ -32,13 +32,13 @@ MCPorter helps you lean into the "code execution" workflows highlighted in Anthr
 - **OAuth and stdio ergonomics.** Built-in OAuth caching, log tailing, and stdio wrappers let you work with HTTP, SSE, and stdio transports from the same interface.
 - **Ad-hoc connections.** Point the CLI at _any_ MCP endpoint (HTTP or stdio) without touching config, then persist it later if you want. Hosted MCPs that expect a browser login (Supabase, Vercel, etc.) are auto-detected—just run `mcporter auth <url>` and the CLI promotes the definition to OAuth on the fly. See [docs/adhoc.md](docs/adhoc.md).
 
-## What's New in 0.10.0
+## What's New in 0.11.0
 
-- **Resources.** `mcporter resource <server> [uri]` lists and reads MCP resources, including keep-alive daemon routing.
-- **Generated CLI polish.** Keep-alive generated CLIs preserve stdio server state across invocations, and Bun-compiled macOS daemon children launch reliably in the background.
-- **Config portability.** mcporter now honors XDG Base Directory env vars while preserving the legacy `~/.mcporter` fallback.
-- **OAuth compatibility.** Static OAuth clients are supported via `oauthClientId`, `oauthClientSecretEnv`, and token endpoint auth method overrides.
-- **Release confidence.** `0.10.0` is published on npm and Homebrew, and live/published install smokes are green.
+- **Bridge mode.** `mcporter serve` exposes daemon-managed keep-alive servers as one MCP bridge with readable `server__tool` names.
+- **Headless OAuth.** `--no-browser`, vault seeding, cached-token refresh, and `auth: "refreshable_bearer"` cover non-interactive deployments.
+- **HTTP compatibility.** `httpFetch: "node-http1"` keeps providers that reject Node's built-in `fetch` working.
+- **Safer writes.** Config, OAuth vault, JSON output, and cache metadata writes are serialized/atomic so parallel agents stop stepping on each other.
+- **Release confidence.** `0.11.0` is published on npm and Homebrew, and live/published install smokes are green.
 
 ## Quick Start
 
@@ -172,7 +172,8 @@ Helpful flags:
 - `--` (on `mcporter call`) -- stop flag parsing so the remaining tokens stay literal positional values, even when they start with `--`.
 - `--json` (on `mcporter list`) -- emit JSON summaries/counts instead of text. Multi-server runs report per-server statuses, counts, and connection issues; single-server runs include the full tool metadata.
 - `--output json/raw` (on `mcporter call`) -- when a connection fails, MCPorter prints the usual colorized hint and also emits a structured `{ server, tool, issue }` envelope so scripts can handle auth/offline/http errors programmatically.
-- `--json` (on `mcporter auth`) -- emit the same structured connection envelope whenever OAuth/transport setup fails, instead of throwing an error.
+- `--json` (on `mcporter auth`) -- emit the same structured connection envelope whenever OAuth/transport setup fails, instead of throwing an error. With `--no-browser`, it emits auth-start JSON containing `authorizationUrl` and `redirectUrl`.
+- `--no-browser` / `--browser none` (on `mcporter auth` or `mcporter config login`) -- suppress browser launch and print the OAuth authorization URL for headless workflows; `MCPORTER_OAUTH_NO_BROWSER=1` / `true` / `yes` enables the same behavior.
 - `--json` (on `mcporter emit-ts`) -- print a JSON summary describing the emitted files (mode + output paths) instead of text logs—handy when generating artifacts inside scripts.
 - `--all-parameters` -- show every schema field when listing a server (default output shows at least five parameters plus a summary of the rest).
 - `--http-url <https://…>` / `--stdio "command …"` -- describe an ad-hoc MCP server inline. STDIO transports now inherit your current shell environment automatically; add `--env KEY=value` only when you need to inject/override variables alongside `--cwd`, `--name`, or `--persist <config.json>`. These flags now work with `mcporter auth` too, so `mcporter auth https://mcp.example.com/mcp` just works.
@@ -203,6 +204,7 @@ npx mcporter call --stdio "bun run ./local-server.ts" --name local-tools
 - Stop it anytime with `mcporter daemon stop`, pre-warm with `mcporter daemon start`, or bounce it via `mcporter daemon restart` after tweaking configs/env.
 - All other servers stay ephemeral; add `"lifecycle": "keep-alive"` to a server entry (or set `MCPORTER_KEEPALIVE=name`) when you want the daemon to manage it. You can also set `"lifecycle": "ephemeral"` (or `MCPORTER_DISABLE_KEEPALIVE=name`) to opt out.
 - The daemon only manages named servers that come from your config/imports. Ad-hoc STDIO/HTTP targets invoked via `--stdio …`, `--http-url …`, or inline function-call syntax remain per-process today; persist them into `config/mcporter.json` (or use `--persist`) if you need them to participate in the shared daemon.
+- `mcporter serve --stdio` exposes every daemon-managed keep-alive server as one MCP stdio bridge for clients such as Claude Code or Codex. Register it once, then call namespaced tools like `chrome-devtools__list_pages`; add `--servers a,b` to limit the bridge or `--http <port>` to serve Streamable HTTP on localhost at `/mcp`.
 - Troubleshooting? Run `mcporter daemon start --log` (or `--log-file /tmp/daemon.log`) to tee stdout/stderr into a file, and add `--log-servers chrome-devtools` when you only want call traces for a specific MCP. Per-server configs can also set `"logging": { "daemon": { "enabled": true } }` to force detailed logging for that entry.
 
 ## Friendlier Tool Calls
@@ -399,7 +401,7 @@ Run `mcporter config …` via your package manager (pnpm, npm, npx, etc.) when y
     },
     "chrome-devtools": {
       "command": "npx",
-      "args": ["-y", "chrome-devtools-mcp@latest"],
+      "args": ["-y", "chrome-devtools-mcp@latest", "--autoConnect"],
       "env": { "npm_config_loglevel": "error" },
     },
   },
@@ -413,6 +415,7 @@ What MCPorter handles for you:
 - Automatic OAuth token caching in the shared vault (`~/.mcporter/credentials.json`, or `$XDG_DATA_HOME/mcporter/credentials.json` when set) unless you override `tokenCacheDir`.
 - Stdio commands inherit the directory of the file that defined them (imports or local config).
 - Import precedence matches the array order; omit `imports` to use the default `["cursor", "claude-code", "claude-desktop", "codex", "windsurf", "opencode", "vscode"]`.
+- `chrome-devtools-mcp --autoConnect` receives a small compatibility patch while upstream auto-connect can hang on busy Chrome profiles; set `MCPORTER_DISABLE_CHROME_DEVTOOLS_COMPAT=1` to opt out.
 
 #### OAuth-protected servers
 
@@ -422,6 +425,8 @@ If an HTTP MCP requires browser login (OAuth), persist it with `--auth oauth` (o
 npx mcporter config add notion https://mcp.notion.com/mcp --auth oauth
 npx mcporter auth notion
 ```
+
+On headless hosts, use `npx mcporter auth notion --no-browser` to print the authorization URL instead of launching the platform browser. Treat the printed URL as sensitive operational output. If you open it on another machine, make sure the printed `redirectUrl` callback port is reachable through a loopback-only tunnel or a configured `oauthRedirectUrl`.
 
 Providers that do not support dynamic client registration can use a pre-registered app:
 
@@ -442,6 +447,32 @@ Providers that do not support dynamic client registration can use a pre-register
 
 Keep client secrets in environment variables or private machine-local configs,
 and register the exact `oauthRedirectUrl` with the provider.
+
+#### Refreshable bearer tokens (non-interactive OAuth)
+
+For servers with pre-seeded OAuth tokens that need automatic refresh without browser prompts, use `auth: "refreshable_bearer"`. HTTP servers receive `Authorization: Bearer <token>` headers; STDIO servers require `refresh.accessTokenEnv` to inject the token as an environment variable:
+
+```jsonc
+{
+  "mcpServers": {
+    "example": {
+      "command": "uvx",
+      "args": ["example-mcp-server"],
+      "auth": "refreshable_bearer",
+      "refresh": {
+        "tokenEndpoint": "https://api.example.com/oauth/token",
+        "clientIdEnv": "EXAMPLE_CLIENT_ID",
+        "clientSecretEnv": "EXAMPLE_CLIENT_SECRET",
+        "clientAuthMethod": "client_secret_basic",
+        "refreshSkewSeconds": 300,
+        "accessTokenEnv": "EXAMPLE_ACCESS_TOKEN",
+      },
+    },
+  },
+}
+```
+
+mcporter refreshes tokens before they expire (default 5 minutes early) using the refresh token from the vault. For keep-alive stdio servers that can't reload credentials after startup, use `"lifecycle": "ephemeral"` or restart the daemon before tokens expire.
 
 Headless deployments that already have OAuth tokens can seed the vault without
 reproducing mcporter's internal vault key:

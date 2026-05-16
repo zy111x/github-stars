@@ -1,6 +1,6 @@
 ---
 project: rivet
-stars: 5523
+stars: 5539
 description: |-
     Rivet Actors are the primitive for stateful workloads. Built for AI agents, collaborative apps, and durable execution.
 url: https://github.com/rivet-dev/rivet

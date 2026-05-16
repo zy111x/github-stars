@@ -1,6 +1,6 @@
 ---
 project: cloudflare-error-page
-stars: 5337
+stars: 5354
 description: |-
     ✅Browser ❌Cloudflare ✅Host — Generator of customized Cloudflare error pages (unofficial)
 url: https://github.com/donlon/cloudflare-error-page
@@ -188,13 +188,19 @@ params = {
 
 ## FAQ
 
-### How to show real user IP / Cloudflare Ray ID / data center location in the error page so that it looks more realistic?
+### 💡 How to show real user IP / Cloudflare Ray ID / data center location in the error page so that it looks more realistic?
 
 Ray ID and user IP field in the error page can be set by `ray_id` and `client_ip` properties in the `params` argument passed to the render function. The real Cloudflare Ray ID and the data center location of current request can be extracted from the `Cf-Ray` request header (e.g. `Cf-Ray: 230b030023ae2822-SJC`). Detailed description of this header can be found at [Cloudflare documentation](https://developers.cloudflare.com/fundamentals/reference/http-headers/#cf-ray).
 
 To lookup the city name of the data center corresponding to the three letter code in the header, you can use a location list [here](https://github.com/Netrvin/cloudflare-colo-list/blob/main/DC-Colos.json)
 
 The demo server runs in our website did handle these. Take a look at [this file](https://github.com/donlon/cloudflare-error-page/blob/e2226ff5bb7a877c9fe3ac09deadccdc58b0c1c7/editor/server/utils.py#L78) for reference.
+
+### 🤔 Is putting this on my website totally legal? As it contains trademarked logo/name and it's pretending to be an official one.
+
+Use it at you own risk. There're still chances Cloudflare send you takedown request or take legal actions. But it depends on if you use it properly. It's better to change texts on the page so users know it's a joke.
+
+If you do want to use an error page that pretends to be a Cloudflare one on your production environment, don't forget to fix your server quickly when it goes down so that they won't find that you are faking their error page. (See [#4](https://github.com/donlon/cloudflare-error-page/issues/4#issuecomment-4445691769))
 
 ## See also
 

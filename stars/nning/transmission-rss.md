@@ -1,6 +1,6 @@
 ---
 project: transmission-rss
-stars: 457
+stars: 458
 description: |-
     Adds torrents from RSS feeds to Transmission web frontend
 url: https://github.com/nning/transmission-rss
@@ -19,8 +19,8 @@ transmission-rss is basically a workaround for transmission's lack of the
 ability to monitor RSS feeds and automatically add enclosed torrent links.
 
 It works with transmission-daemon and transmission-gtk (if the web frontend
-is enabled in the settings dialog). Sites like showrss.karmorra.info and
-ezrss.it or self-hosted seriesly instances are suited well as feed sources.
+is enabled in the settings dialog). Sites like showrss.info and ezrss.it or
+self-hosted seriesly instances are suited well as feed sources.
 
 A tool called transmission-add-file is also included for mass adding of
 torrent files.
@@ -62,6 +62,21 @@ docker run -t \
   nning2/transmission-rss:v1.2.1
 ```
 
+### Go Version
+
+There is a preview version of transmission-rss written in Go in the ["go"
+subfolder](./go). It has a [separate README](./go/README.md) and supports a
+[similar configuration format with some caveats](./go/config.yml.example) but
+does not implement nearly as many features as the Ruby version (on purpose). It
+comes with CLI utilities for adding torrents by file or magnet link, and to add
+torrents from eztv by imdb ID.
+
+Install from the repository:
+
+```sh
+make install
+```
+
 Configuration
 -------------
 
@@ -100,7 +115,7 @@ Feeds can also be configured to download files to specific directory:
 ```yaml
 feeds:
   - url: http://example.com/feed1
-    download_path: /home/user/Downloads
+    download_dir: /home/user/Downloads
 ```
 
 Setting the seed ratio limit is supported per feed:
@@ -163,9 +178,9 @@ feeds:
   - url: http://example.com/feed8
     regexp:
       - matcher: match1
-        download_path: /home/user/match1
+        download_dir: /home/user/match1
       - matcher: match2
-        download_path: /home/user/match2
+        download_dir: /home/user/match2
   - url: http://example.com/feed9
     validate_cert: false
     seen_by_guid: true

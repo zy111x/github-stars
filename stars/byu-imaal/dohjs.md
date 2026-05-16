@@ -1,6 +1,6 @@
 ---
 project: dohjs
-stars: 147
+stars: 146
 description: |-
     DNS over HTTPS client for use in the browser
 url: https://github.com/byu-imaal/dohjs

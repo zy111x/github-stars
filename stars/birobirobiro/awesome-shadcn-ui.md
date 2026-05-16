@@ -1,6 +1,6 @@
 ---
 project: awesome-shadcn-ui
-stars: 19495
+stars: 19547
 description: |-
     A curated list of awesome things related to shadcn/ui.
 url: https://github.com/birobirobiro/awesome-shadcn-ui
@@ -117,6 +117,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | flightcn | flightcn is a flight route visualization component set built for the mapcn ecosystem | [Link](https://flightcn.yencheng.dev/) | 2026-04-05T17:00:07.000Z |
 | floating-dragable-card | Dragable and resizable card using shadcn/ui elements. | [Link](https://github.com/nishansanjuka/react-drag-card) | 2024-12-27T12:56:05.000Z |
 | fluid-functionalism | Refined shadcn/ui-compatible components with spring physics, proximity hover, and font weight transitions. Every animation serves a functional purpose. | [Link](https://fluid-functionalism.vercel.app) | 2026-04-24T19:38:06.000Z |
+| framecn | Beautiful videos, made simple. Ready to use, customizable video components for React. | [Link](https://github.com/shadcn-labs/framecn) | 2026-05-11 |
 | fusion-ui | Library combining shadcn/ui and MagicUI. | [Link](https://github.com/nyxb-ui/ui) | 2024-12-27T12:56:05.000Z |
 | glasscn-ui | shadcn/ui component library with glassmorphism variants, and many additional components. | [Link](https://github.com/itsjavi/glasscn-ui) | 2025-06-10T17:19:42.000Z |
 | glitchcn-ui | A terminal-styled cyberpunk component library for Next.js with scanline effects, glowing borders, and monospace typography. | [Link](https://glitchcn-ui.vercel.app/) | 2026-02-06T17:57:31.000Z |
@@ -132,6 +133,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | jolyui | JolyUI is a modern React component library built with TypeScript, Tailwind CSS and Motion. It offers a wide range of customizable and accessible UI components to help you build stunning web applications quickly and efficiently. | [Link](https://github.com/Johuniq/jolyui) | 2026-01-23T21:22:27.000Z |
 | jalco-ui | Polished, composable React components distributed via a shadcn-compatible registry. Install with one command or copy the source directly. | [Link](https://ui.justinlevine.me) | 2026-04-10T13:56:52.000Z |
 | junwen-k/ui-x | Additional beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source. | [Link](https://ui-x.junwen-k.dev/) | 2025-02-03T19:03:51.000Z |
+| kalyx | Headless React DatePicker family — single / range / time / date+time / month / year / week pickers behind one composition API. ISO 8601 UTC values, IANA timezone-safe, ~13.6 KB gzip. v1.0 RC. | [Link](https://github.com/jiji-hoon96/kalyx) | 2026-05-12T02:43:00.343Z |
 | kanban-board | A production‑ready Kanban board built on shadcn/ui with React & Tailwind CSS: zero dependencies, drag‑and‑drop, keyboard accessibility and seamless theming. | [Link](https://shadcn-kanban-board.com/) | 2025-07-15T17:19:11.000Z |
 | kibo-ui | Kibo UI is designed to be a more comprehensive library of components that can be used to build more complex applications. | [Link](https://www.kibo-ui.com/overview) | 2025-04-03T20:05:04.000Z |
 | kokonut-ui | Free Modern and Customizable components for Next.js. | [Link](https://kokonutui.com/) | 2024-12-27T12:56:05.000Z |
@@ -265,6 +267,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | supercharged-shadcn-components | Type-safe form components collection. | [Link](https://github.com/slickwit/supercharged-shadcn-components) | 2024-12-27T12:56:05.000Z |
 | svelte-image-uploader | Svelte image uploader with dnd, validation and previews. | [Link](https://svelte-image-uploader.vercel.app/) | 2025-06-10T16:53:40.000Z |
 | termcn | Beautiful terminal UIs, made simple. Ready to use, customizable terminal UI components for React. | [Link](https://termcn.vercel.app/) | 2026-04-10T13:55:24.000Z |
+| teul | An opinionated grid system for React and Tailwind | [Link](https://teul.joohyun.dev) | 2026-05-06 |
 | trable-craft | Drizzle ORM-powered table engine that auto-generates tables from your schema. Built on TanStack Table with server-side filtering, sorting, pagination, search, export, and URL state sync. | [Link](https://github.com/jacksonkasi1/TableCraft) | 2026-02-27T22:15:10.000Z |
 | tanstack-ui-table | Customizable table with @tanstack/table and shadcn/ui | [Link](https://github.com/drefahl/tanstack-ui-table) | 2025-02-27T01:56:00.000Z |
 | the-gridcn | Tron inspired shadcn/ui theme | [Link](https://thegridcn.com/) | 2026-02-06T17:57:20.000Z |
@@ -376,6 +379,7 @@ url: https://github.com/birobirobiro/awesome-shadcn-ui
 | shadcn-easy-install | Install all shadcn components easily. One-click to install all selected components. | [Link](https://shadcn-easy-install.vercel.app/) | 2025-06-10T16:58:44.000Z |
 | shadcn-hooks | A comprehensive React Hooks Collection built with Shadcn. | [Link](https://shadcn-hooks.com/) | 2025-10-25T16:05:40.000Z |
 | shadcn-play | A playground for building and previewing shadcn/ui components with a live editor. | [Link](https://github.com/ephraimduncan/shadcn-play) | 2026-02-13T12:46:03.000Z |
+| shadcnpreset | Find the perfect shadcn preset in seconds. Open source and Free. | [Link](https://shadcnpreset.com) | 2026-05-03T14:17:12.478Z |
 | shadcn-pricing-page-generator | The easiest way to get a React pricing page with shadcn/ui, Radix UI, and/or Tailwind CSS. | [Link](https://shipixen.com/shadcn-pricing-page) | 2024-12-27T12:56:05.000Z |
 | shadcn-theme-editor | Shadcn Theme Editor is a user-friendly component designed to simplify the process of managing and customizing theme colors in Shadcn-based projects. | [Link](https://shadcnthemeeditor.vercel.app) | 2024-12-27T12:56:05.000Z |
 | shadcn-zod-form | CLI tool to generate shadcn/ui forms from Zod schemas. | [Link](https://github.com/ilyichv/shadcn-zod-form) | 2024-12-27T12:56:05.000Z |

@@ -1,6 +1,6 @@
 ---
 project: amon-agent
-stars: 174
+stars: 175
 description: |-
     Amon - Your AI coworker running on your desktop
 url: https://github.com/liruifengv/amon-agent

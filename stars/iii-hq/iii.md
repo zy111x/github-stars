@@ -1,6 +1,6 @@
 ---
 project: iii
-stars: 15525
+stars: 15719
 description: |-
     Effortlessly compose, extend, and observe every service in real-time for the first time ever.
 url: https://github.com/iii-hq/iii

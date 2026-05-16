@@ -1,6 +1,6 @@
 ---
 project: KittenTTS
-stars: 13803
+stars: 13950
 description: |-
      State-of-the-art TTS model under 25MB 😻 
 url: https://github.com/KittenML/KittenTTS
@@ -153,6 +153,23 @@ Synthesize speech and write directly to an audio file.
 | `speed` | `float` | `1.0` | Speech speed multiplier |
 | `sample_rate` | `int` | `24000` | Audio sample rate in Hz |
 | `clean_text` | `bool` | `True` | Preprocess text (expand numbers, currencies, etc.) |
+
+### `normalize_text(text, locale="en-US", return_spans=False)`
+
+Normalize text for TTS without generating audio.
+
+```python
+from kittentts import normalize_text
+
+normalized = normalize_text("Dr. Rivera paid $12.50 at 3:05 p.m.")
+# "Doctor Rivera paid twelve dollars and fifty cents at three oh five p m."
+
+result = normalize_text("Fig. 2", return_spans=True)
+print(result.text)
+print(result.spans)
+```
+
+When `return_spans=True`, the result includes original-to-normalized character spans for changed segments such as abbreviations, dates, times, numbers, currency, URLs, and punctuation.
 
 ### `model.available_voices`
 

@@ -1,6 +1,6 @@
 ---
 project: node
-stars: 117122
+stars: 117256
 description: |-
     Node.js JavaScript runtime ✨🐢🚀✨
 url: https://github.com/nodejs/node
@@ -461,8 +461,6 @@ For information about the governance of the Node.js project, see
   **Vladimir Morozov** <<vmorozov@microsoft.com>> (he/him)
 * [watilde](https://github.com/watilde) -
   **Daijiro Wachi** <<daijiro.wachi@gmail.com>> (he/him)
-* [zcbenz](https://github.com/zcbenz) -
-  **Cheng Zhao** <<zcbenz@gmail.com>> (he/him)
 * [ZYSzys](https://github.com/ZYSzys) -
   **Yongsheng Zhang** <<zyszys98@gmail.com>> (he/him)
 
@@ -741,6 +739,8 @@ For information about the governance of the Node.js project, see
   **Yorkie Liu** <<yorkiefixer@gmail.com>>
 * [yosuke-furukawa](https://github.com/yosuke-furukawa) -
   **Yosuke Furukawa** <<yosuke.furukawa@gmail.com>>
+* [zcbenz](https://github.com/zcbenz) -
+  **Cheng Zhao** <<zcbenz@gmail.com>> (he/him)
 
 </details>
 

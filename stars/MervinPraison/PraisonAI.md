@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 7092
+stars: 7779
 description: |-
     PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipping autonomous self-improving agents that research, plan, code, and execute tasks. Deployed in 5 lines of code with built-in memory, RAG, and support for 100+ LLMs.
 url: https://github.com/MervinPraison/PraisonAI
@@ -365,6 +365,15 @@ Connect your AI agents to **Telegram, Discord, Slack, WhatsApp** and more — al
 pip install "praisonai[claw]"
 praisonai claw
 ```
+
+#### Required Environment Variables
+
+Copy `.env.example` to `.env` and configure the following variables:
+
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `OPENAI_API_KEY` | Yes | OpenAI API key for all LLM calls |
+| `TAVILY_API_KEY` | Yes (Claw) | Tavily key for the built-in web-search tool. Get one free at https://app.tavily.com |
 
 Open **http://localhost:8082** — the dashboard comes with 13 built-in pages: Chat, Agents, Memory, Knowledge, Channels, Guardrails, Cron, and more. Add messaging channels directly from the UI.
 

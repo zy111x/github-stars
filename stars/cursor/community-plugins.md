@@ -1,14 +1,14 @@
 ---
-project: directories
-stars: 3929
+project: community-plugins
+stars: 3930
 description: |-
-    Find rules and MCP servers
-url: https://github.com/leerob/directories
+    Plugins from the Cursor community
+url: https://github.com/cursor/community-plugins
 ---
 
 # Cursor Directory
 
-The community hub for Cursor — plugins, MCP servers, events, jobs, and thousands of developers building together.
+The directory of plugins from the Cursor community.
 
 **[cursor.directory](https://cursor.directory)**
 
@@ -19,8 +19,6 @@ The community hub for Cursor — plugins, MCP servers, events, jobs, and thousan
 ```
 ├── apps/
 │   └── cursor/          # Next.js app
-├── packages/
-│   └── email/           # Email templates (React Email)
 ├── supabase/
 │   └── migrations/      # Database migrations
 └── package.json         # Bun workspace config
@@ -40,8 +38,8 @@ All data lives in the database — there is no local data in the repo.
 1. **Clone the repo**
 
 ```bash
-git clone https://github.com/pontusab/cursor.directory.git
-cd cursor.directory
+git clone https://github.com/cursor/community-plugins.git
+cd community-plugins
 ```
 
 2. **Install dependencies**
@@ -63,7 +61,6 @@ Fill in the required values:
 | `NEXT_PUBLIC_SUPABASE_URL` | Yes | Supabase project URL |
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Yes | Supabase Publishable key (`sb_publishable_...`, replaces the legacy anon key) |
 | `SUPABASE_SECRET_KEY` | Yes | Supabase Secret key (`sb_secret_...`, replaces the legacy service role key) |
-| `RESEND_API_KEY` | No | Resend API key (emails) |
 | `NEXT_PUBLIC_APP_URL` | No | Defaults to `http://localhost:3000` |
 
 4. **Run the database migrations**
@@ -104,20 +101,6 @@ Auto-detected components:
 
 See the [Open Plugins specification](https://open-plugins.com/plugin-builders/specification) and [plugin template](https://github.com/cursor/plugin-template) for details.
 
-### Host an Event
-
-Community events are powered by [Luma](https://lu.ma):
-
-1. Go to [cursor.directory/events](https://cursor.directory/events)
-2. Click **Host an event**
-3. Fill out the form — your event will appear on the site automatically
-
-### Post a Job
-
-1. Sign in at [cursor.directory](https://cursor.directory)
-2. Navigate to **Jobs → Post a job**
-3. Fill in the details and submit
-
 ---
 
 ## Tech Stack
@@ -127,10 +110,8 @@ Community events are powered by [Luma](https://lu.ma):
 - **Database**: [Supabase](https://supabase.com) (PostgreSQL)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com)
 - **UI**: [Radix UI](https://radix-ui.com) + [shadcn/ui](https://ui.shadcn.com)
-- **Email**: [React Email](https://react.email) + [Resend](https://resend.com)
 - **Search**: [Fuse.js](https://fusejs.io) (client-side fuzzy search)
 - **URL State**: [nuqs](https://nuqs.47ng.com)
-- **Events**: [Luma API](https://docs.lu.ma)
 - **Linting**: [Biome](https://biomejs.dev)
 
 

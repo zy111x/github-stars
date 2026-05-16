@@ -1,6 +1,6 @@
 ---
 project: magentic-ui
-stars: 9804
+stars: 9807
 description: |-
     A research prototype of a human-centered web agent
 url: https://github.com/microsoft/magentic-ui

@@ -1,12 +1,10 @@
 ---
 project: unavatar
-stars: 1431
+stars: 1432
 description: |-
     Get unified user avatar from social networks, including Instagram, SoundCloud, Telegram, Twitter, YouTube & more.
 url: https://github.com/microlinkhq/unavatar
 ---
-
-![logo](https://unavatar.io/api/og ':id=banner')
 
 ## Table of Contents
 
@@ -16,11 +14,15 @@ url: https://github.com/microlinkhq/unavatar
   - [How to add attribution](#how-to-add-attribution)
   - [Remove attribution](#remove-attribution)
 - [Authentication](#authentication)
+  - [Secret keys](#secret-keys)
+  - [Publishable keys](#publishable-keys)
+  - [Domain restrictions](#domain-restrictions)
 - [Pricing](#pricing)
 - [Cache](#cache)
 - [Query parameters](#query-parameters)
   - [TTL](#ttl)
   - [Fallback](#fallback)
+  - [Token](#token)
   - [JSON](#json)
 - [Providers](#providers)
   - [Apple Music](#apple-music)
@@ -84,7 +86,9 @@ url: https://github.com/microlinkhq/unavatar
 
 ---
 
-Last updated on May 3, 2026
+Last updated on May 13, 2026
+
+![logo](https://unavatar.io/api/og ":id=banner")
 
 ## Introduction
 
@@ -175,6 +179,10 @@ Attribution is only required on the free plan. [Upgrade to the PRO plan](https:/
 Anonymous requests work without authentication. They are limited to 25 requests/day per IP address.
 
 For [PRO](https://unavatar.io/checkout) users, the requests must include the API key as the `x-api-key` request header:
+
+```html
+![](https://unavatar.io/github/kikobeats)
+```
 
 ```bash
 curl "https://unavatar.io/github/kikobeats" -H "x-api-key: YOUR_API_KEY"
@@ -276,6 +284,116 @@ x-rate-limit-remaining: 24
 x-rate-limit-reset: 1744243200
 ```
 
+### Secret keys
+
+Secret keys (`sk_`) are meant for server-side use only — never expose them publicly. They provide full access to all API operations: avatar lookups, key management, usage data, and billing.
+
+Pass them via the `x-api-key` header:
+
+```html
+![](https://unavatar.io/github/kikobeats)
+```
+
+```bash
+curl "https://unavatar.io/github/kikobeats" -H "x-api-key: sk_YOUR_SECRET_KEY"
+```
+
+```javascript
+await fetch('https://unavatar.io/github/kikobeats', {
+
+  headers: {
+
+    'x-api-key': 'sk_YOUR_SECRET_KEY'
+
+  }
+
+})
+```
+
+```python
+import requests
+
+response = requests.get(
+
+  'https://unavatar.io/github/kikobeats',
+
+  headers={'x-api-key': 'sk_YOUR_SECRET_KEY'}
+
+)
+```
+
+```golang
+package main
+
+import "net/http"
+
+func main() {
+
+  req, _ := http.NewRequest("GET", "https://unavatar.io/github/kikobeats", nil)
+
+  req.Header.Set("x-api-key", "sk_YOUR_SECRET_KEY")
+
+  resp, _ := http.DefaultClient.Do(req)
+
+  defer resp.Body.Close()
+
+}
+```
+
+```ruby
+require 'net/http'
+
+require 'uri'
+
+uri = URI('https://unavatar.io/github/kikobeats')
+
+request = Net::HTTP::Get.new(uri)
+
+request['x-api-key'] = 'sk_YOUR_SECRET_KEY'
+
+response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
+
+  http.request(request)
+
+end
+```
+
+```php
+$ch = curl_init('https://unavatar.io/github/kikobeats');
+
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+
+  'x-api-key: sk_YOUR_SECRET_KEY',
+
+]);
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$response = curl_exec($ch);
+
+curl_close($ch);
+```
+
+### Publishable keys
+
+Publishable keys (`pk_`) are safe to use in client-side code. They can **only** fetch avatars — any attempt to call management endpoints (key add/remove/rotate, usage, billing) returns an error.
+
+Pass them as a `token` query parameter, which makes them easy to use directly in HTML markup:
+
+```html
+![](https://unavatar.io/github/kikobeats?token=pk_YOUR_PUBLISHABLE_KEY)
+```
+
+### Domain restrictions
+
+Publishable keys support optional domain restrictions to prevent unauthorized use. When domain restrictions are configured, requests with that publishable key are only accepted from matching `Origin` or `Referer` domains.
+
+Domains can be managed from the [dashboard](https://unavatar.io/dashboard?tab=credentials). Valid values include:
+
+- `example.com` — exact domain match
+- `*.example.com` — all subdomains of example.com
+- `app.example.com` — a specific subdomain
+
 ## Pricing
 
 Unavatar pricing is simple: you can start on the anonymous free tier, then authenticate with `x-api-key` to get additional included usage and metered billing for higher volume.
@@ -299,7 +417,7 @@ Every request has a cost in tokens (**\$0.005 per token**) based on the proxy ti
 The proxy tier used is returned in the `x-proxy-tier` response header, and the total cost in the `x-unavatar-cost` header.
 
 ```bash
-$ curl -I -H "x-api-key: YOUR_API_KEY" https://unavatar.io/instagram/kikobeats
+$ curl -I -H "x-api-key: sk_YOUR_SECRET_KEY" https://unavatar.io/instagram/kikobeats
 
 x-pricing-tier: pro
 
@@ -335,7 +453,7 @@ To check the cache status in real requests, inspect these response headers:
 | `cache-control`  | Shows cache policy and effective TTL (for example `public, max-age=3600` for `ttl=1h`). |
 
 ```bash
-$ curl -I -H "x-api-key: YOUR_API_KEY" "https://unavatar.io/github/kikobeats?ttl=1h"
+$ curl -I -H "x-api-key: sk_YOUR_SECRET_KEY" "https://unavatar.io/github/kikobeats?ttl=1h"
 
 cache-control: public, max-age=3600
 
@@ -385,6 +503,16 @@ or even a base64 encoded image. This allows you to return a transparent, base64 
 e.g., [unavatar.io/github/37t?fallback=data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==](https://unavatar.io/github/37t?fallback=data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==)
 
 You can pass `fallback=false` to explicitly disable this behavior. In this case, a *404 Not Found* HTTP status code will returned when is not possible to get the user avatar.
+
+### Token
+
+Type: `string`
+
+Authenticates the request with a [publishable key](https://unavatar.io/docs#publishable-keys). This is an alternative to the `x-api-key` header, designed for contexts where headers cannot be set (e.g., `<img>` tags).
+
+e.g., [unavatar.io/github/kikobeats?token=pk_YOUR_PUBLISHABLE_KEY](https://unavatar.io/github/kikobeats?token=pk_YOUR_PUBLISHABLE_KEY)
+
+Secret keys (`sk_`) also work as a `token` value, but should only be passed via the `x-api-key` header to avoid exposing them in URLs.
 
 ### JSON
 
@@ -887,7 +1015,7 @@ These headers help you understand pricing, limits, and request diagnostics.
 | `retry-after`            | Seconds until rate limit resets (only on 429 responses)   |
 
 ```bash
-$ curl -I -H "x-api-key: YOUR_API_KEY" https://unavatar.io/github/kikobeats
+$ curl -I -H "x-api-key: sk_YOUR_SECRET_KEY" https://unavatar.io/github/kikobeats
 
 x-pricing-tier: pro
 
@@ -916,28 +1044,34 @@ Expected errors are known operational cases returned with stable codes.
 - `more` links to documentation for common fixes.
 - `report` (when present) indicates how to contact support for server errors.
 
-| HTTP | Code                 | Typical trigger                             |
-| ---- | -------------------- | ------------------------------------------- |
-| 400  | `ESESSIONID`         | Missing `session_id` in `/checkout/success` |
-| 400  | `ESESSION`           | Checkout session not paid or not found      |
-| 400  | `ESIGNATURE`         | Missing `stripe-signature` header           |
-| 400  | `EWEBHOOK`           | Invalid/failed Stripe webhook processing    |
-| 400  | `EAPIKEYVALUE`       | Missing `apiKey` query parameter            |
-| 400  | `EAPIKEYLABEL`       | Missing `label` query parameter             |
-| 401  | `EEMAIL`             | Invalid or missing authenticated email      |
-| 401  | `EUSERUNAUTHORIZED`  | Missing/invalid auth for protected routes   |
-| 401  | `EAPIKEY`            | Invalid `x-api-key`                         |
-| 403  | `ETTL`               | Custom `ttl` requested without pro plan     |
-| 403  | `EPRO`               | Provider restricted to pro plan             |
-| 404  | `ENOTFOUND`          | Route not found                             |
-| 404  | `EAPIKEYNOTFOUND`    | API key not found                           |
-| 409  | `EAPIKEYEXISTS`      | Custom API key already exists               |
-| 409  | `EAPIKEYLABELEXISTS` | API key label already exists                |
-| 409  | `EAPIKEYMIN`         | Attempt to remove last remaining key        |
-| 429  | `ERATE`              | Anonymous daily rate limit exceeded         |
-| 500  | `ECHECKOUT`          | Stripe checkout session creation failed     |
-| 500  | `EAPIKEYFAILED`      | API key retrieval after checkout failed     |
-| 500  | `EINTERNAL`          | Unexpected internal server failure          |
+| HTTP | Code                 | Typical trigger                                         |
+| ---- | -------------------- | ------------------------------------------------------- |
+| 400  | `ESESSIONID`         | Missing `session_id` in `/checkout/success`             |
+| 400  | `ESESSION`           | Checkout session not paid or not found                  |
+| 400  | `ESIGNATURE`         | Missing `stripe-signature` header                       |
+| 400  | `EWEBHOOK`           | Invalid/failed Stripe webhook processing                |
+| 400  | `EAPIKEYVALUE`       | Missing `apiKey` query parameter                        |
+| 400  | `EAPIKEYLABEL`       | Missing `label` query parameter                         |
+| 400  | `EAUTOROUTE`         | `/:key` used with a username instead of email/domain    |
+| 400  | `EPKREMOVE`          | Attempted to remove a publishable key directly          |
+| 400  | `EPKUPDATE`          | Attempted to update a publishable key directly          |
+| 400  | `EPKINVALID`         | Publishable key does not start with `pk_`               |
+| 401  | `EEMAIL`             | Invalid or missing authenticated email                  |
+| 401  | `EUSERUNAUTHORIZED`  | Missing/invalid auth for protected routes               |
+| 401  | `EAPIKEY`            | Invalid API key via header or `?token` query param      |
+| 403  | `ETTL`               | Custom `ttl` requested without pro plan                 |
+| 403  | `EPRO`               | Provider restricted to pro plan                         |
+| 403  | `EPKNOTALLOWED`      | Publishable key used on a secret-key-only endpoint      |
+| 403  | `EPKDOMAIN`          | Request origin not in publishable key's allowed domains |
+| 404  | `ENOTFOUND`          | Route not found                                         |
+| 404  | `EAPIKEYNOTFOUND`    | API key not found                                       |
+| 409  | `EAPIKEYEXISTS`      | Custom API key already exists                           |
+| 409  | `EAPIKEYLABELEXISTS` | API key label already exists                            |
+| 409  | `EAPIKEYMIN`         | Attempt to remove last remaining key                    |
+| 429  | `ERATE`              | Anonymous daily rate limit exceeded                     |
+| 500  | `ECHECKOUT`          | Stripe checkout session creation failed                 |
+| 500  | `EAPIKEYFAILED`      | API key retrieval after checkout failed                 |
+| 500  | `EINTERNAL`          | Unexpected internal server failure                      |
 
 ## Contact
 

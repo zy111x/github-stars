@@ -1,6 +1,6 @@
 ---
 project: ink-markdown-es
-stars: 4
+stars: 5
 description: |-
     A modern performance markdown renderer for ink.
 url: https://github.com/miownag/ink-markdown-es

@@ -1,6 +1,6 @@
 ---
 project: partykit
-stars: 1107
+stars: 1109
 description: |-
     PartyKit, for Workers
 url: https://github.com/cloudflare/partykit

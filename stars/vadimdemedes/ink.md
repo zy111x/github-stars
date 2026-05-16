@@ -1,6 +1,6 @@
 ---
 project: ink
-stars: 38265
+stars: 38397
 description: |-
     🌈 React for interactive command-line apps
 url: https://github.com/vadimdemedes/ink
@@ -139,6 +139,7 @@ render(<Counter />);
 - [instagram-cli](https://github.com/supreme-gg-gg/instagram-cli) - Instagram client.
 - [ElevenLabs CLI](https://github.com/elevenlabs/cli) - ElevenLabs agents client.
 - [SSH AI Chat](https://github.com/miantiao-me/ssh-ai-chat) - Chat with AI over SSH.
+- [Deep Code CLI](https://github.com/lessweb/deepcode-cli) - AI coding assistant optimized for the DeepSeek model.
 
 _(PRs welcome. Append new entries at the end. Repos must have 100+ stars and showcase Ink beyond a basic list picker.)_
 
@@ -2088,7 +2089,7 @@ Use `hasMeasured` to detect when the currently tracked element has been measured
 
 #### ref
 
-Type: `React.RefObject<DOMElement>`
+Type: `React.RefObject<DOMElement | null>`
 
 A ref to the `<Box>` element to track.
 
