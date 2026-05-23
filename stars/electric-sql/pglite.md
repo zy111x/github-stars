@@ -1,6 +1,6 @@
 ---
 project: pglite
-stars: 15224
+stars: 15267
 description: |-
     Embeddable Postgres with real-time, reactive bindings.
 url: https://github.com/electric-sql/pglite
@@ -15,7 +15,7 @@ url: https://github.com/electric-sql/pglite
       <source media="(prefers-color-scheme: light)"
           srcset="https://raw.githubusercontent.com/electric-sql/pglite/main/docs/public/img/brand/logo-light.svg"
       />
-      <img alt="ElectricSQL logo"
+      <img alt="PGlite logo"
           src="https://raw.githubusercontent.com/electric-sql/pglite/main/docs/public/img/brand/logo-light.svg"
       />
     </picture>
@@ -23,7 +23,7 @@ url: https://github.com/electric-sql/pglite
 </p>
 
 <p align="center">
-  <a href="https://pglite.dev">PGlite</a> - the WASM build of Postgres from <a href="https://electric-sql.com" target="_blank">ElectricSQL</a>.<br>
+  <a href="https://pglite.dev">PGlite</a> - the WASM build of Postgres from <a href="https://electric.ax" target="_blank">Electric</a>.<br>
   Build reactive, realtime, local-first apps directly on Postgres.
 <p>
 

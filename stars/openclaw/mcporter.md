@@ -1,6 +1,6 @@
 ---
 project: mcporter
-stars: 4428
+stars: 4487
 description: |-
     Call MCPs via TypeScript, masquerading as simple TypeScript API. Or package them as cli.
 url: https://github.com/openclaw/mcporter
@@ -68,6 +68,7 @@ npx mcporter list --stdio "bun run ./local-server.ts" --env TOKEN=xyz
 ```
 
 - Add `--json` to emit a machine-readable summary with per-server statuses (auth/offline/http/error counts) and, for single-server runs, the full tool schema payload.
+- Add `--status` for a concise single-server status check without tool docs, `--exit-code` to fail when any checked server is unhealthy, or `--quiet` for silent health gates.
 - Add `--verbose` to show every config source that registered the server name (primary first), both in text and JSON list output.
 
 You can now point `mcporter list` at ad-hoc servers: provide a URL directly or use the new `--http-url/--stdio` flags (plus `--env`, `--cwd`, `--name`, or `--persist`) to describe any MCP endpoint. Until you persist that definition, you still need to repeat the same URL/stdio flags for `mcporter call`—the printed slug only becomes reusable once you merge it into a config via `--persist` or `mcporter config add` (use `--scope home|project` to pick the write target). Follow up with `mcporter auth https://…` (or the same flag set) to finish OAuth without editing config. Full details live in [docs/adhoc.md](docs/adhoc.md).
@@ -171,6 +172,7 @@ Helpful flags:
 - `--no-coerce` (on `mcporter call`) -- keep all `key=value` and positional values as raw strings (disables bool/null/number/JSON coercion).
 - `--` (on `mcporter call`) -- stop flag parsing so the remaining tokens stay literal positional values, even when they start with `--`.
 - `--json` (on `mcporter list`) -- emit JSON summaries/counts instead of text. Multi-server runs report per-server statuses, counts, and connection issues; single-server runs include the full tool metadata.
+- `--status`, `--exit-code`, `--quiet` (on `mcporter list`) -- run concise server health checks through the existing list flow; `--quiet` suppresses output and exits 1 if anything checked is unhealthy.
 - `--output json/raw` (on `mcporter call`) -- when a connection fails, MCPorter prints the usual colorized hint and also emits a structured `{ server, tool, issue }` envelope so scripts can handle auth/offline/http errors programmatically.
 - `--json` (on `mcporter auth`) -- emit the same structured connection envelope whenever OAuth/transport setup fails, instead of throwing an error. With `--no-browser`, it emits auth-start JSON containing `authorizationUrl` and `redirectUrl`.
 - `--no-browser` / `--browser none` (on `mcporter auth` or `mcporter config login`) -- suppress browser launch and print the OAuth authorization URL for headless workflows; `MCPORTER_OAUTH_NO_BROWSER=1` / `true` / `yes` enables the same behavior.
@@ -426,7 +428,7 @@ npx mcporter config add notion https://mcp.notion.com/mcp --auth oauth
 npx mcporter auth notion
 ```
 
-On headless hosts, use `npx mcporter auth notion --no-browser` to print the authorization URL instead of launching the platform browser. Treat the printed URL as sensitive operational output. If you open it on another machine, make sure the printed `redirectUrl` callback port is reachable through a loopback-only tunnel or a configured `oauthRedirectUrl`.
+On headless hosts, use `npx mcporter auth notion --no-browser` to print the authorization URL instead of launching the platform browser. Treat the printed URL as sensitive operational output. Keep the `mcporter auth` process alive until the browser redirects back to the printed `redirectUrl`; process managers that exit or clean up the command after capturing stdout can kill the loopback callback listener before OAuth completes. Run the command from a persistent terminal session, `tmux`, or a supervised background process such as `nohup`, and if you open the URL on another machine, make sure the callback port is reachable through a loopback-only tunnel or a configured `oauthRedirectUrl`.
 
 Providers that do not support dynamic client registration can use a pre-registered app:
 
@@ -495,7 +497,7 @@ mcporter reads exactly one primary config per run. The lookup order is:
 1. The path you pass via `--config` (or programmatic `configPath`).
 2. The `MCPORTER_CONFIG` environment variable (set it in your shell to apply everywhere).
 3. `<root>/config/mcporter.json` inside the current project.
-4. `$XDG_CONFIG_HOME/mcporter/mcporter.json[c]` when `XDG_CONFIG_HOME` is set, otherwise `~/.mcporter/mcporter.json[c]`, if the project file is missing.
+4. `$XDG_CONFIG_HOME/mcporter/mcporter.json[c]` when `XDG_CONFIG_HOME` is set, falling back to `~/.mcporter/mcporter.json[c]` when no XDG mcporter config exists and the project file is missing.
 
 All `mcporter config …` mutations write back to whichever file was selected by that order. To manage a system-wide config explicitly, point the CLI at it:
 
@@ -505,7 +507,7 @@ mcporter config --config ~/.mcporter/mcporter.json add global-server https://api
 
 Set `MCPORTER_CONFIG=~/.mcporter/mcporter.json` in your shell profile when you want that file to be the default everywhere (handy for `npx mcporter …` runs).
 
-mcporter honors XDG Base Directory env vars for its own files when those vars are explicitly set: `XDG_CONFIG_HOME` for home configs, `XDG_DATA_HOME` for the OAuth vault, `XDG_CACHE_HOME` for schema caches, and `XDG_STATE_HOME` for daemon/runtime state. If the matching XDG var is unset or relative, mcporter keeps the legacy `~/.mcporter` path. Existing explicit overrides still win.
+mcporter honors XDG Base Directory env vars for its own files when those vars are explicitly set: `XDG_CONFIG_HOME` for home configs, `XDG_DATA_HOME` for the OAuth vault, `XDG_CACHE_HOME` for schema caches, and `XDG_STATE_HOME` for daemon/runtime state. If the matching XDG var is unset or relative, mcporter keeps the legacy `~/.mcporter` path. Config discovery is XDG-first but still probes `~/.mcporter/mcporter.json[c]` when no XDG mcporter config exists, which keeps embedders from hiding the user registry when they set `XDG_CONFIG_HOME` for another tool. Existing explicit overrides still win.
 
 ### Tool Filtering
 

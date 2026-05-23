@@ -1,6 +1,6 @@
 ---
 project: supermemory
-stars: 22594
+stars: 22659
 description: |-
     Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.
 url: https://github.com/supermemoryai/supermemory

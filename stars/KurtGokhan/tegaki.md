@@ -1,6 +1,6 @@
 ---
 project: tegaki
-stars: 2427
+stars: 2441
 description: |-
     Handwriting animation for the web. Supports any font or text.
 url: https://github.com/KurtGokhan/tegaki

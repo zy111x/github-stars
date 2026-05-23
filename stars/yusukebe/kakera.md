@@ -1,6 +1,6 @@
 ---
 project: kakera
-stars: 120
+stars: 124
 description: |-
     A file-based routing framework with Cloudflare Dynamic Workers
 url: https://github.com/yusukebe/kakera

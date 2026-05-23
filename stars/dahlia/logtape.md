@@ -1,6 +1,6 @@
 ---
 project: logtape
-stars: 1782
+stars: 1808
 description: |-
     Unobtrusive logging library with zero dependencies for Deno, Node.js, Bun, browsers, and edge functions
 url: https://github.com/dahlia/logtape

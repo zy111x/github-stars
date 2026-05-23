@@ -1,6 +1,6 @@
 ---
 project: offen
-stars: 976
+stars: 977
 description: |-
     Offen Fair Web Analytics
 url: https://github.com/offen/offen

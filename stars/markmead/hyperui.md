@@ -1,6 +1,6 @@
 ---
 project: hyperui
-stars: 12076
+stars: 12086
 description: |-
     Free Tailwind CSS v4 components for your next project, designed to enhance your web development with the latest features and styles 🚀
 url: https://github.com/markmead/hyperui
@@ -8,13 +8,9 @@ url: https://github.com/markmead/hyperui
 
 # HyperUI
 
-![](https://img.shields.io/github/stars/markmead/hyperui?style=social)
-![](https://img.shields.io/github/issues/markmead/hyperui)
-![](https://img.shields.io/github/license/markmead/hyperui)
+Free, open-source Tailwind CSS components for marketing sites, web apps, and eCommerce projects.
 
-Free, open-source Tailwind CSS v4 components for marketing sites, web apps, and eCommerce projects.
-
-Browse components on [hyperui.dev](https://hyperui.dev), copy the markup, and paste it into your Tailwind project.
+Browse components on [hyperui.dev](https://hyperui.dev), copy the markup, and paste it into your Tailwind CSS project.
 
 ## Use HyperUI
 

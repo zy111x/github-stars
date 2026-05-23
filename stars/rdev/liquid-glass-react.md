@@ -1,6 +1,6 @@
 ---
 project: liquid-glass-react
-stars: 4975
+stars: 5007
 description: |-
     Apple's Liquid Glass effect for React
 url: https://github.com/rdev/liquid-glass-react

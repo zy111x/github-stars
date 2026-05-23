@@ -1,6 +1,6 @@
 ---
 project: forem
-stars: 22696
+stars: 22708
 description: |-
     For empowering community 🌱
 url: https://github.com/forem/forem
@@ -21,7 +21,7 @@ url: https://github.com/forem/forem
   </a>
   <img src="https://img.shields.io/github/commit-activity/w/forem/forem" alt="GitHub commit activity">
   <a href="https://github.com/forem/forem/issues?q=is%3Aissue+is%3Aopen+label%3A%22ready+for+dev%22">
-    <img src="https://img.shields.io/github/issues/forem/forem/ready for dev" alt="GitHub issues ready for dev">
+    <img src="https://img.shields.io/github/issues/forem/forem/ready%20for%20dev" alt="GitHub issues ready for dev">
   </a>
   <a href="https://gitpod.io/#https://github.com/forem/forem">
     <img src="https://img.shields.io/badge/setup-automated-blue?logo=gitpod" alt="GitPod badge">
@@ -95,7 +95,7 @@ However, providing a Gemini API key (`GEMINI_API_KEY`) to actually generate the 
 A more complete overview of our stack is available in
 [our docs](https://developers.forem.com/technical-overview/stack).
 
-To **launch Forem in Gitpod**, navigate to
+To **launch Forem in Gitpod**, please navigate to
 [https://gitpod.io/#https://github.com/{your_github_username}/forem](https://gitpod.io/#https://github.com/{your_github_username}/forem).
 
 To **launch Forem in Ona** (formerly Gitpod), the project is fully configured for Ona development environments. Simply open the project in Ona and the environment will be automatically configured with all necessary services and dependencies.

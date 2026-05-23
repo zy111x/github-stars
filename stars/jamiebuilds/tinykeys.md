@@ -1,6 +1,6 @@
 ---
 project: tinykeys
-stars: 4010
+stars: 4012
 description: |-
     A tiny (~650 B) & modern library for keybindings.
 url: https://github.com/jamiebuilds/tinykeys
@@ -8,7 +8,7 @@ url: https://github.com/jamiebuilds/tinykeys
 
 # `tinykeys`
 
-> A tiny (~650 B) & modern library for keybindings.
+> A tiny (~1KB) & modern library for keybindings.
 > [See Demo](https://jamiebuilds.github.io/tinykeys/)
 
 ## Install
@@ -70,14 +70,20 @@ import { useEffect } from "react"
 import { tinykeys } from "tinykeys"
 
 function useKeyboardShortcuts() {
-  useEffect(() => {
-    let unsubscribe = tinykeys(window, {
-      // ...
-    })
-    return () => {
-      unsubscribe()
-    }
+  const formatBold = useEffectEvent(() => {
+    // ...
   })
+
+  const formatItalic = useEffectEvent(() => {
+    // ...
+  })
+
+  useEffect(() => {
+    return tinykeys(window, {
+      "$mod+b": formatBold,
+      "$mod+i": formatItalic,
+    })
+  }, [])
 }
 ```
 
@@ -170,6 +176,13 @@ valid value to
 "Meta+Shift+D"
 ```
 
+Modifiers can be made optional by wrapping them with `[brackets]`
+
+```js
+"[Shift]+?"
+"Control+[Shift]+D"
+```
+
 There is also a special `$mod` modifier that makes it easy to support cross
 platform keybindings:
 
@@ -181,12 +194,12 @@ platform keybindings:
 "$mod+Shift+D" // Meta/Control+Shift+D
 ```
 
-Alternatively, you can use parenthesis to use case-sensitive regular expressions
-to match multiple keys.
+You can also use parenthesis to use case-insensitive regular expressions to
+match multiple keys (Note: This does not work for modifiers).
 
 ```js
 "$mod+([0-9])" // $mod+0, $mod+1, $mod+2, etc...
-// equivalent regex: /^[0-9]$/
+// equivalent regex: /^(?:[0-9])$/iv
 ```
 
 ### Keybinding Sequences
@@ -208,6 +221,72 @@ Each press can optionally be prefixed with modifier keys:
 ```
 
 Each press in the sequence must be pressed within 1000ms of the last.
+
+#### Keybinding Priorities
+
+It should rarely come up, but the order of your keybindings matters. So if you
+were to create two keybindings that would match the same event, only the first
+will fire.
+
+This mainly comes up when you create bindings for both `KeyboardEvent#key` and
+`KeyboardEvent#code` in order to support more keyboard layouts:
+
+```js
+tinykeys(window, {
+  "$mod+b": () => console.log("make bold"),
+  "$mod+KeyB": () => console.log("also bold"),
+})
+```
+
+> In this case, if the user holds `$mod` and types `b (KeyB)` it will only
+> trigger `$mod+B` and log `"make bold"`
+
+This can also come up when you have sequences that overlap with other
+keybindings.
+
+<!-- prettier-ignore -->
+```js
+tinykeys(window, {
+  "g a": () => console.log("goto archive"),
+  "a": () => console.log("archive item"),
+})
+```
+
+> In this case, if the user types `g a` it will only log `"goto archive"`
+
+However, you can also break later keybindings by declaring earlier keybindings
+that will always win:
+
+<!-- prettier-ignore -->
+```js
+tinykeys(window, {
+  "g": () => console.log("show goto indicator"),
+  "g a": () => console.log("goto archive"),
+})
+```
+
+> In this case, if the user types `g a` it will only log `"show goto indicator"`
+> (after the first `g`)
+
+#### Keybinding Sequence Conflicts
+
+In some circumstances, overlapping keybindings can cause "conflicts" where a
+keybinding has been completely typed, but there is another keybinding declared
+earlier that might still match.
+
+```js
+tinykeys(window, {
+  "a b c": () => console.log("abc"),
+  "a b": () => console.log("ab"),
+})
+```
+
+> In this case, if the user types `a b` it will not trigger either keybinding,
+> but it will print this warning to the console:
+>
+> ```
+> warning: tinykeys: Conflict found, "a b" did not fire, waiting for: ["a b c"]
+> ```
 
 ### Display the keyboard sequence
 
@@ -264,4 +343,11 @@ Keybinding sequences will wait this long between key presses before cancelling
 
 > **Note:** Setting this value too low (i.e. `300`) will be too fast for many of
 > your users.
+
+### `options.ignore`
+
+Add a filter for which keyboard events should be ignored.
+
+By default, tinykeys will ignore keyboard events from `[contenteditable]`,
+`input`, `textarea`, and `select` unless they are the `event.currentTarget`.
 

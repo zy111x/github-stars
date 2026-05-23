@@ -1,6 +1,6 @@
 ---
 project: weibo
-stars: 45
+stars: 44
 description: |-
     新浪微博node sdk
 url: https://github.com/ksky521/weibo

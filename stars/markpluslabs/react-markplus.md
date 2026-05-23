@@ -1,6 +1,6 @@
 ---
 project: react-markplus
-stars: 2117
+stars: 2118
 description: |-
     A React markdown editor and previewer.
 url: https://github.com/markpluslabs/react-markplus

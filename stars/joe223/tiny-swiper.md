@@ -1,6 +1,6 @@
 ---
 project: tiny-swiper
-stars: 1285
+stars: 1284
 description: |-
     Ingenious JavaScript Carousel powered by wonderful plugins. Lightweight yet extensible. Import plugins as needed, No more, no less.
 url: https://github.com/joe223/tiny-swiper

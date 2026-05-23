@@ -1,6 +1,6 @@
 ---
 project: slack-bolt
-stars: 23
+stars: 24
 description: |-
     A Vercel receiver for building Slack apps with Bolt and deploying them to Vercel.
 url: https://github.com/vercel-labs/slack-bolt

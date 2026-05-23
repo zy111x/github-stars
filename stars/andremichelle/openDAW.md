@@ -1,6 +1,6 @@
 ---
 project: openDAW
-stars: 1644
+stars: 1664
 description: |-
     openDAW is a next-generation web-based Digital Audio Workstation (DAW)
 url: https://github.com/andremichelle/openDAW
@@ -91,7 +91,7 @@ Huge thanks to our [ambassadors](https://opendaw.org/ambassadors), whose dedicat
 
 ### openDAW Visionary — $25.00
 
-Stephen Tai, Pathfinder, One Sound Every Day (santino), kanaris, Oli Larkin
+Stephen Tai, Pathfinder, One Sound Every Day (santino), kanaris, Oli Larkin, [@Robert Anthony](https://github.com/RobertAnthonyDevelopment)
 
 ### openDAW Supporter — $5.00
 

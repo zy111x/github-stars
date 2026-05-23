@@ -1,6 +1,6 @@
 ---
 project: react-email
-stars: 19190
+stars: 19223
 description: |-
     💌 Build and send emails using React
 url: https://github.com/resend/react-email
@@ -89,6 +89,7 @@ Emails built with React Email can be converted into HTML and sent using any emai
 - [Mailgun](https://github.com/resend/react-email/tree/main/examples/mailgun)
 - [Postmark](https://github.com/resend/react-email/tree/main/examples/postmark)
 - [AWS SES](https://github.com/resend/react-email/tree/main/examples/aws-ses)
+- [Azure Communication Email](https://github.com/resend/react-email/tree/main/examples/azure-communication-email)
 - [Plunk](https://github.com/resend/react-email/tree/main/examples/plunk)
 - [Scaleway](https://github.com/resend/react-email/tree/main/examples/scaleway)
 

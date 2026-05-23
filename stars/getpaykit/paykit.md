@@ -1,6 +1,6 @@
 ---
 project: paykit
-stars: 934
+stars: 949
 description: |-
     The billing framework for TypeScript. Products in code, handles Stripe, webhooks, and usage state, runs in your app.
 url: https://github.com/getpaykit/paykit
@@ -88,7 +88,7 @@ Billing in the TypeScript ecosystem is either handled through low-level provider
 
 ## Contribution
 
-PayKit is a free and open source project licensed under the [MIT License](./LICENSE). You are free to do whatever you want with it.
+PayKit is free and open source project licensed under the [MIT License](./LICENSE). You are free to do whatever you want with it.
 
 You can help continue its development by:
 

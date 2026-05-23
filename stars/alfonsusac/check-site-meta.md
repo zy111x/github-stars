@@ -1,6 +1,6 @@
 ---
 project: check-site-meta
-stars: 673
+stars: 677
 description: |-
     null
 url: https://github.com/alfonsusac/check-site-meta

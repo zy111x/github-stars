@@ -1,6 +1,6 @@
 ---
 project: sql-formatter
-stars: 2849
+stars: 2859
 description: |-
     A whitespace formatter for different query languages
 url: https://github.com/sql-formatter-org/sql-formatter
@@ -27,16 +27,10 @@ It does not support:
 
 ## Install
 
-Get the latest version from NPM:
+Get the latest version using your package manager of choice:
 
 ```sh
-npm install sql-formatter
-```
-
-Also available with yarn:
-
-```sh
-yarn add sql-formatter
+npm install sql-formatter # or yarn, pnpm, bun, etc
 ```
 
 ## Usage

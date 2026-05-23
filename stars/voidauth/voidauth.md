@@ -1,6 +1,6 @@
 ---
 project: voidauth
-stars: 2119
+stars: 2131
 description: |-
     Single Sign-On for Your Self-Hosted Universe
 url: https://github.com/voidauth/voidauth
@@ -8,7 +8,7 @@ url: https://github.com/voidauth/voidauth
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/voidauth/voidauth/release.yml)
 ![GitHub Release](https://img.shields.io/github/v/release/voidauth/voidauth?logo=github)
-![GitHub License](https://img.shields.io/github/license/voidauth/voidauth)
+![GitHub License](https://img.shields.io/badge/licence-AGPL--3.0-orange)
 ![GitHub Repo stars](https://img.shields.io/github/stars/voidauth/voidauth?style=flat&logo=github)
 
 
@@ -46,6 +46,7 @@ Features:
 
 - 🌐 OpenID Connect (OIDC) Provider
 - 🔄 Proxy ForwardAuth
+- 📖 LDAP Directory Server
 - 👤 User and Groups Management
 - 📨 User Self-Registration and Invitations
 - 🎨 Customizable (Logo, Title, Theme Color, Email Templates)

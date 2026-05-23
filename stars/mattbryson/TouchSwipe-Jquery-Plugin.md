@@ -1,6 +1,6 @@
 ---
 project: TouchSwipe-Jquery-Plugin
-stars: 4015
+stars: 4014
 description: |-
     TouchSwipe is a jquery plugin to be used with jQuery on touch input devices such as iPad, iPhone etc. 
 url: https://github.com/mattbryson/TouchSwipe-Jquery-Plugin

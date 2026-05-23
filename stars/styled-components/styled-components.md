@@ -1,6 +1,6 @@
 ---
 project: styled-components
-stars: 41028
+stars: 41020
 description: |-
     Fast, expressive styling for React. Server components, client components, streaming SSR, React Native—one API.
 url: https://github.com/styled-components/styled-components
@@ -17,7 +17,7 @@ url: https://github.com/styled-components/styled-components
 <div align="center">
   <strong>Fast, expressive styling for React.</strong>
   <br />
-  Server components, client components, streaming SSR, React Native—one API.
+  Server components, client components, streaming SSR, React Native: one API.
   <br />
   <br />
   <a href="https://www.npmjs.com/package/styled-components"><img src="https://img.shields.io/npm/dm/styled-components.svg" alt="npm downloads"></a>
@@ -32,9 +32,9 @@ styled-components is largely maintained by one person. Please help fund the proj
 
 Style React components with real CSS, scoped automatically and delivered only when needed. No class name juggling, no separate files, no build step required.
 
-- **Works everywhere React runs.** Server components, client components, streaming SSR, and React Native—same API, automatic runtime detection.
+- **Works everywhere React runs.** Server components, client components, streaming SSR, and React Native: same API, automatic runtime detection.
 - **Full CSS, no compromises.** Media queries, pseudo-selectors, nesting, keyframes, global styles. If CSS supports it, so does styled-components.
-- **TypeScript-first.** Built-in types ship with the package. Props flow through to your styles with full inference—no `@types` install, no manual generics.
+- **TypeScript-first.** Built-in types ship with the package. Props flow through to your styles with full inference: no `@types` install, no manual generics.
 - **<13kB gzipped.** Small enough to disappear in your bundle. No build plugin required.
 
 ## Install
@@ -96,12 +96,14 @@ Swap the rendered element without changing styles.
 
 ```tsx
 // Renders a <a> tag with Button styles
-<Button as="a" href="/home">Link Button</Button>
+<Button as="a" href="/home">
+  Link Button
+</Button>
 ```
 
 ### Pseudos and nesting
 
-Use `&` to reference the component's generated class name—works with pseudo-classes, pseudo-elements, and nested selectors.
+Use `&` to reference the component's generated class name; works with pseudo-classes, pseudo-elements, and nested selectors.
 
 ```tsx
 const Input = styled.input`
@@ -162,12 +164,12 @@ const Card = styled.div`
 
 <ThemeProvider theme={theme}>
   <Card>Themed content</Card>
-</ThemeProvider>
+</ThemeProvider>;
 ```
 
 ### RSC-compatible themes
 
-`createTheme` turns your tokens into CSS custom properties. Class name hashes stay stable across theme variants—no hydration mismatch when switching light/dark.
+`createTheme` turns your tokens into CSS custom properties. Class name hashes stay stable across theme variants, so there's no hydration mismatch when switching light/dark.
 
 ```tsx
 import styled, { createTheme, ThemeProvider } from 'styled-components';
@@ -183,7 +185,7 @@ const { theme, GlobalStyle: ThemeVars } = createTheme({
 });
 
 const Card = styled.div`
-  color: ${theme.colors.fg};       /* var(--sc-colors-fg, palevioletred) */
+  color: ${theme.colors.fg}; /* var(--sc-colors-fg, palevioletred) */
   background: ${theme.colors.bg};
   padding: ${theme.space.md};
 `;
@@ -193,7 +195,7 @@ const Card = styled.div`
 <ThemeProvider theme={theme}>
   <ThemeVars />
   <Card>Token-driven content</Card>
-</ThemeProvider>
+</ThemeProvider>;
 ```
 
 Tokens are placeholder references that resolve at render time, not raw values. Interpolate them anywhere a CSS value goes; don't combine them with JS arithmetic. For runtime composition use `calc()`, or reach for `theme.raw.space.md` when you genuinely need the original number in JS.
@@ -284,8 +286,8 @@ The function form receives a second `ast` argument for bridging declarations or 
 import { Path } from 'react-native-svg';
 
 const Icon = styled(Path).attrs((_props, ast) => ({
-  fill: ast.pop('color'),                  // lift the CSS color decl
-  stroke: ast.peek('palette.brand'),        // read from theme via typed path
+  fill: ast.pop('color'), // lift the CSS color decl
+  stroke: ast.peek('palette.brand'), // read from theme via typed path
 }))`
   color: red;
 `;
