@@ -1,6 +1,6 @@
 ---
 project: QtScrcpy
-stars: 29526
+stars: 29605
 description: Android real-time display control software
 url: https://github.com/barry-ran/QtScrcpy
 ---

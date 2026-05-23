@@ -1,7 +1,7 @@
 ---
 project: CapsWriter-Offline
-stars: 5445
-description: 一个好用的 PC 端的语音输入工具，支持热词、LLM处理。按下CapsLock或鼠标侧键X2，说话，松开自动上屏。
+stars: 5500
+description: PC 端语音输入工具，离线识别，高准确率、低延迟，支持热词、LLM润色。按住CapsLock或鼠标侧键X2说话，松开自动上屏。
 url: https://github.com/HaujetZhao/CapsWriter-Offline
 ---
 
@@ -121,6 +121,7 @@ Qwen3-ASR-1.7B
 -   文件转录功能如何使用 — 拖拽转字幕、时间戳对齐
 -   显卡加速的若干问题 — DirectML、Vulkan 加速配置
 -   模型下载的若干问题 — 引擎选择、模型下载、目录结构
+-   常见问题 — FAQ
 -   更新日志
 
 💻 平台支持
@@ -168,6 +169,8 @@ A: 点击托盘菜单即可隐藏黑窗口。
 
 **Q: 如何开机启动？**  
 A: `Win+R` 输入 `shell:startup` 打开启动文件夹，将服务端、客户端的快捷方式放进去即可。
+
+更多问题请参阅 docs/常见问题.md。
 
 🚀 我的其他优质项目推荐
 -------------

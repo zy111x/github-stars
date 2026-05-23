@@ -1,6 +1,6 @@
 ---
 project: learn_python3_spider
-stars: 21668
+stars: 21702
 description: python爬虫教程系列、从0到1学习python爬虫，包括浏览器抓包，手机APP抓包，如 fiddler、mitmproxy，各种爬虫涉及的模块的使用，如：requests、beautifulSoup、selenium、appium、scrapy等，以及IP代理，验证码识别，Mysql，MongoDB数据库的python使用，多线程多进程爬虫的使用，css 爬虫加密逆向破解，JS爬虫逆向，分布式爬虫，爬虫项目实战实例等
 url: https://github.com/wistbean/learn_python3_spider
 ---
@@ -8,16 +8,12 @@ url: https://github.com/wistbean/learn_python3_spider
 learn\_python3\_spider
 ======================
 
-接下来就是，学习python的正确姿势！
-
-等下，阿里云服务器/2核2G/3M/40g，99元/年？？？
-
-peace.
+接下来就是，学习python的正确姿势！ peace.
 
 我开发的小程序「要克制」
 ============
 
-帮你戒色：
+如果你喜欢健身的话：
 
 python爬虫教程从0到1
 ==============

@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 37144
+stars: 37886
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/amruthpillai/reactive-resume
 ---
@@ -154,7 +154,7 @@ Tailwind CSS
 
 UI Components
 
-Radix UI
+Base UI + shadcn-style package
 
 State Management
 
