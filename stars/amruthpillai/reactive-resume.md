@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 37886
+stars: 38086
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/amruthpillai/reactive-resume
 ---
@@ -106,7 +106,7 @@ Quick Start
 The quickest way to run Reactive Resume locally:
 
 # Clone the repository
-git clone https://github.com/amruthpillai/reactive-resume.git
+git clone --depth=1  https://github.com/amruthpillai/reactive-resume.git
 cd reactive-resume
 
 # Start all services

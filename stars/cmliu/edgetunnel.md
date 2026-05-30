@@ -1,7 +1,7 @@
 ---
 project: edgetunnel
-stars: 35013
-description: edgetunnel2 VLESS/Trojan 多功能面板
+stars: 36443
+description: edgetunnel2 VLESS/Trojan/SS 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
 
@@ -189,6 +189,14 @@ Warning
 `1`或`true`
 
 默认关闭作为**优选订阅生成器**的功能，设置`1`或`true`则开启该功能
+
+**PRELOAD\_RACE\_DIAL**
+
+❌
+
+`1`或`true`
+
+默认关闭作为**预加载竞速拨号**的功能，设置`1`或`true`则开启该功能
 
 * * *
 

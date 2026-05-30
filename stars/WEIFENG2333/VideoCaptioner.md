@@ -1,6 +1,6 @@
 ---
 project: VideoCaptioner
-stars: 14699
+stars: 14812
 description: 🎬 卡卡字幕助手 | VideoCaptioner - 基于 LLM 的智能字幕助手 - 视频字幕生成、断句、校正、字幕翻译全流程处理！- A powered tool for easy and efficient video subtitling.
 url: https://github.com/WEIFENG2333/VideoCaptioner
 ---
@@ -15,8 +15,7 @@ VideoCaptioner
 安装
 --
 
-pip install videocaptioner          # 仅安装 CLI（轻量，无 GUI 依赖）
-pip install videocaptioner\[gui\]     # 安装 CLI + GUI 桌面版
+pip install videocaptioner          # 安装 CLI + GUI 桌面版
 
 免费功能（必剪语音识别、必应/谷歌翻译）**无需任何配置，安装即用**。
 
@@ -52,6 +51,10 @@ videocaptioner config set llm.model gpt-4o-mini
 
 说明
 
+`gui`
+
+打开桌面版。也可以直接运行 `videocaptioner-gui`
+
 `transcribe`
 
 语音转字幕。引擎：`faster-whisper`、`whisper-api`、`bijian`（免费）、`jianying`（免费）、`whisper-cpp`
@@ -59,6 +62,10 @@ videocaptioner config set llm.model gpt-4o-mini
 `subtitle`
 
 字幕优化/翻译。翻译服务：`llm`、`bing`（免费）、`google`（免费）
+
+`dub`
+
+根据字幕生成配音音轨或配音视频
 
 `synthesize`
 
@@ -81,8 +88,10 @@ videocaptioner config set llm.model gpt-4o-mini
 GUI 桌面版
 -------
 
-pip install videocaptioner\[gui\]
-videocaptioner                      # 无参数时自动打开桌面版
+pip install videocaptioner
+videocaptioner-gui                  # 显式打开桌面版
+videocaptioner gui                  # 等价命令
+videocaptioner                      # 无参数时也会打开桌面版
 
 其他安装方式：Windows 安装包 / macOS 一键脚本
 
