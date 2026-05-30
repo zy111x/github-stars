@@ -1,6 +1,6 @@
 ---
 project: magic-portfolio
-stars: 1307
+stars: 1320
 description: |-
     ⚡ Build your timeless portfolio with Once UI's Magic Portfolio
 url: https://github.com/once-ui-system/magic-portfolio

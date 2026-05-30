@@ -1,6 +1,6 @@
 ---
 project: canvas
-stars: 2239
+stars: 2243
 description: |-
     High performance Skia canvas implementation. Zero system dependencies.
 url: https://github.com/Brooooooklyn/canvas

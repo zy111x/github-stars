@@ -1,6 +1,6 @@
 ---
 project: cloudflare-workers-nextjs-saas-template
-stars: 764
+stars: 767
 description: |-
     Cloudflare Workers/Next.js SaaS Template
 url: https://github.com/LubomirGeorgiev/cloudflare-workers-nextjs-saas-template
@@ -68,6 +68,8 @@ Vinext is not a fork of Next.js and is not affiliated with Vercel. It is still e
   - 🔄 Comprehensive CI/CD Pipeline
   - 🧹 Cache Purging
   - ✅ Type Checking
+  - 🧪 Integration Tests
+  - 🧪 End-to-end Tests
   - 📏 Deploy Size Tracking
 - 🎨 Modern UI
   - 🎨 Tailwind CSS
@@ -115,10 +117,13 @@ Vinext is not a fork of Next.js and is not affiliated with Vercel. It is still e
   - 🧪 Local Development Setup
   - 📘 TypeScript Support
   - 🔍 Oxlint Configuration
+  - 🧪 Co-located Vitest Unit Tests
+  - 🧪 Cloudflare Workers Vitest Integration Tests
+  - 🧪 Vitest and Playwright E2E Tests
   - ⚡ Vinext and Vite Build Pipeline
   - 🔐 Type-safe Environment Variables
   - 🏗️ Cloudflare Types Generation
-  - 🤖 AI-powered Development with Cursor
+  - 🤖 AI-powered Development with AI Agents
   - 📚 Comprehensive Documentation
   - 📐 Project Structure Best Practices
 - ⚡ Edge Computing
@@ -164,6 +169,35 @@ Vinext is not a fork of Next.js and is not affiliated with Vercel. It is still e
 7. Go to http://localhost:3000/sign-in and login with the test user credentials: test@test.com / password
 8. Go to http://localhost:3000/admin to manage users and the CMS.
 
+## End-to-end tests
+
+E2E tests use Vitest with Playwright-driven Chromium pages and run against the production-style local Worker preview.
+
+After cloning the project, install the Playwright Chromium browser once on your machine:
+
+```bash
+pnpm exec playwright install chromium
+```
+
+This browser binary is not downloaded automatically by `pnpm install`. It is kept outside the repo in Playwright's local browser cache, so you normally only need to run the install command after a fresh machine setup, a new Playwright version, or a cleared Playwright cache.
+
+Run the E2E suite with:
+
+```bash
+pnpm run test:e2e
+```
+
+The E2E runner stores its temporary files under `tmp/e2e`, creates a fresh local Wrangler/D1 state under `tmp/e2e/wrangler-state`, applies all D1 migrations, runs `src/db/seed.sql`, builds the app, starts Wrangler preview on that isolated state, then runs the browser tests against the preview Worker. If the existing `dist` output matches the current build input fingerprint, the runner reuses that fresh Vinext build instead of rebuilding. The build and D1 setup run in parallel, and Vitest runs test files in parallel with isolated Playwright browser contexts. This keeps E2E data separate from your normal local `.wrangler` development state.
+
+VS Code Vitest Explorer is configured through `.vscode/settings.json` to use `vitest.e2e.config.ts`. Running an individual E2E test from the editor uses Vitest global setup to create the same isolated Wrangler/D1 state and preview Worker before the selected test starts.
+
+In CI, install Chromium before running the suite:
+
+```bash
+pnpm exec playwright install --with-deps chromium
+pnpm run test:e2e
+```
+
 ## Useful commands
 
 | Command | Purpose |
@@ -172,6 +206,9 @@ Vinext is not a fork of Next.js and is not affiliated with Vercel. It is still e
 | `pnpm build` | Build the app with Vinext and Vite |
 | `pnpm start` | Start the local Vinext production server |
 | `pnpm preview` | Build, then preview the Worker locally with Wrangler |
+| `pnpm run test:unit` | Run co-located Vitest unit tests |
+| `pnpm run test:integration` | Run Cloudflare Workers Vitest integration tests with local D1/KV/Queue bindings |
+| `pnpm run test:e2e` | Run Playwright-driven E2E tests against a clean local Wrangler/D1 preview |
 | `pnpm deploy` | Build and deploy with `vinext deploy` |
 | `pnpm deploy:dryrun` | Build and run a Wrangler deploy dry run into `worker-dist` |
 | `pnpm check:vinext` | Run the Vinext compatibility checker |
@@ -186,34 +223,18 @@ After making a change to `wrangler.jsonc`, run `pnpm run cf-typegen` to regenera
 Cloudflare bindings are defined in `wrangler.jsonc` and exposed to server code through `cloudflare:workers` or the local helper in `src/utils/cloudflare-context.ts`. The custom Worker entry lives in `worker-entrypoint.ts` and is configured as the `main` entry in `wrangler.jsonc`.
 
 ## Things to change and customize before deploying to production
+
 1. Go to `src/constants.ts` and update it with your project details
 2. Update the `name` field in `package.json` to your project name so generated metrics and package metadata identify the reused template correctly
-3. Update `AGENTS.md` with your project specification so that Cursor AI can give you better suggestions
+3. Update `AGENTS.md` with your project specification so that AI coding agents can give you better suggestions
 4. Update the footer in `src/components/footer.tsx` with your project details and links
 5. Optional: Update the color palette in `src/app/globals.css`
 6. Update the metadata in `src/app/layout.tsx` with your project details
 7. Update `cms.config.ts` if necessary
 
-## Deploying to Cloudflare with Github Actions
+## Production deployment
 
-1. Create D1, KV, and R2 resources, and make sure Cloudflare Images is enabled for your account.
-2. Onboard your sending domain in Cloudflare Email Service, then update `EMAIL_FROM`, `EMAIL_FROM_NAME`, `EMAIL_REPLY_TO`, and the `send_email.allowed_sender_addresses` entry in `wrangler.jsonc`. The Worker uses the `EMAIL` Email Service binding to send transactional email.
-3. Create a Turnstile catcha in your Cloudflare account, and set the `NEXT_PUBLIC_TURNSTILE_SITE_KEY` as a Github Actions variable.
-4. Set `TURNSTILE_SECRET_KEY` as a secret in your Cloudflare Worker.
-5. Update the `wrangler.jsonc` file with the new database, KV namespace, R2 bucket, env variables, Images binding, email binding, and account id. Search for "cloudflare-workers-nextjs-saas-template" recursively in the whole repository and change that to the name of your project.
-6. Go to https://dash.cloudflare.com/profile/api-tokens and click on "Use template" next to "Edit Cloudflare Workers". On the next, page add the following permissions in addition to the ones from the template:
-    - Account:AI Gateway:Edit
-    - Account:Workers AI:Edit
-    - Account:Workers AI:Read
-    - Account:Queues:Edit
-    - Account:Vectorize:Edit
-    - Account:D1:Edit
-    - Account:Cloudflare Images:Edit
-    - Account:Workers KV Storage:Edit
-    - Account:Email Sending:Edit
-    - Zone:Cache Purge:Purge
-7. Add the API token to the Github repository secrets as `CLOUDFLARE_API_TOKEN`
-8. Add the Cloudflare account id to the Github repository variables as `CLOUDFLARE_ACCOUNT_ID`
-9. Optional: If you want clear the CDN cache on deploy, add `CLOUDFLARE_ZONE_ID` to the Github repository variables for the zone id of your domain. This is the zone id of your domain, not the account id.
-10. Push to the main branch. The workflow installs with `pnpm install --frozen-lockfile`, runs lint and typecheck, deploys with `pnpm run deploy`, applies D1 migrations, optionally purges the CDN cache, and records deploy size metrics in `metrics/deploy-size-history.jsonl`.
+The source of truth for preparing and deploying this template to production is the repo-local AI agent skill at `.agents/skills/prepare-cloudflare-production-deployment/SKILL.md`.
+
+That skill covers Cloudflare resource provisioning with [Cloudflare MCP](https://developers.cloudflare.com/agents/model-context-protocol/mcp-servers-for-cloudflare/), GitHub Actions secrets and variables with the [GitHub CLI](https://cli.github.com/), `wrangler.jsonc` binding updates, Worker secrets, Turnstile, Email Sending, and deployment verification.
 

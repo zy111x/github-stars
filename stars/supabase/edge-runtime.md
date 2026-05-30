@@ -1,6 +1,6 @@
 ---
 project: edge-runtime
-stars: 944
+stars: 946
 description: |-
     A server based on Deno runtime, capable of running JavaScript, TypeScript, and WASM services.
 url: https://github.com/supabase/edge-runtime

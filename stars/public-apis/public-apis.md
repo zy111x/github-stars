@@ -1,6 +1,6 @@
 ---
 project: public-apis
-stars: 436814
+stars: 437948
 description: |-
     A collective list of free APIs
 url: https://github.com/public-apis/public-apis
@@ -256,6 +256,7 @@ API | Description | Auth | HTTPS | CORS |
 API | Description | Auth | HTTPS | CORS |
 |:---|:---|:---|:---|:---|
 | [A Bíblia Digital](https://www.abibliadigital.com.br/en) | Do not worry about managing the multiple versions of the Bible | `apiKey` | Yes | No |
+| [Amanah Sunnah](https://sunnah.amanahagent.cloud/developers) | Semantic search across Quran, Hadith, Tafsir & 18K+ Rijal narrators | `apiKey` | Yes | Yes |
 | [Bhagavad Gita](https://docs.bhagavadgitaapi.in) | Open Source Shrimad Bhagavad Gita API including 21+ authors translation in Sanskrit/English/Hindi | `apiKey` | Yes | Yes |
 | [Bhagavad Gita](https://bhagavadgita.io/api) | Bhagavad Gita text | `OAuth` | Yes | Yes |
 | [Bhagavad Gita telugu](https://gita-api.vercel.app) | Bhagavad Gita API in telugu and odia languages | No | Yes | Yes |
@@ -585,6 +586,7 @@ API | Description | Auth | HTTPS | CORS |
 | [ProxyCrawl](https://proxycrawl.com) | Scraping and crawling anticaptcha service | `apiKey` | Yes | Unknown |
 | [ProxyKingdom](https://proxykingdom.com) | Rotating Proxy API that produces a working proxy on every request | `apiKey` | Yes | Yes |
 | [Pusher Beams](https://pusher.com/beams) | Push notifications for Android & iOS | `apiKey` | Yes | Unknown |
+| [QR & Barcode](https://solsigs.com/qrapi/) | QR codes and barcodes (Code 128, EAN-13, Data Matrix, PDF417 + more). SVG or PNG output | No | Yes | Yes |
 | [QR code](https://www.qrtag.net/api/) | Create an easy to read QR code and URL shortener | No | Yes | Yes |
 | [QR code](http://goqr.me/api/) | Generate and decode / read QR code graphics | No | Yes | Unknown |
 | [Qrcode Monkey](https://www.qrcode-monkey.com/qr-code-api-with-logo/) | Integrate custom and unique looking QR codes into your system or workflow | No | Yes | Unknown |
@@ -775,6 +777,7 @@ API | Description | Auth | HTTPS | CORS |
 | [Boleto.Cloud](https://boleto.cloud/) | A api to generate boletos in Brazil | `apiKey` | Yes | Unknown | |
 | [Citi](https://sandbox.developerhub.citi.com/api-catalog-list) | All Citigroup account and statement data APIs | `apiKey` | Yes | Unknown | |
 | [Econdb](https://www.econdb.com/api/) | Global macroeconomic data | No | Yes | Yes | |
+| [EconPulse](https://econpulse.io) | Live economic data — CPI, PPI, energy, treasury rates, BTC premium | apiKey | Yes | Yes |
 | [Fed Treasury](https://fiscaldata.treasury.gov/api-documentation/) | U.S. Department of the Treasury Data | No | Yes | Unknown | |
 | [Finage](https://finage.co.uk) | Finage is a stock, currency, cryptocurrency, indices, and ETFs real-time & historical data provider | `apiKey` | Yes | Unknown | |
 | [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs) | Realtime and historical stock data | `apiKey` | Yes | Unknown | |
@@ -811,7 +814,6 @@ API | Description | Auth | HTTPS | CORS |
 | [Yahoo Finance](https://www.yahoofinanceapi.com/) | Real time low latency Yahoo Finance API for stock market, crypto currencies, and currency exchange | `apiKey` | Yes | Yes | |
 | [YNAB](https://api.youneedabudget.com/) | Budgeting & Planning | `OAuth` | Yes | Yes | |
 | [Zoho Books](https://www.zoho.com/books/api/v3/) | Online accounting software, built for your business | `OAuth` | Yes | Unknown | |
-
 **[⬆ Back to Index](#index)**
 <br >
 <br >
@@ -987,6 +989,7 @@ API | Description | Auth | HTTPS | CORS |
 | [Google Earth Engine](https://developers.google.com/earth-engine/) | A cloud-based platform for planetary-scale environmental data analysis | `apiKey` | Yes | Unknown |
 | [Google Maps](https://developers.google.com/maps/) | Create/customize digital maps based on Google Maps data | `apiKey` | Yes | Unknown |
 | [Graph Countries](https://github.com/lennertVanSever/graphcountries) | Country-related data like currencies, languages, flags, regions+subregions and bordering countries | No | Yes | Unknown |
+| [HackMyIP](https://hackmyip.com/api) | IP geolocation, ISP and privacy/VPN scoring, email breach checks, DNS and WHOIS lookups | No | Yes | Yes |
 | [HelloSalut](https://fourtonfish.com/project/hellosalut-api/) | Get hello translation following user language | No | Yes | Unknown |
 | [HERE Maps](https://developer.here.com) | Create/customize digital maps based on HERE Maps data | `apiKey` | Yes | Unknown |
 | [Hirak IP to Country](https://iplocation.hirak.site/) | Ip to location with country code, currency code & currency name, fast response, unlimited requests | `apiKey` | Yes | Unknown |
@@ -1334,6 +1337,7 @@ API | Description | Auth | HTTPS | CORS |
 | [Nobel Prize](https://www.nobelprize.org/about/developer-zone-2/) | Open data about nobel prizes and events | No | Yes | Yes |
 | [Onyx Bazaar](https://onyx-actions.onrender.com/bazaar) | Free public leaderboard of x402 paid HTTP services indexed from Coinbase CDP discovery API | No | Yes | Unknown |
 | [Open Data Minneapolis](https://opendata.minneapolismn.gov/) | Spatial (GIS) and non-spatial city data for Minneapolis | No | Yes | No |
+| [Open Scholarships](https://scholarships.grudged.io) | Free, openly-licensed directory of US scholarships and student aid from official sources | No | Yes | Yes |
 | [openAFRICA](https://africaopendata.org/) | Large datasets repository of African open data | No | Yes | Unknown |
 | [OpenCorporates](http://api.opencorporates.com/documentation/API-Reference) | Data on corporate entities and directors in many countries | `apiKey` | Yes | Unknown |
 | [OpenSanctions](https://www.opensanctions.org/docs/api/) | Data on international sanctions, crime and politically exposed persons | No | Yes | Yes |
@@ -1714,6 +1718,7 @@ API | Description | Auth | HTTPS | CORS |
 | [Code Detection API](https://codedetectionapi.runtime.dev) | Detect, label, format and enrich the code in your app or in your data pipeline | `OAuth` | Yes | Unknown |
 | [apilayer languagelayer](https://languagelayer.com/) | Language Detection JSON API supporting 173 languages | `OAuth` | Yes | Unknown |
 | [Aylien Text Analysis](https://docs.aylien.com/textapi/#getting-started) | A collection of information retrieval and natural language APIs | `apiKey` | Yes | Unknown |
+| [Audexum](https://audexum.com/docs) | Text-to-speech REST API with 43 voices and 33 languages | `apiKey` | Yes | Yes |
 | [Cloudmersive Natural Language Processing](https://www.cloudmersive.com/nlp-api) | Natural language processing and text analysis | `apiKey` | Yes | Yes |
 | [Detect Language](https://detectlanguage.com/) | Detects text language | `apiKey` | Yes | Unknown |
 | [ELI](https://nlp.insightera.co.th/docs/v1.0) | Natural Language Processing Tools for Thai Language | `apiKey` | Yes | Unknown |
@@ -1776,6 +1781,7 @@ API | Description | Auth | HTTPS | CORS |
 | [Metro Lisboa](http://app.metrolisboa.pt/status/getLinhas.php) | Delays in subway lines | No | No | No |
 | [Navitia](https://doc.navitia.io/) | The open API for building cool stuff with transport data | `apiKey` | Yes | Unknown |
 | [Open Charge Map](https://openchargemap.org/site/develop/api) | Global public registry of electric vehicle charging locations | `apiKey` | Yes | Yes |
+| [Orizn Visa](https://visa.orizn.app) | Visa requirements for 199 countries, 39K+ passport-destination pairs in 15 languages | `apiKey` | Yes | Yes |
 | [OpenSky Network](https://opensky-network.org/apidoc/index.html) | Free real-time ADS-B aviation data | No | Yes | Unknown |
 | [Railway Transport for France](https://www.digital.sncf.com/startup/api) | SNCF public API | `apiKey` | Yes | Unknown |
 | [REFUGE Restrooms](https://www.refugerestrooms.org/api/docs/#!/restrooms) | Provides safe restroom access for transgender, intersex and gender nonconforming individuals | No | Yes | Unknown |
@@ -1842,6 +1848,7 @@ API | Description | Auth | HTTPS | CORS |
 | [Mgnet.me](http://mgnet.me/api.html) | Torrent URL shorten API | No | Yes | No |
 | [owo](https://owo.vc/api) | A simple link obfuscator/shortener | No | Yes | Unknown |
 | [Rebrandly](https://developers.rebrandly.com/v1/docs) | Custom URL shortener for sharing branded links | `apiKey` | Yes | Unknown |
+| [RedirHub](https://redirhub.com) | URL redirect management with custom domains, HTTPS, analytics, and REST API | `apiKey` | Yes | Yes |
 | [Short Link](https://github.com/FayasNoushad/Short-Link-API) | Short URLs support so many domains | No | Yes | Unknown |
 | [Shrtcode](https://shrtco.de/docs) | URl Shortener with multiple Domains | No | Yes | Yes |
 | [Shrtlnk](https://shrtlnk.dev/developer) | Simple and efficient short link creation | `apiKey` | Yes | Yes |

@@ -1,6 +1,6 @@
 ---
 project: ui
-stars: 856
+stars: 864
 description: |-
     A beautiful collection of copy-and-paste widgets for your next project.
 url: https://github.com/wigggle-ui/ui

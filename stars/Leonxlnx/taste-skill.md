@@ -1,13 +1,13 @@
 ---
 project: taste-skill
-stars: 18788
+stars: 29084
 description: |-
     Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop 
 url: https://github.com/Leonxlnx/taste-skill
 ---
 
 <p align="center">
-  <img src="assets/readme-banner.png" alt="Taste Skill — Anti-slop Agent Skills for premium frontends" width="100%" />
+  <img src="assets/readme-banner.png" alt="Taste Skill - Anti-slop Agent Skills for premium frontends" width="100%" />
 </p>
 
 # Taste Skill
@@ -17,7 +17,7 @@ url: https://github.com/Leonxlnx/taste-skill
 </p>
 
 <p align="center">
-  <a href="https://tasteskill.dev" title="Taste Skill — tasteskill.dev">
+  <a href="https://tasteskill.dev" title="Taste Skill - tasteskill.dev">
     <img src="assets/taste-skill-logo.webp" width="80" height="80" alt="Taste Skill" />
   </a>
 </p>
@@ -67,6 +67,24 @@ npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-fro
 
 You can also copy any `SKILL.md` into your project or paste it into ChatGPT / Codex conversations.
 
+### Updating from the previous version
+
+The default `taste-skill` (install name `design-taste-frontend`) is now **v2 (experimental)**, a substantial rewrite of the original v1. If you already have v1 installed, just re-run the install command and you will be upgraded:
+
+```bash
+npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend"
+```
+
+The install name did not change, so no script updates are needed. The newer SKILL.md replaces the older one in place.
+
+If you depend on the exact behavior of v1 and want to pin to it explicitly:
+
+```bash
+npx skills add https://github.com/Leonxlnx/taste-skill --skill "design-taste-frontend-v1"
+```
+
+See [CHANGELOG.md](CHANGELOG.md) for the full v1 to v2 diff and the rationale.
+
 ## Skills
 
 Each skill does one job; you do not need all of them at once. **Implementation skills** output code. **Image-generation skills** output reference images only.
@@ -75,14 +93,15 @@ The `Install name` column is the exact value you pass to `--skill`.
 
 | Skill (folder) | Install name | Description |
 | --- | --- | --- |
-| **taste-skill** | `design-taste-frontend` | Default all-rounder for premium frontend output without locking one narrow visual style. |
+| **taste-skill** | `design-taste-frontend` | 🆕 **v2 (experimental)** - substantial rewrite of the default skill. Reads the brief, infers the design language, tunes three dials (VARIANCE / MOTION / DENSITY). Brief inference, design-system map, hard em-dash ban, canonical GSAP code skeletons, redesign-audit protocol, strict pre-flight check. Actively iterating toward v2.0.0 stable. |
+| **taste-skill-v1** | `design-taste-frontend-v1` | The original v1 of taste-skill, preserved for projects depending on its exact behavior. Use only if the v2 default breaks something specific in your workflow. |
 | **gpt-tasteskill** | `gpt-taste` | Stricter variant for GPT/Codex: higher layout variance, stronger GSAP direction, aggressive anti-slop. |
 | **image-to-code-skill** | `image-to-code` | Image-first pipeline: generate site references, analyze them, then implement the frontend to match. |
 | **redesign-skill** | `redesign-existing-projects` | Existing projects: audit the UI first, then fix layout, spacing, hierarchy, styling. |
 | **soft-skill** | `high-end-visual-design` | Polished, calm, expensive UI with softer contrast, whitespace, premium fonts, spring motion. |
 | **output-skill** | `full-output-enforcement` | When the model ships half-finished work: full output, no placeholder comments. |
 | **minimalist-skill** | `minimalist-ui` | Editorial product UI (Notion/Linear vibes), restrained palette, crisp structure. |
-| **brutalist-skill** | `industrial-brutalist-ui` | ⚠️ `BETA` Hard mechanical language: Swiss type, sharp contrast, experimental layout. |
+| **brutalist-skill** | `industrial-brutalist-ui` | Hard mechanical language: Swiss type, sharp contrast, experimental layout. |
 | **stitch-skill** | `stitch-design-taste` | Google Stitch-compatible rules, including optional `DESIGN.md` export format. |
 
 ### Image generation skills
@@ -97,12 +116,13 @@ These produce design images only (no code). Use with ChatGPT Images, Codex image
 
 ### Which one should I use?
 
-- Start with **taste-skill** for the safest general default.  
-- Use **gpt-taste** when you want the stricter GPT/Codex-oriented rules and motion/layout enforcement.  
-- Use **image-to-code-skill** for image → analyze → code website workflows.  
-- Use **redesign-skill** to improve an existing codebase instead of greenfield styling.  
-- Add **soft-skill**, **minimalist-skill**, or **brutalist-skill** when the visual direction is already chosen.  
-- Add **output-skill** if the agent keeps truncating output.  
+- Start with **taste-skill** for the safest general default. (Now v2 experimental - see what changed in the [CHANGELOG](CHANGELOG.md).)
+- If you depend on the exact behavior of the original taste-skill, install **taste-skill-v1** instead. 
+- Use **gpt-taste** when you want the stricter GPT/Codex-oriented rules and motion/layout enforcement. 
+- Use **image-to-code-skill** for image → analyze → code website workflows. 
+- Use **redesign-skill** to improve an existing codebase instead of greenfield styling. 
+- Add **soft-skill**, **minimalist-skill**, or **brutalist-skill** when the visual direction is already chosen. 
+- Add **output-skill** if the agent keeps truncating output. 
 - Use **imagegen-frontend-web**, **imagegen-frontend-mobile**, or **brandkit** when the deliverable is **images** (comps, flows, identity boards), then pass results to your coding agent.
 
 ### Image-first tip
@@ -138,6 +158,11 @@ If Taste Skill helps you, consider sponsoring:
 
 ### Current Sponsors
 
+<a href="https://github.com/dnakov"><img src="https://github.com/dnakov.png" width="40" height="40" style="border-radius:50%" alt="dnakov" title="dnakov" /></a>
+<a href="https://github.com/AkramReshad"><img src="https://github.com/AkramReshad.png" width="40" height="40" style="border-radius:50%" alt="AkramReshad" title="AkramReshad" /></a>
+<a href="https://github.com/ajmalaksar25"><img src="https://github.com/ajmalaksar25.png" width="40" height="40" style="border-radius:50%" alt="ajmalaksar25" title="ajmalaksar25" /></a>
+<a href="https://github.com/krikkkk"><img src="https://github.com/krikkkk.png" width="40" height="40" style="border-radius:50%" alt="krikkkk" title="krikkkk" /></a>
+<a href="https://github.com/navanchauhan"><img src="https://github.com/navanchauhan.png" width="40" height="40" style="border-radius:50%" alt="navanchauhan" title="navanchauhan" /></a>
 <a href="https://github.com/robinebers"><img src="https://github.com/robinebers.png" width="40" height="40" style="border-radius:50%" alt="robinebers" title="robinebers" /></a>
 <a href="https://github.com/JKc66"><img src="https://github.com/JKc66.png" width="40" height="40" style="border-radius:50%" alt="JKc66" title="JKc66" /></a>
 <a href="https://github.com/u2393696078-rgb"><img src="https://github.com/u2393696078-rgb.png" width="40" height="40" style="border-radius:50%" alt="u2393696078-rgb" title="u2393696078-rgb" /></a>
@@ -145,7 +170,6 @@ If Taste Skill helps you, consider sponsoring:
 <a href="https://github.com/AtharvaJaiswal005"><img src="https://github.com/AtharvaJaiswal005.png" width="40" height="40" style="border-radius:50%" alt="AtharvaJaiswal005" title="AtharvaJaiswal005" /></a>
 <a href="https://github.com/ghughes7"><img src="https://github.com/ghughes7.png" width="40" height="40" style="border-radius:50%" alt="ghughes7" title="ghughes7" /></a>
 <a href="https://github.com/mccun934"><img src="https://github.com/mccun934.png" width="40" height="40" style="border-radius:50%" alt="mccun934" title="mccun934" /></a>
-<a href="https://github.com/navanchauhan"><img src="https://github.com/navanchauhan.png" width="40" height="40" style="border-radius:50%" alt="navanchauhan" title="navanchauhan" /></a>
 
 <p align="center">
  <a href="https://www.star-history.com/leonxlnx/taste-skill">

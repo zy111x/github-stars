@@ -1,6 +1,6 @@
 ---
 project: undici
-stars: 7596
+stars: 7604
 description: |-
     An HTTP/1.1 client, written from scratch for Node.js
 url: https://github.com/nodejs/undici
@@ -347,6 +347,9 @@ The `body` mixins are the most common way to format the request/response body. M
 
 > [!NOTE]
 > The body returned from `undici.request` does not implement `.formData()`.
+
+> [!WARNING]
+> Calling `body.formData()` on a fetch response causes undici to buffer and parse the entire body. Since this is dictated by the spec, `body.formData()` must only be called on responses from trusted servers.
 
 Example usage:
 
@@ -748,10 +751,11 @@ and `undici.Agent`) which will enable the family autoselection algorithm when es
 Undici aligns with the Node.js LTS schedule. The following table shows the supported versions:
 
 | Undici Version | Bundled in Node.js | Node.js Versions Supported | End of Life |
-|----------------|-------------------|----------------------------|-------------|
-| 5.x           | 18.x              | ≥14.0 (tested: 14, 16, 18) | 2024-04-30  |
-| 6.x           | 20.x, 22.x       | ≥18.17 (tested: 18, 20, 21, 22) | 2026-04-30  |
-| 7.x           | 24.x              | ≥20.18.1 (tested: 20, 22, 24) | 2027-04-30  |
+|----------------|--------------------|----------------------------|-------------|
+| 5.x            | 18.x               | ≥14.0 (tested: 14, 16, 18) | 2024-04-30  |
+| 6.x            | 20.x, 22.x         | ≥18.17 (tested: 18, 20, 21, 22) | 2027-04-30  |
+| 7.x            | 24.x               | ≥20.18.1 (tested: 20, 22, 24) | 2028-04-30  |
+| 8.x            | 26.x               | ≥22.19.0 (tested: 22, 24, 26) | 2029-04-30  |
 
 ## License
 

@@ -1,6 +1,6 @@
 ---
 project: microsandbox
-stars: 6202
+stars: 6361
 description: |-
     🧱 secure, local and programmable sandboxes for AI agents
 url: https://github.com/superradcompany/microsandbox

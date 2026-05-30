@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 12512
+stars: 12573
 description: |-
     The official TypeScript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk

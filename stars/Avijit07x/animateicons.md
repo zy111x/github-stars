@@ -1,6 +1,6 @@
 ---
 project: animateicons
-stars: 951
+stars: 964
 description: |-
     Free and open-source animated SVG icons for React, built for smooth micro-interactions, easy customization, and lightweight performance.
 url: https://github.com/Avijit07x/animateicons
@@ -29,19 +29,19 @@ url: https://github.com/Avijit07x/animateicons
 
 ## Installation
 
-Pick one of the two paths below. Both ship the same icons and the same API — the only difference is whether you depend on the package or own the source.
+Pick whichever path fits your setup. They all ship the same icons and the same API - the difference is whether you depend on the package or copy the source into your project.
 
 ### npm package
 
 Recommended for most apps. One install, all 281 icons available.
 
-**1. Install the package** — `motion` is bundled, no separate install needed.
+**1. Install the package** - `motion` is bundled, no separate install needed.
 
 ```bash
 pnpm add @animateicons/react
 ```
 
-**2. Import an icon** — Lucide and Huge are exposed as scoped subpaths because some icon names overlap (`HeartIcon`, `CopyIcon`, etc.).
+**2. Import an icon** - Lucide and Huge are exposed as scoped subpaths because some icon names overlap (`HeartIcon`, `CopyIcon`, etc.).
 
 ```tsx
 import { BellRingIcon } from "@animateicons/react/lucide";
@@ -51,15 +51,15 @@ export function Notifications() {
 }
 ```
 
-That's it — the icon animates on hover by default.
+That's it - the icon animates on hover by default.
 
 ### shadcn CLI
 
 Use this if you want each icon copied into your codebase as a single file you can edit.
 
-**1. Set up shadcn** — if your project doesn't have it yet, follow the [shadcn installation guide](https://ui.shadcn.com/docs/installation).
+**1. Set up shadcn** - if your project doesn't have it yet, follow the [shadcn installation guide](https://ui.shadcn.com/docs/installation).
 
-**2. Add an icon** — browse the [Lucide](https://animateicons.in/icons/lucide) or [Huge](https://animateicons.in/icons/huge) gallery, click any tile to copy its install command, or replace `lu-bell-ring` below with the icon you want.
+**2. Add an icon** - browse the [Lucide](https://animateicons.in/icons/lucide) or [Huge](https://animateicons.in/icons/huge) gallery, click any tile to copy its install command, or replace `lu-bell-ring` below with the icon you want.
 
 ```bash
 pnpm dlx shadcn@latest add https://animateicons.in/r/lu-bell-ring.json
@@ -77,6 +77,32 @@ export function Notifications() {
 }
 ```
 
+### animateicons CLI
+
+Same result as the shadcn CLI, but a short first-party command instead of a registry URL.
+
+```bash
+# add one or more (bare name or lu-/hu- prefixed id)
+npx animateicons add bell-ring activity user
+
+# discover from the terminal
+npx animateicons search notification
+npx animateicons list --library huge
+```
+
+Prefer no `npx`? `npm i -g animateicons` puts an `animateicons` binary on your PATH. See [the CLI docs](./cli/README.md).
+
+### AI agents (MCP)
+
+Let AI coding tools search the catalog and add icons for you via the [Model Context Protocol](https://modelcontextprotocol.io). Exposes `search_icons`, `get_icon`, `add_icon`, and `list_libraries`.
+
+```bash
+# Claude Code
+claude mcp add animateicons -- npx -y @animateicons/mcp
+```
+
+See [@animateicons/mcp](./mcp/README.md) for Cursor and other clients.
+
 ---
 
 ## Styling
@@ -84,13 +110,13 @@ export function Notifications() {
 Every icon strokes `currentColor`, so it inherits the surrounding text color. You can also pass `color`, `className`, or use the `duration` and `isAnimated` props to control playback.
 
 ```tsx
-// Color — sets currentColor inline
+// Color - sets currentColor inline
 <EyeIcon color="#f45b48" />
 
-// Tailwind utility — works because icons stroke="currentColor"
+// Tailwind utility - works because icons stroke="currentColor"
 <EyeIcon className="text-primary" />
 
-// Speed — duration is a multiplier (lower = faster)
+// Speed - duration is a multiplier (lower = faster)
 <EyeIcon duration={0.6} />
 
 // Disable hover animation
@@ -101,7 +127,7 @@ Every icon strokes `currentColor`, so it inherits the surrounding text color. Yo
 
 ## Imperative API
 
-Need to trigger an animation from a parent — on click, on focus, or programmatically? Pass a ref. Each icon exports its own `*Handle` type.
+Need to trigger an animation from a parent - on click, on focus, or programmatically? Pass a ref. Each icon exports its own `*Handle` type.
 
 ```tsx
 "use client";
@@ -144,7 +170,7 @@ interface IconHandle {
 }
 ```
 
-Animations respect the OS-level **Reduce Motion** preference — no extra setup required.
+Animations respect the OS-level **Reduce Motion** preference - no extra setup required.
 
 ---
 
@@ -156,13 +182,16 @@ animateicons/
 │   ├── lucide/          248 Lucide-style icons
 │   └── huge/             33 Huge-style icons
 ├── npm/                 @animateicons/react published package
+├── core/                shared catalog/search/write logic (bundled into cli + mcp)
+├── cli/                 animateicons CLI (npx animateicons add …)
+├── mcp/                 @animateicons/mcp server for AI agents
 ├── app/
 │   ├── icons/[library]/ gallery routes
 │   └── icons/docs/      install guide (MDX)
 ├── components/          shared UI (Hero, Section, etc.)
 ├── hooks/               useIconFilter, useIconAnimation
 ├── tests/               Vitest + React Testing Library
-└── scripts/             registry codegen, codemods
+└── scripts/             registry + catalog codegen, codemods
 ```
 
 ---
@@ -192,7 +221,7 @@ pnpm --filter @animateicons/react test:smoke  # smoke-test the built dist
 
 ## Contributing
 
-PRs adding icons are welcome. Each icon is a single React component file — copy any existing one as a template.
+PRs adding icons are welcome. Each icon is a single React component file - copy any existing one as a template.
 
 1. Create `icons/<library>/<name>-icon.tsx` from an existing icon
 2. Register it in `icons/<library>/index.ts`

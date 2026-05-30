@@ -1,6 +1,6 @@
 ---
 project: hyperui
-stars: 12086
+stars: 12097
 description: |-
     Free Tailwind CSS v4 components for your next project, designed to enhance your web development with the latest features and styles 🚀
 url: https://github.com/markmead/hyperui
@@ -25,8 +25,10 @@ There is no package to install.
 ```bash
 pnpm install
 pnpm dev
-pnpm run css --watch
+pnpm run css:component --watch
 ```
+
+To preview the blog styles, execute: `pnpm run css:blog`.
 
 ## Contributing
 

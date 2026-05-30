@@ -1,6 +1,6 @@
 ---
 project: iii
-stars: 15967
+stars: 17290
 description: |-
     Effortlessly compose, extend, and observe every service in real-time for the first time ever.
 url: https://github.com/iii-hq/iii
@@ -82,6 +82,10 @@ Extending iii is `iii worker add`. Composing iii is calling functions. Observing
 trace.
 
 ## Quick Start
+
+<a href="https://assets.motia.dev/videos/mp4/site/v1/iii-intro.mp4">
+  <img src=".github/assets/iii-intro-preview.gif" alt="Watch the iii intro (click to play)" width="720"/>
+</a>
 
 ```bash
 iii project init myapp    # scaffold a project

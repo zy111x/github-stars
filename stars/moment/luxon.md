@@ -1,6 +1,6 @@
 ---
 project: luxon
-stars: 16404
+stars: 16402
 description: |-
     ⏱ A library for working with dates and times in JS
 url: https://github.com/moment/luxon

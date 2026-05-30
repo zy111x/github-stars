@@ -1,6 +1,6 @@
 ---
 project: ipatool
-stars: 9285
+stars: 9314
 description: |-
     Command-line tool that allows searching and downloading app packages (known as ipa files) from the iOS App Store
 url: https://github.com/majd/ipatool
@@ -73,14 +73,15 @@ Use "ipatool auth [command] --help" for more information about a command.
 To search for apps on the App Store, use the `search` command.
 
 ```
-Search for iOS apps available on the App Store
+Search for iOS and tvOS apps available on the App Store
 
 Usage:
   ipatool search <term> [flags]
 
 Flags:
-  -h, --help        help for search
-  -l, --limit int   maximum amount of search results to retrieve (default 5)
+  -h, --help              help for search
+  -l, --limit int         maximum amount of search results to retrieve (default 5)
+      --platform string   Platform to search: iphone, ipad, or appletv
 
 Global Flags:
       --format format     sets output format for command; can be 'text', 'json' (default text)
@@ -129,7 +130,7 @@ Global Flags:
 To download a copy of the ipa file, use the `download` command.
 
 ```
-Download (encrypted) iOS app packages from the App Store
+Download (encrypted) iOS and tvOS app packages from the App Store
 
 Usage:
   ipatool download [flags]
@@ -140,6 +141,7 @@ Flags:
       --external-version-id string   External version identifier of the target iOS app (defaults to latest version when not specified)
   -h, --help                         help for download
   -o, --output string                The destination path of the downloaded app package
+      --platform string              Platform to download for: iphone, ipad, or appletv
       --purchase                     Obtain a license for the app if needed
 
 Global Flags:

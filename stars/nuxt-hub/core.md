@@ -1,8 +1,8 @@
 ---
 project: core
-stars: 1266
+stars: 1270
 description: |-
-    Build full-stack applications with Nuxt, with almost zero-config.
+    Add database, KV, blob storage, and cache to your Nuxt application. NuxtHub works on Vercel, Cloudflare, Netlify, and more.
 url: https://github.com/nuxt-hub/core
 ---
 

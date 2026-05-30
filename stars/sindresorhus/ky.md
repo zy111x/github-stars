@@ -1,6 +1,6 @@
 ---
 project: ky
-stars: 16879
+stars: 16893
 description: |-
     🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API
 url: https://github.com/sindresorhus/ky

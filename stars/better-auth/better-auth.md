@@ -1,6 +1,6 @@
 ---
 project: better-auth
-stars: 28420
+stars: 28514
 description: |-
     The most comprehensive authentication framework
 url: https://github.com/better-auth/better-auth

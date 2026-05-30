@@ -1,6 +1,6 @@
 ---
 project: whoami
-stars: 492
+stars: 508
 description: |-
     your personal encyclopedia, written by agents
 url: https://github.com/whoami-wiki/whoami

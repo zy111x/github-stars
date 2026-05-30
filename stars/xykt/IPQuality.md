@@ -1,6 +1,6 @@
 ---
 project: IPQuality
-stars: 8582
+stars: 8705
 description: |-
     IP质量检测脚本 - IP Quality Check Script
 url: https://github.com/xykt/IPQuality

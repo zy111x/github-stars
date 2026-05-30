@@ -1,6 +1,6 @@
 ---
 project: zerobrew
-stars: 7297
+stars: 7324
 description: |-
     A 5-20x faster experimental Homebrew alternative
 url: https://github.com/lucasgelfond/zerobrew
@@ -34,12 +34,28 @@ url: https://github.com/lucasgelfond/zerobrew
 curl -fsSL https://zerobrew.rs/install | bash
 ```
 
-After install, run the `export` command it prints (or restart your terminal).
+The installer updates your shell config. After it finishes, restart your terminal
+or run the `source` command it prints.
 
 Or via Homebrew:
 
 ```bash
 brew install lucasgelfond/zerobrew/zerobrew
+```
+
+## Update zerobrew
+
+If you used the standalone installer, rerun it:
+
+```bash
+curl -fsSL https://zerobrew.rs/install | bash
+zb --version
+```
+
+If you installed with Homebrew:
+
+```bash
+brew update && brew upgrade zerobrew
 ```
 
 ## Quick start
@@ -52,6 +68,9 @@ zb bundle install -f myfile     # install from custom file
 zb bundle dump                  # export installed packages to Brewfile
 zb bundle dump -f out --force   # dump to custom file (overwrite)
 zb uninstall jq                 # uninstall one package
+zb outdated                     # list packages with newer versions
+zb upgrade                      # upgrade all outdated packages
+zb upgrade jq wget              # upgrade specific packages
 zb reset                        # uninstall everything
 zb gc                           # garbage collect unused store entries
 zbx jq --version                # run without linking

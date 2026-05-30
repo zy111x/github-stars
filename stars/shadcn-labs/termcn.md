@@ -1,16 +1,27 @@
 ---
 project: termcn
-stars: 478
+stars: 506
 description: |-
-    Beautiful terminal UI components, built on Ink. 100% Free, Zero config, one command setup.
+    Beautiful terminal UI components, built on Ink and OpenTUI. 100% Free, Zero config, one command setup.
 url: https://github.com/shadcn-labs/termcn
 ---
+
+<p align="center">
+  <img src="public/og.png" alt="termcn banner" />
+</p>
 
 <h1 align="center">termcn</h1>
 
 <p align="center">
   Free & open-source, ready-to-use, customizable terminal UI components for React.<br/>
-  Zero config. One command setup. Built on <a href="https://github.com/vadimdemedes/ink">Ink</a>, works seamlessly with <a href="https://ui.shadcn.com/">shadcn/ui</a>.
+  Zero config. One command setup. Built on <a href="https://github.com/vadimdemedes/ink">Ink</a> and <a href="https://github.com/anomalyco/opentui">OpenTUI</a>, works seamlessly with <a href="https://ui.shadcn.com/">shadcn/ui</a>.
+</p>
+
+<p align="center">
+  <a href="https://github.com/shadcn-labs/termcn"><img src="https://www.shieldcn.dev/github/stars/shadcn-labs/termcn.svg?variant=secondary&size=xs&theme=zinc" alt="GitHub Stars" /></a>
+  <a href="https://github.com/shadcn-labs/termcn/actions"><img src="https://www.shieldcn.dev/github/ci/shadcn-labs/termcn.svg?variant=secondary&size=xs&theme=zinc" alt="CI" /></a>
+  <a href="https://discord.gg/N6G36KhYK4"><img src="https://www.shieldcn.dev/discord/online-members/N6G36KhYK4.svg?variant=secondary&size=xs&theme=zinc" alt="Discord Members" /></a>
+  <a href="https://x.com/shadcnlabs"><img src="https://www.shieldcn.dev/x/follow/shadcnlabs.svg?variant=branded&size=xs&theme=zinc" alt="X Follow" /></a>
 </p>
 
 <p align="center">
@@ -19,18 +30,12 @@ url: https://github.com/shadcn-labs/termcn
   <a href="https://termcn.dev/docs/components">Components</a>
 </p>
 
-<br />
-
-<p align="center">
-  <img src="public/og.png" alt="termcn banner" />
-</p>
-
 ## Features
 
 - 🎨 **Theme-aware** — Automatically adapts to your chosen terminal theme
 - 🎯 **Zero config** — Works out of the box with sensible defaults
 - 📦 **shadcn/ui compatible** — Uses the same registry format and CLI
-- ⌨️ **Ink powered** — Full access to Ink's powerful terminal rendering
+- ⌨️ **Ink and OpenTUI powered** — Full access to powerful terminal rendering
 - 🧩 **Composable** — Build complex terminal UIs with simple, declarative components
 - 📊 **Charts & Data** — Bar charts, line charts, gauges, heat maps, and more
 - 🤖 **AI Components** — Chat messages, tool approvals, streaming text, and thinking blocks
@@ -52,11 +57,11 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Star History
 
-<a href="https://www.star-history.com/?repos=Aniket-508%2Ftermcn&type=date&legend=top-left">
+<a href="https://www.star-history.com/?repos=shadcn-labs%2Ftermcn&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Aniket-508/termcn&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Aniket-508/termcn&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Aniket-508/termcn&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=shadcn-labs/termcn&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=shadcn-labs/termcn&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=shadcn-labs/termcn&type=date&legend=top-left" />
  </picture>
 </a>
 

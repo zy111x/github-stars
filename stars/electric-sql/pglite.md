@@ -1,6 +1,6 @@
 ---
 project: pglite
-stars: 15267
+stars: 15318
 description: |-
     Embeddable Postgres with real-time, reactive bindings.
 url: https://github.com/electric-sql/pglite
@@ -185,7 +185,7 @@ And follow the instructions to create an appropriate changeset. Please ensure an
 
 ## Acknowledgments
 
-PGlite builds on the work of [Stas Kelvich](https://github.com/kelvich) of [Neon](https://neon.tech) in this [Postgres fork](https://github.com/electric-sql/postgres-wasm).
+PGlite builds on the work of [Stas Kelvich](https://github.com/kelvich) of [Neon](https://neon.tech) in this [Postgres fork](https://github.com/electric-sql/postgres-pglite).
 
 ## Sponsors
 
@@ -201,5 +201,5 @@ Big shoutout to everybody supporting us!
 
 PGlite is dual-licensed under the terms of the [Apache License 2.0](https://github.com/electric-sql/pglite/blob/main/LICENSE) and the [PostgreSQL License](https://github.com/electric-sql/pglite/blob/main/POSTGRES-LICENSE), you can choose which you prefer.
 
-Changes to the [Postgres source](https://github.com/electric-sql/postgres-wasm) are licensed under the PostgreSQL License.
+Changes to the [Postgres source](https://github.com/electric-sql/postgres-pglite) are licensed under the PostgreSQL License.
 

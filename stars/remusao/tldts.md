@@ -1,6 +1,6 @@
 ---
 project: tldts
-stars: 748
+stars: 749
 description: |-
     JavaScript Library to extract domains, subdomains and public suffixes from complex URIs.
 url: https://github.com/remusao/tldts
@@ -9,6 +9,13 @@ url: https://github.com/remusao/tldts
 # tldts - Blazing Fast URL Parsing
 
 `tldts` is a JavaScript library to extract hostnames, domains, public suffixes, top-level domains and subdomains from URLs.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="comparison/bench2/report/charts/readme-hero.dark.svg">
+  <img alt="tldts registrable-domain throughput vs popular public-suffix libraries — getDomain operations per second, higher is better" src="comparison/bench2/report/charts/readme-hero.svg" width="840">
+</picture>
+
+> `getDomain` throughput on a real-world URL corpus, benchmarked on Node against `psl`, `tldjs`, `parse-domain`, `tld-extract` & `haraka-tld` (higher is better).
 
 **Features**:
 
@@ -100,6 +107,22 @@ import { parse } from 'tldts';
 Alternatively, you can try it _directly in your browser_ here: https://npm.runkit.com/tldts
 
 Check [README.md](/packages/tldts/README.md) for more details about the API.
+
+# Special-use domains (RFC 6761 / IANA)
+
+Reserved special-use names such as `localhost`, `*.test`, `*.invalid`, `example(.com/.net/.org)`, `*.local`, `*.onion`, `*.alt`, and `home.arpa` aren't identified by `isIcann`/`isPrivate`: most aren't in the Public Suffix List, and the few that are (e.g. `onion`, `home.arpa`) appear there as ordinary ICANN suffixes. Enable detection with `{ detectSpecialUse: true }` to populate the `isSpecialUse` result field; it is `null` otherwise, so the default path does no extra work:
+
+```js
+const { parse } = require('tldts');
+
+parse('http://printer.local/', { detectSpecialUse: true });
+// { ...
+//   isSpecialUse: true,
+//   publicSuffix: 'local',
+//   subdomain: '' }
+```
+
+The list tracks the IANA [Special-Use Domain Names](https://www.iana.org/assignments/special-use-domain-names/) registry (RFC 6761 and the later RFCs that extend it).
 
 # Migrating from other libraries
 
@@ -214,6 +237,7 @@ done.
 const {
   getHostname,
   getDomain,
+  getFullDomain,
   getPublicSuffix,
   getSubdomain,
   getDomainWithoutSuffix,
@@ -223,9 +247,32 @@ const url = 'https://spark-public.s3.amazonaws.com';
 
 console.log(getHostname(url)); // spark-public.s3.amazonaws.com
 console.log(getDomain(url, { allowPrivateDomains: true })); // spark-public.s3.amazonaws.com
+console.log(getFullDomain(url)); // spark-public.s3.amazonaws.com (subdomain + domain, or null if not a registrable domain)
 console.log(getPublicSuffix(url, { allowPrivateDomains: true })); // s3.amazonaws.com
 console.log(getSubdomain(url, { allowPrivateDomains: true })); // ''
 console.log(getDomainWithoutSuffix(url, { allowPrivateDomains: true })); // spark-public
+```
+
+# Limitations and security considerations
+
+The core of `tldts` is turning a **hostname** into its public suffix, domain and subdomain: an exact lookup against the [Public Suffix List][public suffix list]. As a convenience it also takes a full **URL** and extracts the hostname for you, and that step is fast: `tldts.getHostname(url)` runs at ≈110 ns/call versus ≈290 ns for `new URL(url).hostname` (**~2.6× faster** on Node 26), and returns byte-identical hostnames for 100% of a 12k real-world-URL sample. That extraction is pragmatic, not a 100%-compliant [WHATWG URL](https://url.spec.whatwg.org/) parser, and differs mainly around **normalization**:
+
+- **No host normalization**: the host is returned as it appears (ASCII-lower-cased only) — no IDNA/punycode conversion, IPv4 is not canonicalized, and IPv6 is returned without its surrounding brackets (and not zero-compressed).
+- **Lenient parsing**: bare `host:port`, `user@host`, unbracketed IPv6 literals (which `new URL` rejects), out-of-range ports and trailing dots are accepted/handled rather than rejected.
+- **`isIp` is a heuristic** ("probably an IP"), not a validator: it does not check IPv4 octet ranges and does not recognize IPv4-mapped IPv6.
+
+If you rely on `tldts` for a **security decision** (origin checks, SSRF allow/deny lists, cookie scoping, …), do not treat its output as equivalent to a compliant URL parser. The safest pattern is to **extract the hostname with a real URL parser** — [`new URL(...)`](https://developer.mozilla.org/en-US/docs/Web/API/URL/URL), available in Node.js and browsers — and then hand that hostname to `tldts` with host extraction turned **off** (`extractHostname: false`). That way the platform parser decides where the host begins and ends, and `tldts` is used only for the public-suffix/domain split, so the two can never disagree:
+
+```js
+const { getDomain } = require('tldts');
+
+// 1. Let the platform URL parser determine the hostname (it throws on
+//    invalid input and follows the WHATWG URL spec).
+const { hostname } = new URL(untrustedUrl);
+
+// 2. Ask tldts only for the public-suffix/domain split, skipping its own
+//    hostname extraction.
+const domain = getDomain(hostname, { extractHostname: false });
 ```
 
 ## Contributors

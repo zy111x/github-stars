@@ -1,6 +1,6 @@
 ---
 project: cheerio
-stars: 30341
+stars: 30347
 description: |-
     The fast, flexible, and elegant library for parsing and manipulating HTML and XML.
 url: https://github.com/cheeriojs/cheerio
@@ -202,9 +202,6 @@ development and support.
           </a>
 <a href="https://hasdata.com" target="_blank" rel="noopener noreferrer">
             <img height="128px" width="128px" src="https://humble.imgix.net/https%3A%2F%2Fhasdata.com%2Ffavicon.svg?ixlib=js-3.8.0&w=128&h=128&fit=fillmax&fill=solid&s=21933842d61dec74a961fc57754e58cb" title="HasData" alt="HasData"></img>
-          </a>
-<a href="https://context.dev/" target="_blank" rel="noopener noreferrer">
-            <img height="128px" width="128px" src="https://humble.imgix.net/https%3A%2F%2Favatars.githubusercontent.com%2Fcontext-dot-dev?ixlib=js-3.8.0&w=128&h=128&fit=fillmax&fill=solid&s=34b5fb47ac08ea46e3f4e1e191e5dc40" title="context.dev" alt="context.dev"></img>
           </a>
 
 <!-- END SPONSORS -->

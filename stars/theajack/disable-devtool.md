@@ -1,6 +1,6 @@
 ---
 project: disable-devtool
-stars: 3354
+stars: 3370
 description: |-
     Disable web developer tools from the f12 button, right-click and browser menu
 url: https://github.com/theajack/disable-devtool
@@ -17,9 +17,11 @@ url: https://github.com/theajack/disable-devtool
     <a href="https://www.github.com/theajack/disable-devtool/stargazers" target="_black">
         <img src="https://img.shields.io/github/stars/theajack/disable-devtool?logo=github" alt="stars" />
     </a>
+    <!--
     <a href="https://www.github.com/theajack/disable-devtool/network/members" target="_black">
         <img src="https://img.shields.io/github/forks/theajack/disable-devtool?logo=github" alt="forks" />
     </a>
+    -->
     <a href="https://www.npmjs.com/package/disable-devtool" target="_black">
         <img src="https://img.shields.io/npm/v/disable-devtool?logo=npm" alt="version" />
     </a>
@@ -29,7 +31,18 @@ url: https://github.com/theajack/disable-devtool
     <a href="https://www.jsdelivr.com/package/npm/disable-devtool" target="_black">
         <img src="https://data.jsdelivr.com/v1/package/npm/disable-devtool/badge" alt="jsdelivr" />
     </a>
+    <!--
     <a href="https://github.com/theajack/disable-devtool/issues"><img src="https://img.shields.io/github/issues-closed/theajack/disable-devtool.svg" alt="issue"></a>
+    -->
+    <a href="https://alinsjs.github.io/docs">
+        <img src="https://img.shields.io/badge/alins-142c8e" alt="test">
+    </a>   
+    <a style="margin-left: 10px" href="https://github.com/lim-f/react-lim">
+        <img src="https://img.shields.io/badge/lim_react-ff5f5f" alt="test">
+    </a>     
+    <a style="margin-left: 10px" href="https://github.com/lim-f/vue-lim">
+        <img src="https://img.shields.io/badge/lim_vue-00c250" alt="test">
+    </a>   
 </p>
 <p align="center">
     <a href="https://github.com/theajack" target="_black">
@@ -51,33 +64,20 @@ url: https://github.com/theajack/disable-devtool
 
 ----
 
+Love this open source work? A small contribution keeps the project alive.
+
 <p align="">
+    <a href="https://www.paypal.com/ncp/payment/3572S4YYCMA6C">
+        <img src="https://img.shields.io/badge/Donate-PayPal-142c8e" alt="test">
+    </a>   
     <a href="https://ko-fi.com/theajack">
         <img src="https://img.shields.io/badge/Donate-Ko Fi-ff5f5f" alt="test">
-    </a>    
-    <a href="https://paypal.me/tackchen">
-        <img src="https://img.shields.io/badge/Donate-PayPal-142c8e" alt="test">
-    </a>    
+    </a>     
     <a href="https://shiyix.cn/images/wx-pay.png">
         <img src="https://img.shields.io/badge/Donate-Wechat Pay-00c250" alt="test">
     </a>
 </p>
 
-----
-
-## 0. Sponsor
-
-<p align="center">
-    <a href="https://alinsjs.github.io/docs">
-        <img width="75" src="https://shiyix.cn/images/alins.png" alt="alins">
-    </a>   
-    <a style="margin-left: 10px" href="https://github.com/lim-f/react-lim">
-        <img width="80" src="https://shiyix.cn/images/react.svg" alt="alins">
-    </a>     
-    <a style="margin-left: 10px" href="https://github.com/lim-f/vue-lim">
-        <img width="80" src="https://shiyix.cn/images/vue.svg" alt="alins">
-    </a>     
-</p>
 
 ## 1. Quick use
 

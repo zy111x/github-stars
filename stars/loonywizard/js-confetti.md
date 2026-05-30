@@ -1,6 +1,6 @@
 ---
 project: js-confetti
-stars: 1289
+stars: 1290
 description: |-
     JS Confetti library that supports emojis 🦄 🎉 ⚡️
 url: https://github.com/loonywizard/js-confetti

@@ -1,6 +1,6 @@
 ---
 project: crosspoint-reader
-stars: 4786
+stars: 4919
 description: |-
     Firmware for the Xteink X3 and X4 e-paper display readers
 url: https://github.com/crosspoint-reader/crosspoint-reader
@@ -257,8 +257,6 @@ One of the best things about open source is that anyone can take the code in a d
 - [papyrix-reader](https://github.com/bigbag/papyrix-reader) — Adds FB2 and MD format support. Actively maintained with Arabic script support. Custom themes via SD card.
 
 - [crosspet](https://github.com/trilwu/crosspet) — A Vietnamese fork that adds a Tamagotchi-style virtual chicken that grows based on your reading milestones (pages read, streaks, care). Also: Flashcards, Weather, Pomodoro timer, and mini-games.
-
-- [crosspoint-reader (jpirnay)](https://github.com/jpirnay/crosspoint-reader) — Faster integration of functionality. Tracks upstream PRs and integrates the good ones ahead of the official merge.
 
 - [crosspoint-reader-cjk](https://github.com/aBER0724/crosspoint-reader-cjk) — Purpose-built for Chinese, Japanese, and Korean reading.
 

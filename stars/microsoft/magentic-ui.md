@@ -1,6 +1,6 @@
 ---
 project: magentic-ui
-stars: 9848
+stars: 9872
 description: |-
     An experimental agent that works across the browser and local file system
 url: https://github.com/microsoft/magentic-ui

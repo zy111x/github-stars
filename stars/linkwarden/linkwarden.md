@@ -1,6 +1,6 @@
 ---
 project: linkwarden
-stars: 18427
+stars: 18483
 description: |-
     ⚡️⚡️⚡️ Self-hosted collaborative bookmark manager to collect, read, annotate, and fully preserve what matters, all in one place.
 url: https://github.com/linkwarden/linkwarden

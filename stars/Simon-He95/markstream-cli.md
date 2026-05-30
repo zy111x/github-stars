@@ -1,6 +1,6 @@
 ---
 project: markstream-cli
-stars: 7
+stars: 8
 description: |-
     Stream-render Markdown in a real terminal (with optional async code highlighting).
 url: https://github.com/Simon-He95/markstream-cli

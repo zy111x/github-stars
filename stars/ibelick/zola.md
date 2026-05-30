@@ -1,6 +1,6 @@
 ---
 project: zola
-stars: 1509
+stars: 1513
 description: |-
     Open chat interface for all your models.
 url: https://github.com/ibelick/zola
