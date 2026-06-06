@@ -1,6 +1,6 @@
 ---
 project: codeimage
-stars: 2078
+stars: 2077
 description: |-
     A tool to beautify your code screenshots. Built with SolidJS and Fastify.
 url: https://github.com/riccardoperra/codeimage

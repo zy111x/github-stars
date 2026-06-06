@@ -1,6 +1,6 @@
 ---
 project: sanity
-stars: 6147
+stars: 6159
 description: |-
     Sanity Studio – Rapidly configure content workspaces powered by structured content
 url: https://github.com/sanity-io/sanity

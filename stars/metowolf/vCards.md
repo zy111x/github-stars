@@ -1,6 +1,6 @@
 ---
 project: vCards
-stars: 6224
+stars: 6232
 description: |-
     📡️ vCards 中国黄页 - 优化 iOS/Android 来电、信息界面体验
 url: https://github.com/metowolf/vCards

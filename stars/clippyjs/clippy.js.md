@@ -1,6 +1,6 @@
 ---
 project: clippy.js
-stars: 2872
+stars: 2870
 description: |-
     Add Clippy or his friends to any website for instant nostalgia.
 url: https://github.com/clippyjs/clippy.js

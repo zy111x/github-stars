@@ -1,6 +1,6 @@
 ---
 project: nothing-design-skill
-stars: 2400
+stars: 2413
 description: |-
     A Claude Code skill for generating UI in the Nothing design language. Monochrome, typographic, industrial.
 url: https://github.com/dominikmartn/nothing-design-skill

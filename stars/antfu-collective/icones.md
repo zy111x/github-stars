@@ -1,6 +1,6 @@
 ---
 project: icones
-stars: 7353
+stars: 7358
 description: |-
     ⚡️ Icon Explorer with Instant searching, powered by Iconify
 url: https://github.com/antfu-collective/icones
@@ -16,25 +16,21 @@ Icônes
 <a href="https://icones.js.org">Go to App</a>
 </p>
 
-<p align="center">
-<sub><em>Electron is coming...</em></sub>
-</p>
-
-![](./screenshots/1.png)
-![](./screenshots/2.png)
-![](./screenshots/3.png)
-![](./screenshots/4.png)
-![](./screenshots/5.png)
+![Icônes screenshot 1](./screenshots/1.png)
+![Icônes screenshot 2](./screenshots/2.png)
+![Icônes screenshot 3](./screenshots/3.png)
+![Icônes screenshot 4](./screenshots/4.png)
+![Icônes screenshot 5](./screenshots/5.png)
 
 <p align="center">
 <sub><em>Dark Mode is now Live!</em></sub>
 </p>
 
-![](./screenshots/6.png)
+![Icônes dark mode screenshot](./screenshots/6.png)
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
+    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg' alt='Sponsors'/>
   </a>
 </p>
 
@@ -55,11 +51,6 @@ Icônes
 ### Community
 
 - [VS Code Extension](https://github.com/afzalsayed96/vscode-icones) by [@afzalsayed96](https://github.com/afzalsayed96)
-
-### TODOs
-
-- Electron client (Coming!)
-- Full-offline mode - pack all the icons
 
 ## License
 

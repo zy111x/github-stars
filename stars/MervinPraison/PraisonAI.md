@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 8007
+stars: 8086
 description: |-
     PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipping autonomous self-improving agents that research, plan, code, and execute tasks. Deployed in 5 lines of code with built-in memory, RAG, and support for 100+ LLMs.
 url: https://github.com/MervinPraison/PraisonAI
@@ -390,7 +390,7 @@ praisonai flow
 
 Open **http://localhost:7861** — use the **Agent** and **Agent Team** components to create sequential or parallel workflows. Connect Chat Input → Agent Team → Chat Output for instant multi-agent pipelines.
 
-> 📖 [Full Flow docs](https://docs.praison.ai/docs/concepts/flow) — visual agent building, component reference, and deployment
+> 📖 [Full Flow docs](https://docs.praison.ai/docs/concepts/agentflow) — visual agent building, component reference, and deployment
 
 ### 8. PraisonAI UI 🤖 (Clean Chat)
 

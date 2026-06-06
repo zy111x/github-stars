@@ -1,6 +1,6 @@
 ---
 project: PairPods
-stars: 646
+stars: 667
 description: |-
     Free and open source app to share audio on macOS
 url: https://github.com/wozniakpawel/PairPods

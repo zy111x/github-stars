@@ -1,6 +1,6 @@
 ---
 project: mise
-stars: 28845
+stars: 29197
 description: |-
     dev tools, env vars, task runner
 url: https://github.com/jdx/mise
@@ -34,6 +34,10 @@ url: https://github.com/jdx/mise
   <a href="https://mise.en.dev/dev-tools/">Dev Tools</a> •
   <a href="https://mise.en.dev/environments/">Environments</a> •
   <a href="https://mise.en.dev/tasks/">Tasks</a>
+</p>
+
+<p align="center">
+  Sponsored by <a href="https://37signals.com">37signals</a>.
 </p>
 
 <hr />
@@ -79,7 +83,7 @@ $ ~/.local/bin/mise --version
  / / / / / / (__  )  __/_____/  __/ / / /_____/ /_/ / / /_/ / /__/  __/
 /_/ /_/ /_/_/____/\___/      \___/_/ /_/     / .___/_/\__,_/\___/\___/
                                             /_/                 by @jdx
-2026.5.16 macos-arm64 (2026-05-28)
+2026.6.0 macos-arm64 (2026-06-03)
 ```
 
 Hook mise into your shell (pick the right one for your shell):

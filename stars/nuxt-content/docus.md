@@ -1,6 +1,6 @@
 ---
 project: docus
-stars: 2847
+stars: 2850
 description: |-
     Write beautiful documentations with Nuxt and Markdown.
 url: https://github.com/nuxt-content/docus
@@ -46,42 +46,51 @@ Start by deploying the docus template and create your git repository directly fr
 
 The CLI scaffolds a complete documentation project with:
 
-- ✨ **Beautiful Design** - Clean, modern documentation theme
+- ✨ **Beautiful Design** - Clean, modern documentation theme built on Nuxt UI 4 & Tailwind CSS 4
 - 📱 **Responsive** - Mobile-first responsive design
-- 🌙 **Dark Mode** - Built-in dark/light mode support
-- 🌍 **Internationalization** - Native i18n support for multi-language docs
-- 🔍 **Search** - Full-text search functionality
-- 📝 **Markdown Enhanced** - Extended markdown with custom components
-- 🎨 **Customizable** - Easy theming and brand customization
+- 🌙 **Dark Mode** - Built-in dark/light mode with `d` shortcut toggle
+- 🌍 **Internationalization** - Native i18n support with 20+ locales for assistant UI
+- 🔍 **Search** - Client-side search with optional FTS5 full-text search backend
+- 📝 **Markdown Enhanced** - Extended markdown with custom MDC components
+- 🎨 **Customizable** - Theme variants, custom icons, 
 - ⚡ **Fast** - Optimized for performance with Nuxt 4
 - 🔧 **TypeScript** - Full TypeScript support
-- 🤖 **AI-Ready** - Automatic generation of `llms.txt` and `llms-full.txt` files for LLM integration
+- 🤖 **AI Assistant** - Drop-in chat that answers questions from your docs, cites sources, and generates code
 - 🔌 **Native MCP Server** - Built-in Model Context Protocol server for AI tool integration (Cursor, VS Code, Claude, etc.)
+- 📚 **Agent Skills Discovery** - Publish skills from your docs site via `.well-known/skills/`
+- 📄 **LLM-Ready** - Automatic `llms.txt` and `llms-full.txt` generation
+- 🗺️ **SEO Optimized** - Sitemap, robots.txt, and OG image generation out of the box
 
 Learn more on the [Docus documentation](https://docus.dev).
 
-## 🤖 Docus MCP Server
+## 🤖 AI features
 
-Add the Docus MCP server to help you write your documentation faster with LLMs:
+Docus ships with a full AI stack to help both your users and contributors:
+
+### Assistant
+
+Embed an AI-powered chat in your docs that answers questions, cites sources, and generates code examples. Powered by Vercel AI Gateway and your own MCP server. See the [Assistant guide](https://docus.dev/en/ai/assistant).
+
+### MCP Server
+
+Every Docus site exposes an MCP server at `/mcp` — install it directly into your editor to query your docs from any AI tool:
 
 [![Install MCP in Cursor](https://mcp-toolkit.nuxt.dev/mcp/badge.svg?url=https://docus.dev/mcp)](https://docus.dev/mcp/mcp/deeplink)
 [![Install MCP in VS Code](https://mcp-toolkit.nuxt.dev/mcp/badge.svg?ide=vscode&url=https://docus.dev/mcp)](https://docus.dev/mcp/mcp/deeplink?ide=vscode)
 
-## 🎯 Docus Skill for AI Assistants
+### Agent Skills
 
-Get started quickly and enhance your AI assistant (Cursor, Claude, etc.) with specialized knowledge about creating documentation with Docus:
+Drop skills into a `skills/` directory and Docus serves them at `/.well-known/skills/` following the [Cloudflare Agent Skills Discovery RFC](https://github.com/cloudflare/agent-skills-discovery-rfc). Users install them with a single command:
+
+```bash
+npx skills add https://your-docs-domain.com
+```
+
+Get the Docus skill itself to supercharge your AI assistant when building docs:
 
 ```bash
 npx skills add nuxt-content/docus
 ```
-
-This skill helps you create documentation faster by providing your AI assistant with:
-- 📝 Best practices for writing documentation with Docus
-- 🎨 MDC component usage and ready-to-use templates
-- 📚 Writing guidelines and content structure patterns
-- 🔧 Configuration and customization tips
-
-Perfect for quickly scaffolding new documentation projects or improving existing ones.
 
 ## 📁 Project Structure
 
@@ -142,11 +151,15 @@ Your project comes pre-configured with the best of the Nuxt ecosystem:
 
 - [Nuxt 4](https://nuxt.com) - The web framework
 - [Nuxt Content](https://content.nuxt.com/) - File-based CMS
-- [Nuxt UI](https://ui.nuxt.com) - UI components
+- [Nuxt UI 4](https://ui.nuxt.com) - UI components
 - [Nuxt Image](https://image.nuxt.com/) - Optimized images
 - [Tailwind CSS 4](https://tailwindcss.com/) - Utility-first CSS
 - [Docus Layer](https://www.npmjs.com/package/docus) - Documentation theme
 - [Nuxt i18n](https://i18n.nuxtjs.org/) - Internationalization
+- [Nuxt LLMs](https://github.com/nuxt-modules/llms) - `llms.txt` generation
+- [Nuxt OG Image](https://nuxtseo.com/og-image) - Open Graph image generation
+- [MCP Toolkit](https://mcp-toolkit.nuxt.dev) - Native MCP server
+- [Vercel AI SDK](https://sdk.vercel.ai) - AI assistant (optional)
 
 ## 📖 Documentation
 

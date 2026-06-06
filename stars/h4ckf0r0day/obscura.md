@@ -1,6 +1,6 @@
 ---
 project: obscura
-stars: 13885
+stars: 14263
 description: |-
     The headless browser for AI agents and web scraping
 url: https://github.com/h4ckf0r0day/obscura
@@ -37,11 +37,48 @@ Designed for automation at scale, not desktop browsing.
 
 ## 🎉 10,000 stars and what's next
 
-I'm working on **Obscura Cloud** the hosted version, with managed infrastructure, residential proxies, and dedicated support. For people who want the engine without operating it themselves.
+We are working on **Obscura Cloud** the hosted version, with managed infrastructure, residential proxies, and dedicated support. For people who want the engine without operating it themselves.
 
 The open-source engine stays Apache-2.0, fully featured. No feature gating, ever.
 
 **[Get on the waitlist →](https://tally.so/r/gDWzdD)**
+
+## Sponsors
+
+**Obscura** is supported by sponsors who help keep development independent. 
+
+Want to sponsor? Email [hello@obscura.sh](mailto:hello@obscura.sh).
+
+<table>
+  <tr>
+    <td width="200" align="center" valign="middle">
+      <a href="https://www.swiftproxy.net/?ref=obscura" target="_blank">
+        <img alt="Swiftproxy" src="assets/sponsors/swiftproxy.png" width="180"/>
+      </a>
+    </td>
+    <td valign="middle">
+      <a href="https://www.swiftproxy.net/?ref=obscura"><b>Swiftproxy</b></a> — High-quality residential proxies designed for privacy-conscious users. Access 80M+ rotating residential IPs across 190+ countries with high anonymity, non-expiring traffic, and stable connections. Perfect for browser automation, data collection, AI agents, and large-scale online operations.
+    </td>
+  </tr>
+  <tr>
+    <td width="200" align="center" valign="middle">
+      <a href="https://proxyempire.io/?ref=obscura&utm_source=obscuragithub" target="_blank">
+        <img alt="ProxyEmpire" src="assets/sponsors/proxyempire.png" width="180"/>
+      </a>
+    </td>
+    <td valign="middle">
+      🚀 <b>Obscura × ProxyEmpire</b><br>
+      Using Obscura for AI agents, browser automation, or web scraping? Power it with reliable residential and mobile proxies from <a href="https://proxyempire.io/?ref=obscura&utm_source=obscuragithub"><b>ProxyEmpire</b></a>.<br><br>
+      <b>🌍 30M+ residential IPs in 170+ countries<br>
+      📱 4G/5G mobile proxies<br>
+      🔄 Rotating & sticky sessions<br>
+      🎯 City, region & ISP targeting<br>
+      🔐 HTTP, HTTPS & SOCKS5 support<br><br>
+      🎁 Use code <b>OBSCURA35</b> for a <b>35% recurring discount</b>.<br><br></b>
+      Better proxies. Fewer blocks. More scalable automation.
+    </td>
+  </tr>
+</table>
 
 ## Install
 
@@ -228,6 +265,8 @@ Page load:
 | Static HTML | **51 ms** | ~500 ms |
 | JS + XHR + fetch | **84 ms** | ~800 ms |
 | Dynamic scripts | **78 ms** | ~700 ms |
+
+The full benchmark suite (WPT conformance, obstacle course, real-world corpus, and vs-Chrome speed) lives in a separate repo: https://github.com/h4ckf0r0day/obscura-benchmark
 
 ## Stealth Mode
 

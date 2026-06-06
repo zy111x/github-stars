@@ -1,6 +1,6 @@
 ---
 project: bearblog
-stars: 4991
+stars: 5009
 description: |-
     Free, no-nonsense, super fast blogging.
 url: https://github.com/HermanMartinus/bearblog

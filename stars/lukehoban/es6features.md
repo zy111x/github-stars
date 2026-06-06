@@ -1,6 +1,6 @@
 ---
 project: es6features
-stars: 29068
+stars: 29067
 description: |-
     Overview of ECMAScript 6 features
 url: https://github.com/lukehoban/es6features

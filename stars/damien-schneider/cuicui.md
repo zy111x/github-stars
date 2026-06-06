@@ -1,6 +1,6 @@
 ---
 project: cuicui
-stars: 951
+stars: 954
 description: |-
     Simplify your UI with clean, copy-paste components that minimize JavaScript, maximize CSS, spark creativity, and empower you with code you fully own and understand.
 url: https://github.com/damien-schneider/cuicui
@@ -20,7 +20,7 @@ url: https://github.com/damien-schneider/cuicui
   </p>
   <hr></hr>
   <p align="left">
-   An open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
+   Open-source animated components built with React, Typescript, Tailwind CSS, and Framer Motion.
 100% open-source, and customizable that can be copy pasted directly into your code base.
   </p>
 

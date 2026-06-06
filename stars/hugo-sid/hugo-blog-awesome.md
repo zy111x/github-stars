@@ -1,6 +1,6 @@
 ---
 project: hugo-blog-awesome
-stars: 788
+stars: 791
 description: |-
     Fast, minimal blog with dark mode support.
 url: https://github.com/hugo-sid/hugo-blog-awesome
@@ -148,6 +148,7 @@ url = "/index.xml"
 | `buymeacoffee`  | buymeacoffee.com                |
 | `calendly`      | calendly.com                    |
 | `codeforces`    | codeforces.com                  |
+| codeberg        | codeberg.org                    |
 | `codepen`       | codepen.io                      |
 | `cryptohack`    | cryptohack.org                  |
 | `ctftime`       | ctftime.org                     |
@@ -305,6 +306,7 @@ If you are using this theme for any website, feel free to list the website here.
 - <https://tk-web.top>
 - <https://xayan.nu/>
 - <https://danielecer.com/>
+- <https://mabslabs.com/>
 
 ## Support
 

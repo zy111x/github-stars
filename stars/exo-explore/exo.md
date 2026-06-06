@@ -1,6 +1,6 @@
 ---
 project: exo
-stars: 45000
+stars: 45187
 description: |-
     Run frontier AI locally.
 url: https://github.com/exo-explore/exo
@@ -236,6 +236,12 @@ exo ships a macOS app that runs in the background on your Mac.
 The macOS app requires macOS Tahoe 26.2 or later.
 
 Download the latest build here: [EXO-latest.dmg](https://assets.exolabs.net/EXO-latest.dmg).
+
+You can also install the latest build with Homebrew:
+
+```bash
+brew install --cask exo
+```
 
 The app will ask for permission to modify system settings and install a new Network profile. Improvements to this are being worked on.
 

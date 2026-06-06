@@ -1,6 +1,6 @@
 ---
 project: crosspoint-reader
-stars: 4919
+stars: 5077
 description: |-
     Firmware for the Xteink X3 and X4 e-paper display readers
 url: https://github.com/crosspoint-reader/crosspoint-reader
@@ -18,7 +18,7 @@ CrossPoint is open-source e-reader firmware - community-built, fully hackable, f
 
 ## What can CrossPoint do?
 
-- **Reader engine**: EPUB 2/3 rendering with embedded-style option, image handling, hyphenation, kerning, chapter navigation, footnotes, go-to-percent, auto page turn, orientation control, focus reading, KOReader progress sync and more. 
+- **Reader engine**: EPUB 2/3 rendering with embedded-style option, image handling, hyphenation, kerning, chapter navigation, footnotes, bookmarks, go-to-percent, auto page turn, orientation control, focus reading, KOReader progress sync and more. 
 
 - **Various formats**: native handling for `.epub`, `.xtc/.xtch`, `.txt`, and `.bmp`.
 
@@ -44,13 +44,9 @@ CrossPoint is open-source e-reader firmware - community-built, fully hackable, f
 
 - **Customization**: multiple themes (Classic, Lyra, Lyra Extended, RoundedRaff), sleep screen modes, front/side button remapping, status bar controls, power-button behavior, refresh cadence, and more.
 
-- **Localization**: 22 UI languages and counting.
+- **Localization**: 24 UI languages and counting. RTL support.
 
 ### Coming soon:
-
-- RTL support — Arabic, Hebrew, and Farsi.
-
-- Bookmarks.
 
 - Dictionary lookup — inline word lookup without leaving the reader.
 
@@ -265,6 +261,8 @@ One of the best things about open source is that anyone can take the code in a d
 - ~~[PlusPoint](https://github.com/ngxson/pluspoint-reader) — custom JS apps support.~~ (Unmaintained)
 
 - [crosspoint-reader-papers3](https://github.com/juicecultus/crosspoint-reader-papers3) — Crosspoint port for M5Stack Paper S3. 
+
+- [t5s3-reader](https://github.com/ShallowGreen123/t5s3-reader) — Crosspoint port for LilyGo T5 ePaper S3 / T5S3 4.7-inch e-paper device.
 
 **Note:** Many of these features will make their way into CrossPoint over time. We maintain a slower pace to ensure rock-solid stability and squash bugs before they reach your device.
 

@@ -1,6 +1,6 @@
 ---
 project: botkit
-stars: 79
+stars: 80
 description: |-
     A framework for creating ActivityPub bots
 url: https://github.com/fedify-dev/botkit
@@ -73,7 +73,7 @@ For more information, see the [BotKit docs][BotKit].
 [GitHub Actions]: https://github.com/fedify-dev/botkit/actions/workflows/main.yaml
 [Codecov badge]: https://codecov.io/gh/fedify-dev/botkit/graph/badge.svg?token=1KVVER1626
 [Codecov]: https://codecov.io/gh/fedify-dev/botkit
-[Fediverse badge]: https://fedi-badge.deno.dev/@botkit@hollo.social/followers.svg
+[Fediverse badge]: https://fedi-badge.minhee.org/@botkit@hollo.social/followers.svg
 [Fediverse]: https://hollo.social/@botkit
 [ActivityPub]: https://activitypub.rocks/
 [Fedify]: https://fedify.dev/

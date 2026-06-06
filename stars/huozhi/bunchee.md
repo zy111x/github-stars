@@ -1,6 +1,6 @@
 ---
 project: bunchee
-stars: 1392
+stars: 1393
 description: |-
     Zero config bundler for npm packages
 url: https://github.com/huozhi/bunchee
@@ -14,11 +14,11 @@ url: https://github.com/huozhi/bunchee
 
 <p align="left">
   <a href="https://npm.im/bunchee">
-    <img src="https://badgen.net/npm/v/bunchee">
+    <img src="https://img.shields.io/npm/v/bunchee?style=flat&colorA=000000&colorB=000000">
   </a>
 
-  <a href="https://github.com/huozhi/bunchee/actions?workflow=CI">
-    <img src="https://github.com/huozhi/bunchee/workflows/CI/badge.svg">
+  <a href="https://npm.im/bunchee">
+    <img src="https://img.shields.io/npm/dt/bunchee.svg?style=flat&colorA=000000&colorB=000000">
   </a>
 </p>
 
@@ -557,14 +557,6 @@ export { readme, config, styles, content }
 ```
 
 All these imports will be bundled as string content, regardless of the original file extension.
-
-### Agent Skills
-
-If you want to use bunchee with coding agents with skills, run:
-
-```sh
-npx skills add huozhi/npm-skills
-```
 
 ### Node.js API
 

@@ -1,6 +1,6 @@
 ---
 project: lychee
-stars: 3634
+stars: 3666
 description: |-
     ⚡ Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more!
 url: https://github.com/lycheeverse/lychee
@@ -102,6 +102,16 @@ sudo port install lychee
 docker pull lycheeverse/lychee
 ```
 
+Image tags (each also has an `-alpine` variant, e.g. `latest-alpine`):
+
+| Tag              | Description                                  |
+| ---------------- | -------------------------------------------- |
+| `latest`         | Most recent stable release (recommended)     |
+| `X.Y.Z` / `X.Y`  | A specific release, e.g. `0.20.0` / `0.20`   |
+| `nightly`        | Bleeding-edge build from the `master` branch |
+| `master`         | Alias of `nightly`                           |
+| `sha-<sha>`      | Build for a specific commit                  |
+
 ### Nix
 
 ```sh
@@ -159,8 +169,13 @@ See the lychee-action repository for usage instructions.
 
 We provide binaries for Linux, macOS, and Windows for every release. You can
 download them from the [releases page](https://github.com/lycheeverse/lychee/releases).
+
 You can also use [`cargo-binstall`](https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall)
-to install these binaries.
+to install these binaries:
+
+```sh
+cargo binstall lychee
+```
 
 ### Cargo
 
@@ -369,7 +384,7 @@ Options:
   -a, --accept <ACCEPT>
           A List of accepted status codes for valid links
 
-          The following accept range syntax is supported: [start]..[[=]end]|code.
+          The following accept range syntax is supported: `[start]..[[=]end]|code`.
           Some valid examples are:
 
           - 200 (accepts the 200 status code only)
@@ -378,7 +393,7 @@ Options:
           - 200..=204 (accepts any status code from 200 to 204 inclusive)
           - 200..205 (accepts any status code from 200 to 205 excluding 205, same as 200..=204)
 
-          Use "lychee --accept '200..=204, 429, 500' <inputs>..." to provide a comma-
+          Use `lychee --accept '200..=204, 429, 500' <inputs>...` to provide a comma-
           separated list of accepted status codes. This example will accept 200, 201,
           202, 203, 204, 429, and 500 as valid status codes.
 
@@ -432,7 +447,7 @@ Options:
       --cache-exclude-status <CACHE_EXCLUDE_STATUS>
           A list of status codes that will be ignored from the cache
 
-          The following exclude range syntax is supported: [start]..[[=]end]|code. Some valid
+          The following exclude range syntax is supported: `[start]..[[=]end]|code`. Some valid
           examples are:
 
           - 429 (excludes the 429 status code only)
@@ -441,7 +456,7 @@ Options:
           - 500..=599 (excludes any status code from 500 to 599 inclusive)
           - 500..600 (excludes any status code from 500 to 600 excluding 600, same as 500..=599)
 
-          Use "lychee --cache-exclude-status '429, 500..502' <inputs>..." to provide a
+          Use `lychee --cache-exclude-status '429, 500..502' <inputs>...` to provide a
           comma-separated list of excluded status codes. This example will not cache results
           with a status code of 429, 500 and 501.
 
@@ -524,9 +539,11 @@ Options:
 
           Examples:
 
-              lychee --files-from list.txt
-              find . -name '*.md' | lychee --files-from -
-              echo 'README.md' | lychee --files-from -
+          ```text
+          lychee --files-from list.txt
+          find . -name '*.md' | lychee --files-from -
+          echo 'README.md' | lychee --files-from -
+          ```
 
           File Format:
           - Each line should contain one input (file path, URL, or glob pattern).
@@ -693,7 +710,7 @@ Options:
           To invoke programs with custom arguments or to use multiple preprocessors, use a
           wrapper program such as a shell script. An example script looks like this:
 
-          ```
+          ```bash
           #!/usr/bin/env bash
           case "$1" in
           *.pdf)
@@ -768,7 +785,11 @@ Options:
           Print version
 
   -X, --method <METHOD>
-          Request method
+          Request method(s)
+
+          Accepts a single method or a comma-separated list. When multiple methods are given, lychee tries each one in order and returns the first success. This is useful for servers that reject `HEAD` requests: `--method head,get` falls back to `GET` when `HEAD` fails.
+
+          Note: checking URL fragments requires the response body, which is only fetched for `GET` requests. When a link succeeds with a non-`GET` method (e.g. `HEAD`), its fragment is not checked.
 
           [default: get]
 ```
@@ -924,7 +945,7 @@ great contributors who have since made this project more mature.
   <img src="/assets/nlnet.svg" alt="NLnet logo" width="100" height="75" />
 </a>
 
-lychee received financial support through the [NGI0 Core Fund](https://nlnet.nl/core),
+lychee received financial support through the [NGI0 Core Fund](https://nlnet.nl/core/),
 established by NLnet with financial support from the European Commission's
 [Next Generation Internet](https://ngi.eu) programme.
 NLnet is supporting the open internet since 1997.

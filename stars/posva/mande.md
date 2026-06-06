@@ -1,6 +1,6 @@
 ---
 project: mande
-stars: 1330
+stars: 1333
 description: |-
     800 bytes modern wrapper around fetch with smart defaults
 url: https://github.com/posva/mande

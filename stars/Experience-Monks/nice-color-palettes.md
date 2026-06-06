@@ -1,6 +1,6 @@
 ---
 project: nice-color-palettes
-stars: 969
+stars: 970
 description: |-
     nice colour palettes as JSON
 url: https://github.com/Experience-Monks/nice-color-palettes

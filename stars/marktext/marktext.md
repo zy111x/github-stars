@@ -1,12 +1,12 @@
 ---
 project: marktext
-stars: 56659
+stars: 56976
 description: |-
     📝A simple and elegant markdown editor, available for Linux, macOS and Windows.
 url: https://github.com/marktext/marktext
 ---
 
-<p align="center"><img src="static/logo-small.png" alt="MarkText" width="100" height="100"></p>
+<p align="center"><img src="docs/assets/logo-small.png" alt="MarkText" width="100" height="100"></p>
 
 <h1 align="center">MarkText</h1>
 
@@ -112,12 +112,12 @@ MarkText is an open-source Markdown editor powered by the support of its communi
 
 **Special Sponsor**
 
-| [<img src="https://raw.githubusercontent.com/marktext/marktext/develop/packages/website/content/docs/assets/sponsors/serpapi.png" width="150">](https://serpapi.com/?utm_source=marktext) | [Scrape Google and other search engines from our fast, easy, and complete API.](https://serpapi.com/?utm_source=marktext) |
+| [<img src="docs/assets/sponsors/serpapi.png" width="150">](https://serpapi.com/?utm_source=marktext) | [Scrape Google and other search engines from our fast, easy, and complete API.](https://serpapi.com/?utm_source=marktext) |
 | ------------- |:-------------|
 
 ## Screenshot
 
-![](packages/website/content/docs/assets/marktext.png?raw=true)
+![](docs/assets/marktext.png?raw=true)
 
 ## Features
 

@@ -1,6 +1,6 @@
 ---
 project: Magnific-Popup
-stars: 11332
+stars: 11329
 description: |-
     Light and responsive lightbox script with focus on performance.
 url: https://github.com/dimsemenov/Magnific-Popup

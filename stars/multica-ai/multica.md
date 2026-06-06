@@ -1,6 +1,6 @@
 ---
 project: multica
-stars: 34283
+stars: 35579
 description: |-
     The open-source managed agents platform. Turn coding agents into real teammates — assign tasks, track progress, compound skills.
 url: https://github.com/multica-ai/multica

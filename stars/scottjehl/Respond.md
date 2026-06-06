@@ -1,6 +1,6 @@
 ---
 project: Respond
-stars: 11233
+stars: 11230
 description: |-
     A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)
 url: https://github.com/scottjehl/Respond

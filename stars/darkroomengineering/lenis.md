@@ -1,8 +1,8 @@
 ---
 project: lenis
-stars: 13986
+stars: 14036
 description: |-
-    Smooth scroll at it should be
+    Smooth scroll as it should be
 url: https://github.com/darkroomengineering/lenis
 ---
 
@@ -22,6 +22,7 @@ Read our [Manifesto](https://github.com/darkroomengineering/lenis/blob/main/MANI
 
 <br/>
 
+- [Features](#features)
 - [Sponsors](#sponsors)
 - [Packages](#packages)
 - [Showcase](https://www.lenis.dev/showcase)
@@ -40,6 +41,15 @@ Read our [Manifesto](https://github.com/darkroomengineering/lenis/blob/main/MANI
 - [License](#license)
 
 <br/>
+
+## Features
+
+- **Lightweight & dependency-free** — the whole library is a few KB with zero runtime dependencies
+- **Runs on native scroll** — wraps the browser's own scroll, so position: sticky, anchor links, and accessibility keep working
+- **Any axis** — smooth vertical, horizontal, and nested scrolling from a single instance
+- **Built for sync** — drives WebGL scroll scenes, GSAP ScrollTrigger, and parallax off one loop
+- **Framework adapters** — first-class packages for React, Vue, and Framer
+- **Scroll snapping** — the snap plugin aligns sections without fighting the smooth scroll
 
 ## Sponsors
 

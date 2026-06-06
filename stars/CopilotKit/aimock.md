@@ -1,6 +1,6 @@
 ---
 project: aimock
-stars: 610
+stars: 619
 description: |-
     Mock everything your AI app talks to — LLM APIs, MCP, A2A, AG-UI, vector DBs, search. One package, one port, zero dependencies.
 url: https://github.com/CopilotKit/aimock

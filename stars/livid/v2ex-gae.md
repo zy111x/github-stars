@@ -1,6 +1,6 @@
 ---
 project: v2ex-gae
-stars: 3090
+stars: 3088
 description: |-
     Legacy code of V2EX running on Google App Engine
 url: https://github.com/livid/v2ex-gae

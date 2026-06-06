@@ -1,6 +1,6 @@
 ---
 project: programmer-crosstalk
-stars: 244
+stars: 243
 description: |-
     程序员相声
 url: https://github.com/koolob/programmer-crosstalk

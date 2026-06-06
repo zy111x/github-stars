@@ -1,6 +1,6 @@
 ---
 project: mjml
-stars: 18080
+stars: 18095
 description: |-
     MJML: the only framework that makes responsive-email easy
 url: https://github.com/mjmlio/mjml

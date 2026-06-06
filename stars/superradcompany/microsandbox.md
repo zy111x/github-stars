@@ -1,8 +1,8 @@
 ---
 project: microsandbox
-stars: 6361
+stars: 6439
 description: |-
-    🧱 secure, local and programmable sandboxes for AI agents
+    🧱 local-first and microVM-backed programmable sandboxes for AI agents
 url: https://github.com/superradcompany/microsandbox
 ---
 
@@ -77,6 +77,12 @@ url: https://github.com/superradcompany/microsandbox
 >
 > ```sh
 > curl -fsSL https://install.microsandbox.dev | sh
+> ```
+>
+> On macOS you can also install with Homebrew:
+>
+> ```sh
+> brew install superradcompany/tap/microsandbox
 > ```
 >
 > ```sh

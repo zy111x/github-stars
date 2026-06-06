@@ -1,6 +1,6 @@
 ---
 project: supermemory
-stars: 22908
+stars: 25834
 description: |-
     Memory engine and app that is extremely fast, scalable. The Memory API for the AI era.
 url: https://github.com/supermemoryai/supermemory
@@ -15,7 +15,7 @@ url: https://github.com/supermemoryai/supermemory
 </p>
 
 <p align="center">
-  <strong>State-of-the-art memory and context engine for AI.</strong>
+  <strong>State-of-the-art memory and context engine for AI. And yes - you can use it as a company/personal brain.</strong>
 </p>
 
 <p align="center">
@@ -29,6 +29,10 @@ url: https://github.com/supermemoryai/supermemory
   <a href="https://www.npmjs.com/package/supermemory"><img src="https://img.shields.io/npm/v/supermemory?style=flat-square&color=blue" alt="npm" /></a>
   <a href="https://pypi.org/project/supermemory/"><img src="https://img.shields.io/pypi/v/supermemory?style=flat-square&color=blue" alt="pypi" /></a>
   <a href="https://supermemory.ai/docs"><img src="https://img.shields.io/badge/docs-supermemory.ai-blue?style=flat-square" alt="docs" /></a>
+</p>
+
+<p align="center">
+  <strong>English</strong> · <a href="README.zh-CN.md">简体中文</a>
 </p>
 
 ---

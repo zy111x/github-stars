@@ -1,6 +1,6 @@
 ---
 project: nitter
-stars: 13032
+stars: 13064
 description: |-
     Alternative Twitter front-end
 url: https://github.com/zedeus/nitter
@@ -137,6 +137,17 @@ To run Nitter with Docker, you'll need to install and run Redis separately
 before you can run the container. See below for how to also run Redis using
 Docker.
 
+First create your config file. The Docker commands mount it into the container,
+so it has to exist on the host beforehand. If you've cloned the repo:
+
+```bash
+cp nitter.example.conf nitter.conf
+```
+
+If you're using the prebuilt image without a local clone, download
+[`nitter.example.conf`](https://raw.githubusercontent.com/zedeus/nitter/master/nitter.example.conf)
+and save it as `nitter.conf` instead.
+
 To build and run Nitter in Docker:
 
 ```bash
@@ -159,8 +170,11 @@ Change `redisHost` from `localhost` to `nitter-redis` in `nitter.conf`, then run
 docker-compose up -d
 ```
 
-Note the Docker commands expect a `nitter.conf` file in the directory you run
-them.
+Note the Docker commands mount `nitter.conf` (and `sessions.jsonl` for
+docker-compose) from the directory you run them in. If a mounted file doesn't
+exist, Docker silently creates a directory in its place and the container fails
+with `not a directory: Are you trying to mount a directory onto a file`. Remove
+that directory and create the file as shown above.
 
 ### systemd
 

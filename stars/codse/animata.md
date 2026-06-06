@@ -1,6 +1,6 @@
 ---
 project: animata
-stars: 2699
+stars: 2700
 description: |-
     Bring your site to life with easy to use animation & interaction code. Copy. Paste. Animate. 
 url: https://github.com/codse/animata
@@ -9,9 +9,8 @@ url: https://github.com/codse/animata
 <section id="logo" align="center">
   <a href="https://animata.design/">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/8d3da830-d1b0-4327-8695-edcea3534743">
-        <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/44be7a44-2e1f-4b90-a238-5cd10a376748">
-        <img alt="Animata Logo" src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png" width="512">
+      <source media="(prefers-color-scheme: dark)" srcset="public/animata-logo-smil-dark.svg" />
+      <img alt="Animata Logo" src="public/animata-logo-smil.svg" width="512" height="215" />
     </picture>
   </a>
   <section>
