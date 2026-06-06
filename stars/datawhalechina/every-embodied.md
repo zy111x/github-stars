@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 2075
+stars: 2177
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -79,6 +79,18 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 **LingBot-Map 视频建图**  
 从连续校园视频流式估计轨迹、深度与点云
 
+  
+**UniLab + MotrixSim 异构 RL**  
+6GB 显卡跑通 state-based RL，并体验 uv run --no-sync demo teaser 的 PBR 渲染器
+
+  
+**SIM1 柔体仿真与数据生成**  
+双臂布料任务的 replay、渲染与扩散轨迹生成流程
+
+  
+**ForgeCAD 3D 打印机、键盘与灵巧手**  
+复刻 public kit 的 3D 打印机、视频键盘和可动灵巧手案例，跑通参数渲染 GIF 与 STEP/STL/3MF 导出
+
 ### ⭐ 欢迎点点 Star 共同构建具身智能开源生态 ❤️
 
 具身智能（Embodied AI）是通往通用人工智能（AGI）的关键钥匙。
@@ -131,6 +143,13 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-06-02\]** 新增 RISE 自我改进机器人策略复现教程，覆盖论文方法、组合世界模型流水线、OpenPI policy/value、LTX-Video dynamics model、RLinf imagination RL、Blackwell cu128 环境适配、公开模型资产下载校验，以及官方图与视频素材本地归档。
+-   **\[2026-06-02\]** 新增 LeWorldModel 世界模型分析解读与实验复现，补充世界模型基础概念、表征崩溃问题、SIGReg 正则、潜空间预测与规划流程，适合作为 RISE 前置理论阅读。
+-   **\[2026-06-02\]** 新增 AGILE 人形机器人 Loco-Manipulation Isaac Lab 复现教程，覆盖官方任务边界、Isaac Sim 5.1 / Isaac Lab 2.3.2 复刻、T1/G1 本地渲染视频、pick-place checkpoint 未随仓库开源说明、评估报告与 Sim2MuJoCo 链路。
+-   **\[2026-06-02\]** 新增 HIMLoco 四足机器人运动控制 Isaac Lab 复现教程，覆盖论文方法、原仓库流水线、Blackwell GPU 旧栈排障、Isaac Lab 迁移、smoke test 曲线与本地渲染视频。
+-   **\[2026-06-02\]** 新增 Genesis World 1.0 完整体验与机器人仿真流水线，补充 Genesis World 1.0 环境配置、机器人仿真流程和功能体验记录。
+-   **\[2026-05-31\]** 新增 ForgeCAD 官方 3D 打印机、键盘与灵巧手案例复现，对齐 `KoStard/forgecad-public-kit` 的 `3dprinter-gpt52codex` benchmark，补充视频键盘和官方可动灵巧手，跑通参数渲染 GIF、多视角截图、STEP/STL/3MF 导出和打印检查边界说明。
+-   **\[2026-05-31\]** 新增 UniLab + MotrixSim 异构机器人 RL 训练复现，覆盖 6GB 显卡上的 state-based RL 训练、资源占用记录、MotrixSim checkpoint 回放，以及 `uv run --no-sync demo teaser` 的 PBR renderer 多视角截图体验。
 -   **\[2026-05-14\]** 新增 LingBot-Map 视频流式三维重建教程，覆盖官方连续校园场景 smoke test、点云渲染预览、环境配置、代码与论文数据流讲解，以及轻量本地 Web demo。
 -   **\[2026-05-12\]** 新增 Build123d 代码建模 与 Text-to-CAD 6DOF 教学机械臂 教程，补充 CAD-as-code、Codex CAD skill、STEP/STL/GLB 生成与预览。
 -   **\[2026-05-11\]** 新增 DiT4DiT-LIBERO 训练与评估复现教程，覆盖官方方法图解、LIBERO 评估 smoke test、`libero_spatial` 训练 smoke test、数据元信息修复、日志与多视角视频结果展示。
@@ -213,7 +232,7 @@ Mujoco机械臂数据采集 https://www.bilibili.com/video/BV1DNAbzpE6Z
 
 **4\. 软件基础设施**
 
-ROS/ROS2 通信机制、AutoCAD/Solidworks 基础
+ROS/ROS2 通信机制、Build123d / Text-to-CAD / ForgeCAD 代码建模、AutoCAD/SolidWorks 基础
 
 🚧
 
@@ -239,13 +258,13 @@ ROS/ROS2 通信机制、AutoCAD/Solidworks 基础
 
 **7\. 强化学习 (RL)**
 
-多机器人PPO/SAC 算法详解、Isaac Gym 并行训练实战
+多机器人PPO/SAC 算法详解、UniLab + MotrixSim state-based RL 训练、Isaac Gym 并行训练实战
 
 ✅
 
 **8\. 仿真环境**
 
-Isaac Sim 高级渲染、MuJoCo 物理引擎下OMY/Nova5/Franka机械臂和ACT/Pi0/SmolVLA算法复现、Genie-Sim3教程
+Isaac Sim 高级渲染、MuJoCo 物理引擎下OMY/Nova5/Franka机械臂和ACT/Pi0/SmolVLA算法复现、Genie-Sim3教程、MotrixSim PBR teaser 渲染体验
 
 ✅
 
