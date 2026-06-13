@@ -1,6 +1,6 @@
 ---
 project: CapsWriter-Offline
-stars: 5617
+stars: 5660
 description: PC 端语音输入工具，离线识别，高准确率、低延迟，支持热词、LLM润色。按住CapsLock或鼠标侧键X2说话，松开自动上屏。
 url: https://github.com/HaujetZhao/CapsWriter-Offline
 ---

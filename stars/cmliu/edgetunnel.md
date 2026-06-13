@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 37126
+stars: 37739
 description: edgetunnel2 VLESS/Trojan/SS 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
