@@ -1,6 +1,6 @@
 ---
 project: hotkeys-js
-stars: 7104
+stars: 7106
 description: |-
     ➷ A robust Javascript library for capturing keyboard input. It has no dependencies. 
 url: https://github.com/jaywcjlove/hotkeys-js

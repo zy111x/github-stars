@@ -1,6 +1,6 @@
 ---
 project: scratch
-stars: 1228
+stars: 1339
 description: |-
     A minimalist, offline-first markdown note-taking app
 url: https://github.com/erictli/scratch

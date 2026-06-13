@@ -1,8 +1,8 @@
 ---
 project: microsandbox
-stars: 6439
+stars: 6545
 description: |-
-    🧱 local-first and microVM-backed programmable sandboxes for AI agents
+    🧱 easy and fast microVMs for running untrusted workloads
 url: https://github.com/superradcompany/microsandbox
 ---
 
@@ -20,7 +20,7 @@ url: https://github.com/superradcompany/microsandbox
 
 <br />
 
-<div align="center"><b>——&nbsp;&nbsp;&nbsp;the easiest way to give your agent their own computer&nbsp;&nbsp;&nbsp;——</b></div>
+<div align="center"><b>——&nbsp;&nbsp;&nbsp;easy, fast, local microVMs for untrusted workloads&nbsp;&nbsp;&nbsp;——</b></div>
 
 <br />
 <br />
@@ -33,18 +33,18 @@ url: https://github.com/superradcompany/microsandbox
 
 <br />
 
-**Microsandbox** spins up **lightweight VMs in milliseconds** from our SDKs. Runs locally on your machine. No server to set up. No lingering daemon. It is all embedded and rootless!
+**Microsandbox** runs **untrusted workloads** inside fast, local microVMs: AI agents, user code, plugins, CI jobs, dev environments, scrapers, and automation.
 
 ##
 
 - <img height="14" src="https://octicons-col.vercel.app/shield-lock/A770EF"> **Hardware Isolation**: Hardware-level isolation with microVM technology.
+- <img height="14" src="https://octicons-col.vercel.app/package/A770EF"> **OCI Compatible**: Runs standard container images from Docker Hub, GHCR, or any OCI registry.
+- <img height="14" src="https://octicons-col.vercel.app/container/A770EF"> **Docker-Like Workflows**: Familiar image, command, shell, and volume workflows.
 - <img height="14" src="https://octicons-col.vercel.app/zap/A770EF"> **Instant Startup**: Average boot times under 100 milliseconds.
 - <img height="14" src="https://octicons-col.vercel.app/plug/A770EF"> **Embeddable**: Spawn VMs right within your code. No setup server. No long-running daemon.
 - <img height="14" src="https://octicons-col.vercel.app/lock/A770EF"> **Secrets That Can't Leak**: Unexploitable secret keys that never enter the VM.
-- <img height="14" src="https://octicons-col.vercel.app/package/A770EF"> **OCI Compatible**: Runs standard container images from Docker Hub, GHCR, or any OCI registry.
 - <img height="14" src="https://octicons-col.vercel.app/database/A770EF"> **Long-Running**: Sandboxes can run in detached mode. Great for long-lived sessions.
 - <img height="14" src="https://octicons-col.vercel.app/terminal/A770EF"> **Agent-Ready**: Your agents can create their own sandboxes with our [Agent Skills](https://github.com/superradcompany/skills) and [MCP server](https://github.com/superradcompany/microsandbox-mcp).
-
 
 <br />
 
@@ -55,23 +55,28 @@ url: https://github.com/superradcompany/microsandbox
 > ```sh
 > cargo add microsandbox                                   # 🦀 Rust
 > ```
+>
 > ```sh
 > uv add microsandbox                                      # 🐍 Python
 > ```
+>
 > ```sh
 > npm i microsandbox                                       # 🟦 TypeScript
 > ```
+>
 > ```sh
 > go get github.com/superradcompany/microsandbox/sdk/go    # 🐹 Go
 > ```
 
-#### <img height="14" src="https://octicons-col.vercel.app/download/A770EF">&nbsp;&nbsp;Install the CLI **(Optional)**
+#### <img height="14" src="https://octicons-col.vercel.app/download/A770EF">&nbsp;&nbsp;Install the CLI
 
-> Boot a  microVM in one command.
+> Boot a microVM in a single command:
 >
 > ```sh
 > npx microsandbox run debian
 > ```
+>
+> ##
 >
 > Or install the `msb` command globally:
 >
@@ -79,11 +84,32 @@ url: https://github.com/superradcompany/microsandbox
 > curl -fsSL https://install.microsandbox.dev | sh
 > ```
 >
-> On macOS you can also install with Homebrew:
+> <details>
+> <summary><em>&nbsp;We also support other package managers  →</em></summary>
+>
+> ##
 >
 > ```sh
 > brew install superradcompany/tap/microsandbox
 > ```
+>
+> ```sh
+> npm i -g microsandbox
+> ```
+>
+> ```sh
+> uv tool install microsandbox
+> ```
+>
+> ```sh
+> cargo install microsandbox
+> ```
+>
+> </details>
+>
+> ##
+>
+> Then you can run `msb` directly:
 >
 > ```sh
 > msb run debian
@@ -120,7 +146,7 @@ The SDK lets you create and control sandboxes directly from your application. `S
 >
 >     println!("{}", output.stdout()?);
 >
->     sandbox.stop_and_wait().await?;
+>     sandbox.stop().await?;
 >
 >     Ok(())
 > }
@@ -145,7 +171,7 @@ The SDK lets you create and control sandboxes directly from your application. `S
 >
 >     print(output.stdout_text)
 >
->     await sandbox.stop_and_wait()
+>     await sandbox.stop()
 >
 > asyncio.run(main())
 > ```
@@ -164,7 +190,10 @@ The SDK lets you create and control sandboxes directly from your application. `S
 >   .memory(512)
 >   .create();
 >
-> const output = await sandbox.exec("python", ["-c", "print('Hello from a microVM!')"]);
+> const output = await sandbox.exec("python", [
+>   "-c",
+>   "print('Hello from a microVM!')",
+> ]);
 >
 > console.log(output.stdout());
 > ```
@@ -201,7 +230,7 @@ The SDK lets you create and control sandboxes directly from your application. `S
 >     if err != nil {
 >         log.Fatal(err)
 >     }
->     defer sandbox.StopAndWait(ctx)
+>     defer sandbox.Stop(ctx)
 >
 >     output, err := sandbox.Exec(ctx, "python", []string{"-c", "print('Hello from a microVM!')"})
 >     if err != nil {
@@ -213,7 +242,6 @@ The SDK lets you create and control sandboxes directly from your application. `S
 > ```
 >
 > </details>
-
 
 > The first call to `create()` pulls the image if it isn't cached locally, so it may take longer depending on your connection. Subsequent runs reuse the cache.
 
@@ -280,7 +308,10 @@ The `msb` CLI provides a complete interface for managing sandboxes, images, and 
 
 > [!TIP]
 >
-> Run `msb --tree` to see all available commands and their options.
+> Run:<br />
+> · `msb --help` for quick help menu. <br />
+> · `msb --tree` for complete command hierarchy and descriptions. <br />
+> · `msb <command> --tree` for a specific command tree.
 
 <br />
 
@@ -289,8 +320,6 @@ The `msb` CLI provides a complete interface for managing sandboxes, images, and 
 <br />
 
 ## <a href="./#gh-dark-mode-only" target="_blank"><img height="18" src="https://octicons-col.vercel.app/dependabot/ffffff" alt="agents-dark"></a><a href="./#gh-light-mode-only" target="_blank"><img height="18" src="https://octicons-col.vercel.app/dependabot/000000" alt="agents"></a>&nbsp;&nbsp;AI Agents
-
-Give your AI agents the ability to create and manage their own sandboxes.
 
 #### <img height="14" src="https://octicons-col.vercel.app/book/A770EF">&nbsp;&nbsp;Agent Skills
 

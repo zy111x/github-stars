@@ -1,6 +1,6 @@
 ---
 project: obscura
-stars: 14263
+stars: 15626
 description: |-
     The headless browser for AI agents and web scraping
 url: https://github.com/h4ckf0r0day/obscura
@@ -53,11 +53,18 @@ Want to sponsor? Email [hello@obscura.sh](mailto:hello@obscura.sh).
   <tr>
     <td width="200" align="center" valign="middle">
       <a href="https://www.swiftproxy.net/?ref=obscura" target="_blank">
-        <img alt="Swiftproxy" src="assets/sponsors/swiftproxy.png" width="180"/>
+        <img alt="Swiftproxy" src="assets/sponsors/swiftproxy2.png" width="180"/>
       </a>
     </td>
     <td valign="middle">
-      <a href="https://www.swiftproxy.net/?ref=obscura"><b>Swiftproxy</b></a> — High-quality residential proxies designed for privacy-conscious users. Access 80M+ rotating residential IPs across 190+ countries with high anonymity, non-expiring traffic, and stable connections. Perfect for browser automation, data collection, AI agents, and large-scale online operations.
+      <a href="https://www.swiftproxy.net/?ref=obscura"><b>Swiftproxy</b></a>  — Premium residential proxies built for privacy, automation, and scale.<br><br>
+<b>80M+ residential IPs in 190+ countries<br>
+Rotating & sticky sessions<br>
+Non-expiring traffic<br>
+Free trial available<br>
+Country, state & city targeting<br>
+HTTP, HTTPS & SOCKS5 support<br><br>
+🎁 Use code <b>PROXY90</b> for <b>10% off</b>.<br><br></b>
     </td>
   </tr>
   <tr>
@@ -76,6 +83,17 @@ Want to sponsor? Email [hello@obscura.sh](mailto:hello@obscura.sh).
       🔐 HTTP, HTTPS & SOCKS5 support<br><br>
       🎁 Use code <b>OBSCURA35</b> for a <b>35% recurring discount</b>.<br><br></b>
       Better proxies. Fewer blocks. More scalable automation.
+    </td>
+  </tr>
+  <tr>
+    <td width="200" align="center" valign="middle">
+      <a href="https://mangoproxy.com/?utm_source=github&utm_medium=partner&utm_campaign=h4ckf0r0day" target="_blank">
+        <img alt="MangoProxy" src="assets/sponsors/mangoproxy.png" width="180"/>
+      </a>
+    </td>
+    <td valign="middle">
+      <a href="https://mangoproxy.com/?utm_source=github&utm_medium=partner&utm_campaign=h4ckf0r0day"><b>MangoProxy</b></a> provides residential, ISP, datacenter, and mobile proxies in 200+ countries. Trusted by businesses worldwide for stable connections, fast response times, and scalable proxy infrastructure.<br>
+      Use Promo code <b>OBSCURA</b> for 8% off Static ISP Proxies.
     </td>
   </tr>
 </table>

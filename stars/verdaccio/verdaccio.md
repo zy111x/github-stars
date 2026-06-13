@@ -1,6 +1,6 @@
 ---
 project: verdaccio
-stars: 17684
+stars: 17696
 description: |-
     A lightweight Node.js private proxy registry
 url: https://github.com/verdaccio/verdaccio
@@ -45,7 +45,7 @@ Google Cloud Storage** or create your own plugin.
 
 ## Versions
 
-You can find more details about the different versions of Verdaccio, minimum requirements, as well as links to associated npm packages and docker images in the [version history](VERSIONS.md).
+You can find more details about the different versions of Verdaccio, minimum requirements, as well as links to associated npm packages and docker images in the [version history](VERSIONS.md). For how releases are versioned, approved, and published across branches, see the [release process](RELEASES.md).
 
 ## Install
 

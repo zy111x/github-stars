@@ -1,6 +1,6 @@
 ---
 project: vorpal
-stars: 5632
+stars: 5631
 description: |-
     Node's framework for interactive CLIs
 url: https://github.com/dthree/vorpal

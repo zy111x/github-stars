@@ -1,6 +1,6 @@
 ---
 project: claude-relay-service
-stars: 11993
+stars: 12081
 description: |-
     CRS-自建Claude Code镜像，一站式开源中转服务，让 Claude、OpenAI、Gemini、Droid 订阅统一接入，支持拼车共享，更高效分摊成本，原生工具无缝使用。
 url: https://github.com/Wei-Shaw/claude-relay-service
@@ -25,19 +25,6 @@ url: https://github.com/Wei-Shaw/claude-relay-service
 **🔐 自行搭建Claude API中转服务，支持多账户管理**
 
 [English](README_EN.md) • [快速开始](https://pincc.ai/) • [演示站点](https://demo.pincc.ai/admin-next/login) • [公告频道](https://t.me/claude_relay_service)
-
-</div>
-
----
-
-## 💎 Claude/Codex 拼车服务推荐
-
-<div align="center">
-
-| 平台 | 服务 | 介绍 |
-|:---|:---|:---|
-| **[pincc.ai](https://pincc.ai/)** | <small>✅ Claude Code<br>✅ Codex CLI</small> | 提供稳定的 Codex CLI 拼车服务<br><br> **全新上线 2API 渠道**：接入CC的效果媲美官方 Anthropic Console 账号，暂不支持 PDF 识别功能 <br>💰 单价：0.8元=1美金额度 |
-
 
 </div>
 

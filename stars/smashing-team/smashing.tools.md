@@ -1,6 +1,6 @@
 ---
 project: smashing.tools
-stars: 132
+stars: 133
 description: |-
     A curated collection of the best starter kits, UI components, design kits, AI & Dev tools.
 url: https://github.com/smashing-team/smashing.tools

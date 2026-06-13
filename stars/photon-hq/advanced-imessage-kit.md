@@ -1,6 +1,6 @@
 ---
 project: advanced-imessage-kit
-stars: 183
+stars: 184
 description: |-
     The Typescript SDK for Next Level iMessage Automation
 url: https://github.com/photon-hq/advanced-imessage-kit
@@ -20,19 +20,14 @@ url: https://github.com/photon-hq/advanced-imessage-kit
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2.svg?logo=discord&logoColor=white)](https://discord.gg/RSJUUHTV)
 
-Advanced iMessage Kit is a full-featured iMessage SDK for **reading**, **sending**, and **automating** iMessage conversations on macOS. Perfect for building **AI agents**, **automation tools**, and **chat applications**.
+> [!NOTE]
+> ✨ Looking for advanced features like threaded replies, tapbacks, message editing, unsending, live typing indicators? Try **[Photon Spectrum](https://photon.codes)**
 
-## Enterprise
+# ⚠️ Deprecated
 
-**Advanced iMessage Kit** is the **enterprise edition** provided by **[Photon](https://photon.codes)**.
+This repository is no longer maintained.
 
-- **Provisioned iMessage Numbers** – Dedicated numbers ready for production use
-- **Managed Hosting** – Fully managed infrastructure for reliability and scale  
-- **DevOps & Deployment Support** – Production setup, monitoring, and scaling  
-- **Enterprise Support** – Direct support and custom integrations  
-
-📩 **Enterprise inquiries:**  
-Contact **daniel@photon.codes**
+**Please use [Photon Spectrum](https://photon.codes) instead.**
 
 🌐 **Book a Demo:**  
 https://photon.codes

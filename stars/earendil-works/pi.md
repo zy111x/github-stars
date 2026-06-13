@@ -1,8 +1,8 @@
 ---
 project: pi
-stars: 60380
+stars: 62316
 description: |-
-    AI agent toolkit: coding agent CLI, unified LLM API, TUI & web UI libraries, Slack bot, vLLM pods
+    AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI
 url: https://github.com/earendil-works/pi
 ---
 

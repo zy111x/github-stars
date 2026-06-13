@@ -1,6 +1,6 @@
 ---
 project: certbot
-stars: 33072
+stars: 33083
 description: |-
     Certbot is EFF's tool to obtain certs from Let's Encrypt and (optionally) auto-enable HTTPS on your server.  It can also act as a client for any other CA that uses the ACME protocol.
 url: https://github.com/certbot/certbot
@@ -10,9 +10,9 @@ url: https://github.com/certbot/certbot
 
 |build-status|
 
-.. |build-status| image:: https://img.shields.io/azure-devops/build/certbot/ba534f81-a483-4b9b-9b4e-a60bec8fee72/5/main
-   :target: https://dev.azure.com/certbot/certbot/_build?definitionId=5
-   :alt: Azure Pipelines CI status
+.. |build-status| image:: https://img.shields.io/github/actions/workflow/status/certbot/certbot/nightly.yml
+   :target: https://github.com/certbot/certbot/actions/workflows/nightly.yml
+   :alt: GitHub Actions nightly CI status
 
 .. image:: https://raw.githubusercontent.com/EFForg/design/master/logos/certbot/eff-certbot-lockup.png
   :width: 200

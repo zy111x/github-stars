@@ -1,6 +1,6 @@
 ---
 project: react-call
-stars: 952
+stars: 958
 description: |-
     Call & Await React Components
 url: https://github.com/desko27/react-call

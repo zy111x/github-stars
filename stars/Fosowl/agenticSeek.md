@@ -1,6 +1,6 @@
 ---
 project: agenticSeek
-stars: 26469
+stars: 26514
 description: |-
     Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity. 🔔 Official updates only via twitter @Martin993886460 (Beware of fake account)
 url: https://github.com/Fosowl/agenticSeek
@@ -82,6 +82,7 @@ ANTHROPIC_API_KEY='optional'
 Update the `.env` file with your own values as needed:
 
 - **SEARXNG_BASE_URL**: Leave unchanged unless running on host with CLI mode.
+> **Note on `SEARXNG_PORT` vs `SEARXNG_BASE_URL`**: `SEARXNG_PORT` only changes the host port that Docker binds to (e.g., `8001`). The searxng container always listens on port `8080` internally. Therefore, when running fully in Docker, `SEARXNG_BASE_URL` should always remain `http://searxng:8080` (the internal Docker network address). Only change `SEARXNG_BASE_URL` if you are running CLI mode on the host.
 - **REDIS_BASE_URL**: Leave unchanged
 - **WORK_DIR**: Path to your working directory on your local machine. AgenticSeek will be able to read and interact with these files.
 - **OLLAMA_PORT**: Port number for the Ollama service.
@@ -247,7 +248,7 @@ provider_server_address = # Typically ignored or can be left blank when is_local
 | Hugging Face | `huggingface`   | No     | Use models from Hugging Face Inference API.       | [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) |
 | TogetherAI   | `togetherAI`    | No     | Use various open-source models via TogetherAI API.| [api.together.ai/settings/api-keys](https://api.together.ai/settings/api-keys) |
 | OpenRouter   | `openrouter`    | No     | Use OpenRouter Models| [https://openrouter.ai/](https://openrouter.ai/) |
-| MiniMax      | `minimax`       | No     | Use MiniMax models (e.g., MiniMax-M2.7, MiniMax-M2.5).| [platform.minimax.io](https://platform.minimax.io/user-center/basic-information) |
+| MiniMax      | `minimax`       | No     | Use MiniMax models (e.g., MiniMax-M3, MiniMax-M2.7).| [platform.minimax.io](https://platform.minimax.io/user-center/basic-information) |
 
 *Note:*
 *   We advise against using `gpt-4o` or other OpenAI models for complex web browsing and task planning as current prompt optimizations are geared towards models like Deepseek.
@@ -706,6 +707,8 @@ The SEARXNG_BASE_URL should be depending on whenever you run in docker or on hos
 **Run on host**: `SEARXNG_BASE_URL="http://localhost:8080"`
 
 **Run fully in docker (web interface)**: `SEARXNG_BASE_URL="http://searxng:8080"`
+
+> **Note on port conflicts**: If port `8080` is already in use on your host, change `SEARXNG_PORT` (e.g., to `8001`) in your `.env`. Keep `SEARXNG_BASE_URL` as `http://searxng:8080` — the internal Docker port does not change.
 
 ## FAQ
 

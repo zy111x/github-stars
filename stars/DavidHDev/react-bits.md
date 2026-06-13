@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 40530
+stars: 41016
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building memorable websites.
 url: https://github.com/DavidHDev/react-bits

@@ -1,6 +1,6 @@
 ---
 project: terminal-portfolio
-stars: 773
+stars: 775
 description: |-
     Terminal style portfolio website built with React, TypeScript and Styled-Components.
 url: https://github.com/satnaing/terminal-portfolio

@@ -1,6 +1,6 @@
 ---
 project: unavatar
-stars: 1437
+stars: 1438
 description: |-
     Get unified user avatar from social networks, including Instagram, SoundCloud, Telegram, Twitter, YouTube & more.
 url: https://github.com/microlinkhq/unavatar
@@ -32,6 +32,7 @@ url: https://github.com/microlinkhq/unavatar
   - [Buy Me a Coffee](#buy-me-a-coffee)
   - [CodePen](#codepen)
   - [Cults3D](#cults3d)
+  - [Cursor](#cursor)
   - [DeviantArt](#deviantart)
   - [Discord](#discord)
   - [Docker Hub](#docker-hub)
@@ -46,6 +47,7 @@ url: https://github.com/microlinkhq/unavatar
   - [Google](#google)
   - [Google Play](#google-play)
   - [Gravatar](#gravatar)
+  - [Hevy](#hevy)
   - [Hugging Face](#hugging-face)
   - [Instagram](#instagram)
   - [Ko-fi](#ko-fi)
@@ -58,15 +60,18 @@ url: https://github.com/microlinkhq/unavatar
   - [OpenStreetMap](#openstreetmap)
   - [Patreon](#patreon)
   - [Pinterest](#pinterest)
+  - [Primal](#primal)
   - [Printables](#printables)
   - [Product Hunt](#product-hunt)
   - [PSN Profiles](#psn-profiles)
+  - [Raycast](#raycast)
   - [Reddit](#reddit)
   - [Snapchat](#snapchat)
   - [SoundCloud](#soundcloud)
   - [Spotify](#spotify)
   - [Stack Overflow](#stack-overflow)
   - [Steam](#steam)
+  - [Strava](#strava)
   - [Substack](#substack)
   - [Telegram](#telegram)
   - [Thingiverse](#thingiverse)
@@ -96,7 +101,7 @@ Welcome to **unavatar.io**, the ultimate avatar service that offers everything y
 
 - **Versatile**: A wide range of platforms and services including [TikTok](https://unavatar.io/docs#tiktok), [Instagram](https://unavatar.io/docs#instagram), [YouTube](https://unavatar.io/docs#youtube), [X/Twitter](https://unavatar.io/docs#xtwitter), [Gravatar](https://unavatar.io/docs#gravatar), etc., meaning you can rule all of them just querying against unavatar.
 
-- **Speed**: Designed to be fast and efficient with a 91% cache hit rate, serving 12.5 TB of data across 382M requests.
+- **Speed**: Designed to be fast and efficient with a 92% cache hit rate, serving 9.59 TB of data across 258.5M requests.
 
 - **Optimize**: All the images are not only compressed on-the-fly to reduce their size and save bandwidth, but also optimized to maintain a high-quality ratio. They are ready for immediate use, enhancing the overall optimization of your website or application.
 
@@ -592,6 +597,12 @@ Get any Cults3D creator's profile picture by username.
 
 e.g., [unavatar.io/cults3d/RaBros](https://unavatar.io/cults3d/RaBros)
 
+### Cursor
+
+Get any Cursor user's profile picture by their username.
+
+e.g., [unavatar.io/cursor/leerob](https://unavatar.io/cursor/leerob)
+
 ### DeviantArt
 
 Get any DeviantArt user's profile picture by their username.
@@ -661,7 +672,6 @@ Available inputs:
 
 - Username, e.g., [unavatar.io/facebook/zuck](https://unavatar.io/facebook/zuck)
 - Page, e.g., [unavatar.io/facebook/windtodayco](https://unavatar.io/facebook/windtodayco)
-- Group ID, e.g., [unavatar.io/facebook/1426378481098002](https://unavatar.io/facebook/1426378481098002)
 
 ### Flickr
 
@@ -727,6 +737,12 @@ Available inputs:
 When you pass an email address directly in the URL, it is visible in plain text — both in server logs and to any intermediary that inspects the request.
 
 To avoid this, pass a pre-computed `MD5` or `SHA256` hash of the email instead. Unavatar detects the hash automatically and routes it to Gravatar, which natively supports both hash formats.
+
+### Hevy
+
+Get any Hevy user's profile picture by their username.
+
+e.g., [unavatar.io/hevy/om_giigo](https://unavatar.io/hevy/om_giigo)
 
 ### Hugging Face
 
@@ -811,6 +827,12 @@ Get any Pinterest user's profile picture by their username.
 
 e.g., [unavatar.io/pinterest/ohjoy](https://unavatar.io/pinterest/ohjoy)
 
+### Primal
+
+Get any Primal user's profile picture by their username.
+
+e.g., [unavatar.io/primal/jack](https://unavatar.io/primal/jack)
+
 ### Printables
 
 Get any Printables user's profile picture by their username.
@@ -835,6 +857,12 @@ Available inputs:
 Get any PlayStation Network user's profile picture by their PSN username.
 
 e.g., [unavatar.io/psnprofiles/Duff85](https://unavatar.io/psnprofiles/Duff85)
+
+### Raycast
+
+Get any Raycast user's profile picture by their username.
+
+e.g., [unavatar.io/raycast/peduarte](https://unavatar.io/raycast/peduarte)
 
 ### Reddit
 
@@ -894,6 +922,12 @@ Available inputs:
 - `id` (default): [unavatar.io/steam/id:gabelogannewell](https://unavatar.io/steam/id:gabelogannewell)
 - `profile`: [unavatar.io/steam/profile:76561198044605749](https://unavatar.io/steam/profile:76561198044605749)
 - `group`: [unavatar.io/steam/group:murcia-gaming](https://unavatar.io/steam/group:murcia-gaming)
+
+### Strava
+
+Get any Strava athlete's profile picture by their username or athlete ID.
+
+e.g., [unavatar.io/strava/kikobeats](https://unavatar.io/strava/kikobeats)
 
 ### Substack
 

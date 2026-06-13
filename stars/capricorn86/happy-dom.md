@@ -1,6 +1,6 @@
 ---
 project: happy-dom
-stars: 4509
+stars: 4521
 description: |-
     A JavaScript implementation of a web browser without its graphical user interface
 url: https://github.com/capricorn86/happy-dom
@@ -72,7 +72,7 @@ And much more..
 
 ## Contributing
 
-See [Contributing Guide](https://github.com/capricorn86/happy-dom/blob/master/docs/contributing.md).
+See [Contributing Guide](https://github.com/capricorn86/happy-dom/blob/master/CONTRIBUTING.md).
 
 ## License
 

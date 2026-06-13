@@ -1,6 +1,6 @@
 ---
 project: document
-stars: 1769
+stars: 1776
 description: |-
     Perform common file preview and editing via the web.
 url: https://github.com/ranuts/document

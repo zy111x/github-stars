@@ -1,6 +1,6 @@
 ---
 project: react-ink-textarea
-stars: 24
+stars: 26
 description: |-
     A full-featured CLI textarea component for React Ink — Implement beautiful multi-line text input on the CLI
 url: https://github.com/omranjamal/react-ink-textarea
@@ -359,6 +359,7 @@ const CodeEditor = () => {
 | `activeLineColor`       | `string`                                                                                    | Background color for the active line highlight. Defaults to no color.                                                                     |
 | `cursorInterval`        | `number`                                                                                    | Cursor blink interval in milliseconds. Defaults to `500`.                                                                                 |
 | `typingPause`           | `number`                                                                                    | Milliseconds to wait after typing before resuming cursor blink. Defaults to `450`.                                                        |
+| `disableCursorBlink`    | `boolean`                                                                                   | When `true`, fully disables cursor blinking — no blink timer runs and the cursor renders as a steady block. Defaults to `false`.          |
 | `maxUndo`               | `number`                                                                                    | Maximum number of undo steps to retain. Defaults to `128`.                                                                                |
 | `undoGroupDelay`        | `number`                                                                                    | Milliseconds to group consecutive edits into a single undo step. Defaults to `750`.                                                       |
 | `autoNewLineLimit`      | `number`                                                                                    | Maximum number of empty lines allowed after the last line with content. Only applies to Down arrow navigation. Defaults to `3`.           |

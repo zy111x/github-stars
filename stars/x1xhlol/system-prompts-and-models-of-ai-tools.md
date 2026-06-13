@@ -1,6 +1,6 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 138854
+stars: 140289
 description: |-
     FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
@@ -11,15 +11,15 @@ url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
 </p>
 
 <p align="center">
-  <a href="https://latitude.so/?utm_source=github&utm_medium=readme&utm_campaign=sponsorship">
+  <a href="https://github.com/latitude-dev/latitude-llm">
     <img src="assets/latitude-dark.png" alt="Latitude Logo" width="700"/>
   </a>
 </p>
 
 <div align="center" markdown="1">
 
-### [Issue Tracking for AI Agents](https://latitude.so/?utm_source=github&utm_medium=readme&utm_campaign=sponsorship)  
-[Open Source Monitoring platform](https://latitude.so/?utm_source=github&utm_medium=readme&utm_campaign=sponsorship)
+### [Issue Tracking for AI Agents](https://github.com/latitude-dev/latitude-llm)  
+[Open Source Monitoring platform](https://github.com/latitude-dev/latitude-llm)
 
 </div>
 
@@ -82,7 +82,7 @@ Sponsor the most comprehensive repository of AI system prompts and reach thousan
 
 ## Connect With Me
 
-- **X:** [NotLucknite](https://x.com/Lucknite)
+- **X:** [Lucknite](https://x.com/Lucknite)
 - **Discord**: `x1xhlol`
 - **Email**: `lucasvalbuena@pm.me`
 

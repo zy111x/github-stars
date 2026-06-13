@@ -1,6 +1,6 @@
 ---
 project: konsta
-stars: 4181
+stars: 4190
 description: |-
     Mobile UI components made with Tailwind CSS
 url: https://github.com/konstaui/konsta

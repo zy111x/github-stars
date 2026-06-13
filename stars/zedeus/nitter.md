@@ -1,6 +1,6 @@
 ---
 project: nitter
-stars: 13064
+stars: 13106
 description: |-
     Alternative Twitter front-end
 url: https://github.com/zedeus/nitter
@@ -112,9 +112,9 @@ along with the scss and md files.
 # su nitter
 $ git clone https://github.com/zedeus/nitter
 $ cd nitter
-$ nimble build -d:danger --mm:refc
-$ nimble scss
-$ nimble md
+$ nimble -l build -d:danger --mm:refc
+$ nimble -l scss
+$ nimble -l md
 $ cp nitter.example.conf nitter.conf
 ```
 
@@ -131,7 +131,7 @@ performance reasons.
 
 Page for the Docker image: https://hub.docker.com/r/zedeus/nitter
 
-#### NOTE: For ARM64 support, please use the separate ARM64 docker image: [`zedeus/nitter:latest-arm64`](https://hub.docker.com/r/zedeus/nitter/tags).
+#### NOTE: The published image is multi-arch — `zedeus/nitter:latest` runs natively on both `amd64` and `arm64`.
 
 To run Nitter with Docker, you'll need to install and run Redis separately
 before you can run the container. See below for how to also run Redis using
@@ -154,8 +154,6 @@ To build and run Nitter in Docker:
 docker build -t nitter:latest .
 docker run -v $(pwd)/nitter.conf:/src/nitter.conf -d --network host nitter:latest
 ```
-
-Note: For ARM64, use this Dockerfile: [`Dockerfile.arm64`](https://github.com/zedeus/nitter/blob/master/Dockerfile.arm64).
 
 A prebuilt Docker image is provided as well:
 

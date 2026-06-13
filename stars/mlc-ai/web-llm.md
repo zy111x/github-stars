@@ -1,6 +1,6 @@
 ---
 project: web-llm
-stars: 18147
+stars: 18187
 description: |-
     High-performance In-browser LLM Inference Engine 
 url: https://github.com/mlc-ai/web-llm
@@ -184,6 +184,7 @@ const engine = await CreateMLCEngine("Llama-3.1-8B-Instruct-q4f32_1-MLC", {
 
 Notes:
 - If `"opfs"` is selected in an environment without OPFS support, cache operations fail with an OPFS availability error.
+- When using `"opfs"`, `appConfig.opfsAccessMode` can be set to `"auto"` to use OPFS sync access handles where supported, or `"sync"` to require sync access handles. The default is `"async"`.
 - The `"cross-origin"` backend requires installing and enabling a compatible browser extension.
 - Cross-origin backend currently does not support programmatic tensor-cache deletion; clearing is extension-managed.
 

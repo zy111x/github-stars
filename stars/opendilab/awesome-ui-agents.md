@@ -1,6 +1,6 @@
 ---
 project: awesome-ui-agents
-stars: 300
+stars: 301
 description: |-
     A curated list of of awesome UI agents resources, encompassing Web, App, OS, and beyond (continually updated)
 url: https://github.com/opendilab/awesome-ui-agents
@@ -508,6 +508,7 @@ format:
     - 2021
     - [code](https://github.com/google-deepmind/android_env)
 
+- [TWZRD Agent Intel](https://intel.twzrd.xyz) - Trust scoring MCP for AI agents on Solana. Verify agent wallet identity before x402 micropayments. Free: `{"mcpServers":{"twzrd-agent-intel":{"url":"https://intel.twzrd.xyz/mcp"}}}`
 ### Datasets
 - [SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation](https://arxiv.org/abs/2410.15164)
     - Jingxuan Chen, Derek Yuen, Bin Xie, Yuhao Yang, Gongwei Chen, Zhihao Wu, Li Yixing, Xurui Zhou, Weiwen Liu, Shuai Wang, Rui Shao, Liqiang Nie, Yasheng Wang, Jianye Hao, Jun Wang, Kun Shao

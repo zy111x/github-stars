@@ -1,6 +1,6 @@
 ---
 project: imessage-kit
-stars: 1369
+stars: 1386
 description: |-
     A type-safe, elegant iMessage SDK for macOS with zero dependencies
 url: https://github.com/photon-hq/imessage-kit
@@ -24,7 +24,13 @@ url: https://github.com/photon-hq/imessage-kit
 A full-featured iMessage SDK for **reading**, **sending**, and **automating** iMessage conversations on macOS. Perfect for building AI agents, automation tools, and chat-first applications.
 
 > [!NOTE]
-> **✨ Looking for advanced features like threaded replies, tapbacks, message editing, unsending, live typing indicators? Check out [Advanced iMessage Kit](https://github.com/photon-hq/advanced-imessage-kit) and contact us at daniel@photon.codes.**
+> ✨ Looking for advanced features like threaded replies, tapbacks, message editing, unsending, live typing indicators? Try **[Photon Spectrum](https://photon.codes)**
+
+## About Photon
+
+**[Photon](https://photon.codes)** builds infrastructure for AI agents that operate over real communication channels.
+
+Spectrum is Photon’s open-source multi-channel agent framework, enabling AI agents to communicate through interfaces people already use—such as iMessage, SMS, email, Slack, Discord, and voice—instead of being confined to web chat.
 
 ---
 

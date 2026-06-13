@@ -1,6 +1,6 @@
 ---
 project: ecapture
-stars: 15221
+stars: 15257
 description: |-
     Capturing SSL/TLS plaintext without a CA certificate using eBPF. Supported on Linux/Android kernels for amd64/arm64.
 url: https://github.com/gojue/ecapture
@@ -244,11 +244,4 @@ After eCapture is running, you can dynamically modify the configurations through
 ## Event Forwarding
 
 eCapture supports multiple event forwarding methods. You can forward events to packet capture software such as Burp Suite. For details, refer to the [Event Forwarding API Documentation](./docs/event-forward-api.md).
-
-## Acknowledgements
-
-This project is supported by a [JetBrains IDE](https://www.jetbrains.com) license. We thank JetBrains for their
-contributions to the open-source community.
-
-![JetBrains logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)
 

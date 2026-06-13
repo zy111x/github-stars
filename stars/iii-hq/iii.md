@@ -1,6 +1,6 @@
 ---
 project: iii
-stars: 17713
+stars: 18090
 description: |-
     Effortlessly compose, extend, and observe every service in real-time for the first time ever.
 url: https://github.com/iii-hq/iii
@@ -10,8 +10,6 @@ url: https://github.com/iii-hq/iii
 
 ![iii: point-to-point integrations vs zero-integration via shared runtime](.github/assets/zero-integration.png)
 
-[![Engine License](https://img.shields.io/badge/engine-ELv2-blue.svg)](engine/LICENSE)
-[![SDK License](https://img.shields.io/badge/sdk-Apache--2.0-green.svg)](sdk/LICENSE)
 [![Docker](https://img.shields.io/docker/v/iiidev/iii?label=docker)](https://hub.docker.com/r/iiidev/iii)
 [![npm](https://img.shields.io/npm/v/iii-sdk?label=npm)](https://www.npmjs.com/package/iii-sdk)
 [![PyPI](https://img.shields.io/pypi/v/iii-sdk?label=pypi)](https://pypi.org/project/iii-sdk/)

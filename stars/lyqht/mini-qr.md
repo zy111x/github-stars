@@ -1,6 +1,6 @@
 ---
 project: mini-qr
-stars: 2106
+stars: 2116
 description: |-
     Create & scan cute qr codes easily 👾
 url: https://github.com/lyqht/mini-qr
@@ -110,6 +110,10 @@ Translations & bug fixes are welcome!
 For all other matters, before opening an issue or contacting the project maintainer, please read up on to [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Component stories live in Storybook (`pnpm storybook` locally, or the production build at [mini-qr-storybook.vercel.app](https://mini-qr-storybook.vercel.app)). Pull requests that touch the UI get an auto-deployed Storybook preview on Vercel — see [docs/storybook-vercel-previews.md](docs/storybook-vercel-previews.md) for how it's wired up.
+
+Maintainers: see [RELEASING.md](RELEASING.md) for how releases are cut (automated via release-please + Crowdin).
+
+> **Release process:** Automated with release-please (versioning, tagging, GitHub Release, and `public/CHANGELOG.md`) and the Crowdin GitHub integration (translations). See [RELEASING.md](RELEASING.md).
 
 ---
 
