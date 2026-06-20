@@ -1,6 +1,6 @@
 ---
 project: zerobrew
-stars: 7417
+stars: 7436
 description: |-
     A 5-20x faster experimental Homebrew alternative
 url: https://github.com/lucasgelfond/zerobrew

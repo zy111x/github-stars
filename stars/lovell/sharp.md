@@ -1,6 +1,6 @@
 ---
 project: sharp
-stars: 32331
+stars: 32362
 description: |-
     High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP, AVIF and TIFF images. Uses the libvips library.
 url: https://github.com/lovell/sharp
@@ -8,7 +8,7 @@ url: https://github.com/lovell/sharp
 
 # sharp
 
-<img src="https://sharp.pixelplumbing.com/sharp-logo.svg" width="160" height="160" alt="sharp logo" align="right">
+<picture><img src="https://sharp.pixelplumbing.com/sharp-logo.svg" width="160" height="160" alt="sharp logo" align="right"></picture>
 
 The typical use case for this high speed Node-API module
 is to convert large images in common formats to

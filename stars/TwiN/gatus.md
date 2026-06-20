@@ -1,6 +1,6 @@
 ---
 project: gatus
-stars: 11224
+stars: 11285
 description: |-
     Automated developer-oriented status page with alerting and incident support
 url: https://github.com/TwiN/gatus

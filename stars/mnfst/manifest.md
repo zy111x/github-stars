@@ -1,6 +1,6 @@
 ---
 project: manifest
-stars: 6948
+stars: 7074
 description: |-
     Connect Your Agents And Harnesses With Any Provider 🦚
 url: https://github.com/mnfst/manifest

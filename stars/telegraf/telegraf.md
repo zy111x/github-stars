@@ -1,6 +1,6 @@
 ---
 project: telegraf
-stars: 9156
+stars: 9162
 description: |-
     Modern Telegram Bot Framework for Node.js
 url: https://github.com/telegraf/telegraf

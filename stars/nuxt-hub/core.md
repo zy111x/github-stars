@@ -1,6 +1,6 @@
 ---
 project: core
-stars: 1276
+stars: 1278
 description: |-
     Add database, KV, blob storage, and cache to your Nuxt application. NuxtHub works on Vercel, Cloudflare, Netlify, and more.
 url: https://github.com/nuxt-hub/core

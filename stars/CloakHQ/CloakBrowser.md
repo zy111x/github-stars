@@ -1,6 +1,6 @@
 ---
 project: CloakBrowser
-stars: 25919
+stars: 26708
 description: |-
     Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.
 url: https://github.com/CloakHQ/CloakBrowser
@@ -158,7 +158,7 @@ Open [http://localhost:8080](http://localhost:8080). Create a profile. Click **L
 
 ---
 
-## Latest: v0.3.31 (Chromium 146.0.7680.177.5)
+## Latest: v0.3.32 (Chromium 146.0.7680.177.5)
 
 - **58 fingerprint patches** — rendering consistency improvements across Linux and Windows, corrected GPU/display/graphics parameters to match stock Chrome 146 profiles
 - **Windows native GPU passthrough** — real hardware values pass through directly instead of being spoofed, matching real browser behavior
@@ -1248,7 +1248,6 @@ await new Promise(r => setTimeout(r, 3000));
 ```
 
 Other tips for maximizing reCAPTCHA scores:
-- **Try the Patchright backend** — suppresses additional CDP automation signals at the Playwright protocol layer. Install with `pip install cloakbrowser[patchright]`, then use `launch(backend="patchright")` or set `CLOAKBROWSER_BACKEND=patchright` globally. Note: Patchright breaks proxy auth and `add_init_script` — only use it if you're still seeing low scores after trying the steps above
 - **Use Playwright, not Puppeteer** — Puppeteer sends more CDP protocol traffic that reCAPTCHA detects ([details](#puppeteer))
 - **Use residential proxies** — datacenter IPs are flagged by IP reputation, not browser fingerprint
 - **Spend 15+ seconds on the page** before triggering reCAPTCHA — short visits score lower
@@ -1337,7 +1336,8 @@ Issues and PRs welcome. If something isn't working, [open an issue](https://gith
 - [@aaronjmars](https://github.com/aaronjmars) — security fixes (shell injection, dep bumps)
 - [@Seryiza](https://github.com/Seryiza) — Nix/NixOS flake
 - [@245678000000](https://github.com/245678000000) — package-lock sync
-- [@honor2030](https://github.com/honor2030) — cloakserve WebSocket origin guard, composable JS launch helpers
+- [@honor2030](https://github.com/honor2030) — cloakserve WebSocket origin guard, CDP WebSocket URL rewrite, composable JS launch helpers
 - [@sparanoid](https://github.com/sparanoid) — Docker Xvfb lock cleanup
+- [@Kumario1](https://github.com/Kumario1) — cloakserve idle cleanup for seeded profiles
 - [@0xlally](https://github.com/0xlally) — security reports (cloakserve path traversal, WebSocket origin bypass)
 

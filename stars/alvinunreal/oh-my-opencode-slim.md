@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 5469
+stars: 5820
 description: |-
     Slimmed, cleaned and fine-tuned oh-my-opencode fork, consumes much less tokens
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -37,6 +37,38 @@ oh-my-opencode-slim is an agent orchestration plugin for OpenCode. It includes a
 The main idea is simple: instead of forcing one model to do everything, the plugin routes each part of the job to the agent best suited for it, balancing **quality, speed and cost**.
 
 To explore the agents themselves, see **[Meet the Pantheon](#meet-the-pantheon)**. For the full feature set, see **[Features & Workflows](#features-and-workflows)** below.
+
+### Manage Agent Skills with LazySkills
+
+<p align="center">
+  <a href="https://github.com/alvinunreal/lazyskills">
+    <img src="img/lazyskills-wide.svg" alt="LazySkills" width="720">
+  </a>
+</p>
+
+**[LazySkills](https://github.com/alvinunreal/lazyskills)** is a terminal UI for managing agent skills. It gives you one place to see what is installed, which agents can use each skill, why visibility may be broken, and what actions are safe to run next.
+
+<p align="center">
+  <a href="https://github.com/alvinunreal/lazyskills"><b>Explore LazySkills →</b></a>
+</p>
+
+### 🏛️ Support
+
+My sponsorship goal is **$200/month**.
+
+That covers my Codex subscription, so I can keep building and testing oh-my-opencode-slim without worrying about token costs.
+
+<p align="center">
+  <a href="https://github.com/sponsors/alvinunreal">Sponsor this project</a>
+</p>
+
+### ✨ Sponsors
+
+<p align="center">
+  <a href="https://github.com/sponsors/alvinunreal">
+    <img src="./sponsors.svg" alt="Sponsors" width="800">
+  </a>
+</p>
 
 ### What Users Say
 
@@ -173,6 +205,10 @@ verification while specialists do the work in their own lanes.
   agents are currently active, including parallel background specialists.
 - **[Deepwork](#deepwork)** — a structured workflow for large, multi-file, risky,
   or phased coding work using persistent plan files and Oracle review gates.
+- **[Reflect](#reflect)** — reviews repeated work patterns and suggests reusable skills,
+  agents, commands, config rules, prompt rules, or project playbooks.
+- **[Worktrees](#worktrees)** — manages Git worktrees as isolated coding lanes
+  with safety protocols for complex, risky, or parallel tasks.
 - **[oh-my-opencode-slim skill](#oh-my-opencode-slim-skill)** — a bundled
   configuration skill that helps tune models, prompts, custom agents, MCP access,
   presets, and plugin behavior safely.
@@ -222,6 +258,36 @@ Start it with:
 
 See **[Skills](docs/skills.md#deepwork)** for when to use it and how the workflow
 runs.
+
+#### Reflect
+
+Reflect helps the Orchestrator learn from repeated workflow friction. It reviews
+recent work and existing assets, then recommends the smallest useful improvement:
+a skill, custom agent, command, config rule, prompt rule, MCP permission change,
+or project playbook. If there is not enough evidence, it should recommend
+creating nothing.
+
+Use it directly with:
+
+```text
+/reflect
+/reflect release workflow and checks
+```
+
+Or with natural prompts like:
+
+```text
+reflect on my recent workflows
+find repeated work worth turning into reusable instructions
+```
+
+See **[Skills](docs/skills.md#reflect)** for the full workflow and guardrails.
+
+#### Worktrees
+
+Worktrees manages Git worktrees as safe, isolated coding lanes under `.slim/worktrees/<slug>/`. The Orchestrator manages the lifecycle of these lanes, tracks state in `.slim/worktrees.json`, dispatches specialist agents inside them, and requires explicit confirmation before mutating git state.
+
+See **[Skills](docs/skills.md#worktrees)** for the safety protocol.
 
 #### oh-my-opencode-slim Skill
 
@@ -593,9 +659,11 @@ Use this section as a map: start with installation, then jump to features, confi
 |-----|----------------|
 | **[Council](docs/council.md)** | Run multiple models in parallel and synthesize a single answer with `@council` |
 | **[Custom Agents](docs/configuration.md#custom-agents)** | Define your own specialists with custom prompts, models, MCP access, and Orchestrator delegation rules |
+| **[ACP Agents](docs/acp-agents.md)** | Connect external ACP-compatible agents such as Claude Code ACP or Gemini ACP as delegatable subagents |
 | **[Multiplexer Integration](docs/multiplexer-integration.md)** | Watch agents work live in Tmux or Zellij panes |
 | **[Codemap](docs/codemap.md)** | Generate hierarchical codemaps to understand large codebases faster |
 | **[Clonedeps](docs/clonedeps.md)** | Clone selected dependency source into an ignored local workspace for inspection |
+| **[Worktrees](docs/worktrees.md)** | Use `.slim/worktrees/` lanes for isolated parallel or risky coding work |
 | **[Preset Switching](docs/preset-switching.md)** | Switch agent model presets at runtime with `/preset` |
 | **[Interview](docs/interview.md)** | Turn rough ideas into a structured markdown spec through a browser-based Q&A flow |
 | **[Companion](docs/companion.md)** | Floating window companion for parsing, help, and types |
@@ -608,7 +676,7 @@ Use this section as a map: start with installation, then jump to features, confi
 | **[Configuration](docs/configuration.md)** | Config file locations, JSONC support, prompt overrides, and full option reference |
 | **[Background Orchestration](docs/background-orchestration.md)** | Scheduler-first orchestrator model built around native background subagents |
 | **[Maintainer Guide](docs/maintainers.md)** | Issue triage rules, label meanings, support routing, and repo maintenance workflow |
-| **[Skills](docs/skills.md)** | Bundled skills such as `simplify`, `codemap`, `clonedeps`, `deepwork`, and `oh-my-opencode-slim` |
+| **[Skills](docs/skills.md)** | Bundled skills such as `simplify`, `codemap`, `clonedeps`, `deepwork`, `reflect`, `worktrees`, and `oh-my-opencode-slim` |
 | **[MCPs](docs/mcps.md)** | `websearch`, `context7`, `gh_grep`, and how MCP permissions work per agent |
 | **[Tools](docs/tools.md)** | Built-in tool capabilities like `webfetch`, LSP tools, code search, and formatters |
 
@@ -629,7 +697,7 @@ Use this section as a map: start with installation, then jump to features, confi
   <p><sub>Every merged contribution leaves a mark on the realm.</sub></p>
 
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-60-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-65-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -719,6 +787,13 @@ Use this section as a map: start with installation, then jump to features, confi
       <td align="center" valign="top" width="16.66%"><a href="http://www.flyinghail.net/"><img src="https://avatars.githubusercontent.com/u/157430?v=4?s=100" width="100px;" alt="FENG Hao"/><br /><sub><b>FENG Hao</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=flyinghail" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/smatheusblu"><img src="https://avatars.githubusercontent.com/u/5666794?v=4?s=100" width="100px;" alt="Matheus Nogueira Silveira"/><br /><sub><b>Matheus Nogueira Silveira</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=smatheusblu" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/sktr"><img src="https://avatars.githubusercontent.com/u/44969514?v=4?s=100" width="100px;" alt="sktr"/><br /><sub><b>sktr</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=sktr" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/bobbyunknown"><img src="https://avatars.githubusercontent.com/u/62272380?v=4?s=100" width="100px;" alt="Insomnia"/><br /><sub><b>Insomnia</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=bobbyunknown" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/andrescastane"><img src="https://avatars.githubusercontent.com/u/13487870?v=4?s=100" width="100px;" alt="Andres Castañeda"/><br /><sub><b>Andres Castañeda</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=andrescastane" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://zaradacht.com/"><img src="https://avatars.githubusercontent.com/u/24251016?v=4?s=100" width="100px;" alt="Zaradacht Taifour (Zack)"/><br /><sub><b>Zaradacht Taifour (Zack)</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=Zaradacht" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/fslse"><img src="https://avatars.githubusercontent.com/u/90545544?v=4?s=100" width="100px;" alt="fslse"/><br /><sub><b>fslse</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=fslse" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/linze0721"><img src="https://avatars.githubusercontent.com/u/178997622?v=4?s=100" width="100px;" alt="萧瑟"/><br /><sub><b>萧瑟</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=linze0721" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

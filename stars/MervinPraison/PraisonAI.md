@@ -1,6 +1,6 @@
 ---
 project: PraisonAI
-stars: 8125
+stars: 8197
 description: |-
     PraisonAI 🦞 — Hire a 24/7 AI Workforce. Stop writing boilerplate and start shipping autonomous self-improving agents that research, plan, code, and execute tasks. Deployed in 5 lines of code with built-in memory, RAG, and support for 100+ LLMs.
 url: https://github.com/MervinPraison/PraisonAI
@@ -778,11 +778,11 @@ agent.start('Write a movie script about a robot in Mars');
 
 ## ⚡ Performance
 
-PraisonAI is built for speed, with agent instantiation in under 4μs. This reduces overhead, improves responsiveness, and helps multi-agent systems scale efficiently in real-world production workloads.
+PraisonAI is built for speed, with agent instantiation in around 14μs. This reduces overhead, improves responsiveness, and helps multi-agent systems scale efficiently in real-world production workloads.
 
 | Performance Metric | PraisonAI |
 |--------------------|-----------|
-| Avg Instantiation Time | **3.77 μs** |
+| Avg Instantiation Time | **14 μs** |
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 project: axonhub
-stars: 4282
+stars: 4359
 description: |-
     ⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing, cost control & end-to-end tracing.
 url: https://github.com/looplj/axonhub
@@ -37,6 +37,32 @@ url: https://github.com/looplj/axonhub
 Check out Atlas Cloud's [new coding plan promotion](https://lj.s.gy/jknt2V) for more budget-friendly API access.
 
 </div>
+
+<br />
+
+<table border="1" cellspacing="0" cellpadding="16">
+  <thead>
+    <tr>
+      <th align="center" width="220">Sponsor</th>
+      <th align="left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">
+        <a href="https://bloome.im/" target="_blank">
+         <strong>Bloome</strong>
+          <img src="docs/sponsors/bloome.png" alt="Bloome" height="90" />
+        </a>
+      </td>
+      <td valign="middle">
+        Try AxonHub with zero local setup on Bloome：
+        <a href="https://bloome.im/agent/join/WchosTFN?ref=MjgMzmCY" target="_blank">Quick start</a>,
+        one click from your browser or phone, easy to share with your team.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 

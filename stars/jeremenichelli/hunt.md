@@ -1,6 +1,6 @@
 ---
 project: hunt
-stars: 341
+stars: 340
 description: |-
     👻 Minimal library to observe nodes entering and leaving the viewport
 url: https://github.com/jeremenichelli/hunt

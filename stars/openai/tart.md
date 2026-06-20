@@ -1,6 +1,6 @@
 ---
 project: tart
-stars: 5867
+stars: 5913
 description: |-
     macOS and Linux VMs on Apple Silicon to use in CI and other automations
 url: https://github.com/openai/tart

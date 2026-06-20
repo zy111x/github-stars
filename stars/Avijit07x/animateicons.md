@@ -1,6 +1,6 @@
 ---
 project: animateicons
-stars: 971
+stars: 973
 description: |-
     Free and open-source animated SVG icons for React, built for smooth micro-interactions, easy customization, and lightweight performance.
 url: https://github.com/Avijit07x/animateicons
@@ -10,16 +10,20 @@ url: https://github.com/Avijit07x/animateicons
 
 # AnimateIcons
 
-**281 animated SVG icons for React.** Hover and imperative triggers, configurable size, color, and duration. Built on `motion/react`.
+**281 animated SVG icons for React.** Hover & imperative triggers, configurable size, color, and duration. Built on `motion/react`.
 
-[![npm](https://img.shields.io/npm/v/@animateicons/react?color=f45b48&label=%40animateicons%2Freact)](https://www.npmjs.com/package/@animateicons/react)
-[![License](https://img.shields.io/badge/License-MIT-f45b48.svg)](./LICENSE)
-[![Lucide](https://img.shields.io/badge/Lucide-248_icons-2a2a2a)](https://animateicons.in/icons/lucide)
-[![Huge](https://img.shields.io/badge/Huge-33_icons-2a2a2a)](https://animateicons.in/icons/huge)
-[![Next.js](https://img.shields.io/badge/Next.js-16-2a2a2a)](https://nextjs.org)
-[![motion](https://img.shields.io/badge/motion%2Freact-12-2a2a2a)](https://motion.dev)
+[Browse icons](https://animateicons.in/icons/lucide) &nbsp;·&nbsp; [Docs](https://animateicons.in/icons/docs) &nbsp;·&nbsp; [MCP](https://animateicons.in/icons/docs/mcp) &nbsp;·&nbsp; [Sponsor](https://github.com/sponsors/Avijit07x)
 
-[**Browse icons →**](https://animateicons.in/icons/lucide) &nbsp;·&nbsp; [**Docs →**](https://animateicons.in/icons/docs) &nbsp;·&nbsp; [**Sponsor →**](https://github.com/sponsors/Avijit07x)
+<p>
+  <a href="https://www.npmjs.com/package/@animateicons/react"><img alt="npm" src="https://shieldcn.dev/npm/v/@animateicons/react.svg?variant=secondary&size=xs&theme=zinc" /></a>
+  <a href="https://github.com/Avijit07x/animateicons/stargazers"><img alt="GitHub stars" src="https://shieldcn.dev/github/stars/Avijit07x/animateicons.svg?variant=secondary&size=xs&theme=zinc" /></a>
+  <a href="https://github.com/Avijit07x/animateicons/graphs/contributors"><img alt="Contributors" src="https://shieldcn.dev/github/contributors/Avijit07x/animateicons.svg?variant=secondary&size=xs&theme=zinc" /></a>
+  <a href="https://github.com/Avijit07x/animateicons/commits"><img alt="Last commit" src="https://shieldcn.dev/github/last-commit/Avijit07x/animateicons.svg?variant=secondary&size=xs&theme=zinc" /></a>
+  <a href="./LICENSE"><img alt="License MIT" src="https://shieldcn.dev/github/license/Avijit07x/animateicons.svg?variant=secondary&size=xs&theme=zinc" /></a>
+  <a href="https://vercel.com/open-source-program"><img alt="Vercel OSS Program" src="https://shieldcn.dev/badge/Vercel_OSS_Program_Member.svg?variant=branded&size=xs&theme=zinc&logo=vercel" /></a>
+</p>
+
+<br />
 
 ![AnimateIcons preview](./public/og.png)
 

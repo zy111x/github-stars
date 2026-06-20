@@ -1,6 +1,6 @@
 ---
 project: tink
-stars: 2137
+stars: 2134
 description: |-
     a dependency unwinder for javascript 
 url: https://github.com/npm/tink

@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 34594
+stars: 35010
 description: |-
     AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨
 url: https://github.com/AstrBotDevs/AstrBot
@@ -242,10 +242,6 @@ pre-commit install
 
 ### QQ Groups
 
-- Group 12: 916228568 (New)
-- Group 9: 1076659624 (Full)
-- Group 10: 1078079676 (Full)
-- Group 11: 704659519 (Full)
 - Group 1: 322154837 (Full)
 - Group 3: 630166526 (Full)
 - Group 4: 1077826412 (Full)
@@ -253,6 +249,12 @@ pre-commit install
 - Group 6: 753075035 (Full)
 - Group 7: 743746109 (Full)
 - Group 8: 1030353265 (Full)
+- Group 9: 1076659624 (Full)
+- Group 10: 1078079676 (Full)
+- Group 11: 704659519 (Full)
+- Group 12: 916228568 (Full)
+- Group 13: 1092185289
+- Group 14: 1103419483
 
 - Developer Group(Chit-chat): 975206796
 - Developer Group(Formal): 1039761811

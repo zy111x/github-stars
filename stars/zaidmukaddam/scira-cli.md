@@ -1,6 +1,6 @@
 ---
 project: scira-cli
-stars: 16
+stars: 22
 description: |-
     TUI/CLI interface where Code meets Research
 url: https://github.com/zaidmukaddam/scira-cli

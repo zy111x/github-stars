@@ -1,6 +1,6 @@
 ---
 project: iii
-stars: 18090
+stars: 18298
 description: |-
     Effortlessly compose, extend, and observe every service in real-time for the first time ever.
 url: https://github.com/iii-hq/iii
@@ -137,7 +137,7 @@ npx skills add iii-hq/workers --all         # every worker skill
 ```
 
 The engine's built-in workers (`iii-queue`, `iii-state`, `iii-pubsub`, `iii-stream`, `iii-cron`,
-`iii-http`, `iii-observability`, `iii-bridge`, `iii-exec`, `iii-worker-manager`) ship their skills in
+`iii-http`, `iii-observability`, `iii-bridge`, `iii-exec`, `configuration`) ship their skills in
 this repo. Install one with `npx skills add iii-hq/iii --full-depth --skill <name>`; each worker's README under
 [`engine/src/workers/`](engine/src/workers/) lists the exact `iii worker add` and skill command.
 

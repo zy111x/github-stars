@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 1874
+stars: 1895
 description: |-
     Render JSX, HTML, and CSS to images without a headless browser. OG cards, animated GIFs, and video frames from Node.js, edge runtimes, browsers, or Rust. Drop-in next/og replacement.
 url: https://github.com/kane50613/takumi

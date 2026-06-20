@@ -1,6 +1,6 @@
 ---
 project: slideout
-stars: 7881
+stars: 7880
 description: |-
     A touch slideout navigation menu for your mobile web apps.
 url: https://github.com/Mango/slideout

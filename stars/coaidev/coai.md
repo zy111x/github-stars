@@ -1,6 +1,6 @@
 ---
 project: coai
-stars: 9197
+stars: 9203
 description: |-
     🚀 Next Gen Multi-tenant AI One-Stop Solution. Builtin Admin & Billing System. Enterprise-Grade Unified LLM Gateway Support for 200+ Models And 35+ Providers, Load Balacing w/ Priority-base Routing, Cost Management, Chat Share, Cloud Sync, Credit/Subscription Billing, All File Parsing, Web Search, Built-in Model Cache.
 url: https://github.com/coaidev/coai

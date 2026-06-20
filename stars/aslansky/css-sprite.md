@@ -1,6 +1,6 @@
 ---
 project: css-sprite
-stars: 722
+stars: 721
 description: |-
     css sprite generator
 url: https://github.com/aslansky/css-sprite

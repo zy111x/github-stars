@@ -1,6 +1,6 @@
 ---
 project: microsandbox
-stars: 6545
+stars: 6624
 description: |-
     🧱 easy and fast microVMs for running untrusted workloads
 url: https://github.com/superradcompany/microsandbox

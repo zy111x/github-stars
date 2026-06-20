@@ -1,6 +1,6 @@
 ---
 project: logseq
-stars: 43366
+stars: 43470
 description: |-
     A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: https://logseq.io/p/NX4mc_ggEV
 url: https://github.com/logseq/logseq

@@ -1,6 +1,6 @@
 ---
 project: deno
-stars: 107055
+stars: 107166
 description: |-
     A modern runtime for JavaScript and TypeScript.
 url: https://github.com/denoland/deno
@@ -48,7 +48,7 @@ irm https://deno.land/install.ps1 | iex
 brew install deno
 ```
 
-[Chocolatey](https://chocolatey.org/packages/deno) (Windows):
+[Chocolatey](https://community.chocolatey.org/packages/deno) (Windows):
 
 ```powershell
 choco install deno

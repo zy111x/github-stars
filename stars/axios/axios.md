@@ -1,6 +1,6 @@
 ---
 project: axios
-stars: 109076
+stars: 109083
 description: |-
     Promise based HTTP client for the browser and node.js
 url: https://github.com/axios/axios
@@ -438,6 +438,12 @@ Using bun:
 $ bun add axios
 ```
 
+Using Deno:
+
+```bash
+$ deno add axios
+```
+
 Once the package is installed, import it with `import` or `require`:
 
 ```js
@@ -778,6 +784,8 @@ These config options are available for requests. Only `url` is required. Request
 
   // `data` is the data to be sent as the request body
   // Only applicable for request methods 'PUT', 'POST', 'DELETE', and 'PATCH'
+  // `data` is request-specific: axios does not inherit or deep-merge it from defaults.
+  // To add shared body fields, use a request interceptor or transformRequest.
   // When no `transformRequest` is set, it must be of one of the following types:
   // - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams
   // - Browser only: FormData, File, Blob
@@ -899,8 +907,11 @@ These config options are available for requests. Only `url` is required. Request
   redact: ['authorization', 'password'],
 
   // `validateStatus` defines whether to resolve or reject the promise for a given
-  // HTTP response status code. If `validateStatus` returns `true` (or is set to `null`
-  // or `undefined`), Axios resolves the promise; otherwise, Axios rejects it.
+  // HTTP response status code. If `validateStatus` returns `true` or is set to
+  // `null`, Axios resolves the promise; otherwise, Axios rejects it.
+  // Explicit `validateStatus: undefined` resolves every status by default for
+  // backward compatibility. Set `transitional.validateStatusUndefinedResolves`
+  // to `false` to make explicit `undefined` behave as if this option was omitted.
   validateStatus: function (status) {
     return status >= 200 && status < 300; // default
   },
@@ -910,9 +921,9 @@ These config options are available for requests. Only `url` is required. Request
   maxRedirects: 21, // default
 
   // `sensitiveHeaders` (Node only option) lists custom secret-bearing headers
-  // to remove from cross-origin redirects. Matching is case-insensitive.
-  // Same-origin redirects keep these headers. If `maxRedirects` is 0, this
-  // option is not used.
+  // (such as `X-API-Key`) to remove from cross-origin redirects. Matching is
+  // case-insensitive. Same-origin redirects keep these headers. If
+  // `maxRedirects` is 0, this option is not used.
   sensitiveHeaders: ['X-API-Key'],
 
   // `beforeRedirect` defines a function that Axios calls before redirect.
@@ -1050,6 +1061,11 @@ These config options are available for requests. Only `url` is required. Request
     // throw ETIMEDOUT error instead of generic ECONNABORTED on request timeouts
     clarifyTimeoutError: false,
 
+    // keep explicit `validateStatus: undefined` resolving every response status
+    // for backward compatibility. Set to false to make explicit undefined behave
+    // as if validateStatus was omitted.
+    validateStatusUndefinedResolves: true,
+
     // advertise `zstd` in the default Accept-Encoding header when the current
     // Node.js runtime supports zstd decompression. Axios still decompresses
     // zstd responses when support exists and `decompress` is true.
@@ -1078,6 +1094,15 @@ These config options are available for requests. Only `url` is required. Request
     100 * 1024  // 100KB/s download limit
   ]
 }
+```
+
+For custom secret-bearing headers in Node.js, list them in `sensitiveHeaders` so Axios removes them when following a redirect to another origin:
+
+```js
+axios.get('https://api.example.com/users', {
+  headers: { 'X-API-Key': 'secret' },
+  sensitiveHeaders: ['X-API-Key']
+});
 ```
 
 ### Strict RFC 3986 percent-encoding for query params
@@ -1183,6 +1208,8 @@ instance.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 ### Config order of precedence
 
 Axios merges config in this order: library defaults from [lib/defaults/index.js](https://github.com/axios/axios/blob/main/lib/defaults/index.js#L49), the instance `defaults` property, and the request `config` argument. Later values take precedence over earlier ones.
+
+Some options are request-specific and are only taken from the request `config`. `data` is one of those options: axios does not inherit or deep-merge request bodies from global or instance defaults. If every request needs shared body fields, add them with a request interceptor or `transformRequest`, and scope that logic carefully so sensitive values are not sent to the wrong endpoint.
 
 ```js
 // Create an instance using the config defaults provided by the library
@@ -1415,6 +1442,19 @@ axios.get('/user/12345', {
   validateStatus: function (status) {
     return status < 500; // Resolve only if the status code is less than 500
   },
+});
+```
+
+By default, explicit `validateStatus: undefined` keeps legacy behavior and resolves every response status because `transitional.validateStatusUndefinedResolves` defaults to `true`. Set it to `false` to make explicit `validateStatus: undefined` behave like the option was omitted, so Axios uses the configured/default validator and rejects non-2xx responses by default.
+
+`validateStatus: null` still accepts every response status. If you disable the transitional behavior and intentionally want all statuses to resolve, use `null` or `() => true`.
+
+```js
+axios.get('/user/12345', {
+  validateStatus: undefined,
+  transitional: {
+    validateStatusUndefinedResolves: false
+  }
 });
 ```
 

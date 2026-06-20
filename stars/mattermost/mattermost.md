@@ -1,6 +1,6 @@
 ---
 project: mattermost
-stars: 37754
+stars: 38087
 description: |-
     Mattermost is an open source platform for secure collaboration across the entire software development lifecycle..
 url: https://github.com/mattermost/mattermost

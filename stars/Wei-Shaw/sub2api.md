@@ -1,6 +1,6 @@
 ---
 project: sub2api
-stars: 27578
+stars: 28518
 description: |-
     Sub2API is an open-source relay platform that unifies Claude, OpenAI, Gemini, and Antigravity subscriptions into a single endpoint. It supports account sharing and cost-sharing, with seamless native tool compatibility.
 url: https://github.com/Wei-Shaw/sub2api

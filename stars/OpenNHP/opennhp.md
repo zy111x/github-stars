@@ -1,6 +1,6 @@
 ---
 project: opennhp
-stars: 13797
+stars: 13798
 description: |-
     A lightweight, cryptography-powered, open-source toolkit built to enforce Zero Trust security for infrastructure, applications, and data in the AI-driven world.
 url: https://github.com/OpenNHP/opennhp
@@ -178,6 +178,10 @@ Found a vulnerability? Please follow the responsible-disclosure process in [SECU
 
 <a href="https://layerv.ai">
   <img src="docs/images/layerv_logo.png" height="40" alt="LayerV.ai logo">
+</a>
+&nbsp;&nbsp;
+<a href="https://www.atlascloud.ai/">
+  <img src="docs/images/atlascloud_logo.png" height="40" alt="Atlas Cloud logo">
 </a>
 
 ---

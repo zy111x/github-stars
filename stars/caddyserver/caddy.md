@@ -1,6 +1,6 @@
 ---
 project: caddy
-stars: 73283
+stars: 73452
 description: |-
     Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS
 url: https://github.com/caddyserver/caddy
@@ -9,9 +9,9 @@ url: https://github.com/caddyserver/caddy
 <p align="center">
 	<a href="https://caddyserver.com">
 		<picture>
-			<source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/1128849/210187358-e2c39003-9a5e-4dd5-a783-6deb6483ee72.svg">
-			<source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/1128849/210187356-dfb7f1c5-ac2e-43aa-bb23-fc014280ae1f.svg">
-			<img src="https://user-images.githubusercontent.com/1128849/210187356-dfb7f1c5-ac2e-43aa-bb23-fc014280ae1f.svg" alt="Caddy" width="550">
+			<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/1d6be89c-df8a-438c-b01d-cef6bf56440a">
+			<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/3a5b7419-6925-48f6-ae75-d231f4a4f0c2">
+			<img src="https://github.com/user-attachments/assets/3a5b7419-6925-48f6-ae75-d231f4a4f0c2" alt="Caddy" width="550">
 		</picture>
 	</a>
 	<br>

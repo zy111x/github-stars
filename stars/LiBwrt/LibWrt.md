@@ -1,6 +1,6 @@
 ---
 project: LibWrt
-stars: 748
+stars: 755
 description: |-
     IPQ60XX系列、IPQ807X系列满血NSS支持！Full-featured NSS support for IPQ60XX series and IPQ807X series！
 url: https://github.com/LiBwrt/LibWrt

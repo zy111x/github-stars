@@ -1,6 +1,6 @@
 ---
 project: obscura
-stars: 15626
+stars: 16002
 description: |-
     The headless browser for AI agents and web scraping
 url: https://github.com/h4ckf0r0day/obscura
@@ -94,6 +94,33 @@ HTTP, HTTPS & SOCKS5 support<br><br>
     <td valign="middle">
       <a href="https://mangoproxy.com/?utm_source=github&utm_medium=partner&utm_campaign=h4ckf0r0day"><b>MangoProxy</b></a> provides residential, ISP, datacenter, and mobile proxies in 200+ countries. Trusted by businesses worldwide for stable connections, fast response times, and scalable proxy infrastructure.<br>
       Use Promo code <b>OBSCURA</b> for 8% off Static ISP Proxies.
+    </td>
+  </tr>
+    <tr>
+      <td width="200" align="center" valign="middle">
+        <a href="https://9proxy.com/?utm_source=Github&utm_campaign=obscura" target="_blank">
+          <img alt="9Proxy" src="assets/sponsors/9proxy.png" width="180"/>
+        </a>
+      </td>
+      <td valign="middle">
+        <a href="https://9proxy.com/?utm_source=Github&utm_campaign=obscura"><b>9Proxy</b></a> provides residential proxies from
+  just $0.018/IP or $0.68/GB. 20M+ IPs across 90+ countries. Sticky or rotating sessions, managed from desktop or mobile app.
+      </td>
+    </tr>
+  <tr>
+    <td width="200" align="center" valign="middle">
+      <a href="https://go.nodemaven.com/obscura" target="_blank">
+        <img alt="NodeMaven" src="assets/sponsors/nodemaven.svg" width="180"/>
+      </a>
+    </td>
+    <td valign="middle">
+      <a href="https://go.nodemaven.com/obscura"><b>NodeMaven</b></a> — the most reliable proxy provider with the highest quality IPs on the market. Built for automation, web scraping, SEO research, and social media management.<br><br>
+      <b>99.9% uptime<br>
+      Sticky sessions up to 7 days<br>
+      IP filtering on every proxy<br>
+      No KYC required<br>
+      Cashback on traffic — earn up to 10% back<br><br></b>
+      :gift: Use code <b>OBSCURA35</b> for 35% off Mobile & Residential, or <b>OBSCURA40</b> for 40% off ISP (Static) proxies.
     </td>
   </tr>
 </table>

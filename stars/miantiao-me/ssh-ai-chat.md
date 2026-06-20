@@ -1,6 +1,6 @@
 ---
 project: ssh-ai-chat
-stars: 827
+stars: 830
 description: |-
     Chat with AI over SSH.
 url: https://github.com/miantiao-me/ssh-ai-chat

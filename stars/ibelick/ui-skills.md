@@ -1,6 +1,6 @@
 ---
 project: ui-skills
-stars: 2735
+stars: 3224
 description: |-
     Skills for Design Engineers
 url: https://github.com/ibelick/ui-skills
@@ -13,6 +13,18 @@ url: https://github.com/ibelick/ui-skills
 Skills for Design Engineers
 
 More on [ui-skills.com](http://ui-skills.com/)
+
+Run `npx ui-skills start` to route your agent through the right UI skill set for the task.
+
+## CLI
+
+```bash
+npx ui-skills
+npx ui-skills start
+npx ui-skills categories
+npx ui-skills list --category motion
+npx ui-skills get baseline-ui
+```
 
 ## License
 

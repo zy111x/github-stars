@@ -1,6 +1,6 @@
 ---
 project: daytona
-stars: 72433
+stars: 72381
 description: |-
     Daytona is a Secure and Elastic Infrastructure for Running AI-Generated Code
 url: https://github.com/daytonaio/daytona
@@ -133,7 +133,7 @@ Gradle (`build.gradle.kts`):
 
 ```kotlin
 dependencies {
-    implementation("io.daytona:sdk:0.1.0")
+    implementation("io.daytona:sdk:x.y.z")
 }
 ```
 
@@ -143,7 +143,7 @@ Maven (`pom.xml`):
 <dependency>
   <groupId>io.daytona</groupId>
   <artifactId>sdk</artifactId>
-  <version>0.1.0</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 

@@ -1,6 +1,6 @@
 ---
 project: winston
-stars: 24467
+stars: 24476
 description: |-
     A logger for just about everything.
 url: https://github.com/winstonjs/winston

@@ -1,6 +1,6 @@
 ---
 project: later
-stars: 2415
+stars: 2414
 description: |-
     A javascript library for defining recurring schedules and calculating future (or past) occurrences for them.  Includes support for using English phrases and Cron schedules.  Works in Node and in the browser.
 url: https://github.com/bunkat/later

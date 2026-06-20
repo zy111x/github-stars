@@ -1,6 +1,6 @@
 ---
 project: jarvis
-stars: 5453
+stars: 5456
 description: |-
     A very intelligent browser based Webpack dashboard
 url: https://github.com/zouhir/jarvis

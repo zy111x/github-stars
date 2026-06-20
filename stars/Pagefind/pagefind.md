@@ -1,6 +1,6 @@
 ---
 project: pagefind
-stars: 5271
+stars: 5284
 description: |-
     Static low-bandwidth search at scale
 url: https://github.com/Pagefind/pagefind

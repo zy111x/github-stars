@@ -1,6 +1,6 @@
 ---
 project: zhui
-stars: 1449
+stars: 1448
 description: |-
     🚀 A Chinese style component library powered by React 
 url: https://github.com/zhui-team/zhui

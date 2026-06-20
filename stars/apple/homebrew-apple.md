@@ -1,6 +1,6 @@
 ---
 project: homebrew-apple
-stars: 2278
+stars: 2279
 description: |-
     null
 url: https://github.com/apple/homebrew-apple

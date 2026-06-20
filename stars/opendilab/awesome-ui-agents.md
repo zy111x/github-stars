@@ -1,6 +1,6 @@
 ---
 project: awesome-ui-agents
-stars: 301
+stars: 303
 description: |-
     A curated list of of awesome UI agents resources, encompassing Web, App, OS, and beyond (continually updated)
 url: https://github.com/opendilab/awesome-ui-agents
@@ -71,6 +71,11 @@ format:
 ### Models
 
 #### 2026
+
+- [PerceptUI: LLM Agents as Human-Aligned Synthetic Users for UI/UX Evaluation](https://arxiv.org/abs/2606.05697)
+  - Nicolas Bougie, Xiaotong Ye, Gian Maria Marconi, Narimasa Watanabe
+  - Key: persona-conditioned UI/UX evaluation, contrastive reflection fine-tuning, reflective prompt evolution
+  - ExpEnv: WiserUI-Bench, UIClip/BetterApp, WebDevJudge, LabintheWild, LabintheWild-UX, UICrit, UXCar
 
 - [UI-Ins: Enhancing GUI Grounding with Multi-Perspective Instruction as Reasoning](https://openreview.net/forum?id=dsQHm7YX9c)
   - Liangyu Chen, Hanzhang Zhou, Chenglin Cai, Jianan Zhang, Panrong Tong, Xu Zhang, et al.

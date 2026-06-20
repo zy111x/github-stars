@@ -1,6 +1,6 @@
 ---
 project: KnowledgeBaseDNS
-stars: 119
+stars: 121
 description: |-
     AdGuard DNS knowledge base
 url: https://github.com/AdguardTeam/KnowledgeBaseDNS
@@ -32,6 +32,9 @@ Second, clone this repo to your local computer:
 Alternatively, you can use the [Github app](https://desktop.github.com/) to do that.
 
 Then you should open Terminal on your computer and navigate to the directory where you cloned this repo and run this command to install the local dependencies:
+
+> [!NOTE]
+> For version 11 and above of `pnpm`, you may need to use `pnpm approve-builds`.
 
 - `pnpm install`
 

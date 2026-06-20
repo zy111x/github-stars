@@ -1,6 +1,6 @@
 ---
 project: satteri
-stars: 253
+stars: 298
 description: |-
     High-performance Markdown and MDX processing for the JavaScript ecosystem
 url: https://github.com/bruits/satteri
