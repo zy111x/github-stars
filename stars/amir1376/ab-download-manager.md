@@ -1,6 +1,6 @@
 ---
 project: ab-download-manager
-stars: 16079
+stars: 16214
 description: A Download Manager that speeds up your downloads
 url: https://github.com/amir1376/ab-download-manager
 ---
@@ -31,6 +31,8 @@ Installation
 ### Download and Install the App
 
 #### Installation script (Linux)
+
+The recommended way to install the app on Linux
 
 bash <(curl -fsSL https://raw.githubusercontent.com/amir1376/ab-download-manager/master/scripts/install.sh)
 

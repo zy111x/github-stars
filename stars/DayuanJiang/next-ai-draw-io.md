@@ -1,6 +1,6 @@
 ---
 project: next-ai-draw-io
-stars: 31894
+stars: 32155
 description: A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.
 url: https://github.com/DayuanJiang/next-ai-draw-io
 ---
@@ -37,6 +37,8 @@ Table of Contents
         -   Deploy on Vercel
         -   Deploy on Cloudflare Workers
     -   Multi-Provider Support
+        -   Server-Side Multi-Model Configuration
+        -   Admin Panel
     -   How It Works
     -   Support & Contact
     -   FAQ
@@ -176,6 +178,7 @@ Multi-Provider Support
 -   Azure OpenAI
 -   Ollama
 -   OpenRouter
+-   AIHubMix
 -   DeepSeek
 -   SiliconFlow
 -   ModelScope
@@ -188,7 +191,13 @@ All providers except AWS Bedrock and OpenRouter support custom endpoints.
 
 ### Server-Side Multi-Model Configuration
 
-Administrators can configure multiple server-side models that are available to all users without requiring personal API keys. Configure via `AI_MODELS_CONFIG` environment variable (JSON string) or `ai-models.json` file.
+Administrators can configure multiple server-side models that are available to all users without requiring personal API keys. Configure via `AI_MODELS_CONFIG` environment variable (JSON string) or `ai-models.json` file. For a single-provider quick setup, list comma-separated model IDs in `AI_MODEL`.
+
+### Admin Panel
+
+Set the `ADMIN_PASSWORD` environment variable and visit `/admin` to manage server settings (models, access codes, features, observability, quota) from a web panel instead of hand-editing `.env`.
+
+📖 **Admin Panel Guide** — setup, precedence rules, and notes.
 
 **Model Requirements**: This task requires strong model capabilities for generating long-form text with strict formatting constraints (draw.io XML). Recommended models include Claude Sonnet 4.5, GPT-5.1, Gemini 3 Pro, and DeepSeek V3.2/R1.
 

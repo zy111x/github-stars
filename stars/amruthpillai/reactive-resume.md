@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 38447
+stars: 38794
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/amruthpillai/reactive-resume
 ---
@@ -17,6 +17,15 @@ Reactive Resume is a free and open-source resume builder that simplifies the pro
 Reactive Resume makes building resumes straightforward. Pick a template, fill in your details, and export to PDF—no account required for basic use. For those who want more control, the entire application can be self-hosted on your own infrastructure.
 
 Built with privacy as a core principle, Reactive Resume gives you complete ownership of your data. The codebase is fully open-source under the MIT license, with no tracking, no ads, and no hidden costs.
+
+Sponsors
+--------
+
+Reactive Resume stays free, open-source, and independent because companies choose to support the work behind it. Thank you to every sponsor who helps fund hosting, maintenance, and continued development for the community.
+
+Atlas Cloud supports Reactive Resume as a project sponsor. Atlas Cloud provides a unified AI platform for developers, with access to hundreds of models for chat, image generation, video generation, media processing, and GPU cloud workloads through one API key, one endpoint, and one billing account.
+
+If your company would like to sponsor Reactive Resume, email hello@amruthpillai.com.
 
 Features
 --------

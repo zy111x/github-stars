@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 37739
+stars: 38482
 description: edgetunnel2 VLESS/Trojan/SS 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -237,31 +237,25 @@ Warning
 
 推荐客户端
 
-备注
-
 **Windows**
 
-v2rayN, FlClash, mihomo-party, Clash Verge Rev
-
-全面支持
+v2rayN、Hiddify、FlClash、mihomo-party、Clash Verge Rev、Clashmi、FlyClash、Karing、Bettbox
 
 **Android**
 
-ClashMetaForAndroid, FlClash, v2rayNG
-
-建议使用 Meta 核心
+v2rayNG、ClashMetaForAndroid、FlClash、Clashmi、Hiddify、NekoBox、FlyClash、Karing、Bettbox
 
 **iOS**
 
-Surge, Shadowrocket, Stash
+Surge、Shadowrocket、Stash、Hiddify、Loon、Egern、Clashmi、Karing、Quantumult X
 
-完美适配
+**macOS**
 
-**MacOS**
+FlClash、mihomo-party、Clash Verge Rev、Surge、Clashmi、Karing、FlyClash
 
-FlClash, mihomo-party, Clash Verge Rev, Surge
+**鸿蒙**
 
-M1/M2 完美兼容
+ClashBox
 
 * * *
 
