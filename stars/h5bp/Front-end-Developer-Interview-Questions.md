@@ -1,6 +1,6 @@
 ---
 project: Front-end-Developer-Interview-Questions
-stars: 60881
+stars: 60882
 description: |-
     A list of helpful front-end related questions you can use to interview potential candidates, test yourself or completely ignore.
 url: https://github.com/h5bp/Front-end-Developer-Interview-Questions

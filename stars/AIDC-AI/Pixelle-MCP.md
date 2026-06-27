@@ -1,6 +1,6 @@
 ---
 project: Pixelle-MCP
-stars: 1053
+stars: 1061
 description: |-
     An Open-Source Multimodal AIGC Solution based on ComfyUI + MCP + LLM  https://pixelle.ai
 url: https://github.com/AIDC-AI/Pixelle-MCP

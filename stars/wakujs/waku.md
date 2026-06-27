@@ -1,6 +1,6 @@
 ---
 project: waku
-stars: 6331
+stars: 6340
 description: |-
     ⛩️ The minimal React framework
 url: https://github.com/wakujs/waku
@@ -21,11 +21,11 @@ visit [waku.gg](https://waku.gg) or `npm create waku@latest`
 
 ## Introduction
 
-**Waku** _(wah-ku)_ or **わく** is the minimal React framework. It’s lightweight and designed for a fun developer experience, yet supports all the latest React 19 features like server components and actions. Built for marketing sites, headless commerce, and web apps. For large enterprise applications, you may prefer a heavier framework.
+**Waku** _(wah-ku)_ or **わく** is the minimal React framework. It's lightweight and designed for a fun developer experience, yet supports all the latest React 19 features like server components and actions. Built for marketing sites, headless commerce, and web apps. For large enterprise applications, you may prefer a heavier framework.
 
 ## Getting started
 
-Start a new Waku project with the `create` command for your preferred package manager. It will scaffold a new project with our default [Waku starter](https://github.com/wakujs/waku/tree/main/examples/01_template).
+Start a new Waku project with the `create` command for your preferred package manager. It will scaffold a new project with our default [Waku starter](https://github.com/wakujs/waku-examples/tree/main/fs-router/basic).
 
 ```sh
 npm create waku@latest
@@ -37,21 +37,21 @@ npm create waku@latest
 - `waku build` to generate a production build
 - `waku start` to serve the production build locally
 
-**Node.js version requirement:** `^26.0.0` or `^24.0.0` or `^22.13.0`
+**Node.js version requirement:** `^26.0.0` or `^24.0.0` or `^22.15.0`
 
 ## Rendering
 
-While there’s a bit of a learning curve to modern React rendering, it introduces powerful new patterns of full-stack composability that are only possible with the advent of [server components](https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md).
+While there's a bit of a learning curve to modern React rendering, it introduces powerful new patterns of full-stack composability that are only possible with the advent of [server components](https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md).
 
-So please don’t be intimidated by the `'use client'` directive! Once you get the hang of it, you’ll appreciate how awesome it is to flexibly move server-client boundaries with a single line of code as your full-stack React codebase evolves over time. It’s way simpler than maintaining separate codebases for your backend and frontend.
+So please don't be intimidated by the `'use client'` directive! Once you get the hang of it, you'll appreciate how awesome it is to flexibly move server-client boundaries with a single line of code as your full-stack React codebase evolves over time. It's way simpler than maintaining separate codebases for your backend and frontend.
 
-And please don’t fret about client components! Even if you only lightly optimize towards server components, your client bundle size will be smaller than traditional React frameworks, which are always 100% client components.
+And please don't fret about client components! Even if you only lightly optimize towards server components, your client bundle size will be smaller than traditional React frameworks, which are always 100% client components.
 
 > Future versions of Waku may provide additional opt-in APIs to abstract some of the complexity away for an improved developer experience.
 
 #### Server components
 
-Server components can be made async and can securely perform server-side logic and data fetching. Feel free to access the local file-system and import heavy dependencies since they aren’t included in the client bundle. They have no state, interactivity, or access to browser APIs since they run _exclusively_ on the server.
+Server components can be made async and can securely perform server-side logic and data fetching. Feel free to access the local file-system and import heavy dependencies since they aren't included in the client bundle. They have no state, interactivity, or access to browser APIs since they run _exclusively_ on the server.
 
 ```tsx
 // server component
@@ -141,9 +141,9 @@ Waku provides static prerendering (SSG) and server-side rendering (SSR) options 
 
 Each layout and page in Waku is composed of a React component hierarchy.
 
-It begins with a server component at the top of the tree. Then at points down the hierarchy, you’ll eventually import a component that needs client component APIs. Mark this file with a `'use client'` directive at the top. When imported into a server component, it will create a server-client boundary. Below this point, all imported components are hydrated and will run in the browser as well.
+It begins with a server component at the top of the tree. Then at points down the hierarchy, you'll eventually import a component that needs client component APIs. Mark this file with a `'use client'` directive at the top. When imported into a server component, it will create a server-client boundary. Below this point, all imported components are hydrated and will run in the browser as well.
 
-Server components can be rendered below this boundary, but only via composition (e.g., `children` props). Together they form [a new “React server” layer](https://github.com/reactwg/server-components/discussions/4) that runs _before_ the traditional “React client” layer with which you’re already familiar.
+Server components can be rendered below this boundary, but only via composition (e.g., `children` props). Together they form [a new "React server" layer](https://github.com/reactwg/server-components/discussions/4) that runs _before_ the traditional "React client" layer with which you're already familiar.
 
 Client components are still server-side rendered as SSR is separate from RSC. Please see the [linked diagrams](https://github.com/reactwg/server-components/discussions/4) for a helpful visual.
 
@@ -153,7 +153,7 @@ To learn more about the modern React architecture, we recommend [Making Sense of
 
 ## Routing
 
-Waku provides a minimal file-based “pages router” experience built for the server components era.
+Waku provides a minimal file-based "pages router" experience built for the server components era.
 
 Its underlying [low-level API](https://github.com/wakujs/waku/blob/main/docs/create-pages.mdx) is also available for those that prefer programmatic routing. This documentation covers file-based routing since many React developers prefer it, but please feel free to try both and see which you like more!
 
@@ -403,7 +403,7 @@ export const getConfig = async () => {
 
 #### Catch-all routes
 
-Catch-all or “wildcard” segment routes (e.g., `/app/[...catchAll]`) are marked with an ellipsis before the name and have indefinite segments.
+Catch-all or "wildcard" segment routes (e.g., `/app/[...catchAll]`) are marked with an ellipsis before the name and have indefinite segments.
 
 Wildcard routes receive a prop with segment values as an ordered array. For example, the `/app/profile/settings` route would receive a `catchAll` prop with the value `['profile', 'settings']`. These values can then be used to determine what to render in the component.
 
@@ -769,6 +769,8 @@ This allows you to have a `dynamic` slice component while keeping the rest of th
 
 The `<Link />` component should be used for internal links. It accepts a `to` prop for the destination and handles client-side navigation through Waku's router.
 
+`to` is either a route string, or a structured `{ to, params, search, hash }` target for typed navigation (the same shape `router.push` accepts; see [Typed Routes](https://github.com/wakujs/waku/blob/main/docs/guides/typed-routes.mdx)).
+
 ```tsx
 // ./src/pages/index.tsx
 import { Link } from 'waku';
@@ -778,6 +780,7 @@ export default async function HomePage() {
     <>
       <h1>Home</h1>
       <Link to="/about">About</Link>
+      <Link to={{ to: '/search', search: { q: 'waku' } }}>Search</Link>
     </>
   );
 }
@@ -812,11 +815,11 @@ export const Component = () => {
 
 The `router` object also contains several methods for programmatic navigation:
 
-- `router.push(to: string)` - navigate to the provided route
+- `router.push(to)` - navigate to the provided route. `to` is a route string, or a structured `{ to, params, search, hash }` target for typed navigation to dynamic routes (see [Typed Routes](https://github.com/wakujs/waku/blob/main/docs/guides/typed-routes.mdx))
 
 - `router.prefetch(to: string)` - prefetch the provided route
 
-- `router.replace(to: string)` - replace the current history entry
+- `router.replace(to)` - replace the current history entry (same argument as `push`)
 
 - `router.reload()` - reload the current route
 
@@ -1255,7 +1258,7 @@ export const ContactForm = () => {
 
 #### Configuring API routes
 
-API routes are dynamic by default, but if you’re using them to create a static resource such as an XML document, you can export a `getConfig` function that returns a config object with the render property set to `'static'`.
+API routes are dynamic by default, but if you're using them to create a static resource such as an XML document, you can export a `getConfig` function that returns a config object with the render property set to `'static'`.
 
 ```ts
 // ./src/pages/_api/blog/rss.xml.ts
@@ -1418,17 +1421,17 @@ export const ContactForm = ({ author = 'guest' }) => {
 
 Server actions integrate with many other React APIs such as the [`useTransition`](https://react.dev/reference/react/useTransition) hook for handling pending states, the [`useActionState`](https://react.dev/reference/react/useActionState) hook for accessing returned values, and the [`useOptimistic`](https://react.dev/reference/react/useOptimistic) hook for performing optimistic UI updates.
 
-See the talk [What’s new in React 19?](https://www.youtube.com/watch?v=AJOGzVygGcY) to learn more.
+See the talk [What's new in React 19?](https://www.youtube.com/watch?v=AJOGzVygGcY) to learn more.
 
 ## State management
 
-We recommend [Jotai](https://jotai.org) for global React state management based on the atomic model’s performance and scalability, but Waku is compatible with all React state management libraries such as Zustand and Valtio.
+We recommend [Jotai](https://jotai.org) for global React state management based on the atomic model's performance and scalability, but Waku is compatible with all React state management libraries such as Zustand and Valtio.
 
-> We’re exploring a deeper integration of atomic state management into Waku to achieve the performance and developer experience of signals while preserving React’s declarative programming model.
+> We're exploring a deeper integration of atomic state management into Waku to achieve the performance and developer experience of signals while preserving React's declarative programming model.
 
 ## Environment variables
 
-It’s important to distinguish environment variables that must be kept secret from those that can be made public.
+It's important to distinguish environment variables that must be kept secret from those that can be made public.
 
 #### Private
 
@@ -1436,7 +1439,7 @@ By default all environment variables are considered private and are accessible o
 
 #### Public
 
-A special `WAKU_PUBLIC_` prefix is required to make an environment variable public and accessible in client components. They will be present as cleartext in the production JavaScript bundle sent to users’ browsers.
+A special `WAKU_PUBLIC_` prefix is required to make an environment variable public and accessible in client components. They will be present as cleartext in the production JavaScript bundle sent to users' browsers.
 
 ### Runtime agnostic (recommended)
 
@@ -1621,7 +1624,7 @@ Please join our friendly [GitHub discussions](https://github.com/wakujs/waku/dis
 
 ## Roadmap
 
-Waku is in active development and we’re seeking additional contributors. Check out our [roadmap](https://github.com/wakujs/waku/issues/24) for more information.
+Waku is in active development and we're seeking additional contributors. Check out our [roadmap](https://github.com/wakujs/waku/issues/24) for more information.
 
 ## Contributing
 

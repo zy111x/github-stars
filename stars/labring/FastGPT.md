@@ -1,6 +1,6 @@
 ---
 project: FastGPT
-stars: 28562
+stars: 28676
 description: |-
     FastGPT is a knowledge-based platform built on the LLMs, offers a comprehensive suite of out-of-the-box capabilities such as data processing, RAG retrieval, and visual AI workflow orchestration, letting you easily develop and deploy complex question-answering systems without the need for extensive setup or configuration.
 url: https://github.com/labring/FastGPT
@@ -127,7 +127,6 @@ docker compose up -d
 - [OpenAPI 文档](https://doc.fastgpt.io/openapi/intro)
 - [FastGPT-plugin](https://github.com/labring/fastgpt-plugin)
 - [AI Proxy: 模型聚合负载均衡服务](https://github.com/labring/aiproxy)
-- [Laf：3 分钟快速接入三方应用](https://github.com/labring/laf)
 - [Sealos：快速部署集群应用](https://github.com/labring/sealos)
 
 <a href="#readme">

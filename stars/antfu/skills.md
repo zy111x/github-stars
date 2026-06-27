@@ -1,6 +1,6 @@
 ---
 project: skills
-stars: 5351
+stars: 5422
 description: |-
     Anthony Fu's curated collection of agent skills.
 url: https://github.com/antfu/skills
@@ -41,6 +41,7 @@ Manually maintained by Anthony Fu with his preferred tools, setup conventions, a
 | Skill | Description |
 |-------|-------------|
 | [antfu](skills/antfu) | Anthony Fu's preferences and best practices for app/library projects (eslint, pnpm, vitest, vue, etc.) |
+| [antfu-design](skills/antfu-design) | UnoCSS-centered design principles, semantic tokens, and UI presentation patterns from Anthony Fu's tooling UIs |
 
 ### Skills Generated from Official Documentation
 

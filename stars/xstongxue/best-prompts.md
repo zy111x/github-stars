@@ -1,6 +1,6 @@
 ---
 project: best-prompts
-stars: 1245
+stars: 1257
 description: |-
     通用高质量 Prompt 合集🔥
 url: https://github.com/xstongxue/best-prompts

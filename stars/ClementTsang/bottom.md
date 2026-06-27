@@ -1,6 +1,6 @@
 ---
 project: bottom
-stars: 13591
+stars: 13653
 description: |-
     Yet another cross-platform graphical process/system monitor.
 url: https://github.com/ClementTsang/bottom
@@ -138,6 +138,7 @@ A non-comprehensive list of some currently unofficially-supported platforms that
 - Linux (`armv6`, `armv7`, `powerpc64le`, `riscv64gc`, `loongarch64`)
 - Android (`arm64`)
 - Windows (`arm64`)
+- NetBSD (`x86_64`)
 
 For more details on unsupported platforms and known problems, check out [the documentation](https://bottom.pages.dev/nightly/support/unofficial/).
 

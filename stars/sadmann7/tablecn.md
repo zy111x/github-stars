@@ -1,6 +1,6 @@
 ---
 project: tablecn
-stars: 6163
+stars: 6175
 description: |-
     Data table and data grid components built with shadcn/ui, featuring sorting, filtering, pagination, infinite scrolling, and real-time collaboration.
 url: https://github.com/sadmann7/tablecn

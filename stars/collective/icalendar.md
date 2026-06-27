@@ -1,6 +1,6 @@
 ---
 project: icalendar
-stars: 1146
+stars: 1147
 description: |-
     icalendar parser library for Python
 url: https://github.com/collective/icalendar
@@ -112,6 +112,9 @@ Related projects
 
 `sphinx-icalendar <https://pypi.org/project/sphinx-icalendar/>`_
     Provides calendar code blocks and syntax highlighting in a tabbed interface for documentation as an extension to Sphinx.
+
+`Python Calendaring Ecosystem <https://pycal.org/>`_
+    The standards compliant, integrated Python calendar packages.
 
 Change log
 ==========

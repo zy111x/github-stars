@@ -1,6 +1,6 @@
 ---
 project: craft-agents-oss
-stars: 6298
+stars: 6394
 description: |-
     null
 url: https://github.com/craft-ai-agents/craft-agents-oss

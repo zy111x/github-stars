@@ -1,6 +1,6 @@
 ---
 project: desengs
-stars: 166
+stars: 167
 description: |-
     🏴 Resources for design engineers.
 url: https://github.com/remvze/desengs

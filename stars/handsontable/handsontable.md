@@ -1,6 +1,6 @@
 ---
 project: handsontable
-stars: 21942
+stars: 21952
 description: |-
     JavaScript Data Grid / Data Table with a Spreadsheet Look & Feel. Works with React, Angular, and Vue. Supported by the Handsontable team ⚡
 url: https://github.com/handsontable/handsontable
@@ -22,7 +22,7 @@ url: https://github.com/handsontable/handsontable
     <a href="https://github.com/handsontable/handsontable/tree/master/wrappers/vue3" target="_blank">Vue</a>. With its spreadsheet-like editing features, it’s perfect for building data-rich internal apps. It allows users to enter, edit, validate, and process data from various sources. Common use cases include resource planning software (ERP), inventory management systems, digital platforms, and data modeling applications.
   </p>
 
-<a href="https://handsontable.com">Website</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://handsontable.com/docs">Documentation</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://handsontable.com/docs/themes">Themes</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://handsontable.com/docs/api">API</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://github.com/handsontable/handsontable/discussions">Community</a>
+<a href="https://handsontable.com">Website</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://handsontable.com/docs">Documentation</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://handsontable.com/docs/themes">Themes</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://handsontable.com/docs/api">API</a> &nbsp;&nbsp;—&nbsp;&nbsp; <a href="https://forum.handsontable.com/">Community</a>
 
   <br>
 
@@ -243,9 +243,8 @@ At first glance, it might seem that a data table, spreadsheet, and data grid are
 **We're here to help!**
 
 If you're using Handsontable with a free, non-commercial license, you can:
-- Join the conversation on [GitHub Discussions](https://github.com/handsontable/handsontable/discussions) to share ideas, suggest features, or discuss changes.
+- Join the [Community Forums](https://github.com/handsontable/handsontable/discussions) to share ideas, request features, or find answers.
 - Report any bugs you find on our [GitHub Issue Board](https://github.com/handsontable/handsontable/issues).
-- Connect with other developers and find answers on our [Developer Forum](https://forum.handsontable.com).
 
 If you have a commercial license, feel free to contact us directly at [support@handsontable.com](mailto:support@handsontable.com) or use our [contact form](https://handsontable.com/contact?category=technical_support).
 
@@ -283,5 +282,5 @@ Created and maintained by the [Handsontable Team](https://handsontable.com/team)
 
 ---
 
-© 2012 - 2025 Handsoncode
+© 2012 - 2026 Handsoncode
 

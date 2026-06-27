@@ -1,6 +1,6 @@
 ---
 project: comlink
-stars: 12718
+stars: 12727
 description: |-
     Comlink makes WebWorkers enjoyable.
 url: https://github.com/GoogleChromeLabs/comlink

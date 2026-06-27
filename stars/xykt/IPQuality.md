@@ -1,6 +1,6 @@
 ---
 project: IPQuality
-stars: 9123
+stars: 9213
 description: |-
     IP质量检测脚本 - IP Quality Check Script
 url: https://github.com/xykt/IPQuality
@@ -210,10 +210,10 @@ docker run --rm --net=host -it xykt/ipquality & docker rmi xykt/ipquality > NUL 
 | LisaHost</br>丽萨主机 | ![lisa_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_lisa.png) | [https://lisahost.com](https://lisahost.com)|
 | VIRCS</br>威尔克斯 | ![vircs_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_vircs.png) | [https://vircs.com](https://www.vircs.com/promotion?code=6)|   
 | RapidProxy</br>`原生IP` | ![rapidproxy_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_rapidproxy.png) | [https://rapidproxy.io](https://www.rapidproxy.io/?ref=gitipquality)|   
-| VMRack | ![vmrack_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_vmrack.png) | [https://vmrack.net](https://www.vmrack.net?affid=ipcheck)|  
 | 蔭雲</br>YINNET | ![yinnet_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_yinnet.png) | [https://yin-net.com](https://yin-net.com)| 
 | Swiftproxy</br>`原生IP` | ![swiftproxy_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_swiftproxy.png) | [https://swiftproxy.net](https://www.swiftproxy.net/?ref=ipquality)|   
-| IPWO</br>`原生IP` | ![ipwo_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_ipwo.png) | [https://ipwo.net](https://www.ipwo.net/?ref=githubxykt)|  
+| IPWO</br>`原生IP` | ![ipwo_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_ipwo.png) | [https://ipwo.net](https://www.ipwo.net/?ref=githubxykt)|   
+| IPPeak</br>`原生IP` | ![ippeak_logo](https://raw.githubusercontent.com/xykt/IPQuality/main/res/sponsor/logo_ippeak.png) | [https://ippeak.com](https://www.ippeak.com/?utm_t=1&utm_i=125)|  
 
 ##### *E-Mail: sponsor@check.place Telegram Bot: https://t.me/xythebot*
 **仅接受长期稳定运营，信誉良好的商家*

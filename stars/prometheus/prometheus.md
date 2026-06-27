@@ -1,6 +1,6 @@
 ---
 project: prometheus
-stars: 64643
+stars: 64788
 description: |-
     The Prometheus monitoring system and time series database.
 url: https://github.com/prometheus/prometheus
@@ -158,7 +158,6 @@ You can build a docker image locally with the following commands:
 ```bash
 make promu
 promu crossbuild -p linux/amd64
-make npm_licenses
 make common-docker-amd64
 ```
 

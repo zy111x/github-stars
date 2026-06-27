@@ -1,6 +1,6 @@
 ---
 project: subbrute
-stars: 3514
+stars: 3517
 description: |-
     A DNS meta-query spider that enumerates DNS records, and subdomains.
 url: https://github.com/TheRook/subbrute

@@ -1,6 +1,6 @@
 ---
 project: git-remote-dropbox
-stars: 3137
+stars: 3138
 description: |-
     A transparent bridge between Git and Dropbox - use a Dropbox (shared) folder as a Git remote! 🎁
 url: https://github.com/anishathalye/git-remote-dropbox
@@ -47,14 +47,21 @@ concurrent operations, even when using a shared folder.
 ### Install git-remote-dropbox
 
 1. Prerequisites:
-   1. `python` and matching `pip`
+   1. [`uv`](https://docs.astral.sh/uv/) (or other tool like `pip`)
    2. `git`
-2. Install this package with `pip install git-remote-dropbox`. Use `which git-remote-dropbox` to make sure it's available via `$PATH`. If not, edit `$PATH` appropriately.
+2. Install this package with `uv tool install git-remote-dropbox`. Use `which git-remote-dropbox` to make sure it's available via `$PATH`.
 
 ### Log in to Dropbox
 
 Run `git dropbox login` and follow the instructions to authenticate with OAuth
 and log in to your Dropbox account.
+
+If you'd like to scope the access to an [app
+folder](https://help.dropbox.com/integrations/third-party-apps), you can run
+`git dropbox login --app-folder`. With this setup, paths will be rooted in a
+"git-remote-dropbox-repos" [app folder in your Dropbox
+account](https://www.dropbox.com/home/Apps). Note that app folders [**cannot be
+shared**](https://community.dropbox.com/en/discussion/38534/sharing-of-folders-inside-the-apps-folder).
 
 ## Sharing
 

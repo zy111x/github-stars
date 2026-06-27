@@ -1,6 +1,6 @@
 ---
 project: console-table-printer
-stars: 226
+stars: 228
 description: |-
     🖥️  🍭 Printing Pretty Tables on your console
 url: https://github.com/console-table-printer/console-table-printer

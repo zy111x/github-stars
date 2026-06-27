@@ -1,6 +1,6 @@
 ---
 project: Archon
-stars: 22488
+stars: 22601
 description: |-
     The first open-source harness builder for AI coding. Make AI coding deterministic and repeatable.
 url: https://github.com/coleam00/Archon
@@ -302,11 +302,13 @@ The Web UI and CLI work out of the box. Optionally connect a chat platform for r
                            │
                            ▼
 ┌─────────────────────────────────────────────────────────┐
-│             SQLite / PostgreSQL (12 Tables)             │
+│          SQLite / PostgreSQL (14 core tables)           │
 │  Codebases • Conversations • Sessions • Workflow Runs   │
 │   Isolation Environments • Messages • Workflow Events   │
 │    Users • User Identities • Workflow Node Sessions     │
 │         Codebase Env Vars • User GitHub Tokens          │
+│           User Provider Keys • User AI Prefs            │
+│          (+ Better Auth tables, Postgres only)          │
 └─────────────────────────────────────────────────────────┘
 ```
 

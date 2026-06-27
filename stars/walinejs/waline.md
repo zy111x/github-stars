@@ -1,6 +1,6 @@
 ---
 project: waline
-stars: 3035
+stars: 3046
 description: |-
     💬 A Simple, Safe Comment System
 url: https://github.com/walinejs/waline

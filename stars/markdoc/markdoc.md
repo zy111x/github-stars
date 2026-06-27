@@ -1,6 +1,6 @@
 ---
 project: markdoc
-stars: 8058
+stars: 8061
 description: |-
     A powerful, flexible, Markdown-based authoring framework.
 url: https://github.com/markdoc/markdoc

@@ -1,6 +1,6 @@
 ---
 project: typescript-sdk
-stars: 12702
+stars: 12740
 description: |-
     The official TypeScript SDK for Model Context Protocol servers and clients
 url: https://github.com/modelcontextprotocol/typescript-sdk
@@ -145,8 +145,7 @@ Ready to build something real? Follow the step-by-step quickstart tutorials:
 The complete code for each tutorial is in [`examples/server-quickstart/`](https://github.com/modelcontextprotocol/typescript-sdk/tree/main/examples/server-quickstart/) and
 [`examples/client-quickstart/`](https://github.com/modelcontextprotocol/typescript-sdk/tree/main/examples/client-quickstart/). For more advanced runnable examples, see:
 
-- [`examples/server/README.md`](examples/server/README.md) — server examples index
-- [`examples/client/README.md`](examples/client/README.md) — client examples index
+- [`examples/README.md`](examples/README.md) — runnable, self-verifying client/server example pairs (one story per directory)
 
 ## Documentation
 

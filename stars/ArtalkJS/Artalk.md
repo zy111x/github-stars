@@ -1,6 +1,6 @@
 ---
 project: Artalk
-stars: 2274
+stars: 2282
 description: |-
     🌌  Your Self-hosted Comment System. | 自托管评论系统
 url: https://github.com/ArtalkJS/Artalk
@@ -21,7 +21,7 @@ url: https://github.com/ArtalkJS/Artalk
 [![Codecov](https://img.shields.io/codecov/c/gh/ArtalkJS/Artalk?style=flat-square)](https://codecov.io/gh/ArtalkJS/Artalk)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/artalk?style=flat-square)](https://bundlephobia.com/package/artalk)
 
-[Homepage](https://artalk.js.org) • [Documentation](https://artalk.js.org/en/guide/deploy.html) • [Latest Release](https://github.com/ArtalkJS/Artalk/releases) • [Changelog](https://github.com/ArtalkJS/Artalk/blob/master/CHANGELOG.md) • [简体中文](./README.zh.md)
+[Homepage](https://artalk.js.org) • [Documentation](https://artalk.js.org/en/guide/deploy.html) • [Latest Release](https://github.com/ArtalkJS/Artalk/releases) • [Changelog](https://github.com/ArtalkJS/Artalk/blob/master/CHANGELOG.md) • [简体中文](./README.zh.md) • [日本語](./README.ja.md)
 
 Artalk is an intuitive yet feature-rich comment system, ready for immediate deployment into any blog, website, or web application.
 

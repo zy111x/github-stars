@@ -1,6 +1,6 @@
 ---
 project: CopilotKit
-stars: 35338
+stars: 35572
 description: |-
     The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol
 url: https://github.com/CopilotKit/CopilotKit

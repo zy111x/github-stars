@@ -1,6 +1,6 @@
 ---
 project: imessage-kit
-stars: 1401
+stars: 1416
 description: |-
     A type-safe, elegant iMessage SDK for macOS with zero dependencies
 url: https://github.com/photon-hq/imessage-kit

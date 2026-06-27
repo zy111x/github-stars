@@ -1,6 +1,6 @@
 ---
 project: wireit
-stars: 6409
+stars: 6414
 description: |-
     Wireit upgrades your npm/pnpm/yarn scripts to make them smarter and more efficient.
 url: https://github.com/google/wireit
@@ -431,20 +431,11 @@ set the `wireit.<script>.clean` property to one of these values:
 
 In _watch_ mode, Wireit monitors all `files` of a script, and all `files` of its
 transitive dependencies, and when there is a change, it re-runs only the
-affected scripts. To enable watch mode, ensure that the
-[`files`](#input-and-output-files) array is defined, and add the `--watch`
-flag:
+affected scripts. To enable watch mode, first ensure that the
+[`files`](#input-and-output-files) array is defined, and then run:
 
 ```sh
-npm run <script> --watch
-```
-
-An additional `--` is required when using `node --run`, otherwise Node's
-built-in [watch](https://nodejs.org/docs/v20.17.0/api/cli.html#--watch) feature
-will be triggered instead of Wireit's:
-
-```sh
-node --run <script> -- --watch
+WIREIT_WATCH=true npm run <script>
 ```
 
 The benefit of Wireit's watch mode over the built-in watch modes of Node and other programs are:
@@ -893,6 +884,7 @@ The following environment variables affect the behavior of Wireit:
 | `WIREIT_DEBUG_LOG_FILE` | Path to a file which will receive detailed event logging.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `WIREIT_MAX_OPEN_FILES` | Limits the number of file descriptors Wireit will have open concurrently. Prevents resource exhaustion when checking large numbers of cached files. Set to a lower number if you hit file descriptor limits.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | `WIREIT_PARALLEL`       | [Maximum number of scripts to run at one time](#parallelism).<br><br>Defaults to 2×logical CPU cores.<br><br>Must be a positive integer or `infinity`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `WIREIT_WATCH`          | Set to `true` to enable [watch mode](#watch-mode).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `WIREIT_WATCH_STRATEGY` | How Wireit determines when a file has changed which warrants a new watch iteration.<br><br>Options:<br><ul><li>`event` (default): Register OS file system watcher callbacks (using [chokidar](https://github.com/paulmillr/chokidar)).</li><li>`poll`: Poll the filesystem every `WIREIT_WATCH_POLL_MS` milliseconds. Less responsive and worse performance than `event`, but a good fallback for when `event` does not work well or at all (e.g. filesystems that don't support filesystem events, or performance and memory problems with large file trees).</li></ul>                                                                                                                  |
 | `WIREIT_WATCH_POLL_MS`  | When `WIREIT_WATCH_STRATEGY` is `poll`, how many milliseconds to wait between each filesystem poll. Defaults to `500`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `CI`                    | Affects the default value of `WIREIT_CACHE`.<br><br>Automatically set to `true` by [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables) and most other CI (continuous integration) services.<br><br>Must be exactly `true`. If unset or any other value, interpreted as `false`.                                                                                                                                                                                                                                                                                                                                 |

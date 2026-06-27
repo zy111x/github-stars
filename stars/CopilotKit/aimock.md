@@ -1,6 +1,6 @@
 ---
 project: aimock
-stars: 631
+stars: 637
 description: |-
     Mock everything your AI app talks to — LLM APIs, MCP, A2A, AG-UI, vector DBs, search. One package, one port, zero dependencies.
 url: https://github.com/CopilotKit/aimock
@@ -59,7 +59,7 @@ Run them all on one port with `npx @copilotkit/aimock --config aimock.json`, or 
 - **[Record & Replay](https://aimock.copilotkit.dev/record-replay)** — Proxy real APIs, save as fixtures, replay deterministically forever
 - **Timing-aware recording and replay** — Recorded fixtures capture per-frame arrival timestamps; replay uses recorded timings for approximate timing reproduction based on recorded TTFT and inter-frame cadence (replay chunk count may differ from recording — TTFT and average pace are preserved, not per-token fidelity) with configurable `--replay-speed` multiplier
 - **[Multi-turn Conversations](https://aimock.copilotkit.dev/multi-turn)** — Record and replay multi-turn traces with tool rounds; match distinct turns via `turnIndex`, `hasToolResult`, `toolCallId`, `sequenceIndex`, `systemMessage` (gate on host-supplied agent context), or custom predicates
-- **[14 LLM Providers](https://aimock.copilotkit.dev/docs)** — OpenAI Chat, OpenAI Responses, OpenAI Realtime (GA + Beta shim), Claude, Gemini (REST + embedContent), Gemini Live, Gemini Interactions, Azure, Bedrock, Vertex AI, Ollama (chat + embeddings), Cohere (chat + embed), ElevenLabs TTS — full streaming support
+- **[12 providers across 14 API surfaces](https://aimock.copilotkit.dev/docs)** — OpenAI Chat, OpenAI Responses, OpenAI Realtime (GA + Beta shim), Claude, Gemini (REST + embedContent), Gemini Live, Gemini Interactions, Azure, Bedrock, Vertex AI, Ollama (chat + embeddings), Cohere (chat + embed), ElevenLabs TTS — full streaming support
 - **Multimedia APIs** — [image generation](https://aimock.copilotkit.dev/images) (DALL-E, Imagen), [image editing](https://aimock.copilotkit.dev/images) (/v1/images/edits), [text-to-speech](https://aimock.copilotkit.dev/speech) (OpenAI + ElevenLabs), [audio transcription](https://aimock.copilotkit.dev/transcription), [audio translation](https://aimock.copilotkit.dev/transcription) (/v1/audio/translations), [video generation](https://aimock.copilotkit.dev/video), [OpenRouter video generation](https://aimock.copilotkit.dev/openrouter-video) (/api/v1/videos with async job lifecycle), [fal.ai](https://aimock.copilotkit.dev/fal-ai) (image / video / audio with queue lifecycle)
 - **[MCP](https://aimock.copilotkit.dev/mcp-mock) / [A2A](https://aimock.copilotkit.dev/a2a-mock) / [AG-UI](https://aimock.copilotkit.dev/agui-mock) / [Vector](https://aimock.copilotkit.dev/vector-mock)** — Mock every protocol your AI agents use
 - **[Chaos Testing](https://aimock.copilotkit.dev/chaos-testing)** — 500 errors, malformed JSON, mid-stream disconnects at any probability
@@ -129,6 +129,10 @@ docker run -d -p 4010:4010 -v "$(pwd)/fixtures:/fixtures" ghcr.io/copilotkit/aim
 `--fixtures` accepts `https://` and `http://` URLs pointing at JSON fixture files in addition to filesystem paths, and the flag is repeatable so you can layer remote and local sources in argv order. Fetched fixtures are cached on disk at `~/.cache/aimock/fixtures/<sha256-of-url>/` (honors `$XDG_CACHE_HOME`); when paired with `--validate-on-load`, a fetch failure with a valid cached copy logs a warning and continues — without a cache, the process exits non-zero. HTTP fetches have a 10s timeout and a 50 MB body cap; redirects are rejected fail-loud, so configure your upstream to serve the final URL directly (GitHub raw content URLs already do).
 
 Private and link-local addresses (loopback, RFC1918, CGNAT, cloud metadata, ULA, multicast) are rejected by default to prevent SSRF. For local development or tests that need to hit `127.0.0.1`, opt out with `AIMOCK_ALLOW_PRIVATE_URLS=1`. Tarball and zip URL support is intentionally deferred.
+
+### Replay matching & `AIMOCK_STRICT_TURN_INDEX`
+
+On replay, `turnIndex` is a non-fatal disambiguator, not a hard reject gate: a content-matching fixture is served even when its scripted `turnIndex` differs from the request's assistant-message count. This kills false "no fixture matched" misses for multi-bubble agent runs (multi-step agents emit several assistant bubbles per logical turn). When a served fixture diverges from its scripted `turnIndex`, the match diagnostic carries `turnIndexRelaxed: true` and aimock logs a one-shot warning (at the `warn` log level — silent by default). To restore the legacy strict behavior where a defined `turnIndex` must equal the assistant count exactly, set `AIMOCK_STRICT_TURN_INDEX=1`. The record path is always strict regardless of this flag.
 
 ## Framework Guides
 

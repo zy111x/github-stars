@@ -1,8 +1,8 @@
 ---
 project: takumi
-stars: 1895
+stars: 2112
 description: |-
-    Render JSX, HTML, and CSS to images without a headless browser. OG cards, animated GIFs, and video frames from Node.js, edge runtimes, browsers, or Rust. Drop-in next/og replacement.
+    Render JSX, HTML, and CSS to SVG or images without a headless browser. OG cards, animated GIFs, and video frames from Node.js, edge runtimes, browsers, or Rust. Drop-in next/og replacement.
 url: https://github.com/kane50613/takumi
 ---
 
@@ -13,7 +13,7 @@ url: https://github.com/kane50613/takumi
 
 **A Rust rendering engine that turns JSX, HTML, and node trees into images. No headless browser required.**
 
-Render OpenGraph cards, animated GIFs, and video frames from Node.js, Cloudflare Workers, browsers, or any Rust application.
+Render OpenGraph cards, animated GIFs, video frames, and vector SVG from Node.js, Cloudflare Workers, browsers, or any Rust application.
 Drop-in compatible with `next/og`.
 
 [![npm version](https://img.shields.io/npm/v/takumi-js?label=takumi-js)](https://www.npmjs.com/package/takumi-js)
@@ -73,28 +73,43 @@ export function GET() {
 ### Animated WebP
 
 ```tsx
-import { Renderer } from "takumi-js/node";
-import { fromJsx } from "takumi-js/helpers/jsx";
+import { renderAnimation } from "takumi-js";
 import { writeFile } from "node:fs/promises";
 
-const renderer = new Renderer();
-
-const { node, stylesheets } = await fromJsx(
-  <div tw="w-full h-full flex items-center justify-center">
-    <div tw="w-32 h-32 bg-blue-500 animate-spin rounded-lg" />
-  </div>,
-);
-
-const animation = await renderer.renderAnimation({
+const animation = await renderAnimation({
   width: 400,
   height: 400,
   fps: 30,
   format: "webp",
-  stylesheets,
-  scenes: [{ durationMs: 1000, node }],
+  scenes: [
+    {
+      durationMs: 1000,
+      node: (
+        <div tw="w-full h-full flex items-center justify-center">
+          <div tw="w-32 h-32 bg-blue-500 animate-spin rounded-lg" />
+        </div>
+      ),
+    },
+  ],
 });
 
 await writeFile("./output.webp", animation);
+```
+
+### Vector SVG
+
+```tsx
+import { renderSvg } from "takumi-js";
+import { writeFile } from "node:fs/promises";
+
+const svg = await renderSvg(
+  <div tw="w-full h-full flex items-center justify-center bg-gradient-to-b from-blue-100 to-red-50">
+    <h1 tw="text-6xl font-bold">Hello from Takumi</h1>
+  </div>,
+  { width: 1200, height: 630 },
+);
+
+await writeFile("./output.svg", svg);
 ```
 
 ### Rust
@@ -115,6 +130,7 @@ Start from the [Rust example](./example/rust).
 | **Selectors**                      |      Limited       | Complex selectors, `:is()`, `:where()`, `::before`, `::after` |
 | **`backdrop-filter`, blend modes** |         ✗          |                              ✅                               |
 | **Animated output**                |         ✗          |             **WebP / APNG / GIF / video frames**              |
+| **Vector SVG output**              |     ✅ Native      |            ✅ **Plus raster and animated output**             |
 | **Headless browser**               |         ✗          |                               ✗                               |
 | **`ImageResponse` API**            |     ✅ Native      |                       ✅ **Compatible**                       |
 
@@ -123,6 +139,7 @@ Compare rendering output across providers at [image-bench.kane.tw](https://image
 ## Who's Using Takumi
 
 - [Dcard](https://dcard.tw) renders post share images
+- [TanStack](https://tanstack.com) renders OG images for its docs
 - [Fumadocs](https://fumadocs.dev) generates its docs OG images
 - [Nuxt OG Image](https://nuxtseo.com/docs/og-image/renderers/takumi) ships Takumi as a built-in renderer
 - [shiki-image](https://github.com/pi0/shiki-image) turns syntax-highlighted code into images
@@ -142,12 +159,17 @@ The input contract is a node tree, so any template system that serializes to HTM
 
 A **time axis** threads through the pipeline: the renderer takes a timestamp, so a PNG is the tree at `t=0` and a GIF is the same tree sampled across `t`. CSS `@keyframes`, the `animation` shorthand, and Tailwind animation utilities (`animate-spin`, `animate-bounce`, arbitrary values) all resolve at render time.
 
+The same layout drives a second backend: `renderSvg()` (Rust `render_svg`, behind the `svg-backend` feature) emits a real `<svg>` document built from `<rect>`, `<path>`, gradients, and glyph outlines, so you can ship scalable vector output instead of pixels. If you reached for [satori](https://github.com/vercel/satori) to get SVG, this is the drop-in path.
+
 ```mermaid
 flowchart LR
-    A[Templates] --> N[Node Tree] --> P[Rendering Pipeline] --> F[(Raw Pixels)]
+    A[Templates] --> N[Node Tree] --> P[Rendering Pipeline]
     C[Stylesheets] --> P
     R[Resources] --> P
     D(Time Axis) -.-> P
+
+    P --> F[(Raw Pixels)]
+    P --> S[Vector SVG]
 
     F --> G[PNG / JPEG / WebP / ICO]
     F --> H[GIF / APNG]
@@ -170,7 +192,7 @@ flowchart LR
 
 ## Contributing
 
-Read [CONTRIBUTING.md](./CONTRIBUTING.md). Covers local setup, test commands, fixture workflow, and changeset process.
+Read [CONTRIBUTING.md](./CONTRIBUTING.md). Covers local setup, test commands, fixture workflow, and changelog process.
 
 We welcome bug reports, feature requests, doc improvements, and new example integrations.
 

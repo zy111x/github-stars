@@ -1,6 +1,6 @@
 ---
 project: Docker-Warp-Socks
-stars: 581
+stars: 583
 description: |-
     Connet to CloudFlare WARP, exposing `socks5` proxy all together.
 url: https://github.com/Mon-ius/Docker-Warp-Socks
@@ -16,19 +16,41 @@ url: https://github.com/Mon-ius/Docker-Warp-Socks
 [![Open Issues](https://img.shields.io/github/issues/Mon-ius/Docker-Warp-Socks)](https://github.com/Mon-ius/Docker-Warp-Socks/issues)
 [![Visitors](https://api.visitorbadge.io/api/visitors?path=https://github.com/Mon-ius/Docker-Warp-Socks&label=Visitors%20Totay&labelColor=%23808080&countColor=%23ffa31a&style=flat&labelStyle=upper)](https://visitorbadge.io/status?path=https://github.com/Mon-ius/Docker-Warp-Socks)
 
-> A lightweight Docker image, designed for easy connection to CloudFlare WARP, exposing `socks5` proxy all together.
+> A lightweight `Alpine Linux` based Docker image, designed for easy connection to CloudFlare WARP, exposing `socks5` proxy all together.
 
 Multi-platform: `linux/arm`, `linux/arm64`, `linux/amd64`,  `linux/ppc64le`, `linux/s390x` and `linux/riscv64`
 
 ---
 
-## Quick start v5 via GHCR
+## Usage
+
+### Quick Start
 
 ```sh
 docker run --restart=always -itd \
-    --name warp_socks_v5 \
+    --name warp-socks \
     -p 9091:9091 \
-    ghcr.io/mon-ius/docker-warp-socks:v5
+    ghcr.io/mon-ius/docker-warp-socks
+```
+
+### Docker Compose
+
+Run `docker-compose up -d` with the content for `docker-compose.yml`.
+
+```yaml
+services:
+    warp-socks:
+        image: ghcr.io/mon-ius/docker-warp-socks
+        container_name: warp-socks
+        restart: always
+        ports:
+            - "9091:9091"
+        healthcheck:
+            test: ["CMD", "curl", "-x", "socks5h://127.0.0.1:9091", "-fsSL", "https://www.cloudflare.com/cdn-cgi/trace"]
+            interval: 30s
+            timeout: 10s
+            retries: 5
+            start_period: 10s
 ```
 
 > [!Note]
@@ -39,23 +61,30 @@ curl -x "socks5h://127.0.0.1:9091" -fsSL "https://www.cloudflare.com/cdn-cgi/tra
 curl -x "http://127.0.0.1:9091" -fsSL "https://www.cloudflare.com/cdn-cgi/trace"
 ```
 
-## V5 Features
+### Features
+
+<details>
+<summary>V6</summary>
 
 - Rich support for most linux family systems, including `arm`, `arm64`, `ppc64le`, `s390x` and `riscv64`, etc.
 - Light start without `NET_ADMIN`, `SYS_MODULE`, `/lib/modules`, and extra `net` deps.
 - More secure Bootstrap without `privileged` acquisition in docker container.
-- Support lastest `SagerNet/sing-box` v1.11.x version with `action` feature enabled.
+- Core upgraded to `SagerNet/sing-box` v1.13.x (stable), built on the WireGuard `endpoints` and the typed DNS engine.
+- Rule-action routing (`sniff` / `hijack-dns` / `route`) with `auto_detect_interface` and a `default_domain_resolver`.
+- New `1.13.x` capabilities: ICMP/ping over the tunnel, optimistic DNS cache (persistent `cache_file`), `bypass` rule action, and TLS fragment route options.
 - Support for mixed `http`, `https`, and `socks` protocols on the default port `9091`
 - Light core with alpine linux `3.22`.
 - Easy networking between containers.
-- Used call `Google Gemini-Diffusion`, `Google Gemini 2.5 Pro`, `Google Gemini 2.5 Flash thinking` and `Google Gemini 2.5 Pro(Deep Thinking)` API.
-- Used call `OpenAI-GPT5`, `ChatGPT-4o`, `ChatGPT-4.1`, `OpenAI-o1`, `OpenAI-o3`, `OpenAI-o3-mini`, `OpenAI-o1-pro` and `OpenAI-Sora` API.
-- Used call `Grok-4`, and `Grok-3` API.
-- Used call `Claude 4 Sonnet` and `Claude 4 Opus` API.
-- Used call `DeepSeek V3` and `DeepSeek R1` API.
-- Used call `Moonshot Kimi K2` API.
-- Used call `Minimax M1` API.
+- Used call `Google Gemini 3.5 Flash`, `Google Gemini 3.5 Pro`, `Google Gemini 3.1 Pro` and `Google Gemini 3.1 Deep Think` API.
+- Used call `OpenAI-GPT-5.5`, `GPT-5.5 Pro`, `GPT-5.5 Thinking` and `OpenAI-Sora 2` API.
+- Used call `Grok-4.3`, and `Grok-4.20` API.
+- Used call `Claude Opus 4.8` and `Claude Sonnet 4.6` API.
+- Used call `DeepSeek V4-Pro` and `DeepSeek V4-Flash` API.
+- Used call `Moonshot Kimi K2.7 Code` and `Moonshot Kimi K2.6` API.
+- Used call `MiniMax M3` and `MiniMax M2.7` API.
 - Support `GHCR` for more Security and Flexibility.
+
+</details>
 
 <!-- ## Why to use
 
@@ -441,17 +470,20 @@ curl --interface warp "https://www.cloudflare.com/cdn-cgi/trace"
 
 - CentOS/RedHat/Rocky Linux as Host, see https://github.com/uzairali001/docker-wireguard-rhel -->
 
-## Migrate to v5
+<!--
+## Migrate to v6
 - The `v2` version will be kept and available at `monius/docker-warp-socks:v2`.
 - The `v3` version will be kept and available at `monius/docker-warp-socks:v3`.
 - The `v4` version will be kept and available at `monius/docker-warp-socks:v4`.
-- Due to the Cloudflare Policy, we dont provide option for input license any more on `v5`.
+- The `v5` version will be kept and available at `monius/docker-warp-socks:v5`.
+- `v6` upgrades the core to `SagerNet/sing-box` v1.13.x; due to the Cloudflare Policy, we dont provide option for input license.
+-->
 
-### Source
+## Source
 - [GitHub](https://github.com/Mon-ius/Docker-Warp-Socks)
 - [DockerHub](https://hub.docker.com/r/monius/docker-warp-socks)
 
-### Credits
+## Credits
 - [WireGuard](https://www.wireguard.com/)
 - [Mon-ius/Docker-Warp-Socks](https://github.com/Mon-ius/Docker-Warp-Socks)
 - [Cloudflare WARP](https://developers.cloudflare.com/warp-client/get-started/linux/)
@@ -461,8 +493,9 @@ curl --interface warp "https://www.cloudflare.com/cdn-cgi/trace"
 - [Wireguard-Socks-Proxy](https://github.com/ispmarin/wireguard-socks-proxy)
 - [WARP exlude config](https://github.com/crzidea/confbook/blob/fe6e583dff223fc9d461cd8350adc24eff5b1925/apt/cloudflare-warp#L16)
 
+<!--
 > [!Tip]
-> Prerequisites for use `docker-warp-socks` v5 without root permission!
+> Prerequisites for use `docker-warp-socks` v6 without root permission!
 
 ```bash
 # in case, you have no docker-ce installed;
@@ -478,6 +511,7 @@ sudo chown root:docker /var/run/docker.sock
 # in case, using Centos/RedHatEL
 sudo systemctl enable docker && sudo systemctl start docker
 ```
+-->
 
 ## Notice of Non-Affiliation and Disclaimer
 
@@ -485,9 +519,11 @@ We are not affiliated, associated, authorized, endorsed by, or in any way offici
 
 ![visitor](https://count.getloli.com/get/@warp-socks?theme=asoul)
 
+<!--
 > [!CAUTION]
 > - To prune all docker containers and images
 
 ```sh
 docker rm -f $(docker ps -a -q) && docker rmi -f $(docker images -a -q)
 ```
+-->

@@ -1,6 +1,6 @@
 ---
 project: scripts
-stars: 5523
+stars: 5526
 description: |-
     BoxJs
 url: https://github.com/chavyleung/scripts

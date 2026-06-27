@@ -1,6 +1,6 @@
 ---
 project: cloudflare-trace-api
-stars: 188
+stars: 189
 description: |-
     Get IP Address, TimeStamp, User Agent, Country Code, IATA, HTTP Version, TLS/SSL Version & more by Cloudflare
 url: https://github.com/fawazahmed0/cloudflare-trace-api

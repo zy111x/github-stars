@@ -1,6 +1,6 @@
 ---
 project: pattern.css
-stars: 3923
+stars: 3926
 description: |-
     CSS only library to fill empty background with beautiful patterns.
 url: https://github.com/bansal/pattern.css

@@ -1,6 +1,6 @@
 ---
 project: lenis
-stars: 14144
+stars: 14211
 description: |-
     Smooth scroll as it should be
 url: https://github.com/darkroomengineering/lenis
@@ -58,7 +58,7 @@ If you’ve used Lenis and it made your site feel just a little more alive, cons
 Your support helps us smooth out the internet one library at a time—and lets us keep building tools that care about the details most folks overlook.
 
 <!-- sponsors -->
-<a href="https://glauber.org/?utm_source=lenis.dev&utm_medium=github"><img src="https://github.com/glauber-sampaio.png?size=64" width="64" height="64" alt="Glauber"/></a> <a href="https://smsunarto.com/?utm_source=lenis.dev&utm_medium=github"><img src="https://github.com/smsunarto.png?size=64" width="64" height="64" alt="Scott"/></a> <a href="https://bizar.ro/?utm_source=lenis.dev&utm_medium=github"><img src="https://github.com/bizarro.png?size=64" width="64" height="64" alt="Luis Bizarro"/></a> <a href="https://www.cachet.studio/?utm_source=lenis.dev&utm_medium=github"><img src="https://github.com/cachet-studio.png?size=64" width="64" height="64" alt="cachet.studio"/></a> <a href="https://oho.design/?utm_source=lenis.dev&utm_medium=github"><img src="https://github.com/OHO-Design.png?size=64" width="64" height="64" alt="OHO Design"/></a> <a href="https://itsoffbrand.com/?utm_source=lenis.dev&utm_medium=github"><img src="https://github.com/itsoffbrand.png?size=64" width="64" height="64" alt="OFF+BRAND."/></a> <a href="https://github.com/jjmendezrodriguez?utm_source=lenis.dev&utm_medium=github"><img src="https://github.com/jjmendezrodriguez.png?size=64" width="64" height="64" alt="Jose J. Mendez Rodriguez"/></a> <a href="https://veloxthemes.com/?atp=lenis&utm_source=lenis.dev&utm_medium=github"><img src="https://github.com/velox-themes.png?size=64" width="64" height="64" alt="Velox Themes"/></a>
+<a href="https://glauber.org/?utm_source=lenis&utm_medium=github"><img src="https://github.com/glauber-sampaio.png?size=64" width="64" height="64" alt="Glauber"/></a> <a href="https://smsunarto.com/?utm_source=lenis&utm_medium=github"><img src="https://github.com/smsunarto.png?size=64" width="64" height="64" alt="Scott"/></a> <a href="https://bizar.ro/?utm_source=lenis&utm_medium=github"><img src="https://github.com/bizarro.png?size=64" width="64" height="64" alt="Luis Bizarro"/></a> <a href="https://www.cachet.studio/?utm_source=lenis&utm_medium=github"><img src="https://github.com/cachet-studio.png?size=64" width="64" height="64" alt="cachet.studio"/></a> <a href="https://good-fella.com/?utm_source=lenis&utm_medium=github"><img src="https://github.com/GoodFellaStudio.png?size=64" width="64" height="64" alt="Julian Fella"/></a> <a href="https://oho.design/?utm_source=lenis&utm_medium=github"><img src="https://github.com/OHO-Design.png?size=64" width="64" height="64" alt="OHO Design"/></a> <a href="https://itsoffbrand.com/?utm_source=lenis&utm_medium=github"><img src="https://github.com/itsoffbrand.png?size=64" width="64" height="64" alt="OFF+BRAND."/></a> <a href="https://github.com/jjmendezrodriguez?utm_source=lenis&utm_medium=github"><img src="https://github.com/jjmendezrodriguez.png?size=64" width="64" height="64" alt="Jose J. Mendez Rodriguez"/></a> <a href="https://veloxthemes.com/?atp=lenis&utm_source=lenis&utm_medium=github"><img src="https://github.com/velox-themes.png?size=64" width="64" height="64" alt="Velox Themes"/></a>
 <!-- sponsors -->
 
 <br/>
@@ -94,7 +94,7 @@ import Lenis from 'lenis'
 Using scripts:
 
 ```html
-<script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
+<script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script> 
 ```
 
 
@@ -141,7 +141,7 @@ import 'lenis/dist/lenis.css'
 **Or link the CSS file:**
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.25/dist/lenis.css">
 ```
 
 **Or add it manually:**
@@ -174,8 +174,8 @@ gsap.ticker.lagSmoothing(0);
 One line, no build step — just drop this into your HTML:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
-<script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script> 
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.25/dist/lenis.css">
+<script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script> 
 <script>new Lenis({ autoRaf: true, autoToggle: true, anchors: true, allowNestedScroll: true, naiveDimensions: true, stopInertiaOnNavigate: true })</script>
 ```
 

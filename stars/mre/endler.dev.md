@@ -1,6 +1,6 @@
 ---
 project: endler.dev
-stars: 111
+stars: 112
 description: |-
     My personal website
 url: https://github.com/mre/endler.dev

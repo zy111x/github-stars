@@ -1,6 +1,6 @@
 ---
 project: ink-chart
-stars: 23
+stars: 24
 description: |-
     Terminal visualization components for Ink CLI framework - Sparkline and BarChart components with TypeScript support
 url: https://github.com/pppp606/ink-chart

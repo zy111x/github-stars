@@ -1,6 +1,6 @@
 ---
 project: community-plugins
-stars: 3954
+stars: 3956
 description: |-
     Plugins from the Cursor community
 url: https://github.com/cursor/community-plugins

@@ -1,6 +1,6 @@
 ---
 project: hatsu
-stars: 250
+stars: 253
 description: |-
     🩵 Self-hosted & Fully-automated ActivityPub Bridge for Static Sites.
 url: https://github.com/importantimport/hatsu

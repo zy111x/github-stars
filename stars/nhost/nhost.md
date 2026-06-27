@@ -1,6 +1,6 @@
 ---
 project: nhost
-stars: 9202
+stars: 9218
 description: |-
     The Open Source Firebase Alternative with GraphQL.
 url: https://github.com/nhost/nhost
@@ -72,6 +72,9 @@ The Nhost CLI is the easiest way to start developing locally. It sets up a local
 **Install the CLI:**
 - **macOS / Linux:** `brew install nhost/tap/nhost` or `curl -sSL https://raw.githubusercontent.com/nhost/nhost/main/cli/get.sh | bash`
 - **Nix:** `nix profile install github:nhost/nhost#cli`
+- **npm / pnpm / Yarn / Bun:** `npm install -D @nhost/cli`,
+  `pnpm add -D @nhost/cli`, `yarn add -D @nhost/cli`, or
+  `bun add -d @nhost/cli`
 
 **Start building:**
 ```bash
@@ -100,7 +103,7 @@ const nhost = createClient({
 
 await nhost.auth.signInEmailPassword({
   email: 'user@example.com',
-  password: 'password123'
+  password: '<password>'
 })
 
 await nhost.graphql.request({

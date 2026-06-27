@@ -1,6 +1,6 @@
 ---
 project: player
-stars: 3550
+stars: 3562
 description: |-
     UI components and hooks for building video/audio players on the web. Robust, customizable, and accessible. Modern alternative to JW Player and Video.js.
 url: https://github.com/vidstack/player
