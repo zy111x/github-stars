@@ -1,6 +1,6 @@
 ---
 project: shot-easy-website
-stars: 1122
+stars: 1126
 description: Take a screenshot online and compresses images in browser with Webassembly
 url: https://github.com/CH563/shot-easy-website
 ---
@@ -8,7 +8,7 @@ url: https://github.com/CH563/shot-easy-website
 ShotEasy - take a screenshot online
 ===================================
 
-Photo edit online for free, resize, and filter any photos, edit photo on browser, convert image to jpg/png/jpeg/webp, easy to screenshot area or full page
+Photo edit online for free, resize, and filter any photos, edit photo on browser, convert image to jpg/png/jpeg/webp, merge images or PDF pages into a long image, convert video to GIF, open documents online, and easily screenshot an area or full page.
 
 🏆 Chrome Extension
 
@@ -21,6 +21,12 @@ Photo edit online for free, resize, and filter any photos, edit photo on browser
 🎉 Background Remover
 
 😬 Image Compressor
+
+🧩 Long Image Composer
+
+🎬 Video Convert
+
+📄 Office & PDF Viewer
 
 Blog
 ----

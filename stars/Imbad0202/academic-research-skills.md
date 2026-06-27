@@ -1,6 +1,6 @@
 ---
 project: academic-research-skills
-stars: 33106
+stars: 34879
 description: Academic Research Skills for Claude Code: research → write → review → revise → finalize
 url: https://github.com/Imbad0202/academic-research-skills
 ---
@@ -8,7 +8,7 @@ url: https://github.com/Imbad0202/academic-research-skills
 Academic Research Skills for Claude Code
 ========================================
 
-简体中文版 | 繁體中文版 | 日本語版
+简体中文版 | 繁體中文版 | 日本語版 | 한국어
 
 A comprehensive suite of Claude Code skills for academic research, covering the full pipeline from research to publication.
 
@@ -377,6 +377,8 @@ Contributors
 **eltociear** (Ikko Eltociear Ashimine) — Contributor. Translated the Japanese README (`README.ja-JP.md`) (PR #161).
 
 **xpfo-go** (xpfo) — Contributor. Translated the Simplified Chinese README (`README.zh-CN.md`) (PR #181).
+
+**devCharlotte** — Contributor. Translated the Korean README (`README.ko-KR.md`) (PR #469).
 
 **Yaobin29** — Contributor. Proposed reviewer-response tooling in PR #433; the `deep-research three-way-scan` mode and the `academic-paper rebuttal-audit` mode (rescued from the PR's `audit` concept) were integrated from that contribution in v3.12.1.
 

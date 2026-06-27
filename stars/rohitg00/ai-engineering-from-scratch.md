@@ -1,6 +1,6 @@
 ---
 project: ai-engineering-from-scratch
-stars: 35077
+stars: 36582
 description: Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
@@ -4673,6 +4673,9 @@ Sponsor the work
 Free, MIT-licensed, 503 lessons. The curriculum is maintained on sponsorship alone. Cash only.
 
 **Reach (verified 2026-05-14):** 55,593 monthly visitors · 90,709 page views · 7.5K stars · Twitter/X is the #1 acquisition channel.
+
+  
+  
 
 **Current sponsors:** CodeRabbit · iii
 

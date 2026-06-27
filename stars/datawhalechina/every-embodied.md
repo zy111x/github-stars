@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 2330
+stars: 2421
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -143,6 +143,7 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-06-27\]** 新增 Locate Anything 视觉语言定位复现教程，覆盖 `nvidia/LocateAnything-3B` 本地环境、RTX PRO 6000 Blackwell smoke test、Parallel Box Decoding 原理，以及与 YOLO26n 的同图速度和任务边界对比。
 -   **\[2026-06-02\]** 新增 RISE 自我改进机器人策略复现教程，覆盖论文方法、组合世界模型流水线、OpenPI policy/value、LTX-Video dynamics model、RLinf imagination RL、Blackwell cu128 环境适配、公开模型资产下载校验，以及官方图与视频素材本地归档。
 -   **\[2026-06-02\]** 新增 扩散数理基础及问题解析入门，讲解扩散模型需要的数理基础，用简单的代码讲解扩散模型，让大家在不推导复杂公式的前提下，熟悉vae和ddpm，为后续的世界模型学习打下基础。
 -   **\[2026-06-02\]** 新增 AGILE 人形机器人 Loco-Manipulation Isaac Lab 复现教程，覆盖官方任务边界、Isaac Sim 5.1 / Isaac Lab 2.3.2 复刻、T1/G1 本地渲染视频、pick-place checkpoint 未随仓库开源说明、评估报告与 Sim2MuJoCo 链路。
@@ -246,7 +247,7 @@ ROS/ROS2 通信机制、Build123d / Text-to-CAD / ForgeCAD 代码建模、AutoCA
 
 **5\. 计算机视觉 (CV)**
 
-目标检测 (YOLO)、图像分割 (SAM)、视频流式三维重建 (LingBot-Map)、6D 位姿估计
+目标检测 (YOLO)、视觉语言定位 (Locate Anything)、图像分割 (SAM)、视频流式三维重建 (LingBot-Map)、6D 位姿估计
 
 ✅
 

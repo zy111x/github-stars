@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 14839
+stars: 14929
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -323,6 +323,13 @@ Swiftproxy
 接入覆盖全球的 8000万+ 住宅 IP，专为 TikTok / 抖音数据采集与下载优化，Swiftproxy 可有效降低限流与封禁风险，保障下载稳定性与自动轮换。
 
 优惠码：PROXY90（9折）
+
+* * *
+
+Thordata
+--------
+
+Thordata：提供 190+ 国家 100M+ 动态住宅 IP，无限量代理适合高并发、高流量任务，低至 $38/天，旋转或粘性会话，精准定位更稳连接；凭折扣码 **Thor20d** 可获 10% 折扣。
 
 * * *
 

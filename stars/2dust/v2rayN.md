@@ -1,6 +1,6 @@
 ---
 project: v2rayN
-stars: 109525
+stars: 110052
 description: A GUI client for Windows, Linux and macOS, support Xray and sing-box and others
 url: https://github.com/2dust/v2rayN
 ---
@@ -8,14 +8,108 @@ url: https://github.com/2dust/v2rayN
 v2rayN
 ======
 
-A GUI client for Windows, Linux and macOS, support Xray and sing-box and others
+### A GUI client for Windows, Linux and macOS. Support Xray and sing-box and others
 
-How to use
-----------
+* * *
 
-Read the Wiki for details.
+Download / 下载
+-------------
 
-Telegram Channel
-----------------
+Download the latest release here:
 
-github\_2dust
+在这里下载最新版本：
+
+https://github.com/2dust/v2rayN/releases
+
+* * *
+
+Documentation / 使用文档
+--------------------
+
+Read the Wiki for usage guides and configuration details.
+
+请阅读 Wiki 获取使用说明和配置教程。
+
+https://github.com/2dust/v2rayN/wiki
+
+* * *
+
+Supported Platforms / 支持平台
+--------------------------
+
+Platform / 平台
+
+x64
+
+x86
+
+arm64
+
+riscv64
+
+loong64
+
+Windows
+
+✅
+
+✅
+
+✅
+
+\-
+
+\-
+
+Linux
+
+✅
+
+\-
+
+✅
+
+✅
+
+✅
+
+macOS
+
+✅
+
+\-
+
+✅
+
+\-
+
+\-
+
+* * *
+
+GPG Verification / GPG 签名校验
+---------------------------
+
+Release files are signed with GPG to verify authenticity and integrity, helping prevent mirror, ISP, or CDN hijacking.
+
+发布文件已使用 GPG 签名，可用于校验文件真实性与完整性，预防镜像站、运营商或 CDN 劫持。
+
+### Fingerprint / 公钥指纹
+
+```
+7694 5E9F 3E9A 168F 8070 F195 805D 661C
+134D FAF6 8903 C199 463C 31E5 AE90 3AE0
+```
+
+* * *
+
+Community / 社区
+--------------
+
+Telegram Group / Telegram 群组：
+
+https://t.me/v2rayN
+
+Telegram Channel / Telegram 频道：
+
+https://t.me/github\_2dust
