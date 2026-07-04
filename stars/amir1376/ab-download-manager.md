@@ -1,6 +1,6 @@
 ---
 project: ab-download-manager
-stars: 16391
+stars: 16518
 description: A Download Manager that speeds up your downloads
 url: https://github.com/amir1376/ab-download-manager
 ---
@@ -8,8 +8,8 @@ url: https://github.com/amir1376/ab-download-manager
 AB Download Manager
 ===================
 
-Description
------------
+Introduction
+------------
 
 AB Download Manager is a desktop app that helps you manage and organize your downloads more efficiently than ever before.
 
@@ -61,21 +61,11 @@ You can download the browser extension to integrate the app with your browser.
 Screenshots
 -----------
 
-Project Status & Feedback
--------------------------
-
-Please keep in mind that this project is in the beginning of its journey. **Lots of features** are on the way!
-
-**But**, in the meantime you may face **Bugs or Problems**. If you do, please report them to me via the Community chat or through `GitHub Issues`, and I'll do my best to fix them ASAP.
-
 Community
 ---------
 
-You can join our Telegram Group to:
-
--   Report problems
--   Suggest features
--   Get help with the app
+-   📢 Telegram Channel – News, announcements, and release updates.
+-   💬 Telegram Group – Get help, report bugs, suggest features, and discuss the project with the community.
 
 Repositories And Source Code
 ----------------------------

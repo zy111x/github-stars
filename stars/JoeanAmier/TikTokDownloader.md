@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 14929
+stars: 15001
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -21,7 +21,7 @@ DouK-Downloader
 
 ⭐ 本项目历史名称：`TikTokDownloader`
 
-📣 本项目将于未来进行代码结构重构，目标是让代码更加稳健，并具备更好的可维护性与扩展性；如果你对项目设计、实现方式或优化思路有想法，欢迎提出建议或参与讨论！
+⚠️ 本项目的加密参数算法已过期失效；为确保项目合法合规，参数算法不再维护，部分功能可能无法正常工作。如需使用，请自行准备加密参数生成代码，配置方法请查阅 文档！
 
 * * *
 
@@ -433,4 +433,5 @@ TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台�
 -   https://foss.heptapod.net/openpyxl/openpyxl
 -   https://github.com/carpedm20/emoji/
 -   https://github.com/lxml/lxml
+-   https://github.com/neverl805/never-jscore
 -   https://ffmpeg.org/ffmpeg-all.html

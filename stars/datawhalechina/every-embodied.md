@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 2421
+stars: 2513
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -143,7 +143,12 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-07-02\]** 新增 RoboDream 可组合世界模型数据合成导读，放入 `17-具身世界模型` 前沿导读线：系统拆解 USC PSI Lab 与 TRI 提出的 _Compositional World Models for Scalable Robot Data Synthesis_，重点讲清它不是可实时 `step(action)` 的神经仿真器，而是基于 robot-only 轨迹、scene prior、object prior 的机器人示教视频合成数据引擎；教程补充官方架构图、prior extraction、retrieval and rebirth、prop-free teleoperation、真实机器人实验表和当前代码开源边界。
+-   **\[2026-06-29\]** 新增 EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航 与 WALL-WM 事件级世界动作模型：前三篇归入现有 VLA 章节，WALL-WM 归入世界模型章节，分别补充官方图解、开源地址、权重/数据入口和当前适合的复现边界。
+-   **\[2026-06-29\]** 新增 AMD ROCm 策略复刻专题，基于 AMD Ryzen AI MAX+ / ROCm 设备复刻 MuJoCo 抓杯任务，整理 ACT DAgger 诊断、SmolVLA 红/蓝杯加权采样、pi\_0 权限 smoke test 与训练门控，并配套 Notebook、成功率图表和成功/失败关键帧，方便大家从排障过程学会在 AMD 平台上迁移具身策略。
 -   **\[2026-06-27\]** 新增 Locate Anything 视觉语言定位复现教程，覆盖 `nvidia/LocateAnything-3B` 本地环境、RTX PRO 6000 Blackwell smoke test、Parallel Box Decoding 原理，以及与 YOLO26n 的同图速度和任务边界对比。
+-   **\[2026-06-27\]** 新增 WoG 条件空间世界模型导读，系统拆解 ByteDance Seed 与港大提出的 _World Guidance_：从总览图、两阶段训练、Future Encoder、Q-Former query、condition alignment 到 SIMPLER/真机/人类视频实验，重点说明它不是可 rollout 的传统世界模型，而是把未来观测蒸馏成动作相关 latent condition 来增强 VLA 动作生成。
+-   **\[2026-06-27\]** 新增 RAW-Dream 任务无关世界模型强化 VLA 导读，梳理微软等作者的 _Reinforcing VLAs in Task-Agnostic World Models_：明确不是 pi0.5 基座，而是 OpenVLA-OFT + Wan 2.1 world model + Qwen3-VL reward + GRPO 的后训练范式，并补充 DNV 技巧、LIBERO/真机评测边界和可继续追踪的开源仓库。
 -   **\[2026-06-02\]** 新增 RISE 自我改进机器人策略复现教程，覆盖论文方法、组合世界模型流水线、OpenPI policy/value、LTX-Video dynamics model、RLinf imagination RL、Blackwell cu128 环境适配、公开模型资产下载校验，以及官方图与视频素材本地归档。
 -   **\[2026-06-02\]** 新增 扩散数理基础及问题解析入门，讲解扩散模型需要的数理基础，用简单的代码讲解扩散模型，让大家在不推导复杂公式的前提下，熟悉vae和ddpm，为后续的世界模型学习打下基础。
 -   **\[2026-06-02\]** 新增 AGILE 人形机器人 Loco-Manipulation Isaac Lab 复现教程，覆盖官方任务边界、Isaac Sim 5.1 / Isaac Lab 2.3.2 复刻、T1/G1 本地渲染视频、pick-place checkpoint 未随仓库开源说明、评估报告与 Sim2MuJoCo 链路。
@@ -285,17 +290,23 @@ LIBERO、SimplerENV
 
 **10\. VLA 大模型**
 
-SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析
+SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析、EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航
 
 ✅
 
-**11\. VLN 大模型**
+**11\. 具身世界模型**
+
+LeWM 世界模型分析解读与实验复现、RAW-Dream 任务无关世界模型强化 VLA 导读、WoG 条件空间世界模型导读、WALL-WM 事件级世界动作模型、RoboDream 可组合世界模型数据合成导读
+
+✅
+
+**12\. VLN 大模型**
 
 VLN概念基础、ETPNav
 
 ✅
 
-**12\. 综合项目复现**
+**13\. 综合项目复现**
 
 无人机多模态LLM导航
 

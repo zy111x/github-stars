@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 44158
+stars: 44188
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/网页爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -51,17 +51,17 @@ CapSolver is one of the top 3 providers in the CAPTCHA-solving industry, offerin
 
 Click here to see how to solve captcha in EasySpider with CapSolver integration.
 
-EasySpider提供零代码可视化爬虫能力，搭配IPWO爬虫住宅代理，可实现：
+IPPeak提供海量真实住宅 IP + 高性能网络架构，有效降低封禁率，提升成功率，让每一次请求都更有价值。 平均响应 < 0.5 秒 ｜IP 来源合规可靠 ｜任务流畅不中断
 
--   真实住宅 IP，大幅降低被封禁风险。
--   195 + 国家 / 地区精准定位，满足跨境采集需求。
--   高可用、高并发，轻松应对大型爬虫任务。
--   可视化配置 + 稳定代理，新手也能高效采集数据。
--   让爬虫更简单，让数据更安全。
+三大核心方案，覆盖全部采集场景
 
-IPWO爬虫住宅代理全球领先代理网络。专注于提供全球各地 195+ 国家、拥有上亿级代理IP池，确保您的网络连接速度和稳定性，欢迎加入。
+住宅代理低至 $0.49/GB ｜无限并发 ｜支持地区 / ASN精准定位
 
-IPWO海外住宅代理支持HTTP/HTTPS/SOCKS5多种协议和平台，确保用户的灵活性99.9%稳定运行率，兼容指纹浏览器、自动化工具等第三方软件。可适用于网页抓取、数据收集、社交媒体营销、广告验证、品牌保护、SEO等业务。戳本条信息注册即得充裕流量，流量不过期。
+不限量住宅代理 低至 $8/小时 ｜不限流量 & IP 99.9% 在线率 ｜长时间运行无压力
+
+ISP 代理｜稳定长期运行 低至 $3.7/IP ｜独享静态住宅 IP ｜不限流量
+
+7×24 小时专业支持，IPPeak保障数据采集稳定持续运行
 
 LegionProxy作为快速发展的代理网络，覆盖全球195+国家和地区，拥有7400万+真实住宅 IP，提供真实 residential proxies及HTTP/3支持，助力大规模web scraping和自动化任务，有效规避IP封锁。住宅套餐低至$0.60/GB起，支持即时开通，中文客服快速响应。
 
