@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 2513
+stars: 2621
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -143,6 +143,7 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-07-07\]** 更新 Datawhale 具身智能零基础入门组队学习路径 v6：基于最近新增的世界模型、VLA 前沿、Locate Anything 视觉语言定位、LingBot-Map 三维重建、Build123d / Text-to-CAD / ForgeCAD 代码建模、SIM1、UniLab + MotrixSim 与 AMD ROCm 专题，重新组织 20 天组队学习路线，按“操作控制”“感知建图”“导航规划”“世界模型”四条主线拆分，并明确 Task01 截止时间为 07月17日03:00。
 -   **\[2026-07-02\]** 新增 RoboDream 可组合世界模型数据合成导读，放入 `17-具身世界模型` 前沿导读线：系统拆解 USC PSI Lab 与 TRI 提出的 _Compositional World Models for Scalable Robot Data Synthesis_，重点讲清它不是可实时 `step(action)` 的神经仿真器，而是基于 robot-only 轨迹、scene prior、object prior 的机器人示教视频合成数据引擎；教程补充官方架构图、prior extraction、retrieval and rebirth、prop-free teleoperation、真实机器人实验表和当前代码开源边界。
 -   **\[2026-06-29\]** 新增 EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航 与 WALL-WM 事件级世界动作模型：前三篇归入现有 VLA 章节，WALL-WM 归入世界模型章节，分别补充官方图解、开源地址、权重/数据入口和当前适合的复现边界。
 -   **\[2026-06-29\]** 新增 AMD ROCm 策略复刻专题，基于 AMD Ryzen AI MAX+ / ROCm 设备复刻 MuJoCo 抓杯任务，整理 ACT DAgger 诊断、SmolVLA 红/蓝杯加权采样、pi\_0 权限 smoke test 与训练门控，并配套 Notebook、成功率图表和成功/失败关键帧，方便大家从排障过程学会在 AMD 平台上迁移具身策略。
@@ -320,9 +321,15 @@ VLN概念基础、ETPNav
 
 状态
 
+**19\. Datawhale 每月组队学习路径**
+
+具身智能零基础入门 v6、v5 旧版路径
+
+✅
+
 **16\. 达摩院组队学习专题**
 
-专题导航、组织学习方案、学习任务安排、乐云平台体验指引
+专题导航、Task01 理论与趋势、Task02 技术透视、Task03 演示实操、Task04 总结分享
 
 ✅
 

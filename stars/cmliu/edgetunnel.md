@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 39697
+stars: 40270
 description: edgetunnel2 VLESS/Trojan/SS 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -198,6 +198,22 @@ Warning
 
 默认关闭作为**预加载竞速拨号**的功能，设置`1`或`true`则开启该功能
 
+**TCP\_CONCURRENT\_DIAL**
+
+❌
+
+`2`
+
+**TCP 并发拨号数**，默认值为`2`；设置后不再根据中国移动网络自动降为单路
+
+**PROXY\_CONCURRENT\_DIAL**
+
+❌
+
+`1`
+
+**反代并发拨号数**，默认值为`1`；数值越高连接速度越快，但 IP 切换也越频繁
+
 * * *
 
 🔧 高级实用技巧
@@ -226,6 +242,10 @@ Warning
     
     /http\=user:password@127.0.0.1:1080
     /http://user:password@127.0.0.1:8080 (默认激活全局SOCKS5)
+    
+-   指定 `Trojan fallback` 案例（由于使用场景为自建对接, 仅 Trojan 入站，fallback 服务需为同密码、非 WebSocket、非 TLS. 此时 UDP 透传给 fallback, 性能优秀, 功能完整）
+    
+    /trojan\=1.1.1.1:1234
     
 
 * * *

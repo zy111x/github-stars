@@ -1,6 +1,6 @@
 ---
 project: Rope
-stars: 5335
+stars: 5337
 description: GUI-focused roop
 url: https://github.com/Hillobar/Rope
 ---
@@ -11,139 +11,31 @@ Rope implements the insightface inswapper\_128 model with a helpful GUI.
 
 ### Donate
 
-### Wiki with install instructions and usage
+### ${{\\color{Goldenrod}{\\textsf{Last Updated 2026-07-11}}}}$
 
-### Demo Video (Rope-Ruby)
+### ${{\\color{Goldenrod}{\\textsf{Welcome to Rope-Bronze!}}}}$
 
-### ${{\\color{Goldenrod}{\\textsf{Last Updated 2024-05-27}}}}$
+### Updates for Rope-Bronze:
 
-### ${{\\color{Goldenrod}{\\textsf{Welcome to Rope-Pearl!}}}}$
+-   New, more responsive UI
+-   TRT Engine for better performance
+-   Batched inswapper for better 256 and 512 mode performance
+-   Settings tab for managing folders, models threading, benchmarking, ...
+-   New Likeness / Fidelity settings
+-   Color Matching (LAB) for accureate color matching
+-   XSeg masker
+-   Easier Embedding management. Drag and drop embeddings to reorder them.
+-   New Capture mode. Move and resize a window on your desktop to swap whatever is in it.
 
-### Updates for Rope-Pearl-00:
+### Install from scratch:
 
-### To update from Opal-03a, just need to replace the rope folder.
+py -3.12 -m venv venv
 
--   (feature) Selectable model swapping output resolution - 128, 256, 512
--   (feature) Better selection of input images (ctrl and shift modifiers work mostly like windows behavior)
--   (feature) Toggle between mean and median merging withou having to save to compare
--   (feature) Added back keyboard controls (q, w, a, s, d, space)
--   (feature) Gamma slider
+venv\\Scripts\\activate
 
-### Performance:
+pip install -r requirements.lock.txt
 
-Machine: 3090Ti (24GB), i5-13600K
-
-File: benchmark/target-1080p.mp4, 2048x1080, 269 frames, 25 fps, 10s
-
-Rendering time in seconds (5 threads):
-
-Option
-
-Crystal
-
-Sapphire
-
-Ruby
-
-Opal
-
-Pearl
-
-Only Swap (128)
-
-7.3
-
-7.5
-
-4.4
-
-4.3
-
-4.4
-
-Swap (256)
-
-\---
-
-\---
-
-\---
-
-\---
-
-8.6
-
-Swap (512)
-
-\---
-
-\---
-
-\---
-
-\---
-
-28.6
-
-Swap+GFPGAN
-
-10.7
-
-11.0
-
-9.0
-
-9.8
-
-9.3
-
-Swap+Codeformer
-
-12.4
-
-13.5
-
-11.1
-
-11.1
-
-11.3
-
-Swap+one word CLIP
-
-10.4
-
-11.2
-
-9.1
-
-9.3
-
-9.3
-
-Swap+Occluder
-
-7.8
-
-7.8
-
-4.4
-
-4.7
-
-4.7
-
-Swap+MouthParser
-
-13.9
-
-12.1
-
-5.0
-
-4.9
-
-5.1
+Also, copy models from the Rope-Bronze Models Release to somewhere on your drive. In settings, select the folder they were copied to (you have to unzip them).
 
 ### Disclaimer:
 

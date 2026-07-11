@@ -1,6 +1,6 @@
 ---
 project: Scrapling
-stars: 68069
+stars: 69156
 description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!
 url: https://github.com/D4Vinci/Scrapling
 ---
@@ -51,9 +51,6 @@ Platinum Sponsors
 
 Scrapling handles Cloudflare Turnstile. For enterprise-grade protection, **Hyper Solutions** provides API endpoints that generate valid antibot tokens for **Akamai**, **DataDome**, **Kasada**, and **Incapsula**. Simple API calls, no browser automation required.
 
-Hey, we built **BirdProxies** because proxies shouldn't be complicated or overpriced. Fast residential and ISP proxies in 195+ locations, fair pricing, and real support.  
-**Try our FlappyBird game on the landing page for free data!**
-
 **Evomi** : residential proxies from $0.49/GB. Scraping browser with fully spoofed Chromium, residential IPs, auto CAPTCHA solving, and anti-bot bypass.  
 **Scraper API for hassle-free results. MCP and N8N integrations are available.**
 
@@ -66,8 +63,6 @@ PetroSky VPS - cloud servers built for nonstop automation. Windows and Linux mac
 Read a full review of Scrapling on The Web Scraping Club (Nov 2025), the #1 newsletter dedicated to Web Scraping.
 
 Swiftproxy provides scalable residential proxies with 80M+ IPs across 195+ countries, delivering fast, reliable connections, automatic rotation, and strong anti-block performance. Free trial available.
-
-9Proxy provides residential proxies from just $0.018/IP or $0.68/GB. 20M+ IPs across 90+ countries. Sticky or rotating sessions, managed from desktop or mobile app.
 
 NodeMaven - reliable proxy provider with the highest quality IP on the market. Use promo code SCRAPLING35 for 35% discount on proxies.
 

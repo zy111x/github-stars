@@ -1,6 +1,6 @@
 ---
 project: academic-research-skills
-stars: 36237
+stars: 37347
 description: Academic Research Skills for Claude Code: research → write → review → revise → finalize
 url: https://github.com/Imbad0202/academic-research-skills
 ---
@@ -70,6 +70,8 @@ Quick install
 **Using Claude Science?** The four skills import directly: **Skills → Import from GitHub**, paste `https://github.com/Imbad0202/academic-research-skills`, **Preview**, then **Import 4 skills** (requires v3.14.0+ of this repo — the importer reads the explicit skill paths in the marketplace manifest). Imports are point-in-time snapshots: re-import after ARS updates. Imported skills carry the ARS methodology (research / writing / review protocols); Claude Code-specific machinery — slash commands, hooks, subagent orchestration — does not transfer. See docs/SETUP.md Method 5 for details.
 
 **Using Codex CLI?** Install the sibling distribution instead: `Imbad0202/academic-research-skills-codex` — same workflow content, Codex-native packaging as a single `$academic-research-suite` skill with `ars-*` aliases.
+
+**Third-party platforms and integrations** that wrap or host ARS are listed in THIRD\_PARTY.md — community-submitted and not reviewed or endorsed by the maintainer.
 
 Performance & cost
 ------------------
