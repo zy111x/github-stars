@@ -1,6 +1,6 @@
 ---
 project: Scrapling
-stars: 69156
+stars: 69989
 description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!
 url: https://github.com/D4Vinci/Scrapling
 ---
@@ -320,7 +320,7 @@ vs Scrapling
 
 Scrapling
 
-2.02
+1.98
 
 1.0x
 
@@ -328,23 +328,23 @@ Scrapling
 
 Parsel/Scrapy
 
-2.04
+1.99
 
-1.01
+1.005
 
 3
 
 Raw Lxml
 
-2.54
+2.48
 
-1.257
+1.253
 
 4
 
 PyQuery
 
-24.17
+23.15
 
 ~12x
 
@@ -352,33 +352,33 @@ PyQuery
 
 Selectolax
 
-82.63
+196.09
 
-~41x
+~99x
 
 6
 
 MechanicalSoup
 
-1549.71
+1531.24
 
-~767.1x
+~773.4x
 
 7
 
 BS4 with Lxml
 
-1584.31
+1535.19
 
-~784.3x
+~775.3x
 
 8
 
 BS4 with html5lib
 
-3391.91
+3388.16
 
-~1679.1x
+~1711.2x
 
 ### Element Similarity & Text Search Performance
 
@@ -392,15 +392,15 @@ vs Scrapling
 
 Scrapling
 
-2.39
+2.29
 
 1.0x
 
 AutoScraper
 
-12.45
+12.46
 
-5.209x
+5.441x
 
 > All benchmarks represent averages of 100+ runs. See benchmarks.py for methodology.
 
