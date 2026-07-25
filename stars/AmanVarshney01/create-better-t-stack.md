@@ -1,6 +1,6 @@
 ---
 project: create-better-t-stack
-stars: 5582
+stars: 5594
 description: |-
     A modern CLI tool for scaffolding end-to-end type-safe TypeScript projects with best practices and customizable configurations
 url: https://github.com/AmanVarshney01/create-better-t-stack

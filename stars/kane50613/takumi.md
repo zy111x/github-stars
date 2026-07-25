@@ -1,13 +1,13 @@
 ---
 project: takumi
-stars: 2390
+stars: 2506
 description: |-
-    Render JSX & HTML to SVG or images. Support 160+ CSS properties. Drop-in next/og replacement.
+    Render JSX & HTML to SVG or images. 160+ CSS properties supported. Drop-in next/og replacement.
 url: https://github.com/kane50613/takumi
 ---
 
 <div align="center">
-  <img src="./assets/images/takumi.svg" alt="Takumi" width="64" />
+  <img src="./assets/images/sticker.svg" alt="Takumi Sticker" height="96" />
 
 # Takumi
 

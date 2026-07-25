@@ -1,6 +1,6 @@
 ---
 project: docus
-stars: 2927
+stars: 2934
 description: |-
     Write beautiful documentations with Nuxt and Markdown.
 url: https://github.com/nuxt-content/docus

@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 7063
+stars: 7337
 description: |-
     Lean, fine tuned Opencode multi agent suite · Mix any models · Auto delegate tasks
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -180,21 +180,21 @@ The default generated configuration includes both `openai` and `opencode-go` pre
   "preset": "openai",
   "presets": {
     "openai": {
-      "orchestrator": { "model": "openai/gpt-5.6-terra", "variant": "medium", "skills": ["*"], "mcps": ["*", "!context7"] },
-      "oracle": { "model": "openai/gpt-5.6-sol", "variant": "high", "skills": ["simplify"], "mcps": [] },
+      "orchestrator": { "model": "openai/gpt-5.6-terra", "variant": "xhigh", "skills": ["*"], "mcps": ["*", "!context7"] },
+      "oracle": { "model": "openai/gpt-5.6-sol", "variant": "xhigh", "skills": ["simplify"], "mcps": [] },
       "librarian": { "model": "openai/gpt-5.6-luna", "variant": "low", "skills": [], "mcps": ["websearch", "context7", "gh_grep"] },
       "explorer": { "model": "openai/gpt-5.6-luna", "variant": "low", "skills": [], "mcps": [] },
       "designer": { "model": "openai/gpt-5.6-luna", "variant": "medium", "skills": [], "mcps": [] },
-      "fixer": { "model": "openai/gpt-5.6-luna", "variant": "medium", "skills": [], "mcps": [] }
+      "fixer": { "model": "openai/gpt-5.6-luna", "variant": "xhigh", "skills": [], "mcps": [] }
     },
     "opencode-go": {
-      "orchestrator": { "model": "opencode-go/minimax-m3", "variant": "max", "skills": [ "*" ], "mcps": [ "*", "!context7" ] },
-      "oracle": { "model": "opencode-go/qwen3.7-max", "variant": "max", "skills": ["simplify"], "mcps": [] },
-      "librarian": { "model": "opencode-go/deepseek-v4-flash", "variant": "high", "skills": [], "mcps": [ "websearch", "context7", "gh_grep" ] },
-      "explorer": { "model": "opencode-go/deepseek-v4-flash", "variant": "max", "skills": [], "mcps": [] },
-      "designer": { "model": "opencode-go/kimi-k2.7-code", "variant": "medium", "skills": [], "mcps": [] },
-      "fixer": { "model": "opencode-go/deepseek-v4-flash", "variant": "high", "skills": [], "mcps": [] },
-      "observer": { "model": "opencode-go/mimo-v2.5", "variant": "max", "skills": [], "mcps": [] }
+      "orchestrator": { "model": "opencode-go/minimax-m3", "variant": "thinking" },
+      "oracle": { "model": "opencode-go/qwen3.7-max", "variant": "max" },
+      "librarian": { "model": "opencode-go/deepseek-v4-flash", "variant": "high" },
+      "explorer": { "model": "opencode-go/deepseek-v4-flash", "variant": "high" },
+      "designer": { "model": "opencode-go/kimi-k2.7-code" },
+      "fixer": { "model": "opencode-go/deepseek-v4-flash", "variant": "high" },
+      "observer": { "model": "opencode-go/mimo-v2.5" }
     }
   }
 }
@@ -686,7 +686,7 @@ Use this section as a map: start with installation, then jump to features, confi
   <p><sub>Every merged contribution leaves a mark on the realm.</sub></p>
 
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-80-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-85-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -804,6 +804,13 @@ Use this section as a map: start with installation, then jump to features, confi
     <tr>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/DanielMaly"><img src="https://avatars.githubusercontent.com/u/1443921?v=4?s=100" width="100px;" alt="Daniel Maly"/><br /><sub><b>Daniel Maly</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=DanielMaly" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://giuseppebellamacina.com/"><img src="https://avatars.githubusercontent.com/u/102151655?v=4?s=100" width="100px;" alt="Giuseppe Bellamacina"/><br /><sub><b>Giuseppe Bellamacina</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=GiuseppeBellamacina" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/Zhanyuanium"><img src="https://avatars.githubusercontent.com/u/92024923?v=4?s=100" width="100px;" alt="Zhanyuanium"/><br /><sub><b>Zhanyuanium</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=Zhanyuanium" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/kaze-gif"><img src="https://avatars.githubusercontent.com/u/114116466?v=4?s=100" width="100px;" alt="かぜ"/><br /><sub><b>かぜ</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=kaze-gif" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/tsankotsanev"><img src="https://avatars.githubusercontent.com/u/76694544?v=4?s=100" width="100px;" alt="Tsanko Tsanev"/><br /><sub><b>Tsanko Tsanev</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=tsankotsanev" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/shixi-li"><img src="https://avatars.githubusercontent.com/u/40780706?v=4?s=100" width="100px;" alt="cyril"/><br /><sub><b>cyril</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=shixi-li" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/pmolinal"><img src="https://avatars.githubusercontent.com/u/1817596?v=4?s=100" width="100px;" alt="Patricio Molina"/><br /><sub><b>Patricio Molina</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=pmolinal" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

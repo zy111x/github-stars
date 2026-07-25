@@ -1,6 +1,6 @@
 ---
 project: cloudflare-error-page
-stars: 5482
+stars: 5487
 description: |-
     ✅Browser ❌Cloudflare ✅Host — Customized Cloudflare error page generator. (unofficial)
 url: https://github.com/donlon/cloudflare-error-page

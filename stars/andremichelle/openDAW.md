@@ -1,6 +1,6 @@
 ---
 project: openDAW
-stars: 1909
+stars: 1927
 description: |-
     openDAW is a next-generation web-based Digital Audio Workstation (DAW)
 url: https://github.com/andremichelle/openDAW
@@ -107,11 +107,14 @@ skyboundzoo, JHINZ, Mark Dammer, fork-kun, Martin Eigel
 
 * Apparat (programmable instrument scripted in JavaScript)
 * Arpeggio (plays the notes of a chord one after another)
+* Autotune (real-time monophonic pitch correction)
 * Cheap Reverb (FreeVerb variation)
 * Crusher (degenerates audio signal)
 * Dattorro Reverb (dense algorithmic reverb based on Dattorro's design)
 * Delay (stereo delay with cross and filter options)
 * Fold (waveform folding algorithm with oversampling)
+* Frequency Split (splits the signal into frequency bands, each with its own effect chain)
+* FX Composite (runs several effect chains in parallel and mixes them with dry/wet)
 * Gate (noise gate with sidechain support)
 * Maximizer (brickwall limiter with automatic makeup gain)
 * MIDI Output (sends MIDI messages to other devices)
@@ -121,6 +124,7 @@ skyboundzoo, JHINZ, Mark Dammer, fork-kun, Martin Eigel
 * Revamp (graphical equalizer with spectrum analyser)
 * Soundfont (soundfont player)
 * Spielwerk (programmable MIDI effect scripted in JavaScript)
+* Stereo Split (processes the left and right channels through separate effect chains)
 * Stereo Tool (volume, panning and invert the stereo signal)
 * Tape (playback device for audio regions and clips)
 * Tidal (shapes rhythm and space through volume and pan)
@@ -223,12 +227,6 @@ Before starting, ensure you have the following installed on your system:
 * `npm run build` (for the first time and after `npm run clean`)
 * `npm run dev:studio` | `npm run dev:headless` (start dev server)
 * Navigate to https://localhost:8080 (port is important > cors sample api)
-
-### Flow Charts
-
-<img width="6551" height="7057" alt="image" src="https://github.com/user-attachments/assets/266a9fb2-4b72-4752-bcf1-85fda2ff2cf1" />
-
----
 
 [![Custom Caption: Watch the Demo](https://img.youtube.com/vi/VPTXeJY6Eaw/0.jpg)](https://www.youtube.com/watch?v=VPTXeJY6Eaw)
 

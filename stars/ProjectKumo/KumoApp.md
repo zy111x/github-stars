@@ -1,6 +1,6 @@
 ---
 project: KumoApp
-stars: 277
+stars: 278
 description: |-
     A calm, native macOS client for the Mihomo proxy core, built with SwiftUI and a shared agent-friendly CLI.
 url: https://github.com/ProjectKumo/KumoApp

@@ -1,6 +1,6 @@
 ---
 project: writer-computer
-stars: 791
+stars: 796
 description: |-
     Local-first desktop markdown editor
 url: https://github.com/joelbqz/writer-computer

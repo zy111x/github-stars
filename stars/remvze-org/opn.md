@@ -3,7 +3,7 @@ project: opn
 stars: 107
 description: |-
     Your open-source bio page.
-url: https://github.com/remvze/opn
+url: https://github.com/remvze-org/opn
 ---
 
 <div align="center">

@@ -1,13 +1,12 @@
 ---
 project: itshover
-stars: 2564
+stars: 2574
 description: |-
     Icons that move with intent
 url: https://github.com/itshover/itshover
 ---
 
 # Its Hover
-
 <a href="https://vercel.com/oss">
   <img alt="Vercel OSS Program" src="https://vercel.com/oss/program-badge.svg" />
 </a>

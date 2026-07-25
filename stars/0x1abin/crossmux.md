@@ -1,6 +1,6 @@
 ---
 project: crossmux
-stars: 69
+stars: 71
 description: |-
     CrossMux is a community fork of CrossPoint Reader that turns the device into more than a reader — it adds an Apps hub of mini-games and tools, richer standby faces, and a first-class Simplified Chinese build.
 url: https://github.com/0x1abin/crossmux
@@ -12,7 +12,7 @@ url: https://github.com/0x1abin/crossmux
 
 **CrossMux** is a community fork of [CrossPoint Reader](https://github.com/crosspoint-reader/crosspoint-reader) that turns the device into more than a reader — it adds an Apps hub of mini-games and tools, richer standby faces, and a first-class Simplified Chinese build.
 
-**Version:** CrossMux 1.4.1 (based on CrossPoint Reader 1.4.1 plus upstream `develop` through `c5787d1c`)
+**Version:** CrossMux 1.4.1 (based on CrossPoint Reader 1.4.1 plus upstream `develop` through `63eda54e`)
 
 **Now running on:** ESP32C3-based Xteink [X4](https://www.xteink.com/products/xteink-x4) and [X3](https://www.xteink.com/products/xteink-x3).
 
@@ -37,7 +37,7 @@ CrossPoint is open-source e-reader firmware - community-built, fully hackable, f
 
 ## What can CrossPoint do?
 
-- **Reader engine**: EPUB 2/3 rendering with embedded-style option, image handling, hyphenation, kerning, chapter navigation, footnotes, bookmarks, go-to-percent, auto page turn, orientation control, focus reading, KOReader progress sync and more. 
+- **Reader engine**: EPUB 2/3 rendering with embedded-style option, image handling, hyphenation, kerning, chapter navigation, footnotes, bookmarks, dictionary lookups ([StarDict](docs/dictionary.md)), go-to-percent, auto page turn, orientation control, focus reading, KOReader progress sync and more.
 
 - **Various formats**: native handling for `.epub`, `.xtc/.xtch`, `.txt`, and `.bmp`.
 
@@ -50,7 +50,7 @@ CrossPoint is open-source e-reader firmware - community-built, fully hackable, f
 - **Library workflow**: folder browser, hidden-file toggle, long-press delete, recent books, SD-cache management.
 
 - **Wireless workflows**:
-  
+
   - File transfer web UI
   - EPUB Optimizer
   - Web settings UI/API (edit many device settings from browser)
@@ -66,8 +66,6 @@ CrossPoint is open-source e-reader firmware - community-built, fully hackable, f
 - **Localization**: 24 UI languages and counting. RTL support.
 
 ### Coming soon:
-
-- Dictionary lookup — inline word lookup without leaving the reader.
 
 - More themes.
 
@@ -88,9 +86,9 @@ https://crosspointreader.com/#unlock-tool before you can flash CrossPoint.
 USB port or browser before assuming the device is locked. Only reach for the unlocker if the device still doesn't appear.
 
 > ### ⚠️ WARNING: READ THIS BEFORE USING THE UNLOCKER ⚠️
-> 
+>
 > **The only officially supported firmwares in the unlock tool are CrossPoint and CrossInk.**
-> 
+>
 > Flashing any other firmware on a USB-locked device may **permanently brick the device** or leave it **permanently
 > stuck on that firmware with no recovery path**. Once USB flashing is re-locked, your only way back is via OTA, and if
 > the firmware you flashed doesn't support OTA, **there is no way out**.
@@ -163,6 +161,7 @@ Conversion runs the firmware repo's `lib/EpdFont/scripts/fontconvert_sdcard.py` 
 - [Web server endpoints](./docs/webserver-endpoints.md)
 - [Project scope](./SCOPE.md)
 - [Contributing docs](./docs/contributing/README.md)
+- [Touch and UI development](./docs/contributing/touch-and-ui.md) - FreeInkUI components for new screens, the touch bridge for existing ones, and build envs for the non-Xteink touch devices
 
 ---
 
@@ -184,6 +183,24 @@ cd crosspoint-reader
 # if cloned without --recursive:
 git submodule update --init --recursive
 ```
+
+### Nix/NixOS
+
+Nix/NixOS users can enter the development shell with either `nix develop` (flakes) or `nix-shell`:
+
+```bash
+nix develop -f nix
+# or
+nix-shell nix
+```
+
+To flash a connected ESP32-C3 device, enable PlatformIO's udev rules in your NixOS configuration:
+
+```nix
+services.udev.packages = with pkgs; [ platformio-core.udev ];
+```
+
+After rebuilding the system configuration, reconnect the device or reload udev rules.
 
 ### Build / flash / monitor
 
@@ -298,7 +315,7 @@ One of the best things about open source is that anyone can take the code in a d
 
 - ~~[PlusPoint](https://github.com/ngxson/pluspoint-reader) — custom JS apps support.~~ (Unmaintained)
 
-- [crosspoint-reader-papers3](https://github.com/juicecultus/crosspoint-reader-papers3) — Crosspoint port for M5Stack Paper S3. 
+- [crosspoint-reader-papers3](https://github.com/juicecultus/crosspoint-reader-papers3) — Crosspoint port for M5Stack Paper S3.
 
 - [t5s3-reader](https://github.com/ShallowGreen123/t5s3-reader) — Crosspoint port for LilyGo T5 ePaper S3 / T5S3 4.7-inch e-paper device.
 

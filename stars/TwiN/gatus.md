@@ -1,6 +1,6 @@
 ---
 project: gatus
-stars: 11539
+stars: 11607
 description: |-
     Automated developer-oriented status page with alerting and incident support
 url: https://github.com/TwiN/gatus
@@ -662,6 +662,7 @@ the client used to send the request.
 | `client.tls.renegotiation`             | Type of renegotiation support to provide. (`never`, `freely`, `once`).        | `"never"`       |
 | `client.network`                       | The network to use for ICMP endpoint client (`ip`, `ip4` or `ip6`).           | `"ip"`          |
 | `client.tunnel`                        | Name of the SSH tunnel to use for this endpoint. See [Tunneling](#tunneling). | `""`            |
+| `client.store-cookies`                 | Whether to store cookies between requests.                                    | `false`         |
 
 
 > 📝 Some of these parameters are ignored based on the type of endpoint. For instance, there's no certificate involved
@@ -674,6 +675,7 @@ client:
   insecure: false
   ignore-redirect: false
   timeout: 10s
+  store-cookies: false
 ```
 
 Note that this configuration is only available under `endpoints[]`, `alerting.mattermost` and `alerting.custom`.

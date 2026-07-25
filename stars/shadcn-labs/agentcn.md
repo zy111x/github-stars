@@ -1,6 +1,6 @@
 ---
 project: agentcn
-stars: 375
+stars: 388
 description: |-
     shadcn/ui, but for building agents. 🤖
 url: https://github.com/shadcn-labs/agentcn

@@ -1,6 +1,6 @@
 ---
 project: snapdom
-stars: 7946
+stars: 7962
 description: |-
     High-performance engine for capturing, modifying, and converting DOM elements into any format.
 url: https://github.com/zumerlab/snapdom
@@ -199,6 +199,29 @@ const blob = await snapdom.toBlob(el);
 document.body.appendChild(png);
 ```
 
+## CORS & External Resources
+
+When capturing elements that reference **external stylesheets** (e.g., Google Fonts, Font Awesome, or any CDN‑hosted CSS), you **must** ensure that the resources are served with proper CORS headers. Otherwise, the captured image may lack the expected fonts or icons, even though they render correctly in the browser.
+
+### Why is this needed?
+
+- Browsers block JavaScript (including SnapDOM) from reading the binary data of cross‑origin fonts or images unless the server explicitly allows it via `Access-Control-Allow-Origin`.
+- SnapDOM relies on Canvas, which enforces strict CORS policies — unlike the browser's rendering engine, which is more permissive for on‑screen display.
+
+### How to fix it
+
+Add the `crossorigin="anonymous"` attribute to the `<link>` tag when loading external stylesheets:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  crossorigin="anonymous"
+/>
+```
+
+> **Note**: If you are hosting the fonts or assets **on the same origin** as your page (e.g., using a local server like `http://localhost`), you **do not** need to add `crossorigin` – the browser treats them as same‑origin and allows full access.
+
 ## Documentation
 
 The full reference lives on **[snapdom.dev/docs](https://snapdom.dev/docs/)** — kept there so it stays in sync and searchable:
@@ -251,6 +274,9 @@ All options are optional and can be passed to `snapdom(el, options)` or any shor
 | `outerTransforms` | `boolean` | `true` | Keep root translate/rotate in the output |
 | `outerShadows` | `boolean` | `false` | Expand bounds to include root shadows/blur/outline |
 | `fast` | `boolean` | `true` | Skip idle delays for faster capture |
+| `reconcile` | `boolean` | `false` | Measure the clone against the live DOM and pin any diverging box to its real size. Fixes rare text re-wrap/layout drift at the cost of roughly doubling capture time — snapdom warns once (`console.warn`) if it detects a capture that could benefit from it |
+| `burst` | `boolean` | `false` | Memoizes repeated captures of this element via a scoped MutationObserver — an unchanged repeat skips the pipeline entirely. Without it, snapdom warns once if the same element is captured 3+ times within 2s |
+| `invalidate` | `boolean` | `false` | With `burst: true`, forces a fresh capture for changes automatic tracking can't see (canvas draws, programmatic CSSOM edits) |
 | `plugins` | `array` | — | Per-capture plugins (override globals by name) |
 
 📖 **[Full API & every option, explained with examples → snapdom.dev/docs](https://snapdom.dev/docs/)**
@@ -360,7 +386,7 @@ For detailed guidelines, see [CONTRIBUTING](https://github.com/zumerlab/snapdom/
 <a href="https://github.com/titoBouzout" title="titoBouzout"><img src="https://avatars.githubusercontent.com/u/64156?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="titoBouzout"/></a>
 <a href="https://github.com/ZiuChen" title="ZiuChen"><img src="https://avatars.githubusercontent.com/u/64892985?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="ZiuChen"/></a>
 <a href="https://github.com/adajoy" title="adajoy"><img src="https://avatars.githubusercontent.com/u/26210079?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="adajoy"/></a>
-<a href="https://github.com/harshasiddartha" title="harshasiddartha"><img src="https://avatars.githubusercontent.com/u/147021873?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="harshasiddartha"/></a>
+<a href="https://github.com/hjl12345" title="hjl12345"><img src="https://avatars.githubusercontent.com/u/170017602?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="hjl12345"/></a>
 </p>
 <!-- CONTRIBUTORS:END -->
 
