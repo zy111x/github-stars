@@ -1,6 +1,6 @@
 ---
 project: ai-engineering-from-scratch
-stars: 39080
+stars: 43462
 description: Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
@@ -135,6 +135,73 @@ Ten-question placement quiz. Maps your knowledge to a starting phase and produce
 `/check-understanding <phase>`
 
 Per-phase quiz, eight questions, with feedback and specific lessons to review.
+
+```
+░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
+```
+
+Read it as a book
+-----------------
+
+The whole course compiles into a six-volume book series. EPUB and PDF are built by CI from the same lesson sources and attached to every GitHub release; the links below always resolve to the newest release. Volume numbers index the series, not versions: each copy carries a dated edition stamp, and older editions stay downloadable from their release.
+
+Vol
+
+Title
+
+Phases
+
+Download
+
+1
+
+Foundations · Math, Tooling, and Classical Machine Learning
+
+00-02
+
+EPUB · PDF
+
+2
+
+Deep Learning · Networks, Vision, and Speech
+
+03, 04, 06
+
+EPUB · PDF
+
+3
+
+Language · NLP Foundations and the Transformer
+
+05, 07
+
+EPUB · PDF
+
+4
+
+Large Language Models · Generation, Reinforcement, Pretraining, and Engineering
+
+08-11
+
+EPUB · PDF
+
+5
+
+Agents · Multimodality, Protocols, Autonomy, and Swarms
+
+12-16
+
+EPUB · PDF
+
+6
+
+Production · Infrastructure, Safety, and Capstones
+
+17-19
+
+EPUB · PDF
+
+The book is the snapshot; this repository is the living edition. Every chapter ends with links back to the lesson's animated figures, quiz, and runnable code. Build locally with `python3 scripts/build_book.py` (pandoc required); pipeline details in book/README.md.
 
 ```
 ░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
@@ -2107,7 +2174,7 @@ Python
 
 16
 
-LangGraph: State Machines for Agents
+Agent State Machines — Graphs, Nodes, Checkpoints
 
 Build
 
@@ -2585,7 +2652,7 @@ Python
 
 07
 
-Memory — Virtual Context and MemGPT
+Agent Memory — Virtual Context and Memory Paging
 
 Build
 
@@ -2601,7 +2668,7 @@ Python
 
 09
 
-Hybrid Memory — Mem0 Vector + Graph + KV
+Hybrid Memory — Vector + Graph + KV
 
 Build
 
@@ -2609,7 +2676,7 @@ Python
 
 10
 
-Skill Libraries and Lifelong Learning — Voyager
+Skill Libraries and Lifelong Learning (Voyager)
 
 Build
 
@@ -2633,7 +2700,7 @@ Python
 
 13
 
-LangGraph — Stateful Graphs and Durable Execution
+Stateful Graph Orchestration — Durable Execution and Checkpoints
 
 Build
 
@@ -2641,7 +2708,7 @@ Python
 
 14
 
-AutoGen v0.4 — Actor Model
+The Actor Model for Agents
 
 Build
 
@@ -2649,7 +2716,7 @@ Python
 
 15
 
-CrewAI — Role-Based Crews and Flows
+Role-Based Agent Teams — Roles, Tasks, Processes
 
 Build
 
@@ -2665,7 +2732,7 @@ Python
 
 17
 
-Claude Agent SDK — Subagents and Session Store
+The Harness as a Library — Subagents and Session Store
 
 Build
 
@@ -2673,7 +2740,7 @@ Python
 
 18
 
-Agno and Mastra — Production Runtimes
+Production Agent Runtimes
 
 Learn
 
@@ -2957,7 +3024,7 @@ Python
 
 10
 
-Claude Code Permission Modes and Auto Mode
+Permission Modes for Autonomous Agents
 
 Learn
 
@@ -3305,7 +3372,7 @@ Python
 
 04
 
-vLLM Serving Internals — PagedAttention, Continuous Batching, Chunked Prefill
+Serving Engine Internals — PagedAttention, Continuous Batching, Chunked Prefill
 
 Learn
 
@@ -3321,7 +3388,7 @@ Python
 
 06
 
-SGLang and RadixAttention for Prefix-Heavy Workloads
+Prefix-Cache Serving — RadixAttention and KV Reuse
 
 Learn
 
@@ -3329,7 +3396,7 @@ Python
 
 07
 
-TensorRT-LLM on Blackwell with FP8 and NVFP4
+Hardware-Specialized Inference Compilation — FP8 and NVFP4 on Blackwell
 
 Learn
 
@@ -3417,7 +3484,7 @@ Python
 
 18
 
-vLLM Production Stack with LMCache KV Offloading
+Production Serving Stack — KV Offloading and Cache-Aware Routing
 
 Learn
 
@@ -3497,7 +3564,7 @@ Python
 
 28
 
-Self-Hosted Serving Selection — llama.cpp, Ollama, TGI, vLLM, SGLang
+Self-Hosted Serving Selection — Matching Engine to Hardware and Scale
 
 Learn
 

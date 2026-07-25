@@ -1,6 +1,6 @@
 ---
 project: enhanced-FaaS-in-China
-stars: 3040
+stars: 3045
 description: 提升部署在cloudflare、vercel或netlify的网页在中国的访问速度和稳定性   cf优选域名 | cf优选ip | cloudflare | vercel | netlify | 加速 | 国内 | 中国 | 境内 | 大陆
 url: https://github.com/xingpingcn/enhanced-FaaS-in-China
 ---

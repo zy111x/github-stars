@@ -1,6 +1,6 @@
 ---
 project: Scrapling
-stars: 69989
+stars: 71246
 description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!
 url: https://github.com/D4Vinci/Scrapling
 ---
@@ -45,6 +45,8 @@ MySpider().start()
 Platinum Sponsors
 =================
 
+NodeMaven - reliable proxy provider with the highest quality IP on the market. Use promo code SCRAPLING35 for 35% discount on proxies.
+
 **Proxidize** provides mobile and residential proxies for scraping, browser automation, SEO monitoring, AI agents, and data collection. _Use code **scrapling20** for 20% off_.
 
 **ColdProxy** provides residential and datacenter proxies for stable web scraping, public data collection, and geo-targeted testing across 195+ countries.
@@ -63,8 +65,6 @@ PetroSky VPS - cloud servers built for nonstop automation. Windows and Linux mac
 Read a full review of Scrapling on The Web Scraping Club (Nov 2025), the #1 newsletter dedicated to Web Scraping.
 
 Swiftproxy provides scalable residential proxies with 80M+ IPs across 195+ countries, delivering fast, reliable connections, automatic rotation, and strong anti-block performance. Free trial available.
-
-NodeMaven - reliable proxy provider with the highest quality IP on the market. Use promo code SCRAPLING35 for 35% discount on proxies.
 
 _Do you want to show your ad here? Click here_
 

@@ -1,6 +1,6 @@
 ---
 project: BypassAIGC
-stars: 2009
+stars: 2015
 description: 论文润色，AIGC 降重工具(gptzero等检测网站)
 url: https://github.com/chi111i/BypassAIGC
 ---

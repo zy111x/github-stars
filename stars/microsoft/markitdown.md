@@ -1,6 +1,6 @@
 ---
 project: markitdown
-stars: 167089
+stars: 168991
 description: Python tool for converting files and office documents to Markdown.
 url: https://github.com/microsoft/markitdown
 ---
@@ -25,7 +25,7 @@ MarkItDown currently supports the conversion from:
 -   HTML
 -   Text-based formats (CSV, JSON, XML)
 -   ZIP files (iterates over contents)
--   Youtube URLs
+-   YouTube URLs
 -   EPubs
 -   ... and more!
 

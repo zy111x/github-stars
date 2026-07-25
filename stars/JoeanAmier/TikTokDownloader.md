@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 15178
+stars: 15251
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -326,22 +326,8 @@ Swiftproxy
 
 * * *
 
-Thordata
---------
-
-Thordata：提供 190+ 国家 100M+ 动态住宅 IP，无限量代理适合高并发、高流量任务，低至 $38/天，旋转或粘性会话，精准定位更稳连接；凭折扣码 **Thor20d** 可获 10% 折扣。
-
-* * *
-
 DartNode
 --------
-
-* * *
-
-ZMTO
-----
-
-ZMTO：一家专业的云基础设施提供商，以可靠的尖端技术与专业支持，提供高效的解决方案，并为符合条件的开源项目提供企业级VPS基础设施，支持开源生态系统的可持续发展与创新。
 
 * * *
 
@@ -423,7 +409,6 @@ TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台�
 
 -   https://github.com/Johnserf-Seed/f2
 -   https://github.com/Evil0ctal/Douyin\_TikTok\_Download\_API
--   https://github.com/justbeluga/tiktok-web-reverse-engineering
 -   https://github.com/ihmily/DouyinLiveRecorder
 -   https://github.com/encode/httpx/
 -   https://github.com/Textualize/rich

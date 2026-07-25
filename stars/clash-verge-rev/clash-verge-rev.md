@@ -1,6 +1,6 @@
 ---
 project: clash-verge-rev
-stars: 132254
+stars: 133714
 description: A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience
 url: https://github.com/clash-verge-rev/clash-verge-rev
 ---
@@ -122,6 +122,8 @@ pnpm i
 pnpm run prebuild
 pnpm dev
 
+`pnpm dev` preserves the Development Channel's installed service state: an existing service is used, while a previously uninstalled service remains uninstalled and the app starts in Sidecar mode. Use `pnpm dev:service` to explicitly install or update the isolated development service before launch, or `pnpm dev:sidecar` to force the unprivileged Sidecar workflow.
+
 Contributions
 -------------
 
@@ -143,5 +145,3 @@ License
 -------
 
 GPL-3.0 License. See License here for details.
-
-Supported By ForZTN

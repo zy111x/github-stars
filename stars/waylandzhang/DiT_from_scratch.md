@@ -1,6 +1,6 @@
 ---
 project: DiT_from_scratch
-stars: 101
+stars: 102
 description: 一系列文生图模型概念讲解及代码实现
 url: https://github.com/waylandzhang/DiT_from_scratch
 ---
