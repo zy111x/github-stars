@@ -1,161 +1,75 @@
 ---
 project: hackingtool
-stars: 78475
+stars: 78620
 description: ALL IN ONE Hacking Tool For Hackers
 url: https://github.com/Z4nzu/hackingtool
 ---
 
-**All-in-One Hacking Tool for Security Researchers & Pentesters**
+### AI-guided, all-in-one toolkit for authorized security testing
 
-           
+**215 curated tools across 21 categories** — recon, OSINT, web, wireless, phishing, forensics, post-exploitation and more — with an **AI layer that turns plain English into the right tool and the exact command**.
 
-   
+**Built for** penetration testers · red teamers · blue-team/SOC and DFIR analysts · OSINT researchers · bug-bounty hunters · CTF players · security researchers and students — all working **legally, on systems they own or are authorised to test**.
 
-* * *
+  
+  
 
-What's New in v2.0.0
---------------------
+  
 
-Feature
+       
 
-Description
+  
 
-**🐍**
-
-**Python 3.10+**
-
-All Python 2 code removed, modern syntax throughout
-
-**🖥**
-
-**OS-aware menus**
-
-Linux-only tools hidden automatically on macOS
-
-**📦**
-
-**185+ tools**
-
-35 new modern tools added across 6 categories
-
-**🔍**
-
-**Search**
-
-Type `/` to search all tools by name, description, or keyword
-
-**🏷**
-
-**Tag filter**
-
-Type `t` to filter by 19 tags — osint, web, c2, cloud, mobile...
-
-**💡**
-
-**Recommend**
-
-Type `r` — "I want to scan a network" → shows relevant tools
-
-**✅**
-
-**Install status**
-
-✔/✘ shown next to every tool — know what's ready
-
-**⚡**
-
-**Install all**
-
-Option `97` in any category — batch install at once
-
-**🔄**
-
-**Smart update**
-
-Each tool has Update — auto-detects git pull / pip upgrade / go install
-
-**📂**
-
-**Open folder**
-
-Jump into any tool's directory for manual inspection
-
-**🐳**
-
-**Docker**
-
-Builds locally — no unverified external images
-
-**🚀**
-
-**One-liner install**
-
-`curl -sSL .../install.sh | sudo bash` — zero manual steps
-
-**🏢**
-
-**3 new categories**
-
-Active Directory, Cloud Security, Mobile Security
+     
 
 * * *
 
-Quick Commands
---------------
+Contents
+--------
 
-Command
+-   Why hackingtool
+-   Tool Categories
+-   Installation
+    -   From source with pipx (recommended)
+    -   For development
+    -   Docker
+    -   Optional runtimes
+-   Quick Commands
+    -   Command reference
+-   Features
+    -   🔎 `/find` — a tool for a need you don't have yet
+    -   🎯 `/goal` — plan an objective, run it one step at a time
+    -   🧠 Recommendations — say what you want in plain English
+    -   🏷 Tags and search
+    -   ▶ Background panes (tmux)
+    -   ⚙ Settings and the AI layer
+    -   📋 Headless engagements
+-   Documentation
+-   Contributing
+-   Support & Sponsor
+-   Social
 
-Action
+* * *
 
-Works in
+Why hackingtool
+---------------
 
-`/query`
+-   **🧠 AI-guided workflow** — describe what you want ("find subdomains of example.com") and it maps your intent to the right tools, hands you the exact documented command, plans an objective step by step, then summarizes findings and drafts an engagement report. Bring your own key or run a local model — nothing auto-executes and nothing is fabricated.
+-   **🗂 215 curated tools, one console** — install and run across 21 categories without hunting down Git repos; a fixed tag taxonomy (63 tags in use) makes every tool discoverable.
+-   **🔎 It knows what it doesn't have** — `/find` searches your catalog first, then the GitHub API, and shows real maintained projects with the reason each was ranked.
+-   **🛡 Safe by default** — standard installs, **no `curl | bash`**, downloads pinned + SHA-256 verified, list-form `subprocess`, no forced `sudo`, and signed releases with an SBOM.
+-   **🎯 For the whole spectrum** — red team, blue team, OSINT, bug bounty, CTF/THM, forensics/IR — all on **authorized targets only**.
 
-**Search** — find tools instantly by keyword
-
-Main menu
-
-`t`
-
-**Tags** — filter by osint, scanner, c2, cloud, mobile...
-
-Main menu
-
-`r`
-
-**Recommend** — "I want to do X" → matching tools
-
-Main menu
-
-`?`
-
-**Help** — quick reference card
-
-Everywhere
-
-`q`
-
-**Quit** — exit from any depth
-
-Everywhere
-
-`97`
-
-**Install All** — batch install all tools in category
-
-Category
-
-`99`
-
-**Back** — return to previous menu
-
-Everywhere
+  
+The console on launch — live system readout, and `/` opens the command palette.
 
 * * *
 
 Tool Categories
 ---------------
 
+**215 tools across 21 categories** — the full list, with links and tags, is in **docs/TOOLS.md**.
+
 #
 
 Category
@@ -170,489 +84,214 @@ Tools
 
 1
 
-🛡 Anonymously Hiding
+🛡 Anonymously Hiding Tools
 
-2
-
-11
-
-🧰 Exploit Framework
-
-4
-
-2
-
-🔍 Information Gathering
-
-26
+5
 
 12
 
-🔁 Reverse Engineering
+🔁 Reverse engineering tools
 
-5
+10
+
+2
+
+🔍 Information gathering tools
+
+26
+
+13
+
+⚡ DDOS Attack Tools
+
+7
 
 3
 
 📚 Wordlist Generator
 
-7
-
-13
-
-⚡ DDOS Attack
-
-5
-
-4
-
-📶 Wireless Attack
-
-13
+8
 
 14
 
-🖥 RAT
+🖥 Remote Administrator Tools (RAT)
 
-1
+4
 
-5
+4
 
-🧩 SQL Injection
+📡 Wireless attack tools
 
-7
+17
 
 15
 
-💥 XSS Attack
-
-9
+🧪 XSS Attack Tools
 
 6
 
-🎣 Phishing Attack
+5
 
-17
-
-16
-
-🖼 Steganography
-
-4
+💉 SQL Injection Tools
 
 7
 
-🌐 Web Attack
+16
 
-20
+🖼 Steganography Tools
 
-17
-
-🏢 Active Directory
+10
 
 6
 
-8
+🎣 Phishing attack tools
 
-🔧 Post Exploitation
+13
+
+17
+
+🏢 Active Directory Tools
 
 10
+
+7
+
+🌐 Web Attack tools
+
+23
 
 18
 
-☁ Cloud Security
+☁ Cloud Security Tools
 
-4
-
-9
-
-🕵 Forensics
+7
 
 8
+
+🔧 Post exploitation tools
+
+15
 
 19
 
-📱 Mobile Security
+📱 Mobile Security Tools
 
-3
+6
 
-10
+9
 
-📦 Payload Creation
+🕵 Forensic tools
 
-8
+12
 
 20
 
-✨ Other Tools
+✨ Other tools
 
-24
+10
 
-* * *
+10
 
-🛡 Anonymously Hiding Tools
----------------------------
+📦 Payload creation tools
 
--   Anonymously Surf
--   Multitor
+6
 
-🔍 Information Gathering Tools
-------------------------------
+21
 
--   Network Map (nmap)
--   Dracnmap
--   Port scanning
--   Host to IP
--   Xerosploit
--   RED HAWK
--   ReconSpider
--   IsItDown
--   Infoga
--   ReconDog
--   Striker
--   SecretFinder
--   Shodanfy
--   rang3r
--   Breacher
--   theHarvester ★
--   Amass ★
--   Masscan ★
--   RustScan ★
--   Holehe ★
--   Maigret ★
--   httpx ★
--   SpiderFoot ★
--   Subfinder ★
--   TruffleHog ★
--   Gitleaks ★
+🔑 Password / Hash Cracking
 
-📚 Wordlist Generator
----------------------
+7
 
--   Cupp
--   WordlistCreator
--   Goblin WordGenerator
--   Password list (1.4B)
--   Hashcat ★
--   John the Ripper ★
--   haiti ★
+11
 
-📶 Wireless Attack Tools
-------------------------
+🧰 Exploit framework
 
--   WiFi-Pumpkin
--   pixiewps
--   Bluetooth Honeypot (bluepot)
--   Fluxion
--   Wifiphisher
--   Wifite
--   EvilTwin
--   Fastssh
--   Howmanypeople
--   Airgeddon ★
--   hcxdumptool ★
--   hcxtools ★
--   Bettercap ★
+6
 
-🧩 SQL Injection Tools
-----------------------
-
--   Sqlmap
--   NoSqlMap
--   DSSS
--   Explo
--   Blisqy
--   Leviathan
--   SQLScan
-
-🎣 Phishing Attack Tools
-------------------------
-
--   Autophisher
--   PyPhisher
--   AdvPhishing
--   Setoolkit
--   SocialFish
--   HiddenEye
--   Evilginx3
--   I-See-You
--   SayCheese
--   QR Code Jacking
--   BlackEye
--   ShellPhish
--   Thanos
--   QRLJacking
--   Maskphish
--   BlackPhish
--   dnstwist
-
-🌐 Web Attack Tools
--------------------
-
--   Web2Attack
--   Skipfish
--   Sublist3r
--   CheckURL
--   Sub-Domain TakeOver
--   Dirb
--   Nuclei ★
--   ffuf ★
--   Feroxbuster ★
--   Nikto ★
--   wafw00f ★
--   Katana ★
--   Gobuster ★
--   Dirsearch ★
--   OWASP ZAP ★
--   testssl.sh ★
--   Arjun ★
--   Caido ★
--   mitmproxy ★
-
-🔧 Post Exploitation Tools
---------------------------
-
--   Vegile
--   Chrome Keylogger
--   pwncat-cs ★
--   Sliver ★
--   Havoc ★
--   PEASS-ng (LinPEAS/WinPEAS) ★
--   Ligolo-ng ★
--   Chisel ★
--   Evil-WinRM ★
--   Mythic ★
-
-🕵 Forensic Tools
------------------
-
--   Autopsy
--   Wireshark
--   Bulk extractor
--   Guymager
--   Toolsley
--   Volatility 3 ★
--   Binwalk ★
--   pspy ★
-
-📦 Payload Creation Tools
--------------------------
-
--   The FatRat
--   Brutal
--   Stitch
--   MSFvenom Payload Creator
--   Venom
--   Spycam
--   Mob-Droid
--   Enigma
-
-🧰 Exploit Framework
---------------------
-
--   RouterSploit
--   WebSploit
--   Commix
--   Web2Attack
-
-🔁 Reverse Engineering Tools
-----------------------------
-
--   Androguard
--   Apk2Gold
--   JadX
--   Ghidra ★
--   Radare2 ★
-
-⚡ DDOS Attack Tools
--------------------
-
--   DDoS Script
--   SlowLoris
--   Asyncrone
--   UFOnet
--   GoldenEye
-
-🖥 Remote Administrator Tools (RAT)
------------------------------------
-
--   Pyshell
-
-💥 XSS Attack Tools
--------------------
-
--   DalFox
--   XSS Payload Generator
--   Extended XSS Searcher
--   XSS-Freak
--   XSpear
--   XSSCon
--   XanXSS
--   XSStrike
--   RVuln
-
-🖼 Steganography Tools
-----------------------
-
--   SteganoHide
--   StegoCracker
--   Whitespace
-
-🏢 Active Directory Tools
--------------------------
-
--   BloodHound ★
--   NetExec (nxc) ★
--   Impacket ★
--   Responder ★
--   Certipy ★
--   Kerbrute ★
-
-☁ Cloud Security Tools
-----------------------
-
--   Prowler ★
--   ScoutSuite ★
--   Pacu ★
--   Trivy ★
-
-📱 Mobile Security Tools
-------------------------
-
--   MobSF ★
--   Frida ★
--   Objection ★
-
-✨ Other Tools
--------------
-
-#### SocialMedia Bruteforce
-
--   AllinOne SocialMedia Attack
--   Facebook Attack
--   Application Checker
-
-#### Android Hacking Tools
-
--   Keydroid
--   MySMS
--   Lockphish
--   DroidCam / WishFish
--   EvilApp
-
-#### IDN Homograph Attack
-
--   EvilURL
-
-#### Email Verify Tools
-
--   Knockmail
-
-#### Hash Cracking Tools
-
--   Hash Buster
-
-#### Wifi Deauthenticate
-
--   WifiJammer-NG
--   KawaiiDeauther
-
-#### SocialMedia Finder
-
--   Find SocialMedia By Facial Recognition
--   Find SocialMedia By UserName
--   Sherlock
--   SocialScan
-
-#### Payload Injector
-
--   Debinject
--   Pixload
-
-#### Web Crawling
-
--   Gospider
-
-#### Mix Tools
-
--   Terminal Multiplexer (tilix)
--   Crivo
-
-* * *
-
-Contributing — Add a New Tool
------------------------------
-
-### Open an Issue
-
-> **Title:** `[Tool Request] ToolName — Category`
-
-Use the Tool Request template.
-
-Required: tool name, GitHub URL, category, OS, install command, reason.
-
-### Open a Pull Request
-
-> **Title:** `[New Tool] ToolName — Category`
-
-Use the PR template checklist.
-
-Required: class in `tools/*.py`, TITLE, DESCRIPTION, INSTALL/RUN commands, SUPPORTED\_OS, test locally.
-
-> Issues or PRs that don't follow the title format will be closed without review.
+59 further entries are archived (unmaintained or dead upstream) and hidden unless you set `show_archived true` via `/config`. The in-app header counts 22 categories / 217 tools because it also counts the built-in Update / Uninstall menu.
 
 * * *
 
 Installation
 ------------
 
-### One-liner (recommended)
+Requires **Python 3.10+** on **Linux or macOS** (Kali, Parrot, Debian/Ubuntu, Arch, …). Windows is not supported — the app tells you so and exits. No `curl | bash`: every path below is a standard, verifiable install.
 
-curl -sSL https://raw.githubusercontent.com/Z4nzu/hackingtool/master/install.sh | sudo bash
+### From source with pipx (recommended)
 
-Handles everything — prerequisites, clone, venv, launcher.
+pipx installs hackingtool into its own isolated environment and puts the `hackingtool` command on your PATH, so you can launch it from any directory.
 
-### Manual
+# 1 — get the code
+git clone https://github.com/Z4nzu/hackingtool.git
+cd hackingtool
+
+# 2 — install it onto your PATH (isolated venv, no system Python touched)
+pipx install .
+
+# 3 — run it from anywhere
+hackingtool
+
+No pipx yet?
+
+# macOS
+brew install pipx && pipx ensurepath
+
+# Debian / Ubuntu / Kali
+sudo apt install pipx && pipx ensurepath
+
+Open a new shell after `pipx ensurepath` so the PATH change takes effect. To update later: `git pull && pipx install . --force`. To remove it: `pipx uninstall hackingtool`.
+
+Alternative: `uv tool install .` (same result, uses uv instead of pipx)
 
 git clone https://github.com/Z4nzu/hackingtool.git
 cd hackingtool
-sudo python3 install.py
+uv tool install .        # installs the \`hackingtool\` executable on your PATH
+hackingtool
 
-Then run: `hackingtool`
+Alternative: plain venv + pip (no PATH changes)
+
+git clone https://github.com/Z4nzu/hackingtool.git
+cd hackingtool
+python3 -m venv .venv && . .venv/bin/activate
+pip install .            # or: pip install -e .   for an editable dev install
+hackingtool
+
+The command is only on your PATH while that venv is activated.
+
+### For development
+
+uv creates the virtualenv and installs everything from `pyproject.toml` / `uv.lock` in one step:
+
+git clone https://github.com/Z4nzu/hackingtool.git
+cd hackingtool
+uv sync
+uv run hackingtool
+
+No uv yet? `pipx install uv` (or see the uv install docs).
+
+**Contributing?** `make setup` wires the pre-push hook and `make check` runs the full gate (lint + tests + catalog validation). See CONTRIBUTING.md.
 
 ### Docker
 
-# Build
-docker build -t hackingtool .
+Pull and run the published image:
 
-# Run (direct)
+docker run -it --rm hardikzinzu/hackingtool:latest
+
+Or build it locally from a checkout:
+
+git clone https://github.com/Z4nzu/hackingtool.git && cd hackingtool
+docker build -t hackingtool .
 docker run -it --rm hackingtool
 
-# Run (Compose — recommended)
-docker compose up -d
-docker exec -it hackingtool bash
+### Optional runtimes
 
-# Dev mode (live source mount)
-docker compose --profile dev up
-docker exec -it hackingtool-dev bash
-
-# Stop
-docker compose down        # stop container
-docker compose down -v     # also remove data volume
-
-### Requirements
+Some individual tools need a language runtime to install/run; the core app doesn't.
 
 Dependency
 
 Version
 
 Needed for
-
-Python
-
-3.10+
-
-Core
 
 Go
 
@@ -666,25 +305,317 @@ any
 
 haiti, evil-winrm
 
+tmux
+
+any
+
+background panes (`/run … &`, `/panes`, `/attach`)
+
 Docker
 
 any
 
 Mythic, MobSF (optional)
 
-pip install -r requirements.txt
+* * *
+
+Quick Commands
+--------------
+
+Launch `hackingtool` and type. There are only three kinds of input:
+
+You type
+
+It means
+
+Example
+
+`/…`
+
+a command you run
+
+`/search subdomain`
+
+`@…`
+
+a thing you name
+
+`@nmap`, `@tag:osint`
+
+anything else
+
+plain English "what I want to do"
+
+`crack a wifi handshake`
+
+  
+`@` completes tool names — `@tag:` completes tags, `/` completes commands.
+
+### Command reference
+
+Command
+
+Aliases
+
+What it does
+
+`/run <tool> [args] [&]`
+
+`/open`
+
+open a tool's menu; with a trailing `&` it runs in a background tmux pane instead (that's where `args` are used)
+
+`/search <keyword>`
+
+search tools by name, description or tag
+
+`/tags`
+
+list every tag with its tool count
+
+`/ai <goal>`
+
+`/recommend`, `/r`
+
+recommend tools for a goal
+
+`/goal <objective>`
+
+AI-plan an objective and run it step by step, with per-step confirmation
+
+`/find <need>`
+
+`/discover`
+
+find tools for a need — your catalog first, then GitHub (suggest-only)
+
+`/panes`
+
+`/jobs`
+
+list background panes
+
+`/attach`
+
+attach to the background session (`Ctrl-b` `d` to return)
+
+`/kill <label|all>`
+
+kill one background pane, or all of them
+
+`/config [key value]`
+
+view/change settings; `/config test` checks the AI connection, `/config github` checks the GitHub token
+
+`/skill`
+
+show the operator playbook
+
+`/update` · `/uninstall`
+
+`/remove`
+
+update system packages or hackingtool · remove hackingtool and its tools
+
+`/clear`
+
+`/cls`
+
+clear the screen
+
+`/back`
+
+`/b`
+
+leave the current tool and go back
+
+`/help`
+
+`/?`, `/h`
+
+quick reference card
+
+`/quit`
+
+`/q`, `/exit`
+
+exit (also `q`, `Ctrl-C`, `Ctrl-D`)
+
+`@<tool>`
+
+open a tool (case-insensitive, fuzzy fallback)
+
+`@tag:<tag>`
+
+list and pick from the tools carrying that tag
+
+Inside a category: `1–N` pick a tool · `97` install everything not yet installed · `98` archived tools · `99` back. Inside a tool: `1` install · `2` run · `c` ask for the exact command for your goal · `98` project page · `99` back.
+
+  
+`/help` — the same card, in the app.
+
+On a non-interactive terminal (or without `prompt_toolkit`) hackingtool falls back to the classic numbered menu, where `/` or `s` searches, `t` filters by tag, `r` or `a` recommends, `?` helps and `q` quits. Force it with `hackingtool --classic`.
+
+> **New here?** docs/HOW-TO-USE.md walks through each of these start to finish with numbered steps.
 
 * * *
 
-Star History
+Features
+--------
+
+### 🔎 `/find` — a tool for a need you don't have yet
+
+Searches the 215 curated tools first, then the GitHub search API, and ranks the results explainably. **Suggest-only** — it never clones, installs or runs anything — and it makes **zero model calls**.
+
+```
+/find crack a wpa handshake
+
+In your toolbox (vetted)
+  • aircrack-ng (WiFi security suite)
+  • Kismet (wireless detector / WIDS)
+  • Reaver (WPS PIN attack)
+  • WiGLE (wardriving map & API)
+  • hashcat example hashes (WPA mode 22000)
+
+Found on GitHub — NOT vetted by us
+
+  wifiphisher/wifiphisher  14713★  GPL-3.0
+    The Rogue Access Point Framework
+    14713★ · trusted author (ships in our catalog) · active · matches: security, wifi
+    git clone https://github.com/wifiphisher/wifiphisher
+  …
+```
+
+Press `a` to keep a result: it is saved to `~/.hackingtool/found.yaml` as a "Discovered tools" entry — title, tags, description, link, and **no install or run command**, so a discovered entry can never execute anything. It shows up in your menu and in `/search` next launch.
+
+Out-of-scope asks (jamming, DoS, mass-targeting, malware) are refused **before any network call**, with an authorized alternative where one exists. Defensive/DFIR phrasing is never refused.
+
+Works anonymously at 10 GitHub searches/minute; a **no-scope, no-permission** token raises that to 30 — see `/config github`.
+
+### 🎯 `/goal` — plan an objective, run it one step at a time
+
+```
+/goal find live subdomains of example.com
+```
+
+hackingtool drafts a short plan of real commands (with the reason for each step and an install hint for tools you don't have), asks you to confirm you are **authorized** to test the target, then walks the steps: `[y]` run · `[s]` skip · `[e]` edit · `[q]` abort. Every step runs list-form — never through a shell — and each goal gets a timestamped workspace under `~/.hackingtool/goals/` holding `plan.json`, a UTC-stamped `run.log`, and the raw output of each step.
+
+The model is called **once**, for planning; tool output is never fed back to it. With no model configured, `/goal` degrades to tool recommendations for the same objective.
+
+### 🧠 Recommendations — say what you want in plain English
+
+Bare text (or `/ai`) maps intent to tools. The model may only return tags from the fixed taxonomy, and the catalog resolves tags → tools, so a tool can never be invented; with no model reachable a stdlib keyword matcher answers instead.
+
+  
+`/ai` — pick one of the common tasks, or type the job in your own words.
+
+### 🏷 Tags and search
+
+`/tags` prints every tag in use with its live tool count; `@tag:<name>` opens the tools carrying it; `/search <keyword>` matches names, descriptions and tags.
+
+  
+`/tags` — 63 tags in use, with the number of tools behind each.
+
+### ▶ Background panes (tmux)
+
+Long scans shouldn't block your console. With tmux installed, `/run <tool> … &` opens a labeled window in one detached `hackingtool` session:
+
+```
+/run nmap -sV -oA scan 10.0.0.5 &
+▶ started 'nmap' in background — /attach to view
+```
+
+`/panes` lists them, `/attach` watches one (`Ctrl-b` `d` to come back), `/kill <label>` or `/kill all` stops them, and the status line under the prompt shows `▶ N running`. No tmux? It says so and opens the tool inline instead; disable it entirely with `/config background_runner off`.
+
+### ⚙ Settings and the AI layer
+
+`/config` opens a full-screen settings editor (`↑↓` move, `←→` change, `Enter` edit, `t` test the connection, `Esc` close); `/config <key> <value>` sets one key from the prompt. Settings live in `~/.hackingtool/config.json`.
+
+The AI layer is **opt-in and bring-your-own-key**: an OpenAI-compatible endpoint when `ai_base_url` + an API key are set, else a local Ollama, else nothing — every feature degrades to a deterministic offline behaviour instead of guessing. Your API key is written only to `~/.hackingtool/.env` (mode 600), never to `config.json`, and never printed back. `/config test` reports the real failure if a probe fails.
+
+### 📋 Headless engagements
+
+The same catalog drives a non-interactive orchestrator that normalizes tool output into one `findings.json`:
+
+hackingtool --engagement acme --targets example.com --pipeline recon
+hackingtool --engagement acme --report          # deterministic Markdown report
+hackingtool --engagement acme --ai-summary      # opt-in triage of the REAL findings
+hackingtool --engagement acme --ai-report       # opt-in narrative draft (report.draft.md)
+
+Out-of-scope targets are flagged and logged before anything runs, and the AI passes only ever summarize findings that exist.
+
+* * *
+
+Documentation
+-------------
+
+Document
+
+What's in it
+
+How to use hackingtool
+
+numbered walkthroughs: first run, `/find`, `/goal`, `/config`, background panes, headless mode
+
+Tool catalog
+
+every tool, by category, with links and tags
+
+Operator playbook
+
+the charter and grounding rules the AI layer runs under (also `/skill`)
+
+SECURITY.md
+
+disclosure policy, release verification, threat model
+
+CONTRIBUTING.md
+
+catalog-first tool additions, the gate your PR must pass
+
+* * *
+
+Contributing
 ------------
 
+New tools, fixes, and docs are all welcome — for **authorized security testing** only.
+
+> **The easy path:** most tools are just **one YAML entry** in `src/hackingtool/catalog/` — no Python needed. Tags come from a fixed taxonomy, so your tool is instantly discoverable and searchable.
+
+I want to…
+
+Do this
+
+💡 Suggest a tool
+
+Open a Tool Request issue
+
+➕ Add a tool
+
+Add a catalog entry (or a class for custom install/run logic), then open a PR with the template
+
+🐛 Report a bug
+
+Open a Bug report issue
+
+🔒 Report a vulnerability
+
+**Privately** — do not open a public issue; see SECURITY.md
+
+Before opening a PR, run **`make check`** (lint + tests + catalog validation) and use the title format `[New Tool] Name — Category`. The full guide — security rules and the one-entry catalog walkthrough — is in **CONTRIBUTING.md**.
+
+📄 Contributing · Security · Code of Conduct
+
 * * *
 
-Support
--------
+Support & Sponsor
+-----------------
 
-If this project helps you, consider buying me a coffee:
+hackingtool is free and open-source. If it saves you time on an engagement or helps you learn, please consider sponsoring — funding goes to tool curation, the AI layer, and keeping installs safe and current.
+
+ 
+
+⭐ Starring the repo is free and helps others discover the project.
 
 Social
 ------

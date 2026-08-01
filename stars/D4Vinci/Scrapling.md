@@ -1,6 +1,6 @@
 ---
 project: Scrapling
-stars: 71246
+stars: 72098
 description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!
 url: https://github.com/D4Vinci/Scrapling
 ---
@@ -71,6 +71,8 @@ _Do you want to show your ad here? Click here_
 Sponsors
 ========
 
+  
+
 _Do you want to show your ad here? Click here and choose the tier that suits you!_
 
 * * *
@@ -86,9 +88,12 @@ Key Features
 -   💾 **Pause & Resume**: Checkpoint-based crawl persistence. Press Ctrl+C for a graceful shutdown; restart to resume from where you left off.
 -   📡 **Streaming Mode**: Stream scraped items as they arrive via `async for item in spider.stream()` with real-time stats - ideal for UI, pipelines, and long-running crawls.
 -   🛡️ **Blocked Request Detection**: Automatic detection and retry of blocked requests with customizable logic.
+-   🚦 **AutoThrottle**: Stop guessing delays. The spider tunes the delay of each domain on its own from how fast the website responds, then doubles it (or waits what `Retry-After` asks) whenever the website starts blocking or rate-limiting you, and speeds back up once it stops.
 -   🤖 **Robots.txt Compliance**: Optional `robots_txt_obey` flag that respects `Disallow`, `Crawl-delay`, and `Request-rate` directives with per-domain caching.
 -   🧪 **Development Mode**: Cache responses to disk on the first run and replay them on subsequent runs - iterate on your `parse()` logic without re-hitting the target servers.
--   📦 **Built-in Export**: Export results through hooks and your own pipeline or the built-in JSON/JSONL with `result.items.to_json()` / `result.items.to_jsonl()` respectively.
+-   🧩 **Ready-made Spider Templates**: Skip the boilerplate with `CrawlSpider` for rule-based link following, `SitemapSpider` for sitemap/robots.txt-driven crawls, and `ShopifySpider` to pull every product out of any Shopify store through its JSON API, one item per variant.
+-   🔗 **Link Extraction**: A standalone `LinkExtractor` primitive with allow/deny patterns, domain filters, CSS/XPath scoping, extension filtering, and canonicalization - use it inside the templates or on its own.
+-   📦 **Built-in Export**: Export results through hooks and your own pipeline or the built-in JSON/JSONL/CSV/XML exporters with `result.items.to_json()`, `to_jsonl()`, `to_csv()`, and `to_xml()`.
 
 ### Advanced Websites Fetching with Session Support
 
@@ -99,6 +104,8 @@ Key Features
 -   **Proxy Rotation**: Built-in `ProxyRotator` with cyclic or custom rotation strategies across all session types, plus per-request proxy overrides.
 -   **Domain & Ad Blocking**: Block requests to specific domains (and their subdomains) or enable built-in ad blocking (~3,500 known ad/tracker domains) in browser-based fetchers.
 -   **DNS Leak Prevention**: Optional DNS-over-HTTPS support to route DNS queries through Cloudflare's DoH, preventing DNS leaks when using proxies.
+-   **Remote Browsers**: Instead of launching a browser locally, connect to one that's already running through CDP with `cdp_url`, whether it's on the same machine, another host, or a managed browser provider. You can also point any browser fetcher at your own Chromium build with `executable_path`.
+-   **Background API Capture**: Pass a URL pattern to `capture_xhr`, and all matching XHR/fetch responses the page makes while loading are collected for you as `Response` objects in `response.captured_xhr` - grab a site's API data without reverse-engineering the requests yourself.
 -   **Async Support**: Complete async support across all fetchers and dedicated async session classes.
 
 ### Adaptive Scraping & AI Integration
@@ -106,7 +113,8 @@ Key Features
 -   🔄 **Smart Element Tracking**: Relocate elements after website changes using intelligent similarity algorithms.
 -   🎯 **Smart Flexible Selection**: CSS selectors, XPath selectors, filter-based search, text search, regex search, and more.
 -   🔍 **Find Similar Elements**: Automatically locate elements similar to found elements.
--   🤖 **MCP Server to be used with AI**: Built-in MCP server for AI-assisted Web Scraping and data extraction. The MCP server features powerful, custom capabilities that leverage Scrapling to extract targeted content before passing it to the AI (Claude/Cursor/etc), thereby speeding up operations and reducing costs by minimizing token usage. (demo video)
+-   🤖 **MCP Server to be used with AI**: Built-in MCP server for AI-assisted Web Scraping and data extraction. The MCP server features powerful, custom capabilities that leverage Scrapling to extract targeted content before passing it to the AI (Claude/Cursor/etc), thereby speeding up operations and reducing costs by minimizing token usage. (demo video) It can also keep browser sessions open across calls, take page screenshots, and drive remote browsers over CDP.
+-   🧠 **Agent Skill**: A ready-to-install Agent Skill that teaches coding agents the whole library, so the code they write with Scrapling matches the current API instead of guessing.
 
 ### High-Performance & battle-tested Architecture
 
@@ -123,6 +131,7 @@ Key Features
 -   🧬 **Enhanced Text Processing**: Built-in regex, cleaning methods, and optimized string operations.
 -   📝 **Auto Selector Generation**: Generate robust CSS/XPath selectors for any element.
 -   🔌 **Familiar API**: Similar to Scrapy/BeautifulSoup with the same pseudo-elements used in Scrapy/Parsel.
+-   🤝 **Drop-in Scrapy Integration**: Already invested in Scrapy? Decorate any callback with `scrapling_response` to parse the responses you already fetch with Scrapling's parser, no rewrite needed.
 -   📘 **Complete Type Coverage**: Full type hints for excellent IDE support and code completion. The entire codebase is automatically scanned with **PyRight** and **MyPy** with each change.
 -   🔋 **Ready Docker image**: With each release, a Docker image containing all browsers is automatically built and pushed.
 
@@ -221,6 +230,15 @@ Pause and resume long crawls with checkpoints by running the spider like this:
 QuotesSpider(crawldir\="./crawl\_data").start()
 
 Press Ctrl+C to pause gracefully - progress is saved automatically. Later, when you start the spider again, pass the same `crawldir`, and it will resume from where it stopped.
+
+Or skip writing the crawling logic altogether with the ready-made templates, like pulling an entire Shopify store's catalog:
+
+from scrapling.spiders import ShopifySpider
+
+class MyStore(ShopifySpider):
+    target\_website \= "example.com"
+
+result \= MyStore().start()  \# Every product in the store, one item per variant
 
 ### Advanced Parsing & Navigation
 

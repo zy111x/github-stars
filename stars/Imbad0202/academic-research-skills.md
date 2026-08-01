@@ -1,6 +1,6 @@
 ---
 project: academic-research-skills
-stars: 39491
+stars: 40450
 description: Academic Research Skills for Claude Code: research → write → review → revise → finalize
 url: https://github.com/Imbad0202/academic-research-skills
 ---
@@ -93,7 +93,7 @@ Features at a glance
 
 -   **Deep Research** — 13-agent research team with Socratic guided mode, PRISMA systematic review, intent detection, dialogue health monitoring, optional cross-model DA, Semantic Scholar API verification.
 -   **Academic Paper** — 12-agent paper writing with Style Calibration, Writing Quality Check, LaTeX hardening, visualization, revision coaching, citation conversion, anti-leakage protocol, and VLM figure verification.
--   **Academic Paper Reviewer** — 7-agent multi-perspective peer review with 0–100 quality rubrics (EIC + 3 dynamic reviewers + Devil's Advocate), concession threshold protocol, attack intensity preservation, optional cross-model DA critique / calibration, R&R traceability matrix, read-only constraint.
+-   **Academic Paper Reviewer** — 7-agent multi-perspective peer review with 0–100 quality rubrics (Journal-Fit Reviewer + 3 dynamic reviewers + Devil's Advocate), concession threshold protocol, attack intensity preservation, optional cross-model DA critique / calibration, R&R traceability matrix, read-only constraint.
 -   **Academic Pipeline** — 10-stage pipeline orchestrator with adaptive checkpoints, claim verification, Material Passport, optional `repro_lock`, optional cross-model integrity verification, mid-conversation reinforcement, and score trajectory tracking.
 -   **Data Access Level Metadata** (v3.3.2+) — every skill declares `data_access_level` (`raw` / `redacted` / `verified_only`); enforced by `scripts/check_data_access_level.py`. Pattern adapted from Anthropic's automated-w2s-researcher (2026). See `shared/ground_truth_isolation_pattern.md`.
 -   **Task Type Annotation** (v3.3.2+) — every skill declares `task_type` (`open-ended` or `outcome-gradable`). All current ARS skills are `open-ended`.
@@ -134,7 +134,7 @@ Stage 4.5: zero regressions confirmed
 
 Peer Review Round 1
 
-EIC + 3 Reviewers + Devil's Advocate
+Journal-Fit Reviewer + 3 Reviewers + Devil's Advocate
 
 Re-Review
 
@@ -233,7 +233,7 @@ You: "status"
 #### Academic Paper Reviewer (6 modes)
 
 ```
-"Review this paper"                                   → full mode (EIC + R1/R2/R3 + Devil's Advocate)
+"Review this paper"                                   → full mode (Journal-Fit Reviewer + R1/R2/R3 + Devil's Advocate)
 "Quick assessment of this paper"                      → quick mode
 "Guide me to improve this paper"                      → guided mode
 "Check the methodology"                               → methodology-focus mode
@@ -295,7 +295,7 @@ Per-agent responsibilities and per-stage artifacts now live in `docs/ARCHITECTUR
 
 ### Academic Paper Reviewer (v1.10.0)
 
-7-agent multi-perspective review with **0-100 quality rubrics**. Modes: full, re-review, quick, methodology-focus, guided, calibration. **Decision mapping:** ≥80 Accept, 65-79 Minor Revision, 50-64 Major Revision, <50 Reject. First-round review team vs. narrow re-review team boundary: see ARCHITECTURE.md §3 Stage 3 / Stage 3'.
+7-agent multi-perspective review with **0-100 quality rubrics**. Modes: full, re-review, quick, methodology-focus, guided, calibration. **Decision mapping:** ≥80 Accept, 65-79 Minor Revision, 50-64 Major Revision, <50 Reject. First-round review panel vs. contract-governed re-review dispatch boundary: see ARCHITECTURE.md §3 Stage 3 / Stage 3'.
 
 ### Academic Pipeline (v3.19.0)
 
@@ -389,6 +389,8 @@ Contributors
 **devCharlotte** — Contributor. Translated the Korean README (`README.ko-KR.md`) (PR #469).
 
 **Yaobin29** — Contributor. Proposed reviewer-response tooling in PR #433; the `deep-research three-way-scan` mode and the `academic-paper rebuttal-audit` mode (rescued from the PR's `audit` concept) were integrated from that contribution in v3.12.1.
+
+**ktao732084-arch** — Contributor. Expanded the `academic-paper` disclosure system with nine medical-publishing policy targets, target-specific required-fact intake, and fail-closed standalone rendering (Issue #596, PR #599).
 
 * * *
 
@@ -652,7 +654,7 @@ Integrates insights from Lu et al. (2026, _Nature_ 651:914-919) — the first en
 
 -   **7-mode AI Research Failure Mode Checklist** — blocks pipeline at Stage 2.5/4.5 on suspected implementation bugs, hallucinated results, shortcut reliance, bug-as-insight, methodology fabrication, frame-lock. Extends existing 5-type citation hallucination taxonomy.
 -   **Reviewer Calibration Mode** (academic-paper-reviewer v1.8) — opt-in FNR/FPR/balanced-accuracy measurement against user-supplied gold set. 5× ensembling, cross-model default-on, session-scoped confidence disclosure.
--   **Disclosure Mode** (academic-paper v2.9) — venue-specific AI-usage statement generator. v1 covers ICLR, NeurIPS, Nature, Science, ACL, EMNLP.
+-   **Disclosure Mode** (academic-paper v2.9) — the default venue path returns `REQUIRED`, `ACTION_ONLY`, `NOT_REQUIRED`, or `UNKNOWN` applicability plus an explicit typed halt status when needed; policy-anchor invocations use their separate anchor-specific renderer. v1 covers ICLR, NeurIPS, Nature, Science, ACL, EMNLP. (Since expanded: the v2 database (#596) adds 9 medical-publishing policy targets — ICMJE, NEJM, The Lancet, JAMA, BMJ, PLOS, Frontiers, plus the database's first two Chinese-language policy targets: the publisher-wide 中华护理杂志社 entry and the journal 国际眼科杂志.)
 -   **Early-Stopping Criterion** (academic-pipeline v3.1) — convergence check + budget transparency at pipeline start.
 -   **Fidelity-Originality Mode Spectrum** — classifies all modes across 3 skills per Lu 2026 Fig 1c.
 -   New versions: academic-paper v2.9, academic-paper-reviewer v1.8, academic-pipeline v3.1

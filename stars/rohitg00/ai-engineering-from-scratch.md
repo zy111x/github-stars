@@ -1,9 +1,12 @@
 ---
 project: ai-engineering-from-scratch
-stars: 43462
+stars: 45434
 description: Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
+
+**Read in your language:** 简体中文 · हिन्दी · Español · العربية · Türkçe  
+machine-translated by CI to the `translations` branch; English is canonical. See docs/i18n.md.
 
 From the creator of Agent Memory - #1 Persistent memory ⭐ which naturally works with any agents or chat assistants.
 -------------------------------------------------------------------------------------------------------------------

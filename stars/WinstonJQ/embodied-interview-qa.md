@@ -1,6 +1,6 @@
 ---
 project: embodied-interview-qa
-stars: 118
+stars: 127
 description: 具身智能高频面试题库
 url: https://github.com/WinstonJQ/embodied-interview-qa
 ---

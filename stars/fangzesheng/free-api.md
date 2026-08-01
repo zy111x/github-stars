@@ -1,6 +1,6 @@
 ---
 project: free-api
-stars: 16167
+stars: 16182
 description: 收集免费的接口服务,做一个api的搬运工
 url: https://github.com/fangzesheng/free-api
 ---

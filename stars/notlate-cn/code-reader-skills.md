@@ -1,6 +1,6 @@
 ---
 project: code-reader-skills
-stars: 125
+stars: 128
 description: 🧠 Cognitive science-based Claude Skills for deep code understanding | 基于认知科学的源代码深度理解工具
 url: https://github.com/notlate-cn/code-reader-skills
 ---

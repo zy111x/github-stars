@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 2858
+stars: 2949
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -143,6 +143,7 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-08-01\]** 新增 ATEC2026 赛后复盘与开源方案教程：将 Task A/B/D/E 的任务边界、观测契约、环境视角调试、Task B 公开方案对照、评估与复现边界，以及中文 Workspace Memory 统一归入第 15 章，并配套 Task B 公开复现归档 与 Task E 开源资源。
 -   **\[2026-07-18\]** 新增 Dexbotic-RLinf 工程化 VLA 后训练导读：归入现有 VLA 章节，系统讲解 Dexbotic 如何把 RLinf 作为分布式强化学习后端，用 PPO 对 Dexbotic π0 / DM0 在 LIBERO 上做在线 fine-tuning，覆盖 Dexbotic 三层工具箱架构、RLinf frontend 与 Dexbotic backend 两种启动方式、`dexbotic_pi0` / `dexbotic_dm0` 动态模型注册、actor / rollout / env worker 分工、checkpoint 下载、TensorBoard 指标、standalone evaluation，以及该链路更适合作为工程化后训练导读而非轻量一键复现的边界。
 -   **\[2026-07-18\]** 新增 Robots That Know What to Ask 奖励对齐导读：归入 `05-具身场景的深度和强化学习`，系统拆解 RSS 2026 论文 _Robots That Know What to Ask: Recovering Misaligned Rewards through Targeted Explanations_，重点讲清 ASQ 如何从示教特征方差中识别欠指定奖励维度，用自然语言解释引导人类补充 corrective demonstrations，并覆盖 JacoRobot 仿真、Franka 真实用户实验、LLM filtering、demo-specific rationality / weighting、与 VLA / 世界模型后训练的接口，以及当前未检索到官方代码仓库的复现边界。
 -   **\[2026-07-18\]** 新增 GE-Sim 2.0 闭环视频世界模拟器导读：归入 `17-具身世界模型`，系统拆解 AgiBot Genie Envisioner World Simulator 2.0，重点讲清它如何从动作条件视频生成推进到可闭环调用的 learned world simulator，覆盖 Pixel-aligned Action Condition、Proprioceptive State Expert、World Judge、DMD2 加速、WorldArena 公共榜第一、2B G01 + OmniPicker 开源权重、`WorldModelEnv.step(actions)` 接口、pi05 policy demo rollout、成功/失败示例和当前 World Judge 尚需自接 RewardClient 或等待进一步发布的复现边界。

@@ -1,6 +1,6 @@
 ---
 project: edgetunnel
-stars: 41086
+stars: 41583
 description: edgetunnel2 VLESS/Trojan/SS 多功能面板
 url: https://github.com/cmliu/edgetunnel
 ---
@@ -172,7 +172,7 @@ Warning
 
 `1`或`true`
 
-**开发者模式**，默认关闭调试日志功能（console.log），设置`1`或`true`则开启调试日志功能
+**开发者模式**，默认**关闭**调试日志功能（console.log），设置`1`或`true`则**开启**调试日志功能
 
 **OFF\_LOG**
 
@@ -180,7 +180,7 @@ Warning
 
 `1`或`true`
 
-默认开启日志记录功能，设置`1`或`true`则关闭日志记录功能
+默认**开启**KV日志记录功能，设置`1`或`true`则**关闭**日志记录功能
 
 **BEST\_SUB**
 
@@ -188,7 +188,7 @@ Warning
 
 `1`或`true`
 
-默认关闭作为**优选订阅生成器**的功能，设置`1`或`true`则开启该功能
+默认**关闭**作为**优选订阅生成器**的功能，设置`1`或`true`则**开启**该功能
 
 **PRELOAD\_RACE\_DIAL**
 
@@ -196,7 +196,7 @@ Warning
 
 `1`或`true`
 
-默认关闭作为**预加载竞速拨号**的功能，设置`1`或`true`则开启该功能
+默认**关闭**作为**预加载竞速拨号**的功能，设置`1`或`true`则**开启**该功能
 
 **TCP\_CONCURRENT\_DIAL**
 
@@ -289,9 +289,8 @@ ClashBox
 
 ### 💖 赞助支持 - 提供云服务器维持订阅转换服务
 
--   Alice
--   EasyLinks
--   ZMTO(VTEXS)
+-   Yuusei Network
+-   VMRack
 
 ### 🛠 开源代码引用
 
@@ -312,6 +311,7 @@ ClashBox
 -   zhangtaile
 -   1345695
 -   ToiCF/GrainTCP
+-   xream
 
 * * *
 
