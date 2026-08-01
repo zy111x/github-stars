@@ -1,6 +1,6 @@
 ---
 project: Cap
-stars: 20343
+stars: 20442
 description: |-
     Open source Loom alternative. Beautiful, shareable screen recordings.
 url: https://github.com/CapSoftware/Cap

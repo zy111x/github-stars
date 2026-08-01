@@ -1,6 +1,6 @@
 ---
 project: firecrawl
-stars: 155978
+stars: 159074
 description: |-
     The API to search, scrape, and interact with the web at scale. 🔥
 url: https://github.com/firecrawl/firecrawl
@@ -66,7 +66,7 @@ _Pst. Hey, you, join our stargazers :)_
 - **Agent ready**: Connect Firecrawl to any AI agent or MCP client with a single command
 - **Media parsing**: Parse and extract content from web-hosted PDFs, DOCX, and more
 - **Actions**: Click, scroll, write, wait, and press before extracting content
-- **Open source**: Developed transparently and collaboratively — [join our community](https://github.com/firecrawl/firecrawl)
+- **Open source**: Developed transparently and collaboratively — [join our community](https://discord.gg/firecrawl)
 
 ---
 
@@ -197,7 +197,7 @@ Output:
 ```
 # Firecrawl
 
-Firecrawl helps AI systems search, scrape, and interact with the web.
+Firecrawl helps AI agents search, scrape, and interact with the web.
 
 ## Features
 - Search: Find information across the web

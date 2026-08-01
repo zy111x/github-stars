@@ -1,8 +1,8 @@
 ---
 project: agenticSeek
-stars: 26687
+stars: 26718
 description: |-
-    Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity. Also checkout AgenticSeek successor 3Toks! https://github.com/Fosowl/3toks
+    Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.
 url: https://github.com/Fosowl/agenticSeek
 ---
 

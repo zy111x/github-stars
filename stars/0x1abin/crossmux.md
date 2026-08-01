@@ -1,6 +1,6 @@
 ---
 project: crossmux
-stars: 71
+stars: 83
 description: |-
     CrossMux is a community fork of CrossPoint Reader that turns the device into more than a reader — it adds an Apps hub of mini-games and tools, richer standby faces, and a first-class Simplified Chinese build.
 url: https://github.com/0x1abin/crossmux
@@ -12,7 +12,7 @@ url: https://github.com/0x1abin/crossmux
 
 **CrossMux** is a community fork of [CrossPoint Reader](https://github.com/crosspoint-reader/crosspoint-reader) that turns the device into more than a reader — it adds an Apps hub of mini-games and tools, richer standby faces, and a first-class Simplified Chinese build.
 
-**Version:** CrossMux 1.4.1 (based on CrossPoint Reader 1.4.1 plus upstream `develop` through `63eda54e`)
+**Version:** CrossMux 1.5.3 (based on CrossPoint Reader 1.5.0 plus upstream `develop` through `9163149a`)
 
 **Now running on:** ESP32C3-based Xteink [X4](https://www.xteink.com/products/xteink-x4) and [X3](https://www.xteink.com/products/xteink-x3).
 
@@ -20,12 +20,18 @@ url: https://github.com/0x1abin/crossmux
 
 What CrossMux adds on top of upstream:
 
-- **Apps hub** (the `Apps` menu): 2048, Minesweeper, Sudoku, Gomoku (五子棋), Chinese Chess / Xiangqi (象棋), and a procedural "Ugly Avatar" generator. The menu paginates with page dots once the apps overflow a single screen.
-- **WeRead Copilot** (微信读书): browse your shelf, notes, and reviews with an SD-backed offline cache and bulk sync.
+- **Apps hub** (the `Apps` menu): 2048, Minesweeper, Sudoku, Gomoku (五子棋), Chinese Chess / Xiangqi (象棋), a procedural "Ugly Avatar" generator, and **AirPage** — scan its QR upload page, then fetch and display BMP or JPEG cloud images manually or through foreground-only live MQTT push. AirPage always opens on the QR page and silently connects saved Wi-Fi, but connecting or reconnecting never fetches by itself; only Refresh or a live push starts a download. The mapped bottom actions open Settings, browse the latest 20 delivered images, or Refresh, with the side keys mirroring image/refresh navigation. Images use the EPUB aspect-fit, centered 4-level grayscale path and can be selected as the custom sleep screen, optionally after every new delivery. Failed refreshes keep the previous image, while repeated live connection failures pause after two minutes so normal auto-sleep can resume. The menu paginates with page dots once the apps overflow a single screen.
+- **WeRead** (微信读书): scan to sign in, browse your shelf, download books, read them offline as EPUBs, and sync reading progress. The reader keeps one **Sync Progress** action: recognized standard WeRead books use WeRead sync, while other EPUBs keep KOReader sync. New WeRead downloads also make a best-effort cloud-progress fetch before caching content so the first open can start at the remote position.
 - **Reading analytics**: reading stats, a monthly reading heatmap, a reading profile, and achievements — backed by an SD-stored JSON history.
-- **Standby faces**: a hand-drawn "sloppy" clock and a Chinese almanac/calendar face (老黄历), plus **AirPage** — a cloud-backed face that shows a QR code to its upload page and fetches a cloud-rendered image over Wi-Fi (manual or live MQTT push), shown full-screen in 4-level grayscale and cached on SD. Optional 4-level grayscale and inverse display modes throughout.
+- **Standby faces**: a hand-drawn "sloppy" clock and a Chinese almanac/calendar face (老黄历), with optional 4-level grayscale enhancement and inverse display.
 - **Simplified Chinese firmware** (`gh_release_cn`): Chinese UI + i18n, embedded CJK fonts, and CJK-aware EPUB layout (word breaking and line-break rules). See [Build the Simplified Chinese firmware](#build-the-simplified-chinese-firmware).
 - **Desktop / WebAssembly simulator** for developing and previewing the UI on the host.
+
+> **WeRead security notice:** WeRead uses an unofficial Web protocol that may
+> change without notice. Device builds encrypt traffic with wolfSSL but call
+> `setInsecure()`, so they do not verify the server CA or host identity and are
+> vulnerable to man-in-the-middle attacks. Use WeRead only on a trusted network.
+> The native simulator verifies certificates through libcurl's host trust store.
 
 ---
 

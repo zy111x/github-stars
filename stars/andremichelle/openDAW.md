@@ -1,6 +1,6 @@
 ---
 project: openDAW
-stars: 1927
+stars: 1945
 description: |-
     openDAW is a next-generation web-based Digital Audio Workstation (DAW)
 url: https://github.com/andremichelle/openDAW

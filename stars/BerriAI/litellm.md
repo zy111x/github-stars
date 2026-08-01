@@ -1,6 +1,6 @@
 ---
 project: litellm
-stars: 54687
+stars: 55288
 description: |-
     The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]
 url: https://github.com/BerriAI/litellm

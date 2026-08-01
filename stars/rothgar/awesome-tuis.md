@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 19893
+stars: 20001
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -48,6 +48,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [bottom](https://github.com/ClementTsang/bottom) A customizable graphical process/system monitor for the terminal.
 - [bpytop](https://github.com/aristocratos/bpytop) A Python-based system monitor with lots of information.
 - [btop++](https://github.com/aristocratos/btop) Resource monitor with extras
+- [bullmq-dash](https://github.com/quanghuynt14/bullmq-dash) Dashboard for monitoring BullMQ queues, inspecting jobs, and retrying failures
 - [cgdb](https://github.com/cgdb/cgdb) Console front-end to the GNU debugger
 - [chdig](https://github.com/azat/chdig) Dig into ClickHouse with TUI interface
 - [cheatshh](https://github.com/AnirudhG07/cheatshh) A fzf TUI for managing custom made command-line cheatsheet for Unix.
@@ -394,6 +395,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [UniCurses](https://github.com/unicurses/unicurses) A **Python** module that is aimed at providing the Curses functionality on all operating systems.
 - [urwid](https://github.com/urwid/urwid) A console user interface library for **Python** on Linux, OSX, Cygwin or other unix-like OS.
 - [Vindauga](https://github.com/gabbpuy/vindauga) A **Python** implementation of the BSD licensed C++ Turbo Vision library.
+- [xnano](https://github.com/hsaeed3/xnano) A modern, lightweight and declarative **Python** TUI framework built on top of the Rust ratatui and tachyonfx libraries. ([docs](https://xnano.hammad.app))
 
 <h3>GO</h3>
 

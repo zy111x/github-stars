@@ -1,6 +1,6 @@
 ---
 project: core
-stars: 382
+stars: 383
 description: |-
     Lightweight syntax highlighter library for the Web and the Terminal
 url: https://github.com/speed-highlight/core
@@ -8,17 +8,21 @@ url: https://github.com/speed-highlight/core
 
 # Speed Highlight JS
 
-<p align="center">
+[![NPM Version](https://badge.fury.io/js/@speed-highlight%2Fcore.svg)](https://badge.fury.io/js/@speed-highlight%2Fcore) ![NPM Downloads](https://img.shields.io/npm/dm/%40speed-highlight%2Fcore)
+
+A JavaScript syntax highlighter for the web and the terminal
+
+- **Tiny** <small>(~2kB core, ~1kB per language)</small>
+- **Fast** <small>(outperforms Prism and highlight.js)</small>
+- **Simple** <small>(zero dependencies)</small>
+
+<p>
 	<a href="https://speed-highlight.github.io/core/examples">Demo</a> |
 	<a href="https://github.com/speed-highlight/core/wiki">Wiki</a> |
 	<a href="https://speed-highlight.github.io/core/docs">Docs</a>
 </p>
 
 ![Screenshot](https://raw.githubusercontent.com/speed-highlight/core/main/assets/screenshot.png)
-
-- 🪶 Lightweight (**~2kB** for the core + **~1kB** by language)
-- ⚡ Fast (faster than prism and highlight.js on average)
-- 🧹 Minimal Codebase
 
 ## Simple setup 🚀
 
@@ -61,6 +65,15 @@ Load custom language
 import { loadLanguage } from '../dist/index.js';
 
 loadLanguage('language-name', customLanguage);
+```
+
+Preload a bundled language
+
+```js
+import { loadLanguage } from '@speed-highlight/core';
+import * as js from '@speed-highlight/core/languages/js.js';
+
+loadLanguage('js', js);
 ```
 
 ---

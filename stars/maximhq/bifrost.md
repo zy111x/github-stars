@@ -1,6 +1,6 @@
 ---
 project: bifrost
-stars: 6792
+stars: 6961
 description: |-
     Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000+ models support & <100 µs overhead at 5k RPS.
 url: https://github.com/maximhq/bifrost
@@ -67,7 +67,7 @@ curl -X POST http://localhost:8080/v1/chat/completions \
 ## Enterprise Deployments
 
 Bifrost supports enterprise-grade, private deployments for teams running production AI systems at scale.
-In addition to private networking, custom security controls, and governance, enterprise deployments unlock advanced capabilities including adaptive load balancing, clustering, guardrails, MCP gateway and and other features designed for enterprise-grade scale and reliability.
+In addition to private networking, custom security controls, and governance, enterprise deployments unlock advanced capabilities including adaptive load balancing, clustering, guardrails, MCP gateway, and other features designed for enterprise-grade scale and reliability.
 
 <img src=".github/assets/features.png" alt="Book a Demo" width="100%" style="margin-top:5px;"/>
 
@@ -96,7 +96,7 @@ In addition to private networking, custom security controls, and governance, ent
 
 - **[Model Context Protocol (MCP)](https://docs.getbifrost.ai/mcp/overview)** - Enable AI models to use external tools (filesystem, web search, databases)
 - **[Semantic Caching](https://docs.getbifrost.ai/features/semantic-caching)** - Intelligent response caching based on semantic similarity to reduce costs and latency
-- **[Multimodal Support](https://docs.getbifrost.ai/quickstart/gateway/streaming)** - Support for text,images, audio, and streaming, all behind a common interface.
+- **[Multimodal Support](https://docs.getbifrost.ai/quickstart/gateway/streaming)** - Support for text, images, audio, and streaming, all behind a common interface.
 - **[Custom Plugins](https://docs.getbifrost.ai/enterprise/custom-plugins)** - Extensible middleware architecture for analytics, monitoring, and custom logic
 - **[Governance](https://docs.getbifrost.ai/features/governance/virtual-keys)** - Usage tracking, rate limiting, and fine-grained access control
 
@@ -128,8 +128,8 @@ bifrost/
 │   ├── schemas/         # Interfaces and structs used throughout Bifrost
 │   └── bifrost.go       # Main Bifrost implementation
 ├── framework/           # Framework components for data persistence
-│   ├── configstore/     # Configuration storages
-│   ├── logstore/        # Request logging storages
+│   ├── configstore/     # Configuration storage backends
+│   ├── logstore/        # Request logging storage backends
 │   └── vectorstore/     # Vector storages
 ├── transports/          # HTTP gateway and other interface layers
 │   └── bifrost-http/    # HTTP transport implementation
@@ -189,7 +189,7 @@ go get github.com/maximhq/bifrost/core
 - base_url = "https://api.openai.com"
 + base_url = "http://localhost:8080/openai"
 
-# Anthropic SDK  
+# Anthropic SDK
 - base_url = "https://api.anthropic.com"
 + base_url = "http://localhost:8080/anthropic"
 
@@ -249,7 +249,7 @@ Bifrost adds virtually zero overhead to your AI requests. In sustained 5,000 RPS
 - [AWS Bedrock SDK](https://docs.getbifrost.ai/integrations/bedrock-sdk/overview) - AWS Bedrock integration
 - [Google GenAI SDK](https://docs.getbifrost.ai/integrations/genai-sdk/overview) - Drop-in GenAI replacement
 - [LiteLLM SDK](https://docs.getbifrost.ai/integrations/litellm-sdk) - LiteLLM integration
-- [Langchain SDK](https://docs.getbifrost.ai/integrations/langchain-sdk) - Langchain integration
+- [LangChain SDK](https://docs.getbifrost.ai/integrations/langchain-sdk) - LangChain integration
 
 ### Enterprise
 
@@ -267,7 +267,7 @@ Bifrost adds virtually zero overhead to your AI requests. In sustained 5,000 RPS
 Get help with:
 
 - Quick setup assistance and troubleshooting
-- Best practices and configuration tips  
+- Best practices and configuration tips
 - Community discussions and support
 - Real-time help with integrations
 

@@ -1,6 +1,6 @@
 ---
 project: cua
-stars: 20585
+stars: 20835
 description: |-
     Scale computer-use 2.0 with open-source drivers, cross-OS fleets, and benchmarks for training, evaluation, and data generation.
 url: https://github.com/trycua/cua

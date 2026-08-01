@@ -1,6 +1,6 @@
 ---
 project: state-in-url
-stars: 417
+stars: 418
 description: |-
     Store any user state in query parameters; imagine JSON in a browser URL, while keeping types and structure of data, e.g.numbers will be decoded as numbers not strings. With TS validation. Shared state and URL state sync without any hassle or boilerplate. Supports Next.js@14-16, react-router@6-7, and Remix@2.
 url: https://github.com/asmyshlyaev177/state-in-url
@@ -18,6 +18,8 @@ English | [한국어](./README.KO.md) | [简体中文](./README.CN.md)
 </div>
 
 <div align="center">
+
+[![Available for hire](https://img.shields.io/badge/available%20for%20hire-senior%20react%20engineer-2ea44f?style=flat-square)](https://asmyshlyaev177.dev)
 
 [![npm](https://img.shields.io/npm/v/state-in-url.svg)](https://www.npmjs.com/package/state-in-url)
 ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/state-in-url.svg)
@@ -781,9 +783,29 @@ See [Contributing doc](CONTRIBUTING.md)
 
 This project is licensed under the [MIT license](LICENSE).
 
-## Personal website
+## Hire me
 
-[Portfolio site](https://asmyshlyaev177.dev)
+I'm **Aleksandr Smyshliaev** — sole author and maintainer of this library.
+Senior frontend engineer (React / Next.js / TypeScript, 8+ years), and
+**available for full-time remote work right now**.
+
+This library is the short version of what I'm good at: a typed API over a messy
+browser primitive, zero dependencies, and stability across Next.js, Remix and
+React Router through several React majors.
+
+- **Best at** — component libraries, state management, and test suites that
+  survive a refactor.
+- **Also mine** —
+  [react-horizontal-scrolling-menu](https://github.com/asmyshlyaev177/react-horizontal-scrolling-menu)
+  (~84k weekly installs),
+  [test-proxy-recorder](https://github.com/asmyshlyaev177/test-proxy-recorder)
+  (record/replay for Playwright),
+  [llm-queue](https://github.com/asmyshlyaev177/llm-queue).
+- **Where** — Tbilisi, Georgia (GMT+4), full CET overlap. Registered contractor
+  entity, so B2B engagement needs no employer-of-record setup.
+- **Reach me** — [asmyshlyaev177.dev](https://asmyshlyaev177.dev) ·
+  [asmyshlyaev177@gmail.com](mailto:asmyshlyaev177@gmail.com) ·
+  [LinkedIn](https://linkedin.com/in/asmyshlyaev177) · Telegram @asmyshlyaev177
 
 ## Inspiration
 

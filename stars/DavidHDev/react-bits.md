@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 44183
+stars: 44633
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building memorable websites.
 url: https://github.com/DavidHDev/react-bits
@@ -92,14 +92,6 @@ React Bits is proudly supported by these amazing sponsors:
     <img src="public/assets/sponsors/shadcnblocks.svg" alt="shadcnblocks.com" style="height: 50px;">
   </picture>
 </a>
-&nbsp;&nbsp;&nbsp;
-<a href="https://shadcnstudio.com/?utm_source=reactbits&utm_medium=sponsor&utm_campaign=diamond&ref=reactbits" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="public/assets/sponsors/shadcnstudio.svg">
-    <source media="(prefers-color-scheme: light)" srcset="public/assets/sponsors/shadcnstudio-lightmode.svg">
-    <img src="public/assets/sponsors/shadcnstudio.svg" alt="shadcn studio" style="height: 50px;">
-  </picture>
-</a>
 
 ### Silver
 
@@ -123,9 +115,11 @@ Please read the [contribution guide](https://github.com/DavidHDev/react-bits/blo
 
 ## 🙌 Contributors
 
-<a href="https://github.com/davidhdev/react-bits/graphs/contributors">
+<!-- <a href="https://github.com/davidhdev/react-bits/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=davidhdev/react-bits" />
-</a>
+</a> -->
+
+![Contributors](https://contrib-circles.vercel.app/davidhdev/react-bits?padding=16&borders=none&transparent=true)
 
 ## 👤 Maintainer
 

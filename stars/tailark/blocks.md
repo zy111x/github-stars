@@ -1,26 +1,70 @@
 ---
 project: blocks
-stars: 2257
+stars: 2271
 description: |-
     Shadcn marketing blocks
 url: https://github.com/tailark/blocks
 ---
 
-# Tailark
+# Tailark Registry
 
-Tailark is a design and component toolkit built for founders and teams who want to ship modern marketing websites faster. It provides a large collection of responsive, production-ready blocks built with shadcn/ui, Tailwind CSS, Next.js, and TypeScript. The components are fully open and editable, so they fit naturally into your codebase without introducing a new design system or locking you into fixed styling patterns.
+Open source shadcn/ui registry for Tailark blocks and pages.
 
-## Dusk Kit
+## Endpoints
 
-Dusk is a set of blocks designed to be stylish and elegant, ideal for dark mode websites while also working well in light themes.
+The registry ships two bases: **Base UI** (`base`) and **Radix UI** (`radix`). Base UI is the default, so it is served under `/r` without a base segment.
 
-![Dusk Image](apps/www/app/opengraph-image.png)
+Base UI (default):
 
-## Mist Kit
+- `/r/registry.json` returns the full Base UI registry index.
+- `/r/[name]` returns a single Base UI registry item with file contents.
 
-Mist offers a clean and friendly "notion-like" experience, designed specifically for light mode websites.
+Radix UI:
 
-![Mist Image](apps/www/app/(app)/mist/opengraph-image.png)
+- `/r/radix/registry.json` returns the full Radix UI registry index.
+- `/r/radix/[name]` returns a single Radix UI registry item with file contents.
+
+## Registry namespace
+
+Consumers install items through shadcn [registry namespace](https://ui.shadcn.com/docs/registry/namespace). Add the `@tailark-oss` namespace to your project's `components.json`. Base UI is the default namespace, and Radix UI is available under a dedicated one:
+
+### Default (Base UI)
+
+```json
+{
+  "registries": {
+    "@tailark-oss": "https://oss-tailark.com/r/{name}",
+  }
+}
+```
+
+### Radix UI
+
+```json
+{
+  "registries": {
+    "@tailark-oss": "https://oss-tailark.com/r/radix/{name}",
+  }
+}
+```
+
+Then install any block or page by name:
+
+```bash
+# Base UI (default)
+npx shadcn@latest add @tailark-oss/dusk-hero-section-one
+
+Browse available item names at `/r/registry.json` (Base UI) or `/r/radix/registry.json` (Radix UI).
+```
+## Development
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Open `http://localhost:3003/registry` to inspect the registry index.
+
 
 ## Start Using
 
@@ -33,6 +77,7 @@ Learn more about [Contributing](CONTRIBUTING.md).
 ## License
 
 Tailark is released under the [MIT License](LICENSE).
+
 
 <br />
 <br />

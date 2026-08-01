@@ -1,6 +1,6 @@
 ---
 project: bunchee
-stars: 1399
+stars: 1400
 description: |-
     Zero config bundler for npm packages
 url: https://github.com/huozhi/bunchee
@@ -30,6 +30,8 @@ By using the standard `exports` configuration as the single source of truth, **b
 
 ## Quick Start
 
+> Migrating from bunchee 6? See the [bunchee 7 migration guide](https://github.com/huozhi/bunchee/blob/main/docs/MIGRATION.md).
+
 ### Installation
 
 ```sh
@@ -52,7 +54,7 @@ cd ./coffee
 mkdir src && touch ./src/index.ts && touch package.json
 ```
 
-Add the exports in `package.json`.
+Add the package metadata in `package.json`.
 
 ```json5
 {
@@ -90,7 +92,7 @@ Here's a example of entry files and exports configuration:
 {
   "name": "coffee",
   "scripts": {
-    "build: "bunchee",
+    "build": "bunchee",
   },
   "type": "module",
   "exports": {
@@ -332,10 +334,9 @@ cd <project-root-dir>
 
 # Build based on the package.json configuration
 bunchee --runtime node -o ./dist/bundle.js
-bunchee -f esm -o --target es2022 ./dist/bundle.esm.js
 
 # Specify the input source file
-bunchee ./src/foo.ts -o ./dist/foo.js
+bunchee ./src/foo.ts -f esm --target es2022 -o ./dist/foo.js
 ```
 
 #### Specifying extra external dependencies
@@ -438,7 +439,6 @@ _NOTE_: When you're using `.mjs` or `.cjs` extensions with TypeScript and modern
   "files": ["dist"],
   "type": "module",
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     "import": {
@@ -579,8 +579,8 @@ await bundle(path.resolve('./src/index.ts'), {
   sourcemap: false, // Boolean
   external: [], // string[]
   format: 'esm', // 'esm' | 'cjs'
-  target: 'es2015', // ES syntax target
-  runtime: 'nodejs', // 'browser' | 'nodejs'
+  target: 'es2022', // ES syntax target
+  runtime: 'node', // 'browser' | 'node'
   cwd: process.cwd(), // string
   clean: true, // boolean
   tsconfig: 'tsconfig.json', // string

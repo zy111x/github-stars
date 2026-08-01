@@ -1,6 +1,6 @@
 ---
 project: cline
-stars: 65051
+stars: 65418
 description: |-
     Autonomous coding agent as an SDK, IDE extension, or CLI assistant.
 url: https://github.com/cline/cline
@@ -234,7 +234,7 @@ Run Cline with zero interaction for scripting and automation. Pipe input, get JS
 
 ```bash
 cline "Run tests and fix any failures"
-git diff origin/main | cline  "Review these changes for issues"
+git diff origin/main | cline "Review these changes for issues"
 cline --json "List all TODO comments" | jq -r 'select(.type == "agent_event" and .event.text) | .event.text'
 ```
 

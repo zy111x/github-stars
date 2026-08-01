@@ -13,7 +13,10 @@ url: https://github.com/netgoat-xyz/netgoat
 NetGoat is a self-hosted reverse proxy and traffic-policy agent written in Go. It can run from a local YAML configuration, consume snapshots from the companion control plane, and continue serving the last known-good configuration during an outage.
 
 > [!WARNING]
-> NetGoat is active alpha software. Review the sample configuration, use strong bootstrap credentials, and place administrative services behind TLS before exposing a deployment to the internet.
+> NetGoat is active alpha software. The shipped configuration contains no
+> routes. Review every upstream, use strong bootstrap credentials, and place
+> administrative services behind authenticated TLS before exposing a
+> deployment to the internet.
 
 ## Feature status
 
@@ -25,17 +28,17 @@ NetGoat is a self-hosted reverse proxy and traffic-policy agent written in Go. I
 | Traffic controls | Available | Global rate limiting, request queueing, bandwidth throttling, honeypot handling, and dynamic challenges. |
 | Shared response cache | Available | Bounded LRU/TTL cache for explicitly public responses, with HTTP freshness and revalidation safeguards. |
 | Local authentication | Available | Cookie or Basic authentication, per-user zero-trust challenge flags, and explicit secure bootstrap users. |
-| TLS termination | Available | Static certificate and key files configured at startup. |
+| TLS termination | Available | Static fallback, streamed per-domain/wildcard certificates, and atomic SNI selection. |
 | WebSocket proxying | Available | Upgrade connections are preserved by Go's reverse proxy. |
 | Metrics | Available | JSON and Prometheus endpoints for traffic, cache, block, latency, and proxy-error counters. |
 | AI request classifiers | Optional | Local GoatAI, Koda-WAF, and Koda-2 workers; model files and Python dependencies are required only when enabled. |
 | Control-plane recovery | Available | Polling with timeouts/backoff, atomic snapshot reconciliation, deduplication, and private on-disk recovery snapshots. |
 | Operational telemetry | Optional | Explicitly opt-in delivery to the companion telemetry server, with endpoint and ingestion-key configuration. |
-| Automatic certificate issuance/renewal | Planned | Streamed per-domain certificates and automatic ACME renewal are not wired into TLS serving yet. |
-| JavaScript/TypeScript dynamic rules | Planned | The current rules engine uses compiled expressions, not an embedded JS/TS runtime. |
-| Plugin/middleware SDK | Planned | No stable plugin API exists yet. |
-| Cloudflare Access, DNS, and tunnel management | Planned | The agent does not validate Cloudflare Access tokens or manage Cloudflare resources. |
-| Per-route cache/bandwidth policies | Planned | These controls are currently process-wide; WAF expressions can still scope decisions by host or path. |
+| Automatic certificate issuance/renewal | Available (opt-in) | Explicit ACME allow-list, HTTP-01 handler, encrypted persistent cache, and last-known-good certificate retention. |
+| JavaScript/TypeScript dynamic rules | Available (opt-in) | Isolated, bounded JS/TS request decisions with atomic last-known-good reload and fail-closed evaluation. |
+| Developer plugin catalog and middleware SDK | Available | Restart-only selections for exact compiled descriptors; v1 capability grants, lifecycle isolation, and no remote code/artifact loading. |
+| Cloudflare Access, DNS, and tunnel management | Available (opt-in) | Fail-closed Access JWT/JWKS verification plus bounded, dry-run-by-default startup reconciliation using an environment-only token. |
+| Per-route cache/bandwidth policies | Available | Route policies inherit global defaults, isolate cache/bandwidth state, and support explicit per-route overrides. |
 
 The dashboard shown by the wider NetGoat project belongs to the control plane. This agent exposes metrics APIs but does not embed that dashboard.
 
@@ -43,11 +46,11 @@ The dashboard shown by the wider NetGoat project belongs to the control plane. T
 
 Requirements:
 
-- Go 1.24 or newer
-- a C toolchain for the SQLite driver
+- Go 1.25 or newer
 - one or more reachable HTTP upstreams
 
-Clone the repository, edit the sample `routes` in `config.yml`, then run:
+Clone the repository, add the routes you intend to expose to `config.yml`,
+then run:
 
 ```sh
 go test ./...
@@ -74,6 +77,13 @@ Then send a request with the configured host:
 curl -H 'Host: app.localhost' http://127.0.0.1:8080/
 ```
 
+The listener accepts connections on all interfaces. A route to a loopback or
+private-network target makes that target reachable through NetGoat, so keep
+the listener behind an appropriate network boundary or enable authentication
+before adding such a route. The shipped `routes: {}` is intentionally empty:
+a fresh default deployment returns `404` for every Host instead of proxying to
+a local service.
+
 If the control plane is unavailable, NetGoat uses local routes and then the last valid recovery snapshot. Configure `api.url` as an empty string for a fully offline deployment.
 
 ## Authentication bootstrap
@@ -89,16 +99,21 @@ Then set `auth.enabled: true`. Bootstrap credentials are used only when the user
 
 ## Configuration highlights
 
-- `routes`: local fallback routes keyed by domain, wildcard/regex pattern, or path prefix.
+- `routes`: local fallback routes keyed by domain, wildcard/regex pattern, or path prefix; each route can override `policy.cache` and `policy.bandwidth`.
 - `api`: control-plane URL, key, poll interval, timeout, and maximum retry interval.
 - `health`: probe enablement, interval, timeout, and default path.
-- `cache`, `rate_limit`, `request_queue`, `bandwidth`: bounded process-wide traffic controls.
+- `cache`, `rate_limit`, `request_queue`, `bandwidth`: bounded global traffic defaults; cache and bandwidth can be overridden per route.
 - `metrics`: enables JSON at the configured path and Prometheus at `<path>.prom`.
-- `ssl`: static TLS certificate/key and listen port.
+- `ssl`: static fallback TLS, per-domain certificate selection, and optional ACME issuance/renewal.
+- `dynamic_rules`: bounded administrator-managed TypeScript/JavaScript request decisions.
+- `plugins`: restart-only catalog selections for middleware compiled into this exact agent build; `sha256` is the release descriptor fingerprint, not a downloaded artifact hash.
+- `cloudflare`: optional Access JWT enforcement and explicit DNS/tunnel startup reconciliation. Reconciliation defaults to dry-run.
 - `telemetry`: disabled by default; endpoint, shared ingestion key, and heartbeat interval.
 - `anomaly`, `koda_waf`, `koda_2`: optional local inference workers.
 
-Secrets may also be supplied through the environment. `API_STREAM_KEY` overrides the YAML control-plane key, while `TELEMETRY_ENDPOINT` and `TELEMETRY_INGEST_KEY` override their telemetry settings. Do not commit `.env`, model files, databases, recovery snapshots, or telemetry identifiers.
+Secrets may also be supplied through the environment. `API_STREAM_KEY` overrides the YAML control-plane key, `NETGOAT_ACME_CACHE_KEY` encrypts ACME state, and `CLOUDFLARE_API_TOKEN` is required for Cloudflare reconciliation. Do not commit `.env`, private keys, model files, databases, recovery snapshots, or telemetry identifiers.
+
+See the [operations guide](docs/operations.md) for policy precedence, ACME setup, and dynamic-rule safety boundaries; the [middleware SDK guide](docs/middleware-sdk.md) for trusted compiled-in extensions; and the [developer plugin catalog guide](docs/developer-plugins.md) for the restart-time selection and publisher trust boundary.
 
 ## Architecture
 
@@ -110,7 +125,7 @@ client -> NetGoat agent -> healthy upstream pool
               +------> telemetry-server (optional, opt-in)
 ```
 
-The agent's hot request path applies authentication and traffic controls, resolves a route, evaluates precompiled WAF rules, optionally runs enabled local classifiers, and proxies the request. Health checks and control-plane polling run in bounded background workers.
+The agent's hot request path optionally verifies Cloudflare Access, applies authentication and traffic controls, resolves a route, evaluates dynamic rules, precompiled WAF rules, and any selected compiled middleware, optionally runs enabled local classifiers, and proxies the request. Health checks and control-plane polling run in bounded background workers.
 
 The optional `docker-compose.yml` starts only a loopback-bound development MongoDB for `stream-server`; the Go agent itself does not require it. Export `MONGO_INITDB_ROOT_USERNAME` and `MONGO_INITDB_ROOT_PASSWORD` before running Compose so development credentials stay outside the repository.
 
