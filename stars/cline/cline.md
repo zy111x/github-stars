@@ -1,6 +1,6 @@
 ---
 project: cline
-stars: 65418
+stars: 65889
 description: |-
     Autonomous coding agent as an SDK, IDE extension, or CLI assistant.
 url: https://github.com/cline/cline

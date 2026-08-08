@@ -1,6 +1,6 @@
 ---
 project: etiket
-stars: 435
+stars: 442
 description: |-
     Zero-dependency barcode & QR code SVG, PNG generator. 40+ formats, styled QR codes, tree-shakeable. Pure TypeScript.
 url: https://github.com/productdevbook/etiket
@@ -36,36 +36,50 @@ npm install etiket
 ```
 
 ```ts
-import { barcode, qrcode } from "etiket";
+import { barcode, qrcode } from "etiket"
 
-const svg = barcode("Hello World");
-const qr = qrcode("https://example.com", { dotType: "dots", ecLevel: "H" });
+const svg = barcode("Hello World")
+const qr = qrcode("https://example.com", { dotType: "dots", ecLevel: "H" })
 ```
 
 ## CLI
 
 ```sh
+npx etiket list                       # every supported symbology
 npx etiket qr "Hello World" -o qr.svg
 npx etiket qr "Hello" --terminal
 npx etiket qr "Hello" --size 300 --ec H --dot-type dots
+npx etiket qr "Hello" -o qr.png       # .png output writes a PNG
 npx etiket barcode "4006381333931" --type ean13 --show-text -o barcode.svg
+npx etiket postal "SN34RD1A" --type rm4scc -o postal.svg
 npx etiket datamatrix "Hello" -o dm.svg
 npx etiket pdf417 "Hello" -o pdf.svg
 npx etiket aztec "Hello" -o aztec.svg
+npx etiket maxicode "Hello" -o maxi.svg
 npx etiket wifi "MyNetwork" "secret123" -o wifi.svg
+npx etiket contact "Ada Lovelace" --email ada@example.com -o card.svg
 ```
+
+Every symbology has a subcommand (`qr`, `microqr`, `rmqr`, `barcode`, `postal`,
+`datamatrix`, `pdf417`, `micropdf417`, `aztec`, `maxicode`, `dotcode`, `hanxin`,
+`codablockf`, `code16k`, `jabcode`) plus the `wifi`, `contact` and `link`
+helpers. Add `--png` or use a `.png` output path for raster output.
 
 ## Tree Shaking
 
 Import only what you need:
 
 ```ts
-import { barcode, barcodeDataURI, barcodeBase64 } from "etiket/barcode";
-import { qrcode, qrcodeDataURI, qrcodeBase64, qrcodeTerminal } from "etiket/qr";
-import { datamatrix, gs1datamatrix } from "etiket/datamatrix";
-import { pdf417 } from "etiket/pdf417";
-import { aztec } from "etiket/aztec";
-import { barcodePNG, qrcodePNG } from "etiket/png"; // PNG output
+import { barcode, barcodeDataURI, barcodeBase64 } from "etiket/barcode"
+import { postal, encodePostal } from "etiket/postal"
+import { qrcode, qrcodeDataURI, qrcodeBase64, qrcodeTerminal, microqr, rmqr } from "etiket/qr"
+import { datamatrix, gs1datamatrix } from "etiket/datamatrix"
+import { pdf417, micropdf417 } from "etiket/pdf417"
+import { aztec } from "etiket/aztec"
+import { maxicode, dotcode, hanxin, codablockf, code16k } from "etiket/2d"
+import { barcodePNG, qrcodePNG, postalPNG } from "etiket/png" // PNG output
+import { validateBarcode, validateQRInput } from "etiket/validators"
+import { EtiketError, InvalidInputError, CapacityError } from "etiket/errors"
 ```
 
 ## Supported Formats
@@ -103,45 +117,72 @@ import { barcodePNG, qrcodePNG } from "etiket/png"; // PNG output
 
 ### 2D Codes
 
-| Format             | Function              | Description                                 |
-| :----------------- | :-------------------- | :------------------------------------------ |
-| **QR Code**        | `qrcode()`            | Versions 1-40, all EC levels, all modes     |
-| **Micro QR**       | `encodeMicroQR()`     | M1-M4 (11x11 to 17x17)                      |
-| **Data Matrix**    | `datamatrix()`        | ECC 200, ASCII/C40/Text auto encoding       |
-| **GS1 DataMatrix** | `gs1datamatrix()`     | FNC1 + AI parsing                           |
-| **PDF417**         | `pdf417()`            | Text/Byte/Numeric, 9 EC levels, ISO-8859-15 |
-| **MicroPDF417**    | `encodeMicroPDF417()` | Compact PDF417 for small items              |
-| **Aztec**          | `aztec()`             | Compact + full-range, no quiet zone         |
-| **MaxiCode**       | `encodeMaxiCode()`    | 33×30 hexagonal, UPS shipping labels        |
-| **rMQR**           | `encodeRMQR()`        | Rectangular Micro QR (R7x43 to R17x139)     |
-| **Codablock F**    | `encodeCodablockF()`  | Stacked Code 128                            |
-| **Code 16K**       | `encodeCode16K()`     | Stacked barcode, 2-16 rows                  |
-| **DotCode**        | `encodeDotCode()`     | Checkerboard dots, high-speed printing      |
-| **Han Xin**        | `encodeHanXin()`      | Chinese market, 84 versions, 4 finders      |
-| **JAB Code**       | `encodeJABCode()`     | Polychrome (4/8 color), ISO/IEC 23634       |
+| Format             | Function          | Description                                 |
+| :----------------- | :---------------- | :------------------------------------------ |
+| **QR Code**        | `qrcode()`        | Versions 1-40, all EC levels, all modes     |
+| **Micro QR**       | `microqr()`       | M1-M4 (11x11 to 17x17)                      |
+| **Data Matrix**    | `datamatrix()`    | ECC 200, ASCII/C40/Text auto encoding       |
+| **GS1 DataMatrix** | `gs1datamatrix()` | FNC1 + AI parsing                           |
+| **PDF417**         | `pdf417()`        | Text/Byte/Numeric, 9 EC levels, ISO-8859-15 |
+| **MicroPDF417**    | `micropdf417()`   | Compact PDF417 for small items              |
+| **Aztec**          | `aztec()`         | Compact + full-range, no quiet zone         |
+| **MaxiCode**       | `maxicode()`      | 33×30 hexagonal, UPS shipping labels        |
+| **rMQR**           | `rmqr()`          | Rectangular Micro QR (R7x43 to R17x139)     |
+| **Codablock F**    | `codablockf()`    | Stacked Code 128                            |
+| **Code 16K**       | `code16k()`       | Stacked barcode, 2-16 rows                  |
+| **DotCode**        | `dotcode()`       | Checkerboard dots, high-speed printing      |
+| **Han Xin**        | `hanxin()`        | Chinese market, 84 versions, 4 finders      |
+| **JAB Code**       | `jabcode()`       | Polychrome (4/8 color), ISO/IEC 23634       |
 
-### 4-State Postal Barcodes
+Each also has a raw encoder (`encodeMicroQR`, `encodeMaxiCode`, …) and, except
+for JAB Code, a `*PNG()` variant.
 
-| Format             | Function                | Description           |
-| :----------------- | :---------------------- | :-------------------- |
-| **RM4SCC**         | `encodeRM4SCC()`        | Royal Mail (UK)       |
-| **KIX**            | `encodeKIX()`           | PostNL (Netherlands)  |
-| **Australia Post** | `encodeAustraliaPost()` | Australia Post        |
-| **Japan Post**     | `encodeJapanPost()`     | Japan Post (Kasutama) |
-| **USPS IMb**       | `encodeIMb()`           | Intelligent Mail (US) |
+### Postal Barcodes
+
+Postal symbologies are height-modulated — the data lives in each bar's vertical
+extent, not its width — so they have their own encoder and renderer.
+
+| Format             | `type`    | Description                   |
+| :----------------- | :-------- | :---------------------------- |
+| **POSTNET**        | `postnet` | USPS ZIP (5, 9 or 11 digits)  |
+| **PLANET**         | `planet`  | USPS PLANET (11 or 13 digits) |
+| **RM4SCC**         | `rm4scc`  | Royal Mail (UK)               |
+| **KIX**            | `kix`     | PostNL (Netherlands)          |
+| **Australia Post** | `auspost` | Australia Post                |
+| **Japan Post**     | `jppost`  | Japan Post (Kasutama)         |
+| **USPS IMb**       | `imb`     | Intelligent Mail (US)         |
+
+```ts
+import { postal, encodePostal, postalPNG } from "etiket"
+
+postal("12345-6789", { type: "postnet" }) // SVG
+postal("SN34RD1A", { type: "rm4scc" })
+postal("12345678", { type: "auspost", fcc: "59" })
+postal("01234567094987654321", { type: "imb", routingCode: "01234567891" })
+
+postalPNG("12345", { type: "postnet" }) // Uint8Array
+
+// Raw bar states: 'T' | 'A' | 'D' | 'F' (4-state), or 1 / 0 (POSTNET, PLANET)
+const bars = encodePostal("SN34RD1A", { type: "rm4scc" })
+```
+
+`barcode()` accepts `postnet` and `planet` and routes them to the postal
+renderer automatically. The per-format raw encoders (`encodeRM4SCC`,
+`encodeKIX`, `encodeAustraliaPost`, `encodeJapanPost`, `encodeIMb`,
+`encodePOSTNET`, `encodePLANET`) remain available.
 
 ## Usage
 
 ### Barcodes
 
 ```ts
-import { barcode } from "etiket";
+import { barcode } from "etiket"
 
-barcode("Hello World"); // Code 128 (default)
-barcode("4006381333931", { type: "ean13", showText: true });
-barcode("00012345678905", { type: "itf14", bearerBars: true });
-barcode("(01)12345678901234(17)260101", { type: "gs1-128" });
-barcode("HELLO", { type: "code39", code39CheckDigit: true });
+barcode("Hello World") // Code 128 (default)
+barcode("4006381333931", { type: "ean13", showText: true })
+barcode("00012345678905", { type: "itf14", bearerBars: true })
+barcode("(01)12345678901234(17)260101", { type: "gs1-128" })
+barcode("HELLO", { type: "code39", code39CheckDigit: true })
 ```
 
 | Option         | Type                            | Default       | Description                 |
@@ -172,10 +213,10 @@ barcode("HELLO", { type: "code39", code39CheckDigit: true });
 ### QR Codes
 
 ```ts
-import { qrcode } from "etiket";
+import { qrcode } from "etiket"
 
-qrcode("https://example.com");
-qrcode("Hello", { size: 300, ecLevel: "H", dotType: "rounded" });
+qrcode("https://example.com")
+qrcode("Hello", { size: 300, ecLevel: "H", dotType: "rounded" })
 
 // With gradient
 qrcode("Test", {
@@ -187,7 +228,7 @@ qrcode("Test", {
       { offset: 1, color: "#0000ff" },
     ],
   },
-});
+})
 
 // With corner styling
 qrcode("Test", {
@@ -197,7 +238,7 @@ qrcode("Test", {
     topRight: { outerShape: "extra-rounded" },
     bottomLeft: { outerShape: "dots" },
   },
-});
+})
 ```
 
 | Option           | Type                                              | Default    | Description            |
@@ -225,12 +266,44 @@ qrcode("Test", {
 
 ### 2D Codes
 
-```ts
-import { datamatrix, pdf417, aztec } from "etiket";
+Every 2D, stacked and polychrome symbology has a high-level function returning
+SVG:
 
-datamatrix("Hello World");
-pdf417("Hello World", { ecLevel: 4, columns: 5 });
-aztec("Hello World", { ecPercent: 33 });
+```ts
+import {
+  datamatrix,
+  gs1datamatrix,
+  pdf417,
+  micropdf417,
+  aztec,
+  microqr,
+  rmqr,
+  maxicode,
+  dotcode,
+  hanxin,
+  codablockf,
+  code16k,
+  jabcode,
+} from "etiket"
+
+datamatrix("Hello World")
+gs1datamatrix("(01)12345678901231")
+pdf417("Hello World", { ecLevel: 4, columns: 5 })
+micropdf417("Hello", { columns: 2 })
+aztec("Hello World", { ecPercent: 33 })
+
+microqr("12345", { version: 3 })
+rmqr("Hello", { ecLevel: "H" })
+maxicode("Hello", { mode: 2, postalCode: "123456789", countryCode: 840 })
+dotcode("Hello")
+hanxin("Hello", { ecLevel: 3 })
+
+// Stacked linear symbologies (rows taller than modules are wide)
+codablockf("Hello World", { columns: 8 })
+code16k("Hello World")
+
+// Polychrome
+jabcode("Hello", { colors: 8 })
 ```
 
 ## Output Formats
@@ -248,31 +321,54 @@ import {
   qrcodePNG,
   barcodePNGDataURI,
   qrcodePNGDataURI,
-} from "etiket";
+} from "etiket"
 
 // SVG
-const svg = qrcode("Hello"); // SVG string
-const uri = qrcodeDataURI("Hello"); // data:image/svg+xml,...
-const b64 = qrcodeBase64("Hello"); // data:image/svg+xml;base64,...
-const term = qrcodeTerminal("Hello"); // Terminal (UTF-8 blocks)
+const svg = qrcode("Hello") // SVG string
+const uri = qrcodeDataURI("Hello") // data:image/svg+xml,...
+const b64 = qrcodeBase64("Hello") // data:image/svg+xml;base64,...
+const term = qrcodeTerminal("Hello") // Terminal (UTF-8 blocks)
 
-// PNG (zero-dependency raster output)
-const png = qrcodePNG("Hello"); // Uint8Array
-const pngUri = qrcodePNGDataURI("Hello"); // data:image/png;base64,...
-const barPng = barcodePNG("12345", { type: "code128" }); // Uint8Array
+// PNG (zero-dependency raster output — no canvas, no native deps)
+const png = qrcodePNG("Hello") // Uint8Array
+const pngUri = qrcodePNGDataURI("Hello") // data:image/png;base64,...
+const barPng = barcodePNG("12345", { type: "code128" }) // Uint8Array
+```
+
+PNG output is available for every format except JAB Code, each with a matching
+`*PNGDataURI` variant:
+
+`barcodePNG`, `postalPNG`, `qrcodePNG`, `microqrPNG`, `rmqrPNG`,
+`datamatrixPNG`, `gs1datamatrixPNG`, `pdf417PNG`, `micropdf417PNG`, `aztecPNG`,
+`maxicodePNG`, `dotcodePNG`, `hanxinPNG`, `codablockfPNG`, `code16kPNG`.
+
+### Raw Encoding
+
+`encode()` returns the underlying data for any symbology without rendering:
+
+```ts
+import { encode } from "etiket"
+
+const result = encode("Hello", { type: "qr", qr: { ecLevel: "H" } })
+
+if (result.type === "1d")
+  result.bars // bar/space widths
+else if (result.type === "2d")
+  result.matrix // boolean[][]
+else result.bars // postal bar states
 ```
 
 ## Convenience Helpers
 
 ```ts
-import { wifi, email, sms, geo, url, phone, vcard, mecard, event } from "etiket";
+import { wifi, email, sms, geo, url, phone, vcard, mecard, event } from "etiket"
 
-wifi("MyNetwork", "password123"); // WiFi QR
-email("test@example.com"); // mailto: QR
-sms("+1234567890", "Hello!"); // SMS QR
-geo(37.7749, -122.4194); // Location QR
-url("https://example.com"); // URL QR
-phone("+1234567890"); // tel: QR
+wifi("MyNetwork", "password123") // WiFi QR
+email("test@example.com") // mailto: QR
+sms("+1234567890", "Hello!") // SMS QR
+geo(37.7749, -122.4194) // Location QR
+url("https://example.com") // URL QR
+phone("+1234567890") // tel: QR
 
 // vCard QR
 vcard({
@@ -281,10 +377,10 @@ vcard({
   phone: "+1234567890",
   email: "john@example.com",
   org: "Acme Inc",
-});
+})
 
 // MeCard QR (simpler, used by Android)
-mecard({ name: "John Doe", phone: "+1234567890", email: "john@example.com" });
+mecard({ name: "John Doe", phone: "+1234567890", email: "john@example.com" })
 
 // Calendar event QR
 event({
@@ -292,17 +388,43 @@ event({
   start: "2026-04-01T10:00:00",
   end: "2026-04-01T11:00:00",
   location: "Office",
-});
+})
+```
+
+## Batch Generation
+
+```ts
+import { barcodes, barcodeSheet, qrcodeSheet } from "etiket"
+
+// Many symbols, one call, shared options
+const labels = barcodes(["SKU-001", "SKU-002", "SKU-003"], {
+  type: "code128",
+  height: 50,
+})
+
+// Or a single SVG document holding a grid of them — a label sheet
+const sheet = barcodeSheet(
+  orders.map((o) => o.tracking),
+  {
+    type: "code128",
+    columns: 3,
+    gap: 12,
+    labels: orders.map((o) => o.reference),
+  },
+)
+
+// Progress on a long batch
+qrcodeSheet(tickets, { columns: 4, onProgress: (done, total) => bar.update(done / total) })
 ```
 
 ## Validation
 
 ```ts
-import { validateBarcode, isValidInput, validateQRInput } from "etiket";
+import { validateBarcode, isValidInput, validateQRInput } from "etiket"
 
-validateBarcode("4006381333931", "ean13"); // { valid: true }
-validateBarcode("ABC", "ean13"); // { valid: false, error: '...' }
-isValidInput("HELLO", "code39"); // true
+validateBarcode("4006381333931", "ean13") // { valid: true }
+validateBarcode("ABC", "ean13") // { valid: false, error: '...' }
+isValidInput("HELLO", "code39") // true
 ```
 
 ## Swiss QR Code
@@ -310,7 +432,7 @@ isValidInput("HELLO", "code39"); // true
 Generate QR-bill payment codes (mandatory in Switzerland since 2022):
 
 ```ts
-import { swissQR } from "etiket";
+import { swissQR } from "etiket"
 
 swissQR({
   iban: "CH4431999123000889012",
@@ -319,7 +441,7 @@ swissQR({
   currency: "CHF",
   reference: "210000000003139471430009017",
   referenceType: "QRR",
-});
+})
 ```
 
 ## Raw Encoders
@@ -339,19 +461,19 @@ import {
   renderMatrixSVG,
   renderBarcodePNG,
   renderMatrixPNG,
-} from "etiket";
+} from "etiket"
 
-const bars = encodeCode128("data"); // number[] (bar/space widths)
-const matrix = encodeQR("data"); // boolean[][] (QR matrix)
-const dm = encodeDataMatrix("data"); // boolean[][] (Data Matrix)
+const bars = encodeCode128("data") // number[] (bar/space widths)
+const matrix = encodeQR("data") // boolean[][] (QR matrix)
+const dm = encodeDataMatrix("data") // boolean[][] (Data Matrix)
 
 // SVG rendering
-const svg = renderBarcodeSVG(bars, { height: 100 });
-const qrSvg = renderQRCodeSVG(matrix, { size: 400, dotType: "dots" });
+const svg = renderBarcodeSVG(bars, { height: 100 })
+const qrSvg = renderQRCodeSVG(matrix, { size: 400, dotType: "dots" })
 
 // PNG rendering
-const png = renderBarcodePNG(bars, { height: 100, scale: 2 });
-const qrPng = renderMatrixPNG(matrix, { moduleSize: 10, margin: 4 });
+const png = renderBarcodePNG(bars, { height: 100, scale: 2 })
+const qrPng = renderMatrixPNG(matrix, { moduleSize: 10, margin: 4 })
 ```
 
 ## Industry Standards
@@ -363,7 +485,7 @@ import {
   gs1DigitalLink,
   encodeHIBCPrimary,
   encodeHIBCSecondary,
-} from "etiket";
+} from "etiket"
 
 // Swiss QR-bill (mandatory in Switzerland since 2022)
 swissQR({
@@ -371,21 +493,21 @@ swissQR({
   creditor: { name: "Max Muster", postalCode: "8000", city: "Zürich", country: "CH" },
   amount: 1949.75,
   currency: "CHF",
-});
+})
 
 // GS1 DataMatrix (healthcare, supply chain)
-gs1datamatrix("(01)12345678901234(17)260101(10)BATCH01");
+gs1datamatrix("(01)12345678901234(17)260101(10)BATCH01")
 
 // GS1 Digital Link (2027 retail migration)
-gs1DigitalLink({ gtin: "09520123456788", batch: "ABC123", serial: "12345" });
+gs1DigitalLink({ gtin: "09520123456788", batch: "ABC123", serial: "12345" })
 
 // HIBC (medical device labeling, FDA UDI)
-const hibc = encodeHIBCPrimary("A123", "PROD456");
-barcode(hibc, { type: "code128" }); // Encode in any symbology
+const hibc = encodeHIBCPrimary("A123", "PROD456")
+barcode(hibc, { type: "code128" }) // Encode in any symbology
 
 // ISBT 128 (blood bank labeling, ISO 7064 Mod 37-2 check character)
-const din = encodeISBT128DIN("US", "12345", "26", "000001");
-barcode(din, { type: "code128" });
+const din = encodeISBT128DIN("US", "12345", "26", "000001")
+barcode(din, { type: "code128" })
 
 // MaxiCode (UPS shipping labels)
 const mc = encodeMaxiCode("Test shipment", {
@@ -393,7 +515,7 @@ const mc = encodeMaxiCode("Test shipment", {
   postalCode: "12345",
   countryCode: 840,
   serviceClass: 1,
-});
+})
 ```
 
 ## SVG Accessibility
@@ -406,15 +528,15 @@ barcode("123456789", {
   ariaLabel: "EAN-13 barcode for product 123456789",
   title: "Product Barcode",
   desc: "EAN-13 barcode encoding the GTIN 123456789",
-});
+})
 
 qrcode("https://example.com", {
   ariaLabel: "QR code linking to example.com",
   title: "Website QR Code",
-});
+})
 
 // CSS currentColor support for theme-aware barcodes
-barcode("HELLO", { color: "currentColor", background: "transparent" });
+barcode("HELLO", { color: "currentColor", background: "transparent" })
 ```
 
 ## Framework Integration
@@ -424,7 +546,7 @@ etiket generates plain SVG strings — no DOM required. Works with any framework
 ### React / Next.js
 
 ```tsx
-import { qrcode } from "etiket";
+import { qrcode } from "etiket"
 
 function QRCode({ url }: { url: string }) {
   const svg = qrcode(url, {
@@ -436,29 +558,29 @@ function QRCode({ url }: { url: string }) {
       topRight: { outerShape: "dots", innerShape: "dots" },
       bottomLeft: { outerShape: "dots", innerShape: "dots" },
     },
-  });
+  })
 
-  return <div dangerouslySetInnerHTML={{ __html: svg }} />;
+  return <div dangerouslySetInnerHTML={{ __html: svg }} />
 }
 ```
 
 Or use a data URI for `<img>`:
 
 ```tsx
-import { qrcodeDataURI } from "etiket";
+import { qrcodeDataURI } from "etiket"
 
 function QRImage({ url }: { url: string }) {
-  return <img src={qrcodeDataURI(url)} alt="QR Code" width={200} height={200} />;
+  return <img src={qrcodeDataURI(url)} alt="QR Code" width={200} height={200} />
 }
 ```
 
 PNG output (useful for downloads or `<canvas>`):
 
 ```tsx
-import { qrcodePNGDataURI } from "etiket/png";
+import { qrcodePNGDataURI } from "etiket/png"
 
 function QRCodePNG({ url }: { url: string }) {
-  return <img src={qrcodePNGDataURI(url, { size: 200 })} alt="QR Code" width={200} height={200} />;
+  return <img src={qrcodePNGDataURI(url, { size: 200 })} alt="QR Code" width={200} height={200} />
 }
 ```
 
@@ -468,10 +590,10 @@ function QRCodePNG({ url }: { url: string }) {
 
 ```vue
 <script setup lang="ts">
-import { qrcode } from "etiket";
+import { qrcode } from "etiket"
 
-const props = defineProps<{ url: string }>();
-const svg = computed(() => qrcode(props.url, { dotType: "dots", ecLevel: "H" }));
+const props = defineProps<{ url: string }>()
+const svg = computed(() => qrcode(props.url, { dotType: "dots", ecLevel: "H" }))
 </script>
 
 <template>
@@ -495,21 +617,21 @@ const svg = computed(() => qrcode(props.url, { dotType: "dots", ecLevel: "H" }))
 ### Angular
 
 ```typescript
-import { Component, Input } from "@angular/core";
-import { DomSanitizer, SafeHtml } from "@angular/platform-browser";
-import { qrcode } from "etiket";
+import { Component, Input } from "@angular/core"
+import { DomSanitizer, SafeHtml } from "@angular/platform-browser"
+import { qrcode } from "etiket"
 
 @Component({
   selector: "app-qrcode",
   template: `<div [innerHTML]="svg"></div>`,
 })
 export class QRCodeComponent {
-  svg: SafeHtml = "";
+  svg: SafeHtml = ""
 
   @Input() set url(value: string) {
     this.svg = this.sanitizer.bypassSecurityTrustHtml(
       qrcode(value, { dotType: "dots", ecLevel: "H" }),
-    );
+    )
   }
 
   constructor(private sanitizer: DomSanitizer) {}
@@ -532,7 +654,7 @@ const svg = qrcode("https://example.com", { dotType: "dots", ecLevel: "H" });
 
 - Zero dependencies
 - Pure ESM, edge-runtime compatible (Cloudflare Workers, Deno, Bun)
-- TypeScript-first with strict types (tsgo)
+- TypeScript-first with strict types (TypeScript 7)
 - Tree-shakeable sub-path exports
 - CLI tool (`npx etiket`)
 - SVG string output (no DOM required) + `optimizeSVG()` for compact inline
@@ -541,11 +663,39 @@ const svg = qrcode("https://example.com", { dotType: "dots", ecLevel: "H" });
 - Measurement units (`px`, `mm`, `in`, `cm`, `pt`) for print use cases
 - CSS `currentColor` support for theme-aware barcodes
 - Auto EC upgrade to H when QR logo is present (supports PNG, JPEG, SVG, ICO)
-- GS1 support (100+ AIs, Digital Link, GS1 DataMatrix, GS1 DataBar)
+- GS1 support (100+ AIs, Digital Link, GS1 QR, GS1 DataMatrix, the full GS1
+  DataBar family including the stacked variants)
+- ECI on QR, Data Matrix, PDF417 and Aztec — non-Latin-1 data is declared, not
+  truncated
+- QR kanji mode with the real Shift-JIS table, Structured Append across up to
+  16 symbols, and optimal multi-segment encoding
+- Batch generation and label sheets (`barcodes()`, `qrcodeSheet()`)
 - HIBC medical device encoding + ISBT 128 blood bank labeling
 - Swiss QR-bill payments
 - 4-state postal barcodes (RM4SCC, KIX, Australia Post, Japan Post, USPS IMb)
 - Works in browser, Node.js, Deno, Bun, Cloudflare Workers
+
+## Verification
+
+Producing a symbol is easy; producing one a scanner accepts is not. Every
+symbology here is checked against something that is not this library:
+
+- **Decoded back** with [zxing-wasm](https://github.com/Sec-ant/zxing-wasm) or
+  jsQR — QR, Micro QR, rMQR, Data Matrix, PDF417, MicroPDF417, Aztec, MaxiCode,
+  Code 128, EAN, UPC, Code 39, Code 93, ITF, Codabar, GS1-128 and every GS1
+  DataBar variant.
+- **Compared module for module** with [bwip-js](https://github.com/metafloor/bwip-js)
+  (BWIPP) for the formats no JavaScript decoder implements — Code 16K,
+  Codablock F, DotCode, Han Xin, MSI, Plessey, Code 11, Pharmacode, Identcode,
+  Leitcode, HIBC, POSTNET, PLANET, RM4SCC, KIX, Australia Post, Japan Post and
+  USPS IMb.
+- **JAB Code is the exception**, and says so in its own API docs: no JavaScript
+  or WebAssembly decoder exists and neither zxing nor BWIPP implements it, so
+  its output cannot be verified and is marked experimental.
+
+`test/bwip-compare.test.ts` keeps the differences visible rather than asserting
+them away: a format that diverges is listed with the issue tracking it, and the
+test turns red the moment it starts matching.
 
 ## Comparison
 

@@ -1,6 +1,6 @@
 ---
 project: socialify
-stars: 2211
+stars: 2213
 description: |-
     💞 Socialify your project. 🌐 Share with the world!
 url: https://github.com/wei/socialify

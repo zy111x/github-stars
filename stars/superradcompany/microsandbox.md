@@ -1,6 +1,6 @@
 ---
 project: microsandbox
-stars: 7098
+stars: 7182
 description: |-
     🧱 easy fast local-first microVM runtime and library
 url: https://github.com/superradcompany/microsandbox
@@ -52,7 +52,6 @@ url: https://github.com/superradcompany/microsandbox
 ## <a href="./#gh-dark-mode-only" target="_blank"><img height="13" src="https://octicons-col.vercel.app/rocket/ffffff" alt="rocket-dark"></a><a href="./#gh-light-mode-only" target="_blank"><img height="13" src="https://octicons-col.vercel.app/rocket/000000" alt="rocket"></a>&nbsp;&nbsp;Getting Started
 
 #### <img height="14" src="https://octicons-col.vercel.app/move-to-bottom/A770EF">&nbsp;&nbsp;Install the SDK
-
 > ```sh
 > cargo add microsandbox                                   # 🦀 Rust
 > ```
@@ -68,7 +67,10 @@ url: https://github.com/superradcompany/microsandbox
 > ```sh
 > go get github.com/superradcompany/microsandbox/sdk/go    # 🐹 Go
 > ```
-
+>
+> ```sh
+> gem install microsandbox                                 # 💎 Ruby
+> ```
 #### <img height="14" src="https://octicons-col.vercel.app/download/A770EF">&nbsp;&nbsp;Install the CLI
 
 > Boot a microVM in a single command:
@@ -185,6 +187,38 @@ The SDK lets you create and control sandboxes directly from your application. `S
 >
 > asyncio.run(main())
 > ```
+>
+> </details>
+> <details>
+> <summary><b>&nbsp;Ruby Example →</b></summary>
+>
+> ```ruby
+> require "microsandbox"
+>
+> sandbox = Microsandbox::Sandbox.create(
+>   "my-sandbox",
+>   image: "python",
+>   cpus: 1,
+>   memory: 512,
+>   network: {
+>     allowed_hosts: ["api.openai.com"],
+>     allowed_ports: [443]
+>   },
+>   secrets: [{
+>     env: "OPENAI_API_KEY",
+>     value: ENV.fetch("OPENAI_API_KEY"),
+>     allowed_host: "api.openai.com"
+>   }]
+> )
+>
+> output = sandbox.exec("python", ["-c", "print('Hello from a microVM!')"])
+> puts output.stdout
+>
+> sandbox.stop
+> ```
+>
+> See the [Ruby SDK guide](./sdk/ruby/README.md) for installation, lifecycle,
+> networking, and backend details.
 >
 > </details>
 >

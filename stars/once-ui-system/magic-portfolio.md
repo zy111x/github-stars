@@ -1,6 +1,6 @@
 ---
 project: magic-portfolio
-stars: 1364
+stars: 1370
 description: |-
     ⚡ Build your timeless portfolio with Once UI's Magic Portfolio
 url: https://github.com/once-ui-system/magic-portfolio
@@ -13,6 +13,8 @@ Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It sup
 View the demo [here](https://demo.magic-portfolio.com).
 
 ![Magic Portfolio](public/images/og/home.jpg)
+
+Launch your portfolio on [Aveiro](https://www.aveiro.app/marketplace/spotlight), our managed publishing platform. Update case studies, blog posts and content through MCP from your favorite AI tools.
 
 ## Getting started
 
@@ -97,3 +99,4 @@ See `LICENSE.txt` for more information.
 ## Deploy with Vercel
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+

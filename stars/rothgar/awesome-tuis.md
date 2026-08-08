@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 20001
+stars: 20102
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -157,6 +157,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [ggc](https://github.com/bmf-san/ggc) A terminal-based Git CLI tool written in Go
 - [ghcup](https://github.com/haskell/ghcup-hs) An installer for the Haskell toolchain
 - [gitui](https://github.com/extrawurst/gitui) blazing fast terminal-ui for git written in rust
+- [gitwig](https://github.com/tareqmy/gitwig) - A mouse-drivable git TUI and multi-repo dashboard built in Rust.
 - [gitv](https://github.com/jayanaxhf/gitv): A beautiful, feature-rich and performant terminal client for GitHub issues.
 - [git-crecord](https://github.com/andrewshadura/git-crecord) interactive selective commit tool
 - [git-scope](https://github.com/Bharath-code/git-scope) Terminal UI dashboard for inspecting multiple local Git repositories.
@@ -195,6 +196,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [resterm](https://github.com/unkn0wn-root/resterm) A terminal client for HTTP/GraphQL/gRPC with support for WebSockets, SSE, workflows, profiling, OpenAPI and response diffs.
 - [runme](https://github.com/stateful/runme) Discover and run code snippets directly from your README.md or other markdowns
 - [scope](https://github.com/matheuswhite/scope-rs) Cross-platform serial-port & RTT monitor with colored timestamped I/O, hex/@tag input macros, search, session recording, auto-reconnect and Lua plugins
+- [sabiql](https://github.com/riii111/sabiql) A fast, driver-less TUI to browse, query, and edit PostgreSQL databases, written in Rust
 - [sls-dev-tools](https://github.com/Theodo-UK/sls-dev-tools) Dev Tools for the Serverless World
 - [snips.sh](https://github.com/robherley/snips.sh) ✂️ passwordless, anonymous SSH-powered pastebin with a human-friendly TUI and web UI
 - [stu](https://github.com/lusingander/stu) A TUI for Amazon S3
@@ -298,6 +300,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [deletor](https://github.com/pashkov256/deletor) Manage and delete files efficiently with an interactive TUI and scriptable CLI.
 - [far2l](https://github.com/elfmz/far2l) Linux port of Far v2 file manager
 - [fml](https://github.com/wick3dr0se/fml) :file_folder: A stupid simple, fast file manager written in BASH v4.2+.
+- [fyzenor](https://github.com/Bimbok/fyzenor) A modern, blazing-fast terminal file manager built in C++ with live previews, async workflows, and a polished three-column interface.
 - [goful](https://github.com/anmitsu/goful) a powerful TUI file manager written in Go.
 - [lf](https://github.com/gokcehan/lf) A terminal file manager written in Go with heavy inspiration from ranger file manager.
 - [mc](https://github.com/MidnightCommander/mc) GNU Midnight Commander. A free cross-platform orthodox file manager.
@@ -491,6 +494,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [iamb](https://iamb.chat) A Matrix client for Vim addicts written in Rust
 - [instagram-cli](https://github.com/supreme-gg-gg/instagram-cli) Use Instagram from your terminal, the end of brainrot is here
 - [irssi](https://irssi.org/) An IRC terminal client
+- [marchat](https://github.com/Cod-e-Codes/marchat) Self-hosted terminal chat with WebSocket client/server, optional shared-key encryption, and plugins.
 - [mastui](https://github.com/kimusan/mastui) Mastodon TUI
 - [matcha](https://github.com/floatpane/matcha) Email client
 - [matterhorn](https://github.com/matterhorn-chat/matterhorn) A Mattermost terminal client.
@@ -600,7 +604,6 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [wavemon](https://github.com/uoaerg/wavemon) A wireless device monitoring application
 - [wifitui](https://github.com/shazow/wifitui) Fast featureful friendly wifi terminal UI, supports NetworkManager and iwd over dbus.
 - [WG Commander](https://github.com/andrianbdn/wg-cmd) A TUI for a simple WireGuard VPN setup: peer management, QR codes, setup wizard.
-- [WireGuard Monitor](https://codeberg.org/anthonymills/Wireguard_Monitor) Simple TUI written in Rust to display the status of WireGuard connections on a host.
 - [wttr.in](https://github.com/chubin/wttr.in) The right way to check the weather
 - [WifUI](https://github.com/sohamw03/wifui) TUI for managing Wi-Fi connections on Windows natively (Rust)
 - [xplr](https://github.com/sayanarijit/xplr) A hackable, minimal, fast TUI file explorer, stealing ideas from nnn and fzf.

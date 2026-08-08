@@ -1,6 +1,6 @@
 ---
 project: justatemp
-stars: 226
+stars: 227
 description: |-
     📮 The free temporary email service powered by Cloudflare 
 url: https://github.com/berrysauce/justatemp

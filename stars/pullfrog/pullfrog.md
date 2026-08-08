@@ -1,6 +1,6 @@
 ---
 project: pullfrog
-stars: 863
+stars: 886
 description: |-
     Open-source model-agnostic BYOK GitHub bot that runs in GitHub Actions
 url: https://github.com/pullfrog/pullfrog
@@ -109,7 +109,7 @@ jobs:
 
 ```
 
-To gate merges on Pullfrog with branch protection, add `status_checks: enabled` under `with:`. Each PR run then posts a `pullfrog` check (run completion — success when the run finishes, failure on error/timeout) and a `pullfrog-approval` check (whether Pullfrog would approve the PR), both requireable as status checks. See [PR reviews → Required status checks](https://docs.pullfrog.dev/pr-reviews#required-status-checks-branch-protection).
+Every PR run posts a `pullfrog` commit-status check: `in_progress` from the moment the run is dispatched, then success when it finishes or failure on error/timeout. It is on by default. To also gate merges on Pullfrog's review verdict, enable the `pullfrog-approval` check, which reports whether Pullfrog would approve the PR. Both are repository settings, configured in the Pullfrog console (Automations → Review PRs), and both are requireable as branch-protection status checks. See [PR reviews → Status checks](https://docs.pullfrog.dev/pr-reviews#status-checks).
 
 #### 2. Create `triggers.yml`
 

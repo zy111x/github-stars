@@ -1,6 +1,6 @@
 ---
 project: curl-impersonate
-stars: 2668
+stars: 2686
 description: |-
     An active fork of curl-impersonate with more versions and build targets. A series of patches that make curl requests look like Chrome, Firefox and Safari.
 url: https://github.com/lexiforest/curl-impersonate
@@ -105,6 +105,7 @@ The following browsers can be impersonated. For a full list of browser profiles,
 | ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png "Chrome") | 142 | macOS Tahoe | `chrome142` | [curl_chrome142](bin/curl_chrome142) |
 | ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png "Chrome") | 145 | macOS Tahoe | `chrome145` | [curl_chrome145](bin/curl_chrome145) | ✅ |
 | ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png "Chrome") | 146 | macOS Tahoe | `chrome146` | [curl_chrome146](bin/curl_chrome146) | ✅ |
+| ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png "Chrome") | 150 | macOS Tahoe | `chrome150` | [curl_chrome150](bin/curl_chrome150) | ✅ |
 | ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png "Chrome") | 99 | Android 12 | `chrome99_android` | [curl_chrome99_android](bin/curl_chrome99_android) |
 | ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_24x24.png "Chrome") | 131 | Android 14 | `chrome131_android` | [curl_chrome131_android](bin/curl_chrome131_android) |
 | ![Edge](https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_24x24.png "Edge") | 99 | Windows 10 | `edge99` | [curl_edge99](bin/curl_edge99) |

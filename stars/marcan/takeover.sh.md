@@ -1,6 +1,6 @@
 ---
 project: takeover.sh
-stars: 7331
+stars: 7330
 description: |-
     Wipe and reinstall a running Linux system via SSH, without rebooting. You know you want to.
 url: https://github.com/marcan/takeover.sh

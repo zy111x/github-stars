@@ -1,6 +1,6 @@
 ---
 project: framecn
-stars: 116
+stars: 118
 description: |-
     Beautiful video components, built on Editframe. 100% Free, Zero config, one command setup.
 url: https://github.com/shadcn-labs/framecn

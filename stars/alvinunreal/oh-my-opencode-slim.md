@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 7587
+stars: 7856
 description: |-
     Lean, fine tuned Opencode multi agent suite · Mix any models · Auto delegate tasks
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -55,7 +55,7 @@ The main idea is simple: instead of forcing one model to do everything, the plug
 - **[Preset switching](docs/preset-switching.md)** - swap the whole team's
   models at runtime with `/preset`.
 - **[Code intelligence tools](docs/tools.md)** - LSP tools, AST-aware search
-  across 25 languages, and built-in MCPs for web search, docs, and GitHub code
+  across 25 languages, and built-in MCPs for docs and GitHub code
   search.
 - **[Fully customizable](docs/configuration.md)** - custom agents, prompt
   overrides, per-agent skill/MCP permissions, and
@@ -182,7 +182,7 @@ The default generated configuration includes both `openai` and `opencode-go` pre
     "openai": {
       "orchestrator": { "model": "openai/gpt-5.6-terra", "variant": "xhigh", "skills": ["*"], "mcps": ["*", "!context7"] },
       "oracle": { "model": "openai/gpt-5.6-sol", "variant": "xhigh", "skills": ["simplify"], "mcps": [] },
-      "librarian": { "model": "openai/gpt-5.6-luna", "variant": "low", "skills": [], "mcps": ["websearch", "context7", "gh_grep"] },
+      "librarian": { "model": "openai/gpt-5.6-luna", "variant": "low", "skills": [], "mcps": ["context7", "gh_grep"] },
       "explorer": { "model": "openai/gpt-5.6-luna", "variant": "low", "skills": [], "mcps": [] },
       "designer": { "model": "openai/gpt-5.6-luna", "variant": "medium", "skills": [], "mcps": [] },
       "fixer": { "model": "openai/gpt-5.6-luna", "variant": "xhigh", "skills": [], "mcps": [] }
@@ -661,7 +661,6 @@ Use this section as a map: start with installation, then jump to features, confi
 | **[Clonedeps](docs/clonedeps.md)** | Clone selected dependency source into an ignored local workspace for inspection |
 | **[Worktrees](docs/worktrees.md)** | Use `.slim/worktrees/` lanes for isolated parallel or risky coding work |
 | **[Preset Switching](docs/preset-switching.md)** | Switch agent model presets at runtime with `/preset` |
-| **[Interview](docs/interview.md)** | Turn rough ideas into a structured markdown spec through a browser-based Q&A flow |
 | **[Companion](docs/companion.md)** | Floating window companion for parsing, help, and types |
 
 ### ⚙️ Config & Reference
@@ -674,7 +673,7 @@ Use this section as a map: start with installation, then jump to features, confi
 | **[Background Orchestration](docs/background-orchestration.md)** | Scheduler-first orchestrator model built around native background subagents |
 | **[Maintainer Guide](docs/maintainers.md)** | Issue triage rules, label meanings, support routing, and repo maintenance workflow |
 | **[Skills](docs/skills.md)** | Bundled skills such as `simplify`, `codemap`, `clonedeps`, `deepwork`, `verification-planning`, `reflect`, `worktrees`, and `oh-my-opencode-slim` |
-| **[MCPs](docs/mcps.md)** | `websearch`, `context7`, `gh_grep`, and how MCP permissions work per agent |
+| **[MCPs](docs/mcps.md)** | `context7`, `gh_grep`, and how MCP permissions work per agent |
 | **[Tools](docs/tools.md)** | Built-in tool capabilities like `webfetch`, LSP tools, code search, and formatters |
 
 ---
@@ -686,7 +685,7 @@ Use this section as a map: start with installation, then jump to features, confi
   <p><sub>Every merged contribution leaves a mark on the realm.</sub></p>
 
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-85-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-93-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -811,6 +810,16 @@ Use this section as a map: start with installation, then jump to features, confi
     </tr>
     <tr>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/pmolinal"><img src="https://avatars.githubusercontent.com/u/1817596?v=4?s=100" width="100px;" alt="Patricio Molina"/><br /><sub><b>Patricio Molina</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=pmolinal" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/vinilouz"><img src="https://avatars.githubusercontent.com/u/20116132?v=4?s=100" width="100px;" alt="vinilouz"/><br /><sub><b>vinilouz</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=vinilouz" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/MyGO-Mujica"><img src="https://avatars.githubusercontent.com/u/190353468?v=4?s=100" width="100px;" alt="Homura"/><br /><sub><b>Homura</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=MyGO-Mujica" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://major.io/"><img src="https://avatars.githubusercontent.com/u/89910?v=4?s=100" width="100px;" alt="Major Hayden"/><br /><sub><b>Major Hayden</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=major" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/FrancoStino"><img src="https://avatars.githubusercontent.com/u/32127923?v=4?s=100" width="100px;" alt="Davide Ladisa"/><br /><sub><b>Davide Ladisa</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=FrancoStino" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/Max-Null"><img src="https://avatars.githubusercontent.com/u/24647158?v=4?s=100" width="100px;" alt="Max-Null"/><br /><sub><b>Max-Null</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=Max-Null" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/brucemead"><img src="https://avatars.githubusercontent.com/u/5895525?v=4?s=100" width="100px;" alt="Bruce"/><br /><sub><b>Bruce</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=brucemead" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/lih54767-coder"><img src="https://avatars.githubusercontent.com/u/271720354?v=4?s=100" width="100px;" alt="zhaohaofan"/><br /><sub><b>zhaohaofan</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=lih54767-coder" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/adevwithpurpose"><img src="https://avatars.githubusercontent.com/u/197252873?v=4?s=100" width="100px;" alt="adevwithpurpose"/><br /><sub><b>adevwithpurpose</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=adevwithpurpose" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

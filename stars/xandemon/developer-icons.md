@@ -1,6 +1,6 @@
 ---
 project: developer-icons
-stars: 2560
+stars: 2565
 description: |-
     A collection of well-optimized SVG tech logos for developers and designers—customizable, scalable, and free.
 url: https://github.com/xandemon/developer-icons
@@ -48,13 +48,7 @@ Welcome to **`developer-icons`**—a curated set of high-quality, customizable t
 
 ## ✨ Star History
 
-<a href="https://github.com/xandemon/developer-icons/stargazers">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xandemon/developer-icons&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xandemon/developer-icons&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=xandemon/developer-icons&type=date&legend=top-left" />
- </picture>
-</a>
+[![Star History Chart](https://api.star-history.com/chart?repos=xandemon/developer-icons&type=date&legend=top-left&sealed_token=VfGUSuyugvKD24d4j3goIa6wueRn5fpn9v2UoAobrDTJYCFPdbjAcp4oZ7HneeIT9YoiV1XAvsmAVH06szGlzM1Sek8rn2U68Z7qsu3j3pWEiU1yY701PluLi1y9sbnyAnUH9OTO5tuDhKVRHSheI2tEXwXuU02b6_vXeBz97L_AD7mv3lopGj--q04V)](https://github.com/xandemon/developer-icons/stargazers)
 
 ## 🧑‍💻 Used by
 

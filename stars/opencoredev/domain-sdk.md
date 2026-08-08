@@ -1,6 +1,6 @@
 ---
 project: domain-sdk
-stars: 341
+stars: 346
 description: |-
     Add, verify, monitor, and remove customer domains with one TypeScript API.
 url: https://github.com/opencoredev/domain-sdk
@@ -18,7 +18,7 @@ url: https://github.com/opencoredev/domain-sdk
 
 One TypeScript client for customer domains. Add a hostname to the platform you already run, return the exact DNS records your customer needs, track it until it is ready, and remove it safely.
 
-- Adapters for Vercel, Cloudflare for SaaS, Railway, Render, and Netlify
+- Adapters for Vercel, Cloudflare for SaaS, Railway, Render, Netlify, and bunny.net
 - One normalized lifecycle for adding, reading, listing, verifying, and removing domains
 - Exact routing, ownership, and certificate records for customer-facing DNS instructions
 - Provider-authoritative verification and certificate status without false readiness
@@ -74,7 +74,7 @@ Use `provisionWildcard()` once when the provider supports wildcards, or `add("cu
 
 ## Providers
 
-Vercel, Cloudflare for SaaS, Railway, Render, Netlify, and an in-memory testing adapter. Each provider lives behind its own entry point and preserves the platform-specific DNS and verification details your UI needs.
+Vercel, Cloudflare for SaaS, Railway, Render, Netlify, bunny.net, and an in-memory testing adapter. Each provider lives behind its own entry point and preserves the platform-specific DNS and verification details your UI needs.
 
 ## Documentation
 

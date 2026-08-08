@@ -1,8 +1,8 @@
 ---
 project: takumi
-stars: 2528
+stars: 2730
 description: |-
-    Render JSX & HTML to SVG or images. 160+ CSS properties supported. Drop-in next/og replacement.
+    Render JSX & HTML to image, SVG or PDF. 170+ CSS properties supported. Drop-in next/og replacement.
 url: https://github.com/kane50613/takumi
 ---
 
@@ -13,7 +13,7 @@ url: https://github.com/kane50613/takumi
 
 **A Rust rendering engine that turns JSX, HTML, and node trees into images. No headless browser required.**
 
-Render OpenGraph cards, animated GIFs, video frames, and vector SVG from Node.js, Cloudflare Workers, browsers, or any Rust application.
+Render OpenGraph cards, animated GIFs, video frames, vector SVG, and paged PDFs from Node.js, Cloudflare Workers, browsers, or any Rust application.
 Drop-in compatible with `next/og`.
 
 [![npm version](https://img.shields.io/npm/v/takumi-js?label=takumi-js)](https://www.npmjs.com/package/takumi-js)
@@ -152,6 +152,26 @@ const svg = await renderSvg(
 );
 
 await writeFile("./output.svg", svg);
+```
+
+### Paged PDF
+
+The same engine writes multi-page vector PDFs through the [takumi-pdf](https://www.npmjs.com/package/takumi-pdf) package: selectable text, embedded subset fonts, page breaks, and repeating headers and footers.
+
+```tsx
+import { render } from "takumi-pdf";
+import { writeFile } from "node:fs/promises";
+
+const pdf = await render(<Invoice data={data} />, {
+  size: "a4",
+  footer: (
+    <div tw="flex w-full justify-center text-[10px] text-gray-500">
+      Page <span className="pageNumber" /> of <span className="totalPages" />
+    </div>
+  ),
+});
+
+await writeFile("invoice.pdf", pdf);
 ```
 
 ### Rust

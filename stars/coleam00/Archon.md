@@ -1,6 +1,6 @@
 ---
 project: Archon
-stars: 23048
+stars: 23109
 description: |-
     The first open-source harness builder for AI coding. Make AI coding deterministic and repeatable.
 url: https://github.com/coleam00/Archon
@@ -168,6 +168,11 @@ Already have Claude Code set up? Install the standalone CLI binary and skip the 
 ```bash
 curl -fsSL https://archon.diy/install | bash
 ```
+
+> **x64 compatibility:** The macOS/Linux quick install requires AVX2 on x64
+> CPUs. Older Intel/AMD hardware and virtual machines that mask AVX2 should use
+> the [source installation guide](https://archon.diy/getting-started/installation/#from-source).
+> ARM64 quick installs are unaffected.
 
 **Windows (PowerShell)**
 ```powershell

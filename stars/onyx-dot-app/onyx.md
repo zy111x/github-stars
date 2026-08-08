@@ -1,6 +1,6 @@
 ---
 project: onyx
-stars: 31359
+stars: 31505
 description: |-
     Open Source AI Platform - AI Chat with advanced features that works with every LLM
 url: https://github.com/onyx-dot-app/onyx

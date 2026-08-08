@@ -1,6 +1,6 @@
 ---
 project: openDAW
-stars: 1945
+stars: 1974
 description: |-
     openDAW is a next-generation web-based Digital Audio Workstation (DAW)
 url: https://github.com/andremichelle/openDAW
@@ -119,6 +119,7 @@ skyboundzoo, JHINZ, Mark Dammer, fork-kun, Martin Eigel
 * Maximizer (brickwall limiter with automatic makeup gain)
 * MIDI Output (sends MIDI messages to other devices)
 * Nano (nano sampler for a single audio file)
+* Neon (phase-distortion synthesizer)
 * Pitch (offsets midi note pitches)
 * Playfield (sample drum computer with individual effect chains)
 * Revamp (graphical equalizer with spectrum analyser)
