@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 15300
+stars: 15349
 description: TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具/下载工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -414,7 +414,7 @@ TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台�
 -   https://github.com/Textualize/rich
 -   https://github.com/omnilib/aiosqlite
 -   https://github.com/Tinche/aiofiles
--   https://github.com/pyinstaller/pyinstaller
+-   https://github.com/marcelotduarte/cx\_Freeze
 -   https://foss.heptapod.net/openpyxl/openpyxl
 -   https://github.com/carpedm20/emoji/
 -   https://github.com/lxml/lxml

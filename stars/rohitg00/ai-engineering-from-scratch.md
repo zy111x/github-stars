@@ -1,12 +1,12 @@
 ---
 project: ai-engineering-from-scratch
-stars: 45434
+stars: 46309
 description: Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
 
-**Read in your language:** 简体中文 · हिन्दी · Español · العربية · Türkçe  
-machine-translated by CI to the `translations` branch; English is canonical. See docs/i18n.md.
+**Read in your language:** Español · Français · Português · Deutsch · Italiano · 简体中文 · 日本語 · 한국어 · हिन्दी · العربية · Русский · Türkçe  
+Translated landing pages, committed to the repo. English is canonical; lesson pages are machine-translated on the `translations` branch. See docs/i18n.md.
 
 From the creator of Agent Memory - #1 Persistent memory ⭐ which naturally works with any agents or chat assistants.
 -------------------------------------------------------------------------------------------------------------------
@@ -22,6 +22,23 @@ From the creator of Agent Memory - #1 Persistent memory ⭐ which naturally work
 > You don't just learn AI. You build it. End-to-end. By hand.
 
 **150,639** readers  ·  **241,669** page views in the last 30 days  ·  as of 2026-06-07
+
+Start learning in 30 seconds
+----------------------------
+
+Your coding agent becomes your tutor. Two commands, no clone, no setup:
+
+npx skills add rohitg00/ai-engineering-from-scratch
+
+Then, inside your agent:
+
+```
+/start-learning
+```
+
+A ten-question placement quiz maps what you already know to a starting phase and saves a personalized study plan to `LEARNING.md`. From there, `/learn` teaches one lesson per session — concept, math, code, quiz — streaming lessons straight from this repo, and `/course-guide <topic>` jumps you to the exact lesson that covers anything you are stuck on.
+
+Works with Claude Code, Cursor, Codex, OpenClaw, Hermes, or any agent that reads a `SKILL.md` directory — the installer asks which agents to set up. No agent? Read the same lessons at aiengineeringfromscratch.com.
 
 How this works
 --------------
@@ -101,35 +118,50 @@ Getting started
 
 Three ways in. Pick one.
 
-**Option A — read.** Open any completed lesson on aiengineeringfromscratch.com or expand a phase under Contents. No setup, no cloning.
+**Option A — learn in your terminal _(recommended)_.** Install the learning skills into any agent and let the course drive itself:
 
-**Option B — clone and run.**
+npx skills add rohitg00/ai-engineering-from-scratch
+
+```
+/start-learning     # interview + placement quiz -> personalized plan in LEARNING.md
+/learn              # next lesson, taught interactively: concept -> math -> code -> quiz
+/course-guide rag   # "which lessons teach X?" -> exact lessons + links
+```
+
+Lessons stream from this repo as you go — no clone needed. Progress lives in `LEARNING.md` in your project, so every session resumes where you left off.
+
+**Option B — read.** Open any completed lesson on aiengineeringfromscratch.com or expand a phase under Contents. No setup, no cloning.
+
+**Option C — clone and run.**
 
 git clone https://github.com/rohitg00/ai-engineering-from-scratch.git
 cd ai-engineering-from-scratch
 python phases/01-math-foundations/01-linear-algebra-intuition/code/vectors.py
 
-**Option C — find your level _(recommended)_.** Skip ahead intelligently. Inside Claude, Cursor, Codex, OpenClaw, Hermes, or any agent with the curriculum skills installed:
-
-/find-your-level
-
-Ten questions. Maps your knowledge to a starting phase, builds a personalized path with hour estimates. After each phase:
-
-/check-understanding 3        # quiz yourself on phase 3
-ls phases/03-deep-learning-core/05-loss-functions/outputs/
-# ├── prompt-loss-function-selector.md
-# └── prompt-loss-debugger.md
+Cloning also auto-loads the learning skills in Claude Code, and gives every lesson's code to `/learn` for real execution instead of read-along.
 
 ### Prerequisites
 
 -   You can write code (any language; Python helps).
 -   You want to understand how AI **actually works**, not just call APIs.
 
-### Built-in agent skills (Claude, Cursor, Codex, OpenClaw, Hermes)
+### The learning skills (any agent: Claude, Cursor, Codex, OpenClaw, Hermes, …)
 
 Skill
 
 What it does
+
+`/start-learning`
+
+One-time onboarding: why you're learning, placement quiz, personalized plan saved to `LEARNING.md`.
+
+`/learn`
+
+The tutor loop. Warm-up recall, then the next lesson taught interactively, then its quiz; records progress and a review queue.
+
+`/course-guide`
+
+Topic router. "Where do I learn attention?" or "my loss is NaN" → the exact lessons, with links.
 
 `/find-your-level`
 
@@ -239,7 +271,7 @@ Deploy as autonomous workers — you wrote the loop yourself in Phase 14.
 
 Plug into any MCP-compatible client. Built end-to-end in Phase 13.
 
-> Install the lot with `python3 scripts/install_skills.py`. Real tools, not homework. By the end of the curriculum, you have a portfolio of 503 artifacts you actually understand because you built them.
+> Install the lot with `python3 scripts/install_skills.py <target>`. Real tools, not homework. By the end of the curriculum, you have a portfolio of 503 artifacts you actually understand because you built them.
 
 ### FIG\_002 · A worked sample
 
@@ -1469,7 +1501,7 @@ Learn
 
 Python
 
-**Phase 7 — Transformers Deep Dive**  `14 lessons`  _The architecture that changed everything._  
+**Phase 7 — Transformers Deep Dive**  `16 lessons`  _The architecture that changed everything._  
 
 #
 
@@ -1607,7 +1639,7 @@ Build
 
 Python
 
-**Phase 8 — Generative AI**  `14 lessons`  _Create images, video, audio, 3D, and more._  
+**Phase 8 — Generative AI**  `15 lessons`  _Create images, video, audio, 3D, and more._  
 
 #
 
@@ -1843,7 +1875,7 @@ Build
 
 Python
 
-**Phase 10 — LLMs from Scratch**  `22 lessons`  _Build, train, and understand large language models._  
+**Phase 10 — LLMs from Scratch**  `24 lessons`  _Build, train, and understand large language models._  
 
 #
 
@@ -4538,21 +4570,19 @@ outputs/
 └── skills/       SKILL.md files for AI coding agents
 ```
 
-Install them with `npx skills add`. Plug them into Claude, Cursor, Codex, OpenClaw, Hermes, or any agent that reads a SKILL.md / AGENTS.md directory. Real tools, not homework.
+Plug them into Claude, Cursor, Codex, OpenClaw, Hermes, or any agent that reads a SKILL.md / AGENTS.md directory. Real tools, not homework.
 
-### Install every course skill into your agent
+### Install course skills into your agent
 
-The repo ships 388 skills and 99 prompts under `phases/**/outputs/`.
+Two skill sets, two installers:
 
-**Recommended: install via skills.sh.** No clone, no Python, detects your agent's skills directory automatically:
+**The learning skills** (`/start-learning`, `/learn`, `/course-guide`, `/find-your-level`, `/check-understanding`) live under `skills/` and install into any agent with one command — no clone, no Python:
 
-npx skills add rohitg00/ai-engineering-from-scratch                       # every skill
-npx skills add rohitg00/ai-engineering-from-scratch --skill agent-loop    # one skill
-npx skills add rohitg00/ai-engineering-from-scratch --phase 14            # one phase
+npx skills add rohitg00/ai-engineering-from-scratch
 
 `skills` writes to whichever directory your agent picks up: `.claude/skills/`, `.cursor/skills/`, `.codex/skills/`, OpenClaw's skills folder, Hermes's bundle path, or any SKILL.md-aware tool. One command, every agent.
 
-**Advanced: offline / custom layout via `scripts/install_skills.py`.** Requires cloning the repo. Useful when you need tag filters, dry-runs, or a non-default layout:
+**The lesson artifacts.** The repo ships 388 skills and 99 prompts under `phases/**/outputs/`; install them via `scripts/install_skills.py`. Requires cloning the repo. Supports tag filters, dry-runs, and per-agent layouts:
 
 python3 scripts/install\_skills.py <target\>                                 # every skill, default --layout skills (nested)
 python3 scripts/install\_skills.py <target\> --layout skills                 # same as above, explicit
@@ -4674,10 +4704,10 @@ FIG\_003 · B
 
 > _"The hottest new programming language is English."_  
 > — **Andrej Karpathy** (tweet)
-
+> 
 > _"Software engineering is being remade in front of our eyes."_  
 > — **Boris Cherny**, creator of Claude Code
-
+> 
 > _"Models will keep getting better. The skill that compounds is **knowing what to build**."_  
 > — Industry consensus, 2026
 

@@ -1,6 +1,6 @@
 ---
 project: Embodied-AI-Guide
-stars: 15171
+stars: 15315
 description: [Lumina具身智能社区] 具身智能技术指南 Embodied-AI-Guide
 url: https://github.com/TianxingChen/Embodied-AI-Guide
 ---
@@ -127,6 +127,7 @@ Science Robotics, TRO, IJRR, JFR, RSS, RAL, IROS, ICRA, ICCV, ECCV, ICML, CVPR, 
 -   Embodied AI Paper TopConf：repo
 -   Awesome **RL-VLA** for Robotic Manipulation (Haoyuan Deng)：repo
 -   Awesome **Efficient-VLA** for Robotic Manipulation (Weifan Guan)：repo
+-   Awesome Embodied Data：project ｜ repo ｜ arXiv
 
 **年度趋势总结**
 

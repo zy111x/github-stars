@@ -1,6 +1,6 @@
 ---
 project: free-programming-books
-stars: 393508
+stars: 393983
 description: :books: Freely available programming books
 url: https://github.com/EbookFoundation/free-programming-books
 ---
@@ -59,7 +59,6 @@ English, By Subject
 #### Other Languages
 
 -   Arabic / al arabiya / العربية
--   Armenian / Հայերեն
 -   Azerbaijani / Азәрбајҹан дили / آذربايجانجا ديلي
 -   Bengali / বাংলা
 -   Bulgarian / български

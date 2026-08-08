@@ -1,6 +1,6 @@
 ---
 project: ab-download-manager
-stars: 16970
+stars: 17145
 description: A Download Manager that speeds up your downloads
 url: https://github.com/amir1376/ab-download-manager
 ---

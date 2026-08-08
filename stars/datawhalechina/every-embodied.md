@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 2949
+stars: 3050
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -145,6 +145,7 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 
 -   **\[2026-08-01\]** 新增 ATEC2026 赛后复盘与开源方案教程：将 Task A/B/D/E 的任务边界、观测契约、环境视角调试、Task B 公开方案对照、评估与复现边界，以及中文 Workspace Memory 统一归入第 15 章，并配套 Task B 公开复现归档 与 Task E 开源资源。
 -   **\[2026-07-18\]** 新增 Dexbotic-RLinf 工程化 VLA 后训练导读：归入现有 VLA 章节，系统讲解 Dexbotic 如何把 RLinf 作为分布式强化学习后端，用 PPO 对 Dexbotic π0 / DM0 在 LIBERO 上做在线 fine-tuning，覆盖 Dexbotic 三层工具箱架构、RLinf frontend 与 Dexbotic backend 两种启动方式、`dexbotic_pi0` / `dexbotic_dm0` 动态模型注册、actor / rollout / env worker 分工、checkpoint 下载、TensorBoard 指标、standalone evaluation，以及该链路更适合作为工程化后训练导读而非轻量一键复现的边界。
+-   **\[2026-08-05\]** 新增 DM0.5 高性能推理与 OpenDM 开源导读：归入现有 VLA 章节，系统拆解 DM0.5 的 Gemma3 VLM prefix、Action Expert suffix、KV cache、Flow Matching action chunk 和公开 OpenDM 代码入口；进一步分析官网公告中的 Vision TensorRT、Tuned FlexAttention、FP8 E4M3 Tensor Core MLP、Triton fused kernels 与启动期 CUDA Graph 如何组成 9.29× 推理优化链路，并明确 OpenDM 当前可复现的模型/训练/推理/评测范围，以及 DM0.5 专用 9.29× 部署代码尚未在公开仓库完整出现的边界。
 -   **\[2026-07-18\]** 新增 Robots That Know What to Ask 奖励对齐导读：归入 `05-具身场景的深度和强化学习`，系统拆解 RSS 2026 论文 _Robots That Know What to Ask: Recovering Misaligned Rewards through Targeted Explanations_，重点讲清 ASQ 如何从示教特征方差中识别欠指定奖励维度，用自然语言解释引导人类补充 corrective demonstrations，并覆盖 JacoRobot 仿真、Franka 真实用户实验、LLM filtering、demo-specific rationality / weighting、与 VLA / 世界模型后训练的接口，以及当前未检索到官方代码仓库的复现边界。
 -   **\[2026-07-18\]** 新增 GE-Sim 2.0 闭环视频世界模拟器导读：归入 `17-具身世界模型`，系统拆解 AgiBot Genie Envisioner World Simulator 2.0，重点讲清它如何从动作条件视频生成推进到可闭环调用的 learned world simulator，覆盖 Pixel-aligned Action Condition、Proprioceptive State Expert、World Judge、DMD2 加速、WorldArena 公共榜第一、2B G01 + OmniPicker 开源权重、`WorldModelEnv.step(actions)` 接口、pi05 policy demo rollout、成功/失败示例和当前 World Judge 尚需自接 RewardClient 或等待进一步发布的复现边界。
 -   **\[2026-07-18\]** 新增 Agentic-VLA 在线适应导读：归入现有 VLA 章节，系统拆解 _Efficient Online Adaptation for Vision-Language-Action Models_，重点讲清它不是新的 VLA 基座，而是围绕 OpenVLA-OFT 构建的 agentic online adaptation 外环，覆盖 Adaptive Reward Synthesis、Language-Guided Exploration、Experience Memory、GRPO、LIBERO / RoboTwin 2.0 评测、1-shot 与跨任务迁移结果、reward hacking / memory interference 风险，以及当前未检索到官方代码仓库的复现边界。
@@ -306,7 +307,7 @@ LIBERO、SimplerENV
 
 **10\. VLA 大模型**
 
-SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析、EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航、3DVLA 三维空间实例增强 VLA、PhysBrain 1.0 物理常识增强 VLA、PRTS 强化学习原生 VLA、Galaxea G0.5 自回归 VLA、Dexora 高自由度双臂灵巧 VLA、LWD 真机机群强化学习、VisualThink-VLA 视觉证据推理、Agentic-VLA 在线适应、Dexbotic-RLinf 工程化 VLA 后训练
+SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析、EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航、3DVLA 三维空间实例增强 VLA、PhysBrain 1.0 物理常识增强 VLA、PRTS 强化学习原生 VLA、Galaxea G0.5 自回归 VLA、Dexora 高自由度双臂灵巧 VLA、LWD 真机机群强化学习、VisualThink-VLA 视觉证据推理、Agentic-VLA 在线适应、Dexbotic-RLinf 工程化 VLA 后训练、DM0.5 高性能推理与 OpenDM
 
 ✅
 
