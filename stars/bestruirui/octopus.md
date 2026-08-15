@@ -1,6 +1,6 @@
 ---
 project: octopus
-stars: 2342
+stars: 2364
 description: |-
     One Hub All LLMs For You | 为个人打造的 LLM API 聚合网关
 url: https://github.com/bestruirui/octopus
@@ -22,8 +22,6 @@ url: https://github.com/bestruirui/octopus
 ## ✨ Features
 
 - 🔀 **Multi-Channel Aggregation** - Connect multiple LLM provider channels with unified management
-- 🔑 **Multi-Key Support** - Support multiple API keys for a single channel
-- ⚡ **Smart Selection** - Multiple endpoints per channel, smart selection of the endpoint with the shortest delay
 - ⚖️ **Load Balancing** - Automatic request distribution for stable and efficient service
 - 🔄 **Protocol Conversion** - Seamless conversion between OpenAI Chat / OpenAI Responses / Anthropic API formats
 - 💰 **Price Sync** - Automatic model pricing updates

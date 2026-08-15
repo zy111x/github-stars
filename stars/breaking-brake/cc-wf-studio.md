@@ -1,6 +1,6 @@
 ---
 project: cc-wf-studio
-stars: 5346
+stars: 5353
 description: |-
     CC Workflow Studio
 url: https://github.com/breaking-brake/cc-wf-studio

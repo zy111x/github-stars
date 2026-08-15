@@ -1,6 +1,6 @@
 ---
 project: crossmux
-stars: 96
+stars: 111
 description: |-
     CrossMux is a community fork of CrossPoint Reader that turns the device into more than a reader — it adds an Apps hub of mini-games and tools, richer standby faces, and a first-class Simplified Chinese build.
 url: https://github.com/0x1abin/crossmux
@@ -20,7 +20,7 @@ url: https://github.com/0x1abin/crossmux
 
 What CrossMux adds on top of upstream:
 
-- **Apps hub** (the `Apps` menu): 2048, Minesweeper, Sudoku, Gomoku (五子棋), Chinese Chess / Xiangqi (象棋), Electronic Woodfish (button or touchscreen knocks with a permanent, lazily checkpointed counter), a procedural "Ugly Avatar" generator, and **AirPage** — scan its QR upload page, then fetch and display BMP or JPEG cloud images manually or through foreground-only live MQTT push. AirPage always opens on the QR page and silently connects saved Wi-Fi, but connecting or reconnecting never fetches by itself; only Refresh or a live push starts a download. The mapped bottom actions open Settings, browse the latest 20 delivered images, or Refresh, with the side keys mirroring image/refresh navigation. Images use the EPUB aspect-fit, centered 4-level grayscale path and can be selected as the custom sleep screen, optionally after every new delivery. Failed refreshes keep the previous image, while repeated live connection failures pause after two minutes so normal auto-sleep can resume. The menu paginates with page dots once the apps overflow a single screen.
+- **Apps hub** (the `Apps` menu): 2048, Minesweeper, Sudoku, Gomoku (五子棋), Chinese Chess / Xiangqi (象棋), Electronic Woodfish (button or touchscreen knocks with a permanent, lazily checkpointed counter), a procedural "Ugly Avatar" generator, and **AirPage** — scan its QR upload page, then fetch and display BMP or JPEG cloud images manually or through foreground-only live MQTT push. AirPage always opens on the QR page and stays offline until Refresh or live mode needs Wi-Fi; connecting or reconnecting never fetches by itself. The mapped bottom actions open Settings, browse the latest 20 delivered images, or Refresh, with the side keys mirroring image/refresh navigation. Images use the EPUB aspect-fit, centered 4-level grayscale path and can be selected as the custom sleep screen, optionally after every new delivery. Failed refreshes keep the previous image, while repeated live connection failures pause after two minutes so normal auto-sleep can resume. The menu paginates with page dots once the apps overflow a single screen.
 - **WeRead** (微信读书): scan to sign in, browse your shelf, download books, read them offline as EPUBs, and sync reading progress. The reader keeps one **Sync Progress** action: recognized standard WeRead books use WeRead sync, while other EPUBs keep KOReader sync. New WeRead downloads also make a best-effort cloud-progress fetch before caching content so the first open can start at the remote position.
 - **Reading analytics**: reading stats, a monthly reading heatmap, a reading profile, and achievements — backed by an SD-stored JSON history.
 - **Standby faces**: a hand-drawn "sloppy" clock and a Chinese almanac/calendar face (老黄历), with optional 4-level grayscale enhancement and inverse display.
@@ -43,9 +43,9 @@ CrossPoint is open-source e-reader firmware - community-built, fully hackable, f
 
 ## What can CrossPoint do?
 
-- **Reader engine**: EPUB 2/3 rendering with embedded-style option, image handling, hyphenation, kerning, chapter navigation, footnotes, bookmarks, dictionary lookups ([StarDict](docs/dictionary.md)), go-to-percent, auto page turn, orientation control, focus reading, KOReader progress sync and more.
+- **Reader engine**: EPUB 2/3 rendering with embedded-style option, image handling, hyphenation, kerning, chapter navigation, footnotes, bookmarks, dictionary lookups ([StarDict](docs/dictionary.md)), go-to-percent, auto page turn, orientation control, focus reading, configurable line guides, KOReader progress sync and more.
 
-- **Various formats**: native handling for `.epub`, `.xtc/.xtch`, `.txt`, and `.bmp`.
+- **Various formats**: native handling for `.epub`, `.xtc/.xtch`, `.txt`, `.bmp`, and `.png`.
 
 - **Screenshots.**
 
@@ -67,7 +67,7 @@ CrossPoint is open-source e-reader firmware - community-built, fully hackable, f
   - OPDS browser with saved servers (up to 8), search, pagination, and direct download
   - OTA update checks and installs from GitHub releases
 
-- **Customization**: multiple themes (Classic, Lyra, Lyra Extended, RoundedRaff), sleep screen modes, front/side button remapping, status bar controls, power-button behavior, refresh cadence, and more.
+- **Customization**: multiple themes (Classic, Lyra, Lyra Extended, RoundedRaff), sleep screen modes, EPUB/TXT line guides, custom PNG reading backgrounds, front/side button remapping, status bar controls, power-button behavior, refresh cadence, and more. Set a background from **Settings > Reader > Reading Background > Custom Image**.
 
 - **Localization**: 24 UI languages and counting. RTL support.
 

@@ -1,6 +1,6 @@
 ---
 project: awesome-mcp-servers
-stars: 91975
+stars: 92381
 description: |-
     A collection of MCP servers.
 url: https://github.com/punkpeye/awesome-mcp-servers

@@ -1,6 +1,6 @@
 ---
 project: animateicons
-stars: 1070
+stars: 1078
 description: |-
     Free and open-source animated SVG icons for React, built for smooth micro-interactions, easy customization, and lightweight performance.
 url: https://github.com/Avijit07x/animateicons
@@ -103,7 +103,7 @@ PRs adding icons are welcome. Each icon is a single React component file - copy 
 1. Create `icons/<library>/<name>-icon.tsx` from an existing icon
 2. Register it in `data/<library>-icons.json`
 3. Run `pnpm gen:icons` to regenerate the registry + catalog
-4. Open a PR against `dev`
+4. Open a PR against `main`
 
 Full workflow in [CONTRIBUTING.md](./CONTRIBUTING.md).
 

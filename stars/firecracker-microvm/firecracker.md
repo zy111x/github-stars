@@ -1,6 +1,6 @@
 ---
 project: firecracker
-stars: 35953
+stars: 36084
 description: |-
     Secure and fast microVMs for serverless computing.
 url: https://github.com/firecracker-microvm/firecracker
@@ -190,7 +190,7 @@ You can get in touch with the Firecracker community in the following ways:
 
 - Security-related issues, see our [security policy document](SECURITY.md).
 - Chat with us on our
-  [Slack workspace](https://join.slack.com/t/firecracker-microvm/shared_invite/zt-2tc0mfxpc-tU~HYAYSzLDl5XGGJU3YIg)
+  [Slack workspace](https://join.slack.com/t/firecracker-microvm/shared_invite/zt-3v81btcpe-usCf8Qk7k1gUlSAEKKdYMg)
   _Note: most of the maintainers are on a European time zone._
 - Open a GitHub issue in this repository.
 - Email the maintainers at

@@ -1,6 +1,6 @@
 ---
 project: ai-app-lab
-stars: 2429
+stars: 2432
 description: |-
     null
 url: https://github.com/volcengine/ai-app-lab

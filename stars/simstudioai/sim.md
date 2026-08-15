@@ -1,8 +1,8 @@
 ---
 project: sim
-stars: 29382
+stars: 29424
 description: |-
-    Build, deploy, and orchestrate AI agents. Sim is the central intelligence layer for your AI workforce.
+    Sim is the collaborative workspace to build, deploy, and monitor AI agents and workflows. Used by 100,000+ builders.
 url: https://github.com/simstudioai/sim
 ---
 
@@ -113,6 +113,7 @@ Manage your install with `bun run sim`:
 
 ```bash
 bun run sim start | stop | restart   # bring your install up / down / cycle
+bun run sim update                   # pull/rebuild and apply Compose images
 bun run sim status                    # what's installed and healthy
 bun run sim logs                      # follow logs
 bun run sim doctor                    # diagnose configuration problems

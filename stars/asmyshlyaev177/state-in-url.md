@@ -6,7 +6,10 @@ description: |-
 url: https://github.com/asmyshlyaev177/state-in-url
 ---
 
-English | [한국어](./README.KO.md) | [简体中文](./README.CN.md)
+<!-- i18n:start -->
+English · [简体中文](./README.zh-CN.md) · [日本語](./README.ja.md) · [한국어](./README.ko.md) · [Русский](./README.ru.md) · [Español](./README.es.md) · [Português (BR)](./README.pt-BR.md) · [Français](./README.fr.md) · [Tiếng Việt](./README.vi.md)
+<!-- i18n:meta locale=en -->
+<!-- i18n:end -->
 
 <div align="center">
   <img src="/packages/example-nextjs14/public/Logo_symbol.png" alt="state-in-url logo" width="120px" />
@@ -109,6 +112,8 @@ This library is a good alternative for NUQS.
 
 ## Table of content
 
+<!-- toc:start -->
+
 - [State in url](#state-in-url)
 - [Demo](#demo)
   - [Why use `state-in-url`?](#why-use-state-in-url)
@@ -137,6 +142,7 @@ This library is a good alternative for NUQS.
   - [Other hooks and helpers](#other-hooks-and-helpers)
     - [`useUrlStateBase` hook for others routers](#useurlstatebase-hook-for-others-routers)
     - [`useSharedState` hook for React.js](#usesharedstate-hook-for-reactjs)
+    - [`useLinkProps` hook for React.js](#uselinkprops-hook-for-reactjs)
     - [`useUrlEncode` hook for React.js](#useurlencode-hook-for-reactjs)
     - [`encodeState` and `decodeState` helpers](#encodestate-and-decodestate-helpers)
     - [`encode` and `decode` helpers](#encode-and-decode-helpers)
@@ -145,12 +151,14 @@ This library is a good alternative for NUQS.
   - [Other](#other)
     - [Contribute and/or run locally](#contribute-andor-run-locally)
   - [Roadmap](#roadmap)
-  - [Contact \& Support](#contact--support)
+  - [Contact & Support](#contact--support)
   - [Changelog](#changelog)
   - [Mentions](#mentions)
   - [License](#license)
-  - [Personal website](#personal-website)
+  - [Hire me](#hire-me)
   - [Inspiration](#inspiration)
+
+<!-- toc:end -->
 
 ## installation
 
@@ -698,6 +706,29 @@ function SettingsComponent() {
 ```
 
 [API Docs](packages/urlstate/useSharedState/README.md)
+
+### `useLinkProps` hook for React.js
+
+Hook to carry the state to a link pointing at a different route, e.g. a language switcher. `setUrl` always writes to the current path; this doesn't.
+
+```tsx
+'use client'
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useLinkProps } from 'state-in-url/useLinkProps';
+
+export const form = { name: '' };
+
+function LanguagePicker() {
+  const linkProps = useLinkProps(form, useRouter().push);
+
+  return <Link {...linkProps('/de/pricing')}>Deutsch</Link>;
+}
+```
+
+The markup keeps the plain `href`, so crawlers and `hreflang` see the canonical URL; the state is read on click.
+
+[API Docs](packages/urlstate/useLinkProps/README.md)
 
 ### `useUrlEncode` hook for React.js
 

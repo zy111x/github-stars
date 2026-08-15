@@ -1,6 +1,6 @@
 ---
 project: tinypdf
-stars: 1877
+stars: 1906
 description: |-
     Minimal PDF creation library. <400 LOC, zero dependencies, makes real PDFs.
 url: https://github.com/Lulzx/tinypdf
@@ -18,9 +18,15 @@ Minimal PDF creation library. **<400 LOC, zero dependencies, makes real PDFs.**
 npm install tinypdf
 ```
 
-![Invoice Example](examples/invoice.png)
+| Executive report | Event ticket |
+|---|---|
+| [![Executive report](examples/executive-report-v2.png)](examples/executive-report.ts) | [![Event ticket](examples/event-ticket.png)](examples/event-ticket.ts) |
+| KPI dashboard and chart | Bold landscape admission ticket |
+| Certificate | Invoice |
+| [![Certificate](examples/certificate.png)](examples/certificate.ts) | [![Invoice](examples/invoice-v2.png)](examples/invoice.ts) |
+| Formal award certificate | Editorial studio invoice |
 
-> [View sample PDF](examples/invoice.pdf) — Generated with ~50 lines of code
+Run any example with Bun, for example: `bun examples/executive-report.ts`.
 
 ---
 
@@ -41,7 +47,7 @@ Invoices, receipts, reports, shipping labels, tickets, certificates, contracts, 
 
 | Feature | Description |
 |---------|-------------|
-| **Text** | Helvetica, any size, hex colors, align left/center/right |
+| **Text** | Helvetica (WinAnsi), any size, hex colors, align left/center/right |
 | **Shapes** | Rectangles and lines |
 | **Images** | JPEG (photos, logos, signatures) |
 | **Links** | Clickable URLs with optional underline |
@@ -50,7 +56,7 @@ Invoices, receipts, reports, shipping labels, tickets, certificates, contracts, 
 
 ### Not included
 
-Custom fonts, PNG/GIF/SVG, vector graphics, forms, encryption, compression, HTML-to-PDF
+Unicode/custom fonts, PNG/GIF/SVG, vector graphics, forms, encryption, compression, HTML-to-PDF
 
 Need those? Use [jsPDF](https://github.com/parallax/jsPDF) or [pdf-lib](https://github.com/Hopding/pdf-lib).
 
@@ -132,7 +138,7 @@ writeFileSync('output.pdf', pdf)
 
 ### Stream large PDFs
 
-For documents too large to fit in memory, use `buildStream()` to emit a `ReadableStream<Uint8Array>` one object at a time.
+Use `buildStream()` to emit a `ReadableStream<Uint8Array>` incrementally. Page content and image inputs are retained until the stream reaches them, but stream bodies are emitted directly and the final PDF is not assembled into one additional full-size buffer.
 
 ```typescript
 import { pdf } from 'tinypdf'
@@ -176,75 +182,7 @@ markdown(str, options?)                    // options: { width, height, margin }
 
 ## Full example
 
-<details>
-<summary>Invoice generator (~50 lines)</summary>
-
-```typescript
-import { pdf } from 'tinypdf'
-import { writeFileSync } from 'fs'
-
-const doc = pdf()
-
-doc.page(612, 792, (p) => {
-  const margin = 40, pw = 532
-
-  // Header
-  p.rect(margin, 716, pw, 36, '#2563eb')
-  p.text('INVOICE', 55, 726, 24, { color: '#fff' })
-  p.text('#INV-2025-001', 472, 728, 12, { color: '#fff' })
-
-  // Company & billing info
-  p.text('Acme Corporation', margin, 670, 16)
-  p.text('123 Business Street', margin, 652, 11, { color: '#666' })
-  p.text('New York, NY 10001', margin, 638, 11, { color: '#666' })
-
-  p.text('Bill To:', 340, 670, 12, { color: '#666' })
-  p.text('John Smith', 340, 652, 14)
-  p.text('456 Customer Ave', 340, 636, 11, { color: '#666' })
-  p.text('Los Angeles, CA 90001', 340, 622, 11, { color: '#666' })
-
-  // Table
-  p.rect(margin, 560, pw, 25, '#f3f4f6')
-  p.text('Description', 50, 568, 11)
-  p.text('Qty', 310, 568, 11)
-  p.text('Price', 380, 568, 11)
-  p.text('Total', 480, 568, 11)
-
-  const items = [
-    ['Website Development', '1', '$5,000.00', '$5,000.00'],
-    ['Hosting (Annual)', '1', '$200.00', '$200.00'],
-    ['Maintenance Package', '12', '$150.00', '$1,800.00'],
-  ]
-
-  let y = 535
-  for (const [desc, qty, price, total] of items) {
-    p.text(desc, 50, y, 11)
-    p.text(qty, 310, y, 11)
-    p.text(price, 380, y, 11)
-    p.text(total, 480, y, 11)
-    p.line(margin, y - 15, margin + pw, y - 15, '#e5e7eb', 0.5)
-    y -= 30
-  }
-
-  // Totals
-  p.line(margin, y, margin + pw, y, '#000', 1)
-  p.text('Subtotal:', 380, y - 25, 11)
-  p.text('$7,000.00', 480, y - 25, 11)
-  p.text('Tax (8%):', 380, y - 45, 11)
-  p.text('$560.00', 480, y - 45, 11)
-  p.rect(370, y - 75, 202, 25, '#2563eb')
-  p.text('Total Due:', 380, y - 63, 12, { color: '#fff' })
-  p.text('$7,560.00', 480, y - 63, 12, { color: '#fff' })
-
-  // Footer
-  p.text('Thank you for your business!', margin, 80, 12, { align: 'center', width: pw, color: '#666' })
-  p.text('Payment due within 30 days', margin, 62, 10, { align: 'center', width: pw, color: '#999' })
-})
-
-writeFileSync('invoice.pdf', doc.build())
-```
-
-</details>
+See the complete [invoice generator](examples/invoice.ts) for a production-style layout using only tinypdf's core text, rectangle, and line primitives.
 
 ---
 

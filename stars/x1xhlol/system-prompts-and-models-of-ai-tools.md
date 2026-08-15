@@ -1,21 +1,9 @@
 ---
 project: system-prompts-and-models-of-ai-tools
-stars: 142664
+stars: 142851
 description: |-
     FULL Augment Code, Claude Code, Cluely, CodeBuddy, Comet, Cursor, Devin AI, Junie, Kiro, Leap.new, Lovable, Manus, NotionAI, Orchids.app, Perplexity, Poke, Qoder, Replit, Same.dev, Trae, Traycer AI, VSCode Agent, Warp.dev, Windsurf, Xcode, Z.ai Code, Dia & v0. (And other Open Sourced) System Prompts, Internal Tools & AI Models
 url: https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools
----
-
-<a href="https://gauss.sh" target="_blank">
-  <img src="https://gauss.sh/banner" alt="Gauss — CI that runs on real GPUs" width="1200" />
-</a>
-
-<p align="center">
-  <b>Gauss</b> — GPU-native CI.
-  <br />
-  <a href="https://gauss.sh"><b>Get early access →</b></a>
-</p>
-
 ---
 
 <a href="https://discord.gg/NwzrWErdMU" target="_blank">

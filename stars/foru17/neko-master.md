@@ -1,6 +1,6 @@
 ---
 project: neko-master
-stars: 3188
+stars: 3289
 description: |-
     A modern and elegant dashboard for network traffic visualization and analysis.
 url: https://github.com/foru17/neko-master

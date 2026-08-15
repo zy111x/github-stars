@@ -1,6 +1,6 @@
 ---
 project: autumn
-stars: 2632
+stars: 2642
 description: |-
     Autumn is an open-source pricing & billing platform
 url: https://github.com/useautumn/autumn

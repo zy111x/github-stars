@@ -1,6 +1,6 @@
 ---
 project: LiYing
-stars: 3244
+stars: 3250
 description: |-
     LiYing is an automated photo processing program designed for automating the post-processing workflow of ID photos in general photo studios. | LiYing 是一套适用于自动化 完成一般照相馆后期证件照处理流程的照片自动处理的程序。
 url: https://github.com/aoguai/LiYing
@@ -351,11 +351,5 @@ USDT(TRON):TWFDp8aZMWZHPXjBodyhfPeK8LUyrWe9mi
 
 ## ⭐ Star History
 
-<a href="https://star-history.com/#aoguai/LiYing&Timeline">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=aoguai/subscription&type=Timeline&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=aoguai/subscription&type=Timeline" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=aoguai/subscription&type=Timeline" />
-  </picture>
-</a>
+[![Star History Chart](https://starhistory.link/aoguai/LiYing.svg?theme=cyan)](https://starhistory.link/aoguai/LiYing)
 

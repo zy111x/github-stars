@@ -1,6 +1,6 @@
 ---
 project: office-open-xml-viewer
-stars: 645
+stars: 658
 description: |-
     A browser-based viewer for Office Open XML documents that renders to an HTML Canvas element.
 url: https://github.com/yukiyokotani/office-open-xml-viewer
@@ -54,6 +54,11 @@ npm install @silurus/ooxml
 pnpm add @silurus/ooxml
 ```
 
+> Upgrading from v0.76? Review the
+> [v0.77 migration guide](https://ooxml.silurus.dev/announcements/v077-migration-guide/)
+> for the XLSX selection, selection-context, MCP-tool, option/type, and Viewer
+> error-handling changes.
+
 > **Bundler note**: the Rust parsers ship as real `.wasm` asset files next to the
 > JavaScript, referenced with the standard `new URL('…', import.meta.url)` form
 > and fetched (streaming-compiled) at load time. Verified to work with zero
@@ -82,16 +87,18 @@ pnpm add @silurus/ooxml
 > **Bundle size note**: the package is ESM-only (`.mjs`). npm's *Unpacked
 > Size* sums every entry bundle **and** the standalone MathJax + STIX Two Math
 > asset, so the reported figure is much larger than any single app build. For
-> v0.76.2, the complete npm package is approximately 11.2 MB unpacked (3.7 MB
+> v0.79.0, the complete npm package is approximately 13.0 MB unpacked (4.3 MB
 > as the downloaded tarball), while a format-specific application graph is
 > approximately:
 >
 > | Imported entry | Reachable assets | gzip | Includes |
 > |---|---:|---:|---|
-> | `@silurus/ooxml/docx` | 3.9 MB | 1.2 MB | DOCX renderer, parser WASM, and lazy worker |
-> | `@silurus/ooxml/xlsx` | 2.5 MB | 0.81 MB | XLSX renderer, parser WASM, and lazy worker |
-> | `@silurus/ooxml/pptx` | 2.5 MB | 0.77 MB | PPTX renderer, parser WASM, and lazy worker |
+> | `@silurus/ooxml/docx` | 4.0 MB | 1.2 MB | DOCX renderer, parser WASM, and lazy worker |
+> | `@silurus/ooxml/xlsx` | 2.6 MB | 0.82 MB | XLSX renderer, parser WASM, and lazy worker |
+> | `@silurus/ooxml/pptx` | 2.5 MB | 0.78 MB | PPTX renderer, parser WASM, and lazy worker |
 > | `@silurus/ooxml/math` | 3.1 MB | 1.1 MB | Optional MathJax + STIX Two Math engine |
+> | `@silurus/ooxml/three-d` | 81 KB | 23 KB | Optional model-space 3-D chart mesh and camera |
+> | `@silurus/ooxml/region-map` | 236 KB | 66 KB | Optional offline Region Map renderer and fixed country geometry |
 >
 > These are production-artifact estimates, not initial-load figures: each row
 > sums all assets reachable from that entry, including parser WASM and worker
@@ -104,6 +111,11 @@ pnpm add @silurus/ooxml
 > `@silurus/ooxml/math` and passed it to a viewer (see
 > [Rendering equations](#rendering-equations)). Never import the `math` entry
 > and the loader chunk never enters your graph at all.
+>
+> The 3-D chart and Region Map renderers follow the same dependency-injection
+> boundary: import and pass only the addons an application needs. Ordinary
+> format entries do not reach either optional implementation, so bundlers can
+> tree-shake their mesh code and fixed geographic asset completely.
 
 ---
 
@@ -201,6 +213,37 @@ constructor or the `.load()` options — and every render reuses it; it is never
 per-render argument. (Excel stores "Insert > Equation" as OMML inside the shared
 DrawingML `<xdr:txBody>` grammar, so `XlsxViewer` renders equations embedded in
 shapes / text boxes the same way.)
+
+### Optional chart renderers
+
+Model-space 3-D charts and offline country-level Region Maps are separate
+entries. Inject them once in the same load options object as `math`; omitting an
+addon keeps it out of the application graph. They currently render on the main
+thread, so use `mode: 'main'` (the default). Without `threeD`, 3-D chart groups
+fall back to their canonical 2-D family. Without `regionMap`, Region Maps show
+the standard unsupported-chart placeholder.
+
+```typescript
+import { XlsxViewer } from '@silurus/ooxml/xlsx';
+import { threeD } from '@silurus/ooxml/three-d';
+import { regionMap } from '@silurus/ooxml/region-map';
+
+const container = document.getElementById('xlsx-container') as HTMLElement;
+const workbookViewer = new XlsxViewer(container, {
+  threeD,
+  regionMap,
+  mode: 'main',
+});
+await workbookViewer.load('/workbook-with-advanced-charts.xlsx');
+```
+
+The Region Map addon is deterministic and network-free. It uses a pinned
+Natural Earth country dataset, supports authored world projections and
+two/three-stop value ramps, and fails closed for cached identities or
+sub-country/view-specific layouts that the bounded offline model cannot yet
+represent safely. The specification/Office evidence boundary for automatic
+chart behavior is documented in
+[Chart compatibility evidence and scope](docs/chart-compatibility-evidence.md).
 
 ### Off-main-thread rendering
 
@@ -325,8 +368,9 @@ limits. Check `truncated` / `truncationReasons` before building a prompt.
 ```typescript
 const docx = new DocxViewer(docxCanvas, {
   enableTextSelection: true,
+  enableElementSelection: true,
   onSelectionContextChange(context) {
-    // context.kind === 'text': selected text + page/paragraph/run locators
+    // kind === 'text' or 'element': selected text or a clicked drawing
     updateAskAiButton(context);
   },
 });
@@ -342,20 +386,39 @@ const pptx = new PptxViewer(pptxCanvas, {
 });
 
 const spreadsheet = new XlsxViewer(container, {
-  onSelectionStateChange() {
-    updateAskAiButton(spreadsheet.getSelectionContext({ maxCells: 1_000 }));
+  enableElementSelection: true,
+  onSelectionContextChange(context) {
+    updateAskAiButton(context);
+  },
+  onContextMenu: async ({ originalEvent, getContext }) => {
+    // Browser-menu control must happen synchronously, before the first await.
+    originalEvent.preventDefault();
+    const { clientX, clientY } = originalEvent;
+    const context = await getContext();
+    openContextMenu({ clientX, clientY, context });
   },
 });
 const spreadsheetContext = spreadsheet.getSelectionContext({ maxCells: 1_000 });
-// format === 'xlsx', kind === 'range': selection state, displayed values,
-// formulas and populated cells only.
+// kind === 'range': selection state, values and formulas.
+// kind === 'element': a clicked chart, picture or shape.
 ```
 
-DOCX/PPTX callbacks are notifications for native text selection or PPTX element
-focus; callers may instead query on demand. XLSX already has
-`onSelectionStateChange`, so use that notification and call the same getter.
-`PptxPresentation.getElementContextAt()` provides the identical compact element
-query for custom/headless slide surfaces in both main and worker modes. PPTX
+All three formats expose the same `onSelectionContextChange(context)` handoff;
+callers may instead query on demand. `enableElementSelection` is an independent,
+explicit opt-in because it enables object selection and draws a non-editable outline
+around the focused object; adding the callback alone never enables object
+hit-testing. XLSX separately retains
+`onSelectionStateChange` for canonical UI state such as ActiveCell and multiple
+areas. Its context callback is frame-coalesced so drag selection does not build
+one snapshot per pointer event.
+`onContextMenu` is also common to every Viewer. It receives the real browser
+event synchronously so the host can call `preventDefault()`, plus a clearly
+asynchronous `getContext()` lookup for the right-click target. The lookup starts
+on the first call and is memoized. Omitting the callback installs no listener and leaves
+the native browser menu unchanged.
+`DocxDocument.getElementContextAt()` and
+`PptxPresentation.getElementContextAt()` provide the identical compact element
+query for custom/headless page or slide surfaces in both modes. PPTX
 element provenance is limited to `master | layout | slide`; editor tree indexes,
 archive paths, save/round-trip handles, and mutation APIs are deliberately absent.
 When switching on `kind`, retain a default branch so a future read-only focus kind
@@ -441,20 +504,9 @@ const md = await doc.toMarkdown();
 bullets, notes / comments collated) and `XlsxWorkbook.toMarkdown()` (each sheet →
 a `## SheetName` pipe table) are the twins.
 
-For a one-off conversion outside a viewer, the standalone
-`@silurus/ooxml-markdown` package exposes the low-level functions and a CLI:
-
-```typescript
-import { docxToMarkdown, initDocxFromBytes } from '@silurus/ooxml-markdown';
-
-initDocxFromBytes(wasmBytes);          // the docx parser's `_bg.wasm`
-const md = docxToMarkdown(fileBytes);  // ArrayBuffer | Uint8Array | Buffer
-```
-
-```bash
-npx ooxml-md document.docx            # → stdout
-npx ooxml-md deck.pptx -o deck.md     # → file
-```
+The repository also contains a low-level adapter and CLI for workspace tooling.
+They are internal implementation utilities, not separately published packages;
+installed applications should use the format model's `toMarkdown()` method.
 
 ---
 
@@ -589,10 +641,10 @@ file without uploading it.
 | | `w:snapToGrid` opt-out of the document grid (§17.3.1.32) | ✅ |
 | | Track changes (`w:ins` / `w:del` — author-coloured underline / strikethrough) | ✅ |
 | | Comments — author / date / text via the document model (`doc.comments`, §17.13.4; not drawn on the page) | ✅ |
-| | Markdown export (`DocxDocument.toMarkdown()` — headings, lists, tables, footnotes / comments; also `@silurus/ooxml-markdown` + the `ooxml-md` CLI) | ✅ |
+| | Markdown export (`DocxDocument.toMarkdown()` — headings, lists, tables, footnotes / comments) | ✅ |
 | | Mail merge fields | ❌ Not planned |
 | **Interaction** | Text selection (transparent overlay, native copy) | ✅ |
-| | Bounded read-only selection context (`getSelectionContext()`, page/paragraph/run locators, AI/MCP callback) | ✅ |
+| | Bounded read-only text/element context (`getSelectionContext()`, page/source locators, element selection, AI/MCP callback) | ✅ |
 | | In-document find (`findText` / `findNext` / `findPrev` / `clearFind` — full-text search, all hits highlighted, each match tagged with its page) | ✅ |
 | | Runtime zoom (`getScale` / `setScale` / `fitWidth` / `fitPage`) | ✅ |
 | | Clickable hyperlinks (overlay hit-test, `onHyperlinkClick`; internal bookmark / anchor navigation) | ✅ |
@@ -645,12 +697,12 @@ file without uploading it.
 | | Pivot tables (saved worksheet output renders unchanged; read-only metadata is exposed. Refresh, recalculation, filtering, restructuring, and interactivity are unsupported) | ⚠️ Partial |
 | | Cell comments / notes (classic `xl/commentsN.xml` + Office-365 threaded comments — red triangle indicator + author / text via the worksheet model, shown in an Excel-style hover popup) | ✅ |
 | | Data validation (rules via the worksheet model; `list`-type dropdown arrow on the selected cell whose click opens a panel showing the allowed values — read-only) | ✅ |
-| | Markdown export (`XlsxWorkbook.toMarkdown()` — each sheet as a `## SheetName` pipe table; also `@silurus/ooxml-markdown` + the `ooxml-md` CLI) | ✅ |
+| | Markdown export (`XlsxWorkbook.toMarkdown()` — each sheet as a `## SheetName` pipe table) | ✅ |
 | **Interaction** | Cell selection (single / range / row / column / all / multiple areas; `setSelection('B2:D5')` or canonical structured state) | ✅ |
 | | Excel-style row / column header highlight on selection | ✅ |
-| | Shift+click to extend, Ctrl+C to copy as TSV | ✅ |
+| | Shift+click to extend, Ctrl/⌘+drag to add another area, Ctrl+C to copy as TSV | ✅ |
 | | Text selection inside cells (transparent overlay) | ✅ |
-| | `onSelectionStateChange`, bounded `getSelectionContext()` / `copySelection()`, `getCellAt(x, y)` | ✅ |
+| | `onSelectionStateChange`, bounded range/element `getSelectionContext()` / `copySelection()`, chart/picture/shape selection, `getCellAt(x, y)` | ✅ |
 | | Zoom slider (Excel-style, right of the tab bar, 10–400% with 100% centered; `showZoomSlider` option) | ✅ |
 | | Ctrl/⌘ + mouse-wheel and trackpad-pinch zoom (in addition to the slider) | ✅ |
 | | Runtime fit / zoom API (`fitWidth` / `fitPage` / `getScale` / `setScale`, in addition to the slider) | ✅ |
@@ -672,7 +724,7 @@ file without uploading it.
 | | Slide background (solid, gradient, image) | ✅ |
 | | Slide numbers | ✅ |
 | | Speaker notes (plain text via `getNotes()`) | ✅ |
-| | Markdown export (`PptxPresentation.toMarkdown()` — title slides → headings, body → nested bullets, notes / comments collated; also `@silurus/ooxml-markdown` + the `ooxml-md` CLI) | ✅ |
+| | Markdown export (`PptxPresentation.toMarkdown()` — title slides → headings, body → nested bullets, notes / comments collated) | ✅ |
 | | Animations / transitions | ❌ Not planned |
 | **Element types** | Shapes (`sp`) | ✅ |
 | | Pictures (`pic`) | ✅ |
@@ -754,7 +806,7 @@ file without uploading it.
 | | Font scheme (`+mj-lt`, `+mn-lt`) | ✅ |
 | | lumMod / lumOff / alpha transforms | ✅ |
 | **Interaction** | Text selection (transparent overlay, native copy) | ✅ |
-| | Bounded text/element selection context (`getSelectionContext()`, click focus, master/layout/slide provenance, main + worker) | ✅ |
+| | Bounded text/element selection context (`getSelectionContext()`, element selection, master/layout/slide provenance, main + worker) | ✅ |
 | | In-document find (`findText` / `findNext` / `findPrev` / `clearFind` — matches tagged with slide) | ✅ |
 | | Runtime zoom (`getScale` / `setScale` / `fitWidth` / `fitPage`) | ✅ |
 | | Clickable hyperlinks (`onHyperlinkClick`; internal slide-jump navigation) | ✅ |
@@ -769,10 +821,10 @@ file without uploading it.
 
 ## Companion packages
 
-- **[`packages/markdown/`](packages/markdown/)** — `@silurus/ooxml-markdown` and the `ooxml-md` CLI convert `.pptx` / `.docx` / `.xlsx` to GitHub-flavoured markdown via the workspace WASM parsers. Same projection used by the MCP server (~21× smaller than the raw XML on the demo deck, ~8% bigger than a flat-text extractor). Includes a node20-based GitHub Action for bulk repo-wide conversion.
+- **[`packages/markdown/`](packages/markdown/)** — internal workspace adapter and `ooxml-md` development CLI for the same GitHub-flavoured Markdown projection exposed by each format model's `toMarkdown()` method.
 - **[`packages/node/`](packages/node/)** — the implementation behind the public Node-only `@silurus/ooxml/node` subpath. Its canonical APIs are the explicitly owned, bounded `openPptxPresentation`, `openDocxDocument`, and `openXlsxWorkbook` sessions. Async `materializePptxPresentation`, `materializeDocxDocument`, `materializeXlsxWorkbookIndex`, `materializeXlsxWorksheet`, and `materializeXlsxWorkbook` are provided when a complete caller-owned graph is actually needed. Each `open*` call returns an explicit, idempotent `close()`-able session; PPTX streams `slides()`, DOCX completes format-required sequential pagination before streaming `pages()`, and XLSX parses its workbook index once before sequential `worksheetRows(sheetIndex)` streams reuse the retained archive. Useful for CI checks and headless rendering pipelines; canvas rendering accepts a user-supplied backend such as `skia-canvas` without making it a runtime dependency.
   See the [0.75 to 0.76 migration guide](docs/migration-0.76.md) for every removed synchronous helper and its replacement.
-- **[`packages/vscode-extension/`](packages/vscode-extension/)** — VS Code extension (`ooxml-viewer`) that registers `CustomEditorProvider`s for `.docx`, `.xlsx`, and `.pptx`, and (opt-in) auto-installs and registers the `ooxml-mcp-server` so AI coding agents in the same window (Copilot Agent mode, Claude, …) can read those files via dedicated tools. The preview is offline by default; an opt-in `ooxmlViewer.useGoogleFonts` setting (off, and force-disabled in untrusted workspaces) surfaces the library's metric-compatible font substitution, widening the webview CSP to the Google Fonts CDN only while enabled.
+- **[`packages/vscode-extension/`](packages/vscode-extension/)** — VS Code extension (`ooxml-viewer`) that registers `CustomEditorProvider`s for `.docx`, `.xlsx`, and `.pptx`, and (opt-in) auto-installs and registers the `ooxml-mcp-server` for GitHub Copilot Chat in Agent mode, including active Viewer selection. Claude Code and Codex can configure the same binary separately for path-based file tools, but do not receive the active selection bridge. The preview is offline by default; an opt-in `ooxmlViewer.useGoogleFonts` setting (off, and force-disabled in untrusted workspaces) surfaces the library's metric-compatible font substitution, widening the webview CSP to the Google Fonts CDN only while enabled.
 - **[`packages/mcp-server/`](packages/mcp-server/)** — Rust MCP server (`ooxml-mcp-server`) exposing the parsers as tools for AI agents (Claude, Copilot, Codex, etc.). Provides structured queries (`docx_get_structure`, `xlsx_get_cell_range`, `pptx_get_slide_structure`, …) so agents can inspect OOXML files without shelling out to `unzip`. Prebuilt binaries are attached to each [GitHub Release](https://github.com/yukiyokotani/office-open-xml-viewer/releases) for macOS / Linux / Windows; the VS Code extension downloads them on demand.
 
 ---
@@ -811,16 +863,18 @@ cd packages/pptx/parser && wasm-pack build --target web && cp pkg/pptx_parser_bg
 
 ## Error handling
 
-Headless APIs (`DocxDocument`, `XlsxWorkbook`, and `PptxPresentation`) report
-load and render failures by rejecting the returned Promise. Viewer APIs also
-support an `onError(error)` callback, with an important delivery rule:
+Headless APIs (`DocxDocument`, `XlsxWorkbook`, and `PptxPresentation`) and
+Viewer APIs report failures from awaitable operations by rejecting the returned
+Promise. This includes `viewer.load()` parsing and its initial render, whether
+or not the Viewer has an `onError(error)` callback. A failure is never delivered
+through both channels.
 
-- Without `onError`, a load/parse failure rejects `viewer.load()`.
-- With `onError`, that failure is delivered to the callback and
-  `viewer.load()` resolves. Do not treat resolution alone as proof that the
-  document rendered.
-- Later Viewer-managed render or media failures are delivered to `onError`, or
-  logged with `console.error` when the callback is omitted.
+Use `onError` for later Viewer-managed work that has no directly awaitable
+result, such as virtualized scroll-view rendering or embedded-media playback.
+Those failures are logged with `console.error` when the callback is omitted.
+`PptxPresentation.presentSlide()` follows the same boundary: initialization
+rejects its Promise, while `PresentSlideOptions.onError` observes only media
+decode or playback failures after the presentation handle has been returned.
 
 Stable failures can be narrowed without parsing message strings:
 
@@ -853,6 +907,7 @@ import {
 } from '@silurus/ooxml/docx';
 
 const viewer = new DocxViewer(canvas, {
+  // Background failures after an awaited operation has completed.
   onError(error) {
     if (error instanceof OoxmlResourceLimitError) {
       const { limit, observed } = error.details.violation;
@@ -867,7 +922,11 @@ const viewer = new DocxViewer(canvas, {
   },
 });
 
-await viewer.load(file);
+try {
+  await viewer.load(file);
+} catch (error) {
+  reportUnexpectedError(error);
+}
 ```
 
 ## Security & Privacy

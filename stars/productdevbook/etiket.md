@@ -1,6 +1,6 @@
 ---
 project: etiket
-stars: 442
+stars: 448
 description: |-
     Zero-dependency barcode & QR code SVG, PNG generator. 40+ formats, styled QR codes, tree-shakeable. Pure TypeScript.
 url: https://github.com/productdevbook/etiket
@@ -23,9 +23,9 @@ url: https://github.com/productdevbook/etiket
 </p>
 
 > [!IMPORTANT]
-> **Verified formats (18):** QR Code, Data Matrix, PDF417, Aztec, Micro QR, rMQR, MaxiCode, MicroPDF417, Code 128, EAN-13, EAN-8, UPC-A, Code 39, Code 93, ITF, Codabar, GS1-128, Codablock F — verified with round-trip scan tests (zxing-wasm, rxing, gozxing) and/or 100% bit-match against Zint/bwip-js reference.
+> **Every symbology is verified against an implementation that is not this one** — decoded back with zxing-wasm or jsQR where a decoder exists, compared module for module with bwip-js (BWIPP) where none does. See [Verification](#verification).
 >
-> **Experimental formats:** DotCode, Han Xin, JAB Code — no open-source decoder exists for these formats. Encoders produce structurally valid output (Han Xin 75% reference match, finders 100%). PRs welcome.
+> **One exception:** JAB Code. No JavaScript or WebAssembly decoder exists and neither zxing nor BWIPP implements it, so its output cannot be checked. It is marked experimental and says so in its own API docs.
 >
 > **Contributions welcome!** If you find a scanning issue or want to improve an encoder, please [open an issue](https://github.com/productdevbook/etiket/issues) or submit a PR. See [Contributing](#contributing) below.
 
@@ -86,34 +86,42 @@ import { EtiketError, InvalidInputError, CapacityError } from "etiket/errors"
 
 ### 1D Barcodes
 
-| Format                   | Type                   | Description                    |
-| :----------------------- | :--------------------- | :----------------------------- |
-| **Code 128**             | `code128`              | Auto charset (A/B/C)           |
-| **Code 39**              | `code39`               | 43-char set, optional check    |
-| **Code 39 Ext**          | `code39ext`            | Full ASCII                     |
-| **Code 93**              | `code93`               | Higher density, 2 check digits |
-| **Code 93 Ext**          | `code93ext`            | Full ASCII                     |
-| **EAN-13**               | `ean13`                | Auto check digit               |
-| **EAN-8**                | `ean8`                 | Auto check digit               |
-| **EAN-5**                | `ean5`                 | Addon (book price)             |
-| **EAN-2**                | `ean2`                 | Addon (issue number)           |
-| **UPC-A**                | `upca`                 | 12-digit, auto check digit     |
-| **UPC-E**                | `upce`                 | Compressed 8-digit             |
-| **ITF**                  | `itf`                  | Interleaved 2 of 5             |
-| **ITF-14**               | `itf14`                | 14-digit with bearer bars      |
-| **Codabar**              | `codabar`              | Libraries, blood banks         |
-| **MSI Plessey**          | `msi`                  | Mod10/11/1010/1110             |
-| **Pharmacode**           | `pharmacode`           | Pharmaceutical                 |
-| **Code 11**              | `code11`               | Telecommunications             |
-| **GS1-128**              | `gs1-128`              | AI parsing, FNC1, 100+ AIs     |
-| **GS1 DataBar**          | `gs1-databar`          | Omnidirectional, 14-digit GTIN |
-| **GS1 DataBar Limited**  | `gs1-databar-limited`  | GTIN starting with 0/1         |
-| **GS1 DataBar Expanded** | `gs1-databar-expanded` | Variable-length AI data        |
-| **Identcode**            | `identcode`            | Deutsche Post / DHL            |
-| **Leitcode**             | `leitcode`             | Deutsche Post routing          |
-| **POSTNET**              | `postnet`              | USPS legacy postal             |
-| **PLANET**               | `planet`               | USPS confirmation tracking     |
-| **Plessey**              | `plessey`              | UK library systems             |
+| Format                    | Type                    | Description                      |
+| :------------------------ | :---------------------- | :------------------------------- |
+| **Code 128**              | `code128`               | Auto charset (A/B/C)             |
+| **Code 39**               | `code39`                | 43-char set, optional check      |
+| **Code 39 Ext**           | `code39ext`             | Full ASCII                       |
+| **Code 93**               | `code93`                | Higher density, 2 check digits   |
+| **Code 93 Ext**           | `code93ext`             | Full ASCII                       |
+| **EAN-13**                | `ean13`                 | Auto check digit                 |
+| **EAN-8**                 | `ean8`                  | Auto check digit                 |
+| **EAN-5**                 | `ean5`                  | Addon (book price)               |
+| **EAN-2**                 | `ean2`                  | Addon (issue number)             |
+| **UPC-A**                 | `upca`                  | 12-digit, auto check digit       |
+| **UPC-E**                 | `upce`                  | Compressed 8-digit               |
+| **ITF**                   | `itf`                   | Interleaved 2 of 5               |
+| **ITF-14**                | `itf14`                 | 14-digit with bearer bars        |
+| **Codabar**               | `codabar`               | Libraries, blood banks           |
+| **MSI Plessey**           | `msi`                   | Mod10/11/1010/1110               |
+| **Pharmacode**            | `pharmacode`            | Pharmaceutical                   |
+| **Code 11**               | `code11`                | Telecommunications               |
+| **GS1-128**               | `gs1-128`               | AI parsing, FNC1, 100+ AIs       |
+| **GS1 DataBar**           | `gs1-databar`           | Omnidirectional, 14-digit GTIN   |
+| **GS1 DataBar Limited**   | `gs1-databar-limited`   | GTIN starting with 0/1           |
+| **GS1 DataBar Expanded**  | `gs1-databar-expanded`  | Variable-length AI data          |
+| **Identcode**             | `identcode`             | Deutsche Post / DHL              |
+| **Leitcode**              | `leitcode`              | Deutsche Post routing            |
+| **POSTNET**               | `postnet`               | USPS legacy postal               |
+| **PLANET**                | `planet`                | USPS confirmation tracking       |
+| **Plessey**               | `plessey`               | UK library systems               |
+| **GS1 DataBar Truncated** | `gs1-databar-truncated` | Short-height omnidirectional     |
+| **EAN-14**                | `ean14`                 | GTIN-14 as a GS1-128, AI (01)    |
+| **SSCC-18**               | `sscc18`                | Shipping container, AI (00)      |
+| **ISBN**                  | `isbn`                  | ISBN-10 or ISBN-13, over EAN-13  |
+| **ISSN**                  | `issn`                  | Serials, with sequence variant   |
+| **ISMN**                  | `ismn`                  | Printed music, 9790 prefix       |
+| **Code 32**               | `code32`                | Italian Pharmacode, over Code 39 |
+| **PZN-7 / PZN-8**         | `pzn` / `pzn8`          | German pharmaceutical number     |
 
 ### 2D Codes
 
@@ -687,8 +695,9 @@ symbology here is checked against something that is not this library:
 - **Compared module for module** with [bwip-js](https://github.com/metafloor/bwip-js)
   (BWIPP) for the formats no JavaScript decoder implements — Code 16K,
   Codablock F, DotCode, Han Xin, MSI, Plessey, Code 11, Pharmacode, Identcode,
-  Leitcode, HIBC, POSTNET, PLANET, RM4SCC, KIX, Australia Post, Japan Post and
-  USPS IMb.
+  Leitcode, HIBC, POSTNET, PLANET, RM4SCC, KIX, Australia Post, Japan Post,
+  USPS IMb, and every GS1 Composite symbol from its linkage flag to its
+  separator pattern.
 - **JAB Code is the exception**, and says so in its own API docs: no JavaScript
   or WebAssembly decoder exists and neither zxing nor BWIPP implements it, so
   its output cannot be verified and is marked experimental.
@@ -704,7 +713,7 @@ test turns red the moment it starts matching.
 | Zero dependencies                    | :white_check_mark: |         :white_check_mark:         |                  :x: (1.5MB+)                   |                   :x: (xmldom)                    |                           :x: (qrcode)                           |
 | TypeScript-first                     | :white_check_mark: |         :white_check_mark:         |                       :x:                       |                        :x:                        |                             Partial                              |
 | Tree-shakeable                       | :white_check_mark: |                :x:                 |                       :x:                       |                        :x:                        |                               :x:                                |
-| 1D barcodes (22 types)               | :white_check_mark: |                :x:                 |            :white_check_mark: (100+)            |              :white_check_mark: (13)              |                               :x:                                |
+| 1D barcodes (40 types)               | :white_check_mark: |                :x:                 |            :white_check_mark: (100+)            |              :white_check_mark: (13)              |                               :x:                                |
 | QR Code (v1-40, all EC)              | :white_check_mark: |         :white_check_mark:         |               :white_check_mark:                |                        :x:                        |                        :white_check_mark:                        |
 | Data Matrix                          | :white_check_mark: |                :x:                 |               :white_check_mark:                |                        :x:                        |                               :x:                                |
 | PDF417                               | :white_check_mark: |                :x:                 |               :white_check_mark:                |                        :x:                        |                               :x:                                |
@@ -739,17 +748,26 @@ Standards: [ISO/IEC 15417](https://www.iso.org/standard/43896.html) (Code 128), 
 
 Contributions are welcome! Here are some areas where help is especially appreciated:
 
-**Encoder improvements needed:**
+**Where help would go furthest:**
 
-- **DotCode** — Symbol size selection tables and mask pattern per AIM ISS DotCode 4.0
-- **Han Xin** — Separator bands, data placement, and GB 18030 Chinese character encoding (75% reference match, finders 100%)
-- **JAB Code** — Full LDPC error correction per ISO/IEC 23634
+- **JAB Code** — full LDPC error correction per ISO/IEC 23634. The one
+  symbology here that cannot be verified against anything, because no decoder
+  and no reference encoder implements it.
+- **Han Xin GB 18030 Chinese modes** — byte mode carries Chinese text today.
+  BWIPP's own Han Xin encoder implements Numeric and Byte and no more, so
+  adding the Chinese modes means finding something that can check them first.
+- **Telepen and Channel Code** — neither has a decoder, and neither yields to a
+  rule: Telepen's 128 character table is reproduced by no deterministic
+  tokenizer or small state machine we could find, and Channel Code's
+  construction is an enumeration. Copying the reference's tables and then
+  comparing against the reference is not verification.
+- **Code 49, Code One, Ultracode** — implementable and comparable against
+  BWIPP, just not written yet.
 
-**Other contributions:**
+**Also welcome:**
 
-- Data Matrix DMRE rectangular sizes ([#71](https://github.com/productdevbook/etiket/issues/71))
-- GS1 DataBar stacked variants ([#61](https://github.com/productdevbook/etiket/issues/61))
-- Round-trip scan tests for experimental formats
+- More payloads for `test/encoders-random-differential.test.ts`, which is where
+  a mis-taken branch shows up
 - Documentation improvements
 
 ```bash

@@ -1,6 +1,6 @@
 ---
 project: scira
-stars: 11833
+stars: 11838
 description: |-
     Scira (Formerly MiniPerplx) is a minimalistic AI-powered search engine that helps you find information on the internet and cites it too. Powered by Vercel AI SDK!
 url: https://github.com/zaidmukaddam/scira
@@ -20,6 +20,18 @@ Research at the speed of thought. The agentic research platform that plans, retr
 
 <br />
 
+<div align="center" markdown="1">
+
+[![Context.dev](public/context-dev-promo.png)](https://link.context.dev/scira)<br>
+
+### **[Context.dev, One API to fetch the internet](https://link.context.dev/scira)**<br>
+
+[Sign up for 500 credits free, no card required.](https://link.context.dev/scira)
+
+</div>
+
+<br />
+
 🔗 **[Try Scira at scira.ai](https://scira.ai)**
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/zaidmukaddam/scira)
@@ -32,19 +44,6 @@ Research at the speed of thought. The agentic research platform that plans, retr
 | :-----------------------------------------------------------: | :----------------------------------------------------: | :-----------------------------------------------------: |
 | <img src="/public/one.svg" alt="Vercel AI SDK" height="40" /> | <img src="/public/exa.png" alt="Exa AI" height="40" /> | <img src="/public/upstash.svg" alt="Upstash" height="40" /> |
 |            For AI model integration and streaming             |          For web search and content retrieval          |        For serverless Redis and rate limiting           |
-
-</div>
-
-## Special Thanks
-
-<div align="center" markdown="1">
-
-[![Warp](https://github.com/user-attachments/assets/2bda420d-4211-4900-a37e-e3c7056d799c)](https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=scira)<br>
-
-### **[Warp, the intelligent terminal](https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=scira)**<br>
-
-[Available for MacOS, Linux, & Windows](https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=scira)<br>
-[Visit warp.dev to learn more](https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=scira)
 
 </div>
 
@@ -242,11 +241,11 @@ To run the application locally without Docker:
 2. Copy `.env.example` to `.env.local` and fill in your API keys
 3. Install dependencies:
    ```bash
-   pnpm install
+   bun install
    ```
 4. Start the development server:
    ```bash
-   pnpm dev
+   bun dev
    ```
 5. Open `http://localhost:3000` in your browser
 

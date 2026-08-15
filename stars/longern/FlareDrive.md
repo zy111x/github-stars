@@ -1,6 +1,6 @@
 ---
 project: FlareDrive
-stars: 536
+stars: 538
 description: |-
     Free file hosting service (WebUI & WebDAV) using CloudFlare R2
 url: https://github.com/longern/FlareDrive
