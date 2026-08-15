@@ -1,6 +1,6 @@
 ---
 project: Scrapling
-stars: 73128
+stars: 74152
 description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!
 url: https://github.com/D4Vinci/Scrapling
 ---
@@ -53,6 +53,9 @@ NodeMaven - reliable proxy provider with the highest quality IP on the market. U
 
 Scrapling handles Cloudflare Turnstile. For enterprise-grade protection, **Hyper Solutions** provides API endpoints that generate valid antibot tokens for **Akamai**, **DataDome**, **Kasada**, and **Incapsula**. Simple API calls, no browser automation required.
 
+Hey, we built **BirdProxies** because proxies shouldn't be complicated or overpriced. Fast residential and ISP proxies in 195+ locations, fair pricing, and real support.  
+**Try our FlappyBird game on the landing page for free data!**
+
 **Evomi** : residential proxies from $0.49/GB. Scraping browser with fully spoofed Chromium, residential IPs, auto CAPTCHA solving, and anti-bot bypass.  
 **Scraper API for hassle-free results. MCP and N8N integrations are available.**
 
@@ -65,6 +68,8 @@ PetroSky VPS - cloud servers built for nonstop automation. Windows and Linux mac
 Read a full review of Scrapling on The Web Scraping Club (Nov 2025), the #1 newsletter dedicated to Web Scraping.
 
 Swiftproxy provides scalable residential proxies with 80M+ IPs across 195+ countries, delivering fast, reliable connections, automatic rotation, and strong anti-block performance. Free trial available.
+
+CoreClaw provides Web Data APIs for AI agents. Access structured data from Google Maps, LinkedIn, Instagram, YouTube, Amazon and more.
 
 _Do you want to show your ad here? Click here_
 
@@ -91,7 +96,7 @@ Key Features
 -   🚦 **AutoThrottle**: Stop guessing delays. The spider tunes the delay of each domain on its own from how fast the website responds, then doubles it (or waits what `Retry-After` asks) whenever the website starts blocking or rate-limiting you, and speeds back up once it stops.
 -   🤖 **Robots.txt Compliance**: Optional `robots_txt_obey` flag that respects `Disallow`, `Crawl-delay`, and `Request-rate` directives with per-domain caching.
 -   🧪 **Development Mode**: Cache responses to disk on the first run and replay them on subsequent runs - iterate on your `parse()` logic without re-hitting the target servers.
--   🧩 **Ready-made Spider Templates**: Skip the boilerplate with `CrawlSpider` for rule-based link following, `SitemapSpider` for sitemap/robots.txt-driven crawls, and `ShopifySpider` to pull every product out of any Shopify store through its JSON API, one item per variant.
+-   🧩 **Ready-made Spider Templates**: Skip the boilerplate with `CrawlSpider` for rule-based link following, `SitemapSpider` for sitemap/robots.txt-driven crawls, `XMLFeedSpider`/`CSVFeedSpider` for iterating XML/RSS and CSV feeds, and `ShopifySpider` to pull every product out of any Shopify store through its JSON API, one item per variant.
 -   🔗 **Link Extraction**: A standalone `LinkExtractor` primitive with allow/deny patterns, domain filters, CSS/XPath scoping, extension filtering, and canonicalization - use it inside the templates or on its own.
 -   📦 **Built-in Export**: Export results through hooks and your own pipeline or the built-in JSON/JSONL/CSV/XML exporters with `result.items.to_json()`, `to_jsonl()`, `to_csv()`, and `to_xml()`.
 
@@ -338,7 +343,7 @@ vs Scrapling
 
 Scrapling
 
-1.98
+1.99
 
 1.0x
 
@@ -346,23 +351,23 @@ Scrapling
 
 Parsel/Scrapy
 
-1.99
+2.06
 
-1.005
+1.035
 
 3
 
 Raw Lxml
 
-2.48
+2.56
 
-1.253
+1.286
 
 4
 
 PyQuery
 
-23.15
+23.98
 
 ~12x
 
@@ -370,7 +375,7 @@ PyQuery
 
 Selectolax
 
-196.09
+197.02
 
 ~99x
 
@@ -378,25 +383,25 @@ Selectolax
 
 MechanicalSoup
 
-1531.24
+1545.15
 
-~773.4x
+~776.5x
 
 7
 
 BS4 with Lxml
 
-1535.19
+1562.1
 
-~775.3x
+~785.0x
 
 8
 
 BS4 with html5lib
 
-3388.16
+3412.73
 
-~1711.2x
+~1714.9x
 
 ### Element Similarity & Text Search Performance
 
@@ -410,15 +415,15 @@ vs Scrapling
 
 Scrapling
 
-2.29
+2.3
 
 1.0x
 
 AutoScraper
 
-12.46
+12.58
 
-5.441x
+5.47x
 
 > All benchmarks represent averages of 100+ runs. See benchmarks.py for methodology.
 

@@ -1,6 +1,6 @@
 ---
 project: shot-easy-website
-stars: 1158
+stars: 1159
 description: Take a screenshot online and compresses images in browser with Webassembly
 url: https://github.com/CH563/shot-easy-website
 ---
@@ -8,7 +8,7 @@ url: https://github.com/CH563/shot-easy-website
 ShotEasy - take a screenshot online
 ===================================
 
-Photo edit online for free, resize, and filter any photos, edit photo on browser, convert image to jpg/png/jpeg/webp, merge images or PDF pages into a long image, convert video to GIF, open documents online, and easily screenshot an area or full page.
+Photo edit online for free, resize and filter photos, convert image formats, merge images or PDF pages into a long image, convert video to GIF, open documents, recognize text with browser-based OCR, create searchable PDFs, and easily screenshot an area or full page.
 
 🏆 Chrome Extension
 
@@ -27,6 +27,25 @@ Photo edit online for free, resize, and filter any photos, edit photo on browser
 🎬 Video Convert
 
 📄 Office & PDF Viewer
+
+🔎 OCR & Editable PDF
+
+OCR & searchable PDF
+--------------------
+
+The OCR tool uses `@paddleocr/paddleocr-js` and PP-OCRv5 to recognize text from one image or scanned PDF directly in the browser.
+
+Key capabilities:
+
+-   Supports JPG, PNG, WebP, BMP, and scanned PDF input.
+-   Starts OCR automatically after a file is selected.
+-   Displays detected text regions and recognition confidence scores.
+-   Allows line-by-line correction and full-text editing before export.
+-   Reconstructs visible OCR text at the detected positions in a selectable, searchable PDF without embedding the source image.
+-   Keeps document images, rendered PDF pages, and recognized text in browser memory without uploading the selected file to an OCR server.
+-   Downloads the public OCR model and WebAssembly runtime on first use; browser caching can make later recognition faster.
+
+The localized OCR page and SEO copy are available for every language configured in `src/lib/config.js`. OCR page translations live in `src/lib/ocrCopy.js`, while the main interface is implemented in `src/components/OcrTool.jsx`.
 
 Blog
 ----
@@ -109,6 +128,7 @@ Give me the bugs
 Update
 ------
 
+-   2026-08-11: add local PaddleOCR.js text recognition, editable OCR results, and searchable PDF export.
 -   2024-11-26: add background remover use Hugging Face model: Xenova/modnet
 
 👀 Want to learn more?

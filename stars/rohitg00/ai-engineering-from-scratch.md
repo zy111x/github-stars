@@ -1,6 +1,6 @@
 ---
 project: ai-engineering-from-scratch
-stars: 46309
+stars: 46824
 description: Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
@@ -145,6 +145,14 @@ Cloning also auto-loads the learning skills in Claude Code, and gives every less
 -   You can write code (any language; Python helps).
 -   You want to understand how AI **actually works**, not just call APIs.
 
+### Prepare for Claude certifications
+
+The Claude Certification Academy is a free, open-source preparation program for all four official Claude certification tracks: Associate Foundations, Developer Foundations, Architect Foundations, and Architect Professional. Each route combines blueprint-mapped lessons, runnable labs, a diagnostic, capstone work, and a full-length original practice exam.
+
+Use the AI-native GitHub onboarding guide with Claude Code, Codex, ChatGPT, Cursor, or another agent. Run `/claude-certification` to choose a track, create a persistent route in `CLAUDE-CERTIFICATION.md`, learn one step at a time, execute the real labs, and get artifact-based feedback. The same curriculum remains available on the certification website.
+
+The academy is independent study material based on public exam objectives. It is not affiliated with Anthropic, does not reproduce live exam questions, and cannot guarantee a passing score.
+
 ### The learning skills (any agent: Claude, Cursor, Codex, OpenClaw, Hermes, …)
 
 Skill
@@ -163,6 +171,10 @@ The tutor loop. Warm-up recall, then the next lesson taught interactively, then 
 
 Topic router. "Where do I learn attention?" or "my loss is NaN" → the exact lessons, with links.
 
+`/claude-certification`
+
+Certification tutor. Chooses CCAO-F, CCDV-F, CCAR-F, or CCAR-P; teaches each lesson; runs labs; reviews artifacts; administers diagnostics and mocks; saves progress.
+
 `/find-your-level`
 
 Ten-question placement quiz. Maps your knowledge to a starting phase and produces a personalized path with hour estimates.
@@ -175,10 +187,12 @@ Per-phase quiz, eight questions, with feedback and specific lessons to review.
 ░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
 ```
 
-Read it as a book
------------------
+Read the core curriculum as a book
+----------------------------------
 
-The whole course compiles into a six-volume book series. EPUB and PDF are built by CI from the same lesson sources and attached to every GitHub release; the links below always resolve to the newest release. Volume numbers index the series, not versions: each copy carries a dated edition stamp, and older editions stay downloadable from their release.
+The 20-phase core curriculum under `phases/` compiles into a six-volume book series. EPUB and PDF are built by CI from the same core lesson sources and attached to every GitHub release; the links below always resolve to the newest release. Volume numbers index the series, not versions: each copy carries a dated edition stamp, and older editions stay downloadable from their release.
+
+Certification curricula are intentionally not converted into the books. Their AI tutor state, runnable labs, interactive figures, diagnostics, and timed mocks remain first-class on GitHub and the website.
 
 Vol
 
@@ -4576,7 +4590,7 @@ Plug them into Claude, Cursor, Codex, OpenClaw, Hermes, or any agent that reads 
 
 Two skill sets, two installers:
 
-**The learning skills** (`/start-learning`, `/learn`, `/course-guide`, `/find-your-level`, `/check-understanding`) live under `skills/` and install into any agent with one command — no clone, no Python:
+**The learning skills** (`/start-learning`, `/learn`, `/course-guide`, `/claude-certification`, `/find-your-level`, `/check-understanding`) live under `skills/` and install into any agent with one command — no clone, no Python:
 
 npx skills add rohitg00/ai-engineering-from-scratch
 

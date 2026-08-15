@@ -1,6 +1,6 @@
 ---
 project: annotated_deep_learning_paper_implementations
-stars: 67298
+stars: 67310
 description: 🧑‍🏫 60+ Implementations/tutorials of deep learning papers with side-by-side notes 📝; including transformers (original, xl, switch, feedback, vit, ...), optimizers (adam, adabelief, sophia, ...), gans(cyclegan, stylegan2, ...), 🎮 reinforcement learning (ppo, dqn), capsnet, distillation, ... 🧠
 url: https://github.com/labmlai/annotated_deep_learning_paper_implementations
 ---
