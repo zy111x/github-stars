@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 40370
+stars: 41518
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/amruthpillai/reactive-resume
 ---
@@ -226,7 +226,8 @@ Reactive Resume is and always will be free and open-source. If it has helped you
 Other ways to support:
 
 -   Star this repository
--   Report bugs and suggest features
+-   Report reproducible bugs and suggest actionable features
+-   Help other users in GitHub Discussions
 -   Improve documentation
 -   Help with translations
 
@@ -245,6 +246,8 @@ Contributions make open-source thrive. Whether fixing a typo or adding a feature
 5.  Open a Pull Request
 
 See the development setup guide for detailed instructions on how to set up the project locally.
+
+Maintainers review the `status: needs triage` queue weekly. Triaged bugs become `status: confirmed`; feature proposals become `status: accepted`; reports that need details become `status: needs info`.
 
 License
 -------

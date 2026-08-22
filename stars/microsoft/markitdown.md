@@ -1,6 +1,6 @@
 ---
 project: markitdown
-stars: 173915
+stars: 175504
 description: Python tool for converting files and office documents to Markdown.
 url: https://github.com/microsoft/markitdown
 ---

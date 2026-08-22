@@ -1,6 +1,6 @@
 ---
 project: next-ai-draw-io
-stars: 34903
+stars: 35172
 description: A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.
 url: https://github.com/DayuanJiang/next-ai-draw-io
 ---
@@ -15,6 +15,8 @@ English | 中文 | 日本語
 A Next.js web application that integrates AI capabilities with draw.io diagrams. Create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.
 
 > Note: Thanks to ByteDance Doubao sponsorship, the demo site now uses the powerful glm-4.7 model!
+
+> 🎁 Thanks to **Atlas Cloud** for sponsoring next-ai-draw-io. Its OpenAI-compatible API gives diagram workflows one provider connection for DeepSeek, Qwen, GLM, Kimi, MiniMax, and more. Budget-friendly access is available through the Coding Plan.
 
 20251211\_drawio.mp4
 
@@ -184,6 +186,7 @@ Multi-Provider Support
 -   ModelScope
 -   SGLang
 -   Vercel AI Gateway
+-   Atlas Cloud
 
 All providers except AWS Bedrock and OpenRouter support custom endpoints.
 
@@ -218,6 +221,8 @@ Support & Contact
 -----------------
 
 **Special thanks to ByteDance Doubao for sponsoring the API token usage of the demo site!** Register on the ARK platform to get 500K free tokens for all models!
+
+**Special thanks to Atlas Cloud for sponsoring next-ai-draw-io and supporting its multi-provider ecosystem!** Try its OpenAI-compatible LLM API through the Atlas Cloud Coding Plan.
 
 If you find this project useful, please consider sponsoring to help me host the live demo site!
 

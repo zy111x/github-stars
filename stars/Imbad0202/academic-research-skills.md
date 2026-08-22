@@ -1,6 +1,6 @@
 ---
 project: academic-research-skills
-stars: 42595
+stars: 43339
 description: Academic Research Skills for Claude Code: research → write → review → revise → finalize
 url: https://github.com/Imbad0202/academic-research-skills
 ---
@@ -58,6 +58,8 @@ Quick install
 -   _Optional:_ Pandoc for DOCX, tectonic + Source Han Serif TC for APA 7.0 PDF (Markdown output works without either)
 -   _Optional (real Python):_ The core skills (research / write / review) need no Python — they are prompt-driven. A **real Python interpreter** is needed only for: the `PreToolUse` write-scope guard (optional subagent hardening — if no real Python is found it cleanly no-ops and the guard is simply inactive; core skills are unaffected), plus a few opt-in features that shell out to Python (revision-patch mode, the submission-package verifier, and the `/ars-cache-invalidate` / `/ars-mark-read` / `/ars-unmark-read` commands). On Windows, note that `python3` is often a non-functional Microsoft Store placeholder rather than real Python; install Python from python.org (or via `winget`) so the launcher can find a real interpreter. The guard launcher is a POSIX shell script and `hooks.json` invokes it through `bash`, so on Windows it needs **Git Bash** (bundled with Git for Windows). With Git Bash present, a missing real Python degrades cleanly (the guard no-ops, silently). Without Git Bash, Claude Code falls back to PowerShell, which cannot run the `.sh` launcher at all: the guard is inactive and the `PreToolUse` hook will log an error per call rather than no-op quietly (accepted degradation — the guard is optional and never blocks your writes, but the hook noise is the trade-off until Git Bash is installed).
 
+> **Which controls are active in _your_ install channel?** Availability varies by install channel. See the per-channel map: docs/CONTROL\_AVAILABILITY.md.
+
 **Plugin install (v3.7.0+, recommended):**
 
 ```
@@ -69,6 +71,10 @@ Quick install
 
 **👉 docs/SETUP.md** — full guide: install Claude Code, set up API keys, optional Pandoc/tectonic for DOCX/PDF, cross-model verification (`ARS_CROSS_MODEL`), and six installation methods (Plugin, project skills, global skills, claude.ai Project, repo-cloned, Claude Science import).
 
+**👉 docs/DATA\_FLOWS.md** — what leaves your machine (bibliographic resolvers, optional consent-gated cross-model calls, the plugin update check), what is cached locally, for how long, and how to turn each path off.
+
+**👉 docs/RISK\_REGISTER.md** — the standing risks the suite knows about, which existing controls address each one, the evidence status behind those controls, and what remains open.
+
 **Using Claude Science?** The four skills import directly: **Skills → Import from GitHub**, paste `https://github.com/Imbad0202/academic-research-skills`, **Preview**, then **Import 4 skills** (requires v3.14.0+ of this repo — the importer reads the explicit skill paths in the marketplace manifest). Imports are point-in-time snapshots: re-import after ARS updates. Imported skills carry the ARS methodology (research / writing / review protocols); Claude Code-specific machinery — slash commands, hooks, subagent orchestration — does not transfer. See docs/SETUP.md Method 5 for details.
 
 **Using Pi?** Install the in-tree, community-maintained wrapper with `pi install git:github.com/Imbad0202/academic-research-skills`. It keeps the original ARS content authoritative and documents Pi-specific orchestration and hook limitations. See `pi/README.md`.
@@ -76,6 +82,8 @@ Quick install
 **Using Codex CLI?** Install the sibling distribution instead: `Imbad0202/academic-research-skills-codex` — same workflow content, Codex-native packaging as a single `$academic-research-suite` skill with `ars-*` aliases.
 
 **Third-party platforms and integrations** that wrap or host ARS are listed in THIRD\_PARTY.md — community-submitted and not reviewed or endorsed by the maintainer.
+
+**Governance:** who decides, what cross-model review does and does not provide, and the project's end-of-life posture are stated in GOVERNANCE.md; security reporting and triage in SECURITY.md.
 
 Performance & cost
 ------------------
@@ -301,9 +309,9 @@ Per-agent responsibilities and per-stage artifacts now live in `docs/ARCHITECTUR
 
 7-agent multi-perspective review with **criterion-bound narrative judgements**. Modes: full, re-review, quick, methodology-focus, guided, calibration. Current live reviews and Schema 6 packages remain `NOT_CALIBRATED`; full calibration can produce a bounded candidate profile, but application to a live review is not wired. No numerical total is mapped to Accept, Minor Revision, Major Revision, or Reject. First-round review panel vs. contract-governed re-review dispatch boundary: see ARCHITECTURE.md §3 Stage 3 / Stage 3'.
 
-### Academic Pipeline (v3.20.1)
+### Academic Pipeline (v3.21.0)
 
-10-stage orchestrator with integrity verification, two-stage review, Socratic coaching, and collaboration evaluation. Pipeline guarantees: every stage requires user confirmation checkpoint; integrity verification (Stage 2.5 + 4.5) cannot be skipped; R&R Traceability Matrix (Schema 11) independently verifies author revision claims. v3.4 added the Compliance Agent (PRISMA-trAIce + RAISE) at Stage 2.5 / 4.5. v3.5 adds the **Collaboration Depth Observer** (`collaboration_depth_agent`, advisory only — never blocks) at every FULL/SLIM checkpoint and at pipeline completion. MANDATORY integrity gates (2.5 / 4.5) explicitly skip the observer so compliance checks are not diluted. Based on Wang & Zhang (2026), IJETHE 23:11. Stage-by-stage matrix with agents, artifacts, and gates: see ARCHITECTURE.md §3.
+10-stage orchestrator with integrity verification, two-stage review, Socratic coaching, and collaboration evaluation. Pipeline guarantees: every stage requires user confirmation checkpoint; integrity verification (Stage 2.5 + 4.5) is MANDATORY with no unrecorded bypass (every override requires user reasoning recorded for Stage 6); R&R Traceability Matrix (Schema 11) independently verifies author revision claims. v3.4 added the Compliance Agent (PRISMA-trAIce + RAISE) at Stage 2.5 / 4.5. v3.5 adds the **Collaboration Depth Observer** (`collaboration_depth_agent`, advisory only — never blocks) at every FULL/SLIM checkpoint and at pipeline completion. MANDATORY integrity gates (2.5 / 4.5) explicitly skip the observer so compliance checks are not diluted. Based on Wang & Zhang (2026), IJETHE 23:11. Stage-by-stage matrix with agents, artifacts, and gates: see ARCHITECTURE.md §3.
 
 * * *
 
@@ -400,6 +408,10 @@ Contributors
 
 Changelog
 ---------
+
+### v3.21.0 (2026-08-18) — ISO/IEC 42001-spirit transparency, verifiability, and feasibility track
+
+> **Transparency you can check:** v3.21.0 completes the ISO/IEC 42001-spirit audit track (#753–#760). Outward claims are aligned with the evidence record, and four standing artifacts now answer the questions users actually have: which controls operate in your install channel (`docs/CONTROL_AVAILABILITY.md`), what leaves your machine and what is stored (`docs/DATA_FLOWS.md`), how strongly each CI workflow actually enforces (`docs/ARCHITECTURE.md` §7.1), and which risk each mechanism addresses, with what evidence and what residual gap (`docs/RISK_REGISTER.md`) — each defended by its own CI lint. `GOVERNANCE.md` states decision authority, what cross-model review does and does not provide (an error-detection control, not organizational independence), and the end-of-life posture; `SECURITY.md` gains a solo-runnable severity-tiered triage procedure. These are distilled operating principles with informative anchors to ISO/IEC 42001, not a certification claim, and no new effectiveness numbers are claimed. Suite/pipeline → v3.21.0; deep-research → v2.12.1; academic-paper → v3.3.1; academic-paper-reviewer → v1.11.1.
 
 ### v3.20.1 (2026-08-15) — Contract-honesty hardening and bounded evaluation substrates
 

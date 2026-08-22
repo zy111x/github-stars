@@ -1,6 +1,6 @@
 ---
 project: lingbot-map
-stars: 16500
+stars: 16616
 description: A feed-forward 3D foundation model for reconstructing scenes from streaming data
 url: https://github.com/Robbyant/lingbot-map
 ---
@@ -230,16 +230,21 @@ pip install onnxruntime        # CPU
 # or
 pip install onnxruntime-gpu    # GPU (faster for large image sets)
 
-The sky segmentation model (`skyseg.onnx`) will be automatically downloaded from HuggingFace on first use. If the download fails or does not produce a regular file, sky masking stops with a `RuntimeError` that reports the model path, download URL, cause, and manual setup guidance; it never silently continues without masking. For manual recovery, download the model as `skyseg.onnx` in the directory from which you run the command, because root `demo.py` resolves its default model path relative to the current working directory:
+By default, root `demo.py` resolves the sky segmentation model as `skyseg.onnx` relative to the current working directory. If that default file is missing, it is automatically downloaded from HuggingFace on first use. If the download fails or does not produce a regular file, sky masking stops with a `RuntimeError` that reports the model path, download URL, cause, and manual setup guidance; it never silently continues without masking.
+
+For manual recovery while keeping the default path, download `skyseg.onnx` into the directory from which you run `demo.py`:
 
 wget -O skyseg.onnx https://huggingface.co/JianyuanWang/skyseg/resolve/main/skyseg.onnx
 python demo.py --model\_path /path/to/checkpoint.pt \\
     --image\_folder /path/to/images/ --mask\_sky
 
-**Usage:**
+**Usage with an explicit model path:**
+
+To use a model stored elsewhere, pass its absolute path with `--sky_model`:
 
 python demo.py --model\_path /path/to/checkpoint.pt \\
-    --image\_folder /path/to/images/ --mask\_sky
+    --image\_folder /path/to/images/ --mask\_sky \\
+    --sky\_model /absolute/path/to/skyseg.onnx
 
 Sky masks are cached in `<image_folder>_sky_masks/` so subsequent runs skip regeneration. You can also specify a custom cache directory with `--sky_mask_dir`, or save side-by-side mask visualizations with `--sky_mask_visualization_dir`:
 
@@ -399,6 +404,8 @@ Stamp a `<i> / <N> Frames` counter in the top-right corner of the MP4.
 `--save_predictions`
 
 Persist per-frame NPZs alongside the MP4. Useful for inspection or for re-rendering with different camera/overlay settings later.
+
+#### Quick Mode and Demo Reproduction
 
 Replacing keyframe\_interval = 10 with image\_stride = 10 speeds up rendering. Then, uncomment the camera follow section in demo\_render/config/indoor.yaml and set the birdeye's ranges to \[2000, 2500\] to reproduce the indoor fly-through effect shown in the demo:
 

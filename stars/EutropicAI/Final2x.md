@@ -1,6 +1,6 @@
 ---
 project: Final2x
-stars: 7265
+stars: 7314
 description: a cross-platform image super-resolution tool
 url: https://github.com/EutropicAI/Final2x
 ---
@@ -43,9 +43,10 @@ apt install -y libomp5 xdg-utils
 
 ### Reference
 
+The Python CLI and desktop backend now live in `core` and are released with the desktop app under the same version number.
+
 The following references were referenced in the development of this project:
 
--   Final2x-core
 -   naive-ui
 -   electron-vite
 
