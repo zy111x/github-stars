@@ -1,6 +1,6 @@
 ---
 project: snapdom
-stars: 7996
+stars: 8016
 description: |-
     High-performance engine for capturing, modifying, and converting DOM elements into any format.
 url: https://github.com/zumerlab/snapdom
@@ -44,14 +44,14 @@ url: https://github.com/zumerlab/snapdom
 
 # SnapDOM
 
-**SnapDOM** is a next-generation **DOM Capture Engine** — the fast, modern alternative to **html2canvas**, **dom-to-image**, and **html-to-image**.  
-It converts any DOM subtree into a self-contained representation that can be exported to SVG, PNG, JPG, WebP, Canvas, Blob, or **any custom format** through plugins — ultra-fast, modular, extensible, and dependency-free.
+**SnapDOM** is a next-generation **DOM Capture Engine**: the fast, modern alternative to **html2canvas**, **dom-to-image**, and **html-to-image**.  
+It converts any DOM subtree into a self-contained representation that can be exported to SVG, PNG, JPG, WebP, Canvas, Blob, or **any custom format** through plugins. Ultra-fast, modular, extensible, and dependency-free.
 
 > 📖 **[Documentation, guides & live demos → snapdom.dev](https://snapdom.dev)**
 
 ## Features
 
-Full DOM capture with embedded styles, pseudo-elements and fonts; export to SVG, PNG, JPG, WebP, `canvas` or Blob — ultra fast, dependency-free, and 100% based on standard Web APIs.
+Full DOM capture with embedded styles, pseudo-elements and fonts; export to SVG, PNG, JPG, WebP, `canvas` or Blob. Ultra fast, dependency-free, and 100% based on standard Web APIs.
 
 👉 **See the complete technical feature list in [FEATURES.md](FEATURES.md).**
 
@@ -165,7 +165,14 @@ import { snapdom } from '@zumer/snapdom';  // → dist/snapdom.mjs
 **Subpath imports** (lighter bundle if you only need one):
 ```js
 import { preCache } from '@zumer/snapdom/preCache';
-import { plugins } from '@zumer/snapdom/plugins';
+```
+
+**Official plugins** live in their own package:
+```bash
+npm install @zumer/snapdom-plugins
+```
+```js
+import { filter } from '@zumer/snapdom-plugins/filter';
 ```
 
 
@@ -231,7 +238,7 @@ The full reference lives on **[snapdom.dev/docs](https://snapdom.dev/docs/)**, k
 - **[Plugins](https://snapdom.dev/docs/plugins/)**: build, register and ship custom plugins and export formats. Browse community plugins on the [plugins page](https://snapdom.dev/plugins.html).
 - **[Cache & preCache](https://snapdom.dev/docs/cache/)**: control caching between captures and preload resources.
 
-Popular guides: **[capture before creating a PDF](https://snapdom.dev/how-to/capture-before-pdf/)** · **[SnapDOM vs modern-screenshot](https://snapdom.dev/compare/modern-screenshot/)** · **[how SnapDOM captures the DOM](https://snapdom.dev/blog/painting-without-canvas/)**
+Popular guides: **[convert HTML to PNG](https://snapdom.dev/how-to/html-to-png/)** · **[tile a full-page capture](https://snapdom.dev/blog/huge-page-mosaic/)** · **[run SnapDOM from Playwright or Puppeteer](https://snapdom.dev/blog/dom-capture-boundaries/)** · **[how SnapDOM captures the DOM](https://snapdom.dev/blog/painting-without-canvas/)**
 
 ### API at a glance
 
@@ -286,8 +293,8 @@ All options are optional and can be passed to `snapdom(el, options)` or any shor
 ## Limitations
 
 * External images should be CORS-accessible (use `useProxy` option for handling CORS denied)
-* When WebP format is used on Safari, it will fallback to PNG rendering.
-* `@font-face` CSS rule is well supported, but if need to use JS `FontFace()`, see this workaround [`#43`](https://github.com/zumerlab/snapdom/issues/43)
+* When WebP format is used on Safari, it will fallback to PNG rendering (verified on Safari 26.5: `canvas.toDataURL('image/webp')` returns PNG). `download()` keeps the `.webp` filename, so the saved file carries PNG bytes.
+* `@font-face` CSS rule is well supported. Fonts registered from JavaScript with `FontFace()` are *not* embedded automatically: list them in the `localFonts` option (`{ family, src }`), or use the workaround in [`#43`](https://github.com/zumerlab/snapdom/issues/43)
 * **Safari**: captures with `embedFonts` or background/mask images run slower due to [WebKit #219770](https://bugs.webkit.org/show_bug.cgi?id=219770) (font decode timing). SnapDOM waits for the fonts the element actually uses and verifies the first canvas draw, so there is nothing to configure.
 * **Custom scrollbar styles** (`::-webkit-scrollbar`): Applied only when the element has *not* been scrolled. When scrolled, the viewport content is captured without the scrollbar.
 

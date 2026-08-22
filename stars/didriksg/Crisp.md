@@ -1,6 +1,6 @@
 ---
 project: Crisp
-stars: 980
+stars: 1080
 description: |-
     Free, open-source external monitor control for macOS: a lightweight menu bar app with sharp HiDPI/Retina scaling (no more blurry or tiny text), DDC brightness, presets, and virtual displays. A free alternative to BetterDisplay and Lunar, including features they charge for.
 url: https://github.com/didriksg/Crisp
@@ -23,7 +23,7 @@ Sharp HiDPI scaling, DDC brightness, presets and virtual displays.
 [![Platform](https://img.shields.io/badge/platform-macOS%2014%2B-blue)](#requirements)
 [![License](https://img.shields.io/github/license/didriksg/Crisp?color=3fb950)](LICENSE)
 
-[Website](https://didriksg.github.io/Crisp/) · [Crisp vs BetterDisplay & Lunar](https://didriksg.github.io/Crisp/crisp-vs-betterdisplay.html) · [Fix a blurry external monitor](https://didriksg.github.io/Crisp/fix-blurry-external-monitor-macos.html) · [中文](https://didriksg.github.io/Crisp/zh.html)
+[Website](https://crispmac.app/) · [Crisp vs BetterDisplay & Lunar](https://crispmac.app/crisp-vs-betterdisplay.html) · [Fix a blurry external monitor](https://crispmac.app/fix-blurry-external-monitor-macos.html) · [中文](https://crispmac.app/zh.html)
 
 </div>
 
@@ -60,7 +60,7 @@ Or download [`Crisp.dmg`](https://github.com/didriksg/Crisp/releases/latest/down
 
 ## How does it compare?
 
-BetterDisplay and Lunar are excellent, deeper tools. Crisp keeps the everyday essentials free: flexible HiDPI scaling, hardware brightness, presets, disconnecting displays, color adjustments, and auto-brightness sync. See the full side-by-side: [Crisp vs BetterDisplay, Lunar & MonitorControl](https://didriksg.github.io/Crisp/crisp-vs-betterdisplay.html).
+BetterDisplay and Lunar are excellent, deeper tools. Crisp keeps the everyday essentials free: flexible HiDPI scaling, hardware brightness, presets, disconnecting displays, color adjustments, and auto-brightness sync. See the full side-by-side: [Crisp vs BetterDisplay, Lunar & MonitorControl](https://crispmac.app/crisp-vs-betterdisplay.html).
 
 ## Support
 
@@ -78,6 +78,7 @@ Thank you to the people chipping in toward keeping Crisp signed and notarized:
 
 - **Barry** ([@BarryBarrywu](https://github.com/BarryBarrywu))
 - **[@kuldipmaharjan](https://github.com/kuldipmaharjan)**
+- **Volodymyr Dombrovskyi** ([@rebelvg](https://github.com/rebelvg))
 
 ## Requirements
 

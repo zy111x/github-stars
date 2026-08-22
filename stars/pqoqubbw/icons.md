@@ -1,6 +1,6 @@
 ---
 project: icons
-stars: 7958
+stars: 7982
 description: |-
     beautifully crafted animated icons
 url: https://github.com/pqoqubbw/icons

@@ -1,6 +1,6 @@
 ---
 project: office-open-xml-viewer
-stars: 658
+stars: 671
 description: |-
     A browser-based viewer for Office Open XML documents that renders to an HTML Canvas element.
 url: https://github.com/yukiyokotani/office-open-xml-viewer
@@ -97,8 +97,9 @@ pnpm add @silurus/ooxml
 > | `@silurus/ooxml/xlsx` | 2.6 MB | 0.82 MB | XLSX renderer, parser WASM, and lazy worker |
 > | `@silurus/ooxml/pptx` | 2.5 MB | 0.78 MB | PPTX renderer, parser WASM, and lazy worker |
 > | `@silurus/ooxml/math` | 3.1 MB | 1.1 MB | Optional MathJax + STIX Two Math engine |
-> | `@silurus/ooxml/three-d` | 81 KB | 23 KB | Optional model-space 3-D chart mesh and camera |
+> | `@silurus/ooxml/three-d` | 92 KB | 27 KB | Optional model-space 3-D chart mesh and camera |
 > | `@silurus/ooxml/region-map` | 236 KB | 66 KB | Optional offline Region Map renderer and fixed country geometry |
+> | `@silurus/ooxml/chart-ex` | 37 KB | 11 KB | Optional Microsoft ChartEx families |
 >
 > These are production-artifact estimates, not initial-load figures: each row
 > sums all assets reachable from that entry, including parser WASM and worker
@@ -112,10 +113,11 @@ pnpm add @silurus/ooxml
 > [Rendering equations](#rendering-equations)). Never import the `math` entry
 > and the loader chunk never enters your graph at all.
 >
-> The 3-D chart and Region Map renderers follow the same dependency-injection
-> boundary: import and pass only the addons an application needs. Ordinary
-> format entries do not reach either optional implementation, so bundlers can
-> tree-shake their mesh code and fixed geographic asset completely.
+> The ChartEx, 3-D chart and Region Map renderers follow the same dependency-injection
+> boundary: import and pass only the optional renderer modules an application
+> needs. Their implementations are not eagerly loaded or evaluated in main
+> mode. Worker mode fetches a self-contained render-worker asset that includes
+> the worker-side built-ins, so consumer bundlers can copy it safely.
 
 ---
 
@@ -190,8 +192,8 @@ OMML equations (`m:oMath` / `m:oMathPara`) in `.docx`, `.pptx` and `.xlsx` are r
 [MathJax](https://www.mathjax.org/) + [STIX Two Math](https://github.com/stipub/stixfonts).
 That engine is ~3 MB, so it is **opt-in**: import the `math` engine from the separate
 `@silurus/ooxml/math` entry and pass it to the viewer. Pass it and equations render;
-omit it and the engine is referenced nowhere, so a bundler leaves it out of your build
-entirely (equations are simply skipped). When you *do* pass it, the ~3 MB engine ships
+omit it and the engine asset is not fetched or evaluated (equations are simply skipped;
+the on-demand render-worker asset retains a small loader). When you *do* pass it, the ~3 MB engine ships
 as a **standalone asset file** next to the bundle rather than an inline data URL, and is
 fetched **on demand — only the first time a document actually contains an equation**, so
 equation-free documents never pay for it. It is fully self-contained: served from your own
@@ -216,28 +218,36 @@ shapes / text boxes the same way.)
 
 ### Optional chart renderers
 
-Model-space 3-D charts and offline country-level Region Maps are separate
-entries. Inject them once in the same load options object as `math`; omitting an
-addon keeps it out of the application graph. They currently render on the main
-thread, so use `mode: 'main'` (the default). Without `threeD`, 3-D chart groups
+Classic DrawingML 2-D chart families are included in every format entry.
+Microsoft ChartEx, model-space 3-D charts and offline country-level Region Maps
+are separate entries. Inject them once in the same load options object as
+`math`; omitting a renderer keeps it out of the ordinary render path. The
+built-in renderers work in both main and worker modes. Without `chartEx`,
+ChartEx families show the standard unsupported-chart placeholder. Without
+`threeD`, 3-D chart groups
 fall back to their canonical 2-D family. Without `regionMap`, Region Maps show
-the standard unsupported-chart placeholder.
+the standard unsupported-chart placeholder. The code-size boundary applies to
+the default main-mode application graph. The separately loaded render-worker
+asset stays self-contained for broad bundler compatibility and therefore
+contains its built-in optional renderer implementations.
 
 ```typescript
 import { XlsxViewer } from '@silurus/ooxml/xlsx';
 import { threeD } from '@silurus/ooxml/three-d';
 import { regionMap } from '@silurus/ooxml/region-map';
+import { chartEx } from '@silurus/ooxml/chart-ex';
 
 const container = document.getElementById('xlsx-container') as HTMLElement;
 const workbookViewer = new XlsxViewer(container, {
   threeD,
   regionMap,
-  mode: 'main',
+  chartEx,
+  mode: 'worker',
 });
 await workbookViewer.load('/workbook-with-advanced-charts.xlsx');
 ```
 
-The Region Map addon is deterministic and network-free. It uses a pinned
+The Region Map renderer is deterministic and network-free. It uses a pinned
 Natural Earth country dataset, supports authored world projections and
 two/three-stop value ramps, and fails closed for cached identities or
 sub-country/view-specific layouts that the bounded offline model cannot yet
@@ -248,8 +258,8 @@ chart behavior is documented in
 ### Off-main-thread rendering
 
 By default the headless engines parse in a worker but render on the main thread.
-Pass `mode: 'worker'` to `.load()` to parse **and** render entirely inside a Web
-Worker — the main thread only paints the returned `ImageBitmap` via a
+Pass `mode: 'worker'` to `.load()` to normally parse **and** render inside a Web
+Worker — the main thread presents the returned `ImageBitmap` via a
 `bitmaprenderer` context, keeping it free for scrolling and input. It requires
 `Worker` + `OffscreenCanvas`.
 
@@ -279,8 +289,14 @@ Notes:
 - The canvas-target methods (`renderSlide(canvas)`, `renderPage(canvas)`,
   `renderViewport(canvas)`) are unavailable in worker mode — use the `*ToBitmap`
   variants instead.
-- OMML equations require `mode: 'main'`; in worker mode they are skipped (with a
-  console warning).
+- The built-in math, 3-D chart, and Region Map renderers work in both modes
+  through the same `math`, `threeD`, and `regionMap` options. Custom renderer
+  objects are main-realm code and therefore use the feature's documented
+  fallback in `mode: 'worker'`.
+- A DOCX document that requires browser-only OpenType vertical-glyph selection
+  automatically uses effective main mode for correct shaping. Read
+  `document.mode` after loading when your integration needs to observe this
+  fallback.
 - Trade-off: worker mode keeps the main thread responsive, but each frame is
   transferred back as an `ImageBitmap`, so a single render can be marginally
   slower than `mode: 'main'`. Choose it for non-blocking UI, not raw speed.
@@ -432,8 +448,9 @@ overlay is enabled, links are interactive by default. XLSX hit-tests cells
 directly, so links are interactive out of the box. An external link opens in a
 new tab (scheme-sanitized to `http` / `https` / `mailto` / `tel`, `noopener`),
 and an internal target navigates within the document (docx bookmark, pptx slide
-jump, xlsx sheet). Pass `onHyperlinkClick(target)` to take over the click
-yourself.
+jump, xlsx defined name or cell reference). XLSX references may switch sheets
+and then scroll the destination cell into view; a range navigates to its first
+cell. Pass `onHyperlinkClick(target)` to take over the click yourself.
 Pass `enableHyperlinks: false` to disable hyperlink interactivity entirely — no
 hit-testing, no pointer cursor over links, no default navigation, and
 `onHyperlinkClick` is never called; links still render as authored but are inert.
@@ -707,7 +724,7 @@ file without uploading it.
 | | Ctrl/⌘ + mouse-wheel and trackpad-pinch zoom (in addition to the slider) | ✅ |
 | | Runtime fit / zoom API (`fitWidth` / `fitPage` / `getScale` / `setScale`, in addition to the slider) | ✅ |
 | | In-document find (`findText` / `findNext` / `findPrev` / `clearFind` — matches tagged with sheet + cell) | ✅ |
-| | Clickable hyperlinks (`onHyperlinkClick`; internal defined-name / cell navigation) | ✅ |
+| | Clickable hyperlinks (`onHyperlinkClick`; internal defined-name / sheet-and-cell navigation, ranges use the first cell) | ✅ |
 | | Drag-to-resize columns / rows by dragging header borders (`resizable` option, default on) — **view-only: changes the on-screen view only and never modifies the loaded file** | ✅ |
 | | Customizable cell-selection color (`selectionColor` option, `setSelectionColor()`) | ✅ |
 | **Loading** | Password-protected files ([MS-OFFCRYPTO] Agile Encryption — `load(bytes, { password })`, decrypted client-side via WebCrypto; legacy Standard / Extensible encryption → typed `unsupported-encryption`) | ✅ |
@@ -736,8 +753,8 @@ file without uploading it.
 | | Charts (pie, doughnut) | ✅ |
 | | Charts (scatter — `scatterStyle` marker / line / smooth variants) | ✅ |
 | | Charts (bubble — `bubbleSize` per-point area scaling) | ✅ |
-| | Charts (combo — bar + line with a secondary value axis on the right) | ✅ |
-| | Charts (chartEx — funnel / histogram / treemap / sunburst / box &amp; whisker) | ✅ |
+| | Charts (ordered classic combo groups — observed bar/line/area, scatter/bubble, and stock/line combinations; unsupported mixes fail closed) | ✅ |
+| | Charts (chartEx — funnel / histogram / treemap / sunburst / box &amp; whisker) | ✅ opt-in |
 | | Charts (stock — high / low / close candlesticks) | ✅ |
 | | SmartArt (renders the PowerPoint-saved drawing layout `dsp:drawing`, or a staged fallback to a text list when no drawing part is present; no native diagram layout engine) | ✅ |
 | | OLE embedded objects (`p:oleObj` — the baked preview `p:pic` is drawn; the embedded app is not run) | ✅ |

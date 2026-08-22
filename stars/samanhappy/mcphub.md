@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 2300
+stars: 2319
 description: |-
     A unified hub for centrally managing and dynamically orchestrating multiple MCP servers/APIs into separate endpoints with flexible routing strategies.
 url: https://github.com/samanhappy/mcphub
@@ -26,6 +26,7 @@ MCPHub makes it easy to manage and scale multiple MCP (Model Context Protocol) s
 - **Centralized Management** - Monitor and control all MCP servers from a unified dashboard
 - **Flexible Routing** - Access all servers, specific groups, or individual servers via HTTP/SSE
 - **Granular Group Visibility** - Control Tool, Prompt, and Resource visibility independently for each server inside a group
+- **Per-Server Sharing** - Keep servers private, share them with selected users, or make them public
 - **Smart Routing** - AI-powered tool discovery using vector semantic search ([Learn more](https://docs.mcphub.app/features/smart-routing))
 - **MCP Apps Proxy** - Transparently forward interactive MCP Apps on single-server routes ([Learn more](https://docs.mcphub.app/features/mcp-apps))
 - **Tool Result Compression** - Transparently reduce large text tool outputs before they reach clients
@@ -168,7 +169,7 @@ Contributions welcome! See our [Discord community](https://discord.gg/2BJehJZVH5
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=samanhappy/mcphub&type=Date)](https://www.star-history.com/#samanhappy/mcphub&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=samanhappy/mcphub&type=Date)](https://star-history.dera.page/#samanhappy/mcphub&Date)
 
 ## 📄 License
 

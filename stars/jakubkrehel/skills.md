@@ -1,6 +1,6 @@
 ---
 project: skills
-stars: 3805
+stars: 4139
 description: |-
     A collection of agent skills that help you build a great interface.
 url: https://github.com/jakubkrehel/skills
@@ -18,14 +18,18 @@ A collection of agent skills that help you build a great interface. They cover U
 
 - [**better-interface**](skills/better-interface/SKILL.md): A cross-discipline interface review that coordinates every skill below.
 - [**interface-review**](skills/interface-review/SKILL.md): A user-invoked review of your uncommitted changes, current branch or a pull request against every skill below. Run it by name; it never starts on its own.
+- [**variant**](skills/variant/SKILL.md): Builds several genuinely different versions of one piece of UI behind a picker, so you can flip between them in the real page and promote the one that wins. Run it by name.
+- [**explain-interface**](skills/explain-interface/SKILL.md): Ask how something was built. Point it at a URL or a screenshot, name the thing you're curious about, and it finds the layers behind the effect and explains what each one does. Run it by name.
 - [**better-ui**](skills/better-ui/SKILL.md): Design engineering details that make interfaces feel polished: border radius, shadows, animations and micro-interactions.
-- [**better-typography**](skills/better-typography/SKILL.md): Web typography from choosing fonts to spacing, wrapping and accessibility.
+- [**better-typography**](skills/better-typography/SKILL.md): Choosing and pairing typefaces, type scales, spacing, wrapping and truncation.
 - [**better-colors**](skills/better-colors/SKILL.md): Color systems: building and naming palettes, applying color with meaning, contrast and theming.
 - [**better-accessibility**](skills/better-accessibility/SKILL.md): Focus states, keyboard support, ARIA, forms, screen readers, hit areas and motion.
 - [**better-layout**](skills/better-layout/SKILL.md): Layout structure, grouping, alignment, reading order, progressive disclosure and adaptive breakpoints.
 - [**better-writing**](skills/better-writing/SKILL.md): UX writing and interface copy, from button labels to errors, settings and empty states.
 
 ## Install
+
+Both methods install the same skills. They differ in what you type to run one, so pick a method and use its names.
 
 ### CLI
 
@@ -35,6 +39,8 @@ Works in Claude Code, Codex, Opencode and other agents. You can choose which ski
 npx skills add jakubkrehel/skills
 ```
 
+Skills installed this way keep their plain names, so the change review runs as `/interface-review`.
+
 ### Claude Code plugin
 
 Installs every skill in this repository together and updates in place. Run these inside Claude Code:
@@ -43,4 +49,8 @@ Installs every skill in this repository together and updates in place. Run these
 /plugin marketplace add jakubkrehel/skills
 /plugin install interfaces@interfaces
 ```
+
+Plugin skills are namespaced under the plugin, so the change review runs as `/interfaces:interface-review` and variants as `/interfaces:variant`.
+
+To update later, run `/plugin update interfaces@interfaces` and restart.
 

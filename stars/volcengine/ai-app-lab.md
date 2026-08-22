@@ -1,6 +1,6 @@
 ---
 project: ai-app-lab
-stars: 2432
+stars: 2434
 description: |-
     null
 url: https://github.com/volcengine/ai-app-lab
@@ -37,12 +37,15 @@ url: https://github.com/volcengine/ai-app-lab
 | [长记忆方案](./demohouse/longterm_memory/README.md)          | 基于 DeepSeek-R1 模型的强大思考能力将对话内容抽取成记忆，记录用户偏好、性格、生日等，并在对话到相关话题时帮助 Doubao 角色模型生成更贴合角色人设的回复。 |
 | [手机助手](./demohouse/pocket_pal/README.md)                | 移动端手机智能助手。                                                                             |
 | [智能客服助手](./demohouse/shop_assist/backend/README.md)     | 以车载零配件网店客服场景为例设计的智能导购机器人。                                                              |
+| [销售智能工作台](./demohouse/sales-intelligence-workbench/README.md) | 基于 Agent Plan、DataPro、豆包搜索、OpenViking 和 AI Native 应用开发底座，构建来源可追溯的企业档案、销售资料问答与飞书资料导入工作台。 |
 | [教师分身](./demohouse/teacher_avatar/README.md)            | 基于豆包视觉理解与 DeepSeek 深度推理双引擎的教育解决方案。                                                     |
 | [视频实时理解](./demohouse/video_analyser/README.md)          | 多模态洞察，基于豆包-视觉理解模型实时视觉与语音理解。                                                            |
 | [实时对话式 AI](./demohouse/rtc_conversational_ai/README.md) | 超低延迟的 AI 实时对话应用，更流畅，更自然，更实时。                                                           |
 | [AI-Media2Doc](./demohouse/media2doc/README.md)         | 一键将视频和音频转化为小红书/公众号/知识笔记/视频总结/思维导图等各种风格的文档, 可基于视频内容进行 AI 二次对话。                          |
 | [Mobile-Use](./demohouse/mobile-use/README_zh.md) | 基于火山引擎云手机与豆包视觉大模型能力，通过自然语言指令完成面向移动端场景自动化任务的 AI Agent 解决方案 |
+| [购车决策助手](./demohouse/car-decision-assistant/README.md) | 基于 Agent Plan、专业数据集和 AI Native 应用开发底座，将自然语言购车需求与精确车型配置、城市销量和用户主观确认进行可追溯核验。 |
 | [个人投资助手](./demohouse/personal-investment-assistant/README.md) | 基于 Agent Plan、DataPro 和豆包搜索生成来源可追溯的个股简评与盘后风险摘要，支持个性化关注偏好、定时监控和 Skill 一键初始化。 |
+| [化学科研 Skills](./demohouse/chemistry-research-skills/README.md) | 面向 AI Agent 的可审计化学研究工具集，覆盖化学身份解析、结构标准化、分子特征计算、反应检索与合成路线复核，支持确定性工作流和一键安装。 |
 
 ## 相关指引
 

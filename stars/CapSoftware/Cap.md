@@ -1,6 +1,6 @@
 ---
 project: Cap
-stars: 20815
+stars: 21070
 description: |-
     Open source Loom alternative. Beautiful, shareable screen recordings.
 url: https://github.com/CapSoftware/Cap
@@ -128,6 +128,7 @@ Requirements:
 - pnpm 10.5.2
 - Rust 1.88 or newer
 - Docker for MySQL, MinIO, and local services
+- Optional on macOS: [Cinder](https://github.com/CapSoftware/cinder) for faster local `check` / `build` / `test` / `run` and desktop watch. `pnpm dev:desktop` uses it automatically when `cinder` is on `PATH`. Install with `pnpm cinder:install`. Set `CAP_USE_CINDER=0` to force stock Cargo.
 
 Install and set up the repo:
 
@@ -150,6 +151,7 @@ Common commands:
 | `pnpm format` | Format with Biome |
 | `pnpm typecheck` | Run TypeScript project references |
 | `cargo test -p <crate>` | Run Rust tests for a crate |
+| `pnpm cinder:install` | Install Cinder for faster local macOS Rust commands |
 
 Database commands:
 

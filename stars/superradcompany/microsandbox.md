@@ -1,6 +1,6 @@
 ---
 project: microsandbox
-stars: 7529
+stars: 7868
 description: |-
     🧱 easy fast local-first microVM runtime and library
 url: https://github.com/superradcompany/microsandbox
@@ -124,7 +124,7 @@ url: https://github.com/superradcompany/microsandbox
 >
 > - <img height="14" src="https://api.iconify.design/simple-icons:apple.svg?color=%23A770EF" alt="macOS"> **macOS**: Apple Silicon.
 > - <img height="14" src="https://api.iconify.design/simple-icons:linux.svg?color=%23A770EF" alt="Linux"> **Linux**: KVM enabled.
-> - <img height="14" src="https://api.iconify.design/simple-icons:windows.svg?color=%23A770EF" alt="Windows"> **Windows**: WHP enabled.
+> - <img height="14" src="https://api.iconify.design/simple-icons:windows.svg?color=%23A770EF" alt="Windows"> **Windows**: Windows 10+ (x64 or ARM64) with WHP enabled.
 >
 > **Warning**: Microsandbox is still **beta software**. Expect breaking changes, missing features, and rough edges.
 
@@ -385,6 +385,24 @@ The `msb` CLI provides a complete interface for managing sandboxes, images, and 
 
 <br />
 
+## <a href="./#gh-dark-mode-only" target="_blank"><img height="18" src="https://octicons-col.vercel.app/beaker/ffffff" alt="beaker-dark"></a><a href="./#gh-light-mode-only" target="_blank"><img height="18" src="https://octicons-col.vercel.app/beaker/000000" alt="beaker"></a>&nbsp;&nbsp;Examples
+
+Practical ways to put microsandbox to work:
+
+> • <img height="14" src="https://octicons-col.vercel.app/container/A770EF"> **[Docker in a Sandbox](https://docs.microsandbox.dev/examples/docker/docker-in-sandbox)**: Run Docker without touching the host daemon.<br />
+> • <img height="14" src="https://octicons-col.vercel.app/code/A770EF"> **[OpenCode](https://docs.microsandbox.dev/examples/agents/opencode)**: Give a coding agent an isolated project workspace.<br />
+> • <img height="14" src="https://octicons-col.vercel.app/globe/A770EF"> **[Playwright](https://docs.microsandbox.dev/examples/browser-automation/playwright)**: Run headless browser jobs inside a microVM.<br />
+> • <img height="14" src="https://octicons-col.vercel.app/cache/A770EF"> **[Warm Workers](https://docs.microsandbox.dev/examples/sandboxing/warm-workers)**: Snapshot a toolchain and launch clean workers.<br />
+> • <img height="14" src="https://octicons-col.vercel.app/database/A770EF"> **[Migration Rehearsal](https://docs.microsandbox.dev/examples/data/migration-rehearsal)**: Test a database migration, then restore the baseline.<br />
+> • <img height="14" src="https://octicons-col.vercel.app/workflow/A770EF"> **[GitHub Actions Runner](https://docs.microsandbox.dev/examples/ci-cd/github-actions-runner)**: Run each self-hosted job in a disposable microVM.<br />
+> • <img height="14" src="https://octicons-col.vercel.app/file/A770EF"> **[Documents to PDF](https://docs.microsandbox.dev/examples/file-processing/libreoffice-pdf)**: Convert untrusted documents in a fresh offline worker.
+
+<br />
+
+<a href="https://docs.microsandbox.dev/examples/overview"><img src="https://img.shields.io/badge/Browse_Examples-%E2%86%92-A770EF?style=flat-square&labelColor=2b2b2b" alt="Browse Examples"></a>
+
+<br />
+
 ## <a href="./#gh-dark-mode-only" target="_blank"><img height="18" src="https://octicons-col.vercel.app/dependabot/ffffff" alt="agents-dark"></a><a href="./#gh-light-mode-only" target="_blank"><img height="18" src="https://octicons-col.vercel.app/dependabot/000000" alt="agents"></a>&nbsp;&nbsp;AI Agents
 
 #### <img height="14" src="https://octicons-col.vercel.app/book/A770EF">&nbsp;&nbsp;Agent Skills
@@ -403,6 +421,23 @@ The `msb` CLI provides a complete interface for managing sandboxes, images, and 
 > # Claude Code
 > claude mcp add --transport stdio microsandbox -- npx -y microsandbox-mcp
 > ```
+
+<br />
+
+## <a href="./#gh-dark-mode-only" target="_blank"><img height="18" src="https://octicons-col.vercel.app/people/ffffff" alt="people-dark"></a><a href="./#gh-light-mode-only" target="_blank"><img height="18" src="https://octicons-col.vercel.app/people/000000" alt="people"></a>&nbsp;&nbsp;Projects using microsandbox
+
+> ⏵ **[Eve by Vercel](https://eve.dev/docs/sandbox#microsandbox)**<br />
+> ⏵ **[GSA TTS Agentic Coding Quickstart](https://github.com/GSA-TTS/agentic-coding-quickstart)**<br />
+> ⏵ **[agent-compose by Chaitin](https://github.com/chaitin/agent-compose)**<br />
+> ⏵ **[Condukt](https://github.com/tuist/condukt) and [Once](https://github.com/tuist/once) by Tuist**<br />
+> ⏵ **[h5i](https://github.com/h5i-dev/h5i)**<br />
+> ⏵ **[Smithers](https://github.com/smithersai/smithers)**<br />
+> ⏵ **[sandboxed-lit by LlamaIndex](https://github.com/run-llama/sandboxed-lit)**<br />
+> ⏵ **[Agentic Usability by PSPDFKit Labs](https://github.com/PSPDFKit-labs/agentic-usability)**<br />
+> ⏵ **[Agent VM by Wiren Board](https://github.com/wirenboard/agent-vm)**<br />
+> ⏵ **[Devsy](https://github.com/devsy-org/devsy)**
+
+> Built something with microsandbox? [Share it with us on Discord](https://discord.gg/T95Y3XnEAK). We’d love to feature it here.
 
 <br />
 

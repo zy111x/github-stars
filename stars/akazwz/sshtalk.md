@@ -1,6 +1,6 @@
 ---
 project: sshtalk
-stars: 26
+stars: 27
 description: |-
     ssh sshtalk.com
 url: https://github.com/akazwz/sshtalk

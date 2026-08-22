@@ -1,6 +1,6 @@
 ---
 project: nanobrowser
-stars: 13563
+stars: 13631
 description: |-
     Open-Source Chrome extension for AI-powered web automation. Run multi-agent workflows using your own LLM API key. Alternative to OpenAI Operator.
 url: https://github.com/nanobrowser/nanobrowser
@@ -258,6 +258,10 @@ Made with ❤️ by the Nanobrowser Team.
 
 Like Nanobrowser? Give us a star 🌟 and join us in [Discord](https://discord.gg/NN3ABHggMK) | [X](https://x.com/nanobrowser_ai)
 
+## 🔗 Our Other Products
+
+- [DSH Plugin Directory](https://dsh.directory/): Discover installable community plugins for DeepSeek Harness by category, popularity, and activity.
+
 ## ⚠️ DISCLAIMER ON DERIVATIVE PROJECTS
 
 **We explicitly *DO NOT* endorse, support, or participate in any** projects involving cryptocurrencies, tokens, NFTs, or other blockchain-related applications **based on this codebase.**
@@ -269,6 +273,5 @@ Like Nanobrowser? Give us a star 🌟 and join us in [Discord](https://discord.g
 **We reserve the right to publicly distance ourselves from any misuse or misleading use of our name, codebase, or brand.**
 
 We encourage open-source innovation but urge our community to be discerning and cautious. Please ensure you understand the risks before using any software or service built upon our codebase by independent developers.
-
 
 

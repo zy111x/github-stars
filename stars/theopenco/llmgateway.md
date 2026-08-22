@@ -1,6 +1,6 @@
 ---
 project: llmgateway
-stars: 1538
+stars: 1566
 description: |-
     Route, manage, and analyze your LLM requests across multiple providers with a unified API interface.
 url: https://github.com/theopenco/llmgateway
@@ -116,7 +116,7 @@ curl -X POST https://api.llmgateway.io/v1/chat/completions \
 LLMGateway is available under a dual license:
 
 - **Open Source**: Core functionality is licensed under AGPLv3 - see the [LICENSE](LICENSE) file for details.
-- **Enterprise**: Commercial features in the `ee/` directory require an Enterprise license - see [ee/LICENSE](ee/LICENSE) for details.
+- **Enterprise**: Commercial features in the `ee/` directory require an Enterprise license; multi-organization administration requires a white-label license. See [ee/LICENSE](ee/LICENSE) for details.
 
 ### Enterprise features include:
 

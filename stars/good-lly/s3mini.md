@@ -1,6 +1,6 @@
 ---
 project: s3mini
-stars: 1345
+stars: 1344
 description: |-
     ⚠️  Moved to Code.NOLOG: https://code.nolog.cz/thinking.tools/s3mini - Tiny S3 client. Edge computing ready. No-dep. In Typescript.
 url: https://github.com/good-lly/s3mini

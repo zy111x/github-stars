@@ -1,6 +1,6 @@
 ---
 project: obscura
-stars: 21421
+stars: 22099
 description: |-
     The headless browser for AI agents and web scraping
 url: https://github.com/h4ckf0r0day/obscura
@@ -95,16 +95,6 @@ Want to sponsor? Email [hello@obscura.sh](mailto:hello@obscura.sh).
       🎁 Use code <b>OBSCURA35</b> for a <b>35% recurring discount</b>.<br><br></b>
       Better proxies. Fewer blocks. More scalable automation.
     </td>
-  </tr>
-      <td width="200" align="center" valign="middle">
-        <a href="https://9proxy.com/?utm_source=Github&utm_campaign=obscura" target="_blank">
-          <img alt="9Proxy" src="assets/sponsors/9proxy.png" width="180"/>
-        </a>
-      </td>
-      <td valign="middle">
-        <a href="https://9proxy.com/?utm_source=Github&utm_campaign=obscura"><b>9Proxy</b></a> provides residential proxies from
-  just $0.018/IP or $0.68/GB. 20M+ IPs across 90+ countries. Sticky or rotating sessions, managed from desktop or mobile app.
-      </td>
     </tr>
     <td width="200" align="center" valign="middle">
       <a href="https://www.thordata.com/?ls=dob&lk=dob" target="_blank">
@@ -123,6 +113,17 @@ Want to sponsor? Email [hello@obscura.sh](mailto:hello@obscura.sh).
       ⚡ Stable HTTP(S) connections<br><br>
       🎁 Use code <b>obscura</b> for <b>10% off</b>.<br><br></b>
       Get started with a 3-day free trial and test Thordata with your own workflow.
+    </td>
+  </tr>
+ <tr>
+    <td width="200" align="center" valign="middle">
+      <a href="https://niuproxy.com/?utm_source=obscura&utm_medium=obscura&ref=obscura" target="_blank">
+        <img alt="NiuProxy" src="assets/sponsors/niuproxlogo.png" width="180"/>
+      </a>
+    </td>
+    <td valign="middle">
+      <a href="https://niuproxy.com/?utm_source=obscura&utm_medium=obscura&ref=obscura"><b>NiuProxy</b></a> Rotating Residential Proxies — Special Offer: 10TB at $0.35/GB | 1TB at $0.50/GB.<br><br>
+      🎁 Use code <b>PAY2</b> for <b>10% off</b> your recharge.
     </td>
   </tr>
 </table>
@@ -427,6 +428,14 @@ Obscura caps the page's script-execution phase so one slow or hung page cannot s
 ```bash
 OBSCURA_SCRIPT_DEADLINE_MS=60000 obscura serve --port 9222
 ```
+
+Modules that enhance an already-rendered page have a separate 3s per-module budget so one non-essential module cannot hold navigation open. Raise it for legitimate long-running modules such as a Vite HMR client:
+
+```bash
+OBSCURA_MODULE_BUDGET_MS=10000 obscura serve --port 9222
+```
+
+An unmounted SPA shell already gives its app modules the full `OBSCURA_SCRIPT_DEADLINE_MS` budget. `OBSCURA_FETCH_TIMEOUT_MS` controls the module's network request, not its evaluation time. See [Environment variables](docs/Environment-variables.md) for the complete timeout model.
 
 ### `obscura serve`
 
