@@ -1,6 +1,6 @@
 ---
 project: openDAW
-stars: 2021
+stars: 2055
 description: |-
     openDAW is a next-generation web-based Digital Audio Workstation (DAW)
 url: https://github.com/andremichelle/openDAW
@@ -112,6 +112,7 @@ skyboundzoo, JHINZ, Mark Dammer, fork-kun, Martin Eigel
 * Arpeggio (plays the notes of a chord one after another)
 * Autotune (real-time monophonic pitch correction)
 * Cheap Reverb (FreeVerb variation)
+* Convolver (zero-latency partitioned convolution with impulse-response samples)
 * Crusher (degenerates audio signal)
 * Dattorro Reverb (dense algorithmic reverb based on Dattorro's design)
 * Delay (stereo delay with cross and filter options)

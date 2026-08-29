@@ -1,15 +1,15 @@
 ---
 project: takumi
-stars: 2861
+stars: 2897
 description: |-
     Render OG images and paged PDFs from JSX, HTML, and CSS. No headless browser. Runs on Node.js, Cloudflare Workers, browsers, and Rust.
 url: https://github.com/kane50613/takumi
 ---
 
 <div align="center">
-  <img src="./assets/images/sticker.svg" alt="Takumi Sticker" height="96" />
-
-# Takumi
+  <a href="./example/twitter-images/components/readme-banner.tsx">
+    <img src="./example/twitter-images/output/readme-banner.webp" alt="Takumi — images and PDFs from JSX and CSS, no browser. Rendered by Takumi from the JSX shown in the banner." />
+  </a>
 
 **Render OG images and paged PDFs from JSX, HTML, and CSS. No headless browser.**
 

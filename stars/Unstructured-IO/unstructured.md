@@ -1,6 +1,6 @@
 ---
 project: unstructured
-stars: 15333
+stars: 15363
 description: |-
     Convert documents to structured data effortlessly. Unstructured is open-source ETL solution for transforming complex documents into clean, structured formats for language models.  Visit our website to learn more about our enterprise grade Platform product for production grade workflows, partitioning, enrichments, chunking and embedding.
 url: https://github.com/Unstructured-IO/unstructured
@@ -64,10 +64,7 @@ Unstructured Transform brings production-grade document processing to your agent
 
 5. **Describe what you need in plain language.** Tell the agent your intent (e.g. "parse and chunk this contract for a vector store") and Transform partitions, enriches, chunks, and embeds the file, returning structured data ready to use. 
 
-15,000 free pages a month, 3 cents per page after!
-
-📄 Full docs: https://docs.unstructured.io/transform/overview
-
+⚡ [Get Started for Free](https://transform.unstructured.io/?entry=cta)
 
 ## Unstructured Pipelines
 

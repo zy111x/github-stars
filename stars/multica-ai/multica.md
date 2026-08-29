@@ -1,8 +1,8 @@
 ---
 project: multica
-stars: 47293
+stars: 48234
 description: |-
-    Assign issues to Claude Code, Codex, Cursor, and 17 more coding agents like teammates — open-source and self-hostable.
+    Make humans and AI agents work as one team — open-source and self-hostable.
 url: https://github.com/multica-ai/multica
 ---
 

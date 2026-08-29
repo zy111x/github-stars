@@ -1,6 +1,6 @@
 ---
 project: what-can-brower-run-do
-stars: 51
+stars: 52
 description: |-
     A little site to showchase different Cloudlfare Browser Run use cases
 url: https://github.com/fayazara/what-can-brower-run-do

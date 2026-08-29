@@ -1,6 +1,6 @@
 ---
 project: nano-staged
-stars: 680
+stars: 682
 description: |-
     Tiny tool to run commands for modified, staged, and committed files in a GIT repository.
 url: https://github.com/usmanyunusov/nano-staged

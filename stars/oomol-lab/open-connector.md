@@ -1,6 +1,6 @@
 ---
 project: open-connector
-stars: 4874
+stars: 5410
 description: |-
     Open-source auth gateway connecting 1000+ SaaS providers to AI agents through SDK, CLI, MCP, HTTP, and OpenAPI.
 url: https://github.com/oomol-lab/open-connector
@@ -251,6 +251,13 @@ Run OpenConnector from a prebuilt image on GitHub Packages (GHCR): `ghcr.io/oomo
 `main` build.
 
 See [docs/docker-ghcr.md](docs/docker-ghcr.md) for tags, pulling, and running.
+
+## RepoCloud Deployment
+
+Deploy OpenConnector to the cloud with one click on RepoCloud with competitive pricing and no
+infrastructure setup required.
+
+See [RepoCloud](https://repocloud.io/details/Open%20Connector/) for one-click cloud deployment.
 
 ## Build a Desktop Agent with Wanta
 

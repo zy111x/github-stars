@@ -1,6 +1,6 @@
 ---
 project: bm.md
-stars: 607
+stars: 611
 description: |-
     更好用的 Markdown 排版助手｜一键适配微信公众号、网页与图片。
 url: https://github.com/miantiao-me/bm.md
@@ -15,7 +15,7 @@ url: https://github.com/miantiao-me/bm.md
 ## ✨ 特性
 
 - 📝 **实时预览** - 基于 CodeMirror 6 的 Markdown 编辑器，所见即所得
-- 🎨 **15 种排版样式** - 从专业商务到复古怀旧，满足不同场景需求
+- 🎨 **8 种排版样式** - 从纸张阅读到复古怀旧，满足不同场景需求
 - 🌈 **14 种代码主题** - 支持浅色/深色多种代码高亮风格
 - 📱 **平台适配** - 微信公众号专门适配，同时支持通用 HTML 输出
 - 📊 **图表与信息图** - 支持 Mermaid 与 AntV Infographic

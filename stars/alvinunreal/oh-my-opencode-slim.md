@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 8338
+stars: 8510
 description: |-
     Lean, fine tuned Opencode multi agent suite · Mix any models · Auto delegate tasks
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -8,7 +8,7 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
 
 <div align="center">
   <a href="https://github.com/alvinunreal/oh-my-opencode-slim/stargazers">
-    <img src="img/v2.webp" alt="oh-my-opencode-slim V2 Release" style="border-radius: 10px;">
+    <img src="img/v2.jpg" alt="oh-my-opencode-slim V2 Release" style="border-radius: 10px;">
   </a>
   <h3>✨ oh-my-opencode-slim ✨</h3>
 
@@ -116,25 +116,6 @@ have Bun installed:
 npx oh-my-opencode-slim@latest install
 ```
 
-### Herdr
-
-The Herdr multiplexer adapter works with Herdr **0.8.0+**. Install Herdr's
-official OpenCode lifecycle integration separately:
-
-```bash
-herdr integration install opencode
-```
-
-For Marketplace discoverability, publish this repository with the required
-`herdr-plugin` repository topic, then install it with:
-
-```bash
-herdr plugin install alvinunreal/oh-my-opencode-slim
-```
-
-This Marketplace entry describes the OpenCode plugin's Herdr adapter; it does
-not install a standalone native Herdr runtime plugin or lifecycle reporter.
-
 ### Run from Master
 
 Use this if you want the latest code, easier bug fixes, or a local setup for
@@ -159,33 +140,24 @@ bun install
 bun run build
 ```
 
-### OpenCode v2 (`opencode2`) Compatibility
+### OpenCode v2 (`opencode2`)
 
-The plugin is **dual-compatible**: the same published package installs and runs
-on both OpenCode v1 (`opencode`) and OpenCode v2 (`opencode2`).
+The same package runs on both OpenCode v1 and v2. On v2 you get the full
+agent pantheon, delegation through the host `subagent` tool (bridged into the
+background job board), all built-in tools and slash commands, auto-registered
+MCPs, `/preset` in the TUI, webfetch secondary-model summaries, and
+rate-limit model fallback. Multiplexer panes and the orchestrator-wake
+scheduler stay v1-only by design (v2 renders and notifies subagents natively).
 
-- The package default export is `{ id, server, setup }`. v1 loads `server` (the
-  classic plugin function); v2 loads `setup` (the v2 promise-plugin adapter).
-- v2 loads the self-contained `./server` build (`dist/server.js`) via the
-  `server` export subpath, so no extra dependencies need to be resolvable on the
-  v2 host (except the optional native `@ast-grep/napi` and `jsdom` for the
-  ast-grep / webfetch tools).
-
-To use it with `opencode2`, add the package to your v2 config
-(`~/.config/opencode2/opencode.json`):
+v2 auto-refreshes unpinned plugins on startup, so pin an exact version while
+both v2 and this adapter evolve quickly:
 
 ```json
-{
-  "plugin": ["oh-my-opencode-slim@latest"]
-}
+{ "plugin": ["oh-my-opencode-slim@2.2.17"] }
 ```
 
-Then run `opencode2`. The orchestrator + specialist agents, tools, slash
-commands (`/deepwork`, `/reflect`, `/loop`), and the system-prompt / message
-transforms all work on v2. Configure agent models and any MCP servers in your
-v2 `opencode.json` (v2 has no programmatic MCP-registration hook, so built-in
-MCPs must be declared in config). See `docs/opencode-v2-compatibility.md` for the full
-feature matrix and limitations.
+Details, the feature matrix, and per-feature minimum v2 builds:
+[OpenCode v2 Compatibility](docs/opencode-v2-compatibility.md).
 
 ### Getting Started
 
@@ -291,7 +263,7 @@ If any agent fails to respond, check your provider authentication and config fil
 <table>
   <tr>
     <td width="30%" align="center" valign="top">
-      <img src="img/orchestrator.png" width="240" style="border-radius: 10px;">
+      <img src="img/orchestrator.jpg" width="240" style="border-radius: 10px;">
       <br><sub><i>Forged in the void of complexity.</i></sub>
     </td>
     <td width="70%" valign="top">
@@ -332,7 +304,7 @@ If any agent fails to respond, check your provider authentication and config fil
 <table>
   <tr>
     <td width="30%" align="center" valign="top">
-      <img src="img/explorer.png" width="240" style="border-radius: 10px;">
+      <img src="img/explorer.jpg" width="240" style="border-radius: 10px;">
       <br><sub><i>The wind that carries knowledge.</i></sub>
     </td>
     <td width="70%" valign="top">
@@ -373,7 +345,7 @@ If any agent fails to respond, check your provider authentication and config fil
 <table>
   <tr>
     <td width="30%" align="center" valign="top">
-      <img src="img/oracle.png" width="240" style="border-radius: 10px;">
+      <img src="img/oracle.jpg" width="240" style="border-radius: 10px;">
       <br><sub><i>The voice at the crossroads.</i></sub>
     </td>
     <td width="70%" valign="top">
@@ -417,7 +389,7 @@ If any agent fails to respond, check your provider authentication and config fil
 <table>
   <tr>
     <td width="30%" align="center" valign="top">
-      <img src="img/council.png" width="240" style="border-radius: 10px;">
+      <img src="img/council.jpg" width="240" style="border-radius: 10px;">
       <br><sub><i>Many minds, one verdict.</i></sub>
     </td>
     <td width="70%" valign="top">
@@ -463,7 +435,7 @@ If any agent fails to respond, check your provider authentication and config fil
 <table>
   <tr>
     <td width="30%" align="center" valign="top">
-      <img src="img/librarian.png" width="240" style="border-radius: 10px;">
+      <img src="img/librarian.jpg" width="240" style="border-radius: 10px;">
       <br><sub><i>The weaver of understanding.</i></sub>
     </td>
     <td width="70%" valign="top">
@@ -504,7 +476,7 @@ If any agent fails to respond, check your provider authentication and config fil
 <table>
   <tr>
     <td width="30%" align="center" valign="top">
-      <img src="img/designer.png" width="240" style="border-radius: 10px;">
+      <img src="img/designer.jpg" width="240" style="border-radius: 10px;">
       <br><sub><i>Beauty is essential.</i></sub>
     </td>
     <td width="70%" valign="top">
@@ -545,7 +517,7 @@ If any agent fails to respond, check your provider authentication and config fil
 <table>
   <tr>
     <td width="30%" align="center" valign="top">
-      <img src="img/fixer.png" width="240" style="border-radius: 10px;">
+      <img src="img/fixer.jpg" width="240" style="border-radius: 10px;">
       <br><sub><i>The final step between vision and reality.</i></sub>
     </td>
     <td width="70%" valign="top">
@@ -716,6 +688,7 @@ Use this section as a map: start with installation, then jump to features, confi
 | Doc | What it covers |
 |-----|----------------|
 | **[Installation Guide](docs/installation.md)** | Install the plugin, use CLI flags, reset config, and troubleshoot setup |
+| **[OpenCode v2 Compatibility](docs/opencode-v2-compatibility.md)** | Run the same plugin on `opencode2`: feature matrix, minimum v2 builds, version pinning |
 | **[Configuration](docs/configuration.md)** | Config file locations, JSONC support, prompt overrides, and full option reference |
 | **[Project Customization](docs/project-local-customization.md)** | Repository-specific custom agents, prompt overrides, per-agent skills, and precedence |
 | **[Background Orchestration](docs/background-orchestration.md)** | Scheduler-first orchestrator model built around native background subagents |
@@ -733,7 +706,7 @@ Use this section as a map: start with installation, then jump to features, confi
   <p><sub>Every merged contribution leaves a mark on the realm.</sub></p>
 
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-103-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-104-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -882,6 +855,7 @@ Use this section as a map: start with installation, then jump to features, confi
     </tr>
     <tr>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/zjm54321"><img src="https://avatars.githubusercontent.com/u/20168947?v=4?s=100" width="100px;" alt="落花有意"/><br /><sub><b>落花有意</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=zjm54321" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/JoJohanse"><img src="https://avatars.githubusercontent.com/u/97782983?v=4?s=100" width="100px;" alt="JoJohanse"/><br /><sub><b>JoJohanse</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=JoJohanse" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

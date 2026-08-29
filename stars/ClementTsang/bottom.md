@@ -1,6 +1,6 @@
 ---
 project: bottom
-stars: 13924
+stars: 13948
 description: |-
     Yet another cross-platform graphical process/system monitor.
 url: https://github.com/ClementTsang/bottom
@@ -174,8 +174,8 @@ Alternatively, you can use `cargo install` using the repo as the source.
 rustup update stable
 
 # Option 1 - Download an archive from releases and install
-curl -LO https://github.com/ClementTsang/bottom/archive/0.14.8.tar.gz
-tar -xzvf 0.14.8.tar.gz
+curl -LO https://github.com/ClementTsang/bottom/archive/0.14.9.tar.gz
+tar -xzvf 0.14.9.tar.gz
 cargo install --path . --locked
 
 # Option 2 - Manually clone the repo and install
@@ -227,20 +227,20 @@ Some examples of installing it this way:
 
 ```bash
 # x86-64
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.8/bottom_0.14.8-1_amd64.deb
-sudo dpkg -i bottom_0.14.8-1_amd64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom_0.14.9-1_amd64.deb
+sudo dpkg -i bottom_0.14.9-1_amd64.deb
 
 # ARM64
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.8/bottom_0.14.8-1_arm64.deb
-sudo dpkg -i bottom_0.14.8-1_arm64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom_0.14.9-1_arm64.deb
+sudo dpkg -i bottom_0.14.9-1_arm64.deb
 
 # ARM
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.8/bottom_0.14.8-1_armhf.deb
-sudo dpkg -i bottom_0.14.8-1_armhf.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom_0.14.9-1_armhf.deb
+sudo dpkg -i bottom_0.14.9-1_armhf.deb
 
 # musl-based
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.8/bottom-musl_0.14.8-1_amd64.deb
-sudo dpkg -i bottom-musl_0.14.8-1_amd64.deb
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom-musl_0.14.9-1_amd64.deb
+sudo dpkg -i bottom-musl_0.14.9-1_amd64.deb
 ```
 
 ### Exherbo Linux
@@ -282,8 +282,8 @@ sudo dnf install bottom
 For example:
 
 ```bash
-curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.8/bottom-0.14.8-1.x86_64.rpm
-sudo dnf install ./bottom-0.14.8-1.x86_64.rpm
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.14.9/bottom-0.14.9-1.x86_64.rpm
+sudo dnf install ./bottom-0.14.9-1.x86_64.rpm
 ```
 
 ### Gentoo
@@ -604,6 +604,10 @@ Thanks to all contributors:
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gepbird"><img src="https://avatars.githubusercontent.com/u/29818440?v=4?s=100" width="100px;" alt="Gergő Gutyina"/><br /><sub><b>Gergő Gutyina</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=gepbird" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/puneetdixit200"><img src="https://avatars.githubusercontent.com/u/236133619?v=4?s=100" width="100px;" alt="Puneet Dixit"/><br /><sub><b>Puneet Dixit</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=puneetdixit200" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/upuddu"><img src="https://avatars.githubusercontent.com/u/125773480?v=4?s=100" width="100px;" alt="Umberto Puddu"/><br /><sub><b>Umberto Puddu</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=upuddu" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Oseryx"><img src="https://avatars.githubusercontent.com/u/54248014?v=4?s=100" width="100px;" alt="Anis"/><br /><sub><b>Anis</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=Oseryx" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://gitlab.com/fazzi/"><img src="https://avatars.githubusercontent.com/u/18248986?v=4?s=100" width="100px;" alt="fazzi"/><br /><sub><b>fazzi</b></sub></a><br /><a href="https://github.com/ClementTsang/bottom/commits?author=fxzzi" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

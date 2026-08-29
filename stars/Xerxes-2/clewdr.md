@@ -1,6 +1,6 @@
 ---
 project: clewdr
-stars: 1251
+stars: 1254
 description: |-
     High Performance LLM Reverse Proxy
 url: https://github.com/Xerxes-2/clewdr
@@ -117,6 +117,12 @@ cargo xtask ci        # everything CI runs
 ```
 
 Building the frontend needs `rustup target add wasm32-unknown-unknown` and `cargo binstall trunk`. Running `cargo xtask` itself needs nothing.
+
+Or skip the toolchain setup entirely: `nix develop` provides the pinned stable
+toolchain with wasm32, nightly rustfmt, trunk and the matching wasm-bindgen, so
+`nix develop -c cargo xtask ci` works on a bare checkout. The same flake builds
+the release binaries and the container images (`nix build .#clewdr-musl-x86_64`,
+`nix build .#image-amd64`); see AGENTS.md for the target list.
 
 Two gotchas if you bypass xtask. Formatting must go through **nightly**, because `.rustfmt.toml` uses nightly-only options that stable silently ignores.
 
