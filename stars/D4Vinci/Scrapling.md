@@ -1,6 +1,6 @@
 ---
 project: Scrapling
-stars: 75872
+stars: 77187
 description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!
 url: https://github.com/D4Vinci/Scrapling
 ---
@@ -18,7 +18,7 @@ Effortless Web Scraping for the Modern Web
 
 Scrapling is an adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl.
 
-Its parser learns from website changes and automatically relocates your elements when pages update. Its fetchers bypass anti-bot systems like Cloudflare Turnstile out of the box. And its spider framework lets you scale up to concurrent, multi-session crawls with pause/resume and automatic proxy rotation - all in a few lines of Python. One library, zero compromises.
+Its parser learns from website changes and automatically relocates your elements when pages update. Its fetchers bypass anti-bot systems like Cloudflare Turnstile out of the box. And its spider framework lets you scale up to concurrent, multi-session crawls with pause/resume, automatic proxy rotation, and a crawl speed that adapts to how fast each website responds and backs off when it starts blocking you - all in a few lines of Python. One library, zero compromises.
 
 Blazing fast crawls with real-time stats and streaming. Built by Web Scrapers for Web Scrapers and regular users, there's something for everyone.
 
@@ -69,8 +69,6 @@ Read a full review of Scrapling on The Web Scraping Club (Nov 2025), the #1 news
 
 Swiftproxy provides scalable residential proxies with 80M+ IPs across 195+ countries, delivering fast, reliable connections, automatic rotation, and strong anti-block performance. Free trial available.
 
-CoreClaw provides Web Data APIs for AI agents. Access structured data from Google Maps, LinkedIn, Instagram, YouTube, Amazon and more.
-
 NiuProxy — Rotating residential proxies from $0.35/GB. Use exclusive Scrapling code PAY2 for 10% off your recharge.
 
 _Do you want to show your ad here? Click here_
@@ -115,13 +113,17 @@ Key Features
 -   **Background API Capture**: Pass a URL pattern to `capture_xhr`, and all matching XHR/fetch responses the page makes while loading are collected for you as `Response` objects in `response.captured_xhr` - grab a site's API data without reverse-engineering the requests yourself.
 -   **Async Support**: Complete async support across all fetchers and dedicated async session classes.
 
-### Adaptive Scraping & AI Integration
+### Adaptive Scraping
 
 -   🔄 **Smart Element Tracking**: Relocate elements after website changes using intelligent similarity algorithms.
 -   🎯 **Smart Flexible Selection**: CSS selectors, XPath selectors, filter-based search, text search, regex search, and more.
 -   🔍 **Find Similar Elements**: Automatically locate elements similar to found elements.
--   🤖 **MCP Server to be used with AI**: Built-in MCP server for AI-assisted Web Scraping and data extraction. The MCP server features powerful, custom capabilities that leverage Scrapling to extract targeted content before passing it to the AI (Claude/Cursor/etc), thereby speeding up operations and reducing costs by minimizing token usage. (demo video) It can also keep browser sessions open across calls, take page screenshots, and drive remote browsers over CDP.
+
+### AI Features
+
+-   🤖 **MCP Server**: Let AI chatbots and agents (Claude/Cursor/etc) scrape through Scrapling with one-shot or session-based tools covering plain HTTP requests (any method), browser fetches, and stealth fetches that bypass Cloudflare. Pages are narrowed with CSS selectors and stripped of prompt-injection content before the AI sees them, so the agent reads less, costs less, and can't be hijacked by hidden text. Screenshots, remote browsers over CDP, and a secure-by-default HTTP transport are included. (demo video)
 -   🧠 **Agent Skill**: A ready-to-install Agent Skill that teaches coding agents the whole library, so the code they write with Scrapling matches the current API instead of guessing.
+-   📚 **RAG-ready Markdown**: Turn any page into clean, sanitized, LLM-ready Markdown with one line (`page.markdown()`), or crawl a whole website into a Markdown corpus with the `SiteToMarkdownSpider` template, all without an LLM in the loop. (docs)
 
 ### High-Performance & battle-tested Architecture
 
@@ -463,6 +465,10 @@ This installation only includes the parser engine and its dependencies, without 
     -   Install the MCP server feature:
         
         pip install "scrapling\[ai\]"
+        
+    -   Install dependencies for (building RAG systems):
+        
+        pip install "scrapling\[rag\]"
         
     -   Install shell features (Web Scraping shell and the `extract` command):
         

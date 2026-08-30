@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 3308
+stars: 3404
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -140,9 +140,24 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 
 复现大模型导航VLN、OpenVLA、SmolVLA 等前沿项目，实现仿真或真实部署
 
+AMD ROCm 仿真长程案例
+---------------
+
+DexJoCo 双臂河内塔
+
+RoboCasa365 长程装餐任务
+
+Pi0.5 双臂协同，三视角，47.6 秒
+
+GR00T N1.5 家庭长时序操作，四视角，195 秒
+
+两段完整回合均在 AMD Ryzen AI MAX+ 395 上完成闭环推理和视频录制。查看 AMD Physical AI 仿真基准与长程视频复现教程，继续学习 Every Embodied、RoboCasa365、DexJoCo、DISCOVERSE、RoboWits 和 Unitree G1 的任务协议、评估结果与多视角导出流程。
+
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-08-29\]** 新增 AMD Physical AI 仿真基准与长程视频复现教程：汇总 Every Embodied、RoboCasa365、DexJoCo、DISCOVERSE、RoboWits 和 Unitree G1 的 AMD ROCm 运行链路、正式评估协议与多视角视频，并提供 DexJoCo 双臂河内塔和 RoboCasa365 长程装餐任务的完整成功回合。
+-   **\[2026-08-23\]** 新增 EVA-Client 真机部署与评测工程导航：归入现有 VLA 章节，系统讲解 EVA-Client 如何衔接 LeRobot 数据、外部 VLA 策略服务器与真实机器人，覆盖 Transport、Robot Definition、Policy Client、五种 action chunk 调度策略、七类控制台工作流、可审计评测日志、无真机 open-loop 体验和两进程真机部署模式；同时明确当前官方版本尚未提供 SO-101 适配，并给出社区扩展所需的机器人描述、硬件节点、动作契约、配置与安全验证清单。
 -   **\[2026-08-01\]** 新增 ATEC2026 赛后复盘与开源方案教程：将 Task A/B/D/E 的任务边界、观测契约、环境视角调试、Task B 公开方案对照、评估与复现边界，以及中文 Workspace Memory 统一归入第 15 章，并配套 Task B 公开复现归档 与 Task E 开源资源。
 -   **\[2026-07-18\]** 新增 Dexbotic-RLinf 工程化 VLA 后训练导读：归入现有 VLA 章节，系统讲解 Dexbotic 如何把 RLinf 作为分布式强化学习后端，用 PPO 对 Dexbotic π0 / DM0 在 LIBERO 上做在线 fine-tuning，覆盖 Dexbotic 三层工具箱架构、RLinf frontend 与 Dexbotic backend 两种启动方式、`dexbotic_pi0` / `dexbotic_dm0` 动态模型注册、actor / rollout / env worker 分工、checkpoint 下载、TensorBoard 指标、standalone evaluation，以及该链路更适合作为工程化后训练导读而非轻量一键复现的边界。
 -   **\[2026-08-05\]** 新增 DM0.5 高性能推理与 OpenDM 开源导读：归入现有 VLA 章节，系统拆解 DM0.5 的 Gemma3 VLM prefix、Action Expert suffix、KV cache、Flow Matching action chunk 和公开 OpenDM 代码入口；进一步分析官网公告中的 Vision TensorRT、Tuned FlexAttention、FP8 E4M3 Tensor Core MLP、Triton fused kernels 与启动期 CUDA Graph 如何组成 9.29× 推理优化链路，并明确 OpenDM 当前可复现的模型/训练/推理/评测范围，以及 DM0.5 专用 9.29× 部署代码尚未在公开仓库完整出现的边界。
@@ -307,7 +322,7 @@ LIBERO、SimplerENV
 
 **10\. VLA 大模型**
 
-SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析、EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航、3DVLA 三维空间实例增强 VLA、PhysBrain 1.0 物理常识增强 VLA、PRTS 强化学习原生 VLA、Galaxea G0.5 自回归 VLA、Dexora 高自由度双臂灵巧 VLA、LWD 真机机群强化学习、VisualThink-VLA 视觉证据推理、Agentic-VLA 在线适应、Dexbotic-RLinf 工程化 VLA 后训练、DM0.5 高性能推理与 OpenDM
+SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析、EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航、3DVLA 三维空间实例增强 VLA、PhysBrain 1.0 物理常识增强 VLA、PRTS 强化学习原生 VLA、Galaxea G0.5 自回归 VLA、Dexora 高自由度双臂灵巧 VLA、LWD 真机机群强化学习、VisualThink-VLA 视觉证据推理、Agentic-VLA 在线适应、Dexbotic-RLinf 工程化 VLA 后训练、DM0.5 高性能推理与 OpenDM、EVA-Client 真机部署与评测
 
 ✅
 

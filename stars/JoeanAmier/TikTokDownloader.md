@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 15507
+stars: 15630
 description: 抖音 / TikTok 平台作品下载/数据采集工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -14,12 +14,15 @@ DouK-Downloader
 
   
   
-
   
 
-🔥 **TikTok 发布/喜欢/合辑/直播/视频/图集/音乐；抖音发布/喜欢/收藏/收藏夹/视频/图集/实况/直播/音乐/合集/评论/账号/搜索/热榜数据采集工具：**完全开源，基于 HTTPX 模块实现的免费数据采集和文件下载工具；批量下载抖音账号发布、喜欢、收藏、收藏夹作品；批量下载 TikTok 账号发布、喜欢作品；下载抖音链接或 TikTok 链接作品；获取抖音直播拉流地址；下载抖音直播视频；获取 TikTok 直播拉流地址；下载 TikTok 直播视频；采集抖音作品评论数据；批量下载抖音合集作品；批量下载 TikTok 合辑作品；采集抖音账号详细数据；采集抖音用户 / 作品 / 直播搜索结果；采集抖音热榜数据。
+🔥 抖音 / TikTok 平台作品下载/数据采集工具
 
 ⭐ 本项目历史名称：`TikTokDownloader`
+
+* * *
+
+⚠️ 当前版本部分功能已失效。项目计划在 `6.0` 版本进行重构，重构完成后将会修复部分失效的功能！
 
 ⚠️ 本项目的加密参数算法已过期失效；为确保项目合法合规，参数算法不再维护，部分功能可能无法正常工作。如需使用，请自行准备加密参数生成代码，配置方法请查阅 文档！
 
@@ -33,7 +36,6 @@ DouK-Downloader
 -   ✅ 下载抖音视频/图集
 -   ✅ 下载抖音实况/动图
 -   ✅ 下载最高画质视频文件
--   ✅ 下载 TikTok 视频原画
 -   ✅ 下载 TikTok 视频/图集
 -   ✅ 下载抖音账号发布/喜欢/收藏/收藏夹作品
 -   ✅ 下载 TikTok 账号发布/喜欢作品
@@ -65,7 +67,6 @@ DouK-Downloader
 -   ✅ 采集抖音搜索数据
 -   ✅ 采集抖音热榜数据
 -   ✅ 记录已下载作品 ID
--   ☑️ 扫码登陆获取 Cookie
 -   ✅ 从浏览器读取 Cookie
 -   ✅ 支持 Web API 调用
 -   ✅ 支持多线程下载作品
@@ -104,7 +105,7 @@ Web API 接口模式
 
 ### API 调用示例代码
 
-from httpx import post
+from curl\_cffi.requests import post
 from rich import print
 
 def demo():
@@ -132,6 +133,8 @@ demo()
 ⭐ 自动构建可执行文件教程请查阅本文档的 `构建可执行文件指南` 部分；如果需要更加详细的图文教程，请 查阅文章！
 
 **注意：由于 Mac OS 平台的可执行文件 `main` 未经过代码签名，首次运行时会受到系统安全限制。请先在终端执行 `xattr -cr 项目文件夹路径` 命令移除安全标记，执行一次后即可正常运行。**
+
+**Node.js（可选）**：部分功能需要使用 Node.js 执行 JavaScript 代码，使用这些功能时请安装 **Node.js >= 18**；未安装 Node.js 不影响其他功能的正常使用。
 
 * * *
 
@@ -161,10 +164,6 @@ demo()
     3.  选择 `从剪贴板读取 Cookie` 选项，程序会自动读取剪贴板的 Cookie 并写入配置文件
     
     **从浏览器读取 Cookie（弃用）**2.  选择 `从浏览器读取 Cookie` 选项，按照提示输入浏览器类型或序号
-    
-    **扫码登录获取 Cookie（失效）**2.  选择 `扫码登录获取 Cookie` 选项，程序会显示登录二维码图片，并使用默认应用打开图片
-    3.  使用抖音 APP 扫描二维码并登录账号
-    4.  按照提示操作，程序会自动将 Cookie 写入配置文件
 4.  返回程序界面，依次选择 `终端交互模式` -> `批量下载链接作品` -> `手动输入待采集的作品链接`
 5.  输入抖音作品链接即可下载作品文件（TikTok 平台需要更多初始设置，详见文档）
 6.  更多详细说明请查看 **项目文档**
@@ -310,7 +309,7 @@ A: 由于权限限制，您无法直接触发主仓库的 Actions。请通过 Fo
 程序更新
 ----
 
-**方案一：**下载并解压文件，将旧版本的 `_internal\Volume` 文件夹复制到新版本的 `_internal` 文件夹。
+**方案一：**下载并解压文件，将旧版本的 `Volume` 文件夹复制到新版本的程序根目录。
 
 **方案二：**下载并解压文件（不要运行程序），复制全部文件，直接覆盖旧版本文件。
 
@@ -410,7 +409,8 @@ TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台�
 -   https://github.com/Johnserf-Seed/f2
 -   https://github.com/Evil0ctal/Douyin\_TikTok\_Download\_API
 -   https://github.com/ihmily/DouyinLiveRecorder
--   https://github.com/encode/httpx/
+-   https://github.com/xvhuan/tiktok-web-params
+-   https://github.com/lexiforest/curl\_cffi/
 -   https://github.com/Textualize/rich
 -   https://github.com/omnilib/aiosqlite
 -   https://github.com/Tinche/aiofiles
@@ -418,5 +418,5 @@ TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台�
 -   https://foss.heptapod.net/openpyxl/openpyxl
 -   https://github.com/carpedm20/emoji/
 -   https://github.com/lxml/lxml
--   https://github.com/neverl805/never-jscore
+-   https://github.com/extremeheat/JSPyBridge
 -   https://ffmpeg.org/ffmpeg-all.html

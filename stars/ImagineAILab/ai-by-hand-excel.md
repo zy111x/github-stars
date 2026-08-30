@@ -1,6 +1,6 @@
 ---
 project: ai-by-hand-excel
-stars: 6259
+stars: 6263
 description: null
 url: https://github.com/ImagineAILab/ai-by-hand-excel
 ---

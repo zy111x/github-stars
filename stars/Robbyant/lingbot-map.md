@@ -1,6 +1,6 @@
 ---
 project: lingbot-map
-stars: 16616
+stars: 16741
 description: A feed-forward 3D foundation model for reconstructing scenes from streaming data
 url: https://github.com/Robbyant/lingbot-map
 ---
