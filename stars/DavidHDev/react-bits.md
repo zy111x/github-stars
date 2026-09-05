@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 46409
+stars: 46808
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building memorable websites.
 url: https://github.com/DavidHDev/react-bits
@@ -100,6 +100,14 @@ React Bits is proudly supported by these amazing sponsors:
     <source media="(prefers-color-scheme: dark)" srcset="public/assets/sponsors/shadcncraft.svg">
     <source media="(prefers-color-scheme: light)" srcset="public/assets/sponsors/shadcncraft-lightmode.svg">
     <img src="public/assets/sponsors/shadcncraft.svg" alt="Shadcncraft" style="height: 40px;">
+  </picture>
+</a>
+
+<a href="https://shadcnuikit.com/?utm_source=reactbits&utm_medium=sponsor&utm_campaign=silver&ref=reactbits" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/assets/sponsors/shadcnuikit.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/assets/sponsors/shadcnuikit-lightmode.svg">
+    <img src="public/assets/sponsors/shadcnuikit.svg" alt="shadcnuikit.com" style="height: 40px;">
   </picture>
 </a>
 

@@ -1,6 +1,6 @@
 ---
 project: omarchy
-stars: 34743
+stars: 38292
 description: |-
     Beautiful, Modern & Opinionated Linux
 url: https://github.com/omacom/omarchy
@@ -8,7 +8,7 @@ url: https://github.com/omacom/omarchy
 
 # Omarchy
 
-Omarchy is a beautiful, modern & opinionated Linux distribution by DHH.
+Omarchy is a beautiful, fun & agentic Linux distribution by DHH.
 
 Read more at [omarchy.org](https://omarchy.org).
 

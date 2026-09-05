@@ -1,6 +1,6 @@
 ---
 project: tutti
-stars: 108
+stars: 109
 description: |-
     Multi-output audio and display control for Mac — one panel for every output, app, and screen.
 url: https://github.com/BarryBarrywu/tutti
@@ -9,7 +9,7 @@ url: https://github.com/BarryBarrywu/tutti
 <p align="right">English · <a href="README.zh.md">中文</a></p>
 
 <p align="center">
-  <img src="assets/readme/hero-en.svg" width="100%" alt="Tutti, a macOS audio control center for multi-output, per-app control, and iPhone remote">
+  <img src="assets/readme/hero-en.svg" width="100%" alt="Tutti: Bring your setup together. Sound and display control for Mac.">
 </p>
 
 <p align="center">
@@ -25,13 +25,16 @@ url: https://github.com/BarryBarrywu/tutti
 
 <p align="center"><sub><strong>No virtual driver · no system extension · no telemetry · no account.</strong> Notarized by Apple. Quit Tutti and your audio setup is exactly as it was.</sub></p>
 
-## One panel for your whole sound system
+## One panel for sound and screens
 
-macOS gives you a volume slider, a device list, and a tiny speaker glyph — and that's it. You can't play to two speakers at once, can't set a different volume per app, can't EQ one app without touching the rest. Tutti is the control center that fills the gap: one panel for every output, every app, and every level — riding Apple's own audio frameworks, with nothing installed into your system.
+An external display is often both another screen and another audio output, but macOS keeps brightness and sound in separate places. Tutti brings audio outputs, every app, displays, and presets into one menu bar panel.
 
-- **One sound, many outputs** — play through several speakers at once and keep them aligned.
-- **Each app, its own sound** — set volume, EQ, and output without changing everything else.
-- **Your Mac, from your iPhone** — switch presets, choose speakers, and control playback from the couch.
+Play through several devices at once, adjust each device and app, control brightness for one display or a whole group, then save the complete setup as a preset. Tutti uses Apple’s own frameworks, with no virtual audio driver or system extension to install.
+
+- **One sound, every speaker**: play through speakers, headphones, and display audio together.
+- **Every app, its own settings**: control volume, EQ, and output separately.
+- **Every display, the right brightness**: control one display or a group, with external displays following the built-in screen.
+- **Your whole setup, one preset**: restore outputs, volume, apps, and display brightness together.
 
 ## Install
 
@@ -45,7 +48,7 @@ Tutti checks for updates automatically after installation.
 
 ## Tutti Remote — now on the App Store
 
-**Control your Mac's audio from your iPhone.** Sit on the couch and switch presets, pick output speakers, set per-device and per-app volume, and drive playback from an iPod-style click wheel. Pairs over your local network; the Mac stays in charge. The iPhone app is free; controlling your Mac needs Tutti Pro there.
+Control Mac outputs, device and app volume, music playback, and display brightness from your iPhone. The Mac remains in charge; Tutti Remote simply puts the whole panel within reach. Pairs over your local network. The iPhone app is free; controlling your Mac requires Tutti Pro on the Mac.
 
 <p align="center">
   <a href="https://apps.apple.com/app/tutti-remote/id6788375184"><strong>Download Tutti Remote on the App Store →</strong></a>
@@ -78,6 +81,9 @@ Tutti checks for updates automatically after installation.
 - **Follow the built-in display** — external displays can keep their brightness offset while following manual changes and macOS automatic brightness.
 - **Brightness keys & scrolling** — the keyboard brightness keys control the selected displays with Tutti's progress HUD; hover and scroll to adjust a group or one display.
 - **Display presets + iPhone control** &nbsp;`Pro` — save display selection and brightness in presets, or control them from Tutti Remote 1.1.0.
+- **Brightness Upscaling (v1.10.0)** &nbsp;`Pro` — use available EDR headroom to move a compatible XDR display's own slider above 100%, with Gamma or Metal. Presets can save and restore each display's switch and level. [Compatibility and setup](https://tutti.barrybarrywu.com/docs/#upscaling).
+
+Upscaling can affect HDR content and color accuracy; it does not detect HDR or turn itself off automatically. Group controls, brightness keys, direct brightness shortcuts, Remote, automation, Brightness Following, and scrolling remain within 100%. Standard Studio Display and generic third-party HDR displays are excluded; the linked guide distinguishes software compatibility from hardware testing.
 
 Tutti's display brightness engine builds on the open-source [Crisp](https://github.com/didriksg/Crisp) project. Thanks to didriksg and its contributors for sharing their work.
 
@@ -149,6 +155,7 @@ Every feature above without a tag is **free, forever**. Every new install also g
 | **Raycast control** | control Tutti from Raycast — mute, set volume, or apply presets |
 | **iPhone remote** | control your Mac's audio from your iPhone (free app, needs Pro on the Mac) |
 | **Display presets & iPhone brightness control** | save display groups and brightness, then control them from your iPhone |
+| **Brightness Upscaling (v1.10.0)** | above-100% brightness on compatible XDR displays, including saved preset scenes |
 
 - **$12.99 one-time — no subscription.** All future Pro features included at no extra cost.
 - **Up to 2 Macs** per license. Activate and deactivate from Settings › License.

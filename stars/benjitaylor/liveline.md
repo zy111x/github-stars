@@ -1,6 +1,6 @@
 ---
 project: liveline
-stars: 920
+stars: 936
 description: |-
     Real-time animated line chart for React.
 url: https://github.com/benjitaylor/liveline

@@ -1,9 +1,9 @@
 ---
 project: sandbox-runtime
-stars: 5092
+stars: 5144
 description: |-
     A lightweight sandboxing tool for enforcing filesystem and network restrictions on arbitrary processes at the OS level, without requiring a container.
-url: https://github.com/anthropic-experimental/sandbox-runtime
+url: https://github.com/anthropics/sandbox-runtime
 ---
 
 # Anthropic Sandbox Runtime (srt)

@@ -1,11 +1,12 @@
 ---
 project: office-open-xml-viewer
-stars: 679
+stars: 778
 description: |-
     A browser-based viewer for Office Open XML documents that renders to an HTML Canvas element.
 url: https://github.com/yukiyokotani/office-open-xml-viewer
 ---
 
+> [!NOTE]
 > **This entire codebase — Rust parsers, TypeScript renderers, tests, and tooling — is implemented by AI coding agents, primarily [Claude](https://claude.ai) and [Codex](https://openai.com/codex/)**, through iterative prompting. No human-written application code exists in this repository.
 
 <details>
@@ -84,7 +85,7 @@ pnpm add @silurus/ooxml
 > format-specific application graph. See the current production measurements on
 > the stable [Bundle size](https://ooxml.silurus.dev/bundle-size/) page. Import
 > only the format and optional renderer entries your application needs. In main
-> mode, MathJax, ChartEx, 3-D and Region Map implementations remain outside the
+> mode, MathJax, ChartEx, 3-D, Region Map and TIFF implementations remain outside the
 > graph unless imported; the separately loaded worker asset is self-contained.
 
 ---
@@ -154,6 +155,29 @@ await pptx.load('/deck.pptx');
 pptx.nextSlide();
 ```
 
+`XlsxSheetViewer` also offers a deliberately small delimited-text preview convenience
+that reuses the Excel-style sheet surface. It has the same source and ownership
+lifecycle as XLSX loading: a string is fetched as a URL, an `ArrayBuffer` is
+caller-owned, a successful reload replaces and disposes the previous source,
+and `destroy()` releases the active source. There is no format auto-detection or
+general-purpose tabular model, and `XlsxWorkbook` / `XlsxViewer` remain
+OOXML-only. Every delimited field stays text, so leading zeroes, long identifiers,
+dates, and `=...` values are displayed without type or formula inference.
+This convenience covers delimiter-based text regardless of filename extension;
+fixed-width PRN, DIF, and SYLK remain separate formats and are not parsed here.
+
+```typescript
+const csvFile = document.querySelector('input[type=file]') as HTMLInputElement;
+const csvBytes = await (csvFile.files?.[0] as File).arrayBuffer();
+await sheet.load(csvBytes, { format: 'csv' });
+
+// String sources are URLs, just like sheet.load('/workbook.xlsx').
+await sheet.load('/export.tsv', { format: 'tsv', encoding: 'windows-1252' });
+
+// Extensions such as .txt, .dat, and .psv do not imply one delimiter.
+await sheet.load('/report.dat', { format: 'delimited-text', delimiter: '|' });
+```
+
 ### Rendering equations
 
 OMML equations (`m:oMath` / `m:oMathPara`) in `.docx`, `.pptx` and `.xlsx` are rendered with
@@ -184,17 +208,20 @@ per-render argument. (Excel stores "Insert > Equation" as OMML inside the shared
 DrawingML `<xdr:txBody>` grammar, so `XlsxViewer` renders equations embedded in
 shapes / text boxes the same way.)
 
-### Optional chart renderers
+### Optional rendering modules
 
 Classic DrawingML 2-D chart families are included in every format entry.
 Microsoft ChartEx, model-space 3-D charts and offline country-level Region Maps
-are separate entries. Inject them once in the same load options object as
-`math`; omitting a renderer keeps it out of the ordinary render path. The
-built-in renderers work in both main and worker modes. Without `chartEx`,
+are separate entries. TIFF decoding is also a separate entry shared by DOCX,
+XLSX and PPTX. Inject the modules once in the same load options object as
+`math`; omitting one keeps its main-mode implementation out of the ordinary
+format graph. The built-in modules work in both main and worker modes. Without `chartEx`,
 ChartEx families show the standard unsupported-chart placeholder. Without
 `threeD`, 3-D chart groups
 fall back to their canonical 2-D family. Without `regionMap`, Region Maps show
-the standard unsupported-chart placeholder. The code-size boundary applies to
+the standard unsupported-chart placeholder. Without `tiff`, recognized TIFF
+parts report a render error instead of relying on the browser decoder or being
+silently omitted. The code-size boundary applies to
 the default main-mode application graph. The separately loaded render-worker
 asset stays self-contained for broad bundler compatibility and therefore
 contains its built-in optional renderer implementations.
@@ -204,12 +231,14 @@ import { XlsxViewer } from '@silurus/ooxml/xlsx';
 import { threeD } from '@silurus/ooxml/three-d';
 import { regionMap } from '@silurus/ooxml/region-map';
 import { chartEx } from '@silurus/ooxml/chart-ex';
+import { tiff } from '@silurus/ooxml/tiff';
 
 const container = document.getElementById('xlsx-container') as HTMLElement;
 const workbookViewer = new XlsxViewer(container, {
   threeD,
   regionMap,
   chartEx,
+  tiff,
   mode: 'worker',
 });
 await workbookViewer.load('/workbook-with-advanced-charts.xlsx');
@@ -222,6 +251,20 @@ sub-country/view-specific layouts that the bounded offline model cannot yet
 represent safely. The specification/Office evidence boundary for automatic
 chart behavior is documented in
 [Chart compatibility evidence and scope](docs/chart-compatibility-evidence.md).
+
+The bounded TIFF 6.0 codec decodes the first IFD/page of stripped, top-left
+images in the uncompressed bilevel, 8-bit grayscale, RGB, RGBA and process-CMYK
+classes, plus 1-bit CCITT Group 4. Unsupported or malformed first-page classes
+fail with a diagnostic render error. It is not a general-purpose TIFF library,
+but as a small
+by-product the same `tiff.render()` method can provide a simple preview of a
+supported standalone TIFF file. Its optional `TiffRenderOptions` argument can
+request a bounded display-sized bitmap; the Office viewers supply those targets
+automatically for layout-backed image paints. Try Yours and the VS Code extension enable
+every first-party optional module; library applications can choose only the entries they need.
+See [Production decisions](https://ooxml.silurus.dev/production/) for the full
+module list and [Bundle size](https://ooxml.silurus.dev/bundle-size/) for current
+measurements.
 
 ### Off-main-thread rendering
 
@@ -299,10 +342,11 @@ await viewer.load('/deck.pptx');
 ```
 
 The container must have a bounded height (e.g. `height: 100vh` or a flex child)
-so the viewer can size its scroll host to it. Base zoom fits the first page/slide
-width to the container width and re-fits on resize; a `0`-width container defers
-layout until it has width. Call `destroy()` to tear down (a self-loaded engine is
-destroyed with it; a borrowed one is not — see below).
+so the viewer can size its scroll host to it. Base zoom fits the widest available
+DOCX page, or the PPTX slide width, to the container and re-fits on resize. A
+progressively loaded DOCX re-fits if a wider page appears; a `0`-width container
+defers layout until it has width. Call `destroy()` to tear down (a self-loaded
+engine is destroyed with it; a borrowed one is not — see below).
 
 Pass `refitOnResize: false` when the viewport must not determine the document's
 physical display size. An explicit pre-load `setScale(1)` then keeps the same
@@ -331,7 +375,9 @@ sheet sits inside a uniform desk margin; pass `0` for a flush edge.
 bare-wheel still scrolls natively. Zoom is flicker-free — a rapid gesture shows a
 CSS preview and settles into a crisp re-render when it pauses. Bounds are the
 absolute scale factors `zoomMin` / `zoomMax` (default `0.1` / `4`), and
-`setScale(scale)` sets it programmatically. Pass `enableZoom: false` to disable.
+`setScale(scale)` sets it programmatically. When fitting needs a scale below
+`zoomMin`, that fitted scale becomes the effective minimum so users can zoom in
+and still return to the original fit. Pass `enableZoom: false` to disable.
 
 **Text selection and find.** Pass `enableTextSelection: true` to overlay a
 transparent, selectable text layer per page/slide for native copy. It works in
@@ -540,11 +586,20 @@ headless engines (`mode`, `useGoogleFonts`, `resourceLimits`, the deprecated
 
 ### Markdown export
 
-Every headless engine can project its document to GitHub-flavoured markdown for
-LLM ingestion, full-text search, or diffing — headings, lists, tables, and (for
-docx) footnotes / comments are preserved; layout, fonts, and positioning are
-dropped. The projection is compiled into the parser WASM you already ship, so it
-adds **zero** bundle weight. `toMarkdown()` works in both `mode: 'main'` and
+Every headless engine can produce a best-effort, text-focused GitHub-flavoured
+markdown projection for LLM ingestion, full-text search, or diffing. Explicit
+headings, lists, and tables are preserved where available, but visual layout,
+fonts, positioning, and inferred relationships between shapes are intentionally
+dropped. Treat the result as full-text extraction, not an authoritative semantic
+or reading-order representation.
+
+Review comments are kept out of the document body and collected in a final
+`## Review comments` appendix. Comment text is quoted, replies use nested quotes,
+and only reliable locations (such as a slide number or worksheet cell) are
+reported. Speaker notes remain separate from review comments.
+
+The projection is compiled into each format's existing parser WASM; there is no
+separate markdown WASM to load. `toMarkdown()` works in both `mode: 'main'` and
 `mode: 'worker'` (it runs off the archive opened at `load()`):
 
 ```typescript
@@ -555,8 +610,8 @@ const md = await doc.toMarkdown();
 ```
 
 `PptxPresentation.toMarkdown()` (title slides → `#` headings, body → nested
-bullets, notes / comments collated) and `XlsxWorkbook.toMarkdown()` (each sheet →
-a `## SheetName` pipe table) are the twins.
+bullets, speaker notes kept with their slide) and `XlsxWorkbook.toMarkdown()`
+(each sheet → a `## SheetName` pipe table) are the twins.
 
 The repository also contains a low-level adapter and CLI for workspace tooling.
 They are internal implementation utilities, not separately published packages;
@@ -680,10 +735,12 @@ file without uploading it.
 | | Charts (embedded DrawingML `c:chart` — bar / line / area / pie / doughnut / radar / scatter, via the shared core chart renderer; data labels honour `dLblPos`, §21.2.2.48) | ✅ |
 | | ChartEx (waterfall / histogram / Pareto / funnel / box &amp; whisker / treemap / sunburst) | ✅ opt-in |
 | | Math equations (OMML `m:oMath` / `m:oMathPara`, rendered via MathJax — opt-in `@silurus/ooxml/math`) | ✅ |
-| | Images (inline and anchored, with text wrap) | ✅ |
+| | Images (inline and anchored, with text wrap and adaptive display-sized decoding for oversized rasters) | ✅ |
+| | TIFF images (opt-in `@silurus/ooxml/tiff`; bounded bilevel, grayscale, RGB(A), process-CMYK and CCITT Group 4) | ✅ |
 | | SVG images (`asvg:svgBlip` MS-2016 extension — vector drawn from the embedded `.svg`, raster fallback) | ✅ |
 | | Text boxes / drawing shapes (inline and anchored `wps:wsp` / `wps:txbx`, including solid, gradient, and image fills; `a:prstGeom` — 186 preset geometries via the shared engine; connector arrow heads `headEnd` / `tailEnd` (§20.1.8.3) and `prstDash` dash patterns (§20.1.8.48)). Text-box paragraphs run through the **same line-layout engine as body text**, so kinsoku 行頭/行末禁則 (§17.15.1.58–60), UAX#9 bidi (`w:bidi`, §17.3.1.6), justification (§17.18.44) and tab stops (§17.3.1.37) all apply inside a box | ✅ |
 | | WMF **and EMF** metafile images (legacy vector, incl. inside text boxes) — rasterized via a built-in player: window→viewport mapping (MS-EMF map modes, world transform), pens/brushes, poly/rect/ellipse, text-out, path clipping, and embedded DIB blits | ✅ |
+| | Legacy VML content — positioned shapes, text boxes, image previews, and authored text wrapping | ✅ |
 | | OLE embedded objects (`w:object` — the baked VML `v:imagedata` preview is drawn; the embedded app is not run) | ✅ |
 | **Advanced** | Footnotes — reference markers + bottom-of-page bodies with separator rule, numbered (`w:footnoteReference` / `w:footnoteRef`, §17.11) | ✅ |
 | | Endnotes — reference markers + bodies at document end (`w:endnoteReference`, §17.11) | ✅ |
@@ -694,7 +751,7 @@ file without uploading it.
 | | Comments (§17.13.4) — opt-in margin balloons (`comments: true`): commented ranges tinted, threaded replies via `commentsExtended.xml`, resolved threads hidden, click-to-select stacking; also available as data (`doc.comments`, `doc.commentAnchorRanges()`) | ✅ |
 | | Markdown export (`DocxDocument.toMarkdown()` — headings, lists, tables, footnotes / comments) | ✅ |
 | | Mail merge fields | ❌ Not planned |
-| **Interaction** | Text selection (transparent overlay, native copy) | ✅ |
+| **Interaction** | Text selection, including table-cell text (transparent overlay, native copy) | ✅ |
 | | Bounded read-only text/element context (`getSelectionContext()`, page/source locators, element selection, AI/MCP callback) | ✅ |
 | | In-document find (`findText` / `findNext` / `findPrev` / `clearFind` — full-text search, all hits highlighted, each match tagged with its page) | ✅ |
 | | Runtime zoom (`getScale` / `setScale` / `fitWidth` / `fitPage`) | ✅ |
@@ -732,7 +789,8 @@ file without uploading it.
 | | Row / column sizing (custom widths and heights) | ✅ |
 | | Hidden rows / columns | ✅ |
 | | Row / column outline grouping (`outlineLevel` / `collapsed` §18.3.1.73 / .13, `<outlinePr>` — gutter brackets, +/− collapse, numbered level buttons; view-only) | ✅ |
-| **Elements** | Images (`<xdr:twoCellAnchor>`) | ✅ |
+| **Elements** | Images (`<xdr:twoCellAnchor>`, with adaptive display-sized decoding for oversized rasters) | ✅ |
+| | TIFF images (opt-in `@silurus/ooxml/tiff`; bounded bilevel, grayscale, RGB(A), process-CMYK and CCITT Group 4) | ✅ |
 | | OLE embedded objects (`<oleObjects>` — the legacy VML `v:imagedata` preview keyed by `oleObject@shapeId` is drawn; an image-typed `objectPr` target is preferred when present, and the embedded app is not run) | ✅ |
 | | SVG images (`asvg:svgBlip` MS-2016 extension — vector drawn from the embedded `.svg`, raster fallback) | ✅ |
 | | Drawing shapes / text boxes (`xdr:sp`, `xdr:txBody` — 186 preset geometries via the shared engine, with `avLst` adjust handles) | ✅ |
@@ -779,7 +837,8 @@ file without uploading it.
 | | Markdown export (`PptxPresentation.toMarkdown()` — title slides → headings, body → nested bullets, notes / comments collated) | ✅ |
 | | Animations / transitions | ❌ Not planned |
 | **Element types** | Shapes (`sp`) | ✅ |
-| | Pictures (`pic`) | ✅ |
+| | Pictures (`pic`, with adaptive display-sized decoding for oversized rasters) | ✅ |
+| | TIFF images (opt-in `@silurus/ooxml/tiff`; bounded bilevel, grayscale, RGB(A), process-CMYK and CCITT Group 4) | ✅ |
 | | SVG images (`asvg:svgBlip` MS-2016 extension — vector drawn from the embedded `.svg`, PNG fallback) | ✅ |
 | | Groups (`grpSp`) with nested transforms | ✅ |
 | | Connectors (`cxnSp`) | ✅ |
@@ -857,7 +916,7 @@ file without uploading it.
 | **Theme** | Scheme colors (dk1/lt1/accent1–6) | ✅ |
 | | Font scheme (`+mj-lt`, `+mn-lt`) | ✅ |
 | | lumMod / lumOff / alpha transforms | ✅ |
-| **Interaction** | Text selection (transparent overlay, native copy) | ✅ |
+| **Interaction** | Text selection, including table-cell text (transparent overlay, native copy) | ✅ |
 | | Bounded text/element selection context (`getSelectionContext()`, element selection, master/layout/slide provenance, main + worker) | ✅ |
 | | Comments — opt-in slide-side cards (`comments: true`), authored target markers and highlights, replies and resolved state; also available per slide through the presentation model | ✅ |
 | | In-document find (`findText` / `findNext` / `findPrev` / `clearFind` — matches tagged with slide) | ✅ |
@@ -942,6 +1001,11 @@ Stable failures can be narrowed without parsing message strings:
   (`code === 'ooxml-decoded-image-limit'`) — a raster crossed an image pixel or
   active decoded-byte ceiling. Its `metric`, `limit`, and `observed` properties
   are stable.
+- `TiffDecodeError` (`code === 'ooxml-tiff-decode'`) — a recognized TIFF part
+  is malformed, uses a class the configured codec does not support, or fails
+  during bitmap handoff. Its message is diagnostic rather than a stable subtype.
+  Omitting the optional TIFF codec is not an error; the affected image is shown
+  as an unavailable-image placeholder while the rest of the document renders.
 - An otherwise ordinary `Error` may carry `code === 'parser-crashed'` for a
   recognized WASM trap. This does not mean “OOM”: panic, allocation failure,
   stack overflow, and other traps can be indistinguishable at the current WASM
@@ -957,6 +1021,7 @@ import {
   OoxmlDecodedImageLimitError,
   OoxmlError,
   OoxmlResourceLimitError,
+  TiffDecodeError,
 } from '@silurus/ooxml/docx';
 
 const viewer = new DocxViewer(canvas, {
@@ -967,6 +1032,8 @@ const viewer = new DocxViewer(canvas, {
       showTooLargeMessage({ limit, observed });
     } else if (error instanceof OoxmlDecodedImageLimitError) {
       showImageTooLargeMessage(error);
+    } else if (error instanceof TiffDecodeError) {
+      showUnsupportedImageMessage();
     } else if (error instanceof OoxmlError) {
       handleContainerError(error.code);
     } else {
@@ -1025,7 +1092,17 @@ try {
 
   The report is content-free by construction: it does not include source URLs, filenames, package paths, document text, passwords, or raw error messages. It still contains document-derived sizes, counts, and timings, so applications remain responsible for consent, retention, and telemetry policy. The initial browser callback covers the underlying document/workbook/presentation factory and does not wait for a Viewer's first canvas paint; use `getResourceMetrics()` for the latest observed package counters. Bounded Node sessions accept both `onResourceMetrics` and `debug`. DOCX/PPTX report successful terminal metrics when their one-pass stream completes or the session is explicitly closed; XLSX reports success when the reusable workbook session is explicitly closed. Open-time and session-operation failures report immediately.
 
-  Image decoding has separate, non-configurable browser safety ceilings shared by all three formats: at most 32 megapixels (128 MiB RGBA) for one raster, 128 MiB of decoded raster ownership per document cache or live render pass, and two simultaneous decodes per document. Crossing a measurable image ceiling rejects with `OoxmlDecodedImageLimitError` (`code === 'ooxml-decoded-image-limit'`) instead of silently omitting the image. These are hard implementation guards rather than public tuning knobs because browser/GPU overhead is not portable enough for an application-supplied byte value to mean the same thing across devices.
+  Image decoding uses a separate adaptive resource policy shared by all three formats. Ordinary browser-decodable rasters are assigned a geometry-weighted share of the default 128 MiB decoded budget before source extraction. Each source can then flow directly from extraction to decode: it keeps native resolution when it fits its share and otherwise uses up to a 2x canvas/DPR grid when that share has headroom, avoiding visibly soft 1x intermediates for small placed artwork. If the complete set of display grids itself exceeds the budget, adaptive mode reduces them by one uniform quality ratio. This avoids an all-paint inspection barrier without making display-sized downsampling the default. Natural-size consumers, pixel effects that require the authored grid, and formats that cannot be decoder-resized remain on their guarded format-specific paths under the hard surface ceilings. Image-bearing paints for the same loaded document are serialized so overlapping paints cannot each consume the full budget, while the admitted paint still runs up to two decodes concurrently. Applications with a known environment can override the aggregate budget on Viewer or per-render options:
+  ```ts
+  new PptxViewer(canvas, {
+    imageResources: {
+      decodedByteBudget: 256 * 1024 * 1024,
+      strategy: 'adaptive', // or 'strict' to reject instead of reducing quality
+      resolution: 'native-if-fit', // or 'display' to minimize retained pixels
+    },
+  });
+  ```
+  `resolution` defaults to `'native-if-fit'`. Use `'display'` when minimizing retained raster pixels is more important than preserving source-resolution sampling. `decodedByteBudget` accepts a positive safe integer from 4 bytes through 512 MiB. This configures planned and retained decoded RGBA ownership; it does not measure browser decoder intermediates or disable the encoded-source, per-axis, or per-surface hard safety ceilings. A strict aggregate crossing or any hard-ceiling crossing rejects with `OoxmlDecodedImageLimitError` (`code === 'ooxml-decoded-image-limit'`) instead of silently omitting the image.
 
   The package counters and raster-image guards are deterministic admission limits, not exact JavaScript/WASM process-memory accounting. XML trees, document models, canvas backing stores, browser decoder overhead, renderer state, and browser-managed SVG/vector parse or decoded storage can still require several times the measured input. SVG has no portable decoded-byte measure or explicit browser release primitive; the library count-bounds its cache and revokes owned object URLs, but cannot charge it as RGBA bytes. The defaults therefore reduce risk but cannot promise that an OOM is impossible on every device. Running parse and render work in `mode: 'worker'` can contain many failures away from the main UI thread, but a Worker is not a separate operating-system process or a strict memory sandbox.
 

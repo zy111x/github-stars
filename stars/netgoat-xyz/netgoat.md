@@ -13,22 +13,32 @@ url: https://github.com/netgoat-xyz/netgoat
 NetGoat is a self-hosted reverse proxy and traffic-policy agent written in Go. It can run from a local YAML configuration, consume snapshots from the companion control plane, and continue serving the last known-good configuration during an outage.
 
 > [!WARNING]
-> NetGoat is active alpha software. The shipped configuration contains no
-> routes. Review every upstream, use strong bootstrap credentials, and place
-> administrative services behind authenticated TLS before exposing a
-> deployment to the internet.
+> NetGoat is active alpha software (`v0.1.0-alpha.1`; git tags going
+> forward are `v*`, see [docs/release.md](docs/release.md)). The shipped
+> configuration contains no routes. Review every upstream, use strong
+> bootstrap credentials, and place administrative services behind
+> authenticated TLS before exposing a deployment to the internet.
 
 ## Feature status
+
+This table is the public roadmap surface. **Available** is what this agent
+ships today. **Planned** is designed work with open specs — not live
+behavior, not a package, and not an identity product.
+
+The shipped `config.yml` has `routes: {}`. A fresh default deployment
+returns `404` for every Host instead of proxying to a local service.
+
+### Available
 
 | Capability | Status | Notes |
 | --- | --- | --- |
 | Domain and path routing | Available | Exact, wildcard, regex, and longest-prefix path routes; local routes can be overridden by streamed routes. |
 | Load balancing and failover | Available | Round-robin pools, bounded concurrent health checks, and safe-method retry/failover. |
-| WAF rules | Available | Precompiled expression rules with priorities, `BLOCK`/`ALLOW` actions, and request host/method/path/query/header context. |
-| Traffic controls | Available | Global rate limiting, request queueing, bandwidth throttling, honeypot handling, and dynamic challenges. |
+| WAF rules | Available | Precompiled expression rules with priorities, `BLOCK`/`ALLOW` actions, and request host/method/path/query/header/`stack_class` context. |
+| Traffic controls | Available | Global rate limiting, request queueing, bandwidth throttling, honeypot handling, and session-bound PoW with pinned Web Bot Auth skip. Challenge is JSON (not text/click/slider). Difficulty from load + `stack_class` mismatch (wired from terminate-only JA4/H2/ALPN), not User-Agent. Verify is bound to the terminated TLS session, not IP. |
 | Shared response cache | Available | Bounded LRU/TTL cache for explicitly public responses, with HTTP freshness and revalidation safeguards. |
 | Local authentication | Available | Cookie or Basic authentication, per-user zero-trust challenge flags, and explicit secure bootstrap users. |
-| TLS termination | Available | Static fallback, streamed per-domain/wildcard certificates, and atomic SNI selection. |
+| TLS termination | Available | Static fallback, streamed per-domain/wildcard certificates, and atomic SNI selection. Termination is required for fingerprint v1 and for session-bound PoW. |
 | WebSocket proxying | Available | Upgrade connections are preserved by Go's reverse proxy. |
 | Metrics | Available | JSON and Prometheus endpoints for traffic, cache, block, latency, and proxy-error counters. |
 | AI request classifiers | Optional | Local GoatAI, Koda-WAF, and Koda-2 workers; model files and Python dependencies are required only when enabled. |
@@ -36,11 +46,60 @@ NetGoat is a self-hosted reverse proxy and traffic-policy agent written in Go. I
 | Operational telemetry | Optional | Explicitly opt-in delivery to the companion telemetry server, with endpoint and ingestion-key configuration. |
 | Automatic certificate issuance/renewal | Available (opt-in) | Explicit ACME allow-list, HTTP-01 handler, encrypted persistent cache, and last-known-good certificate retention. |
 | JavaScript/TypeScript dynamic rules | Available (opt-in) | Isolated, bounded JS/TS request decisions with atomic last-known-good reload and fail-closed evaluation. |
+| Stack fingerprint v1 | Available | JA4 + Akamai-style H2 `SETTINGS` / `WINDOW_UPDATE` / `PRIORITY` / pseudo-header order + ALPN order, **only when this agent terminates TLS**. Opaque `stack_class` for bot clustering — not a user, hardware ID, or canvas hash. No JA4H. HTTP/3 / QUIC is a documented hole. Emit nothing for plaintext HTTP, TLS pass-through, or Cloudflare in front (`CF-Connecting-IP`). Spec: [#113](https://github.com/netgoat-xyz/netgoat/issues/113). |
 | Developer plugin catalog and middleware SDK | Available | Restart-only selections for exact compiled descriptors; v1 capability grants, lifecycle isolation, and no remote code/artifact loading. |
-| Cloudflare Access, DNS, and tunnel management | Available (opt-in) | Fail-closed Access JWT/JWKS verification plus bounded, dry-run-by-default startup reconciliation using an environment-only token. |
+| Cloudflare Access, DNS, and tunnel management | Available (opt-in) | Fail-closed Access JWT/JWKS verification plus bounded, dry-run-by-default startup reconciliation using an environment-only token. Cloudflare in front of this agent is **not** a JA4 source. |
 | Per-route cache/bandwidth policies | Available | Route policies inherit global defaults, isolate cache/bandwidth state, and support explicit per-route overrides. |
 
-The dashboard shown by the wider NetGoat project belongs to the control plane. This agent exposes metrics APIs but does not embed that dashboard.
+Recent hardening (already merged): public plaintext HTTP is refused at
+startup unless `allow_insecure_public_http: true` is set
+([#111](https://github.com/netgoat-xyz/netgoat/pull/111)). CI runs `go vet`
+and `go test -race` on pull requests and `main`
+([#110](https://github.com/netgoat-xyz/netgoat/pull/110),
+[#112](https://github.com/netgoat-xyz/netgoat/pull/112)).
+
+The dashboard shown by the wider NetGoat project belongs to the control
+plane. This agent exposes metrics APIs but does not embed that dashboard.
+
+### Next / roadmap
+
+Designed, not shipped. Specs live in the linked issues. Do not treat these
+rows as implementation claims.
+
+| Capability | Status | Notes |
+| --- | --- | --- |
+| VSA (Virtual System Administrator) | Planned | Out-of-band autonomous defense operator (not a hot-path classifier, not Kaseya VSA). Open: [#98](https://github.com/netgoat-xyz/netgoat/issues/98). |
+
+**Honesty**
+
+- Fingerprint is a client TLS/HTTP **stack class**. Chrome on a million
+  laptops will collide. Do not persist it as identity.
+- JA4 is live **only** when this agent terminates TLS. If Cloudflare or
+  any other terminator sits in front, this agent must not fingerprint
+  that ClientHello and call it the browser.
+- Turnstile / reCAPTCHA are **not** NetGoat features.
+- Session-bound PoW and pinned Web Bot Auth skip **are live** when this
+  agent terminates TLS. The pin list may be empty (skip lane empty until
+  operators seed https `pinned_directories`). Unsigned agents take the
+  PoW lane.
+
+**Gaps**
+
+- No terminate (plaintext, pass-through, or Cloudflare in front)
+  → no fingerprint and no PoW. Same rule as [#113](https://github.com/netgoat-xyz/netgoat/issues/113).
+- Web Bot Auth registry is empty until operators seed a pinned https
+  allowlist.
+- HTTP/3 / QUIC clients will not appear in fingerprint v1.
+- Unsigned LLM browsers / `python` / `go-http-client` / curl take the
+  **PoW** lane — not a magic skip.
+
+**Hardening next** (docs only; not this change)
+
+- Keep CI race + vet on PRs and `main` as the verification baseline.
+- Leave alpha only when the written gate in
+  [docs/release.md](docs/release.md) is checked off. Beta does not
+  require Cloudflare parity, VSA, H3/QUIC fingerprint, default-on AI
+  classifiers, or a control-plane MVP.
 
 ## Quick start
 
@@ -111,15 +170,16 @@ Then set `auth.enabled: true`. Bootstrap credentials are used only when the user
 - `listen`: plaintext HTTP bind address when TLS is off; the sample uses loopback.
 - `allow_insecure_public_http`: explicit opt-in for plaintext HTTP on a public address.
 - `ssl`: static fallback TLS, per-domain certificate selection, and optional ACME issuance/renewal.
+- `bot_auth`: pinned https Web Bot Auth directory allowlist; empty pins fail open to session-bound PoW.
 - `dynamic_rules`: bounded administrator-managed TypeScript/JavaScript request decisions.
 - `plugins`: restart-only catalog selections for middleware compiled into this exact agent build; `sha256` is the release descriptor fingerprint, not a downloaded artifact hash.
 - `cloudflare`: optional Access JWT enforcement and explicit DNS/tunnel startup reconciliation. Reconciliation defaults to dry-run.
 - `telemetry`: disabled by default; endpoint, shared ingestion key, and heartbeat interval.
 - `anomaly`, `koda_waf`, `koda_2`: optional local inference workers.
 
-Secrets may also be supplied through the environment. `API_STREAM_KEY` overrides the YAML control-plane key, `NETGOAT_ACME_CACHE_KEY` encrypts ACME state, and `CLOUDFLARE_API_TOKEN` is required for Cloudflare reconciliation. Do not commit `.env`, private keys, model files, databases, recovery snapshots, or telemetry identifiers.
+Secrets may also be supplied through the environment. `API_STREAM_KEY` overrides the YAML control-plane key, `NETGOAT_ACME_CACHE_KEY` encrypts ACME state, `CLOUDFLARE_API_TOKEN` is required for Cloudflare reconciliation, and `NETGOAT_CHALLENGE_SECRET` (or `DiamondKey`) binds PoW commitments. Do not commit `.env`, private keys, model files, databases, recovery snapshots, or telemetry identifiers.
 
-See the [operations guide](docs/operations.md) for policy precedence, ACME setup, and dynamic-rule safety boundaries; the [middleware SDK guide](docs/middleware-sdk.md) for trusted compiled-in extensions; and the [developer plugin catalog guide](docs/developer-plugins.md) for the restart-time selection and publisher trust boundary.
+See the [operations guide](docs/operations.md) for production deploy, metrics scrape, policy precedence, ACME setup, and dynamic-rule safety boundaries; the [release train](docs/release.md) for `v*` tags and the alpha→beta gate; the [middleware SDK guide](docs/middleware-sdk.md) for trusted compiled-in extensions; and the [developer plugin catalog guide](docs/developer-plugins.md) for the restart-time selection and publisher trust boundary.
 
 ## Architecture
 
@@ -151,7 +211,7 @@ Python worker syntax can be checked without installing their model dependencies:
 python3 -m py_compile ai/*.py
 ```
 
-See `CONTRIBUTING.md` for contribution conventions and `SECURITY.md` for private vulnerability reporting.
+See `CONTRIBUTING.md` for contribution conventions, `docs/release.md` for tagging and the alpha→beta gate, `docs/operations.md` for production deploy, and `SECURITY.md` for private vulnerability reporting.
 
 ## Project links
 

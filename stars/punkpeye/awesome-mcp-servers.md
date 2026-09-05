@@ -1,6 +1,6 @@
 ---
 project: awesome-mcp-servers
-stars: 93057
+stars: 94320
 description: |-
     A collection of MCP servers.
 url: https://github.com/punkpeye/awesome-mcp-servers
@@ -17,7 +17,9 @@ url: https://github.com/punkpeye/awesome-mcp-servers
 [![Subreddit subscribers](https://img.shields.io/reddit/subreddit-subscribers/mcp?style=flat&logo=reddit&label=subreddit)](https://www.reddit.com/r/mcp/)
 
 > [!IMPORTANT]
-> [Awesome MCP Servers](https://glama.ai/mcp/servers) web directory.
+> [ray.run](https://ray.run/) – from idea to a production-grade MCP server in under a minute! 🦜
+
+<sup><a href="https://glama.ai/advertise">Ad</a></sup>
 
 A curated list of awesome Model Context Protocol (MCP) servers.
 
@@ -1577,4 +1579,4 @@ Tools and integrations that enhance the development workflow and environment man
 - [childrentime/reactuse](https://github.com/childrentime/reactuse) [![childrentime/reactuse MCP server](https://glama.ai/mcp/servers/childrentime/reactuse/badges/score.svg)](https://glama.ai/mcp/servers/childrentime/reactuse) 📇 🏠 🍎 🪟 🐧 - MCP server for the [ReactUse](https://reactuse.com) library — 110+ React Hooks (TypeScript-first, SSR-compatible, tree-shakable). Lets AI assistants discover hook signatures, demos, and usage patterns directly from the docs.
 - [kannajune/mcp-architect](https://github.com/kannajune/mcp-architect) [![kannajune/mcp-architect MCP server](https://glama.ai/mcp/servers/kannajune/mcp-architect/badges/score.svg)](https://glama.ai/mcp/servers/kannajune/mcp-architect) 🐍 🏠 - Gives any AI assistant real architectural understanding of a codebase: tech-stack overview, internal dependency graph with cycle detection, risk hotspots, and module summaries. Local, zero-config, no API keys. `uvx mcp-architect`.
 - [todah-zg/codemagic-mcp](https://github.com/todah-zg/codemagic-mcp) [![codemagic-mcp MCP server](https://glama.ai/mcp/servers/todah-zg/codemagic-mcp/badges/score.svg)](https://glama.ai/mcp/servers/todah-zg/codemagic-mcp) 📇 ☁️ - Build, sign, and publish iOS and Android apps through AI agents. Integrates Codemagic CI/CD, App Store Connect, and Google Play in one server.
-- [deslay1/amendor-mcp](https://github.com/deslay1/amendor-mcp) [![deslay1/amendor-mcp MCP server](https://glama.ai/mcp/servers/deslay1/amendor-mcp/badges/score.svg)](https://glama.ai/mcp/servers/deslay1/amendor-mc
+- [deslay1/amendor-mcp](https://github.com/deslay1/amendor-mcp) [![deslay1/amendor-mcp MCP server](https://glama.ai/mcp/serve

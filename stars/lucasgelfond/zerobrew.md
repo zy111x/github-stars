@@ -1,6 +1,6 @@
 ---
 project: zerobrew
-stars: 7537
+stars: 7541
 description: |-
     A 5-20x faster experimental Homebrew alternative
 url: https://github.com/lucasgelfond/zerobrew
@@ -27,6 +27,11 @@ url: https://github.com/lucasgelfond/zerobrew
 <p><strong>zerobrew brings uv-style architecture to Homebrew packages on macOS and Linux.</strong></p>
 
 </div>
+
+> [!WARNING] 
+> zerobrew is currently **unmaintained**.
+> Please contact lucas.gelfond@gmail.com or akrm@cachebag.sh for CVE's or other critical security issues
+
 
 ## Install
 

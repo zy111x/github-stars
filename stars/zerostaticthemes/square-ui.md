@@ -1,6 +1,6 @@
 ---
 project: square-ui
-stars: 6107
+stars: 6111
 description: |-
     Collection of beautifully crafted open-source layouts UI built with shadcn/ui.
 url: https://github.com/zerostaticthemes/square-ui

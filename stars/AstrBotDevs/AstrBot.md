@@ -1,6 +1,6 @@
 ---
 project: AstrBot
-stars: 39769
+stars: 40042
 description: |-
     AI Agent Assistant & development framework that integrates lots of IM platforms, LLMs, plugins and AI feature, and can be your openclaw alternative. ✨
 url: https://github.com/AstrBotDevs/AstrBot
@@ -161,6 +161,7 @@ Connect AstrBot to your favorite chat platform.
 | DeepSeek | LLM Services |
 | Ollama (Self-hosted) | LLM Services |
 | LM Studio (Self-hosted) | LLM Services |
+| [MiraRouter](https://mirarouter.com/) | LLM Services (API Gateway, supports all models) |
 | [AIHubMix](https://aihubmix.com/?aff=4bfH) | LLM Services (API Gateway, supports all models) |
 | [CompShare](https://www.compshare.cn/?ytag=GPU_YY-gh_astrbot&referral_code=FV7DcGowN4hB5UuXKgpE74) | LLM Services |
 | [302.AI](https://share.302.ai/rr1M3l) | LLM Services |

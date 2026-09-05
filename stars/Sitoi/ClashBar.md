@@ -1,6 +1,6 @@
 ---
 project: ClashBar
-stars: 1282
+stars: 1320
 description: |-
     原生 macOS 菜单栏代理客户端，基于 SwiftUI + AppKit，由 mihomo 驱动。 轻量、稳定，在菜单栏完成配置、节点、规则、连接与系统代理管理。
 url: https://github.com/Sitoi/ClashBar
@@ -66,9 +66,9 @@ url: https://github.com/Sitoi/ClashBar
 
 ## ✨ 特点
 
-- 🪶 **轻量**：含 Core 约 15 MB 内；去掉 Core 约 3 MB 内
+- 🪶 **轻量**：去掉 Core 约 3 MB 内
 - 🧭 **菜单栏优先**：配置导入/更新、节点切换、延迟测试、规则与连接排障
-- 🔐 **系统集成**：系统代理、开机启动、Keychain 敏感信息
+- 🔐 **系统集成**：系统代理、开机启动
 - 📊 **可观测**：实时流量、连接、内存、日志过滤
 - 🌍 **中英双语**：简体中文 / English
 
@@ -77,7 +77,6 @@ url: https://github.com/Sitoi/ClashBar
 | 客户端                 |     体积 |
 | ---------------------- | -------: |
 | ClashBar.app (No Core) |     3 MB |
-| ClashBar.app           |  14.2 MB |
 | ClashMac.app           |  75.2 MB |
 | Clash Verge.app        | 128.4 MB |
 | Clash Party.app        | 496.7 MB |

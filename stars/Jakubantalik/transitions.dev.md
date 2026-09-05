@@ -1,6 +1,6 @@
 ---
 project: transitions.dev
-stars: 3373
+stars: 3485
 description: |-
     Collection of the most essential transitions for web apps, skill for agents and Refine tool for agents
 url: https://github.com/Jakubantalik/transitions.dev

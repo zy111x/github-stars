@@ -1,6 +1,6 @@
 ---
 project: manifest
-stars: 7486
+stars: 7506
 description: |-
     Connect Your Agents And Harnesses With Any Provider 🦚
 url: https://github.com/mnfst/manifest
@@ -46,6 +46,16 @@ AI Agents that don't break
 <a href="https://trendshift.io/repositories/12890" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12890" alt="mnfst%2Fmanifest | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
+<p align="center">
+  <a href="https://manifest.build/blog/manifest-is-taking-a-new-direction/">
+    <img
+      src=".github/assets/new-direction-banner.png"
+      alt="Manifest is becoming the self-healing layer for APIs. We're building a new product that fixes failed API requests on the fly, independently of the gateway. The open-source gateway stays available and maintained."
+      width="100%"
+    />
+  </a>
+</p>
+
 ## What is Manifest?
 
 Manifest is an open-source LLM gateway for AI agents and apps. Connect your API keys, subscriptions, and local models to one OpenAI-compatible endpoint, and each query goes to the right model. No single-provider lock-in.
@@ -89,7 +99,7 @@ Full deployment guides: [Railway](https://manifest.build/docs/deploy/railway), [
 
 ## Providers
 
-Manifest connects to **300+ models through 32 built-in provider connections** plus any custom OpenAI/Anthropic-compatible endpoint. Bring your own API key, reuse one of **18 subscription flows**, or run models locally. Everything is routed through the same OpenAI-compatible endpoint — send `"model": "auto"` and Manifest picks the model.
+Manifest connects to **300+ models through 35 built-in provider connections** plus any custom OpenAI/Anthropic-compatible endpoint. Bring your own API key, reuse one of **18 subscription flows**, or run models locally. Everything is routed through the same OpenAI-compatible endpoint — send `"model": "auto"` and Manifest picks the model.
 
 Provider catalogs are discovered dynamically when credentials are connected. The examples below are representative, not exhaustive.
 
@@ -98,6 +108,9 @@ Provider catalogs are discovered dynamically when credentials are connected. The
 | [**OpenAI**](https://platform.openai.com/)                                               |       ✅        | ✅ ChatGPT Plus / Pro / Team | GPT-5.6 (Sol / Terra / Luna), GPT-5.5, GPT-5.4, Codex, o-series |
 | [**Anthropic**](https://www.anthropic.com/)                                              |       ✅        | ✅ Claude Max / Pro          | Claude Opus 5, Sonnet 5, Fable 5, Haiku 4.5                     |
 | [**Google**](https://ai.google.dev/)                                                     |       ✅        | ✅ Sign in with Google       | Gemini 3.6 Flash, 3.5 Flash, 3.1 Pro, Gemini 2.5                |
+| [**Google Vertex AI**](https://cloud.google.com/vertex-ai)                               |       ✅        | —                            | Gemini models via Vertex AI                                     |
+| **Gemini Free**                                                                          | ✅ Managed key  | —                            | Free Gemini models through Manifest's managed gateway           |
+| [**Meta**](https://www.meta.ai/)                                                         |       ✅        | —                            | Muse Spark 1.2 / 1.1 + Contributor route (Meta Model API)       |
 | [**xAI**](https://x.ai/)                                                                 |       ✅        | ✅ Grok subscription         | Grok 4.5, Grok 4.3, Grok Build, Grok 4.20                       |
 | [**AWS Bedrock**](https://aws.amazon.com/bedrock/)                                       |       ✅        | —                            | Claude, GPT, Kimi, MiniMax, Nemotron, Nova via Bedrock          |
 | [**Alibaba Cloud / Qwen**](https://www.alibabacloud.com/en/solutions/generative-ai/qwen) |       ✅        | ✅ Qwen Token Plan           | Qwen 3.7 Max / Plus / Flash, DeepSeek, Kimi, GLM                |
@@ -131,6 +144,7 @@ Provider catalogs are discovered dynamically when credentials are connected. The
 ## Quick links
 
 - [Docs](https://manifest.build/docs)
+- [n8n community node](integrations/n8n-nodes-manifest) — `n8n-nodes-manifest` on npm
 - [Discord](https://discord.com/invite/FepAked3W7)
 - [Discussions](https://github.com/mnfst/manifest/discussions)
 - [Contributing](CONTRIBUTING.md)

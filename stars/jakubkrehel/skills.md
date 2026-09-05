@@ -1,6 +1,6 @@
 ---
 project: skills
-stars: 4604
+stars: 5824
 description: |-
     A collection of agent skills that help you build a great interface.
 url: https://github.com/jakubkrehel/skills

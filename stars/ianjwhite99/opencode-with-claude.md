@@ -1,6 +1,6 @@
 ---
 project: opencode-with-claude
-stars: 541
+stars: 555
 description: |-
     OpenCode plugin to use your Claude Max/Pro subscription with OpenCode via Meridian
 url: https://github.com/ianjwhite99/opencode-with-claude

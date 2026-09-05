@@ -1,6 +1,6 @@
 ---
 project: hydrogen
-stars: 2106
+stars: 2110
 description: |-
     Hydrogen lets you build faster headless storefronts in less time, on Shopify.
 url: https://github.com/Shopify/hydrogen
@@ -33,7 +33,7 @@ Hydrogen legacy v1 has been moved [to a separate repo](https://github.com/Shopif
 
 **Requirements:**
 
-- Node.js version 18.0.0 or higher
+- Node.js version 22 or 24
 - `npm` (or your package manager of choice, such as `yarn` or `pnpm`)
 
 1. Install the latest version of Hydrogen:
