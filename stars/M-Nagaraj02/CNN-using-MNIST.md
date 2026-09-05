@@ -83,8 +83,8 @@ The CNN model typically includes:
 
 * * *
 
-▶️ Visualizaation:
-------------------
+▶️ Visualization:
+-----------------
 
 **1\. Accuracy Visualization:**
 

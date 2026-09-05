@@ -1,6 +1,6 @@
 ---
 project: AI-For-Beginners
-stars: 67685
+stars: 68101
 description: 12 Weeks, 24 Lessons, AI for All!
 url: https://github.com/microsoft/AI-For-Beginners
 ---
@@ -40,6 +40,11 @@ Arabic | Bengali | Bulgarian | Burmese (Myanmar) | Chinese (Simplified) | Chines
 
 Join the Community
 ------------------
+
+🤝 Contributing
+---------------
+
+We welcome contributions from the community! Whether you're fixing typos, improving documentation, or adding new examples, your help makes this curriculum better for everyone. Check out our CONTRIBUTING.md guide to get started.
 
 What you will learn
 -------------------

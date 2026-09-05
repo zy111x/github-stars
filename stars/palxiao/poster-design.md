@@ -1,25 +1,43 @@
 ---
 project: poster-design
-stars: 4806
-description: 迅排设计 - 美观且功能强大的图片编辑器、在线海报设计，仿稿定设计，适用于多种场景：海报生成、电商产品图、文章长图、视频/公众号封面等。A beautiful online image designer, suitable for various scenarios like generate posters, making design easier!
+stars: 4826
+description: 迅排设计 - 图片编辑器、AI 在线海报设计，仿稿定设计，适用于多种场景：海报生成、电商产品图、文章长图、视频/公众号封面等。A beautiful online image designer, suitable for various scenarios like generate posters, making design easier!
 url: https://github.com/palxiao/poster-design
 ---
 
-迅排官方网站 | 在线文档 | 常见问题 | 性能压测
+迅排设计 AI Poster Design 2.0
 
-漂亮易用的在线创意图片编辑器、海报设计器，仿造稿定设计等产品，开源、强大、好玩是我们的关键词。
+一个开箱即用，零开发可部署生产的 AI 海报编辑器、在线创意图片设计工具，简洁好用、易于开发，最初灵感是模仿稿定设计等产品。
+
+全新开源版 2.0 增加了免费的 AI 功能，且相比旧版拥有完整的后台管理与接口，真正做到开箱即用，旧版请访问 mit-version 分支。
 
 适用于多种场景：海报图片生成、电商分享图、文章长图、视频/公众号封面等，轻松实现创意，迅速完成图文排版，设计如此简单！
 
+访问迅排设计 SaaS 官网 | 项目文档(旧版)
+
+### 开源版 2.0 部分预览
+
+编辑器100%全功能可用
+
+高级文字、图片编辑工具
+
+内置免费 AI 生图、文案
+
+AI 抠图，无需部署
+
 ### 项目特点
 
--   丰富的交互细节，基础功能完善
--   原生 DOM 画布编辑器，操作体验丝滑，支持各种 HTML5 特性，扩展生态更方便
--   前端 + 服务端混合出图，确保高质量图像输出，准确还原网页细节和效果
+-   交互与细节丰富，基础功能完善
+-   原生 DOM 画布编辑器，操作体验丝滑
+-   前端 + 服务端混合出图，维护门槛低，极易上手开发
 -   支持导入 PSD 设计文件解析辅助生成模板
 -   AI 抠图工具一键去除背景，支持画笔修补擦除
--   技术栈：Vue3 、Vite5 、Pinia 、ElementPlus、Express
--   图片生成：Puppeteer、Html2canvas
+-   主要技术栈：Vue3 、Vite5 、Pinia 、TypeScript
+-   运行时与框架：Node.js + Express + ElementPlus
+-   图片合成：Puppeteer（后端）内置并发队列与熔断阈值、Html2canvas（前端）
+-   图像处理：sharp
+-   数据库：better-sqlite3（内嵌 SQLite，DB：`service/data/poster.db`，WAL 模式）
+-   上传解析：body-parser、multiparty
 
 ### 快速开始
 
@@ -30,47 +48,27 @@ npm run prepared
 npm run serve
 ```
 
-输入网址 http://127.0.0.1:5173/ 访问站点，如遇失败请拆开命令运行，更多详情参阅文档。
+输入网址 http://127.0.0.1:5173/ 访问站点，如遇失败请拆开命令运行，更多详情参阅文档(旧)。
 
-### 服务端 & 图片生成
+管理后台：http://127.0.0.1:5173/admin（仅管理员可访问） 默认管理员账号：admin、密码：123456
 
-本仓库中所提供的后端代码仅为示例作用，目的在于帮助开发者更好地理解项目，实际生产则根据自身需求进行开发。（原项目中请求的远程 API 接口已不再适用，但 接口 API 文档 仍具有一定参考性）
+### 后端 & 图片生成
 
-关于部署等说明请前往项目中查看，后端项目代码位于根目录 /service 下。
+本项目的后端服务（位于 /service），提供海报截图、文件上传、用户/管理员认证、模板与素材存取等接口。
 
-### 快速启动
+生成的图片与用户上传文件落盘到 `static/` 目录后，由服务以 `/static/*` 路径对外暴露。管理后台相关接口（模板/素材/用户图片/分类管理）由 `requireAdmin` 中间件鉴权保护。
 
-使用docker-compose.yml 文件快速启动。在运行安装命令之前，请确保您的机器上安装了 Docker 和 Docker Compose：
+注：早期版本的 接口 API 文档 仍可作为部分接口形态的参考范本。
 
-> 特别注意⚠️：由于`ghcr.io/puppeteer/puppeteer`镜像，暂不支持Arm64架构。请在Amd64架构下运行。
+### 部署上线
 
-```
-docker compose up -d
-```
-
-运行后，可以在浏览器上访问http://localhost 直接访问
-
-#### 自定义镜像构建
-
--   前端构建
-
-```
-docker build -t heimanba/poster-web -f ./docker/web/Dockerfile .
-```
-
--   服务端构建
-
-```
-docker build -t heimanba/poster-api -f ./docker/api/Dockerfile ./service
-```
-
-### 付费技术支持
-
-支持基于开源版定制有限功能，帮助开发者节省研发时间和成本，并提供全方位技术指导与答疑。了解/获取技术支持请访问：迅排 Plus 服务。
-
-### 交流群
-
-欢迎关注公众号《品味前端》，回复“加群”或添加作者微信，了解项目最新动态、交流前端全栈技术。
+1.  构建前端：根目录执行 `npm run build`，产物在 `dist/`（AI 抠图模型 `public/models/` 与 onnxruntime 运行时 `public/ort/` 会一并拷入产物，随仓库分发，无需额外下载）。
+2.  启动后端：`service` 目录安装依赖后执行 `npm run build && npm run serverstart`（pm2），或 `npm run serve` 直接运行。
+3.  反向代理：前端与后端同源部署，将 `/api`、`/design`、`/static` 转发到后端端口（默认 `7001`）。若前后端不同源，构建时设置环境变量 `VITE_API_URL=https://你的后端地址` 即可。
+4.  安全事项：
+    -   管理员默认账号 `admin / 123456`，**首次登录后请立即修改密码**；
+    -   登录态使用 JWT，生产环境务必通过环境变量配置服务端密钥（见 `service/src/configs.ts`），不要使用默认值；
+    -   SQLite 为 WAL 模式，备份/迁移时请将 `poster.db`、`poster.db-shm`、`poster.db-wal` 三个文件一并处理，或先停服后再拷贝。
 
 ### `Star` 仓库
 
@@ -78,13 +76,11 @@ docker build -t heimanba/poster-api -f ./docker/api/Dockerfile ./service
 
 每一个 Star 都是我不断前进的动力 ❤️
 
-### `Contributions`
+### 交流群
 
-### 其它
+了解项目最新动态、交流前端全栈技术：欢迎关注公众号《品味前端》，回复“加群”或添加作者微信。
 
-项目持续迭代中，还有很多不足，可以将你遇到的问题在 Issues 中提出，或者提交 Pull Request 帮助完善。
-
-### 详细功能清单
+### 附功能清单
 
 #### 基础设计功能
 
@@ -168,20 +164,43 @@ docker build -t heimanba/poster-api -f ./docker/api/Dockerfile ./service
 3.  渐变色支持：调色盘支持渐变色编辑，自由定制多个颜色节点、调整角度等。
     
 
-### 感谢
+#### 用户与作品管理
 
-项目使用或参考了一些优秀开源项目，包括但不限于：
+1.  用户注册、登录及登录状态维护。
+    
+2.  用户保存设计作品，可继续编辑已保存作品。
+    
+3.  用户访问和删除自己的作品，下载和保存。
+    
+
+#### 管理后台
+
+1.  管理员权限校验，仅管理员可访问后台接口。
+    
+2.  模板与组件分开管理，支持列表查看、删除、编辑基础信息及修改分类。
+    
+3.  支持查看和管理用户作品、用户上传图片及用户列表。
+    
+4.  用户上传图片绑定归属，普通用户仅能查看自己的图片，管理员可查看全部。
+    
+5.  分类管理：模板、组件、素材、图片四类分类的新增、重命名、删除及数量查看。
+    
+6.  字体管理：分页、搜索、新增、编辑、删除及 woff/woff2 文件上传。
+    
+
+#### 服务端数据与接口
+
+1.  使用 SQLite 持久化模板、组件、分类、字体、用户、作品和图片数据，启动时自动执行表结构迁移。
+    
+2.  文件上传接口支持 multipart/form-data 图片及字体文件上传，文件保存到 `static/` 目录。
+    
+
+项目使用/参考了一些优秀开源项目，感谢这些开源项目作者所做出的杰出贡献，包括但不限于：
 
 -   moveable: 提供了画布中选择、拖动缩放等能力
 -   html2canvas: 前端出图的简单方案
 -   qr-code-styling: 生成风格化二维码
--   rembg: 图片自动抠图，使用 u2net 预训练模型
-
-### 感谢以下伙伴打赏支持
-
-Dooring低代码
-
-DrawOn桌案
+-   rembg / rembg-web: 浏览器端 AI 自动抠图（onnxruntime-web + u2netp 轻量模型，约 4.7MB，首次使用时自动加载，无需后端服务）
 
 ### 社区合作伙伴
 
@@ -189,4 +208,8 @@ LeaferJS
 
 ### `LICENSE`
 
-本项目遵循 MIT 开源协议，如有疑问，建议仔细阅读并保留此 中文版开源许可证。
+本项目遵循 AGPL-3.0 开源协议，中文版开源许可说明。
+
+### 技术支持
+
+开源版作为迅排设计早期项目底座，功能比较有限，只适合二开和学习研究。如果您有明确的业务需求，想快速开发部署一个更完善、稳定且强大的在线设计站点，可以了解：迅排 Plus 服务，我们提供定制开发、企业私有化部署等全方位技术服务。过去迅排花费了数年时间潜心打磨编辑器项目，已服务了 20+ 中小企业和上市公司，产品经历大量实际验证，且广受好评，诚挚欢迎洽谈合作。

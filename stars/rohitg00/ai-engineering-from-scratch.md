@@ -1,6 +1,6 @@
 ---
 project: ai-engineering-from-scratch
-stars: 50959
+stars: 52481
 description: Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
@@ -17,16 +17,16 @@ From the creator of Agent Memory - #1 Persistent memory ⭐ which naturally work
 
 > **84% of students already use AI tools. Only 18% feel prepared to use them professionally.** This curriculum closes that gap.
 > 
-> 511 lessons. 20 phases. ~329 hours. Python, TypeScript, Rust, Julia. Every lesson ships a reusable artifact: a prompt, a skill, an agent, an MCP server. Free, open source, MIT.
+> 523 lessons. 20 phases. ~342 hours. Python, TypeScript, Rust, Julia. Every lesson ships a reusable artifact: a prompt, a skill, an agent, an MCP server. Free, open source, MIT.
 > 
 > You don't just learn AI. You build it. End-to-end. By hand.
 
-**150,639** readers  ·  **241,669** page views in the last 30 days  ·  as of 2026-06-07
+**114,584** readers  ·  **181,995** page views in the last 30 days  ·  as of 2026-08-29
 
 Start here: choose what you want to build
 -----------------------------------------
 
-You do not need to scan 511 lessons before beginning. Pick one goal. Each link opens the same curriculum on GitHub or the website, and both versions use the same lesson code.
+You do not need to scan 523 lessons before beginning. Pick one goal. Each link opens the same curriculum on GitHub or the website, and both versions use the same lesson code.
 
 Your goal
 
@@ -58,6 +58,18 @@ Phase 14: Agent Engineering
 
 The Agent Loop
 
+I want to use coding agents on real repositories
+
+Agent-Assisted Engineering path
+
+Agent-Assisted Engineering
+
+I want to shape the right build before implementation
+
+Product Judgment and Delivery path
+
+Product Judgment and Delivery
+
 I want to build with Model Context Protocol (MCP)
 
 Model Context Protocol (MCP) route
@@ -77,6 +89,8 @@ Certification onboarding
 Certification Academy
 
 Not sure where you fit? Use the `start-learning` placement tutor or the website prerequisites guide.
+
+Compare four core domains and six career routes in the AI Engineering Learning Paths.
 
 ### Use every lesson the same way
 
@@ -167,7 +181,7 @@ How this works
 
 Most AI material teaches in scattered pieces. A paper here, a fine-tuning post there, a flashy agent demo somewhere else. The pieces rarely line up. You ship a chatbot but can't explain its loss curve. You hook a function to an agent but can't say what attention does inside the model that's calling it.
 
-This curriculum is the spine. 20 phases, 511 lessons, four languages: Python, TypeScript, Rust, Julia. Linear algebra at one end, autonomous swarms at the other. Every algorithm gets built from raw math first. Backprop. Tokenizer. Attention. Agent loop. By the time PyTorch shows up, you already know what it's doing under the hood.
+This curriculum is the spine. 20 phases, 523 lessons, four languages: Python, TypeScript, Rust, Julia. Linear algebra at one end, autonomous swarms at the other. Every algorithm gets built from raw math first. Backprop. Tokenizer. Attention. Agent loop. By the time PyTorch shows up, you already know what it's doing under the hood.
 
 Each lesson runs the same loop: read the problem, derive the math, write the code, run the test, keep the artifact. No five-minute videos, no copy-paste deploys, no hand-holding. Free, open source, and built to run on your own laptop.
 
@@ -409,7 +423,7 @@ Deploy as autonomous workers — you wrote the loop yourself in Phase 14.
 
 Plug into any MCP-compatible client. Built end-to-end in Phase 13.
 
-> Install the lot with `python3 scripts/install_skills.py <target>`. Real tools, not homework. By the end of the curriculum, you have a portfolio of 511 artifacts you actually understand because you built them.
+> Install the lot with `python3 scripts/install_skills.py <target>`. Real tools, not homework. By the end of the curriculum, you have a portfolio of 523 artifacts you actually understand because you built them.
 
 ### FIG\_002 · A worked sample
 
@@ -2833,7 +2847,7 @@ Lessons 06-18 and 28-31 form the focused Model Context Protocol (MCP) path. Its 
 
 Lessons 22 and 24-27 form the focused Agent Skills learning path, from package contract through real-host release gates. Start it with the host-specific `learn-agent-skills` invocation shown above; do not follow numeric next navigation from 22 to 23.
 
-**Phase 14 — Agent Engineering**  `42 lessons`  _Build agents from first principles — loop, memory, planning, frameworks, benchmarks, production, workbench._  
+**Phase 14 — Agent Engineering**  `54 lessons`  _Build agents from first principles, use coding agents reliably, and shape the work before implementation._  
 
 #
 
@@ -3179,7 +3193,105 @@ Build
 
 Python
 
+43
+
+Frame the Task Before the Agent Writes Code
+
+Build
+
+Python
+
+44
+
+Build an Evidence-Backed Execution Plan
+
+Build
+
+Python
+
+45
+
+Delegate Agent Work with Isolation and Merge Contracts
+
+Build
+
+Python
+
+46
+
+Turn Every Agent Correction into a System Improvement
+
+Build
+
+Python
+
+47
+
+Define the Outcome Before You Choose the Output
+
+Build
+
+Python
+
+48
+
+Discover the Workflow People Actually Perform
+
+Build
+
+Python
+
+49
+
+Map Assumptions and Resolve the Riskiest One First
+
+Build
+
+Python
+
+50
+
+Choose the Smallest Slice That Can Change the Decision
+
+Build
+
+Python
+
+51
+
+Write Specifications That Preserve Judgment
+
+Build
+
+Python
+
+52
+
+Design Success Metrics Before the Result Exists
+
+Build
+
+Python
+
+53
+
+Choose Prototype, Pilot, or Production Deliberately
+
+Build
+
+Python
+
+54
+
+Build a Feedback Ratchet with Ownership and Retirement
+
+Build
+
+Python
+
 Each Phase 14 workbench lesson (31-42) ships a `mission.md` briefing the agent before it opens the full lesson docs.
+
+Lessons 31-46 form the Agent-Assisted Engineering path. Its manifest order combines the workbench foundation with task framing, planning, delegation, and durable feedback. Lessons 47-54 form the Product Judgment and Delivery path, from outcome framing through evidence, risk, scope, measurement, staged release, and feedback ownership.
 
 **Phase 15 — Autonomous Systems**  `22 lessons`  _Long-horizon agents, self-improvement, and the 2026 safety stack._  
 
@@ -4988,14 +5100,21 @@ Exit code is non-zero when any rule fails. Rules (L001–L010) validate director
 Sponsor the work
 ----------------
 
-Free, MIT-licensed, 511 lessons. The curriculum is maintained on sponsorship alone. Cash only.
+Free, MIT-licensed, 523 lessons. The curriculum is maintained through cash sponsorships and approved Hardware Lab Partners.
 
-**Reach (verified 2026-05-14):** 55,593 monthly visitors · 90,709 page views · 7.5K stars · Twitter/X is the #1 acquisition channel.
+**Reach:** 114,584 monthly visitors · 181,995 page views (Vercel Web Analytics verified 2026-08-29) · 50,728 GitHub stars (verified 2026-08-29).
 
-  
-  
+### Current sponsors
 
-**Current sponsors:** CodeRabbit · iii
+Sponsor
+
+What they support
+
+CodeRabbit · iii
+
+Current sponsors supporting curriculum maintenance and open-source development.
+
+Open-source infrastructure support through the Vercel Open Source Program.
 
 Tier
 
@@ -5032,6 +5151,14 @@ Platinum
 $5,000
 
 Hero logo above the fold + one dedicated integration lesson, max 1 partner
+
+Diamond / Title Partner
+
+$10,000
+
+Sole title-partner placement + hero logo + quarterly reporting and co-feature, max 1 partner
+
+Hardware manufacturers can support the course through the separate Hardware Lab Partner policy. Equipment is in-kind support and does not automatically grant a cash sponsorship tier.
 
 Full rate card, hard rules, pricing anchors, and reach data: SPONSORS.md. Sign up via GitHub Sponsors.
 

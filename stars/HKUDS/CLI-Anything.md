@@ -1,6 +1,6 @@
 ---
 project: CLI-Anything
-stars: 48606
+stars: 49029
 description: "CLI-Anything: Making ALL Software Agent-Native" -- CLI-Hub: https://clianything.cc/
 url: https://github.com/HKUDS/CLI-Anything
 ---

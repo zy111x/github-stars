@@ -1,6 +1,6 @@
 ---
 project: lingbot-map
-stars: 16741
+stars: 16839
 description: A feed-forward 3D foundation model for reconstructing scenes from streaming data
 url: https://github.com/Robbyant/lingbot-map
 ---
@@ -120,14 +120,6 @@ Huggingface Repository
 ModelScope Repository
 
 Description
-
-lingbot-map-long
-
-robbyant/lingbot-map
-
-Robbyant/lingbot-map
-
-Better suited for long sequences and large scale scenes.
 
 lingbot-map
 
