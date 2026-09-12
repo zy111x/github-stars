@@ -1,9 +1,9 @@
 ---
-project: manifest
-stars: 7506
+project: llm-gateway
+stars: 7521
 description: |-
     Connect Your Agents And Harnesses With Any Provider 🦚
-url: https://github.com/mnfst/manifest
+url: https://github.com/mnfst/llm-gateway
 ---
 
 <p align="center">

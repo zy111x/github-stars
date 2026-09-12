@@ -1,6 +1,6 @@
 ---
 project: luci-app-bandix
-stars: 924
+stars: 936
 description: |-
     A network traffic monitoring application for OpenWrt
 url: https://github.com/timsaya/luci-app-bandix
@@ -72,6 +72,7 @@ LuCI Bandix is developed based on the LuCI framework, offering network traffic m
 - Support for LAN/WAN speed monitoring
 - Support device TCP/UDP connection number monitoring
 - Support for WAN speed limitation
+- Per-device minute, hourly, daily, weekly, monthly, and lifetime WAN traffic quotas with automatic blocking
 - Support IPv4/IPv6
 - Persistent data storage
 - Support real-time/daily/weekly/monthly monitoring

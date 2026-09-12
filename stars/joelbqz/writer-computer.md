@@ -1,6 +1,6 @@
 ---
 project: writer-computer
-stars: 1345
+stars: 1369
 description: |-
     Local-first desktop markdown editor
 url: https://github.com/joelbqz/writer-computer
@@ -47,6 +47,14 @@ cargo test
 cargo clippy
 cargo fmt --check
 ```
+
+## Privacy
+
+Writer is local-first and stays that way. It ships opt-in usage telemetry that
+is **off until you turn it on**, never sees your documents, file names, or
+paths, and is not even compiled into builds made from a clone of this repo.
+[`docs/telemetry.md`](./docs/telemetry.md) lists every event and property, and
+the three independent ways to keep it off.
 
 ## Releases
 

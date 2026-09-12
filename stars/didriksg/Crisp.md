@@ -1,8 +1,8 @@
 ---
 project: Crisp
-stars: 1584
+stars: 1666
 description: |-
-    Free, open-source external monitor control for macOS: a lightweight menu bar app with sharp HiDPI/Retina scaling (no more blurry or tiny text), DDC brightness, presets, and virtual displays. A free alternative to BetterDisplay and Lunar, including features they charge for.
+    Every display control macOS hides, in one menu bar app: sharp HiDPI/Retina scaling (no more blurry or tiny text), DDC brightness and volume, Extra Brightness past 100%, presets, virtual displays. Free and open source, a no-cost alternative to BetterDisplay and Lunar.
 url: https://github.com/didriksg/Crisp
 ---
 
@@ -98,24 +98,37 @@ To keep Keep Awake off on company Macs, push a configuration profile for the `co
 
 ## Automation
 
-Source builds include a minimal `crispctl` target:
+Crisp ships with `crispctl`, a command line tool for the same controls. It lives inside the app at `Crisp.app/Contents/MacOS/crispctl`; the Command Line Tool switch in Settings links it into `/usr/local/bin` after one admin prompt (off removes the link), and the Homebrew cask makes the same link on install. Source builds get it with:
 
 ```sh
 xcodegen generate && xcodebuild -scheme crispctl -configuration Release
 ```
 
-It supports five control commands:
+`crispctl help` prints the commands, and `crispctl display`, `crispctl brightness` or `crispctl hdr` one group with `--help` on any command for its details; point an agent at them before it does anything else.
 
-```sh
-crispctl display list
-crispctl brightness get <display>
-crispctl brightness set <display> <percent>
-crispctl brightness boost get <display>
-crispctl brightness boost set <display> on|off
-crispctl help
+```
+Display commands:
+  display list                              List displays as JSON
+  display connect      <display>            Put a disconnected display back
+  display disconnect   <display>            Take a display out of the layout
+  display toggle       <display>            Disconnect if connected, connect if not
+
+Brightness commands:
+  brightness get       <display>            Read brightness and its live maximum
+  brightness set       <display> <percent>  Set brightness
+  brightness boost get <display>            Read Extra Brightness state
+  brightness boost set <display> on|off     Switch Extra Brightness
+
+HDR commands:
+  hdr get              <display>            Read HDR state
+  hdr set              <display> on|off     Switch HDR on an eligible external
+
+Other commands:
+  help                                      Show this help (also -h, --help)
+  version                                   Show the Crisp version this tool ships with (also --version)
 ```
 
-`<display>` is a runtime id or a uuid from `display list`. Ids can change after an unplug or a wake; uuids do not, so scripts should prefer them. `crispctl help` prints the reference (commands, output format, exit codes); point an agent at it before it does anything else.
+`<display>` is a runtime id or a uuid from `display list`. Ids can change after an unplug or a wake; uuids do not, so scripts should prefer them.
 
 `display list` reports each display's uuid, current resolution, logical `brightness`, logical `maxBrightness`, and brightness backend. The backend is Crisp's current route (`builtin`, `ddc`, `software`, or `unknown` while external DDC availability is undetermined); HDR software dimming reports `software`. Output is one JSON object per call.
 
@@ -123,7 +136,9 @@ Crisp must already be running; crispctl never launches it. `brightness set` acce
 
 For example, `brightness boost get` returns `{"ok":true,"brightnessBoost":{"displayID":7,"eligible":true,"enabled":false}}`. `eligible` is the running Extra Brightness service's current eligibility result; `enabled` is its persisted per-display toggle state, so the two can differ while capability has collapsed and cleanup or auto-disable is pending. `brightness boost set` uses that existing service: `on` is refused when currently ineligible or when enabling fails, while `off` remains available for a connected display regardless of current eligibility. Enabling an external display may wait while the service settles HDR mode. Success means the service returned `true`, not that hardware, EDR headroom, or luminance was independently verified. A transport timeout does not prove the change was not applied; do not retry automatically—run `brightness boost get` first.
 
-The current public Crisp 1.5.0 release, normal DMG, and Homebrew cask do not include `crispctl`.
+`display disconnect`, `connect` and `toggle` are the menu's Disconnect Display and Reconnect from a script, for a KVM desk or a button: Apple Silicon only, and a disconnect is refused when it would leave no active display. A display Crisp is holding disconnected is absent from every macOS display list, so `display list` still shows it with `connected:false` and its last-known id; use the uuid for it. Asking for the state a display is already in succeeds and changes nothing, and the reply comes after the window server has answered, which can take a few seconds.
+
+`hdr get` and `hdr set` work on the external displays Crisp shows its HDR toggle for; the built-in panel and externals without HDR modes are refused. `get` reads the live state. `set` writes once through the same path as the toggle and reports success only when the read-back agrees; when it cannot tell (a timeout, or the display going away mid-way) it says so and does not retry, so run `hdr get` before retrying. Exit codes are unchanged.
 
 ## Building
 

@@ -1,6 +1,6 @@
 ---
 project: croner
-stars: 2588
+stars: 2591
 description: |-
     Trigger functions or evaluate cron expressions in JavaScript or TypeScript. No dependencies. Most features. Node. Deno. Bun. Browser.
 url: https://github.com/Hexagon/croner

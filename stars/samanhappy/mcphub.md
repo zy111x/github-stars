@@ -1,20 +1,27 @@
 ---
 project: mcphub
-stars: 2371
+stars: 2420
 description: |-
-    Self-hosted MCP gateway and management platform for connecting, managing, and operating MCP servers.
+    Self-hosted MCP gateway and control plane for connecting, controlling, and operating MCP servers.
 url: https://github.com/samanhappy/mcphub
 ---
 
 # MCPHub
 
-> A self-hosted MCP gateway and management platform for connecting, managing, and operating MCP servers.
+> An open-source, self-hosted MCP gateway and control plane for connecting, controlling, and operating MCP servers.
 
-[![MCP Toplist](https://mcptoplist.com/badge/glama%2Fsamanhappy%2Fmcphub.svg)](https://mcptoplist.com/server/glama%2Fsamanhappy%2Fmcphub)
+[![CI](https://github.com/samanhappy/mcphub/actions/workflows/ci.yml/badge.svg)](https://github.com/samanhappy/mcphub/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/@samanhappy/mcphub)](https://www.npmjs.com/package/@samanhappy/mcphub)
+[![Docker pulls](https://img.shields.io/docker/pulls/samanhappy/mcphub)](https://hub.docker.com/r/samanhappy/mcphub)
+[![License](https://img.shields.io/github/license/samanhappy/mcphub)](LICENSE)
+[![Discord](https://img.shields.io/badge/discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/2BJehJZVH5)
+[![GitHub stars](https://img.shields.io/github/stars/samanhappy/mcphub?style=social)](https://github.com/samanhappy/mcphub/stargazers)
 
 English | [Français](README.fr.md) | [中文版](README.zh.md)
 
-MCPHub provides a unified way to connect and manage multiple MCP servers, organize them into groups, control access, and expose stable MCP endpoints for clients such as Claude Code, Cursor, Cherry Studio, OpenWebUI, and other MCP-compatible applications.
+MCPHub provides a unified control point between AI clients and MCP servers. Connect local and remote MCP servers once, organize and route their capabilities through stable endpoints, control access with authentication, scoped credentials, and per-user visibility, and operate everything with centralized logs, activity tracking, and health monitoring.
+
+It works with MCP clients such as Claude Code, Cursor, Cherry Studio, OpenWebUI, and other MCP-compatible applications.
 
 ![Dashboard Preview](assets/dashboard.png)
 
@@ -26,28 +33,54 @@ MCPHub provides a unified way to connect and manage multiple MCP servers, organi
 
 ## 🚀 Features
 
+### Connect once, expose everywhere
+
+- **Smart Routing** ⭐ - AI-powered tool discovery using vector semantic search ([Learn more](https://docs.mcphub.app/features/smart-routing))
 - **Unified MCP Gateway** - Expose all connected servers through stable MCP endpoints, including routes for groups and individual servers
-- **Server and Group Management** - Organize servers into groups, manage visibility, and control Tool, Prompt, and Resource exposure
-- **SSE / Streamable HTTP / stdio Support** - Connect local and remote MCP servers over the supported transports
-- **Authentication and Access Control** - Use OAuth 2.0, bearer keys, and server or group visibility controls to manage access
 - **Server Aliases and Routing** - Define aliases and route clients to all servers, specific groups, individual servers, or smart routing
+- **SSE / Streamable HTTP / stdio Support** - Connect local and remote MCP servers over the supported transports
+- **Hot-Swappable Config** - Add, remove, or update servers without downtime
+
+### Control access and credentials
+
+- **Per-user Credentials** ⭐ - Bind personal keys to one shared server, with encrypted storage and isolated stdio runtimes ([Learn more](docs/features/per-user-credentials.mdx))
+- **Authentication and Access Control** - Use OAuth 2.0, bearer keys, and server or group visibility controls to manage access
+- **OAuth 2.0 Support** ⭐ - Both client and server modes for secure authentication ([Learn more](https://docs.mcphub.app/features/oauth))
+- **Social Login** - Seamless GitHub and Google login support with Better Auth integration (requires Database Mode)
+- **Server and Group Management** - Organize servers into groups, manage visibility, and control Tool, Prompt, and Resource exposure
+
+### Operate with confidence
+
 - **Logs and Observability** - Inspect tool-call activity, request status, latency, and server logs
 - **Health Checks** - Monitor connection health and server status from one place
 - **Web Dashboard** - Manage server configuration and runtime operations from a browser
-- **Smart Routing** - AI-powered tool discovery using vector semantic search ([Learn more](https://docs.mcphub.app/features/smart-routing))
 - **MCP Apps Proxy** - Transparently forward interactive MCP Apps on single-server routes ([Learn more](https://docs.mcphub.app/features/mcp-apps))
 - **Tool Result Compression** - Transparently reduce large text tool outputs before they reach clients
-- **Hot-Swappable Config** - Add, remove, or update servers without downtime
-- **OAuth 2.0 Support** - Both client and server modes for secure authentication ([Learn more](https://docs.mcphub.app/features/oauth))
-- **Social Login** - Seamless GitHub and Google login support with Better Auth integration (requires Database Mode)
 - **Database Mode** - Store configuration in PostgreSQL for production environments ([Learn more](https://docs.mcphub.app/configuration/database-configuration))
 - **Docker-Ready** - Deploy instantly with containerized setup
 
 ## 🔧 Quick Start
 
+### Prerequisites
+
+- **Docker** (recommended) — the fastest way to run MCPHub; all commands below use it
+- **Node.js** `^18.0.0 || >=20.0.0` and **pnpm** `10.12.4` — only needed to run from source or develop locally (see [Local Development](#local-development))
+
+### Start with Docker
+
+```bash
+docker run -p 3000:3000 -v ./data:/app/data samanhappy/mcphub
+```
+
+Open `http://localhost:3000` and log in with username `admin`. On first launch, if no `ADMIN_PASSWORD` environment variable is set, a random password is generated and printed to the server logs.
+
+Settings, users, and credential bindings persist in `./data` by default.
+
+Want your own servers? Before the first launch, create `data/mcp_settings.json` (see [Configuration](#configuration)). After launch, add servers in the dashboard or edit the existing file and restart MCPHub.
+
 ### Configuration
 
-Create a `mcp_settings.json` file:
+Create `data/mcp_settings.json` before the first launch:
 
 ```json
 {
@@ -68,13 +101,7 @@ Create a `mcp_settings.json` file:
 
 ### Docker Deployment
 
-```bash
-# Run with custom config (recommended)
-docker run -p 3000:3000 -v ./mcp_settings.json:/app/mcp_settings.json -v ./data:/app/data samanhappy/mcphub
-
-# Or run with default settings (also mount ./data so credentials and state survive restarts)
-docker run -p 3000:3000 -v ./data:/app/data samanhappy/mcphub
-```
+See [Start with Docker](#start-with-docker) for the copy-paste command. Keep `./data` mounted so settings, users, and credential bindings survive container recreation.
 
 Two image variants are published under `samanhappy/mcphub`:
 
@@ -85,11 +112,11 @@ See [Docker Setup](https://docs.mcphub.app/configuration/docker-setup) for build
 
 ### Access Dashboard
 
-Open `http://localhost:3000` and log in with username `admin`. On first launch, if no `ADMIN_PASSWORD` environment variable is set, a random password is generated and printed to the server logs. You can also pre-set the password:
+Open `http://localhost:3000` (see [Start with Docker](#start-with-docker) for login details). You can also pre-set the password:
 
 ```bash
 # Docker: set admin password via environment variable
-docker run -p 3000:3000 -e ADMIN_PASSWORD=your-secure-password samanhappy/mcphub
+docker run -p 3000:3000 -v ./data:/app/data -e ADMIN_PASSWORD=your-secure-password samanhappy/mcphub
 ```
 
 > **Tip:** Change the admin password after first login for security.
@@ -111,24 +138,6 @@ http://localhost:3000/mcp/$smart/{group}  # Smart routing within group
 > **Security note**: MCP endpoints require authentication by default to prevent accidental exposure. To allow unauthenticated MCP access, disable **Enable Bearer Authentication** in the Keys section. **Skip Authentication** only affects dashboard login. Use only in trusted environments.
 
 📖 See [API Reference](https://docs.mcphub.app/api-reference) for detailed endpoint documentation.
-
-### Manage From the Terminal
-
-The same `mcphub` binary doubles as a CLI for the running hub — no extra install needed.
-
-```bash
-mcphub login --url http://localhost:3000 --username admin
-mcphub servers list
-mcphub servers add fetch --type stdio --command uvx --arg mcp-server-fetch
-mcphub tools list                              # discover what tools are available
-mcphub tools get fetch_url                     # see required params + sample command
-mcphub call fetch_url url=https://example.com --json
-mcphub keys create --name ci --access-type all
-```
-
-It also speaks the public marketplace API (`mcphub discover`, `mcphub install ...`) so server lookup and one-command install work against any hub with discovery enabled.
-
-📖 See [CLI Guide](https://docs.mcphub.app/features/cli) for every subcommand, profiles, and CI usage.
 
 ## 📚 Documentation
 
@@ -170,8 +179,8 @@ Local development uses `admin` / `admin123` and stores its writable settings cop
 
 Running MCPHub in production?
 
-Work directly with the maintainer on production deployment, OAuth/OIDC,
-access control, credential management, audit, Kubernetes, and HA readiness.
+Work directly with the maintainer on production architecture, OAuth/OIDC,
+identity and access control, credential management, audit, Kubernetes, and HA readiness.
 
 [Discuss a production pilot →](https://www.mcphub.app/pricing)
 
@@ -182,6 +191,8 @@ Contributions welcome! See our [Discord community](https://discord.gg/2BJehJZVH5
 ## ❤️ Sponsor
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/samanhappy)
+
+Chinese users can also support via WeChat Pay — see [中文版](README.zh.md).
 
 ## 🌟 Star History
 

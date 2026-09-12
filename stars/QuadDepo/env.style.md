@@ -1,6 +1,6 @@
 ---
 project: env.style
-stars: 221
+stars: 223
 description: |-
     null
 url: https://github.com/QuadDepo/env.style

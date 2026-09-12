@@ -1,6 +1,6 @@
 ---
 project: chanfana
-stars: 765
+stars: 766
 description: |-
     OpenAPI 3 and 3.1 schema generator and validator for Hono, itty-router and more!
 url: https://github.com/cloudflare/chanfana

@@ -1,6 +1,6 @@
 ---
 project: CopilotKit
-stars: 37211
+stars: 37330
 description: |-
     The Frontend Stack for Agents & Generative UI. React, Angular, Mobile, Slack, and more.  Makers of the AG-UI Protocol
 url: https://github.com/CopilotKit/CopilotKit
@@ -77,7 +77,7 @@ npx copilotkit@latest create
 
 ## Agent Skills
 
-CopilotKit ships [agent skills](https://docs.copilotkit.ai) that teach your coding agent (Claude Code, Codex, Cursor, Gemini, and others) how to set up, build with, integrate, debug, and upgrade CopilotKit.
+CopilotKit ships [agent skills](https://docs.copilotkit.ai/build-with-agents) that teach your coding agent (Claude Code, Codex, Cursor, Gemini, and others) how to work with CopilotKit. There are two: `copilotkit`, which searches the current documentation and source instead of answering from training data, and `copilotkit-cli`, which drives the CLI and proves a project's wiring with `copilotkit verify`.
 
 Install them into any project directory:
 

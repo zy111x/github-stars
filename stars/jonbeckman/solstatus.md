@@ -1,6 +1,6 @@
 ---
 project: solstatus
-stars: 750
+stars: 749
 description: |-
     An uptime monitoring service that is easy and cheap to run at scale. Create endpoint checks for uptime, latency, and status code. Supports OpsGenie for alerts.
 url: https://github.com/jonbeckman/solstatus
@@ -67,7 +67,7 @@ nub run db:setup
 This repo uses multiple workers, each split into their own workspace. To run everything together:
 
 ```sh
-# Start both the API (monitor workers) and the Next.js app
+# Start both the API (monitor workers) and the TanStack Start app
 nub run dev
 ```
 
@@ -77,7 +77,7 @@ If you need to run components separately:
 # Run just the API (includes both executor and trigger workers)
 nub run dev:api
 
-# Run just the Next.js app
+# Run just the TanStack Start app
 nub run dev:app
 
 # Run the API executor worker
@@ -89,19 +89,22 @@ nub run --filter '@solstatus/api' dev:api-trigger
 
 ### Deployment
 
-To deploy the entire application:
+Production workers and the dashboard deploy through Alchemy, not Wrangler:
+
 ```sh
-nub run deploy:prod
+nub run cli -- --fqdn uptime.example.com --stage prod
 ```
 
 To deploy components separately:
 ```sh
-# Deploy just the Next.js app
+# Deploy just the TanStack Start app
 nub run deploy:prod:app
 
 # Deploy just the API workers
 nub run deploy:prod:api
 ```
+
+Wrangler stays for local D1 (`nub run db:setup`) and local API workers (`nub run dev:api`). Those commands share D1 state under `packages/infra/.wrangler/state`.
 
 ### Maintenance
 Update dependencies

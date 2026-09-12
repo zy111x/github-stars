@@ -1,6 +1,6 @@
 ---
 project: comark
-stars: 1006
+stars: 1024
 description: |-
     A high-performance Markdown parser and renderer for Angular, React, Svelte, Vue, HTML and ANSI.
 url: https://github.com/comarkdown/comark

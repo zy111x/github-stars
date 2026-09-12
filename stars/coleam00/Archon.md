@@ -1,6 +1,6 @@
 ---
 project: Archon
-stars: 23386
+stars: 23443
 description: |-
     The first open-source harness builder for AI coding. Make AI coding deterministic and repeatable.
 url: https://github.com/coleam00/Archon
@@ -223,7 +223,7 @@ The coding agent handles workflow selection, branch naming, and worktree isolati
 
 ## Web UI
 
-Archon includes a web dashboard for chatting with your coding agent, running workflows, and monitoring activity. Binary installs: run `archon serve` to download and start the web UI in one step. From source: ask your coding agent to run the frontend from the Archon repo, or run `bun run dev` from the repo root yourself.
+Archon includes a web dashboard for chatting with your coding agent, running workflows, and monitoring activity. Run `archon serve` to start it, whichever way you installed. A binary downloads the matching web UI on first run. A source checkout serves the copy you build: run `bun run build:web` once from the repo root, then `archon serve`.
 
 Register a project by clicking **+** next to "Project" in the chat sidebar - enter a GitHub URL or local path. Then start a conversation, invoke workflows, and watch progress in real time.
 
@@ -362,6 +362,8 @@ POSTHOG_API_KEY=off   # off | 0 | false | disabled | "" all disable
 CI environments (`CI=true`) are auto-disabled — forks running fixtures in GitHub Actions, CircleCI, etc. do not send events.
 
 **Check the current state:** run `archon telemetry status` to see whether telemetry is enabled, why (if not), the install UUID, and the active host. Run `archon telemetry reset` to rotate the install UUID. `archon doctor` also surfaces the current state in its check list.
+
+Shutdown gives pending telemetry a 75 ms flush window, then cancels outstanding requests. Slow or unreachable ingestion can lose events; it does not hold up command exit.
 
 Self-host PostHog or use a different project by setting `POSTHOG_API_KEY` and `POSTHOG_HOST`.
 

@@ -1,6 +1,6 @@
 ---
 project: itshover
-stars: 2662
+stars: 2667
 description: |-
     Icons that move with intent
 url: https://github.com/itshover/itshover

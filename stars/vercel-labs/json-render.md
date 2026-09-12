@@ -1,6 +1,6 @@
 ---
 project: json-render
-stars: 16098
+stars: 16147
 description: |-
     The Generative UI framework
 url: https://github.com/vercel-labs/json-render
@@ -139,6 +139,7 @@ function Dashboard({ spec }) {
 | `@json-render/react-three-fiber` | React Three Fiber renderer for 3D scenes (20 built-in components, including GaussianSplat)  |
 | `@json-render/react-native` | React Native renderer with standard mobile components                  |
 | `@json-render/next`         | Next.js renderer — JSON becomes full apps with routes, layouts, SSR    |
+| `@json-render/tanstack-start` | TanStack Start renderer — full apps with routes, layouts, SSR, and head metadata |
 | `@json-render/remotion`     | Remotion video renderer, timeline schema                               |
 | `@json-render/react-pdf`    | React PDF renderer for generating PDF documents from specs             |
 | `@json-render/react-email`  | React Email renderer for HTML/plain-text emails from specs             |
@@ -543,6 +544,54 @@ const app = createNextApp({ spec });
 //   {children}
 // </NextAppProvider>
 ```
+
+### TanStack Start (Full Apps)
+
+```tsx
+import { createFileRoute, notFound } from "@tanstack/react-router";
+import {
+  PageRenderer,
+  StartErrorBoundary,
+  StartLoading,
+  StartNotFound,
+  type StartAppSpec,
+} from "@json-render/tanstack-start";
+import { createStartApp } from "@json-render/tanstack-start/server";
+
+const spec: StartAppSpec = {
+  metadata: { title: { default: "My App", template: "%s | My App" } },
+  routes: {
+    "/": {
+      metadata: { title: "Home" },
+      page: {
+        root: "hero",
+        elements: {
+          hero: { type: "Card", props: { title: "Welcome" }, children: [] },
+        },
+      },
+    },
+  },
+};
+
+const { getPageData, getHead } = createStartApp({ spec });
+
+export const Route = createFileRoute("/$")({
+  loader: async ({ location }) => {
+    const data = await getPageData({ pathname: location.pathname });
+    if (!data) throw notFound();
+    return data;
+  },
+  head: ({ match }) => getHead({ pathname: match.pathname }),
+  component: () => <PageRenderer {...Route.useLoaderData()} />,
+  pendingComponent: StartLoading,
+  errorComponent: StartErrorBoundary,
+  notFoundComponent: StartNotFound,
+});
+```
+
+Wrap the root route's outlet with `<StartAppProvider spec={spec}>` so route
+fallback components can resolve the current route. Pass named `$computed`
+implementations through its `functions` prop.
 
 ### shadcn-svelte (Svelte)
 

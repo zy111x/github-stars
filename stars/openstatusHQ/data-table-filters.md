@@ -1,6 +1,6 @@
 ---
 project: data-table-filters
-stars: 2225
+stars: 2252
 description: |-
     Faceted filters, sorting & infinite scroll for React data tables - shadcn/ui + TanStack Table
 url: https://github.com/openstatusHQ/data-table-filters
@@ -35,6 +35,7 @@ npx shadcn@latest add https://data-table.openstatus.dev/r/data-table.json
 | `data-table-query`             | `.../r/data-table-query.json`             | React Query infinite query integration                                                                                     |
 | `data-table-filter-command-ai` | `.../r/data-table-filter-command-ai.json` | AI-powered natural language → filter inference                                                                             |
 | `data-table-mcp`               | `.../r/data-table-mcp.json`               | MCP server endpoint for AI agents                                                                                          |
+| `data-table-actions`           | `.../r/data-table-actions.json`           | Row and bulk actions rendered from server metadata                                                                         |
 
 All URLs use base `https://data-table.openstatus.dev`.
 
