@@ -1,6 +1,6 @@
 ---
 project: markitdown
-stars: 178337
+stars: 183232
 description: Python tool for converting files and office documents to Markdown.
 url: https://github.com/microsoft/markitdown
 ---
@@ -291,10 +291,14 @@ To use Large Language Models for image descriptions (currently only for pptx and
 from markitdown import MarkItDown
 from openai import OpenAI
 
-client \= OpenAI()
+client \= OpenAI(max\_retries\=5)
 md \= MarkItDown(llm\_client\=client, llm\_model\="gpt-4o", llm\_prompt\="optional custom prompt")
 result \= md.convert("example.jpg")
 print(result.markdown)
+
+`max_retries` controls the OpenAI client's automatic retries for retryable errors (the default is 2); `5` allows up to six attempts with backoff. See the OpenAI SDK retry documentation.
+
+If any attempt succeeds, image conversion continues normally. If the client raises an error after exhausting its retries, or encounters a non-retryable error, MarkItDown tries other applicable converters and raises `FileConversionException` only if none succeeds.
 
 ### Docker
 

@@ -1,6 +1,6 @@
 ---
 project: Embodied-AI-Guide
-stars: 15797
+stars: 15936
 description: [Lumina具身智能社区] 具身智能技术指南 Embodied-AI-Guide
 url: https://github.com/TianxingChen/Embodied-AI-Guide
 ---

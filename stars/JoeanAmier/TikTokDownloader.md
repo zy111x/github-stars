@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 15770
+stars: 15900
 description: 抖音 / TikTok 平台作品下载/数据采集工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -22,9 +22,9 @@ DouK-Downloader
 
 * * *
 
-⚠️ 当前版本部分功能已失效。项目计划在 `6.0` 版本进行重构，重构完成后将会修复部分失效的功能！
+⚠️ 项目计划在 `6.0` 版本进行彻底重构，预期重构完成后支持 `GUI` 或者 `WebUI`！
 
-⚠️ 本项目的加密参数算法已过期失效；为确保项目合法合规，参数算法不再维护，部分功能可能无法正常工作。如需使用，请自行准备加密参数生成代码，配置方法请查阅 文档！
+⚠️ 为确保项目合法合规，本项目的加密参数算法不再维护；如因平台更新导致部分功能无法正常工作，请自行准备加密参数生成代码，配置方法请查阅 文档！
 
 * * *
 
@@ -134,7 +134,7 @@ demo()
 
 **注意：由于 Mac OS 平台的可执行文件 `main` 未经过代码签名，首次运行时会受到系统安全限制。请先在终端执行 `xattr -cr 项目文件夹路径` 命令移除安全标记，执行一次后即可正常运行。**
 
-**Node.js（可选）**：部分功能需要使用 Node.js 执行 JavaScript 代码，使用这些功能时请安装 **Node.js >= 18**；未安装 Node.js 不影响其他功能的正常使用。
+**Node.js（可选依赖）**：部分功能依赖 Node.js 执行 JavaScript 代码，需要 Node.js 18 及以上版本；建议使用者自行安装，未安装时部分功能可能受到影响。
 
 * * *
 
@@ -403,13 +403,12 @@ TikHub API 提供超过 700 个端点，可用于从 14+ 个社交媒体平台�
 ⭐ Star 趋势
 =========
 
-💡 项目参考
-=======
+💡 参考与致谢
+========
 
--   https://github.com/Johnserf-Seed/f2
 -   https://github.com/Evil0ctal/Douyin\_TikTok\_Download\_API
+-   https://github.com/Johnserf-Seed/f2
 -   https://github.com/ihmily/DouyinLiveRecorder
--   https://github.com/xvhuan/tiktok-web-params
 -   https://github.com/lexiforest/curl\_cffi/
 -   https://github.com/Textualize/rich
 -   https://github.com/omnilib/aiosqlite

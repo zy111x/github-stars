@@ -1,9 +1,13 @@
 ---
 project: reactive-resume
-stars: 42220
+stars: 42542
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
-url: https://github.com/amruthpillai/reactive-resume
+url: https://github.com/reactive-resume/reactive-resume
 ---
+
+Important
+
+**Repository moved:** Reactive Resume now lives at **`reactive-resume/reactive-resume`** on GitHub. **Docker Hub stays at `amruthpillai/reactive-resume`.** GHCR builds now publish to `ghcr.io/reactive-resume/reactive-resume`. Verified image tags: `latest`, `v5`, `v5.3`, and `v5.3.0` (AMD64 and ARM64). The current version was rebuilt and production redeployed for this rename; no new GitHub release or version bump was made. See migration details. GitHub Sponsors and Open Collective funding links remain unchanged.
 
 Reactive Resume
 ===============
@@ -17,15 +21,6 @@ Reactive Resume is a free and open-source resume builder that makes it easy to c
 Pick a template, fill in your details, and export to PDF. Basic use needs no account. If you want more control, you can run the whole application on your own infrastructure.
 
 You own your data. The codebase is open source under the MIT license, with no tracking, no ads, and no hidden costs.
-
-Sponsors
---------
-
-Sponsors pay for hosting, maintenance, and ongoing development, which is what keeps Reactive Resume free and independent. Thank you to everyone who chips in.
-
-Atlas Cloud supports Reactive Resume as a project sponsor. Atlas Cloud provides a unified AI platform for developers, with access to hundreds of models for chat, image generation, video generation, media processing, and GPU cloud workloads through one API key, one endpoint, and one billing account.
-
-If your company would like to sponsor Reactive Resume, email hello@amruthpillai.com.
 
 Features
 --------
@@ -115,7 +110,7 @@ Quick Start
 The quickest way to run Reactive Resume locally:
 
 # Clone the repository
-git clone --depth=1  https://github.com/amruthpillai/reactive-resume.git
+git clone --depth=1  https://github.com/reactive-resume/reactive-resume.git reactive-resume
 cd reactive-resume
 
 # Start all services
@@ -214,7 +209,7 @@ Pull the latest image from Docker Hub or GitHub Container Registry:
 docker pull amruthpillai/reactive-resume:latest
 
 # GitHub Container Registry
-docker pull ghcr.io/amruthpillai/reactive-resume:latest
+docker pull ghcr.io/reactive-resume/reactive-resume:latest
 
 See the self-hosting guide for complete instructions.
 

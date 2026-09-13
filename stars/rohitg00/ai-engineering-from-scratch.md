@@ -1,6 +1,6 @@
 ---
 project: ai-engineering-from-scratch
-stars: 52481
+stars: 54366
 description: Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
@@ -91,6 +91,16 @@ Certification Academy
 Not sure where you fit? Use the `start-learning` placement tutor or the website prerequisites guide.
 
 Compare four core domains and six career routes in the AI Engineering Learning Paths.
+
+### Sponsors
+
+  
+**Thank you to our sponsors.**
+
+Your support keeps every lesson free and open source.
+
+See all supporters  
+Become a sponsor  
 
 ### Use every lesson the same way
 
@@ -5100,67 +5110,9 @@ Exit code is non-zero when any rule fails. Rules (L001–L010) validate director
 Sponsor the work
 ----------------
 
-Free, MIT-licensed, 523 lessons. The curriculum is maintained through cash sponsorships and approved Hardware Lab Partners.
+Free, MIT-licensed, 523 lessons. Thank you to the sponsors and backers who make the work possible. See all sponsors and backers.
 
-**Reach:** 114,584 monthly visitors · 181,995 page views (Vercel Web Analytics verified 2026-08-29) · 50,728 GitHub stars (verified 2026-08-29).
-
-### Current sponsors
-
-Sponsor
-
-What they support
-
-CodeRabbit · iii
-
-Current sponsors supporting curriculum maintenance and open-source development.
-
-Open-source infrastructure support through the Vercel Open Source Program.
-
-Tier
-
-$/mo
-
-What you get
-
-Backer
-
-$25
-
-Name in BACKERS.md
-
-Bronze
-
-$250
-
-Text-only row in README sponsor block + launch-day tweet
-
-Silver
-
-$750
-
-Small logo in README + listed as one supported provider in API lessons
-
-Gold
-
-$2,000
-
-Medium logo in README + sponsor page + quarterly X / LinkedIn co-feature
-
-Platinum
-
-$5,000
-
-Hero logo above the fold + one dedicated integration lesson, max 1 partner
-
-Diamond / Title Partner
-
-$10,000
-
-Sole title-partner placement + hero logo + quarterly reporting and co-feature, max 1 partner
-
-Hardware manufacturers can support the course through the separate Hardware Lab Partner policy. Equipment is in-kind support and does not automatically grant a cash sponsorship tier.
-
-Full rate card, hard rules, pricing anchors, and reach data: SPONSORS.md. Sign up via GitHub Sponsors.
+Want to support the work? See sponsorship options, including hardware sponsorships, or sponsor on GitHub.
 
 ```
 ░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒

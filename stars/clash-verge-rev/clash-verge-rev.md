@@ -1,6 +1,6 @@
 ---
 project: clash-verge-rev
-stars: 142447
+stars: 144064
 description: A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience
 url: https://github.com/clash-verge-rev/clash-verge-rev
 ---
@@ -139,6 +139,13 @@ Clash Verge rev was based on or inspired by these projects and so on:
 -   MetaCubeX/mihomo: A rule-based tunnel in Go.
 -   Fndroid/clash\_for\_windows\_pkg: A Windows/macOS GUI based on Clash.
 -   vitejs/vite: Next generation frontend tooling. It's fast!
+
+Privacy
+-------
+
+Clash Verge Rev 不收集任何用户数据，配置与日志仅保存在本地。详见隐私政策。
+
+Clash Verge Rev does not collect any user data; configuration and logs stay on your own device. See the Privacy Policy for details.
 
 License
 -------

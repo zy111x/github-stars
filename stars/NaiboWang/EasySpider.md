@@ -1,6 +1,6 @@
 ---
 project: EasySpider
-stars: 44503
+stars: 44532
 description: A visual no-code/code-free web crawler/spider易采集：一个可视化浏览器自动化测试/数据采集/网页爬虫软件，可以无代码图形化的设计和执行爬虫任务。别名：ServiceWrapper面向Web应用的智能化服务封装系统。
 url: https://github.com/NaiboWang/EasySpider
 ---
@@ -52,6 +52,8 @@ CapSolver is one of the top 3 providers in the CAPTCHA-solving industry, offerin
 Click here to see how to solve captcha in EasySpider with CapSolver integration.
 
 Webshare是一家经济实惠且高性能的代理服务提供商，提供覆盖全球 195 个国家/地区的超过 8000 万个住宅、数据中心及 ISP 代理。其服务专为大规模网络爬虫和数据采集而设计，支持精确到国家和城市的定位，并提供轮换式住宅代理带宽，起价仅为 1.40 美元/GB。您可以利用包含 10 个代理和每月 1GB 流量的永久免费套餐（无需信用卡）无风险试用该网络，首次购买时使用优惠码 **SPIDER20** 还可享受 8 折优惠。
+
+Webshare is an affordable, high-performance proxy provider offering access to over 80 million residential, datacenter, and ISP proxies across 195 countries. Built for seamless web scraping and data collection at scale, plans feature precise country and city targeting with rotating residential bandwidth starting at just $1.40/GB. Test the network risk-free with a permanent free plan offering 10 proxies and 1 GB/month (no credit card required), and use code SPIDER20 for 20% off your first purchase.
 
 LegionProxy作为快速发展的代理网络，覆盖全球195+国家和地区，拥有7400万+真实住宅 IP，提供真实 residential proxies及HTTP/3支持，助力大规模web scraping和自动化任务，有效规避IP封锁。住宅套餐低至$0.60/GB起，支持即时开通，中文客服快速响应。
 

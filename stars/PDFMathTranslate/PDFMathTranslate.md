@@ -1,6 +1,6 @@
 ---
 project: PDFMathTranslate
-stars: 36720
+stars: 36875
 description: [EMNLP 2025 Demo] PDF scientific paper translation with preserved formats - 基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/MCP/Docker/Zotero
 url: https://github.com/PDFMathTranslate/PDFMathTranslate
 ---
@@ -29,6 +29,8 @@ Scientific PDF document translation preserving layouts.
 2\. Recent Updates
 ------------------
 
+-   \[September 8, 2026\] Experimental OCR support, with paragraph regrouping and adaptive typesetting. (by @reycn)
+    
 -   \[March 23, 2026\] Experimental support for v2.0 translation kernel using isolated environment (`--mode precise`). (by @reycn)
     
 -   \[March 22, 2026\] Supporting MiniMax (PR by @octo-patch)
@@ -167,6 +169,12 @@ If the solution does not work to you / you encountered other issues, please refe
 
 4\. Technical Details
 ---------------------
+
+### Experimental automatic OCR (fast mode)
+
+Fast mode automatically runs local OCR on selected image-only pages before translation. Native text, existing OCR layers, and blank pages are skipped; the original pages in dual output remain unchanged. Install with `pip install 'pdf2zh[ocr]'` (or `pip install -e '.[ocr]'` from this checkout). The first scanned page downloads the requested language data from Tesseract's `tessdata_fast` 4.1.0 release into `~/.cache/pdf2zh/tessdata/4.1.0`; subsequent runs reuse it offline. Native-text PDFs do not trigger downloads. OCR uses the input language; `PDF2ZH_OCR_LANGUAGE=eng+deu` overrides it with Tesseract language codes. Set `TESSDATA_PREFIX` to use your own data without automatic downloads.
+
+PyMuPDF supplies the OCR engine; the optional extra adds Pooch for cached downloads. No separate Tesseract executable is required. OCR words are regrouped into paragraphs within detected layout regions before translation, with wrapped lines and soft hyphens joined. Translated paragraphs start at the median source font size and shrink to fit their original boxes; detected figures, tables, and standalone formulas remain untouched. The initial implementation targets white-background scans: partial scans on pages that already contain text are skipped, and handwritten text or inline equations may be recognized incorrectly. Precise mode is unchanged.
 
 ### 4.1 Advanced options
 

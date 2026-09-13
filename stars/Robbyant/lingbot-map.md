@@ -1,7 +1,7 @@
 ---
 project: lingbot-map
-stars: 16839
-description: A feed-forward 3D foundation model for reconstructing scenes from streaming data
+stars: 17003
+description: (ECCV 2026 oral) LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction
 url: https://github.com/Robbyant/lingbot-map
 ---
 
