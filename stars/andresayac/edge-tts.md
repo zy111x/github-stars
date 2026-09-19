@@ -1,6 +1,6 @@
 ---
 project: edge-tts
-stars: 145
+stars: 146
 description: |-
     Edge TTS is a Node or Bun package that allows access to the online text-to-speech service used by Microsoft Edge without the need for Microsoft Edge, Windows, or an API key.
 url: https://github.com/andresayac/edge-tts
@@ -165,6 +165,24 @@ await tts.synthesize("Hello, world!");
 // Synthesis with specific voice
 await tts.synthesize("Hello, world!", 'en-US-AriaNeural');
 ```
+
+#### Matching the voice to the text
+
+Voices are locale specific. A voice can only read text written in the script of
+its own language, so passing Chinese, Cyrillic, Arabic or Devanagari text to an
+English voice returns no audio at all:
+
+```js
+// Nothing to play: an English voice cannot read this.
+await tts.synthesize("这是一个测试", 'en-US-AriaNeural');
+
+// Works.
+await tts.synthesize("这是一个测试", 'zh-CN-XiaoxiaoNeural');
+```
+
+A few foreign words inside an otherwise English sentence are fine; the problem
+only appears when the other script is most of the text. `toBuffer()` throws in
+this case rather than handing back an empty buffer.
 
 #### Advanced Synthesis with Options
 ```js

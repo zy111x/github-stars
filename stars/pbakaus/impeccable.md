@@ -1,6 +1,6 @@
 ---
 project: impeccable
-stars: 67594
+stars: 69154
 description: |-
     The design language that makes your AI harness better at design.
 url: https://github.com/pbakaus/impeccable
@@ -8,7 +8,7 @@ url: https://github.com/pbakaus/impeccable
 
 # Impeccable
 
-Design guidance for AI coding agents. 1 skill, 23 commands, live browser iteration, and 61 deterministic detector rules for AI-generated frontend design.
+Design guidance for AI coding agents. 1 skill, 24 commands, live browser iteration, and 61 deterministic detector rules for AI-generated frontend design.
 
 > **Quick start:** From your project root, run `npx impeccable install`, then run `/impeccable init` inside your AI coding tool. Full docs: [impeccable.style](https://impeccable.style).
 
@@ -20,7 +20,7 @@ Every model trained on the same SaaS templates. Skip the guidance and you get th
 
 Impeccable adds:
 - **One setup flow.** `/impeccable init` records durable product truth in `PRODUCT.md`, so later commands know the audience, purpose, operating context, constraints, voice, and evidence without confusing those facts with surface-level visual direction.
-- **23 commands.** A shared design vocabulary with your AI: `polish`, `audit`, `critique`, `distill`, `animate`, `bolder`, `quieter`, and more.
+- **24 commands.** A shared design vocabulary with your AI: `polish`, `audit`, `critique`, `distill`, `animate`, `bolder`, `quieter`, and more.
 - **61 deterministic detector rules** plus LLM-only critique checks. The CLI and browser extension run the deterministic rules with no LLM and no API key.
 
 ## What's Included
@@ -41,7 +41,7 @@ Start every new project with:
 
 `init` inspects the project, asks only for material gaps in durable product truth, and writes `PRODUCT.md`. Visitor mode and visual direction are chosen later for each surface; incumbent or newly built visual systems are recorded separately in `DESIGN.md`.
 
-### 23 Commands
+### 24 Commands
 
 All commands are accessed through `/impeccable`:
 
@@ -70,6 +70,7 @@ All commands are accessed through `/impeccable`:
 | `/impeccable adapt` | Adapt for different devices |
 | `/impeccable optimize` | Performance improvements |
 | `/impeccable live` | Visual variant mode: iterate on elements in the browser |
+| `/impeccable generate` | Generate variants of a named element in the live browser, no manual picking |
 
 Use `/impeccable pin <command>` to create standalone shortcuts (e.g., `pin audit` creates `/audit`).
 

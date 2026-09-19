@@ -1,6 +1,6 @@
 ---
 project: skills
-stars: 5878
+stars: 5898
 description: |-
     Anthony Fu's curated collection of agent skills.
 url: https://github.com/antfu/skills

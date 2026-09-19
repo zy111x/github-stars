@@ -1,6 +1,6 @@
 ---
 project: crossmux
-stars: 184
+stars: 201
 description: |-
     CrossMux is a community fork of CrossPoint Reader that turns the device into more than a reader — it adds an Apps hub of mini-games and tools.  Xteink X4/X3 CrossPoint 完整的简体中文支持固件。
 url: https://github.com/0x1abin/crossmux

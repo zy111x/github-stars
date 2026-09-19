@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 8823
+stars: 8963
 description: |-
     Lean, fine tuned Opencode multi agent suite · Mix any models · Auto delegate tasks
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -23,7 +23,7 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
   </p>
 
   <p>
-    <b>English</b> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.ja-JP.md">日本語</a> | <a href="README.ko-KR.md">한국어</a>
+    <b>English</b> | <a href="README.zh-CN.md">简体中文</a> | <a href="README.ja-JP.md">日本語</a> | <a href="README.ko-KR.md">한국어</a> | <a href="README.fa-IR.md">فارسی</a>
   </p>
 
   <p><sub>✦ ✦ ✦</sub></p>
@@ -653,7 +653,7 @@ Use this section as a map: start with installation, then jump to features, confi
 | Doc | What it covers |
 |-----|----------------|
 | **[Installation Guide](docs/installation.md)** | Install the plugin, use CLI flags, reset config, and troubleshoot setup |
-| **[OpenCode v2 Compatibility](docs/opencode-v2-compatibility.md)** | Run the same plugin on `opencode2`: feature matrix, minimum v2 builds, version pinning |
+| **[OpenCode v2 Compatibility](docs/opencode-v2-compatibility.md)** | Run the same plugin on `opencode2`: feature matrix, v2.0.x compatibility baseline, version pinning |
 | **[Configuration](docs/configuration.md)** | Config file locations, JSONC support, prompt overrides, and full option reference |
 | **[Project Customization](docs/project-local-customization.md)** | Repository-specific custom agents, prompt overrides, per-agent skills, and precedence |
 | **[Background Orchestration](docs/background-orchestration.md)** | Scheduler-first orchestrator model built around native background subagents |
@@ -671,7 +671,7 @@ Use this section as a map: start with installation, then jump to features, confi
   <p><sub>Every merged contribution leaves a mark on the realm.</sub></p>
 
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-112-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-115-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -831,6 +831,11 @@ Use this section as a map: start with installation, then jump to features, confi
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/BaconDroid"><img src="https://avatars.githubusercontent.com/u/11067111?v=4?s=100" width="100px;" alt="BaconDroid"/><br /><sub><b>BaconDroid</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=BaconDroid" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://sprightly-strudel-e1f939.netlify.app/"><img src="https://avatars.githubusercontent.com/u/277080233?v=4?s=100" width="100px;" alt="Enoch"/><br /><sub><b>Enoch</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=bferanmi806-sketch" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/mxalbert1996"><img src="https://avatars.githubusercontent.com/u/9391933?v=4?s=100" width="100px;" alt="Albert Chang"/><br /><sub><b>Albert Chang</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=mxalbert1996" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/Aveer"><img src="https://avatars.githubusercontent.com/u/84144527?v=4?s=100" width="100px;" alt="Aveer"/><br /><sub><b>Aveer</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=Aveer" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/Amm1rr"><img src="https://avatars.githubusercontent.com/u/480468?v=4?s=100" width="100px;" alt="Mohammad"/><br /><sub><b>Mohammad</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=Amm1rr" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/kumar-shivang"><img src="https://avatars.githubusercontent.com/u/89011717?v=4?s=100" width="100px;" alt="Shivang Kumar"/><br /><sub><b>Shivang Kumar</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=kumar-shivang" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

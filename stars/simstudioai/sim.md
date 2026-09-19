@@ -1,6 +1,6 @@
 ---
 project: sim
-stars: 29623
+stars: 29678
 description: |-
     Sim is the collaborative workspace to build, deploy, and monitor AI agents and workflows. Used by 100,000+ builders.
 url: https://github.com/simstudioai/sim
@@ -37,8 +37,6 @@ url: https://github.com/simstudioai/sim
 ```bash
 npx sim-setup
 ```
-
-Open [http://localhost:3000](http://localhost:3000)
 
 ### Desktop: [macOS](https://sim.ai/api/desktop/update/download)
 

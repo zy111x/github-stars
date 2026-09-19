@@ -1,6 +1,6 @@
 ---
 project: litellm
-stars: 58591
+stars: 59163
 description: |-
     The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]
 url: https://github.com/BerriAI/litellm
@@ -641,9 +641,8 @@ For detailed contributing guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 LiteLLM follows the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html).
 
 Our automated checks include:
-- **Black** for code formatting
-- **Ruff** for linting and code quality
-- **MyPy** for type checking
+- **Ruff** for formatting, linting, and code quality
+- **basedpyright** for type checking
 - **Circular import detection**
 - **Import safety checks**
 

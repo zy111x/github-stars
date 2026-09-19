@@ -1,6 +1,6 @@
 ---
 project: html2any
-stars: 93
+stars: 94
 description: |-
     🌀 convert html to anything
 url: https://github.com/huozhi/html2any

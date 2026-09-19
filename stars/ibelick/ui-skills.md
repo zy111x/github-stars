@@ -1,6 +1,6 @@
 ---
 project: ui-skills
-stars: 8365
+stars: 8713
 description: |-
     Skills for Design Engineers
 url: https://github.com/ibelick/ui-skills
@@ -8,7 +8,7 @@ url: https://github.com/ibelick/ui-skills
 
 # UI Skills
 
-![UI Skills](./public/UI-OG.webp)
+![UI Skills](./public/UI-OG.png)
 
 Skills for Design Engineers.
 

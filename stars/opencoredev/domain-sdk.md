@@ -1,6 +1,6 @@
 ---
 project: domain-sdk
-stars: 360
+stars: 361
 description: |-
     Add, verify, monitor, and remove customer domains with one TypeScript API.
 url: https://github.com/opencoredev/domain-sdk

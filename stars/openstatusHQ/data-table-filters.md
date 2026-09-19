@@ -2,42 +2,79 @@
 project: data-table-filters
 stars: 2252
 description: |-
-    Faceted filters, sorting & infinite scroll for React data tables - shadcn/ui + TanStack Table
+    React data tables for shadcn/ui: faceted filters, sorting, infinite scroll. Filtering, faceted counts and cursor pagination can run in SQL with Drizzle.
 url: https://github.com/openstatusHQ/data-table-filters
 ---
 
-## About The Project
+# data-table-filters
 
-A **Table Schema builder**, **BYOS (Bring Your Own Store)** state management, and a set of pre-built **components** for building powerful, filterable data-tables with React.
+Data tables for React and shadcn/ui: faceted filters, sorting, infinite scroll, and a row detail sheet. Installed as source with the shadcn CLI, so the code is yours to change.
 
 ![Data Table with Infinite Scroll](https://data-table.openstatus.dev/assets/data-table-infinite.png)
+
+One `createTableSchema` definition drives the columns, the filter controls, the row sheet, the Drizzle route handler, and the MCP tool schema. When the rows live in Postgres, filtering, faceted counts, and cursor pagination run in SQL. Built for the openstatus dashboard and used there in production.
 
 Visit [data-table.openstatus.dev](https://data-table.openstatus.dev) to learn more. Read the [Docs](https://data-table.openstatus.dev/docs) for full documentation.
 
 ## Install
 
-Install blocks via the shadcn registry:
+[![Registry install](https://github.com/openstatusHQ/data-table-filters/actions/workflows/registry-install.yml/badge.svg)](https://github.com/openstatusHQ/data-table-filters/actions/workflows/registry-install.yml) — the Quick Start below is installed into a fresh Next.js app on each shadcn library, Base UI and Radix, and typechecked nightly against the latest shadcn CLI.
+
+> **Prerequisite.** Works on either shadcn library: the CLI default, Base UI (`npx shadcn@latest init -d`), or Radix (`npx shadcn@latest init -b radix -p nova`). CI installs into both and typechecks them on every registry change and nightly.
+
+One command installs the core block and the schema system:
 
 ```bash
-npx shadcn@latest add https://data-table.openstatus.dev/r/data-table.json
+npx shadcn@latest add @data-table-filters/data-table @data-table-filters/data-table-schema
 ```
 
-| Block                          | Install URL                               | What it adds                                                                                                               |
-| ------------------------------ | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `data-table`                   | `.../r/data-table.json`                   | Core: table engine, store, 4 filter types, memory adapter                                                                  |
-| `data-table-filter-command`    | `.../r/data-table-filter-command.json`    | Command palette with history + keyboard shortcuts                                                                          |
-| `data-table-cell`              | `.../r/data-table-cell.json`              | 12 cell renderers (text, code, number, bar, heatmap, gauge, badge, boolean, star, status-code, level-indicator, timestamp) |
-| `data-table-sheet`             | `.../r/data-table-sheet.json`             | Row detail side panel                                                                                                      |
-| `data-table-nuqs`              | `.../r/data-table-nuqs.json`              | nuqs URL state adapter                                                                                                     |
-| `data-table-zustand`           | `.../r/data-table-zustand.json`           | zustand state adapter                                                                                                      |
-| `data-table-schema`            | `.../r/data-table-schema.json`            | Declarative schema system with `col.*` factories                                                                           |
-| `data-table-drizzle`           | `.../r/data-table-drizzle.json`           | Drizzle ORM server-side helpers                                                                                            |
-| `data-table-query`             | `.../r/data-table-query.json`             | React Query infinite query integration                                                                                     |
-| `data-table-filter-command-ai` | `.../r/data-table-filter-command-ai.json` | AI-powered natural language → filter inference                                                                             |
-| `data-table-mcp`               | `.../r/data-table-mcp.json`               | MCP server endpoint for AI agents                                                                                          |
-| `data-table-actions`           | `.../r/data-table-actions.json`           | Row and bulk actions rendered from server metadata                                                                         |
+Then render a table from any array of objects — columns, filters, and cell renderers are inferred:
 
-All URLs use base `https://data-table.openstatus.dev`.
+```tsx
+import { DataTableAuto } from "@/components/data-table/data-table-auto";
+
+const data = [
+  {
+    name: "Alice",
+    role: "admin",
+    rating: 5,
+    created_at: "2026-01-15T10:00:00Z",
+  },
+  { name: "Bob", role: "user", rating: 3, created_at: "2026-02-20T14:30:00Z" },
+];
+
+export default function Page() {
+  return <DataTableAuto data={data} />;
+}
+```
+
+Starting from nothing? One command creates the Next.js app, initializes shadcn, and installs a working example with every block it needs (add `-b radix` before `-p nova` for Radix). Run `cd data-table-app && npm run dev` and open [localhost:3000/example](http://localhost:3000/example):
+
+```bash
+npx shadcn@latest init @data-table-filters/data-table-example-infinite --name data-table-app --template next -p nova
+```
+
+From `create-next-app` to a green `next build` this takes about 30 seconds on a clean machine. See the [Quick Start](https://data-table.openstatus.dev/docs/quick-start) for the full walkthrough, and add any block below as you need it.
+
+| Block                          | Install                                            | What it adds                                                                                                               |
+| ------------------------------ | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `data-table`                   | `@data-table-filters/data-table`                   | Core: table engine, store, 4 filter types, memory adapter                                                                  |
+| `data-table-filter-command`    | `@data-table-filters/data-table-filter-command`    | Command palette with history + keyboard shortcuts                                                                          |
+| `data-table-cell`              | `@data-table-filters/data-table-cell`              | 12 cell renderers (text, code, number, bar, heatmap, gauge, badge, boolean, star, status-code, level-indicator, timestamp) |
+| `data-table-sheet`             | `@data-table-filters/data-table-sheet`             | Row detail side panel                                                                                                      |
+| `data-table-nuqs`              | `@data-table-filters/data-table-nuqs`              | nuqs URL state adapter                                                                                                     |
+| `data-table-zustand`           | `@data-table-filters/data-table-zustand`           | zustand state adapter                                                                                                      |
+| `data-table-schema`            | `@data-table-filters/data-table-schema`            | Declarative schema system with `col.*` factories                                                                           |
+| `data-table-drizzle`           | `@data-table-filters/data-table-drizzle`           | Drizzle ORM server-side helpers                                                                                            |
+| `data-table-query`             | `@data-table-filters/data-table-query`             | React Query infinite query integration                                                                                     |
+| `data-table-filter-command-ai` | `@data-table-filters/data-table-filter-command-ai` | AI-powered natural language → filter inference                                                                             |
+| `data-table-mcp`               | `@data-table-filters/data-table-mcp`               | MCP server endpoint for AI agents                                                                                          |
+| `data-table-actions`           | `@data-table-filters/data-table-actions`           | Row and bulk actions rendered from server metadata                                                                         |
+| `data-table-remote`            | `@data-table-filters/data-table-remote`            | Headless table that renders from an API endpoint's manifest                                                                |
+| `data-table-chart`             | `@data-table-filters/data-table-chart`             | Timeline chart over the table: stacked buckets per level, drag to zoom the time filter                                     |
+| `data-table-example-infinite`  | `@data-table-filters/data-table-example-infinite`  | Ready-to-run `/example` route: schema, mock API, infinite table with URL state                                             |
+
+Blocks install by name from the shadcn registry directory; the JSON form `https://data-table.openstatus.dev/r/<block>.json` works too.
 
 ## For AI Agents
 

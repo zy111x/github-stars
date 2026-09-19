@@ -1,6 +1,6 @@
 ---
 project: vinext
-stars: 8787
+stars: 8822
 description: |-
     Vite plugin that reimplements the Next.js API surface — deploy anywhere
 url: https://github.com/cloudflare/vinext
@@ -11,6 +11,10 @@ url: https://github.com/cloudflare/vinext
 Run Next.js applications on Vite, with Cloudflare Workers as the primary deployment target.
 
 **Website:** [vinext.dev](https://vinext.dev)
+
+**Documentation:**
+
+- [Caching](docs/caching.md)
 
 > **Read the announcement:** [How we rebuilt Next.js with AI in one week](https://blog.cloudflare.com/vinext/)
 
@@ -730,7 +734,7 @@ upload and makes one final cache-fill request per admitted identity by default.
 Add `--warm-cdn-certify` only to opt into a second, header-only request that
 must prove every planned entry reusable before promotion.
 
-While the data adapter can store entries and serve HIT/STALE itself, the CDN adapter delegates serving to Cloudflare's edge: the origin renders fresh responses and tags them with `Cache-Tag`, and `revalidateTag()` / `revalidatePath()` purge the edge through `ctx.cache.purge({ tags })`. See [examples/workers-cache](examples/workers-cache) for both adapters wired up together.
+While the data adapter can store entries and serve HIT/STALE itself, the CDN adapter delegates serving to Cloudflare's edge: the origin renders fresh responses and tags them with `Cache-Tag`, and `revalidateTag()` / `revalidatePath()` purge the edge through `ctx.cache.purge({ tags })`. See [examples/response-store-demo](examples/response-store-demo) for the Workers Response Store adapter.
 
 The response entrypoint adds a transport-only digest of the complete stage
 identity to its Workers Cache URL. That internal key is independent of zone

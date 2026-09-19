@@ -1,6 +1,6 @@
 ---
 project: nullframe
-stars: 318
+stars: 320
 description: |-
     PROJECT NULLFRAME — a live telemetry dashboard in the Nothing design language
 url: https://github.com/m1ckc3s/nullframe

@@ -1,6 +1,6 @@
 ---
 project: trailbase
-stars: 5607
+stars: 5614
 description: |-
     An open, sub-millisecond, single-executable Firebase alternative with type-safe APIs, built-in WebAssembly runtime, realtime subscriptions, auth, MCP and admin UI built on Rust, SQLite (PG) & Wasmtime.
 url: https://github.com/trailbaseio/trailbase
@@ -89,7 +89,7 @@ Client packages for various languages are available via:
 - [Rust](https://crates.io/crates/trailbase-client)
 - [C#/.Net](https://www.nuget.org/packages/TrailBase/)
 - [Swift](https://github.com/trailbaseio/trailbase/tree/main/client/swift/trailbase)
-- [Kotlin](https://mvnrepository.com/artifact/io.trailbase/trailbase-client)
+- [Kotlin](https://central.sonatype.com/artifact/io.trailbase/trailbase-client/)
 - [Go](https://github.com/trailbaseio/trailbase/tree/main/client/go/trailbase)
 - [Python](https://pypi.org/project/trailbase/)
 

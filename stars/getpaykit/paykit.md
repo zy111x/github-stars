@@ -1,6 +1,6 @@
 ---
 project: paykit
-stars: 1049
+stars: 1058
 description: |-
     Build Stripe billing without the glue code. Products in code, webhooks handled, billing state in your app.
 url: https://github.com/getpaykit/paykit
@@ -19,7 +19,7 @@ url: https://github.com/getpaykit/paykit
   </a>
 </p>
 
-<h3 align="center">The billing framework for TypeScript</h3>
+<h3 align="center">Build Stripe billing without the glue code</h3>
 
 <p align="center">
   Define plans in code. Gate features. Track usage. Webhooks handled for you.
@@ -42,7 +42,7 @@ url: https://github.com/getpaykit/paykit
 
 ## What is PayKit?
 
-PayKit is an embedded billing framework for TypeScript apps. It sits inside your app, uses your database, and gives you a single API to manage products, subscriptions, entitlements, and usage billing without touching provider dashboards.
+PayKit is an embedded Stripe billing framework for TypeScript apps. It runs inside your app, uses your database, and gives you a typed API for products, subscriptions, entitlements, and usage billing without stitching together raw Stripe APIs and webhooks.
 
 ```ts
 import { createPayKit, feature, plan } from "paykitjs";
@@ -91,7 +91,6 @@ PayKit is a free and open-source project licensed under the [MIT License](./LICE
 
 You can help continue its development by:
 
-- [Contribute to the source code](./CONTRIBUTING.md)
 - [Suggest new features and report issues](https://github.com/getpaykit/paykit/issues)
 
 ## Security
@@ -99,4 +98,19 @@ You can help continue its development by:
 If you discover a security vulnerability within PayKit, please send an email to [security@paykit.sh](mailto:security@paykit.sh).
 
 All reports will be promptly addressed, and you'll be credited accordingly.
+
+## Sponsors
+
+PayKit is supported by companies and individuals who help keep the project maintained. Want to support PayKit? [Become a sponsor →](https://github.com/sponsors/maxktz)
+
+<!-- Pulled automatically from GitHub Sponsors via shieldcn.dev. Logos, names, and avatars are fetched live. -->
+<p align="center">
+  <a href="https://github.com/sponsors/maxktz">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/sponsors/maxktz.svg?title=false&mode=dark&preset=surface" />
+      <source media="(prefers-color-scheme: light)" srcset="https://shieldcn.dev/sponsors/maxktz.svg?title=false&mode=light&preset=surface" />
+      <img alt="PayKit sponsors" src="https://shieldcn.dev/sponsors/maxktz.svg?title=false&mode=light&preset=surface" width="820" />
+    </picture>
+  </a>
+</p>
 

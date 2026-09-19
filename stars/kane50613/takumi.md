@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 2976
+stars: 3010
 description: |-
     Render OG images and paged PDFs from JSX, HTML, and CSS. No headless browser. Runs on Node.js, Cloudflare Workers, browsers, and Rust.
 url: https://github.com/kane50613/takumi
@@ -244,6 +244,7 @@ Takumi converts templates to a node tree, computes layout with Taffy, shapes tex
 | ---------------------------------------- | --------------------------------------------------------- |
 | [`takumi-js`](./takumi-js)               | JSX, HTML, and node trees to images, SVG, and animations. |
 | [`takumi-pdf`](./takumi-pdf-js)          | JSX, HTML, and node trees to PDF documents.               |
+| [`takumi-paint`](./takumi-paint)         | JSX, HTML, and node trees to a paint tree of used values. |
 | [`@takumi-rs/core`](./takumi-napi)       | Native Node.js bindings for direct node-tree rendering.   |
 | [`@takumi-rs/wasm`](./takumi-wasm)       | WebAssembly bindings for edge runtimes and browsers.      |
 | [`@takumi-rs/helpers`](./takumi-helpers) | Template conversion, fonts, images, and emoji.            |

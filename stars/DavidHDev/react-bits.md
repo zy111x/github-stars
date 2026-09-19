@@ -1,6 +1,6 @@
 ---
 project: react-bits
-stars: 47084
+stars: 47634
 description: |-
     An open source collection of animated, interactive & fully customizable React components for building memorable websites.
 url: https://github.com/DavidHDev/react-bits
@@ -18,7 +18,7 @@ url: https://github.com/DavidHDev/react-bits
 	<br>
   <strong>The largest & most creative library of animated React components.</strong>
   <br />
-  <sub>Stand out with 165+ free, customizable animations for text, backgrounds, and UI.</sub>
+  <sub>Stand out with 200+ free, customizable animations for text, backgrounds, UI, and micro interactions.</sub>
 	<br>
 	<br>
   <a href="https://github.com/davidhdev/react-bits/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/davidhdev/react-bits"></a>
@@ -40,11 +40,11 @@ url: https://github.com/DavidHDev/react-bits
 
 React Bits helps you **ship stunning interfaces faster**. Instead of spending hours crafting animations from scratch, grab a polished component and customize it to fit your vision.
 
-> 💬 **Text Animations** · 🌀 **Animations** · 🧩 **Components** · 🖼️ **Backgrounds**
+> 💬 **Text Animations** · 🌀 **Animations** · 🧩 **Components** · ⚡ **Micro** · 🖼️ **Backgrounds**
 
 ## 🚀 Features
 
-- **165+ components** — text animations, UI elements, and backgrounds, growing weekly
+- **200+ components** — text animations, UI elements, micro interactions, and backgrounds, growing weekly
 - **Minimal dependencies** — lightweight and tree-shakeable
 - **Fully customizable** — tweak everything via props or edit the source directly
 - **4 variants per component** — JS-CSS, JS-TW, TS-CSS, TS-TW (everyone's happy)

@@ -1,6 +1,6 @@
 ---
 project: VirtualBuddy
-stars: 8694
+stars: 8730
 description: |-
     Virtualize macOS 12 and later on Apple Silicon, VirtualBuddy is a virtual machine GUI for macOS M1, M2, M3, M4
 url: https://github.com/insidegui/VirtualBuddy
@@ -63,9 +63,9 @@ If you’d just like to download the latest version, [go to GitHub releases](htt
 
 #### VirtualBuddyGuest app
 
-VirtualBuddy automatically mounts a disk image with the VirtualBuddyGuest app when you boot up a virtual machine running macOS. To install the VirtualBuddyGuest app, just select the “Guest” disk on Finder’s side bar then double-click the “VirtualBuddyGuest” app icon.
+VirtualBuddy automatically mounts a disk image with the VirtualBuddyGuest app when you boot a supported macOS virtual machine with the guest app enabled. To install the VirtualBuddyGuest app, just select the “Guest” disk on Finder’s side bar then double-click the “VirtualBuddyGuest” app icon.
 
-VirtualBuddyGuest enables clipboard sharing between host and guest and automatic mounting of the shared folders configured for the virtual machine.
+The latest VirtualBuddyGuest app requires macOS 14 or later and supports clipboard sharing and automatic mounting of shared folders. On macOS 13, the legacy guest app only mounts shared folders automatically; clipboard sharing is unavailable. VirtualBuddyGuest is not supported on macOS 12 or earlier.
 
 ![](./assets/GuestApp.jpg)
 

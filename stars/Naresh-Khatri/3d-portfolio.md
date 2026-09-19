@@ -1,6 +1,6 @@
 ---
 project: 3d-portfolio
-stars: 1270
+stars: 1282
 description: |-
     Interactive 3D developer portfolio with a keyboard where every keycap is a skill. Built with Next.js, React, TypeScript, GSAP & Motion. Free to use!
 url: https://github.com/Naresh-Khatri/3d-portfolio

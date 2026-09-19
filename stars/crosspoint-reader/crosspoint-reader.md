@@ -1,6 +1,6 @@
 ---
 project: crosspoint-reader
-stars: 7769
+stars: 7940
 description: |-
     Open-source e-reader firmware
 url: https://github.com/crosspoint-reader/crosspoint-reader
@@ -38,7 +38,7 @@ Check [our Devices page](https://crosspointreader.com/devices) for the full list
 
 - **USB Drive mode (X4Pro)**: access the SD card as USB mass storage.
 
-- **Library workflow**: folder browser, hidden-file toggle, long-press delete, recent books, SD-cache management.
+- **Library workflow**: indexed title/author search, recently-added and alphabetical views, multilingual grouping, folder browser, recent books, and SD-cache management.
 
 - **Wireless workflows**:
   

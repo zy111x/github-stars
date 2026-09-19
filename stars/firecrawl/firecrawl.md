@@ -1,8 +1,8 @@
 ---
 project: firecrawl
-stars: 179565
+stars: 182258
 description: |-
-    The context API to search, scrape, and interact with the web at scale. 🔥
+    The web data API to search, scrape, and interact at scale. 🔥
 url: https://github.com/firecrawl/firecrawl
 ---
 
@@ -47,7 +47,7 @@ url: https://github.com/firecrawl/firecrawl
 
 # **🔥 Firecrawl**
 
-**The API to search, scrape, and interact with the web at scale. 🔥** The web context API to find sources, extract content, and turn it into clean Markdown or structured data your agents can ship with. Open source and available as a [hosted service](https://firecrawl.dev/?ref=github).
+**The API to search, scrape, and interact with the web at scale. 🔥** The web data API to find sources, extract content, and turn it into clean Markdown or structured data your agents can ship with. Open source and available as a [hosted service](https://firecrawl.dev/?ref=github).
 
 _Pst. Hey, you, join our stargazers :)_
 

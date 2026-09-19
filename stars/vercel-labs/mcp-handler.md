@@ -1,9 +1,9 @@
 ---
 project: mcp-handler
-stars: 668
+stars: 670
 description: |-
     Easily spin up an MCP Server on Next.js, Nuxt, Svelte, and more
-url: https://github.com/vercel/mcp-handler
+url: https://github.com/vercel-labs/mcp-handler
 ---
 
 # mcp-handler
@@ -11,6 +11,13 @@ url: https://github.com/vercel/mcp-handler
 `mcp-handler` is a framework-agnostic HTTP adapter for hosting Model Context Protocol (MCP) servers in JavaScript and TypeScript applications. It turns an MCP server definition into a Web-standard `(Request) => Promise<Response>` handler that can be mounted in Next.js, Nuxt/Nitro, SvelteKit, Hono, and other Fetch-compatible frameworks.
 
 Built on MCP SDK v2, it serves the **2026-07-28** MCP specification natively while transparently falling back to stateless Streamable HTTP for 2025-era clients — one handler, both protocol generations.
+
+<p>
+  <a href="https://vercel.com/labs#labs-products"><img alt="Vercel Labs Product" src="https://img.shields.io/badge/LABS-PRODUCT-0a0a0a.svg?style=for-the-badge&amp;logo=Vercel&amp;labelColor=000000" height="28"></a>
+  <a href="https://www.npmjs.com/package/mcp-handler"><img alt="npm version: mcp-handler" src="https://img.shields.io/npm/v/mcp-handler.svg?style=for-the-badge&amp;labelColor=000000" height="28"></a>
+  <a href="https://www.npmjs.com/package/mcp-handler"><img alt="License: Apache-2.0" src="https://img.shields.io/npm/l/mcp-handler.svg?style=for-the-badge&amp;labelColor=000000" height="28"></a>
+  <a href="https://www.npmjs.com/package/mcp-handler"><img alt="npm downloads per month: mcp-handler" src="https://img.shields.io/npm/dm/mcp-handler.svg?style=for-the-badge&amp;labelColor=000000&amp;label=npm%20downloads" height="28"></a>
+</p>
 
 ## Installation
 
@@ -117,6 +124,7 @@ See [Authorization](docs/AUTHORIZATION.md) for wiring details.
 - [Client Integration](docs/CLIENTS.md) - Claude Desktop, Cursor, Windsurf setup
 - [Authorization](docs/AUTHORIZATION.md) - OAuth and token verification
 - [Advanced Usage](docs/ADVANCED.md) - Dynamic routing, Nuxt, configuration options
+- [WebMCP Bridge](docs/WEBMCP.md) - Expose allowlisted tools to in-page agents (experimental)
 
 ## Features
 

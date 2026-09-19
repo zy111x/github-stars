@@ -1,6 +1,6 @@
 ---
 project: audio
-stars: 567
+stars: 573
 description: |-
     Declarative audio synthesis for the web
 url: https://github.com/raphaelsalaja/audio
