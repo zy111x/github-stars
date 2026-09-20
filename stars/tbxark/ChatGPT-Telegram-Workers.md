@@ -1,6 +1,6 @@
 ---
 project: ChatGPT-Telegram-Workers
-stars: 3805
+stars: 3806
 description: Easily deploy your Telegram ChatGPT bot on Cloudflare Workers (or Vercel, Docker...).
 url: https://github.com/tbxark/ChatGPT-Telegram-Workers
 ---
@@ -27,10 +27,10 @@ Features
 
 -   Serverless deployment
 -   Multi-platform deployment support (Cloudflare Workers, Vercel, Docker...)
--   Adaptation to multiple AI service providers (OpenAI, Azure OpenAI, Cloudflare AI, Cohere, Anthropic, Mistral, DeepSeek, Gemini, Groq...)
--   Switching Models with InlineKeyboards
+-   Adaptation to multiple AI service providers (OpenAI, Cloudflare AI, Cohere, Anthropic, Mistral, DeepSeek, Groq...)
+-   Web admin panel (Telegram Mini App) to manage AI providers and settings
 -   Custom commands (can achieve quick switching of models, switching of robot presets)
--   Support for multiple Telegram bots
+-   Simple KV-based configuration
 -   Streaming output
 -   Multi-language support
 -   Text-to-image generation
@@ -39,17 +39,17 @@ Features
 Documentation
 -------------
 
+-   Deploy in one click — Cloudflare clones the repo, creates the KV namespace, asks for your bot token and deploys.
 -   Deploy Cloudflare Workers
--   Local (or Docker) deployment
--   Deploy other platforms
+-   Deploy Vercel, Local, Docker
 -   Configuration and Commands
--   Automatic update
+-   Plugin System
+-   Migrating from v1 to v2
 -   Change Log
 
 Related Projects
 ----------------
 
--   cloudflare-worker-adapter A simple Cloudflare Worker adapter that allows this project to run independently of Cloudflare Worker.
 -   telegram-bot-api-types Telegram Bot API SDK with 0 output after compilation, complete documentation, supports all APIs.
 
 Contributors

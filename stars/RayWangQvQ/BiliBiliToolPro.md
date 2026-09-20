@@ -1,6 +1,6 @@
 ---
 project: BiliBiliToolPro
-stars: 8818
+stars: 8830
 description: B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。全面拥抱AI。敏感肌也能用。
 url: https://github.com/RayWangQvQ/BiliBiliToolPro
 ---
@@ -85,10 +85,6 @@ BiliTool 实现自动完成任务的原理，是通过调用一系列开放的ap
 #### 1.1.1. 方案一：免费在线容器
 
 有很多平台会提供一定免费额度的在线容器，基于官方镜像，部署 BiliTool 很容易。
-
-以下以 ClawCloud 为例，其他平台操作类似：
-
-\>>ClawCloud 部署教程
 
 #### 1.1.2. 方式二：青龙
 

@@ -1,6 +1,6 @@
 ---
 project: scipilot-figure-skill
-stars: 2315
+stars: 2417
 description: SciPilot Skills family - Publication-grade scientific figure copilot for Claude Code 
 url: https://github.com/Haojae/scipilot-figure-skill
 ---

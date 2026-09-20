@@ -1,7 +1,7 @@
 ---
 project: lingbot-map
-stars: 17003
-description: (ECCV 2026 oral) LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction
+stars: 17087
+description: (ECCV 2026 oral & best paper candidate) LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction
 url: https://github.com/Robbyant/lingbot-map
 ---
 

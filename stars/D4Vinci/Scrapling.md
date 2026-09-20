@@ -1,7 +1,7 @@
 ---
 project: Scrapling
-stars: 80531
-description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl!
+stars: 82423
+description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ
 url: https://github.com/D4Vinci/Scrapling
 ---
 
