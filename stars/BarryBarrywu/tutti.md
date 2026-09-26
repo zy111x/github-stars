@@ -1,6 +1,6 @@
 ---
 project: tutti
-stars: 111
+stars: 110
 description: |-
     Multi-output audio and display control for Mac — one panel for every output, app, and screen.
 url: https://github.com/BarryBarrywu/tutti
@@ -75,12 +75,18 @@ Outdoors or beside a bright window, your screen can be hard to see even at maxim
 
 Both adjustments can affect color accuracy; turn them off for color-critical editing.
 
+## Bluetooth synchronization limits
+
+Tutti can compensate for a relatively stable time difference by delaying the faster output. It cannot make a slower Bluetooth speaker play sooner. Some Bluetooth devices may fall out of sync after a track change, pause/resume, reconnection or during continuous playback, even when the saved setting stays the same. If adjustment does not hold, try a wired connection or use one output. Neither restoring a saved setting nor a one-time calibration guarantees ongoing synchronization.
+
+[Bluetooth synchronization limits](https://tutti.barrybarrywu.com/blog/fix-bluetooth-audio-delay-mac/)
+
 ## Install
 
 [Download the latest DMG](https://github.com/BarryBarrywu/tutti/releases/latest/download/Tutti.dmg), move Tutti to Applications, and open it. Or install with Homebrew:
 
 ```bash
-brew install --cask barrybarrywu/tap/tutti
+brew install --cask brewforge/extras/tutti
 ```
 
 Click the menu bar icon and select the outputs you want to use. Select more than one for multi-output playback, then adjust the group volume or each output separately. Tutti checks for updates automatically; [release notes](https://github.com/BarryBarrywu/tutti/releases) describe what's changed.

@@ -1,6 +1,6 @@
 ---
 project: litellm
-stars: 59163
+stars: 59672
 description: |-
     The fastest, litest AI Gateway. Rust core with Python SDK. Call 100+ LLM APIs in OpenAI (or native) format with cost tracking, guardrails, load balancing, and logging [Bedrock, Azure, OpenAI, Anthropic, OpenAI, VertexAI, vLLM, Nvidia NIM]
 url: https://github.com/BerriAI/litellm
@@ -176,7 +176,7 @@ from a2a.utils.constants import TransportProtocol
 from uuid import uuid4
 
 base_url = "http://localhost:4000/a2a/my-agent"  # LiteLLM proxy + agent name
-headers = {"Authorization": "Bearer sk-1234"}    # LiteLLM Virtual Key
+headers = {"Authorization": "Bearer <your-master-key>"}    # LiteLLM master key or a virtual key
 
 async with httpx.AsyncClient(headers=headers, timeout=60.0) as http_client:
     resolver = A2ACardResolver(httpx_client=http_client, base_url=base_url)
@@ -241,7 +241,7 @@ async with stdio_client(server_params) as (read, write):
 
 ```bash
 curl -X POST 'http://0.0.0.0:4000/v1/chat/completions' \
-  -H 'Authorization: Bearer sk-1234' \
+  -H 'Authorization: Bearer <your-master-key>' \
   -H 'Content-Type: application/json' \
   -d '{
     "model": "gpt-4o",
@@ -263,7 +263,7 @@ curl -X POST 'http://0.0.0.0:4000/v1/chat/completions' \
     "LiteLLM": {
       "url": "http://localhost:4000/mcp/",
       "headers": {
-        "x-litellm-api-key": "Bearer sk-1234"
+        "x-litellm-api-key": "Bearer <your-master-key>"
       }
     }
   }
@@ -315,6 +315,7 @@ For MCP OAuth, an upstream may advertise dynamic client registration but refuse 
 | [Deepgram (`deepgram`)](https://docs.litellm.ai/docs/providers/deepgram) | ✅ | ✅ | ✅ |  |  | ✅ |  |  |  |  |
 | [DeepInfra (`deepinfra`)](https://docs.litellm.ai/docs/providers/deepinfra) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Deepseek (`deepseek`)](https://docs.litellm.ai/docs/providers/deepseek) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
+| [Eden AI (`edenai`)](https://docs.litellm.ai/docs/providers/edenai) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |  |  |  |
 | [ElevenLabs (`elevenlabs`)](https://docs.litellm.ai/docs/providers/elevenlabs) | ✅ | ✅ | ✅ |  |  | ✅ | ✅ |  |  |  |
 | [Empower (`empower`)](https://docs.litellm.ai/docs/providers/empower) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Fal AI (`fal_ai`)](https://docs.litellm.ai/docs/providers/fal_ai) | ✅ | ✅ | ✅ |  | ✅ |  |  |  |  |  |
@@ -364,11 +365,12 @@ For MCP OAuth, an upstream may advertise dynamic client registration but refuse 
 | [Petals (`petals`)](https://docs.litellm.ai/docs/providers/petals) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Pinstripes (`pinstripes`)](https://docs.litellm.ai/docs/providers/pinstripes) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Predibase (`predibase`)](https://docs.litellm.ai/docs/providers/predibase) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
-| [Qwen AI Platform (`qwen_ai_platform`)](https://docs.litellm.ai/docs/providers/qwencloud) | ✅ | ✅ | ✅ | ✅ | ✅ |  |  |  |  | ✅ |
+| [Qianwen AI Platform (`qwen_ai_platform`)](https://docs.litellm.ai/docs/providers/qwencloud) | ✅ | ✅ | ✅ | ✅ | ✅ |  |  |  |  | ✅ |
 | [QwenCloud (`qwencloud`)](https://docs.litellm.ai/docs/providers/qwencloud) | ✅ | ✅ | ✅ | ✅ | ✅ |  |  |  |  | ✅ |
 | [Recraft (`recraft`)](https://docs.litellm.ai/docs/providers/recraft) |  |  |  |  | ✅ |  |  |  |  |  |
 | [Replicate (`replicate`)](https://docs.litellm.ai/docs/providers/replicate) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Sagemaker Chat (`sagemaker_chat`)](https://docs.litellm.ai/docs/providers/aws_sagemaker) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
+| [Sail (`sail`)](https://docs.litellm.ai/docs/providers/sail) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Sambanova (`sambanova`)](https://docs.litellm.ai/docs/providers/sambanova) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Snowflake (`snowflake`)](https://docs.litellm.ai/docs/providers/snowflake) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |
 | [Text Completion Codestral (`text-completion-codestral`)](https://docs.litellm.ai/docs/providers/codestral) | ✅ | ✅ | ✅ |  |  |  |  |  |  |  |

@@ -1,6 +1,6 @@
 ---
 project: diceui
-stars: 2078
+stars: 2079
 description: |-
     Accessible shadcn/ui components built with React, TypeScript, and Tailwind CSS. Copy-paste ready, and customizable.
 url: https://github.com/sadmann7/diceui

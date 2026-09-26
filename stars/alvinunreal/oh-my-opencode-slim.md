@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 8963
+stars: 9075
 description: |-
     Lean, fine tuned Opencode multi agent suite · Mix any models · Auto delegate tasks
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -8,7 +8,7 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
 
 <div align="center">
   <a href="https://github.com/alvinunreal/oh-my-opencode-slim/stargazers">
-    <img src="img/v3-beta.webp" alt="oh-my-opencode-slim V3 Beta Release" style="border-radius: 10px;">
+    <img src="img/v3.webp" alt="oh-my-opencode-slim V3 Beta Release" style="border-radius: 10px;">
   </a>
   <h3>✨ oh-my-opencode-slim ✨</h3>
 
@@ -43,7 +43,9 @@ The main idea is simple: instead of forcing one model to do everything, the plug
   the agent best suited for it - mix any models across any providers.
 - **[Background orchestration](docs/background-orchestration.md)** - the
   Orchestrator dispatches specialists as background tasks, tracks them, and
-  reconciles results before continuing - parallel work by default.
+  reconciles results before continuing - parallel work by default, with
+  terminal-result wake-ups and reopen corrections keeping idle parents
+  current.
 - **[Bundled skills](#skills)** - prompt-based workflows like `deepwork`,
   `codemap`, `verification-planning`, and `reflect`, assigned per agent.
 - **[Council](docs/council.md)** - run multiple models in parallel on the same
@@ -53,7 +55,7 @@ The main idea is simple: instead of forcing one model to do everything, the plug
 - **[Multiplexer integration](docs/multiplexer-integration.md)** - watch agents
   work live in Tmux, Zellij, Herdr, cmux, or kitty panes.
 - **[Preset switching](docs/preset-switching.md)** - swap the whole team's
-  models at runtime with `/preset`.
+  models at runtime with `/preset`, with single-parent preset inheritance.
 - **[Code intelligence tools](docs/tools.md)** - LSP tools, AST-aware search
   across 25 languages, and built-in MCPs for docs and GitHub code
   search.
@@ -171,16 +173,22 @@ The default generated configuration includes both `openai` and `opencode-go` pre
   "preset": "openai",
   "presets": {
     "openai": {
-      "orchestrator": { "model": "openai/gpt-5.6-terra", "variant": "high", "skills": ["*"], "mcps": ["*", "!context7"] },
-      "oracle": { "model": "openai/gpt-5.6-sol", "variant": "high", "skills": ["simplify"], "mcps": [] },
-      "librarian": { "model": "openai/gpt-5.6-luna", "variant": "low", "skills": [], "mcps": ["context7", "gh_grep"] },
-      "explorer": { "model": "openai/gpt-5.6-luna", "variant": "low", "skills": [], "mcps": [] },
-      "designer": { "model": "openai/gpt-5.6-luna", "variant": "medium", "skills": [], "mcps": [] },
-      "fixer": { "model": "openai/gpt-5.6-luna", "variant": "high", "skills": [], "mcps": [] }
+      "orchestrator": { "model": "openai/gpt-6-sol", "variant": "high", "skills": ["*"], "mcps": ["*", "!context7"] },
+      "oracle": { "model": "openai/gpt-6-astra", "variant": "high", "skills": ["simplify"], "mcps": [] },
+      "librarian": { "model": "openai/gpt-6-luna", "variant": "low", "skills": [], "mcps": ["context7", "gh_grep"] },
+      "explorer": { "model": "openai/gpt-6-luna", "variant": "low", "skills": [], "mcps": [] },
+      "designer": { "model": "openai/gpt-6-luna", "variant": "medium", "skills": [], "mcps": [] },
+      "fixer": { "model": "openai/gpt-6-luna", "variant": "high", "skills": [], "mcps": [] }
     }
   }
 }
 ```
+
+Presets can inherit from one base preset with `extends`: a `design` preset can
+extend `base` and override only its designer model. Changes are persisted by
+`/preset` and take effect after an OpenCode reload. See
+[Configuration](docs/configuration.md#preset-inheritance) for the inheritance
+example and precedence rules.
 
 ### Preset Docs
 
@@ -190,7 +198,6 @@ Consider presets as guidelines as they are often outdated.
 - **[OpenCode Go Preset](docs/opencode-go-preset.md)** — runs the agents on OpenCode Go models; enables the Observer agent for visual analysis since its orchestrator model isn't multimodal.
 - **[Author's Preset](docs/authors-preset.md)** — the exact config the author runs day to day, with third-party skills.
 - **[$30 Preset](docs/thirty-dollars-preset.md)** — a mixed-provider setup built around Codex Plus and GitHub Copilot Pro for about $30/month.
-- **[OpenCode Zen Free Preset](docs/opencode-zen-free-preset.md)** — every agent runs on an opencode free model; no usage cost.
 
 ### For Alternative Providers
 
@@ -247,12 +254,12 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5.6-terra (medium)</code>
+      <b>Default Model:</b> <code>openai/gpt-6-sol (medium)</code>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Recommended Models:</b> <code>claude-fable-5</code> <code>claude-opus-4-8</code> <code>glm-5.2</code> <code>gpt-5.6-terra</code> <code>mimo-v2.5</code> <code>minimax-m3</code> <code>qwen3.7-plus</code>
+      <b>Recommended Models:</b> <code>claude-fable-5</code> <code>claude-opus-4-8</code> <code>glm-5.2</code> <code>gpt-6-sol</code> <code>mimo-v2.5</code> <code>minimax-m3</code> <code>qwen3.7-plus</code>
     </td>
   </tr>
   <tr>
@@ -288,7 +295,7 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5.6-luna</code>
+      <b>Default Model:</b> <code>openai/gpt-6-luna</code>
     </td>
   </tr>
   <tr>
@@ -329,12 +336,12 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5.6-sol (high)</code>
+      <b>Default Model:</b> <code>openai/gpt-6-astra (high)</code>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Recommended Models:</b> <code>claude-fable-5</code> <code>claude-opus-4-8</code> <code>deepseek-v4-pro</code> <code>glm-5.2</code> <code>gpt-5.6-sol</code> <code>qwen3.7-max</code>
+      <b>Recommended Models:</b> <code>claude-fable-5</code> <code>claude-opus-4-8</code> <code>deepseek-v4-pro</code> <code>glm-5.2</code> <code>gpt-6-astra</code> <code>qwen3.7-max</code>
     </td>
   </tr>
   <tr>
@@ -419,7 +426,7 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5.6-luna</code>
+      <b>Default Model:</b> <code>openai/gpt-6-luna</code>
     </td>
   </tr>
   <tr>
@@ -460,7 +467,7 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5.6-luna</code>
+      <b>Default Model:</b> <code>openai/gpt-6-luna</code>
     </td>
   </tr>
   <tr>
@@ -501,12 +508,12 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5.6-luna</code>
+      <b>Default Model:</b> <code>openai/gpt-6-luna</code>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <b>Recommended Models:</b> <code>claude-sonnet-4-6</code> <code>deepseek-v4-flash</code> <code>gpt-5.6-luna</code> <code>kimi-k2.7-code</code>
+      <b>Recommended Models:</b> <code>claude-sonnet-4-6</code> <code>deepseek-v4-flash</code> <code>gpt-6-luna</code> <code>kimi-k2.7-code</code>
     </td>
   </tr>
   <tr>
@@ -548,7 +555,7 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-5.6-luna</code> - <i>configure a vision-capable model to enable</i>
+      <b>Default Model:</b> <code>openai/gpt-6-luna</code> - <i>configure a vision-capable model to enable</i>
     </td>
   </tr>
   <tr>
@@ -572,13 +579,10 @@ If any agent fails to respond, check your provider authentication and config fil
 Skills are prompt-based instructions injected into an agent's system prompt to
 guide decisions, workflows, and tool use. Unlike MCPs (which are running
 servers), a skill runs no process — it is a focused playbook an agent activates
-when the task calls for it. The installer bundles eight skills and keeps them
-updated on plugin auto-update; local customizations are preserved.
-
-> [!TIP]
-> To discard local bundled-skill customizations and receive package updates, run
-> `bunx oh-my-opencode-slim install --skills=force`. This deliberately replaces
-> installed bundled skills with the package versions.
+when the task calls for it. The plugin registers its eight bundled skills
+in-process at load — updates apply on restart, nothing is copied to disk. A
+same-named skill directory under `~/.config/opencode/skills/` overrides the
+bundled version.
 
 | Skill | Purpose | Default agent | How to invoke |
 |:-----:|---------|---------------|---------------|
@@ -639,7 +643,7 @@ Use this section as a map: start with installation, then jump to features, confi
 |-----|----------------|
 | **[Council](docs/council.md)** | Run multiple models in parallel and synthesize a single answer with `@council` |
 | **[Custom Agents](docs/configuration.md#custom-agents)** | Define your own specialists with custom prompts, models, MCP access, and Orchestrator delegation rules |
-| **[ACP Agents](docs/acp-agents.md)** | Connect external ACP-compatible agents such as Claude Code ACP or Gemini ACP as delegatable subagents |
+| **[ACP Agents](docs/acp-agents.md)** | Connect external ACP-compatible agents such as Claude Code ACP or Gemini ACP as delegatable subagents; tool and plan progress streams to the TUI while they work |
 | **[Multiplexer Integration](docs/multiplexer-integration.md)** | Watch agents work live in Tmux, Zellij, Herdr, cmux, or kitty panes |
 | **[Codemap](docs/codemap.md)** | Generate hierarchical codemaps to understand large codebases faster |
 | **[Clonedeps](docs/clonedeps.md)** | Clone selected dependency source into an ignored local workspace for inspection |
@@ -671,7 +675,7 @@ Use this section as a map: start with installation, then jump to features, confi
   <p><sub>Every merged contribution leaves a mark on the realm.</sub></p>
 
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-115-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-121-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -836,6 +840,14 @@ Use this section as a map: start with installation, then jump to features, confi
     </tr>
     <tr>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/kumar-shivang"><img src="https://avatars.githubusercontent.com/u/89011717?v=4?s=100" width="100px;" alt="Shivang Kumar"/><br /><sub><b>Shivang Kumar</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=kumar-shivang" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/ScoFan-official"><img src="https://avatars.githubusercontent.com/u/137064417?v=4?s=100" width="100px;" alt="ScoFan-official"/><br /><sub><b>ScoFan-official</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=ScoFan-official" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://www.littlelyon.com/"><img src="https://avatars.githubusercontent.com/u/6328186?v=4?s=100" width="100px;" alt="Haoliang Wu"/><br /><sub><b>Haoliang Wu</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=haoliangwu" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://guanbear.com/"><img src="https://avatars.githubusercontent.com/u/11829005?v=4?s=100" width="100px;" alt="GuanBear"/><br /><sub><b>GuanBear</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=guanbear" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/ShoelaceMan"><img src="https://avatars.githubusercontent.com/u/9676844?v=4?s=100" width="100px;" alt="Trent Arcuri"/><br /><sub><b>Trent Arcuri</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=ShoelaceMan" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/expnn"><img src="https://avatars.githubusercontent.com/u/18525479?v=4?s=100" width="100px;" alt="expnn"/><br /><sub><b>expnn</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=expnn" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/wirsbf"><img src="https://avatars.githubusercontent.com/u/144008530?v=4?s=100" width="100px;" alt="wirsbf"/><br /><sub><b>wirsbf</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=wirsbf" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

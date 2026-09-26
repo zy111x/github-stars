@@ -1,6 +1,6 @@
 ---
 project: overtype
-stars: 3703
+stars: 3704
 description: |-
     The markdown editor that's just a textarea https://overtype.dev
 url: https://github.com/panphora/overtype
@@ -8,7 +8,7 @@ url: https://github.com/panphora/overtype
 
 # OverType
 
-A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~130KB minified with all features.
+A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~132KB minified with all features.
 
 ## Live Examples
 
@@ -27,7 +27,7 @@ A lightweight markdown editor library with perfect WYSIWYG alignment using an in
 - ⌨️ **Keyboard shortcuts** - Common markdown shortcuts (Cmd/Ctrl+B for bold, etc.)
 - 📱 **Mobile optimized** - Responsive design with mobile-specific styles
 - 🔄 **DOM persistence aware** - Recovers from existing DOM (perfect for HyperClay and similar platforms)
-- 🚀 **Lightweight** - ~130KB minified
+- 🚀 **Lightweight** - ~132KB minified
 - 🎯 **Optional toolbar** - Clean, minimal toolbar with all essential formatting
 - ✨ **Smart shortcuts** - Keyboard shortcuts with selection preservation
 - 📝 **Smart list continuation** - GitHub-style automatic list continuation on Enter
@@ -43,7 +43,7 @@ We overlap an invisible textarea on top of styled output, giving the illusion of
 
 | Feature | OverType | HyperMD | Milkdown | TUI Editor | EasyMDE |
 |---------|----------|---------|----------|------------|---------|
-| **Size** | ~130KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
+| **Size** | ~132KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
 | **Dependencies** | Bundled | CodeMirror | ProseMirror + plugins | Multiple libs | CodeMirror |
 | **Setup** | Single file | Complex config | Build step required | Complex config | Moderate |
 | **Approach** | Invisible textarea | ContentEditable | ContentEditable | ContentEditable | CodeMirror |
@@ -778,18 +778,25 @@ See [examples/custom-toolbar.html](examples/custom-toolbar.html) for migration e
 
 ## DOM Persistence & Re-initialization
 
-OverType is designed to work with platforms that persist DOM across page loads (like HyperClay):
+OverType can resume from its own saved DOM, for pages that save themselves (like [ClayJS](https://clayjs.com) / Hyperclay). Calling `new OverType(el)` on an element that holds a saved editor keeps the text and rebuilds the toolbar, preview and other UI exactly once.
+
+In a ClayJS page, pass `persist: true`:
 
 ```javascript
-// Safe to call multiple times - will recover existing editors
-OverType.init('.editor');
-
-// The library will:
-// 1. Check for existing OverType DOM structure
-// 2. Recover content from existing textarea if found
-// 3. Re-establish event bindings
-// 4. Or create fresh editor if no existing DOM
+new OverType('#entry', { persist: true, toolbar: true });
 ```
+
+With `persist`, the saved file holds only the text:
+
+```html
+<div class="overtype-container" data-theme="solar">
+  <div class="overtype-wrapper">
+    <textarea class="overtype-input" persist>…your markdown…</textarea>
+  </div>
+</div>
+```
+
+The textarea gets ClayJS's `persist` attribute, and the style tag, toolbar, tooltip, stats bar, placeholder and preview are marked `clay="editor-ui"`, so they are never saved and never trigger an autosave. `destroy()` leaves the container, wrapper and textarea in place, so the editor can be resumed later.
 
 ## Examples
 

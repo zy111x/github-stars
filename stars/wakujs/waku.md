@@ -1,6 +1,6 @@
 ---
 project: waku
-stars: 6454
+stars: 6459
 description: |-
     ⛩️ The minimal React framework
 url: https://github.com/wakujs/waku
@@ -646,7 +646,10 @@ The attributes of `<html>`, `<head>`, or `<body>` elements can be customized wit
 export default async function RootElement({ children }) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body data-version="1.0">{children}</body>
     </html>
   );

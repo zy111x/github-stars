@@ -1,6 +1,6 @@
 ---
 project: paddleocr.js
-stars: 21
+stars: 22
 description: |-
     A cross-platform OCR library based on PaddleOCR v5 and ONNX Runtime that is as small as possible.
 url: https://github.com/x3zvawq/paddleocr.js

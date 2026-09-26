@@ -1,6 +1,6 @@
 ---
 project: interface-design
-stars: 5717
+stars: 5734
 description: |-
     Design engineering for Claude Code. Craft, memory, and enforcement for consistent UI.
 url: https://github.com/Dammyjay93/interface-design

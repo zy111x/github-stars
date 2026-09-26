@@ -1,6 +1,6 @@
 ---
 project: office-open-xml-viewer
-stars: 803
+stars: 813
 description: |-
     A browser-based viewer for Office Open XML documents that renders to an HTML Canvas element.
 url: https://github.com/yukiyokotani/office-open-xml-viewer
@@ -182,14 +182,18 @@ await sheet.load('/report.dat', { format: 'delimited-text', delimiter: '|' });
 
 OMML equations (`m:oMath` / `m:oMathPara`) in `.docx`, `.pptx` and `.xlsx` are rendered with
 [MathJax](https://www.mathjax.org/) + [STIX Two Math](https://github.com/stipub/stixfonts).
-That engine is ~3 MB, so it is **opt-in**: import the `math` engine from the separate
+That engine is ~4 MB, so it is **opt-in**: import the `math` engine from the separate
 `@silurus/ooxml/math` entry and pass it to the viewer. Pass it and equations render;
 omit it and the engine asset is not fetched or evaluated (equations are simply skipped;
-the on-demand render-worker asset retains a small loader). When you *do* pass it, the ~3 MB engine ships
+the on-demand render-worker asset retains a small loader). When you *do* pass it, the ~4 MB engine ships
 as a **standalone asset file** next to the bundle rather than an inline data URL, and is
 fetched **on demand — only the first time a document actually contains an equation**, so
 equation-free documents never pay for it. It is fully self-contained: served from your own
 origin, no cross-origin requests.
+
+Accented Latin letters use STIX Two Math paths in normal, italic, bold and bold-italic
+equations. Less common Cyrillic, phonetic and dingbat characters use a system-font
+fallback, so their appearance can vary by platform.
 
 ```typescript
 import { DocxViewer } from '@silurus/ooxml/docx';
@@ -808,7 +812,7 @@ file without uploading it.
 | **Workbook** | Multiple sheets, sheet names | ✅ |
 | | Sheet tab colors (`<sheetPr><tabColor>` — theme / tint / indexed / rgb) | ✅ |
 | **Cells** | Text, number, boolean, error values | ✅ |
-| | Formula results (from cached `<v>`) | ✅ |
+| | Formula results (cached `<v>` only; formulas, including `TODAY()` / `NOW()`, are never recalculated) | ✅ |
 | | Dates (ECMA-376 date format codes) | ✅ |
 | | Rich text (per-run formatting) | ✅ |
 | | East-Asian furigana (`<rPh>` §18.4.6 + `<phoneticPr>` §18.4.3 — drawn when a cell opts in via `ph="1"`; row-level `<row ph>` inheritance) | ✅ |
@@ -843,6 +847,7 @@ file without uploading it.
 | | Chart manual layout (`<c:title><c:layout>` and `<c:plotArea><c:layout>`) | ✅ |
 | | Sparklines (`x14:sparklineGroup` — line / column / win-loss, with markers and high/low/first/last/negative highlights) | ✅ |
 | **Advanced** | Conditional formatting (`cellIs`, `colorScale`, `dataBar`, `iconSet`, `top10`, `aboveAverage`) | ✅ |
+| | Conditional-formatting formulas (`expression`, text / blanks / errors rules — partial evaluator over cached values; complete evaluation tracked in [#1547](https://github.com/yukiyokotani/office-open-xml-viewer/issues/1547)) | ⚠️ Partial |
 | | Slicers (static, Office 2010 extension) | ✅ |
 | | Pivot tables (saved worksheet output renders unchanged; read-only metadata is exposed. Refresh, recalculation, filtering, restructuring, and interactivity are unsupported) | ⚠️ Partial |
 | | Cell comments / notes (classic `xl/commentsN.xml` + Office-365 threaded comments — red triangle indicator + author / text via the worksheet model; pointer or keyboard users can open the popup, with a polite screen-reader status) | ✅ |
@@ -976,7 +981,7 @@ file without uploading it.
 - **[`packages/markdown/`](packages/markdown/)** — internal workspace adapter and `ooxml-md` development CLI for the same GitHub-flavoured Markdown projection exposed by each format model's `toMarkdown()` method.
 - **[`packages/node/`](packages/node/)** — the implementation behind the public Node-only `@silurus/ooxml/node` subpath. Its canonical APIs are the explicitly owned, bounded `openPptxPresentation`, `openDocxDocument`, and `openXlsxWorkbook` sessions. Async `materializePptxPresentation`, `materializeDocxDocument`, `materializeXlsxWorkbookIndex`, `materializeXlsxWorksheet`, and `materializeXlsxWorkbook` are provided when a complete caller-owned graph is actually needed. Each `open*` call returns an explicit, idempotent `close()`-able session; PPTX streams `slides()`, DOCX completes format-required sequential pagination before streaming `pages()`, and XLSX parses its workbook index once before sequential `worksheetRows(sheetIndex)` streams reuse the retained archive. Useful for CI checks and headless rendering pipelines; canvas rendering accepts a user-supplied backend such as `skia-canvas` without making it a runtime dependency.
   See the [0.75 to 0.76 migration guide](docs/migration-0.76.md) for every removed synchronous helper and its replacement.
-- **[`packages/vscode-extension/`](packages/vscode-extension/)** — VS Code extension (`ooxml-viewer`) that registers `CustomEditorProvider`s for `.docx`, `.xlsx`, and `.pptx`, and (opt-in) auto-installs and registers the `ooxml-mcp-server` for GitHub Copilot Chat in Agent mode, including active Viewer selection. Claude Code and Codex can configure the same binary separately for path-based file tools, but do not receive the active selection bridge. The preview is offline by default; an opt-in `ooxmlViewer.useGoogleFonts` setting (off, and force-disabled in untrusted workspaces) surfaces the library's metric-compatible font substitution, widening the webview CSP to the Google Fonts CDN only while enabled.
+- **[`packages/vscode-extension/`](packages/vscode-extension/)** — VS Code extension (`ooxml-viewer`) that registers `CustomEditorProvider`s for `.docx`, `.xlsx`, and `.pptx`, and (opt-in) auto-installs and registers the `ooxml-mcp-server` for GitHub Copilot Chat in Agent mode, including active Viewer selection. Claude Code and Codex can configure the same binary separately for path-based file tools, but do not receive the active selection bridge. The preview is offline by default; an opt-in `ooxmlViewer.useGoogleFonts` setting (off, and force-disabled in untrusted workspaces) loads optional webfont substitutes and script fallbacks, widening the webview CSP to the Google Fonts CDN only while enabled.
 - **[`packages/mcp-server/`](packages/mcp-server/)** — Rust MCP server (`ooxml-mcp-server`) exposing the parsers as tools for AI agents (Claude, Copilot, Codex, etc.). Provides structured queries (`docx_get_structure`, `xlsx_get_cell_range`, `pptx_get_slide_structure`, …) so agents can inspect OOXML files without shelling out to `unzip`. Prebuilt binaries are attached to each [GitHub Release](https://github.com/yukiyokotani/office-open-xml-viewer/releases) for macOS / Linux / Windows; the VS Code extension downloads them on demand.
 
 ---
@@ -1020,6 +1025,27 @@ Viewer APIs report failures from awaitable operations by rejecting the returned
 Promise. This includes `viewer.load()` parsing and its initial render, whether
 or not the Viewer has an `onError(error)` callback. A failure is never delivered
 through both channels.
+
+All three formats use a module Web Worker for parsing, including the default
+`mode: 'main'`; the mode selects where rendering runs, not whether parsing uses
+a Worker. The supported browser setup requires a page with a normal,
+non-opaque origin where Worker loading is permitted. An iframe with
+`sandbox="allow-scripts"` but no `allow-same-origin` has an opaque origin. Worker
+loading may fail there depending on the browser and Worker script, so this
+embedding setup is not supported even if it happens to work in one browser.
+There is no classic-Worker or no-Worker fallback for this configuration.
+
+For a regular iframe, omit `sandbox`. To retain sandbox restrictions, serve
+the viewer page from a dedicated origin distinct from the parent and use, for
+example,
+`<iframe sandbox="allow-scripts allow-same-origin" src="https://viewer.example.net/viewer.html"></iframe>`.
+Here `allow-same-origin` retains the **iframe page's** origin; it does not give
+the iframe the parent's origin. This separate-origin setup requires a `src`
+URL; `srcdoc` inherits the parent's origin when origin sandboxing is disabled.
+If module scripts or other resources are fetched across origins, configure
+CORS as required; the page's CSP must also allow its module Worker and required
+assets. The Worker error message includes an opaque-origin hint when the
+browser gives no detail, but it cannot identify every Worker failure.
 
 Use `onError` for later Viewer-managed work that has no directly awaitable
 result, such as virtualized scroll-view rendering or embedded-media playback.
@@ -1170,7 +1196,7 @@ tarball) for the full list and license texts. Highlights:
   (Apache License 2.0) — the equation-rendering engine behind the
   opt-in `@silurus/ooxml/math` entry described in
   [Rendering equations](#rendering-equations). It ships in the tarball as
-  a standalone ~3 MB asset but is never loaded by a consuming app unless
+  a standalone ~4 MB asset but is never loaded by a consuming app unless
   that app imports `@silurus/ooxml/math` and the viewer is handed a
   document that actually contains an equation.
 - **Rust crate dependencies** of the WASM parsers (docx/pptx/xlsx) — all

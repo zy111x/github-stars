@@ -1,6 +1,6 @@
 ---
 project: bifrost
-stars: 8172
+stars: 8381
 description: |-
     Fastest enterprise AI gateway (50x faster than LiteLLM) with adaptive load balancer, cluster mode, guardrails, 1000+ models support & <100 µs overhead at 5k RPS.
 url: https://github.com/maximhq/bifrost
@@ -15,6 +15,7 @@ url: https://github.com/maximhq/bifrost
 ![Docker Pulls](https://img.shields.io/docker/pulls/maximhq/bifrost)
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 95px; height: 21px;">](https://app.getpostman.com/run-collection/31642484-2ba0e658-4dcd-49f4-845a-0c7ed745b916?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D31642484-2ba0e658-4dcd-49f4-845a-0c7ed745b916%26entityType%3Dcollection%26workspaceId%3D63e853c8-9aec-477f-909c-7f02f543150e)
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/bifrost)](https://artifacthub.io/packages/search?repo=bifrost)
+[![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://app.codspeed.io/maximhq/bifrost?utm_source=badge)
 [![License](https://img.shields.io/github/license/maximhq/bifrost)](LICENSE)
 
 ## The fastest way to build AI applications that never go down

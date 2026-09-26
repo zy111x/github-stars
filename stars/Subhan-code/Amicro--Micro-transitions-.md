@@ -1,6 +1,6 @@
 ---
 project: Amicro--Micro-transitions-
-stars: 2461
+stars: 2487
 description: |-
     null
 url: https://github.com/Subhan-code/Amicro--Micro-transitions-
@@ -9,6 +9,9 @@ url: https://github.com/Subhan-code/Amicro--Micro-transitions-
 # @subhanhq/amicro
 
 A curated collection of premium React micro-interactions, transition components, and card layouts powered by **Motion**.
+
+> [!NOTE]
+> **Layout Attribution & Appreciation**: The layout of this project is from [transition.dev](https://transition.dev/). Huge thanks to [Jakub Antalík (@Jakubantalik)](https://x.com/Jakubantalik) for making it open-source! With time, this layout will be continuously updated and evolved.
 
 [![npm version](https://img.shields.io/npm/v/@subhanhq/amicro?style=for-the-badge&color=000000&logo=npm&logoColor=white)](https://www.npmjs.com/package/@subhanhq/amicro)
 [![License](https://img.shields.io/github/license/Subhan-code/Amicro--Micro-transitions-?style=for-the-badge&color=000000&logo=opensourceinitiative&logoColor=white)](https://github.com/Subhan-code/Amicro--Micro-transitions-/blob/main/LICENSE)

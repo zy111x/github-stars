@@ -1,6 +1,6 @@
 ---
 project: data-table-filters
-stars: 2252
+stars: 2260
 description: |-
     React data tables for shadcn/ui: faceted filters, sorting, infinite scroll. Filtering, faceted counts and cursor pagination can run in SQL with Drizzle.
 url: https://github.com/openstatusHQ/data-table-filters
@@ -20,7 +20,7 @@ Visit [data-table.openstatus.dev](https://data-table.openstatus.dev) to learn mo
 
 [![Registry install](https://github.com/openstatusHQ/data-table-filters/actions/workflows/registry-install.yml/badge.svg)](https://github.com/openstatusHQ/data-table-filters/actions/workflows/registry-install.yml) — the Quick Start below is installed into a fresh Next.js app on each shadcn library, Base UI and Radix, and typechecked nightly against the latest shadcn CLI.
 
-> **Prerequisite.** Works on either shadcn library: the CLI default, Base UI (`npx shadcn@latest init -d`), or Radix (`npx shadcn@latest init -b radix -p nova`). CI installs into both and typechecks them on every registry change and nightly.
+> **Prerequisite.** Works on either shadcn library: the CLI default, Base UI (`npx shadcn@latest init -d`), or Radix (`npx shadcn@latest init -b radix -p lyra`). CI installs into both and typechecks them on every registry change and nightly.
 
 One command installs the core block and the schema system:
 
@@ -48,11 +48,13 @@ export default function Page() {
 }
 ```
 
-Starting from nothing? One command creates the Next.js app, initializes shadcn, and installs a working example with every block it needs (add `-b radix` before `-p nova` for Radix). Run `cd data-table-app && npm run dev` and open [localhost:3000/example](http://localhost:3000/example):
+Starting from nothing? One command creates the Next.js app, initializes shadcn, and installs a working example with every block it needs (add `-b radix` before `-p lyra` for Radix). Run `cd logs-viewer && pnpm dev` and open [localhost:3000/example](http://localhost:3000/example):
 
 ```bash
-npx shadcn@latest init @data-table-filters/data-table-example-infinite --name data-table-app --template next -p nova
+pnpm dlx shadcn@latest init @data-table-filters/data-table-example-infinite --name logs-viewer --template next -p lyra
 ```
+
+Requires pnpm (`npm i -g pnpm`); `npx` and `npm run dev` work the same if you prefer npm.
 
 From `create-next-app` to a green `next build` this takes about 30 seconds on a clean machine. See the [Quick Start](https://data-table.openstatus.dev/docs/quick-start) for the full walkthrough, and add any block below as you need it.
 

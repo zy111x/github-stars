@@ -1,6 +1,6 @@
 ---
 project: webtui
-stars: 2442
+stars: 2444
 description: |-
     Modular CSS Library that brings the beauty of Terminal UIs to the browser
 url: https://github.com/webtui/webtui

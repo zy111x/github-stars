@@ -1,8 +1,8 @@
 ---
 project: crossmux
-stars: 201
+stars: 219
 description: |-
-    CrossMux is a community fork of CrossPoint Reader that turns the device into more than a reader — it adds an Apps hub of mini-games and tools.  Xteink X4/X3 CrossPoint 完整的简体中文支持固件。
+    A CJK-optimized open-source ESP32 e-ink reader with EPUB support, lightweight apps, reading analytics, and multi-device support.  面向中文用户与 CJK 阅读体验深度优化的开源 ESP32 墨水屏阅读器，支持 EPUB、轻量应用、阅读统计及多设备适配。
 url: https://github.com/0x1abin/crossmux
 ---
 
@@ -33,7 +33,7 @@ url: https://github.com/0x1abin/crossmux
 | Device | Chip | Published channels |
 |---|---|---|
 | Xteink X3 / X4 (shared image) | ESP32-C3 | Stable, Nightly |
-| Seeed Sticky | ESP32-S3 | Nightly |
+| [Seeed Sticky](https://www.seeedstudio.com/sticky/?utm_source=partner&utm_medium=crossmux&utm_campaign=readme) | ESP32-S3 | Nightly |
 | Xteink X4 Pro | ESP32-S3 | Nightly |
 | M5Stack Paper Mono | ESP32-S3 | Nightly |
 | eego A4 | ESP32-S3 | Nightly |

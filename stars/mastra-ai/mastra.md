@@ -1,6 +1,6 @@
 ---
 project: mastra
-stars: 28187
+stars: 28349
 description: |-
     Mastra is the modern TypeScript framework for AI-powered applications and agents.
 url: https://github.com/mastra-ai/mastra

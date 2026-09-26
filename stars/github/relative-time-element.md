@@ -1,6 +1,6 @@
 ---
 project: relative-time-element
-stars: 4033
+stars: 4036
 description: |-
     Web component extensions to the standard <time> element.
 url: https://github.com/github/relative-time-element

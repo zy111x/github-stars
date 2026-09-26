@@ -1,6 +1,6 @@
 ---
 project: StakeVladDracula
-stars: 463
+stars: 462
 description: |-
     StakeVladDracula pierces all.
 url: https://github.com/Herm-Studio/StakeVladDracula

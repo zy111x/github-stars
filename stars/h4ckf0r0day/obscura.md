@@ -1,6 +1,6 @@
 ---
 project: obscura
-stars: 27394
+stars: 27949
 description: |-
     The headless browser for AI agents and web scraping
 url: https://github.com/h4ckf0r0day/obscura

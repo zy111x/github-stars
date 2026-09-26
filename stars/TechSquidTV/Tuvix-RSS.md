@@ -1,6 +1,6 @@
 ---
 project: Tuvix-RSS
-stars: 74
+stars: 76
 description: |-
     A self-hostable RSS aggregator for the masses
 url: https://github.com/TechSquidTV/Tuvix-RSS
@@ -107,7 +107,7 @@ Visit `http://localhost:5173` and log in with your admin credentials.
 
 ### Development Setup
 
-**Prerequisites:** Node.js 20+ (with pnpm), SQLite3
+**Prerequisites:** Node.js 24+ (with pnpm), SQLite3
 
 ```bash
 pnpm install
