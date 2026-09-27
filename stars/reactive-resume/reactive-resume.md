@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 43198
+stars: 43448
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/reactive-resume/reactive-resume
 ---
@@ -130,7 +130,7 @@ Technology
 
 Framework
 
-TanStack Start (React 19, Vite)
+TanStack Router (React 19, Vite)
 
 Runtime
 
@@ -196,7 +196,11 @@ PDF and JSON export options
 Self-Hosting
 ------------
 
-Reactive Resume can be self-hosted using Docker. The stack includes:
+Reactive Resume supports Docker and Vercel Hobby.
+
+Vercel provisions Neon PostgreSQL, private Blob storage, and Upstash Redis through its deployment wizard. Supply two persistent secrets, then deploy. See the Vercel guide for setup, limits, and optional SMTP/OAuth configuration.
+
+For Docker, the stack includes:
 
 -   **PostgreSQL** — Database for storing user data and resumes
 -   **SeaweedFS** (optional) — S3-compatible storage for file uploads

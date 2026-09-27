@@ -1,6 +1,6 @@
 ---
 project: markitdown
-stars: 185654
+stars: 187174
 description: Python tool for converting files and office documents to Markdown.
 url: https://github.com/microsoft/markitdown
 ---
@@ -37,7 +37,7 @@ Markdown is extremely close to plain text, with minimal markup or formatting, bu
 Prerequisites
 -------------
 
-MarkItDown requires Python 3.10 or higher. It is recommended to use a virtual environment to avoid dependency conflicts.
+MarkItDown requires Python 3.10 through 3.14. It is recommended to use a virtual environment to avoid dependency conflicts.
 
 With the standard Python installation, you can create and activate a virtual environment using the following commands:
 

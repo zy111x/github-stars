@@ -1,6 +1,6 @@
 ---
 project: ai-engineering-from-scratch
-stars: 55029
+stars: 58374
 description: Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
@@ -87,6 +87,12 @@ I want to prepare for a Claude certification
 Certification onboarding
 
 Certification Academy
+
+I want to prepare for the MCP Associate (MCPA)
+
+MCPA onboarding
+
+MCPA track
 
 Not sure where you fit? Use the `start-learning` placement tutor or the website prerequisites guide.
 
@@ -293,6 +299,14 @@ Use the AI-native GitHub onboarding guide with Claude Code, Codex, ChatGPT, Curs
 
 The academy is independent study material based on public exam objectives. It is not affiliated with Anthropic, does not reproduce live exam questions, and cannot guarantee a passing score.
 
+### Prepare for the MCP Associate (MCPA) certification
+
+The MCPA Certification Curriculum is a free, open-source preparation program for the Model Context Protocol Associate exam from the Agentic AI Foundation, delivered through Linux Foundation Training. Its 34 lessons teach the stateless 2026-07-28 protocol across the five exam domains: per-request `_meta` and `server/discover` in place of the old handshake, multi round-trip requests, subscriptions, caching, the tasks and MCP Apps extensions, OAuth authorization, and the registry and SDK tiers. Every lesson ships a runnable standard-library lab whose transcript is checked for the current wire shape, and the track adds a diagnostic, a capstone, and three full-length original practice exams whose question mix follows the published blueprint weights.
+
+Use the AI-native GitHub onboarding guide with Claude Code, Codex, ChatGPT, Cursor, or another agent. Run `mcpa-certification` in Codex, `/mcpa-certification` in Claude Code, or ask another host to use `mcpa-certification`. It creates a persistent route in `MCPA-CERTIFICATION.md`, teaches one step at a time, runs the real labs, and gives artifact-based feedback. The same curriculum is available on the MCPA track page.
+
+This curriculum is independent study material based on public exam objectives. It is not affiliated with the Agentic AI Foundation or the Linux Foundation, does not reproduce live exam questions, and cannot guarantee a passing score.
+
 ### The learning skills
 
 Skill
@@ -322,6 +336,10 @@ Focused Agent Skills tutor. Creates `AGENT-SKILLS-LEARNING.md`, teaches lessons 
 `claude-certification`
 
 Certification tutor. Chooses CCAO-F, CCDV-F, CCAR-F, or CCAR-P; teaches each lesson; runs labs; reviews artifacts; administers diagnostics and mocks; saves progress.
+
+`mcpa-certification`
+
+MCPA tutor. Follows the 34-lesson `mcpa-f` route on the 2026-07-28 protocol; teaches each lesson; runs labs and the wire checker; administers the diagnostic and three mocks; saves progress.
 
 `find-your-level`
 
@@ -4904,7 +4922,7 @@ Plug them into Claude, Cursor, Codex, OpenClaw, Hermes, or any agent that reads 
 
 Two skill sets, two installers:
 
-**The learning skills** (`start-learning`, `learn`, `course-guide`, `learn-mcp`, `learn-agent-skills`, `claude-certification`, `find-your-level`, and `check-understanding`) live under `skills/` and install into a supported skill-capable host with one command. Installation needs Node.js and `npx`, but not a repository clone or Python:
+**The learning skills** (`start-learning`, `learn`, `course-guide`, `learn-mcp`, `learn-agent-skills`, `claude-certification`, `mcpa-certification`, `find-your-level`, and `check-understanding`) live under `skills/` and install into a supported skill-capable host with one command. Installation needs Node.js and `npx`, but not a repository clone or Python:
 
 npx skills add rohitg00/ai-engineering-from-scratch
 

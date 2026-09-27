@@ -1,7 +1,7 @@
 ---
 project: Scrapling
-stars: 82423
-description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ
+stars: 83891
+description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev
 url: https://github.com/D4Vinci/Scrapling
 ---
 
@@ -72,6 +72,10 @@ Swiftproxy provides scalable residential proxies with 80M+ IPs across 195+ count
 NiuProxy — Rotating residential proxies from $0.35/GB. Use exclusive Scrapling code PAY2 for 10% off your recharge.
 
 VoidMob: 4G/5G mobile proxies on real SIMs and devices. Dedicated or shared, sticky, rotating, p0f fingerprint presets, API/MCP and full protocol support. SCRAPLING20 for 20% off.
+
+Byteful supplies ethical residential, mobile, ISP, and datacenter proxies, plus scraping and AI automation tools. Use code SCRAPLING10: 10% off residential proxies.
+
+ProxyLane: 28M clean residential IPs for reliable scraping/browser automation. Non-expiring traffic from $2/GB. 195 countries. Sticky/rotating sessions. City/ISP/ASN targeting. $1.95/350MB trial. Code SCRAPEANDTAKE: 25% off.
 
 _Do you want to show your ad here? Click here_
 
