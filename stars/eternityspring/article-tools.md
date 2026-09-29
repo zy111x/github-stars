@@ -1,6 +1,6 @@
 ---
 project: article-tools
-stars: 825
+stars: 826
 description: |-
     一套封面制作和x、微信公众号排版工具
 url: https://github.com/eternityspring/article-tools

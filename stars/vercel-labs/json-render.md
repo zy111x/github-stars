@@ -1,6 +1,6 @@
 ---
 project: json-render
-stars: 18314
+stars: 18410
 description: |-
     The Generative UI framework
 url: https://github.com/vercel-labs/json-render

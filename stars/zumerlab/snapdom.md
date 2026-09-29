@@ -1,6 +1,6 @@
 ---
 project: snapdom
-stars: 8159
+stars: 8168
 description: |-
     High-performance engine for capturing, modifying, and converting DOM elements into any format.
 url: https://github.com/zumerlab/snapdom
@@ -183,9 +183,24 @@ const result = await snapdom(card, {
 
 [All options](https://snapdom.dev/docs/options/) include shadows, transforms, fonts, CORS, fallbacks and layout reconciliation.
 
+### Export a long page
+
+With the default SVG engine, PNG file exports automatically handle captures beyond the browser's canvas limits. Capture once, then download one full-resolution file or get its Blob:
+
+```js
+const capture = await snapdom(article);
+await capture.download({ format: 'png', scale: 2 });
+// Or upload/store the file yourself:
+const blob = await capture.toBlob({ format: 'png', scale: 2, dpr: 1 });
+```
+
+SnapDOM renders the frozen capture in windows and encodes them into one PNG. It preserves the requested dimensions, including shadows and padding, without allocating a canvas for the whole image. `download()` always uses DPR 1; `toBlob()` uses the capture's DPR unless you override it. Ordinary-sized exports use the native encoder.
+
+This requires `CompressionStream`; older browsers keep the existing downscale and warning. Very large files still take time and memory to encode, and the application opening them has its own image limits.
+
 ### Export a long page in pieces
 
-A canvas cannot be taller than 16,384px in Safari or 32,767px in Chrome and Firefox. Past that, a single image is scaled down to fit. To keep full resolution, capture once and export it in pieces with `crop`:
+`toCanvas()`, `toPng()` and JPEG/WebP exports still use a single canvas and scale down past SnapDOM's size guards (16,384px per side in Safari, 32,767px in Chrome/Firefox, plus an area limit). When you need separate canvases, use `crop`:
 
 ```js
 const capture = await snapdom(article);
@@ -326,7 +341,7 @@ Capture-affecting plugins suspend memoization unless they declare `pure: true`. 
 - SnapDOM needs a browser DOM. A server-side Node.js process needs a browser environment to run it.
 - Cross-origin images, fonts and stylesheets need readable resources or an appropriate proxy. `crossorigin` does not grant access unless the server also allows it. Cross-origin iframes use placeholders.
 - SVG output includes HTML inside `<foreignObject>`. It is suitable for browsers; support varies in other SVG viewers and document tools.
-- Output depends on browser rendering and canvas limits; for tall pages see [Export a long page in pieces](#export-a-long-page-in-pieces). Safari may fall back to PNG when WebP encoding is unavailable.
+- Output depends on browser rendering and image limits; for tall PNG files see [Export a long page](#export-a-long-page). Safari may fall back to PNG when WebP encoding is unavailable.
 - Canvas, video and other changing surfaces are captured fresh. JavaScript CSSOM edits are not observable automatically; use `invalidate: true` after them.
 - Core captures visible input values. Semantic plugins redact sensitive field values in their text/map output, but their attached image needs `redactInputs` or `exclude` if you want those pixels hidden too.
 
@@ -386,6 +401,7 @@ npm run test:pack
 <a href="https://github.com/pedrocateexte" title="pedrocateexte"><img src="https://avatars.githubusercontent.com/u/207524750?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="pedrocateexte"/></a>
 <a href="https://github.com/domialex" title="domialex"><img src="https://avatars.githubusercontent.com/u/4694217?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="domialex"/></a>
 <a href="https://github.com/stypr" title="stypr"><img src="https://avatars.githubusercontent.com/u/6625978?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="stypr"/></a>
+<a href="https://github.com/jamalkamaladdin" title="jamalkamaladdin"><img src="https://avatars.githubusercontent.com/u/256541632?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="jamalkamaladdin"/></a>
 <a href="https://github.com/mon-jai" title="mon-jai"><img src="https://avatars.githubusercontent.com/u/91261297?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="mon-jai"/></a>
 <a href="https://github.com/puneetdixit200" title="puneetdixit200"><img src="https://avatars.githubusercontent.com/u/236133619?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="puneetdixit200"/></a>
 <a href="https://github.com/RexSkz" title="RexSkz"><img src="https://avatars.githubusercontent.com/u/27483702?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="RexSkz"/></a>
@@ -394,7 +410,6 @@ npm run test:pack
 <a href="https://github.com/simon1uo" title="simon1uo"><img src="https://avatars.githubusercontent.com/u/60037549?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="simon1uo"/></a>
 <a href="https://github.com/titoBouzout" title="titoBouzout"><img src="https://avatars.githubusercontent.com/u/64156?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="titoBouzout"/></a>
 <a href="https://github.com/ZiuChen" title="ZiuChen"><img src="https://avatars.githubusercontent.com/u/64892985?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="ZiuChen"/></a>
-<a href="https://github.com/adajoy" title="adajoy"><img src="https://avatars.githubusercontent.com/u/26210079?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="adajoy"/></a>
 </p>
 <!-- CONTRIBUTORS:END -->
 

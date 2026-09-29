@@ -1,6 +1,6 @@
 ---
 project: CloakBrowser
-stars: 31713
+stars: 31783
 description: |-
     Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.
 url: https://github.com/CloakHQ/CloakBrowser

@@ -1,6 +1,6 @@
 ---
 project: morphicons
-stars: 2697
+stars: 2716
 description: |-
     Any icon morphs into any other — universal morphing for stroke-based icons with spring physics. Zero dependencies, ~7 KB gzip.
 url: https://github.com/guillermolg00/morphicons

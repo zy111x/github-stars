@@ -1,8 +1,8 @@
 ---
 project: microsandbox
-stars: 8441
+stars: 8471
 description: |-
-    🧱 fast branchable microVM for any workload
+    🧱 easy, fast, programmable and local-first microVM runtime
 url: https://github.com/superradcompany/microsandbox
 ---
 

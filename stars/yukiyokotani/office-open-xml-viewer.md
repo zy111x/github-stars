@@ -1,6 +1,6 @@
 ---
 project: office-open-xml-viewer
-stars: 813
+stars: 817
 description: |-
     A browser-based viewer for Office Open XML documents that renders to an HTML Canvas element.
 url: https://github.com/yukiyokotani/office-open-xml-viewer
@@ -951,7 +951,7 @@ file without uploading it.
 | | Word wrap / no wrap | ✅ |
 | | Japanese kinsoku line breaking (`a:pPr@eaLnBrk`, §21.1.2.2.7 — 行頭/行末禁則, shared core engine) | ✅ |
 | | Multi-column text body (`numCol` / `spcCol` — balanced flow) | ✅ |
-| | Theme object-default inheritance (`<a:objectDefaults><a:txDef\|spDef>` bodyPr fallback) | ✅ |
+| | Theme object defaults (`<a:objectDefaults>`) treated as new-object templates only, as PowerPoint does | ✅ |
 | **Tables** | Cells, rows, columns | ✅ |
 | | Cell merges (horizontal / vertical) | ✅ |
 | | Cell borders | ✅ |

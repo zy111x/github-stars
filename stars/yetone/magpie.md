@@ -1,6 +1,6 @@
 ---
 project: magpie
-stars: 992
+stars: 1930
 description: |-
     Every agent's model. One place. Codex on DeepSeek, Claude Code on Kimi, from the menu bar.
 url: https://github.com/yetone/magpie
@@ -27,6 +27,7 @@ and there is a terminal version (`magpie tui`) and a plain CLI.
     Codex         gpt-6-astra   effort medium
     Gemini CLI    gemini-3.1-pro
     OpenCode      anthropic/claude-sonnet-5   small anthropic/claude-haiku-4-5
+    MiMo Code     anthropic/claude-sonnet-5
     Pi            openrouter/z-ai/glm-5.2:batch
     Goose         anthropic/claude-sonnet-5
     Cursor        auto
@@ -52,8 +53,9 @@ and there is a terminal version (`magpie tui`) and a plain CLI.
   use its models through the gateway, with nothing copied and no key to
   paste.
 - **Providers with one field.** Pick a preset (Anthropic, OpenAI, Gemini,
-  DeepSeek, Kimi, GLM, MiniMax, Qwen, Mistral, Groq, xAI, OpenRouter,
-  Together, Fireworks, SiliconFlow, AiHubMix, 302.AI, Ollama, LM Studio…),
+  DeepSeek, Kimi, GLM, MiniMax, StepFun, Qwen, Baidu Qianfan Token Plan, Tencent Cloud Token Plan,
+  Huawei Cloud MaaS, Volcengine Ark, Mistral, Groq, xAI, OpenRouter, Together,
+  Fireworks, SiliconFlow, NVIDIA NIM, ModelScope, AiHubMix, 302.AI, Ollama, LM Studio…),
   paste a key, done. Custom vendors need a name and a base URL. magpie never
   reads keys from your shell environment.
 - **Real model lists, nothing compiled in.** With a key in hand magpie asks
@@ -73,9 +75,11 @@ and there is a terminal version (`magpie tui`) and a plain CLI.
 | Agent        | File                              | Fields          |
 | ------------ | --------------------------------- | --------------- |
 | Claude Code  | `~/.claude/settings.json`         | provider, model, opus/sonnet/haiku/fable (through magpie) |
+| Claude Desktop | `Claude/` + `Claude-3p/configLibrary/` in `~/Library/Application Support` (`%LOCALAPPDATA%` on Windows, `~/.config` on Linux) | provider (its third-party gateway mode: Code and Cowork on magpie, no Anthropic sign-in; restart Desktop) |
 | Codex        | `~/.codex/config.toml`            | provider, model, effort |
 | Gemini CLI   | `~/.gemini/settings.json`, `~/.gemini/.env` | auth, model |
 | OpenCode     | `~/.config/opencode/opencode.json(c)` | model, small |
+| MiMo Code    | `~/.config/mimocode/mimocode.json(c)` | model, small |
 | Pi           | `~/.pi/agent/settings.json`       | model           |
 | Goose        | `~/.config/goose/config.yaml`     | model           |
 | Cursor CLI   | `~/.cursor/cli-config.json`       | model           |
@@ -83,16 +87,21 @@ and there is a terminal version (`magpie tui`) and a plain CLI.
 | Crush        | `~/.config/crush/crush.json`      | large, small    |
 | DeepSeek Harness (dsh) | `~/.dsh/config.yaml` (`$DSH_HOME`) | model |
 | Command Code | `~/.commandcode/settings.json` (+ `providers.json`) | model |
+| fx           | `~/.fx/settings.json`             | model (a keyless `magpie` provider) |
 | omp (oh-my-pi) | `~/.omp/agent/config.yml` (+ `models.yml`) | model |
 | Devin        | `~/.config/devin/config.json` (`%APPDATA%\devin\config.json` on Windows) | model |
 | Hermes Agent | `~/.hermes/config.yaml` (`$HERMES_HOME`) | model |
+| Kimi Code    | `~/.kimi/config.toml` (`$KIMI_SHARE_DIR`) | model (a `magpie` provider; magpie's models in Kimi's /model) |
 | Cline (CLI)  | `~/.cline/data/settings/providers.json` (`$CLINE_DIR`) | model, effort (magpie takes its openai-compatible provider) |
 | Qoder (CLI)  | `~/.qoder/settings.json` (`$QODER_CONFIG_DIR`) | model, effort (a `magpie` custom provider; needs a Qoder plan with BYOK) |
+| Qoder CN (CLI) | `~/.qoder-cn/settings.json` (`$QODERCN_CONFIG_DIR`) | model, effort (as Qoder; its own accounts, a Qoder CN plan with BYOK) |
 | Grok Build   | `~/.grok/config.toml` (`$GROK_HOME`) | model, effort |
 | ZCode        | `~/.zcode/v2/config.json`         | provider (magpie's models in ZCode's picker) |
+| WorkBuddy    | `~/.workbuddy/models.json` (`$WORKBUDDY_CONFIG_DIR`) | provider (magpie's models in WorkBuddy's picker) |
+| OpenHanako   | `~/.hanako/provider-catalog.json` + `agents/<id>/config.yaml` (`$HANA_HOME`; its local API while it runs) | model (the primary agent's; magpie's models as a provider) |
 | Alma         | Alma's local API (`localhost:23001`, while Alma runs) | model (Alma's default; magpie's models as a provider) |
 
-Provider-scoped agents (OpenCode, Pi, Goose, Crush, omp, Hermes Agent) take `provider/model`.
+Provider-scoped agents (OpenCode, MiMo Code, Pi, Goose, Crush, omp, Hermes Agent) take `provider/model`.
 Only agents that are installed or configured are shown.
 
 ## Providers and the gateway
@@ -121,6 +130,16 @@ Anthropic-compatible base), or both, plus `responses=` when the vendor has a
 separate Responses endpoint, `catalog=` to borrow a models.dev list, and
 `models=` to name the models to expose. Anything a preset does not know can
 be overridden the same way.
+
+Baidu Qianfan's [Token Plan Personal](https://cloud.baidu.com/doc/qianfan/s/Dmrabu8b6)
+is available as `qianfan-token-plan`, with its dedicated Chat Completions,
+Responses and Anthropic Messages endpoints. Add it with
+`magpie provider add qianfan-token-plan <personal-plan-api-key>`.
+`qianfan-code-latest` follows the model selected in the Qianfan console;
+explicit model IDs such as `glm-5.3` select that model directly. The preset
+uses the documented plan models because the plan has no model-list endpoint;
+new model IDs can also be entered by hand. Use a Token Plan Personal key:
+Coding Plan and enterprise plans have different endpoints.
 
 ### Routing groups
 
@@ -165,8 +184,9 @@ An agent you have signed in to is a subscription with models behind it, so
 magpie offers it as a provider too. Claude Code (an OAuth login in the macOS
 Keychain or `~/.claude/.credentials.json`), Codex (a ChatGPT login in
 `~/.codex/auth.json`), Copilot (a GitHub login in
-`~/.config/github-copilot/apps.json`) and Devin (`devin auth login`, kept in
-`~/.local/share/devin/credentials.toml`) appear in `magpie providers` and in
+`~/.config/github-copilot/apps.json`), Devin (`devin auth login`, kept in
+`~/.local/share/devin/credentials.toml`) and Qoder (signed in from magpie with
+its OAuth device flow, kept in magpie's own config) appear in `magpie providers` and in
 the Providers tab as *signed in as …*, with their models spelled
 `claude/claude-sonnet-5`, `codex/gpt-5.5`, `copilot/claude-sonnet-4.5` or
 `devin/swe-2-max` in every other agent's picker. magpie reads the agent's own credentials each
@@ -186,10 +206,11 @@ Code process; Pi, OpenCode and every other agent use this path automatically.
 The generated harness stays out of Anthropic's system-prompt classifier while
 its instructions remain part of the user context. This requires Claude Code
 to be installed and signed in.
-Cursor, Grok (SuperGrok, through Grok Build) and Devin subscriptions likewise run through their own CLIs —
-none of them has an endpoint a borrowed key can be sent to — with Devin
-driven over ACP (`devin acp`) in a home of magpie's own that keeps only the
-caller's MCP tools and shares just the sign-in.
+A Grok subscription (SuperGrok, signed in with Grok Build) talks straight
+to the Responses API the grok CLI uses, a Devin subscription to the API the
+devin CLI uses, and a Cursor subscription to the agent API cursor-agent
+uses, each with the CLI's sign-in and the caller's tools passed through
+(Cursor's model calls them as MCP tools; none of Cursor's own tools run).
 Google sign-ins — Gemini CLI's and Antigravity's — talk to Google's Code
 Assist API directly: magpie reads Gemini CLI's own login from `~/.gemini` or
 signs one in itself, and refreshes the token in memory. Google no longer
@@ -354,6 +375,8 @@ gateway translates.
 magpie                          # open the app: a window plus the menu bar icon
 magpie tray                     # menu bar icon only (use this in your login items)
 magpie tui                      # the same thing, in the terminal
+magpie web                      # the app's window in a browser (WSL, a server over SSH); --lan, --addr, --no-open
+                                # (a new key each run; MAGPIE_WEB_KEY keeps one, for a page run as a service)
 magpie ls                       # list every agent and its current settings
 magpie claude opus              # set a model (agent names accept prefixes: cc, oc, gem …)
 magpie codex gpt-5.6-sol
@@ -366,6 +389,7 @@ magpie claude haiku ""          # back to the main model
 magpie gemini auth api-key
 magpie opencode anthropic/claude-sonnet-5
 magpie oc small anthropic/claude-haiku-4-5
+magpie mimo anthropic/claude-sonnet-5
 
 magpie save work                # snapshot everything as a profile
 magpie use work                 # switch back
@@ -406,10 +430,16 @@ magpie backup                   # writes magpie.magpie-backup, asks for a passph
 magpie backup --no-keys ~/b.magpie-backup   # the same with no API keys in it
 magpie restore magpie.magpie-backup         # on the other machine
 magpie restore --no-agents b.magpie-backup  # providers, settings, profiles; agents left as they are
+magpie restore --no-library b.magpie-backup # the library here left as it is
 ```
 
 A backup holds your providers (with their keys, unless `--no-keys`), the
-pictures picked for them, the settings, the profiles and every agent's model.
+pictures picked for them, the settings, the profiles, every agent's model and
+the library (unless `--no-library`): the instruction sets, the MCP servers and
+the skills with their files (a file over 2 MB is left out). Without keys, a
+server's environment variables and headers that look like a key go empty.
+Restoring the library replaces the one there — what it replaces is kept with
+the library's backups — and writes it into the agents on that machine.
 It is encrypted on your machine (AES-256-GCM, the key derived from the
 passphrase with PBKDF2-SHA256); nothing in it can be read without the
 passphrase. Restoring replaces providers with the same id and adds the rest;
@@ -428,6 +458,16 @@ stdin.
 - `~/.cache/magpie/models/<provider>.json` — model lists fetched from vendors
 
 `XDG_CONFIG_HOME` and `XDG_CACHE_HOME` are respected.
+
+## Counting users
+
+Once a day, a running magpie (the app, or `magpie serve`) sends one event to
+PostHog so we know how many people use it: a random id made up on your
+computer (`~/.config/magpie/install-id`), magpie's version, and your system
+and architecture. Nothing else goes: no accounts, keys, providers, models,
+prompts or usage. Turn it off in Settings → Privacy → Count me as a user, or
+with `DO_NOT_TRACK=1` or `MAGPIE_NO_STATS=1`. Builds from source never send
+it. The code is [internal/stats](internal/stats/stats.go).
 
 ## Community
 

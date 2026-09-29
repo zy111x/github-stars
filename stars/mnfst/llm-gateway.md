@@ -1,6 +1,6 @@
 ---
 project: llm-gateway
-stars: 7542
+stars: 7544
 description: |-
     Connect Your Agents And Harnesses With Any Provider 🦚
 url: https://github.com/mnfst/llm-gateway
@@ -18,16 +18,6 @@ AI Agents that don't break
 </p>
 
 ![manifest-gh](https://github.com/user-attachments/assets/7dd74fc2-f7d6-4558-a95a-014ed754a125)
-
----
-
-<p align="center">
-  <strong>🦚 Keep your apps up with self-healing APIs</strong><br/>
-  <br/>
-  Manifest fixes API errors in real time, so your apps, workflows and agents keep running instead of breaking on failed requests.<br/>
-  <br/>
-  <a href="https://dashboard.manifest.build/signup" style="display: inline-block; padding: 10px 24px; background-color: #0066cc; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">Get started</a>
-</p>
 
 ---
 
@@ -57,12 +47,6 @@ AI Agents that don't break
 <p align="center">
 <a href="https://trendshift.io/repositories/12890" target="_blank"><img src="https://trendshift.io/api/badge/repositories/12890" alt="mnfst%2Fllm-gateway | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
-
-> ### 🦚 Meet Manifest, the self-healing layer for APIs
->
-> Manifest fixes failed API requests in real time, before they break your app. This open-source LLM gateway is a Manifest product and stays maintained.
->
-> **[Try Manifest](https://dashboard.manifest.build/signup)**
 
 ## What is Manifest LLM Gateway?
 

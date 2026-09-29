@@ -1,6 +1,6 @@
 ---
 project: evilcharts
-stars: 2976
+stars: 3030
 description: |-
     EvilCharts is an open-source chart UI website built with shadcn and Recharts, beautifully designed and handcrafted.
 url: https://github.com/legions-developer/evilcharts

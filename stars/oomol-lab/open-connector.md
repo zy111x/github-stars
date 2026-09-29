@@ -1,6 +1,6 @@
 ---
 project: open-connector
-stars: 5902
+stars: 5913
 description: |-
     Open-source auth gateway connecting 1500+ SaaS providers to AI agents through SDK, CLI, MCP, HTTP, and OpenAPI.
 url: https://github.com/oomol-lab/open-connector
@@ -37,7 +37,7 @@ prebuilt Actions to agents and applications.
   <tr>
     <td width="33.33%" valign="top">Managed OAuth and hosted runtime, ready to use. No deployment or OAuth app setup.</td>
     <td width="33.33%" valign="top">Run locally or on your own infrastructure with Docker or Node.js. You manage storage and OAuth apps.</td>
-    <td width="33.33%" valign="top"><strong>Cloudflare</strong>, <strong>Fly.io</strong>, <strong>RepoCloud</strong>, <strong>nibrun</strong>, and more.</td>
+    <td width="33.33%" valign="top"><strong>Cloudflare</strong>, <strong>Fly.io</strong>, <strong>RepoCloud</strong>, <strong>nibrun</strong>, <strong>NEXUS AI</strong>, and more.</td>
   </tr>
   <tr>
     <td width="33.33%" align="center">🚀 <a href="https://oomol.com/docs/connector-saas/"><strong>OOMOL Hosted</strong></a></td>
@@ -242,6 +242,7 @@ Issues and pull requests are welcome.
 - [Quickstart](docs/quickstart.md)
 - [Developer tools](docs/sdk-cli.md)
 - [Programmatic connection management](docs/programmatic-connections.md)
+- [Connect your clients: MCP, CLI, and SDK](docs/client-onboarding.md)
 - [Gmail OAuth and SDK tutorial](docs/gmail-oauth-sdk.md)
 - [Instagram OAuth and Actions](docs/instagram-oauth.md)
 - [Runtime API and MCP](docs/runtime-api.md)

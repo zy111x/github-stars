@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 2473
+stars: 2486
 description: |-
     Self-hosted MCP gateway and control plane for connecting, controlling, and operating MCP servers.
 url: https://github.com/samanhappy/mcphub
@@ -64,7 +64,7 @@ It works with MCP clients such as Claude Code, Cursor, Cherry Studio, OpenWebUI,
 ### Prerequisites
 
 - **Docker** (recommended) — the fastest way to run MCPHub; all commands below use it
-- **Node.js** `^18.0.0 || >=20.0.0` and **pnpm** `10.12.4` — only needed to run from source or develop locally (see [Local Development](#local-development))
+- **Node.js** `>=20.0.0` and **pnpm** `10.12.4` — only needed to run from source or develop locally (see [Local Development](#local-development))
 
 ### Start with Docker
 

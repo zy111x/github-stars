@@ -1,6 +1,6 @@
 ---
 project: forgeui
-stars: 201
+stars: 207
 description: |-
     A library of React components for smooth, fast front-end development.
 url: https://github.com/AmanShakya0018/forgeui

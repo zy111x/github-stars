@@ -1,6 +1,6 @@
 ---
 project: void
-stars: 150
+stars: 151
 description: |-
     null
 url: https://github.com/void-sdk/void
