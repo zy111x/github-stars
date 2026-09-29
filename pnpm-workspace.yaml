@@ -1,14 +1,17 @@
+minimumReleaseAgeExcludePrune: true
+minimumReleaseAgeExclude:
+  - '@modelcontextprotocol/core@2.2.0'
+  - '@modelcontextprotocol/server@2.2.0'
+
+trustPolicy: no-downgrade
+shellEmulator: true
+
 allowBuilds:
   core-js-pure: true
   esbuild: true
   sharp: true
   simple-git-hooks: true
   workerd: true
-minimumReleaseAgeExclude:
-  - eslint@10.7.0
-shellEmulator: true
-
-trustPolicy: no-downgrade
 
 onlyBuiltDependencies:
   - core-js-pure
