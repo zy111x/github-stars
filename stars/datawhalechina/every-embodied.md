@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 3852
+stars: 3914
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -156,6 +156,7 @@ GR00T N1.5 家庭长时序操作，四视角，195 秒
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-09-29\]** 更新 Booster K1 网页 MuJoCo 本机部署与 AMP 训练教程：区分上游在线 demo 与 Windows 本机静态托管，标明 K1 网页模型和 `policy.bin` 的上游目录，补充 MIME 兼容服务器、获授权后的 GitHub Pages 发布步骤及 Linux + NVIDIA 可选训练指南。
 -   **\[2026-09-05\]** 更新 Microduck 双足强化学习教程：新增 BallKick 非对称 actor-critic、奖励与随机化拆解，提供独立训练和 ONNX 导出命令，并接入官方 Microduck Sandbox，讲清 MuJoCo WebAssembly、onnxruntime-web、Three.js 与 50 Hz 浏览器闭环；本机实测右脚策略成功触球并保存画面与 QA 记录。
 -   **\[2026-09-04\]** 新增 UniCross 统一跨技能灵巧操作导读：归入强化学习与灵巧操作章节，系统拆解抓取、搬移、手内旋转和手内平移如何共享手-物关系观测、增量动作空间与奖励结构，十个 PPO 专家如何通过 DAgger 蒸馏为单一策略，以及未见物体、扰动、Allegro / MANO / Sharpa Wave 跨手型和长时程组合实验；同时更新 Microduck 双足强化学习教程，加入由同一 walking policy 实时执行的 12 秒命令编舞视频和可复现录制参数。
 -   **\[2026-08-29\]** 新增 AMD Physical AI 仿真基准与长程视频复现教程：汇总 Every Embodied、RoboCasa365、DexJoCo、DISCOVERSE、RoboWits 和 Unitree G1 的 AMD ROCm 运行链路、正式评估协议与多视角视频，并提供 DexJoCo 双臂河内塔和 RoboCasa365 长程装餐任务的完整成功回合。
@@ -293,7 +294,7 @@ ROS/ROS2 通信机制、Build123d / Text-to-CAD / ForgeCAD / Shape Your Body 机
 
 **6\. 运动与控制**
 
-路径规划 (A\*/RRT)、轨迹优化、PID 与 MPC 控制、模仿学习 (IL)、ACT复现、Hand-Eye 标定、AnyGrasp 抓取算法、灵巧手操作
+路径规划 (A\*/RRT)、轨迹优化、PID 与 MPC 控制、模仿学习 (IL)、ACT复现、Booster K1 网页 MuJoCo 本机部署与 AMP 训练、Hand-Eye 标定、AnyGrasp 抓取算法、灵巧手操作
 
 🚧
 

@@ -1,6 +1,6 @@
 ---
 project: Final2x
-stars: 7335
+stars: 7332
 description: a cross-platform image super-resolution tool
 url: https://github.com/EutropicAI/Final2x
 ---
@@ -8,52 +8,53 @@ url: https://github.com/EutropicAI/Final2x
 Final2x
 =======
 
-A cross-platform image super-resolution tool.
+A cross-platform image super-resolution tool for Windows, macOS, and Linux.
 
--   News🎉: Final2x v4.0.0 is now available! It uses the cccv backend, supporting custom models and more. See custom model demo.
--   News🎉: Final2x v3.0.0 is now available, support Nvidia 50 series GPUs now!
+Use built-in models or load your own. See the custom model demo to get started.
 
-### Screenshots
+🖼️ Screenshots
+---------------
 
-### Installation
+📦 Installation
+---------------
 
-##### Download the latest release from here.
+Download the latest release for your platform.
 
-#### Windows
+### 🪟 Windows
 
-You can also use a package manager like winget or scoop to install and upgrade. Please note that the versions available through package managers may not always be the latest.
+Install from the release page, or use a package manager such as winget or Scoop. Package manager versions may lag behind the latest release.
 
-#### MacOS
+### 🍎 macOS
 
-sudo spctl --master-disable
-# Disable Gatekeeper, then allow applications downloaded from anywhere in System Preferences > Security & Privacy > General
+If macOS blocks the app on first launch, run the following command in Terminal after placing it in `/Applications`:
+
 xattr -cr /Applications/Final2x.app
 
-In first time, you need to run the command above in terminal to allow the app to run.
+### 🐧 Linux
 
-#### Linux
-
-For Linux User, you need to install the dependencies first.
-
-Make sure you have Python >= 3.9 and PyTorch >= 2.0 installed
+Install Python >= 3.10 and PyTorch >= 2.0, then install the backend and required system libraries. On Debian or Ubuntu:
 
 pip install Final2x-core
-Final2x-core -h # check if the installation is successful
-apt install -y libomp5 xdg-utils
+Final2x-core -h # Verify the backend installation
+sudo apt install -y libomp5 xdg-utils
 
-### Reference
+🧩 References
+-------------
 
-The Python CLI and desktop backend now live in `core` and are released with the desktop app under the same version number.
+The Python CLI and desktop backend live in `core` and share the desktop app's version number.
 
-The following references were referenced in the development of this project:
+This project builds on the following open-source projects:
 
+-   cccv — image restoration and super-resolution backend
 -   naive-ui
 -   electron-vite
 
-### License
+📄 License
+----------
 
 This project is licensed under the BSD 3-Clause - see the LICENSE file for details.
 
-### Acknowledgements
+💙 Acknowledgements
+-------------------
 
 Feel free to reach out to the project maintainers with any questions or concerns~

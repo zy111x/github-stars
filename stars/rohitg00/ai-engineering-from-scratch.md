@@ -1,6 +1,6 @@
 ---
 project: ai-engineering-from-scratch
-stars: 58374
+stars: 63158
 description: Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
@@ -8,8 +8,15 @@ url: https://github.com/rohitg00/ai-engineering-from-scratch
 **Read in your language:** Español · Français · Português · Deutsch · Italiano · 简体中文 · 日本語 · 한국어 · हिन्दी · العربية · Русский · Türkçe  
 Translated landing pages, committed to the repo. English is canonical; lesson pages are machine-translated on the `translations` branch. See docs/i18n.md.
 
-From the creator of Agent Memory - #1 Persistent memory ⭐ which naturally works with any agents or chat assistants.
--------------------------------------------------------------------------------------------------------------------
+### Sponsors
+
+  
+**Thank you to our sponsors.**
+
+Your support keeps every lesson free and open source.
+
+See all supporters  
+Become a sponsor  
 
 ```
 ░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
@@ -97,16 +104,6 @@ MCPA track
 Not sure where you fit? Use the `start-learning` placement tutor or the website prerequisites guide.
 
 Compare four core domains and six career routes in the AI Engineering Learning Paths.
-
-### Sponsors
-
-  
-**Thank you to our sponsors.**
-
-Your support keeps every lesson free and open source.
-
-See all supporters  
-Become a sponsor  
 
 ### Use every lesson the same way
 

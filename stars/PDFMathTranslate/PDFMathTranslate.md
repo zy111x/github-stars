@@ -1,6 +1,6 @@
 ---
 project: PDFMathTranslate
-stars: 37202
+stars: 37310
 description: [EMNLP 2025 Demo] PDF scientific paper translation with preserved formats - 基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/MCP/Docker/Zotero
 url: https://github.com/PDFMathTranslate/PDFMathTranslate
 ---
@@ -29,6 +29,10 @@ Scientific PDF document translation preserving layouts.
 2\. Recent Updates
 ------------------
 
+-   \[October 3, 2026\] Translated PDFs automatically add spaces between adjacent CJK and Latin letters, including accented letters, in normal and `--ultrafast` modes.
+    
+-   \[October 2, 2026\] Added the `--ultrafast` CLI mode for native-text PDFs. It uses `pdf-inspector` text positions for heuristic layout and skips ONNX layout and OCR. (by @reycn)
+    
 -   \[September 8, 2026\] Experimental OCR support, with paragraph regrouping and adaptive typesetting. (by @reycn)
     
 -   \[March 23, 2026\] Experimental support for v2.0 translation kernel using isolated environment (`--mode precise`). (by @reycn)
@@ -176,6 +180,14 @@ Fast mode automatically runs local OCR on selected image-only pages before trans
 
 PyMuPDF supplies the OCR engine; the optional extra adds Pooch for cached downloads. No separate Tesseract executable is required. OCR words are regrouped into paragraphs within detected layout regions before translation, with wrapped lines and soft hyphens joined. Translated paragraphs start at the median source font size and shrink to fit their original boxes; detected figures, tables, and standalone formulas remain untouched. The initial implementation targets white-background scans: partial scans on pages that already contain text are skipped, and handwritten text or inline equations may be recognized incorrectly. Precise mode is unchanged.
 
+### Ultrafast mode
+
+Install the optional `pdf-inspector>=1.25.2,<2` dependency with `pip install 'pdf2zh[ultrafast]'`, then run:
+
+pdf2zh example.pdf --ultrafast
+
+`--ultrafast` uses native PDF text positions from `pdf-inspector` for heuristic layout. It skips ONNX layout and OCR; pages without native text are preserved without OCR. Its heuristic text grouping retains the usual font and character formula safeguards. It is best suited to PDFs that already contain native text; use normal mode for complex tables or formulas. It is available only in fast CLI mode and cannot be combined with `--mode precise`, `--babeldoc`, server or GUI modes, or `--onnx`. It automatically skips font subsetting, so its output PDFs are larger, while still using BabelDOC font assets as needed. With `--ignore-cache`, it bypasses both translation-cache reads and writes; normal mode keeps its existing `--ignore-cache` behavior. Ultrafast uses a shared whole-document paragraph worker pool with 16 workers by default and submits individual paragraph requests; `-t` overrides this value, while normal mode keeps its default of 4. `[ultrafast perf]` INFO logs report stage and per-page timings. `page_scan` is the paragraph-submission scan; `translation` is the elapsed wait for the whole-document pool to drain, including API retries, so it is not a sum of per-page waits. `paragraph_parse` covers both passes, `typesetting` runs after translation completes, and `layout_extract` is reported separately before font setup. `page_processing` includes nested `layout_mask`, `paragraph_parse`, `translation`, and `typesetting` timings, so do not sum the nested values again. This path does not import ONNX or OpenCV.
+
 ### 4.1 Advanced options
 
 Execute the translation command in the command line to generate the translated document `example-mono.pdf` and the bilingual document `example-dual.pdf` in the current working directory. Use Google as the default translation service. More support translation services can find HERE.
@@ -253,6 +265,12 @@ Exceptions
 Compatibility Mode
 
 `pdf2zh example.pdf --compatible`
+
+`--ultrafast`
+
+Use native PDF text positions for heuristic layout; skip ONNX layout and OCR
+
+`pdf2zh example.pdf --ultrafast`
 
 `--skip-subset-fonts`
 
