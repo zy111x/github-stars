@@ -1,6 +1,6 @@
 ---
 project: Scrapling
-stars: 85466
+stars: 86697
 description: 🕷️ An adaptive Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev
 url: https://github.com/D4Vinci/Scrapling
 ---
@@ -45,16 +45,9 @@ MySpider().start()
 Platinum Sponsors
 =================
 
-**ColdProxy** provides residential and datacenter proxies for stable web scraping, public data collection, and geo-targeted testing across 195+ countries. _Using this link gives you 5% off_.
-
 NodeMaven - The most efficient proxy provider for Web Scraping and Automation with the Highest Quality IP on the market. Use code SCRAPLING35 for 35% discount.
 
-**Proxidize** provides mobile and residential proxies for scraping, browser automation, SEO monitoring, AI agents, and data collection. _Use code **scrapling20** for 20% off_.
-
 Scrapling handles Cloudflare Turnstile. For enterprise-grade protection, **Hyper Solutions** provides API endpoints that generate valid antibot tokens for **Akamai**, **DataDome**, **Kasada**, and **Incapsula**. Simple API calls, no browser automation required.
-
-Hey, we built **BirdProxies** because proxies shouldn't be complicated or overpriced. Fast residential and ISP proxies in 195+ locations, fair pricing, and real support.  
-**Try our FlappyBird game on the landing page for free data!**
 
 **Evomi** : residential proxies from $0.49/GB. Scraping browser with fully spoofed Chromium, residential IPs, auto CAPTCHA solving, and anti-bot bypass.  
 **Scraper API for hassle-free results. MCP and N8N integrations are available.**
@@ -72,6 +65,8 @@ Swiftproxy provides scalable residential proxies with 80M+ IPs across 195+ count
 Byteful supplies ethical residential, mobile, ISP, and datacenter proxies, plus scraping and AI automation tools. Use code SCRAPLING10: 10% off residential proxies.
 
 ProxyLane: Reduce blocks and CAPTCHAs by 90%. 28M Premium Residential IPs for Heavy Web Scraping. 195 countries. City/ISP/ZIP targeting. Sticky/rotating sessions. Non-expiring traffic from $2/GB. Code **SCRAPEANDTAKE**: _25% off_.
+
+$1/GB at DataImpulse. Ethical first-party proxies. 90M+ IPs, 195+ countries. Residential, datacenter, mobile. Pay-as-you-go = no subscription. Traffic never expires.
 
 _Do you want to show your ad here? Click here_
 

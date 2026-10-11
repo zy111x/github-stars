@@ -1,6 +1,6 @@
 ---
 project: next-ai-draw-io
-stars: 36103
+stars: 36163
 description: A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.
 url: https://github.com/DayuanJiang/next-ai-draw-io
 ---
@@ -8,62 +8,56 @@ url: https://github.com/DayuanJiang/next-ai-draw-io
 Next AI Draw.io
 ===============
 
-**AI-Powered Diagram Creation Tool - Chat, Draw, Visualize**
+**Draw and edit draw.io diagrams by chatting with an AI.**
 
 English | 中文 | 日本語
 
-A Next.js web application that integrates AI capabilities with draw.io diagrams. Create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.
+**Live Demo** · **Desktop App** · **MCP Server**
 
-> Note: Thanks to ByteDance Doubao sponsorship, the demo site now uses the powerful glm-4.7 model!
+promo-web.mp4
 
-> 🎁 Thanks to **Atlas Cloud** for sponsoring next-ai-draw-io. Its OpenAI-compatible API gives diagram workflows one provider connection for DeepSeek, Qwen, GLM, Kimi, MiniMax, and more. Budget-friendly access is available through the Coding Plan.
+Describe a diagram in a sentence and the AI draws it on a real draw.io canvas. Edit it by hand like any draw.io file, or select a few shapes and tell the AI what to change. Every AI change is a version you can compare, restore or undo, and the result exports as `.drawio`, `.png` or `.svg`.
 
-20251211\_drawio.mp4
+Available as a web app, a desktop app for Windows, macOS and Linux, and an MCP server for AI agents such as Claude Code, Cursor and VS Code.
 
-Table of Contents
------------------
+Highlights
+----------
 
--   Next AI Draw.io
-    -   Table of Contents
-    -   Examples
-    -   Features
-    -   MCP Server
-        -   Claude Code CLI
-    -   Getting Started
-        -   Try it Online
-        -   Desktop Application
-        -   Run with Docker
-        -   Installation
-    -   Deployment
-        -   Deploy to EdgeOne Pages
-        -   Deploy on Vercel
-        -   Deploy on Cloudflare Workers
-    -   Multi-Provider Support
-        -   Server-Side Multi-Model Configuration
-        -   Admin Panel
-    -   How It Works
-    -   Support & Contact
-    -   FAQ
-    -   Star History
+**Draw**
+
+-   Architecture diagrams, flowcharts, sequence diagrams and more from one sentence, with built-in AWS, Azure, GCP and Kubernetes icon libraries
+-   Connectors can carry a flowing animation
+-   Upload a screenshot or a sketch and the AI redraws it; upload PDF, Markdown, code and other text files and get a diagram of their content
+
+**Edit**
+
+-   Edit by chat: changes stream onto the canvas and the shapes the AI just changed are highlighted
+-   Ask about a selection: select shapes on the canvas and the AI changes only those
+-   Versions and undo: every AI change is a version card with a thumbnail; compare it with the canvas, restore it or undo it, and Ctrl+Z on the canvas also takes back an AI change in one step
+-   It is a normal draw.io diagram: double-click to rename, drag, restyle, use several pages, and export as `.drawio`, `.png`, `.svg` or `.drawio.svg` at any time
+
+**Use**
+
+-   24 model providers; enter your own API key in the browser and it stays on your machine
+-   Models that reason show their thinking
+-   Dark mode; the interface is available in English, Simplified Chinese, Traditional Chinese and Japanese
 
 Examples
 --------
 
-Here are some example prompts and their generated diagrams:
+**Transformer architecture with animated connectors**  
 
-**Animated transformer connectors**  
+**Prompt:** Give me a **animated connector** diagram of transformer's architecture.
 
-**Prompt:** Give me a \*\*animated connector\*\* diagram of transformer's architecture.
+**RAG architecture**  
 
-**RAG Technique Diagram**  
+**Prompt:** Generate a RAG architecture diagram for **chat application**. Use connected diagram for data ingestion
 
-**Prompt:** Generate a RAG architecture diagram for \*\*chat application\*\*. Use connected diagram for data ingestion
+**Authentication with React and AWS**  
 
-**Authentication using React and AWS**  
+**Prompt:** Generate authentication process using React with **AWS**. Use Serverless architecture.
 
-**Prompt:** Generate authentication process using React with \*\*AWS\*\*. Use Serverless architecture.
-
-**Open Innovation**  
+**Open Innovation model**  
 
 **Prompt:** Create visualization of Henry Chesbrough's Open Innovation model.
 
@@ -71,22 +65,20 @@ Here are some example prompts and their generated diagrams:
 
 **Prompt:** Draw a cute cat for me.
 
-Features
---------
+Use it
+------
 
--   **LLM-Powered Diagram Creation**: Leverage Large Language Models to create and manipulate draw.io diagrams directly through natural language commands
--   **Image-Based Diagram Replication**: Upload existing diagrams or images and have the AI replicate and enhance them automatically
--   **PDF & Text File Upload**: Upload PDF documents and text files to extract content and generate diagrams from existing documents
--   **AI Reasoning Display**: View the AI's thinking process for supported models (OpenAI o1/o3, Gemini, Claude, etc.)
--   **Diagram History**: Comprehensive version control that tracks all changes, allowing you to view and restore previous versions of your diagrams before the AI editing.
--   **Interactive Chat Interface**: Communicate with AI to refine your diagrams in real-time
--   **Cloud Architecture Diagram Support**: Specialized support for generating cloud architecture diagrams (AWS, GCP, Azure)
--   **Animated Connectors**: Create dynamic and animated connectors between diagram elements for better visualization
+### Online demo
 
-MCP Server
-----------
+Open next-ai-drawio.jiang.jp, nothing to install. The demo has a usage limit; click the settings icon in the chat panel and enter your own provider and API key to lift it. The key stays in your browser and is never sent to the server for storage.
 
-Use Next AI Draw.io with AI agents like Claude Desktop, Cursor, and VS Code via MCP (Model Context Protocol).
+### Desktop app
+
+Download the Windows, macOS or Linux installer from the Releases page.
+
+### In your AI agent (MCP)
+
+Through MCP (Model Context Protocol, the protocol AI agents use to call outside tools), Claude Desktop, Cursor, VS Code and others can draw draw.io diagrams directly. Add this to your client's MCP configuration:
 
 {
   "mcpServers": {
@@ -97,145 +89,69 @@ Use Next AI Draw.io with AI agents like Claude Desktop, Cursor, and VS Code via 
   }
 }
 
-### Claude Code CLI
+For Claude Code, one command does it:
 
 claude mcp add drawio -- npx @next-ai-drawio/mcp-server@latest
 
-Then ask Claude to create diagrams:
+Then ask the AI for "a flowchart of user authentication with login, MFA and session management" and the diagram appears in your browser as it is drawn. The MCP server has most of the web app's drawing features:
 
-> "Create a flowchart showing user authentication with login, MFA, and session management"
+-   The same drawing rules and icon libraries (AWS, Azure, GCP, Kubernetes and more)
+-   A screenshot tool, so the AI can look at the rendered diagram and fix it
+-   Version history, multi-page diagrams, and download as `.drawio`, `.png`, `.svg` or `.drawio.svg`
+-   Auto-save to `~/.next-ai-drawio/`, so a diagram survives a restart
 
-The diagram appears in your browser in real-time!
+See the MCP server README for VS Code, Cursor and other client configurations.
 
-See the MCP Server README for VS Code, Cursor, and other client configurations.
+Self-host
+---------
 
-Getting Started
----------------
-
-### Try it Online
-
-No installation needed! Try the app directly on our demo site:
-
-> **Bring Your Own API Key**: You can use your own API key to bypass usage limits on the demo site. Click the Settings icon in the chat panel to configure your provider and API key. Your key is stored locally in your browser and is never stored on the server.
-
-### Desktop Application
-
-Download the native desktop app for your platform from the Releases page:
-
-Supported platforms: Windows, macOS, Linux.
-
-### Run with Docker
-
-Go to Docker Guide
-
-### Installation
-
-1.  Clone the repository:
+### Run locally
 
 git clone https://github.com/DayuanJiang/next-ai-draw-io
 cd next-ai-draw-io
 npm install
-cp env.example .env.local
-
-See the Provider Configuration Guide for detailed setup instructions for each provider.
-
-1.  Run the development server:
-
+cp env.example .env.local   # add your provider and API key, see "Models and providers" below
 npm run dev
 
-1.  Open http://localhost:6002 in your browser to see the application.
+Open http://localhost:6002.
 
-Deployment
-----------
+### One-click deploy
 
-### Deploy to EdgeOne Pages
+Platform
 
-You can deploy with one click using Tencent EdgeOne Pages.
+How
 
-Deploy by this button:
+Tencent EdgeOne Pages
 
-Check out the Tencent EdgeOne Pages documentation for more details.
+Deploying there also gives you a daily free quota for DeepSeek models
 
-Additionally, deploying through Tencent EdgeOne Pages will also grant you a daily free quota for DeepSeek models.
+Vercel
 
-### Deploy on Vercel
+Set the same environment variables in the Vercel dashboard as in your `.env.local`
 
-The easiest way to deploy is using Vercel, the creators of Next.js. Be sure to **set the environment variables** in the Vercel dashboard as you did in your local `.env.local` file.
+Cloudflare Workers
 
-See the Next.js deployment documentation for more details.
+Cloudflare deploy guide
 
-### Deploy on Cloudflare Workers
+Docker
 
-Go to Cloudflare Deploy Guide
+Docker guide
 
-Multi-Provider Support
-----------------------
+Offline or intranet
 
--   ByteDance Doubao
--   AWS Bedrock (default)
--   OpenAI
--   Anthropic
--   Google AI
--   Google Vertex AI
--   Azure OpenAI
--   Ollama
--   OpenRouter
--   AIHubMix
--   DeepSeek
--   SiliconFlow
--   ModelScope
--   SGLang
--   Vercel AI Gateway
--   Atlas Cloud
+Offline deployment
 
-All providers except AWS Bedrock and OpenRouter support custom endpoints.
+### Models and providers
 
-📖 **Detailed Provider Configuration Guide** - See setup instructions for each provider.
+24 providers are supported: AWS Bedrock (default), OpenAI, Anthropic, Google AI, Google Vertex AI, Azure OpenAI, Ollama, OpenRouter, AIHubMix, DeepSeek, SiliconFlow, SGLang, Vercel AI Gateway, Tencent EdgeOne, ByteDance Doubao, ModelScope, Zhipu GLM, Qwen, Qiniu, Kimi, MiniMax, Novita, Xiaomi MiMo and Atlas Cloud. The environment variables and notes for each are in the provider configuration guide.
 
-### Server-Side Multi-Model Configuration
+**Which model**: the task is to produce long text in a strict format (draw.io XML), so pick a capable model; small models tend to produce broken diagrams.
 
-Administrators can configure multiple server-side models that are available to all users without requiring personal API keys. Configure via `AI_MODELS_CONFIG` environment variable (JSON string) or `ai-models.json` file. For a single-provider quick setup, list comma-separated model IDs in `AI_MODEL`.
+**Several models and the admin panel**: list several model IDs in `AI_MODEL` separated by commas, or configure models from several providers with the `AI_MODELS_CONFIG` environment variable or an `ai-models.json` file, and every user can use them without a key of their own. Set `ADMIN_PASSWORD` and open `/admin` to manage models, access codes, feature switches, observability and quotas from a web page; see the admin panel guide.
 
-### Admin Panel
+Support
+-------
 
-Set the `ADMIN_PASSWORD` environment variable and visit `/admin` to manage server settings (models, access codes, features, observability, quota) from a web panel instead of hand-editing `.env`.
-
-📖 **Admin Panel Guide** — setup, precedence rules, and notes.
-
-**Model Requirements**: This task requires strong model capabilities for generating long-form text with strict formatting constraints (draw.io XML). Recommended models include Claude Sonnet 4.5, GPT-5.1, Gemini 3 Pro, and DeepSeek V3.2/R1.
-
-Note that the `claude` series has been trained on draw.io diagrams with cloud architecture logos like AWS, Azure, GCP. So if you want to create cloud architecture diagrams, this is the best choice.
-
-How It Works
-------------
-
-The application uses the following technologies:
-
--   **Next.js**: For the frontend framework and routing
--   **Vercel AI SDK** (`ai` + `@ai-sdk/*`): For streaming AI responses and multi-provider support
--   **react-drawio**: For diagram representation and manipulation
-
-Diagrams are represented as XML that can be rendered in draw.io. The AI processes your commands and generates or modifies this XML accordingly.
-
-Support & Contact
------------------
-
-**Special thanks to ByteDance Doubao for sponsoring the API token usage of the demo site!** Register on the ARK platform to get 500K free tokens for all models!
-
-**Special thanks to Atlas Cloud for sponsoring next-ai-draw-io and supporting its multi-provider ecosystem!** Try its OpenAI-compatible LLM API through the Atlas Cloud Coding Plan.
-
-If you find this project useful, please consider sponsoring to help me host the live demo site!
-
-For support or inquiries, please open an issue on the GitHub repository or contact the maintainer at:
-
--   Email: me\[at\]jiang.jp
-
-FAQ
----
-
-See FAQ for common issues and solutions.
-
-Star History
-------------
-
-* * *
+-   Questions and ideas: open a GitHub issue or email me\[at\]jiang.jp
+-   Common problems: FAQ
+-   If the project is useful to you, consider sponsoring to help keep the demo site running

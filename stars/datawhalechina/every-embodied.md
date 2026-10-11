@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 3914
+stars: 3990
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -42,6 +42,20 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 详细说明请见：`examples/README.md`
 
   
+
+  
+**G0.5 × 机器人弹琴**  
+《我爱你，中国》双手多指演奏  
+带声音完整视频
+
+  
+**MicroDuck 篮球平衡**  
+机器人在篮球上保持平衡  
+完整视频
+
+  
+**AgiBot World Model 比赛评估**  
+改进方法预测结果，点击查看基线对比与复现教程
 
   
 **项目快速入门**  
@@ -151,11 +165,14 @@ Pi0.5 双臂协同，三视角，47.6 秒
 
 GR00T N1.5 家庭长时序操作，四视角，195 秒
 
+点击封面观看完整视频。
+
 两段完整回合均在 AMD Ryzen AI MAX+ 395 上完成闭环推理和视频录制。查看 AMD Physical AI 仿真基准与长程视频复现教程，继续学习 Every Embodied、RoboCasa365、DexJoCo、DISCOVERSE、RoboWits 和 Unitree G1 的任务协议、评估结果与多视角导出流程。
 
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-10-06\]** 新增 G0.5 × 双手钢琴：琴位变化后的重新就位与续弹：公开 R1 Pro 双手演奏、G0.5 模型接入、移琴调整与续弹代码，提供本地回放、练习曲谱及运行记录。
 -   **\[2026-09-29\]** 更新 Booster K1 网页 MuJoCo 本机部署与 AMP 训练教程：区分上游在线 demo 与 Windows 本机静态托管，标明 K1 网页模型和 `policy.bin` 的上游目录，补充 MIME 兼容服务器、获授权后的 GitHub Pages 发布步骤及 Linux + NVIDIA 可选训练指南。
 -   **\[2026-09-05\]** 更新 Microduck 双足强化学习教程：新增 BallKick 非对称 actor-critic、奖励与随机化拆解，提供独立训练和 ONNX 导出命令，并接入官方 Microduck Sandbox，讲清 MuJoCo WebAssembly、onnxruntime-web、Three.js 与 50 Hz 浏览器闭环；本机实测右脚策略成功触球并保存画面与 QA 记录。
 -   **\[2026-09-04\]** 新增 UniCross 统一跨技能灵巧操作导读：归入强化学习与灵巧操作章节，系统拆解抓取、搬移、手内旋转和手内平移如何共享手-物关系观测、增量动作空间与奖励结构，十个 PPO 专家如何通过 DAgger 蒸馏为单一策略，以及未见物体、扰动、Allegro / MANO / Sharpa Wave 跨手型和长时程组合实验；同时更新 Microduck 双足强化学习教程，加入由同一 walking policy 实时执行的 12 秒命令编舞视频和可复现录制参数。
@@ -221,6 +238,8 @@ Past News
 
 📽️视频教程
 -------
+
+G0.5 × 机器人弹琴：《我爱你，中国》音乐室成片 · 钢琴移位续弹视频 · 开源复现教程
 
 Habitat导航基础复现： https://www.datawhale.cn/learn/content/258/6154
 

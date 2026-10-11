@@ -1,7 +1,7 @@
 ---
 project: lingbot-map
-stars: 17211
-description: (ECCV 2026 oral & best paper candidate) LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction
+stars: 17959
+description: [ECCV 2026 Best Paper Award Candidate] LingBot-Map: Geometric Context Transformer for Streaming 3D Reconstruction
 url: https://github.com/Robbyant/lingbot-map
 ---
 
@@ -585,11 +585,26 @@ This project is released under the Apache License 2.0. See LICENSE file for deta
 📖 Citation
 -----------
 
-@article{chen2026geometric,
-  title\={Geometric Context Transformer for Streaming 3D Reconstruction},
-  author\={Chen, Lin-Zhuo and Gao, Jian and Chen, Yihang and Cheng, Ka Leong and Sun, Yipengjing and Hu, Liangxiao and Xue, Nan and Zhu, Xing and Shen, Yujun and Yao, Yao and Xu, Yinghao},
-  journal\={arXiv preprint arXiv:2604.14141},
-  year\={2026}
+If you use LingBot-Map in your research, please cite the ECCV 2026 paper:
+
+> Lin-Zhuo Chen, Jian Gao, Shangzhan Zhang, Yihang Chen, Nan Xue, Jianyuan Wang, Christian Rupprecht, Xun Cao, Xing Zhu, Yujun Shen, Yao Yao, and Yinghao Xu. **Geometric Context Transformer for Streaming 3D Reconstruction.** In _European Conference on Computer Vision (ECCV)_, pages 293–314. Springer, 2026.
+
+@inproceedings{chen2026geometric,
+  title     = {Geometric Context Transformer for Streaming {3D} Reconstruction},
+  author    = {Chen, Lin-Zhuo and Gao, Jian and Zhang, Shangzhan and Chen, Yihang and Xue, Nan and Wang, Jianyuan and Rupprecht, Christian and Cao, Xun and Zhu, Xing and Shen, Yujun and Yao, Yao and Xu, Yinghao},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  pages     = {293--314},
+  year      = {2026},
+  publisher = {Springer}
+}
+
+The extended technical report (LingBot-Map) can be cited as:
+
+@article{chen2026lingbotmap,
+  title   = {{LingBot-Map}: Geometric Context Transformer for Streaming {3D} Reconstruction},
+  author  = {Chen, Lin-Zhuo and Gao, Jian and Zhang, Shangzhan and Chen, Yihang and Cheng, Ka Leong and Sun, Yipengjing and Hu, Liangxiao and Xue, Nan and Zhu, Xing and Shen, Yujun and Yao, Yao and Xu, Yinghao},
+  journal = {arXiv preprint arXiv:2604.14141},
+  year    = {2026}
 }
 
 ✨ Acknowledgments

@@ -1,6 +1,6 @@
 ---
 project: clash-verge-rev
-stars: 149043
+stars: 150402
 description: A modern GUI client based on Tauri, designed to run in Windows, macOS and Linux for tailored proxy experience
 url: https://github.com/clash-verge-rev/clash-verge-rev
 ---
@@ -12,7 +12,7 @@ Continuation of Clash Verge
 
 ### A Clash Meta GUI based on Tauri.
 
-Languages: 简体中文 · English · Español · Русский · 日本語 · 한국어 · فارسی
+Languages: English · Español · فارسی · 日本語 · 한국어 · Português · Русский · 简体中文
 
 Preview
 -------
@@ -26,7 +26,7 @@ Install
 
 请到发布页面下载对应的安装包：Release page  
 Go to the Release page to download the corresponding installation package  
-Supports Windows (x64/x86), Linux (x64/arm64) and macOS 11+ (intel/apple).
+Supports Windows (x64/x86), Linux (x64/arm64) and macOS 11+ (intel/apple). 支持 Windows (x64/x86)、Linux (x64/arm64) 和 macOS 11+ (intel/apple)。
 
 #### 我应当怎样选择发行版
 
@@ -65,14 +65,14 @@ Promotion
 
 ### ✈️ AI云边 -- 全新架构机场 ClaudeBorder
 
-🔥热销中使用本链接注册即送 3 天免费试用\*\*，每日 **1GB 流量**：👉 点此注册
+🔥热销中使用本链接注册即送 **3 天免费试用**，每日 **1GB 流量**：👉 点此注册
 
 #### AI云边 -- 全新架构机场。
 
 -   💻 多次**技术迭代后**全新亮相。
 -   🗺 全**高速稳定**正价节点。
 -   🌏 **海外团队**，不跑路
--   🚀 线路**冗余**设计，自动化运维\*\*对抗各类封锁
+-   🚀 线路**冗余**设计，**自动化运维**对抗各类封锁
 -   👨‍🦲 团队架构师为**大厂**网络架构师
 -   💰 极致**稳定**，亲民价**价格**
 -   🌐 全面支持**流媒体及各AI访问**

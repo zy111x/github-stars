@@ -1,6 +1,6 @@
 ---
 project: academic-research-skills
-stars: 50299
+stars: 51210
 description: Academic Research Skills for Claude Code: research → write → review → revise → finalize
 url: https://github.com/Imbad0202/academic-research-skills
 ---
