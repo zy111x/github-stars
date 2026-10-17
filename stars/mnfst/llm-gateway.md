@@ -1,6 +1,6 @@
 ---
 project: llm-gateway
-stars: 7566
+stars: 7585
 description: |-
     Open Source LLM Gateway 🦚
 url: https://github.com/mnfst/llm-gateway
@@ -56,10 +56,6 @@ Manifest LLM Gateway is an open-source LLM gateway for AI agents and apps. Conne
 - 💾 Full Body Logs for Success and Error Messages
 - 📊 Track every single dollar, setup notifications and limits
 - 🚑 Fallback on different models when queries fail, Self-heals your bad requests
-
-<p align="center">
-  <a href="https://manifest.build/api-bot/"><img src=".github/assets/api-bot-readme-banner.png" alt="Meet API Bot: API changes won't take your app down anymore. Discover" width="100%" /></a>
-</p>
 
 ## Quick start
 

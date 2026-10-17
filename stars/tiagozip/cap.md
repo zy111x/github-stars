@@ -1,6 +1,6 @@
 ---
 project: cap
-stars: 7978
+stars: 8070
 description: |-
     privacy-first, open-source and self-hosted CAPTCHA alternative with PoW and instrumentation challenges.
 url: https://github.com/tiagozip/cap

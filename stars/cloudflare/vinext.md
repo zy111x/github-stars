@@ -1,6 +1,6 @@
 ---
 project: vinext
-stars: 9125
+stars: 9168
 description: |-
     Vite plugin that reimplements the Next.js API surface — deploy anywhere
 url: https://github.com/cloudflare/vinext
@@ -155,6 +155,9 @@ Other options: `--port <port>` (default: 3001), `--skip-check`, `--force`.
 Cloudflare init uses `cf` and `cloudflare.config.ts` by default. Both `vinext init`
 and `create-vinext-app` accept `--legacy-wrangler-cloudflare-init` to retain the
 legacy Wrangler setup. Existing Wrangler configs are not automatically migrated.
+`vinext init --name <name>` sets the Worker name in the generated config instead of
+deriving it from `package.json`. An existing config keeps its own Worker name, and init
+prints a warning.
 
 If your `next.config.*` sets `output: "standalone"`, `vite build` emits a self-hosting bundle at `dist/standalone/`. Start it with:
 
@@ -1053,7 +1056,7 @@ Or add it to your `package.json` as a file dependency:
 }
 ```
 
-vinext has peer dependencies on `react ^19.2.6`, `react-dom ^19.2.6`, `react-server-dom-webpack ^19.2.6`, and `vite ^8.0.0`. Then replace `next` with `vinext` in your scripts and run as normal.
+vinext has peer dependencies on `react ^19.3.1`, `react-dom ^19.3.1`, `react-server-dom-webpack ^19.3.1`, and `vite ^8.0.0`. Then replace `next` with `vinext` in your scripts and run as normal.
 
 ## Contributing
 

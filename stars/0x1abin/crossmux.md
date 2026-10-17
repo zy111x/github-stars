@@ -1,6 +1,6 @@
 ---
 project: crossmux
-stars: 243
+stars: 255
 description: |-
     A CJK-optimized open-source ESP32 e-ink reader with EPUB support, lightweight apps, reading analytics, and multi-device support.  面向中文用户与 CJK 阅读体验深度优化的开源 ESP32 墨水屏阅读器，支持 EPUB、轻量应用、阅读统计及多设备适配。
 url: https://github.com/0x1abin/crossmux
@@ -24,7 +24,7 @@ url: https://github.com/0x1abin/crossmux
 - **AirPage**: scan to upload content, then display BMP/JPEG images with manual refresh or foreground live delivery; images can become a sleep screen. [Usage and network behavior](./src/activities/apps/README.md#airpage).
 - **WeRead**: QR login, bookshelf browsing, EPUB downloads for offline reading, and progress sync. Available in the China content profile. [WeRead guide (Chinese)](./src/activities/apps/weread/README.md).
 - **Reading analytics and standby**: reading statistics, heatmaps, profiles and achievements; clock and Chinese almanac faces. [Analytics guide](./src/activities/apps/reading-stats/README.md).
-- **Languages and development**: 33 UI languages in one firmware per hardware target, plus desktop simulators for UI development.
+- **Languages and development**: All UI languages in one firmware per hardware target, plus desktop simulators for UI development.
 
 > **WeRead security:** this unofficial Web protocol may change. Device traffic is encrypted, but its client does not verify the server certificate or hostname; use it only on a trusted network. The native simulator verifies certificates through the host trust store. See the [transport details](./docs/engineering/chinese-build.md#weread-transport).
 
@@ -42,7 +42,7 @@ url: https://github.com/0x1abin/crossmux
 | [Metalio E-Ink 4](./docs/engineering/metalio-eink4.md) | ESP32-S3 | Nightly |
 | [Read Pico (小纸 Pico)](./docs/engineering/read-pico.md) | ESP32-S3 | Nightly |
 
-This table describes configured release targets, not a claim that every feature has passed hardware acceptance. Each S3 target needs its own image. X4 Classic has a build-only target and is absent from public release/OTA indexes. See [device variants](./docs/engineering/device-variants.md) for target-specific limitations.
+This table describes configured release targets, not a claim that every feature has passed hardware acceptance. Each S3 target needs its own image. X4 Classic (`x4c`) and [LilyGo T5 S3 4.7 PRO/Lite](./docs/engineering/lilygo-t5s3.md) (`lilygo_t5s3`) have development build targets and are absent from public Nightly/OTA indexes. See [device variants](./docs/engineering/device-variants.md) for target-specific limitations.
 
 Use [Stable](https://github.com/0x1abin/crossmux/releases/tag/stable) for the stable X3/X4 channel, or [Nightly](https://github.com/0x1abin/crossmux/releases/tag/nightly) for development builds. The [target table](./scripts/nightly_targets.py) defines channels and artifact names; [release architecture](./docs/engineering/firmware-release.md) explains packaging and OTA. Current source version and build environments live in [platformio.ini](./platformio.ini).
 

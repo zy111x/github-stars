@@ -1,6 +1,6 @@
 ---
 project: mcp-openapi-proxy
-stars: 157
+stars: 158
 description: |-
     MCP server that dynamically exposes REST APIs defined by OpenAPI specs. Dual-stack MCP 1.x/2.x with native Streamable HTTP.
 url: https://github.com/matthewhand/mcp-openapi-proxy
@@ -10,7 +10,7 @@ url: https://github.com/matthewhand/mcp-openapi-proxy
 
 **mcp-openapi-proxy** is a Python package that implements a Model Context Protocol (MCP) server, designed to dynamically expose REST APIs—defined by OpenAPI specifications—as MCP tools. This facilitates seamless integration of OpenAPI-described APIs into MCP-based workflows.
 
-**2026-09-05 — 0.4.0:** MCP 2.x / 2026-07-28 native Streamable HTTP (stateless POST /mcp, dual-stack with legacy stdio).
+**v0.4.0 — tagged September 6, 2026; [GitHub Release published October 15, 2026 (AEDT)](https://github.com/matthewhand/mcp-openapi-proxy/releases/tag/v0.4.0):** MCP SDK 2.x / protocol 2026-07-28, with native stateless Streamable HTTP and legacy stdio support.
 
 ## What's New in 0.4.0
 
@@ -159,6 +159,17 @@ Refer to the **Examples** section below for practical configurations tailored to
 - `MCP_LIST_TTL_MS` / `MCP_READ_TTL_MS`: (Optional) `ttlMs` for list results (default `60000`) and `resources/read` (default `5000`).
 - `MCP_ALLOWED_HOSTS`: (Optional) Comma-separated Host allow-list for DNS-rebinding protection. Default `*` (protection off — typical behind nginx).
 - `MCP_REQUEST_STATE_KEY`: (Optional) Shared HMAC key so MRTR `requestState` verifies across instances. Unset = process-local.
+**Unreleased on `main` (not in tagged/PyPI v0.4.0):** The next two raw-command logging settings are available only in newer source.
+
+- `MCP_LOG_RAW_COMMANDS`: (Optional, **default off**) `1`/`true`/`yes` adds one extra INFO record per shell-execution tool call, emitted *before* the command runs:
+
+  ```text
+  mcp raw-command tool=post_command_execute_shell
+  cd /srv/app && npm run build   # <- the verbatim command, unmodified
+  ```
+
+  The command is logged byte-for-byte — whitespace, blank lines, tabs and quoting are preserved; nothing is normalised, reconstructed, or redacted. The existing `mcp rpc method=… name=…` line is unchanged and still the only record when this is off. ⚠️ **This can write secrets into your logs**: shell commands routinely carry credentials (`export TOKEN=…`, `curl -H 'Authorization: Bearer …'`, `ssh`/`psql` invocations). It is opt-in for that reason — enable it only where the log sink is trusted, and scrub or rotate the log afterwards. Only the command body is dumped, never `Authorization` headers or unrelated tool arguments. Scoped to the allow-list below; not a general tool-argument dump.
+- `MCP_LOG_RAW_COMMAND_TOOLS`: (Optional) Comma-separated tool names eligible for raw-command logging, overriding the default `post_command_execute_shell,executeShell`. Entries that are not valid tool names are ignored. Use this when a new terminal-style upstream lands.
 
 ## Verified Clients & Live Results (2026-06-12)
 
@@ -1003,15 +1014,12 @@ with body `{"entity_id": "light.kitchen"}` should return 200 — the path params
 
 ### JSON-RPC Testing
 
-For alternative testing, you can interact with the MCP server via JSON-RPC. After starting the server, paste the following initialization message:
+For legacy **stdio** testing, you can interact with the MCP server via JSON-RPC. After starting the server, send the following initialization message. Native Streamable HTTP in v0.4.0 uses self-contained requests and does **not** require an `initialize` handshake; see the [migration guide](docs/MIGRATION-0.4.md):
 ```json
 {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"claude-ai","version":"0.1.0"}},"jsonrpc":"2.0","id":0}
 ```
 
-Expected response:
-```json
-{"jsonrpc":"2.0","id":0,"result":{"protocolVersion":"2024-11-05","capabilities":{"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"listChanged":false}},"serverInfo":{"name":"sqlite","version":"0.1.0"}}}
-```
+The response should contain a JSON-RPC `result` with a negotiated `protocolVersion`, advertised `capabilities`, and `serverInfo` identifying this proxy (not `sqlite`). Exact names, versions and capabilities depend on the active SDK, configuration and client; the old fixed example did not describe this project's response.
 
 Then paste these follow-up messages:
 ```json

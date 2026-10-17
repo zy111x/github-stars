@@ -1,6 +1,6 @@
 ---
 project: Archon
-stars: 23659
+stars: 23704
 description: |-
     The first open-source harness builder for AI coding. Make AI coding deterministic and repeatable.
 url: https://github.com/coleam00/Archon
@@ -39,7 +39,7 @@ When you ask an AI agent to "fix this bug", what happens depends on the model's 
 Archon fixes this. Encode your development process as a workflow. The workflow defines the phases, validation gates, and artifacts. The AI fills in the intelligence at each step, but the structure is deterministic and owned by you.
 
 - **Repeatable** - Same workflow, same sequence, every time. Plan, implement, validate, review, PR.
-- **Isolated** - Every workflow run gets its own git worktree. Run 5 fixes in parallel with no conflicts.
+- **Worktree isolation** - Repository workflows can run in a separate git worktree or reuse an existing one. See [isolation and folder projects](https://archon.diy/getting-started/concepts/#isolation-worktrees).
 - **Fire and forget** - Kick off a workflow, go do other work. Come back to a finished PR with review comments.
 - **Composable** - Mix deterministic nodes (bash scripts, tests, git ops) with AI nodes (planning, code generation, review). The AI only runs where it adds value.
 - **Portable** - Define workflows once in `.archon/workflows/`, commit them to your repo. They work the same from CLI, Web UI, Slack, Telegram, or GitHub.
@@ -71,10 +71,17 @@ nodes:
 
   - id: approve
     depends_on: [review]
-    loop:                                      # Human approval gate
-      prompt: "Present the changes for review. Address any feedback."
-      until: APPROVED
-      interactive: true                        # Pauses and waits for human input
+    loop_group:                                # Repeat until approved
+      max_iterations: 5
+      until_bash: 'decision=$ask.output.decision; [ "$decision" = approve ]'
+      nodes:
+        - id: revise
+          prompt: "Address this feedback, if any: $LOOP_PREV.ask.output.text"
+        - id: ask
+          depends_on: [revise]
+          wait:                                # Pauses until you approve or reject
+            attention: "Review the changes. Approve, or reject with what to change."
+            form: approval
 
   - id: create-pr
     depends_on: [approve]
@@ -184,8 +191,14 @@ irm https://archon.diy/install.ps1 | iex
 brew install coleam00/archon/archon
 ```
 
-> **Compiled binaries need a `CLAUDE_BIN_PATH`.** The quick-install binaries
-> don't bundle Claude Code. Install it separately, then point Archon at it:
+Release binaries ship without AI providers. The quick installers ask which of
+Claude, Codex and Pi to install; pass `--providers codex` (shell) or
+`-Providers codex` (PowerShell) to skip the question. After a Homebrew install,
+or to add one later, run `archon setup` or `archon provider add <claude|codex|pi>`.
+See [Installation → Providers](https://archon.diy/getting-started/installation/#providers).
+
+> **The Claude provider needs Claude Code.** Compiled binaries don't bundle it.
+> Install it separately; if Archon can't find it, point it there:
 >
 > ```bash
 > # macOS / Linux / WSL
@@ -255,7 +268,7 @@ Archon ships the `sdlc` workflow pack for the software development lifecycle:
 
 Run `archon workflow list` to see them, or describe what you want and the router picks the right one. For a plain question, just ask: the router answers directly.
 
-The older `archon-*` workflows (`archon-fix-github-issue`, `archon-idea-to-pr`, `archon-smart-pr-review`, `archon-assist`, and others) no longer ship. To keep using one, copy it from [`.archon/workflows/defaults/` at v0.11.1](https://github.com/coleam00/Archon/tree/v0.11.1/.archon/workflows/defaults) (most are in its `legacy/` folder) into your project's `.archon/workflows/`, along with the [commands](https://github.com/coleam00/Archon/tree/v0.11.1/.archon/commands/defaults) it uses into `.archon/commands/`. `archon-idea-to-pr`, `archon-plan-to-pr` and `archon-issue-review-full` also need `archon-review-block.yaml` from the same `legacy/` folder, because they include it.
+The older `archon-*` workflows (`archon-fix-github-issue`, `archon-idea-to-pr`, `archon-smart-pr-review`, `archon-assist`, and others) no longer ship. To keep using one, copy it from [`.archon/workflows/defaults/` at v0.11.1](https://github.com/coleam00/Archon/tree/v0.11.1/.archon/workflows/defaults) (most are in its `legacy/` folder) into your project's `.archon/workflows/`, along with the [commands](https://github.com/coleam00/Archon/tree/v0.11.1/.archon/commands/defaults) it uses into `.archon/commands/`. `archon-idea-to-pr`, `archon-plan-to-pr` and `archon-issue-review-full` also need `archon-review-block.yaml` from the same `legacy/` folder, because they include it. Save that copy under another name, such as `legacy-review-block` (its file name and its `name:`), and point the three workflows' `include:` at it: the `sdlc` pack ships its own `archon-review-block`, and a project or global copy with that name would replace it.
 
 **Or define your own.** Keep a workflow copyable by placing its YAML, commands, and scripts together under `.archon/workflows/<pack>/<workflow>/`; both directory names are yours. The same tree works in target repos and under `~/.archon/workflows/`. Existing flat workflows and shared `.archon/commands/` / `.archon/scripts/` remain supported. Same-named workflow files in your repo override bundled defaults.
 
@@ -323,7 +336,7 @@ Full documentation is available at **[archon.diy/docs](https://archon.diy/docs/)
 | [Configuration](https://archon.diy/reference/configuration/) | All config options, env vars, YAML settings |
 | [AI Assistants](https://archon.diy/getting-started/ai-assistants/) | Claude, Codex, and Pi setup details |
 | [Deployment](https://archon.diy/deployment/) | Docker, VPS, production setup |
-| [Architecture](https://archon.diy/reference/architecture/) | System design and internals |
+| [Architecture](https://archon.diy/reference/architecture/) | Package overview and the maintained architecture map |
 | [Troubleshooting](https://archon.diy/reference/troubleshooting/) | Common issues and fixes |
 
 **For AI tools:** Point your LLM at [`/llms.txt`](https://archon.diy/llms.txt) for an index of all documentation, [`/llms-full.txt`](https://archon.diy/llms-full.txt) for the complete docs in a single file, or [`/llms-small.txt`](https://archon.diy/llms-small.txt) for a condensed version.

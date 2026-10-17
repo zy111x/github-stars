@@ -1,6 +1,6 @@
 ---
 project: player
-stars: 3689
+stars: 3691
 description: |-
     Deprecated in favour of Video.js 10; security fixes only until January 2028. UI components and hooks for building video and audio players on the web.
 url: https://github.com/vidstack/player

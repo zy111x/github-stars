@@ -1,6 +1,6 @@
 ---
 project: core
-stars: 407
+stars: 409
 description: |-
     A tiny, fast, simple syntax highlighter for the web and the terminal in JavaScript
 url: https://github.com/speed-highlight/core

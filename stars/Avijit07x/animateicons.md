@@ -1,18 +1,14 @@
 ---
 project: animateicons
-stars: 1250
+stars: 1278
 description: |-
     Free and open-source animated SVG icons for React, built for smooth micro-interactions, easy customization, and lightweight performance.
 url: https://github.com/Avijit07x/animateicons
 ---
 
-<div align="center">
+<img src="public/readme-banner.svg" alt="AnimateIcons. Make every icon move. 1,170 animated icons for React, Vue, Angular and plain JavaScript." width="100%" />
 
-# AnimateIcons
-
-**1170 animated SVG icons for React.** Hover & imperative triggers, configurable size, color, and duration. Built on `motion/react`.
-
-[Browse icons](https://animateicons.in/icons/lucide) &nbsp;·&nbsp; [Docs](https://animateicons.in/icons/docs) &nbsp;·&nbsp; [MCP](https://animateicons.in/icons/docs/mcp) &nbsp;·&nbsp; [Sponsor](https://github.com/sponsors/Avijit07x)
+**[Browse icons](https://animateicons.in/icons/lucide)** &nbsp;&nbsp;·&nbsp;&nbsp; **[Docs](https://animateicons.in/icons/docs)** &nbsp;&nbsp;·&nbsp;&nbsp; **[MCP](https://animateicons.in/icons/docs/mcp)** &nbsp;&nbsp;·&nbsp;&nbsp; **[Sponsor](https://github.com/sponsors/Avijit07x)**
 
 <p>
   <a href="https://www.npmjs.com/package/@animateicons/react"><img alt="npm" src="https://shieldcn.dev/npm/v/@animateicons/react.svg?variant=secondary&size=xs&theme=zinc" /></a>
@@ -23,13 +19,9 @@ url: https://github.com/Avijit07x/animateicons
   <a href="https://vercel.com/open-source-program"><img alt="Vercel OSS Program" src="https://shieldcn.dev/badge/Vercel_OSS_Program_Member.svg?variant=branded&size=xs&theme=zinc&logo=vercel" /></a>
 </p>
 
-<br />
-
-![AnimateIcons preview](./public/og.png)
-
-</div>
-
 ---
+
+1,170 animated SVG icons with hover and imperative triggers, and configurable size, color and duration. Built on `motion`.
 
 ## Quick start
 
@@ -48,6 +40,16 @@ export function Notifications() {
 Icons animate on hover by default, and `motion` is bundled. Import from `@animateicons/react/lucide` or `@animateicons/react/huge`.
 
 Prefer to own the code? Copy one icon into your project with `npx animateicons add bell-ring`.
+
+## Other frameworks
+
+The same icons and the same motion ship for more than React:
+
+| Framework                                      | Package                                                                        | Docs                                                   |
+| ---------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------ |
+| Plain JS, web components, Svelte, Solid, Astro | [`@animateicons/vanilla`](https://www.npmjs.com/package/@animateicons/vanilla) | [Plain JS](https://animateicons.in/icons/docs/vanilla) |
+| Vue 3 and Nuxt                                 | [`@animateicons/vue`](https://www.npmjs.com/package/@animateicons/vue)         | [Vue](https://animateicons.in/icons/docs/vue)          |
+| Angular 20, 21 and 22                          | [`@animateicons/angular`](https://www.npmjs.com/package/@animateicons/angular) | [Angular](https://animateicons.in/icons/docs/angular)  |
 
 ## Props
 

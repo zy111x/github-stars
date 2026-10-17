@@ -1,6 +1,6 @@
 ---
 project: s3mini
-stars: 1350
+stars: 1351
 description: |-
     ⚠️  Moved to Code.NOLOG: https://code.nolog.cz/thinking.tools/s3mini - Tiny S3 client. Edge computing ready. No-dep. In Typescript.
 url: https://github.com/good-lly/s3mini
@@ -42,7 +42,7 @@ Dev:
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=thinking-tools-at-code-nolog-s3mini&metric=bugs&branch=dev)](https://sonarcloud.io/summary/new_code?id=thinking-tools-at-code-nolog-s3mini&branch=dev)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=thinking-tools-at-code-nolog-s3mini&metric=reliability_rating&branch=dev)](https://sonarcloud.io/summary/new_code?id=thinking-tools-at-code-nolog-s3mini&branch=dev)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=thinking-tools-at-code-nolog-s3mini&metric=security_rating&branch=dev)](https://sonarcloud.io/summary/new_code?id=thinking-tools-at-code-nolog-s3mini&branch=dev)
-[![Socket Badge](https://badge.socket.dev/npm/package/s3mini/1.0.2)](https://badge.socket.dev/npm/package/s3mini/1.0.2)
+[![Socket Badge](https://badge.socket.dev/npm/package/s3mini/1.0.3)](https://badge.socket.dev/npm/package/s3mini/1.0.3)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=thinking-tools-at-code-nolog-s3mini&metric=vulnerabilities&branch=dev)](https://sonarcloud.io/summary/new_code?id=thinking-tools-at-code-nolog-s3mini&branch=dev)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=thinking-tools-at-code-nolog-s3mini&metric=sqale_index&branch=dev)](https://sonarcloud.io/summary/new_code?id=thinking-tools-at-code-nolog-s3mini&branch=dev)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=thinking-tools-at-code-nolog-s3mini&metric=sqale_rating&branch=dev)](https://sonarcloud.io/summary/new_code?id=thinking-tools-at-code-nolog-s3mini&branch=dev)

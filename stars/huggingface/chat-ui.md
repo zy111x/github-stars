@@ -1,6 +1,6 @@
 ---
 project: chat-ui
-stars: 10977
+stars: 10988
 description: |-
     The open source codebase powering HuggingChat
 url: https://github.com/huggingface/chat-ui
@@ -192,6 +192,8 @@ Try it on HuggingChat at [huggingface.co/chat/?mode=ml-intern](https://huggingfa
 
 - [Getting started with ML Intern](docs/source/ml-intern/getting-started.md): set up your account and billing, write your first task, and keep spending under control.
 - [Running Chat UI with ML Intern locally](docs/source/ml-intern/local-development.md): configure and run ML Intern in your own Chat UI, choose models, and find your way around the code.
+
+- [ML Intern in Slack](docs/source/ml-intern/slack-bot.md): install the bot, answer questions in threads, and configure shared compute.
 
 ## Building
 

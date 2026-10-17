@@ -1,6 +1,6 @@
 ---
 project: dotabout
-stars: 109
+stars: 110
 description: |-
     Your open-source bio page.
 url: https://github.com/remvze/dotabout

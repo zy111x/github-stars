@@ -1,6 +1,6 @@
 ---
 project: hydrogen
-stars: 2142
+stars: 2150
 description: |-
     Shopify commerce primitives in your framework
 url: https://github.com/Shopify/hydrogen
@@ -10,10 +10,10 @@ url: https://github.com/Shopify/hydrogen
 
 Hydrogen (`@shopify/hydrogen`) is Shopify's toolkit for building headless storefronts in the JavaScript framework you already use. It ships with agent skills that teach coding agents how to use it.
 
-[Changelog](./packages/hydrogen/CHANGELOG.md)
+[Documentation](https://shopify.dev/docs/storefronts/hydrogen) · [API reference](https://shopify.dev/docs/api/hydrogen/2026-10) · [Changelog](./packages/hydrogen/CHANGELOG.md)
 
 > [!NOTE]
-> This README covers Hydrogen 2026-10 or later. Hydrogen 2026-04 and earlier are on the [`2026-04` branch](https://github.com/Shopify/hydrogen/tree/2026-04).
+> This README covers Hydrogen 2026-10 or later. Hydrogen 2026-04 and earlier are on the [`2026-04` branch](https://github.com/Shopify/hydrogen/tree/2026-04), with docs in [Legacy Hydrogen](https://shopify.dev/docs/storefronts/headless/legacy). To migrate a storefront, follow [Migrate to the latest version of Hydrogen](https://shopify.dev/docs/storefronts/hydrogen/migrate).
 
 ## What's included
 
@@ -34,7 +34,7 @@ You need a Shopify store with Storefront API access from the [Headless channel](
 
 ### Deploy a template
 
-**React Router on Oxygen.** Shopify's starter template, [`templates/react-router`](./templates/react-router), deployed to Oxygen from your Shopify admin.
+**React Router on Oxygen.** Shopify's starter template, [`templates/react-router`](./templates/react-router), deployed to [Oxygen](https://shopify.dev/docs/storefronts/hydrogen/deploy/oxygen) from your Shopify admin.
 
 <a href="https://admin.shopify.com/hydrogen/new?template=react-router"><img alt="Deploy to Oxygen" src=".github/images/deploy-to-oxygen.svg" width="182" height="46"></a>
 
@@ -159,7 +159,7 @@ Hydrogen works in any JavaScript framework that renders on the server. Framework
 
 The projects in [`examples/`](./examples) test Hydrogen across frameworks. They aren't starters and aren't versioned for reuse.
 
-The core depends on web platform APIs (`fetch`, `Request`, `Response`, and Web Crypto) rather than on a specific runtime. It targets Oxygen, Node.js, Cloudflare Workers, Deno, and other runtimes that provide those APIs, including Vercel's. The template and examples in this repository run on Oxygen and Node.js.
+The core depends on web platform APIs (`fetch`, `Request`, `Response`, and Web Crypto) rather than on a specific runtime. It targets Oxygen, Node.js, Cloudflare Workers, Deno, and other runtimes that provide those APIs, including Vercel's. The template and examples in this repository run on Oxygen and Node.js. See [About deploying Hydrogen storefronts](https://shopify.dev/docs/storefronts/hydrogen/deploy), and before you go live, work through the [production checklist](https://shopify.dev/docs/storefronts/hydrogen/production-checklist).
 
 ## Agent skills
 
@@ -171,6 +171,7 @@ The core depends on web platform APIs (`fetch`, `Request`, `Response`, and Web C
 - **Products, collections, and search**: `hydrogen-variant-form`, `hydrogen-collection-browser`, `hydrogen-predictive-search`, `hydrogen-image`, `hydrogen-money`
 - **Checkout, accounts, and analytics**: `hydrogen-shop-pay`, `hydrogen-customer-account`, `hydrogen-analytics`
 - **Hosting and local development**: `hydrogen-oxygen`, `hydrogen-local-https`
+- **Migration from classic Hydrogen**: `migrate-to-hydrogen-2026-10`
 
 Read them in [`packages/hydrogen/skills`](./packages/hydrogen/skills).
 

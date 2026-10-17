@@ -1,6 +1,6 @@
 ---
 project: craft.js
-stars: 8756
+stars: 8760
 description: |-
     🚀 A React Framework for building extensible drag and drop page editors
 url: https://github.com/prevwong/craft.js

@@ -1,6 +1,6 @@
 ---
 project: moejs
-stars: 261
+stars: 287
 description: |-
     A pure-Go JavaScript runtime built for running many small plugin sandboxes fast.
 url: https://github.com/Calcium-Ion/moejs

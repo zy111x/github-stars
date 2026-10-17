@@ -1,6 +1,6 @@
 ---
 project: snapdom
-stars: 8182
+stars: 8191
 description: |-
     High-performance engine for capturing, modifying, and converting DOM elements into any format.
 url: https://github.com/zumerlab/snapdom
@@ -95,7 +95,7 @@ Install the core and, when you need them, the official plugins; choose a core su
 npm i @zumer/snapdom@latest @zumer/snapdom-plugins@latest
 ```
 
-Plugins 4.x in this checkout require core 3.x. The full PDF and Vector exporters are open source under MIT here, but have not been published to npm; the `@latest` command above does not install these new exporters. Run `npm run compile` and `npm run site` to try them against the local build.
+Plugins 4.x require SnapDOM 3.3.0 or newer within 3.x. The full PDF and Vector exporters are MIT-licensed and available on npm in `@zumer/snapdom-plugins` 4.x. The `@latest` command above installs the published release.
 
 Or load it in a browser:
 
@@ -165,7 +165,7 @@ const result = await snapdom(card, {
 });
 ```
 
-`width` and `height` define output size. If only one is set, the aspect ratio is preserved. `scale` applies when neither is set, and `dpr` multiplies the pixel dimensions.
+`width` and `height` define output size. If only one is set, the aspect ratio is preserved. `scale` applies when neither is set, and `dpr` multiplies the pixel dimensions. `download()` always uses DPR 1, so the file matches the element's CSS size; pass `scale: devicePixelRatio` for a file as sharp as the screen.
 
 | Common option | Default | Purpose |
 | --- | --- | --- |
@@ -223,7 +223,7 @@ for (let y = 0; y < h0; y += pieceHeight) {
 
 ### Export HTML or structured context
 
-Official plugins are published separately as `@zumer/snapdom-plugins`. Plugins 4.x in this checkout require core 3.x and include the full PDF and Vector exporters under MIT. Their sources live in `packages/plugins/`.
+Official plugins are published separately as `@zumer/snapdom-plugins`. Plugins 4.x require SnapDOM 3.3.0 or newer within 3.x and include the full PDF and Vector exporters under MIT. Their sources live in `packages/plugins/`.
 
 ```js
 import { htmlExport, contextExport } from '@zumer/snapdom-plugins';
@@ -240,7 +240,7 @@ The same plugin system supports overlays, redaction and custom exporters. Local 
 
 ### Export PDF and editable vectors
 
-These examples use plugins 4.x from this checkout. PDF returns a `Blob` with searchable, selectable text, links, pagination and optional form fields. Vector returns an SVG string without `<foreignObject>`, preserving supported shapes and editable text.
+These examples use the published `@zumer/snapdom-plugins` 4.x package. PDF returns a `Blob` with searchable, selectable text, links, pagination and optional form fields. Vector returns an SVG string without `<foreignObject>`, preserving supported shapes and editable text.
 
 ```js
 import { snapdom } from '@zumer/snapdom';
@@ -279,7 +279,7 @@ async function refresh(element) {
 }
 ```
 
-`result.meta` contains the capture geometry needed to place an exported image over the source interface. The [labs](https://snapdom.dev/labs.html) show textures, mirrors and transitions.
+`result.meta` contains the capture geometry needed to place an exported image over the source interface. The [labs](https://snapdom.dev/showcase/#labs) show textures, mirrors and transitions.
 
 ## What's new in v3
 
@@ -376,10 +376,10 @@ For a useful comparison, use the same scene, output format, scale and DPR. Compa
 
 ## Documentation
 
-- [Interactive Playground](https://snapdom.dev/playground/), [PDF demos](https://snapdom.dev/pro/pdf/) and [Vector demos](https://snapdom.dev/pro/vector/)
+- [Plugin demos](https://snapdom.dev/showcase/#plugins), [PDF demos](https://snapdom.dev/pro/pdf/) and [Vector demos](https://snapdom.dev/pro/vector/)
 - [v2 source](https://github.com/zumerlab/snapdom/tree/v2)
 - [API](https://snapdom.dev/docs/api/) and [options](https://snapdom.dev/docs/options/)
-- [Framework guides](https://snapdom.dev/guides/) and [how-to examples](https://snapdom.dev/how-to/)
+- [Framework guides](https://snapdom.dev/how-to/#frameworks) and [how-to examples](https://snapdom.dev/how-to/)
 - [Official plugins](packages/plugins/README.md), [plugin specification](PLUGIN_SPEC.md) and [contributing plugins](CONTRIBUTING_PLUGINS.md)
 - [Architecture](ARCHITECTURE.md) and [technical features](FEATURES.md)
 

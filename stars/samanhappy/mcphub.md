@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 2513
+stars: 2544
 description: |-
     Self-hosted MCP gateway and control plane for connecting, controlling, and operating MCP servers.
 url: https://github.com/samanhappy/mcphub
@@ -135,6 +135,8 @@ http://localhost:3000/mcp/$smart    # Smart routing
 http://localhost:3000/mcp/$smart/{group}  # Smart routing within group
 ```
 
+Set `SMART_ROUTING_PATH=my_smart` to use `/mcp/my_smart` (and `/mcp/my_smart/{group}`) without `$`. Restart to apply; `/mcp/$smart` remains supported. Include `BASE_PATH` before `/mcp` when configured. The custom segment must not match an existing server name, group name or group ID.
+
 > **Security note**: MCP endpoints require authentication by default to prevent accidental exposure. To allow unauthenticated MCP access, disable **Enable Bearer Authentication** in the Keys section. **Skip Authentication** only affects dashboard login. Use only in trusted environments.
 
 📖 See [API Reference](https://docs.mcphub.app/api-reference) for detailed endpoint documentation.
@@ -189,6 +191,8 @@ identity and access control, credential management, audit, Kubernetes, and HA re
 Contributions welcome! See our [Discord community](https://discord.gg/2BJehJZVH5) for discussions and support.
 
 ## ❤️ Sponsor
+
+[![Sponsor samanhappy](https://img.shields.io/badge/Sponsor-samanhappy-ea4aaa?logo=githubsponsors&logoColor=white)](https://github.com/sponsors/samanhappy)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/samanhappy)
 

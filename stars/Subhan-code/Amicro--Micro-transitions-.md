@@ -1,6 +1,6 @@
 ---
 project: Amicro--Micro-transitions-
-stars: 2595
+stars: 2627
 description: |-
     null
 url: https://github.com/Subhan-code/Amicro--Micro-transitions-

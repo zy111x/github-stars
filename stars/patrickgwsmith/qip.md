@@ -1,6 +1,6 @@
 ---
 project: qip
-stars: 121
+stars: 122
 description: |-
     Quickly render anything, everywhere
 url: https://github.com/patrickgwsmith/qip
@@ -137,7 +137,8 @@ You can read more about the [Content component contract in our docs](./docs/cont
 ## CLI Usage
 
 You can pipe the results of other CLI tools to stdin, pass one raw file with
-`-i`, or construct multipart input with repeatable `-F` options. You can also
+`-i`, or construct form data with repeatable `-F` options. Combine `-i` with typed
+`-F` file parts for `multipart/related`. You can also
 chain multiple QIP components together like unix tools.
 
 Put one or more HTTPS hosts before `run`, `dry run`, `bench`, or `comply` to
@@ -179,6 +180,10 @@ echo "qip + wasm" | qipx run bytes/gzip-compress.wasm | gunzip
 
 # Create BGZF for tabix and samtools (also gunzip-compatible)
 qipx run -i regions.bed bytes/bgzf-compress.wasm > regions.bed.gz
+
+# Create Zstandard bytes that any zstd reads
+echo "qip + wasm" | qipx run bytes/zstd-compress.wasm | zstd -dc
+# qip + wasm
 
 # Load Hacker News, extract all links
 curl -s https://news.ycombinator.com | qipx run text/html/html-link-extractor.wasm
@@ -644,7 +649,7 @@ echo "World" | NODE_OPTIONS=--expose-gc qipx bench -i - --benchtime=2s text/hell
 - [ ] Decide whether the component debugger should show fixed table entries alongside locals and globals.
 - [ ] In debugger show instructions used by the current wasm: call_indirect, SIMD, etc.
 - [ ] Allow compiling TUIs into native code via `application/wasm/qip-component-to-c.wasm`. So you get the benefit of a sandbox but you get the fast performance of native.
-- [ ] Explore a consistent route hierarchy for interactive image tools, such as moving `/image-resize` to `/image/resize`. Consider all image tools together, preserve redirects for existing URLs, and decide how tool routes coexist with the `/image` component namespace.
+- [x] Move interactive image tools under `/image/`, such as `/image-resize` to `/image/resize`, with redirects from the old URLs. Tool pages avoid names of `/image/<format>/` component directories, so `/webp` became `/image/convert-to-webp`.
 - [ ] Add `--view-source` to `npx qip-router warc`, including recipe source and view-source records.
 - [ ] Align `npx qip-router` CLI output with `./qip router`. Rendering and WARC output match byte-for-byte, and `list` has the same routes after whitespace normalization. Remaining differences: `list` uses tabs instead of Go's padded columns; `head` prints an HTTP-style block to stdout while Go logs headers to stderr; Node does not currently emit `ETag` for some static/raw `HEAD` responses that Go reports.
 - [ ] Add `github:owner/repo/subdir` content roots to `qip-router`, pinned to one repository snapshot per load.

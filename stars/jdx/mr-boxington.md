@@ -1,6 +1,6 @@
 ---
 project: mr-boxington
-stars: 486
+stars: 522
 description: |-
     null
 url: https://github.com/jdx/mr-boxington

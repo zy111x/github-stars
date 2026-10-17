@@ -1,6 +1,6 @@
 ---
 project: comark
-stars: 1056
+stars: 1060
 description: |-
     Comark is an open-source Markdown parser and renderer with components, attributes and plugins. It streams AI output to React, Vue, Svelte, Angular, HTML and the terminal.
 url: https://github.com/comarkdown/comark
@@ -13,6 +13,7 @@ url: https://github.com/comarkdown/comark
 [![npm version](https://img.shields.io/npm/v/comark?color=black)](https://npmx.dev/comark)
 [![npm downloads](https://img.shields.io/npm/dm/comark?color=black)](https://npm.chart.dev/comark)
 [![CI](https://img.shields.io/github/actions/workflow/status/comarkdown/comark/ci.yml?branch=main&color=black)](https://github.com/comarkdown/comark/actions/workflows/ci.yml)
+[![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://app.codspeed.io/comarkdown/comark)
 [![Documentation](https://img.shields.io/badge/Documentation-black?logo=readme&logoColor=white)](https://comark.dev)
 [![license](https://img.shields.io/github/license/comarkdown/comark?color=black)](https://github.com/comarkdown/comark/blob/main/LICENSE)
 

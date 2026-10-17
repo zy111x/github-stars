@@ -1,6 +1,6 @@
 ---
 project: awesome-tuis
-stars: 20855
+stars: 20919
 description: |-
     List of projects that provide terminal user interfaces
 url: https://github.com/rothgar/awesome-tuis
@@ -59,10 +59,12 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [damon](https://github.com/hashicorp/damon) TUI interface for Hashicorp Nomad
 - [dashbrew](https://github.com/rasjonell/dashbrew) TUI dashboard builder that lets you visualize data from scripts and APIs.
 - [dolphie](https://github.com/charles-001/dolphie) Your single pane of glass for real-time analytics into MySQL/MariaDB & ProxySQL
+- [flowrs](https://github.com/jvanbuel/flowrs) A TUI for monitoring, inspecting and managing Apache Airflow DAGs
 - [framework-tool-tui](https://github.com/grouzen/framework-tool-tui) TUI for controlling and monitoring Framework Computers hardware built in Rust
 - [fubar](https://github.com/irishmaestro/fubar) Formidable Unix Binary Arsenal & Repository. TUI built for gtfobins power users.
 - [gh-dash](https://github.com/dlvhdr/gh-dash) A rich terminal UI for GitHub PRs and Issues
 - [Glances](https://github.com/nicolargo/glances) Glances an Eye on your system. A top/htop alternative.
+- [Gloomberb](https://github.com/vincelwt/gloomberb) Open-source finance terminal for portfolios, watchlists, charts, news, research, and broker connections.
 - [Goaccess](https://github.com/allinurl/goaccess) GoAccess is a real-time web log analyzer and interactive viewer that runs in a terminal in nix systems or through your browser.
 - [gobang](https://github.com/TaKO8Ki/gobang) A cross-platform TUI database management tool written in Rust
 - [gonzo](https://github.com/control-theory/gonzo) A powerful, real-time log analysis terminal UI inspired by k9s.
@@ -88,6 +90,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [otel-tui](https://github.com/ymtdzzz/otel-tui) A terminal OpenTelemetry viewer
 - [Planor](https://github.com/mrusme/planor) The Cloud Aviator, dashboard for AWS, Vultr, Heroku, ...
 - [process-compose](https://github.com/F1bonacc1/process-compose) TUI for running apps and processes
+- [prt](https://github.com/rekurt/prt) Interactive network port monitor with process details and SSH tunnel inspection for macOS and Linux.
 - [psmux](https://github.com/marlocarlo/psmux) tmux-compatible terminal multiplexer for Windows built in Rust with ratatui.
 - [psnet](https://github.com/marlocarlo/psnet) Real-time TUI network monitor for Windows with speed graphs, DNS resolution, and packet inspection.
 - [pstop](https://github.com/marlocarlo/pstop) htop-style system monitor for Windows with per-core CPU bars, tree view, and 7 color schemes.
@@ -463,6 +466,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 - [Consolonia](https://github.com/jinek/Consolonia) A **.NET** terminal-based GUI framework with support of XAML
 - [Elaris.UI](https://github.com/ambystechcom/Ambystech.Elaris.UI) A lightweight Terminal UI library for **.NET** with true 24-bit RGB color support. Built for modern terminals with cross-platform support.
 - [Hex1b](https://github.com/mitchdenny/hex1b) A **.NET** library for building rich, interactive TUIs with a React-inspired declarative API
+- [RazorConsole](https://github.com/RazorConsole/RazorConsole) A **.NET** library for building interactive terminal UIs with Razor components and keyboard/mouse support
 - [SharpConsoleUI](https://github.com/nickprotop/ConsoleEx) Multi-window TUI framework for **.NET** with overlapping windows, compositor effects, and Spectre.Console integration
 - [Spectre.Console](https://github.com/spectreconsole/spectre.console) A **.NET** library for creating beautiful console applications
 - [Terminal.Gui](https://github.com/gui-cs/Terminal.Gui) Cross-platform terminal UI toolkit for **.NET**
@@ -471,6 +475,7 @@ There's a lot of cool projects here that I have no association with. Run them at
 
 - [iocraft](https://github.com/ccbrown/iocraft) **Rust** crate for beautiful, artisanally crafted TUIs and text-based IO, with a declarative, React-like API inspired by Ink.
 - [Ratatui](https://github.com/tui-rs-revival/ratatui) A **Rust** crate for building Terminal UIs (actively maintained fork of tui-rs).
+- [Ratatui Kit](https://github.com/yexiyue/ratatui-kit) **Rust** crate that allows for the creation of React-like components built on top of Ratatui.
 - [tui-input](https://github.com/sayanarijit/tui-input) TUI input library supporting multiple backends, tui-rs and ratatui in **Rust**
 - [tui-rs](https://github.com/fdehau/tui-rs) Terminal user interfaces and dashboards using **Rust** (no longer maintained, use Ratatui instead).
 - [Zaz](https://github.com/raphamorim/zaz) A **Rust** TUI library for efficient terminal rendering.

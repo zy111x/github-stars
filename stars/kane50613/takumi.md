@@ -1,6 +1,6 @@
 ---
 project: takumi
-stars: 3080
+stars: 3118
 description: |-
     Render OG images and paged PDFs from JSX, HTML, and CSS. No headless browser. Runs on Node.js, Cloudflare Workers, browsers, and Rust.
 url: https://github.com/kane50613/takumi
@@ -273,6 +273,8 @@ We welcome bug reports, feature requests, doc improvements, and new example inte
 ## License
 
 MIT or Apache-2.0
+
+Bundled third-party code is listed in the [third-party notices](THIRD-PARTY-NOTICES.md).
 
 <br/>
 <a href="https://vercel.com/oss">

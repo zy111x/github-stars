@@ -1,12 +1,12 @@
 ---
 project: docus
-stars: 3111
+stars: 3117
 description: |-
     Write beautiful documentations with Nuxt and Markdown.
 url: https://github.com/nuxt-content/docus
 ---
 
-[![docus](https://docus.dev/_og/s/c_Landing,title_Write+beautiful+docs+with+Markdown,description_Ship+fast+flexible+and+SEO-optimized+documentation+with+beautiful+design+out+of+the+box.,p_Ii9lbiI.png)](https://docus.dev)
+[![docus](https://docus.dev/_og/s/o_e5724630ae944920.png)](https://docus.dev)
 
 > Create beautiful docs with Markdown & Vue components
 

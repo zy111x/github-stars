@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 9440
+stars: 9609
 description: |-
     Lean, fine tuned Opencode multi agent suite · Mix any models · Auto delegate tasks
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -12,7 +12,7 @@ url: https://github.com/alvinunreal/oh-my-opencode-slim
   </a>
   <h3>✨ oh-my-opencode-slim ✨</h3>
 
-  <p><i>Seven divine beings emerged from the dawn of code, each an immortal master of their craft,<br>awaiting your command to forge order from chaos and build what was once thought impossible.</i></p>
+  <p><i>Six divine beings emerged from the dawn of code, each an immortal master of their craft,<br>awaiting your command to forge order from chaos and build what was once thought impossible.</i></p>
 
   <p><b>Opencode Multi Agent Suite</b> · Mix any models · Auto delegate tasks</p>
   <p><sub>by <b>Boring Dystopia Development</b></sub></p>
@@ -43,9 +43,9 @@ The main idea is simple: instead of forcing one model to do everything, the plug
 
 ### ✨ Highlights
 
-- **[Seven specialized agents](#meet-the-pantheon)** - Orchestrator, Explorer,
-  Oracle, Council, Librarian, Designer, and Fixer. Each part of the job goes to
-  the agent best suited for it - mix any models across any providers.
+- **[Six specialized agents](#meet-the-pantheon)** - Orchestrator, Explorer,
+  Oracle, Council, Designer, and Fixer. Each part of the job goes to the agent
+  best suited for it - mix any models across any providers.
 - **[Background orchestration](docs/background-orchestration.md)** - the
   Orchestrator dispatches specialists as background tasks, tracks them, and
   reconciles results before continuing - parallel work by default, with
@@ -58,7 +58,7 @@ The main idea is simple: instead of forcing one model to do everything, the plug
 - **[Companion](docs/companion.md)** - an optional floating desktop window
   showing which agents are active, including parallel background specialists.
 - **[Multiplexer integration](docs/multiplexer-integration.md)** - watch agents
-  work live in Tmux, Zellij, Herdr, cmux, or kitty panes.
+  work live in Tmux, Zellij, Herdr, cmux, kitty, or WezTerm panes.
 - **[Preset switching](docs/preset-switching.md)** - swap the whole team's
   models at runtime with `/preset`, with single-parent preset inheritance.
 - **[Code intelligence tools](docs/tools.md)** - LSP tools, AST-aware search
@@ -171,7 +171,7 @@ Then:
 > It's **recommended** to understand how background orchestration works. The **[Orchestrator prompt](https://github.com/alvinunreal/oh-my-opencode-slim/blob/master/src/agents/orchestrator.ts#L28)** contains the scheduler rules, specialist routing logic, and thresholds for when work should be assigned to background agents. You can always delegate manually by calling a subagent via: `@agentName <task>`
 
 > [!TIP]
-> Because background agents are now the default workflow, it is **highly recommended** to enable and configure **[Multiplexer Integration](docs/multiplexer-integration.md)**. It automatically opens each agent in a dedicated Tmux, Zellij, Herdr, cmux, or kitty pane, so you can watch specialists work live while the Orchestrator continues coordinating the session. On OpenCode v2 hosts, panes work with the shared background service or an explicit `--server`; `--standalone` hosts cannot host panes (one diagnostic per process; use v2's native subagent surfaces instead).
+> Because background agents are now the default workflow, it is **highly recommended** to enable and configure **[Multiplexer Integration](docs/multiplexer-integration.md)**. It automatically opens each agent in a dedicated Tmux, Zellij, Herdr, cmux, kitty, or WezTerm pane, so you can watch specialists work live while the Orchestrator continues coordinating the session. On OpenCode v2 hosts, panes work with the shared background service or an explicit `--server`; `--standalone` hosts cannot host panes (one diagnostic per process; use v2's native subagent surfaces instead).
 
 The default generated configuration includes both `openai` and `opencode-go` presets.
 
@@ -181,12 +181,11 @@ The default generated configuration includes both `openai` and `opencode-go` pre
   "preset": "openai",
   "presets": {
     "openai": {
-      "orchestrator": { "model": "openai/gpt-6-sol", "variant": "high", "skills": ["*"], "mcps": ["*", "!context7"] },
-      "oracle": { "model": "openai/gpt-6-astra", "variant": "high", "skills": ["simplify"], "mcps": [] },
-      "librarian": { "model": "openai/gpt-6-luna", "variant": "low", "skills": [], "mcps": ["context7", "gh_grep"] },
-      "explorer": { "model": "openai/gpt-6-luna", "variant": "low", "skills": [], "mcps": [] },
-      "designer": { "model": "openai/gpt-6-luna", "variant": "medium", "skills": [], "mcps": [] },
-      "fixer": { "model": "openai/gpt-6-luna", "variant": "high", "skills": [], "mcps": [] }
+      "orchestrator": { "model": "openai/gpt-6-sol", "variant": "high", "skills": ["*"] },
+      "oracle": { "model": "openai/gpt-6-astra", "variant": "high", "skills": ["simplify"] },
+      "explorer": { "model": "openai/gpt-6-luna", "variant": "low", "skills": [] },
+      "designer": { "model": "openai/gpt-6-luna", "variant": "medium", "skills": [] },
+      "fixer": { "model": "openai/gpt-6-luna", "variant": "high", "skills": [] }
     }
   }
 }
@@ -307,7 +306,7 @@ If any agent fails to respond, check your provider authentication and config fil
   </tr>
   <tr>
     <td colspan="2">
-      <b>Role:</b> <code>Codebase reconnaissance</code>
+      <b>Role:</b> <code>Codebase reconnaissance and external research</code>
     </td>
   </tr>
   <tr>
@@ -424,48 +423,7 @@ If any agent fails to respond, check your provider authentication and config fil
 
 ---
 
-### 05. Librarian: The Weaver of Knowledge
-
-<table>
-  <tr>
-    <td width="30%" align="center" valign="top">
-      <img src="img/librarian.jpg" width="240" style="border-radius: 10px;">
-      <br><sub><i>The weaver of understanding.</i></sub>
-    </td>
-    <td width="70%" valign="top">
-      The Librarian was forged when humanity realized that no single mind could hold all knowledge. They are the weaver who connects disparate threads of information into a tapestry of understanding. They traverse the infinite library of human knowledge, gathering insights from every corner and binding them into answers that transcend mere facts. What they return is not information - it's understanding.
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <b>Role:</b> <code>External knowledge retrieval</code>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <b>Prompt:</b> <a href="src/agents/librarian.ts"><code>librarian.ts</code></a>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <b>Default Model:</b> <code>openai/gpt-6-luna</code>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <b>Recommended Models:</b> <code>deepseek-v4-flash</code> <code>gpt-5.3-codex</code> <code>mimo-v2.5</code> <code>minimax-m2.7</code>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">
-      <b>Model Guidance:</b> Choose a fast, low-cost model. Librarian handles research and documentation lookups, so speed and efficiency usually matter more than using your strongest reasoning model.
-    </td>
-  </tr>
-</table>
-
----
-
-### 06. Designer: The Guardian of Aesthetics
+### 05. Designer: The Guardian of Aesthetics
 
 <table>
   <tr>
@@ -506,7 +464,7 @@ If any agent fails to respond, check your provider authentication and config fil
 
 ---
 
-### 07. Fixer: The Last Builder
+### 06. Fixer: The Last Builder
 
 <table>
   <tr>
@@ -555,7 +513,7 @@ If any agent fails to respond, check your provider authentication and config fil
 > **Why a separate agent?** If your Orchestrator model is not multimodal, enable Observer to handle images, screenshots, and other visual files. Observer is disabled by default and gives the Orchestrator a dedicated multimodal reader without forcing you to change your main reasoning model. Set `disabled_agents: []` and an `observer` model in your configuration. The bundled `opencode-go` install preset does this automatically because its GLM Orchestrator is not multimodal. Omitting `image_routing` preserves existing conditional Observer behavior. `"auto"` is capability-aware: models that accept image input keep attachments inline for native vision; non-vision chains get attachments saved under `.opencode/images/<session>/` with a delegation nudge by path. `"direct"` always keeps image parts inline. Saved workspace images are not automatically deleted. Remove the whole `.opencode/images/` directory or a single session subdirectory manually when no longer needed (references in old conversations then stop resolving); images from session-less messages are saved at the top level.
 
 > [!TIP]
-> **Subagents reading images.** Advisory subagents (explorer, librarian, oracle, designer, councillors) can dispatch `@observer` themselves for image files on disk. On OpenCode v2 hosts this needs one extra hop of nesting, which the host denies by default — set `"experimental": { "subagent_depth": 2 }` in your opencode config to enable it. Fixer, observer itself, and the council synthesizer stay non-spawning by design.
+> **Subagents reading images.** Advisory subagents (explorer, oracle, designer, councillors) can dispatch `@observer` themselves for image files on disk. On OpenCode v2 hosts this needs one extra hop of nesting, which the host denies by default — set `"experimental": { "subagent_depth": 2 }` in your opencode config to enable it. Fixer, observer itself, and the council synthesizer stay non-spawning by design.
 
 <table>
   <tr>
@@ -612,11 +570,14 @@ bundled version.
 | Skill | Purpose | Default agent | How to invoke |
 |:-----:|---------|---------------|---------------|
 | <img src="img/skills/codemap.webp" width="120" alt="Codemap artifact"><br>[`codemap`](src/skills/codemap/SKILL.md) | Hierarchical repository maps so agents understand codebases without re-reading everything | `orchestrator` | `run codemap` |
-| <img src="img/skills/deepwork.webp" width="120" alt="Deepwork artifact"><br>[`deepwork`](src/skills/deepwork/SKILL.md) | Structured workflow for large, risky, multi-phase coding sessions with review gates | `orchestrator` | `/deepwork <task>` |
+| <img src="img/skills/deepwork.webp" width="120" alt="Deepwork artifact"><br>[`deepwork`](src/skills/deepwork/SKILL.md) | Autonomous pass-by-pass workflow (sketch → structure → detail) for large, risky coding sessions, one review gate per pass | `orchestrator` | `/deepwork <task>` |
 | <img src="img/skills/verification-planning.webp" width="120" alt="Verification Planning artifact"><br>[`verification-planning`](src/skills/verification-planning/SKILL.md) | Plans a project-specific evidence path before non-trivial changes | `orchestrator` | automatic before non-trivial work |
 | <img src="img/skills/simplify.webp" width="120" alt="Simplify artifact"><br>[`simplify`](src/skills/simplify/SKILL.md) | Behavior-preserving simplification for readability and maintainability | `oracle` | ask for simplification or during review |
 | <img src="img/skills/worktrees.webp" width="120" alt="Worktrees artifact"><br>[`worktrees`](src/skills/worktrees/SKILL.md) | Git worktrees as safe, isolated coding lanes for risky or parallel work | `orchestrator` | `work in a worktree` |
 | <img src="img/skills/clonedeps.webp" width="120" alt="Clonedeps artifact"><br>[`clonedeps`](src/skills/clonedeps/SKILL.md) | Clones dependency source locally so agents can inspect library internals | `orchestrator` | `clone dependencies` |
+| <img src="img/skills/step-back.webp" width="120" alt="Step Back artifact"><br>[`step-back`](src/skills/step-back/SKILL.md) | Pauses snowballing patches to reassess direction and propose a cleaner path | `orchestrator` | automatic when fixes start stacking |
+| <img src="img/skills/deanchor.webp" width="120" alt="Deanchor artifact"><br>[`deanchor`](src/skills/deanchor/SKILL.md) | Generalizes from examples instead of copying them with light edits | `orchestrator` | automatic when a request includes examples |
+| <img src="img/skills/ai-estimates.webp" width="120" alt="AI Estimates artifact"><br>[`ai-estimates`](src/skills/ai-estimates/SKILL.md) | Estimates task duration for a human working with AI, not alone | `orchestrator` | ask how long something will take |
 | <img src="img/skills/reflect.webp" width="120" alt="Reflect artifact"><br>[`reflect`](src/skills/reflect/SKILL.md) | Turns repeated workflow friction into reusable skills, agents, or config | `orchestrator` | `/reflect` |
 | <img src="img/skills/oh-my-opencode-slim.webp" width="120" alt="oh-my-opencode-slim artifact"><br>[`oh-my-opencode-slim`](src/skills/oh-my-opencode-slim/SKILL.md) | Configures and safely improves the plugin setup itself | `orchestrator` | ask to tune your setup |
 
@@ -656,6 +617,32 @@ install details.
 
 ---
 
+## Choose an inner ACP model per invocation
+
+Keep the outer OpenCode wrapper model fixed while choosing an independent
+inner model for each task. The wrapper calls, for a server advertising `fable`:
+
+```text
+acp_run(agent: "claude-code", model: "fable", prompt: "Investigate this bug")
+```
+
+To delegate through the generated wrapper, put the choice in the task text:
+
+```text
+@claude-code
+Inner ACP selector: fable
+Task: Investigate this bug and summarize the likely cause.
+```
+
+`acp_run.model` is an exact ACP-advertised selector, not an OpenCode
+`provider/model`. Native `subagent.model` selects only the **outer** wrapper.
+The wrapper's extraction is LLM-mediated, not a new native delegation argument.
+An explicit selector must be advertised and confirmed before prompting; errors
+never silently fall back. Omission uses the external agent default, not the
+previous call's selection. Custom wrapper/routing prompts replace this generated
+guidance and must implement it themselves. See
+[ACP Agents](docs/acp-agents.md#choosing-the-inner-model-per-invocation).
+
 ## 📚 Documentation
 
 Use this section as a map: start with installation, then jump to features, configuration, or example presets depending on what you need.
@@ -669,7 +656,7 @@ Use this section as a map: start with installation, then jump to features, confi
 | **[Council](docs/council.md)** | Run multiple models in parallel and synthesize a single answer — keyword-triggered via the orchestrator's Council Mode procedure |
 | **[Custom Agents](docs/configuration.md#custom-agents)** | Define your own specialists with custom prompts, models, MCP access, and Orchestrator delegation rules |
 | **[ACP Agents](docs/acp-agents.md)** | Connect external ACP-compatible agents such as Claude Code ACP or Gemini ACP as delegatable subagents; tool and plan progress streams to the TUI while they work |
-| **[Multiplexer Integration](docs/multiplexer-integration.md)** | Watch agents work live in Tmux, Zellij, Herdr, cmux, or kitty panes |
+| **[Multiplexer Integration](docs/multiplexer-integration.md)** | Watch agents work live in Tmux, Zellij, Herdr, cmux, kitty, or WezTerm panes |
 | **[Codemap](docs/codemap.md)** | Generate hierarchical codemaps to understand large codebases faster |
 | **[Clonedeps](docs/clonedeps.md)** | Clone selected dependency source into an ignored local workspace for inspection |
 | **[Worktrees](docs/worktrees.md)** | Use `.slim/worktrees/` lanes for isolated parallel or risky coding work |
@@ -688,7 +675,7 @@ Use this section as a map: start with installation, then jump to features, confi
 | **[Project Customization](docs/project-local-customization.md)** | Repository-specific custom agents, prompt overrides, per-agent skills, and precedence |
 | **[Background Orchestration](docs/background-orchestration.md)** | Scheduler-first orchestrator model built around native background subagents |
 | **[Maintainer Guide](docs/maintainers.md)** | Issue triage rules, label meanings, support routing, and repo maintenance workflow |
-| **[Skills](docs/skills.md)** | Bundled skills such as `simplify`, `codemap`, `clonedeps`, `deepwork`, `verification-planning`, `reflect`, `worktrees`, and `oh-my-opencode-slim` |
+| **[Skills](docs/skills.md)** | Bundled skills such as `simplify`, `codemap`, `clonedeps`, `deepwork`, `verification-planning`, `step-back`, `deanchor`, `ai-estimates`, `reflect`, `worktrees`, and `oh-my-opencode-slim` |
 | **[MCPs](docs/mcps.md)** | `context7`, `gh_grep`, and how MCP permissions work per agent |
 | **[Tools](docs/tools.md)** | Built-in tool capabilities like `webfetch`, LSP tools, code search, and formatters |
 
@@ -701,7 +688,7 @@ Use this section as a map: start with installation, then jump to features, confi
   <p><sub>Every merged contribution leaves a mark on the realm.</sub></p>
 
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-134-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-137-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -891,6 +878,9 @@ Use this section as a map: start with installation, then jump to features, confi
     <tr>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/doublepi123"><img src="https://avatars.githubusercontent.com/u/54027436?v=4?s=100" width="100px;" alt="doublepi123"/><br /><sub><b>doublepi123</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=doublepi123" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/timothy-cloudopsguy"><img src="https://avatars.githubusercontent.com/u/96697196?v=4?s=100" width="100px;" alt="Timothy"/><br /><sub><b>Timothy</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=timothy-cloudopsguy" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/mwoodson"><img src="https://avatars.githubusercontent.com/u/236828?v=4?s=100" width="100px;" alt="Matt Woodson"/><br /><sub><b>Matt Woodson</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=mwoodson" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/caiozizh"><img src="https://avatars.githubusercontent.com/u/244536034?v=4?s=100" width="100px;" alt="caiozizh"/><br /><sub><b>caiozizh</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=caiozizh" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/capyBearista"><img src="https://avatars.githubusercontent.com/u/20227532?v=4?s=100" width="100px;" alt="Arjun Pramanik"/><br /><sub><b>Arjun Pramanik</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=capyBearista" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

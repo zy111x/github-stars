@@ -1,6 +1,6 @@
 ---
 project: mapcn
-stars: 12247
+stars: 12273
 description: |-
     Beautiful map components. 100% Free, Zero config, one command setup.
 url: https://github.com/AnmolSaini16/mapcn
@@ -28,7 +28,10 @@ url: https://github.com/AnmolSaini16/mapcn
 </p>
 
 <p align="center">
-  <img src="public/banner.png" alt="mapcn banner" />
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="public/banner-light.png" />
+    <img src="public/banner.png" alt="mapcn banner" />
+  </picture>
 </p>
 
 ## Features
@@ -41,6 +44,16 @@ url: https://github.com/AnmolSaini16/mapcn
 - 📍 **Markers & Popups** — Rich marker system with popups, tooltips, and labels
 - 🛤️ **Routes** — Draw routes and paths on your maps
 - 🎮 **Controls** — Zoom, compass, locate, and fullscreen controls
+
+## Agent Skill
+
+Teach your coding agent (Claude Code, Cursor, Codex, …) how to use mapcn:
+
+```bash
+npx skills add AnmolSaini16/mapcn
+```
+
+Then ask for a map, or ask where one would fit in your app. See [mapcn.dev/docs/skill](https://mapcn.dev/docs/skill).
 
 ## Basemap Terms of Service
 
