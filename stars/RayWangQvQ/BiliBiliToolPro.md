@@ -1,6 +1,6 @@
 ---
 project: BiliBiliToolPro
-stars: 8973
+stars: 9018
 description: B 站（bilibili）自动任务工具，支持docker、青龙、k8s等多种部署方式。全面拥抱AI。敏感肌也能用。
 url: https://github.com/RayWangQvQ/BiliBiliToolPro
 ---
@@ -208,7 +208,11 @@ Documentation fixes, clarifications, and corrections are just as valuable as cod
 Support the project
 -------------------
 
-If BiliTool helps you, you can support its maintenance through the donation QR code below. Include a name and message if you would like the maintainer to recognize your donation.
+If BiliTool helps you, you can support its maintenance through the donation QR code below.
+
+Every sponsorship is a vote for your ideal world!
+
+(If you would like to join the discussion group, please include your WeChat ID in the message when making a donation.)
 
 Some creator-ID settings use the maintainer's Bilibili ID as a **default configuration value**. You can change those settings through the configuration file, secrets, or environment variables to support a different creator.
 

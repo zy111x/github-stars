@@ -1,7 +1,7 @@
 ---
 project: next-ai-draw-io
-stars: 36163
-description: A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural language commands and AI-assisted visualization.
+stars: 36306
+description: Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
 url: https://github.com/DayuanJiang/next-ai-draw-io
 ---
 
@@ -12,7 +12,7 @@ Next AI Draw.io
 
 English | 中文 | 日本語
 
-**Live Demo** · **Desktop App** · **MCP Server**
+**Live Demo** · **Docs** · **Gallery** · **Desktop App** · **MCP Server**
 
 promo-web.mp4
 
@@ -38,32 +38,50 @@ Highlights
 
 **Use**
 
--   24 model providers; enter your own API key in the browser and it stays on your machine
+-   25 model providers, including an OpenAI-compatible preset for any other URL; enter your own API key in the browser and it stays on your machine
 -   Models that reason show their thinking
 -   Dark mode; the interface is available in English, Simplified Chinese, Traditional Chinese and Japanese
 
 Examples
 --------
 
+**Highly available web app on AWS**  
+
+**Prompt:** Draw an AWS architecture for a highly available web app across two Availability Zones with AWS icons: Route 53, CloudFront with AWS WAF, an Application Load Balancer, ECS Fargate services in private subnets, Aurora PostgreSQL with a writer and a reader, ElastiCache for Redis, S3 for static assets, NAT gateways, and CloudWatch for monitoring.
+
+**Model:** Claude Opus 5.5, in Claude Code with the MCP server
+
+**Kubernetes deployment for a web shop**  
+
+**Prompt:** Draw a Kubernetes deployment for a web shop: an ingress, web and API deployments with their services and pods, a Redis StatefulSet with a persistent volume, a ConfigMap, a Secret, and an autoscaler on the API.
+
+**Model:** Claude Opus 5.5, in Claude Code with the MCP server
+
+**ER diagram of an online shop**  
+
+**Prompt:** Draw an ER diagram for an online shop: customers, addresses, orders, order items, products, categories and payments, with primary and foreign keys and the cardinality of each relationship.
+
+**Model:** Claude Opus 5.5, in Claude Code with the MCP server
+
+**BPMN expense claim process**  
+
+**Prompt:** Draw a BPMN process for an expense claim: an employee submits it, the manager approves or rejects it, finance checks the receipts and pays, and the claim goes back to the employee when receipts are missing.
+
+**Model:** Claude Opus 5.5, in Claude Code with the MCP server
+
 **Transformer architecture with animated connectors**  
 
-**Prompt:** Give me a **animated connector** diagram of transformer's architecture.
+**Prompt:** Give me an animated connector diagram of transformer's architecture.
 
-**RAG architecture**  
+**Model:** Claude Opus 5.5, in Claude Code with the MCP server
 
-**Prompt:** Generate a RAG architecture diagram for **chat application**. Use connected diagram for data ingestion
+**Customer journey map of a banking app**  
 
-**Authentication with React and AWS**  
+**Prompt:** Draw a customer journey map for a mobile banking app across five stages (discover, sign up, first payment, everyday use, get help), with the customer's actions, touchpoints, feelings and pain points in each stage, and an opportunity for each pain point.
 
-**Prompt:** Generate authentication process using React with **AWS**. Use Serverless architecture.
+**Model:** Claude Opus 5.5, in Claude Code with the MCP server
 
-**Open Innovation model**  
-
-**Prompt:** Create visualization of Henry Chesbrough's Open Innovation model.
-
-**Cat sketch**  
-
-**Prompt:** Draw a cute cat for me.
+More examples, each with its prompt and model, are in the **gallery**.
 
 Use it
 ------
@@ -78,6 +96,8 @@ Download the Windows, macOS or Linux installer from the Releases page.
 
 ### In your AI agent (MCP)
 
+mcp-promo-v10-720p.mp4
+
 Through MCP (Model Context Protocol, the protocol AI agents use to call outside tools), Claude Desktop, Cursor, VS Code and others can draw draw.io diagrams directly. Add this to your client's MCP configuration:
 
 {
@@ -89,18 +109,29 @@ Through MCP (Model Context Protocol, the protocol AI agents use to call outside 
   }
 }
 
-For Claude Code, one command does it:
+In VS Code or Cursor, one click adds it:
 
-claude mcp add drawio -- npx @next-ai-drawio/mcp-server@latest
+For Claude Code, one command does it (`--scope user` makes it available in every project):
+
+claude mcp add --scope user drawio -- npx @next-ai-drawio/mcp-server@latest
+
+It is also a plugin in the Claude Code community marketplace (Claude Code 2.1.275 or later):
+
+```
+/plugin install next-ai-drawio --marketplace anthropics/claude-plugins-community
+```
 
 Then ask the AI for "a flowchart of user authentication with login, MFA and session management" and the diagram appears in your browser as it is drawn. The MCP server has most of the web app's drawing features:
 
--   The same drawing rules and icon libraries (AWS, Azure, GCP, Kubernetes and more)
--   A screenshot tool, so the AI can look at the rendered diagram and fix it
--   Version history, multi-page diagrams, and download as `.drawio`, `.png`, `.svg` or `.drawio.svg`
--   Auto-save to `~/.next-ai-drawio/`, so a diagram survives a restart
+-   The same drawing rules, icon libraries (AWS, Azure, GCP, Kubernetes and more) and canvas as the web app: the AI's changes are outlined, one Ctrl+Z takes them back, and the AI reads the shapes you select
+-   A screenshot tool, so the AI looks at the rendered diagram and fixes it
+-   Version history, several pages, export as `.drawio`, `.png`, `.svg` or `.drawio.svg`, and auto-save to `~/.next-ai-drawio/`; the draw.io editor ships inside the package, so the preview works offline
 
-See the MCP server README for VS Code, Cursor and other client configurations.
+The MCP server page has the setup for Codex, VS Code, Cursor and other clients, every tool, and how it compares with other draw.io MCP servers.
+
+### Compared with draw.io's built-in AI
+
+draw.io has its own Generate tool (Arrange > Insert > Generate). It runs inside draw.io on a free hosted model or your own API key, and it can change a diagram, page or selection that you attach to its chat. Next AI Draw.io sends the current canvas, including your hand edits, with every message, turns every AI change into a version you can compare or restore, and works with 25 providers, including local models through Ollama, on the demo site, in the desktop app or on your own server.
 
 Self-host
 ---------
@@ -143,7 +174,7 @@ Offline deployment
 
 ### Models and providers
 
-24 providers are supported: AWS Bedrock (default), OpenAI, Anthropic, Google AI, Google Vertex AI, Azure OpenAI, Ollama, OpenRouter, AIHubMix, DeepSeek, SiliconFlow, SGLang, Vercel AI Gateway, Tencent EdgeOne, ByteDance Doubao, ModelScope, Zhipu GLM, Qwen, Qiniu, Kimi, MiniMax, Novita, Xiaomi MiMo and Atlas Cloud. The environment variables and notes for each are in the provider configuration guide.
+25 providers are supported: AWS Bedrock (default), OpenAI, Anthropic, Google AI, Google Vertex AI, Azure OpenAI, Ollama, OpenRouter, AIHubMix, DeepSeek, SiliconFlow, SGLang, Vercel AI Gateway, Tencent EdgeOne, ByteDance Doubao, ModelScope, Zhipu GLM, Qwen, Qiniu, Kimi, MiniMax, Novita, Xiaomi MiMo, Atlas Cloud, and an OpenAI-compatible preset for any other URL (vLLM, LM Studio, a gateway). The environment variables and notes for each are in the provider configuration guide.
 
 **Which model**: the task is to produce long text in a strict format (draw.io XML), so pick a capable model; small models tend to produce broken diagrams.
 

@@ -1,6 +1,6 @@
 ---
 project: learn_python3_spider
-stars: 22185
+stars: 22206
 description: python爬虫教程系列、从0到1学习python爬虫，包括浏览器抓包，手机APP抓包，如 fiddler、mitmproxy，各种爬虫涉及的模块的使用，如：requests、beautifulSoup、selenium、appium、scrapy等，以及IP代理，验证码识别，Mysql，MongoDB数据库的python使用，多线程多进程爬虫的使用，css 爬虫加密逆向破解，JS爬虫逆向，分布式爬虫，爬虫项目实战实例等
 url: https://github.com/wistbean/learn_python3_spider
 ---
@@ -10,10 +10,10 @@ learn\_python3\_spider
 
 接下来就是，学习python的正确姿势！ peace.
 
-我开发的小程序「健身动作库与计划」
-=================
+我的小说「被调用的人」火热更新中
+================
 
-如果你喜欢健身的话：
+9.9分神作：程序员收到一封神秘邮件后改变了自己的人生
 
 python爬虫教程从0到1
 ==============

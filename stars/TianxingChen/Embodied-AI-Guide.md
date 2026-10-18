@@ -1,6 +1,6 @@
 ---
 project: Embodied-AI-Guide
-stars: 16373
+stars: 16513
 description: [Lumina具身智能社区] 具身智能技术指南 Embodied-AI-Guide
 url: https://github.com/TianxingChen/Embodied-AI-Guide
 ---
@@ -432,7 +432,7 @@ WhynotTV、TianxingChen（陈天行）、穆尧\_YaoMarkMu、许华哲 Harry、�
     -   (1.1) 经典课程
 -   (2) Control Foundations —— 控制理论基础
     -   (2.1) 经典控制（Classical Control）
-    -   (2.2) 现代控制（最优控制）
+    -   (2.2) 现代控制（线性系统与最优控制）
     -   (2.3) 先进控制（Advanced Control）
 -   (3) Robotics Foundations —— 机器人学导论
     -   (3.1) 推荐教材与材料
@@ -495,7 +495,7 @@ WhynotTV、TianxingChen（陈天行）、穆尧\_YaoMarkMu、许华哲 Harry、�
 
 本项目采用 **非商业使用（Non-Commercial Use）** 协议：
 
--   **允许**：个人学习、学术研究与其他非盈利用途；
+-   **允许**：个人学习、学术研究与其他非营利用途；
 -   **禁止**：任何形式的商业使用，包括但不限于公司/企业内部使用、集成到收费产品或服务中，或用于任何营利目的。
 
 详情请查看仓库中的 LICENSE 文件。如需商业授权（例如在公司产品或商业项目中使用），请联系项目负责人：chentianxing2002@gmail.com。

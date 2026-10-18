@@ -1,13 +1,15 @@
 ---
 project: reactive-resume
-stars: 44098
+stars: 44442
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/reactive-resume/reactive-resume
 ---
 
 Important
 
-**Repository moved:** Reactive Resume now lives at **`reactive-resume/reactive-resume`** on GitHub. **Docker Hub stays at `amruthpillai/reactive-resume`.** GHCR images publish to `ghcr.io/reactive-resume/reactive-resume`. GitHub Sponsors and Open Collective funding links remain unchanged.
+Reactive Resume now lives at **`reactive-resume/reactive-resume`** on GitHub.  
+GHCR images publish to `ghcr.io/reactive-resume/reactive-resume`.  
+Docker Hub stays at `amruthpillai/reactive-resume`.
 
 Reactive Resume
 ===============
@@ -16,7 +18,7 @@ Reactive Resume is a free and open-source resume builder for writing resumes and
 
 **Get Started** · **Learn More**
 
-  
+Sponsored by
 
 * * *
 
@@ -37,7 +39,7 @@ Features
 
 **Templates and Customization**
 
--   17 templates, including the new Porygon and Smeargle, previewed with your own content
+-   18 templates, including the new Porygon and Smeargle, previewed with your own content
 -   One-column, two-column, and ATS-safe template filters
 -   Font presets, custom fonts, colors, spacing, A4 and Letter paper, and left or right sidebars
 -   Fit overflowing content by adjusting density, margins, and text size
@@ -84,7 +86,7 @@ Features
 
 **Privacy and Control**
 
--   Self-host with Docker, Vercel, or Cloudflare Workers
+-   Self-host with Docker, Vercel, Cloudflare Workers, or a 1-click deploy on Hostinger
 -   No tracking or ads; export your account data or delete your account
 -   Passkeys, two-factor authentication, and linked sign-in providers
 -   Multiple interface languages, light/dark/system themes, and reduced-motion support
@@ -121,6 +123,9 @@ Templates
 
   
 **Onyx**
+
+  
+**Persian**
 
   
 **Pikachu**
@@ -283,20 +288,62 @@ Codebase structure and package boundaries
 Self-Hosting
 ------------
 
-Reactive Resume supports Docker, Kubernetes, Vercel, and Cloudflare Workers. Each deployment runs the same application with PostgreSQL and upload storage.
+Reactive Resume runs the same application everywhere: PostgreSQL for data, plus storage for uploads. Pick the option that fits how much you want to manage.
+
+Option
+
+Best for
+
+Guide
+
+Hostinger
+
+A ready-made VPS with no setup
+
+Hostinger guide
+
+Vercel
+
+Serverless, with managed database and storage
+
+Vercel guide
+
+Cloudflare Workers
+
+Workers, R2 and your own PostgreSQL
+
+Cloudflare guide
+
+Docker and Kubernetes
+
+Your own server, homelab or cluster
+
+Docker · Kubernetes
+
+> **PDF generation in v6** uses Forme in the browser and on the server. No Browserless, Chromium, or external print service is needed. Legacy `PRINTER_*` and `BROWSERLESS_*` environment variables can be removed.
+
+### Hostinger
+
+The quickest way to get going is a 1-click deploy on Hostinger, starting at $6.49/month. Their VPS plans include a ready-made Reactive Resume template that provisions the Docker environment and brings the app up for you, with weekly backups and a Docker manager UI included — so you can skip the setup entirely.
+
+See the Hostinger guide for what the template sets up and what to configure afterwards, such as email, your own domain, and turning off sign-ups.
+
+### Vercel
 
 Vercel provisions Neon PostgreSQL, private Blob storage, and Upstash Redis through its deployment wizard. Supply two persistent secrets and use the **Services** framework preset. Static assets run in the frontend service, and Hono serves the application routes and APIs from the backend service. See the Vercel guide for setup, limits, and optional SMTP/OAuth configuration.
 
+### Cloudflare Workers
+
 Cloudflare deployment requires **Workers Paid** and uses Static Assets, private R2 storage, SQLite Durable Objects, and PostgreSQL through Hyperdrive. Supply an existing PostgreSQL database and apply migrations before deployment. See the Cloudflare guide for setup and runtime limits.
 
-For Docker and Kubernetes, the application needs:
+### Docker and Kubernetes
+
+The application needs:
 
 -   **PostgreSQL** — Accounts, documents, applications, and assistant conversations
 -   **Upload storage** — A persistent local directory or an S3-compatible bucket, such as SeaweedFS
 -   **Redis** (optional) — Shared coordination across instances and resumable assistant replies
 -   **SMTP** (optional) — Verification and password-reset emails
-
-> **PDF generation in v6** uses Forme in the browser and on the server. No Browserless, Chromium, or external print service is needed. Legacy `PRINTER_*` and `BROWSERLESS_*` environment variables can be removed.
 
 Published releases are available from Docker Hub and GitHub Container Registry (`latest` tracks the latest stable release):
 
@@ -306,9 +353,15 @@ docker pull amruthpillai/reactive-resume:latest
 # GitHub Container Registry
 docker pull ghcr.io/reactive-resume/reactive-resume:latest
 
-See the Docker guide or Kubernetes guide for complete instructions. Self-hosters can also configure shared AI and job-search services.
+See the Docker guide or Kubernetes guide for complete instructions. Running on a NAS? See the Synology and UGREEN guides.
 
-For a v5 upgrade, back up your database and uploads and stop all v5 instances before applying v6 migrations. Old visual style rules require a manual conversion; API and MCP integrations also have changes. Follow Migrating from v5.
+### Configuration
+
+Every setting is listed in the environment variables reference. Self-hosters can also configure shared AI and job-search services and single sign-on.
+
+### Upgrading from v5
+
+Back up your database and uploads and stop all v5 instances before applying v6 migrations. Old visual style rules require a manual conversion; API and MCP integrations also have changes. Follow Migrating from v5.
 
 Support
 -------

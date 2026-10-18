@@ -1,6 +1,6 @@
 ---
 project: ai-engineering-from-scratch
-stars: 66780
+stars: 70674
 description: Learn AI Engineering! Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---
@@ -11,7 +11,7 @@ Implement model internals, retrieval pipelines, and agent runtimes. Test them, i
 
 Free, open source, MIT. Learn on the website, with a coding agent, or by running local code.
 
-> 523 lessons. 20 phases. Python, TypeScript, Rust, Julia.
+> 542 lessons. 20 phases. Python, TypeScript, Rust, Julia.
 
 Read in your language
 
@@ -206,6 +206,10 @@ Focused Model Context Protocol (MCP) tutor. Creates `MCP-LEARNING.md`, follows t
 
 Focused Agent Skills tutor. Creates `AGENT-SKILLS-LEARNING.md`, teaches lessons 22, 24, 25, 26, and 27, and records real-host evidence.
 
+`learn-reverse-engineering`
+
+Focused Reverse Engineering tutor. Creates `REVERSE-ENGINEERING-LEARNING.md`, teaches Phase 13 lessons 32 to 45 on programs you build yourself, and records lab evidence.
+
 `claude-certification`
 
 Certification tutor. Chooses CCAO-F, CCDV-F, CCAR-F, or CCAR-P; teaches each lesson; runs labs; reviews artifacts; administers diagnostics and mocks; saves progress.
@@ -246,7 +250,7 @@ Commands in lesson pages are paths from the repository root unless the lesson ex
 Choose a learning path
 ----------------------
 
-You do not need to scan 523 lessons before beginning. Pick one goal. Each link opens the same curriculum on GitHub or the website, and both versions use the same lesson code.
+You do not need to scan 542 lessons before beginning. Pick one goal. Each link opens the same curriculum on GitHub or the website, and both versions use the same lesson code.
 
 Your goal
 
@@ -294,7 +298,7 @@ Not sure where you fit? Use the `start-learning` placement tutor or the website 
 
 Compare four core domains and six career routes in the AI Engineering Learning Paths.
 
-Focused MCP and Agent Skills paths
+Focused MCP, Agent Skills, and Reverse Engineering paths
 
 Your goal
 
@@ -313,6 +317,12 @@ I want to write and ship Agent Skills
 Focused Agent Skills route
 
 Agent Skills path
+
+I want to read compiled programs
+
+Reverse Engineering route
+
+Reverse Engineering path
 
 Prerequisites and study time
 
@@ -372,6 +382,12 @@ Agent Skills Engineering path
 
 ~9.5 hours
 
+Only want to learn reverse engineering
+
+Reverse Engineering path
+
+~32.5 hours
+
 The shape of the curriculum
 ---------------------------
 
@@ -408,7 +424,7 @@ Contents
 
 Twenty phases. Click any phase to expand its lesson list.
 
-### Phase 0: Setup & Tooling `12 lessons`
+### Phase 0: Setup & Tooling `13 lessons`
 
 > Get your environment ready for everything that follows.
 
@@ -511,6 +527,14 @@ Learn
 12
 
 Debugging & Profiling
+
+Build
+
+Python
+
+13
+
+Python for AI Engineering
 
 Build
 
@@ -702,7 +726,7 @@ Learn
 
 Python
 
-**Phase 2 — ML Fundamentals**  `18 lessons`  _Classical ML — still the backbone of most production AI._  
+**Phase 2 — ML Fundamentals**  `21 lessons`  _Classical ML — still the backbone of most production AI._  
 
 #
 
@@ -851,6 +875,30 @@ Python
 18
 
 Feature Selection
+
+Build
+
+Python
+
+19
+
+ML System Design — From Problem to Deployed Model
+
+Build
+
+Python
+
+20
+
+Monitoring Models in Production — Data Drift and Concept Drift
+
+Build
+
+Python
+
+21
+
+Feature Stores and Training-Serving Skew
 
 Build
 
@@ -2524,7 +2572,7 @@ Build
 
 Python
 
-**Phase 13 — Tools & Protocols**  `31 lessons`  _The interfaces between AI and the real world._  
+**Phase 13 — Tools & Protocols**  `45 lessons`  _The interfaces between AI and the real world._  
 
 #
 
@@ -2777,6 +2825,118 @@ Python
 31
 
 MCP Conformance Engineering: Versioning, Evidence, and Operations
+
+Build
+
+Python
+
+32
+
+Program Anatomy: An ELF Reader From Scratch
+
+Build
+
+Python
+
+33
+
+Disassembly and Control Flow: From Bytes to a Graph You Can Check
+
+Build
+
+Python
+
+34
+
+Lifting to Pseudocode: IR, SSA, and Structuring From Scratch
+
+Build
+
+Python
+
+35
+
+Evidence, Confidence, and Unknowns in Binary Analysis
+
+Build
+
+Python
+
+36
+
+Rebuild and Prove Equal: Differential Tests, Byte Comparison, and the Evidence Loop
+
+Build
+
+Python
+
+37
+
+The Reverse Engineering Landscape: History, Tool Families, and How a Decompiler Is Built
+
+Build
+
+Python
+
+38
+
+Calling Conventions and Stack Frames: System V, Windows x64, and AArch64
+
+Build
+
+Python
+
+39
+
+Compiler Idioms: What Optimization Does to Your Code and How to Read It Back
+
+Build
+
+Python
+
+40
+
+Linking, Loading, and Stripped Binaries: PLT, GOT, Imports, Fixups, and Function Identification
+
+Build
+
+Python
+
+41
+
+Recovering Data and Types: Structs, Arrays, C++ Objects, and DWARF
+
+Build
+
+Python
+
+42
+
+Dynamic Analysis of Your Own Program: Debuggers, Traces, and Confirming Static Claims
+
+Build
+
+Python
+
+43
+
+Beyond Native Code: Python, JVM, .NET, and WebAssembly Bytecode
+
+Build
+
+Python
+
+44
+
+Binary Diffing and Symbolic Execution: Matching Functions and Solving for Inputs
+
+Build
+
+Python
+
+45
+
+AI-Assisted Reverse Engineering: LLM Decompilers, Analysis Agents, and Ground Truth
 
 Build
 
@@ -3628,7 +3788,7 @@ Learn
 
 Python
 
-**Phase 17 — Infrastructure & Production**  `28 lessons`  _Ship AI to the real world._  
+**Phase 17 — Infrastructure & Production**  `29 lessons`  _Ship AI to the real world._  
 
 #
 
@@ -3859,6 +4019,14 @@ Python
 Self-Hosted Serving Selection — Matching Engine to Hardware and Scale
 
 Learn
+
+Python
+
+29
+
+Model Demo Interfaces — From a Function to a Shareable App
+
+Build
 
 Python
 
@@ -4958,7 +5126,7 @@ Plug into any MCP-compatible client. Built end-to-end in Phase 13.
 
 Install lesson artifacts
 
-**The lesson artifacts.** The repo ships 396 skills and 99 prompts under `phases/**/outputs/`; install them via `scripts/install_skills.py`. Requires cloning the repo. Supports tag filters, dry-runs, and per-agent layouts:
+**The lesson artifacts.** The repo ships 414 skills and 100 prompts under `phases/**/outputs/`; install them via `scripts/install_skills.py`. Requires cloning the repo. Supports tag filters, dry-runs, and per-agent layouts:
 
 python3 scripts/install\_skills.py <target\>                                 # every skill, default --layout skills (nested)
 python3 scripts/install\_skills.py <target\> --layout skills                 # same as above, explicit
@@ -5081,7 +5249,7 @@ Sponsor the work
 
 **114,584** readers  ·  **181,995** page views in the last 30 days  ·  as of 2026-08-29
 
-Free, MIT-licensed, 523 lessons. Thank you to the sponsors and backers who make the work possible. See all sponsors and backers.
+Free, MIT-licensed, 542 lessons. Thank you to the sponsors and backers who make the work possible. See all sponsors and backers.
 
 Want to support the work? See sponsorship options, including hardware sponsorships, or sponsor on GitHub.
 
