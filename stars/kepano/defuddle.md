@@ -1,6 +1,6 @@
 ---
 project: defuddle
-stars: 9715
+stars: 9780
 description: |-
     Get the main content of any page as Markdown.
 url: https://github.com/kepano/defuddle

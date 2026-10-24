@@ -1,6 +1,6 @@
 ---
 project: scriptc
-stars: 6184
+stars: 6393
 description: |-
     TypeScript-to-Native Compiler
 url: https://github.com/vercel-labs/scriptc

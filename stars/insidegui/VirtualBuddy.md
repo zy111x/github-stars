@@ -1,6 +1,6 @@
 ---
 project: VirtualBuddy
-stars: 8831
+stars: 8854
 description: |-
     Virtualize macOS 12 and later on Apple Silicon, VirtualBuddy is a virtual machine GUI for macOS M1, M2, M3, M4
 url: https://github.com/insidegui/VirtualBuddy

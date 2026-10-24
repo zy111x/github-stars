@@ -1,6 +1,6 @@
 ---
 project: deepseek-harness
-stars: 252108
+stars: 260446
 description: |-
     DeepSeek Harness: Everything is a Plugin.
 url: https://github.com/deepseek-ai/deepseek-harness

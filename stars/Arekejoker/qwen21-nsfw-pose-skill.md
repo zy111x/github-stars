@@ -1,6 +1,6 @@
 ---
 project: qwen21-nsfw-pose-skill
-stars: 2629
+stars: 3702
 description: |-
     Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / OpenClaw
 url: https://github.com/Arekejoker/qwen21-nsfw-pose-skill
@@ -9,6 +9,8 @@ url: https://github.com/Arekejoker/qwen21-nsfw-pose-skill
 # qwen21-nsfw-pose
 
 [![Package checks](https://github.com/Arekejoker/qwen21-nsfw-pose-skill/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/Arekejoker/qwen21-nsfw-pose-skill/actions/workflows/validate.yml)
+
+[English](README.en.md) | 中文
 
 **Qwen-Image 2.1 本地 NSFW / 姿势出图完整配方** — 作者级提示词结构 + NSFW LoRA + 136 个 3D 姿势库 + VNCCS 人偶精确姿势控制。
 
@@ -91,7 +93,7 @@ python3 scripts/qwen_pose_test.py \
 - **推荐**：24GB 显存（3090/4090 级）+ 32–64GB 内存——模型基本常驻，体验最顺
 - **8GB 显存**：建议用 GGUF 量化版（社区实测 12–16GB 显存可跑 Q4；8GB 靠 offload 会明显更慢）
 - 纯 CPU 不推荐（单张图耗时过长）
-- 硬盘预留 ~40GB；CPU 无特殊要求（现代 x86_64/ARM 均可）；Linux 最省事，Windows 建议 WSL2；Mac（Apple Silicon）见下方单独小节
+- 硬盘预留 ~40GB；CPU 无特殊要求（现代 x86_64/ARM 均可）；Linux 最省事；Windows 可原生运行基础脚本（doctor / `--list-poses` / 媒体锁回退，社区贡献），完整流程仍建议 WSL2；Mac（Apple Silicon）见下方单独小节
 - 路线④额外需要一个可连接的桌面浏览器（Playwright/CDP，见 `install/setup.md`）
 
 本仓库案例图与实测数据来自统一内存设备（DGX Spark）：1024×1024、40 步约 32 秒/张，峰值增量约 7–10GB。
@@ -133,6 +135,7 @@ python3 scripts/qwen_pose_test.py \
 
 ```
 ├── SKILL.md            # agent 技能（完整规则）
+├── CHANGELOG.md        # 版本变更记录
 ├── install/setup.md    # 安装指南（模型/LoRA/节点/姿势库）
 ├── scripts/            # doctor.py 自检、出图/自定义姿势脚本、浏览器 fallback、media_lock.py、validate_package.py
 ├── workflows/          # qwen21_t2i.json / qwen21_edit.json / VNCCS_PoseStudio_QI2.1.json

@@ -1,6 +1,6 @@
 ---
 project: agenticSeek
-stars: 27504
+stars: 27538
 description: |-
     Fully Local Manus AI. No APIs, No $200 monthly bills. Enjoy an autonomous agent that thinks, browses the web, and code for the sole cost of electricity.
 url: https://github.com/Fosowl/agenticSeek
@@ -261,6 +261,7 @@ provider_server_address = # Typically ignored or can be left blank when is_local
 | Hugging Face | `huggingface`   | No     | Use models from Hugging Face Inference API.       | [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) |
 | TogetherAI   | `togetherAI`    | No     | Use various open-source models via TogetherAI API.| [api.together.ai/settings/api-keys](https://api.together.ai/settings/api-keys) |
 | OpenRouter   | `openrouter`    | No     | Use OpenRouter Models| [https://openrouter.ai/](https://openrouter.ai/) |
+| TrustedRouter| `trustedrouter` | No     | Use TrustedRouter Models| [https://trustedrouter.com/](https://trustedrouter.com/) |
 | MiniMax      | `minimax`       | No     | Use MiniMax models (e.g., MiniMax-M3, MiniMax-M2.7).| [platform.minimax.io](https://platform.minimax.io/user-center/basic-information) |
 
 *Note:*
@@ -796,7 +797,6 @@ We’re looking for developers to improve AgenticSeek! Check out open issues or 
 
 [Contribution guide](./docs/CONTRIBUTING.md)
 
-
 ## Sponsors:
 
 ### SwiftProxy
@@ -821,10 +821,16 @@ See [Contributing.md](./docs/CONTRIBUTING.md) to learn how to integrate custom t
 
 ## Maintainers:
 
+ **Core (Agents, Tools, Systems, Searxng, Backend)**
  > [Fosowl](https://github.com/Fosowl) | Paris Time
+
+ **Frontend**
+ > [Tanvir Ahamed](https://github.com/nettanvirdev) For frontend design. 
 
 ## Special Thanks:
 
  > [tcsenpai](https://github.com/tcsenpai) and [plitc](https://github.com/plitc) For helping with backend dockerization
+
+ > [Tanvir Ahamed](https://github.com/nettanvirdev) For frontend design. 
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Fosowl/agenticSeek&type=Date)](https://www.star-history.com/#Fosowl/agenticSeek&Date)

@@ -1,6 +1,6 @@
 ---
 project: onyx
-stars: 32548
+stars: 32949
 description: |-
     Open Source AI Platform - AI Chat with advanced features that works with every LLM
 url: https://github.com/onyx-dot-app/onyx
@@ -126,7 +126,7 @@ The Lite mode can be thought of as a lightweight AI Chat UI. It requires less re
 It is great for users who want to test out the Onyx UI quickly or for teams who are only interested in the Chat UI and Agents functionalities.
 
 > [!TIP]  
-> **To try Onyx for free without deploying, visit [Onyx Cloud](https://cloud.onyx.app/signup?utm_source=onyx_repo&utm_medium=github&utm_campaign=readme)**.
+> **To try Onyx for free without deploying, visit [Onyx Cloud](https://cloud.onyx.app/auth/signup?utm_source=onyx_repo&utm_medium=github&utm_campaign=readme)**.
 
 ---
 

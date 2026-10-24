@@ -1,6 +1,6 @@
 ---
 project: pierre
-stars: 6279
+stars: 6359
 description: |-
     pierre’s open source code
 url: https://github.com/pierrecomputer/pierre

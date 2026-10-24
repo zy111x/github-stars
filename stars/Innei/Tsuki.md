@@ -109,7 +109,7 @@ Automated tools work best when they share the same constraints as the framework.
 
 ## Development
 
-- **Package Manager**: pnpm 10.x
+- **Package Manager**: pnpm 12.x
 - **Language**: TypeScript (ESNext)
 - **Test**: Vitest
 

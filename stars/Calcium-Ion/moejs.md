@@ -1,6 +1,6 @@
 ---
 project: moejs
-stars: 287
+stars: 388
 description: |-
     A pure-Go JavaScript runtime built for running many small plugin sandboxes fast.
 url: https://github.com/Calcium-Ion/moejs
@@ -37,8 +37,10 @@ server can give every concurrent request its own runtime.
 The chart runs new-api's plugin workloads on the engines a Go program can
 embed: small task-plugin calls, 100k-token coding-agent requests that a plugin
 rewrites for the upstream, and requests that carry an 8 MiB image. QuickJS
-called straight from C is shown in grey for reference. How it was measured is
-in [docs/performance.md](docs/performance.md#plugin-scenarios).
+called straight from C is shown in grey for reference. The chart was
+measured on 2026-10-21 with moejs v0.1.0-alpha.9 on 8 vCPUs of an Intel
+Xeon E5-2667 v4; the setup is in
+[docs/performance.md](docs/performance.md#plugin-scenarios).
 
 The table below times single calls on new-api's 10 task plugins and 269
 recorded calls, on the Go caller's side, including converting the arguments
@@ -99,6 +101,27 @@ the code does at run time fail with a `*SyntaxError`.
 A bare runtime has no timers. The `eventloop` package adds `setTimeout`,
 `setInterval` and `setImmediate`, and an event loop on which host functions
 settle promises from other goroutines.
+
+### Web APIs
+
+The `webapi` package installs `fetch`, `Headers`, `Request`, `Response`,
+the Streams, `AbortController`, `URL` and `performance` on a runtime with an
+event loop, for SDKs written against fetch. The host decides which network
+fetch reaches through its `http.Client` and an allow hook: without a client
+there is none, and without a hook every address the client reaches, so
+give untrusted scripts a host list. Response bodies stream: Go reads a
+chunk only when JavaScript asks for one, each byte is charged to the
+runtime's memory limit, and cancel and abort reach the Go request. See
+the [guide](docs/guide.md#web-apis).
+
+<p align="center">
+  <img src="docs/assets/webapi-bench.en.png" alt="moejs Web APIs against Node.js 24: fetch of small JSON requests at 1 and 8 concurrent, a 256 MiB streamed body and server-sent events">
+</p>
+
+The chart runs the same fetch script in moejs and in Node.js 24 against a
+local loopback server, measured on 2026-10-24 on 8 vCPUs of an Intel Xeon
+E5-2667 v4. moejs is faster on small requests and on a streamed body, and
+server-sent events are the row where it is slower.
 
 ### Timeouts and errors
 
@@ -341,14 +364,16 @@ additions such as the `Set` methods, `Promise.try`, `Float16Array`,
 expressions support every flag and Unicode 17 properties, and `Date` takes
 its time zones from Go.
 
-On [test262](https://github.com/tc39/test262), 79,385 tests pass and 0
-fail. The other 14,058 tests use features moejs does not implement and are
+On [test262](https://github.com/tc39/test262), 80,971 tests pass and 0
+fail. The other 14,268 tests use features moejs does not implement and are
 skipped. Results by directory are in
 [bench/test262/RESULTS.md](bench/test262/RESULTS.md).
 
 Not implemented: import attributes and JSON modules, `using` declarations
-and `DisposableStack`, decorators, iterator helpers, `Intl`, `Temporal`,
-`ShadowRealm`, `FinalizationRegistry` and `JSON.rawJSON`. A bare `Runtime`
+and `DisposableStack`, decorators, iterator helpers, `Intl.Collator`,
+`Intl.RelativeTimeFormat`, `Intl.ListFormat`, `Intl.DisplayNames`,
+`Intl.DurationFormat`, `Temporal`, `ShadowRealm`, `FinalizationRegistry`
+and `JSON.rawJSON`. A bare `Runtime`
 has no timers; the `eventloop` package installs them. [TODO.md](TODO.md)
 lists all of these, the known wrong results and the limits.
 
@@ -379,7 +404,11 @@ cd bench && go test -timeout 30m ./...
 ## Acknowledgements
 
 moejs takes design ideas from these projects. Its code was written
-independently.
+independently, except for the parts [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES)
+lists: Intl's date, time zone and number formatting is ported from
+[ICU](https://icu.unicode.org/), and the `Date.parse` parser, the stack
+trace format and the callee text of "is not a function" errors from V8.
+Intl's locale data is [Unicode CLDR](https://cldr.unicode.org/).
 
 - [goja](https://github.com/dop251/goja) and [Sobek](https://github.com/grafana/sobek):
   the Go interop conventions and the `Export` rules. Sobek is also the
@@ -409,7 +438,10 @@ independently.
 
 ## License
 
-moejs is licensed under the [Apache License 2.0](LICENSE).
+moejs is licensed under the [Apache License 2.0](LICENSE). It contains Unicode
+CLDR and Unicode Character Database data and code ported from ICU and V8,
+which are under their own licenses.
+[THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES) lists them with their full texts. A program that embeds moejs ships those notices too.
 
 The benchmarks run new-api's task plugins, which are licensed under AGPL-3.0
 and downloaded separately by

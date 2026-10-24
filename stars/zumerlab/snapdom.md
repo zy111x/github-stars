@@ -1,6 +1,6 @@
 ---
 project: snapdom
-stars: 8191
+stars: 8207
 description: |-
     High-performance engine for capturing, modifying, and converting DOM elements into any format.
 url: https://github.com/zumerlab/snapdom
@@ -43,28 +43,22 @@ url: https://github.com/zumerlab/snapdom
 
 # SnapDOM
 
-SnapDOM is a browser capture engine for web interfaces. It captures rendered DOM state as a reusable result, with styles, fonts and images included.
-
-Export images and canvas with the core. Use plugins for self-contained HTML, page context, maps for visual agents, PDF and recordings. Captures can also feed WebGL textures, visual regression tests and UI transitions. Everything runs in the page, using standard Web APIs, with no core dependencies.
+SnapDOM is a high-performance DOM engine that captures a rendered element in the browser and exports it as PNG, SVG or canvas. Plugins turn the same capture into self-contained HTML, PDF, editable vectors, GIF, video or context for agents. Everything runs in the page, with no core dependencies.
 
 [Documentation and demos](https://snapdom.dev/) · [Technical features](FEATURES.md) · [Official plugins](packages/plugins/README.md) · [简体中文](README_CN.md)
 
-This checkout documents **v3.x.x**. The migration guide below compares it with **v2.x.x**. The [v2 source](https://github.com/zumerlab/snapdom/tree/v2) remains available.
+## Why SnapDOM
 
-## What you can build
-
-| Use | Output | Provided by |
-| --- | --- | --- |
-| Share a card, chart, invoice or dashboard | SVG, PNG, JPG, WebP, canvas or Blob | Core |
-| Reuse a capture in a texture, overlay or transition | Canvas plus capture geometry | Core |
-| Save a page fragment for later display | HTML with captured styles and fonts | `html-export` plugin |
-| Give an agent or a log a view of page content | Text/JSON context, or an image with an element map | `context-export` / `agent-map` plugins |
-| Download a document or record changing content | Searchable, paginated PDF, animated GIF or browser-encoded video | `pdf` / `gif-export` / `video-export` plugins |
-| Export editable artwork or paste into Figma | Native SVG shapes and text, or a Figma clipboard payload | `vector` plugin |
-
-Image, HTML and context exports use the captured state. GIF and video plugins record the live element over time.
+- **Speed.** [Run the live benchmark](https://snapdom.dev/compare/live/) in your browser: first and repeat captures against html2canvas and the other libraries, sorted by measured time. Unchanged elements reuse their last capture.
+- **Fidelity.** The output matches what the browser painted. Every release runs a pixel suite of real demo pages before it ships.
+- **Flexibility.** Capture once, export many formats. Official plugins add outputs, and the same [plugin hooks](PLUGIN_SPEC.md) let you write your own.
+- **Maintenance.** About one release a week over the past year, MIT licensed, with a public [changelog](CHANGELOG.md).
 
 ## Quick start
+
+```sh
+npm i @zumer/snapdom
+```
 
 ```js
 import { snapdom } from '@zumer/snapdom';
@@ -87,15 +81,28 @@ await result.download({ format: 'jpg', filename: 'card' });
 
 The result keeps that capture even if the source element later changes. Call `snapdom(card)` again to capture its new state.
 
+## What you can build
+
+| Use | Output | Provided by |
+| --- | --- | --- |
+| Share a card, chart, invoice or dashboard | SVG, PNG, JPG, WebP, canvas or Blob | Core |
+| Reuse a capture in a texture, overlay or transition | Canvas plus capture geometry | Core |
+| Save a page fragment for later display | HTML with captured styles and fonts | [`html-export`](packages/plugins/README.md#html-export) plugin |
+| Give an agent or a log a view of page content | Text/JSON context, or an image with an element map | [`context-export`](packages/plugins/README.md#context-export) / [`agent-map`](packages/plugins/README.md#agent-map) plugins |
+| Download a document or record changing content | Searchable, paginated PDF, animated GIF or browser-encoded video | [`pdf`](packages/plugins/pdf/README.md) / [`gif-export`](packages/plugins/README.md#gif-export) / [`video-export`](packages/plugins/README.md#video-export) plugins |
+| Export editable artwork or paste into Figma | Native SVG shapes and text, or a Figma clipboard payload | [`vector`](packages/plugins/vector/README.md) plugin |
+
+Image, HTML and context exports use the captured state. GIF and video plugins record the live element over time.
+
 ## Installation
 
-Install the core and, when you need them, the official plugins; choose a core supported by the plugins’ peer dependency:
+Install the core and, when you need them, the official plugins:
 
 ```sh
 npm i @zumer/snapdom@latest @zumer/snapdom-plugins@latest
 ```
 
-Plugins 4.x require SnapDOM 3.3.0 or newer within 3.x. The full PDF and Vector exporters are MIT-licensed and available on npm in `@zumer/snapdom-plugins` 4.x. The `@latest` command above installs the published release.
+Plugins 4.x require SnapDOM 3.3.0 or newer within 3.x. They include the PDF and Vector exporters, MIT licensed like the core. Their sources live in `packages/plugins/`.
 
 Or load it in a browser:
 
@@ -116,16 +123,6 @@ import { htmlExport } from 'https://esm.sh/@zumer/snapdom-plugins@latest/html-ex
 ```
 
 `https://unpkg.com/@zumer/snapdom@latest/dist/snapdom.mjs` serves the same module. These examples load the latest published core and plugins.
-
-To run the docs site against a local build of this checkout instead:
-
-```sh
-npm install
-npm run compile
-npm run site
-```
-
-The local site runs the local build. The public site's demos load the published package.
 
 ### Build outputs
 
@@ -153,7 +150,7 @@ There is no CommonJS build. `@zumer/snapdom/plugins` and the package root share 
 
 One-step shortcuts such as `snapdom.toPng(element, options)` capture and export in one call. Results also have `toJpeg()` as an alias for `toJpg()`. `toImg()` remains available; prefer `toSvg()` for an SVG image.
 
-### Set size and content
+### Set size and exclude content
 
 ```js
 const result = await snapdom(card, {
@@ -182,27 +179,30 @@ const result = await snapdom(card, {
 | `canvas` | Unset | Reuse an existing canvas |
 | `invalidate` | `false` | Refresh after changes such as programmatic CSSOM edits |
 | `fast` | `true` | `false` keeps the page responsive during long captures |
+| `debug` | `false` | Log fallbacks and errors to the console; without it SnapDOM stays quiet and `result.warnings` reports them |
 
 [All options](https://snapdom.dev/docs/options/) include shadows, transforms, fonts, CORS, fallbacks and layout reconciliation.
 
 ### Export a long page
 
-With the default SVG engine, PNG file exports automatically handle captures beyond the browser's canvas limits. Capture once, then download one full-resolution file or get its Blob:
+With the default SVG engine, PNG and JPEG file exports automatically handle captures beyond the browser's canvas limits. Capture once, then download one full-resolution file or get its Blob:
 
 ```js
 const capture = await snapdom(article);
 await capture.download({ format: 'png', scale: 2 });
 // Or upload/store the file yourself:
 const blob = await capture.toBlob({ format: 'png', scale: 2, dpr: 1 });
+// JPEG works the same way, up to 65,535px per side:
+await capture.download({ format: 'jpg', scale: 2, quality: 0.9 });
 ```
 
-SnapDOM renders the frozen capture in windows and encodes them into one PNG. It preserves the requested dimensions, including shadows and padding, without allocating a canvas for the whole image. `download()` always uses DPR 1; `toBlob()` uses the capture's DPR unless you override it. Ordinary-sized exports use the native encoder.
+SnapDOM renders the frozen capture in windows and encodes them into one PNG or JPEG. It preserves the requested dimensions, including shadows and padding, without allocating a canvas for the whole image. `download()` always uses DPR 1; `toBlob()` uses the capture's DPR unless you override it. Ordinary-sized exports use the native encoder.
 
-This requires `CompressionStream`; older browsers keep the existing downscale and warning. Very large files still take time and memory to encode, and the application opening them has its own image limits.
+PNG requires `CompressionStream`; older browsers keep the existing downscale and warning, as does a JPEG past 65,535px per side, the format's limit. WebP cannot go past 16,383px per side. Very large files still take time and memory to encode, and the application opening them has its own image limits.
 
 ### Export a long page in pieces
 
-`toCanvas()`, `toPng()` and JPEG/WebP exports still use a single canvas and scale down past SnapDOM's size guards (16,384px per side in Safari, 32,767px in Chrome/Firefox, plus an area limit). When you need separate canvases, use `crop`:
+`toCanvas()`, `toPng()`, `toJpg()` and WebP exports still use a single canvas and scale down past SnapDOM's size guards (16,384px per side in Safari, 32,767px in Chrome/Firefox, plus an area limit). When you need separate canvases, use `crop`:
 
 ```js
 const capture = await snapdom(article);
@@ -223,8 +223,6 @@ for (let y = 0; y < h0; y += pieceHeight) {
 
 ### Export HTML or structured context
 
-Official plugins are published separately as `@zumer/snapdom-plugins`. Plugins 4.x require SnapDOM 3.3.0 or newer within 3.x and include the full PDF and Vector exporters under MIT. Their sources live in `packages/plugins/`.
-
 ```js
 import { htmlExport, contextExport } from '@zumer/snapdom-plugins';
 
@@ -240,7 +238,7 @@ The same plugin system supports overlays, redaction and custom exporters. Local 
 
 ### Export PDF and editable vectors
 
-These examples use the published `@zumer/snapdom-plugins` 4.x package. PDF returns a `Blob` with searchable, selectable text, links, pagination and optional form fields. Vector returns an SVG string without `<foreignObject>`, preserving supported shapes and editable text.
+PDF returns a `Blob` with searchable, selectable text, links, pagination and optional form fields. Vector returns an SVG string without `<foreignObject>`, preserving supported shapes and editable text.
 
 ```js
 import { snapdom } from '@zumer/snapdom';
@@ -264,7 +262,7 @@ const result = await snapdom.fromString('<article>Hello</article>');
 const image = await result.toPng();
 ```
 
-`fromString()` mounts the markup offscreen and removes it after capture. The string is parsed and activated like markup you wrote yourself: inline handlers such as `<img onerror>` run in the caller's origin, and can keep running after the mount is removed. Sanitize untrusted HTML first, with DOMPurify or equivalent.
+Sanitize untrusted HTML first, with DOMPurify or equivalent. The string is parsed and activated like markup you wrote yourself: inline handlers such as `<img onerror>` run in the caller's origin, and can keep running after the mount is removed. `fromString()` mounts the markup offscreen and removes it after capture.
 
 ### Feed a WebGL texture
 
@@ -280,6 +278,17 @@ async function refresh(element) {
 ```
 
 `result.meta` contains the capture geometry needed to place an exported image over the source interface. The [labs](https://snapdom.dev/showcase/#labs) show textures, mirrors and transitions.
+
+## Limitations
+
+- SnapDOM needs a browser DOM. A server-side Node.js process needs a browser environment to run it.
+- Cross-origin images, fonts and stylesheets need readable resources or an appropriate proxy. `crossorigin` does not grant access unless the server also allows it. Cross-origin iframes use placeholders.
+- SVG output includes HTML inside `<foreignObject>`. It is suitable for browsers; support varies in other SVG viewers and document tools.
+- Output depends on browser rendering and image limits; for tall PNG files see [Export a long page](#export-a-long-page). Safari may fall back to PNG when WebP encoding is unavailable.
+- Canvas, video and other changing surfaces are captured fresh. JavaScript CSSOM edits are not observable automatically; use `invalidate: true` after them.
+- Core captures visible input values. Semantic plugins redact sensitive field values in their text/map output, but their attached image needs `redactInputs` or `exclude` if you want those pixels hidden too.
+
+[Technical features and browser behavior](FEATURES.md) covers the details.
 
 ## What's new in v3
 
@@ -302,7 +311,7 @@ The second engine is experimental: it still needs a compatible browser with its 
 
 ## Migrating from v2
 
-The main capture pattern remains `snapdom(element, options)`. This guide compares v3 with **v2.x.x**; review these changes before upgrading:
+The main capture pattern remains `snapdom(element, options)`. This guide compares v3 with **v2.x.x**, whose [source](https://github.com/zumerlab/snapdom/tree/v2) remains available. Review these changes before upgrading:
 
 | In v2 | In v3 | What to change |
 | --- | --- | --- |
@@ -338,9 +347,11 @@ await snapdom(card, {
 
 Both modes default to `'hide'`. Per node, `data-capture="exclude"` is checked first, then `exclude`, then `filter`. The first omission decides the mode and stops evaluation for that node: if it matches `exclude`, `excludeMode` wins even when `filter` would reject it with a different mode. `filter` uses the v2 truthiness rule: any falsy return filters the node out.
 
-### Callbacks that read changing application state
+### Prefer selectors to callbacks in polling loops
 
-Captures with function-valued `filter`, `exclude`, `excludeStyleProps` or `fallbackURL` run fresh so applicable callbacks can read current application state on each new capture. They do not reuse an unchanged capture or an earlier callback's style/fallback decision. You do not need `invalidate` just because a callback's closure changed. That freshness has a cost: a function-valued `filter`, `exclude`, `excludeStyleProps` or `fallbackURL` turns off memoization and differential recapture for the capture, so a polling loop with a predicate pays a full capture on every tick. When the rule can be written as a selector, pass the selector and keep the reuse:
+A function-valued `filter`, `exclude`, `excludeStyleProps` or `fallbackURL` turns off memoization and differential recapture, so a polling loop with a predicate pays a full capture on every tick. When the rule can be written as a selector, pass the selector and keep the reuse.
+
+Captures with function-valued `filter`, `exclude`, `excludeStyleProps` or `fallbackURL` run fresh so applicable callbacks can read current application state on each new capture. They do not reuse an unchanged capture or an earlier callback's style/fallback decision. You do not need `invalidate` just because a callback's closure changed:
 
 ```js
 let privateMode = false;
@@ -357,17 +368,6 @@ const after = await snapdom(card, options); // evaluates the current policy
 
 Capture-affecting plugins suspend memoization unless they declare `pure: true`. Declare it only for deterministic hooks; timestamps and callbacks reading external state must run again. See the [v3 plugin contract](PLUGIN_SPEC.md).
 
-## Limitations
-
-- SnapDOM needs a browser DOM. A server-side Node.js process needs a browser environment to run it.
-- Cross-origin images, fonts and stylesheets need readable resources or an appropriate proxy. `crossorigin` does not grant access unless the server also allows it. Cross-origin iframes use placeholders.
-- SVG output includes HTML inside `<foreignObject>`. It is suitable for browsers; support varies in other SVG viewers and document tools.
-- Output depends on browser rendering and image limits; for tall PNG files see [Export a long page](#export-a-long-page). Safari may fall back to PNG when WebP encoding is unavailable.
-- Canvas, video and other changing surfaces are captured fresh. JavaScript CSSOM edits are not observable automatically; use `invalidate: true` after them.
-- Core captures visible input values. Semantic plugins redact sensitive field values in their text/map output, but their attached image needs `redactInputs` or `exclude` if you want those pixels hidden too.
-
-[Technical features and browser behavior](FEATURES.md) covers the details.
-
 ## Performance benchmarks
 
 [Recorded measurements](BENCHMARKS.md) separate first captures, repeat captures and image-heavy scenes. The [live comparison](https://snapdom.dev/compare/live/) runs in your browser and identifies the package version it loads.
@@ -376,7 +376,7 @@ For a useful comparison, use the same scene, output format, scale and DPR. Compa
 
 ## Documentation
 
-- [Plugin demos](https://snapdom.dev/showcase/#plugins), [PDF demos](https://snapdom.dev/pro/pdf/) and [Vector demos](https://snapdom.dev/pro/vector/)
+- [Plugin demos](https://snapdom.dev/showcase/#plugins), [PDF demos](https://snapdom.dev/plugins/pdf/) and [Vector demos](https://snapdom.dev/plugins/vector/)
 - [v2 source](https://github.com/zumerlab/snapdom/tree/v2)
 - [API](https://snapdom.dev/docs/api/) and [options](https://snapdom.dev/docs/options/)
 - [Framework guides](https://snapdom.dev/how-to/#frameworks) and [how-to examples](https://snapdom.dev/how-to/)
@@ -390,15 +390,10 @@ From this checkout:
 ```sh
 npm install
 npx playwright install
-npm run compile
-npm run lint
-npm run test:types
-npm run test:bundle
-BROWSER=all npx vitest run __tests__ --browser.headless
-npm run test:pack
+npm test            # Chromium; test:firefox, test:webkit, or test:full for all three
 ```
 
-`npm run site` serves the docs with the local build. `npm test` checks lint without changing files; use `npm run lint:fix` to apply fixes. See [ARCHITECTURE.md](ARCHITECTURE.md) for implementation notes.
+Every test script runs `npm run check` (lint, types, release checks, bundle) and then the browser suite, visual demos included. Visual baselines live in `__snapshots__/`, which is not committed: on a fresh clone, record them once with `node scripts/vitest.mjs run --browser.headless` before relying on `npm test`. `npm run site` serves the docs with the local build. `npm test` never changes files; use `npm run lint:fix` to apply lint fixes. See [ARCHITECTURE.md](ARCHITECTURE.md) for implementation notes.
 
 ## Contributors
 
@@ -407,6 +402,7 @@ npm run test:pack
 <a href="https://github.com/tinchox5" title="tinchox5"><img src="https://avatars.githubusercontent.com/u/11557901?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="tinchox5"/></a>
 <a href="https://github.com/claude" title="claude"><img src="https://avatars.githubusercontent.com/u/81847?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="claude"/></a>
 <a href="https://github.com/pdufour" title="pdufour"><img src="https://avatars.githubusercontent.com/u/1239145?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="pdufour"/></a>
+<a href="https://github.com/Pharex38" title="Pharex38"><img src="https://avatars.githubusercontent.com/u/79025093?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="Pharex38"/></a>
 <a href="https://github.com/FlavioLimaMindera" title="FlavioLimaMindera"><img src="https://avatars.githubusercontent.com/u/96424442?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="FlavioLimaMindera"/></a>
 <a href="https://github.com/Jarvis2018" title="Jarvis2018"><img src="https://avatars.githubusercontent.com/u/36788851?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="Jarvis2018"/></a>
 <a href="https://github.com/tarwin" title="tarwin"><img src="https://avatars.githubusercontent.com/u/646149?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="tarwin"/></a>
@@ -425,17 +421,22 @@ npm run test:pack
 <a href="https://github.com/domialex" title="domialex"><img src="https://avatars.githubusercontent.com/u/4694217?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="domialex"/></a>
 <a href="https://github.com/stypr" title="stypr"><img src="https://avatars.githubusercontent.com/u/6625978?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="stypr"/></a>
 <a href="https://github.com/jamalkamaladdin" title="jamalkamaladdin"><img src="https://avatars.githubusercontent.com/u/256541632?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="jamalkamaladdin"/></a>
+<a href="https://github.com/MFA-G" title="MFA-G"><img src="https://avatars.githubusercontent.com/u/136257088?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="MFA-G"/></a>
 <a href="https://github.com/mon-jai" title="mon-jai"><img src="https://avatars.githubusercontent.com/u/91261297?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="mon-jai"/></a>
 <a href="https://github.com/puneetdixit200" title="puneetdixit200"><img src="https://avatars.githubusercontent.com/u/236133619?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="puneetdixit200"/></a>
 <a href="https://github.com/RexSkz" title="RexSkz"><img src="https://avatars.githubusercontent.com/u/27483702?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="RexSkz"/></a>
 <a href="https://github.com/RinZ27" title="RinZ27"><img src="https://avatars.githubusercontent.com/u/222222878?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="RinZ27"/></a>
 <a href="https://github.com/sharuzzaman" title="sharuzzaman"><img src="https://avatars.githubusercontent.com/u/7421941?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="sharuzzaman"/></a>
-<a href="https://github.com/simon1uo" title="simon1uo"><img src="https://avatars.githubusercontent.com/u/60037549?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="simon1uo"/></a>
-<a href="https://github.com/titoBouzout" title="titoBouzout"><img src="https://avatars.githubusercontent.com/u/64156?v=4&s=100" style="border-radius:10px; width:60px; height:60px; object-fit:cover; margin:5px;" alt="titoBouzout"/></a>
 </p>
 <!-- CONTRIBUTORS:END -->
 
 ## Sponsors
+
+<p align="center">
+  <a href="https://github.com/syntaxfm"><img src="https://github.com/syntaxfm.png" width="96" height="96" alt="Syntax"></a>
+</p>
+
+<p align="center"><strong>Huge thanks to <a href="https://github.com/syntaxfm">Syntax</a> for sponsoring SnapDOM.</strong></p>
 
 Special thanks to [@megaphonecolin](https://github.com/megaphonecolin), [@sdraper69](https://github.com/sdraper69), [@reynaldichernando](https://github.com/reynaldichernando), [@gamma-app](https://github.com/gamma-app), [@jrjohnson](https://github.com/jrjohnson), and [@ryanander](https://github.com/ryanander) for supporting this project!
 

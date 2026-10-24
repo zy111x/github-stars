@@ -1,6 +1,6 @@
 ---
 project: multica
-stars: 53070
+stars: 53719
 description: |-
     Make humans and AI agents work as one team — open-source and self-hostable.
 url: https://github.com/multica-ai/multica
@@ -95,7 +95,7 @@ issue — so nobody reconstructs context, and nothing ships without a human sayi
 *Which agent touched this? What did it run? What did it cost? Open the run.*
 
 - **[Execution log](https://multica.ai/docs/tasks) →** Replay every tool call, command, and error, timestamped.
-- **Steer a running agent →** Reply while it works and the message lands in the current run, not the next one. Claude Code, Codex, and Grok today.
+- **Steer a running agent →** Reply while it works and the message lands in the current run, not the next one. Claude Code, Codex, Grok, and Kiro today.
 - **Usage analytics →** See what each run cost, per agent and per issue.
 - **[Review gates](https://multica.ai/docs/issues) →** Work lands in review, not in main. You decide what ships.
 - **[Inbox](https://multica.ai/docs/inbox) →** Get pinged when an agent needs a call, not for every step.

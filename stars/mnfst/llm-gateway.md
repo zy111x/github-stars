@@ -1,6 +1,6 @@
 ---
 project: llm-gateway
-stars: 7585
+stars: 7597
 description: |-
     Open Source LLM Gateway 🦚
 url: https://github.com/mnfst/llm-gateway

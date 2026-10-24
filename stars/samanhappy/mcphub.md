@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 2544
+stars: 2581
 description: |-
     Self-hosted MCP gateway and control plane for connecting, controlling, and operating MCP servers.
 url: https://github.com/samanhappy/mcphub

@@ -1,12 +1,14 @@
 ---
 project: netgoat
-stars: 901
+stars: 903
 description: |-
     A Cloudflare alternative for local and cloud use, can be used ontop of cloudflare for cloudflares paid features, but for free!
 url: https://github.com/netgoat-xyz/netgoat
 ---
 
 <img width="5658" height="1600" alt="NetGoat" src="https://github.com/user-attachments/assets/d30fb971-4b39-490c-ac08-0d688e8f9ada" />
+
+[![Deploy to Railyard](https://app.railyard.run/deploy/badge)](https://app.railyard.run/deploy?repo=https://github.com/netgoat-xyz/netgoat)
 
 # NetGoat agent
 

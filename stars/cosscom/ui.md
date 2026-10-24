@@ -1,6 +1,6 @@
 ---
 project: ui
-stars: 10713
+stars: 10746
 description: |-
     coss.com/ui is the official design system of Cal.com
 url: https://github.com/cosscom/ui

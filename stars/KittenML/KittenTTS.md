@@ -1,15 +1,15 @@
 ---
 project: KittenTTS
-stars: 16126
+stars: 16436
 description: |-
     Open-source State-of-the-art TTS model which runs on a CPU 😻 
 url: https://github.com/KittenML/KittenTTS
 ---
 
-# Kitten TTS
+# Kitten-TTS
 
 <p align="center">
-  <img width="607" alt="Kitten TTS" src="https://raw.githubusercontent.com/KittenML/KittenTTS/main/assets/banner.png" />
+  <img alt="Kitten TTS" src="https://raw.githubusercontent.com/KittenML/KittenTTS/main/assets/kitten_tts_2_announcement.png" />
 </p>
 
 <p align="center">
@@ -19,20 +19,19 @@ url: https://github.com/KittenML/KittenTTS
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-green.svg" alt="License"></a>
 </p>
 
-> ## **New:** Free Kitten TTS API available at  [https://platform.kittenml.com](https://platform.kittenml.com/)
+> ## **New:** Free Kitten-TTS 2 API available at  [https://platform.kittenml.com](https://platform.kittenml.com/)
 
-Kitten TTS is an open-source text-to-speech library. Its flagship model, **KittenTTS 2**, is a
-1.7B-parameter 1-bit speech language model with in-context voice cloning and expression control: give it
-five seconds of anyone's voice and it speaks your text in that voice. It runs realtime on a CPU!
+Kitten-TTS is a series of sota open-source text-to-speech models, built by KittenML. Its flagship model, **Kitten-TTS 2**, is a
+1.7B-parameter 1-bit TTS model with in-context voice cloning and expression control. It provides SOTA quality while being so efficient that it runs realtime on CPUs and consumer GPU's!
 
-The library also ships the original [**lightweight legacy models**](docs/onnx-models.md),
+The library also ships our existing [**lightweight V0.8 models**](docs/onnx-models.md),
 15M-80M parameters, which run on CPU without a GPU. Both families load through the same
 `KittenTTS(...)` constructor.
 
 **Commercial support is available.** For integration assistance, custom voices, or enterprise licensing, [contact us](https://docs.google.com/forms/d/e/1FAIpQLSc49erSr7jmh3H2yeqH4oZyRRuXm0ROuQdOgWguTzx6SMdUnQ/viewform?usp=preview).
 
 
-<img   alt="5325cae7-e2e1-4aad-8d53-caf93a268b36" src="https://github.com/user-attachments/assets/3ed09eab-09e9-457a-acc6-619152cc5a21" />
+<img   alt="5325cae7-e2e1-4aad-8d53-caf93a268b36" src="https://raw.githubusercontent.com/KittenML/KittenTTS/main/assets/kitten_tts_2_features.png" />
 
 
 
@@ -45,6 +44,7 @@ The library also ships the original [**lightweight legacy models**](docs/onnx-mo
 - [Voice cloning](#voice-cloning)
 - [Expression controls](#expression-controls)
 - [Running on CPU](#running-on-cpu)
+- [Running on a Mac](#running-on-a-mac)
 - [Running with vLLM](#running-with-vllm)
 - [Long text and streaming](#long-text-and-streaming)
 - [Documentation](#documentation)
@@ -66,6 +66,7 @@ The library also ships the original [**lightweight legacy models**](docs/onnx-mo
 - **Runs without a GPU**
 - **Runs real time on a CPU** -- Check [Running on CPU](#running-on-cpu)
 - **Optimized C++ inference for CPU** -- Our fork of [llama.cpp](https://github.com/KittenML/kitten-tts-2-cpp)
+- **Several times realtime on Apple silicon** -- Check [Running on a Mac](#running-on-a-mac)
 
 
 
@@ -104,6 +105,8 @@ https://github.com/user-attachments/assets/c42c236b-7b7d-41d6-944b-7527a5f30626
 
 Try Kitten TTS directly in your browser on [KittenML Platform](https://platform.kittenml.com).
 
+Or run the Gradio demo locally: `pip install kittenml gradio`, then `python gradio_demo.py`.
+
 ## Quick Start
 
 ### Prerequisites
@@ -131,8 +134,8 @@ import soundfile as sf
 
 m = KittenTTS("KittenML/kitten-tts-2")
 
-audio = m.generate("One day, a little girl named Lily found a needle in her room.",
-                   voice="Bruno")
+audio = m.generate("Hi! umm.. how are you, I guess?  .. uh.. nice to meet you??",
+                   voice="WeatherPresenterCheerful")
 sf.write("output.wav", audio, m.sample_rate)
 ```
 > To run Kitten-TTS 2 on a CPU, please refer to  [Running on CPU](#running-on-cpu)
@@ -152,7 +155,7 @@ m = KittenTTS("KittenML/kitten-tts-2", weights="emb4")   # half the download
 
 ```python
 # Trade stability against expressiveness
-audio = m.generate("Hello, world.", voice="Luna", preset="expressive")
+audio = m.generate("Hello, world.", voice="Matthew", preset="expressive")
 
 # Save directly to a file
 m.generate_to_file("Hello, world.", "output.wav", voice="Bruno")
@@ -219,9 +222,30 @@ print(model.last_report)  # Generation timings and token IDs.
 
 > Kitten-TTS 2 C++ is in beta. Please report any issues you encounter.
 
+## Running on a Mac
+
+On an Apple-silicon Mac, install the optional MLX backend and select it:
+
+```bash
+pip install "kittenml[mlx]"
+```
+
+```python
+from kittenml import KittenTTS
+
+m = KittenTTS("KittenML/kitten-tts-2", backend="mlx")
+m.generate_to_file("One day, a little girl named Lily found a needle in her room.",
+                   "hello.wav", voice="Bruno")
+```
+
+See the [MLX guide](docs/mlx.md) for benchmarks and the full details.
+
 ## Running with vLLM
 
-For GPU inference with vLLM on Linux and an NVIDIA CUDA GPU, install the optional backend:
+For GPU inference with vLLM on Linux and an NVIDIA CUDA GPU with compute capability
+8.0 or newer (Ampere or later, for bfloat16), install the optional backend. GPUs with compute
+capability 7.5 can use a float16 fallback that is supported but not the optimal path
+([vLLM guide](docs/vllm.md#older-gpus-compute-capability-75)).
 
 ```bash
 pip install "kittenml[vllm]"
@@ -233,7 +257,8 @@ Select `backend="vllm"`:
 from kittenml import KittenTTS
 
 def main():
-    m = KittenTTS("KittenML/kitten-tts-2", backend="vllm")
+    m = KittenTTS("KittenML/kitten-tts-2", backend="vllm",
+                  vllm_options={"quantization": "w4a16"})
     m.generate_to_file("Hello there.", "output.wav", voice="Bruno")
     print("Saved output.wav")
 
@@ -242,7 +267,10 @@ if __name__ == "__main__":
 ```
 
 Keep the main guard when running a script: vLLM starts a worker process. The same
-voices, decoders, weight choices and generation arguments apply. See the
+voices, decoders, weight choices and generation arguments apply. The example
+uses 4-bit language-model weights (`"quantization": "w4a16"`): the same weights, exactly, in about
+2 GB less GPU memory, and faster for single requests. Leave out `vllm_options` to run in bf16; see
+[4-bit weights](docs/vllm.md#4-bit-weights). See the
 [vLLM guide](docs/vllm.md) for memory settings and benchmarks.
 
 
@@ -286,7 +314,9 @@ Two consequences worth knowing:
 | [Decoders](docs/decoders.md) | How audio is decoded, and the smaller quantised decoders |
 | [Text normalization](docs/text-normalization.md) | How written text becomes spoken text |
 | [Architecture](docs/architecture.md) | What the model is, package layout, vendored components |
+| [Docker](docs/docker.md) | Run a basic OpenAI-compatible speech API, with voice cloning, in a container |
 | [Lightweight ONNX models](docs/onnx-models.md) | The CPU models, 15M-80M parameters, and their API |
+| [MLX on Apple silicon](docs/mlx.md) | The optional Mac GPU backend, and why it is faster |
 
 ## System Requirements
 

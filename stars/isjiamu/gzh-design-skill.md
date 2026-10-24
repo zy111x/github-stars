@@ -1,10 +1,12 @@
 ---
 project: gzh-design-skill
-stars: 4022
+stars: 4141
 description: |-
     把 Markdown 一键排成可直接粘进公众号编辑器的精致 HTML —— 6 套精选主题 + 主题生成器 + 双关卡校验。An AI-agent skill that turns Markdown into paste-ready WeChat article HTML.
 url: https://github.com/isjiamu/gzh-design-skill
 ---
+
+> 🏠 **主仓库托管于 [github.com/isjiamu/gzh-design-skill](https://github.com/isjiamu/gzh-design-skill) ｜ 镜像同步：AtomGit**：[atomgit.com/zuiyn/gzh-design-skill](https://atomgit.com/zuiyn/gzh-design-skill)
 
 > 🤝 **本项目由 甲木 × [「摸鱼小李」](https://mp.weixin.qq.com/s/EMahAzgfAbRQrYukWE7_IQ) 联名共建** —— 排版组件、主题设计与质量标准凝聚了两人的公众号实践与共同打磨，特别感谢小李。
 

@@ -1,24 +1,10 @@
 ---
 project: pear-desktop
-stars: 33792
+stars: 33891
 description: |-
     Pear 🍐 is extension for music player
 url: https://github.com/pear-devs/pear-desktop
 ---
-
-<div align="center" markdown="1">
-   <sup>Special thanks to:</sup>
-   <br>
-   <br>
-   <a href="https://go.warp.dev/pear-desktop">
-      <img alt="Warp sponsorship" width="400" src="https://github.com/user-attachments/assets/8307ea56-e872-494a-8a9c-de0e296a06ed" />
-   </a>
-
-### [Warp, built for coding with multiple AI agents](https://go.warp.dev/pear-desktop)
-[Available for macOS, Linux, & Windows](https://go.warp.dev/pear-desktop)<br>
-
-</div>
-<hr>
 
 <div align="center">
 

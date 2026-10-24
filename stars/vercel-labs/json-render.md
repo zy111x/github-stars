@@ -1,6 +1,6 @@
 ---
 project: json-render
-stars: 18711
+stars: 18781
 description: |-
     The Generative UI framework
 url: https://github.com/vercel-labs/json-render
@@ -236,7 +236,7 @@ const { registry } = defineRegistry(catalog, {
 ### Solid (UI)
 
 ```tsx
-import { defineRegistry, Renderer } from "@json-render/solid";
+import { defineRegistry, JSONUIProvider, Renderer } from "@json-render/solid";
 import { schema } from "@json-render/solid/schema";
 
 const { registry } = defineRegistry(catalog, {
@@ -244,13 +244,15 @@ const { registry } = defineRegistry(catalog, {
     Card: (renderProps) => <div>{renderProps.children}</div>,
     Button: (renderProps) => (
       <button onClick={() => renderProps.emit("press")}>
-        {renderProps.element.props.label as string}
+        {renderProps.props.label}
       </button>
     ),
   },
 });
 
-<Renderer spec={spec} registry={registry} />;
+<JSONUIProvider registry={registry}>
+  <Renderer spec={spec} registry={registry} />
+</JSONUIProvider>;
 ```
 
 ### shadcn/ui (Web)
@@ -816,7 +818,7 @@ pnpm dev
 - http://react-email-demo.json-render.localhost:1355 - React Email Example
 - http://remotion-demo.json-render.localhost:1355 - Remotion Video Example
 - Chat Example: run `pnpm dev` in `examples/chat`
-- [Experimental Jev composition](https://json-render.dev/docs/jev): use `experimental_composeSpec` and `experimental_createEvaluator` from core with your own catalog, or select **Jev (Experimental)** in `/playground`. Unreleased; source-build instructions are in the guide.
+- [Experimental Jev composition](https://json-render.dev/docs/jev): use `experimental_composeSpec` and `experimental_createEvaluator` from core with your own catalog, or select **Jev (Experimental)** in `/playground`. Available since v0.21.0; pin exact package versions as described in the guide.
 - Svelte Example: run `pnpm dev` in `examples/svelte` or `examples/svelte-chat`
 - Vue Example: run `pnpm dev` in `examples/vue`
 - Vite Renderers (React + Vue + Svelte + Solid): run `pnpm dev` in `examples/vite-renderers`

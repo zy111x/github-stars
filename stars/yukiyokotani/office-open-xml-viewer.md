@@ -1,6 +1,6 @@
 ---
 project: office-open-xml-viewer
-stars: 845
+stars: 855
 description: |-
     A browser-based viewer for Office Open XML documents that renders to an HTML Canvas element.
 url: https://github.com/yukiyokotani/office-open-xml-viewer
@@ -217,30 +217,33 @@ shapes / text boxes the same way.)
 ### Experimental legacy DOC, XLS, and PPT sources
 
 Legacy binary Office files can be read directly into the ordinary document,
-workbook and presentation models through **model sources**, a format-generic
-`modelSources` load option. The legacy readers are separate opt-in entries, one
-per format in `@silurus/ooxml-legacy-office`. Install matching versions of both packages:
+workbook and presentation models through the experimental
+`@silurus/ooxml-legacy-office` add-on. Its readers are separate opt-in entries,
+one per format, passed in like the other opt-in modules (`{ legacyDoc }`,
+`{ legacyXls }` or `{ legacyPpt }`). Install matching versions of both packages:
 
 ```sh
 npm i @silurus/ooxml @silurus/ooxml-legacy-office
 ```
 
-Each entry returns a model source for the matching loader or viewer:
+Each entry exports a reader for the matching loader or viewer:
 
 ```typescript
 import { DocxViewer } from '@silurus/ooxml/docx';
-import { legacyDocSource } from '@silurus/ooxml-legacy-office/doc';
+import { legacyDoc } from '@silurus/ooxml-legacy-office/doc';
 
 const canvas = document.querySelector('canvas') as HTMLCanvasElement;
-const viewer = new DocxViewer(canvas, { modelSources: [legacyDocSource()] });
+const viewer = new DocxViewer(canvas, { legacyDoc });
 await viewer.load(docOrDocxBytes);
 ```
 
-`legacyXlsSource()` (`@silurus/ooxml-legacy-office/xls`) and `legacyPptSource()`
-(`@silurus/ooxml-legacy-office/ppt`) work the same way for XLSX and PPTX. A source
+`legacyXls` (`@silurus/ooxml-legacy-office/xls`) and `legacyPpt`
+(`@silurus/ooxml-legacy-office/ppt`) work the same way for XLSX and PPTX; for
+custom asset URLs create the reader with `createLegacyDoc({ wasmUrl, moduleUrl })`
+(likewise `createLegacyXls` and `createLegacyPpt`). A reader
 claims only its own binary family; every other input takes the unchanged OOXML
 path, and without a source a legacy file still rejects with the typed
-`legacy-binary-format` error. Creating a source fetches nothing: its
+`legacy-binary-format` error. Importing a reader fetches nothing: its
 self-contained source module and WASM load in the parser worker (or in Node)
 only when a claimed file is opened, and no OOXML package is generated. The
 readers are narrow and experimental and reject unsupported content rather than
@@ -758,7 +761,7 @@ owns the layout, paint and type primitives shared by DOCX, XLSX and PPTX.
 | `packages/docx/parser/src/lib.rs` | Rust WASM parser — DOCX ZIP → `Document` JSON |
 | `packages/xlsx/parser/src/lib.rs` | Rust WASM parser — XLSX ZIP → `Workbook` JSON |
 | `packages/pptx/parser/src/lib.rs` | Rust WASM parser — PPTX ZIP → `Presentation` JSON |
-| `packages/docx/src/renderer.ts` | DOCX Canvas 2D rendering and text layout |
+| `packages/docx/src/renderer.ts` | DOCX Canvas 2D paint from retained page geometry |
 | `packages/xlsx/src/renderer.ts` | XLSX Canvas 2D viewport rendering |
 | `packages/pptx/src/renderer.ts` | PPTX Canvas 2D rendering |
 | `packages/*/src/worker.ts` | Main-mode parser Worker entry |
@@ -828,10 +831,11 @@ file without uploading it.
 | | SVG images (`asvg:svgBlip` MS-2016 extension — vector drawn from the embedded `.svg`, raster fallback) | ✅ |
 | | Text boxes / drawing shapes (inline and anchored `wps:wsp` / `wps:txbx`, including solid, gradient, and image fills; `a:prstGeom` — 186 preset geometries via the shared engine; connector arrow heads `headEnd` / `tailEnd` (§20.1.8.3) and `prstDash` dash patterns (§20.1.8.48)). Text-box paragraphs run through the **same line-layout engine as body text**, so kinsoku 行頭/行末禁則 (§17.15.1.58–60), UAX#9 bidi (`w:bidi`, §17.3.1.6), justification (§17.18.44) and tab stops (§17.3.1.37) all apply inside a box | ✅ |
 | | WMF **and EMF** metafile images (legacy vector, incl. inside text boxes) — rasterized via a built-in player: window→viewport mapping (MS-EMF map modes, world transform), pens/brushes, poly/rect/ellipse, text-out, path clipping, and embedded DIB blits | ✅ |
+| | Paragraph text frames (`w:framePr`) — inherited positioning and spacing, with surrounding text wrap | ✅ |
 | | Legacy VML content — positioned shapes, text boxes, image previews, and authored text wrapping | ✅ |
 | | OLE embedded objects (`w:object` — the baked VML `v:imagedata` preview is drawn; the embedded app is not run) | ✅ |
-| **Advanced** | Footnotes — reference markers + bottom-of-page bodies with separator rule, numbered (`w:footnoteReference` / `w:footnoteRef`, §17.11) | ✅ |
-| | Endnotes — reference markers + bodies at document end (`w:endnoteReference`, §17.11) | ✅ |
+| **Advanced** | Footnotes — numbered markers, authored separators and paragraph continuation across pages; column placement follows document compatibility settings (`w:footnoteReference` / `w:footnoteRef`, §17.11) | ✅ |
+| | Endnotes — reference markers + document-end bodies, including paragraph continuation across pages (`w:endnoteReference`, §17.11) | ✅ |
 | | Page-number formats (`w:pgNumType` restart / format §17.6.12; PAGE `\*` switches — decimal / roman / letter / hex / ordinal-dash / hebrew2 / koreanLegal, §17.18.59) | ✅ |
 | | Field date/time pictures (`TIME` / `DATE` field `\@` format, §17.16.5.72 / .16) | ✅ |
 | | `w:snapToGrid` opt-out of the document grid (§17.3.1.32) | ✅ |
@@ -891,7 +895,7 @@ file without uploading it.
 | | Chart manual layout (`<c:title><c:layout>` and `<c:plotArea><c:layout>`) | ✅ |
 | | Sparklines (`x14:sparklineGroup` — line / column / win-loss, with markers and high/low/first/last/negative highlights) | ✅ |
 | **Advanced** | Conditional formatting (`cellIs`, `colorScale`, `dataBar`, `iconSet`, `top10`, `aboveAverage`) | ✅ |
-| | Conditional-formatting formulas (`expression`, text / blanks / errors rules — partial evaluator over cached values; complete evaluation tracked in [#1547](https://github.com/yukiyokotani/office-open-xml-viewer/issues/1547)). A rule the evaluator cannot evaluate neither formats nor stops lower rules; the last completed render's boundary is available from `XlsxWorkbook.getLastConditionalFormattingDiagnostics()` and the Viewer shows a status notice | ⚠️ Partial |
+| | Conditional-formatting formulas (`expression`, text / blanks / errors rules — partial evaluator over cached values; complete evaluation tracked in [#1547](https://github.com/yukiyokotani/office-open-xml-viewer/issues/1547)). A rule the evaluator cannot evaluate neither formats nor stops lower rules | ⚠️ Partial |
 | | Slicers (static, Office 2010 extension) | ✅ |
 | | Pivot tables (saved worksheet output renders unchanged; read-only metadata is exposed. Refresh, recalculation, filtering, restructuring, and interactivity are unsupported) | ⚠️ Partial |
 | | Cell comments / notes (classic `xl/commentsN.xml` + Office-365 threaded comments — red triangle indicator + author / text via the worksheet model; pointer or keyboard users can open the popup, with a polite screen-reader status) | ✅ |
@@ -1104,8 +1108,10 @@ decode or playback failures after the presentation handle has been returned.
 Stable failures can be narrowed without parsing message strings:
 
 - `OoxmlError` — typed input and source failures. Its `code` is `encrypted`,
-  `invalid-password`, `unsupported-encryption`, `legacy-binary-format`, `unsupported-content`, or
-  `not-ooxml`. For `unsupported-content`, offer conversion: the configured
+  `invalid-password`, `unsupported-encryption`, `legacy-binary-format`,
+  `not-ooxml`, `unsupported-image-effect` (a picture-effect chain that is
+  malformed or cannot be drawn), `invalid-numbering` (DOCX numbering that Word
+  cannot open), or `unsupported-content`. For `unsupported-content`, offer conversion: the configured
   source cannot represent this input. Frozen `details` contain only its
   `format` identifier and `reason: 'source-subset'`.
 - `OoxmlResourceLimitError` (`code === 'ooxml-resource-limit'`) — a measured

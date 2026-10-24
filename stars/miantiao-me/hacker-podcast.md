@@ -1,6 +1,6 @@
 ---
 project: hacker-podcast
-stars: 2597
+stars: 2599
 description: |-
     一个基于 AI 的 Hacker News 中文播客项目，每天自动抓取 Hacker News 热门文章，通过 AI 生成中文总结并转换为播客内容。
 url: https://github.com/miantiao-me/hacker-podcast
@@ -71,6 +71,8 @@ HACKER_PODCAST_R2_BUCKET_URL=https://your-bucket-url
 OPENAI_API_KEY=your_api_key
 OPENAI_BASE_URL=https://api.openai.com/v1
 OPENAI_MODEL=gpt-4.1
+# 可选：额外的请求头，JSON 对象格式
+OPENAI_HEADERS='{"x-opencode-session":"your-session-id"}'
 ```
 
 3. 启动开发服务器:
@@ -105,6 +107,7 @@ pnpx wrangler secret put --cwd worker HACKER_PODCAST_R2_BUCKET_URL
 pnpx wrangler secret put --cwd worker OPENAI_API_KEY
 pnpx wrangler secret put --cwd worker OPENAI_BASE_URL
 pnpx wrangler secret put --cwd worker OPENAI_MODEL
+pnpx wrangler secret put --cwd worker OPENAI_HEADERS # JSON 对象，如 {"x-opencode-session":"..."}
 
 # 更新 Web 程序的私有变量
 pnpx wrangler secret put NODE_ENV # 建议 production

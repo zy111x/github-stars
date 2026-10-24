@@ -1,6 +1,6 @@
 ---
 project: transitions.dev
-stars: 5389
+stars: 5686
 description: |-
     UI motion agent, a library of 43+ crafted transitions, a skill that fits your workflow.
 url: https://github.com/Jakubantalik/transitions.dev
@@ -61,6 +61,8 @@ npx skills add Jakubantalik/transitions.dev
 Skill source lives in [`skills/transitions-dev/`](./skills/transitions-dev) — `SKILL.md`, eighteen per-transition reference files (`01-card-resize.md` … `18-texts-reveal.md`), and `_root.css` (the universal install block on its own).
 
 The same command also installs [`skills/transitions-ui-generation/`](./skills/transitions-ui-generation): it makes any UI appear as if an agent is generating it. A dotted wireframe is drawn from the element's own structure, then the real UI is revealed. It has two modes, `skeleton` and `skeleton-texts` (with an agent log, the motion CSS being written and a step line), and one dependency-free runtime for any framework. Preview it with [`demo.html`](./skills/transitions-ui-generation/demo.html).
+
+Besides components (`ui`, the default), it has variants for big type and photos: `text` (every glyph of a headline traced along its real outline in dots, then fading in), `small-text` (a dotted line through each line), `image` (a sketch of the photo's tones, a halftone of its own pixels, colour dots, then the photo) and `auto` (all of them in one block). Preview them with [`demo-text.html`](./skills/transitions-ui-generation/demo-text.html) and [`demo-editorial.html`](./skills/transitions-ui-generation/demo-editorial.html).
 
 The skill is generated from `index.html` so the snippets always match what the showcase site demonstrates. Re-run after editing the source site:
 

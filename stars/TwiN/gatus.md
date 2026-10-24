@@ -1,6 +1,6 @@
 ---
 project: gatus
-stars: 12338
+stars: 12395
 description: |-
     Automated developer-oriented status page with alerting and incident support
 url: https://github.com/TwiN/gatus
@@ -488,6 +488,7 @@ Here are some examples of conditions you can use:
 | `[BODY] == 1`                    | The body must be equal to 1                         | 1                          | `{}`, `2`, ...   |
 | `[BODY].user.name == john`       | JSONPath value of `$.user.name` is equal to `john`  | `{"user":{"name":"john"}}` |                  |
 | `[BODY].data[0].id == 1`         | JSONPath value of `$.data[0].id` is equal to 1      | `{"data":[{"id":1}]}`      |                  |
+| `[BODY]["a.b"] == ok`            | JSONPath value of `$["a.b"]` is equal to `ok`       | `{"a.b":"ok"}`             |                  |
 | `[BODY].age == [BODY].id`        | JSONPath value of `$.age` is equal JSONPath `$.id`  | `{"age":1,"id":1}`         |                  |
 | `len([BODY].data) < 5`           | Array at JSONPath `$.data` has less than 5 elements | `{"data":[{"id":1}]}`      |                  |
 | `len([BODY].name) == 8`          | String at JSONPath `$.name` has a length of 8       | `{"name":"john.doe"}`      | `{"name":"bob"}` |
@@ -521,6 +522,11 @@ Here are some examples of conditions you can use:
 | `any`    | Specifies that any one of the values passed as parameters is a valid value. Works only with `==` and `!=`.                                                                                                                          | `[BODY].ip == any(127.0.0.1, ::1)` |
 
 > 💡 Use `pat` only when you need to. `[STATUS] == pat(2*)` is a lot more expensive than `[STATUS] < 300`.
+
+> 💡 Because an unquoted dot always separates two keys, object keys that contain dots must be wrapped in
+> single or double quotes between brackets. For instance, given the body
+> `{"status": {"core.integrations.key_1": "ok"}}`, the condition to use is
+> `[BODY].status["core.integrations.key_1"] == ok`.
 
 ### Web
 Allows you to configure how and where the dashboard is being served.
