@@ -1,6 +1,6 @@
 ---
 project: Scrapling
-stars: 88294
+stars: 89483
 description: 🕷️ A Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev
 url: https://github.com/D4Vinci/Scrapling
 ---
@@ -68,9 +68,6 @@ Scrapling handles Cloudflare Turnstile. For enterprise-grade protection, **Hyper
 
 **Evomi** : residential proxies from $0.49/GB. Scraping browser with fully spoofed Chromium, residential IPs, auto CAPTCHA solving, and anti-bot bypass.  
 **Scraper API for hassle-free results. MCP and N8N integrations are available.**
-
-TikHub.io provides 900+ stable APIs across 16+ platforms including TikTok, X, YouTube & Instagram, with 40M+ datasets.  
-Also offers DISCOUNTED AI models - Claude, GPT, GEMINI & more up to 71% off.
 
 Read a full review of Scrapling on The Web Scraping Club (Nov 2025), the #1 newsletter dedicated to Web Scraping.
 

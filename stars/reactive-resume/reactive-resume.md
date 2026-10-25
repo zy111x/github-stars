@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 44442
+stars: 44815
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/reactive-resume/reactive-resume
 ---
@@ -25,6 +25,17 @@ Sponsored by
 Create a free account, import an existing resume or start fresh, and see the finished page as you write. Download a PDF, Word, Markdown, or JSON file, or share your resume with a public link. You can also run the whole application on your own infrastructure.
 
 You own your data. The codebase is open source under the MIT license, with no tracking, no ads, and no paid tier. Optional AI features use a provider you connect; hosting and provider usage may have their own costs.
+
+Build a better resume, together
+-------------------------------
+
+Join the Reactive Resume community on Discord to exchange resume feedback, get help using or self-hosting the app, and share ideas with other users and contributors.
+
+-   **Resume feedback:** post a redacted resume and one specific question, or help someone improve theirs.
+-   **Help:** find troubleshooting discussions and ask questions in dedicated forum threads.
+-   **Contribute:** discuss ideas, translations, and code with the people building Reactive Resume.
+
+Feedback comes from fellow community members. Remove contact details and other private information before posting.
 
 Features
 --------

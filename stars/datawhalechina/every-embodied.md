@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 4108
+stars: 4213
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -172,62 +172,128 @@ GR00T N1.5 家庭长时序操作，四视角，195 秒
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-10-23\]** 新增 Agnes Harness 多设备 Demo 实践：在 Ubuntu 上运行 MHS 四设备、火星基地与三个插件示例，提供固定版本启动器、自动验证脚本和实机运行截图；手动与模拟模型路线无需 API Key。
+    
+-   **\[2026-10-23\]** 新增 TurboVLA 轻量视觉语言动作模型精读：拆解 DINOv3、BERT、双向交互与 ACT 动作块，整理 v3 的 LIBERO / RoboTwin 结果、关键消融、推理计时口径，以及多卡训练和单卡梯度累积复现路线。
+    
+-   **\[2026-10-21\]** 新增 LTX Alpha Gen 视频抠像与透明合成教程：从连续透明度、IC-LoRA 参考条件讲到官方 ComfyUI 工作流、Python 推理和透明视频导出，并说明显存需求与离线处理的时间量级。
+    
+-   **\[2026-10-18\]** 新增 DepthART 轻量单目深度估计教程：复现约 6M 参数的 MobileNetV4-M-slim-SPF，提供 CPU ONNX 运行脚本、224/448 深度图和完整测速记录，区分参数量、文件大小与端侧实时部署条件。
+    
+-   **\[2026-10-18\]** 新增 BeyondRetarget 单目视频动作复现教程：提供官方在线推理客户端、固定版本的 Linux 本地基础版步骤、八机器人动作文件检查器与实测记录，区分轨迹生成、运动学回放和物理控制验证。
+    
 -   **\[2026-10-06\]** 新增 G0.5 × 双手钢琴：琴位变化后的重新就位与续弹：公开 R1 Pro 双手演奏、G0.5 模型接入、移琴调整与续弹代码，提供本地回放、练习曲谱及运行记录。
+    
 -   **\[2026-09-29\]** 更新 Booster K1 网页 MuJoCo 本机部署与 AMP 训练教程：区分上游在线 demo 与 Windows 本机静态托管，标明 K1 网页模型和 `policy.bin` 的上游目录，补充 MIME 兼容服务器、获授权后的 GitHub Pages 发布步骤及 Linux + NVIDIA 可选训练指南。
+    
 -   **\[2026-09-05\]** 更新 Microduck 双足强化学习教程：新增 BallKick 非对称 actor-critic、奖励与随机化拆解，提供独立训练和 ONNX 导出命令，并接入官方 Microduck Sandbox，讲清 MuJoCo WebAssembly、onnxruntime-web、Three.js 与 50 Hz 浏览器闭环；本机实测右脚策略成功触球并保存画面与 QA 记录。
+    
 -   **\[2026-09-04\]** 新增 UniCross 统一跨技能灵巧操作导读：归入强化学习与灵巧操作章节，系统拆解抓取、搬移、手内旋转和手内平移如何共享手-物关系观测、增量动作空间与奖励结构，十个 PPO 专家如何通过 DAgger 蒸馏为单一策略，以及未见物体、扰动、Allegro / MANO / Sharpa Wave 跨手型和长时程组合实验；同时更新 Microduck 双足强化学习教程，加入由同一 walking policy 实时执行的 12 秒命令编舞视频和可复现录制参数。
+    
 -   **\[2026-08-29\]** 新增 AMD Physical AI 仿真基准与长程视频复现教程：汇总 Every Embodied、RoboCasa365、DexJoCo、DISCOVERSE、RoboWits 和 Unitree G1 的 AMD ROCm 运行链路、正式评估协议与多视角视频，并提供 DexJoCo 双臂河内塔和 RoboCasa365 长程装餐任务的完整成功回合。
+    
 -   **\[2026-08-23\]** 新增 EVA-Client 真机部署与评测工程导航：归入现有 VLA 章节，系统讲解 EVA-Client 如何衔接 LeRobot 数据、外部 VLA 策略服务器与真实机器人，覆盖 Transport、Robot Definition、Policy Client、五种 action chunk 调度策略、七类控制台工作流、可审计评测日志、无真机 open-loop 体验和两进程真机部署模式；同时明确当前官方版本尚未提供 SO-101 适配，并给出社区扩展所需的机器人描述、硬件节点、动作契约、配置与安全验证清单。
+    
 -   **\[2026-09-08\]** 新增 VLNVerse 导航比赛经验分享：记录基线训练、InternVLA 双系统迁移、训练资产补齐、渲染输入排查、多卡权重导出和完整评估经验，附逐条验证摘要与提交包检查脚本。
+    
 -   **\[2026-08-01\]** 新增 ATEC2026 赛后复盘与开源方案教程：将 Task A/B/D/E 的任务边界、观测契约、环境视角调试、Task B 公开方案对照、评估与复现边界，以及中文 Workspace Memory 统一归入第 15 章，并配套 Task B 公开复现归档 与 Task E 开源资源。
+    
 -   **\[2026-07-18\]** 新增 Dexbotic-RLinf 工程化 VLA 后训练导读：归入现有 VLA 章节，系统讲解 Dexbotic 如何把 RLinf 作为分布式强化学习后端，用 PPO 对 Dexbotic π0 / DM0 在 LIBERO 上做在线 fine-tuning，覆盖 Dexbotic 三层工具箱架构、RLinf frontend 与 Dexbotic backend 两种启动方式、`dexbotic_pi0` / `dexbotic_dm0` 动态模型注册、actor / rollout / env worker 分工、checkpoint 下载、TensorBoard 指标、standalone evaluation，以及该链路更适合作为工程化后训练导读而非轻量一键复现的边界。
+    
 -   **\[2026-08-05\]** 新增 DM0.5 高性能推理与 OpenDM 开源导读：归入现有 VLA 章节，系统拆解 DM0.5 的 Gemma3 VLM prefix、Action Expert suffix、KV cache、Flow Matching action chunk 和公开 OpenDM 代码入口；进一步分析官网公告中的 Vision TensorRT、Tuned FlexAttention、FP8 E4M3 Tensor Core MLP、Triton fused kernels 与启动期 CUDA Graph 如何组成 9.29× 推理优化链路，并明确 OpenDM 当前可复现的模型/训练/推理/评测范围，以及 DM0.5 专用 9.29× 部署代码尚未在公开仓库完整出现的边界。
+    
 -   **\[2026-07-18\]** 新增 Robots That Know What to Ask 奖励对齐导读：归入 `05-具身场景的深度和强化学习`，系统拆解 RSS 2026 论文 _Robots That Know What to Ask: Recovering Misaligned Rewards through Targeted Explanations_，重点讲清 ASQ 如何从示教特征方差中识别欠指定奖励维度，用自然语言解释引导人类补充 corrective demonstrations，并覆盖 JacoRobot 仿真、Franka 真实用户实验、LLM filtering、demo-specific rationality / weighting、与 VLA / 世界模型后训练的接口，以及当前未检索到官方代码仓库的复现边界。
+    
 -   **\[2026-07-18\]** 新增 GE-Sim 2.0 闭环视频世界模拟器导读：归入 `17-具身世界模型`，系统拆解 AgiBot Genie Envisioner World Simulator 2.0，重点讲清它如何从动作条件视频生成推进到可闭环调用的 learned world simulator，覆盖 Pixel-aligned Action Condition、Proprioceptive State Expert、World Judge、DMD2 加速、WorldArena 公共榜第一、2B G01 + OmniPicker 开源权重、`WorldModelEnv.step(actions)` 接口、pi05 policy demo rollout、成功/失败示例和当前 World Judge 尚需自接 RewardClient 或等待进一步发布的复现边界。
+    
 -   **\[2026-07-18\]** 新增 Agentic-VLA 在线适应导读：归入现有 VLA 章节，系统拆解 _Efficient Online Adaptation for Vision-Language-Action Models_，重点讲清它不是新的 VLA 基座，而是围绕 OpenVLA-OFT 构建的 agentic online adaptation 外环，覆盖 Adaptive Reward Synthesis、Language-Guided Exploration、Experience Memory、GRPO、LIBERO / RoboTwin 2.0 评测、1-shot 与跨任务迁移结果、reward hacking / memory interference 风险，以及当前未检索到官方代码仓库的复现边界。
+    
 -   **\[2026-07-18\]** 新增 Shape Your Body 价值梯度机器人设计导读：归入 `21-机械臂和机器人设计`，系统讲解 TU Darmstadt / RIG / DFKI 的 _Value Gradients for Multi-Embodiment Robot Design_，重点拆解如何先训练多具身 policy 和 value function，再冻结 critic 并通过 Value-Gradient Design Search 优化新的机器人身体参数，覆盖 URMA、direct-design critic、soft trust region、50 机器人训练集、190-1177 维连续设计空间、单机器人与 held-out robot 设计结果、设计分析热力图，以及当前项目页显示 `Code (soon)` 的开源边界。
+    
 -   **\[2026-07-18\]** 新增 VisualThink-VLA 视觉证据推理导读：归入现有 VLA 章节，系统拆解 _Visual Intermediate Reasoning for Effective and Low-Latency VLA Policies_，重点讲清为什么文本 CoT 不适合实时机器人闭环控制，VisualThink-VLA 如何用 `bbox / edge / motion / relation` 四类 routed visual evidence 替代长文本推理，覆盖 frozen VLA backbone、Visual State Composer、FullSoft teacher、soft-hard collaborative routing、VisualEvidence-Kit、754.7k VisualEvidence-Set、BridgeData V2 22.8x 延迟加速和当前 MIT 代码骨架复现入口。
+    
 -   **\[2026-07-18\]** 新增 LWD 真机机群强化学习导读：归入现有 VLA 章节，系统拆解智元 AGIBOT Finch / Shanghai Innovation Institute 的 _Learning while Deploying_，重点讲清真机部署如何变成数据飞轮，覆盖 16 台 AgiBot G1 双臂机器人、8 个真实操作任务、离线到在线 replay、Distributional Implicit Value Learning、Q-learning with Adjoint Matching、flow-based VLA action head、长时程任务收益，以及当前项目页公开但尚未提供一键复现代码入口的复现边界。
+    
 -   **\[2026-07-18\]** 新增 Dexora 高自由度双臂灵巧 VLA 导读：归入现有 VLA 章节，系统拆解清华、智源、港大、北大等团队的 ICRA 2026 Manipulation and Locomotion 最佳论文候选工作，重点讲清 Dexora 为什么是 36-DoF 双臂双灵巧手 VLA，覆盖外骨骼 + Apple Vision Pro 混合遥操作、MuJoCo 数字孪生、100K 级仿真轨迹、10K+ 真实遥操作 episodes、discriminator-guided quality-aware diffusion-transformer 训练、双手灵巧任务、跨本体泛化和当前代码/数据公开入口。
+    
 -   **\[2026-07-18\]** 新增 Galaxea G0.5 自回归 VLA 导读：归入现有 VLA 章节，围绕 “记忆 + CoT + 动作表征” 这条技术线，系统拆解 G0.5 如何用过去 5 秒 6 帧多视角 RGB、Embodiment ID、任务指令和 proprioception 作为输入，在同一条自回归流中生成 `Subtask / BBox / Trace / ActionHint` 与 action tokens，覆盖 ActionCodec、27 维共享动作空间、Qwen3.5 2B VLM-as-Actor、DROID / Bridge-SimplerEnv / RoboTwin / LIBERO / BEHAVIOR-1K 结果和 G0.5 Community License 开源边界。
+    
 -   **\[2026-07-18\]** 新增 PRTS 强化学习原生 VLA 导读：归入现有 VLA 章节，围绕 TeleAI PRTS-Droid 跻身 MolmoSpaces 全球 TOP3 的榜单事件，系统讲解 PRTS 如何把 reward-label-free contrastive RL 放进 VLA 预训练，覆盖 Qwen3-VL backbone、single-forward attention mask、Flow Matching Action Expert、goal-reachability value、LIBERO / RealMan / Flexiv / MolmoSpaces 评测和 CC BY-NC 4.0 开源边界。
+    
 -   **\[2026-07-18\]** 新增 τ0-WM 统一视频-动作世界模型导读：归入 `17-具身世界模型`，系统拆解 Shanghai Innovation Institute 与 AGIBOT Finch 的 5B 级开源 video-action world model，覆盖 Wan2.2-TI2V-5B / Action DiT 架构、VAM 与 ACVS 双接口、27.3K 小时异构数据、modality-specific supervision masks、re-denoising consistency、test-time proposal-evaluation-revision，以及 GitHub / Hugging Face 当前可复现和暂未放出的 Simulator / TTC 边界。
+    
 -   **\[2026-07-18\]** 新增 NBS 主动感知路径规划导读：归入 `08-具身导航及VLN` 的导航规划前沿线，系统讲解 IJRR OnlineFirst 论文 _An Efficient Beam Search Algorithm for Active Perception in Mobile Robotics_，覆盖 active perception 问题定义、Node-wise Beam Search、Expected Gain、RRAG 在线构图、Habitat / HSSD 三类主动感知任务、ANYmal 真机验证，以及 OpenApero 当前代码尚未公开的复现边界。
+    
 -   **\[2026-07-18\]** 新增 BWM 动作条件世界模型导读：归入 `17-具身世界模型`，系统讲解同济 Boundless 团队在 WorldArena 上开源第 1、overall 第 2 的 action-conditioned video world model，覆盖 Wan2.2-TI2V-5B 基座、Action Encoder、AdaLN 动作注入、自回归 rollout、WorldArena 榜单图、官方 GIF 示例、HF 权重和当前训练代码/技术报告未发布边界。
+    
 -   **\[2026-07-18\]** 新增 3DVLA 三维空间实例增强 VLA 导读、PhysBrain 1.0 物理常识增强 VLA 导读、HumanoidMimicGen 全身规划数据生成导读 与 Gamma-World 多智能体世界模型导读：3DVLA 与 PhysBrain 归入现有 VLA 章节，分别拆解 3D 空间实例 token 注入 action expert，以及人类第一人称视频如何转成物理常识监督、再通过 TwinBrainVLA 和 LangForce 迁移到机器人控制；HumanoidMimicGen 归入仿真与数据生成章节，系统讲解少量人形示教、技能约束、全身 IK/运动规划、G1 benchmark 和 sim-and-real co-training；Gamma-World 归入世界模型章节，补充 NVIDIA x 清华多智能体共享世界模型的项目图、代码/权重入口、Simplex RoPE、Sparse Hub Attention、24 FPS 流式 rollout 和两人训练到四人泛化。
+    
 -   **\[2026-07-07\]** 更新 Datawhale 具身智能零基础入门组队学习路径 v6：基于最近新增的世界模型、VLA 前沿、Locate Anything 视觉语言定位、LingBot-Map 三维重建、Build123d / Text-to-CAD / ForgeCAD 代码建模、SIM1、UniLab + MotrixSim 与 AMD ROCm 专题，重新组织 20 天组队学习路线，按“操作控制”“感知建图”“导航规划”“世界模型”四条主线拆分，并明确 Task01 截止时间为 07月17日03:00。
+    
 -   **\[2026-07-02\]** 新增 RoboDream 可组合世界模型数据合成导读，放入 `17-具身世界模型` 前沿导读线：系统拆解 USC PSI Lab 与 TRI 提出的 _Compositional World Models for Scalable Robot Data Synthesis_，重点讲清它不是可实时 `step(action)` 的神经仿真器，而是基于 robot-only 轨迹、scene prior、object prior 的机器人示教视频合成数据引擎；教程补充官方架构图、prior extraction、retrieval and rebirth、prop-free teleoperation、真实机器人实验表和当前代码开源边界。
+    
 -   **\[2026-06-29\]** 新增 EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航 与 WALL-WM 事件级世界动作模型：前三篇归入现有 VLA 章节，WALL-WM 归入世界模型章节，分别补充官方图解、开源地址、权重/数据入口和当前适合的复现边界。
+    
 -   **\[2026-06-29\]** 新增 AMD ROCm 策略复刻专题，基于 AMD Ryzen AI MAX+ / ROCm 设备复刻 MuJoCo 抓杯任务，整理 ACT DAgger 诊断、SmolVLA 红/蓝杯加权采样、pi\_0 权限 smoke test 与训练门控，并配套 Notebook、成功率图表和成功/失败关键帧，方便大家从排障过程学会在 AMD 平台上迁移具身策略。
+    
 -   **\[2026-06-27\]** 新增 Locate Anything 视觉语言定位复现教程，覆盖 `nvidia/LocateAnything-3B` 本地环境、RTX PRO 6000 Blackwell smoke test、Parallel Box Decoding 原理，以及与 YOLO26n 的同图速度和任务边界对比。
+    
 -   **\[2026-06-27\]** 新增 WoG 条件空间世界模型导读，系统拆解 ByteDance Seed 与港大提出的 _World Guidance_：从总览图、两阶段训练、Future Encoder、Q-Former query、condition alignment 到 SIMPLER/真机/人类视频实验，重点说明它不是可 rollout 的传统世界模型，而是把未来观测蒸馏成动作相关 latent condition 来增强 VLA 动作生成。
+    
 -   **\[2026-06-27\]** 新增 RAW-Dream 任务无关世界模型强化 VLA 导读，梳理微软等作者的 _Reinforcing VLAs in Task-Agnostic World Models_：明确不是 pi0.5 基座，而是 OpenVLA-OFT + Wan 2.1 world model + Qwen3-VL reward + GRPO 的后训练范式，并补充 DNV 技巧、LIBERO/真机评测边界和可继续追踪的开源仓库。
+    
 -   **\[2026-06-02\]** 新增 RISE 自我改进机器人策略复现教程，覆盖论文方法、组合世界模型流水线、OpenPI policy/value、LTX-Video dynamics model、RLinf imagination RL、Blackwell cu128 环境适配、公开模型资产下载校验，以及官方图与视频素材本地归档。
+    
 -   **\[2026-06-02\]** 新增 扩散数理基础及问题解析入门，讲解扩散模型需要的数理基础，用简单的代码讲解扩散模型，让大家在不推导复杂公式的前提下，熟悉vae和ddpm，为后续的世界模型学习打下基础。
+    
 -   **\[2026-06-02\]** 新增 AGILE 人形机器人 Loco-Manipulation Isaac Lab 复现教程，覆盖官方任务边界、Isaac Sim 5.1 / Isaac Lab 2.3.2 复刻、T1/G1 本地渲染视频、pick-place checkpoint 未随仓库开源说明、评估报告与 Sim2MuJoCo 链路。
+    
 -   **\[2026-06-02\]** 新增 HIMLoco 四足机器人运动控制 Isaac Lab 复现教程，覆盖论文方法、原仓库流水线、Blackwell GPU 旧栈排障、Isaac Lab 迁移、smoke test 曲线与本地渲染视频。
+    
 -   **\[2026-06-02\]** 新增 Genesis World 1.0 完整体验与机器人仿真流水线，补充 Genesis World 1.0 环境配置、机器人仿真流程和功能体验记录。
+    
 -   **\[2026-05-31\]** 新增 ForgeCAD 官方 3D 打印机、键盘与灵巧手案例复现，对齐 `KoStard/forgecad-public-kit` 的 `3dprinter-gpt52codex` benchmark，补充视频键盘和官方可动灵巧手，跑通参数渲染 GIF、多视角截图、STEP/STL/3MF 导出和打印检查边界说明。
+    
 -   **\[2026-05-31\]** 新增 UniLab + MotrixSim 异构机器人 RL 训练复现，覆盖 6GB 显卡上的 state-based RL 训练、资源占用记录、MotrixSim checkpoint 回放，以及 `uv run --no-sync demo teaser` 的 PBR renderer 多视角截图体验。
+    
 -   **\[2026-05-14\]** 新增 LingBot-Map 视频流式三维重建教程，覆盖官方连续校园场景 smoke test、点云渲染预览、环境配置、代码与论文数据流讲解，以及轻量本地 Web demo。
+    
 -   **\[2026-05-12\]** 新增 Build123d 代码建模 与 Text-to-CAD 6DOF 教学机械臂 教程，补充 CAD-as-code、Codex CAD skill、STEP/STL/GLB 生成与预览。
+    
 -   **\[2026-05-11\]** 新增 DiT4DiT-LIBERO 训练与评估复现教程，覆盖官方方法图解、LIBERO 评估 smoke test、`libero_spatial` 训练 smoke test、数据元信息修复、日志与多视角视频结果展示。
+    
 -   **\[2026-04-29\]** 新增 SIM1 柔体仿真与数据生成、InternVerse / InternDataEngine 小空间体验教程、EBench / GenManip 最小复现记录，补充仿真数据生成、合成数据引擎与评测基准介绍。
+    
 -   **\[2026-04-11\]** 新增了无人机相关教程：系统的讲解无人机从控制到轨迹生成再到轨迹优化的完整流程，包括比较难以理解的微分平坦性，SE3控制器，minimumsnap轨迹优化等内容，包含12个可运行的简单易懂案例，不用复杂的环境，不用复杂的代码，助你从零入门无人机。
+    
 -   **\[2026-04-07\]** 新增LeWorldModel世界模型教程和复现指导！用最通俗的话、最清晰的结构，把LeWM从头到尾讲明白，一步到位带你吃透最新的LeWM世界模型算法，不管是入门世界模型还是深入科研都能用
+    
 -   **\[2026-03-17\]** 新增具身导航综合入门实践视频教程！仅需“半天”即可走通从感知决策再到规划控制的所有的算法：从入门具身导航到深入研究一站式
+    
 -   **\[2026-03-17\]** 新增视频教程：LeHome柔性衣物折叠ICRA2026比赛视频教程 http://xhslink.com/o/2oxCz0RTXcA
+    
 -   **\[2026-03-16\]** 新增达摩院 x Datawhale 组队学习 https://github.com/datawhalechina/every-embodied/tree/main/16-%E4%B8%93%E9%A2%98%E7%BB%84%E9%98%9F%E5%AD%A6%E4%B9%A0/01-%E8%BE%BE%E6%91%A9%E9%99%A2%E7%BB%84%E9%98%9F%E5%AD%A6%E4%B9%A0
+    
 -   **\[2026-03-16\]** 新增LeHome ICRA2026 比赛教程 https://github.com/datawhalechina/every-embodied/blob/main/15-Challenge%E7%AB%9E%E8%B5%9B/LeHome/README.md
+    
 -   **\[2026-03-05\]** 算力自由平台复刻ETPNav连续环境导航算法视频教程 http://xhslink.com/o/8t08X6dROt5
+    
 -   **\[2026-03-02\]** 新增具身智能面试教程
+    
 -   **\[2026-02-28\]** 复刻ACT机械臂抓取水杯算法 https://www.bilibili.com/video/BV1YFAbzoECf
+    
 -   **\[2026-02-25\]** 复刻mujoco机械臂数据采集 https://www.bilibili.com/video/BV1DNAbzpE6Z
+    
 -   **\[2026-02-23\]** 新增春晚武术机器人复刻视频教程 https://www.datawhale.cn/learn/content/258/6228
+    
 -   **\[2026-02-22\]** 新增 ETPNav(IEEE TPAMI 2024)复现教程指导
+    
 -   **\[2026-02-21\]** 新增春晚武术机器人复刻
+    
 -   **\[2026-02-16\]** 新增GenieSim一键启动镜像和视频教程
+    
 -   **\[2026-01-15\]** 新增Habitat导航实战一键启动镜像和视频教程及大模型导航实战VLN教程
+    
 
 Past News
 
@@ -307,7 +373,7 @@ ROS/ROS2 通信机制、Build123d / Text-to-CAD / ForgeCAD / Shape Your Body 机
 
 **5\. 计算机视觉 (CV)**
 
-目标检测 (YOLO)、视觉语言定位 (Locate Anything)、图像分割 (SAM)、视频流式三维重建 (LingBot-Map)、6D 位姿估计
+目标检测 (YOLO)、视觉语言定位 (Locate Anything)、图像分割 (SAM)、视频流式三维重建 (LingBot-Map)、DepthART 轻量单目深度估计、LTX Alpha Gen 视频抠像与透明合成、6D 位姿估计
 
 ✅
 
@@ -345,7 +411,7 @@ LIBERO、SimplerENV
 
 **10\. VLA 大模型**
 
-SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析、EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航、3DVLA 三维空间实例增强 VLA、PhysBrain 1.0 物理常识增强 VLA、PRTS 强化学习原生 VLA、Galaxea G0.5 自回归 VLA、Dexora 高自由度双臂灵巧 VLA、LWD 真机机群强化学习、VisualThink-VLA 视觉证据推理、Agentic-VLA 在线适应、Dexbotic-RLinf 工程化 VLA 后训练、DM0.5 高性能推理与 OpenDM、EVA-Client 真机部署与评测
+SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析、EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航、3DVLA 三维空间实例增强 VLA、PhysBrain 1.0 物理常识增强 VLA、PRTS 强化学习原生 VLA、Galaxea G0.5 自回归 VLA、Dexora 高自由度双臂灵巧 VLA、LWD 真机机群强化学习、VisualThink-VLA 视觉证据推理、Agentic-VLA 在线适应、Dexbotic-RLinf 工程化 VLA 后训练、DM0.5 高性能推理与 OpenDM、EVA-Client 真机部署与评测、TurboVLA 轻量 VLA 精读
 
 ✅
 

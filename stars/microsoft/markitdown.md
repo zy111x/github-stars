@@ -1,6 +1,6 @@
 ---
 project: markitdown
-stars: 190777
+stars: 191975
 description: Python tool for converting files and office documents to Markdown.
 url: https://github.com/microsoft/markitdown
 ---
@@ -176,15 +176,15 @@ Structured fields
 
 Not available
 
-Not exposed by this integration
+YAML front matter from model or query fields
 
 YAML front matter from analyzer fields
 
-Custom analyzers
+Custom analyzers/models
 
 Not available
 
-Not configurable in this integration
+Supported with `docintel_model_id`
 
 Supported with `cu_analyzer_id`
 
@@ -259,12 +259,27 @@ More information about Azure Content Understanding can be found here.
 
 To use Microsoft Document Intelligence for conversion:
 
+export AZURE\_API\_KEY="<document\_intelligence\_api\_key>"
 markitdown path-to-file.pdf -o document.md -d -e "<document\_intelligence\_endpoint>"
 
 The endpoint can also be set once in the environment, so callers only need `-d`:
 
 export MARKITDOWN\_DOCINTEL\_ENDPOINT="<document\_intelligence\_endpoint>"
 markitdown path-to-file.pdf -o document.md -d
+
+If `AZURE_API_KEY` is not set, MarkItDown uses `DefaultAzureCredential`.
+
+Select a model, configure analysis add-ons, or request fields from the CLI:
+
+markitdown document.pdf --use-docintel \\
+  --endpoint "<document\_intelligence\_endpoint>" \\
+  --docintel-model-id prebuilt-layout \\
+  --docintel-features "ocrHighResolution,styleFont" \\
+  --docintel-query-fields "Title,Author"
+
+No analysis add-ons are enabled by default. Use `--docintel-features` to opt in, or `--docintel-features none` to explicitly request no add-ons. Analysis add-ons and query fields apply only to OCR-supported inputs such as PDFs and images.
+
+Available feature values are `barcodes`, `formulas`, `keyValuePairs`, `languages`, `ocrHighResolution`, and `styleFont`. The `formulas`, `ocrHighResolution`, and `styleFont` features incur additional charges, as does the `queryFields` add-on, which is priced differently from the other add-ons. See the Document Intelligence add-on documentation and pricing for details.
 
 More information about how to set up an Azure Document Intelligence Resource can be found here
 
@@ -278,13 +293,38 @@ md \= MarkItDown(enable\_plugins\=False) \# Set to True to enable plugins
 result \= md.convert("test.xlsx")
 print(result.markdown)
 
-Document Intelligence conversion in Python:
+Document Intelligence conversion in Python using an API key:
 
+from azure.core.credentials import AzureKeyCredential
 from markitdown import MarkItDown
 
-md \= MarkItDown(docintel\_endpoint\="<document\_intelligence\_endpoint>")
+md \= MarkItDown(
+    docintel\_endpoint\="<document\_intelligence\_endpoint>",
+    docintel\_credential\=AzureKeyCredential("<document\_intelligence\_api\_key>"),
+)
 result \= md.convert("test.pdf")
 print(result.markdown)
+
+Omit `docintel_credential` to use `AZURE_API_KEY` when it is set, or `DefaultAzureCredential` otherwise.
+
+Configure the model, analysis add-ons, and structured query fields:
+
+from azure.ai.documentintelligence.models import DocumentAnalysisFeature
+from markitdown import MarkItDown
+
+md \= MarkItDown(
+    docintel\_endpoint\="<document\_intelligence\_endpoint>",
+    docintel\_model\_id\="prebuilt-layout",
+    docintel\_features\=\[
+        DocumentAnalysisFeature.OCR\_HIGH\_RESOLUTION,
+        DocumentAnalysisFeature.STYLE\_FONT,
+    \],
+    docintel\_query\_fields\=\["Title", "Author"\],
+)
+result \= md.convert("test.pdf")
+print(result.markdown)
+
+Omit `docintel_features` or set `docintel_features=[]` to request no analysis add-ons. When query fields are provided, MarkItDown automatically enables the required `queryFields` add-on. Models that return structured fields prepend them to the Markdown as YAML front matter. A single document uses a top-level `fields` mapping. When the service returns multiple documents, the front matter instead contains a `documents` list in service order, with a separate `fields` mapping for each document. Documents without extracted fields retain an empty mapping in that list; no front matter is emitted when all documents have empty fields. Selection groups are represented as lists of selected values.
 
 To use Large Language Models for image descriptions (currently only for pptx and image files), provide `llm_client` and `llm_model`:
 

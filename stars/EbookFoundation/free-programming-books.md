@@ -1,6 +1,6 @@
 ---
 project: free-programming-books
-stars: 399359
+stars: 400017
 description: :books: Freely available programming books
 url: https://github.com/EbookFoundation/free-programming-books
 ---
@@ -194,6 +194,7 @@ Write, compile, and run your code within a browser. Try it out!
 -   Chinese / 中文
 -   English
 -   German / Deutsch
+-   Russian / Русский
 
 Translations
 ------------
