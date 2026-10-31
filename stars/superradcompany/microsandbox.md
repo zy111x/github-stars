@@ -1,6 +1,6 @@
 ---
 project: microsandbox
-stars: 8793
+stars: 8888
 description: |-
     🧱 easy, fast, programmable and local-first microVM runtime and library
 url: https://github.com/superradcompany/microsandbox
@@ -120,9 +120,9 @@ url: https://github.com/superradcompany/microsandbox
 
 > **Requirements**:
 >
-> - <img height="14" src="https://api.iconify.design/simple-icons:apple.svg?color=%23A770EF" alt="macOS"> **macOS**: Apple Silicon.
-> - <img height="14" src="https://api.iconify.design/simple-icons:linux.svg?color=%23A770EF" alt="Linux"> **Linux**: KVM enabled.
-> - <img height="14" src="https://api.iconify.design/simple-icons:windows.svg?color=%23A770EF" alt="Windows"> **Windows**: WHP enabled.
+> - <img height="14" src="https://api.iconify.design/simple-icons/apple.svg?color=%23A770EF" alt="macOS"> **macOS**: Apple Silicon.
+> - <img height="14" src="https://api.iconify.design/simple-icons/linux.svg?color=%23A770EF" alt="Linux"> **Linux**: KVM enabled.
+> - <img height="14" src="https://api.iconify.design/simple-icons/windows.svg?color=%23A770EF" alt="Windows"> **Windows**: WHP enabled.
 >
 > **Warning**: Microsandbox is still **beta software**. Expect breaking changes, missing features, and rough edges.
 

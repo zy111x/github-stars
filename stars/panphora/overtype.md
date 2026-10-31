@@ -1,6 +1,6 @@
 ---
 project: overtype
-stars: 3702
+stars: 3703
 description: |-
     The markdown editor that's just a textarea https://overtype.dev
 url: https://github.com/panphora/overtype
@@ -8,7 +8,7 @@ url: https://github.com/panphora/overtype
 
 # OverType
 
-A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~134KB minified with all features.
+A lightweight markdown editor library with perfect WYSIWYG alignment using an invisible textarea overlay technique. Includes optional toolbar. ~136KB minified with all features.
 
 ## Live Examples
 
@@ -27,10 +27,12 @@ A lightweight markdown editor library with perfect WYSIWYG alignment using an in
 - ⌨️ **Keyboard shortcuts** - Common markdown shortcuts (Cmd/Ctrl+B for bold, etc.)
 - 📱 **Mobile optimized** - Responsive design with mobile-specific styles
 - 🔄 **DOM persistence aware** - Recovers from existing DOM (perfect for HyperClay and similar platforms)
-- 🚀 **Lightweight** - ~134KB minified
+- 🚀 **Lightweight** - ~136KB minified
 - 🎯 **Optional toolbar** - Clean, minimal toolbar with all essential formatting
 - ✨ **Smart shortcuts** - Keyboard shortcuts with selection preservation
 - 📝 **Smart list continuation** - GitHub-style automatic list continuation on Enter
+- 🧩 **Custom syntax** - Highlight your own syntax (mentions, footnotes, directives) globally or per editor
+- 🚫 **Disable features per editor** - Render headings, lists, quotes, code blocks or rules as plain text, e.g. for comment boxes
 - 🔧 **Framework agnostic** - Works with React, Vue, vanilla JS, and more
 
 ## How it works
@@ -43,7 +45,7 @@ We overlap an invisible textarea on top of styled output, giving the illusion of
 
 | Feature | OverType | HyperMD | Milkdown | TUI Editor | EasyMDE |
 |---------|----------|---------|----------|------------|---------|
-| **Size** | ~134KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
+| **Size** | ~136KB | 364.02 KB | 344.51 KB | 560.99 KB | 323.69 KB |
 | **Dependencies** | Bundled | CodeMirror | ProseMirror + plugins | Multiple libs | CodeMirror |
 | **Setup** | Single file | Complex config | Build step required | Complex config | Moderate |
 | **Approach** | Invisible textarea | ContentEditable | ContentEditable | ContentEditable | CodeMirror |
@@ -272,6 +274,54 @@ The toolbar and keyboard shortcuts work together seamlessly:
 
 Collapsed **Tab** and **Shift+Tab** follow normal browser focus navigation so keyboard users can leave the editor.
 Editing shortcuts preserve text selection, allowing you to apply multiple formats quickly.
+
+### Disabling Features
+
+Turn off line-level Markdown features for one editor, for example a comment box without headings. A disabled feature renders as plain text, so `# Hello` stays the literal text "# Hello" in the editor and in preview mode. Matching toolbar buttons are hidden and their keyboard shortcuts do nothing.
+
+```javascript
+new OverType('#comment', {
+  toolbar: true,
+  disable: ['headings', 'blockquote']
+});
+```
+
+Names: `h1`, `h2`, `h3`, `headings` (all three), `lists` (also turns off tasks and smart list continuation), `tasks`, `blockquote`, `code` (fenced code blocks), `hr`. Inline formatting (bold, italic, links, inline code) can't be disabled. Change it later with `editor.reinit({ disable: [...] })`.
+
+### Markdown Spelling
+
+Italic, bold and bullets each have more than one standard spelling. The toolbar buttons and keyboard shortcuts remove any of them, and write the one you choose:
+
+```javascript
+new OverType('#editor', {
+  italicUsesAsterisk: true,   // *italic* instead of _italic_
+  boldUsesUnderscore: false,  // **bold** (the default)
+  bulletMarker: '*'           // * item instead of - item
+});
+```
+
+Leave an option out and the editor matches the document: if the text already has `*italic*`, the italic button writes stars. A document with none of that format gets `_italic_`, `**bold**` and `- item`.
+
+### Per-Editor Custom Syntax
+
+`OverType.setCustomSyntax()` applies to every editor on the page. Give one editor its own processor with the `customSyntax` option, or pass `false` to leave the global one out, for example when some users shouldn't get mentions:
+
+```javascript
+// Every editor highlights #tags
+OverType.setCustomSyntax((html) =>
+  html.replace(/(^|[^&\w])#([\w-]+)/g, '$1<span class="hashtag">#$2</span>')
+);
+
+// This editor highlights @mentions instead
+new OverType('#team-notes', {
+  customSyntax: (html) => html.replace(/(^|[^\w])@([\w-]+)/g, '$1<span class="mention">@$2</span>')
+});
+
+// This editor gets neither
+new OverType('#public-comment', { customSyntax: false });
+```
+
+The processor gets each rendered line's HTML and must only wrap text in tags, never add or remove characters, so the overlay stays aligned. Change it later with `editor.setCustomSyntax(fn)`, `editor.setCustomSyntax(false)`, or `editor.setCustomSyntax(null)` to go back to the global processor.
 
 ### Multiple Editors
 
@@ -565,12 +615,24 @@ new OverType(target, options)
   // Syntax highlighting
   codeHighlighter: null,  // Function: (code, lang) => html
                           // Overrides global OverType.setCodeHighlighter()
+  customSyntax: null,     // Function: (html) => html
+                          // Overrides global OverType.setCustomSyntax()
+                          // false = skip the global processor for this editor
 
   // Smart lists
   smartLists: true,       // Enable GitHub-style list continuation on Enter
 
   // Task toggling
   clickToToggleTasks: false,  // Click a task checkbox marker to toggle its state
+
+  // Turn off line-level Markdown features (rendered as plain text)
+  disable: [],            // 'h1', 'h2', 'h3', 'headings', 'lists', 'tasks',
+                          // 'blockquote', 'code', 'hr'
+
+  // Which spelling the toolbar and shortcuts write (null matches the document)
+  italicUsesAsterisk: null, // true: *italic*, false: _italic_
+  boldUsesUnderscore: null, // true: __bold__, false: **bold**
+  bulletMarker: null,       // '-', '*' or '+'
 
   // Spellcheck
   spellcheck: false,      // Enable browser spellcheck (disabled by default)
@@ -626,6 +688,11 @@ editor.setTheme(customThemeObject)  // Custom theme
 // Set code highlighter (instance-specific)
 editor.setCodeHighlighter((code, lang) => highlightedHTML)
 editor.setCodeHighlighter(null)  // Disable for this instance
+
+// Set custom syntax processor (instance-specific)
+editor.setCustomSyntax((html) => html.replace(/@(\w+)/g, '<span class="mention">$&</span>'))
+editor.setCustomSyntax(false)  // Skip the global processor for this editor
+editor.setCustomSyntax(null)   // Fall back to the global processor
 
 // View modes
 editor.showNormalEditMode()   // Switch to normal edit mode (default)
@@ -963,6 +1030,7 @@ Special thanks to:
 - [riasvdv](https://github.com/riasvdv) - Contributed keyboard focus-trap fix ([#115](https://github.com/panphora/overtype/pull/115)) and toolbar accessibility following the W3C APG Toolbar pattern ([#114](https://github.com/panphora/overtype/pull/114))
 - [gcamacho079](https://github.com/gcamacho079) - Reported the markdown editor keyboard focus trap ([#113](https://github.com/panphora/overtype/issues/113))
 - [Matt Round](https://mattround.com/) - Reported the Safari stale-glyph caret/wrap desync and supplied the original workaround ([#116](https://github.com/panphora/overtype/issues/116))
+- [maxmin-es](https://github.com/maxmin-es) - Reported and diagnosed the Web Component decoding typed escape sequences on rebuild ([#123](https://github.com/panphora/overtype/issues/123))
 
 ### TypeScript & Framework Support
 - [merlinz01](https://github.com/merlinz01) - Contributed TypeScript declaration file ([#20](https://github.com/panphora/overtype/pull/20))
@@ -975,7 +1043,7 @@ Special thanks to:
 - [Rognoni](https://github.com/rognoni) - Suggested custom toolbar button API ([#61](https://github.com/panphora/overtype/issues/61))
 - [Deyan Gigov](https://github.com/dido739) - Reported checkbox rendering bug in preview mode ([#60](https://github.com/panphora/overtype/issues/60)), contributed auto theme implementation ([#100](https://github.com/panphora/overtype/pull/100))
 - [GregJohnStewart](https://github.com/GregJohnStewart) - Suggested data attribute configuration ([#76](https://github.com/panphora/overtype/issues/76)), reported initFromData array nesting bug ([#93](https://github.com/panphora/overtype/issues/93)), suggested DOM element init ([#92](https://github.com/panphora/overtype/issues/92)), suggested supporting more options via data attributes ([#112](https://github.com/panphora/overtype/issues/112))
-- [boris-glumpler](https://github.com/boris-glumpler) - Suggested custom syntax highlighting API ([#79](https://github.com/panphora/overtype/issues/79))
+- [boris-glumpler](https://github.com/boris-glumpler) - Suggested custom syntax highlighting API ([#79](https://github.com/panphora/overtype/issues/79)), disabling Markdown features per editor ([#121](https://github.com/panphora/overtype/issues/121)) and per-editor custom syntax ([#126](https://github.com/panphora/overtype/issues/126))
 - [sorokya](https://github.com/sorokya) - Contributed file upload support ([#87](https://github.com/panphora/overtype/pull/87))
 - [aaronmyatt](https://github.com/aaronmyatt) - Contributed show/hide toolbar methods ([#95](https://github.com/panphora/overtype/pull/95))
 - [rouilj](https://github.com/rouilj) - Suggested progressive textarea enhancement ([#90](https://github.com/panphora/overtype/issues/90))

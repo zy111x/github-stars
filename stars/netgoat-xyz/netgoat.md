@@ -1,6 +1,6 @@
 ---
 project: netgoat
-stars: 903
+stars: 906
 description: |-
     A Cloudflare alternative for local and cloud use, can be used ontop of cloudflare for cloudflares paid features, but for free!
 url: https://github.com/netgoat-xyz/netgoat
@@ -150,6 +150,53 @@ intentionally empty: a fresh default deployment returns `404` for every Host
 instead of proxying to a local service.
 
 If the control plane is unavailable, NetGoat uses local routes and then the last valid recovery snapshot. Configure `api.url` as an empty string for a fully offline deployment.
+
+## Docker
+
+```sh
+docker build -t netgoat-agent .
+```
+
+The image is a distroless static runtime that runs as `nonroot`. It ships the
+repository's `config.yml` unchanged, which binds `127.0.0.1:8080` — inside a
+container that is only reachable from the container itself. Mount a config that
+listens on a container address before publishing a port:
+
+```yaml
+# config.container.yml
+listen: "0.0.0.0:8080"
+# Only behind a TLS-terminating proxy you control.
+allow_insecure_public_http: true
+routes: {}
+```
+
+```sh
+docker run --rm -p 8080:8080 \
+  -v "$PWD/config.container.yml:/app/config.yml:ro" \
+  -v netgoat-data:/app/database \
+  netgoat-agent
+```
+
+Mount `/app/database` so SQLite state, recovery snapshots, and ACME material
+survive a restart. The healthcheck is a TCP probe on port 8080 because the agent
+answers `404` for unconfigured hosts, so an HTTP status check would report a
+healthy server as failing. If your config moves the listener (`ssl.enabled`, a
+different `listen` address), point the probe at it:
+
+```sh
+docker run --rm -p 8443:8443 \
+  -e NETGOAT_HEALTHCHECK_PORT=8443 \
+  -v "$PWD/config.tls.yml:/app/config.yml:ro" \
+  -v netgoat-data:/app/database \
+  netgoat-agent
+```
+
+Published images: `ghcr.io/netgoat-xyz/netgoat`.
+
+The image does not include Python, so the optional `koda_waf`, `koda_2`, and
+`anomaly` inference workers are unavailable in the container. Run those features
+from a source checkout, or build a derived image that adds a Python runtime and
+the `ai/` directory.
 
 ## Authentication bootstrap
 

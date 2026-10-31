@@ -1,8 +1,8 @@
 ---
 project: nsh
-stars: 614
+stars: 906
 description: |-
-    NSH runs modules written in TSX — natively on iOS, Android, macOS, Windows, Linux, GPUI and the web
+    Native Shell is a native UI framework for iOS, Android, macOS, Windows, Linux and the web, built in Rust.
 url: https://github.com/longbridge/nsh
 ---
 

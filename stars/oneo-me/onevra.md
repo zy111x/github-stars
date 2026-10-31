@@ -1,6 +1,6 @@
 ---
 project: onevra
-stars: 252
+stars: 261
 description: |-
      Native desktop UI components for Go, built on MyGo. Themed controls, window shells, Lucide icons, plus chat, Markdown, code highlighting, charts and a command palette. Also includes a standalone packager for macOS, Windows and Linux.
 url: https://github.com/oneo-me/onevra
@@ -55,10 +55,10 @@ Each template includes localization and its own packaging configuration; all but
 
 ## Getting started
 
-Install **0.2026.15** in your application module with:
+Install **0.2026.16** in your application module with:
 
 ```sh
-go get github.com/oneo-me/onevra/source@v0.2026.15
+go get github.com/oneo-me/onevra/source@v0.2026.16
 ```
 
 Save this minimal application as `main.go` and run `go run .` from your application module:
@@ -159,7 +159,7 @@ Formatting should produce no output. See [development checks](docs/build.md#deve
 
 ## Website
 
-The documentation site lives in [website/](website): guides and a page for every component, whose live examples are Go compiled to WebAssembly. The [Website workflow](.github/workflows/website.yml) deploys it to GitHub Pages. It needs Bun and Go 1.27.1 or later:
+The documentation site lives in [website/](website): guides and a page for every component, whose live examples are Go compiled to WebAssembly. The [Website workflow](.github/workflows/website.yml) deploys it to GitHub Pages. It needs Bun and Go 1.27.3 or later:
 
 ```sh
 cd website

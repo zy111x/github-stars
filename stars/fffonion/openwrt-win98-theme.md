@@ -1,6 +1,6 @@
 ---
 project: openwrt-win98-theme
-stars: 83
+stars: 84
 description: |-
     OpenWRT Windows 98 Theme
 url: https://github.com/fffonion/openwrt-win98-theme

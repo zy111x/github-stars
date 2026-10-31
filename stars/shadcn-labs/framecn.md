@@ -1,6 +1,6 @@
 ---
 project: framecn
-stars: 157
+stars: 158
 description: |-
     Beautiful video components, built on Editframe. 100% Free, Zero config, one command setup.
 url: https://github.com/shadcn-labs/framecn
@@ -13,8 +13,8 @@ url: https://github.com/shadcn-labs/framecn
 <h1 align="center">framecn</h1>
 
 <p align="center">
-  Free & open-source, ready-to-use, customizable video components for React.<br/>
-  Zero config. One command setup. Built on <a href="https://editframe.com">Editframe</a>, works seamlessly with <a href="https://ui.shadcn.com/">shadcn/ui</a>.
+  Free, open-source video components for React. Customize them, make them yours, and install with <a href="https://ui.shadcn.com/">shadcn/ui</a>.<br/>
+  Built on <a href="https://editframe.com">Editframe</a>. Want more? Explore additional components with <a href="https://framecn.dev/pricing">framecn Pro</a>, available separately.
 </p>
 
 <p align="center">
@@ -27,7 +27,8 @@ url: https://github.com/shadcn-labs/framecn
 <p align="center">
   <a href="https://framecn.dev/docs">Get Started</a> ·
   <a href="https://framecn.dev/docs/installation">Installation</a> ·
-  <a href="https://framecn.dev/docs/components">Components</a>
+  <a href="https://framecn.dev/components">Components</a> ·
+  <a href="https://framecn.dev/pricing">Pricing</a>
 </p>
 
 ## Features
@@ -40,23 +41,58 @@ url: https://github.com/shadcn-labs/framecn
 - 🎬 **Multi-layer composition** — Stack videos, images, text, and effects
 - 🤖 **AI-ready** — Perfect for generating videos programmatically
 
+## Sponsors
+
+<!-- sponsors:start -->
+<!-- Keep tier order and placed logos in sync with lib/sponsors.ts. -->
+<table>
+  <tbody>
+    <tr>
+      <td colspan="3"><strong>Diamond Sponsors</strong></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://framecn.dev/sponsor#plans">Your logo here</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Gold Sponsors</strong></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://framecn.dev/sponsor#plans">Your logo here</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="3"><strong>Silver Sponsors</strong></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://framecn.dev/sponsor#plans">Your logo here</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<!-- sponsors:end -->
+
+> Found framecn useful? [Become a sponsor](https://framecn.dev/sponsor#plans) to support maintenance and get your logo here and on the site, with placement based on your tier.
+
+## Community
+
+The framecn community lives on [GitHub](https://github.com/shadcn-labs/framecn), where you can ask questions, share ideas, and show what you've built.
+
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) to get the repo running locally and land a change, and use [issues](https://github.com/shadcn-labs/framecn/issues) and [discussions](https://github.com/shadcn-labs/framecn/discussions) to collaborate. By participating, you agree to the [Code of Conduct](./CODE_OF_CONDUCT.md).
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## Security
 
-## Credits
-
-- [remocn](https://github.com/kapishdima/remocn) by [Kapish Dima](https://github.com/kapishdima)
+Please do not open public issues for security vulnerabilities. Follow [SECURITY.md](./SECURITY.md) and report them privately through GitHub Security Advisories.
 
 ## License
 
-[MIT](LICENSE)
+- [MIT](LICENSE) for all original code.
+- Free captions in `registry/bases/editframe/components/` are adapted from [HyperFrames](https://github.com/heygen-com/hyperframes) — Apache-2.0, © 2026 HeyGen, Inc. Each file keeps an attribution header.
 
 ## Star History
 

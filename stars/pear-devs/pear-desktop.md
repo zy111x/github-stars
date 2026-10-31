@@ -1,6 +1,6 @@
 ---
 project: pear-desktop
-stars: 33891
+stars: 33949
 description: |-
     Pear 🍐 is extension for music player
 url: https://github.com/pear-devs/pear-desktop

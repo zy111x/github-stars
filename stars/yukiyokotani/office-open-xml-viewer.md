@@ -1,6 +1,6 @@
 ---
 project: office-open-xml-viewer
-stars: 855
+stars: 864
 description: |-
     A browser-based viewer for Office Open XML documents that renders to an HTML Canvas element.
 url: https://github.com/yukiyokotani/office-open-xml-viewer
@@ -632,8 +632,62 @@ page count, or completion state changes), `onVisibleSlideChange` (fires when the
 top-most visible slide or PPTX completion state changes; its slide count is
 final from first paint), and `onError` (async per-page render failures are routed
 here instead of crashing the scroll loop). The parse/render knobs from the
-headless engines (`mode`, `useGoogleFonts`, `cjkFallback`, `resourceLimits`, the deprecated
+headless engines (`mode`, `fonts`, `cjkFallback`, `resourceLimits`, the deprecated
 `maxZipEntryBytes` alias, `math`, `dpr`) are accepted too.
+
+### Font sources
+
+Documents often name fonts the viewer's machine does not have. By default the
+canvas falls back to installed fonts and no font is requested from any network
+host. Pass `fonts`, an ordered list of sources, to supply web fonts instead. It
+works the same way for every format, engine and Viewer, in main and worker
+mode:
+
+```ts
+import { DocxViewer, fontFiles, googleFonts, officeFontSubstitutions } from '@silurus/ooxml/docx';
+
+// Google Fonts, or a Google-compatible mirror via googleFonts({ cssOrigin }) (stylesheet requests only;
+// the mirror's redirects and the font URLs it returns decide where files load from)
+new DocxViewer(canvas, { fonts: [googleFonts()] });
+
+// Self-hosted files first, then a mirror for whatever they do not serve
+new DocxViewer(canvas, {
+  fonts: [
+    fontFiles({ faces: [{ family: 'Carlito', url: '/fonts/Carlito-Regular.woff2' }], substitutes: officeFontSubstitutions }),
+    googleFonts({ cssOrigin: 'https://fonts.internal.example' }),
+  ],
+});
+```
+
+The factories are `googleFonts({ cssOrigin?, substitutes? })`,
+`fontCssApi({ urlTemplate, … })`, `fontCss({ url })`, `fontFiles({ faces })`
+and, for authenticated or private services, `fontResolver(fn)`, which runs on
+the main thread (in worker mode the page also fetches the claimed URLs it
+returns).
+Every source takes `substitutes`; `fontCssApi`, `fontCss` and `fontFiles` also
+take `credentials`. They are exported from `@silurus/ooxml` and from
+each format entry.
+
+- **Chaining:** sources are consulted per family, in option order. The first
+  source that has a face for the family claims it. A failed stylesheet or face
+  keeps the host fallback with a `console.warn`, and no other source is tried.
+- **Lazy subsets:** only the `unicode-range` subsets that intersect the painted
+  text are loaded, and installed faces with the authored name are never
+  replaced. Font files the library fetches itself (`fontResolver` URLs in
+  worker mode, sources with `credentials: 'omit'`) are fetched for every face
+  of a claimed family.
+- **Deployment:** cross-origin font URLs need CORS. Stylesheet origins need
+  `connect-src` and font file origins need `font-src` in your CSP; font files
+  the library fetches itself (`fontResolver` URLs in worker mode, sources with
+  `credentials: 'omit'`) also need `connect-src`. Optionally
+  add `<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>` for
+  Google Fonts. Source limits fail closed with
+  `OoxmlError('font-source-limit')`.
+
+`useGoogleFonts: true` is deprecated: it still works in 0.90 as
+`fonts: [googleFonts()]`, with a warning, and is removed in 0.91. See the
+[0.90 migration guide](docs/migration-0.90.md) for every source kind, the
+resolver contract, CSP and CORS requirements, and the limits.
 
 ### CJK fallback region
 
@@ -666,8 +720,9 @@ No migration is required. Set an explicit region when the fallback choice must
 not depend on the browser locale, server, or Node host. This makes the regional
 choice deterministic; it does not by itself guarantee pixel-identical output
 across machines because the available fonts still matter. `cjkFallback` does
-not download fonts. Use `useGoogleFonts: true` or provide local/self-hosted
-fallback fonts when the same fallback faces must be available everywhere.
+not download fonts. Configure [`fonts`](#font-sources) (for example
+`fonts: [googleFonts()]` or self-hosted files) when the same fallback faces must
+be available everywhere.
 
 HK retains the existing sans-only webfont support. This option covers document
 text, spreadsheet cells/shapes, and slide text; embedded chart and equation
@@ -1111,7 +1166,8 @@ Stable failures can be narrowed without parsing message strings:
   `invalid-password`, `unsupported-encryption`, `legacy-binary-format`,
   `not-ooxml`, `unsupported-image-effect` (a picture-effect chain that is
   malformed or cannot be drawn), `invalid-numbering` (DOCX numbering that Word
-  cannot open), or `unsupported-content`. For `unsupported-content`, offer conversion: the configured
+  cannot open), `font-source-limit` (a configured font source exceeded a fixed
+  limit; `violation` names it), or `unsupported-content`. For `unsupported-content`, offer conversion: the configured
   source cannot represent this input. Frozen `details` contain only its
   `format` identifier and `reason: 'source-subset'`.
 - `OoxmlResourceLimitError` (`code === 'ooxml-resource-limit'`) — a measured
@@ -1169,6 +1225,74 @@ try {
   reportUnexpectedError(error);
 }
 ```
+
+### Partially unreadable files
+
+When one package part fails to parse, the rest of the file still loads.
+`load()` resolves, and the broken part is replaced by a placeholder card:
+
+- **DOCX:** a "This document could not be displayed" page replaces a broken
+  `word/document.xml`.
+- **PPTX:** a "Slide N could not be displayed" card replaces each broken slide.
+  The other slides render normally.
+- **XLSX:** a `Sheet "…" could not be displayed` card replaces each broken
+  worksheet, chartsheet or dialogsheet part. A broken shared part such as
+  `xl/sharedStrings.xml` still opens the workbook but paints no placeholder.
+
+These partial failures never reach `onError` and never reject a Promise. To
+find them, read `partFailures` on the engine or the viewer, or pass
+`onPartFailure`, which is called once per failed part:
+
+```ts
+const viewer = new XlsxViewer(container, {
+  onPartFailure(failure) {
+    // failure.kind is 'sheet' (with sheetIndex and sheetName) or 'workbook'.
+    statusLine.textContent = `Part could not be read: ${failure.message}`;
+  },
+});
+await viewer.load(file);
+console.log(viewer.partFailures);
+```
+
+When each failure becomes known:
+
+- **DOCX:** before `load()` resolves.
+- **PPTX:** before `load()` resolves. With `progressiveLayout`, a slide's
+  failure is known before it becomes available, and the list is complete after
+  `waitUntilLayoutComplete()`.
+- **XLSX:** a broken shared part is known before `load()` resolves. Worksheets
+  are parsed lazily, so a broken sheet is reported when its model is first
+  loaded: when a viewer shows it, or when you call `getWorksheet(i)`. In the
+  `'skip'` hidden-sheet mode, a hidden sheet is reported only if it is opened
+  explicitly with `goToSheet(i)`.
+
+`errorPlaceholder` replaces the placeholder's title and detail text. It is
+accepted by the viewers and by the engines' render options. It never changes
+the warning glyph, the colours, the card or the page, slide or sheet size.
+
+- Pass an object `{ title?, detail? }`. Omitting a field keeps the built-in
+  text, and `detail: null` hides the detail line.
+- Or pass a function of the failure that returns that object, or `undefined`
+  for the built-in text. The function always runs on the main thread, also in
+  `mode: 'worker'`; only its text is sent to the worker. It runs only for
+  failed parts, and it may run on every repaint, so keep it cheap and side
+  effect free. If it throws or returns an invalid value, that render rejects.
+
+```ts
+const viewer = new PptxViewer(canvas, {
+  errorPlaceholder: (failure) => ({
+    title: `スライド ${failure.slideNumber} を表示できません`,
+    detail: null,
+  }),
+});
+```
+
+`message` is the parser's part-tagged diagnostic, such as
+`ppt/slides/slide3.xml: …`, clamped to 1 KiB in the failure record. Each
+engine keeps at most 1 MiB of these messages; past that, a record keeps its
+index and name with an empty `message`. `message` and XLSX `sheetName` come
+from the file, so treat them as untrusted text: put them in the DOM with
+`textContent`, never `innerHTML`. The library draws them only as canvas text.
 
 ## Security & Privacy
 
@@ -1243,7 +1367,7 @@ try {
 
   ZIP, input, wire, representation, and copy limits remain independent. Raising these budgets does not promise that a whole 251,000-cell selection can be copied to the clipboard. The budgets are logical counters, not physical memory measurements. Increasing them accepts additional out-of-memory risk; the library does not guarantee that an allocation failure can be caught. With unchanged defaults no migration is needed. The one exception: errors from these adjustable guards now report `configurable: true`, whether the default or an override applied. Hard-ceiling errors remain `configurable: false`.
 
-- **No network by default.** The library does not send telemetry or analytics, and does not contact third-party services unless you ask it to. In particular, theme webfonts, Office font metric substitutes (Carlito/Caladea), and the script fallback fonts are **not** loaded from Google Fonts unless you pass `useGoogleFonts: true` to the relevant `Viewer` / `load(...)` options — supported uniformly by `DocxViewer`, `PptxViewer`, `XlsxViewer`, and `XlsxSheetViewer`. When enabled, fonts for non-Latin scripts are supplied on demand from Noto families so text does not fall back to tofu: Arabic (Noto Naskh/Sans Arabic), CJK (Noto Sans/Serif KR · SC · TC · JP, plus Noto Sans HK, picked per document language so shared Han glyphs take the right shapes), Cyrillic (Noto Sans/Serif), Hebrew (Noto Sans/Serif Hebrew, RTL), Thai (Noto Sans Thai) and Devanagari (Noto Sans Devanagari). No font binaries ship in the bundle. This sends the end-user's IP and User-Agent to `fonts.googleapis.com`, which may have GDPR implications.
+- **No network by default.** The library does not send telemetry or analytics, and does not contact third-party services unless you ask it to. In particular, theme webfonts, Office font metric substitutes (Carlito/Caladea), and the script fallback fonts are **not** loaded from anywhere unless you pass [`fonts`](#font-sources) to the relevant `Viewer` / `load(...)` options, for example `fonts: [googleFonts()]`. This is supported uniformly by `DocxViewer`, `PptxViewer`, `XlsxViewer`, and `XlsxSheetViewer`. With `googleFonts()`, fonts for non-Latin scripts are supplied on demand from Noto families so text does not fall back to tofu: Arabic (Noto Naskh/Sans Arabic), CJK (Noto Sans/Serif KR · SC · TC · JP, plus Noto Sans HK, picked per document language so shared Han glyphs take the right shapes), Cyrillic (Noto Sans/Serif), Hebrew (Noto Sans/Serif Hebrew, RTL), Thai (Noto Sans Thai) and Devanagari (Noto Sans Devanagari). No font binaries ship in the bundle; your application is responsible for the licences of the fonts it serves (Google Fonts' Carlito, Caladea and Noto families are OFL). A hosted source receives the end user's IP address and User-Agent (`fonts.googleapis.com` and `fonts.gstatic.com` for `googleFonts()`), which may have GDPR implications; `googleFonts({ cssOrigin })`, `fontCss` and `fontFiles` let you serve fonts from your own origin instead (with `cssOrigin`, only the stylesheet requests start there: redirects and the font URLs in the returned CSS are the mirror's to control, and your CSP enforces the allowed hosts).
 - **XML parsing.** Uses `roxmltree`, which does not resolve external entities (XXE-safe by default).
 - **Encrypted OOXML ([MS-OFFCRYPTO] Agile Encryption).** Password-protected `.docx` / `.xlsx` / `.pptx` files are OLE2/CFB containers, not ZIPs. Pass `password` to `load(...)` and the file is decrypted **client-side** via WebCrypto — no bytes and no password leave the browser:
   ```ts

@@ -1,6 +1,6 @@
 ---
 project: mediabunny
-stars: 7370
+stars: 7416
 description: |-
     Pure TypeScript media toolkit for reading, writing, and converting video and audio files, directly in the browser.
 url: https://github.com/Vanilagy/mediabunny
@@ -20,6 +20,14 @@ url: https://github.com/Vanilagy/mediabunny
 Mediabunny is a JavaScript library for reading, writing, and converting media (like MP4, WebM, MP3, HLS), directly in the browser. It aims to be a complete toolkit for high-performance media operations on the web. It's written from scratch in pure TypeScript, has zero dependencies, is very performant, and is extremely tree-shakable, meaning you only include what you use. You can think of it a bit like [FFmpeg](https://ffmpeg.org/), but built from the ground up for the web.
 
 [Documentation](https://mediabunny.dev) | [Examples](https://mediabunny.dev/examples) | [Sponsoring](#sponsoring) | [License](#license) | [Discord](https://discord.gg/hmpkyYuS4U)
+
+### Platinum sponsors
+
+<div align="center">
+  <a href="https://www.figma.com/" target="_blank" rel="sponsored">
+    <img src="./docs/public/sponsors/figma.png" width="80" height="80" alt="Figma">
+  </a>
+</div>
 
 ### Gold sponsors
 

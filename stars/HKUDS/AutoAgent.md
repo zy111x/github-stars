@@ -1,6 +1,6 @@
 ---
 project: AutoAgent
-stars: 9824
+stars: 9832
 description: |-
     "AutoAgent: Fully-Automated and Zero-Code LLM Agent Framework"
 url: https://github.com/HKUDS/AutoAgent

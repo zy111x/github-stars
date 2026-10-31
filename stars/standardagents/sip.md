@@ -1,6 +1,6 @@
 ---
 project: sip
-stars: 191
+stars: 192
 description: |-
     Small Image Processor - Ultra memory-efficient image processing for Cloudflare Workers 🟠
 url: https://github.com/standardagents/sip

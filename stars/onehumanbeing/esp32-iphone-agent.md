@@ -1,6 +1,6 @@
 ---
 project: esp32-iphone-agent
-stars: 3789
+stars: 4156
 description: |-
     Let an AI model use a real iPhone with a $7 ESP32: AirPlay eyes, USB HID hands, any OpenAI-compatible vision model. No Mac, no developer account, no jailbreak.
 url: https://github.com/onehumanbeing/esp32-iphone-agent
@@ -152,6 +152,8 @@ Debugging without the phone app: `hardware/tools/board_test.py` plays the app ov
 
 ## Limitations
 
+- **AirPlay source must be an iPhone.** Screen Mirroring from macOS is not supported: the handshake can look healthy
+  while the board never receives video.
 - BLE carries about 300-500 kbps, so the screen is mirrored small (480×1040, ≤5 fps); each step takes a few seconds,
   most of it the model.
 - iOS does not mirror some screens (passcode entry, Apple Pay, DRM video); the agent cannot see them. Mirroring stops

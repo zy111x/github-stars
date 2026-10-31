@@ -1,6 +1,6 @@
 ---
 project: qip
-stars: 123
+stars: 124
 description: |-
     Quickly render anything, everywhere
 url: https://github.com/patrickgwsmith/qip
@@ -497,7 +497,7 @@ docs/_recipes/
 Preview in dev mode:
 
 ```bash
-npx qip-router dev ./docs -p 4000
+npx qip-router dev -C ./docs -p 4000
 open http://localhost:4000
 ```
 
@@ -505,17 +505,17 @@ Resolve a single path through the same router pipeline:
 
 ```bash
 # GET /about
-npx qip-router get ./docs /about
+npx qip-router get -C ./docs /about
 # HEAD /about
-npx qip-router head ./docs /about
+npx qip-router head -C ./docs /about
 # List all routes
-npx qip-router list ./docs
+npx qip-router list -C ./docs
 ```
 
 Build static tar from the site:
 
 ```bash
-npx qip-router warc ./docs \
+npx qip-router warc -C ./docs \
   | qipx run application/warc/warc-to-static-tar-no-trailing-slash.wasm \
   > site.tar
 
@@ -700,6 +700,8 @@ echo "World" | NODE_OPTIONS=--expose-gc qipx bench -i - --benchtime=2s text/hell
     - [ ] Will be like an uncontrolled form in React, where every keypress does NOT need a re-render. Only do this on submit.
     - [ ] See how it could work with Time and Events, and HTML-in-canvas
   - [ ] In favor of a future cross-host `Prompt` contract: sequential prompts with recoverable failure, `submit(input_size, now_ms)` for state changes, and `render(0)` for the current semantic projection/output.
+  - [x] Remove the `qip form` CLI command.
+  - [ ] Port `<qip-form>` and the `components/form/*.zig` modules to Prompt Projection. Split each module into two stateless Content components: one maps urlencoded answers to urlencoded output carrying `_prompt[key]`, `_aria[role/label]`, and `_prompt[error]`; the other generates the final rfc822/iCal/vCard output. `qip-form.js` re-sends all answers on each step.
 - [ ] Add Command Palette example, combining `<input>` and `<canvas>`
 - [ ] Add CSV to chart SVG example
 - [ ] Add TCP simulator example, showing segments and allowing you to test failure.

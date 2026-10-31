@@ -1,6 +1,6 @@
 ---
 project: pullfrog
-stars: 1357
+stars: 1408
 description: |-
     Open-source model-agnostic BYOK GitHub bot that runs in GitHub Actions
 url: https://github.com/pullfrog/pullfrog
@@ -60,8 +60,8 @@ No API key required. Connect a coding-agent plan once and every run bills agains
 
 | Plan | Connect with |
 | --- | --- |
-| [Claude Pro/Max](https://docs.pullfrog.com/claude-auth) | `npx pullfrog auth claude` |
-| [ChatGPT Codex](https://docs.pullfrog.com/codex-auth) | `npx pullfrog auth codex` |
+| [Claude](https://docs.pullfrog.com/claude-auth) | `npx pullfrog auth claude` |
+| [Codex / ChatGPT](https://docs.pullfrog.com/codex-auth) | `npx pullfrog auth codex` |
 | [Grok](https://docs.pullfrog.com/grok-auth) | `npx pullfrog auth grok` |
 | [Kimi Code](https://docs.pullfrog.com/kimi-code) | a Kimi Code key as `KIMI_API_KEY` |
 | [OpenCode Go](https://docs.pullfrog.com/models#opencode-zen-and-opencode-go) | an OpenCode key as `OPENCODE_API_KEY` |
@@ -107,7 +107,7 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: pullfrog/pullfrog@v0
         with:
           prompt: ${{ inputs.prompt }}
@@ -135,7 +135,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -171,7 +171,7 @@ For longer prompts you want to version and reuse, commit the prompt text to the 
 
 ```yaml
 # .github/workflows/triage.yml
-- uses: actions/checkout@v4
+- uses: actions/checkout@v6
 - uses: pullfrog/pullfrog@v0
   with:
     prompt_file: .github/pullfrog/triage.md

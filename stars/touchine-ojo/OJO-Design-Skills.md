@@ -1,6 +1,6 @@
 ---
 project: OJO-Design-Skills
-stars: 164
+stars: 169
 description: |-
     Reusable UI/UX design skills for AI coding agents — Codex, Claude Code, ZCode, and more.
 url: https://github.com/touchine-ojo/OJO-Design-Skills

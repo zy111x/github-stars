@@ -1,6 +1,6 @@
 ---
 project: hucre
-stars: 2245
+stars: 2250
 description: |-
     Zero-dependency spreadsheet engine. Read & write XLSX, CSV, ODS. Pure TypeScript, works everywhere.
 url: https://github.com/productdevbook/hucre
@@ -21,6 +21,9 @@ url: https://github.com/productdevbook/hucre
   <a href="https://bundlephobia.com/result?p=hucre"><img src="https://img.shields.io/bundlephobia/minzip/hucre?style=flat&colorA=18181B&colorB=34d399" alt="bundle size"></a>
   <a href="https://github.com/productdevbook/hucre/blob/main/LICENSE"><img src="https://img.shields.io/github/license/productdevbook/hucre?style=flat&colorA=18181B&colorB=34d399" alt="license"></a>
 </p>
+
+> [!NOTE]
+> The only official sources for hucre are this repository ([productdevbook/hucre](https://github.com/productdevbook/hucre)) and the [`hucre` package on npm](https://npmjs.com/package/hucre). The website hucre.dev is not affiliated with this project.
 
 ## Quick Start
 
@@ -146,6 +149,7 @@ const wb = await readXlsx(uint8Array, {
   sheets: [0, "Products"], // Filter sheets by index or name
   readStyles: true, // Parse cell styles
   dateSystem: "auto", // Auto-detect 1900/1904
+  dates: "date", // Or "serial" to keep date-formatted numbers as numbers
 })
 
 for (const sheet of wb.sheets) {
@@ -216,7 +220,18 @@ Anything a cell carries works there — `style`, `formula`, `richText`,
 `hyperlink`, `checkbox`. `cells` still takes a `"row,col"` map, and wins
 where both describe the same position.
 
-Features: cell styles, auto column widths, merged cells, freeze/split panes, auto-filter (with per-column value filters — `<filters><filter val="…"/></filters>`; custom/dynamic/colour criteria are not emitted), data validation, hyperlinks, images (PNG/JPEG/GIF/SVG/WebP), comments, tables, conditional formatting (all 15 rule types, with their dxf styles), named ranges, print settings, page breaks, sheet protection, workbook protection, rich text, shared/array/dynamic formulas, sparklines, textboxes, background images, number formats, hidden sheets, Excel 2024 native checkboxes, HTML/Markdown/JSON/TSV export, template engine.
+A whole row or column can carry a format of its own. `rowDefs` takes a
+`style` beside `height` and the rest — written as Excel writes a
+formatted row, `<row s="N" customFormat="1">` — and `columns[i].style`
+does the same for a column. Either one is also stamped onto the cells in
+it that have no style of their own; where a row and a column both cover
+such a cell, the row's wins.
+
+```ts
+rowDefs: new Map([[9, { height: 20, style: { font: { bold: true }, numFmt: "#,##0.00" } }]])
+```
+
+Features: cell styles, auto column widths, merged cells, freeze/split panes, auto-filter (per-column value, custom, top-10, dynamic and date-group criteria; colour and icon criteria are not carried), data validation, hyperlinks, images (PNG/JPEG/GIF/SVG/WebP), comments, tables, conditional formatting (all 15 rule types, with their dxf styles), named ranges, print settings, page breaks, sheet protection, workbook protection, rich text, shared/array/dynamic formulas, sparklines, textboxes, background images, number formats, hidden sheets, Excel 2024 native checkboxes, HTML/Markdown/JSON/TSV export, template engine.
 
 ### Auto Column Width
 
@@ -333,6 +348,7 @@ Process large files row-by-row without loading everything into memory:
 
 ```ts
 import {
+  streamXlsRows,
   streamXlsxRows,
   writeXlsxStream,
   writeXlsxStreamSheets,
@@ -369,6 +385,15 @@ for await (const row of streamXlsxRows(buffer, { maxRows: 100 })) {
 for await (const row of streamXlsxRows(buffer, { range: "B2:D1000" })) {
   // row.values[0] === null (column A is outside)
   // row.values[1..3] carry B/C/D
+}
+
+// Legacy .xls streams the same way, with the same `sheet`, `range` and
+// `maxRows`. The file is read whole — a CFB container needs random
+// access — and a sheet whose cells come in row order is never held
+// whole; one whose records go back a row is buffered, under
+// `maxTotalCells`, and yielded in order.
+for await (const row of streamXlsRows(xlsBytes, { sheet: "Data" })) {
+  console.log(row.index, row.values)
 }
 
 // Stream write — the workbook is emitted as bytes while rows are pulled
@@ -657,7 +682,7 @@ const buf = await writer.finish()
 
 Read and write password-protected XLSX workbooks (ECMA-376 **Agile**
 encryption — the Excel 2010+ scheme). Encryption is built on the
-platform's WebCrypto, so it stays zero-dependency and runs in Node, Deno,
+platform's WebCrypto, so it stays zero-dependency and runs in Node,
 Bun, Cloudflare Workers, and browsers.
 
 ```ts
@@ -728,6 +753,9 @@ Decodes the shared-string table (with CONTINUE spanning), RK / MULRK /
 number / boolean / error cells, labels, cached formula values, dates, and
 merged cells. Read-only.
 
+For a sheet too large to hold as a workbook, `streamXlsRows` yields the
+same values a row at a time — see [Streaming](#streaming).
+
 Both legacy readers surface sheet names, cell values, and merges — and
 nothing else. Formulas arrive as their **cached value**, never as formula
 text; styles, column widths, row heights, sheet visibility, named ranges
@@ -750,19 +778,19 @@ The ODS reader and writer model the same narrow set, so **ODS → ODS is
 lossless**. The loss shows up when converting _into_ ODS from a format
 that models more, which in practice means XLSX.
 
-|                                                            | ODS                                                                                         |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Cell values — string, number, boolean, date                | yes                                                                                         |
-| Formulas, including the `of:=` translation                 | yes                                                                                         |
-| Merged cells                                               | yes                                                                                         |
-| Cell styles                                                | **six facets only**: bold, italic, font size, font colour, background colour, number format |
-| Document properties                                        | six fields: title, subject, creator, description, keywords, created                         |
-| Borders, alignment, font name, underline, strikethrough    | no                                                                                          |
-| Column widths, row heights, hidden rows and columns        | no                                                                                          |
-| Freeze and split panes, sheet views, tab colour            | no                                                                                          |
-| Data validation, conditional formatting, auto-filter       | no                                                                                          |
-| Named ranges, tables, images, page setup, sheet protection | no                                                                                          |
-| Hidden sheets                                              | no                                                                                          |
+|                                                                  | ODS                                                                                         |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Cell values — string, number, boolean, date                      | yes                                                                                         |
+| Formulas, including the `of:=` translation                       | yes                                                                                         |
+| Merged cells                                                     | yes                                                                                         |
+| Cell styles                                                      | **six facets only**: bold, italic, font size, font colour, background colour, number format |
+| Document properties                                              | six fields: title, subject, creator, description, keywords, created                         |
+| Borders, alignment, font name, underline, strikethrough          | no                                                                                          |
+| Column widths, row heights, row formats, hidden rows and columns | no                                                                                          |
+| Freeze and split panes, sheet views, tab colour                  | no                                                                                          |
+| Data validation, conditional formatting, auto-filter             | no                                                                                          |
+| Named ranges, tables, images, page setup, sheet protection       | no                                                                                          |
+| Hidden sheets                                                    | no                                                                                          |
 
 So `readXlsx` → `writeOds` keeps values, formulas, merges and those six
 style facets, and drops the rest **silently** — there is no warning,
@@ -1719,7 +1747,7 @@ const restored = jsonToWorkbook(json)
 // `rowsAt`, or use `jsonToWorkbook` for all of them.
 parseJson(workbookToJson(wb), { rowsAt: "Sheet2" })
 
-// Streaming write — works in Cloudflare Workers / Deno / Node 18+
+// Streaming write — works in Cloudflare Workers / Bun / Node 24+
 const writer = new NdjsonStreamWriter()
 for await (const row of source) writer.addObject(row)
 writer.finish() // `write()` / `end()` still work as deprecated aliases
@@ -1972,6 +2000,18 @@ instant to map to, so `serialToDate(60)` and `serialToDate(59)` both give
 that actually contains serial 60 therefore shifts by a day on rewrite.
 Excel produces it only for files inherited from Lotus.
 
+When you need the number the cell holds — serial 60 intact, no
+millisecond rounding, a time as a fraction of a day — read with
+`dates: "serial"`. The cell is then typed `"number"`, and its format is
+still on the style for `isDateFormat`:
+
+```ts
+const wb = await readXlsx(bytes, { dates: "serial", readStyles: true })
+const cell = wb.sheets[0].cells?.get("0,0")
+cell?.value // 45306.123456789, not a Date
+isDateFormat(cell?.style?.numFmt ?? "") // true
+```
+
 ## Platform Support
 
 hucre works everywhere — no Node.js APIs (`fs`, `crypto`, `Buffer`) in core.
@@ -1979,7 +2019,6 @@ hucre works everywhere — no Node.js APIs (`fs`, `crypto`, `Buffer`) in core.
 | Runtime               | Status       |
 | --------------------- | ------------ |
 | Node.js 24+           | Full support |
-| Deno                  | Full support |
 | Bun                   | Full support |
 | Modern browsers       | Full support |
 | Cloudflare Workers    | Full support |
@@ -2039,6 +2078,7 @@ Zero dependencies. Pure TypeScript. The ZIP engine uses `CompressionStream`/`Dec
 | `openXlsx(input, options?)`        | Open for round-trip (preserves unknown parts)                                           |
 | `saveXlsx(workbook)`               | Save round-trip workbook back to XLSX                                                   |
 | `streamXlsxRows(input, options?)`  | AsyncGenerator yielding rows one at a time                                              |
+| `streamXlsRows(input, options?)`   | The same for a legacy `.xls` sheet (BIFF5/BIFF8)                                        |
 | `writeXlsxStream(rows, options)`   | Constant-memory XLSX writing — returns a `ReadableStream<Uint8Array>`                   |
 | `toWriteOptions(workbook, opts?)`  | Convert a read `Workbook` into `WriteOptions`; `onDrop` reports what it could not carry |
 | `XlsxStreamWriter`                 | Incremental XLSX writing (`addRow`/`addObject`); auto-splits past `maxRowsPerSheet`     |
@@ -2248,7 +2288,8 @@ See the [issue tracker](https://github.com/productdevbook/hucre/issues) for the 
 - Chart authoring for the remaining kinds — bubble, radar, surface, stock, and combo (multi-kind plot areas); these read and round-trip today
 - Streaming XML reader (`readXml` takes a whole string today)
 - Conditional formatting: `timePeriod` rules, and the `rank` / `percent` / `bottom` / `aboveAverage` / `equalAverage` / `stdDev` knobs on `top10` and `aboveAverage`
-- Auto-filter criteria beyond value lists (custom, dynamic, colour, icon filters)
+- Auto-filter colour and icon criteria
+- Cell-embedded ("Place in Cell") pictures — not read; see `docs/PARITY.md`
 - Pre-computed pivot value cells (the writer emits the structure; Excel computes on open)
 - Threaded comments (Excel 365+) — synthesize from a fresh write (read + roundtrip already supported). `WriteSheet` has no `threadedComments` field; it is not silently accepted
 - Slicers & timeline filters — synthesize from a fresh write (read + roundtrip already supported)

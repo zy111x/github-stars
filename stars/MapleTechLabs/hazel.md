@@ -1,6 +1,6 @@
 ---
 project: hazel
-stars: 728
+stars: 731
 description: |-
     null
 url: https://github.com/MapleTechLabs/hazel
@@ -8,16 +8,17 @@ url: https://github.com/MapleTechLabs/hazel
 
 # Hazel Chat
 
-A modern, real-time collaborative chat platform built with Effect-TS, ElectricSQL, TanstackDB, React, and PostgreSQL.
+A modern, real-time collaborative chat platform built with Effect-TS, Foldkit, TanStack DB and Cloudflare Durable Objects.
 
 ## Overview
 
 Hazel Chat is a full-stack chat application featuring:
 
 - **Effect-TS** for type-safe, functional backend programming
+- **Foldkit** for an Elm-style frontend on Effect
 - **Type-safe RPC** for seamless client-server communication
-- **Local-first architecture** with Electric SQL for real-time sync
-- **Distributed workflows** via Effect Cluster for background jobs
+- **Real-time sync** from Durable Objects (one per organization, channel and user) into TanStack DB
+- **Background work** (notifications, RSS, webhooks, thread naming) inside those objects
 
 ## Features
 
@@ -28,34 +29,29 @@ Hazel Chat is a full-stack chat application featuring:
 - **File Attachments** - Share files with Cloudflare R2 storage
 - **Notifications** - Configurable notification system with muting
 - **Team Management** - Organizations with member roles and invitations
-- **Rich Text Editor** - Plate.js powered editor with formatting
+- **Rich Text Editor** - ProseMirror powered editor with formatting
 - **Bot Integration** - Create and manage bots with a simple API
 
 ## Tech Stack
 
 ### Frontend
 
-- **React 19** with TypeScript
+- **Foldkit** (Model / Message / update / view on Effect) with TypeScript
 - **Vite** for fast development and builds
-- **TanStack Router** with file-based routing
-- **TanStack DB**
-- **TailwindCSS v4**
-- **React Aria Components**
-- **Electric SQL** for local-first real-time sync
+- **Routing** with a flat route union in `src/route.ts`
+- **TanStack DB** collections
+- **TailwindCSS v4** with `tailwind-variants`
+- **`@foldkit/ui`** components
+- **ProseMirror** for the message composer
+- **Durable Object sync** over WebSockets (`libs/effect-db-collection`)
 
 ### Backend
 
-- **Bun** runtime
+- **Cloudflare Workers** and **Durable Objects**, deployed and run locally with **Alchemy**
 - **Effect-TS** functional programming framework
 - **Effect RPC** for type-safe APIs
-- **effect-orm** (`@maple-dev/effect-orm`) with PostgreSQL
-- **Clerk** for authentication
-
-### Cluster Service
-
-- **Effect Cluster** for distributed systems
-- **Effect Workflow** for durable background jobs
-- PostgreSQL-backed persistence
+- **effect-orm** (`@maple-dev/effect-orm`) on SQLite: Durable Object storage and D1
+- **Hazel auth** (`@hazel/auth`) for sign-in and sessions
 
 ### Development Tools
 
@@ -67,25 +63,24 @@ Hazel Chat is a full-stack chat application featuring:
 
 ```
 ├── apps/
-│   ├── web/                 # React frontend (port 3000)
-│   ├── backend/             # Effect-TS API server (port 3003)
-│   ├── cluster/             # Distributed workflow service (port 3020)
-│   ├── electric-proxy/      # Electric SQL proxy worker
+│   ├── web-foldkit/         # Foldkit frontend (port 3100)
+│   ├── backend/             # api Worker: HTTP API, RPC and the Durable Objects holding the data
+│   ├── bot-gateway/         # Bot gateway Worker and its per-bot Durable Object
 │   └── link-preview-worker/ # Link preview generation
 ├── packages/
-│   ├── db/                  # effect-orm table definitions and migrations (`migrations/`)
-│   ├── domain/              # Shared types, RPC contracts, cluster definitions
+│   ├── db/                  # effect-orm SQLite tables, per-store table lists, migrations
+│   ├── sync-do/             # Durable Object sync runtime
+│   ├── domain/              # Shared types, RPC contracts, sync protocol
 │   ├── backend-core/        # Reusable backend services and repositories
 │   ├── schema/              # Shared schema definitions
 │   └── ...
-└── .context/                # Library documentation (Effect, Effect Atom, TanStack DB)
+└── .context/                # Library documentation (Effect, TanStack DB)
 ```
 
 ## Prerequisites
 
 - [Bun](https://bun.sh/) **v1.2.14 or later** (required for [workspace catalogs](https://bun.sh/blog/release-notes/bun-v1.2.14))
-- [Docker](https://docker.com/) (for local services)
-- [Clerk](https://clerk.com/) account (for authentication)
+- [Docker](https://docker.com/) (MinIO, the local S3 for uploads)
 
 ## Getting Started
 
@@ -109,12 +104,10 @@ Hazel Chat is a full-stack chat application featuring:
     ```
 
     This interactive CLI will:
-    - Start Docker services (PostgreSQL, Redis, Electric, MinIO)
+    - Start Docker services (MinIO)
     - Validate your environment
-    - Configure Clerk authentication
     - Generate secrets
-    - Create all necessary `.env` files
-    - Initialize the database
+    - Write `.env.local` (what `bun run alchemy:dev` reads; see `.env.local.example`)
 
 4. **Start development**
 
@@ -122,49 +115,24 @@ Hazel Chat is a full-stack chat application featuring:
     bun run dev
     ```
 
-    This starts the core development stack via Turborepo:
-    - Web: http://localhost:3000
-    - Backend: http://localhost:3003
-    - Cluster: http://localhost:3020
-    - Bot gateway: http://localhost:3034
+    This runs `bun run alchemy:dev`: every Worker (the api with its Durable Objects and the
+    directory D1, the bot gateway, link preview) runs locally in workerd, plus the web
+    app's dev server. Local state lives in `.alchemy/`.
 
-    To start local bot apps alongside the shared gateway, run:
+    The first-party bots (`bots/*`) run as Workers too: set `HAZEL_BOT_TOKEN` and/or
+    `LINEAR_BOT_TOKEN` in `.env.local` and `alchemy:dev` starts them.
 
-    ```bash
-    bun run dev:bots
-    ```
+## Sign-in
 
-    To start everything at once, run:
-
-    ```bash
-    bun run dev:withBots
-    ```
-
-## Clerk Configuration
-
-This project uses [Clerk](https://clerk.com/) for authentication. After creating a Clerk application, grab your **Publishable key** and **Secret key** from the dashboard and provide them to `bun run setup` (or set `CLERK_PUBLISHABLE_KEY` / `CLERK_SECRET_KEY` in the generated `.env` files).
-
-### Organizations
-
-Enable **Organizations** in your Clerk dashboard (Organizations → Settings). Hazel uses Clerk organizations for multi-tenant workspaces, with members synced to our database via webhooks.
-
-### Webhook endpoint
-
-Add a webhook in the Clerk dashboard pointing at `http://<backend-host>/webhooks/clerk` (e.g. `http://localhost:3003/webhooks/clerk` for local dev, exposed via a tunnel). Subscribe to at least:
-
-- `user.created`, `user.updated`, `user.deleted`
-- `organization.created`, `organization.updated`, `organization.deleted`
-- `organizationMembership.created`, `organizationMembership.updated`, `organizationMembership.deleted`
-
-Copy the signing secret into `CLERK_WEBHOOK_SECRET`.
+Hazel auth (`packages/auth`) handles sign-in: GitHub and Google OAuth, passkeys and cookie sessions.
+Locally it is off until `AUTH_GITHUB_CLIENT_ID` / `AUTH_GITHUB_CLIENT_SECRET` are set in `.env.local`
+(see `.env.local.example`).
 
 ## Development Commands
 
 | Command                 | Description                                 |
 | ----------------------- | ------------------------------------------- |
-| `bun run dev`           | Start core apps and the bot gateway         |
-| `bun run dev:bots`      | Start the bot gateway and local bot apps    |
-| `bun run dev:withBots`  | Start everything in development mode        |
+| `bun run dev`           | Start the whole stack (`alchemy:dev`)       |
 | `bun run build`         | Build all apps and packages                 |
 | `bun run typecheck`     | Run TypeScript checking across all packages |
 | `bun run format`        | Format and lint code with OXC               |
@@ -193,25 +161,18 @@ Type-safe client-server communication using Effect RPC:
 
 ### Real-time Sync
 
-Electric SQL provides local-first data synchronization:
+Each organization, channel and user is a Durable Object with its own SQLite
+(`infra/durable-object-sync-plan.md`):
 
-- Optimistic updates with automatic conflict resolution
-- Offline support with background sync
-- Reactive queries via TanStack Query integration
-
-### Workflow System
-
-Effect Cluster handles background jobs:
-
-- Durable workflow execution
-- Automatic retries and failure handling
-- PostgreSQL-backed persistence
+- Clients open a WebSocket per object and receive their visible rows, then live changes
+- Writes return a `transactionId` the client awaits before dropping its optimistic state
+- Side effects between objects go through a transactional outbox, retried by alarms
 
 ## Documentation
 
 - **[CLAUDE.md](./CLAUDE.md)** - Detailed architecture and development guidelines
 - **[packages/db/README.md](./packages/db/README.md)** - Database schema documentation
-- **[.context/](./.context/)** - Library-specific guides for Effect, Effect Atom, and TanStack DB
+- **[.context/](./.context/)** - Library-specific guides for Effect and TanStack DB
 
 ## Contributing
 

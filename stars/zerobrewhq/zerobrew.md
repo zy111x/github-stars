@@ -1,6 +1,6 @@
 ---
 project: zerobrew
-stars: 8214
+stars: 8228
 description: |-
     An up to 10x faster Homebrew client
 url: https://github.com/zerobrewhq/zerobrew

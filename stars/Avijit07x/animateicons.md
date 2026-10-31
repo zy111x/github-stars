@@ -1,8 +1,8 @@
 ---
 project: animateicons
-stars: 1453
+stars: 1504
 description: |-
-    1,170 animated SVG icons with hover and imperative triggers, and configurable size, color and duration. Built on motion.
+    1,500+ animated SVG icons with hover and imperative triggers, and configurable size, color and duration. Built on motion.
 url: https://github.com/Avijit07x/animateicons
 ---
 

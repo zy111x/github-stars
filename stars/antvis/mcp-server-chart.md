@@ -1,6 +1,6 @@
 ---
 project: mcp-server-chart
-stars: 4402
+stars: 4408
 description: |-
     🤖 A visualization mcp & skills contains 25+ visual charts using @antvis. Using for chart generation and data analysis.
 url: https://github.com/antvis/mcp-server-chart

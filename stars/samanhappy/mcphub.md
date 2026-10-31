@@ -1,6 +1,6 @@
 ---
 project: mcphub
-stars: 2581
+stars: 2610
 description: |-
     Self-hosted MCP gateway and control plane for connecting, controlling, and operating MCP servers.
 url: https://github.com/samanhappy/mcphub
@@ -64,7 +64,7 @@ It works with MCP clients such as Claude Code, Cursor, Cherry Studio, OpenWebUI,
 ### Prerequisites
 
 - **Docker** (recommended) — the fastest way to run MCPHub; all commands below use it
-- **Node.js** `>=20.0.0` and **pnpm** `10.12.4` — only needed to run from source or develop locally (see [Local Development](#local-development))
+- **Node.js** `>=22.0.0` and **pnpm** `10.12.4` — only needed to run from source or develop locally (see [Local Development](#local-development))
 
 ### Start with Docker
 
@@ -109,6 +109,10 @@ Two image variants are published under `samanhappy/mcphub`:
 - **`latest-full`** — the extended image. Adds Rust toolchain (Cargo/rustc), Docker Engine, and Playwright browsers (Chrome + Firefox, amd64 only). Use this for Rust-based servers or container-in-container workflows. Larger download.
 
 See [Docker Setup](https://docs.mcphub.app/configuration/docker-setup) for build options and Docker-in-Docker configuration.
+
+### Upgrading deployments with personal credentials
+
+Database mode requires a persistent `MCPHUB_CREDENTIAL_ENCRYPTION_KEY` or an existing key file; it no longer generates a local key automatically. Before replacing a working container, back up its original key and preserve the same value in deployment secrets. A database backup alone cannot recover encrypted credentials if the key is lost. See the [Credential Key Upgrade and Recovery Guide](docs/configuration/credential-key-upgrade.mdx) for working deployments and recovery after a failed upgrade.
 
 ### Access Dashboard
 

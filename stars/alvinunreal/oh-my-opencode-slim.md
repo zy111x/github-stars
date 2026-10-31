@@ -1,6 +1,6 @@
 ---
 project: oh-my-opencode-slim
-stars: 9780
+stars: 10038
 description: |-
     Lean, fine tuned Opencode multi agent suite · Mix any models · Auto delegate tasks
 url: https://github.com/alvinunreal/oh-my-opencode-slim
@@ -87,6 +87,41 @@ The main idea is simple: instead of forcing one model to do everything, the plug
 >
 > \- `xenstar1`
 
+### Merch · The Pantheon in gold
+
+The six agents as gold tarot artwork, on clothing, desk gear and prints.
+
+<table>
+  <tr>
+    <td width="25%" align="center" valign="top">
+      <a href="https://ohmyopencodeslim.com/merch/the-orchestrator-tee">
+        <img src="img/merch/the-orchestrator-tee.webp" alt="The Orchestrator in gold on a black tee" width="160"><br>
+        <sub><b>Tee</b></sub>
+      </a>
+    </td>
+    <td width="25%" align="center" valign="top">
+      <a href="https://ohmyopencodeslim.com/merch/the-oracle-hoodie">
+        <img src="img/merch/the-oracle-hoodie.webp" alt="The Oracle tarot card on the back of a black hoodie" width="160"><br>
+        <sub><b>Hoodie</b></sub>
+      </a>
+    </td>
+    <td width="25%" align="center" valign="top">
+      <a href="https://ohmyopencodeslim.com/merch/the-six-cards-framed-poster">
+        <img src="img/merch/the-six-cards-framed-poster.webp" alt="All six agent tarot cards in a black frame" width="160"><br>
+        <sub><b>Framed poster</b></sub>
+      </a>
+    </td>
+    <td width="25%" align="center" valign="top">
+      <a href="https://ohmyopencodeslim.com/merch/the-six-agents-mouse-pad">
+        <img src="img/merch/the-six-agents-mouse-pad.webp" alt="All six agents in gold on a black mouse pad" width="160"><br>
+        <sub><b>Mouse pad</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+<p align="center"><a href="https://ohmyopencodeslim.com/merch"><b>Explore the collection →</b></a></p>
+
 ### Quick Start
 
 Copy and paste this prompt to your LLM agent (Claude Code, AmpCode, Cursor, etc.):
@@ -164,7 +199,7 @@ Then:
 > It's **recommended** to understand how background orchestration works. The **[Orchestrator prompt](https://github.com/alvinunreal/oh-my-opencode-slim/blob/master/src/agents/orchestrator.ts#L28)** contains the scheduler rules, specialist routing logic, and thresholds for when work should be assigned to background agents. You can always delegate manually by calling a subagent via: `@agentName <task>`
 
 > [!TIP]
-> Because background agents are now the default workflow, it is **highly recommended** to enable and configure **[Multiplexer Integration](docs/multiplexer-integration.md)**. It automatically opens each agent in a dedicated Tmux, Zellij, Herdr, cmux, kitty, or WezTerm pane, so you can watch specialists work live while the Orchestrator continues coordinating the session. On OpenCode v2 hosts, panes work with the shared background service or an explicit `--server`; `--standalone` hosts cannot host panes (one diagnostic per process; use v2's native subagent surfaces instead).
+> Because background agents are now the default workflow, it is **highly recommended** to enable and configure **[Multiplexer Integration](docs/multiplexer-integration.md)**. It automatically opens each agent in a dedicated Tmux, Zellij, Herdr, cmux, kitty, WezTerm, or Orca pane, so you can watch specialists work live while the Orchestrator continues coordinating the session. On OpenCode v2 hosts, panes work with the shared background service or an explicit `--server`; `--standalone` hosts cannot host panes (one diagnostic per process; use v2's native subagent surfaces instead).
 
 The default generated configuration includes both `openai` and `opencode-go` presets.
 
@@ -187,13 +222,16 @@ The default generated configuration includes both `openai` and `opencode-go` pre
 Presets can inherit from one base preset with `extends`: a `design` preset can
 extend `base` and override only its designer model. On v2, `/preset` lets you
 apply subagent inference settings to **Current session** or change the
-**Global default**. `/preset <name>` and manual configuration edits change
-defaults; existing work and its future subagents retain their saved
+**Global default**. `/preset <name>` applies the preset to the session you are
+in — no restart — while manual configuration edits change the default for
+future sessions; existing work and its future subagents retain their saved
 configuration until you explicitly reapply a preset to that session.
 Already-created children keep their own configuration. Main-session models,
 prompts, tools, skills and MCPs are not switched by the session action.
+The sidebar shows the current session's saved team models and variants;
+`/preset` marks its bound preset separately from the global default.
 On v1, reload OpenCode after applying a preset. See
-[Preset Switching](docs/preset-switching.md) for scope and timing, and
+[Preset Switching](docs/presets/preset-switching.md) for scope and timing, and
 [Configuration](docs/configuration.md#preset-inheritance) for the inheritance
 example and precedence rules.
 
@@ -214,11 +252,11 @@ following OpenCode's directory discovery. See
 > have access to rather than copy-pasting one blindly. The bundled
 > `oh-my-opencode-slim` skill can help: ask the Orchestrator to tune your setup.
 
-- **[OpenAI Preset](docs/openai-preset.md)** — the default generated preset; runs all agents on OpenAI models.
-- **[OpenCode Go Preset](docs/opencode-go-preset.md)** — runs the agents on OpenCode Go models; enables the Observer agent for visual analysis since its orchestrator model isn't multimodal.
-- **[Author's Preset](docs/authors-preset.md)** — the exact config the author runs day to day, with third-party skills.
-- **[$30 Preset](docs/thirty-dollars-preset.md)** — a mixed-provider setup built around Codex Plus and GitHub Copilot Pro for about $30/month.
-- **[$40 Preset](docs/forty-dollars-preset.md)** — a dual-subscription setup pairing Claude Pro and ChatGPT Plus for about $40/month.
+- **[OpenAI Preset](docs/presets/openai-preset.md)** — the default generated preset; runs all agents on OpenAI models.
+- **[OpenCode Go Preset](docs/presets/opencode-go-preset.md)** — runs the agents on OpenCode Go models; enables the Observer agent for visual analysis since its orchestrator model isn't multimodal.
+- **[Author's Preset](docs/presets/authors-preset.md)** — the exact config the author runs day to day, with third-party skills.
+- **[$30 Preset](docs/presets/thirty-dollars-preset.md)** — a mixed-provider setup built around Codex Plus and GitHub Copilot Pro for about $30/month.
+- **[$40 Preset](docs/presets/forty-dollars-preset.md)** — a dual-subscription setup pairing Claude Pro and ChatGPT Plus for about $40/month.
 
 ### For Alternative Providers
 
@@ -723,11 +761,11 @@ Use this section as a map: start with installation, then jump to features, confi
 | **[Council](docs/council.md)** | Run multiple models in parallel and synthesize a single answer — keyword-triggered via the orchestrator's Council Mode procedure |
 | **[Custom Agents](docs/configuration.md#custom-agents)** | Define your own specialists with custom prompts, models, MCP access, and Orchestrator delegation rules |
 | **[ACP Agents](docs/acp-agents.md)** | Connect external ACP-compatible agents such as Claude Code ACP or Gemini ACP as delegatable subagents; tool and plan progress streams to the TUI while they work |
-| **[Multiplexer Integration](docs/multiplexer-integration.md)** | Watch agents work live in Tmux, Zellij, Herdr, cmux, kitty, or WezTerm panes |
+| **[Multiplexer Integration](docs/multiplexer-integration.md)** | Watch agents work live in Tmux, Zellij, Herdr, cmux, kitty, WezTerm, or Orca panes |
 | **[Codemap](docs/codemap.md)** | Generate hierarchical codemaps to understand large codebases faster |
 | **[Clonedeps](docs/clonedeps.md)** | Clone selected dependency source into an ignored local workspace for inspection |
 | **[Worktrees](docs/worktrees.md)** | Use `.slim/worktrees/` lanes for isolated parallel or risky coding work |
-| **[Preset Switching](docs/preset-switching.md)** | Switch agent model presets at runtime with `/preset` |
+| **[Preset Switching](docs/presets/preset-switching.md)** | Switch agent model presets at runtime with `/preset` |
 | **[Interview](docs/interview.md)** | Turn rough ideas into a structured markdown spec through a browser-based Q&A flow, then implement it with `/implement` |
 | **[Companion](docs/companion.md)** | Floating window companion for parsing, help, and types |
 
@@ -736,7 +774,8 @@ Use this section as a map: start with installation, then jump to features, confi
 | Doc | What it covers |
 |-----|----------------|
 | **[Installation Guide](docs/installation.md)** | Install the plugin, use CLI flags, reset config, and troubleshoot setup |
-| **[OpenCode v2 Compatibility](docs/opencode-v2-compatibility.md)** | Run the same plugin on `opencode2`: feature matrix, v2.0.x compatibility baseline, version pinning |
+| **[OpenCode v2 Compatibility](docs/opencode-v2-compatibility.md)** | Host contracts, feature matrix, entrypoints and package loading |
+| **[Runtime Efficiency](docs/runtime-efficiency.md)** | Shared configuration reads, request-local facts, optional implementation loading and verification |
 | **[Configuration](docs/configuration.md)** | Config file locations, JSONC support, prompt overrides, and full option reference |
 | **[Marketplace](docs/marketplace.md)** | Install, inspect, activate, and update marketplace agent packages |
 | **[Project Customization](docs/project-local-customization.md)** | Repository-specific custom agents, prompt overrides, per-agent skills, and precedence |
@@ -745,7 +784,7 @@ Use this section as a map: start with installation, then jump to features, confi
 | **[Developer Evals](docs/evals.md)** | Source-checkout routing/reliability harness, offline scoring, and advisory model judging |
 | **[Skills](docs/skills.md)** | Bundled skills such as `simplify`, `codemap`, `clonedeps`, `deepwork`, `verification-planning`, `step-back`, `deanchor`, `ai-estimates`, `reflect`, `worktrees`, and `oh-my-opencode-slim` |
 | **[MCPs](docs/mcps.md)** | `context7`, `gh_grep`, and how MCP permissions work per agent |
-| **[Tools](docs/tools.md)** | Built-in tool capabilities like `webfetch`, LSP tools, code search, and formatters |
+| **[Tools](docs/tools.md)** | What Slim adds: background task control, `ast_grep` search, and the enhanced `webfetch` |
 
 ---
 
@@ -756,7 +795,7 @@ Use this section as a map: start with installation, then jump to features, confi
   <p><sub>Every merged contribution leaves a mark on the realm.</sub></p>
 
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-140-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-146-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 </div>
 
@@ -954,6 +993,14 @@ Use this section as a map: start with installation, then jump to features, confi
     <tr>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/Phototonic"><img src="https://avatars.githubusercontent.com/u/35551999?v=4?s=100" width="100px;" alt="Lucas Wright"/><br /><sub><b>Lucas Wright</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=Phototonic" title="Code">💻</a></td>
       <td align="center" valign="top" width="16.66%"><a href="https://github.com/monsterlag"><img src="https://avatars.githubusercontent.com/u/64719697?v=4?s=100" width="100px;" alt="monsterlag"/><br /><sub><b>monsterlag</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=monsterlag" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/YMoose"><img src="https://avatars.githubusercontent.com/u/42179813?v=4?s=100" width="100px;" alt="YMoose"/><br /><sub><b>YMoose</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=YMoose" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/mv2sa"><img src="https://avatars.githubusercontent.com/u/2573094?v=4?s=100" width="100px;" alt="Marcos Santanna"/><br /><sub><b>Marcos Santanna</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=mv2sa" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://codenebula.netlify.app/"><img src="https://avatars.githubusercontent.com/u/121377123?v=4?s=100" width="100px;" alt="CodeNebula"/><br /><sub><b>CodeNebula</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=gaojunran" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/BoysGameStudio"><img src="https://avatars.githubusercontent.com/u/15364305?v=4?s=100" width="100px;" alt="Alan Liu"/><br /><sub><b>Alan Liu</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=BoysGameStudio" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/niheaven"><img src="https://avatars.githubusercontent.com/u/5832170?v=4?s=100" width="100px;" alt="Hsiao-nan Cheung"/><br /><sub><b>Hsiao-nan Cheung</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=niheaven" title="Code">💻</a></td>
+      <td align="center" valign="top" width="16.66%"><a href="https://github.com/akrhin"><img src="https://avatars.githubusercontent.com/u/17483152?v=4?s=100" width="100px;" alt="akrhin"/><br /><sub><b>akrhin</b></sub></a><br /><a href="https://github.com/alvinunreal/oh-my-opencode-slim/commits?author=akrhin" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

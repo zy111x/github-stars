@@ -1,6 +1,6 @@
 ---
 project: bklit-ui
-stars: 1810
+stars: 1858
 description: |-
     Open-source UI & Charts library
 url: https://github.com/bklit/bklit-ui
@@ -39,7 +39,7 @@ Bklit UI is supported by our sponsors. [Become a sponsor](https://github.com/spo
 
 **[OpenPanel](https://openpanel.dev)** — OpenPanel is an open source analytics platform that combines web analytics and product analytics in one privacy-first tool. Track pageviews, events, funnels, retention, and user journeys — all without cookies.
 
-**Silver sponsors:** [UI Rules](https://uirules.com), [shadcn studio](https://shadcnstudio.com)
+**Silver sponsors:** [UI Rules](https://uirules.com), [shadcn studio](https://shadcnstudio.com), [pug](https://pug.sh)
 
 ## Charts
 
@@ -197,6 +197,17 @@ Bklit UI is supported by our sponsors. [Become a sponsor](https://github.com/spo
       <a href="https://ui.bklit.com/docs/components/radar-chart">Docs</a> · <a href="https://ui.bklit.com/studio?chart=radar-chart">Studio</a>
     </td>
     <td align="center" valign="top" width="33%">
+      <a href="https://ui.bklit.com/docs/components/radial-chart">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/readme/radial-chart-dark.svg" />
+          <img src="apps/web/public/readme/radial-chart-light.svg" alt="Radial Chart" width="280" />
+        </picture>
+      </a>
+      <br />
+      <strong>Radial Chart</strong><br />
+      <a href="https://ui.bklit.com/docs/components/radial-chart">Docs</a> · <a href="https://ui.bklit.com/studio?chart=radial-chart">Studio</a>
+    </td>
+    <td align="center" valign="top" width="33%">
       <a href="https://ui.bklit.com/docs/components/ring-chart">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/readme/ring-chart-dark.svg" />
@@ -207,6 +218,8 @@ Bklit UI is supported by our sponsors. [Become a sponsor](https://github.com/spo
       <strong>Ring Chart</strong><br />
       <a href="https://ui.bklit.com/docs/components/ring-chart">Docs</a> · <a href="https://ui.bklit.com/studio?chart=ring-chart">Studio</a>
     </td>
+  </tr>
+  <tr>
     <td align="center" valign="top" width="33%">
       <a href="https://ui.bklit.com/docs/components/sankey-chart">
         <picture>
@@ -218,8 +231,6 @@ Bklit UI is supported by our sponsors. [Become a sponsor](https://github.com/spo
       <strong>Sankey Chart</strong><br />
       <a href="https://ui.bklit.com/docs/components/sankey-chart">Docs</a> · <a href="https://ui.bklit.com/studio?chart=sankey-chart">Studio</a>
     </td>
-  </tr>
-  <tr>
     <td align="center" valign="top" width="33%">
       <a href="https://ui.bklit.com/docs/components/scatter-chart">
         <picture>
@@ -232,6 +243,19 @@ Bklit UI is supported by our sponsors. [Become a sponsor](https://github.com/spo
       <a href="https://ui.bklit.com/docs/components/scatter-chart">Docs</a> · <a href="https://ui.bklit.com/studio?chart=scatter-chart">Studio</a>
     </td>
     <td align="center" valign="top" width="33%">
+      <a href="https://ui.bklit.com/docs/components/sparkline">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/readme/sparkline-dark.svg" />
+          <img src="apps/web/public/readme/sparkline-light.svg" alt="Sparkline" width="280" />
+        </picture>
+      </a>
+      <br />
+      <strong>Sparkline</strong><br />
+      <a href="https://ui.bklit.com/docs/components/sparkline">Docs</a> · <a href="https://ui.bklit.com/studio?chart=sparkline">Studio</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" width="33%">
       <a href="https://ui.bklit.com/docs/components/sunburst-chart">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="apps/web/public/readme/sunburst-chart-dark.svg" />
@@ -242,6 +266,7 @@ Bklit UI is supported by our sponsors. [Become a sponsor](https://github.com/spo
       <strong>Sunburst Chart</strong><br />
       <a href="https://ui.bklit.com/docs/components/sunburst-chart">Docs</a> · <a href="https://ui.bklit.com/studio?chart=sunburst-chart">Studio</a>
     </td>
+    <td width="33%"></td>
     <td width="33%"></td>
   </tr>
 </table>

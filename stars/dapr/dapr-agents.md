@@ -1,8 +1,8 @@
 ---
 project: dapr-agents
-stars: 764
+stars: 770
 description: |-
-    Build autonomous, resilient and observable AI agents with built-in workflow orchestration, security, statefulness and telemetry.
+    Build durable, autonomous, resilient and observable AI agents with built-in workflow orchestration, security, statefulness and telemetry.
 url: https://github.com/dapr/dapr-agents
 ---
 
@@ -175,6 +175,8 @@ For a high level introduction to the fundamentals of Dapr Agents, see our [quick
 ### Run The Examples
 
 Once you've gotten a feel for the fundamentals of the project in the quickstarts, then dive deeper with the [examples](./examples/README.md).
+
+See the [durable deep agent](./examples/14-durable-deep-agent) example for a long-running research task that survives a crash and resumes.
 
 ## Get Involved
 
