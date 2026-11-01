@@ -1,6 +1,6 @@
 ---
 project: free-programming-books
-stars: 400017
+stars: 400620
 description: :books: Freely available programming books
 url: https://github.com/EbookFoundation/free-programming-books
 ---
@@ -100,6 +100,7 @@ English, By Subject
 -   Turkish / Türkçe
 -   Ukrainian / Українська
 -   Urdu / اردو
+-   Uzbek / Oʻzbekcha / Ўзбекча
 -   Vietnamese / Tiếng Việt
 
 ### Cheat Sheets

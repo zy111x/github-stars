@@ -1,7 +1,7 @@
 ---
 project: Scrapling
-stars: 89483
-description: 🕷️ A Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev
+stars: 90923
+description: 🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev
 url: https://github.com/D4Vinci/Scrapling
 ---
 
@@ -75,9 +75,11 @@ Swiftproxy provides scalable residential proxies with 80M+ IPs across 195+ count
 
 Byteful supplies ethical residential, mobile, ISP, and datacenter proxies, plus scraping and AI automation tools. Use code SCRAPLING10: 10% off residential proxies.
 
-ProxyLane: Reduce blocks and CAPTCHAs by 90%. 28M Premium Residential IPs for Heavy Web Scraping. 195 countries. City/ISP/ZIP targeting. Sticky/rotating sessions. Non-expiring traffic from $2/GB. Code **SCRAPEANDTAKE**: _25% off_.
+ProxyLane: 90% fewer CAPTCHAs on your Scrapling runs. 28M real P2P residential devices, 98.7% clean IPs, 195 countries. City/ISP/ZIP targeting, sticky/rotating sessions, traffic never expires. Try 350 MB for $1.95. Code **SCRAPEANDTAKE**: _25% off_.
 
 LundProxy: Stop paying per GB. Unlimited residential traffic, 100M+ IPs, 190+ countries. Pay by bandwidth. Request a free 50 Mbps residential proxies trial.
+
+Resolvr: Scraping at scale means CAPTCHAs at scale. Resolvr solves reCAPTCHA and Cloudflare challenges on real devices through one API. Free beta access is available now.
 
 $1/GB at DataImpulse. Ethical first-party proxies. 90M+ IPs, 195+ countries. Residential, datacenter, mobile. Pay-as-you-go = no subscription. Traffic never expires.
 

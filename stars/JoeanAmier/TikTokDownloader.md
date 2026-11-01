@@ -1,6 +1,6 @@
 ---
 project: TikTokDownloader
-stars: 17083
+stars: 17259
 description: 抖音 / TikTok 平台作品下载/数据采集工具
 url: https://github.com/JoeanAmier/TikTokDownloader
 ---
@@ -322,6 +322,15 @@ Swiftproxy
 接入覆盖全球的 8000万+ 住宅 IP，专为 TikTok / 抖音数据采集与下载优化，Swiftproxy 可有效降低限流与封禁风险，保障下载稳定性与自动轮换。
 
 优惠码：PROXY90（9折）
+
+* * *
+
+SX.ORG
+------
+
+接入覆盖全球 200+ 国家及地区的 1000万+ 纯净住宅 IP 池，专为自动化、多账号防关联与数据采集打造，SX.ORG 提供超高连通率与严格的黑名单过滤，有效降低限流与封禁风险，保障网络连接的高稳定性与长效防封。
+
+专属福利：使用优惠码 TTD3 立即免费领取 3GB 流量，名额有限，点击链接马上体验！专属链接：https://sx.org/c/TTD3
 
 * * *
 

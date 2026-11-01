@@ -1,6 +1,6 @@
 ---
 project: reactive-resume
-stars: 44815
+stars: 45130
 description: A one-of-a-kind resume builder that keeps your privacy in mind. Completely secure, customizable, portable, open-source and free forever. Try it out today!
 url: https://github.com/reactive-resume/reactive-resume
 ---
@@ -263,6 +263,10 @@ Readability, job match, and writing reviews
 Using the assistant
 
 Ask for changes and review proposed edits
+
+Resume and career agent skills
+
+32 skills for resume writing, specific roles and the job search
 
 Writing a cover letter
 

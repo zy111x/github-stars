@@ -1,6 +1,6 @@
 ---
 project: next-ai-draw-io
-stars: 36401
+stars: 36525
 description: Draw and edit draw.io diagrams by chatting with an AI. Web app, desktop app, and an MCP server for Claude Code, Cursor, Codex and VS Code.
 url: https://github.com/DayuanJiang/next-ai-draw-io
 ---

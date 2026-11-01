@@ -1,6 +1,6 @@
 ---
 project: ai-engineering-from-scratch
-stars: 73307
+stars: 76098
 description: Learn AI Engineering! Learn it. Build it. Ship it for others.
 url: https://github.com/rohitg00/ai-engineering-from-scratch
 ---

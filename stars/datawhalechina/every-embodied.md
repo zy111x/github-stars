@@ -1,6 +1,6 @@
 ---
 project: every-embodied
-stars: 4213
+stars: 4311
 description: 仅需Python基础，从0构建自己的具身智能机器人；从0逐步构建VLA/OpenVLA/SmolVLA/Pi0， 深入理解具身智能
 url: https://github.com/datawhalechina/every-embodied
 ---
@@ -105,6 +105,18 @@ python examples/01\_hello\_every\_embodied\_mujoco.py
 **ForgeCAD 3D 打印机、键盘与灵巧手**  
 复刻 public kit 的 3D 打印机、视频键盘和可动灵巧手案例，跑通参数渲染 GIF 与 STEP/STL/3MF 导出
 
+  
+**Jumper 螃蟹机器人：三足步态行走**  
+训练策略 · MuJoCo 仿真 · 完整视频
+
+  
+**Jumper 螃蟹机器人：参考动作跳跃**  
+训练策略 · MuJoCo 仿真 · 完整视频
+
+  
+**Jumper 螃蟹机器人：参考动作舞蹈**  
+训练策略 · MuJoCo 仿真 · 完整视频
+
 ### ⭐ 欢迎点点 Star 共同构建具身智能开源生态 ❤️
 
 具身智能（Embodied AI）是通往通用人工智能（AGI）的关键钥匙。
@@ -172,9 +184,21 @@ GR00T N1.5 家庭长时序操作，四视角，195 秒
 🔥 News & Highlights
 --------------------
 
+-   **\[2026-10-29\]** 新增 Jumper 螃蟹机器人专题：整理开源模型与动作资源，提供 7 篇 Notebook、Ubuntu 工作站训练和评估记录，以及三足行走、跳跃和舞蹈仿真视频。
+    
+-   **\[2026-10-29\]** 新增 BladeMaster 与 DexLab 柔体切割仿真入门：补充 CPU 仿真实测与动画：豆腐切成两块，香蕉三刀得到四块，并记录刀具接触与切割结果。
+    
+-   **\[2026-10-25\]** 更新 MicroDuck 球平衡与 FastSAC：固定 MotrixLab 版本与依赖，更新训练、回放及 ONNX 导出命令，并保留旧版 Notebook 和视频的版本说明。
+    
+-   **\[2026-10-25\]** 新增 HIL-SERL 人机协同强化学习与 MuJoCo 插孔：配图讲解干预动作如何进入双回放缓冲区，并提供官方 Panda 仿真、示范采集、actor/learner 启动与插孔任务移植路线。
+    
+-   **\[2026-10-25\]** 新增 SmolWAM 轻量世界动作模型：以三张官方图拆解单帧适配、注意力汇、边界层剪枝、状态条件动作查询和单步整流流，整理 LIBERO 结果、布局蒸馏与官方代码入口。
+    
 -   **\[2026-10-23\]** 新增 Agnes Harness 多设备 Demo 实践：在 Ubuntu 上运行 MHS 四设备、火星基地与三个插件示例，提供固定版本启动器、自动验证脚本和实机运行截图；手动与模拟模型路线无需 API Key。
     
 -   **\[2026-10-23\]** 新增 TurboVLA 轻量视觉语言动作模型精读：拆解 DINOv3、BERT、双向交互与 ACT 动作块，整理 v3 的 LIBERO / RoboTwin 结果、关键消融、推理计时口径，以及多卡训练和单卡梯度累积复现路线。
+    
+-   **\[2026-10-23\]** 新增 PHP 人形跑酷：动作匹配、视觉策略与 MuJoCo 体验：从官方浏览器试玩入手，讲解 Motion Matching、强化学习教师与 DAgger＋RL 学生策略，提供固定代码版本的双 ONNX 模型本地推理、动作数据生成及训练评估入口。
     
 -   **\[2026-10-21\]** 新增 LTX Alpha Gen 视频抠像与透明合成教程：从连续透明度、IC-LoRA 参考条件讲到官方 ComfyUI 工作流、Python 推理和透明视频导出，并说明显存需求与离线处理的时间量级。
     
@@ -379,13 +403,13 @@ ROS/ROS2 通信机制、Build123d / Text-to-CAD / ForgeCAD / Shape Your Body 机
 
 **6\. 运动与控制**
 
-路径规划 (A\*/RRT)、轨迹优化、PID 与 MPC 控制、模仿学习 (IL)、ACT复现、Booster K1 网页 MuJoCo 本机部署与 AMP 训练、Hand-Eye 标定、AnyGrasp 抓取算法、灵巧手操作
+路径规划 (A\*/RRT)、轨迹优化、PID 与 MPC 控制、模仿学习 (IL)、ACT复现、Booster K1 网页 MuJoCo 本机部署与 AMP 训练、PHP 人形跑酷与视觉策略、Hand-Eye 标定、AnyGrasp 抓取算法、灵巧手操作
 
 🚧
 
 **7\. 强化学习 (RL)**
 
-多机器人PPO/SAC 算法详解、Robots That Know What to Ask 奖励对齐、UniLab + MotrixSim state-based RL 训练、Isaac Gym 并行训练实战
+HIL-SERL 人机协同强化学习与 MuJoCo 插孔、多机器人PPO/SAC 算法详解、Robots That Know What to Ask 奖励对齐、UniLab + MotrixSim state-based RL 训练、Isaac Gym 并行训练实战
 
 ✅
 
@@ -411,13 +435,13 @@ LIBERO、SimplerENV
 
 **10\. VLA 大模型**
 
-SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析、EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航、3DVLA 三维空间实例增强 VLA、PhysBrain 1.0 物理常识增强 VLA、PRTS 强化学习原生 VLA、Galaxea G0.5 自回归 VLA、Dexora 高自由度双臂灵巧 VLA、LWD 真机机群强化学习、VisualThink-VLA 视觉证据推理、Agentic-VLA 在线适应、Dexbotic-RLinf 工程化 VLA 后训练、DM0.5 高性能推理与 OpenDM、EVA-Client 真机部署与评测、TurboVLA 轻量 VLA 精读
+SmolVLA 训练和部署、OpenVLA部署、DiT4DiT-LIBERO 训练与评估、RT-1 / RT-2 / RT-X 论文解读与代码分析、EventVLA 视觉证据记忆、WALL-OSS 开源 VLA 模型、WALL-X 工程框架导航、3DVLA 三维空间实例增强 VLA、PhysBrain 1.0 物理常识增强 VLA、PRTS 强化学习原生 VLA、Galaxea G0.5 自回归 VLA、Dexora 高自由度双臂灵巧 VLA、LWD 真机机群强化学习、VisualThink-VLA 视觉证据推理、Agentic-VLA 在线适应、Dexbotic-RLinf 工程化 VLA 后训练、DM0.5 高性能推理与 OpenDM、EVA-Client 真机部署与评测、TurboVLA 轻量 VLA 精读 、SmolWAM 轻量世界动作模型
 
 ✅
 
 **11\. 具身世界模型**
 
-LeWM 世界模型分析解读与实验复现、RAW-Dream 任务无关世界模型强化 VLA 导读、WoG 条件空间世界模型导读、WALL-WM 事件级世界动作模型、RoboDream 可组合世界模型数据合成导读、Gamma-World 多智能体世界模型、BWM 动作条件世界模型、τ0-WM 统一视频-动作世界模型、GE-Sim 2.0 闭环视频世界模拟器
+LeWM 世界模型分析解读与实验复现、RAW-Dream 任务无关世界模型强化 VLA 导读、WoG 条件空间世界模型导读、WALL-WM 事件级世界动作模型、RoboDream 可组合世界模型数据合成导读、Gamma-World 多智能体世界模型、BWM 动作条件世界模型、τ0-WM 统一视频-动作世界模型、GE-Sim 2.0 闭环视频世界模拟器、SmolWAM 轻量世界动作模型
 
 ✅
 
@@ -440,6 +464,12 @@ VLN概念基础、ETPNav、NBS 主动感知路径规划
 关键内容
 
 状态
+
+**Jumper 螃蟹机器人专题**
+
+专题首页、三足行走、跳跃、舞蹈
+
+✅
 
 **19\. Datawhale 每月组队学习路径**
 
